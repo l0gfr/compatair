@@ -20,7 +20,7 @@ const product: CompressorInput = {
 	"fadCurve": [
 		{
 			"pressureBar": 13,
-			"litersPerMinute": 590
+			"litersPerMinute": 1360
 		}
 	],
 	"powerKw": 15,
@@ -56,8 +56,8 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Air livré à 13 bar",
-			"value": "590 L/min",
+			"label": "FAD maximal de modulation à 13 bar",
+			"value": "1360 L/min (1,36 m³/min)",
 			"evidenceIds": [
 				"october4-hertz-catalog-p20"
 			]
@@ -68,22 +68,27 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october4-hertz-catalog-p20"
 			]
+		},
+		{
+			"label": "FAD minimal de modulation à 13 bar",
+			"value": "590 L/min (0,59 m³/min)",
+			"evidenceIds": [
+				"october4-hertz-catalog-p20"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "Hertz FRECON PLUS PM 15. 590 L/min déclarés à 13 bar. Base Mounted, stockage d’air externe.",
+		"overview": "FRECON PLUS PM 15, Base Mounted à 13 bar : plage FAD de 590 à 1360 L/min pour 15 kW. La courbe CompatAir retient le maximum 1360 L/min ; le minimum est conservé séparément. Le PM 11 voisin publie 510–1130 L/min à 13 bar pour 11 kW.",
 		"verifiedFacts": [
-			"Configuration de pression documentée : 13 bar.",
-			"Montage sans réservoir de stockage intégré explicitement documenté.",
-			"FAD sous pression identifié séparément des valeurs d’aspiration : 590 L/min déclarés à 13 bar."
+			"Configuration de pression retenue : 13 bar.",
+			"PlageFAD publiée : 0,59–1,36 m³/min à 13 bar, selonISO 1217:2009 annexe E.",
+			"MontageBase Mounted sans réservoir de stockage intégré ; puissance 15 kW."
 		],
 		"limitations": [
-			"Une seule configuration de pression est retenue par modèle. Les autres lignes de pression ne sont pas assemblées en une courbe mesurée.",
-			"La cuve optionnelle Tank + Dryer est distincte du montage Base Mounted retenu.",
-			"Le FAD retenu est le minimum de la plage VSD à cette pression. Le maximum de la plage n’est pas utilisé comme débit garanti.",
-			"Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
-			"Le plafond CompatAir correspond à la pression de travail de la version retenue. Il ne décrit ni la soupape ni le maximum de toutes les versions de la famille."
+			"Le maximum publié ne décrit pas un débit garanti à tout régime. Le taux de marche du groupe complet reste non documenté.",
+			"La note ISO 1217:2009 annexe E indique 1 bar absolu à l’aspiration, 20 °C et 0 % HR, vanne thermostatique 71 °C et huile Smartoil.",
+			"Le Base Mounted 15 indique 236 kg et 835 × 730 × 1200 mm ; le montage Tank + Dryer 250 L constitue une autre configuration, de 423 kg.",
+			"Les autres lignes de pression restent des versions distinctes. Raccordement, refroidissement et disponibilité locale sont à confirmer."
 		]
 	},
 	"evidence": [

@@ -28,7 +28,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Gentilin C330/24, référence 810206001 : cuve de 24 L, pression maximale publiée de 10 bar. Le point documenté le plus élevé en pression fournit 165 L/min à 8 bar.",
+		"overview": "C330/24, article 810206001 : cuve de 24 L, 200 L/min à 5 bar et 165 L/min à 8 bar, en 230 V à 50 Hz. La fiche actuelle annonce S1 100 % et 38 kg. Le C330/03 possède 3 L, pèse 32 kg et publie la même courbe.",
 		"verifiedFacts": [
 			"Débit restitué publié : 200 L/min à 5 bar ; 165 L/min à 8 bar.",
 			"Compresseur à pistons sans huile. Puissance moteur publiée : 2,2 kW.",
@@ -37,9 +37,10 @@ const product: CompressorInput = {
 			"Alimentation publiée : 230 V, 50 Hz."
 		],
 		"limitations": [
-			"Les points proviennent de la fiche fabricant, pas d’un essai physique réalisé par CompatAir.",
-			"Le taux de marche est celui déclaré par le fabricant ; les conditions de cycle et de température restent à respecter. La disponibilité commerciale reste à confirmer.",
-			"La disponibilité commerciale et les exigences électriques de l’installation sont à confirmer avant achat."
+			"Les 330 L/min sont le débit aspiré ; les points sous pression proviennent de la fiche actuelle.",
+			"La fiche actuelle donne 55,4 × 48 × 78 cm et 38 kg ; la notice de mai 2017 donne 477 × 548 × 793 mm et 36 kg. Faire confirmer la génération et les dimensions de la machine livrée.",
+			"Les cuves de 24 et 3 L changent le stockage et le transport, avec la même production publiée.",
+			"La déclaration S1 est celle de la fiche actuelle. Les conditions d’installation et d’entretien de la notice restent applicables."
 		]
 	},
 	"specifications": [
@@ -97,6 +98,24 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "La notice liée à cette fiche déclare la compression sans huile : Compressing air (no oil) to be used with suitable pneumatic utensils according to current legislation in force (E.g. blowing,"
+		},
+		{
+			"id": "gentilin-810201001-20260926-review-20261020-for-gentilin-c330-24",
+			"sourceUrl": "https://www.gentilinair.com/en/products/c330-03",
+			"sourceLabel": "Gentilin, fiche technique C330/03, réf. 810201001",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-10-20",
+			"confidence": "A",
+			"notes": "Fiche voisine consultée en HTTPS le 19 octobre 2026 ; SHA-256 du corps : 4e9064337e82bfd4156eea01fd8176f3e8830193e096b6f84580320aada0ef89. Configurations comparées séparément."
+		},
+		{
+			"id": "editorial-20261020-gentilin-c33024-technical-p25",
+			"sourceUrl": "https://www.gentilinair.com/docs/c330032450_1711018316.pdf#page=25",
+			"sourceLabel": "Gentilin, MAN_C330_A001, révision01 de mai2017, tableau anglais pagePDF25",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-10-20",
+			"confidence": "A",
+			"notes": "C330/24 :36kg et477×548×793mm dans cette notice, contre38kg et55,4×48×78cm sur la fiche actuelle. Écart d’édition conservé."
 		}
 	],
 	"fieldSources": {

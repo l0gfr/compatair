@@ -33,7 +33,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Chicago Pneumatic"
 	},
 	"editorial": {
-		"overview": "CP3349-SALABELE, référence 6151704740, demande 780 L/min en charge à 6,3 bar selon le catalogue Chicago Pneumatic v6.08.2026, page 149. Vitesse à vide : 6 500 tr/min. Puissance de l’outil : 2 900 W.",
+		"overview": "CP3349-SALABELE 6151704740 : meuleuse verticale pour roue de 230 mm, 6 500 tr/min et 2 900 W. La SALAVETE voisine accepte 150 mm à 6 000 tr/min. Le catalogue sépare ainsi capacité de roue, vitesse et alimentation : le SALABELE demande 13 L/s en charge à 6,3 bar, soit 780 L/min. La meule et ses limites de vitesse doivent être qualifiées avant l’essai pneumatique.",
 		"verifiedFacts": [
 			"Vitesse à vide : 6 500 tr/min.",
 			"Puissance de l’outil : 2 900 W.",
@@ -42,6 +42,7 @@ const product: ToolProfileInput = {
 			"Entrée d’air 1/2 pouce ; flexible intérieur de 10 mm publié par le fabricant."
 		],
 		"limitations": [
+			"La broche 5/8-11 UNC commune ne rend pas les roues interchangeables. Le flexible intérieur de 10 mm est publié sans longueur de réseau associée.",
 			"Le débit utilisé est la consommation en charge du tableau constructeur à 6,3 bar. Aucune réduction arbitraire pour usage intermittent n’est appliquée.",
 			"Le diamètre intérieur de flexible publié est de 10 mm, sans longueur associée dans ce tableau. La perte de pression du réseau reste à vérifier pour votre installation.",
 			"Référence issue du catalogue international v6.08.2026. La configuration livrée, les normes applicables et la disponibilité en France restent à confirmer avec le fournisseur."
@@ -100,6 +101,15 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-25",
 			"confidence": "A",
 			"notes": "Colonne AIR CONS. @LOAD : 13 L/s × 60 = 780 L/min. Note de tableau : 90 PSI (6,3 bar). Valeurs brutes et empreinte PDF versionnées."
+		},
+		{
+			"id": "cp-catalog-202608-6151609150",
+			"sourceUrl": "https://tools.cp.com/content/dam/pim/itba/cp/literature/catalogs/General-Industry_catalog_CP_EN.pdf#page=149",
+			"sourceLabel": "Chicago Pneumatic, catalogue v6.08.2026, p. 149, réf. 6151609150",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-25",
+			"confidence": "A",
+			"notes": "Colonne AIR CONS. @LOAD : 43 L/s × 60 = 2580 L/min. Note de tableau : 90 PSI (6,3 bar). Valeurs brutes et empreinte PDF versionnées."
 		}
 	],
 	"fieldSources": {

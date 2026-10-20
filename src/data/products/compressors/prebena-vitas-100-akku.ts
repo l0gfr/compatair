@@ -19,7 +19,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "PREBENA VITAS 100-AKKU, référence VITAS 100-AKKU : cuve de 5 L, pression maximale publiée de 8 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Capacité de remplissage sans pression de mesure : 72 L/min. Vitesse de rotation : 2760 tr/min.",
+		"overview": "VITAS 100-AKKU : compresseur sur batterie 18 V, cuve de 5 L et masse publiée de 8,5 kg. Le catalogue annonce 72 L/min de remplissage et 100 L/min aspirés. Le VITAS 45 voisin fonctionne sur secteur 230 V, possède 4 L et annonce 24 L/min de remplissage pour 10 kg.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons sans huile.",
@@ -30,9 +30,10 @@ const product: CompressorInput = {
 			"Masse publiée : 8,5 kg."
 		],
 		"limitations": [
-			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
-			"Le catalogue précise que la batterie est vendue séparément pour cette référence."
+			"La référence 100-AKKU est livrée sans batterie. Le kit 100-AKKU-SET ajoute une batterie AKKU18-5,5-LIHD et le chargeur AKKU-STATION12-36.",
+			"La pression d’essai du remplissage et le taux de marche restent inconnus. Aucune autonomie ou cadence de clouage n’est déduite de ces valeurs.",
+			"Le 100-AKKU annonce LWA 93 dB(A), contre 78 dB(A) pour le VITAS 45. Ces puissances acoustiques sont distinctes d’une pression acoustique à distance.",
+			"Le 100-AKKU atteint 8 bar et mesure 340 × 315 × 380 mm ; le VITAS 45 atteint 10 bar. Le choix batterie/secteur et le volume sont des différences de configuration."
 		]
 	},
 	"specifications": [
@@ -67,6 +68,20 @@ const product: CompressorInput = {
 		{
 			"label": "Masse publiée",
 			"value": "8,5 kg",
+			"evidenceIds": [
+				"prebena-vitas-100-akku-20260927"
+			]
+		},
+		{
+			"label": "Livraison de cette référence",
+			"value": "Sans batterie ; kit 100-AKKU-SET distinct avec AKKU18-5,5-LIHD et chargeur AKKU-STATION12-36",
+			"evidenceIds": [
+				"prebena-vitas-100-akku-20260927"
+			]
+		},
+		{
+			"label": "Puissance acoustique LWA publiée",
+			"value": "93 dB(A)",
 			"evidenceIds": [
 				"prebena-vitas-100-akku-20260927"
 			]

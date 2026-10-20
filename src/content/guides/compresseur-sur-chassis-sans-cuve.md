@@ -2,18 +2,19 @@
 title: "Compresseur sur châssis sans cuve : ce que le devis doit préciser"
 seoTitle: "Compresseur sans cuve intégrée : préparer le devis"
 description: "Une configuration base mounted peut publier zéro litre de cuve tout en produisant un FAD élevé. Distinguer le bloc compresseur du stockage du réseau."
+updatedDate: 2026-10-20
 pubDate: 2026-09-26
 category: "Installer"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
 readingTime: 3
 relatedGuides: ["airblok-dry-version-secheur-integre", "compresseur-vis-230v-triphase"]
-sources: ["https://shop.fiac.it/en-IT/products/4152026070/ax-703bd-8-40050-ce"]
+sources: ["https://shop.fiac.it/en-IT/products/4152026070/ax-703bd-8-40050-ce", "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf"]
 ---
 
 La ligne « cuve : 0 L » n’indique pas nécessairement un défaut de fiche. Sur un compresseur industriel livré sur châssis, elle peut décrire l’absence de réservoir intégré. Le stockage et le traitement d’air sont alors à définir à l’échelle de l’installation.
 
-La [fiche FIAC 4152026070](https://shop.fiac.it/en-IT/products/4152026070/ax-703bd-8-40050-ce) associe une configuration **Base Mounted**, une capacité de réservoir de **0 L** et un **FAD de 880 L/min à 8 bar**. Ces trois informations sont compatibles : la production d’air et le volume stocké sont deux grandeurs différentes.
+La [fiche FIAC 4152026070](https://shop.fiac.it/en-IT/products/4152026070/ax-703bd-8-40050-ce) associe une configuration **Base Mounted**, une capacité de réservoir de **0 L** et un **FAD de 880 L/min à 8 bar**. Ces trois informations sont compatibles : la production d’air et le volume stocké sont deux grandeurs différentes. Le [catalogue FIAC S226-R1-062026, page PDF 34](https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf#page=34), relie séparément le code 4152026070 à la ligne de 8 bar et à 880 L/min de FAD. La cuve intégrée est renseignée par la fiche du code, sans volume de réseau ajouté par hypothèse.
 
 ## Les frontières de la fourniture
 

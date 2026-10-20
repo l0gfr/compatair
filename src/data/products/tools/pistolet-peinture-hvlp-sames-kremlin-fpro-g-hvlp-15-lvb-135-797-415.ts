@@ -11,7 +11,7 @@ const product: ToolProfileInput = {
 	"mpn": "135.797.415",
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
-	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+	"demandExplanation": "La colonne de consommation d’air du tableau de cette configuration est vide. Aucun débit n’est déduit du débit produit ni transféré depuis une autre tête.",
 	"confidence": "B",
 	"image": {
 		"src": "/images/products/pistolet-peinture-hvlp-sames-kremlin-fpro-g-hvlp-15-lvb-135-797-415.svg",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sames Kremlin FPro G HVLP-15-Lvb (réf. 135.797.415). Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "FPro G HVLP 15 LVB 135.797.415 : version sans godet, buse de 1,5 mm et sortie produit annoncée de 170 cm³/min. La 135.797.414 de 1,4 mm donne 150 cm³/min. La livraison avec godet porte le code 136.797.415. La colonne d’air de cette page est vide : ni le débit de peinture ni le jet de 30 à 40 cm à 20 cm ne permettent de calculer le besoin d’air.",
 		"verifiedFacts": [
 			"Taille buse (mm) : 1.5.",
 			"Sortie produit (cc/min) : 170.",
@@ -37,11 +37,9 @@ const product: ToolProfileInput = {
 			"Largeur de jet à 20 cm (libellé fabricant) : L : 30 cm – 40 cm."
 		],
 		"limitations": [
-			"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
-			"Le tableau de configuration fournit les consommations par buse, mais n’associe pas un point de pression de mesure complet à chaque débit. Les plages recommandées ne deviennent pas des pressions de mesure.",
-			"Les têtes seules, projecteurs, buses, packs et pistolets Solo incomplets sont exclus. Lorsqu’avec/sans godet sont imprimés, une seule identité de pistolet est retenue.",
-			"Les consommations de famille et les consommations de certaines configurations diffèrent. Les valeurs originales sont conservées ; aucune harmonisation ni verdict conclusif.",
-			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"La référence complète évite de confondre une livraison avec ou sans godet. Aucun débit d’une autre tête ni d’une autre configuration n’est transféré.",
+			"Les débits de famille ne complètent pas la cellule vide de cette configuration ; aucune pression de mesure n’est supposée.",
+			"Revue documentaire, sans essai physique ni disponibilité commerciale actuelle vérifiée."
 		]
 	},
 	"specifications": [

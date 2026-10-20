@@ -81,18 +81,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Chicago Pneumatic CPI100, 50 Hz, 8,5 bar. 12 983,333 L/min à 8 bar. Moteur 75 kW ; STD, groupe fixe au sol, sans sécheur ; vitesse fixe.",
+		"overview": "CPI100 STD50 Hz, version 8,5 bar : 779 m³/h, soit 12983,333 L/min, à 8 bar pour un moteur 75 kW. La version 10 bar de même fréquence annonce 720 m³/h à 9,5 bar. Le groupeSTD de cette ligne pèse 1417 kg.",
 		"verifiedFacts": [
 			"Débit restitué relié à une pression et aux unités originales de la fiche fabricant.",
 			"Périmètre retenu : groupe seul ; réservoir de stockage externe exclu.",
 			"Limite de pression documentée : 8,5 bar ; le point FAD conserve sa pression publiée."
 		],
 		"limitations": [
-			"Page 7, Pression FAD supérieure au maximum de cette configuration ; exclue sans inversion ni correction.",
-			"Cette entrée correspond à une configuration constructeur de pression maximale ; aucun nouveau produit n’est créé à partir d’un simple point de test.",
-			"Cycle de service non établi par les sources retenues ; la tenue permanente reste indéterminée.",
-			"Les seules pressions FAD retenues sont celles du document. Aucun débit aspiré, extrapolation ou essai d’utilisation CompatAir.",
-			"Documentation et disponibilité de la configuration à confirmer avec le constructeur."
+			"Le point FAD de 8 bar est inférieur au maximum 8,5 bar de cette configuration.",
+			"Certaines lignes 60 Hz présentent une référence de mesure supérieure au maximum imprimé ; elles restent distinctes de la ligne 50 Hz retenue.",
+			"Le taux de marche est inconnu ; la capacité publiée ne suffit pas à conclure pour un usage permanent.",
+			"Le montage STD est sans sécheur ni stockage intégré. Refroidissement, installation et disponibilité restent à confirmer."
 		]
 	},
 	"evidence": [

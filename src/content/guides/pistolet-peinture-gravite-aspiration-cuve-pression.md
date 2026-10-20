@@ -6,7 +6,7 @@ description: "Comparez l’alimentation en peinture et le besoin d’air sans
   confondre gravité, aspiration, cuve sous pression et technologie HVLP. Grille
   de choix atelier."
 pubDate: "2026-09-26"
-updatedDate: 2026-10-03
+updatedDate: 2026-10-20
 category: "Choisir"
 audiences: [ "professionnel" ]
 metiers: [ "carrosserie-peinture", "menuiserie-agencement" ]
@@ -19,8 +19,8 @@ relatedGuides:
     "peindre-meuble-compresseur-pistolet"
   ]
 sources:
-  - https://binks.com/support/resource-library/spray-gun-troubleshooting-preventative-maintenance-guide-sb-2-001/
-  - https://binks.com/support/resource-library/abcs-of-spray-finishing-1-239/
+  - https://binks.canto.com/direct/document/i8u5a49c7567pdmngte67mhu2d/eK8HUxnEg9Y24l10t6BX4-L9L7Y/original?content-type=application%2Fpdf&name=SB-2-001-English.pdf
+  - https://binks.canto.com/direct/document/86a9okdqq93mjfirj75efooo16/pQYLG1OpybCffHqTgdSTlTEjJYM/original?content-type=application%2Fpdf&name=ABCs-of-Spray-Finishing.pdf
   - https://www.sata.com/en-us/multi-purpose-cup-system-rps-uv-0.6-l-200-m-plug-in-sieve-qcc-uv-cup-black-vpe-50-for-mixing-spraying-reusing-and-storing-uv-based-coating-systems/1202150
   - https://www.sata.com/es-us/sistema-de-vasos-multiuso-rps-0-3-l-125-m-tamiz-plano-qcc-embalaje-de-50-unidades-para-mezclar-pintar-reutilizar-y-almacenar-sistemas-de-pintura-con-disolventes-y-base-agua/1202043
 ---
@@ -31,9 +31,9 @@ Le mauvais raccourci consiste à chercher un « pistolet à cuve » sans précis
 
 ## Trois alimentations en produit
 
-Le [guide technique DeVilbiss SB-2-001](https://binks.com/support/resource-library/spray-gun-troubleshooting-preventative-maintenance-guide-sb-2-001/) décrit le godet supérieur alimentant par gravité, le godet inférieur alimentant par aspiration et l’alimentation sous pression depuis un récipient ou une pompe séparés. Le produit et l’air d’atomisation arrivent par des passages distincts. Un équipement à alimentation sous pression comprend donc aussi une liaison produit et ses accessoires.
+Le [guide technique DeVilbiss SB-2-001](https://binks.canto.com/direct/document/i8u5a49c7567pdmngte67mhu2d/eK8HUxnEg9Y24l10t6BX4-L9L7Y/original?content-type=application%2Fpdf&name=SB-2-001-English.pdf) décrit le godet supérieur alimentant par gravité, le godet inférieur alimentant par aspiration et l’alimentation sous pression depuis un récipient ou une pompe séparés. Le produit et l’air d’atomisation arrivent par des passages distincts. Un équipement à alimentation sous pression comprend donc aussi une liaison produit et ses accessoires.
 
-L’[ABC de la finition par pulvérisation de Binks](https://binks.com/support/resource-library/abcs-of-spray-finishing-1-239/) traite séparément alimentation, chapeau d’air et ensemble buse-aiguille. Le choix doit tenir compte du matériau appliqué et du système utilisé. Une appellation commune ne rend pas toutes les pièces interchangeables.
+L’[ABC de la finition par pulvérisation de Binks](https://binks.canto.com/direct/document/86a9okdqq93mjfirj75efooo16/pQYLG1OpybCffHqTgdSTlTEjJYM/original?content-type=application%2Fpdf&name=ABCs-of-Spray-Finishing.pdf) traite séparément alimentation, chapeau d’air et ensemble buse-aiguille. Le choix doit tenir compte du matériau appliqué et du système utilisé. Une appellation commune ne rend pas toutes les pièces interchangeables.
 
 <figure class="article-infographic article-infographic--compact">
 <svg viewBox="0 0 520 390" role="img" aria-labelledby="pistolet-peinture-gravite-aspiration-cuve-pression-title pistolet-peinture-gravite-aspiration-cuve-pression-desc" xmlns="http://www.w3.org/2000/svg">
@@ -83,9 +83,9 @@ Non : changer le mode d’alimentation en peinture ne documente pas le débit d�
 
 ## Sources et méthode
 
-Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture interne, sans essai physique ni validation professionnelle externe. Les grilles de décision sont proposées par CompatAir ; les valeurs constructeur et les exemples hypothétiques sont distingués dans le texte.
+Sources relues le **20 octobre 2026**. Rédaction avec assistance d’IA et relecture interne, sans essai physique ni validation professionnelle externe. Les grilles de décision sont proposées par CompatAir ; les valeurs constructeur et les exemples hypothétiques sont distingués dans le texte.
 
-- [DeVilbiss/Binks, SB-2-001, principes et circuits](https://binks.com/support/resource-library/spray-gun-troubleshooting-preventative-maintenance-guide-sb-2-001/)
-- [Binks, ABC’s of Spray Finishing, 1-239](https://binks.com/support/resource-library/abcs-of-spray-finishing-1-239/)
+- [DeVilbiss/Binks, SB-2-001, principes et circuits](https://binks.canto.com/direct/document/i8u5a49c7567pdmngte67mhu2d/eK8HUxnEg9Y24l10t6BX4-L9L7Y/original?content-type=application%2Fpdf&name=SB-2-001-English.pdf)
+- [Binks, ABC’s of Spray Finishing, 1-239](https://binks.canto.com/direct/document/86a9okdqq93mjfirj75efooo16/pQYLG1OpybCffHqTgdSTlTEjJYM/original?content-type=application%2Fpdf&name=ABCs-of-Spray-Finishing.pdf)
 
 Pour un produit chargé destiné à la céramique, le [W200 ZP2](/guides/iwata-w200-zp2-glacure-ceramique-air/) possède un point de consommation explicitement associé à la pulvérisation ; cette donnée ne se transfère pas aux autres pistolets.

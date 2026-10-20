@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Yato YT-2357. Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "YT-2357 : petit pistolet HVLP à buse de 0,8 mm et réservoir de 0,1 L. Le YT-2346 voisin possède une buse de 1,8 mm et un réservoir de 1 L. La fiche du 2357 sépare 220 L/min d’air de 0,07 à 0,11 L/min de produit mesuré avec de l’eau. Cette différence de format doit être rapprochée du lot à peindre, sans confondre les deux circuits.",
 		"verifiedFacts": [
 			"Type : HVLP.",
 			"Coating material flow (water) : 0.07-0.11 l/min.",
@@ -42,6 +42,7 @@ const product: ToolProfileInput = {
 			"Weight : 0.34 kg."
 		],
 		"limitations": [
+			"La mention de pression maximale 0,2–0,3 MPa ne qualifie pas la pression de mesure des 220 L/min. Le débit continu en charge reste inconnu.",
 			"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
 			"Les pressions recommandées ou maximales de cette fiche ne sont pas des points de mesure de consommation.",
 			"Sans régime explicite en charge et pression de mesure associée, la consommation éventuelle reste documentaire et ne permet aucun verdict conclusif.",
@@ -123,6 +124,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-05",
 			"confidence": "B",
 			"notes": "Déclaration fabricant, capture SHA-256 2c4aa6778b0cdc8ccd9801f4049dadc2dde327d7bd58a3336f9b1119c38672c8. Aucun essai physique CompatAir."
+		},
+		{
+			"id": "october5-tools-yato-tool-061-p1",
+			"sourceUrl": "https://toya24.pl/en-PL/products/-spray-gun-with-fluid-cup-1l-1-8-mm-10006707",
+			"sourceLabel": "Yato fiche technique officielle",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-05",
+			"confidence": "B",
+			"notes": "Déclaration fabricant, capture SHA-256 d5718774328e26819fa20d1b89b433c110f09dd2816b9d58e213f809bfcf4ba7. Aucun essai physique CompatAir."
+		},
+		{
+			"id": "october5-tools-yato-tool-005-p1",
+			"sourceUrl": "https://toya24.pl/en-PL/products/-spray-gun-with-fluid-cup-hvlp-0-6l-1-5-mm-10006673",
+			"sourceLabel": "Yato fiche technique officielle",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-05",
+			"confidence": "B",
+			"notes": "Déclaration fabricant, capture SHA-256 550a9a7eaed837b2df20e60fbedfc3f094dc34846d3213cb17267abe7ded15ea. Aucun essai physique CompatAir."
 		}
 	],
 	"fieldSources": {

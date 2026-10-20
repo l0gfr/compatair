@@ -24,18 +24,18 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "FIAC AX 203BD 10 400/50 CE, référence 4152026233 : configuration sans cuve intégrée, pression maximale publiée de 10 bar. Le point documenté le plus élevé en pression fournit 2 110 L/min à 10 bar. Sans cuve intégrée. Version de base ; sécheur non intégré.",
+		"overview": "FIAC 4152026233 : version de base sans sécheur ni cuve, avec 2 110 L/min à 10 bar, moteur de 15 kW et alimentation 400 V triphasée à 50 Hz. Le montage DRY 4152026242 ajoute le sécheur ; les masses publiées sont de 270 et 297 kg.",
 		"verifiedFacts": [
 			"Débit restitué publié : 2 110 L/min à 10 bar.",
 			"Compresseur rotatif à vis lubrifié à vitesse fixe. Puissance moteur publiée : 15 kW.",
-			"Masse nette publiée : 270 kg.",
+			"Masse publiée : 270 kg.",
 			"Alimentation publiée : 400 V, 50 Hz, triphasée."
 		],
 		"limitations": [
-			"Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
-			"La référence commande prime sur le nom commercial : le catalogue utilise AIRBLOK et la fiche en ligne le code AX.",
-			"Les puissances arrondies peuvent différer entre le catalogue PDF et la fiche actuelle. Les valeurs de cette fiche proviennent exclusivement de la fiche individuelle consultée."
+			"Le catalogue utilise AIRBLOK 203 BD et l’URL porte AX ; le code commande identifie la version.",
+			"Pour le DRY 4152026242, la fiche web publie 2 100 L/min et le catalogue 2 110 L/min à 10 bar. Cet écart reste à faire clarifier ; les profils ne sont pas fusionnés.",
+			"Les 270 kg sont une masse publiée dont la base nette reste à confirmer. Le groupe de base conserve 2 110 L/min, concordants entre sa fiche et le catalogue.",
+			"Le taux de marche reste inconnu. Réservoir externe, traitement d’air et équipements livrés sont à préciser sur le devis."
 		]
 	},
 	"specifications": [
@@ -79,6 +79,24 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Mode lubrifié documenté par les huiles prévues pour cette famille."
+		},
+		{
+			"id": "fiac-4152026242-20260926-review-20261020-for-fiac-ax-203bd-10-400-50-ce",
+			"sourceUrl": "https://shop.fiac.it/en-IT/products/4152026242/ax-203bd-dry-10-40050-ce",
+			"sourceLabel": "FIAC, fiche officielle 4152026242, réf. 4152026242",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-10-20",
+			"confidence": "A",
+			"notes": "Fiche voisine consultée en HTTPS le 19 octobre 2026 ; SHA-256 du corps : 434de8211721ae54fe4683e24c5d926b53212a3e08628b9a3acc4f0ddb583bcd. Configurations comparées séparément."
+		},
+		{
+			"id": "editorial-20261020-fiac-203bd-dry-p35",
+			"sourceUrl": "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf#page=35",
+			"sourceLabel": "FIAC, catalogue S226 de juin2026, pagePDF35, AIRBLOK203BDDRY",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-10-20",
+			"confidence": "A",
+			"notes": "Code4152026242,10bar :2110L/min dans le catalogue ; la fiche individuelle actuelle indique2100L/min. Écart conservé sans moyenne."
 		}
 	],
 	"fieldSources": {

@@ -73,7 +73,7 @@ const product: CompressorInput = {
 		},
 		{
 			"label": "Alimentation publiée",
-			"value": "230,50 3x400, 230,60 50",
+			"value": "230 V, 50 Hz ; variante retenue",
 			"evidenceIds": [
 				"october3d-ekom-manual-08-p18"
 			]
@@ -87,17 +87,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "EKOM DK50 2V/50/M. 104 L/min à 6 bar. Groupe avec cuve et sécheur.",
+		"overview": "DK50 2V/50/M, variante 230 V à 50 Hz : 104 L/min à 6 bar, cuve 50 L et moteur 1,2 kW, avec sécheur et régime S1-100. La version 2V/50 sans sécheur annonce 135 L/min à 6 bar pour le même volume et la même puissance.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 50 L.",
 			"Plafond conservateur de la plage de fonctionnement : 8 bar."
 		],
 		"limitations": [
-			"Plafond conservateur de la plage de fonctionnement publiée ; la pression de soupape est distincte.",
-			"Configuration 50 Hz retenue. Aucun transfert des performances de la variante 60 Hz.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"La version M indique 61 kg sans accessoires et 577 × 628 × 804 mm en largeur × profondeur × hauteur. Le montage sans M mesure 577 × 587 × 804 mm.",
+			"Le sécheur M annonce un point de rosée sous pression ≤ +3 °C à 7 bar et une filtration 0,1 µm. Le remplissage 0 à 7 bar passe de 149 s sans M à 218 s avec M selon le tableau.",
+			"La plage de travail 6–8 bar reste distincte de la soupape 9 bar. Le point FAD 6 bar n’est pas extrapolé vers 6,2 ou  6,3 bar.",
+			"La notice prévoit un local sec, ventilé, de +5 à +40 °C et humidité relative ≤ 70 %. Les références FAD sont 0 m, 20 °C, 101325 Pa et 0 % HR."
 		]
 	},
 	"evidence": [
@@ -151,11 +151,15 @@ const product: CompressorInput = {
 		],
 		"powerKw": [
 			"october3d-ekom-manual-08-p18"
+		],
+		"voltage": [
+			"october3d-ekom-manual-08-p18"
 		]
 	},
 	"notes": [
 		"Pression FAD, plage de fonctionnement et pression de soupape restent distinctes. ISO 1217 n’est pas ajoutée à une source qui ne la revendique pas."
-	]
+	],
+	"voltage": "230 V, 50 Hz"
 };
 
 export default product;

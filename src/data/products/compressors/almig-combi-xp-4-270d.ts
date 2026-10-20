@@ -30,7 +30,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 410
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "unknown",
 	"powerKw": 4,
 	"weightKg": 465,
@@ -81,17 +80,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "ALMiG COMBI XP 4 270D. Station 4-en-1 : réservoir 270 L, sécheur frigorifique, préfiltre et postfiltre. La courbe reprend les capacités maximales publiées, avec les minima conservés séparément.",
+		"overview": "COMBI XP 4 270D : station 50 Hz de 4 kW avec cuve 270 L, sécheur et pré/post-filtration. Le tableau publie 180–530 L/min à 10 bar et 170–410 L/min à 13 bar. Le COMBI XP 6 conserve 270 L et le même encombrement, avec 5,5 kW et 180–690 L/min à 10 bar.",
 		"verifiedFacts": [
-			"Puissance moteur publiée : 4 kW ; poids de cette configuration : 465 kg.",
-			"Débit restitué documenté : 590 L/min à 8 bar ; 530 L/min à 10 bar ; 410 L/min à 13 bar.",
-			"La documentation de la série prévoit le fonctionnement continu, sous ses conditions d’installation et d’entretien."
+			"À 8 bar : plage publiée de 200 à 590 L/min selonISO 1217 annexe C-2009.",
+			"Station 270 L avec moteur 4 kW ; maxima 530 L/min à 10 bar et 410 L/min à 13 bar.",
+			"Les minima 180 L/min à 10 bar et 170 L/min à 13 bar restent des limites de modulation."
 		],
 		"limitations": [
-			"La disponibilité commerciale actuelle n’a pas été confirmée.",
-			"Les minima et maxima de modulation ne décrivent pas un débit moyen de votre atelier. Aucun débit n’est extrapolé hors des points publiés.",
-			"Le service continu documenté ne dispense pas du contrôle du refroidissement, du traitement d’air et des pertes du réseau.",
-			"Le mode de lubrification n’a pas été établi dans les sources consultées ; il reste unknown, sans présumer une qualité d’air."
+			"La courbe conserve les maxima publiés ; les minima de modulation restent séparés de la consommation moyenne de l’atelier.",
+			"Le taux de marche du groupe complet reste à confirmer dans une notice de cette série.",
+			"Le 4 270D pèse 465 kg et mesure 1530 × 640 × 1520 mm ; le 6 270D indique 470 kg pour le même encombrement.",
+			"Refroidissement, raccordement et lubrification du bloc restent à préciser pour l’installation."
 		]
 	},
 	"evidence": [
@@ -120,9 +119,6 @@ const product: CompressorInput = {
 			"documented-20260930-almig-2026"
 		],
 		"weightKg": [
-			"documented-20260930-almig-2026"
-		],
-		"dutyCycle": [
 			"documented-20260930-almig-2026"
 		]
 	},

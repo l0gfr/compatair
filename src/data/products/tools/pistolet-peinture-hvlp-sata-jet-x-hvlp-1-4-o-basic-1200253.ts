@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SATA jet X HVLP 1.4 O BASIC (réf. 1200253). Les sources constructeur publient des consommations divergentes pour cette famille ; aucune valeur n’est arbitrée pour calculer un débit.",
+		"overview": "jet X HVLP 1.4 O BASIC 1200253 : la matrice de commande l’identifie comme buse O, désignée Speed par SATA. La 1.4 I BASIC 1200534 est désignée Control. Ces noms distinguent deux formes de jet et ne prouvent pas un gain de temps mesuré. Le catalogue publie 445 Nl/min pour la famille HVLP ; la notice donne 430 Nl/min à 2 bar. Aucun de ces chiffres contradictoires n’est arbitré pour dimensionner le compresseur.",
 		"verifiedFacts": [
 			"Technologie de pulvérisation : HVLP.",
 			"Profil de buse : O.",
@@ -45,6 +45,7 @@ const product: ToolProfileInput = {
 			"Température maximale du produit pulvérisé : 50 °C."
 		],
 		"limitations": [
+			"Le mode HVLP est limité à 2 bar par la notice. La plage générale jusqu’à 2,4 bar ne devient pas une consigne HVLP équivalente. Les états de référence des volumes normalisés restent à confirmer.",
 			"Les sources constructeur publient des consommations divergentes pour cette famille ; aucune valeur n’est arbitrée pour calculer un débit.",
 			"Le catalogue 2025 donne RP 335 / HVLP 445 Nl/min ; la notice officielle donne RP 325 / HVLP 430 Nl/min explicitement à 2 bar. Aucune valeur n’est arbitrée.",
 			"La fiche précise HVLP 1.3 I BASIC 1200170 affiche 420 l/min au 2026-10-03. L/min et Nl/min restent distincts ; aucune condition normale absente des citations n’est supposée.",
@@ -171,6 +172,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 3fc1a486bdd5ee9f5b609cc09300c8f7a2dc94e8a1393d752726496ee84366b2. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "october20-sata-jet-x-fan-shapes-p12",
+			"sourceUrl": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806#page=12",
+			"sourceLabel": "SATA catalogue2025, pagePDF12 : formes de jet I/Control et O/Speed",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-20",
+			"confidence": "B",
+			"notes": "Document primaire relu, SHA-256 36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3. Les désignations commerciales ne constituent pas une mesure de productivité."
 		}
 	],
 	"fieldSources": {

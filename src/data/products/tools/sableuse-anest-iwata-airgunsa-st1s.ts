@@ -28,7 +28,7 @@ const product: ToolProfileInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
   },
   "editorial": {
-    "overview": "Anest Iwata AIRGUNSA ST1S. Le régime de consommation et/ou la pression de travail appariée ne sont pas définis. Le débit publié reste hors du calcul FAD. Le code complet W0030800000 désigne AIRGUNSA ST1S. fonction : pistolet de sablage; alimentation abrasive : tuyau de succion du sable de 3 m.",
+    "overview": "AIRGUNSA ST1S W0030800000 : sablage avec tuyau d’aspiration d’abrasif de 3 m. La ST1 voisine utilise un godet AG-1 de 1 L. Cette distinction détermine l’organisation de l’alimentation et des déplacements, pas une économie d’air. Le tableau d’accessoires ne publie ni pression de travail ni consommation propre à ces deux outils.",
     "verifiedFacts": [
       "Fonction : pistolet de sablage.",
       "Alimentation abrasive : tuyau de succion du sable de 3 m.",
@@ -36,6 +36,7 @@ const product: ToolProfileInput = {
       "Pression dans la source : Non publiée pour cet outil dans le tableau de commande."
     ],
     "limitations": [
+      "Le tuyau d’abrasif ne remplace pas le dimensionnement du flexible d’air. Aucun besoin numérique n’est déduit du nom ST1S ou d’un raccord compatible mécaniquement.",
       "Cette page fournit l’identité et la construction de l’outil, sans consommation ni pression d’exercice appariées. Aucun besoin numérique n’est calculé.",
       "La disponibilité actuelle en France n’est pas établie. Les raccords rapides et les accessoires séparés ne sont pas comptés comme des outils supplémentaires.",
       "Les limites du point documenté s’appliquent au pistolet ou à l’outil décrit ; les autres consommateurs du réseau sont à ajouter séparément."

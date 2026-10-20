@@ -18,12 +18,16 @@ const product: CompressorInput = {
 	"maxPressureBar": 10,
 	"fadCurve": [
 		{
+			"pressureBar": 7,
+			"litersPerMinute": 3336.667
+		},
+		{
 			"pressureBar": 9.5,
 			"litersPerMinute": 2873.333
 		}
 	],
-	"oilType": "oil",
-	"powerKw": 18,
+	"oilType": "unknown",
+	"powerKw": 18.5,
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
@@ -48,7 +52,7 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Air livré à 9,5 bar",
+			"label": "FAD maximal à 9,5 bar",
 			"value": "2 873,333 L/min",
 			"evidenceIds": [
 				"october3d-alup-pdf-extra-02-p8"
@@ -74,22 +78,41 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october3d-alup-extra-18"
 			]
+		},
+		{
+			"label": "Puissance nominale du tableau",
+			"value": "18,5 kW",
+			"evidenceIds": [
+				"october3d-alup-pdf-extra-02-p8"
+			]
+		},
+		{
+			"label": "FAD maximal à 7 bar",
+			"value": "200,2 m³/h, soit 3336,667 L/min",
+			"evidenceIds": [
+				"october3d-alup-pdf-extra-02-p8"
+			]
+		},
+		{
+			"label": "FAD minimal de modulation à 7 bar",
+			"value": "32,8 m³/h ; minimum à 9,5 bar non déduit",
+			"evidenceIds": [
+				"october3d-alup-pdf-extra-02-p8"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "ALUP Allegretto 18. 2 873,333 L/min à 9,5 bar. Groupe sur socle sans réservoir de stockage intégré.",
+		"overview": "Allegretto 18 sur socle : moteur de 18,5 kW, FAD maximal de 3336,667 L/min à 7 bar et de 2873,333 L/min à 9,5 bar. L’Allegretto 15 voisin publie 2436,667 L/min à 9,5 bar pour 15 kW. Les valeurs sont des maxima de modulation VSD.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 0 L.",
 			"Pression maximale de fonctionnement publiée : 10 bar."
 		],
 		"limitations": [
-			"Points FAD supérieurs au plafond de fonctionnement excluants, y compris lorsque le tableau présente une colonne 12,5 bar pour une famille limitée à 10 bar.",
-			"Version sur socle retenue ; réservoir externe exclu.",
-			"Cycle de service non établi ; la tenue permanente reste indéterminée.",
-			"Fréquence non publiée dans la fiche retenue ; aucune transposition des performances à 50 Hz.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"Le minimum publié du 18 est 32,8 m³/h à 7 bar ; aucune valeur minimale à 9,5 bar n’est déduite.",
+			"Le montage sur socle indique 325 kg et 1200 × 835 × 1220 mm. Les versions avec sécheur ou cuve 500 L sont d’autres montages.",
+			"La colonne 12,5 bar de SCK ne décrit pas Allegretto. Le voisin Allegretto 15 présente une contradiction d’unités sur son minimum, conservée séparément.",
+			"Le taux de marche, la variante électrique et la lubrification du bloc restent à confirmer."
 		]
 	},
 	"evidence": [
@@ -127,9 +150,6 @@ const product: CompressorInput = {
 	"fieldSources": {
 		"tankLiters": [
 			"october3d-alup-pdf-extra-02-p8"
-		],
-		"oilType": [
-			"october3d-alup-pdf-extra-02-p2"
 		],
 		"maxPressureBar": [
 			"october3d-alup-extra-18",

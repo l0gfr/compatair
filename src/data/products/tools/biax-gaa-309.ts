@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX GAA 309, référence 150619520. Le tableau fabricant publie 210 L/min et une plage d’utilisation de 6 à 6 bar. Vitesse à vide publiée : 900 tr/min. Masse publiée : 510 g.",
+		"overview": "GAA 309 150619520 : visseuse à aspiration intégrée de vis, démarrage par poussée et arrêt automatique à couple réglé. Elle publie 900 tr/min et 210 L/min à 6 bar. Le choix de la douille d’aspiration se fait avec la géométrie de tête et le diamètre de l’embout ; la GAF 309 voisine ne doit pas lui fournir une tête d’aspiration par analogie de nom.",
 		"verifiedFacts": [
 			"Le catalogue prescrit un fonctionnement à 6 bar dans la page de cette famille.",
 			"Consommation publiée dans la ligne Luftverbrauch en L/min ; le régime de charge n’est pas détaillé.",
@@ -32,6 +32,7 @@ const product: ToolProfileInput = {
 			"Masse publiée : 510 g."
 		],
 		"limitations": [
+			"Le tableau distingue joints durs et souples : 0,1–1,4 Nm et 0,1–1,5 Nm. Les 210 L/min ne sont pas qualifiés de maximum en charge ; les auxiliaires doivent être documentés.",
 			"Le réglage du couple dépend de l’assemblage et des ressorts prévus par le fabricant.",
 			"L’aspiration des vis et les équipements auxiliaires peuvent demander un dimensionnement séparé."
 		]
@@ -75,6 +76,15 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation publiée dans la ligne Luftverbrauch en L/min ; le régime de charge n’est pas détaillé."
+		},
+		{
+			"id": "biax-150619525-20260926",
+			"sourceUrl": "https://biax.de/wp-content/uploads/2025/02/BIAX_Schrauber_DE.pdf#page=8",
+			"sourceLabel": "BIAX, catalogue des visseuses pneumatiques, p. 8, réf. 150619525",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation publiée dans la ligne Luftverbrauch en L/min ; le régime de charge n’est pas détaillé."
 		}
 	],
 	"fieldSources": {
@@ -86,6 +96,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"biax-150619520-20260926"
+		],
+		"airflowBasis": [
+			"biax-150619520-20260926"
 		]
 	},
 	"notes": [
@@ -95,7 +108,8 @@ const product: ToolProfileInput = {
 		"min": 210,
 		"typical": 210,
 		"max": 210
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

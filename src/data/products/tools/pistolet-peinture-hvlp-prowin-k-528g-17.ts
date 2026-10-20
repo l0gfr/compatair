@@ -32,12 +32,13 @@ const product: ToolProfileInput = {
     }
   },
   "editorial": {
-    "overview": "ProWin K-528G-17. Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
+    "overview": "K-528G-17 : buse de 1,7 mm, godet latéral de 400 cm³ et jet de 310 mm dans le tableau. La K-528G-14 donne 300 mm avec une buse de 1,4 mm ; la cellule Fluid Output passe de 150 à 170, sous un intitulé en ml sans durée. L’air déclaré reste de 250 L/min pour les deux. Le changement de buse ne prouve donc pas un besoin de compresseur différent.",
     "verifiedFacts": [
       "Buse : 1.7 mm.",
       "Largeur de jet : 310 mm."
     ],
     "limitations": [
+      "Les cellules de produit ne deviennent pas des ml/min. La plage de 20 à 28 psi ne relie pas chaque pression au débit d’air. Les codes SG du kit de réparation ne désignent pas des pistolets complets.",
       "Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
       "La table publie une consommation, sans pression de mesure précise ni protocole de pulvérisation lié à cette valeur.",
       "Les codes SG de la colonne Turn-up Kit sont des kits de réparation et ne constituent pas des références de pistolets.",

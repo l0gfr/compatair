@@ -2,6 +2,7 @@
 title: "Lire une fiche CAGI de compresseur : débit, puissance absorbée et point de mesure"
 seoTitle: "Fiche CAGI compresseur : lire débit, puissance et limites"
 description: "Décodez une fiche CAGI avec un exemple officiel : débit à pression donnée, puissance totale, marche sans débit et portée de la vérification ISO 1217."
+updatedDate: 2026-10-20
 pubDate: "2026-09-26"
 category: "Comprendre"
 audiences: ["professionnel"]
@@ -63,6 +64,10 @@ Pour deux propositions commerciales, demandez les fiches des variantes effective
 
 L’[exemple CAGI à vitesse variable ROT 031.1](https://uploads.prod01.oregon.platform-os.com/instances/2032/assets/documents/pdfs/RotaryVFDCompressorsUniformTestMethod.pdf?updated=1788880181) présente plusieurs points de débit, de puissance absorbée et de puissance spécifique, avec une référence à l’annexe E de l’ISO 1217. Le graphique accompagne ces données ; il ne remplace pas les valeurs et leurs conditions.
 
+La note c du formulaire ROT 031.1 autorise la mention « 0 » ou « not significant » lorsque la puissance mesurée à débit nul est inférieure à 1 % selon sa méthode. La cellule 0,0 kW de cette fiche pédagogique ne démontre donc pas une absence physique de consommation. Conservez la note, la méthode et la précision affichée dans votre relevé.
+
+Pour archiver la preuve, relevez aussi la révision du formulaire et les champs marqués d’un astérisque : le pied de page renvoie à la participation au programme pour leur vérification. Le présent dossier sert à lire le statut de la fiche ; le [comparatif de puissance spécifique](/guides/comparer-puissance-specifique-compresseurs/) sert ensuite à confronter des machines sur un périmètre compatible.
+
 Pour l’atelier, confrontez les points disponibles au profil de demande. Si votre régime se situe hors des points ou de la plage documentés, demandez les informations correspondantes. Ne créez pas une courbe d’économie annuelle par interpolation libre entre quelques valeurs de catalogue.
 
 ## La fiche suffit-elle pour acheter ?
@@ -71,7 +76,7 @@ Elle fournit une base technique structurée. Votre décision exige encore le dé
 
 ## Sources et méthode
 
-Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture interne, sans essai physique ni validation professionnelle externe. Les grilles de décision sont proposées par CompatAir ; les valeurs constructeur et les exemples hypothétiques sont distingués dans le texte.
+Sources relues le **20 octobre 2026**. Rédaction avec assistance d’IA et relecture interne, sans essai physique ni validation professionnelle externe. Les grilles de décision sont proposées par CompatAir ; les valeurs constructeur et les exemples hypothétiques sont distingués dans le texte.
 
 - [CAGI, programme de vérification des performances](https://www.cagi.org/performance-verification-original)
 - [CAGI, exemple de fiche à vitesse fixe ROT 030.1](https://uploads.prod01.oregon.platform-os.com/instances/2032/assets/documents/pdfs/RotaryCompressorUniformTestMethod.pdf?updated=1788880181)

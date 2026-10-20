@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Asturomec PS/IS (réf. 50316). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "PS/IS 50316 : pistolet de sablage à godet aluminium de 1 L, corps nickelé avec revêtement souple et réglage du débit d’abrasif. La PS 50210 voisine aspire par un tube de 2 m en 16 × 22 mm. Le choix porte donc aussi sur le transport et le rechargement de l’abrasif. Les deux possèdent une buse de 6 mm et annoncent 5 à 8 bar de service.",
 		"verifiedFacts": [
 			"Buse : acier cémenté trempé, diamètre 6 mm.",
 			"Corps : métal poli nickelé, soft-touch.",
@@ -40,6 +40,7 @@ const product: ToolProfileInput = {
 			"Réglage : débit de sable réglable."
 		],
 		"limitations": [
+			"Le diamètre de buse et la plage de pression ne fournissent pas une consommation d’air. Le tube d’abrasif ne décrit pas le flexible d’alimentation pneumatique.",
 			"Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 			"Édition italienne 2024 ; aucune disponibilité commerciale actuelle n’est vérifiée.",
 			"La plage de service ne constitue pas une pression de mesure de consommation ; aucun facteur de marche implicite.",

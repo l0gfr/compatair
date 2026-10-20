@@ -164,17 +164,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Bambi BB24V. 35 L/min à 1 bar ; 32 L/min à 2 bar ; 30 L/min à 3 bar ; 28 L/min à 4 bar ; 27 L/min à 5 bar ; 26 L/min à 6 bar ; 25,5 L/min à 7 bar ; 25 L/min à 8 bar. Groupe avec cuve 24 L.",
+		"overview": "BB24 V : cuve verticale 24 L, pompe lubrifiée de 0,34 kW et masse 28 kg. La fiche publie 26 L/min à 6 bar et 25 L/min à 8 bar. Le BB24 horizontal conserve 24 L et la même courbe, avec 26 kg.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 24 L.",
 			"Pression maximale de fonctionnement publiée : 8 bar."
 		],
 		"limitations": [
-			"Le fabricant ne précise pas les conditions de référence ISO 1217 ni la fenêtre de temps du cycle de service dans cette fiche.",
-			"Cycle intermittent déclaré ; durée de référence non précisée. L’exploitation permanente n’est pas assimilée à un service continu.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"Le BB24 V mesure 52 × 40 × 40 cm en hauteur × largeur × profondeur ; le BB24 horizontal, 49 × 65 × 25 cm. Le choix porte sur l’implantation et le transport.",
+			"Le cycle maximal 50 % est publié sans fenêtre temporelle ; aucun nombre de minutes de marche n’est déduit.",
+			"L’alimentation est 240 V à 50 Hz avec prisebritannique ; une priseUE est disponible sur demande. Faire confirmer le raccordement.",
+			"Les conditions de référenceISO 1217 ne sont pas précisées ; aucune production supérieure n’est déduite du montage vertical."
 		]
 	},
 	"evidence": [
@@ -187,6 +187,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 1b000bb3ee0328e603535f174f729ea2eb9428fc4c815506d47405ac9022e27d de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "october3d-bambi-product-31-review-20261020-for-bambi-bb24v",
+			"sourceUrl": "https://bambi-air.co.uk/product/bb24/",
+			"sourceLabel": "Bambi, BB24, fiche constructeur",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-20",
+			"confidence": "B",
+			"notes": "Fiche voisine consultée en HTTPS le 19 octobre 2026 ; SHA-256 du corps : 26c9558a0858b8f67f1c92e3d982f32559e2c36e0054bf7b614364c7a297637f. Configurations comparées séparément."
 		}
 	],
 	"fieldSources": {
@@ -207,11 +217,15 @@ const product: CompressorInput = {
 		],
 		"powerKw": [
 			"october3d-bambi-product-30"
+		],
+		"voltage": [
+			"october3d-bambi-product-30"
 		]
 	},
 	"notes": [
 		"Pression FAD, plage de fonctionnement et pression de soupape restent distinctes. ISO 1217 n’est pas ajoutée à une source qui ne la revendique pas."
-	]
+	],
+	"voltage": "240 V, 50 Hz"
 };
 
 export default product;

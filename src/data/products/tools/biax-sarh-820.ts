@@ -23,16 +23,17 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX SARH 820, référence 150021125. Le tableau fabricant publie 500 L/min et une plage d’utilisation de 6 à 6 bar. Puissance publiée : 300 W. Vitesse de rotation : 20.000 tr/min.",
+		"overview": "SARH 820 150021125 : meuleuse à levier avec double palier avant et 20 000 tr/min. La SBRH 820 voisine utilise une autre construction de nez. La fiche HTML de la SARH donne 300 W, tandis que le catalogue donne 310 W ; les 500 L/min à 6 bar sont conservés sans qualification de régime.",
 		"verifiedFacts": [
 			"Le catalogue de cette référence indique un fonctionnement à 6 bar.",
 			"La fiche fabricant publie une consommation de 500 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
 			"Référence fabricant : 150021125.",
-			"Puissance publiée : 300 W.",
+			"Puissance publiée : Fiche HTML : 300 W ; catalogue PDF : 310 W, écart non résolu.",
 			"Vitesse de rotation : 20.000 tr/min.",
 			"Masse publiée : 830 g."
 		],
 		"limitations": [
+			"La puissance contradictoire n’est pas utilisée pour choisir le compresseur. La pince, la fraise et leurs vitesses admissibles doivent être vérifiées avec la référence livrée.",
 			"Le choix de la fraise, du disque ou de l’accessoire doit respecter la vitesse et les dimensions prescrites par BIAX.",
 			"Débit déclaré par le fabricant, sans mesure physique CompatAir."
 		]
@@ -54,9 +55,10 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Puissance publiée",
-			"value": "300 W",
+			"value": "Fiche HTML : 300 W ; catalogue PDF : 310 W, écart non résolu.",
 			"evidenceIds": [
-				"biax-150021125-20260926"
+				"biax-150021125-20260926",
+				"biax-150021125-20260926-workingpressurebar-1"
 			]
 		},
 		{
@@ -99,6 +101,24 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+		},
+		{
+			"id": "biax-150021115-20260926",
+			"sourceUrl": "https://biax.de/en/product/sbrh-820-20-000-1-min-zweihandschl/",
+			"sourceLabel": "BIAX, fiche technique SBRH 820 – Two hand grinder, réf. 150021115",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "La fiche fabricant publie une consommation de 500 L/min. Le régime de charge n’est pas précisé dans ce tableau."
+		},
+		{
+			"id": "biax-150021115-20260926-workingpressurebar-1",
+			"sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=24",
+			"sourceLabel": "BIAX, catalogue technique biax-pneumatic-en, p. 24",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +130,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"biax-150021125-20260926"
+		],
+		"airflowBasis": [
+			"biax-150021125-20260926"
 		]
 	},
 	"notes": [
@@ -119,7 +142,8 @@ const product: ToolProfileInput = {
 		"min": 500,
 		"typical": 500,
 		"max": 500
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

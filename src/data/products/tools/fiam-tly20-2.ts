@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Fiam TLY20-2, référence 166350103. Le tableau fabricant publie 780 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide : 3500 tr/min. Masse publiée : 1.55 kg.",
+		"overview": "TLY20-2 166350103 : cisaille pour tôle, capacité publiée de 1,8 mm et vitesse de 3 500 tr/min. La TLS12 voisine publie 1,2 mm et 6 500 tr/min. La TLY20-2 demande 13 L/s à 6,3 bar, soit 780 L/min, contre 540 pour la TLS12. Le type de tôle et le jeu de coupe doivent accompagner cette comparaison de capacité et d’air.",
 		"verifiedFacts": [
 			"La brochure associée à cette fiche indique une pression de mesure et d’utilisation recommandée de 6,3 bar (ISO 2787).",
 			"La fiche fabricant publie 13 L/s, soit 780 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML.",
@@ -33,6 +33,7 @@ const product: ToolProfileInput = {
 			"Dimensions publiées : Ø 46 x L 290 mm."
 		],
 		"limitations": [
+			"La capacité de tôle ne couvre pas toute nuance ni toute géométrie. Le régime de consommation n’est pas précisé et ne permet pas un verdict positif en charge.",
 			"Le couple éventuel est indicatif : l’assemblage, l’accessoire et la pression dynamique influencent le résultat.",
 			"Consommation déclarée par le fabricant, sans essai indépendant ni garantie d’un maximum à tous les régimes."
 		]
@@ -106,6 +107,24 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+		},
+		{
+			"id": "fiam-164650102-20260926",
+			"sourceUrl": "https://www.fiamgroup.com/en/products/air-tools-for-cutting/tls12/",
+			"sourceLabel": "Fiam, fiche technique TLS12, réf. 164650102",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "La fiche fabricant publie 9 L/s, soit 540 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML."
+		},
+		{
+			"id": "fiam-164650102-20260926-workingpressurebar-1",
+			"sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-1.pdf#page=4",
+			"sourceLabel": "Fiam, brochure technique en-1, p. 4",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
 		}
 	],
 	"fieldSources": {
@@ -117,6 +136,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"fiam-166350103-20260926"
+		],
+		"airflowBasis": [
+			"fiam-166350103-20260926"
 		]
 	},
 	"notes": [
@@ -126,7 +148,8 @@ const product: ToolProfileInput = {
 		"min": 780,
 		"typical": 780,
 		"max": 780
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

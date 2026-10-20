@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Astro Pneumatic HVLPD508. Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "HVLPD508 : mini-pistolet gravitaire à buse de 0,8 mm, contre 1,2 mm pour le HVLPD512. La fiche du 508 annonce un jet maximal de 120 mm à 8 pouces et une consommation moyenne de 4 cfm à lire séparément de la pression de fonctionnement de 29 psi. La buse et la taille de la retouche doivent être choisies avec le produit appliqué, sans déduire le débit en charge de la moyenne.",
 		"verifiedFacts": [
 			"Buse : 0.8mm.",
 			"Pression de fonctionnement : 29psi.",
@@ -40,6 +40,7 @@ const product: ToolProfileInput = {
 			"Flexible : I.D.Size: 4-6mm."
 		],
 		"limitations": [
+			"La recommandation de puissance de compresseur en HP ne remplace pas un FAD à pression donnée. Aucun rendement de pulvérisation ni débit continu n’est extrapolé.",
 			"Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 			"La consommation moyenne ou sans régime publié reste hors calcul ; aucun débit en charge à pression de mesure connue n’est extrapolé.",
 			"Une pression recommandée ou de service n’est pas un point de mesure de la consommation.",
@@ -121,6 +122,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 42f8859e2e7a9cebb0f73af16025e87b652281722413f7a995a68d5b4b991a14. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "october3d-tools-astro-product-hvlpd512-p1",
+			"sourceUrl": "https://www.astrotools.com/product/hvlp-mini-gravity-feed-spray-gun-1-2mm-nozzle/",
+			"sourceLabel": "Astro Pneumatic, fiche constructeur officielle",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-03",
+			"confidence": "B",
+			"notes": "Réponse primaire SHA-256 f93144f1fd1beceab8d9c34dd3644bd9d0646c85539fd1b48d25bc9c8ec817d7. Déclaration constructeur, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {

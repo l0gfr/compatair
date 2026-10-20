@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Nitto Kohki A-300, référence A-300. Le tableau fabricant publie 300 L/min et une plage d’utilisation de 6 à 6 bar. Cadence de frappe publiée : 2600 coups/min. Masse publiée : 1.7 kg.",
+		"overview": "A-300 : marteau pour travaux de carrosserie, emmanchement de 10 mm et 2 600 coups/min. Le CH-24 voisin possède une autre interface de burin et une cadence de 4 000 coups/min. La consommation de 0,3 m³/min, soit 300 L/min, est explicitement mesurée à vide à 0,6 MPa ; elle ne dimensionne pas seule le travail en charge.",
 		"verifiedFacts": [
 			"Pression de 0,6 MPa publiée dans le tableau, soit 6 bar. La valeur en kgf/cm² entre parenthèses n’est pas utilisée pour la conversion.",
 			"Consommation à vide explicitement publiée (No-load) : 0.3 m³/min. Conversion × 1 000 en L/min.",
@@ -32,6 +32,7 @@ const product: ToolProfileInput = {
 			"Masse publiée : 1.7 kg."
 		],
 		"limitations": [
+			"Les burins ne sont pas fournis en standard. Le burin, sa retenue et le matériau doivent être confirmés, sans assimiler deux emmanchements d’apparence proche.",
 			"Le débit à vide n’établit pas à lui seul la consommation sous toutes les charges. Respecter les conditions d’emploi de la notice.",
 			"La conformité et la disponibilité de la version exacte doivent être confirmées avant achat."
 		]
@@ -75,6 +76,15 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation à vide explicitement publiée (No-load) : 0.3 m³/min. Conversion × 1 000 en L/min."
+		},
+		{
+			"id": "nitto-kohki-ch-24-20260926",
+			"sourceUrl": "https://www.nitto-kohki.eu/images/stories/products/pdf_catalogs/Tools_Catalog.pdf#page=31",
+			"sourceLabel": "Nitto Kohki, catalogue officiel des outils, p. 31, réf. CH-24",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation à vide explicitement publiée (No-load) : 0.2 m³/min. Conversion × 1 000 en L/min."
 		}
 	],
 	"fieldSources": {
@@ -86,6 +96,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"nitto-kohki-a-300-20260926"
+		],
+		"airflowBasis": [
+			"nitto-kohki-a-300-20260926"
 		]
 	},
 	"notes": [
@@ -95,7 +108,8 @@ const product: ToolProfileInput = {
 		"min": 300,
 		"typical": 300,
 		"max": 300
-	}
+	},
+	"airflowBasis": "free-speed"
 };
 
 export default product;

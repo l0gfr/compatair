@@ -74,17 +74,16 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Dalgakiran D 2-100 D. Le débit restitué sous pression reste non qualifié. Groupe sur cuve 100 L.",
+		"overview": "D2-100D : compresseur à un étage, cuve 100 L et moteur 1,5 kW, avec pression de travail 7 bar. Le tableau publie 178 L/min de déplacement du piston. Le D3-200D voisin possède 200 L et 2,2 kW, avec 290 L/min de déplacement à la même pression.",
 		"verifiedFacts": [
 			"Configuration de pression documentée : 7 bar.",
 			"Cuve de stockage documentée : 100 L."
 		],
 		"limitations": [
-			"La colonne Piston Displacement décrit le déplacement du piston. Aucun débit restitué sous pression n’est qualifié dans ce tableau.",
-			"Le cycle de service n’est pas indiqué ; la compatibilité ne devient pas conclusive par la seule capacité de cuve.",
-			"Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
-			"Le plafond CompatAir correspond à la pression de travail de la version retenue. Il ne décrit ni la soupape ni le maximum de toutes les versions de la famille."
+			"Les 178et 290 L/min sont des déplacements de piston ; le débit restitué reste non qualifié et la courbe FAD vide.",
+			"Le D2-100D indique 81 kg et 450 × 1100 × 820 mm en longueur × largeur × hauteur ; le D3-200D, 127 kg et 450 × 1445 × 965 mm.",
+			"Le cycle de service demeure inconnu. Le volume de cuve ne détermine pas la tenue en usage continu.",
+			"Le plafond retenu décrit la pression de travail de cette version, distincte de la soupape et des versions à deux étages."
 		]
 	},
 	"evidence": [

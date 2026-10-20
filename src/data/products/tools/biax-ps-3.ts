@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX PS 3, référence 150322921. Le tableau fabricant publie 250 L/min et une plage d’utilisation de 6 à 6 bar. Puissance publiée : 300 W. Masse publiée : 980 g.",
+		"overview": "PS 3 150322921 : scie avec amortissement des vibrations, à distinguer de la PS 2 PLUS qui possède un autre corps et une masse publiée de 720 g, contre 980 g pour la PS 3. Le catalogue décrit le système de maintien de lame et un porte-outil de 4 mm. Les 250 L/min à 6 bar restent sans régime de mesure qualifié.",
 		"verifiedFacts": [
 			"Le catalogue de cette référence indique un fonctionnement à 6 bar.",
 			"La fiche fabricant publie une consommation de 250 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
@@ -33,6 +33,7 @@ const product: ToolProfileInput = {
 			"Diamètre maximal de queue : 4 mm."
 		],
 		"limitations": [
+			"La réduction des vibrations annoncée ne chiffre pas une durée d’exposition autorisée. La lame et le contre-appui doivent suivre la matière et la notice.",
 			"Le choix de la fraise, du disque ou de l’accessoire doit respecter la vitesse et les dimensions prescrites par BIAX.",
 			"Débit déclaré par le fabricant, sans mesure physique CompatAir."
 		]
@@ -92,6 +93,24 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+		},
+		{
+			"id": "biax-150322922-20260926",
+			"sourceUrl": "https://biax.de/en/product/ps-2-plus-das-leichtgewicht/",
+			"sourceLabel": "BIAX, fiche technique PS 2 PLUS – the lightweight, réf. 150322922",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "La fiche fabricant publie une consommation de 250 L/min. Le régime de charge n’est pas précisé dans ce tableau."
+		},
+		{
+			"id": "biax-150322922-20260926-workingpressurebar-1",
+			"sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=61",
+			"sourceLabel": "BIAX, catalogue technique biax-pneumatic-en, p. 61",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
 		}
 	],
 	"fieldSources": {
@@ -103,6 +122,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"biax-150322921-20260926"
+		],
+		"airflowBasis": [
+			"biax-150322921-20260926"
 		]
 	},
 	"notes": [
@@ -112,7 +134,8 @@ const product: ToolProfileInput = {
 		"min": 250,
 		"typical": 250,
 		"max": 250
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

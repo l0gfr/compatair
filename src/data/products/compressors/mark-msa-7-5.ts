@@ -44,14 +44,14 @@ const product: CompressorInput = {
 			"label": "Pression maximale de fonctionnement",
 			"value": "13 bar relatifs",
 			"evidenceIds": [
-				"october3d-mark-family-00"
+				"october3d-mark-pdf-new-00-p4"
 			]
 		},
 		{
 			"label": "Air livré à 12,5 bar",
 			"value": "883,333 L/min",
 			"evidenceIds": [
-				"october3d-mark-family-00"
+				"october3d-mark-pdf-new-00-p4"
 			]
 		},
 		{
@@ -70,26 +70,23 @@ const product: CompressorInput = {
 		},
 		{
 			"label": "Fréquence retenue",
-			"value": "non précisée",
+			"value": "50 Hz, publié dans le tableau fabricant",
 			"evidenceIds": [
-				"october3d-mark-family-00"
+				"october3d-mark-pdf-new-00-p4"
 			]
 		}
 	],
 	"editorial": {
-		"overview": "MARK MSA 7.5. 883,333 L/min à 12,5 bar. Groupe sur socle sans réservoir de stockage intégré.",
+		"overview": "MSA 7.5 sur socle, version 13 bar à 50 Hz : 53 m³/h, soit 883,333 L/min, à 12,5 bar pour 7,5 kW. Le MSA 5.5 voisin annonce 33 m³/h à 12,5 bar pour 5,5 kW. Chaque pression de fabrication conserve sa capacité propre.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 0 L.",
 			"Pression maximale de fonctionnement publiée : 13 bar."
 		],
 		"limitations": [
-			"La pression FAD et le maximum de la version sont conservés séparément.",
-			"Version sur socle retenue ; réservoir externe exclu.",
-			"Cycle de service non établi ; la tenue permanente reste indéterminée.",
-			"Fréquence non publiée dans la fiche retenue ; aucune transposition des performances à 50 Hz.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"Le tableau publie 53 m³/h et 14,6 L/s, deux valeurs qui ne coïncident pas exactement. Les 53 m³/h restent la base de conversion ; aucune explication de cet écart ni moyenne n’est inventée.",
+			"Le tableau établit 50 Hz. Tension, raccordement et disponibilité restent à confirmer pour la version commandée.",
+			"Le taux de marche du groupe complet reste inconnu ; aucun usage permanent n’est conclu sur ce seul point."
 		]
 	},
 	"evidence": [
@@ -132,13 +129,13 @@ const product: CompressorInput = {
 			"october3d-mark-pdf-new-00-p1"
 		],
 		"maxPressureBar": [
-			"october3d-mark-family-00"
+			"october3d-mark-pdf-new-00-p4"
 		],
 		"fadCurve": [
-			"october3d-mark-family-00"
+			"october3d-mark-pdf-new-00-p4"
 		],
 		"powerKw": [
-			"october3d-mark-family-00"
+			"october3d-mark-pdf-new-00-p4"
 		]
 	},
 	"notes": [

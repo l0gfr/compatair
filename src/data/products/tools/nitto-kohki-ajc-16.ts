@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Nitto Kohki AJC-16, référence AJC-16. Le tableau fabricant publie 70 L/min et une plage d’utilisation de 6 à 6 bar. Cadence de frappe publiée : 6000 coups/min. Masse publiée : 0.98 kg.",
+		"overview": "AJC-16 : détartreur élancé à sept aiguilles de 1,6 × 120 mm, contre douze aiguilles de 3 × 180 mm pour le JT-16 voisin. Les deux annoncent 6 000 coups/min, mais le tableau distingue 0,07 et 0,16 m³/min à vide à 0,6 MPa. Le faisceau et l’accès à la surface distinguent l’usage avant la comparaison des 70 et 160 L/min.",
 		"verifiedFacts": [
 			"Pression de 0,6 MPa publiée dans le tableau, soit 6 bar. La valeur en kgf/cm² entre parenthèses n’est pas utilisée pour la conversion.",
 			"Consommation à vide explicitement publiée (No-load) : 0.07 m³/min. Conversion × 1 000 en L/min.",
@@ -32,6 +32,7 @@ const product: ToolProfileInput = {
 			"Masse publiée : 0.98 kg."
 		],
 		"limitations": [
+			"Le nombre et le diamètre d’aiguilles doivent rester ceux du montage autorisé. Le régime à vide ne devient pas une consommation en charge ni un résultat de décapage garanti.",
 			"Le débit à vide n’établit pas à lui seul la consommation sous toutes les charges. Respecter les conditions d’emploi de la notice.",
 			"La conformité et la disponibilité de la version exacte doivent être confirmées avant achat."
 		]
@@ -75,6 +76,15 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation à vide explicitement publiée (No-load) : 0.07 m³/min. Conversion × 1 000 en L/min."
+		},
+		{
+			"id": "nitto-kohki-jt-16-20260926",
+			"sourceUrl": "https://www.nitto-kohki.eu/images/stories/products/pdf_catalogs/Tools_Catalog.pdf#page=34",
+			"sourceLabel": "Nitto Kohki, catalogue officiel des outils, p. 34, réf. JT-16",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation à vide explicitement publiée (No-load) : 0.16 m³/min. Conversion × 1 000 en L/min."
 		}
 	],
 	"fieldSources": {
@@ -86,6 +96,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"nitto-kohki-ajc-16-20260926"
+		],
+		"airflowBasis": [
+			"nitto-kohki-ajc-16-20260926"
 		]
 	},
 	"notes": [
@@ -95,7 +108,8 @@ const product: ToolProfileInput = {
 		"min": 70,
 		"typical": 70,
 		"max": 70
-	}
+	},
+	"airflowBasis": "free-speed"
 };
 
 export default product;

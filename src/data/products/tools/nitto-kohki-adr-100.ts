@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Nitto Kohki ADR-100, référence ADR-100. Le tableau fabricant publie 670 L/min et une plage d’utilisation de 6 à 6 bar. Vitesse de rotation publiée : 2000 tr/min. Masse publiée : 1.1 kg.",
+		"overview": "ADR-100 : perceuse réversible, capacité nominale de 10 mm et 2 000 tr/min, contre 6,5 mm et 2 900 pour l’ADR-65. Le tableau donne respectivement 0,67 et 0,55 m³/min à vide à 0,6 MPa. Les 670 L/min du modèle100 ne sont pas un débit maximal en charge ; la capacité et le sens de rotation doivent être choisis avec le perçage prévu.",
 		"verifiedFacts": [
 			"Pression de 0,6 MPa publiée dans le tableau, soit 6 bar. La valeur en kgf/cm² entre parenthèses n’est pas utilisée pour la conversion.",
 			"Consommation à vide explicitement publiée (No-load) : 0.67 m³/min. Conversion × 1 000 en L/min.",
@@ -32,6 +32,7 @@ const product: ToolProfileInput = {
 			"Masse publiée : 1.1 kg."
 		],
 		"limitations": [
+			"Le mandrin et la matière doivent correspondre à la notice. La consommation à vide ne suffit pas à conclure à la compatibilité du compresseur pendant le perçage.",
 			"Le débit à vide n’établit pas à lui seul la consommation sous toutes les charges. Respecter les conditions d’emploi de la notice.",
 			"La conformité et la disponibilité de la version exacte doivent être confirmées avant achat."
 		]
@@ -75,6 +76,15 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation à vide explicitement publiée (No-load) : 0.67 m³/min. Conversion × 1 000 en L/min."
+		},
+		{
+			"id": "nitto-kohki-adr-65-20260926",
+			"sourceUrl": "https://www.nitto-kohki.eu/images/stories/products/pdf_catalogs/Tools_Catalog.pdf#page=48",
+			"sourceLabel": "Nitto Kohki, catalogue officiel des outils, p. 48, réf. ADR-65",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation à vide explicitement publiée (No-load) : 0.55 m³/min. Conversion × 1 000 en L/min."
 		}
 	],
 	"fieldSources": {
@@ -86,6 +96,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"nitto-kohki-adr-100-20260926"
+		],
+		"airflowBasis": [
+			"nitto-kohki-adr-100-20260926"
 		]
 	},
 	"notes": [
@@ -95,7 +108,8 @@ const product: ToolProfileInput = {
 		"min": 670,
 		"typical": 670,
 		"max": 670
-	}
+	},
+	"airflowBasis": "free-speed"
 };
 
 export default product;

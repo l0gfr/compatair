@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Cleco 19RAA06AH2, référence 19RAA06AH2. Le tableau fabricant publie 310 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Plage de couple publiée : 1.5 à 6.0 Nm. Vitesse à vide publiée : 850 tr/min.",
+		"overview": "19RAA06AH2 : tête d’angle à carré de 1/4 pouce, 850 tr/min et plage totale de 1,5 à 6 Nm. Le ressort standard limite cette plage à 1,5–5,4 Nm. La 19RAA05AM2 voisine possède une autre tête et tourne à 570 tr/min. Les deux annoncent 310 L/min à 6,2 bar ; ce chiffre sans régime ne suffit pas à garantir leur alimentation en charge.",
 		"verifiedFacts": [
 			"Performances publiées à 6,2 bar à l’entrée de l’outil, note de la page 75.",
 			"Consommation publiée dans la colonne Air Cons. m³/min, multipliée par 1 000. Le régime de mesure n’est pas précisé dans ce tableau.",
@@ -33,6 +33,7 @@ const product: ToolProfileInput = {
 			"Longueur publiée : 316 mm."
 		],
 		"limitations": [
+			"Le fabricant avertit qu’une application au-delà de 5,7 Nm peut réduire la durée de vie de la broche ou du carré. La plage totale n’est pas celle du seul ressort standard.",
 			"Données de catalogue industriel, sans essai physique CompatAir. Disponibilité et révision livrée à confirmer avec le fournisseur.",
 			"Le fabricant avertit qu’au-delà de 5,7 Nm, la durée de vie de la broche ou du carré peut se dégrader sur cette variante.",
 			"Source : catalogue GI-1250-EU, édition archivée du fabricant. Vérifier la référence et la notice de la révision effectivement livrée."
@@ -105,6 +106,24 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation publiée dans la colonne Air Cons. m³/min, multipliée par 1 000. Le régime de mesure n’est pas précisé dans ce tableau."
+		},
+		{
+			"id": "cleco-19raa05am2-20260926",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=75",
+			"sourceLabel": "Cleco et Master Power, catalogue GI-1250-EU, p. 75, réf. 19RAA05AM2",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation publiée dans la colonne Air Cons. m³/min, multipliée par 1 000. Le régime de mesure n’est pas précisé dans ce tableau."
+		},
+		{
+			"id": "cleco-19raa04am2-20260926",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=75",
+			"sourceLabel": "Cleco et Master Power, catalogue GI-1250-EU, p. 75, réf. 19RAA04AM2",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation publiée dans la colonne Air Cons. m³/min, multipliée par 1 000. Le régime de mesure n’est pas précisé dans ce tableau."
 		}
 	],
 	"fieldSources": {
@@ -116,6 +135,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"cleco-19raa06ah2-20260926"
+		],
+		"airflowBasis": [
+			"cleco-19raa06ah2-20260926"
 		]
 	},
 	"notes": [
@@ -125,7 +147,8 @@ const product: ToolProfileInput = {
 		"min": 310,
 		"typical": 310,
 		"max": 310
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

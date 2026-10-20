@@ -32,13 +32,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Hymair H897. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Capacité du godet : 600 ml. Largeur de jet publiée : 240 mm.",
+		"overview": "H897 : godet de 600 ml, jet annoncé de 240 mm et buses de 1,4 à 2,0 mm. Le H891 voisin vise les petites surfaces avec 250 ml et un jet de 100 mm. Le H897 publie 12 cfm et une plage de 1,5 à 3 bar, sans associer une consommation à chaque pression. Le volume de produit préparé et la surface à couvrir distinguent ces deux formats.",
 		"verifiedFacts": [
 			"Capacité du godet : 600 ml.",
 			"Largeur de jet publiée : 240 mm.",
 			"Buses publiées : 1.4-1.7-2.0 mm."
 		],
 		"limitations": [
+			"Les 12 cfm ne constituent pas une mesure en charge à un point de pression défini. La plage de buses ne garantit pas la compatibilité avec tout revêtement.",
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
 		]
@@ -85,6 +86,16 @@ const product: ToolProfileInput = {
 			"id": "october2-tools-steed-7-p5",
 			"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SZUfKpLkrMNq&dp=GvUApKfKKUAU#page=5",
 			"sourceLabel": "Hymair, documentation technique fabricant, page PDF 5",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-01",
+			"confidence": "B",
+			"notes": "SHA-256 de la réponse source : 971e9f3f662af10d3c638d5e9c29c8847ee04672c40e29957ad4ca4eb13d61c1. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "october2-tools-steed-7-p2",
+			"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SZUfKpLkrMNq&dp=GvUApKfKKUAU#page=2",
+			"sourceLabel": "Hymair, documentation technique fabricant, page PDF 2",
 			"sourceType": "manual",
 			"sourceRole": "primary",
 			"retrievedAt": "2026-10-01",

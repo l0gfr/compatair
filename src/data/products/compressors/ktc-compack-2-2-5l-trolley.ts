@@ -76,19 +76,28 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october4-ktc-download-0-p2"
 			]
+		},
+		{
+			"label": "Alimentation de cette référence",
+			"value": "230 V, 50 Hz, monophasé",
+			"evidenceIds": [
+				"october4-ktc-download-0-p2"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "KTC COMPACK 2 2.5L Trolley. 270 L/min déclarés à 10 bar. COMPACK sur réservoir 2.5 L.",
+		"overview": "COMPACK 2 2.5 L Trolley, code 1850120520 : groupe à vis de 2,7 kW, cuve 2,5 L et 270 L/min à 10 bar, en 230 V monophasé à 50 Hz. La version grounded 1850120507 conserve ces caractéristiques, avec 48 kg contre 52 kg pour le Trolley.",
 		"verifiedFacts": [
 			"Configuration de pression documentée : 10 bar.",
 			"Cuve de stockage documentée : 2,5 L.",
 			"FAD sous pression identifié séparément des valeurs d’aspiration : 270 L/min déclarés à 10 bar."
 		],
 		"limitations": [
-			"La petite cuve de 2,5 L est explicitement publiée, y compris pour la version grounded. Elle n’est pas remplacée par zéro.",
-			"Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil."
+			"Le Trolley mesure 68 × 55 × 92 cm ; le grounded, 67 × 40 × 50 cm. La mobilité et l’encombrement distinguent les deux codes.",
+			"Pour le grounded, le tableau associe 48 kg à 101,4 lb, deux valeurs non équivalentes. Sa masse doit être confirmée avant manutention ; la colonne kg est reprise telle quelle dans la comparaison.",
+			"La version triphasée 400 V porte un autre code et publie 300 L/min ; ses performances ne sont pas transférées au 1850120520.",
+			"Le débit est associé à la note ISO 1217 annexe C. Le taux de marche reste inconnu ; la possibilité d’un usage non continu décrite dans la brochure ne qualifie pas un service 100 %.",
+			"Référence et volume 2,5 L explicites du tableau ; disponibilité et raccordement à confirmer avant commande."
 		]
 	},
 	"evidence": [
@@ -121,12 +130,20 @@ const product: CompressorInput = {
 		],
 		"mpn": [
 			"october4-ktc-download-0-p2"
+		],
+		"voltage": [
+			"october4-ktc-download-0-p2"
+		],
+		"phase": [
+			"october4-ktc-download-0-p2"
 		]
 	},
 	"notes": [
 		"Portée de la source : FAD-pressure-qualified.",
 		"Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées."
-	]
+	],
+	"voltage": "230 V, 50 Hz",
+	"phase": "single-phase"
 };
 
 export default product;

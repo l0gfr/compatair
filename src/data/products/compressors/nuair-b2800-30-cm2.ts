@@ -19,7 +19,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Nuair B2800/30 CM2, référence 28CC404NUB014 : cuve de 30 L, pression maximale publiée de 10 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Groupe de compression publié : B2800. Groupe de compression : B2800. Nombre de cylindres : 2.",
+		"overview": "B2800/30 CM2, code 28CC404NUB014 : cuve de 30 L, moteur de 1,5 kW et alimentation 230 V à 50 Hz, pour un maximum de 10 bar. Le B2800/100 CM2 utilise le même groupe à 1 250 tr/min et les mêmes 255 L/min aspirés, avec une cuve de 100 L.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons. Puissance moteur publiée : 1,5 kW.",
@@ -30,23 +30,15 @@ const product: CompressorInput = {
 			"Vitesse de rotation : 1250 tr/min."
 		],
 		"limitations": [
-			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
-			"Données issues du nuair professional, catalogue 2022, encore accessible sur le site du fabricant. La commercialisation actuelle de cette référence n’est pas confirmée.",
-			"La masse et les dimensions de ce tableau concernent l’emballage, pas la machine nue."
+			"Le catalogue 2022 donne l’aspiration, sans FAD sous pression ni taux de marche exploitable.",
+			"Le 30 L indique 45 kg brut emballé et 820 × 390 × 750 mm emballé en largeur × profondeur × hauteur ; le 100 L indique 61 kg brut emballé.",
+			"La différence de stockage et de manutention est documentée. Dimensions de la machine nue et disponibilité actuelle restent à confirmer."
 		]
 	},
 	"specifications": [
 		{
 			"label": "Conditions du débit",
 			"value": "Le tableau Nuair Professional, catalogue 2022 indique « Air displacement » : 255 L/min aspirés. Aucun débit restitué à une pression de mesure n’est fourni dans cette ligne.",
-			"evidenceIds": [
-				"nuair-28cc404nub014-20260927"
-			]
-		},
-		{
-			"label": "Équipement",
-			"value": "Groupe de compression publié : B2800.",
 			"evidenceIds": [
 				"nuair-28cc404nub014-20260927"
 			]
@@ -80,8 +72,8 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Dimensions de l’emballage (L × P × H)",
-			"value": "820x390x750 mm",
+			"label": "Dimensions de l’emballage (largeur × profondeur × hauteur)",
+			"value": "820x 390x 750 mm",
 			"evidenceIds": [
 				"nuair-28cc404nub014-20260927"
 			]

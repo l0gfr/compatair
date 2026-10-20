@@ -23,16 +23,17 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "DEPRAG 325-3258UL, référence 362714A. Le tableau fabricant publie 350 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple maximal : 10 Nm. Vitesse à vide : 640 tr/min.",
+		"overview": "325-3258UL 362714A : visseuse droite pour démontage vertical, 640 tr/min et couple maximal de desserrage de 10 Nm. La 377-521U voisine répond à une autre fonction de vissage et à une autre plage de couple. La 325 publie 0,35 m³/min à 6,3 bar, soit 350 L/min sans régime d’air précisé. L’inversion et la réaction de desserrage font partie du choix.",
 		"verifiedFacts": [
 			"La note du tableau indique une pression de fonctionnement de 6,3 bar.",
 			"Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine.",
 			"Référence fabricant : 362714A.",
-			"Couple maximal : 10 Nm.",
+			"Couple maximal de desserrage : 10 Nm.",
 			"Vitesse à vide : 640 tr/min.",
 			"Démarrage / exécution du catalogue : reversible to right rotation."
 		],
 		"limitations": [
+			"Le couple de desserrage ne devient pas une plage de serrage contrôlé. Le fabricant exige un appui de réaction au-dessus de 4 Nm sur l’exécution droite.",
 			"Le couple et la vitesse correspondent à la colonne de cette référence commande, pas à l’ensemble de la famille.",
 			"Les broches intégrées nécessitent aussi le dimensionnement des auxiliaires de l’installation, qui ne sont pas inclus dans la consommation du moteur de vissage."
 		]
@@ -53,7 +54,7 @@ const product: ToolProfileInput = {
 			]
 		},
 		{
-			"label": "Couple maximal",
+			"label": "Couple maximal de desserrage",
 			"value": "10 Nm",
 			"evidenceIds": [
 				"deprag-362714a-20260926"
@@ -90,6 +91,15 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine."
+		},
+		{
+			"id": "deprag-386530c-20260926",
+			"sourceUrl": "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3450/D3450en.pdf#page=2",
+			"sourceLabel": "DEPRAG, brochure technique D3450en, p. 2, réf. 386530C",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine."
 		}
 	],
 	"fieldSources": {
@@ -101,6 +111,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"deprag-362714a-20260926"
+		],
+		"airflowBasis": [
+			"deprag-362714a-20260926"
 		]
 	},
 	"notes": [
@@ -110,7 +123,8 @@ const product: ToolProfileInput = {
 		"min": 350,
 		"typical": 350,
 		"max": 350
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

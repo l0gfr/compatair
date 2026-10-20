@@ -5,7 +5,7 @@ seoTitle: "Force d’un vérin pneumatique : calcul et limites"
 description: "Comprenez la force en poussée et en traction, l’effet de la tige
   et les limites du calcul théorique avant de choisir le diamètre d’un vérin."
 pubDate: "2026-09-26"
-updatedDate: 2026-10-03
+updatedDate: 2026-10-20
 category: "Choisir"
 audiences: [ "professionnel" ]
 metiers: [ "maintenance-industrielle", "menuiserie-agencement" ]
@@ -39,6 +39,8 @@ Pour un calcul théorique avec l’autre chambre à la pression atmosphérique, 
 `F traction = p × 0,1 × π × (D² − d²) / 4`
 
 Le résultat est en newtons. Le facteur 0,1 assure la conversion entre bar et N/mm². La différence des surfaces explique pourquoi un même vérin ne fournit pas nécessairement le même effort dans les deux directions.
+
+Le tableau Festo de la page PDF 23 applique déjà une hypothèse de frottement de 10 %. Nos deux formules ci-dessus calculent au contraire la force géométrique sans frottement. Comparer directement les résultats reviendrait à mélanger deux périmètres. Cette hypothèse de catalogue ne devient pas une marge universelle pour votre machine.
 
 ## Exemple théorique, sans promesse de capacité
 
@@ -93,7 +95,7 @@ Une vanne à pincement demande un calcul différent de celui d’un piston. AKO 
 
 ## Sources et méthode
 
-Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture éditoriale interne, sans essai physique ni validation professionnelle externe. Les exemples chiffrés explicitement hypothétiques ne sont pas des mesures de terrain.
+Sources relues le **20 octobre 2026**. Rédaction avec assistance d’IA et relecture éditoriale interne, sans essai physique ni validation professionnelle externe. Les exemples chiffrés explicitement hypothétiques ne sont pas des mesures de terrain.
 
-- [Festo, Engineering Support, force et flambage, pages PDF 22 à 24](https://www.festo.com/net/supportportal/files/10203/actuators)
+- [Festo, Engineering Support, force et flambage, pages PDF 23 à 24](https://www.festo.com/net/supportportal/files/10203/actuators)
 - [Festo, General operating conditions, pages 15 à 16](https://www.festo.com/media/cms/media/mam_upload/market/Festo_General_operating_conditions_en.pdf)
