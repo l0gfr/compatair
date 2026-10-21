@@ -24,18 +24,18 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "FIAC AX 203BD 13 400/50 CE, référence 4152026234 : configuration sans cuve intégrée, pression maximale publiée de 13 bar. Le point documenté le plus élevé en pression fournit 1 690 L/min à 13 bar. Sans cuve intégrée. Version de base ; sécheur non intégré.",
+		"overview": "FIAC 4152026234 : groupe de base de 15 kW, sans cuve ni sécheur, avec 1 690 L/min à 13 bar, en 400 V triphasé à 50 Hz. Le 4152026233 de 10 bar conserve le même moteur et publie 2 110 L/min.",
 		"verifiedFacts": [
 			"Débit restitué publié : 1 690 L/min à 13 bar.",
 			"Compresseur rotatif à vis lubrifié à vitesse fixe. Puissance moteur publiée : 15 kW.",
-			"Masse nette publiée : 270 kg.",
+			"Masse publiée : 270 kg.",
 			"Alimentation publiée : 400 V, 50 Hz, triphasée."
 		],
 		"limitations": [
-			"Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
-			"La référence commande prime sur le nom commercial : le catalogue utilise AIRBLOK et la fiche en ligne le code AX.",
-			"Les puissances arrondies peuvent différer entre le catalogue PDF et la fiche actuelle. Les valeurs de cette fiche proviennent exclusivement de la fiche individuelle consultée."
+			"Le catalogue utilise AIRBLOK 203 BD et l’URL porte AX ; le code commande identifie la version de pression.",
+			"La fiche actuelle et le catalogue de juin 2026 concordent sur 1 690 L/min, 15 kW et 270 kg pour le 4152026234.",
+			"Les 270 kg sont une masse publiée dont la qualification nette reste à confirmer.",
+			"Le taux de marche demeure inconnu. Réservoir externe, traitement d’air et équipements livrés sont à préciser sur le devis."
 		]
 	},
 	"specifications": [
@@ -79,6 +79,15 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Mode lubrifié documenté par les huiles prévues pour cette famille."
+		},
+		{
+			"id": "fiac-4152026233-20260926-review-20261021-for-fiac-ax-203bd-13-400-50-ce",
+			"sourceUrl": "https://shop.fiac.it/en-IT/products/4152026233/ax-203bd-10-40050-ce",
+			"sourceLabel": "FIAC, fiche officielle 4152026233, réf. 4152026233",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-10-21",
+			"confidence": "A",
+			"notes": "Fiche voisine consultée en HTTPS le 21 octobre 2026 ; SHA-256 du corps : c972c94eb751644f7e0efdd4277dccd03e32ea3983c27678d8f4aff4e35cfa8a. Configurations comparées séparément."
 		}
 	],
 	"fieldSources": {

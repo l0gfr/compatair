@@ -19,17 +19,17 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Airpress APS 10 Basic Combi 10 bar 10 ch/7,5 kW 996L/min 500 L, référence 364858 : cuve de 500 L, pression maximale publiée de 10 bar. Aucun débit restitué relié à une pression de mesure n’est documenté ; la compatibilité pneumatique reste indéterminée.",
+		"overview": "APS 10 Basic Combi 364858 : groupe de 7,5 kW sur cuve de 500 L, en 400 V triphasé à 50 Hz. Airpress publie une sortie estimée de 996 L/min et un cycle marche/arrêt de 100/0. Le groupe seul 364808 publie également 996 L/min, sans cuve intégrée.",
 		"verifiedFacts": [
 			"Débit restitué à une pression de mesure précise : non documenté.",
 			"Compresseur à vis. Puissance moteur publiée : 7,5 kW.",
 			"Alimentation publiée : 400 V / 50 Hz / 3 Ph, triphasée."
 		],
 		"limitations": [
-			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
-			"Le taux de marche est celui déclaré par le fabricant ; les conditions de cycle et de température restent à respecter. La disponibilité commerciale reste à confirmer.",
-			"La pression maximale du compresseur n’est pas utilisée comme pression de mesure implicite du débit.",
-			"La compatibilité nécessite un débit restitué documenté à la pression de l’outil."
+			"Le pied du tableau qualifie la sortie d’estimation dépendant des conditions d’aspiration. Sa pression d’essai reste à préciser ; la courbe FAD demeure vide.",
+			"La plage de service publiée est de 5,5 à 10 bar. Le maximum de 10 bar ne fixe pas la pression de mesure du débit.",
+			"La cuve de 500 L apporte du stockage ; les deux montages annoncent la même sortie. La masse publiée passe de 170 kg pour le groupe seul à 267 kg pour le Combi, sur une base non précisée.",
+			"Le cycle 100/0 est déclaré pour cette référence ; refroidissement, maintenance et alimentation de l’installation restent à vérifier."
 		]
 	},
 	"specifications": [
@@ -41,8 +41,8 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Débit d'air restitué (L/min)* ; pression de mesure non précisée",
-			"value": "996 L/min 16,6 L/s",
+			"label": "Sortie estimée publiée, pression d’essai non précisée",
+			"value": "996 L/min (16,6 L/s) ; estimation fabricant selon le pied de page",
 			"evidenceIds": [
 				"airpress-364858-20260926"
 			]
@@ -99,6 +99,15 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Le débit restitué indiqué sur la fiche n’est pas accompagné d’une pression de mesure explicite. Il est conservé comme valeur publiée, sans l’assimiler à un point de FAD utilisable pour la compatibilité."
+		},
+		{
+			"id": "airpress-364808-20260926-review-20261021-for-airpress-aps-10-basic-combi-10-bar-10-ch-7-5-kw-996l-min-500-l",
+			"sourceUrl": "https://airpress.fr/compresseur-a-vis-aps-10-basic-10-bar-10-ch-7-5-kw-996-l-min-364808",
+			"sourceLabel": "Airpress, fiche technique 364808, réf. 364808",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-10-21",
+			"confidence": "A",
+			"notes": "Fiche voisine consultée en HTTPS le 21 octobre 2026 ; SHA-256 du corps : a032ca7062295f54e36c779f5fa2b01fa562d559e820e356bbc1eeea78408c8a. Configurations comparées séparément."
 		}
 	],
 	"fieldSources": {

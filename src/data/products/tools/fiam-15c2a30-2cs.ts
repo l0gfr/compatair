@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Fiam 15C2A30-2CS, référence 112509903. Le tableau fabricant publie 240 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple de serrage indicatif : 0.8÷2 Nm. Vitesse à vide : 2000 tr/min.",
+		"overview": "15C2A30-2CS 112509903 : visseuse d’angle à 30°, carré mâle de 1/4 pouce et double signal pneumatique pour un suivi de cycle avec unité TOM. La 15C2A30 voisine ne porte pas ce suffixe de signalisation. La table conserve 0,8–2 Nm, 2 000 tr/min et 4 L/s à 6,3 bar, soit 240 L/min. Les raccords de suivi, le contrôleur et le cycle doivent être définis dans l’installation.",
 		"verifiedFacts": [
 			"La brochure associée à cette fiche indique une pression de mesure et d’utilisation recommandée de 6,3 bar (ISO 2787).",
 			"La fiche fabricant publie 4 L/s, soit 240 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML.",
@@ -33,6 +33,7 @@ const product: ToolProfileInput = {
 			"Masse publiée : 0.7 kg."
 		],
 		"limitations": [
+			"Les 240 L/min n’ont pas de régime qualifié. Le double signal n’est pas à lui seul une preuve de serrage conforme sur un assemblage réel ni une mesure du besoin de tous les auxiliaires.",
 			"Le couple éventuel est indicatif : l’assemblage, l’accessoire et la pression dynamique influencent le résultat.",
 			"Consommation déclarée par le fabricant, sans essai indépendant ni garantie d’un maximum à tous les régimes."
 		]
@@ -106,6 +107,24 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+		},
+		{
+			"id": "fiam-112533942-20260926",
+			"sourceUrl": "https://www.fiamgroup.com/en/products/handheld-air-screwdrivers/15c2a30/",
+			"sourceLabel": "Fiam, fiche technique 15C2A30, réf. 112533942",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "La fiche fabricant publie 4 L/s, soit 240 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML."
+		},
+		{
+			"id": "fiam-112533942-20260926-workingpressurebar-1",
+			"sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-26.pdf#page=8",
+			"sourceLabel": "Fiam, brochure technique en-26, p. 8",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
 		}
 	],
 	"fieldSources": {
@@ -117,6 +136,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"fiam-112509903-20260926"
+		],
+		"airflowBasis": [
+			"fiam-112509903-20260926"
 		]
 	},
 	"notes": [
@@ -126,7 +148,8 @@ const product: ToolProfileInput = {
 		"min": 240,
 		"typical": 240,
 		"max": 240
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

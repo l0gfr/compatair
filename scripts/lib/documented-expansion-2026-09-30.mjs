@@ -1,3 +1,4 @@
+import { applyReviewedOctober21Amendment } from './reviewed-catalog-amendments-2026-10-21.mjs';
 import { applyReviewedOctober20Amendment } from './reviewed-catalog-amendments-2026-10-20.mjs';
 import { applyReviewedOctober19Amendment } from './reviewed-catalog-amendments-2026-10-19.mjs';
 import { applyReviewedOctober18Amendment } from './reviewed-catalog-amendments-2026-10-18.mjs';
@@ -59,5 +60,5 @@ export function buildDocumentedExpansion(snapshot) {
 	});
 	const identities = new Set();
 	for (const p of [...compressors, ...tools]) { if (identities.has(p.id)) throw new Error('Identifiant dupliqué'); identities.add(p.id); }
-	return { compressors: compressors.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment), tools: tools.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment) };
+	return { compressors: compressors.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment), tools: tools.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment) };
 }

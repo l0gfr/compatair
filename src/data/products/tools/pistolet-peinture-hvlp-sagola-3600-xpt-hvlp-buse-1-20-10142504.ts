@@ -32,13 +32,14 @@ const product: ToolProfileInput = {
     }
   },
   "editorial": {
-    "overview": "Sagola 3600 XPT HVLP buse 1.20 (réf. 10142504). Le catalogue et la notice donnent des pressions incompatibles pour ce chapeau. Aucun point de consommation n’est choisi entre ces sources.",
+    "overview": "3600 XPT HVLP 10142504 : la buse de 1,20 mm est associée aux bases hydrosolubles et solvantées, à 145 g/min et 245 mm de jet à 15–18 cm. La 1,40 voisine 10142506 est associée aux bases solvantées, à 161 g/min et 255 mm. Cette comparaison aide à lire la configuration, mais le catalogue mesure l’air à 2 bar tandis que la notice limite le chapeau HVLP à 1,8 bar. Aucun de ces points contradictoires n’est choisi pour le calcul.",
     "verifiedFacts": [
       "Buse : 1.20 mm.",
       "Chapeau d’air : HVLP.",
       "Maximum d’entrée HVLP dans la notice : 1.8 bar."
     ],
     "limitations": [
+      "Les sorties produit en g/min ne sont pas des débits d’air. Respecter la notice de la version livrée et faire résoudre la contradiction avant un dimensionnement conclusif.",
       "Le catalogue et la notice donnent des pressions incompatibles pour ce chapeau. Aucun point de consommation n’est choisi entre ces sources.",
       "Le catalogue donne 360 L/min à 2 bar ; la notice liée impose 1,8 bar maximum avec le chapeau HVLP. Le point n’est pas arbitré entre ces deux sources.",
       "Aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."

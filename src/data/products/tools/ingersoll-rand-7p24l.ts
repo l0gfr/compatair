@@ -9,110 +9,113 @@ const product: ToolProfileInput = {
 	"categoryId": "polisseuse",
 	"category": "polisseuse",
 	"label": "Ingersoll Rand 7P24L",
-	"demandModel": "fixed-flow",
-	"workingPressureBar": {
-		"min": 6.2,
-		"typical": 6.2,
-		"max": 6.2
-	},
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
 	"confidence": "B",
 	"image": {
 		"src": "/images/products/ingersoll-rand-7p24l.webp",
 		"alt": "Repères techniques Ingersoll Rand 7P24L, référence 7P24L",
-		"sourceUrl": "https://powertools.ingersollrand.com/en-gb/asset-library/#page=16",
+		"sourceUrl": "https://powertools.ingersollrand.com/es-lac/surface-preparation-finishing-tools/sanders-polishers-buffers/pro-7p/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Ingersoll Rand 7P24L, référence 7P24L. Le tableau fabricant publie 622,971 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Puissance publiée : 0.8 hp. Vitesse à vide : 2400 tr/min.",
+		"overview": "7P24L : polisseuse à levier, 2 400 tr/min et bonnet de 7 pouces sur sortie 5/8-11. La 7S48L de la même notice utilise un plateau de ponçage et tourne à 4 800 tr/min. La page régionale du fabricant nomme bien 7P24L sans suffixe EU et donne 439 L/min en charge. La fonction et la vitesse distinguent ces deux références ; les valeurs d’une variante EU ne lui sont pas transférées.",
 		"verifiedFacts": [
-			"Le fabricant donne les performances à 90 psi, avec l’équivalence publiée de 6,2 bar dans les consignes du même catalogue.",
-			"Valeur de la colonne CFM : 22. Conversion en L/min par le facteur 28,316846592 ; arrondi à 0,001 L/min.",
-			"Référence fabricant : 7P24L.",
-			"Puissance publiée : 0.8 hp.",
-			"Vitesse à vide : 2400 tr/min.",
-			"Échappement : Latéral."
+			"Puissance publiée : 0,8 hp / 0,6 kW.",
+			"Vitesse à vide : 2 400 tr/min.",
+			"Échappement : latéral.",
+			"Sortie : 5/8-11 ; bonnet de 7 pouces.",
+			"Consommation en charge documentaire : 15,5 cfm / 439 L/min, sans pression de mesure appariée."
 		],
 		"limitations": [
-			"Le catalogue est conservé dans la bibliothèque du fabricant ; la disponibilité commerciale du modèle doit être confirmée.",
-			"Les valeurs sont déclarées par le fabricant. Les débits en CFM ne sont pas des mesures indépendantes CompatAir."
+			"La consommation reste hors du calcul de compatibilité : la pression de mesure et les conditions volumétriques complètes ne sont pas établies.",
+			"La bibliothèque ancienne répond429 ; son fragment de page n’est pas un document PDF. Ses transcriptions antérieures restent dans l’historique, sans être traitées comme des valeurs confirmées.",
+			"Lecture documentaire sans essai physique. Le lecteur web ne prouve ni disponibilité commerciale actuelle ni conformité de la fourniture en France.",
+			"Le flexible minimal est donné à8mm sur la page et3/8pouce(9,3mm) dans la notice. Cette divergence doit être résolue avec le montage livré ; aucun diamètre universel n’est conseillé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Le fabricant donne les performances à 90 psi, avec l’équivalence publiée de 6,2 bar dans les consignes du même catalogue.",
-			"evidenceIds": [
-				"ingersoll-rand-7p24l-20260926-workingpressurebar-1"
-			]
-		},
-		{
-			"label": "Condition de consommation",
-			"value": "Valeur de la colonne CFM : 22. Conversion en L/min par le facteur 28,316846592 ; arrondi à 0,001 L/min.",
-			"evidenceIds": [
-				"ingersoll-rand-7p24l-20260926"
-			]
-		},
-		{
 			"label": "Puissance publiée",
-			"value": "0.8 hp",
+			"value": "0,8 hp / 0,6 kW",
 			"evidenceIds": [
-				"ingersoll-rand-7p24l-20260926"
+				"october21-ingersoll-rand-7p24l-model-table"
 			]
 		},
 		{
 			"label": "Vitesse à vide",
-			"value": "2400 tr/min",
+			"value": "2 400 tr/min",
 			"evidenceIds": [
-				"ingersoll-rand-7p24l-20260926"
+				"october21-ingersoll-rand-7p24l-model-table"
 			]
 		},
 		{
 			"label": "Échappement",
-			"value": "Latéral",
+			"value": "latéral",
 			"evidenceIds": [
-				"ingersoll-rand-7p24l-20260926"
+				"october21-ingersoll-rand-7p24l-model-table"
+			]
+		},
+		{
+			"label": "Sortie",
+			"value": "5/8-11 ; bonnet de 7 pouces",
+			"evidenceIds": [
+				"october21-ingersoll-rand-7p24l-model-table"
+			]
+		},
+		{
+			"label": "Consommation documentaire hors calcul",
+			"value": "15,5 cfm / 439 L/min en charge ; pression de mesure non établie.",
+			"evidenceIds": [
+				"october21-ingersoll-rand-7p24l-model-table"
+			]
+		},
+		{
+			"label": "Condition de pression",
+			"value": "Non établie pour la mesure de consommation ; aucune consigne de famille transférée.",
+			"evidenceIds": [
+				"october21-ingersoll-rand-7p24l-model-table"
 			]
 		}
 	],
 	"evidence": [
 		{
-			"id": "ingersoll-rand-7p24l-20260926",
-			"sourceUrl": "https://powertools.ingersollrand.com/en-gb/asset-library/#page=16",
-			"sourceLabel": "Ingersoll Rand, IR Industrial Air Surface Preparation Tool Catalog.pdf, bibliothèque officielle, p. 16, réf. 7P24L",
+			"id": "october21-ingersoll-rand-7p24l-model-table",
+			"sourceUrl": "https://powertools.ingersollrand.com/es-lac/surface-preparation-finishing-tools/sanders-polishers-buffers/pro-7p/",
+			"sourceLabel": "Ingersoll Rand, tableau officiel des modèles 7P24L",
 			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-26",
+			"retrievedAt": "2026-10-21",
 			"confidence": "A",
-			"notes": "Valeur de la colonne CFM : 22. Conversion en L/min par le facteur 28,316846592 ; arrondi à 0,001 L/min."
+			"notes": "Tableau primaire lu par l’outil web ; ce lecteur expose une copie indexée et ne fournit pas de statut HTTP courant. Le transfert CLI429 reste consigné. La pression de mesure du débit n’est pas établie. La source de modèle documente explicitement le périmètre lu et l’absence de point de pression vérifiable ; le champ reste vide, jamais un nominal inventé."
 		},
 		{
-			"id": "ingersoll-rand-7p24l-20260926-workingpressurebar-1",
-			"sourceUrl": "https://powertools.ingersollrand.com/en-gb/asset-library/#page=26",
-			"sourceLabel": "Ingersoll Rand, IR Industrial Air Surface Preparation Tool Catalog.pdf, bibliothèque officielle, p. 26",
+			"id": "october21-ingersoll-rand-7p24l-model-table-product-information",
+			"sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/bltd89674ca5491ef9a/blt6c5df3c845dfca8f/680a19d1caf58865bdb6cdf2/03529385_ed14_P.pdf#page=3",
+			"sourceLabel": "Ingersoll Rand, Product Information, tableau des modèles et installation",
 			"sourceType": "manufacturer",
-			"retrievedAt": "2026-09-26",
+			"retrievedAt": "2026-10-21",
 			"confidence": "A",
-			"notes": "Consigne de fonctionnement à 90 psi avec l’équivalence de 6,2 bar, et tableaux de performances à 90 psi."
+			"notes": "Document lié par la page officielle, lu intégralement pour les pages anglaises1–4 ; SHA-256 6fa6784a22e9dc2f3ccdd9b92cf8325df45139a6f06d14c8416948dc007f66b4. La consigne PMAX ne fournit pas un point de mesure de consommation."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"ingersoll-rand-7p24l-20260926"
+			"october21-ingersoll-rand-7p24l-model-table"
+		],
+		"demandModel": [
+			"october21-ingersoll-rand-7p24l-model-table"
+		],
+		"demandExplanation": [
+			"october21-ingersoll-rand-7p24l-model-table"
 		],
 		"workingPressureBar": [
-			"ingersoll-rand-7p24l-20260926-workingpressurebar-1"
-		],
-		"airflowLpm": [
-			"ingersoll-rand-7p24l-20260926"
+			"october21-ingersoll-rand-7p24l-model-table"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 622.971,
-		"typical": 622.971,
-		"max": 622.971
-	}
+	"demandExplanation": "La page de modèle publie une consommation en charge, sans établir la pression de mesure. L’ancienne transcription de bibliothèque est retirée du calcul ; aucune suffisance d’alimentation n’est conclue."
 };
 
 export default product;

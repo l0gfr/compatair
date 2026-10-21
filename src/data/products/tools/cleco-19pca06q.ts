@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Cleco 19PCA06Q, référence 19PCA06Q. Le tableau fabricant publie 310 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Plage de couple publiée : 1.1 à 5.1 Nm. Vitesse à vide publiée : 260 tr/min.",
+		"overview": "19PCA06Q : visseuse Clecomatic à commande par appui et gâchette, 260 tr/min, 1,1–5,1 Nm et longueur de 216 mm. La 19PCA05Q voisine possède la même plage de couple mais tourne à 660 tr/min. Le choix du temps d’approche et du réglage sur l’assemblage réel ne se déduit pas des 310 L/min communs à 6,2 bar, dont le régime n’est pas précisé.",
 		"verifiedFacts": [
 			"Performances publiées à 6,2 bar à l’entrée de l’outil, note de la page 69.",
 			"Consommation générale publiée de 310 L/min pour la série 19 ; le catalogue ne la qualifie pas de maximum ou de moyenne.",
@@ -33,6 +33,7 @@ const product: ToolProfileInput = {
 			"Série et commande : 19P ; appui et gâchette."
 		],
 		"limitations": [
+			"Les 310 L/min ne sont qualifiés ni de maximum ni de consommation en charge ; ils ne permettent pas un verdict positif d’alimentation en charge.",
 			"Données de catalogue industriel, sans essai physique CompatAir. Disponibilité et révision livrée à confirmer avec le fournisseur.",
 			"Source : catalogue GI-1250-EU, édition archivée du fabricant. Vérifier la référence et la notice de la révision effectivement livrée."
 		]
@@ -104,6 +105,33 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation générale publiée de 310 L/min pour la série 19 ; le catalogue ne la qualifie pas de maximum ou de moyenne."
+		},
+		{
+			"id": "cleco-19pca05q-20260926",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=69",
+			"sourceLabel": "Cleco et Master Power, catalogue GI-1250-EU, p. 69, réf. 19PCA05Q",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation générale publiée de 310 L/min pour la série 19 ; le catalogue ne la qualifie pas de maximum ou de moyenne."
+		},
+		{
+			"id": "cleco-19pca04q-20260926",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=69",
+			"sourceLabel": "Cleco et Master Power, catalogue GI-1250-EU, p. 69, réf. 19PCA04Q",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation générale publiée de 310 L/min pour la série 19 ; le catalogue ne la qualifie pas de maximum ou de moyenne."
+		},
+		{
+			"id": "cleco-19pca03q-20260926",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=69",
+			"sourceLabel": "Cleco et Master Power, catalogue GI-1250-EU, p. 69, réf. 19PCA03Q",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation générale publiée de 310 L/min pour la série 19 ; le catalogue ne la qualifie pas de maximum ou de moyenne."
 		}
 	],
 	"fieldSources": {
@@ -115,6 +143,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"cleco-19pca06q-20260926"
+		],
+		"airflowBasis": [
+			"cleco-19pca06q-20260926"
 		]
 	},
 	"notes": [
@@ -124,7 +155,8 @@ const product: ToolProfileInput = {
 		"min": 310,
 		"typical": 310,
 		"max": 310
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

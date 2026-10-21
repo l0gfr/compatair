@@ -32,13 +32,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Asturomec PS/S (réf. 50212). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "PS/S 50212 : sableuse à réservoir aluminium à baïonnette de 1 L, masse publiée de 1,15 kg. La PS 50210 voisine aspire l’abrasif par un tube de 2 m en 16 × 22 mm et pèse 1,75 kg. La préparation de l’abrasif et les rechargements distinguent ces montages, qui partagent une buse de 6 mm et 5 à 8 bar de service. Aucune consommation n’est publiée pour en déduire un compresseur.",
 		"verifiedFacts": [
 			"Buse : acier cémenté trempé, diamètre 6 mm.",
 			"Corps : laiton sablé nickelé.",
 			"Réservoir : aluminium 1000 cc."
 		],
 		"limitations": [
+			"Le tube d’aspiration d’abrasif ne doit pas être confondu avec l’alimentation d’air. La buse commune ne prouve ni une consommation ni un rendement de décapage identiques.",
 			"Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 			"Édition italienne 2024 ; aucune disponibilité commerciale actuelle n’est vérifiée.",
 			"La plage de service ne constitue pas une pression de mesure de consommation ; aucun facteur de marche implicite.",

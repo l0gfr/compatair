@@ -82,21 +82,28 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october3d-alup-pdf-02-p7"
 			]
+		},
+		{
+			"label": "Régulation et condition du FAD",
+			"value": "Vitesse variable ; capacité nominale publiée selon ISO 1217 annexe E, minimum de modulation non précisé",
+			"evidenceIds": [
+				"october3d-alup-pdf-02-p7",
+				"october3d-alup-pdf-02-p2"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "ALUP Allegretto 2. 293,333 L/min à 9,5 bar. Groupe sur socle sans réservoir de stockage intégré.",
+		"overview": "Allegretto 2 sur socle : compresseur à vis lubrifié à vitesse variable de 2,2 kW, sans cuve. La ligne 10 bar publie 17,6 m³/h à 9,5 bar, soit 293,333 L/min. L’Allegretto 3 conserve le montage sur socle et publie 21,6 m³/h à 9,5 bar avec 3 kW.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 0 L.",
 			"Pression maximale de fonctionnement publiée : 10 bar."
 		],
 		"limitations": [
-			"La pression FAD et le maximum de la version sont conservés séparément.",
-			"Version sur socle retenue ; réservoir externe exclu.",
-			"Fréquence non publiée dans la fiche retenue ; aucune transposition des performances à 50 Hz.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"Le tableau imprime aussi 293 L/min pour l’Allegretto 2 ; la conversion retenue part de 17,6 m³/h. Les minima de modulation ne sont pas publiés, ce point reste une capacité nominale de la version VSD.",
+			"Le socle mesure 620 × 630 × 975 mm ; les masses publiées sont de 110 kg pour le 2 et 115 kg pour le 3. Les réservoirs et sécheurs intégrés correspondent à d’autres montages.",
+			"La note propre à Allegretto cite ISO 1217 annexe E ; celle de Sonetto cite l’annexe C. Ces deux familles ne sont pas fusionnées.",
+			"Le service continu est explicite pour Allegretto 2-7. La tension et la fréquence de cette version restent à confirmer sur le devis."
 		]
 	},
 	"evidence": [

@@ -76,29 +76,29 @@ const product: CompressorInput = {
 			"label": "Alimentation publiée",
 			"value": "400 / 50 / 3",
 			"evidenceIds": [
-				"october3d-mattei-pdf-11-p6"
+				"october3d-mattei-pdf-11-p7"
 			]
 		},
 		{
 			"label": "Fréquence retenue",
 			"value": "50 Hz",
 			"evidenceIds": [
-				"october3d-mattei-pdf-11-p6"
+				"october3d-mattei-pdf-11-p7"
 			]
 		}
 	],
 	"editorial": {
-		"overview": "Mattei BLADE S 8. 995 L/min à 9,5 bar. BLADE sur réservoir 270 L.",
+		"overview": "BLADE S 8, version 400 V triphasée à 50 Hz : groupe de 7,5 kW sur cuve de 270 L, avec 995 L/min à 9,5 bar pour la version 10 bar. Il pèse 358 kg et mesure 1560 × 760 × 1610 mm. Le BLADE SE 8 ajoute un sécheur avec la même capacité publiée.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 270 L.",
 			"Plafond conservateur de la plage de fonctionnement : 10 bar."
 		],
 		"limitations": [
-			"Service continu déclaré dans les modes de commande décrits ; réglages et installation de la notice à respecter.",
-			"La version 10 bar est retenue ; FAD à9,5 bar, sans fusion avec 8 bar ou 60 Hz.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"Le SE 8 mesure 1490 × 790 × 1610 mm et pèse 385 kg ; la différence d’équipement change l’implantation tout en conservant 270 L.",
+			"Le FAD suit ISO 1217 annexe C. Les colonnes 50 Hz et 60 Hz ne sont pas réunies ; la pression de référence est de 9,5 bar pour la version 10 bar.",
+			"Les modes continu et automatique sont décrits dans la brochure. Réglages, refroidissement et entretien de la notice restent applicables.",
+			"Le traitement d’air au point d’usage et la disponibilité locale de la version commandée restent à confirmer."
 		]
 	},
 	"evidence": [
@@ -152,11 +152,19 @@ const product: CompressorInput = {
 		],
 		"dutyCycle": [
 			"october3d-mattei-pdf-11-p6"
+		],
+		"voltage": [
+			"october3d-mattei-pdf-11-p7"
+		],
+		"phase": [
+			"october3d-mattei-pdf-11-p7"
 		]
 	},
 	"notes": [
 		"Pression FAD, plage de fonctionnement et pression de soupape restent distinctes. ISO 1217 n’est pas ajoutée à une source qui ne la revendique pas."
-	]
+	],
+	"voltage": "400 V, 50 Hz",
+	"phase": "three-phase"
 };
 
 export default product;

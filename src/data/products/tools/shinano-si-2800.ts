@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-2800, référence SI-2800. Le tableau fabricant publie 648 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 15 000 tr/min. Masse publiée : 1,43 kg.",
+		"overview": "SI-2800 : ponceuse à bande de 20 × 520 mm, contre 30 × 540 mm pour la SI-2830. Le catalogue annonce respectivement 15 000 et 10 000 tr/min et des maxima d’air de 10,8 et 15 L/s à 6,3 bar, soit 648 et 900 L/min. La largeur travaillée, le passage de la bande et la capacité d’air disponible doivent être vérifiés ensemble.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Colonne Max Air Consumption : 22.8 CFM / 10.8 L/s. Conversion du maximum publié : 10.8 × 60 = 648 L/min.",
@@ -32,6 +32,7 @@ const product: ToolProfileInput = {
 			"Masse publiée : 1,43 kg."
 		],
 		"limitations": [
+			"Les tr/min ne sont pas une vitesse linéaire de bande. Le carter et la bande doivent correspondre à la référence ; aucune vitesse de matière enlevée n’est extrapolée.",
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
 			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
@@ -79,6 +80,24 @@ const product: ToolProfileInput = {
 		},
 		{
 			"id": "shinano-si-2800-20260926-workingpressurebar-1",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+			"sourceLabel": "Shinano, catalogue général 2025, p. 43",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+		},
+		{
+			"id": "shinano-si-2830-20260926",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=11",
+			"sourceLabel": "Shinano, catalogue général 2025, p. 11, réf. SI-2830",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Colonne Max Air Consumption : 31.8 CFM / 15 L/s. Conversion du maximum publié : 15 × 60 = 900 L/min."
+		},
+		{
+			"id": "shinano-si-2830-20260926-workingpressurebar-1",
 			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
 			"sourceLabel": "Shinano, catalogue général 2025, p. 43",
 			"sourceType": "manufacturer",

@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-2005HD, référence SI-2005HD. Le tableau fabricant publie 408 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Pince 1/4 pouce ; puissance publiée 200 W. Vitesse à vide publiée : 20000 tr/min.",
+		"overview": "SI-2005HD : meuleuse d’angle à pince de 1/4 pouce ; le suffixe -6 voisin désigne une pince de 6 mm. Le moteur commun de 200 W tourne à 20 000 tr/min et la table donne 6,8 L/s maximum, soit 408 L/min à 6,3 bar. La queue réelle de la fraise doit correspondre à la pince : 1/4 pouce et 6 mm ne deviennent pas interchangeables par arrondi.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Consommation maximale, colonne Max Air Consumption : 14.4 CFM / 6.8 L/s, soit 408 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
@@ -33,6 +33,7 @@ const product: ToolProfileInput = {
 			"Masse publiée : 0.56 kg."
 		],
 		"limitations": [
+			"Le diamètre, la vitesse admissible et le porte-à-faux de l’accessoire suivent la notice du montage réel ; le besoin d’air égal ne les valide pas.",
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
 			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
@@ -87,6 +88,24 @@ const product: ToolProfileInput = {
 		},
 		{
 			"id": "shinano-si-2005hd-20260926-workingpressurebar-1",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+			"sourceLabel": "Shinano, catalogue général 2025, p. 43",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+		},
+		{
+			"id": "shinano-si-2005hd-6-20260926",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=20",
+			"sourceLabel": "Shinano, catalogue général 2025, p. 20, réf. SI-2005HD-6",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation maximale, colonne Max Air Consumption : 14.4 CFM / 6.8 L/s, soit 408 L/min. Tableau partagé uniquement entre les références nommées par Shinano."
+		},
+		{
+			"id": "shinano-si-2005hd-6-20260926-workingpressurebar-1",
 			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
 			"sourceLabel": "Shinano, catalogue général 2025, p. 43",
 			"sourceType": "manufacturer",

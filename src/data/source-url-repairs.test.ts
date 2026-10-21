@@ -44,7 +44,12 @@ describe('reviewed source URL repairs', () => {
 	});
 
 	it('preserves model identity, flow pressure pairs and compatibility inputs through source relocation', () => {
-  for (const expected of [...repairs.preservedTechnicalValues, ...octoberRepairs.preservedTechnicalValues, ...aircraftRepairs.preservedTechnicalValues, ...october2Repairs.preservedTechnicalValues]) expect(products.get(expected.id)).toMatchObject(expected);
+  for (const expected of [...repairs.preservedTechnicalValues, ...octoberRepairs.preservedTechnicalValues, ...aircraftRepairs.preservedTechnicalValues, ...october2Repairs.preservedTechnicalValues]) {
+   // The October21 exact-reference review adds the evidenced frequency; all
+   // other identity and compatibility inputs from the relocation stay asserted.
+   const current = expected.id === 'aircraft-airboy-262-e' ? { ...expected, voltage: '230 V, 50 Hz' } : expected;
+   expect(products.get(expected.id)).toMatchObject(current);
+  }
  });
 
  it('removes an unsupported specification while retaining the Aircraft manual average-flow boundary', () => {

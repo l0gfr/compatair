@@ -2,6 +2,7 @@
 title: "CP7732C ou CP7748 : comparer le débit en charge avant le couple maximal"
 description: "CP7732C et CP7748 : consommations en charge, usages et incohérences d’encombrement de la fiche CP7748, pour choisir sans faux classement."
 pubDate: 2026-09-29
+updatedDate: 2026-10-21
 category: Choisir
 audiences: ["professionnel"]
 metiers: ["garage-automobile", "maintenance-industrielle"]
@@ -33,7 +34,7 @@ La conversion en minutes donne 612 et 720 L/min. Elle ne change ni le type de co
 <figcaption>Conversions de valeurs constructeur en charge : 612 L/min pour la CP7732C dans la brochure et 720 L/min pour la CP7748 dans la fiche web. Aucun essai comparatif de couple.</figcaption>
 </figure>
 
-La [fiche web de la CP7732C](https://tools.cp.com/en/products/impactwrenches/cp7732c-sku8941077321) donne 10 L/s en charge, contre 10,2 dans la brochure. CompatAir conserve les deux observations et utilise 612 L/min comme besoin conservateur documenté. Rien dans les pages lues ne permet d’expliquer cet écart comme un arrondi certain ou une évolution mesurée.
+La [fiche web de la CP7732C](https://tools.cp.com/en/products/impactwrenches/cp7732c-sku8941077321) donne 10 L/s en charge, contre 10,2 dans la brochure. CompatAir conserve les deux observations et retient 612 L/min pour la comparaison des **valeurs en charge**. La même fiche publie aussi 14 L/s à vide, soit 840 L/min : les 612 L/min ne sont donc pas le maximum de toutes les phases de fonctionnement. Le bilan d’alimentation doit conserver ce régime à vide distinct, comme le fait la fiche produit. Rien dans les pages lues ne permet d’expliquer cet écart comme un arrondi certain ou une évolution mesurée.
 
 ## Le couple maximal n’est pas un serrage contrôlé
 

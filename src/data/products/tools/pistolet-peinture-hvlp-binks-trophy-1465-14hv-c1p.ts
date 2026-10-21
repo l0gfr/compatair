@@ -31,7 +31,7 @@ const product: ToolProfileInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
   },
   "editorial": {
-    "overview": "Binks Trophy 1465-14HV-C1P. Les conditions de référence du volume normalisé et/ou le régime de mesure manquent. Le débit publié reste hors du calcul FAD. Assemblage 1465-14HV-C1P, buse 1.4 mm, chapeau C1, HVLP, alimentation pressure / siphon sans godet fourni.",
+    "overview": "Trophy 1465-14HV-C1P : buse de 1,4 mm et chapeau C1 HVLP avec ensemble de pointeau à embout plastique, signalé par le fabricant. La C1S voisine utilise le pointeau standard en inox. Le tableau place la C1P dans les produits légers à moyens et la C1S de 1,4 dans les produits plus épais ; le seul diamètre ne rend donc pas leurs applications équivalentes. L’entrée se mesure gâchette actionnée, séparément de la pression au chapeau.",
     "verifiedFacts": [
       "Code assemblage complet, publié littéralement : 1465-14HV-C1P.",
       "Buse produit publiée : 1.4 mm.",
@@ -42,6 +42,7 @@ const product: ToolProfileInput = {
       "Pression dans la source : Voir les couples pression d’entrée / pression au chapeau dans le tableau fabricant ; aucun nominal de travail unique inventé.."
     ],
     "limitations": [
+      "Les 2,5 à 6,4 SCFM du C1 restent dans leur unité originale, sans état de référence défini. Le godet 81-384 pour conversion à aspiration est vendu séparément ; l’entrée produit n’est pas destinée à être déposée ou remplacée.",
       "Consommation publiée en CFM ou SCFM ; l’état de référence n’est pas défini dans ces tableaux. Aucun coefficient volumique silencieux vers L/min FAD.",
       "Pression dans le chapeau, pression d’entrée dynamique et pression produit restent des grandeurs séparées.",
       "Les tailles de buse et les chapeaux proviennent d’une ligne d’assemblage complet. Aucun code commandable absent n’est fabriqué.",

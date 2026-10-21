@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Nitto Kohki APS-125, référence APS-125. Le tableau fabricant publie 450 L/min et une plage d’utilisation de 6 à 6 bar. Vitesse de rotation publiée : 10000 tr/min. Masse publiée : 0.69 kg.",
+		"overview": "APS-125 : ponceuse orbitale à plateau de 125 mm, orbite de 5 mm et 10 000 tr/min. L’APS-150 voisine utilise 150 mm ; le tableau conserve 450 L/min à vide à 6 bar. Les suffixes de l’APS-125 distinguent notamment fixation adhésive et autoagrippante à cinq trous. Le papier et l’équipement d’aspiration réellement commandés doivent être vérifiés, même à consommation identique.",
 		"verifiedFacts": [
 			"Pression de 0,6 MPa publiée dans le tableau, soit 6 bar. La valeur en kgf/cm² entre parenthèses n’est pas utilisée pour la conversion.",
 			"Consommation à vide explicitement publiée (No-load) : 0.45 m³/min. Conversion × 1 000 en L/min.",
@@ -33,6 +33,7 @@ const product: ToolProfileInput = {
 			"Diamètre de plateau : 125 mm."
 		],
 		"limitations": [
+			"La référence de base ne prouve pas quel suffixe est livré. Une possibilité de conversion ne signifie pas qu’un kit ou une aspiration sont inclus.",
 			"Le débit à vide n’établit pas à lui seul la consommation sous toutes les charges. Respecter les conditions d’emploi de la notice.",
 			"La conformité et la disponibilité de la version exacte doivent être confirmées avant achat."
 		]
@@ -83,6 +84,15 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation à vide explicitement publiée (No-load) : 0.45 m³/min. Conversion × 1 000 en L/min."
+		},
+		{
+			"id": "nitto-kohki-aps-150-20260926",
+			"sourceUrl": "https://www.nitto-kohki.eu/images/stories/products/pdf_catalogs/Tools_Catalog.pdf#page=44",
+			"sourceLabel": "Nitto Kohki, catalogue officiel des outils, p. 44, réf. APS-150",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation à vide explicitement publiée (No-load) : 0.45 m³/min. Conversion × 1 000 en L/min."
 		}
 	],
 	"fieldSources": {
@@ -94,6 +104,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"nitto-kohki-aps-125-20260926"
+		],
+		"airflowBasis": [
+			"nitto-kohki-aps-125-20260926"
 		]
 	},
 	"notes": [
@@ -103,7 +116,8 @@ const product: ToolProfileInput = {
 		"min": 450,
 		"typical": 450,
 		"max": 450
-	}
+	},
+	"airflowBasis": "free-speed"
 };
 
 export default product;

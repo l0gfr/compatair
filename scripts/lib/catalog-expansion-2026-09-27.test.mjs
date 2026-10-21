@@ -20,7 +20,7 @@ const withReviewedSources = product => {
  if (!relocation) return product;
  const updated = structuredClone(product);
  const { repair, reference } = relocation;
- if (['aircraft-airboy-131-of-e', 'aircraft-airboy-186-of-e'].includes(product.id)) {
+ if (['aircraft-airboy-131-of-e', 'aircraft-airboy-186-of-e', 'aircraft-airboy-262-e'].includes(product.id)) {
   expect(reviewedAirboySource(product)).toBe(product);
   return product;
  }
@@ -54,7 +54,7 @@ describe('700 additional documented manufacturer references', () => {
   for (const p of expansion.tools) expect(tools.find(x => x.id === p.id)).toEqual({ ...toolProfileSchema.parse(withReviewedSources(p)), category: toolCategoryLabel(p.categoryId) });
  });
  it('rejects a relocation that would overwrite an unreviewed source observation', () => {
-  const original = expansion.compressors.find(product => relocations.has(product.id) && !['aircraft-airboy-131-of-e', 'aircraft-airboy-186-of-e'].includes(product.id));
+  const original = expansion.compressors.find(product => relocations.has(product.id) && !['aircraft-airboy-131-of-e', 'aircraft-airboy-186-of-e', 'aircraft-airboy-262-e'].includes(product.id));
   expect(original).toBeDefined();
   for (const change of [product => { product.evidence[0].sourceUrl = 'https://example.com/unreviewed'; }, product => { product.evidence[0].retrievedAt = '2026-09-28'; }, product => { product.image.sourceUrl = 'https://example.com/unreviewed'; }]) {
    const changed = structuredClone(original);
@@ -63,7 +63,7 @@ describe('700 additional documented manufacturer references', () => {
   }
  });
  it('guards the exact AIRBOY source relocation before editorial reconstruction', () => {
-  for (const id of ['aircraft-airboy-131-of-e', 'aircraft-airboy-186-of-e']) {
+  for (const id of ['aircraft-airboy-131-of-e', 'aircraft-airboy-186-of-e', 'aircraft-airboy-262-e']) {
   const current = expansion.compressors.find(p=>p.id===id);
   const repair = relocations.get(current.id).repair;
   const prior = structuredClone(current); prior.evidence[0].sourceUrl=repair.oldUrl; prior.evidence[0].retrievedAt='2026-09-27'; prior.image.sourceUrl=repair.oldUrl;

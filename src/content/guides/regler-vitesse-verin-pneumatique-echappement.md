@@ -3,7 +3,7 @@ title: "Régler la vitesse d’un vérin pneumatique : admission, échappement 
 seoTitle: "Vitesse vérin pneumatique : admission ou échappement ?"
 description: "Vérin trop rapide, irrégulier ou brutal au redémarrage : distinguez réglage du débit, pression, échappement et état initial des chambres."
 pubDate: "2026-09-26"
-updatedDate: 2026-09-30
+updatedDate: 2026-10-21
 category: "Utiliser"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
@@ -59,7 +59,9 @@ Un [silencieux à examiner](/guides/silencieux-pneumatique-colmate-contre-pressi
 
 ## Une position immobile ne prouve pas une mise en sécurité
 
-Le [guide de sécurité Festo](https://www.festo.com/PDF_Flip/safety/en/files/assets/basic-html/page49.html) signale, dans son exemple, les limites du maintien de pression, les mouvements possibles et la nécessité de traiter les fonctions de sécurité. Une position centrale de distributeur ne doit donc pas être présentée comme une garantie générale d’immobilisation.
+Le [guide de sécurité Festo, page 49](https://www.festo.com/PDF_Flip/safety/en/files/assets/basic-html/page49.html) décrit un **montage particulier** : distributeur ISO, unité de blocage et états de mise sous pression des chambres. Sa fonction de maintien dépend de ces composants et des conditions de l’exemple. Ce document ne démontre pas qu’un distributeur quelconque à centre fermé garantit l’immobilisation.
+
+La [notice SMC ASS, page PDF 5](https://static.smc.eu/pdf/ASS100_EU.pdf#page=5) précise aussi les limites de son propre dispositif : une pression résiduelle peut encore entraîner une extension rapide ; une charge verticale constante ou une longue liaison de tube modifie les conditions de réglage. Ce ne sont pas des fonctions de sécurité universelles attribuables à tout raccord de débit.
 
 Pour une intervention, utilisez la procédure de consignation et de maîtrise des charges prévue pour l’équipement. Pour la réception, nous proposons deux comptes rendus distincts : performance du mouvement et validation des fonctions de sécurité. Notez les références et réglages retenus, les états d’arrêt testés par l’intégrateur et les critères d’acceptation. Cette séparation permet de retrouver un réglage utile sans lui attribuer une protection qu’il n’assure pas.
 
@@ -69,5 +71,5 @@ Le glossaire précise la définition de [réglage meter-out](/glossaire/#meter-o
 
 Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture éditoriale interne, sans essai physique ni validation professionnelle externe. Les exemples chiffrés explicitement hypothétiques ne sont pas des mesures de terrain.
 
-- [SMC, série ASS, principes de fonctionnement, pages PDF 2 et 4](https://static.smc.eu/pdf/ASS100_EU.pdf)
+- [SMC, série ASS, principes et limites, pages PDF 2, 4 et 5](https://static.smc.eu/pdf/ASS100_EU.pdf)
 - [Festo, Safety engineering guidelines, page 49](https://www.festo.com/PDF_Flip/safety/en/files/assets/basic-html/page49.html)

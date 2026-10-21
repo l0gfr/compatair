@@ -19,7 +19,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Black+Decker BD 195/6-NK, référence NKBB304BND308 : cuve de 6 L, pression maximale publiée de 8 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Groupe de compression : OL195. Capacité publiée sans pression de mesure : 180 l/min / 6,4 CFM.",
+		"overview": "BD 195/6-NK, code NKBB304BND308 : cuve de 6 L, maximum de 8 bar et groupe OL195 de 1,1 kW sans huile, en 230 V à 50 Hz. Le catalogue donne 10,1 kg et 375 × 262 × 400 mm. Le BD 195/12-NK possède 12 L, atteint 10 bar et indique 13 kg.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons sans huile. Puissance moteur publiée : 1,1 kW.",
@@ -29,9 +29,9 @@ const product: CompressorInput = {
 			"Vitesse de rotation : 3400 tr/min."
 		],
 		"limitations": [
-			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
-			"Édition du catalogue et disponibilité commerciale actuelle non établies. Le débit non qualifié n’est pas utilisé pour valider une compatibilité."
+			"Les deux références publient une capacité de 180 L/min sans pression de mesure ni qualification FAD. Le volume de cuve et la pression maximale ne documentent pas le débit utile à l’outil.",
+			"Le 12 L porte le code NKBN304BND309 et mesure 420 × 250 × 440 mm. Sa capacité de stockage et son encombrement diffèrent du 6 L.",
+			"Le taux de marche, l’édition du catalogue et la commercialisation actuelle restent à confirmer."
 		]
 	},
 	"specifications": [

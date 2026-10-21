@@ -76,18 +76,27 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october4-ktc-download-0-p2"
 			]
+		},
+		{
+			"label": "Alimentation de cette référence",
+			"value": "230 V, 50 Hz, monophasé",
+			"evidenceIds": [
+				"october4-ktc-download-0-p2"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "KTC COMPACK 2 270L vertical. 270 L/min déclarés à 10 bar. COMPACK sur réservoir 270 L.",
+		"overview": "COMPACK 2 sur cuve verticale de 270 L, code 1850120513 : moteur de 2,7 kW en 230 V monophasé à 50 Hz, avec 270 L/min à 10 bar. Le montage 90 L 1850120508 conserve ces caractéristiques de groupe, avec un réservoir horizontal.",
 		"verifiedFacts": [
 			"Configuration de pression documentée : 10 bar.",
 			"Cuve de stockage documentée : 270 L.",
 			"FAD sous pression identifié séparément des valeurs d’aspiration : 270 L/min déclarés à 10 bar."
 		],
 		"limitations": [
-			"Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil."
+			"Le 270 L mesure 64 × 67 × 170 cm et indique 123 kg dans la colonne kg ; le 90 L mesure 117 × 46 × 96 cm et indique 75 kg. Les colonnes lb affichent respectivement 275 et 176, valeurs non équivalentes aux masses en kg : faire confirmer la masse avant manutention.",
+			"La version 400 V triphasée porte le code 1850223513, avec 3 kW et 300 L/min. Ses performances ne sont pas transférées au code 1850120513.",
+			"Le débit est associé à ISO 1217 annexe C. Le taux de marche demeure inconnu ; la mention d’usage non continu ne permet pas de renseigner un taux de 100 %.",
+			"Implantation, alimentation et contenu de la commande restent à confirmer pour la référence exacte."
 		]
 	},
 	"evidence": [
@@ -120,12 +129,20 @@ const product: CompressorInput = {
 		],
 		"mpn": [
 			"october4-ktc-download-0-p2"
+		],
+		"voltage": [
+			"october4-ktc-download-0-p2"
+		],
+		"phase": [
+			"october4-ktc-download-0-p2"
 		]
 	},
 	"notes": [
 		"Portée de la source : FAD-pressure-qualified.",
 		"Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées."
-	]
+	],
+	"voltage": "230 V, 50 Hz",
+	"phase": "single-phase"
 };
 
 export default product;

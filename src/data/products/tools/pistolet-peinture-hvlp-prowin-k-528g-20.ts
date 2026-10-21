@@ -32,12 +32,13 @@ const product: ToolProfileInput = {
     }
   },
   "editorial": {
-    "overview": "ProWin K-528G-20. Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
+    "overview": "K-528G-20 : buse de 2,0 mm et godet latéral de 400 cm³. Le tableau lui attribue la cellule produit 200, contre 170 pour la K-528G-17, mais conserve 310 mm de jet et 250 L/min d’air. L’intitulé produit est en ml sans durée : ces cellules ne sont pas des ml/min ni une preuve de productivité. Le calibre, le produit et le jet utile se choisissent sans économie d’air déduite du diamètre.",
     "verifiedFacts": [
       "Buse : 2.0 mm.",
       "Largeur de jet : 310 mm."
     ],
     "limitations": [
+      "La plage 20–28 psi ne relie pas un point de pression aux 250 L/min. Le code SG du kit de réparation n’est pas la référence d’un pistolet complet.",
       "Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
       "La table publie une consommation, sans pression de mesure précise ni protocole de pulvérisation lié à cette valeur.",
       "Les codes SG de la colonne Turn-up Kit sont des kits de réparation et ne constituent pas des références de pistolets.",

@@ -19,10 +19,10 @@ describe('public catalog data governance', () => {
 			compressor_count: 5159,
 			tool_count: 20087,
 			explorable_combination_count: 103_628_833,
-			fixed_flow_tool_count: 8936,
-			fixed_verdict_count: 46_100_824,
-			parametric_tool_count: 11151,
-			parametric_combination_count: 57_528_009,
+			fixed_flow_tool_count: 8929,
+			fixed_verdict_count: 46_064_711,
+			parametric_tool_count: 11158,
+			parametric_combination_count: 57_564_122,
 			parametric_inputs: ['action_rate', 'volume_and_target_time'],
 		});
 	});

@@ -19,7 +19,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "PREBENA VITAS 45, référence VITAS 45 : cuve de 4 L, pression maximale publiée de 10 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Capacité de remplissage sans pression de mesure : 24 L/min. Vitesse de rotation : 2840 tr/min.",
+		"overview": "VITAS 45 : compresseur sans huile sur secteur 230 V, cuve de 4 L, moteur de 250 W et masse publiée de 10 kg. Le catalogue annonce 24 L/min de remplissage et 41 L/min aspirés. Le VITAS 100-AKKU fonctionne sur batterie 18 V, possède 5 L et annonce 72 L/min de remplissage pour 8,5 kg.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons sans huile. Puissance moteur publiée : 0,25 kW.",
@@ -30,8 +30,9 @@ const product: CompressorInput = {
 			"Masse publiée : 10,0 kg."
 		],
 		"limitations": [
-			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer."
+			"La pression d’essai du remplissage et le taux de marche restent inconnus. Aucune cadence ou autonomie d’outil n’est déduite de ces valeurs.",
+			"Le VITAS 45 atteint 10 bar et mesure 370 × 310 × 300 mm ; le 100-AKKU atteint 8 bar. Batterie et chargeur sont séparés pour la référence 100-AKKU seule.",
+			"Le catalogue donne une puissance acoustique LWA de 78 dB(A) pour le VITAS 45 et 93 dB(A) pour le 100-AKKU ; ces valeurs ne sont pas des pressions acoustiques à distance."
 		]
 	},
 	"specifications": [
@@ -66,6 +67,13 @@ const product: CompressorInput = {
 		{
 			"label": "Masse publiée",
 			"value": "10,0 kg",
+			"evidenceIds": [
+				"prebena-vitas-45-20260927"
+			]
+		},
+		{
+			"label": "Puissance acoustique LWA publiée",
+			"value": "78 dB(A)",
 			"evidenceIds": [
 				"prebena-vitas-45-20260927"
 			]

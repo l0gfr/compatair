@@ -45,6 +45,7 @@ const repinned = async copy => {
  code = code.replace("'./reviewed-catalog-amendments-2026-10-18.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-18.mjs', import.meta.url).href));
  code = code.replace("'./reviewed-catalog-amendments-2026-10-19.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-19.mjs', import.meta.url).href));
  code = code.replace("'./reviewed-catalog-amendments-2026-10-20.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-20.mjs', import.meta.url).href));
+ code = code.replace("'./reviewed-catalog-amendments-2026-10-21.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-21.mjs', import.meta.url).href));
  const replacement = `const approvedSources = ${JSON.stringify(copy.sources.map(source => ({ id: source.id, sha256: digest(source) })))};\nconst approvedRows = ${JSON.stringify(copy.tools.map(row => ({ documentRowId: row.documentRowId, sha256: digest(row) })))};`;
  const pattern = /const approvedSources = \[[\s\S]*?\];\nconst approvedRows = \[[\s\S]*?\];/;
  if (!pattern.test(code)) throw new Error('Missing fixed approval contracts');
@@ -87,9 +88,10 @@ describe('documented tools, October 3, fourth batch', () => {
    for (const fact of product.specifications) expect(fact.evidenceIds.every(id => ids.has(id)), product.id + ':' + fact.label).toBe(true);
   }
  });
- it('uses97 documented operating flows without implicit averaging', () => {
+ it('uses96 documented operating flows after excluding the reviewed unqualified normalized-volume SATA reference', () => {
   const tools = batch.filter(product => product.demandModel === 'fixed-flow');
-  expect(tools).toHaveLength(97);
+  expect(tools).toHaveLength(96);
+  expect(tools.some(product => product.id === 'pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-4-146373')).toBe(false);
   for (const product of tools) {
    const result = evaluateCompatibility(ample, product);
    expect(result.verdict).not.toBe('insufficient_data');
@@ -118,9 +120,12 @@ describe('documented tools, October 3, fourth batch', () => {
    expect(product.airPerActionLiters).toBe(row.flowOriginal * 60 / 60);
   }
  });
- it('keeps822 incomplete or contradictory demands outside compatibility calculations', () => {
+ it('keeps823 incomplete, contradictory or unspecified-normal-volume demands outside compatibility calculations', () => {
   const tools = batch.filter(product => product.demandModel === 'variable-volume');
-  expect(tools).toHaveLength(822);
+  expect(tools).toHaveLength(823);
+  const sata = tools.find(product => product.id === 'pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-4-146373');
+  expect(sata.workingPressureBar.typical).toBe(2);
+  expect(sata.editorial.limitations.join(' ')).toContain('hors du calcul FAD');
   for (const product of tools) {
    expect(evaluateCompatibility(ample, product).verdict).toBe('insufficient_data');
    expect(product.airflowLpm).toBeUndefined();

@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "DEPRAG 344-140-31, référence 404623C. Le tableau fabricant publie 1 100 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple minimal : 40 Nm. Couple maximal : 130 Nm.",
+		"overview": "344-140-31, commande 404623C : broche de vissage à démarrage déporté, rotation droite et arrêt à droite, carré de 3/4 pouce. Elle couvre 40–130 Nm à 160 tr/min ; la 344-940-31 404623B voisine couvre 40–85 Nm à 250 tr/min. Le moteur commun annonce 1,1 m³/min à 6,3 bar, soit 1 100 L/min sans régime précisé. Le couple, la vitesse d’approche et les commandes de la machine restent à dimensionner séparément.",
 		"verifiedFacts": [
 			"La note du tableau indique une pression de fonctionnement de 6,3 bar.",
 			"Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine.",
@@ -33,6 +33,7 @@ const product: ToolProfileInput = {
 			"Vitesse à vide : 160 tr/min."
 		],
 		"limitations": [
+			"Les forces de poussée en N du tableau ne sont pas des pressions en bar. Les variantes U réversibles ont d’autres couples ; aucune valeur n’est transférée depuis elles.",
 			"Le couple et la vitesse correspondent à la colonne de cette référence commande, pas à l’ensemble de la famille.",
 			"Les broches intégrées nécessitent aussi le dimensionnement des auxiliaires de l’installation, qui ne sont pas inclus dans la consommation du moteur de vissage."
 		]
@@ -97,6 +98,15 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine."
+		},
+		{
+			"id": "deprag-404623b-20260926",
+			"sourceUrl": "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3130/D3130en.pdf#page=12",
+			"sourceLabel": "DEPRAG, brochure technique D3130en, p. 12, réf. 404623B",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine."
 		}
 	],
 	"fieldSources": {
@@ -108,6 +118,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"deprag-404623c-20260926"
+		],
+		"airflowBasis": [
+			"deprag-404623c-20260926"
 		]
 	},
 	"notes": [
@@ -117,7 +130,8 @@ const product: ToolProfileInput = {
 		"min": 1100,
 		"typical": 1100,
 		"max": 1100
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

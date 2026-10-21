@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-3003BM, référence SI-3003BM. Le tableau fabricant publie 474 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Plateau rectangulaire 75 × 100 mm, autoagrippant (Velcro) ; orbite 4 mm ; version sans aspiration autonome. Vitesse à vide publiée : 8000 tr/min.",
+		"overview": "SI-3003BM : ponceuse rectangulaire Heavy Duty à plateau autoagrippant de 75 × 100 mm et orbite de 4 mm. La SI-3003B voisine possède le plateau Leather ; les deux demandent une feuille de format 75 × 110 mm adapté à leur fixation, 8 000 tr/min et 7,9 L/s maximum à 6,3 bar. Le suffixe M règle la fixation à commander, pas un autre besoin que les 474 L/min communs.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Consommation maximale, colonne Max Air Consumption : 16.8 CFM / 7.9 L/s, soit 474 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
@@ -33,6 +33,7 @@ const product: ToolProfileInput = {
 			"Masse publiée : 1.05 kg."
 		],
 		"limitations": [
+			"Le format de plateau n’est pas le format du papier. Une feuille de bonne dimension mais de mauvaise fixation n’est pas validée par le bilan d’air.",
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
 			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
@@ -87,6 +88,60 @@ const product: ToolProfileInput = {
 		},
 		{
 			"id": "shinano-si-3003bm-20260926-workingpressurebar-1",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+			"sourceLabel": "Shinano, catalogue général 2025, p. 43",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+		},
+		{
+			"id": "shinano-si-3003b-20260926",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=13",
+			"sourceLabel": "Shinano, catalogue général 2025, p. 13, réf. SI-3003B",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation maximale, colonne Max Air Consumption : 16.8 CFM / 7.9 L/s, soit 474 L/min. Tableau partagé uniquement entre les références nommées par Shinano."
+		},
+		{
+			"id": "shinano-si-3003b-20260926-workingpressurebar-1",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+			"sourceLabel": "Shinano, catalogue général 2025, p. 43",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+		},
+		{
+			"id": "shinano-si-3003am-20260926",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=13",
+			"sourceLabel": "Shinano, catalogue général 2025, p. 13, réf. SI-3003AM",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation maximale, colonne Max Air Consumption : 16.8 CFM / 7.9 L/s, soit 474 L/min. Tableau partagé uniquement entre les références nommées par Shinano."
+		},
+		{
+			"id": "shinano-si-3003am-20260926-workingpressurebar-1",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+			"sourceLabel": "Shinano, catalogue général 2025, p. 43",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+		},
+		{
+			"id": "shinano-si-3200a-20260926",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=16",
+			"sourceLabel": "Shinano, catalogue général 2025, p. 16, réf. SI-3200A",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation maximale, colonne Max Air Consumption : 14.4 CFM / 6.8 L/s, soit 408 L/min. Tableau partagé uniquement entre les références nommées par Shinano."
+		},
+		{
+			"id": "shinano-si-3200a-20260926-workingpressurebar-1",
 			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
 			"sourceLabel": "Shinano, catalogue général 2025, p. 43",
 			"sourceType": "manufacturer",

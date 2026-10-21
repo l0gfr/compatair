@@ -2,6 +2,7 @@
 title: "Buse de sablage usée : pourquoi la consommation d’air augmente"
 description: "Une buse de sablage qui s’agrandit change le besoin d’air. Repères Clemco à pression constante, mesure de l’orifice et diagnostic avant remplacement."
 pubDate: 2026-09-29
+updatedDate: 2026-10-21
 category: Utiliser
 audiences: ["professionnel"]
 metiers: ["btp-chantier", "maintenance-industrielle"]
@@ -49,6 +50,20 @@ Un dossier d’entretien utile conserve aussi le matériau de buse, l’abrasif 
 | Même anomalie après changement de buse | Ne pas limiter le diagnostic à l’usure |
 
 Le [diagnostic d’une sableuse qui perd sa puissance](/guides/sableuse-perd-puissance-abrasif-humide-diagnostic/) complète cette lecture. Les symptômes peuvent coexister : une buse agrandie et un flexible restrictif ne s’excluent pas.
+
+## Conserver une trace avant et après maintenance
+
+Pour distinguer cette enquête du [choix initial du diamètre de buse](/guides/buse-sablage-diametre-pression-debit-compresseur/), nous proposons une fiche de relevé. Il s’agit d’une méthode de traçabilité CompatAir, et non d’un protocole de mesure prescrit par Clemco. Les critères de remplacement et l’instrument de contrôle restent ceux du fabricant de la buse.
+
+| À relever | Pourquoi le conserver |
+| --- | --- |
+| Référence de buse et diamètre nominal | Retrouver la configuration initiale, sans déduire l’orifice actuel de son étiquette. |
+| Contrôle de l’orifice, méthode et date | Documenter une observation réelle ; laisser « non mesuré » si le contrôle n’a pas été réalisé. |
+| Pression observée à la buse en fonctionnement | Comparer les relevés à conditions de pression identifiées, et non la seule consigne au réservoir. |
+| Abrasif, alimentation produit et liaisons | Repérer un changement de procédé ou une restriction en même temps que l’usure. |
+| Référence remplacée et observation après intervention | Vérifier ce qui change après maintenance, sans attribuer tout gain à la seule buse. |
+
+Une amélioration après remplacement est un indice. Si d’autres réglages ou consommables ont changé en même temps, elle ne quantifie pas isolément l’effet de l’usure. Si le problème persiste, poursuivre le diagnostic de production d’air, de pertes de pression et d’alimentation d’abrasif plutôt que d’augmenter la consigne par défaut.
 
 ## Quand faut-il redimensionner le compresseur ?
 

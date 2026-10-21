@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Cleco 120PTHH304, référence 120PTHH304. Le tableau fabricant publie 800 L/min et une plage d’utilisation de 6 à 6 bar. Plage de couple publiée : 75 à 120 Nm. Vitesse à vide publiée : 3000 tr/min.",
+		"overview": "120PTHH304 : outil à impulsions avec arrêt automatique, carré de 1/2 pouce, 75–120 Nm et 3 000 tr/min à vide. Le 120PHH554 voisin est sans arrêt automatique et tourne à 5 500 tr/min. À 6 bar, le PTHH sépare 400 L/min à vide et 800 en charge ; le PHH donne 900 et 800. Le mécanisme d’arrêt et la séquence de serrage distinguent le choix avant le bilan d’air.",
 		"verifiedFacts": [
 			"Performances publiées à 6 bar à l’entrée de l’outil, note de la page 86.",
 			"Le tableau distingue 400 L/min à vide et 800 L/min en charge à 6 bar. Le calcul conserve la plus élevée des deux valeurs publiées (800 L/min), sans cycle de travail supposé.",
@@ -33,6 +33,7 @@ const product: ToolProfileInput = {
 			"Consommation à vide publiée : 400.0 L/min."
 		],
 		"limitations": [
+			"La plage de couple ne garantit pas le résultat sur tout joint. Le calcul conserve le plus grand des deux régimes publiés pour chaque référence, sans coefficient d’usage implicite.",
 			"Données de catalogue industriel, sans essai physique CompatAir. Disponibilité et révision livrée à confirmer avec le fournisseur.",
 			"Source : catalogue GI-1250-EU, édition archivée du fabricant. Vérifier la référence et la notice de la révision effectivement livrée."
 		]
@@ -111,6 +112,33 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Le tableau distingue 400 L/min à vide et 800 L/min en charge à 6 bar. Le calcul conserve la plus élevée des deux valeurs publiées (800 L/min), sans cycle de travail supposé."
+		},
+		{
+			"id": "cleco-120phh554-20260926",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=86",
+			"sourceLabel": "Cleco et Master Power, catalogue GI-1250-EU, p. 86, réf. 120PHH554",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Le tableau distingue 900 L/min à vide et 800 L/min en charge à 6 bar. Le calcul conserve la plus élevée des deux valeurs publiées (900 L/min), sans cycle de travail supposé."
+		},
+		{
+			"id": "cleco-11pthh35q-20260926",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=86",
+			"sourceLabel": "Cleco et Master Power, catalogue GI-1250-EU, p. 86, réf. 11PTHH35Q",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Le tableau distingue 150 L/min à vide et 300 L/min en charge à 6 bar. Le calcul conserve la plus élevée des deux valeurs publiées (300 L/min), sans cycle de travail supposé."
+		},
+		{
+			"id": "cleco-11pthh353-20260926",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=86",
+			"sourceLabel": "Cleco et Master Power, catalogue GI-1250-EU, p. 86, réf. 11PTHH353",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Le tableau distingue 150 L/min à vide et 300 L/min en charge à 6 bar. Le calcul conserve la plus élevée des deux valeurs publiées (300 L/min), sans cycle de travail supposé."
 		}
 	],
 	"fieldSources": {

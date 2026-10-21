@@ -81,19 +81,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Chicago Pneumatic CPI100, 60 Hz, 10,3 bar. 11 733,333 L/min à 9,5 bar. Moteur 75 kW ; STD, groupe fixe au sol, sans sécheur ; vitesse fixe.",
+		"overview": "CPI100 STD, version 60 Hz de 10,3 bar : 704 m³/h à la pression de référence de 9,5 bar, soit 11 733,333 L/min. Le groupe de 75 kW est au sol, sans sécheur, avec une masse publiée de 1 417 kg. La version 50 Hz de 10 bar publie 720 m³/h à 9,5 bar.",
 		"verifiedFacts": [
 			"Débit restitué relié à une pression et aux unités originales de la fiche fabricant.",
 			"Périmètre retenu : groupe seul ; réservoir de stockage externe exclu.",
 			"Limite de pression documentée : 10,3 bar ; le point FAD conserve sa pression publiée."
 		],
 		"limitations": [
-			"Page 7, Pression FAD supérieure au maximum de cette configuration ; exclue sans inversion ni correction.",
-			"Cette entrée correspond à une configuration constructeur de pression maximale ; aucun nouveau produit n’est créé à partir d’un simple point de test.",
-			"Cycle de service non établi par les sources retenues ; la tenue permanente reste indéterminée.",
-			"Documentation à 60 Hz ; elle ne démontre pas les performances de la version 50 Hz. Alimentation et marché local à confirmer avant achat.",
-			"Les seules pressions FAD retenues sont celles du document. Aucun débit aspiré, extrapolation ou essai d’utilisation CompatAir.",
-			"Documentation et disponibilité de la configuration à confirmer avec le constructeur."
+			"Le point FAD de 9,5 bar est inférieur au maximum de 10,3 bar de cette version ; la réserve signalant un dépassement est retirée.",
+			"Les versions 50 Hz et 60 Hz conservent leurs performances propres. Les 704 et 720 m³/h ne sont pas deux points d’une même courbe.",
+			"Le taux de marche du groupe complet reste inconnu. La version PLUS avec sécheur est distincte du montage STD.",
+			"Le document prévoit 10 224 m³/h d’air de refroidissement et un raccord de sortie de 2½ pouces. Alimentation, implantation et disponibilité locale restent à confirmer."
 		]
 	},
 	"evidence": [

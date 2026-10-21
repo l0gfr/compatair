@@ -45,7 +45,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Dynabrade D25.01"
 	},
 	"editorial": {
-		"overview": "Dynabrade 58460, référence 58460, présente une consommation maximale publiée de 651 L/min. Le catalogue D25.01 indique une pression de 90 PSIG (6,2 bar), page 166. Puissance moteur : 336 W. Vitesse moteur publiée : 12 000 tr/min.",
+		"overview": "DynaLocke 58460 : plateau de 76 mm, contre 152 mm pour la 58435 voisine. La sélection rotation ou mouvement orbital aléatoire appartient aux deux outils ; le débit commun de 651 L/min maximum à 6,2 bar ne signifie pas qu’ils couvrent la même surface ni acceptent les mêmes consommables. Le diamètre et le mouvement requis doivent être choisis avec le travail.",
 		"verifiedFacts": [
 			"Puissance moteur : 336 W.",
 			"Vitesse moteur publiée : 12 000 tr/min.",
@@ -55,6 +55,7 @@ const product: ToolProfileInput = {
 			"Flexible : 6 mm de diamètre intérieur publié."
 		],
 		"limitations": [
+			"Le constructeur impose l’arrêt complet avant de changer de mouvement. Le modèle non-vacuum n’acquiert pas une aspiration parce qu’une version voisine en possède une.",
 			"Masse non retenue : le tableau publie des unités contradictoires (2.35 (1.0)).",
 			"Le calcul conserve la consommation maximale publiée, sans la réduire selon un cycle de travail supposé. Cette valeur ne constitue pas une mesure de débit réalisée par CompatAir.",
 			"Le catalogue ne fournit pas de courbe de consommation selon la pression pour cette référence. Vérifier la pression dynamique à l’entrée de l’outil pendant son fonctionnement.",
@@ -115,6 +116,24 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Tableau 166-0, ligne 1. Consommation maximale publiée : 23 (651) SCFM (L/min). Pression : 90 PSIG (6,2 bar). Cellules sources et empreinte SHA-256 versionnées."
+		},
+		{
+			"id": "dynabrade-58435-catalogue-d25-01",
+			"sourceUrl": "https://www17.dynabrade.com/pdf/dynabrade-industrial-catalog.pdf#page=166",
+			"sourceLabel": "Dynabrade, catalogue D25.01, 58435, page 166",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Tableau 166-0, ligne 7. Consommation maximale publiée : 23 (651) SCFM (L/min). Pression : 90 PSIG (6,2 bar). Cellules sources et empreinte SHA-256 versionnées."
+		},
+		{
+			"id": "dynabrade-58465-catalogue-d25-01",
+			"sourceUrl": "https://www17.dynabrade.com/pdf/dynabrade-industrial-catalog.pdf#page=166",
+			"sourceLabel": "Dynabrade, catalogue D25.01, 58465, page 166",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Tableau 166-0, ligne 3. Consommation maximale publiée : 23 (651) SCFM (L/min). Pression : 90 PSIG (6,2 bar). Cellules sources et empreinte SHA-256 versionnées."
 		}
 	],
 	"fieldSources": {

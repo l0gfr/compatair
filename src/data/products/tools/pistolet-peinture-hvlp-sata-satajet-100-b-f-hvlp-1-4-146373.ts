@@ -9,16 +9,11 @@ const product: ToolProfileInput = {
 	"brand": "SATA",
 	"model": "SATAjet 100 B F HVLP 1.4",
 	"mpn": "146373",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 2,
 		"typical": 2,
 		"max": 2
-	},
-	"airflowLpm": {
-		"min": 350,
-		"typical": 350,
-		"max": 350
 	},
 	"confidence": "B",
 	"image": {
@@ -37,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SATA SATAjet 100 B F HVLP 1.4 (réf. 146373). Consommation de référence en fonctionnement : 350 L/min à 2 bar.",
+		"overview": "SATAjet 100 B F HVLP 146373 : buse de 1,4 mm avec godet plastique QCC de 0,6 L. La ligne 145748 voisine utilise 2,1 mm, avec le même besoin de famille de 350 Nl/min à 2 bar. La notice demande de choisir le calibre selon le produit et la vitesse de travail, et signale une usure moindre quand le réglage produit est largement ouvert. Choisir la 1,4 pour réduire l’air, puis étrangler davantage le produit, ne découle donc pas de ces tableaux. Les350Nl/min restent documentaires ; le calcul ne les assimile pas au FAD.",
 		"verifiedFacts": [
 			"Technologie de pulvérisation : HVLP.",
 			"Buse : 1,4 mm.",
@@ -48,6 +43,8 @@ const product: ToolProfileInput = {
 			"Température maximale du produit pulvérisé : 50 °C."
 		],
 		"limitations": [
+			"Les350Nl/min restent hors du calcul FAD : la température, la pression absolue et l’humidité de référence du volume normalisé ne sont pas définies dans la notice lue. Aucun coefficient de conversion n’est supposé.",
+			"Le code 146381 désigne le jeu de buse 1,4, pas le pistolet complet. Aucun débit de produit propre à ce calibre ni résultat de finition équivalent à la 2,1 n’est inventé.",
 			"La demande au point documenté n’est réduite par aucun facteur de marche implicite.",
 			"Le débit est une consommation de référence au point indiqué dans la notice ; aucun maximum à toutes les positions du jet et du micromètre n’est revendiqué.",
 			"Nl/min est conservé sans supposer une température ni une humidité de référence absente des passages cités.",
@@ -170,13 +167,17 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"october3d-tools-sata-family-100b-manual-0-p132"
 		],
-		"airflowLpm": [
+		"demandModel": [
+			"october3d-tools-sata-family-100b-manual-0-p132"
+		],
+		"demandExplanation": [
 			"october3d-tools-sata-family-100b-manual-0-p132"
 		]
 	},
 	"notes": [
-		"Consommation de référence en fonctionnement : 350 L/min à 2 bar."
-	]
+		"Consommation documentaire : 350 Nl/min à 2 bar, sans état volumétrique de référence défini ; aucune assimilation au FAD."
+	],
+	"demandExplanation": "La notice publie350Nl/min à2bar, sans état de référence volumétrique défini dans les passages lus. Cette valeur normalisée reste documentaire et n’est pas assimilée au FAD enL/min."
 };
 
 export default product;

@@ -85,19 +85,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "MARK MSM 2.2 IVR. 293,333 L/min à 9,5 bar. Groupe sur socle sans réservoir de stockage intégré.",
+		"overview": "MSM 2.2 IVR sur socle : groupe lubrifié à vitesse variable de 2,2 kW, sans cuve. Le tableau publie 17,6 m³/h à 9,5 bar, soit 293,333 L/min. Le MSM 2.2 à vitesse fixe publie 16,9 m³/h à la même pression, avec le même moteur.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 0 L.",
 			"Pression maximale de fonctionnement publiée : 10 bar."
 		],
 		"limitations": [
-			"La pression FAD et le maximum de la version sont conservés séparément.",
-			"Version sur socle retenue ; réservoir externe exclu.",
-			"Capacité catalogue nominale/maximale de la version à régulation VSD ; minimum de débit à ce point non documenté.",
-			"Fréquence non publiée dans la fiche retenue ; aucune transposition des performances à 50 Hz.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"La ligne IVR imprime aussi 293 L/min ; la conversion retenue part de 17,6 m³/h. Le minimum de modulation à ce point reste inconnu.",
+			"Le socle IVR mesure 620 × 630 × 975 mm ; le modèle fixe, 620 × 630 × 950 mm. Les deux indiquent 110 kg ; réservoir et sécheur intégrés sont d’autres montages.",
+			"Le tableau PDF de la version IVR cite ISO 1217 annexe E. La brochure décrit un usage continu pour la série MSM, avec ses conditions d’installation et d’entretien.",
+			"Le résumé de la page web annonce 8 bar, alors que son tableau et le PDF comportent une ligne 10 bar. La ligne 10 bar est retenue ; tension, fréquence et configuration livrée restent à confirmer sur le devis."
 		]
 	},
 	"evidence": [
@@ -153,13 +151,13 @@ const product: CompressorInput = {
 			"october3d-mark-pdf-new-02-p2"
 		],
 		"maxPressureBar": [
-			"october3d-mark-family-12"
+			"october3d-mark-pdf-new-02-p7"
 		],
 		"fadCurve": [
-			"october3d-mark-family-12"
+			"october3d-mark-pdf-new-02-p7"
 		],
 		"powerKw": [
-			"october3d-mark-family-12"
+			"october3d-mark-pdf-new-02-p7"
 		]
 	},
 	"notes": [

@@ -75,19 +75,27 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october4-lupamat-current-catalog-p22"
 			]
+		},
+		{
+			"label": "Nombre d’étages publié",
+			"value": "2",
+			"evidenceIds": [
+				"october4-lupamat-current-catalog-p22"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "Lupamat LKD 62-553 A. 555 L/min déclarés à 15 bar. Groupe sur cuve 548 L.",
+		"overview": "LKD 62-553 A : compresseur à deux étages, cuve de 548 L, moteur de 5,5 kW et maximum de 15 bar. Le catalogue distingue 741 L/min de déplacement et 555 L/min de FAD. Le LKD 61-555 voisin possède un étage et publie 950 L/min de FAD à 8 bar avec 7,5 kW.",
 		"verifiedFacts": [
 			"Configuration de pression documentée : 15 bar.",
 			"Cuve de stockage documentée : 548 L.",
 			"FAD sous pression identifié séparément des valeurs d’aspiration : 555 L/min déclarés à 15 bar."
 		],
 		"limitations": [
-			"Le cycle de service n’est pas indiqué. Le contrôle en usine décrit dans le catalogue ne constitue pas un essai CompatAir.",
-			"Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil."
+			"Les débits de 555 L/min à 15 bar et 950 L/min à 8 bar appartiennent à deux machines et deux pressions distinctes ; ils ne forment pas une courbe.",
+			"Le taux de marche demeure inconnu. Les essais usine de quatre heures à vide puis quatre heures en charge ne définissent pas le régime autorisé en exploitation.",
+			"La famille LKD décrite est lubrifiée par barbotage et entraînée par courroies. Les modèles sans huile figurant à côté appartiennent à la série LPYI.",
+			"Le volume de 548 L est celui du tableau constructeur. Alimentation, implantation et disponibilité locale restent à confirmer."
 		]
 	},
 	"evidence": [

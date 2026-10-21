@@ -68,8 +68,21 @@ const beforeOctober20 = value => {
  }
  return product;
 };
+const amendments21 = new Map(JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-10-21.json', import.meta.url), 'utf8')).rows.map(row => [row.id, row]));
+const beforeOctober21 = value => {
+ const product = structuredClone(value), amendment = amendments21.get(product.id);
+ if (!amendment) return product;
+ for (const field of amendment.fields) {
+  expect(Object.hasOwn(product, field), `${product.id}:${field}`).toBe(Object.hasOwn(amendment.after, field));
+  if (Object.hasOwn(product, field)) expect(product[field], `${product.id}:${field}`).toEqual(amendment.after[field]);
+  if (Object.hasOwn(amendment.before, field)) product[field] = structuredClone(amendment.before[field]);
+  else delete product[field];
+ }
+ return product;
+};
 const cards19 = new Map(JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-10-19.json', import.meta.url), 'utf8')).technicalCards.map(card=>[card.path,card]));
 const cards20 = new Map(JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-10-20.json', import.meta.url), 'utf8')).technicalCards.map(card=>[card.path,card]));
+const cards21 = new Map(JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-10-21.json', import.meta.url), 'utf8')).technicalCards.map(card=>[card.path,card]));
 const withoutBasis = value => { const p = structuredClone(value); delete p.maxPressureBasis; delete p.fieldSources.maxPressureBasis; return p; };
 const demand = pressure => ({ id: 'fixture', demandModel: 'fixed-flow', workingPressureBar: { min: pressure, typical: pressure, max: pressure }, airflowLpm: { min: 100, typical: 100, max: 100 }, confidence: 'B' });
 const loadProduct = id => {
@@ -90,8 +103,10 @@ describe('documented pressure basis migration October 7', () => {
    for (const expected of derived) {
     const product = loadProduct(expected.id);
     expect(product, expected.id).toEqual(expected);
-    canonical.push([product.id, withoutBasis(beforeOctober17(beforeOctober18(beforeOctober19(beforeOctober20(product)))))]);
-    const currentCardHash=digest(readFileSync(new URL(`../../public${product.image.src}`, import.meta.url))), card20=cards20.get(product.image.src);
+    canonical.push([product.id, withoutBasis(beforeOctober17(beforeOctober18(beforeOctober19(beforeOctober20(beforeOctober21(product))))))]);
+    const actualCardHash=digest(readFileSync(new URL(`../../public${product.image.src}`, import.meta.url))), card21=cards21.get(product.image.src);
+    if(card21) expect(actualCardHash).toBe(card21.afterSha256);
+    const currentCardHash=card21?.beforeSha256??actualCardHash, card20=cards20.get(product.image.src);
     if(card20) expect(currentCardHash).toBe(card20.afterSha256);
     const cardHash=card20?.beforeSha256??currentCardHash, card=cards19.get(product.image.src);
     if(card)expect(cardHash,product.id).toBe(card.afterSha256);

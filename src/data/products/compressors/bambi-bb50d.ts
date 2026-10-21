@@ -8,9 +8,9 @@ const product: CompressorInput = {
 	"mpn": "BB50D",
 	"variant": {
 		"familyId": "bambi-bb50d",
-		"label": "Groupe avec cuve 50 L et sécheur",
+		"label": "Groupe à deux pompes sur cuve horizontale 50 L",
 		"distinguishingAttributes": {
-			"équipement": "Groupe avec cuve 50 L et sécheur",
+			"équipement": "Groupe à deux pompes sur cuve horizontale 50 L",
 			"pressionMaximale": "8 bar",
 			"cuve": "50 L",
 			"fréquence": "50 Hz"
@@ -66,7 +66,7 @@ const product: CompressorInput = {
 	"specifications": [
 		{
 			"label": "Configuration constructeur",
-			"value": "Groupe avec cuve 50 L et sécheur",
+			"value": "Groupe à deux pompes sur cuve horizontale 50 L",
 			"evidenceIds": [
 				"october3d-bambi-product-33"
 			]
@@ -164,17 +164,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Bambi BB50D. 70 L/min à 1 bar ; 64 L/min à 2 bar ; 60 L/min à 3 bar ; 56 L/min à 4 bar ; 54 L/min à 5 bar ; 52 L/min à 6 bar ; 51 L/min à 7 bar ; 50 L/min à 8 bar. Groupe avec cuve 50 L et sécheur.",
+		"overview": "BB50D : deux pompes lubrifiées sur cuve horizontale de 50 L, pour une puissance totale de 0,68 kW. Bambi publie 52 L/min à 6 bar et 50 L/min à 8 bar, avec un taux de marche maximal de 50 %. Le BB24D conserve la même production sur cuve de 24 L.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 50 L.",
 			"Pression maximale de fonctionnement publiée : 8 bar."
 		],
 		"limitations": [
-			"Le fabricant ne précise pas les conditions de référence ISO 1217 ni la fenêtre de temps du cycle de service dans cette fiche.",
-			"Cycle intermittent déclaré ; durée de référence non précisée. L’exploitation permanente n’est pas assimilée à un service continu.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"Le BB50D pèse 46 kg et mesure 55 × 88 × 29 cm en hauteur × largeur × profondeur. Le BB24D indique 31 kg ; la différence porte sur le stockage et le transport.",
+			"Le taux de marche de 50 % est publié sans fenêtre de référence. La fiche ne précise pas les conditions ISO 1217.",
+			"La configuration publiée est à deux pompes, sans sécheur annoncé. Un kit de roues est proposé en option pour les cuves horizontales.",
+			"L’alimentation est de 240 V à 50 Hz avec une prise britannique ; une prise européenne est disponible sur demande."
 		]
 	},
 	"evidence": [
@@ -187,6 +187,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 d5e1bf748d7aba1604f5d829b9db6289c96dd66a83ec5c955034c66290e65641 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "october3d-bambi-product-32-review-20261021-for-bambi-bb50d",
+			"sourceUrl": "https://bambi-air.co.uk/product/bb24d/",
+			"sourceLabel": "Bambi, BB24D, fiche constructeur",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-21",
+			"confidence": "B",
+			"notes": "Fiche voisine consultée en HTTPS le 21 octobre 2026 ; SHA-256 du corps : 1181a1d840e409b371bed3fca1c6822b0ad75c8cb487601a52213164b104f936. Configurations comparées séparément."
 		}
 	],
 	"fieldSources": {
@@ -207,11 +217,15 @@ const product: CompressorInput = {
 		],
 		"powerKw": [
 			"october3d-bambi-product-33"
+		],
+		"voltage": [
+			"october3d-bambi-product-33"
 		]
 	},
 	"notes": [
 		"Pression FAD, plage de fonctionnement et pression de soupape restent distinctes. ISO 1217 n’est pas ajoutée à une source qui ne la revendique pas."
-	]
+	],
+	"voltage": "240 V, 50 Hz"
 };
 
 export default product;

@@ -32,13 +32,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Hymair S970G. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Capacité du godet : 1000 ml. Buse standard déclarée : 1.8 mm.",
+		"overview": "S970G : godet de 1 000 ml, buse standard de 1,8 mm et jet annoncé de 160 à 220 mm. Le H897 voisin utilise 600 ml et annonce 240 mm. Le volume préparé et la géométrie du jet sont donc deux choix distincts ; le plus grand godet ne démontre pas un jet plus large. Les 7,5 cfm de la ligne S970G restent documentaires, sans point de mesure apparié à la plage de 2,5 à 3,5 bar.",
 		"verifiedFacts": [
 			"Capacité du godet : 1000 ml.",
 			"Buse standard déclarée : 1.8 mm.",
 			"Largeur de jet publiée : 160~220 mm."
 		],
 		"limitations": [
+			"Les buses optionnelles de 1,4 à 2,0 mm ne constituent pas des essais de consommation séparés. La compatibilité du revêtement et son réglage doivent suivre la notice.",
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
 		]
@@ -85,6 +86,16 @@ const product: ToolProfileInput = {
 			"id": "october2-tools-steed-7-p5",
 			"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SZUfKpLkrMNq&dp=GvUApKfKKUAU#page=5",
 			"sourceLabel": "Hymair, documentation technique fabricant, page PDF 5",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-01",
+			"confidence": "B",
+			"notes": "SHA-256 de la réponse source : 971e9f3f662af10d3c638d5e9c29c8847ee04672c40e29957ad4ca4eb13d61c1. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "october2-tools-steed-7-p2",
+			"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SZUfKpLkrMNq&dp=GvUApKfKKUAU#page=2",
+			"sourceLabel": "Hymair, documentation technique fabricant, page PDF 2",
 			"sourceType": "manual",
 			"sourceRole": "primary",
 			"retrievedAt": "2026-10-01",

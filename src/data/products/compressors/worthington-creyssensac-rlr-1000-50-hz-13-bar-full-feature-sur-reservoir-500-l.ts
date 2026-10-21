@@ -73,16 +73,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Worthington Creyssensac RLR 1000, Full Feature sur réservoir 500 L, 13 bar. 883,333 L/min à 12,5 bar.",
+		"overview": "RLR 1000 Full Feature sur cuve de 500 L, version 50 Hz de 13 bar : 53 m³/h à 12,5 bar, soit 883,333 L/min, avec un moteur de 7,5 kW. Le montage 270 L conserve cette production ; les masses publiées sont de 420 et 355 kg.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Configuration de stockage documentée : 500 L.",
 			"Pression maximale de fonctionnement publiée : 13 bar."
 		],
 		"limitations": [
-			"Cycle de service du groupe complet non établi ; la tenue permanente reste indéterminée.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Configuration publiée dans la documentation citée ; disponibilité commerciale actuelle à confirmer."
+			"Le montage 500 L mesure 1940 × 665 × 1665 mm ; le 270 L, 1625 × 665 × 1535 mm en longueur × largeur × hauteur. Le choix change le stockage et l’implantation.",
+			"Le tableau imprime également 14,8 L/s pour cette ligne, valeur qui ne coïncide pas exactement avec 53 m³/h. La conversion utilisée conserve la colonne 53 m³/h ; aucune moyenne n’est faite.",
+			"La note de débit cite ISO 1217 annexe C. Le taux de marche du groupe complet reste inconnu.",
+			"Réservoir, sécheur et configuration 50 Hz doivent être confirmés sur la commande ; les autres versions de pression restent séparées."
 		]
 	},
 	"evidence": [

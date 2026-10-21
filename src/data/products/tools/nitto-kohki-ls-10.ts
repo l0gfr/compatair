@@ -23,15 +23,16 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Nitto Kohki LS-10, référence LS-10. Le tableau fabricant publie 110 L/min et une plage d’utilisation de 6 à 6 bar. Cadence de frappe publiée : 4000 coups/min. Masse publiée : 0.75 kg.",
+		"overview": "LS-10 : ponceuse à mouvement alternatif, course de 4 mm et 4 000 courses/min, plateau de 55 × 103 mm pour papier de 57 × 140 mm. La FS-50A voisine possède une orbite de 1,2 mm et un autre plateau. Leurs 110 et 140 L/min sont mesurés à vide à 6 bar : forme du mouvement et papier à commander restent distincts du seul besoin d’air.",
 		"verifiedFacts": [
 			"Pression de 0,6 MPa publiée dans le tableau, soit 6 bar. La valeur en kgf/cm² entre parenthèses n’est pas utilisée pour la conversion.",
 			"Consommation à vide explicitement publiée (No-load) : 0.11 m³/min. Conversion × 1 000 en L/min.",
 			"Référence fabricant : LS-10.",
-			"Cadence de frappe publiée : 4000 coups/min.",
+			"Cadence de courses publiée : 4 000 courses/min, mouvement alternatif de ponçage.",
 			"Masse publiée : 0.75 kg."
 		],
 		"limitations": [
+			"La cadence n’est pas une cadence de frappe d’un burineur. Le papier et sa fixation doivent correspondre au plateau, sans prédiction de finition depuis la seule course.",
 			"Le débit à vide n’établit pas à lui seul la consommation sous toutes les charges. Respecter les conditions d’emploi de la notice.",
 			"La conformité et la disponibilité de la version exacte doivent être confirmées avant achat."
 		]
@@ -52,8 +53,8 @@ const product: ToolProfileInput = {
 			]
 		},
 		{
-			"label": "Cadence de frappe publiée",
-			"value": "4000 coups/min",
+			"label": "Cadence de courses publiée",
+			"value": "4 000 courses/min, mouvement alternatif de ponçage.",
 			"evidenceIds": [
 				"nitto-kohki-ls-10-20260926"
 			]
@@ -75,6 +76,15 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation à vide explicitement publiée (No-load) : 0.11 m³/min. Conversion × 1 000 en L/min."
+		},
+		{
+			"id": "nitto-kohki-fs-50a-20260926",
+			"sourceUrl": "https://www.nitto-kohki.eu/images/stories/products/pdf_catalogs/Tools_Catalog.pdf#page=43",
+			"sourceLabel": "Nitto Kohki, catalogue officiel des outils, p. 43, réf. FS-50A",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation à vide explicitement publiée (No-load) : 0.14 m³/min. Conversion × 1 000 en L/min."
 		}
 	],
 	"fieldSources": {
@@ -86,6 +96,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"nitto-kohki-ls-10-20260926"
+		],
+		"airflowBasis": [
+			"nitto-kohki-ls-10-20260926"
 		]
 	},
 	"notes": [
@@ -95,7 +108,8 @@ const product: ToolProfileInput = {
 		"min": 110,
 		"typical": 110,
 		"max": 110
-	}
+	},
+	"airflowBasis": "free-speed"
 };
 
 export default product;

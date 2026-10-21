@@ -20,7 +20,7 @@ const product: CompressorInput = {
 	"fadCurve": [
 		{
 			"pressureBar": 13,
-			"litersPerMinute": 660
+			"litersPerMinute": 2390
 		}
 	],
 	"powerKw": 18.5,
@@ -56,8 +56,8 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Air livré à 13 bar",
-			"value": "660 L/min",
+			"label": "FAD maximal de modulation à 13 bar",
+			"value": "2390 L/min (2,39 m³/min)",
 			"evidenceIds": [
 				"october4-hertz-catalog-p20"
 			]
@@ -68,22 +68,26 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october4-hertz-catalog-p20"
 			]
+		},
+		{
+			"label": "FAD minimal de modulation à 13 bar",
+			"value": "660 L/min (0,66 m³/min)",
+			"evidenceIds": [
+				"october4-hertz-catalog-p20"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "Hertz FRECON PLUS PM 18. 660 L/min déclarés à 13 bar. Base Mounted, stockage d’air externe.",
+		"overview": "FRECON PLUS PM 18, montage Base Mounted de 18,5 kW : plage de FAD publiée de 660 à 2 390 L/min à 13 bar. La courbe conserve le maximum disponible, avec le minimum de modulation séparé. Le PM 15 annonce 590 à 1 360 L/min à cette pression avec 15 kW.",
 		"verifiedFacts": [
-			"Configuration de pression documentée : 13 bar.",
-			"Montage sans réservoir de stockage intégré explicitement documenté.",
-			"FAD sous pression identifié séparément des valeurs d’aspiration : 660 L/min déclarés à 13 bar."
+			"Plage FAD publiée à 13 bar : 0,66 à 2,39 m³/min selon ISO 1217:2009 annexe E.",
+			"Montage Base Mounted sans réservoir de stockage intégré ; puissance de 18,5 kW."
 		],
 		"limitations": [
-			"Une seule configuration de pression est retenue par modèle. Les autres lignes de pression ne sont pas assemblées en une courbe mesurée.",
-			"La cuve optionnelle Tank + Dryer est distincte du montage Base Mounted retenu.",
-			"Le FAD retenu est le minimum de la plage VSD à cette pression. Le maximum de la plage n’est pas utilisé comme débit garanti.",
-			"Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
-			"Le plafond CompatAir correspond à la pression de travail de la version retenue. Il ne décrit ni la soupape ni le maximum de toutes les versions de la famille."
+			"La note de capacité cite ISO 1217:2009 annexe E, à 1 bar absolu à l’aspiration, 20 °C et 0 % d’humidité relative. Le maximum est une capacité publiée, sans simulation d’une charge réelle d’atelier.",
+			"Le groupe au sol mesure 870 × 905 × 1400 mm et pèse 350 kg. Le montage Tank + Dryer est distinct : 2 × 270 L, 766 kg et 2150 × 1225 × 1950 mm.",
+			"Le minimum de 660 L/min décrit la borne basse de modulation. Il ne suffit pas à définir une consommation moyenne ou un régime de marche.",
+			"Le taux de marche demeure inconnu ; raccordement, refroidissement et disponibilité doivent être confirmés pour l’installation."
 		]
 	},
 	"evidence": [

@@ -44,16 +44,17 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Dynabrade D25.01"
 	},
 	"editorial": {
-		"overview": "Dynabrade 53783, référence 53783, présente une consommation maximale publiée de 1 104 L/min. Le catalogue D25.01 indique une pression de 90 PSIG (6,2 bar), page 108. Puissance moteur : 522 W. Vitesse moteur publiée : 20 000 tr/min.",
+		"overview": "53783 : meuleuse à cônes ou meules-bouchons jusqu’à 38 mm, corps acier, sortie mâle 3/8-24 et 20 000 tr/min. La 53531 voisine possède une extension composite plus longue : 467 mm contre 322 mm dans le tableau. Les maxima d’air à 6,2 bar sont de 1 161 et 1 104 L/min. L’accès à la pièce et la vitesse admissible de l’abrasif précèdent le bilan pneumatique.",
 		"verifiedFacts": [
 			"Puissance moteur : 522 W.",
 			"Vitesse moteur publiée : 20 000 tr/min.",
 			"Filetage de sortie : 3/8\"-24 Male.",
-			"Masse : 1,7 kg.",
 			"Entrée d’air : 1/4 pouce NPT.",
 			"Flexible : 6 mm de diamètre intérieur publié."
 		],
 		"limitations": [
+			"Masse non arbitrée : la ligne publie 3,9 lb et 1,7 kg, sans parfaite concordance de conversion.",
+			"Les unités de masse du tableau ne sont pas parfaitement concordantes ; aucune masse unique n’est utilisée pour justifier le choix. Le filetage commun ne valide pas tout cône ou toute meule.",
 			"Hauteur non retenue : le tableau publie des unités contradictoires (1.7 (45)).",
 			"Le calcul conserve la consommation maximale publiée, sans la réduire selon un cycle de travail supposé. Cette valeur ne constitue pas une mesure de débit réalisée par CompatAir.",
 			"Le catalogue ne fournit pas de courbe de consommation selon la pression pour cette référence. Vérifier la pression dynamique à l’entrée de l’outil pendant son fonctionnement.",
@@ -84,13 +85,6 @@ const product: ToolProfileInput = {
 			]
 		},
 		{
-			"label": "Masse",
-			"value": "1,7 kg",
-			"evidenceIds": [
-				"dynabrade-53783-catalogue-d25-01"
-			]
-		},
-		{
 			"label": "Longueur",
 			"value": "322 mm",
 			"evidenceIds": [
@@ -107,6 +101,15 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Tableau 108-0, ligne 7. Consommation maximale publiée : 39 (1,104) SCFM (L/min). Pression : 90 PSIG (6,2 bar). Cellules sources et empreinte SHA-256 versionnées."
+		},
+		{
+			"id": "dynabrade-53531-catalogue-d25-01",
+			"sourceUrl": "https://www17.dynabrade.com/pdf/dynabrade-industrial-catalog.pdf#page=108",
+			"sourceLabel": "Dynabrade, catalogue D25.01, 53531, page 108",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Tableau 108-0, ligne 4. Consommation maximale publiée : 41 (1,161) SCFM (L/min). Pression : 90 PSIG (6,2 bar). Cellules sources et empreinte SHA-256 versionnées."
 		}
 	],
 	"fieldSources": {

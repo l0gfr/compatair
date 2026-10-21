@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Graco AirPro pressure 288937 (réf. 288937). Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "AirPro 288937 : configuration HVLP General Metal à orifice de 1,1 mm. La 289983 voisine appartient à la ligne High Wear en 2,8 mm ; elle n’est pas un simple autre diamètre pour le même usage. La notice sépare leurs plafonds HVLP de 1,3 et 1,4 bar, ainsi que les consommations de famille de 14,9 et 15 SCFM. Le choix de l’application et des pièces en contact précède la comparaison du compresseur.",
 		"verifiedFacts": [
 			"Orifice Size in. (mm) : 0.042 (1.1).",
 			"Spray technology : HVLP.",
@@ -40,6 +40,7 @@ const product: ToolProfileInput = {
 			"Max. HVLP/Compliant Air Pressure psi (MPa, bar) : 19 (0.13, 1.3)."
 		],
 		"limitations": [
+			"Les états de référence des SCFM et le régime complet de gâchette ne sont pas qualifiés ici. Le maximum mécanique de 7 bar ne remplace pas le plafond du chapeau ni le point de consommation.",
 			"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
 			"La consommation est liée à une technologie et à une application. Le protocole de mesure ne précise pas explicitement la gâchette entièrement tirée ; le régime ne reçoit donc pas une qualification en charge.",
 			"Les variantes à débit accru 24U187 et 24U188 et la version haute production 24D472 ne reprennent pas automatiquement le débit des autres configurations.",
@@ -112,6 +113,16 @@ const product: ToolProfileInput = {
 			"id": "october5-tools-graco-airpro-pressure-p23",
 			"sourceUrl": "https://www.graco.com/content/dam/graco/tech_documents/manuals/312/312414/312414EN-U.pdf#page=23",
 			"sourceLabel": "Graco : graco-airpro-pressure, page PDF 23",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-05",
+			"confidence": "B",
+			"notes": "Déclaration fabricant, capture SHA-256 db686f2919e70169aab5175ac84b40c5d306d31bd483f4d3723f6b971a0086cb. Aucun essai physique CompatAir."
+		},
+		{
+			"id": "october5-tools-graco-airpro-pressure-p4",
+			"sourceUrl": "https://www.graco.com/content/dam/graco/tech_documents/manuals/312/312414/312414EN-U.pdf#page=4",
+			"sourceLabel": "Graco : graco-airpro-pressure, page PDF 4",
 			"sourceType": "manual",
 			"sourceRole": "primary",
 			"retrievedAt": "2026-10-05",

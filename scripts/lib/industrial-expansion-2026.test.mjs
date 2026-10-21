@@ -24,7 +24,7 @@ describe('reviewed expansion of 200 compressors and 500 tools', () => {
   expect(batch.compressors.every(p => p.fadCurve.length === 1 && p.status === 'unknown')).toBe(true);
   for (const p of batch.compressors) {
    const reviewed = dutyReview.rows.find(row => row.id === p.id);
-   const withdrawn = ['abac-formula-e-11-13-400-50', 'abac-formula-e-11-8-400-50', 'abac-formula-e-5-5-10-400-50', 'abac-formula-e-5-5-8-400-50'].includes(p.id);
+   const withdrawn = ['abac-formula-e-11-13-400-50', 'abac-formula-e-11-8-400-50', 'abac-formula-e-5-5-10-400-50', 'abac-formula-e-5-5-8-400-50', 'abac-formula-e-7-5-10-400-50'].includes(p.id);
    expect(p.dutyCycle, p.id).toBe(withdrawn ? undefined : reviewed?.dutyCycle);
    if (withdrawn) expect(p.fieldSources.dutyCycle).toBeUndefined();
    else if (reviewed) expect(p.evidence.find(e => p.fieldSources.dutyCycle.includes(e.id))).toMatchObject({ sourceType: 'manufacturer', retrievedAt: '2026-09-27' });

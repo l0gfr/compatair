@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Red Rooster RR-02SC, référence RR-02SC. Le tableau fabricant publie 600 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 1800 tr/min. Masse publiée : 1,2 kg.",
+		"overview": "RR-02SC : visseuse droite à mécanisme à friction réglable, commande par levier, 1–6 Nm et 1 800 tr/min. La RR-06SC voisine couvre 5–16 Nm à 800 tr/min ; les deux sont fournies avec deux ressorts. Leur consommation publiée de 10 L/s à 6,3 bar donne 600 L/min, sans préciser le régime. Le ressort et le réglage sur l’assemblage réel doivent précéder la comparaison du compresseur.",
 		"verifiedFacts": [
 			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
 			"Consommation publiée : 10 L/s, convertis en 600 L/min par multiplication par 60.",
@@ -33,6 +33,7 @@ const product: ToolProfileInput = {
 			"Diamètre intérieur de flexible conseillé : 10 mm."
 		],
 		"limitations": [
+			"Un couple de catalogue n’est pas une validation de serrage. La consommation sans régime de mesure qualifié ne démontre pas la suffisance en charge.",
 			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
 			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
 		]
@@ -99,6 +100,24 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "red-rooster-rr-06sc-20260926",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=42",
+			"sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 42, réf. RR-06SC",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation publiée : 10 L/s, convertis en 600 L/min par multiplication par 60."
+		},
+		{
+			"id": "red-rooster-rr-06sc-20260926-workingpressurebar-1",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+			"sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 106",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
 		}
 	],
 	"fieldSources": {
@@ -116,6 +135,9 @@ const product: ToolProfileInput = {
 		],
 		"connectorSize": [
 			"red-rooster-rr-02sc-20260926"
+		],
+		"airflowBasis": [
+			"red-rooster-rr-02sc-20260926"
 		]
 	},
 	"notes": [
@@ -129,7 +151,8 @@ const product: ToolProfileInput = {
 	"recommendedHose": {
 		"innerDiameterMm": 10
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"airflowBasis": "unqualified"
 };
 
 export default product;

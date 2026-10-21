@@ -74,17 +74,16 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Dalgakiran D 3-200 D. Le débit restitué sous pression reste non qualifié. Groupe sur cuve 200 L.",
+		"overview": "D 3-200 D : compresseur à un étage sur cuve de 200 L, avec moteur de 2,2 kW et pression de travail de 7 bar. Le tableau donne 290 L/min de déplacement du piston. Le D 2-100 D possède 100 L, un moteur de 1,5 kW et 178 L/min de déplacement.",
 		"verifiedFacts": [
 			"Configuration de pression documentée : 7 bar.",
 			"Cuve de stockage documentée : 200 L."
 		],
 		"limitations": [
-			"La colonne Piston Displacement décrit le déplacement du piston. Aucun débit restitué sous pression n’est qualifié dans ce tableau.",
-			"Le cycle de service n’est pas indiqué ; la compatibilité ne devient pas conclusive par la seule capacité de cuve.",
-			"Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
-			"Le plafond CompatAir correspond à la pression de travail de la version retenue. Il ne décrit ni la soupape ni le maximum de toutes les versions de la famille."
+			"La colonne Piston Displacement décrit le déplacement ; aucun débit restitué sous pression n’est qualifié. La courbe FAD demeure vide et le taux de marche reste inconnu.",
+			"Le D 3-200 D pèse 127 kg et mesure 450 × 1445 × 965 mm en longueur × largeur × hauteur, contre 81 kg et 450 × 1100 × 820 mm pour le D 2-100 D.",
+			"Les deux montages annoncent deux raccords G¼. L’alimentation et la disponibilité locale doivent être confirmées avant commande.",
+			"Les 7 bar correspondent à la pression de travail de la ligne retenue, distincte de la soupape et des versions à deux étages."
 		]
 	},
 	"evidence": [

@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX HBH 200, référence 150123770. Le tableau fabricant publie 500 L/min et une plage d’utilisation de 6 à 6 bar. Puissance publiée : 300 W. Vitesse de rotation : 20.000 tr/min.",
+		"overview": "HBH 200 150123770 : ponceuse à bande à bras orientable, prévue pour des bandes de 330 mm en largeurs de 8, 15 ou 20 mm selon le bras. La HB 3 voisine reçoit d’autres bras et un moteur différent. La fiche HBH annonce 500 L/min tandis que le catalogue en donne 550, sans régime de mesure qualifié. Cet écart reste visible ; aucune de ces valeurs ne devient un maximum garanti en charge.",
 		"verifiedFacts": [
 			"Le catalogue de cette référence indique un fonctionnement à 6 bar.",
 			"La fiche fabricant publie une consommation de 500 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
@@ -33,6 +33,7 @@ const product: ToolProfileInput = {
 			"Masse publiée : 870 g."
 		],
 		"limitations": [
+			"Le catalogue indique que le bras n’est pas inclus avec la HBH 200 : vérifier sa référence et la fourniture. La vitesse de 20 000 tr/min ne se confond pas avec les 45 m/s de bande publiés.",
 			"Le choix de la fraise, du disque ou de l’accessoire doit respecter la vitesse et les dimensions prescrites par BIAX.",
 			"Débit déclaré par le fabricant, sans mesure physique CompatAir."
 		]
@@ -47,9 +48,10 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "La fiche fabricant publie une consommation de 500 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
+			"value": "Fiche HTML : 500 L/min ; catalogue PDF : 550 L/min, écart non résolu et régime non précisé.",
 			"evidenceIds": [
-				"biax-150123770-20260926"
+				"biax-150123770-20260926",
+				"biax-150123770-20260926-workingpressurebar-1"
 			]
 		},
 		{
@@ -92,6 +94,42 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+		},
+		{
+			"id": "biax-150122200-20260926",
+			"sourceUrl": "https://biax.de/en/product/hb-3-bandbreiten-3mm-6mm-12mm/",
+			"sourceLabel": "BIAX, fiche technique HB 3 – Belt width 3mm, 6mm, 12mm, réf. 150122200",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "La fiche fabricant publie une consommation de 340 L/min. Le régime de charge n’est pas précisé dans ce tableau."
+		},
+		{
+			"id": "biax-150122200-20260926-workingpressurebar-1",
+			"sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=34",
+			"sourceLabel": "BIAX, catalogue technique biax-pneumatic-en, p. 34",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+		},
+		{
+			"id": "biax-150123645-20260926",
+			"sourceUrl": "https://biax.de/en/product/hb-15-1-bandbreiten-8-mm-15-mm/",
+			"sourceLabel": "BIAX, fiche technique HB 15-1 – bandwidth 8 mm, 15 mm, réf. 150123645",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "La fiche fabricant publie une consommation de 420 L/min. Le régime de charge n’est pas précisé dans ce tableau."
+		},
+		{
+			"id": "biax-150123645-20260926-workingpressurebar-1",
+			"sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=35",
+			"sourceLabel": "BIAX, catalogue technique biax-pneumatic-en, p. 35",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
 		}
 	],
 	"fieldSources": {
@@ -103,6 +141,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"biax-150123770-20260926"
+		],
+		"airflowBasis": [
+			"biax-150123770-20260926"
 		]
 	},
 	"notes": [
@@ -112,7 +153,8 @@ const product: ToolProfileInput = {
 		"min": 500,
 		"typical": 500,
 		"max": 500
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

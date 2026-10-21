@@ -23,16 +23,17 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX SARH 830, référence 150012015. Le tableau fabricant publie 400 L/min et une plage d’utilisation de 6 à 6 bar. Puissance publiée : 260 W. Vitesse de rotation : 30.000 tr/min.",
+		"overview": "SARH 830 150012015 : meuleuse à levier, double palier avant et 30 000 tr/min ; la SARH 820 voisine tourne à 20 000 tr/min. La fiche 830 donne 260 W et le catalogue 240 W, écart non résolu. Les 400 L/min à 6 bar sont communs aux sources mais sans régime qualifié. La fraise, sa queue et sa vitesse admissible doivent être vérifiées séparément de la comparaison d’air.",
 		"verifiedFacts": [
 			"Le catalogue de cette référence indique un fonctionnement à 6 bar.",
 			"La fiche fabricant publie une consommation de 400 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
 			"Référence fabricant : 150012015.",
-			"Puissance publiée : 260 W.",
+			"Puissance publiée : Fiche HTML : 260 W ; catalogue PDF : 240 W, écart non résolu.",
 			"Vitesse de rotation : 30.000 tr/min.",
 			"Masse publiée : 520 g."
 		],
 		"limitations": [
+			"La pince livrée est de 6 mm ; le diamètre de queue maximal de 8 mm ne signifie pas qu’une pince de 8 mm est fournie. Aucune puissance unique n’est arbitrée entre les documents.",
 			"Le choix de la fraise, du disque ou de l’accessoire doit respecter la vitesse et les dimensions prescrites par BIAX.",
 			"Débit déclaré par le fabricant, sans mesure physique CompatAir."
 		]
@@ -54,9 +55,10 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Puissance publiée",
-			"value": "260 W",
+			"value": "Fiche HTML : 260 W ; catalogue PDF : 240 W, écart non résolu.",
 			"evidenceIds": [
-				"biax-150012015-20260926"
+				"biax-150012015-20260926",
+				"biax-150012015-20260926-workingpressurebar-1"
 			]
 		},
 		{
@@ -99,6 +101,42 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+		},
+		{
+			"id": "biax-150021125-20260926",
+			"sourceUrl": "https://biax.de/en/product/sarh-820-20-000-1-min-extra-robust/",
+			"sourceLabel": "BIAX, fiche technique SARH 820 – 20.000 1/min, extra strong, réf. 150021125",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "La fiche fabricant publie une consommation de 500 L/min. Le régime de charge n’est pas précisé dans ce tableau."
+		},
+		{
+			"id": "biax-150021125-20260926-workingpressurebar-1",
+			"sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=23",
+			"sourceLabel": "BIAX, catalogue technique biax-pneumatic-en, p. 23",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+		},
+		{
+			"id": "biax-150021115-20260926",
+			"sourceUrl": "https://biax.de/en/product/sbrh-820-20-000-1-min-zweihandschl/",
+			"sourceLabel": "BIAX, fiche technique SBRH 820 – Two hand grinder, réf. 150021115",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "La fiche fabricant publie une consommation de 500 L/min. Le régime de charge n’est pas précisé dans ce tableau."
+		},
+		{
+			"id": "biax-150021115-20260926-workingpressurebar-1",
+			"sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=24",
+			"sourceLabel": "BIAX, catalogue technique biax-pneumatic-en, p. 24",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +148,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"biax-150012015-20260926"
+		],
+		"airflowBasis": [
+			"biax-150012015-20260926"
 		]
 	},
 	"notes": [
@@ -119,7 +160,8 @@ const product: ToolProfileInput = {
 		"min": 400,
 		"typical": 400,
 		"max": 400
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

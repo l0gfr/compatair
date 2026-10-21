@@ -19,7 +19,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Aircraft AIRBOY 262 E, référence 2001247 : cuve de 2,4 L, pression maximale publiée de 10 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Capacité de remplissage approximative : 155 l/min. Condition de remplissage publiée : à 6 bar de pression de travail.",
+		"overview": "AIRBOY 262 E, article 2001247 : cuve de 2,4 L, maximum de 10 bar, moteur de 1,5 kW et masse approximative de 23 kg. Aircraft publie environ 155 L/min de remplissage à 6 bar. L’AIRBOY 186 OF E possède 6 L, atteint 8 bar et publie environ 90 L/min de remplissage à 6 bar pour 9,2 kg.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons. Puissance moteur publiée : 1,5 kW.",
@@ -30,9 +30,9 @@ const product: CompressorInput = {
 			"Nombre de cylindres : 1."
 		],
 		"limitations": [
-			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
-			"La capacité de remplissage et sa pression éventuelle ne sont pas assimilées à un débit FAD certifié. Demander les conditions d’essai et le débit utile à la pression de l’outil."
+			"La pression de remplissage est publiée : 6 bar. Sa qualification FAD et les conditions complètes d’essai restent à obtenir ; la courbe FAD reste vide.",
+			"Le 262 E est lubrifié et mesure environ 555 × 318 × 430 mm ; le 186 OF E est sans huile. Le réservoir, le poids et l’entretien diffèrent entre ces deux appareils.",
+			"Le taux de marche reste inconnu. Un débit utile documenté à la pression de l’outil est nécessaire pour conclure sur un usage soutenu."
 		]
 	},
 	"specifications": [
@@ -102,6 +102,15 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "A",
 			"notes": "Débit aspiré déclaré : 250 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+		},
+		{
+			"id": "aircraft-2001230-20260927-review-20261021-for-aircraft-airboy-262-e",
+			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airboy-186-of-e-2001230/",
+			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2001230, réf. 2001230",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-10-21",
+			"confidence": "A",
+			"notes": "Fiche voisine consultée en HTTPS le 21 octobre 2026 ; SHA-256 du corps : 49205fb1229863e6dd05baa6be184764800d5c78f88439891ae5f25931ccd26d. Configurations comparées séparément."
 		}
 	],
 	"fieldSources": {
@@ -135,7 +144,7 @@ const product: CompressorInput = {
 	],
 	"intakeFlowLpm": 250,
 	"powerKw": 1.5,
-	"voltage": "230 V"
+	"voltage": "230 V, 50 Hz"
 };
 
 export default product;

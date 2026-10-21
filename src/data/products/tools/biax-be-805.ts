@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX BE 805, référence 150810901. Le tableau fabricant publie 280 L/min et une plage d’utilisation de 6 à 6 bar. Puissance publiée : 80 W. Vitesse de rotation : adjustable 0-500 tr/min.",
+		"overview": "BE 805 150810901 : ébavureur de trous à démarrage par poussée et vitesse réglable de 0 à 500 tr/min, livré avec pince de 8 mm. Le BE 805 H voisin possède une commande et une rotation réversible différentes. Le catalogue propose pour le BE 805 des fraises à chanfreiner de 15 ou 25 mm, suivant la plage de trou. Les 280 L/min à 6 bar restent sans régime précisé ; la fonction et la fraise doivent être choisies avant le compresseur.",
 		"verifiedFacts": [
 			"Le catalogue de cette référence indique un fonctionnement à 6 bar.",
 			"La fiche fabricant publie une consommation de 280 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
@@ -33,6 +33,7 @@ const product: ToolProfileInput = {
 			"Masse publiée : 520 g."
 		],
 		"limitations": [
+			"Le diamètre de queue maximal ne valide pas toute fraise ni toute vitesse. La consommation sans régime ne démontre pas la suffisance en charge.",
 			"Le choix de la fraise, du disque ou de l’accessoire doit respecter la vitesse et les dimensions prescrites par BIAX.",
 			"Débit déclaré par le fabricant, sans mesure physique CompatAir."
 		]
@@ -99,6 +100,24 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+		},
+		{
+			"id": "biax-150810915-20260926",
+			"sourceUrl": "https://biax.de/en/product/be-805-h-mit-drehrichtungsanderung/",
+			"sourceLabel": "BIAX, fiche technique BE 805 H – with rotation direction change, réf. 150810915",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "La fiche fabricant publie une consommation de 280 L/min. Le régime de charge n’est pas précisé dans ce tableau."
+		},
+		{
+			"id": "biax-150810915-20260926-workingpressurebar-1",
+			"sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=55",
+			"sourceLabel": "BIAX, catalogue technique biax-pneumatic-en, p. 55",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +129,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"biax-150810901-20260926"
+		],
+		"airflowBasis": [
+			"biax-150810901-20260926"
 		]
 	},
 	"notes": [
@@ -119,7 +141,8 @@ const product: ToolProfileInput = {
 		"min": 280,
 		"typical": 280,
 		"max": 280
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

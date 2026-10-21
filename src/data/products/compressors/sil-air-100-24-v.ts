@@ -79,17 +79,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "SIL-AIR 100/24 V. 74 L/min déclarés à 5 bar. Compresseur sur cuve 24 L avec ventilateurs de refroidissement.",
+		"overview": "SIL-AIR 100/24 V : modèle sur chariot avec deux moteurs et ventilateurs de refroidissement, cuve de 24 L. La colonne 230 V à 50 Hz publie 74 L/min à 5 bar pour 680 W. Le 100/24 sans suffixe V figure sur la même page, sans ventilateurs annoncés.",
 		"verifiedFacts": [
 			"Configuration de pression documentée : 8 bar.",
 			"Cuve de stockage documentée : 24 L.",
 			"FAD sous pression identifié séparément des valeurs d’aspiration : 74 L/min déclarés à 5 bar."
 		],
 		"limitations": [
-			"Colonne 50 Hz retenue. La ligne 60 Hz n’est pas utilisée pour augmenter le FAD.",
-			"La pression du FAD est inférieure au maximum mécanique ; aucun FAD n’est extrapolé jusqu’à ce maximum.",
-			"Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil."
+			"Les valeurs de 88 L/min et 800 W appartiennent à la colonne 115 V à 60 Hz. Elles ne sont pas transférées à la version 230 V à 50 Hz.",
+			"Le tableau commun indique 50 kg nets et 55 kg emballés. Les dimensions A × B × C sont de 360 × 650 × 550 mm pour la machine et de 370 × 800 × 650 mm pour l’emballage.",
+			"Le catalogue n’isole pas une masse ni un gain de débit propre aux ventilateurs du V ; aucun supplément de performance n’en est déduit.",
+			"Le FAD connu à 5 bar ne permet pas de conclure pour un outil demandant 6,3 bar. Le taux de marche reste inconnu."
 		]
 	},
 	"evidence": [
@@ -130,12 +130,16 @@ const product: CompressorInput = {
 		],
 		"powerKw": [
 			"october4-silair-current-catalog-p25"
+		],
+		"voltage": [
+			"october4-silair-current-catalog-p25"
 		]
 	},
 	"notes": [
 		"Portée de la source : FAD-pressure-qualified.",
 		"Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées."
-	]
+	],
+	"voltage": "230 V, 50 Hz"
 };
 
 export default product;

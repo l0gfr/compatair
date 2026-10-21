@@ -81,18 +81,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Airpol 45. 4 666,667 L/min à 15 bar. Groupe Airpol sans réservoir de stockage intégré.",
+		"overview": "Airpol 45, configuration 15 bar : 280 m³/h publiés à 1,5 MPa, soit 4 666,667 L/min, avec un moteur de 45 kW en 400 V triphasé à 50 Hz. Le groupe sans réservoir intégré mesure 1060 × 1350 × 1570 mm et pèse 1 100 kg.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 0 L.",
 			"Pression maximale de fonctionnement publiée : 15 bar."
 		],
 		"limitations": [
-			"Conditions de référence FAD non précisées dans la fiche ; aucun AnnexC ni température/humidité ajouté.",
-			"Une seule configuration par modèle est retenue ; aucune fusion de pressions de fabrication différentes.",
-			"Cycle de service non établi ; la tenue permanente reste indéterminée.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"La brochure associe les capacités à EN ISO 1217:2009 et EN ISO 5167-2. L’annexe FAD ainsi que les conditions complètes de référence ne sont pas précisées ; aucune annexe C n’est ajoutée.",
+			"Le besoin d’air de refroidissement publié est de 7 000 m³/h, avec une température ambiante admissible de +5 à +40 °C et un raccord G 1½.",
+			"L’Airpol 37 annonce 245 m³/h à 15 bar avec 37 kW, 760 kg et 5 900 m³/h d’air de refroidissement. Les contraintes d’installation diffèrent.",
+			"Le taux de marche demeure inconnu. Les valeurs des autres versions de pression ne sont pas réunies dans cette courbe."
 		]
 	},
 	"evidence": [
@@ -144,11 +143,19 @@ const product: CompressorInput = {
 		],
 		"powerKw": [
 			"october3d-airpol-pdf-075-p11"
+		],
+		"voltage": [
+			"october3d-airpol-pdf-075-p11"
+		],
+		"phase": [
+			"october3d-airpol-pdf-075-p11"
 		]
 	},
 	"notes": [
 		"Pression FAD, plage de fonctionnement et pression de soupape restent distinctes. ISO 1217 n’est pas ajoutée à une source qui ne la revendique pas."
-	]
+	],
+	"voltage": "400 V, 50 Hz",
+	"phase": "three-phase"
 };
 
 export default product;
