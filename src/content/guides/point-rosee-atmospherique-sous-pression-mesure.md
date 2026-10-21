@@ -3,14 +3,14 @@ title: "Point de rosée atmosphérique ou sous pression : comparer deux mesures
 seoTitle: "Point de rosée : atmosphérique ou sous pression ?"
 description: "Deux hygromètres donnent des points de rosée différents ? Vérifiez la pression de mesure, le prélèvement et la stabilisation avant de déclarer le sécheur défaillant."
 pubDate: "2026-09-26"
-updatedDate: 2026-10-03
+updatedDate: 2026-10-21
 category: "Comprendre"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "carrosserie-peinture", "menuiserie-agencement"]
 readingTime: 4
 reviewStatus: "internal"
 relatedGuides: ["point-rosee-secheur-filtre-air-comprime", "secheur-air-comprime-atelier-non-chauffe", "qualite-air-comprime-iso-8573-1"]
-sources: ["https://www.vaisala.com/en/blog/2019-09/what-dew-point-and-how-measure-it", "https://www.vaisala.com/sites/default/files/documents/CompAir-Sampling-Cell-AppNote-B211229EN.pdf"]
+sources: ["https://www.vaisala.com/en/blog/2019-09/what-dew-point-and-how-measure-it", "https://www.vaisala.com/en/industries-applications/compressed-air-measurement/compressed-air-sampling-moisture-detection"]
 ---
 
 **Un point de rosée sans pression de référence est incomplet pour comparer deux mesures d’air comprimé.** Une sonde dans le réseau et une sonde après détente peuvent donner des températures différentes sans que l’une soit nécessairement défectueuse. Il faut d’abord vérifier ce que chaque instrument mesure ou calcule.
@@ -49,7 +49,7 @@ Une ligne de rapport limitée à « air sec : −20 °C » laisse trop d’incon
 
 ## Le prélèvement peut lui-même changer le résultat
 
-La [note de prélèvement de Vaisala](https://www.vaisala.com/sites/default/files/documents/CompAir-Sampling-Cell-AppNote-B211229EN.pdf) décrit plusieurs causes d’écart : chute de pression, condensation dans la ligne, entrée d’humidité par fuite ou diffusion et réponse trop lente dans un échantillon stagnant. Elle recommande un montage représentatif du gaz à mesurer et des matériaux adaptés.
+La [page de recommandations de prélèvement de Vaisala](https://www.vaisala.com/en/industries-applications/compressed-air-measurement/compressed-air-sampling-moisture-detection) décrit plusieurs causes d’écart : chute de pression, condensation dans la ligne, entrée d’humidité par fuite ou diffusion et réponse trop lente dans un échantillon stagnant. Elle recommande un montage représentatif du gaz à mesurer et des matériaux adaptés.
 
 Notre proposition de compte rendu ajoute un croquis de la ligne de prélèvement : position des organes, longueur connue, matériaux, point de rejet et mesure de pression. Cette description rend le résultat interprétable lors d’un contrôle ultérieur. Un chiffre précis sans montage décrit peut être moins utile qu’un résultat accompagné de limites explicites.
 
@@ -73,7 +73,7 @@ Deux cas Vaisala prolongent cet examen du prélèvement : [la vis de fuite DSC74
 
 ## Sources et méthode
 
-Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture interne, sans essai physique ni validation professionnelle externe. Les grilles de décision sont proposées par CompatAir ; les valeurs constructeur et les exemples hypothétiques sont distingués dans le texte.
+Sources initialement consultées le **26 septembre 2026** ; lien et recommandations de prélèvement recontrôlés le **21 octobre 2026**. Rédaction avec assistance d’IA et relecture interne, sans essai physique ni validation professionnelle externe. Les grilles de décision sont proposées par CompatAir ; les valeurs constructeur et les exemples hypothétiques sont distingués dans le texte.
 
 - [Vaisala, définition et mesure du point de rosée](https://www.vaisala.com/en/blog/2019-09/what-dew-point-and-how-measure-it)
-- [Vaisala, prélèvement pour la mesure du point de rosée](https://www.vaisala.com/sites/default/files/documents/CompAir-Sampling-Cell-AppNote-B211229EN.pdf)
+- [Vaisala, prélèvement pour la mesure du point de rosée](https://www.vaisala.com/en/industries-applications/compressed-air-measurement/compressed-air-sampling-moisture-detection)

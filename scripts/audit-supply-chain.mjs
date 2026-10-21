@@ -31,6 +31,7 @@ const EXPECTED_OVERRIDES = new Map([
   ['svgo', '4.1.0'],
   ['tmp', '0.2.7'],
   ['uuid', '11.1.1'],
+  ['vite', '8.1.6'],
 ]);
 const EXPECTED_TRUST_POLICY_EXCLUSIONS = new Set(['chokidar@4.0.3', 'semver@5.7.2||6.3.1']);
 const EXPECTED_RELEASE_AGE_EXCLUSIONS = new Set();
