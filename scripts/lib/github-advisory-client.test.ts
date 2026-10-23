@@ -47,7 +47,7 @@ describe('GitHub Advisory Database client', () => {
 			vulnerabilities: [{ package: { ecosystem: 'npm', name: 'zod' }, vulnerable_version_range: '<= 4.6.7', first_patched_version: '4.6.8' }],
 		}])) as unknown as typeof fetch;
 		const response = await fetchGitHubAdvisories([{ name: 'zod', version: '3.25.76' }, { name: 'zod', version: '4.6.7' }], { fetchImplementation, token: '' });
-		expect(response.zod[0]).toMatchObject({ vulnerableVersionRanges: ['<= 4.6.7'], firstPatchedVersions: ['4.6.8'], queriedVersions: ['3.25.76', '4.6.7'] });
+		expect(response).toMatchObject({ zod: [{ vulnerableVersionRanges: ['<= 4.6.7'], firstPatchedVersions: ['4.6.8'], queriedVersions: ['3.25.76', '4.6.7'] }] });
 	});
 
 	it('fails closed on an HTTP error or malformed advisory', async () => {
