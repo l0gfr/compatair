@@ -15,8 +15,8 @@ const product: CompressorInput = {
 	"image": {
 		"src": "/images/products/aircraft-airstar-853-200.webp",
 		"alt": "Repères techniques Aircraft AIRSTAR 853/200, référence 2009832",
-		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-853200-2009832/",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-compressors-2026-09-27.json",
+		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
 	},
 	"editorial": {
 		"overview": "Aircraft AIRSTAR 853/200, référence 2009832 : cuve de 200 L, pression maximale publiée de 10 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Capacité de remplissage approximative : 680 l/min. Condition de remplissage publiée : à 6 bar de pression de travail.",
@@ -96,12 +96,23 @@ const product: CompressorInput = {
 	"evidence": [
 		{
 			"id": "aircraft-2009832-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-853200-2009832/",
-			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2009832, réf. 2009832",
+			"sourceUrl": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-compressors-2026-09-27.json",
+			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2009832, réf. 2009832 ; relevé historique, archive CompatAir",
 			"sourceType": "manufacturer",
+			"sourceRole": "secondary",
 			"retrievedAt": "2026-10-01",
 			"confidence": "A",
-			"notes": "Débit aspiré déclaré : 850 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+			"notes": "Débit aspiré déclaré : 850 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée. Archive secondaire : transcription de la fiche fabricant relevée le 27/09/2026, conservée dans le fichier JSON immuable du catalogue compressors. La fiche d’origine est hors ligne au 23/10/2026. SHA-256 de l’archive : af866f2323db4015b11fba728e6b8c50093e8998705ae6d1920deac66f83cc62. La date de consultation historique est conservée ; cette réparation de lien ne constitue pas une nouvelle vérification de ses valeurs."
+		},
+		{
+			"id": "aircraft-2009832-documentation-20261023",
+			"sourceUrl": "https://drehen-fraesen-bohren.de/dokumente/Betriebsanleitung_AIRSTAR-703-100_853-200_D.pdf#page=8",
+			"sourceLabel": "AIRCRAFT Kompressorenbau und Maschinenhandel GmbH, Notice 2022-02-28, version 2.07, p. 8 (article 2009832)",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-23",
+			"confidence": "A",
+			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : retailer-mirror-drehen-fraesen-bohren. Empreinte PDF SHA-256 : 221311d35c90002b6e0014630077e4de8252935d1427460dd2723d3b70566929. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
 		}
 	],
 	"fieldSources": {

@@ -19,8 +19,8 @@ const product: ToolProfileInput = {
 	"image": {
 		"src": "/images/products/aircraft-ess-150-composite-pro.webp",
 		"alt": "Repères techniques Aircraft ESS 150 Composite PRO, référence 2403450",
-		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ess-150-composite-pro-2403450/",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-tools-2026-09-27.json",
+		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
 	},
 	"editorial": {
 		"overview": "Aircraft ESS 150 Composite PRO, référence 2403450. Consommation moyenne publiée : 350 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Course de travail : 5 mm. Diamètre du plateau : 150 mm.",
@@ -91,12 +91,23 @@ const product: ToolProfileInput = {
 	"evidence": [
 		{
 			"id": "aircraft-2403450-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/ess-150-composite-pro-2403450/",
-			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2403450, réf. 2403450",
+			"sourceUrl": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-tools-2026-09-27.json",
+			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2403450, réf. 2403450 ; relevé historique, archive CompatAir",
 			"sourceType": "manufacturer",
+			"sourceRole": "secondary",
 			"retrievedAt": "2026-10-01",
 			"confidence": "A",
-			"notes": "Consommation moyenne publiée : 350 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+			"notes": "Consommation moyenne publiée : 350 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Archive secondaire : transcription de la fiche fabricant relevée le 27/09/2026, conservée dans le fichier JSON immuable du catalogue tools. La fiche d’origine est hors ligne au 23/10/2026. SHA-256 de l’archive : 22da35f9dfdf45646a1c9769247d976d34730e51aa9af02d9b5f12d55257222c. La date de consultation historique est conservée ; cette réparation de lien ne constitue pas une nouvelle vérification de ses valeurs."
+		},
+		{
+			"id": "aircraft-2403450-documentation-20261023",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10716868&portal=3001205&pageNumber=67",
+			"sourceLabel": "AIRCRAFT / Stürmer Maschinen, AIRCRAFT Autumn/Winter 2026/27, p. 67 (article 2403450)",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-23",
+			"confidence": "A",
+			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer 702076. Empreinte PDF SHA-256 : 0f0c4b393e231488377db351c3f98ca6e5ef53d3ffe664a41048f13421d86f51. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
 		}
 	],
 	"fieldSources": {

@@ -19,8 +19,8 @@ const product: ToolProfileInput = {
 	"image": {
 		"src": "/images/products/aircraft-iss-tt-composite.webp",
 		"alt": "Repères techniques Aircraft ISS-TT ¾\" Composite, référence 2401376",
-		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-tt-34-composite-2401376/",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-tools-2026-09-27.json",
+		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
 	},
 	"editorial": {
 		"overview": "Aircraft ISS-TT ¾\" Composite, référence 2401376. Consommation moyenne publiée : 235 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Diamètre intérieur du flexible : 13 mm. Vitesse de rotation : 5200 min¯¹.",
@@ -119,12 +119,23 @@ const product: ToolProfileInput = {
 	"evidence": [
 		{
 			"id": "aircraft-2401376-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/iss-tt-34-composite-2401376/",
-			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2401376, réf. 2401376",
+			"sourceUrl": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-tools-2026-09-27.json",
+			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2401376, réf. 2401376 ; relevé historique, archive CompatAir",
 			"sourceType": "manufacturer",
+			"sourceRole": "secondary",
 			"retrievedAt": "2026-10-01",
 			"confidence": "A",
-			"notes": "Consommation moyenne publiée : 235 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+			"notes": "Consommation moyenne publiée : 235 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Archive secondaire : transcription de la fiche fabricant relevée le 27/09/2026, conservée dans le fichier JSON immuable du catalogue tools. La fiche d’origine est hors ligne au 23/10/2026. SHA-256 de l’archive : 22da35f9dfdf45646a1c9769247d976d34730e51aa9af02d9b5f12d55257222c. La date de consultation historique est conservée ; cette réparation de lien ne constitue pas une nouvelle vérification de ses valeurs."
+		},
+		{
+			"id": "aircraft-2401376-documentation-20261023",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=242",
+			"sourceLabel": "AIRCRAFT / Stürmer Maschinen, AIRCRAFT Hauptkatalog 2026/27, p. 242 (article 2401376)",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-23",
+			"confidence": "A",
+			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer 702076. Empreinte PDF SHA-256 : 3a2f521a2d4b3d54f6e9aa1d3663ef7d28198b4d2e9e923b5fef59470eb1e244. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
 		}
 	],
 	"fieldSources": {

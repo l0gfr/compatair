@@ -1,3 +1,4 @@
+import { applyReviewedAircraftSourceRepair } from './reviewed-aircraft-sources-2026-10-23.mjs';
 import { readFileSync } from 'node:fs';
 import { describe, it, expect } from 'vitest';
 import { buildCatalogExpansion, reviewedAirboySource } from './catalog-expansion-2026-09-27.mjs';
@@ -15,7 +16,7 @@ const expansion = buildCatalogExpansion(...snapshots);
 const relocationLedger = JSON.parse(readFileSync(new URL('../../src/data/imports/source-url-repairs-aircraft-2026-10-01.json', import.meta.url)));
 const october2Ledger = JSON.parse(readFileSync(new URL('../../src/data/imports/source-url-repairs-2026-10-02.json', import.meta.url)));
 const relocations = new Map([...relocationLedger.repairs, ...october2Ledger.repairs].flatMap(repair => repair.references.map(reference => [reference.productId, { repair, reference }])));
-const withReviewedSources = product => {
+const withEarlierReviewedSources = product => {
  const relocation = relocations.get(product.id);
  if (!relocation) return product;
  const updated = structuredClone(product);
@@ -35,6 +36,7 @@ const withReviewedSources = product => {
  for (const fragment of repair.overviewRemovals ?? []) updated.editorial.overview = updated.editorial.overview.replace(fragment, '');
  return updated;
 };
+const withReviewedSources = product => applyReviewedAircraftSourceRepair(withEarlierReviewedSources(product));
 const mutate = (kind, brand, patch) => {
  const data = structuredClone(snapshots);
  const row = data[kind].rows.find(r => r.brand === brand);

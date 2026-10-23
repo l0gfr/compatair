@@ -19,8 +19,8 @@ const product: ToolProfileInput = {
 	"image": {
 		"src": "/images/products/aircraft-wb-10-1-pro.webp",
 		"alt": "Repères techniques Aircraft WB 10-1 PRO, référence 2404120",
-		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/wb-10-1-pro-2404120/",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-tools-2026-09-27.json",
+		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
 	},
 	"editorial": {
 		"overview": "Aircraft WB 10-1 PRO, référence 2404120. Consommation moyenne publiée : 175 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Capacité de perçage dans l’acier : 10 mm. Capacité de perçage dans le bois : 20 mm.",
@@ -119,12 +119,23 @@ const product: ToolProfileInput = {
 	"evidence": [
 		{
 			"id": "aircraft-2404120-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-pneumatic-tools/wb-10-1-pro-2404120/",
-			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2404120, réf. 2404120",
+			"sourceUrl": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-tools-2026-09-27.json",
+			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2404120, réf. 2404120 ; relevé historique, archive CompatAir",
 			"sourceType": "manufacturer",
+			"sourceRole": "secondary",
 			"retrievedAt": "2026-10-01",
 			"confidence": "A",
-			"notes": "Consommation moyenne publiée : 175 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+			"notes": "Consommation moyenne publiée : 175 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Archive secondaire : transcription de la fiche fabricant relevée le 27/09/2026, conservée dans le fichier JSON immuable du catalogue tools. La fiche d’origine est hors ligne au 23/10/2026. SHA-256 de l’archive : 22da35f9dfdf45646a1c9769247d976d34730e51aa9af02d9b5f12d55257222c. La date de consultation historique est conservée ; cette réparation de lien ne constitue pas une nouvelle vérification de ses valeurs."
+		},
+		{
+			"id": "aircraft-2404120-documentation-20261023",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=245",
+			"sourceLabel": "AIRCRAFT / Stürmer Maschinen, AIRCRAFT Hauptkatalog 2026/27, p. 245 (article 2404120)",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-23",
+			"confidence": "A",
+			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer 702076. Empreinte PDF SHA-256 : 527567fc8a4c727b8d4e799507260aa310d26decb7e15621f040b3df4e71c8bb. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
 		}
 	],
 	"fieldSources": {

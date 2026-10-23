@@ -15,8 +15,8 @@ const product: CompressorInput = {
 	"image": {
 		"src": "/images/products/aircraft-airstar-403-50.webp",
 		"alt": "Repères techniques Aircraft AIRSTAR 403/50, référence 2009430",
-		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-40350-2009430/",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-compressors-2026-09-27.json",
+		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
 	},
 	"editorial": {
 		"overview": "Aircraft AIRSTAR 403/50, référence 2009430 : cuve de 50 L, pression maximale publiée de 10 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Capacité de remplissage approximative : 290 l/min. Condition de remplissage publiée : à 6 bar de pression de travail.",
@@ -32,7 +32,8 @@ const product: CompressorInput = {
 		"limitations": [
 			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
 			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
-			"La capacité de remplissage et sa pression éventuelle ne sont pas assimilées à un débit FAD certifié. Demander les conditions d’essai et le débit utile à la pression de l’outil."
+			"La capacité de remplissage et sa pression éventuelle ne sont pas assimilées à un débit FAD certifié. Demander les conditions d’essai et le débit utile à la pression de l’outil.",
+			"Écarts entre documents fabricant : Remplissage (L/min) : relevé de fiche du 27/09/2026 = 290 ; Notice 2021-09-01, version 2.05 = 285."
 		]
 	},
 	"specifications": [
@@ -91,17 +92,36 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"aircraft-2009430-20260927"
 			]
+		},
+		{
+			"label": "Écart documentaire fabricant",
+			"value": "Remplissage (L/min) : relevé de fiche du 27/09/2026 = 290 ; Notice 2021-09-01, version 2.05 = 285.",
+			"evidenceIds": [
+				"aircraft-2009430-20260927",
+				"aircraft-2009430-documentation-20261023"
+			]
 		}
 	],
 	"evidence": [
 		{
 			"id": "aircraft-2009430-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-40350-2009430/",
-			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2009430, réf. 2009430",
+			"sourceUrl": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-compressors-2026-09-27.json",
+			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2009430, réf. 2009430 ; relevé historique, archive CompatAir",
 			"sourceType": "manufacturer",
+			"sourceRole": "secondary",
 			"retrievedAt": "2026-10-01",
 			"confidence": "A",
-			"notes": "Débit aspiré déclaré : 390 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+			"notes": "Débit aspiré déclaré : 390 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée. Archive secondaire : transcription de la fiche fabricant relevée le 27/09/2026, conservée dans le fichier JSON immuable du catalogue compressors. La fiche d’origine est hors ligne au 23/10/2026. SHA-256 de l’archive : af866f2323db4015b11fba728e6b8c50093e8998705ae6d1920deac66f83cc62. La date de consultation historique est conservée ; cette réparation de lien ne constitue pas une nouvelle vérification de ses valeurs."
+		},
+		{
+			"id": "aircraft-2009430-documentation-20261023",
+			"sourceUrl": "https://www.profizone24.at/wp-content/uploads/2022/12/2009410_aircraft_kompressor_airstar-503-100_betriebsanleitung.pdf#page=8",
+			"sourceLabel": "AIRCRAFT Kompressorenbau und Maschinenhandel GmbH, Notice 2021-09-01, version 2.05, p. 8 (article 2009430)",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-23",
+			"confidence": "A",
+			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : retailer-mirror-profizone24. Empreinte PDF SHA-256 : b641f089f070d34485aba26eca21b8ef45961b82b8942db057e99f01be25905f. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
 		}
 	],
 	"fieldSources": {
