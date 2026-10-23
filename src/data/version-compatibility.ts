@@ -1,11 +1,11 @@
 export const versionCompatibility = {
 	schemaVersion: '1.0.0',
-	updatedAt: '2026-09-27',
+	updatedAt: '2026-10-23',
 	principle: 'Each version describes a distinct compatibility boundary; matching numbers are not implied.',
 	runtime: {
 		applicationPackage: { version: '0.1.0', scope: 'Private repository package lifecycle; not a public API promise.' },
 		node: { version: '>=24 <25', scope: 'Supported server and release runtime.' },
-		astro: { version: '7.2.8', scope: 'Static site build framework.' },
+		astro: { version: '7.3.3', scope: 'Static site build framework.' },
 		typescript: { version: '6.0.3', scope: 'Strict source validation toolchain.' },
 	},
 	interfaces: [

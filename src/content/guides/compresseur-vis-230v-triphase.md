@@ -3,17 +3,18 @@ title: "Compresseur à vis 230 V triphasé : ne pas confondre tension et phases"
 seoTitle: "Compresseur 230 V triphasé : vérifier avant achat"
 description: "La mention 230 V ne garantit pas une alimentation monophasée. Exemple ABAC SPINN : relever tension, fréquence et nombre de phases séparément."
 pubDate: 2026-09-26
+updatedDate: 2026-10-23
 category: "Installer"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
 readingTime: 3
 relatedGuides: ["compresseur-50hz-60hz-versions", "compresseur-sur-chassis-sans-cuve"]
-sources: ["https://shop.abacaircompressors.com/en-INT/products/4152054944/spinn22-8-40050k-e-ce"]
+sources: ["https://shop.abacaircompressors.com/en-INT/products/4152022526/spinn-55x-8-23050-fm-ce"]
 ---
 
 Une annonce « compresseur 230 V » ne suffit pas pour savoir s’il convient à une alimentation monophasée. Le nombre de phases est une caractéristique distincte. Le catalogue industriel contient aussi des versions 230 V triphasées.
 
-Le [tableau officiel des variantes ABAC SPINN](https://shop.abacaircompressors.com/en-INT/products/4152054944/spinn22-8-40050k-e-ce), consulté le 26 septembre 2026, décrit notamment la référence **4152022526**, **SPINN 5.5X 8 230/50 FM**. Dans les caractéristiques de cette variante, les champs indiquent :
+La [fiche officielle ABAC de la référence 4152022526](https://shop.abacaircompressors.com/en-INT/products/4152022526/spinn-55x-8-23050-fm-ce), consultée le 23 octobre 2026, décrit le **SPINN 5.5X 8 230/50 FM CE**. Les caractéristiques de cette référence indiquent :
 
 | Champ fabricant | Valeur |
 | --- | --- |
@@ -26,6 +27,8 @@ Le [tableau officiel des variantes ABAC SPINN](https://shop.abacaircompressors.c
 | Vessel size | 0 L |
 
 Les trois premières lignes doivent rester ensemble. La présence de 230 V dans le nom n’autorise pas à remplacer « trois phases » par « monophasé ».
+
+Les 8 bar désignent la pression maximale de service. Cette fiche ne fournit pas ici les conditions complètes de mesure des 846 L/min : ce nombre ne suffit donc pas à garantir un débit restitué de 846 L/min à 8 bar pour dimensionner un outil.
 
 <div class="article-infographic article-infographic--compact" tabindex="0" role="group" aria-label="Trois caractéristiques électriques indépendantes">
 <svg viewBox="0 0 380 392" role="img" aria-labelledby="230tri-title 230tri-desc" xmlns="http://www.w3.org/2000/svg"><title id="230tri-title">Trois caractéristiques électriques indépendantes</title><desc id="230tri-desc">Tension nominale: 230 V pour la référence 4152022526 ; Fréquence: 50 Hz pour cette version ; Nombre de phases: 3 : alimentation triphasée documentée</desc><rect width="380" height="392" rx="18" fill="#eef2e9"/><text x="20" y="34" font-size="20" font-weight="700" fill="#143426">Trois caractéristiques</text><text x="20" y="60" font-size="20" font-weight="700" fill="#143426">électriques indépendantes</text><circle cx="32" cy="107" r="14" fill="#19704f"/><text x="32" y="112" text-anchor="middle" font-size="14" fill="white">1</text><text x="58" y="112" font-size="17" font-weight="700" fill="#143426">Tension nominale</text><text x="58" y="135" font-size="15" font-weight="400" fill="#35473d">230 V pour la référence 4152022526</text><circle cx="32" cy="178" r="14" fill="#19704f"/><text x="32" y="183" text-anchor="middle" font-size="14" fill="white">2</text><text x="58" y="183" font-size="17" font-weight="700" fill="#143426">Fréquence</text><text x="58" y="206" font-size="15" font-weight="400" fill="#35473d">50 Hz pour cette version</text><circle cx="32" cy="249" r="14" fill="#19704f"/><text x="32" y="254" text-anchor="middle" font-size="14" fill="white">3</text><text x="58" y="254" font-size="17" font-weight="700" fill="#143426">Nombre de phases</text><text x="58" y="277" font-size="15" font-weight="400" fill="#35473d">3 : alimentation triphasée</text><text x="58" y="298" font-size="15" font-weight="400" fill="#35473d">documentée</text><text x="20" y="346" font-size="13" font-weight="400" fill="#35473d">Schéma de lecture ; aucune mesure physique</text><text x="20" y="365" font-size="13" font-weight="400" fill="#35473d">CompatAir.</text></svg>

@@ -19,7 +19,7 @@ const EXPECTED_OVERRIDES = new Map([
   ['devalue', '5.9.3'],
   ['fast-uri', '3.1.8'],
   ['http-cache-semantics', '4.3.0'],
-  ['ip-address', '10.7.1'],
+  ['ip-address', '10.7.4'],
   ['js-yaml@3', '3.15.2'],
   ['js-yaml@4', '4.3.2'],
   ['nanoid@3', '3.3.18'],

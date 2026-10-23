@@ -1,4 +1,9 @@
 import { execFileSync } from 'node:child_process';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { createRequire } from 'node:module';
+import { dirname, join } from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { describe, it } from 'vitest';
 
 // Resolve through the installed consumers, so a stale transitive copy also fails.
@@ -242,6 +247,46 @@ describe('installed dependency security boundaries', () => {
 		`);
 	});
 
+	it('uses the hardened Vitest mocker for manual modules and redirect paths', async () => {
+		const root = createRequire(pathToFileURL(join(process.cwd(), 'package.json')));
+		const vitest = createRequire(root.resolve('vitest/package.json'));
+		const manifestPath = vitest.resolve('@vitest/mocker/package.json');
+		const manifest = JSON.parse(readFileSync(manifestPath, 'utf8'));
+		const mocker = await import(pathToFileURL(vitest.resolve('@vitest/mocker/node')).href);
+
+		assert.equal(manifest.version, '4.1.12');
+		const maliciousUrl = '/fixture\");globalThis.__compatairInjected=true;//';
+		const generated = mocker.createManualModuleSource(maliciousUrl, ['default']);
+		assert.ok(generated.includes(`getFactoryModule(${JSON.stringify(maliciousUrl)})`));
+		assert.ok(mocker.createManualModuleSource('/fixture.ts', ['default']).includes('getFactoryModule("/fixture.ts")'));
+
+		const nodeSource = readFileSync(join(dirname(manifestPath), 'dist/node.js'), 'utf8');
+		assert.match(nodeSource, /join\(server\.config\.root, slash\(redirectUrl\.pathname\)\)/);
+		assert.match(nodeSource, /isFileLoadingAllowed\(server\.config, redirect\)/);
+	});
+
+	it('uses the hardened Astro JSX and transition serializers', async () => {
+		const root = createRequire(pathToFileURL(join(process.cwd(), 'package.json')));
+		const manifest = JSON.parse(readFileSync(root.resolve('astro/package.json'), 'utf8'));
+		const { jsx } = await import(pathToFileURL(root.resolve('astro/jsx-runtime')).href);
+		const { renderJSX } = await import(pathToFileURL(root.resolve('astro/runtime/server/jsx.js')).href);
+		const { stringifyAnimation } = await import(pathToFileURL(root.resolve('astro/runtime/server/transition.js')).href);
+
+		assert.equal(manifest.version, '7.3.3');
+		const maliciousChild = '</script><script id="compatair-injected">bad</script>';
+		const script = String(await renderJSX({ pathname: '/security-fixture' }, jsx('script', { children: maliciousChild })));
+		const style = String(await renderJSX({ pathname: '/security-fixture' }, jsx('style', { children: maliciousChild })));
+		assert.ok(script.includes('&lt;/script&gt;'));
+		assert.equal(script.includes('<script id="compatair-injected">'), false);
+		assert.ok(style.includes('\\3C /script>'));
+		assert.equal(style.includes('<script id="compatair-injected">'), false);
+
+		const injectedCss = stringifyAnimation({ name: 'fade', duration: '1ms;}#target{color:red' });
+		assert.ok(injectedCss.includes('1ms\\3B \\7D #target\\7B color:red'));
+		assert.equal(injectedCss.includes(';}#target{'), false);
+		assert.ok(stringifyAnimation({ name: 'fade', duration: 'calc(1s + var(--delay, 200ms))' }).includes('calc(1s + var(--delay, 200ms))'));
+	});
+
 	it('uses fixed dependency versions and rejects spoofed proxy ranges and oversized source-map offsets', () => {
 		checkInstalledDependency('@lhci/cli/package.json', ['express'], 'proxy-addr', `
 			assert.equal(installedVersion('proxy-addr'), '2.0.8');
@@ -446,10 +491,17 @@ describe('installed dependency security boundaries', () => {
 	it('rejects cross-family subnet matches and bounds oversized IPv6 diagnostics', () => {
 		checkInstalledDependency('@lhci/cli/package.json', ['proxy-agent', 'pac-proxy-agent', 'socks-proxy-agent', 'socks'], 'ip-address', `
 			const { Address4, Address6, AddressError } = library;
+			assert.equal(installedVersion('ip-address'), '10.7.4');
 			assert.equal(new Address6('a00::1').isInSubnet(new Address4('10.0.0.0/8')), false);
 			assert.equal(new Address4('32.0.0.1').isInSubnet(new Address6('2000::/3')), false);
 			assert.equal(new Address4('10.1.2.3').isInSubnet(new Address4('10.0.0.0/8')), true);
 			assert.equal(new Address6('2001:db8::1').isInSubnet(new Address6('2001:db8::/32')), true);
+			const scoped = new Address6('fe80::1%eth0');
+			assert.equal(scoped.zone, '%eth0');
+			assert.equal(scoped.correctForm(), 'fe80::1');
+			const oversizedZone = '2001:db8::1%' + '%'.repeat(262_144) + '\\n';
+			assert.throws(() => new Address6(oversizedZone), error => error instanceof AddressError && error.message.length < 512);
+			assert.equal(Address6.isValid(oversizedZone), false);
 			assert.throws(() => new Address6('!'.repeat(1_048_576)), error =>
 				error instanceof AddressError && error.message.length < 512 && (error.parseMessage?.length ?? 0) < 512);
 			assert.equal(Address6.isValid('!'.repeat(1_048_576)), false);
