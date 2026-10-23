@@ -4,6 +4,7 @@ import { classifyNpmAdvisories } from './lib/advisory-policy.mjs';
 import { fetchGitHubAdvisories } from './lib/github-advisory-client.mjs';
 import { fileURLToPath } from 'node:url';
 import { attestInstalledDependencyPatches, isVerifiedCacheAdvisory } from './lib/verified-dependency-patches.mjs';
+import { attestInstalledZodCollectionPatch, isVerifiedZodCollectionAdvisory } from './lib/verified-zod-collection-patch.mjs';
 
 const REGISTRY = 'https://registry.npmjs.org';
 const QUARANTINE_MS = 24 * 60 * 60 * 1000;
@@ -241,8 +242,10 @@ async function readInstalledManifests() {
 const failures = [];
 const warnings = [];
 let patchAttestation;
+let zodAttestation;
 try {
   patchAttestation = await attestInstalledDependencyPatches({ root: fileURLToPath(new URL('../', import.meta.url)), workspace, lockfile });
+  zodAttestation = await attestInstalledZodCollectionPatch({ root: fileURLToPath(new URL('../', import.meta.url)), workspace, lockfile });
   console.log('Correctifs locaux de dépendances: patchs, verrou et toutes les copies installées attestés.');
 } catch (error) {
   failures.push(error.message);
@@ -326,11 +329,11 @@ if (advisoryMode) {
     const response = await fetchGitHubAdvisories(lockedPackages);
     const directRuntimeDependencies = new Set(Object.keys(packageJson.dependencies ?? {}));
     const { advisories, blocking: policyBlocking } = classifyNpmAdvisories(response, directRuntimeDependencies);
-    const blocking = policyBlocking.filter((advisory) => !isVerifiedCacheAdvisory(advisory, patchAttestation));
+    const blocking = policyBlocking.filter((advisory) => !isVerifiedCacheAdvisory(advisory, patchAttestation) && !isVerifiedZodCollectionAdvisory(advisory, zodAttestation));
     console.log(`Avis GitHub Advisory Database: ${advisories.length} signalé(s), dont ${blocking.length} bloquant(s) selon la politique runtime.`);
     for (const advisory of advisories) {
       const message = `${advisory.packageName}: ${advisory.severity} ${advisory.title} (${advisory.url})`;
-      if (isVerifiedCacheAdvisory(advisory, patchAttestation)) warnings.push(`avis connu corrigé localement, toujours signalé par GitHub: ${message}`);
+      if (isVerifiedCacheAdvisory(advisory, patchAttestation) || isVerifiedZodCollectionAdvisory(advisory, zodAttestation)) warnings.push(`avis connu corrigé localement, toujours signalé par GitHub: ${message}`);
       else if (blocking.includes(advisory)) failures.push(`vulnérabilité npm: ${message}`);
       else warnings.push(`vulnérabilité npm transitive sous le seuil high: ${message}`);
     }

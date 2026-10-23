@@ -34,6 +34,9 @@ patchedDependencies:
   http-cache-semantics@4.3.0:
     hash: 40659b87d16fa2cbc322f9d95b15e7bb648555c91217261d80a12f22f46022fe
     path: patches/http-cache-semantics@4.3.0.patch
+  zod@3.25.76:
+    hash: b9604079f6581f4ad8304d9c13921d23d0ebc8ecd420bea153f247134b01c482
+    path: patches/zod@3.25.76.patch
 
 importers:
 
@@ -55,8 +58,8 @@ importers:
         specifier: 0.35.5
         version: 0.35.5(@types/node@24.13.3)
       zod:
-        specifier: 4.4.3
-        version: 4.4.3
+        specifier: 4.6.7
+        version: 4.6.7
     devDependencies:
       '@astrojs/check':
         specifier: 0.9.9
@@ -2904,9 +2907,6 @@ packages:
   zod@3.25.76:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
 
-  zod@4.4.3:
-    resolution: {integrity: sha512-ytENFjIJFl2UwYglde2jchW2Hwm4GJFLDiSXWdTrJQBIN9Fcyp7n4DhxJEiWNAJMV1/BqWfW/kkg71UDcHJyTQ==}
-
   zod@4.6.7:
     resolution: {integrity: sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg==}
 
@@ -3033,7 +3033,7 @@ snapshots:
     dependencies:
       sitemap: 9.0.1
       stream-replace-string: 2.0.0
-      zod: 4.4.3
+      zod: 4.6.7
 
   '@astrojs/telemetry@3.3.3':
     dependencies:
@@ -3952,7 +3952,7 @@ snapshots:
     dependencies:
       devtools-protocol: 0.0.1608973
       mitt: 3.0.1
-      zod: 3.25.76
+      zod: 3.25.76(patch_hash=b9604079f6581f4ad8304d9c13921d23d0ebc8ecd420bea153f247134b01c482)
 
   ci-info@4.4.0: {}
 
@@ -5725,9 +5725,7 @@ snapshots:
 
   yocto-queue@1.2.2: {}
 
-  zod@3.25.76: {}
-
-  zod@4.4.3: {}
+  zod@3.25.76(patch_hash=b9604079f6581f4ad8304d9c13921d23d0ebc8ecd420bea153f247134b01c482): {}
 
   zod@4.6.7: {}
 

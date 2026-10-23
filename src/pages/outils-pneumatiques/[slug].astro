@@ -29,7 +29,7 @@ const verifiedAt = latestEvidenceDate(tool);
 const fixedFlow = isFixedFlowTool(tool);
 const incompleteFlow = fixedFlow && tool.airflowBasis !== undefined;
 const availableProductIds = new Set(activeOffers.map((offer) => offer.productId));
-const compatibility = fixedFlow ? createToolCompatibilitySummary(compressors, tool, { availableProductIds }) : undefined;
+const compatibility = fixedFlow && tool.airflowBasis === undefined ? createToolCompatibilitySummary(compressors, tool, { availableProductIds }) : undefined;
 const marginTarget = fixedFlow && tool.airflowBasis === undefined ? Math.round(tool.airflowLpm.typical * 1.25) : undefined;
 const demandLabel = toolDemandLabel(tool);
 const pressureLabel = toolPressureLabel(tool);

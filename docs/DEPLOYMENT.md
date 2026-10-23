@@ -2,13 +2,23 @@
 
 La production est déployée uniquement par `.github/workflows/deploy-production.yml` après un push sur `main`. Une branche ou une pull request ne peut pas accéder aux secrets de déploiement.
 
+Le hook local `main` exécute l’audit de sécurité, le lint et les sept contrôles
+de `validate:source`, avec arrêt au premier échec. Dans le workflow de
+production, après installation, audit et lint, `archive:verify` reste obligatoire
+avant `validate:full` et avant la restauration des caches. Il vérifie le ZIP source
+et rejoue les tests de sa copie extraite sans `.git`. La CI construit ensuite
+une seule fois le SHA exact du push, valide les snapshots et budgets, les
+signatures, l’historique, les liens, Lighthouse et le checkpoint SEO avant
+connexion et activation. Aucun de ces contrôles n’est remplacé par le résultat
+local. `validate:main` reste disponible pour un diagnostic complet explicite.
+
 Le transfert et l’activation utilisent une seule connexion SSH après une seule séquence de port-knocking. Aucun nouvel essai automatique n’est effectué : après un échec de transport, une relance attend la confirmation explicite de l’opérateur que l’accès est ouvert. Les contrôles de sommes de contrôle, l’activation atomique et le retour arrière restent exécutés dans cette session.
 
 Le job de production est borné à 60 minutes. Chacun des deux contrôles SEO live possède un délai global de 180 secondes, y compris la lecture des réponses et les attentes entre essais HTTP. Toutes les pages détail présentes dans le sitemap restent vérifiées, avec dix requêtes simultanées au maximum. Un dépassement échoue et arrête les nouvelles requêtes ; il ne valide pas un échantillon incomplet. Les signaux `HUP`, `INT` et `TERM` reçus pendant une activation non finalisée déclenchent le retour arrière. Une interruption sans résultat final exige toujours de vérifier le SHA réellement servi avant de déclarer la production active.
 
 Avant toute séquence de connexion, le workflow refuse un transfert lorsqu’il reste moins de dix minutes dans la fenêtre calculée depuis la première étape, avec une minute supplémentaire réservée au démarrage du job. Le transfert peut donc commencer jusqu’à 49 minutes incluses, puis il est refusé. Une date absente, invalide ou future est également refusée. Ce contrôle évite de commencer une activation trop tard ; il ne garantit pas la durée d’un démarrage GitHub exceptionnellement long. Le workflow A du 2 octobre avait commencé le transfert après 33 min 02 s, soit seulement 58 s avant le seuil de 34 minutes de l’ancien plafond. Le passage à 60 minutes conserve la réserve et les contrôles ; il ne prédit pas la durée d’un nouveau build froid.
 
-Le job `CI / build` est borné à 35 minutes ; `source-tests` conserve 15 minutes et le job de confirmation une minute. Le build froid A a atteint 23 min 05 s, tandis que l’étape Astro du rehearsal B ajoute 2 min 43 s par rapport à A : 25 minutes ne donnent plus une marge suffisante. Ces durées ne garantissent pas celle du runner suivant. Tous les contrôles de snapshots, liens, sécurité, budgets et Lighthouse restent obligatoires. Les PR réutilisent les caches main en lecture seule ; la prévisualisation complète reste facultative, avec une rétention de deux jours. La fenêtre de production reste à 60 minutes avec sa réserve avant transport.
+Le preflight commun de CI exécute audit et lint en dix minutes au maximum avant les deux jobs parallèles. Le job `CI / build` est borné à 35 minutes ; `source-tests` conserve 15 minutes et le job de confirmation une minute. Le build froid A a atteint 23 min 05 s, tandis que l’étape Astro du rehearsal B ajoute 2 min 43 s par rapport à A : 25 minutes ne donnent plus une marge suffisante. Ces durées ne garantissent pas celle du runner suivant. Tous les contrôles de snapshots, liens, sécurité, budgets et Lighthouse restent obligatoires. Les PR réutilisent les caches main en lecture seule ; la prévisualisation complète reste facultative, avec une rétention de deux jours. La fenêtre de production reste à 60 minutes avec sa réserve avant transport.
 
 ## Topologie retenue
 

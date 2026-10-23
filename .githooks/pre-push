@@ -34,8 +34,11 @@ if [[ "$pushes_main" == "true" ]]; then
 	if [[ "$compatible_node" != "$original_node" ]]; then
 		echo "CompatAir pre-push: bascule automatique vers $(node --version) via ${compatible_node}."
 	fi
-	echo "CompatAir pre-push main: validation complete, audit HTML et Lighthouse"
-	pnpm validate:main
+	echo "CompatAir pre-push main: audit de securite puis controles source, types et tests"
+	pnpm security:audit
+	pnpm lint:source
+	pnpm validate:source
+	echo "CompatAir pre-push main: build, archive source, audit HTML et Lighthouse obligatoires en CI avant activation"
 else
 	echo "CompatAir pre-push: validation source, tests et build"
 	pnpm validate

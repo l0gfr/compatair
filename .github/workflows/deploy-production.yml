@@ -52,11 +52,16 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Verify lockfile integrity and install-script policy
-        run: pnpm security:supply-chain
+      - name: Audit dependencies and installed supply-chain policy
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: pnpm security:audit
 
       - name: Lint source and workflow policy
         run: pnpm lint:source
+
+      - name: Verify source archive and tests without Git metadata
+        run: pnpm archive:verify
 
       - name: Restore bounded page calculations
         id: page-calculations
@@ -150,11 +155,6 @@ jobs:
           test -n "$COMPATAIR_PUBLICATION_SIGNING_KEY"
           pnpm data:sign
           pnpm data:verify-signatures
-
-      - name: Audit production dependencies
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: pnpm security:audit
 
       - name: Check generated HTML and internal links
         run: node scripts/audit-dist.mjs

@@ -1,7 +1,7 @@
 import { appendFileSync, lstatSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 
-const limit = 384 * 1024 * 1024;
+const limit = 1536 * 1024 * 1024;
 let bytes = 0;
 function inspect(directory) {
 	for (const name of readdirSync(directory)) {

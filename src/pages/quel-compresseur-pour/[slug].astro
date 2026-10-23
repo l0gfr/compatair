@@ -20,7 +20,7 @@ export async function getStaticPaths() {
 const { tool } = Astro.props;
 const fixedFlow = isFixedFlowTool(tool);
 const availableProductIds = new Set(activeOffers.map((offer) => offer.productId));
-const compatibility = fixedFlow ? createToolCompatibilitySummary(compressors, tool, { availableProductIds }) : undefined;
+const compatibility = fixedFlow && tool.airflowBasis === undefined ? createToolCompatibilitySummary(compressors, tool, { availableProductIds }) : undefined;
 const pageUrl = `/quel-compresseur-pour/${tool.slug}/`;
 const demandLabel = toolDemandLabel(tool);
 const pressureLabel = toolPressureLabel(tool);

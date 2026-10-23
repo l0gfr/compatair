@@ -1,7 +1,7 @@
 import { chmodSync, copyFileSync, existsSync, mkdtempSync, mkdirSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
-import { execFileSync } from 'node:child_process';
+import { execFileSync, spawnSync } from 'node:child_process';
 import { afterEach, describe, expect, it } from 'vitest';
 
 const temporaryDirectories: string[] = [];
@@ -19,7 +19,7 @@ function fakeNode(directory: string, major: number) {
 function fakePnpm(directory: string) {
 	mkdirSync(directory, { recursive: true });
 	const executable = join(directory, 'pnpm');
-	writeFileSync(executable, '#!/bin/sh\nprintf "pnpm-runtime=%s command=%s\\n" "$(node --version)" "$*"\n');
+	writeFileSync(executable, '#!/bin/sh\nprintf "pnpm-runtime=%s command=%s\\n" "$(node --version)" "$*"\nif [ "$1" = "${TEST_FAIL_COMMAND:-}" ]; then exit "${TEST_FAIL_STATUS:-1}"; fi\n');
 	chmodSync(executable, 0o755);
 	return executable;
 }
@@ -114,6 +114,33 @@ describe('résolution du runtime Node du hook pre-push', () => {
 			encoding: 'utf8',
 		});
 		expect(output).toContain(`bascule automatique vers 24 via ${node24}`);
-		expect(output).toContain('pnpm-runtime=24 command=validate:main');
+		expect(output.split('\n').filter(line => line.startsWith('pnpm-runtime='))).toEqual([
+			'pnpm-runtime=24 command=security:audit',
+			'pnpm-runtime=24 command=lint:source',
+			'pnpm-runtime=24 command=validate:source',
+		]);
+	}, 15_000);
+
+	it.each(['security:audit', 'lint:source', 'validate:source'].flatMap(command => [1, 42].map(status => ({ command, status }))))('arrête le hook main et conserve le code $status lorsque $command échoue', ({ command, status }) => {
+		const root = temporaryHookRepository();
+		const pathDirectory = join(root, 'path');
+		fakeNode(pathDirectory, 24);
+		fakePnpm(pathDirectory);
+		symlinkSync(execFileSync('which', ['git'], { encoding: 'utf8' }).trim(), join(pathDirectory, 'git'));
+		const result = spawnSync('/bin/bash', ['.githooks/pre-push'], {
+			cwd: root,
+			env: {
+				HOME: join(root, 'home'),
+				PATH: `${pathDirectory}:/usr/bin:/bin`,
+				TEST_FAIL_COMMAND: command,
+				TEST_FAIL_STATUS: String(status),
+			},
+			input: `refs/heads/main ${'a'.repeat(40)} refs/heads/main ${'b'.repeat(40)}\n`,
+			encoding: 'utf8',
+			timeout: 10_000,
+		});
+		expect(result.status, result.stderr).toBe(status);
+		const gates = ['security:audit', 'lint:source', 'validate:source'];
+		expect(result.stdout.split('\n').filter(line => line.startsWith('pnpm-runtime='))).toEqual(gates.slice(0, gates.indexOf(command) + 1).map(gate => `pnpm-runtime=24 command=${gate}`));
 	}, 15_000);
 });

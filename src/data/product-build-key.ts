@@ -3,6 +3,7 @@ import { compressors, tools } from './catalog';
 import { evidenceHistoryProductHref } from './evidence-history-directory';
 import { productSeoTitles, productSeoDescriptions, toolUseSeoTitles } from './product-seo-titles';
 import type { Compressor, ToolProfile } from '../domain/catalog';
+import { createRelatedToolLookup } from './related-tools';
 
 const digest = (value: unknown) => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 export const compressorBuildVersion = digest(compressors);
@@ -13,10 +14,7 @@ export function compressorAlternatives(compressor: Compressor) {
  return compressors.filter(item => item.id !== compressor.id && (item.confidence === 'A' || item.confidence === 'B') && item.fadCurve.length > 0)
   .sort((a, b) => distance(a) === distance(b) ? 0 : distance(a) < distance(b) ? -1 : 1).slice(0, 3);
 }
-export function relatedToolsFor(tool: ToolProfile) {
- return tools.filter(item => item.id !== tool.id && item.categoryId === tool.categoryId)
-  .sort((a, b) => (a.brand === tool.brand ? 0 : 1) - (b.brand === tool.brand ? 0 : 1) || a.label.localeCompare(b.label, 'fr')).slice(0, 3);
-}
+export const relatedToolsFor = createRelatedToolLookup(tools);
 export function productBuildData(product: Compressor | ToolProfile, kind: 'compressor' | 'tool' | 'use') {
  return {
   product, historyHref: evidenceHistoryProductHref(product.id),

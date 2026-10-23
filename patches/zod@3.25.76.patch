@@ -1,0 +1,582 @@
+diff --git a/v3/types.js b/v3/types.js
+index 40b11c0f0..f1a119e05 100644
+--- a/v3/types.js
++++ b/v3/types.js
+@@ -1748,6 +1748,7 @@ export class ZodArray extends ZodType {
+     _parse(input) {
+         const { ctx, status } = this._processInputParams(input);
+         const def = this._def;
++        let oversized = false;
+         if (ctx.parsedType !== ZodParsedType.array) {
+             addIssueToContext(ctx, {
+                 code: ZodIssueCode.invalid_type,
+@@ -1760,6 +1761,7 @@ export class ZodArray extends ZodType {
+             const tooBig = ctx.data.length > def.exactLength.value;
+             const tooSmall = ctx.data.length < def.exactLength.value;
+             if (tooBig || tooSmall) {
++                if (tooBig) oversized = true;
+                 addIssueToContext(ctx, {
+                     code: tooBig ? ZodIssueCode.too_big : ZodIssueCode.too_small,
+                     minimum: (tooSmall ? def.exactLength.value : undefined),
+@@ -1787,6 +1789,7 @@ export class ZodArray extends ZodType {
+         }
+         if (def.maxLength !== null) {
+             if (ctx.data.length > def.maxLength.value) {
++                oversized = true;
+                 addIssueToContext(ctx, {
+                     code: ZodIssueCode.too_big,
+                     maximum: def.maxLength.value,
+@@ -1798,6 +1801,8 @@ export class ZodArray extends ZodType {
+                 status.dirty();
+             }
+         }
++        // Stop only after the existing size check actually emitted its issue.
++        if (oversized) return INVALID;
+         if (ctx.common.async) {
+             return Promise.all([...ctx.data].map((item, i) => {
+                 return def.type._parseAsync(new ParseInputLazyPath(ctx, item, ctx.path, i));
+@@ -2791,6 +2796,7 @@ export class ZodSet extends ZodType {
+             return INVALID;
+         }
+         const def = this._def;
++        let oversized = false;
+         if (def.minSize !== null) {
+             if (ctx.data.size < def.minSize.value) {
+                 addIssueToContext(ctx, {
+@@ -2806,6 +2812,7 @@ export class ZodSet extends ZodType {
+         }
+         if (def.maxSize !== null) {
+             if (ctx.data.size > def.maxSize.value) {
++                oversized = true;
+                 addIssueToContext(ctx, {
+                     code: ZodIssueCode.too_big,
+                     maximum: def.maxSize.value,
+@@ -2817,6 +2824,8 @@ export class ZodSet extends ZodType {
+                 status.dirty();
+             }
+         }
++        // Stop only after the existing size check actually emitted its issue.
++        if (oversized) return INVALID;
+         const valueType = this._def.valueType;
+         function finalizeSet(elements) {
+             const parsedSet = new Set();
+diff --git a/v3/types.cjs b/v3/types.cjs
+index 11ed4dfc4..15f842b7c 100644
+--- a/v3/types.cjs
++++ b/v3/types.cjs
+@@ -1769,6 +1769,7 @@ class ZodArray extends ZodType {
+     _parse(input) {
+         const { ctx, status } = this._processInputParams(input);
+         const def = this._def;
++        let oversized = false;
+         if (ctx.parsedType !== util_js_1.ZodParsedType.array) {
+             (0, parseUtil_js_1.addIssueToContext)(ctx, {
+                 code: ZodError_js_1.ZodIssueCode.invalid_type,
+@@ -1781,6 +1782,7 @@ class ZodArray extends ZodType {
+             const tooBig = ctx.data.length > def.exactLength.value;
+             const tooSmall = ctx.data.length < def.exactLength.value;
+             if (tooBig || tooSmall) {
++                if (tooBig) oversized = true;
+                 (0, parseUtil_js_1.addIssueToContext)(ctx, {
+                     code: tooBig ? ZodError_js_1.ZodIssueCode.too_big : ZodError_js_1.ZodIssueCode.too_small,
+                     minimum: (tooSmall ? def.exactLength.value : undefined),
+@@ -1808,6 +1810,7 @@ class ZodArray extends ZodType {
+         }
+         if (def.maxLength !== null) {
+             if (ctx.data.length > def.maxLength.value) {
++                oversized = true;
+                 (0, parseUtil_js_1.addIssueToContext)(ctx, {
+                     code: ZodError_js_1.ZodIssueCode.too_big,
+                     maximum: def.maxLength.value,
+@@ -1819,6 +1822,8 @@ class ZodArray extends ZodType {
+                 status.dirty();
+             }
+         }
++        // Stop only after the existing size check actually emitted its issue.
++        if (oversized) return parseUtil_js_1.INVALID;
+         if (ctx.common.async) {
+             return Promise.all([...ctx.data].map((item, i) => {
+                 return def.type._parseAsync(new ParseInputLazyPath(ctx, item, ctx.path, i));
+@@ -2820,6 +2825,7 @@ class ZodSet extends ZodType {
+             return parseUtil_js_1.INVALID;
+         }
+         const def = this._def;
++        let oversized = false;
+         if (def.minSize !== null) {
+             if (ctx.data.size < def.minSize.value) {
+                 (0, parseUtil_js_1.addIssueToContext)(ctx, {
+@@ -2835,6 +2841,7 @@ class ZodSet extends ZodType {
+         }
+         if (def.maxSize !== null) {
+             if (ctx.data.size > def.maxSize.value) {
++                oversized = true;
+                 (0, parseUtil_js_1.addIssueToContext)(ctx, {
+                     code: ZodError_js_1.ZodIssueCode.too_big,
+                     maximum: def.maxSize.value,
+@@ -2846,6 +2853,8 @@ class ZodSet extends ZodType {
+                 status.dirty();
+             }
+         }
++        // Stop only after the existing size check actually emitted its issue.
++        if (oversized) return parseUtil_js_1.INVALID;
+         const valueType = this._def.valueType;
+         function finalizeSet(elements) {
+             const parsedSet = new Set();
+diff --git a/src/v3/types.ts b/src/v3/types.ts
+index b10e84f1b..0c9d83ecb 100644
+--- a/src/v3/types.ts
++++ b/src/v3/types.ts
+@@ -2240,6 +2240,7 @@ export class ZodArray<T extends ZodTypeAny, Cardinality extends ArrayCardinality
+     const { ctx, status } = this._processInputParams(input);
+ 
+     const def = this._def;
++    let oversized = false;
+ 
+     if (ctx.parsedType !== ZodParsedType.array) {
+       addIssueToContext(ctx, {
+@@ -2254,6 +2255,7 @@ export class ZodArray<T extends ZodTypeAny, Cardinality extends ArrayCardinality
+       const tooBig = ctx.data.length > def.exactLength.value;
+       const tooSmall = ctx.data.length < def.exactLength.value;
+       if (tooBig || tooSmall) {
++          if (tooBig) oversized = true;
+         addIssueToContext(ctx, {
+           code: tooBig ? ZodIssueCode.too_big : ZodIssueCode.too_small,
+           minimum: (tooSmall ? def.exactLength.value : undefined) as number,
+@@ -2283,6 +2285,7 @@ export class ZodArray<T extends ZodTypeAny, Cardinality extends ArrayCardinality
+ 
+     if (def.maxLength !== null) {
+       if (ctx.data.length > def.maxLength.value) {
++        oversized = true;
+         addIssueToContext(ctx, {
+           code: ZodIssueCode.too_big,
+           maximum: def.maxLength.value,
+@@ -2295,6 +2298,8 @@ export class ZodArray<T extends ZodTypeAny, Cardinality extends ArrayCardinality
+       }
+     }
+ 
++    // Stop only after the existing size check actually emitted its issue.
++    if (oversized) return INVALID;
+     if (ctx.common.async) {
+       return Promise.all(
+         ([...ctx.data] as any[]).map((item, i) => {
+@@ -3698,6 +3703,7 @@ export class ZodSet<Value extends ZodTypeAny = ZodTypeAny> extends ZodType<
+     }
+ 
+     const def = this._def;
++    let oversized = false;
+ 
+     if (def.minSize !== null) {
+       if (ctx.data.size < def.minSize.value) {
+@@ -3715,6 +3721,7 @@ export class ZodSet<Value extends ZodTypeAny = ZodTypeAny> extends ZodType<
+ 
+     if (def.maxSize !== null) {
+       if (ctx.data.size > def.maxSize.value) {
++        oversized = true;
+         addIssueToContext(ctx, {
+           code: ZodIssueCode.too_big,
+           maximum: def.maxSize.value,
+@@ -3727,6 +3734,8 @@ export class ZodSet<Value extends ZodTypeAny = ZodTypeAny> extends ZodType<
+       }
+     }
+ 
++    // Stop only after the existing size check actually emitted its issue.
++    if (oversized) return INVALID;
+     const valueType = this._def.valueType;
+ 
+     function finalizeSet(elements: SyncParseReturnType<any>[]) {
+diff --git a/v4/core/schemas.js b/v4/core/schemas.js
+index 692ce1fc2..4169e69b7 100644
+--- a/v4/core/schemas.js
++++ b/v4/core/schemas.js
+@@ -5,6 +5,37 @@ import { safeParse, safeParseAsync } from "./parse.js";
+ import * as regexes from "./regexes.js";
+ import * as util from "./util.js";
+ import { version } from "./versions.js";
++const COLLECTION_SIZE_ABORT = Symbol("collection-size-abort");
++function capCollectionSize(inst, size) {
++    const caps = [];
++    for (const ch of inst._zod.def.checks ?? []) {
++        const d = ch._zod.def;
++        if (Reflect.get(ch._zod, "compatairCustomSizeWhen")) break;
++        if (!/_(length|size)$|_equals$/.test(d.check)) break;
++        const max = d.maximum ?? d.length ?? d.size;
++        if (max >= 0) caps.push([max, ch]);
++    }
++    if (!caps.length) return;
++    const parse = inst._zod.parse;
++    inst._zod.parse = (payload, ctx) => {
++        const n = size(payload.value);
++        if (!ctx?.skipChecks && ctx?.direction !== "backward") {
++            for (const [max, ch] of caps) {
++                if (n > max && (!ch._zod.def.when || ch._zod.def.when(payload))) {
++                    const start = payload.issues.length;
++                    ch._zod.check(payload);
++                    if (payload.issues.length > start) {
++                        payload.issues[start].continue = false;
++                        Object.defineProperty(payload, COLLECTION_SIZE_ABORT, { value: true });
++                        return payload;
++                    }
++                }
++            }
++        }
++        return parse(payload, ctx);
++    };
++}
++
+ export const $ZodType = /*@__PURE__*/ core.$constructor("$ZodType", (inst, def) => {
+     var _a;
+     inst ?? (inst = {});
+@@ -32,6 +63,7 @@ export const $ZodType = /*@__PURE__*/ core.$constructor("$ZodType", (inst, def)
+     }
+     else {
+         const runChecks = (payload, checks, ctx) => {
++            if (Reflect.get(payload, COLLECTION_SIZE_ABORT)) return payload;
+             let isAborted = util.aborted(payload);
+             let asyncResult;
+             for (const ch of checks) {
+@@ -652,6 +684,7 @@ export const $ZodArray = /*@__PURE__*/ core.$constructor("$ZodArray", (inst, def
+         }
+         return payload; //handleArrayResultsAsync(parseResults, final);
+     };
++    capCollectionSize(inst, (value) => Array.isArray(value) ? value.length : -1);
+ });
+ function handleObjectResult(result, final, key) {
+     // if(isOptional)
+@@ -1273,6 +1306,7 @@ export const $ZodMap = /*@__PURE__*/ core.$constructor("$ZodMap", (inst, def) =>
+             return Promise.all(proms).then(() => payload);
+         return payload;
+     };
++    capCollectionSize(inst, (value) => value instanceof Map ? value.size : -1);
+ });
+ function handleMapResult(keyResult, valueResult, final, key, input, inst, ctx) {
+     if (keyResult.issues.length) {
+@@ -1333,6 +1367,7 @@ export const $ZodSet = /*@__PURE__*/ core.$constructor("$ZodSet", (inst, def) =>
+             return Promise.all(proms).then(() => payload);
+         return payload;
+     };
++    capCollectionSize(inst, (value) => value instanceof Set ? value.size : -1);
+ });
+ function handleSetResult(result, final) {
+     if (result.issues.length) {
+diff --git a/v4/core/schemas.cjs b/v4/core/schemas.cjs
+index 7c77d2b5a..6ddf73d91 100644
+--- a/v4/core/schemas.cjs
++++ b/v4/core/schemas.cjs
+@@ -35,6 +35,37 @@ const parse_js_1 = require("./parse.cjs");
+ const regexes = __importStar(require("./regexes.cjs"));
+ const util = __importStar(require("./util.cjs"));
+ const versions_js_1 = require("./versions.cjs");
++const COLLECTION_SIZE_ABORT = Symbol("collection-size-abort");
++function capCollectionSize(inst, size) {
++    const caps = [];
++    for (const ch of inst._zod.def.checks ?? []) {
++        const d = ch._zod.def;
++        if (Reflect.get(ch._zod, "compatairCustomSizeWhen")) break;
++        if (!/_(length|size)$|_equals$/.test(d.check)) break;
++        const max = d.maximum ?? d.length ?? d.size;
++        if (max >= 0) caps.push([max, ch]);
++    }
++    if (!caps.length) return;
++    const parse = inst._zod.parse;
++    inst._zod.parse = (payload, ctx) => {
++        const n = size(payload.value);
++        if (!ctx?.skipChecks && ctx?.direction !== "backward") {
++            for (const [max, ch] of caps) {
++                if (n > max && (!ch._zod.def.when || ch._zod.def.when(payload))) {
++                    const start = payload.issues.length;
++                    ch._zod.check(payload);
++                    if (payload.issues.length > start) {
++                        payload.issues[start].continue = false;
++                        Object.defineProperty(payload, COLLECTION_SIZE_ABORT, { value: true });
++                        return payload;
++                    }
++                }
++            }
++        }
++        return parse(payload, ctx);
++    };
++}
++
+ exports.$ZodType = core.$constructor("$ZodType", (inst, def) => {
+     var _a;
+     inst ?? (inst = {});
+@@ -62,6 +93,7 @@ exports.$ZodType = core.$constructor("$ZodType", (inst, def) => {
+     }
+     else {
+         const runChecks = (payload, checks, ctx) => {
++            if (Reflect.get(payload, COLLECTION_SIZE_ABORT)) return payload;
+             let isAborted = util.aborted(payload);
+             let asyncResult;
+             for (const ch of checks) {
+@@ -683,6 +715,7 @@ exports.$ZodArray = core.$constructor("$ZodArray", (inst, def) => {
+         }
+         return payload; //handleArrayResultsAsync(parseResults, final);
+     };
++    capCollectionSize(inst, (value) => Array.isArray(value) ? value.length : -1);
+ });
+ function handleObjectResult(result, final, key) {
+     // if(isOptional)
+@@ -1304,6 +1337,7 @@ exports.$ZodMap = core.$constructor("$ZodMap", (inst, def) => {
+             return Promise.all(proms).then(() => payload);
+         return payload;
+     };
++    capCollectionSize(inst, (value) => value instanceof Map ? value.size : -1);
+ });
+ function handleMapResult(keyResult, valueResult, final, key, input, inst, ctx) {
+     if (keyResult.issues.length) {
+@@ -1364,6 +1398,7 @@ exports.$ZodSet = core.$constructor("$ZodSet", (inst, def) => {
+             return Promise.all(proms).then(() => payload);
+         return payload;
+     };
++    capCollectionSize(inst, (value) => value instanceof Set ? value.size : -1);
+ });
+ function handleSetResult(result, final) {
+     if (result.issues.length) {
+diff --git a/src/v4/core/schemas.ts b/src/v4/core/schemas.ts
+index ce1683854..e7cff947c 100644
+--- a/src/v4/core/schemas.ts
++++ b/src/v4/core/schemas.ts
+@@ -169,6 +169,37 @@ export interface _$ZodType<T extends $ZodTypeInternals = $ZodTypeInternals>
+   // _zod: T;
+ }
+ 
++const COLLECTION_SIZE_ABORT = Symbol("collection-size-abort");
++function capCollectionSize(inst: any, size: (value: unknown) => number) {
++    const caps: [number, any][] = [];
++    for (const ch of inst._zod.def.checks ?? []) {
++        const d = ch._zod.def;
++        if (Reflect.get(ch._zod, "compatairCustomSizeWhen")) break;
++        if (!/_(length|size)$|_equals$/.test(d.check)) break;
++        const max = d.maximum ?? d.length ?? d.size;
++        if (max >= 0) caps.push([max, ch]);
++    }
++    if (!caps.length) return;
++    const parse = inst._zod.parse;
++    inst._zod.parse = (payload: any, ctx: any) => {
++        const n = size(payload.value);
++        if (!ctx?.skipChecks && ctx?.direction !== "backward") {
++            for (const [max, ch] of caps) {
++                if (n > max && (!ch._zod.def.when || ch._zod.def.when(payload))) {
++                    const start = payload.issues.length;
++                    ch._zod.check(payload);
++                    if (payload.issues.length > start) {
++                        payload.issues[start].continue = false;
++                        Object.defineProperty(payload, COLLECTION_SIZE_ABORT, { value: true });
++                        return payload;
++                    }
++                }
++            }
++        }
++        return parse(payload, ctx);
++    };
++}
++
+ export const $ZodType: core.$constructor<$ZodType> = /*@__PURE__*/ core.$constructor("$ZodType", (inst, def) => {
+   inst ??= {} as any;
+ 
+@@ -203,6 +234,7 @@ export const $ZodType: core.$constructor<$ZodType> = /*@__PURE__*/ core.$constru
+       checks: checks.$ZodCheck<never>[],
+       ctx?: ParseContextInternal | undefined
+     ): util.MaybeAsync<ParsePayload> => {
++      if (Reflect.get(payload, COLLECTION_SIZE_ABORT)) return payload;
+       let isAborted = util.aborted(payload);
+ 
+       let asyncResult!: Promise<unknown> | undefined;
+@@ -1555,6 +1587,7 @@ export const $ZodArray: core.$constructor<$ZodArray> = /*@__PURE__*/ core.$const
+ 
+     return payload; //handleArrayResultsAsync(parseResults, final);
+   };
++  capCollectionSize(inst, (value) => Array.isArray(value) ? value.length : -1);
+ });
+ 
+ //////////////////////////////////////////
+@@ -2599,6 +2632,7 @@ export const $ZodMap: core.$constructor<$ZodMap> = /*@__PURE__*/ core.$construct
+     if (proms.length) return Promise.all(proms).then(() => payload);
+     return payload;
+   };
++  capCollectionSize(inst, (value) => value instanceof Map ? value.size : -1);
+ });
+ 
+ function handleMapResult(
+@@ -2691,6 +2725,7 @@ export const $ZodSet: core.$constructor<$ZodSet> = /*@__PURE__*/ core.$construct
+     if (proms.length) return Promise.all(proms).then(() => payload);
+     return payload;
+   };
++  capCollectionSize(inst, (value) => value instanceof Set ? value.size : -1);
+ });
+ 
+ function handleSetResult(result: ParsePayload, final: ParsePayload<Set<any>>) {
+diff --git a/v4/core/checks.js b/v4/core/checks.js
+index c5eca1e35..a692b65af 100644
+--- a/v4/core/checks.js
++++ b/v4/core/checks.js
+@@ -224,6 +224,8 @@ export const $ZodCheckBigIntFormat = /*@__PURE__*/ core.$constructor("$ZodCheckB
+ export const $ZodCheckMaxSize = /*@__PURE__*/ core.$constructor("$ZodCheckMaxSize", (inst, def) => {
+     var _a;
+     $ZodCheck.init(inst, def);
++    // A public when callback must observe the original post-parse value exactly once.
++    Object.defineProperty(inst._zod, "compatairCustomSizeWhen", { value: def.when !== undefined });
+     (_a = inst._zod.def).when ?? (_a.when = (payload) => {
+         const val = payload.value;
+         return !util.nullish(val) && val.size !== undefined;
+@@ -251,6 +253,8 @@ export const $ZodCheckMaxSize = /*@__PURE__*/ core.$constructor("$ZodCheckMaxSiz
+ export const $ZodCheckMinSize = /*@__PURE__*/ core.$constructor("$ZodCheckMinSize", (inst, def) => {
+     var _a;
+     $ZodCheck.init(inst, def);
++    // A public when callback must observe the original post-parse value exactly once.
++    Object.defineProperty(inst._zod, "compatairCustomSizeWhen", { value: def.when !== undefined });
+     (_a = inst._zod.def).when ?? (_a.when = (payload) => {
+         const val = payload.value;
+         return !util.nullish(val) && val.size !== undefined;
+@@ -278,6 +282,8 @@ export const $ZodCheckMinSize = /*@__PURE__*/ core.$constructor("$ZodCheckMinSiz
+ export const $ZodCheckSizeEquals = /*@__PURE__*/ core.$constructor("$ZodCheckSizeEquals", (inst, def) => {
+     var _a;
+     $ZodCheck.init(inst, def);
++    // A public when callback must observe the original post-parse value exactly once.
++    Object.defineProperty(inst._zod, "compatairCustomSizeWhen", { value: def.when !== undefined });
+     (_a = inst._zod.def).when ?? (_a.when = (payload) => {
+         const val = payload.value;
+         return !util.nullish(val) && val.size !== undefined;
+@@ -308,6 +314,8 @@ export const $ZodCheckSizeEquals = /*@__PURE__*/ core.$constructor("$ZodCheckSiz
+ export const $ZodCheckMaxLength = /*@__PURE__*/ core.$constructor("$ZodCheckMaxLength", (inst, def) => {
+     var _a;
+     $ZodCheck.init(inst, def);
++    // A public when callback must observe the original post-parse value exactly once.
++    Object.defineProperty(inst._zod, "compatairCustomSizeWhen", { value: def.when !== undefined });
+     (_a = inst._zod.def).when ?? (_a.when = (payload) => {
+         const val = payload.value;
+         return !util.nullish(val) && val.length !== undefined;
+@@ -337,6 +345,8 @@ export const $ZodCheckMaxLength = /*@__PURE__*/ core.$constructor("$ZodCheckMaxL
+ export const $ZodCheckMinLength = /*@__PURE__*/ core.$constructor("$ZodCheckMinLength", (inst, def) => {
+     var _a;
+     $ZodCheck.init(inst, def);
++    // A public when callback must observe the original post-parse value exactly once.
++    Object.defineProperty(inst._zod, "compatairCustomSizeWhen", { value: def.when !== undefined });
+     (_a = inst._zod.def).when ?? (_a.when = (payload) => {
+         const val = payload.value;
+         return !util.nullish(val) && val.length !== undefined;
+@@ -366,6 +376,8 @@ export const $ZodCheckMinLength = /*@__PURE__*/ core.$constructor("$ZodCheckMinL
+ export const $ZodCheckLengthEquals = /*@__PURE__*/ core.$constructor("$ZodCheckLengthEquals", (inst, def) => {
+     var _a;
+     $ZodCheck.init(inst, def);
++    // A public when callback must observe the original post-parse value exactly once.
++    Object.defineProperty(inst._zod, "compatairCustomSizeWhen", { value: def.when !== undefined });
+     (_a = inst._zod.def).when ?? (_a.when = (payload) => {
+         const val = payload.value;
+         return !util.nullish(val) && val.length !== undefined;
+diff --git a/v4/core/checks.cjs b/v4/core/checks.cjs
+index c00e84dfe..ca936e38b 100644
+--- a/v4/core/checks.cjs
++++ b/v4/core/checks.cjs
+@@ -250,6 +250,8 @@ exports.$ZodCheckBigIntFormat = core.$constructor("$ZodCheckBigIntFormat", (inst
+ exports.$ZodCheckMaxSize = core.$constructor("$ZodCheckMaxSize", (inst, def) => {
+     var _a;
+     exports.$ZodCheck.init(inst, def);
++    // A public when callback must observe the original post-parse value exactly once.
++    Object.defineProperty(inst._zod, "compatairCustomSizeWhen", { value: def.when !== undefined });
+     (_a = inst._zod.def).when ?? (_a.when = (payload) => {
+         const val = payload.value;
+         return !util.nullish(val) && val.size !== undefined;
+@@ -277,6 +279,8 @@ exports.$ZodCheckMaxSize = core.$constructor("$ZodCheckMaxSize", (inst, def) =>
+ exports.$ZodCheckMinSize = core.$constructor("$ZodCheckMinSize", (inst, def) => {
+     var _a;
+     exports.$ZodCheck.init(inst, def);
++    // A public when callback must observe the original post-parse value exactly once.
++    Object.defineProperty(inst._zod, "compatairCustomSizeWhen", { value: def.when !== undefined });
+     (_a = inst._zod.def).when ?? (_a.when = (payload) => {
+         const val = payload.value;
+         return !util.nullish(val) && val.size !== undefined;
+@@ -304,6 +308,8 @@ exports.$ZodCheckMinSize = core.$constructor("$ZodCheckMinSize", (inst, def) =>
+ exports.$ZodCheckSizeEquals = core.$constructor("$ZodCheckSizeEquals", (inst, def) => {
+     var _a;
+     exports.$ZodCheck.init(inst, def);
++    // A public when callback must observe the original post-parse value exactly once.
++    Object.defineProperty(inst._zod, "compatairCustomSizeWhen", { value: def.when !== undefined });
+     (_a = inst._zod.def).when ?? (_a.when = (payload) => {
+         const val = payload.value;
+         return !util.nullish(val) && val.size !== undefined;
+@@ -334,6 +340,8 @@ exports.$ZodCheckSizeEquals = core.$constructor("$ZodCheckSizeEquals", (inst, de
+ exports.$ZodCheckMaxLength = core.$constructor("$ZodCheckMaxLength", (inst, def) => {
+     var _a;
+     exports.$ZodCheck.init(inst, def);
++    // A public when callback must observe the original post-parse value exactly once.
++    Object.defineProperty(inst._zod, "compatairCustomSizeWhen", { value: def.when !== undefined });
+     (_a = inst._zod.def).when ?? (_a.when = (payload) => {
+         const val = payload.value;
+         return !util.nullish(val) && val.length !== undefined;
+@@ -363,6 +371,8 @@ exports.$ZodCheckMaxLength = core.$constructor("$ZodCheckMaxLength", (inst, def)
+ exports.$ZodCheckMinLength = core.$constructor("$ZodCheckMinLength", (inst, def) => {
+     var _a;
+     exports.$ZodCheck.init(inst, def);
++    // A public when callback must observe the original post-parse value exactly once.
++    Object.defineProperty(inst._zod, "compatairCustomSizeWhen", { value: def.when !== undefined });
+     (_a = inst._zod.def).when ?? (_a.when = (payload) => {
+         const val = payload.value;
+         return !util.nullish(val) && val.length !== undefined;
+@@ -392,6 +402,8 @@ exports.$ZodCheckMinLength = core.$constructor("$ZodCheckMinLength", (inst, def)
+ exports.$ZodCheckLengthEquals = core.$constructor("$ZodCheckLengthEquals", (inst, def) => {
+     var _a;
+     exports.$ZodCheck.init(inst, def);
++    // A public when callback must observe the original post-parse value exactly once.
++    Object.defineProperty(inst._zod, "compatairCustomSizeWhen", { value: def.when !== undefined });
+     (_a = inst._zod.def).when ?? (_a.when = (payload) => {
+         const val = payload.value;
+         return !util.nullish(val) && val.length !== undefined;
+diff --git a/src/v4/core/checks.ts b/src/v4/core/checks.ts
+index 85a7ce7b8..f93173c49 100644
+--- a/src/v4/core/checks.ts
++++ b/src/v4/core/checks.ts
+@@ -449,6 +449,8 @@ export const $ZodCheckMaxSize: core.$constructor<$ZodCheckMaxSize> = /*@__PURE__
+   "$ZodCheckMaxSize",
+   (inst, def) => {
+     $ZodCheck.init(inst, def);
++  // A public when callback must observe the original post-parse value exactly once.
++  Object.defineProperty(inst._zod, "compatairCustomSizeWhen", { value: def.when !== undefined });
+ 
+     inst._zod.def.when ??= (payload) => {
+       const val = payload.value;
+@@ -498,6 +500,8 @@ export const $ZodCheckMinSize: core.$constructor<$ZodCheckMinSize> = /*@__PURE__
+   "$ZodCheckMinSize",
+   (inst, def) => {
+     $ZodCheck.init(inst, def);
++  // A public when callback must observe the original post-parse value exactly once.
++  Object.defineProperty(inst._zod, "compatairCustomSizeWhen", { value: def.when !== undefined });
+ 
+     inst._zod.def.when ??= (payload) => {
+       const val = payload.value;
+@@ -547,6 +551,8 @@ export const $ZodCheckSizeEquals: core.$constructor<$ZodCheckSizeEquals> = /*@__
+   "$ZodCheckSizeEquals",
+   (inst, def) => {
+     $ZodCheck.init(inst, def);
++  // A public when callback must observe the original post-parse value exactly once.
++  Object.defineProperty(inst._zod, "compatairCustomSizeWhen", { value: def.when !== undefined });
+ 
+     inst._zod.def.when ??= (payload) => {
+       const val = payload.value;
+@@ -601,6 +607,8 @@ export const $ZodCheckMaxLength: core.$constructor<$ZodCheckMaxLength> = /*@__PU
+   "$ZodCheckMaxLength",
+   (inst, def) => {
+     $ZodCheck.init(inst, def);
++  // A public when callback must observe the original post-parse value exactly once.
++  Object.defineProperty(inst._zod, "compatairCustomSizeWhen", { value: def.when !== undefined });
+ 
+     inst._zod.def.when ??= (payload) => {
+       const val = payload.value;
+@@ -652,6 +660,8 @@ export const $ZodCheckMinLength: core.$constructor<$ZodCheckMinLength> = /*@__PU
+   "$ZodCheckMinLength",
+   (inst, def) => {
+     $ZodCheck.init(inst, def);
++  // A public when callback must observe the original post-parse value exactly once.
++  Object.defineProperty(inst._zod, "compatairCustomSizeWhen", { value: def.when !== undefined });
+ 
+     inst._zod.def.when ??= (payload) => {
+       const val = payload.value;
+@@ -704,6 +714,8 @@ export const $ZodCheckLengthEquals: core.$constructor<$ZodCheckLengthEquals> = /
+   "$ZodCheckLengthEquals",
+   (inst, def) => {
+     $ZodCheck.init(inst, def);
++  // A public when callback must observe the original post-parse value exactly once.
++  Object.defineProperty(inst._zod, "compatairCustomSizeWhen", { value: def.when !== undefined });
+ 
+     inst._zod.def.when ??= (payload) => {
+       const val = payload.value;

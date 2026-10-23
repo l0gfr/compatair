@@ -137,14 +137,47 @@ Les hubs sans clé sont toujours reconstruits. Le compteur global du header est
 actualisé depuis le petit manifeste, pour ne pas imposer une modification de
 chaque HTML au seul changement du nombre de références.
 
-Le cache HTML est jetable, borné à 384 Mio et sauvegardé uniquement par `main`.
-La CI des PR restaure ces caches en lecture seule. Ses tests et son build
-s’exécutent dans deux jobs indépendants, limités à 15 et 35 minutes. Le contrôle
+Le cache HTML est jetable, borné à 1 536 Mio (1,5 Gio, soit 1 610 612 736 octets
+non compressés) et sauvegardé uniquement par `main`. Le relevé local du
+23 octobre 2026 compte 46 051 fichiers, 1 062 831 606 octets et aucun lien
+symbolique dans `node_modules/.astro` : il dépassait le précédent plafond de
+384 Mio, ce qui rendait ce cache inéligible à la sauvegarde. Le nouveau seuil
+couvre ce relevé sans supprimer le contrôle de taille ni le refus des entrées
+non régulières. Il ne change ni le format ni les clés du cache. Après un
+déploiement vérifié, le nettoyage conserve le cache HTML de `main` le plus
+récent ; plusieurs copies peuvent coexister avant ce nettoyage. La mesure
+locale ne prouve pas une restauration réussie en CI ni un gain de temps à chaud.
+La CI des PR restaure ces caches en lecture seule. Après un preflight commun
+audit et lint limité à dix minutes, ses tests et son build s’exécutent dans deux
+jobs parallèles, limités à 15 et 35 minutes. Les sept contrôles de source,
+contrats, types et tests utilisent l’alias commun `validate:source`. Le contrôle
 `validate` dépend de leur réussite à tous deux. Les snapshots, l’historique,
 les liens et Lighthouse restent vérifiés après le build, y compris à froid.
 Cette séparation ne produit aucune archive intermédiaire du site.
 Un cache absent ou trop grand produit un build complet. Les budgets de données suivent le nombre de références : les seuils de 260 Kio (export d’exécution gzip) et 140 Kio (recherche gzip) sont les bases à 5 006 références. Le plafond HTML est de 300 Mio plus 64 Kio par référence supplémentaire ; l’artefact courant est ramené de 2 700 à 600 Mio, plus 256 Kio par référence supplémentaire. Les plafonds JavaScript restent fixes. Les contrôles de données,
 de valeur propre, de sources, de sécurité, de liens et Lighthouse restent actifs.
+
+## Un seul build automatique sur le parcours main
+
+Le hook `main` conserve `security:audit`, `lint:source` et `validate:source`,
+sans générer `dist`. Le workflow de production exécute `archive:verify` après
+audit et lint, avant les caches et `validate:full`. Cette vérification conserve
+la construction du ZIP et les tests de la copie extraite sans métadonnées Git.
+Les snapshots, budgets, signatures, invariants, liens et quinze passages
+Lighthouse restent obligatoires sur le résultat construit en CI avant activation.
+
+Ce déplacement supprime un build local, son audit de l’artefact et ses quinze
+passages Lighthouse sur le chemin automatique d’un push `main`. Le travail de
+vérification de l’archive est déplacé dans la CI, pas supprimé : le nombre de
+passages de la suite de tests sur ce parcours local plus production reste trois.
+La durée de la CI inclut désormais cette vérification. Le gain total n’est pas
+encore chronométré ; les plafonds de temps et la réserve avant transfert restent
+inchangés. Il n’est pas garanti qu’une nouvelle CI termine en moins d’une heure.
+
+`validate:main` reste disponible pour une validation complète locale volontaire.
+Le hook des autres branches et le build de PR restent inchangés : une PR puis
+son merge sur `main` ne constituent pas une révision ni un contexte de publication
+identiques, et restent validés séparément.
 
 ## Archive historique et migration
 
@@ -233,5 +266,31 @@ ne constitue une garantie de durée sur un runner CI ni un test de trafic concur
 
 Les dates `lastmod` du sitemap restent fondées sur l’historique Git et les dates
 éditoriales. Aucun horodatage de build ne remplace une date de source.
+
+## Mesures ciblées du 23 octobre 2026
+
+Deux comparaisons locales ont été effectuées sur le catalogue de 20 087 outils
+et les sitemaps existants de `01ddf96803d0768360fed3721881fdcfaa99889a`, avec
+les optimisations en cours dans le worktree :
+
+| Opération échantillonnée | Avant | Après | Équivalence vérifiée |
+| --- | ---: | ---: | --- |
+| Outils apparentés, 1 000 références réelles réparties dans le catalogue | 605 ms | 6 ms, dont 5 ms pour créer l’index | Résultats et ordre identiques |
+| Dates sitemap, 1 000 URL réparties en cinq familles de 200 | 31,110 s, 727 processus Git | 1,631 s, 82 processus Git | Dates identiques |
+
+Les cinq familles sont les compresseurs, guides, usages, outils et autres pages.
+Les relevés locaux sont `related-tools-performance.json` et
+`sitemap-large-sample-performance.json`. Ces échantillons ne mesurent pas un
+build complet et ne démontrent ni un gain global en CI ni une restauration
+effective du cache HTML.
+
+Le rendu évite également de recalculer le rapport qualité sur les pages de
+sources suivantes : seul le contenu de la première page le consomme. Les fiches
+outil et pages d’usage ne préparent leur résumé de compatibilité que lorsque
+le débit en charge est qualifié et que ce résumé sera affiché. Les avertissements
+sur les données insuffisantes restent présents. Enfin, la préparation de
+l’archive source utilise un processus Node avec au plus quatre copies simultanées,
+à la place d’une paire de processus `mkdir`/`cp` par fichier, en conservant le
+refus des liens symboliques et des chemins non conformes.
 
 Documentation : https://docs.astro.build/en/reference/experimental-flags/incremental-build/

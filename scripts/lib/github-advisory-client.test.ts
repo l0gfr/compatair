@@ -15,7 +15,7 @@ describe('GitHub Advisory Database client', () => {
 			severity: 'medium',
 			summary: 'Test advisory',
 			html_url: 'https://github.com/advisories/GHSA-test-test-test',
-			vulnerabilities: [{ package: { ecosystem: 'npm', name: 'alpha' } }],
+			vulnerabilities: [{ package: { ecosystem: 'npm', name: 'alpha' }, vulnerable_version_range: '< 1.2.4', first_patched_version: '1.2.4' }],
 		}]));
 		const fetchImplementation = fetchMock as unknown as typeof fetch;
 
@@ -27,6 +27,10 @@ describe('GitHub Advisory Database client', () => {
 				severity: 'moderate',
 				title: 'Test advisory',
 				url: 'https://github.com/advisories/GHSA-test-test-test',
+				ghsaId: 'GHSA-test-test-test',
+				vulnerableVersionRanges: ['< 1.2.4'],
+				firstPatchedVersions: ['1.2.4'],
+				queriedVersions: ['1.2.3'],
 			}],
 		});
 
@@ -34,6 +38,16 @@ describe('GitHub Advisory Database client', () => {
 		expect(requested.searchParams.get('ecosystem')).toBe('npm');
 		expect(requested.searchParams.get('affects')).toBe('@scope/beta@4.5.6,alpha@1.2.3');
 		expect(requested.searchParams.get('is_withdrawn')).toBe('false');
+	});
+
+	it('preserves an expanded advisory range instead of hiding it behind a package name', async () => {
+		const fetchImplementation = vi.fn(async () => jsonResponse([{
+			ghsa_id: 'GHSA-mrhx-c7xc-m3w5', severity: 'high', summary: 'Zod collection issue',
+			html_url: 'https://github.com/advisories/GHSA-mrhx-c7xc-m3w5',
+			vulnerabilities: [{ package: { ecosystem: 'npm', name: 'zod' }, vulnerable_version_range: '<= 4.6.7', first_patched_version: '4.6.8' }],
+		}])) as unknown as typeof fetch;
+		const response = await fetchGitHubAdvisories([{ name: 'zod', version: '3.25.76' }, { name: 'zod', version: '4.6.7' }], { fetchImplementation, token: '' });
+		expect(response.zod[0]).toMatchObject({ vulnerableVersionRanges: ['<= 4.6.7'], firstPatchedVersions: ['4.6.8'], queriedVersions: ['3.25.76', '4.6.7'] });
 	});
 
 	it('fails closed on an HTTP error or malformed advisory', async () => {

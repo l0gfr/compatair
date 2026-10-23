@@ -16,16 +16,9 @@ archive_entries="$temporary_root/archive-entries.txt"
 extracted_root="$temporary_root/extracted"
 mkdir -p "$staging_root" "$extracted_root"
 
-while IFS= read -r -d '' relative_path; do
-	source_path="$repo_root/$relative_path"
-	target_path="$staging_root/$relative_path"
-	if [[ -L "$source_path" || ! -f "$source_path" ]]; then
-		echo "Unsafe source archive entry: $relative_path" >&2
-		exit 1
-	fi
-	mkdir -p "$(dirname "$target_path")"
-	cp -p -- "$source_path" "$target_path"
-done < <(git -C "$repo_root" ls-files -z --cached --others --exclude-standard)
+source_manifest="$temporary_root/source-files"
+git -C "$repo_root" ls-files -z --cached --others --exclude-standard > "$source_manifest"
+node "$repo_root/scripts/lib/stage-source-archive.mjs" "$repo_root" "$staging_root" "$source_manifest"
 
 git -C "$staging_root" init --quiet
 git -C "$staging_root" add --all

@@ -17,11 +17,31 @@ const releaseRoute = readFileSync(new URL('../src/pages/data/release.json.ts', i
 const liveSmoke = readFileSync(new URL('./smoke-live-http.mjs', import.meta.url), 'utf8');
 
 describe('release boundary policy', () => {
-	it('requires both independent CI jobs and preserves every validation gate without PR cache writes', () => {
+	it('centralizes all seven source gates and preserves the complete manual and production validations', () => {
+		const scripts = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8')).scripts;
+		const sourceGates = ['catalog:check', 'audit:editorial', 'audit:page-value', 'contracts:check', 'benchmark:mcp-manifest', 'check', 'test'];
+		expect(scripts['validate:source']).toBe(sourceGates.map(gate => `pnpm ${gate}`).join(' && '));
+		expect(scripts.validate).toBe('pnpm validate:source && pnpm build');
+		expect(scripts['validate:full']).toBe('pnpm validate && pnpm data:validate && pnpm benchmark:mcp-startup && pnpm benchmark:publication-signatures');
+		expect(scripts['validate:main']).toBe('pnpm lint:source && pnpm validate:full && pnpm audit:dist && pnpm archive:verify && pnpm lighthouse');
+		expect(scripts['archive:verify']).toBe('bash scripts/verify-source-archive.sh');
+		expect(scripts['lighthouse:production']).toBe('lhci autorun');
+		const lighthouse = JSON.parse(readFileSync(new URL('../lighthouserc.json', import.meta.url), 'utf8')).ci;
+		expect(lighthouse.collect.numberOfRuns).toBe(3);
+		expect(lighthouse.collect.url).toHaveLength(5);
+		expect(lighthouse.assert.aggregationMethod).toBe('median');
+	});
+	it('gates parallel CI jobs on a common preflight and preserves every validation gate without PR cache writes', () => {
 		const ci = parseDocument(readFileSync(new URL('../.github/workflows/ci.yml', import.meta.url), 'utf8')).toJS();
 		expect(ci.permissions).toEqual({ contents: 'read' });
 		expect(ci.jobs.validate.needs).toEqual(['source-tests', 'build']);
 		expect(ci.jobs.validate.if).toBeUndefined();
+		expect(ci.jobs.preflight['timeout-minutes']).toBe(10);
+		expect(ci.jobs.preflight.if).toBeUndefined();
+		for (const name of ['source-tests', 'build']) {
+			expect(ci.jobs[name].needs).toBe('preflight');
+			expect(ci.jobs[name].if).toBeUndefined();
+		}
 		expect(ci.jobs['source-tests']['timeout-minutes']).toBe(15);
 		expect(ci.jobs.build['timeout-minutes']).toBe(35);
 		expect(ci.jobs.validate['timeout-minutes']).toBe(1);
@@ -35,13 +55,81 @@ describe('release boundary policy', () => {
 			}
 		}
 		const commands = (job: { steps: { run?: string }[] }) => job.steps.map((step) => step.run ?? '').join('\n');
-		for (const gate of ['catalog:check', 'audit:editorial', 'audit:page-value', 'contracts:check', 'benchmark:mcp-manifest', 'check', 'test']) expect(commands(ci.jobs['source-tests'])).toContain(`pnpm ${gate}`);
-		for (const gate of ['build', 'data:validate', 'benchmark:mcp-startup', 'benchmark:publication-signatures', 'security:audit', 'lighthouse', 'lighthouse:summary']) expect(commands(ci.jobs.build)).toContain(`pnpm ${gate}`);
+		const preflight = commands(ci.jobs.preflight);
+		expect(preflight).toContain('pnpm security:audit');
+		expect(preflight).toContain('pnpm lint:source');
+		expect(preflight.indexOf('pnpm install --frozen-lockfile')).toBeLessThan(preflight.indexOf('pnpm security:audit'));
+		expect(preflight.indexOf('pnpm security:audit')).toBeLessThan(preflight.indexOf('pnpm lint:source'));
+		expect(preflight).not.toMatch(/pnpm (?:build|validate(?::|\s|$)|check(?:\s|$)|test(?:\s|$))/);
+		const audit = ci.jobs.preflight.steps.find((step: { run?: string }) => step.run === 'pnpm security:audit');
+		expect(audit.env.GITHUB_TOKEN).toBe('${{ github.token }}');
+		expect(audit.if).toBeUndefined();
+		for (const name of ['source-tests', 'build']) {
+			const jobCommands = commands(ci.jobs[name]);
+			expect(jobCommands).toContain('pnpm security:supply-chain');
+			expect(jobCommands.indexOf('pnpm install --frozen-lockfile')).toBeLessThan(jobCommands.indexOf('pnpm security:supply-chain'));
+			expect(jobCommands.indexOf('pnpm security:supply-chain')).toBeLessThan(jobCommands.indexOf(name === 'build' ? 'pnpm build' : 'pnpm validate:source'));
+			expect(jobCommands).not.toContain('pnpm security:audit');
+			expect(jobCommands).not.toContain('pnpm lint:source');
+		}
+		const sourceGate = ci.jobs['source-tests'].steps.filter((step: { run?: string }) => step.run === 'pnpm validate:source');
+		expect(sourceGate).toHaveLength(1);
+		expect(sourceGate[0].if).toBeUndefined();
+		for (const gate of ['build', 'data:validate', 'benchmark:mcp-startup', 'benchmark:publication-signatures', 'lighthouse', 'lighthouse:summary']) expect(commands(ci.jobs.build)).toContain(`pnpm ${gate}`);
 		expect(commands(ci.jobs.build)).toContain('node scripts/audit-dist.mjs');
 		expect(commands(ci.jobs.build)).toContain('node scripts/assert-evidence-history-extension.mjs');
 		expect(commands(ci.jobs.build)).toContain('node scripts/assert-observatory-history-extension.mjs');
 		const preview = ci.jobs.build.steps.find((step: { name: string }) => step.name === 'Upload requested site preview');
 		expect(preview.if).toBe("github.event_name == 'workflow_dispatch' && inputs.upload_preview");
+	});
+	it('keeps every production gate blocking on the exact main revision before activation', () => {
+		const config = parseDocument(workflow).toJS();
+		expect(config.on.push.branches).toEqual(['main']);
+		expect(config.on.pull_request).toBeUndefined();
+		const job = config.jobs.validate;
+		expect(job.if).toBe("github.ref == 'refs/heads/main' && vars.DEPLOY_ENABLED == 'true'");
+		expect(job['continue-on-error']).toBeUndefined();
+		const steps = job.steps as { name?: string; run?: string; if?: string; env?: Record<string, string>; 'continue-on-error'?: boolean }[];
+		const gates = ['pnpm security:audit', 'pnpm lint:source', 'pnpm archive:verify', 'pnpm validate:full', 'pnpm data:sign', 'pnpm data:verify-signatures', 'node scripts/audit-dist.mjs', 'pnpm lighthouse:production', 'node scripts/verify-indexation-release.mjs'];
+		let previous = -1;
+		for (const command of gates) {
+			const indices = steps.flatMap((step, index) => step.run?.split('\n').map(line => line.trim()).includes(command) ? [index] : []);
+			expect(indices, command).toHaveLength(1);
+			const index = indices[0];
+			expect(index, command).toBeGreaterThanOrEqual(previous);
+			expect(steps[index].if, command).toBeUndefined();
+			expect(steps[index]['continue-on-error'], command).toBeUndefined();
+			previous = index;
+		}
+		const ssh = steps.findIndex(step => step.name === 'Configure SSH');
+		const activation = steps.findIndex(step => step.name === 'Transfer and activate release');
+		expect(ssh).toBeGreaterThan(previous);
+		expect(activation).toBeGreaterThan(ssh);
+		expect(steps.find(step => step.run === 'pnpm validate:full')?.env?.COMPATAIR_RELEASE_SHA).toBe('${{ github.sha }}');
+		expect(workflow).toContain('COMPATAIR_EXPECTED_RELEASE_SHA: ${{ github.sha }}');
+		const archive = steps.findIndex(step => step.run === 'pnpm archive:verify');
+		for (const [index, step] of steps.entries()) if (String((step as { uses?: string }).uses ?? '').startsWith('actions/cache/restore@')) expect(index).toBeGreaterThan(archive);
+	});
+	it('audits production dependencies once before caches, validation and signing', () => {
+		const steps = parseDocument(workflow).toJS().jobs.validate.steps as { run?: string; uses?: string; env?: Record<string, string>; if?: string; 'continue-on-error'?: boolean }[];
+		const auditIndices = steps.flatMap((step, index) => step.run === 'pnpm security:audit' ? [index] : []);
+		expect(auditIndices).toHaveLength(1);
+		const auditIndex = auditIndices[0];
+		const audit = steps[auditIndex];
+		expect(audit.env?.GITHUB_TOKEN).toBe('${{ github.token }}');
+		expect(audit.if).toBeUndefined();
+		expect(audit['continue-on-error']).toBeUndefined();
+		expect(steps.findIndex(step => step.run === 'pnpm install --frozen-lockfile')).toBeLessThan(auditIndex);
+		for (const command of ['pnpm lint:source', 'pnpm validate:full', 'pnpm data:sign']) {
+			expect(steps.findIndex(step => step.run?.includes(command)), command).toBeGreaterThan(auditIndex);
+		}
+		for (const [index, step] of steps.entries()) {
+			if (step.uses?.startsWith('actions/cache/restore@')) expect(index).toBeGreaterThan(auditIndex);
+		}
+		expect(steps.some(step => step.run === 'pnpm security:supply-chain')).toBe(false);
+		const buildIndex = steps.findIndex(step => step.run === 'pnpm validate:full');
+		const checkpointIndex = steps.findIndex(step => step.run === 'node scripts/verify-indexation-release.mjs');
+		expect(checkpointIndex).toBeGreaterThan(buildIndex);
 	});
 	it.each([
 		{ smoke: 1, seo: 0, status: 42, calls: ['smoke-live-http.mjs'] },

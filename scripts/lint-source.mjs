@@ -154,8 +154,38 @@ for (const [file, workflow] of [['.github/workflows/ci.yml', ciWorkflow], ['.git
 if (!deployWorkflow.includes('pnpm crux:report')) errors.push('.github/workflows/deploy-production.yml: statut Core Web Vitals terrain absent');
 const prePushHook = await readFile('.githooks/pre-push', 'utf8');
 if (!prePushHook.includes('resolve_node_for_major')) errors.push('.githooks/pre-push: résolution automatique du runtime Node manquante');
-if (!prePushHook.includes('pnpm validate:main')) errors.push('.githooks/pre-push: validation principale manquante');
+const mainHook = prePushHook.slice(prePushHook.indexOf('if [[ "$pushes_main" == "true" ]]; then'), prePushHook.lastIndexOf('\nelse\n'));
+const mainHookCommands = [...mainHook.matchAll(/^\tpnpm ([^\n]+)$/gm)].map(match => match[1]);
+if (!prePushHook.includes('set -Eeuo pipefail') || JSON.stringify(mainHookCommands) !== JSON.stringify(['security:audit', 'lint:source', 'validate:source'])) errors.push('.githooks/pre-push: main doit bloquer sur audit, lint et validation source, dans cet ordre');
 const packageManifest = JSON.parse(await readFile('package.json', 'utf8'));
+const sourceGates = ['catalog:check', 'audit:editorial', 'audit:page-value', 'contracts:check', 'benchmark:mcp-manifest', 'check', 'test'];
+for (const [name, expected] of Object.entries({
+	'validate:source': sourceGates.map(gate => `pnpm ${gate}`).join(' && '),
+	validate: 'pnpm validate:source && pnpm build',
+	'validate:full': 'pnpm validate && pnpm data:validate && pnpm benchmark:mcp-startup && pnpm benchmark:publication-signatures',
+	'validate:main': 'pnpm lint:source && pnpm validate:full && pnpm audit:dist && pnpm archive:verify && pnpm lighthouse',
+})) if (packageManifest.scripts?.[name] !== expected) errors.push(`package.json: chaîne obligatoire modifiée (${name})`);
+const productionConfig = parseDocument(deployWorkflow).toJS();
+const productionJob = productionConfig?.jobs?.validate;
+const productionSteps = productionJob?.steps ?? [];
+if (productionJob?.if !== "github.ref == 'refs/heads/main' && vars.DEPLOY_ENABLED == 'true'" || productionJob?.['continue-on-error'] !== undefined || JSON.stringify(productionConfig?.on?.push?.branches) !== JSON.stringify(['main'])) errors.push('.github/workflows/deploy-production.yml: la production doit rester bloquante et réservée à main');
+const productionGates = ['pnpm security:audit', 'pnpm lint:source', 'pnpm archive:verify', 'pnpm validate:full', 'pnpm data:sign', 'pnpm data:verify-signatures', 'node scripts/audit-dist.mjs', 'pnpm lighthouse:production', 'node scripts/verify-indexation-release.mjs'];
+let previousProductionGate = -1;
+for (const command of productionGates) {
+	const indices = productionSteps.flatMap((step, index) => step.run?.split('\n').map(line => line.trim()).includes(command) ? [index] : []);
+	const index = indices[0];
+	const step = productionSteps[index];
+	if (indices.length !== 1 || index < previousProductionGate || step?.if !== undefined || step?.['continue-on-error'] !== undefined) errors.push(`.github/workflows/deploy-production.yml: contrôle obligatoire absent, conditionnel ou déplacé (${command})`);
+	previousProductionGate = index ?? previousProductionGate;
+}
+const sshIndex = productionSteps.findIndex(step => step.name === 'Configure SSH');
+const activationIndex = productionSteps.findIndex(step => step.name === 'Transfer and activate release');
+if (sshIndex <= previousProductionGate || activationIndex <= sshIndex) errors.push('.github/workflows/deploy-production.yml: tous les contrôles doivent précéder la connexion et l’activation');
+const productionBuild = productionSteps.find(step => step.run === 'pnpm validate:full');
+if (productionBuild?.env?.COMPATAIR_RELEASE_SHA !== '${{ github.sha }}') errors.push('.github/workflows/deploy-production.yml: la validation complète doit construire le SHA exact de la CI');
+const ciSourceSteps = parseDocument(ciWorkflow).toJS()?.jobs?.['source-tests']?.steps ?? [];
+const ciSourceGate = ciSourceSteps.filter(step => step.run === 'pnpm validate:source');
+if (ciSourceGate.length !== 1 || ciSourceGate[0].if !== undefined || ciSourceGate[0]['continue-on-error'] !== undefined) errors.push('.github/workflows/ci.yml: la CI doit utiliser la validation source centrale sans condition');
 const astroVersion = packageManifest.dependencies?.astro;
 const astroVersionParts = typeof astroVersion === 'string' ? astroVersion.match(/^(\d+)\.(\d+)\.(\d+)$/) : null;
 const astroVersionIsPatched = astroVersionParts && (

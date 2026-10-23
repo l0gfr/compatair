@@ -19,7 +19,37 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  preflight:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Set up Node.js
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          check-latest: false
+
+      - name: Install pnpm
+        run: npm install --global --ignore-scripts pnpm@10.34.4
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Audit dependencies and installed supply-chain policy
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: pnpm security:audit
+
+      - name: Lint source and workflow policy
+        run: pnpm lint:source
+
   source-tests:
+    needs: preflight
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
@@ -44,11 +74,13 @@ jobs:
         run: pnpm security:supply-chain
 
       - name: Check catalog, editorial evidence, contracts, types and tests
-        run: pnpm catalog:check && pnpm audit:editorial && pnpm audit:page-value && pnpm contracts:check && pnpm benchmark:mcp-manifest && pnpm check && pnpm test
+        run: pnpm validate:source
 
   build:
+    needs: preflight
     runs-on: ubuntu-24.04
-    # Source checks run independently. A cold build must still complete every
+    # Source checks and build run in parallel after the common preflight.
+    # A cold build must still complete every
     # snapshot, link and Lighthouse gate without relying on a cache hit.
     # A cold CI build took 23m05; the larger offline Astro stage added 2m43.
     timeout-minutes: 35
@@ -74,9 +106,6 @@ jobs:
 
       - name: Verify lockfile integrity and install-script policy
         run: pnpm security:supply-chain
-
-      - name: Lint source and workflow policy
-        run: pnpm lint:source
 
       # Read-only reuse of a trusted default-branch cache. This workflow never
       # saves calculation caches, including for fork pull requests.
@@ -109,11 +138,6 @@ jobs:
           git show "${PR_BASE_SHA}:src/data/document-quality-observatory-history.snapshot.json" > /tmp/observatory-baseline.json
           node scripts/assert-evidence-history-extension.mjs /tmp/evidence-baseline.json dist/data/evidence-history.json
           node scripts/assert-observatory-history-extension.mjs /tmp/observatory-baseline.json dist/data/document-quality-observatory.json
-
-      - name: Audit production dependencies
-        env:
-          GITHUB_TOKEN: ${{ github.token }}
-        run: pnpm security:audit
 
       - name: Check generated HTML and internal links
         run: node scripts/audit-dist.mjs

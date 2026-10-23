@@ -9,7 +9,18 @@ pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-Validations complètes :
+Validation source sans génération du site :
+
+```bash
+pnpm security:audit
+pnpm lint:source
+pnpm validate:source
+```
+
+`validate:source` centralise catalogue, preuves éditoriales, valeur des pages,
+contrats, budget du manifeste MCP, types et tests. Chaque échec reste bloquant.
+
+Validations complètes pour un diagnostic local volontaire :
 
 ```bash
 pnpm validate:full
@@ -68,7 +79,7 @@ L’installation Debian et le proxy Apache sont décrits dans [docs/DEPLOYMENT.m
 
 Voir [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) pour la préparation Apache, TLS, les secrets et le rollback.
 
-Le checkout local utilise le hook versionné `.githooks/pre-push`. Un push vers `main` exige Node 24 et exécute aussi l’audit HTML et Lighthouse afin de reproduire les principaux contrôles du déploiement avant l’envoi. Si le Node actif n’est pas compatible, le hook cherche automatiquement un Node 24 vérifié parmi `COMPATAIR_NODE_BIN`, NVM, FNM, Volta, asdf, mise, Homebrew et le runtime local Codex. Il échoue sans lancer les validations si aucun binaire compatible n’est disponible. Après un nouveau clone, activer le hook avec :
+Le checkout local utilise le hook versionné `.githooks/pre-push`. Un push vers `main` exige Node 24 et exécute successivement `security:audit`, `lint:source` et `validate:source`. Le workflow de production vérifie ensuite l’archive source et ses tests sans métadonnées Git avant l’unique build automatique de ce parcours `main`, puis les snapshots, budgets, signatures, invariants, audit HTML et Lighthouse avant toute activation. Le SHA construit et le SHA public attendu restent ceux de la CI. `validate:main` conserve tous ses contrôles pour un diagnostic local volontaire ; il n’est plus appelé automatiquement par le hook `main`. Les hooks des autres branches et la CI des PR conservent leur build. Si le Node actif n’est pas compatible, le hook cherche automatiquement un Node 24 vérifié parmi `COMPATAIR_NODE_BIN`, NVM, FNM, Volta, asdf, mise, Homebrew et le runtime local Codex. Il échoue sans lancer les validations si aucun binaire compatible n’est disponible. Après un nouveau clone, activer le hook avec :
 
 ```bash
 git config core.hooksPath .githooks

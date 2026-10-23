@@ -68,11 +68,17 @@ export async function fetchGitHubAdvisories(packages, {
 					.map((entry) => entry.package.name));
 				if (!matchingNames.size) throw new Error(`avis ${advisory.ghsa_id ?? 'sans identifiant'} sans paquet npm correspondant`);
 				for (const name of matchingNames) {
+					const vulnerabilities = advisory.vulnerabilities.filter((entry) => entry?.package?.ecosystem === 'npm' && entry.package.name === name);
+					if (vulnerabilities.some((entry) => typeof entry.vulnerable_version_range !== 'string' || !entry.vulnerable_version_range.trim())) throw new Error('plage de versions GitHub malformée');
 					if (!result[name]) result[name] = [];
 					result[name].push({
 						severity: advisory.severity === 'medium' ? 'moderate' : advisory.severity,
 						title: advisory.summary,
 						url: advisory.html_url,
+						ghsaId: advisory.ghsa_id,
+						vulnerableVersionRanges: [...new Set(vulnerabilities.map((entry) => entry.vulnerable_version_range))].sort(),
+						firstPatchedVersions: [...new Set(vulnerabilities.map((entry) => entry.first_patched_version ?? null))].sort(),
+						queriedVersions: batch.filter((reference) => reference.slice(0, reference.lastIndexOf('@')) === name).map((reference) => reference.slice(reference.lastIndexOf('@') + 1)).sort(),
 					});
 				}
 			}
