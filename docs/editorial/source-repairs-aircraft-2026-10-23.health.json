@@ -1,0 +1,1789 @@
+{
+  "schemaVersion": "1.0.0",
+  "checkedAt": "2026-10-23T17:48:48.615Z",
+  "scope": "only the new versioned sources of the150 Aircraft repair; not a complete inventory audit",
+  "summary": {
+    "reachable": 67,
+    "broken": 0,
+    "unavailable": 0,
+    "unsafe": 0,
+    "unverified": 0,
+    "acknowledged": 0,
+    "recovered": 0,
+    "reviewedRecoveries": 0,
+    "checked": 67,
+    "anomalies": 0,
+    "auditUnavailable": false
+  },
+  "results": [
+    {
+      "url": "https://drehen-fraesen-bohren.de/dokumente/Betriebsanleitung_AIRSTAR-703-100_853-200_D.pdf",
+      "references": [
+        {
+          "productId": "aircraft-airstar-703-100",
+          "evidenceId": "aircraft-2009731-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airstar-853-100",
+          "evidenceId": "aircraft-2009831-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airstar-853-200",
+          "evidenceId": "aircraft-2009832-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://drehen-fraesen-bohren.de/dokumente/Betriebsanleitung_AIRSTAR-703-100_853-200_D.pdf"
+    },
+    {
+      "url": "https://drehen-fraesen-bohren.de/dokumente/Betriebsanleitung-Aircraft-COMPACT-AIR-321-24PRO_DE.pdf",
+      "references": [
+        {
+          "productId": "aircraft-compact-air-321-24-pro",
+          "evidenceId": "aircraft-2005352-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://drehen-fraesen-bohren.de/dokumente/Betriebsanleitung-Aircraft-COMPACT-AIR-321-24PRO_DE.pdf"
+    },
+    {
+      "url": "https://oxomi.com/p/3001205/datasheet/download/702076/2403110.pdf?language=de",
+      "references": [
+        {
+          "productId": "aircraft-gs-pro",
+          "evidenceId": "aircraft-2403110-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/p/3001205/datasheet/download/702076/2403110.pdf?language=de"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=15",
+      "references": [
+        {
+          "productId": "aircraft-airboy-silence-111-as-of-e",
+          "evidenceId": "aircraft-2000108-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/WfENRGUnycEV_mE09DuFkylWdP9LdcokpsQLqPGtRYQ/E3MJLTML59D7UBKS4A422PG9SS/V4S7ROE0M016JI4OMQ35TSLV9S/AIRCRAFT___Hauptkatalog_2026_27_15.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=16",
+      "references": [
+        {
+          "productId": "aircraft-airboy-186-of-e",
+          "evidenceId": "aircraft-2001230-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-mobilboy-185-of-e",
+          "evidenceId": "aircraft-2001240-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/ZU47fn2ubB_agJvVOvYe1w4DEkcB79NFQYFcQFx2rsE/5TK45UFS54SPJRGR2OCKRNF30G/K3S3GP00QHILEEJSQLIKEODQHK/AIRCRAFT___Hauptkatalog_2026_27_16.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=17",
+      "references": [
+        {
+          "productId": "aircraft-handy-silence-221-of-e",
+          "evidenceId": "aircraft-2001221-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/YCt9f4kL_NdmiZ3Z1QsqaVkSqJocuGT0P0Jq2Gt9XrQ/RNTJ6975CNGSHNGT07OT8PGBO4/SPO7BSIGARM9BGJE81EUCDAK0O/AIRCRAFT___Hauptkatalog_2026_27_17.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=18",
+      "references": [
+        {
+          "productId": "aircraft-airboy-131-of-e",
+          "evidenceId": "aircraft-2001225-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airboy-silence-171-of-e",
+          "evidenceId": "aircraft-2001265-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/krq967ebRDuZXUIZSPhZcZtZN6QPcNISShnTrhYvHzU/PRBBPGO88J0VD69GN6R7AQ9TJS/A2VC8KI2Q2RF29F95L5Q8TLDFK/AIRCRAFT___Hauptkatalog_2026_27_18.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=19",
+      "references": [
+        {
+          "productId": "aircraft-airboy-silence-221-of-e",
+          "evidenceId": "aircraft-2000206-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airboy-silence-241-of-e",
+          "evidenceId": "aircraft-2000245-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/3c7pu13su-rFLYQjiUpqCPfFHZCIiMbLUhcgUelKJQY/4GBFG2BA0AEOVI12SRABBM3UK4/68U50B3J1BEP1T240N2SUJD0CG/AIRCRAFT___Hauptkatalog_2026_27_19.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=20",
+      "references": [
+        {
+          "productId": "aircraft-compact-air-320-90-v-of-e",
+          "evidenceId": "aircraft-2005499-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-compact-air-401-50-of-e",
+          "evidenceId": "aircraft-2005452-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/GtUuWqzTx-EU3LtiLnXYgWaRxHtwfKSSG-9rQPuJCqU/I1DJ61TLSE34CC39U25UNB3BES/H88LL2PFU17FT049TKHVGHUAHO/AIRCRAFT___Hauptkatalog_2026_27_20.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=21",
+      "references": [
+        {
+          "productId": "aircraft-compact-air-240-20-of-e",
+          "evidenceId": "aircraft-2005490-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-compact-air-241-16-of-e",
+          "evidenceId": "aircraft-2005450-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-compact-air-320-24-of-e",
+          "evidenceId": "aircraft-2005495-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-compact-air-silence-231-20-of-e",
+          "evidenceId": "aircraft-2005498-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/2VRqZAK4UlTyJfW9_RMaZaNiah261xfCiZCdtdepFJ4/AE9855G8OHHDPLIITBLKD4HTTK/O2JT9V7180ONF49LIQ4VIQHBB8/AIRCRAFT___Hauptkatalog_2026_27_21.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=22",
+      "references": [
+        {
+          "productId": "aircraft-mobilboy-silence-231-50-of-e",
+          "evidenceId": "aircraft-2002326-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-mobilboy-silence-241-24-of-e",
+          "evidenceId": "aircraft-2002245-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-mobilboy-silence-320-90-of-e",
+          "evidenceId": "aircraft-2002340-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-mobilboy-silence-401-50-of-e",
+          "evidenceId": "aircraft-2002401-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/qFSEt8msXOagULzhzArO4HJMIBvfwASgetHIzVWeHMY/8PEH7LT8MLHHUMVRC26PCB7JA4/7V5VIIMUDMO7MKH44RDM5V56R8/AIRCRAFT___Hauptkatalog_2026_27_22.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=228",
+      "references": [
+        {
+          "productId": "aircraft-bpi-pro",
+          "evidenceId": "aircraft-2102170-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-bpk",
+          "evidenceId": "aircraft-2112100-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-bpl",
+          "evidenceId": "aircraft-2112110-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/zx3qHsC8RXXIgNt1XrLlJf9Dy1Ifz1Pv8RqDoLZi_gY/T9VANS5QTK8DRVORLS1G45PCBO/QRFII0TFOC54LAHN09BMB0VRJK/AIRCRAFT___Hauptkatalog_2026_27_228.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=229",
+      "references": [
+        {
+          "productId": "aircraft-bp-pro-duo",
+          "evidenceId": "aircraft-2102190-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-bps-soft-pro",
+          "evidenceId": "aircraft-2102130-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-bst",
+          "evidenceId": "aircraft-2112115-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-sbp",
+          "evidenceId": "aircraft-2102100-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/NCTSoGn67b-qknDCHdYBRg70XTiZtr2OJr_nD8X3Afk/G1R9Q40I65BO9VUG803ECSCC5O/FMC5IRHM7S0DU67D6575BF6294/AIRCRAFT___Hauptkatalog_2026_27_229.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=23",
+      "references": [
+        {
+          "productId": "aircraft-compact-air-440-of-pro",
+          "evidenceId": "aircraft-2015550-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/3upXGCyinvTthrnYeiYIAtG-69699-3GfhFvXIn6768/UUNF7LGRSPLOQ9C9IQ9I473BI0/E0UV06FOK9EUCL8MQCHLCTP4LO/AIRCRAFT___Hauptkatalog_2026_27_23.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=230",
+      "references": [
+        {
+          "productId": "aircraft-bp-pro",
+          "evidenceId": "aircraft-2112120-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-bp-pro-g",
+          "evidenceId": "aircraft-2112121-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-bp-pro-r",
+          "evidenceId": "aircraft-2112130-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-bp-pro-safe",
+          "evidenceId": "aircraft-2112128-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-bp-pro-sil",
+          "evidenceId": "aircraft-2112127-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-bp-pro-v",
+          "evidenceId": "aircraft-2112122-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/zUcoyPTfirbuhtx1Ce20Hv3tRptRiAIEvdqssanB20M/D4JBC86PLHGUPKVCTM5OK68K4O/RF123PU2KDINTAOGL4E5L9S2HG/AIRCRAFT___Hauptkatalog_2026_27_230.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=231",
+      "references": [
+        {
+          "productId": "aircraft-bp-pro-exl",
+          "evidenceId": "aircraft-2102185-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-bp-pro-l",
+          "evidenceId": "aircraft-2112123-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-bp-pro-xl",
+          "evidenceId": "aircraft-2112124-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-bp-pro-xxl",
+          "evidenceId": "aircraft-2112125-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/A3g6I46WCgRu31LncySNdBVsWi2MzXL5qU-h3iCD69Q/LBCKALC15UDNAR923F8JA9B3PO/O2HKQ9MOFTQNVGCSGOEFM5O80K/AIRCRAFT___Hauptkatalog_2026_27_231.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=238",
+      "references": [
+        {
+          "productId": "aircraft-is-3-4-composite",
+          "evidenceId": "aircraft-2401260-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-iss-c-1-2-pro",
+          "evidenceId": "aircraft-2401475-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-iss-c-3-4-pro",
+          "evidenceId": "aircraft-2401485-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/-JPEbXSxhD75c3PaTM4-4PTw75tTrzYBO-xQg1LH6mk/QGA5GRKPC1N2DKNQ21D7C1OSH4/KLU5FV2VD2CKB464F8I2TJ54UK/AIRCRAFT___Hauptkatalog_2026_27_238.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=239",
+      "references": [
+        {
+          "productId": "aircraft-iss-1-pro",
+          "evidenceId": "aircraft-2401490-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-iss-1-pro-l",
+          "evidenceId": "aircraft-2401495-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/ubu8WHMdnmtF6G00Fm_8i5LK8Aapqak4RaYFlaffju4/F4VLRGOMOOBMH77K9U9AF6P09G/111NFMD8HJTA88EF85KA3RE2VG/AIRCRAFT___Hauptkatalog_2026_27_239.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=24",
+      "references": [
+        {
+          "productId": "aircraft-aircar-440-of-pro",
+          "evidenceId": "aircraft-2015530-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/bDQ8wUl_Sw5C8Sj-sqKK8EB_kxpjpb_lC9uPXR5GHqg/TGBJLDDP1066DQSJ7L4PHJO3BO/CP5A4NSV0M9ICUDJTA8T2TJ77G/AIRCRAFT___Hauptkatalog_2026_27_24.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=240",
+      "references": [
+        {
+          "productId": "aircraft-iss-mini",
+          "evidenceId": "aircraft-2401371-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-wss-ht-pro",
+          "evidenceId": "aircraft-2401575-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/OzKIWRup8psaWos1NFz3eBBV_c_5Ouf39a2XVo1j1nQ/D761CVVT5Q3OQVCTJORF7L9NHS/OA94JFRBG45HVCGNBL7LRHVAM4/AIRCRAFT___Hauptkatalog_2026_27_240.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=241",
+      "references": [
+        {
+          "productId": "aircraft-iss-tt-mini-composite",
+          "evidenceId": "aircraft-2401372-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/2LomBrl07WGnAtwmMOKte-VTbqmwoziX12LiiC-qoMc/67LFI1G99F3BFB610AVF9T4G38/LTJV8K7SIDSMU9VJU2576OQ2G8/AIRCRAFT___Hauptkatalog_2026_27_241.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=242",
+      "references": [
+        {
+          "productId": "aircraft-iss-tt-composite",
+          "evidenceId": "aircraft-2401376-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-iss-ttm",
+          "evidenceId": "aircraft-2401370-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/GvPC1_MzUHI10Ko0QQVXYMbx2AJpDJ8Gpsfy2Vzp4rg/IPQ8RIP7PGS5IV6U5A60N9ICJG/9TVM4R0771V48OG3P1I3QO9P2O/AIRCRAFT___Hauptkatalog_2026_27_242.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=245",
+      "references": [
+        {
+          "productId": "aircraft-wb-10-1-pro",
+          "evidenceId": "aircraft-2404120-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-wb-mini-pro",
+          "evidenceId": "aircraft-2406405-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/hLw50Gk6xoiosE2BRcTRi5N0Cl2jvAxDhDAV51hNAjg/4NBH6KIES8LBATB2BQKT8KELKK/GDOATHMKSJHOMG4O3MRLDDNTQC/AIRCRAFT___Hauptkatalog_2026_27_245.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=246",
+      "references": [
+        {
+          "productId": "aircraft-bm-c-10-pro",
+          "evidenceId": "aircraft-2404110-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-bm-c-13-pro",
+          "evidenceId": "aircraft-2404115-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-bm-r-l-pro",
+          "evidenceId": "aircraft-2404100-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/ETs8kghPYD3zDatzyDcbvkD59puTVtptob-gpZ8V0Rk/G4IAT36PD18MKHF6ASVBFB2PSC/DCQ5LTU0O8IPPHKOKKN770MO4K/AIRCRAFT___Hauptkatalog_2026_27_246.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=249",
+      "references": [
+        {
+          "productId": "aircraft-mhp-pro",
+          "evidenceId": "aircraft-2402550-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/cguA7xKv91R5MeNzGO_mOn1IEjd5Fe2QJaexr25bwPA/3NGAGLD3GC7LCQKNQ1H2L58BK4/0BRQB9PJ190J25LNPCHCK27S4S/AIRCRAFT___Hauptkatalog_2026_27_249.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=251",
+      "references": [
+        {
+          "productId": "aircraft-ne-mini-pro",
+          "evidenceId": "aircraft-2402650-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-ne-pro",
+          "evidenceId": "aircraft-2402620-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-np-pro",
+          "evidenceId": "aircraft-2402640-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/hlqicKMAKxibqYR72BuzORGeV-_AbAs182lwBH8IxSw/DM2APHC2RUOD5PTN11VNQ8N2EO/V74DSAHNPDNPSCCGI1JGHMJUQ4/AIRCRAFT___Hauptkatalog_2026_27_251.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=252",
+      "references": [
+        {
+          "productId": "aircraft-np-2-pro",
+          "evidenceId": "aircraft-2402655-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/ZyAM-rcCyLTwREOssOEGuhcjE7ReTtcpF7Uje869Anw/J4EM323LPSGMIILHFAEKS3BILG/PEU05OBLHQNG4CEK42A2NRED74/AIRCRAFT___Hauptkatalog_2026_27_252.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=254",
+      "references": [
+        {
+          "productId": "aircraft-mrs-mini-pro",
+          "evidenceId": "aircraft-2406100-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-rs-1-2-vt-pro",
+          "evidenceId": "aircraft-2401565-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/JF2xUfVK28C966JKzfeCOH1tdYdd4gFdJFAE3sOCuEM/GB00SE1MGUUPC89Q0KF2NGNTI0/C6217QQJ6332FVIAA30BGUEQTC/AIRCRAFT___Hauptkatalog_2026_27_254.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=255",
+      "references": [
+        {
+          "productId": "aircraft-rs-1-4-vt-pro",
+          "evidenceId": "aircraft-2401560-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-srs-1-2-ht-pro",
+          "evidenceId": "aircraft-2401570-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/zi9HL95RYFrHCjsoFyC6fl4_2_Rz7PAQusC8QkM1CqY/L24I27A075558TIO6V35AU1098/1B3BJBG6V0IJCGC9JFH09NR18C/AIRCRAFT___Hauptkatalog_2026_27_255.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=256",
+      "references": [
+        {
+          "productId": "aircraft-ps-c-pro",
+          "evidenceId": "aircraft-2404125-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/gHlRMyF4k4XcCd7FSPC1WKqFkNgmyS5blMfAF7hz6gQ/ERDDH63VTD9SECPSDVQGK856FS/Q1518T2H2IVACMPUOVLS9BD2B4/AIRCRAFT___Hauptkatalog_2026_27_256.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=258",
+      "references": [
+        {
+          "productId": "aircraft-iws-125-2-pro",
+          "evidenceId": "aircraft-2403483-documentation-20261023-catalogue"
+        },
+        {
+          "productId": "aircraft-ws-125-pro",
+          "evidenceId": "aircraft-2403470-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/ve7gZCiR29jUkfAePN985sPikAGlQ5ujbcrKb4ihGPY/2OBK2PAU3UBCMILH0N7T7I7DUG/31IDTU6Q73336SCPECKSPE7I24/AIRCRAFT___Hauptkatalog_2026_27_258.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=259",
+      "references": [
+        {
+          "productId": "aircraft-tts-pro",
+          "evidenceId": "aircraft-2403485-documentation-20261023-catalogue"
+        },
+        {
+          "productId": "aircraft-tws-super",
+          "evidenceId": "aircraft-2403491-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/VOVwZAdv4Bzf0vxHYIoHPVzDo2BjwTmWWyTfkfu-VEY/E8SQ86MG4TNEHV9HFJFLNPI4G0/91URDL2908DBDHTQPNCTM7LL7O/AIRCRAFT___Hauptkatalog_2026_27_259.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=26",
+      "references": [
+        {
+          "productId": "aircraft-airprofi-220-50-of-pro",
+          "evidenceId": "aircraft-2015225-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airprofi-440-100-of-pro",
+          "evidenceId": "aircraft-2015446-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airprofi-440-50-of-pro",
+          "evidenceId": "aircraft-2015445-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/MPwhWZDcPVFGljHaxSLICX8BBPde8J_NfDknVh2Rtg0/MKN2L0PNU2QM8MO2L3237IBEV4/PNH7DGINGPL241NMMT3L384H8G/AIRCRAFT___Hauptkatalog_2026_27_26.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=263",
+      "references": [
+        {
+          "productId": "aircraft-wst-mini-pro",
+          "evidenceId": "aircraft-2406305-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/HtlMxu1xeRYAhak6XoYzsWRaW2dRcWF-n6wsBHmibhw/9F2HUMMFV2QJI4R30C84MJTCFK/RHCV57RUMKSAOPB35EUB62CR30/AIRCRAFT___Hauptkatalog_2026_27_263.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=264",
+      "references": [
+        {
+          "productId": "aircraft-ps-7",
+          "evidenceId": "aircraft-2403290-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/A20LGXeO-5URPuoEs5TH6JkiK05V23X2cFU731Li2kY/VSHV08FI7RGL4L0TFPS8P20KCO/U43M7HI1ER7H7U4N45NUR33LPK/AIRCRAFT___Hauptkatalog_2026_27_264.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=265",
+      "references": [
+        {
+          "productId": "aircraft-bs-c-10-2-pro-vs",
+          "evidenceId": "aircraft-2403771-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-bs-c-20-2-pro-vs",
+          "evidenceId": "aircraft-2403772-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/cDTaltRR2i-B3iLJMzMFWh5N6Ury4C1Vbj6D7gAHkvU/RLK1GL14T5NTRDBCCJQQKU22OC/RC1RPC3A1O8HJLAV54A6SJO9PO/AIRCRAFT___Hauptkatalog_2026_27_265.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=27",
+      "references": [
+        {
+          "productId": "aircraft-airprofi-440-90-v-of-pro",
+          "evidenceId": "aircraft-2015448-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/HlozEz63Y55qhPhrV2nNJHVbrPGVPi6oE5Q0AKczOZw/IL7D355JB492AHCAHD57V9EUG0/7KTB9MN1OKC445SAPL4B946E70/AIRCRAFT___Hauptkatalog_2026_27_27.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=272",
+      "references": [
+        {
+          "productId": "aircraft-us-c-pro",
+          "evidenceId": "aircraft-2404670-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/Yj6OSlJmcUbDDtIPdOMPfw6NltL96bYVbEoOF0W2EbY/C2T19OU1INE7PJUG1B294H1EHK/B819AUPUOG72BJ8J587VE015B8/AIRCRAFT___Hauptkatalog_2026_27_272.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=28",
+      "references": [
+        {
+          "productId": "aircraft-airprofi-600-100-of-pro",
+          "evidenceId": "aircraft-2015606-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airprofi-600-200-of-pro",
+          "evidenceId": "aircraft-2015607-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/I5nvJuJPJGWr-HFTge5EGsf1wIzXb2s25BKC9I_jXlU/JU9IA2K6VCEJHN2LQ7A8C07VLK/N2U9ETFGDBD57L664CKKCIGTPG/AIRCRAFT___Hauptkatalog_2026_27_28.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=282",
+      "references": [
+        {
+          "productId": "aircraft-kp-pro",
+          "evidenceId": "aircraft-2102270-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-sp-pro",
+          "evidenceId": "aircraft-2102290-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/Wvo_0ts5lLRvr9mXLlkLHgsLHs6D0GlWQEoW7xBPFGQ/01O6H7JLRH9IF8ILTFJMQQDCD0/QUKPRHECQFTSIV1V6V26FEBD9O/AIRCRAFT___Hauptkatalog_2026_27_282.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=30",
+      "references": [
+        {
+          "productId": "aircraft-mobilboy-261-24t-e",
+          "evidenceId": "aircraft-2003728-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-mobilboy-301-50-e",
+          "evidenceId": "aircraft-2003731-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-mobilboy-401-50-e",
+          "evidenceId": "aircraft-2003741-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/VWTQqCAu9QV3wNl7xVAOrh4y-_ReIaHQjOSssAEmD3o/56ILKCB6KL6E9F1S64SMEI0J20/53K4F7PF7DHA97BK6DDB25OM68/AIRCRAFT___Hauptkatalog_2026_27_30.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=31",
+      "references": [
+        {
+          "productId": "aircraft-airboy-262-e",
+          "evidenceId": "aircraft-2001247-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airboy-kitt-90",
+          "evidenceId": "aircraft-2001237-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airboy-silence-50-pro",
+          "evidenceId": "aircraft-2000100-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/PB9ClY6LJOPFmn0dEc1QaFroPrjXzujp7bKpTHk8byU/BV2M8TEHD4QM3LI2LJS3LG7RG4/0P25GEJVBIA78SCH7IENDI4JNK/AIRCRAFT___Hauptkatalog_2026_27_31.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=33",
+      "references": [
+        {
+          "productId": "aircraft-compact-air-265-10-e",
+          "evidenceId": "aircraft-2005261-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-compact-air-311-24-e",
+          "evidenceId": "aircraft-2005291-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/2YV7xUETc7heoNLioaGn_GvCy1DcoC6AUh213DEj4ko/QT5UH08BMQ2UG0DAAOKI810AHG/BLKBOCN2GU63R7KUO2GBEVF13K/AIRCRAFT___Hauptkatalog_2026_27_33.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=34",
+      "references": [
+        {
+          "productId": "aircraft-compact-air-321-24",
+          "evidenceId": "aircraft-2005305-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/YUj5MhXsCD_2nBzPabVJn0jE1oeVtpuFXaTF5mMrO-o/0KNMIDOJ5VBQUI1J507MMCK47G/F0VRJ68NRCJU0NQ9738M3G9H4K/AIRCRAFT___Hauptkatalog_2026_27_34.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=35",
+      "references": [
+        {
+          "productId": "aircraft-compact-air-361-24-e",
+          "evidenceId": "aircraft-2005361-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/fOT4q03BG92SZiVY_yJ6GxEIFL7gE9BV2xcLHG_Sedk/6HKGCKBAKJOPTRLVIEMAVG76ES/DIKS4ND32J77SIBA0COVECLAGG/AIRCRAFT___Hauptkatalog_2026_27_35.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=37",
+      "references": [
+        {
+          "productId": "aircraft-aircar-553-22-pro",
+          "evidenceId": "aircraft-2005553-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/0nvifRpUc-2tcOobbXCecrXOgJTUu2-27nhdn1yIdKQ/N3CI524ESELG412FR7V8U0M5HC/OSOQAIHE8GAN6ENPQ6DT3VNS30/AIRCRAFT___Hauptkatalog_2026_27_37.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=38",
+      "references": [
+        {
+          "productId": "aircraft-airbau-480-90-b",
+          "evidenceId": "aircraft-2004450-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/h1z7-qbIQo1c3TyGdvGhdobvAlPAum6-jBH96T0JOzA/42VQ0HAL80L4TH1L3BD4PI0P1S/LTPJMKLAQFOI4VOBC85LBTPQR0/AIRCRAFT___Hauptkatalog_2026_27_38.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=39",
+      "references": [
+        {
+          "productId": "aircraft-aircar-bau-500-20-b-pro",
+          "evidenceId": "aircraft-2005500-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/c0j_5G9XkfJbUq40XxjRpVswAYRUP6v-E_LyUXoYSJk/V53JKHMKKRKCS1K58AF49FFI30/L1AFBTUE3020HT50FSQQS9F5US/AIRCRAFT___Hauptkatalog_2026_27_39.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=40",
+      "references": [
+        {
+          "productId": "aircraft-airbau-652-100-b-pro",
+          "evidenceId": "aircraft-2006530-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/lukt7FeK983zmPG32eaBm5IItfQIh3W8Rnduh7qIoY0/TOQLOK2GASQV98LT5IEB9QBHD8/8AQ167N7R5MMVIRCV0RNF3EN4G/AIRCRAFT___Hauptkatalog_2026_27_40.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=41",
+      "references": [
+        {
+          "productId": "aircraft-airstar-903-50-15-hg",
+          "evidenceId": "aircraft-2028725-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/Z32RAzdeYWWJ0eMAWUssZHAY6pEeVR84gRyqBVPJOu0/FUV2MJHUM894GTFBUURAEFDNVG/148RHGA4N4GHK925JHHTFOPR14/AIRCRAFT___Hauptkatalog_2026_27_41.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=42",
+      "references": [
+        {
+          "productId": "aircraft-airstar-321-50-e",
+          "evidenceId": "aircraft-2008312-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airstar-401-50-e-230v",
+          "evidenceId": "aircraft-2009413-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airstar-403-50-e-400v",
+          "evidenceId": "aircraft-2009433-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/uS-IIgJsZ6M0F-fgFTXVKw29o7lomqEEnARTYMKye7E/A9TDIU50AO9L3S4BCCHK3LGR58/8LADISVSBS7E979LBG8IF31FJK/AIRCRAFT___Hauptkatalog_2026_27_42.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=43",
+      "references": [
+        {
+          "productId": "aircraft-airstar-421-50",
+          "evidenceId": "aircraft-2007410-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airstar-421-50-vz",
+          "evidenceId": "aircraft-2007941-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airstar-423-50",
+          "evidenceId": "aircraft-2007430-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airstar-423-50-vz",
+          "evidenceId": "aircraft-2007943-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airstar-603-50",
+          "evidenceId": "aircraft-2007630-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airstar-603-50-vz",
+          "evidenceId": "aircraft-2007963-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airstar-603-90",
+          "evidenceId": "aircraft-2007631-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airstar-603-90-vz",
+          "evidenceId": "aircraft-2007964-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airstar-703-90",
+          "evidenceId": "aircraft-2007731-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airstar-863-200",
+          "evidenceId": "aircraft-2007832-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airstar-863-90",
+          "evidenceId": "aircraft-2007831-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/RnKvYLT0x_8Ce3AHjuAIUsdf_UWeienRgcXFvjD-ilA/4S5U6LF5OORLGLU6OHTCQ0U334/UQT0FU4I2T5FFLA0MRFAQO9EHO/AIRCRAFT___Hauptkatalog_2026_27_43.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=44",
+      "references": [
+        {
+          "productId": "aircraft-airstar-403-50-sar",
+          "evidenceId": "aircraft-2009430sar-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airstar-503-100-sar",
+          "evidenceId": "aircraft-2009531sar-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airstar-503-50-sar",
+          "evidenceId": "aircraft-2009530sar-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/05fVQ1c3ri6oeDU9a8UbdsJNZgdR9Bc2bstCi5HDtVc/7MV8B259HOBM6SN5KOA0ABMPEC/B2PT3M8SQ86J4P5G5B5KKE55HC/AIRCRAFT___Hauptkatalog_2026_27_44.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=46",
+      "references": [
+        {
+          "productId": "aircraft-airprofi-401-50-p",
+          "evidenceId": "aircraft-2018410-2-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airprofi-401-50-p-incl-hose-reel-sar-10-15",
+          "evidenceId": "aircraft-2018410-2sar-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airprofi-403-50-p",
+          "evidenceId": "aircraft-2018430-2-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airprofi-403-50-p-incl-sar-10-15",
+          "evidenceId": "aircraft-2018430-2sar-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airprofi-503-100-p",
+          "evidenceId": "aircraft-2018531-2-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airprofi-503-100-p-incl-sar-10-15",
+          "evidenceId": "aircraft-2018531-2sar-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airprofi-503-50-p",
+          "evidenceId": "aircraft-2018530-2-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airprofi-503-50-p-incl-sar-10-15",
+          "evidenceId": "aircraft-2018530-2sar-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airprofi-703-100-p",
+          "evidenceId": "aircraft-2018731-2-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airprofi-703-100-p-incl-sar-10-15",
+          "evidenceId": "aircraft-2018731-2sar-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/qftBjtPhx1j27exf3eAf39Wya9duC9LuQFF6A8XHNfI/5LEMNKHLMFQ2S8061OKR94SD8C/VR6SDK8DPHRLG91V3C68QG8P7C/AIRCRAFT___Hauptkatalog_2026_27_46.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=47",
+      "references": [
+        {
+          "productId": "aircraft-airprofi-703-75-13-p",
+          "evidenceId": "aircraft-2018734-2-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airprofi-853-100-p",
+          "evidenceId": "aircraft-2018831-2-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airprofi-853-100-p-incl-sar-10-15",
+          "evidenceId": "aircraft-2018831-2sar-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airprofi-853-200-p",
+          "evidenceId": "aircraft-2018832-2-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/Ht3RP0ye041Y3r5UfSw6wqk26L73xP6P6xYNPyUapsY/3798PJ2AMMA3HPQ5LAIIK5ARP8/NG07R0BGULP6JP2SUH4FBNHMKO/AIRCRAFT___Hauptkatalog_2026_27_47.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=48",
+      "references": [
+        {
+          "productId": "aircraft-airprofi-401-90-v",
+          "evidenceId": "aircraft-2018414-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airprofi-403-90-v",
+          "evidenceId": "aircraft-2018434-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airprofi-503-90-v",
+          "evidenceId": "aircraft-2018533-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/lmM3bJPjhvJjN4DUNuV1fuAdsJi5QYhHPLf6yhHpq8A/5ONMT115CPVEKOU8503BVEQGS8/UNEO8I31BJN4M4KHR1K652TINS/AIRCRAFT___Hauptkatalog_2026_27_48.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=53",
+      "references": [
+        {
+          "productId": "aircraft-airprofi-980-270-10-of-h-pro",
+          "evidenceId": "aircraft-2025430-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airprofi-980-270-10-of-v-pro",
+          "evidenceId": "aircraft-2025428-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airprofi-980-500-10-of-h-pro",
+          "evidenceId": "aircraft-2025450-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/IjgETNTlunhGmFtWbmHHpoOJr-vdnVuV1d0gGrHACco/JCK9EKRNOVGBUAOC29VLCCODES/BHEGFF9261KCS5DMALDH4A7JQK/AIRCRAFT___Hauptkatalog_2026_27_53.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10716868&portal=3001205&pageNumber=65",
+      "references": [
+        {
+          "productId": "aircraft-tts-pro",
+          "evidenceId": "aircraft-2403485-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/R2nLT2VsZlSB_srKN8RXAycSDq5Sp8FWZFzJDVh_m9g/QUMTIK05R75S8CDCT9IS6TEF88/AUFKH8E8V91H74LP5MA6F775G0/AIRCRAFT_Autumn_Winter_2026_27_65.pdf"
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10716868&portal=3001205&pageNumber=67",
+      "references": [
+        {
+          "productId": "aircraft-ds",
+          "evidenceId": "aircraft-2403500-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-ess-150-composite-pro",
+          "evidenceId": "aircraft-2403450-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-sws-180-pro",
+          "evidenceId": "aircraft-2403520-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://oxomi.com/dasd/xxl/pd/documents/ywEOIQ-oXlBHLNjWY-6JJvAD_dOGFKIxMOqJv_dQKVk/7MDRKG4AVII0831S5POMFUEUJK/PBR93NR9REBSCKPB13VE7K30O0/AIRCRAFT_Autumn_Winter_2026_27_67.pdf"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-compressors-2026-09-27.json",
+      "references": [
+        {
+          "productId": "aircraft-airbau-480-90-b",
+          "evidenceId": "aircraft-2004450-20260927"
+        },
+        {
+          "productId": "aircraft-airbau-652-100-b-pro",
+          "evidenceId": "aircraft-2006530-20260927"
+        },
+        {
+          "productId": "aircraft-airboy-131-of-e",
+          "evidenceId": "aircraft-2001225-20260927"
+        },
+        {
+          "productId": "aircraft-airboy-131-of-e",
+          "evidenceId": "aircraft-2001230-20260927-review-20261019-for-aircraft-airboy-131-of-e"
+        },
+        {
+          "productId": "aircraft-airboy-186-of-e",
+          "evidenceId": "aircraft-2001230-20260927"
+        },
+        {
+          "productId": "aircraft-airboy-186-of-e",
+          "evidenceId": "aircraft-2001225-20260927-review-20261020-for-aircraft-airboy-186-of-e"
+        },
+        {
+          "productId": "aircraft-airboy-262-e",
+          "evidenceId": "aircraft-2001247-20260927"
+        },
+        {
+          "productId": "aircraft-airboy-262-e",
+          "evidenceId": "aircraft-2001230-20260927-review-20261021-for-aircraft-airboy-262-e"
+        },
+        {
+          "productId": "aircraft-airboy-kitt-90",
+          "evidenceId": "aircraft-2001237-20260927"
+        },
+        {
+          "productId": "aircraft-airboy-silence-111-as-of-e",
+          "evidenceId": "aircraft-2000108-20260927"
+        },
+        {
+          "productId": "aircraft-airboy-silence-171-of-e",
+          "evidenceId": "aircraft-2001265-20260927"
+        },
+        {
+          "productId": "aircraft-airboy-silence-221-of-e",
+          "evidenceId": "aircraft-2000206-20260927"
+        },
+        {
+          "productId": "aircraft-airboy-silence-241-of-e",
+          "evidenceId": "aircraft-2000245-20260927"
+        },
+        {
+          "productId": "aircraft-airboy-silence-50-pro",
+          "evidenceId": "aircraft-2000100-20260927"
+        },
+        {
+          "productId": "aircraft-aircar-220-of-pro",
+          "evidenceId": "aircraft-2015520-20260927"
+        },
+        {
+          "productId": "aircraft-aircar-321-22-pro",
+          "evidenceId": "aircraft-2005531-20260927"
+        },
+        {
+          "productId": "aircraft-aircar-440-of-pro",
+          "evidenceId": "aircraft-2015530-20260927"
+        },
+        {
+          "productId": "aircraft-aircar-553-22-pro",
+          "evidenceId": "aircraft-2005553-20260927"
+        },
+        {
+          "productId": "aircraft-aircar-bau-500-20-b-pro",
+          "evidenceId": "aircraft-2005500-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-220-50-of-pro",
+          "evidenceId": "aircraft-2015225-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-401-50-p",
+          "evidenceId": "aircraft-2018410-2-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-401-50-p-incl-hose-reel-sar-10-15",
+          "evidenceId": "aircraft-2018410-2sar-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-401-90-v",
+          "evidenceId": "aircraft-2018414-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-403-50-p",
+          "evidenceId": "aircraft-2018430-2-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-403-50-p-incl-sar-10-15",
+          "evidenceId": "aircraft-2018430-2sar-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-403-90-v",
+          "evidenceId": "aircraft-2018434-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-440-100-of-pro",
+          "evidenceId": "aircraft-2015446-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-440-50-of-pro",
+          "evidenceId": "aircraft-2015445-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-440-90-v-of-pro",
+          "evidenceId": "aircraft-2015448-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-503-100-p",
+          "evidenceId": "aircraft-2018531-2-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-503-100-p-incl-sar-10-15",
+          "evidenceId": "aircraft-2018531-2sar-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-503-50-p",
+          "evidenceId": "aircraft-2018530-2-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-503-50-p-incl-sar-10-15",
+          "evidenceId": "aircraft-2018530-2sar-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-503-90-v",
+          "evidenceId": "aircraft-2018533-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-600-100-of-pro",
+          "evidenceId": "aircraft-2015606-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-600-200-of-pro",
+          "evidenceId": "aircraft-2015607-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-703-100-p",
+          "evidenceId": "aircraft-2018731-2-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-703-100-p-incl-sar-10-15",
+          "evidenceId": "aircraft-2018731-2sar-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-703-75-13-p",
+          "evidenceId": "aircraft-2018734-2-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-853-100-p",
+          "evidenceId": "aircraft-2018831-2-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-853-100-p-incl-sar-10-15",
+          "evidenceId": "aircraft-2018831-2sar-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-853-200-p",
+          "evidenceId": "aircraft-2018832-2-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-980-270-10-of-h-pro",
+          "evidenceId": "aircraft-2025430-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-980-270-10-of-v-pro",
+          "evidenceId": "aircraft-2025428-20260927"
+        },
+        {
+          "productId": "aircraft-airprofi-980-500-10-of-h-pro",
+          "evidenceId": "aircraft-2025450-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-321-50-e",
+          "evidenceId": "aircraft-2008312-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-401-50",
+          "evidenceId": "aircraft-2009410-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-401-50-e-230v",
+          "evidenceId": "aircraft-2009413-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-403-50",
+          "evidenceId": "aircraft-2009430-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-403-50-e-400v",
+          "evidenceId": "aircraft-2009433-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-403-50-sar",
+          "evidenceId": "aircraft-2009430sar-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-421-50",
+          "evidenceId": "aircraft-2007410-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-421-50-vz",
+          "evidenceId": "aircraft-2007941-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-423-50",
+          "evidenceId": "aircraft-2007430-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-423-50-vz",
+          "evidenceId": "aircraft-2007943-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-503-100",
+          "evidenceId": "aircraft-2009531-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-503-100-sar",
+          "evidenceId": "aircraft-2009531sar-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-503-50",
+          "evidenceId": "aircraft-2009530-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-503-50-sar",
+          "evidenceId": "aircraft-2009530sar-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-603-50",
+          "evidenceId": "aircraft-2007630-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-603-50-vz",
+          "evidenceId": "aircraft-2007963-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-603-90",
+          "evidenceId": "aircraft-2007631-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-603-90-vz",
+          "evidenceId": "aircraft-2007964-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-703-100",
+          "evidenceId": "aircraft-2009731-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-703-90",
+          "evidenceId": "aircraft-2007731-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-853-100",
+          "evidenceId": "aircraft-2009831-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-853-200",
+          "evidenceId": "aircraft-2009832-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-863-200",
+          "evidenceId": "aircraft-2007832-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-863-90",
+          "evidenceId": "aircraft-2007831-20260927"
+        },
+        {
+          "productId": "aircraft-airstar-903-50-15-hg",
+          "evidenceId": "aircraft-2028725-20260927"
+        },
+        {
+          "productId": "aircraft-compact-air-240-20-of-e",
+          "evidenceId": "aircraft-2005490-20260927"
+        },
+        {
+          "productId": "aircraft-compact-air-241-16-of-e",
+          "evidenceId": "aircraft-2005450-20260927"
+        },
+        {
+          "productId": "aircraft-compact-air-265-10-e",
+          "evidenceId": "aircraft-2005261-20260927"
+        },
+        {
+          "productId": "aircraft-compact-air-311-24-e",
+          "evidenceId": "aircraft-2005291-20260927"
+        },
+        {
+          "productId": "aircraft-compact-air-320-24-of-e",
+          "evidenceId": "aircraft-2005495-20260927"
+        },
+        {
+          "productId": "aircraft-compact-air-320-90-v-of-e",
+          "evidenceId": "aircraft-2005499-20260927"
+        },
+        {
+          "productId": "aircraft-compact-air-321-24",
+          "evidenceId": "aircraft-2005305-20260927"
+        },
+        {
+          "productId": "aircraft-compact-air-321-24-pro",
+          "evidenceId": "aircraft-2005352-20260927"
+        },
+        {
+          "productId": "aircraft-compact-air-361-24-e",
+          "evidenceId": "aircraft-2005361-20260927"
+        },
+        {
+          "productId": "aircraft-compact-air-401-50-of-e",
+          "evidenceId": "aircraft-2005452-20260927"
+        },
+        {
+          "productId": "aircraft-compact-air-440-of-pro",
+          "evidenceId": "aircraft-2015550-20260927"
+        },
+        {
+          "productId": "aircraft-compact-air-silence-231-20-of-e",
+          "evidenceId": "aircraft-2005498-20260927"
+        },
+        {
+          "productId": "aircraft-handy-silence-221-of-e",
+          "evidenceId": "aircraft-2001221-20260927"
+        },
+        {
+          "productId": "aircraft-mobilboy-185-of-e",
+          "evidenceId": "aircraft-2001240-20260927"
+        },
+        {
+          "productId": "aircraft-mobilboy-261-24t-e",
+          "evidenceId": "aircraft-2003728-20260927"
+        },
+        {
+          "productId": "aircraft-mobilboy-301-50-e",
+          "evidenceId": "aircraft-2003731-20260927"
+        },
+        {
+          "productId": "aircraft-mobilboy-401-50-e",
+          "evidenceId": "aircraft-2003741-20260927"
+        },
+        {
+          "productId": "aircraft-mobilboy-silence-231-50-of-e",
+          "evidenceId": "aircraft-2002326-20260927"
+        },
+        {
+          "productId": "aircraft-mobilboy-silence-241-24-of-e",
+          "evidenceId": "aircraft-2002245-20260927"
+        },
+        {
+          "productId": "aircraft-mobilboy-silence-320-90-of-e",
+          "evidenceId": "aircraft-2002340-20260927"
+        },
+        {
+          "productId": "aircraft-mobilboy-silence-401-50-of-e",
+          "evidenceId": "aircraft-2002401-20260927"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-compressors-2026-09-27.json"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-tools-2026-09-27.json",
+      "references": [
+        {
+          "productId": "aircraft-bm-c-10-pro",
+          "evidenceId": "aircraft-2404110-20260927"
+        },
+        {
+          "productId": "aircraft-bm-c-13-pro",
+          "evidenceId": "aircraft-2404115-20260927"
+        },
+        {
+          "productId": "aircraft-bm-r-l-pro",
+          "evidenceId": "aircraft-2404100-20260927"
+        },
+        {
+          "productId": "aircraft-bp-pro",
+          "evidenceId": "aircraft-2112120-20260927"
+        },
+        {
+          "productId": "aircraft-bp-pro-duo",
+          "evidenceId": "aircraft-2102190-20260927"
+        },
+        {
+          "productId": "aircraft-bp-pro-exl",
+          "evidenceId": "aircraft-2102185-20260927"
+        },
+        {
+          "productId": "aircraft-bp-pro-g",
+          "evidenceId": "aircraft-2112121-20260927"
+        },
+        {
+          "productId": "aircraft-bp-pro-l",
+          "evidenceId": "aircraft-2112123-20260927"
+        },
+        {
+          "productId": "aircraft-bp-pro-r",
+          "evidenceId": "aircraft-2112130-20260927"
+        },
+        {
+          "productId": "aircraft-bp-pro-safe",
+          "evidenceId": "aircraft-2112128-20260927"
+        },
+        {
+          "productId": "aircraft-bp-pro-sil",
+          "evidenceId": "aircraft-2112127-20260927"
+        },
+        {
+          "productId": "aircraft-bp-pro-v",
+          "evidenceId": "aircraft-2112122-20260927"
+        },
+        {
+          "productId": "aircraft-bp-pro-xl",
+          "evidenceId": "aircraft-2112124-20260927"
+        },
+        {
+          "productId": "aircraft-bp-pro-xxl",
+          "evidenceId": "aircraft-2112125-20260927"
+        },
+        {
+          "productId": "aircraft-bpi-pro",
+          "evidenceId": "aircraft-2102170-20260927"
+        },
+        {
+          "productId": "aircraft-bpk",
+          "evidenceId": "aircraft-2112100-20260927"
+        },
+        {
+          "productId": "aircraft-bpl",
+          "evidenceId": "aircraft-2112110-20260927"
+        },
+        {
+          "productId": "aircraft-bps-soft-pro",
+          "evidenceId": "aircraft-2102130-20260927"
+        },
+        {
+          "productId": "aircraft-bs-c-10-2-pro-vs",
+          "evidenceId": "aircraft-2403771-20260927"
+        },
+        {
+          "productId": "aircraft-bs-c-10-pro-15-vs",
+          "evidenceId": "aircraft-2403730-20260927"
+        },
+        {
+          "productId": "aircraft-bs-c-20-2-pro-vs",
+          "evidenceId": "aircraft-2403772-20260927"
+        },
+        {
+          "productId": "aircraft-bs-c-20-pro-15-vs",
+          "evidenceId": "aircraft-2403740-20260927"
+        },
+        {
+          "productId": "aircraft-bs-c-20-pro-vs",
+          "evidenceId": "aircraft-2403780-20260927"
+        },
+        {
+          "productId": "aircraft-bst",
+          "evidenceId": "aircraft-2112115-20260927"
+        },
+        {
+          "productId": "aircraft-ds",
+          "evidenceId": "aircraft-2403500-20260927"
+        },
+        {
+          "productId": "aircraft-ess-150-composite-pro",
+          "evidenceId": "aircraft-2403450-20260927"
+        },
+        {
+          "productId": "aircraft-gs-pro",
+          "evidenceId": "aircraft-2403110-20260927"
+        },
+        {
+          "productId": "aircraft-is-3-4-composite",
+          "evidenceId": "aircraft-2401260-20260927"
+        },
+        {
+          "productId": "aircraft-iss-1-pro",
+          "evidenceId": "aircraft-2401490-20260927"
+        },
+        {
+          "productId": "aircraft-iss-1-pro-l",
+          "evidenceId": "aircraft-2401495-20260927"
+        },
+        {
+          "productId": "aircraft-iss-3-4-pro",
+          "evidenceId": "aircraft-2401440-20260927"
+        },
+        {
+          "productId": "aircraft-iss-c-1-2-pro",
+          "evidenceId": "aircraft-2401475-20260927"
+        },
+        {
+          "productId": "aircraft-iss-c-3-4-pro",
+          "evidenceId": "aircraft-2401485-20260927"
+        },
+        {
+          "productId": "aircraft-iss-compact-pro",
+          "evidenceId": "aircraft-2401400-20260927"
+        },
+        {
+          "productId": "aircraft-iss-mini",
+          "evidenceId": "aircraft-2401371-20260927"
+        },
+        {
+          "productId": "aircraft-iss-tt-composite",
+          "evidenceId": "aircraft-2401376-20260927"
+        },
+        {
+          "productId": "aircraft-iss-tt-mini-composite",
+          "evidenceId": "aircraft-2401372-20260927"
+        },
+        {
+          "productId": "aircraft-iss-ttm",
+          "evidenceId": "aircraft-2401370-20260927"
+        },
+        {
+          "productId": "aircraft-iws-125-2-pro",
+          "evidenceId": "aircraft-2403483-20260927"
+        },
+        {
+          "productId": "aircraft-kp-pro",
+          "evidenceId": "aircraft-2102270-20260927"
+        },
+        {
+          "productId": "aircraft-mhp-pro",
+          "evidenceId": "aircraft-2402550-20260927"
+        },
+        {
+          "productId": "aircraft-mrs-mini-pro",
+          "evidenceId": "aircraft-2406100-20260927"
+        },
+        {
+          "productId": "aircraft-ne-mini-pro",
+          "evidenceId": "aircraft-2402650-20260927"
+        },
+        {
+          "productId": "aircraft-ne-pro",
+          "evidenceId": "aircraft-2402620-20260927"
+        },
+        {
+          "productId": "aircraft-np-2-pro",
+          "evidenceId": "aircraft-2402655-20260927"
+        },
+        {
+          "productId": "aircraft-np-pro",
+          "evidenceId": "aircraft-2402640-20260927"
+        },
+        {
+          "productId": "aircraft-ps-7",
+          "evidenceId": "aircraft-2403290-20260927"
+        },
+        {
+          "productId": "aircraft-ps-c-pro",
+          "evidenceId": "aircraft-2404125-20260927"
+        },
+        {
+          "productId": "aircraft-rs-1-2-vt-pro",
+          "evidenceId": "aircraft-2401565-20260927"
+        },
+        {
+          "productId": "aircraft-rs-1-4-vt-pro",
+          "evidenceId": "aircraft-2401560-20260927"
+        },
+        {
+          "productId": "aircraft-sbp",
+          "evidenceId": "aircraft-2102100-20260927"
+        },
+        {
+          "productId": "aircraft-sp-pro",
+          "evidenceId": "aircraft-2102290-20260927"
+        },
+        {
+          "productId": "aircraft-srs-1-2-ht-pro",
+          "evidenceId": "aircraft-2401570-20260927"
+        },
+        {
+          "productId": "aircraft-sws-180-pro",
+          "evidenceId": "aircraft-2403520-20260927"
+        },
+        {
+          "productId": "aircraft-tts-pro",
+          "evidenceId": "aircraft-2403485-20260927"
+        },
+        {
+          "productId": "aircraft-tws-super",
+          "evidenceId": "aircraft-2403491-20260927"
+        },
+        {
+          "productId": "aircraft-us-c-pro",
+          "evidenceId": "aircraft-2404670-20260927"
+        },
+        {
+          "productId": "aircraft-wb-10-1-pro",
+          "evidenceId": "aircraft-2404120-20260927"
+        },
+        {
+          "productId": "aircraft-wb-mini-pro",
+          "evidenceId": "aircraft-2406405-20260927"
+        },
+        {
+          "productId": "aircraft-ws-125-pro",
+          "evidenceId": "aircraft-2403470-20260927"
+        },
+        {
+          "productId": "aircraft-wss-ht-pro",
+          "evidenceId": "aircraft-2401575-20260927"
+        },
+        {
+          "productId": "aircraft-wst-mini-pro",
+          "evidenceId": "aircraft-2406305-20260927"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-tools-2026-09-27.json"
+    },
+    {
+      "url": "https://www.aarniotools.fi/wp-content/uploads/2020/10/AIRCRAFT_catalogue_2019-1.pdf",
+      "references": [
+        {
+          "productId": "aircraft-iss-3-4-pro",
+          "evidenceId": "aircraft-2401440-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-iss-compact-pro",
+          "evidenceId": "aircraft-2401400-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.aarniotools.fi/wp-content/uploads/2020/10/AIRCRAFT_catalogue_2019-1.pdf"
+    },
+    {
+      "url": "https://www.mystuermer.com/MeDaPro/Rohdaten/Dokumente/Betriebsanleitung_de/AC_BA_2403483_IWS_125-2_PRO_DE.pdf",
+      "references": [
+        {
+          "productId": "aircraft-iws-125-2-pro",
+          "evidenceId": "aircraft-2403483-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.mystuermer.com/MeDaPro/Rohdaten/Dokumente/Betriebsanleitung_de/AC_BA_2403483_IWS_125-2_PRO_DE.pdf"
+    },
+    {
+      "url": "https://www.mystuermer.com/MeDaPro/Rohdaten/Dokumente/Betriebsanleitung_de/AC_BA_AIRCAR_220_440_OF-PRO_DE.pdf",
+      "references": [
+        {
+          "productId": "aircraft-aircar-220-of-pro",
+          "evidenceId": "aircraft-2015520-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.mystuermer.com/MeDaPro/Rohdaten/Dokumente/Betriebsanleitung_de/AC_BA_AIRCAR_220_440_OF-PRO_DE.pdf"
+    },
+    {
+      "url": "https://www.mystuermer.com/MeDaPro/Rohdaten/Dokumente/Betriebsanleitung_de/AC_BA_AIRCAR_321-22_553-22_PRO_DE.pdf",
+      "references": [
+        {
+          "productId": "aircraft-aircar-321-22-pro",
+          "evidenceId": "aircraft-2005531-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.mystuermer.com/MeDaPro/Rohdaten/Dokumente/Betriebsanleitung_de/AC_BA_AIRCAR_321-22_553-22_PRO_DE.pdf"
+    },
+    {
+      "url": "https://www.profizone24.at/wp-content/uploads/2022/12/2009410_aircraft_kompressor_airstar-503-100_betriebsanleitung.pdf",
+      "references": [
+        {
+          "productId": "aircraft-airstar-401-50",
+          "evidenceId": "aircraft-2009410-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airstar-403-50",
+          "evidenceId": "aircraft-2009430-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airstar-503-100",
+          "evidenceId": "aircraft-2009531-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-airstar-503-50",
+          "evidenceId": "aircraft-2009530-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.profizone24.at/wp-content/uploads/2022/12/2009410_aircraft_kompressor_airstar-503-100_betriebsanleitung.pdf"
+    },
+    {
+      "url": "https://www.vaentek.de/WebRoot/Store22/Shops/93216177/61FD/808C/7F37/57EE/46D3/0A0C/6D10/7775/AC_BA_BS-C_10_20-PRO-VS_10_20-PRO-15-VS_DE.pdf",
+      "references": [
+        {
+          "productId": "aircraft-bs-c-10-pro-15-vs",
+          "evidenceId": "aircraft-2403730-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-bs-c-20-pro-15-vs",
+          "evidenceId": "aircraft-2403740-documentation-20261023"
+        },
+        {
+          "productId": "aircraft-bs-c-20-pro-vs",
+          "evidenceId": "aircraft-2403780-documentation-20261023"
+        }
+      ],
+      "state": "reachable",
+      "status": 200,
+      "finalUrl": "https://www.vaentek.de/WebRoot/Store22/Shops/93216177/61FD/808C/7F37/57EE/46D3/0A0C/6D10/7775/AC_BA_BS-C_10_20-PRO-VS_10_20-PRO-15-VS_DE.pdf"
+    }
+  ],
+  "repairLedgerSha256": "6cb54665b3638a78e93a0498e78da4a29cf93f9c099f5447fb7592c89c4b9079",
+  "products": 150,
+  "oldUrls": 150,
+  "historicalReferences": 153,
+  "manufacturerReferencesAdded": 152,
+  "historyIntegrity": {
+    "baselineHistoryEvents": 36997,
+    "appendedEvents": 305,
+    "corrected": 153,
+    "added": 152,
+    "historicalPrefixPreserved": true
+  },
+  "limitation": "Contrôle ciblé des67adresses remplacées/ajoutées; ce rapport ne certifie pas le reste de l’inventaire.149modèles ont un document fabricant exact; le document du kit2018831.2SAR couvre le compresseur nu2018831.2 seulement, le kit reste attesté par le relevé historique."
+}

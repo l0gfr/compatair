@@ -15,8 +15,8 @@ const product: CompressorInput = {
 	"image": {
 		"src": "/images/products/aircraft-airstar-401-50-e-230v.webp",
 		"alt": "Repères techniques Aircraft AIRSTAR 401/50 E 230V, référence 2009413",
-		"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-40150-e-230v-2009413/",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-compressors-2026-09-27.json",
+		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
 	},
 	"editorial": {
 		"overview": "Aircraft AIRSTAR 401/50 E 230V, référence 2009413 : cuve de 50 L, pression maximale publiée de 10 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Capacité de remplissage approximative : 270 l/min. Condition de remplissage publiée : à 6 bar de pression de travail.",
@@ -32,7 +32,8 @@ const product: CompressorInput = {
 		"limitations": [
 			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
 			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
-			"La capacité de remplissage et sa pression éventuelle ne sont pas assimilées à un débit FAD certifié. Demander les conditions d’essai et le débit utile à la pression de l’outil."
+			"La capacité de remplissage et sa pression éventuelle ne sont pas assimilées à un débit FAD certifié. Demander les conditions d’essai et le débit utile à la pression de l’outil.",
+			"Écarts entre documents fabricant : Masse approximative (kg) : relevé de fiche du 27/09/2026 = 50,1 ; AIRCRAFT Hauptkatalog 2026/27 = 57,5."
 		]
 	},
 	"specifications": [
@@ -91,17 +92,36 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"aircraft-2009413-20260927"
 			]
+		},
+		{
+			"label": "Écart documentaire fabricant",
+			"value": "Masse approximative (kg) : relevé de fiche du 27/09/2026 = 50,1 ; AIRCRAFT Hauptkatalog 2026/27 = 57,5.",
+			"evidenceIds": [
+				"aircraft-2009413-20260927",
+				"aircraft-2009413-documentation-20261023"
+			]
 		}
 	],
 	"evidence": [
 		{
 			"id": "aircraft-2009413-20260927",
-			"sourceUrl": "https://www.stuermer-machines.com/compressed-air-technology/compressed-air-technology-piston-compressors/airstar-40150-e-230v-2009413/",
-			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2009413, réf. 2009413",
+			"sourceUrl": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-compressors-2026-09-27.json",
+			"sourceLabel": "Aircraft / Stürmer, fiche constructeur 2009413, réf. 2009413 ; relevé historique, archive CompatAir",
 			"sourceType": "manufacturer",
+			"sourceRole": "secondary",
 			"retrievedAt": "2026-10-01",
 			"confidence": "A",
-			"notes": "Débit aspiré déclaré : 365 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée."
+			"notes": "Débit aspiré déclaré : 365 L/min. La capacité de remplissage est conservée séparément ; la fiche n’établit pas une mesure FAD normalisée. Archive secondaire : transcription de la fiche fabricant relevée le 27/09/2026, conservée dans le fichier JSON immuable du catalogue compressors. La fiche d’origine est hors ligne au 23/10/2026. SHA-256 de l’archive : af866f2323db4015b11fba728e6b8c50093e8998705ae6d1920deac66f83cc62. La date de consultation historique est conservée ; cette réparation de lien ne constitue pas une nouvelle vérification de ses valeurs."
+		},
+		{
+			"id": "aircraft-2009413-documentation-20261023",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=42",
+			"sourceLabel": "AIRCRAFT / Stürmer Maschinen, AIRCRAFT Hauptkatalog 2026/27, p. 42 (article 2009413)",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-23",
+			"confidence": "A",
+			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer 702076. Empreinte PDF SHA-256 : 94455b47fe0fbb0f2d9449968ff773ff7dcb8c5d06fa90d60d3feb0a72b4836d. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
 		}
 	],
 	"fieldSources": {

@@ -4,11 +4,12 @@ import { compressors, tools } from './catalog';
 import repairs from './imports/source-url-repairs-2026-09-25.json';
 import octoberRepairs from './imports/source-url-repairs-2026-10-01.json';
 import aircraftRepairs from './imports/source-url-repairs-aircraft-2026-10-01.json';
+import aircraftCurrentRepairs from './imports/source-url-repairs-aircraft-2026-10-23.json';
 import october2Repairs from './imports/source-url-repairs-2026-10-02.json';
 import aircraftReview from '../../docs/editorial/source-repairs-aircraft-2026-10-01.health.json';
 
 const products = new Map([...compressors, ...tools].map((product) => [product.id, product]));
-const reviewedRepairs = [...repairs.repairs, ...octoberRepairs.repairs, ...aircraftRepairs.repairs, ...october2Repairs.repairs];
+const reviewedRepairs = [...repairs.repairs, ...octoberRepairs.repairs, ...aircraftRepairs.repairs, ...october2Repairs.repairs, ...aircraftCurrentRepairs.repairs];
 const nextUrl = new Map(reviewedRepairs.map(repair => [repair.oldUrl, repair.newUrl]));
 function currentSourceUrl(url: string) {
 	const seen = new Set<string>();
