@@ -3,7 +3,7 @@ import { createRequire } from 'node:module';
 import { readFile, readdir, realpath } from 'node:fs/promises';
 import { join } from 'node:path';
 import { parseDocument } from 'yaml';
-import { ZOD_COLLECTION_PATCH } from './verified-zod-collection-patch.mjs';
+import { ZOD_COLLECTION_PATCH, ZOD4_COLLECTION_PATCH } from './verified-zod-collection-patch.mjs';
 
 const PATCHES = [
 	{
@@ -46,11 +46,11 @@ export function isVerifiedCacheAdvisory(advisory, attestation) {
 
 export function validateDependencyPatches({ workspace, lockfile, patches, installedCopies, consumerPaths }) {
 	const fail = (reason) => { throw new Error(`Correctif de dépendance non attesté: ${reason}`); };
-	const expectedWorkspace = Object.fromEntries([...PATCHES.map(({ reference, patchPath }) => [reference, patchPath]), [ZOD_COLLECTION_PATCH.reference, ZOD_COLLECTION_PATCH.patchPath]]);
+	const expectedWorkspace = Object.fromEntries([...PATCHES.map(({ reference, patchPath }) => [reference, patchPath]), [ZOD_COLLECTION_PATCH.reference, ZOD_COLLECTION_PATCH.patchPath], [ZOD4_COLLECTION_PATCH.reference, ZOD4_COLLECTION_PATCH.patchPath]]);
 	const expectedLockfile = Object.fromEntries([...PATCHES.map(({ reference, patchPath, patchSha256 }) => [
 		reference,
 		{ hash: patchSha256, path: patchPath },
-	]), [ZOD_COLLECTION_PATCH.reference, { hash: ZOD_COLLECTION_PATCH.patchSha256, path: ZOD_COLLECTION_PATCH.patchPath }]]);
+	]), [ZOD_COLLECTION_PATCH.reference, { hash: ZOD_COLLECTION_PATCH.patchSha256, path: ZOD_COLLECTION_PATCH.patchPath }], [ZOD4_COLLECTION_PATCH.reference, { hash: ZOD4_COLLECTION_PATCH.patchSha256, path: ZOD4_COLLECTION_PATCH.patchPath }]]);
 	if (!equal(workspace.patchedDependencies, expectedWorkspace)) fail('configuration pnpm');
 	if (!equal(lockfile.patchedDependencies, expectedLockfile)) fail('verrou pnpm');
 	for (const name of ['allowUnusedPatches', 'ignorePatchFailures', 'allowNonAppliedPatches']) {

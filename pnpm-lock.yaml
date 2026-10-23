@@ -38,6 +38,9 @@ patchedDependencies:
   zod@3.25.76:
     hash: b9604079f6581f4ad8304d9c13921d23d0ebc8ecd420bea153f247134b01c482
     path: patches/zod@3.25.76.patch
+  zod@4.4.3:
+    hash: 9c636df52e93181f88cd0ef0cd0f55ff5b9705d72ee397345bb9dc294ad4d4d6
+    path: patches/zod@4.4.3.patch
 
 importers:
 
@@ -59,8 +62,8 @@ importers:
         specifier: 0.35.5
         version: 0.35.5(@types/node@24.13.3)
       zod:
-        specifier: 4.6.7
-        version: 4.6.7
+        specifier: 4.4.3
+        version: 4.4.3(patch_hash=9c636df52e93181f88cd0ef0cd0f55ff5b9705d72ee397345bb9dc294ad4d4d6)
     devDependencies:
       '@astrojs/check':
         specifier: 0.9.9
@@ -2470,8 +2473,8 @@ packages:
   undici-types@7.18.2:
     resolution: {integrity: sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w==}
 
-  undici@8.10.2:
-    resolution: {integrity: sha512-/y4/bH9YNU5hi9NIrpOuvGXFcxrj3CMrV+/AYpowAYTpHn8gX/XPFjNy766FPoYY0miQhdW977JFWKGNhBdwyQ==}
+  undici@8.12.2:
+    resolution: {integrity: sha512-XtuDWVdqTLr3NAxm2ly9/hU6kUsJOgGh1RASzMBbsw6aWCOaQzHdW+QQDfdERjfJ2V5vL5pRPa4RetO9UfivDg==}
     engines: {node: '>=22.19.0'}
 
   unified@11.0.5:
@@ -2907,6 +2910,9 @@ packages:
 
   zod@3.25.76:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
+
+  zod@4.4.3:
+    resolution: {integrity: sha512-ytENFjIJFl2UwYglde2jchW2Hwm4GJFLDiSXWdTrJQBIN9Fcyp7n4DhxJEiWNAJMV1/BqWfW/kkg71UDcHJyTQ==}
 
   zod@4.6.7:
     resolution: {integrity: sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg==}
@@ -5369,7 +5375,7 @@ snapshots:
 
   undici-types@7.18.2: {}
 
-  undici@8.10.2: {}
+  undici@8.12.2: {}
 
   unified@11.0.5:
     dependencies:
@@ -5385,7 +5391,7 @@ snapshots:
     dependencies:
       css-tree: 3.2.1
       ohash: 2.0.11
-      undici: 8.10.2
+      undici: 8.12.2
 
   unique-string@2.0.0:
     dependencies:
@@ -5727,6 +5733,8 @@ snapshots:
   yocto-queue@1.2.2: {}
 
   zod@3.25.76(patch_hash=b9604079f6581f4ad8304d9c13921d23d0ebc8ecd420bea153f247134b01c482): {}
+
+  zod@4.4.3(patch_hash=9c636df52e93181f88cd0ef0cd0f55ff5b9705d72ee397345bb9dc294ad4d4d6): {}
 
   zod@4.6.7: {}
 

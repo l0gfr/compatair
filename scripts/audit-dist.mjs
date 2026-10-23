@@ -212,16 +212,25 @@ for (const [immutablePath, expectedIntegrity] of Object.entries(immutableAssetMa
 }
 if (!professionalWidgetIntegrity) errors.push(`${professionalWidgetPath}: widget professionnel courant absent du manifeste immuable`);
 
+// dist is immutable during this audit; retain only parsed imports and compressed size.
+const scriptModuleCache = new Map();
 async function scriptClosure(entryPaths, includeDynamicImports) {
 	const modules = new Set();
 	async function visit(scriptPath) {
 		if (modules.has(scriptPath)) return;
 		modules.add(scriptPath);
 		if (!artifactPaths.has(scriptPath)) { errors.push(`${scriptPath}: module JavaScript introuvable`); return; }
-		const source = await readFile(join(root, scriptPath), 'utf8');
-		let imports;
-		try { imports = parseJavaScriptModuleSpecifiers(source, scriptPath); }
-		catch (error) { errors.push(error instanceof Error ? error.message : `${scriptPath}: JavaScript impossible à analyser`); return; }
+		let cached = scriptModuleCache.get(scriptPath);
+		if (!cached) {
+			const source = await readFile(join(root, scriptPath));
+			let imports, parseError;
+			try { imports = parseJavaScriptModuleSpecifiers(source.toString('utf8'), scriptPath); }
+			catch (error) { parseError = error instanceof Error ? error.message : `${scriptPath}: JavaScript impossible à analyser`; }
+			cached = { imports, parseError, gzipBytes: gzipSync(source).byteLength };
+			scriptModuleCache.set(scriptPath, cached);
+		}
+		if (cached.parseError !== undefined) { errors.push(cached.parseError); return; }
+		const imports = cached.imports;
 		if (imports.unresolvedDynamicImports) errors.push(`${scriptPath}: ${imports.unresolvedDynamicImports} import(s) dynamique(s) non résoluble(s), graphe impossible à budgéter`);
 		const specifiers = includeDynamicImports ? [...imports.staticImports, ...imports.dynamicImports] : imports.staticImports;
 		for (const specifier of specifiers) {
@@ -233,7 +242,7 @@ async function scriptClosure(entryPaths, includeDynamicImports) {
 	}
 	for (const entryPath of entryPaths) await visit(entryPath);
 	let bytes = 0;
-	for (const modulePath of modules) if (artifactPaths.has(modulePath)) bytes += gzipSync(await readFile(join(root, modulePath))).byteLength;
+	for (const modulePath of modules) if (artifactPaths.has(modulePath)) bytes += scriptModuleCache.get(modulePath).gzipBytes;
 	return { bytes, modules: modules.size };
 }
 

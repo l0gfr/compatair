@@ -1,0 +1,473 @@
+diff --git a/src/v3/types.ts b/src/v3/types.ts
+--- a/src/v3/types.ts
++++ b/src/v3/types.ts
+@@ -2242,6 +2242,7 @@
+     const { ctx, status } = this._processInputParams(input);
+ 
+     const def = this._def;
++    let oversized = false;
+ 
+     if (ctx.parsedType !== ZodParsedType.array) {
+       addIssueToContext(ctx, {
+@@ -2256,6 +2257,7 @@
+       const tooBig = ctx.data.length > def.exactLength.value;
+       const tooSmall = ctx.data.length < def.exactLength.value;
+       if (tooBig || tooSmall) {
++          if (tooBig) oversized = true;
+         addIssueToContext(ctx, {
+           code: tooBig ? ZodIssueCode.too_big : ZodIssueCode.too_small,
+           minimum: (tooSmall ? def.exactLength.value : undefined) as number,
+@@ -2285,6 +2287,7 @@
+ 
+     if (def.maxLength !== null) {
+       if (ctx.data.length > def.maxLength.value) {
++        oversized = true;
+         addIssueToContext(ctx, {
+           code: ZodIssueCode.too_big,
+           maximum: def.maxLength.value,
+@@ -2297,6 +2300,8 @@
+       }
+     }
+ 
++    // Stop only after the existing size check actually emitted its issue.
++    if (oversized) return INVALID;
+     if (ctx.common.async) {
+       return Promise.all(
+         ([...ctx.data] as any[]).map((item, i) => {
+@@ -3700,6 +3705,7 @@
+     }
+ 
+     const def = this._def;
++    let oversized = false;
+ 
+     if (def.minSize !== null) {
+       if (ctx.data.size < def.minSize.value) {
+@@ -3717,6 +3723,7 @@
+ 
+     if (def.maxSize !== null) {
+       if (ctx.data.size > def.maxSize.value) {
++        oversized = true;
+         addIssueToContext(ctx, {
+           code: ZodIssueCode.too_big,
+           maximum: def.maxSize.value,
+@@ -3729,6 +3736,8 @@
+       }
+     }
+ 
++    // Stop only after the existing size check actually emitted its issue.
++    if (oversized) return INVALID;
+     const valueType = this._def.valueType;
+ 
+     function finalizeSet(elements: SyncParseReturnType<any>[]) {
+diff --git a/src/v4/core/schemas.ts b/src/v4/core/schemas.ts
+--- a/src/v4/core/schemas.ts
++++ b/src/v4/core/schemas.ts
+@@ -1627,6 +1627,35 @@
+ 
+ export interface $ZodArray<T extends SomeType = $ZodType> extends $ZodType<any, any, $ZodArrayInternals<T>> {}
+ 
++// an oversized container fails its leading size checks before any element is parsed
++function capSize(inst: $ZodType, size: (input: any) => number): void {
++  const caps = util.sizeCaps(inst._zod.def.checks);
++  if (!caps.length) return;
++  const cap = Math.min(...caps.map((c) => c[0]));
++  const parse = inst._zod.parse;
++  inst._zod.parse = (payload, ctx) => {
++    const n = size(payload.value);
++    if (n > cap && !ctx?.skipChecks && ctx?.direction !== "backward") {
++      for (const [max, ch] of util.sizeCaps(inst._zod.def.checks)) {
++        if (n > max && ch._zod.def.when!(payload)) {
++          const start = payload.issues.length;
++          ch._zod.check(payload as ParsePayload<never>);
++          if (payload.issues.length > start) {
++            // the value is still the raw input, so no later check may read it
++            (payload.issues[start] as { continue?: boolean }).continue = false;
++            return payload;
++          }
++        }
++      }
++    }
++    return parse(payload, ctx);
++  };
++}
++
++const arraySize = (input: unknown): number => (Array.isArray(input) ? input.length : -1);
++const mapSize = (input: unknown): number => (input instanceof Map ? input.size : -1);
++const setSize = (input: unknown): number => (input instanceof Set ? input.size : -1);
++
+ function handleArrayResult(result: ParsePayload<any>, final: ParsePayload<any[]>, index: number) {
+   if (result.issues.length) {
+     final.issues.push(...util.prefixIssues(index, result.issues));
+@@ -1676,6 +1705,7 @@
+ 
+     return payload; //handleArrayResultsAsync(parseResults, final);
+   };
++  capSize(inst, arraySize);
+ });
+ 
+ //////////////////////////////////////////
+@@ -3081,6 +3111,7 @@
+     if (proms.length) return Promise.all(proms).then(() => payload);
+     return payload;
+   };
++  capSize(inst, mapSize);
+ });
+ 
+ function handleMapResult(
+@@ -3175,6 +3206,7 @@
+     if (proms.length) return Promise.all(proms).then(() => payload);
+     return payload;
+   };
++  capSize(inst, setSize);
+ });
+ 
+ function handleSetResult(result: ParsePayload, final: ParsePayload<Set<any>>) {
+diff --git a/src/v4/core/util.ts b/src/v4/core/util.ts
+--- a/src/v4/core/util.ts
++++ b/src/v4/core/util.ts
+@@ -824,6 +824,19 @@
+ 
+ // Checks for explicit abort (continue === false), as opposed to implicit abort (continue === undefined).
+ // Used to respect `abort: true` in .refine() even for checks that have a `when` function.
++/** The leading size checks of `defChecks` that set an upper bound, each paired with it. */
++export function sizeCaps(defChecks: checks.$ZodCheck<never>[] | undefined): [number, checks.$ZodCheck<never>][] {
++  const caps: [number, checks.$ZodCheck<never>][] = [];
++  for (const ch of defChecks ?? []) {
++    const d = ch._zod.def as any;
++    // a later check may rewrite the value
++    if (!/_(length|size)$|_equals$/.test(d.check)) break;
++    const max = d.maximum ?? d.length ?? d.size;
++    if (max >= 0) caps.push([max, ch]);
++  }
++  return caps;
++}
++
+ export function explicitlyAborted(x: schemas.ParsePayload, startIndex = 0): boolean {
+   if (x.aborted === true) return true;
+   for (let i = startIndex; i < x.issues.length; i++) {
+diff --git a/v3/types.cjs b/v3/types.cjs
+--- a/v3/types.cjs
++++ b/v3/types.cjs
+@@ -1771,6 +1771,7 @@
+     _parse(input) {
+         const { ctx, status } = this._processInputParams(input);
+         const def = this._def;
++        let oversized = false;
+         if (ctx.parsedType !== util_js_1.ZodParsedType.array) {
+             (0, parseUtil_js_1.addIssueToContext)(ctx, {
+                 code: ZodError_js_1.ZodIssueCode.invalid_type,
+@@ -1783,6 +1784,7 @@
+             const tooBig = ctx.data.length > def.exactLength.value;
+             const tooSmall = ctx.data.length < def.exactLength.value;
+             if (tooBig || tooSmall) {
++                if (tooBig) oversized = true;
+                 (0, parseUtil_js_1.addIssueToContext)(ctx, {
+                     code: tooBig ? ZodError_js_1.ZodIssueCode.too_big : ZodError_js_1.ZodIssueCode.too_small,
+                     minimum: (tooSmall ? def.exactLength.value : undefined),
+@@ -1810,6 +1812,7 @@
+         }
+         if (def.maxLength !== null) {
+             if (ctx.data.length > def.maxLength.value) {
++                oversized = true;
+                 (0, parseUtil_js_1.addIssueToContext)(ctx, {
+                     code: ZodError_js_1.ZodIssueCode.too_big,
+                     maximum: def.maxLength.value,
+@@ -1821,6 +1824,8 @@
+                 status.dirty();
+             }
+         }
++        // Stop only after the existing size check actually emitted its issue.
++        if (oversized) return parseUtil_js_1.INVALID;
+         if (ctx.common.async) {
+             return Promise.all([...ctx.data].map((item, i) => {
+                 return def.type._parseAsync(new ParseInputLazyPath(ctx, item, ctx.path, i));
+@@ -2822,6 +2827,7 @@
+             return parseUtil_js_1.INVALID;
+         }
+         const def = this._def;
++        let oversized = false;
+         if (def.minSize !== null) {
+             if (ctx.data.size < def.minSize.value) {
+                 (0, parseUtil_js_1.addIssueToContext)(ctx, {
+@@ -2837,6 +2843,7 @@
+         }
+         if (def.maxSize !== null) {
+             if (ctx.data.size > def.maxSize.value) {
++                oversized = true;
+                 (0, parseUtil_js_1.addIssueToContext)(ctx, {
+                     code: ZodError_js_1.ZodIssueCode.too_big,
+                     maximum: def.maxSize.value,
+@@ -2848,6 +2855,8 @@
+                 status.dirty();
+             }
+         }
++        // Stop only after the existing size check actually emitted its issue.
++        if (oversized) return parseUtil_js_1.INVALID;
+         const valueType = this._def.valueType;
+         function finalizeSet(elements) {
+             const parsedSet = new Set();
+diff --git a/v3/types.js b/v3/types.js
+--- a/v3/types.js
++++ b/v3/types.js
+@@ -1750,6 +1750,7 @@
+     _parse(input) {
+         const { ctx, status } = this._processInputParams(input);
+         const def = this._def;
++        let oversized = false;
+         if (ctx.parsedType !== ZodParsedType.array) {
+             addIssueToContext(ctx, {
+                 code: ZodIssueCode.invalid_type,
+@@ -1762,6 +1763,7 @@
+             const tooBig = ctx.data.length > def.exactLength.value;
+             const tooSmall = ctx.data.length < def.exactLength.value;
+             if (tooBig || tooSmall) {
++                if (tooBig) oversized = true;
+                 addIssueToContext(ctx, {
+                     code: tooBig ? ZodIssueCode.too_big : ZodIssueCode.too_small,
+                     minimum: (tooSmall ? def.exactLength.value : undefined),
+@@ -1789,6 +1791,7 @@
+         }
+         if (def.maxLength !== null) {
+             if (ctx.data.length > def.maxLength.value) {
++                oversized = true;
+                 addIssueToContext(ctx, {
+                     code: ZodIssueCode.too_big,
+                     maximum: def.maxLength.value,
+@@ -1800,6 +1803,8 @@
+                 status.dirty();
+             }
+         }
++        // Stop only after the existing size check actually emitted its issue.
++        if (oversized) return INVALID;
+         if (ctx.common.async) {
+             return Promise.all([...ctx.data].map((item, i) => {
+                 return def.type._parseAsync(new ParseInputLazyPath(ctx, item, ctx.path, i));
+@@ -2793,6 +2798,7 @@
+             return INVALID;
+         }
+         const def = this._def;
++        let oversized = false;
+         if (def.minSize !== null) {
+             if (ctx.data.size < def.minSize.value) {
+                 addIssueToContext(ctx, {
+@@ -2808,6 +2814,7 @@
+         }
+         if (def.maxSize !== null) {
+             if (ctx.data.size > def.maxSize.value) {
++                oversized = true;
+                 addIssueToContext(ctx, {
+                     code: ZodIssueCode.too_big,
+                     maximum: def.maxSize.value,
+@@ -2819,6 +2826,8 @@
+                 status.dirty();
+             }
+         }
++        // Stop only after the existing size check actually emitted its issue.
++        if (oversized) return INVALID;
+         const valueType = this._def.valueType;
+         function finalizeSet(elements) {
+             const parsedSet = new Set();
+diff --git a/v4/core/schemas.cjs b/v4/core/schemas.cjs
+--- a/v4/core/schemas.cjs
++++ b/v4/core/schemas.cjs
+@@ -702,6 +702,34 @@
+         return payload;
+     };
+ });
++// an oversized container fails its leading size checks before any element is parsed
++function capSize(inst, size) {
++    const caps = util.sizeCaps(inst._zod.def.checks);
++    if (!caps.length)
++        return;
++    const cap = Math.min(...caps.map((c) => c[0]));
++    const parse = inst._zod.parse;
++    inst._zod.parse = (payload, ctx) => {
++        const n = size(payload.value);
++        if (n > cap && !ctx?.skipChecks && ctx?.direction !== "backward") {
++            for (const [max, ch] of util.sizeCaps(inst._zod.def.checks)) {
++                if (n > max && ch._zod.def.when(payload)) {
++                    const start = payload.issues.length;
++                    ch._zod.check(payload);
++                    if (payload.issues.length > start) {
++                        // the value is still the raw input, so no later check may read it
++                        payload.issues[start].continue = false;
++                        return payload;
++                    }
++                }
++            }
++        }
++        return parse(payload, ctx);
++    };
++}
++const arraySize = (input) => (Array.isArray(input) ? input.length : -1);
++const mapSize = (input) => (input instanceof Map ? input.size : -1);
++const setSize = (input) => (input instanceof Set ? input.size : -1);
+ function handleArrayResult(result, final, index) {
+     if (result.issues.length) {
+         final.issues.push(...util.prefixIssues(index, result.issues));
+@@ -741,6 +769,7 @@
+         }
+         return payload; //handleArrayResultsAsync(parseResults, final);
+     };
++    capSize(inst, arraySize);
+ });
+ function handlePropertyResult(result, final, key, input, isOptionalIn, isOptionalOut) {
+     const isPresent = key in input;
+@@ -1616,6 +1645,7 @@
+             return Promise.all(proms).then(() => payload);
+         return payload;
+     };
++    capSize(inst, mapSize);
+ });
+ function handleMapResult(keyResult, valueResult, final, key, input, inst, ctx) {
+     if (keyResult.issues.length) {
+@@ -1676,6 +1706,7 @@
+             return Promise.all(proms).then(() => payload);
+         return payload;
+     };
++    capSize(inst, setSize);
+ });
+ function handleSetResult(result, final) {
+     if (result.issues.length) {
+diff --git a/v4/core/schemas.js b/v4/core/schemas.js
+--- a/v4/core/schemas.js
++++ b/v4/core/schemas.js
+@@ -671,6 +671,34 @@
+         return payload;
+     };
+ });
++// an oversized container fails its leading size checks before any element is parsed
++function capSize(inst, size) {
++    const caps = util.sizeCaps(inst._zod.def.checks);
++    if (!caps.length)
++        return;
++    const cap = Math.min(...caps.map((c) => c[0]));
++    const parse = inst._zod.parse;
++    inst._zod.parse = (payload, ctx) => {
++        const n = size(payload.value);
++        if (n > cap && !ctx?.skipChecks && ctx?.direction !== "backward") {
++            for (const [max, ch] of util.sizeCaps(inst._zod.def.checks)) {
++                if (n > max && ch._zod.def.when(payload)) {
++                    const start = payload.issues.length;
++                    ch._zod.check(payload);
++                    if (payload.issues.length > start) {
++                        // the value is still the raw input, so no later check may read it
++                        payload.issues[start].continue = false;
++                        return payload;
++                    }
++                }
++            }
++        }
++        return parse(payload, ctx);
++    };
++}
++const arraySize = (input) => (Array.isArray(input) ? input.length : -1);
++const mapSize = (input) => (input instanceof Map ? input.size : -1);
++const setSize = (input) => (input instanceof Set ? input.size : -1);
+ function handleArrayResult(result, final, index) {
+     if (result.issues.length) {
+         final.issues.push(...util.prefixIssues(index, result.issues));
+@@ -710,6 +738,7 @@
+         }
+         return payload; //handleArrayResultsAsync(parseResults, final);
+     };
++    capSize(inst, arraySize);
+ });
+ function handlePropertyResult(result, final, key, input, isOptionalIn, isOptionalOut) {
+     const isPresent = key in input;
+@@ -1585,6 +1614,7 @@
+             return Promise.all(proms).then(() => payload);
+         return payload;
+     };
++    capSize(inst, mapSize);
+ });
+ function handleMapResult(keyResult, valueResult, final, key, input, inst, ctx) {
+     if (keyResult.issues.length) {
+@@ -1645,6 +1675,7 @@
+             return Promise.all(proms).then(() => payload);
+         return payload;
+     };
++    capSize(inst, setSize);
+ });
+ function handleSetResult(result, final) {
+     if (result.issues.length) {
+diff --git a/v4/core/util.cjs b/v4/core/util.cjs
+--- a/v4/core/util.cjs
++++ b/v4/core/util.cjs
+@@ -42,6 +42,7 @@
+ exports.required = required;
+ exports.aborted = aborted;
+ exports.explicitlyAborted = explicitlyAborted;
++exports.sizeCaps = sizeCaps;
+ exports.prefixIssues = prefixIssues;
+ exports.unwrapMessage = unwrapMessage;
+ exports.finalizeIssue = finalizeIssue;
+@@ -592,6 +593,21 @@
+ }
+ // Checks for explicit abort (continue === false), as opposed to implicit abort (continue === undefined).
+ // Used to respect `abort: true` in .refine() even for checks that have a `when` function.
++/** The leading size checks of `defChecks` that set an upper bound, each paired with it. */
++function sizeCaps(defChecks) {
++    const caps = [];
++    for (const ch of defChecks ?? []) {
++        const d = ch._zod.def;
++        // a later check may rewrite the value
++        if (!/_(length|size)$|_equals$/.test(d.check))
++            break;
++        const max = d.maximum ?? d.length ?? d.size;
++        if (max >= 0)
++            caps.push([max, ch]);
++    }
++    return caps;
++}
++
+ function explicitlyAborted(x, startIndex = 0) {
+     if (x.aborted === true)
+         return true;
+diff --git a/v4/core/util.d.cts b/v4/core/util.d.cts
+--- a/v4/core/util.d.cts
++++ b/v4/core/util.d.cts
+@@ -177,6 +177,7 @@
+ export declare function required(Class: SchemaClass<schemas.$ZodNonOptional>, schema: schemas.$ZodObject, mask: object | undefined): any;
+ export type Constructor<T, Def extends any[] = any[]> = new (...args: Def) => T;
+ export declare function aborted(x: schemas.ParsePayload, startIndex?: number): boolean;
++export declare function sizeCaps(defChecks: checks.$ZodCheck<never>[] | undefined): [number, checks.$ZodCheck<never>][];
+ export declare function explicitlyAborted(x: schemas.ParsePayload, startIndex?: number): boolean;
+ export declare function prefixIssues(path: PropertyKey, issues: errors.$ZodRawIssue[]): errors.$ZodRawIssue[];
+ export declare function unwrapMessage(message: string | {
+diff --git a/v4/core/util.d.ts b/v4/core/util.d.ts
+--- a/v4/core/util.d.ts
++++ b/v4/core/util.d.ts
+@@ -177,6 +177,7 @@
+ export declare function required(Class: SchemaClass<schemas.$ZodNonOptional>, schema: schemas.$ZodObject, mask: object | undefined): any;
+ export type Constructor<T, Def extends any[] = any[]> = new (...args: Def) => T;
+ export declare function aborted(x: schemas.ParsePayload, startIndex?: number): boolean;
++export declare function sizeCaps(defChecks: checks.$ZodCheck<never>[] | undefined): [number, checks.$ZodCheck<never>][];
+ export declare function explicitlyAborted(x: schemas.ParsePayload, startIndex?: number): boolean;
+ export declare function prefixIssues(path: PropertyKey, issues: errors.$ZodRawIssue[]): errors.$ZodRawIssue[];
+ export declare function unwrapMessage(message: string | {
+diff --git a/v4/core/util.js b/v4/core/util.js
+--- a/v4/core/util.js
++++ b/v4/core/util.js
+@@ -533,6 +533,21 @@
+ }
+ // Checks for explicit abort (continue === false), as opposed to implicit abort (continue === undefined).
+ // Used to respect `abort: true` in .refine() even for checks that have a `when` function.
++/** The leading size checks of `defChecks` that set an upper bound, each paired with it. */
++export function sizeCaps(defChecks) {
++    const caps = [];
++    for (const ch of defChecks ?? []) {
++        const d = ch._zod.def;
++        // a later check may rewrite the value
++        if (!/_(length|size)$|_equals$/.test(d.check))
++            break;
++        const max = d.maximum ?? d.length ?? d.size;
++        if (max >= 0)
++            caps.push([max, ch]);
++    }
++    return caps;
++}
++
+ export function explicitlyAborted(x, startIndex = 0) {
+     if (x.aborted === true)
+         return true;

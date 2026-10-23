@@ -36,6 +36,7 @@ patchedDependencies:
   '@lhci/utils@0.15.1': patches/@lhci__utils@0.15.1.patch
   http-cache-semantics@4.3.0: patches/http-cache-semantics@4.3.0.patch
   zod@3.25.76: patches/zod@3.25.76.patch
+  zod@4.4.3: patches/zod@4.4.3.patch
 
 allowBuilds:
   esbuild: true
