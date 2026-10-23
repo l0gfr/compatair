@@ -117,8 +117,8 @@ const searchOpportunityMetadata = new Map([
 		description: 'Calculez le débit d’une agrafeuse-cloueuse à partir des litres par tir et de votre cadence, puis vérifiez le FAD du compresseur à 6,3 bar.',
 	}],
 	['guides/bruit-compresseur-lire-decibels/index.html', {
-		title: 'Bruit d’un compresseur : comparer les dB | CompatAir',
-		description: 'Comparez le bruit de deux compresseurs sans confondre LpA et LwA : indicateur, distance, protocole et limites des mentions « Silent ».',
+		title: 'Bruit d’un compresseur : dB(A), LpA et LwA',
+		description: 'Comment comparer les décibels de deux compresseurs ? Distinguez LpA et LwA, vérifiez la distance de mesure et les limites d’une mention « silencieux ».',
 	}],
 	['guides/debit-restitue-fad-vs-debit-aspire/index.html', {
 		title: 'Débit FAD ou débit aspiré : lequel comparer ? | CompatAir',
