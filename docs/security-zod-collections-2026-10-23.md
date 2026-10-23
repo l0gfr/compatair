@@ -15,3 +15,9 @@ Regression tests cover upper bounds, absence of per-element work on oversized in
 The direct backport guards one upstream edge case: a stateful Set size getter can stop the bound check from emitting an issue. It marks early abort only when an issue was actually appended, avoiding the upstream 4.6.7 TypeError without removing a size constraint. Both module systems have a dedicated regression test.
 
 The final advisory check also detected [GHSA-xjj6-f33q-929c](https://github.com/advisories/GHSA-xjj6-f33q-929c) in the locked Undici 8.10.2 used by unifont. The lock now selects the official 8.12.2 correction within unifont’s existing ^8.0.0 range, without a major upgrade or an advisory exception. Its registry signature, archive SHA-512 and publication age were verified before the frozen installation.
+
+## Dependabot verification, 24 October 2026
+
+The frozen installation and 144 focused tests passed on Node 24.21.0, including installed Zod bounds, tampered-patch rejection, advisory classification, fast-uri, body-parser, Undici and application consumers. Source lint and the dependency audit also passed without a full site build. The fast-uri override and lock now use the official 3.1.9 correction for alerts 20 through 23.
+
+Dependabot alerts 18 and 19 identify the unmodified Zod version numbers in the manifest and lock. The corresponding installed implementations are locally remediated by the verified backports described above, not official patched-version upgrades. These alerts can be classified as inaccurate for the verified patched tree with this document as evidence. This classification is limited to GHSA-mrhx-c7xc-m3w5 and its constrained-collection issue. The mandatory byte attestations, behavioral tests and fail-closed advisory policy remain in place; any changed patch, vulnerable resolution or advisory still requires review.

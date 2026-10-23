@@ -19,7 +19,7 @@ const EXPECTED_OVERRIDES = new Map([
   ['brace-expansion', '5.0.12'],
   ['compression', '1.8.2'],
   ['devalue', '5.9.3'],
-  ['fast-uri', '3.1.8'],
+  ['fast-uri', '3.1.9'],
   ['http-cache-semantics', '4.3.0'],
   ['ip-address', '10.7.4'],
   ['js-yaml@3', '3.15.2'],
