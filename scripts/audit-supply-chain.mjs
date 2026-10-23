@@ -15,6 +15,7 @@ const EXPECTED_OVERRIDES = new Map([
   ['@lhci/utils@0.15.1>js-yaml', '4.3.2'],
   ['@puppeteer/browsers', '3.2.0'],
   ['basic-ftp', '6.2.1'],
+  ['body-parser@1', '1.20.9'],
   ['brace-expansion', '5.0.12'],
   ['compression', '1.8.2'],
   ['devalue', '5.9.3'],

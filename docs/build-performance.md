@@ -159,6 +159,13 @@ de valeur propre, de sources, de sécurité, de liens et Lighthouse restent acti
 
 ## Un seul build automatique sur le parcours main
 
+La suite de tests utilise un seul worker pour éviter de faire concourir les
+oracles exhaustifs du catalogue. Leurs assertions et délais restent inchangés.
+Sur le Mac de validation, les deux suites qui avaient dépassé leurs délais en
+concurrence ont passé leurs sept tests séquentiellement en 29,9 secondes au
+total, dont 14,83 secondes de tests. Cette mesure ne qualifie pas encore la
+durée de la suite complète en CI.
+
 Le hook `main` conserve `security:audit`, `lint:source` et `validate:source`,
 sans générer `dist`. Le workflow de production exécute `archive:verify` après
 audit et lint, avant les caches et `validate:full`. Cette vérification conserve
