@@ -196,13 +196,31 @@ Les options `--acquisition`, `--funnel` et `--indexation` sont facultatives : le
 
 Le rapport GoAccess est généré à partir du journal Apache de CompatAir, sans JavaScript de suivi côté visiteur. Les adresses IP sont anonymisées au niveau 2, les paramètres d’URL sont supprimés et seules les données des 90 derniers jours sont affichées.
 
-Après un déploiement contenant les scripts d’administration courants, exécuter :
+Utiliser le paquet d’administration vérifié du commit candidat. Le workflow l’extrait dans `/home/<DEPLOY_USER>/compatair-deploy` ; il ne met pas à jour automatiquement un ancien répertoire `compatair-bootstrap`. Le transfert du paquet n’installe pas les exécutables de statistiques.
+
+Pour une première installation seulement, se placer à la racine de ce paquet puis exécuter :
 
 ```bash
-sudo bash /home/bluetouff/compatair-bootstrap/deploy/server/install-stats.sh
+sudo bash deploy/server/install-stats.sh
 ```
 
-Le script demande un identifiant et un mot de passe d’au moins 16 caractères sans les afficher. Le rapport protégé est disponible sur `https://compatair.fr/stats/` et actualisé toutes les 15 minutes par `compatair-stats.timer`.
+Sans argument, le script demande un identifiant et un mot de passe d’au moins 16 caractères sans afficher le mot de passe. Le rapport protégé est disponible sur `https://compatair.fr/stats/` et actualisé toutes les 15 minutes par `compatair-stats.timer`.
+
+Pour mettre à jour l’installation existante et approuver le cache Apache du même paquet avant le déploiement, exécuter cette commande unique depuis la racine du paquet vérifié :
+
+```bash
+sudo bash -c 'set -e; bash "$1/deploy/server/install-mcp.sh" --prepare-release; bash "$1/deploy/server/install-stats.sh" --update' -- "$PWD"
+```
+
+La première étape approuve et applique le vhost, puis vérifie la santé MCP de la release active. Elle doit précéder la bascule : le déploiement refuse un vhost différent de la copie approuvée par root. Le mode `--update` ne modifie ni `/etc/apache2/compatair-stats.htpasswd`, ni ses permissions, ni les comptes, paquets ou unités systemd. Il exige les identifiants existants, les permissions attendues, le compte de statistiques membre de `adm`, un timer actif et activé, des unités identiques à celles du paquet, ainsi que le vhost candidat déjà approuvé et installé. Il refuse une installation incomplète au lieu de lancer une configuration interactive.
+
+Le mode de mise à jour suspend le timer et attend au plus 30 secondes qu’une génération existante se termine, sans l’interrompre. Il lit explicitement l’état systemd `ActiveState` et ne commence les sauvegardes que lorsque le service est `inactive` ou `failed`. Si le service reste occupé ou si son état ne peut pas être établi, il refuse la mise à jour et rétablit le timer. Il sauvegarde ensuite les deux exécutables et les rapports existants, installe l’agrégateur et son lanceur, puis génère les deux rapports et vérifie leurs réponses `401` sans authentification. Un échec ou une interruption restaure les fichiers précédents et relance le timer ; si cette restauration échoue, les sauvegardes privées sont conservées et le timer reste arrêté lorsqu’il a pu l’être. Aucun changement Apache effectué par l’étape MCP précédente n’est annulé par cette restauration des statistiques. Le mode de mise à jour seul s’exécute avec `sudo bash deploy/server/install-stats.sh --update` lorsque le vhost du paquet est déjà préparé.
+
+Le même flux de journaux produit désormais `https://compatair.fr/stats/traffic-segments.json`, sous la même authentification. L’installation utilise le runtime Node déjà présent dans `/opt/compatair/node/bin/node`. Le JSON ne conserve ni IP, ni utilisateur authentifié, ni URL, paramètres, référent ou user-agent. Il agrège uniquement les requêtes et octets par date du journal Apache, famille de ressource, groupe HTTP et classification : `declared_internal_check`, `declared_automation`, `browser_like` ou `unknown`. Les nouvelles vérifications SEO et HTTP, ainsi que la préparation d’indexation, déclarent `CompatAir-Internal-Check/1.0` ; le trafic historique `node` reste une automatisation non attribuée. Un navigateur plausible n’est jamais une preuve de visite humaine, et les référents Google ne deviennent pas des clics GSC.
+
+Les signatures restent déclaratives et falsifiables. La fenêtre contient au plus 90 dates calendaires jusqu’à la dernière date valide du journal, sans remplir les dates absentes ; les jours de bord peuvent être partiels. `coverage` expose les lignes non interprétables, trop longues et hors fenêtre. Les journaux bruts sont transmis inchangés à GoAccess et restent conservés par Apache ; aucune catégorie de robot n’est bloquée ou retirée du rapport complet. En cas d’échec du pipeline, les rapports HTML et JSON précédents sont conservés. Vérifier après installation le succès du service, l’actualité du JSON privé et les deux réponses `401` sans authentification.
+
+Les archives de données signées sous `/data/archives/<sha>/` sont immuables : le vhost proposé leur réserve un cache public d’un an uniquement pour les réponses `200`, `206` et `304`. Les fichiers courants gardent leur politique existante. Les sondes de snapshots demandent une représentation `identity` et annulent une réponse dépassant la plage autorisée, y compris pour l’archive historique. Toute compression future doit préserver les octets décompressés signés, les validateurs, `Vary: Accept-Encoding` et les plages sur la représentation `identity` ; aucun changement de compression n’est activé par ces scripts.
 
 Contrôler l’automatisation avec :
 

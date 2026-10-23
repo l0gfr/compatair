@@ -11,6 +11,7 @@ import {
 	fetchVerificationText,
 	mapVerificationConcurrent,
 	liveSeoDeadlineMs,
+	internalVerificationUserAgent,
 	readSnapshotProbe,
 	verifySnapshotManifest,
 	countInternalLinks,
@@ -25,6 +26,17 @@ import {
 } from './live-seo-verification.mjs';
 
 describe('bounded exhaustive SEO verification', () => {
+	it('labels exhaustive requests and retries as declared internal checks', async () => {
+		const budget = createVerificationBudget(500), calls = [];
+		try {
+			const text = await fetchVerificationText('/guide/', 'https://compatair.fr', budget, { retryDelayMs: 1, fetchImpl: async (_url, options) => {
+				calls.push(options.headers);
+				return new Response(calls.length === 1 ? 'retry' : 'ok', { status: calls.length === 1 ? 503 : 200 });
+			} });
+			expect(text).toBe('ok');
+			expect(calls).toEqual(Array.from({ length: 2 }, () => ({ 'Cache-Control': 'no-cache', 'User-Agent': `${internalVerificationUserAgent} seo` })));
+		} finally { budget.dispose(); }
+	});
 	it('aborts at the declared180 s deadline and clears its timer', () => {
 		vi.useFakeTimers();
 		const budget = createVerificationBudget();
@@ -146,6 +158,12 @@ describe('vérification SEO de la surface live', () => {
 		let cancelled = false;
 		const stream = new ReadableStream({ cancel() { cancelled = true; } });
 		await expect(readBoundedResponse(new Response(stream, { headers: { 'Content-Length': '50000000' } }), 65_536)).rejects.toThrow('dépasse');
+		expect(cancelled).toBe(true);
+	});
+	it('annule le corps de l’archive historique si une sonde de 1 Kio reçoit le fichier complet', async () => {
+		let cancelled = false;
+		const stream = new ReadableStream({ cancel() { cancelled = true; } });
+		await expect(readBoundedResponse(new Response(stream, { headers: { 'Content-Length': '2177776241' } }), 1024)).rejects.toThrow('dépasse');
 		expect(cancelled).toBe(true);
 	});
 	it('borne aussi une réponse sans Content-Length et conserve les octets exacts', async () => {

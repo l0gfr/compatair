@@ -5,11 +5,17 @@ umask 027
 log_directory="/var/log/apache2"
 active_log="$log_directory/compatair-ssl-access.log"
 output_directory="/var/www/html/compatair-stats"
-temporary_report=$(mktemp --suffix=.html "$output_directory/.index.XXXXXX")
-trap 'rm -f "$temporary_report"' EXIT
+node_binary="/opt/compatair/node/bin/node"
+aggregator="/usr/local/libexec/compatair-aggregate-stats.mjs"
 
 test -r "$active_log"
 test -d "$output_directory"
+test -x "$node_binary"
+test -r "$aggregator"
+temporary_report=$(mktemp --suffix=.html "$output_directory/.index.XXXXXX")
+temporary_segments=""
+trap 'rm -f "$temporary_report" "$temporary_segments"' EXIT
+temporary_segments=$(mktemp --suffix=.json "$output_directory/.traffic.XXXXXX")
 
 mapfile -t compressed_logs < <(
 	find "$log_directory" -maxdepth 1 -type f -name 'compatair-ssl-access.log.*.gz' -print | sort -V -r
@@ -23,7 +29,7 @@ mapfile -t compressed_logs < <(
 		cat -- "$active_log.1"
 	fi
 	cat -- "$active_log"
-} | /usr/bin/goaccess - \
+} | "$node_binary" "$aggregator" --output "$temporary_segments" --pass-through | /usr/bin/goaccess - \
 	--no-global-config \
 	--log-format=COMBINED \
 	--anonymize-ip \
@@ -39,6 +45,8 @@ mapfile -t compressed_logs < <(
 	--output="$temporary_report"
 
 chmod 640 "$temporary_report"
+chmod 640 "$temporary_segments"
 mv -f "$temporary_report" "$output_directory/index.html"
+mv -f "$temporary_segments" "$output_directory/traffic-segments.json"
 chmod 640 "$output_directory/goaccess.css" "$output_directory/goaccess.js"
 trap - EXIT

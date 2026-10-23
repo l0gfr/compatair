@@ -1,9 +1,7 @@
 ---
 title: "Audit d’un réseau d’air comprimé : protocole de mesure et plan d’action"
-seoTitle: "Audit réseau d’air comprimé : méthode et mesures"
-description: "Préparer un audit d’air comprimé de l’alimentation aux usages,
-  établir une ligne de base mesurable et transformer les écarts en actions
-  vérifiables."
+seoTitle: "Audit d’air comprimé : mesures, fuites et plan d’action"
+description: "Quelles mesures relever pour auditer un réseau d’air comprimé ? Pression, débit, puissance, fuites et méthode pour vérifier les résultats après intervention."
 pubDate: 2026-07-20
 category: "Utiliser"
 audiences: [ professionnel ]
@@ -24,10 +22,10 @@ sources:
   - https://www.cagi.org/assets/documents/pdfs/handbook/Chapter_4_handbook_Final2021.pdf
   - https://www.smcworld.com/assets/manual/en-jp/files/PFxx-OMA1007.pdf
   - https://www.cs-instruments.com/fileadmin/cs-data/Bedienungsanleitungen/Instruction%20manuals_EN_new/Instruction_manual_VA500_EN.pdf
-updatedDate: 2026-10-03
+updatedDate: 2026-10-23
 ---
 
-Un audit utile ne commence pas par une liste de compresseurs à remplacer. Il définit le périmètre du système, enregistre les conditions de production, mesure simultanément l’offre et la demande, puis établit une ligne de base contre laquelle chaque modification pourra être vérifiée.
+**Un audit de réseau d’air comprimé associe des mesures de pression, de débit et de puissance aux conditions réelles de production.** Il sert à localiser les pertes, les consommations inutiles et les défauts d’alimentation, puis à vérifier l’effet des corrections. Le relevé initial doit conserver les points de mesure, les instruments, les réglages et les périodes observées pour permettre une comparaison après intervention.
 
 L’[ISO 11011:2013](https://www.iso.org/fr/standard/46580.html) structure l’évaluation autour de trois sous-systèmes : alimentation, transmission et demande. Le [Sourcebook du Department of Energy américain](https://www.energy.gov/sites/default/files/2016/03/f30/Improving%20Compressed%20Air%20Sourcebook%20version%203.pdf) relie la ligne de base aux mesures de puissance, pression et débit. Ces références donnent un cadre. Elles ne fournissent ni les valeurs de votre installation, ni un seuil universel de rentabilité.
 

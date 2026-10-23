@@ -4,6 +4,8 @@ import { createReadStream } from 'node:fs';
 import { setTimeout as wait } from 'node:timers/promises';
 
 export const liveSeoDeadlineMs = 180_000;
+// Declared identity for our checks; it is a reporting hint, never authentication.
+export const internalVerificationUserAgent = 'CompatAir-Internal-Check/1.0';
 
 export function createVerificationBudget(timeoutMs = liveSeoDeadlineMs) {
 	if (!Number.isSafeInteger(timeoutMs) || timeoutMs < 1) throw new Error('Délai global SEO invalide');
@@ -20,7 +22,7 @@ export async function fetchVerificationText(pathname, origin, budget, { attempts
 		const timer = setTimeout(() => request.abort(new Error('Délai de requête SEO dépassé')), requestTimeoutMs);
 		try {
 			const response = await fetchImpl(new URL(pathname, origin), {
-				headers: { 'Cache-Control': 'no-cache' },
+				headers: { 'Cache-Control': 'no-cache', 'User-Agent': `${internalVerificationUserAgent} seo` },
 				signal: AbortSignal.any([budget.signal, request.signal]),
 			});
 			if (!response.ok) throw new Error(`HTTP ${response.status}`);

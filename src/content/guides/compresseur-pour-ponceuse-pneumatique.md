@@ -2,7 +2,7 @@
 title: "Quel compresseur pour une ponceuse pneumatique ?"
 description: "Une ponceuse exige un débit durable, pas seulement une grande cuve. Dimensionnez le FAD, le cycle de service et le flexible à partir d’un cas vérifié."
 pubDate: 2026-07-13
-updatedDate: 2026-10-03
+updatedDate: 2026-10-23
 category: Choisir
 audiences: [particulier, professionnel]
 metiers: [carrosserie-peinture, menuiserie-agencement]
@@ -35,6 +35,8 @@ La fiche publie aussi une puissance S3 de 25 %. Faute de pression de réenclench
 ## À quoi ressemble une réserve saine
 
 L’[Einhell TE-AC 430/90/10](https://www.einhell.fr/p/4010800-te-ac-430-90-10/) publie 200 L/min à 7 bar. Il couvre le besoin nominal et la marge de 25 % de notre cas, tout en disposant d’une cuve de 90 litres. Ce constat porte sur les caractéristiques techniques, pas sur le prix, le bruit, l’encombrement ou la disponibilité commerciale.
+
+Pour départager les modèles compatibles, vérifiez ensuite l’[alimentation monophasée ou triphasée requise](/guides/compresseur-triphase-ou-monophase-atelier/) et les [indicateurs de bruit LpA et LwA](/guides/bruit-compresseur-lire-decibels/). Ces contraintes d’atelier complètent le besoin d’air de la ponceuse.
 
 ## Les quatre contrôles avant achat
 

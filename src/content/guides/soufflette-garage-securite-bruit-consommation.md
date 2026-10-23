@@ -1,9 +1,9 @@
 ---
-title: "Soufflette en garage : traiter le bruit, l’usage et la consommation sans raccourci"
-seoTitle: "Soufflette de garage : bruit et consommation"
-description: "Choisir et contrôler une soufflette à partir de sa tâche, d’un essai acoustique documenté et de sa consommation propre, sans gain universel inventé."
+title: "Soufflette en garage : sécurité, bruit et consommation d’air"
+seoTitle: "Soufflette de garage : sécurité, bruit et débit"
+description: "Quand éviter la soufflette au garage, comment choisir une buse et vérifier son bruit et son débit ? Les recommandations INRS et les mesures à conserver."
 pubDate: 2026-07-15
-updatedDate: 2026-09-26
+updatedDate: 2026-10-23
 category: "Utiliser"
 audiences: [professionnel]
 metiers: [garage-automobile, atelier-poids-lourds, maintenance-industrielle]
@@ -14,9 +14,15 @@ sources:
   - https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-6282.pdf
 ---
 
-Parce qu’elle intervient quelques secondes à la fois, la soufflette échappe facilement à l’inventaire des consommateurs. Sa répétition, son bruit et la diversité des buses imposent pourtant de traiter trois questions différentes : la tâche est-elle justifiée, la buse convient-elle et quelle consommation le modèle exact ajoute-t-il au réseau ?
+**Le choix d’une soufflette de garage commence par l’opération à réaliser : certains nettoyages demandent une autre méthode.** Pour un usage de soufflage retenu, vérifiez ensuite la buse, la pression prévue, le bruit et la consommation du modèle exact. Quelques secondes d’utilisation répétées peuvent compter dans l’exposition sonore et dans les pointes de demande d’air de l’atelier.
 
 Pour d’autres usages du soufflage, consultez le [choix d’un compresseur pour Tornador](/guides/compresseur-pour-tornador-black-classic/) et la [lecture des débits d’un amplificateur EXAIR](/guides/amplificateur-air-exair-consommation-debit/). Leurs données ne se transposent pas à une soufflette classique.
+
+## Quand éviter la soufflette au garage
+
+Dans son [guide ED 6282, section « Soufflette »](https://www.inrs.fr/dam/inrs/CataloguePapier/ED/TI-ED-6282.pdf#page=32), l’INRS demande de proscrire la soufflette directement raccordée au réseau pour sécher les vêtements, dépoussiérer les freins et embrayages ou nettoyer les pièces. Pour ce dernier usage, il préconise des fontaines de lavage adaptées et des chiffons. Le soufflage peut disperser poussières et liquides sous forme d’aérosols.
+
+Pour un usage particulier sans autre solution, comme le séchage de pièces, ce document préconise une alimentation à **moins de 2,5 bar**, un modèle muni de diffuseur et des lunettes enveloppantes. Ce cas ne constitue pas une autorisation générale de souffler sur toute pièce : conservez les restrictions liées à la tâche et à la notice.
 
 ## Un résultat INRS, dans les limites de son essai
 

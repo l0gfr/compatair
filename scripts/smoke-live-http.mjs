@@ -1,7 +1,7 @@
 import { CALCULATION_VERSION } from '../server/air-sizing.mjs';
 import { readFile } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
-import { readBoundedResponse, readSnapshotProbe, verifySnapshotManifest, verifySnapshotRange } from './lib/live-seo-verification.mjs';
+import { internalVerificationUserAgent, readBoundedResponse, readSnapshotProbe, verifySnapshotManifest, verifySnapshotRange } from './lib/live-seo-verification.mjs';
 
 const origin = new URL(process.env.COMPATAIR_SITE_ORIGIN ?? 'https://compatair.fr').origin;
 const expectedSha = process.env.COMPATAIR_EXPECTED_RELEASE_SHA;
@@ -32,7 +32,7 @@ async function check(label, pathname, inspect, { attempts = 3, method = 'GET', h
 				method,
 				headers: {
 					'Cache-Control': 'no-cache',
-					'User-Agent': 'CompatAir deployment smoke',
+					'User-Agent': `${internalVerificationUserAgent} http-smoke`,
 					...headers,
 				},
 				body: requestBody,
@@ -89,7 +89,7 @@ await check('vidéo du parcours en lecture partielle', '/media/compatair-parcour
 	assert(body.includes('ftyp'), 'signature MP4 ftyp absente des premiers octets');
 	assert(response.headers.get('content-security-policy')?.includes("media-src 'self'"), 'CSP media-src self absente de la vidéo');
 }, {
-	headers: { Range: 'bytes=0-31' },
+	headers: { Range: 'bytes=0-31', 'Accept-Encoding': 'identity' }, maximumBytes: 32,
 });
 await check('robots', '/robots.txt', bodyContains('https://compatair.fr/sitemap-index.xml'));
 await check('sitemap', '/sitemap-index.xml', status(200));
@@ -160,7 +160,7 @@ await check('signatures versionnées de la release', '/data/signatures.json', ({
 for (const probe of snapshotProbes) {
 	await check(`${probe.label}, plage exacte de la release`, probe.pathname, ({ bytes, response }) => {
 		verifySnapshotRange({ status: response.status, contentRange: response.headers.get('content-range'), contentType: response.headers.get('content-type'), bytes }, probe.prefix, probe.sizeBytes);
-	}, { headers: { Range: `bytes=0-${probe.prefix.length - 1}` }, maximumBytes: probe.prefix.length });
+	}, { headers: { Range: `bytes=0-${probe.prefix.length - 1}`, 'Accept-Encoding': 'identity' }, maximumBytes: probe.prefix.length });
 }
 
 // v2 is a compact contract; rollback to the frozen v1 release remains supported.
@@ -173,10 +173,10 @@ if (verdictBytes < 65_536 && JSON.parse(verdictPrefix.toString('utf8')).mode ===
   assert(response.status === 200 && JSON.stringify(JSON.parse(body)) === JSON.stringify(archive.manifest), 'manifeste historique différent du manifeste épinglé');
  });
  const entry = archive.manifest.files.find(item => item.path === '/data/verdicts.json');
- await check('export historique conservé', `${archive.basePath}/verdicts.json`, ({ body, response }) => {
-  assert(response.status === 206 && response.headers.get('content-range') === `bytes 0-1023/${entry.sizeBytes}`, 'taille historique incohérente');
+ await check('export historique conservé', `${archive.basePath}/verdicts.json`, ({ body, bytes, response }) => {
+  assert(response.status === 206 && bytes.length === 1024 && response.headers.get('content-range') === `bytes 0-1023/${entry.sizeBytes}`, 'taille historique incohérente');
   assert(body.includes(archive.metadata.verdictVersion) && body.includes('"schemaVersion":"1.1.0"'), 'version historique incohérente');
- }, { headers: { Range: 'bytes=0-1023' } });
+ }, { headers: { Range: 'bytes=0-1023', 'Accept-Encoding': 'identity' }, maximumBytes: 1024 });
 }
 
 const legacyPath = '/compatibilite/einhell-tc-ac-240-50-10-of--ponceuse-excentrique-einhell-tc-pe-150/';

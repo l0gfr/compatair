@@ -1,8 +1,9 @@
 ---
 title: "Compresseur triphasé ou monophasé : comment choisir pour un atelier ?"
-description: "Alimentation, débit restitué, puissance et installation : les critères vérifiables pour choisir un compresseur triphasé ou monophasé en atelier."
+seoTitle: "Compresseur monophasé ou triphasé : lequel choisir ?"
+description: "Monophasé ou triphasé pour votre compresseur ? Vérifiez l’alimentation de l’atelier, puis le débit restitué et le cycle avec deux exemples documentés."
 pubDate: 2026-07-14
-updatedDate: 2026-10-01
+updatedDate: 2026-10-23
 category: "Choisir"
 audiences: [particulier, professionnel]
 metiers: [maintenance-industrielle]
@@ -19,7 +20,7 @@ sources:
 relatedGuides: ["compresseur-ne-demarre-plus-froid-rallonge", "compresseur-vis-230v-triphase", "compresseur-50hz-60hz-versions"]
 ---
 
-Un compresseur triphasé n’est pas automatiquement meilleur qu’un compresseur monophasé. Le choix dépend d’abord de l’alimentation disponible dans l’atelier et de la plaque du moteur. La performance pneumatique doit ensuite être comparée séparément, avec le débit restitué à la pression utile.
+**Choisissez d’abord un compresseur compatible avec l’alimentation de l’atelier, puis vérifiez son débit restitué à la pression des outils et son cycle de service.** Si vous disposez uniquement du monophasé, la notice du modèle doit autoriser cette alimentation. Un modèle triphasé exige une installation adaptée ; le nombre de phases ne permet pas, à lui seul, de déduire la quantité d’air disponible.
 
 Deux modèles Metabo illustrent cette séparation. Le [Mega 400-50 W](https://www.metabo.com/com/en/tools/compressed-air/compressors/mobile-workshop-compressors/mega-400-50-w-compressor/601536000) est alimenté en 220 à 240 V monophasé et publie 260 L/min effectifs à 8 bar. Le [Mega 580-200 D](https://www.metabo.com/dk/da/maskiner/trykluft/kompressorer/kompressorer-til-mobile-vaerksteder/mega-580-200-d-601588000-kompressor.html) demande 380 à 415 V triphasé et publie 360 L/min effectifs à 8,8 bar.
 

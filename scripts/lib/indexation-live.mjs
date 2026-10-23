@@ -1,10 +1,10 @@
 import { INDEXATION_MANIFEST_PATH, INDEXATION_ORIGIN, validateManifest, validatePath } from './indexation-policy.mjs';
-import { extractSitemapLocations } from './live-seo-verification.mjs';
+import { extractSitemapLocations, internalVerificationUserAgent } from './live-seo-verification.mjs';
 
 export async function fetchIndexationText(path, { fetchImpl = fetch, allowMissing = false } = {}) {
 	if (!['/data/release.json', INDEXATION_MANIFEST_PATH, '/sitemap-index.xml'].includes(path) && !/^\/sitemap-[a-z0-9-]+\.xml$/.test(path)) throw new Error('Ressource d’indexation non autorisée.');
 	const response = await fetchImpl(new URL(path, INDEXATION_ORIGIN), {
-		redirect: 'error', headers: { 'Cache-Control': 'no-cache' }, signal: AbortSignal.timeout(20_000),
+		redirect: 'error', headers: { 'Cache-Control': 'no-cache', 'User-Agent': `${internalVerificationUserAgent} indexation` }, signal: AbortSignal.timeout(20_000),
 	});
 	if (allowMissing && response.status === 404) return undefined;
 	if (!response.ok) throw new Error(`${path}: HTTP ${response.status}`);

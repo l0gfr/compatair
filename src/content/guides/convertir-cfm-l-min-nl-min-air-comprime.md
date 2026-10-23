@@ -1,9 +1,9 @@
 ---
 title: "CFM, L/min, Nl/min : convertir un débit d’air sans fausser la comparaison"
-seoTitle: "CFM en L/min : conversion, Nl/min et pièges"
-description: "Tableau CFM, L/s et m³/h, exemples de conversion et distinction entre air libre, débit normalisé et FAD. Comparez les fiches sans mélanger les conditions."
+seoTitle: "CFM en L/min : formule et tableau de conversion"
+description: "1 CFM vaut environ 28,32 L/min. Formule, tableau et exemples pour convertir un débit d’air en conservant les différences entre CFM, Nl/min et FAD."
 pubDate: 2026-09-25
-updatedDate: 2026-10-03
+updatedDate: 2026-10-23
 category: "Comprendre"
 audiences: [particulier, professionnel]
 metiers: [maintenance-industrielle, garage-automobile]
@@ -15,7 +15,7 @@ sources:
   - https://www.atlascopco.com/en-in/compressors/wiki/compressed-air-articles/physics-physicalunits2
 ---
 
-**Pour convertir des CFM en L/min, multipliez par environ 28,32.** Ce changement d’unité conserve les conditions auxquelles le débit était exprimé. Il ne transforme pas un débit aspiré en débit restitué et ne rend pas automatiquement comparables des litres « normaux » et des litres d’air libre.
+**1 CFM correspond à environ 28,32 L/min : multipliez les CFM par 28,32, ou divisez les L/min par 28,32 pour la conversion inverse.** Ce changement d’unité conserve les conditions auxquelles le débit était exprimé. Il ne transforme pas un débit aspiré en débit restitué et ne rend pas automatiquement comparables des litres « normaux » et des litres d’air libre.
 
 Le problème apparaît lors d’un achat : une fiche américaine annonce des CFM, un outil européen des L/s et un pistolet des Nl/min. Avant de les classer, il faut conserver le libellé complet de chaque donnée. Voici une méthode pour faire le calcul tout en gardant ce qui lui donne un sens.
 
@@ -32,7 +32,18 @@ Les [tables CEJN](https://www.cejn.com/guides-support/toolbox/conversion-tables/
 | m³/h | L/min | × 1 000 ÷ 60 |
 | L/min | m³/h | × 0,06 |
 
-Exemples purement arithmétiques, **sans référence à un produit** : 5 CFM correspondent à environ 141,6 L/min ; 10 CFM à 283,2 L/min ; 20 CFM à 566,4 L/min. De même, 8 L/s donnent 480 L/min, et 30 m³/h donnent 500 L/min.
+### Exemples : de 1 à 20 CFM en litres par minute
+
+Ces valeurs sont des conversions arithmétiques avec le facteur arrondi 28,32, **sans référence à un produit**.
+
+| Débit en CFM | Équivalent approché en L/min |
+| ---: | ---: |
+| 1 | 28,32 |
+| 5 | 141,6 |
+| 10 | 283,2 |
+| 20 | 566,4 |
+
+De même, 8 L/s donnent 480 L/min, et 30 m³/h donnent 500 L/min.
 
 Conservez la précision initiale. Un affichage « environ 10 CFM » ne devient pas une mesure précise au centième parce qu’une calculatrice affiche davantage de décimales.
 

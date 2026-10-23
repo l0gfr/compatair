@@ -3,7 +3,7 @@ title: "Dimensionner un compresseur pour un garage automobile, poste par poste"
 seoTitle: "Compresseur pour garage automobile | CompatAir"
 description: "Méthode sourcée pour relever les besoins des outils d’un garage, traiter leur simultanéité et contrôler le réseau sans consommation métier inventée."
 pubDate: 2026-07-15
-updatedDate: 2026-09-30
+updatedDate: 2026-10-23
 category: "Choisir"
 audiences: [professionnel]
 metiers: [garage-automobile]
@@ -36,11 +36,15 @@ La [Chicago Pneumatic CP7748](https://tools.cp.com/fr-fr/products/impactwrenches
 
 Une autre notice peut se limiter à une consommation moyenne, parfois sans détailler le cycle associé. Il faut alors garder cette qualification telle quelle ; emprunter les 12 L/s de la CP7748 fausserait la fiche.
 
+Si les notices mélangent CFM, L/s et L/min, utilisez le [tableau de conversion des débits d’air](/guides/convertir-cfm-l-min-nl-min-air-comprime/) en conservant les conditions et le régime de chaque valeur.
+
 ## Le planning de l’atelier compte autant que les débits
 
 Une pompe de transfert doit figurer dans l’inventaire avec sa consommation pneumatique. Le [cas de la pompe à membrane ARO 66605](/guides/pompe-membrane-aro-66605-debit-air/) montre comment la distinguer du débit de liquide annoncé.
 
 L’inventaire prend vie lorsque l’atelier décrit les chevauchements. Clé, gonfleur, ponceuse et pistolet peuvent se succéder ou se recouvrir ; la liste seule ne tranche pas. Deux postes actifs ensemble entrent en revanche dans le même [facteur de simultanéité](/glossaire/#facteur-simultaneite).
+
+Ajoutez aussi les usages de soufflage retenus par l’atelier. Le dossier [soufflette de garage : sécurité, bruit et consommation](/guides/soufflette-garage-securite-bruit-consommation/) aide à examiner la tâche avant d’ajouter son débit au bilan.
 
 Le dossier [utiliser plusieurs outils pneumatiques](/guides/utiliser-plusieurs-outils-pneumatiques/) détaille ce calcul. Les consommations déclarées comme simultanées sont additionnées ; pour un outil exprimé par action, la cadence reste une donnée de l’atelier.
 

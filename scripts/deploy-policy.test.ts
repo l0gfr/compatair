@@ -254,6 +254,18 @@ describe('release boundary policy', () => {
 		expect(liveSmoke).toContain("body.includes('ftyp')");
 	});
 
+	it('caches only SHA-addressed immutable archive responses without changing mutable data or errors', () => {
+		const section = [...apache.matchAll(/<LocationMatch "([^"]+)">([\s\S]*?)<\/LocationMatch>/g)].find((match) => match[1].includes('/data/archives/'));
+		expect(section).toBeDefined();
+		const pattern = new RegExp(section![1]);
+		for (const file of ['verdicts.json', 'catalog.ndjson', 'catalog-dcat.jsonld', 'signatures.json']) expect(pattern.test(`/data/archives/${'a'.repeat(40)}/${file}`)).toBe(true);
+		for (const path of ['/data/verdicts.json', '/data/release.json', '/data/archives/current/verdicts.json', `/data/archives/${'a'.repeat(40)}/../verdicts.json`, `/data/archives/${'a'.repeat(40)}/nested/verdicts.json`]) expect(pattern.test(path)).toBe(false);
+		expect(section![2]).toContain('"expr=%{REQUEST_STATUS} == 200 || %{REQUEST_STATUS} == 206 || %{REQUEST_STATUS} == 304"');
+		expect(section![2]).toContain('public, max-age=31536000, immutable');
+		expect(section![2]).not.toContain('unset');
+		expect(liveSmoke).toContain("{ headers: { Range: 'bytes=0-1023', 'Accept-Encoding': 'identity' }, maximumBytes: 1024 }");
+	});
+
 	it('keeps the public browser boundary closed against script injection', () => {
 		const publicCsp = apache.split('\n').find((line) => line.includes('Content-Security-Policy') && line.includes('script-src-attr')) ?? '';
 		expect(publicCsp).toContain("default-src 'self'");

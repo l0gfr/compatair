@@ -5,7 +5,7 @@ description: "Longueur, diamètre intérieur et raccords réduisent la pression
   disponible. Voici comment éviter qu’un bon compresseur devienne mauvais au
   bout du flexible."
 pubDate: 2026-07-13
-updatedDate: 2026-10-03
+updatedDate: 2026-10-23
 category: Installer
 audiences: [ particulier, professionnel ]
 metiers: [ btp-chantier ]
@@ -45,6 +45,8 @@ Sur le piSAVE ESL, Piab limite séparément le tuyau d’alimentation de la pomp
 ## Les raccords peuvent devenir le goulot
 
 Un flexible de 10 mm associé à un raccord dont le passage interne est beaucoup plus petit reste limité par le raccord. Contrôlez toute la chaîne : sortie du détendeur, coupleur, flexible, filtre, lubrificateur éventuel et entrée de l’outil.
+
+Si plusieurs postes rencontrent la même baisse de pression, préparez un [audit du réseau d’air comprimé](/guides/audit-reseau-air-comprime-protocole-mesures/). Le protocole relie les points de mesure au fonctionnement des postes pour examiner le réseau au-delà du seul flexible.
 
 ## Recommandation de départ
 

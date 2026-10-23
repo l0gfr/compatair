@@ -211,6 +211,11 @@
 		Header always unset Cache-Control
 		Header always set Cache-Control "no-store"
 	</LocationMatch>
+	# SHA-addressed signed archives are immutable. Keep errors on the default
+	# cache policy and preserve identity bytes, validators and Range support.
+	<LocationMatch "^/data/archives/[a-f0-9]{40}/[a-z0-9-]+\.(?:json|jsonld|ndjson)$">
+		Header always set Cache-Control "public, max-age=31536000, immutable" "expr=%{REQUEST_STATUS} == 200 || %{REQUEST_STATUS} == 206 || %{REQUEST_STATUS} == 304"
+	</LocationMatch>
 	<LocationMatch "^/data/(?:catalog|offers)\.json$">
 		Header onsuccess unset Cache-Control
 		Header always unset Cache-Control
