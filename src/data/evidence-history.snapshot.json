@@ -735379,7 +735379,408 @@
         "confidence": "A",
         "notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer 702076. Empreinte PDF SHA-256 : 5f8fd1e58d7e34d0bd12dead68f80608538d5e7410fb8b8469585600af2fb802. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
       }
+    },
+    {
+      "id": "added:airpol-55:october3d-airpol-pdf-075-p11:2026-10-24",
+      "evidenceId": "october3d-airpol-pdf-075-p11",
+      "productId": "airpol-55",
+      "productType": "compressor",
+      "occurredAt": "2026-10-24",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "0be700237944d39f50164bac89d1edc05b7b4d4ab47af7f7a30fcb5fd44ba673",
+      "snapshot": {
+        "id": "october3d-airpol-pdf-075-p11",
+        "sourceUrl": "https://airpol.com.pl/wp-content/uploads/2022/05/EN-Karta-Airpol-185-55kW.pdf#page=11",
+        "sourceLabel": "Airpol, manufacturer technical documentation, page PDF 11",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-03",
+        "confidence": "B",
+        "notes": "SHA-256 03765bd3f6325ceba8a938e64a469e120e952843538b1a18f3aac757d0728e64 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:bambi-bb8:october3d-bambi-product-29:2026-10-24",
+      "evidenceId": "october3d-bambi-product-29",
+      "productId": "bambi-bb8",
+      "productType": "compressor",
+      "occurredAt": "2026-10-24",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "7897357fa48baa6ab0ee8e9e4d83c64be48ac31768d04cedc62c6bd4012aa884",
+      "snapshot": {
+        "id": "october3d-bambi-product-29",
+        "sourceUrl": "https://bambi-air.co.uk/product/bb15v/",
+        "sourceLabel": "Bambi, BB15V, fiche constructeur",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-03",
+        "confidence": "B",
+        "notes": "SHA-256 0602bb7839acf86bbccb9d8abfccc8ca540282e58b62b12341634b0897d93cd1 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:biax-beg-309:biax-150800710-20260926:2026-10-24",
+      "evidenceId": "biax-150800710-20260926",
+      "productId": "biax-beg-309",
+      "productType": "tool",
+      "occurredAt": "2026-10-24",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8bfa5ef0f92ff496b1cf68bef6c59a10227d06bed8f48582e4b01d37f32970bd",
+      "snapshot": {
+        "id": "biax-150800710-20260926",
+        "sourceUrl": "https://biax.de/en/product/be-309-bis-senk-o-55-mm/",
+        "sourceLabel": "BIAX, fiche technique BE 309 – max. hole Ø 5,5 mm, réf. 150800710",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "La fiche fabricant publie une consommation de 150 L/min. Le régime de charge n’est pas précisé dans ce tableau."
+      }
+    },
+    {
+      "id": "added:biax-beg-309:biax-150800710-20260926-workingpressurebar-1:2026-10-24",
+      "evidenceId": "biax-150800710-20260926-workingpressurebar-1",
+      "productId": "biax-beg-309",
+      "productType": "tool",
+      "occurredAt": "2026-10-24",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "bf533f8c85b1b4ba880eddfeb48f2aa227ebec4f5b176794ca5e12e98e245545",
+      "snapshot": {
+        "id": "biax-150800710-20260926-workingpressurebar-1",
+        "sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=42",
+        "sourceLabel": "BIAX, catalogue technique biax-pneumatic-en, p. 42",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+      }
+    },
+    {
+      "id": "added:biax-gaa-505:biax-150600720-20260926:2026-10-24",
+      "evidenceId": "biax-150600720-20260926",
+      "productId": "biax-gaa-505",
+      "productType": "tool",
+      "occurredAt": "2026-10-24",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "537fc7f85439bff006235e1232685536ac6be5beadaae3888fd4f0401ff2ea62",
+      "snapshot": {
+        "id": "biax-150600720-20260926",
+        "sourceUrl": "https://biax.de/wp-content/uploads/2025/02/BIAX_Schrauber_DE.pdf#page=12",
+        "sourceLabel": "BIAX, catalogue des visseuses pneumatiques, p. 12, réf. 150600720",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Consommation publiée dans la ligne Luftverbrauch en L/min ; le régime de charge n’est pas détaillé."
+      }
+    },
+    {
+      "id": "added:fiac-ax-203bd-8-400-50-ce:fiac-4152026234-20260926:2026-10-24",
+      "evidenceId": "fiac-4152026234-20260926",
+      "productId": "fiac-ax-203bd-8-400-50-ce",
+      "productType": "compressor",
+      "occurredAt": "2026-10-24",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "7e80d3a99acec90512ccf8700a0d2835c64683f952a86f6ce17677a20962ead9",
+      "snapshot": {
+        "id": "fiac-4152026234-20260926",
+        "sourceUrl": "https://shop.fiac.it/en-IT/products/4152026234/ax-203bd-13-40050-ce",
+        "sourceLabel": "FIAC, fiche officielle 4152026234, réf. 4152026234",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "La fiche individuelle 4152026234 publie un FAD de 1690 L/min pour cette version de 13 bar. Débit restitué fabricant, pas débit aspiré."
+      }
+    },
+    {
+      "id": "added:fiam-fde33pa:fiam-122311145-20260926-workingpressurebar-1:2026-10-24",
+      "evidenceId": "fiam-122311145-20260926-workingpressurebar-1",
+      "productId": "fiam-fde33pa",
+      "productType": "tool",
+      "occurredAt": "2026-10-24",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "30db8ffc0da6c41938294a182c236f6ddd6b15eb8ef6276251f6fc757e5e61f0",
+      "snapshot": {
+        "id": "fiam-122311145-20260926-workingpressurebar-1",
+        "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf#page=9",
+        "sourceLabel": "Fiam, brochure technique en-34, p. 9",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+      }
+    },
+    {
+      "id": "added:fiam-fde33pa:fiam-124610552-20260926:2026-10-24",
+      "evidenceId": "fiam-124610552-20260926",
+      "productId": "fiam-fde33pa",
+      "productType": "tool",
+      "occurredAt": "2026-10-24",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a2115c519426c8b799f340260282413a752ccf8cbd52e27238ebd8b650e392e4",
+      "snapshot": {
+        "id": "fiam-124610552-20260926",
+        "sourceUrl": "https://www.fiamgroup.com/en/products/air-drills/fde33p/",
+        "sourceLabel": "Fiam, fiche technique FDE33P, réf. 124610552",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "La fiche fabricant publie 10 L/s, soit 600 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML."
+      }
+    },
+    {
+      "id": "added:fiam-fde33pa:fiam-124610552-20260926-workingpressurebar-1:2026-10-24",
+      "evidenceId": "fiam-124610552-20260926-workingpressurebar-1",
+      "productId": "fiam-fde33pa",
+      "productType": "tool",
+      "occurredAt": "2026-10-24",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8b4e1ceeb37106f8389937bcf350a4dfe799ce415e265bbbfe1fba022e97c921",
+      "snapshot": {
+        "id": "fiam-124610552-20260926-workingpressurebar-1",
+        "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf#page=13",
+        "sourceLabel": "Fiam, brochure technique en-34, p. 13",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+      }
+    },
+    {
+      "id": "added:fiam-fde33pa:fiam-124611553-20260926-workingpressurebar-1:2026-10-24",
+      "evidenceId": "fiam-124611553-20260926-workingpressurebar-1",
+      "productId": "fiam-fde33pa",
+      "productType": "tool",
+      "occurredAt": "2026-10-24",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "ca6ace23453ea403c16163b77dbc0a3b46379f585342e398aa3cca762b5ebd8d",
+      "snapshot": {
+        "id": "fiam-124611553-20260926-workingpressurebar-1",
+        "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf#page=13",
+        "sourceLabel": "Fiam, brochure technique en-34, p. 13",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+      }
+    },
+    {
+      "id": "added:fiam-fde33pa:fiam-124611563-20260926-workingpressurebar-1:2026-10-24",
+      "evidenceId": "fiam-124611563-20260926-workingpressurebar-1",
+      "productId": "fiam-fde33pa",
+      "productType": "tool",
+      "occurredAt": "2026-10-24",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "3ccc54a0b6149583e651eef55dbb9f568c3bd73837aa33a9ee5e8c649c450ed8",
+      "snapshot": {
+        "id": "fiam-124611563-20260926-workingpressurebar-1",
+        "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf#page=13",
+        "sourceLabel": "Fiam, brochure technique en-34, p. 13",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+      }
+    },
+    {
+      "id": "added:fiam-les30sp:fiam-144695300-20260926:2026-10-24",
+      "evidenceId": "fiam-144695300-20260926",
+      "productId": "fiam-les30sp",
+      "productType": "tool",
+      "occurredAt": "2026-10-24",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "50720b8ca7a94f1d9c2cdaad05e217f54a8e2933db1e6dce2085adbd87ad4bdd",
+      "snapshot": {
+        "id": "fiam-144695300-20260926",
+        "sourceUrl": "https://www.fiamgroup.com/en/products/grinders-and-sanders/les34/",
+        "sourceLabel": "Fiam, fiche technique LES34, réf. 144695300",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "La fiche fabricant publie 9 L/s, soit 540 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML."
+      }
+    },
+    {
+      "id": "added:fiam-les30sp:fiam-144695300-20260926-workingpressurebar-1:2026-10-24",
+      "evidenceId": "fiam-144695300-20260926-workingpressurebar-1",
+      "productId": "fiam-les30sp",
+      "productType": "tool",
+      "occurredAt": "2026-10-24",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "efa86a01630fd098865accc09e34dfc5ac1c3e3c22d3587cca60b166ea8d8c0b",
+      "snapshot": {
+        "id": "fiam-144695300-20260926-workingpressurebar-1",
+        "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-44.pdf#page=13",
+        "sourceLabel": "Fiam, brochure technique en-44, p. 13",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+      }
+    },
+    {
+      "id": "added:gentilin-c660-100:gentilin-810209001-20260926:2026-10-24",
+      "evidenceId": "gentilin-810209001-20260926",
+      "productId": "gentilin-c660-100",
+      "productType": "compressor",
+      "occurredAt": "2026-10-24",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "9158e26c05a98811c55d8b3b80cc9fcdd4fb30ae43f5b77dae21c8fbf6e726f8",
+      "snapshot": {
+        "id": "gentilin-810209001-20260926",
+        "sourceUrl": "https://www.gentilinair.com/en/products/c330-50",
+        "sourceLabel": "Gentilin, fiche technique C330/50, réf. 810209001",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Débits restitués publiés séparément à 5.0 bar, 8.0 bar. Le débit aspiré est conservé dans un champ distinct."
+      }
+    },
+    {
+      "id": "added:nitto-kohki-b-20d-a:nitto-kohki-b-20d-20260926:2026-10-24",
+      "evidenceId": "nitto-kohki-b-20d-20260926",
+      "productId": "nitto-kohki-b-20d-a",
+      "productType": "tool",
+      "occurredAt": "2026-10-24",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "f47684fbed84e5a85bc9219ad36ba927e5506c9d009bb993a860b0411a60642b",
+      "snapshot": {
+        "id": "nitto-kohki-b-20d-20260926",
+        "sourceUrl": "https://www.nitto-kohki.eu/images/stories/products/pdf_catalogs/Tools_Catalog.pdf#page=38",
+        "sourceLabel": "Nitto Kohki, catalogue officiel des outils, p. 38, réf. B-20D",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Consommation à vide explicitement publiée (No-load) : 0.52 m³/min. Conversion × 1 000 en L/min."
+      }
+    },
+    {
+      "id": "added:red-rooster-rr-0315ns:red-rooster-rr-2110ns-20260926:2026-10-24",
+      "evidenceId": "red-rooster-rr-2110ns-20260926",
+      "productId": "red-rooster-rr-0315ns",
+      "productType": "tool",
+      "occurredAt": "2026-10-24",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "6e2ea406075629eed10b2ed066fa0963cece7e5389af1aed7cf46e130a40a108",
+      "snapshot": {
+        "id": "red-rooster-rr-2110ns-20260926",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=55",
+        "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 55, réf. RR-2110NS",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Consommation publiée : 6.6 L/s, convertis en 396 L/min par multiplication par 60."
+      }
+    },
+    {
+      "id": "added:red-rooster-rr-0315ns:red-rooster-rr-2110ns-20260926-workingpressurebar-1:2026-10-24",
+      "evidenceId": "red-rooster-rr-2110ns-20260926-workingpressurebar-1",
+      "productId": "red-rooster-rr-0315ns",
+      "productType": "tool",
+      "occurredAt": "2026-10-24",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "00d2e2fca18146fab84b2a8d1a9f83c7dd1a54e5be104b7fce9468adc7f92874",
+      "snapshot": {
+        "id": "red-rooster-rr-2110ns-20260926-workingpressurebar-1",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+        "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 106",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+      }
+    },
+    {
+      "id": "added:red-rooster-rr-476:red-rooster-rrj-8205-20260926:2026-10-24",
+      "evidenceId": "red-rooster-rrj-8205-20260926",
+      "productId": "red-rooster-rr-476",
+      "productType": "tool",
+      "occurredAt": "2026-10-24",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "95fe5508d68b0c70e05b2645c5d1d319ec49f3eba93bdc9362c50fad82f9f886",
+      "snapshot": {
+        "id": "red-rooster-rrj-8205-20260926",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=56",
+        "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 56, réf. RRJ-8205",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Consommation publiée : 2.8 L/s, convertis en 168 L/min par multiplication par 60."
+      }
+    },
+    {
+      "id": "added:red-rooster-rr-476:red-rooster-rrj-8205-20260926-workingpressurebar-1:2026-10-24",
+      "evidenceId": "red-rooster-rrj-8205-20260926-workingpressurebar-1",
+      "productId": "red-rooster-rr-476",
+      "productType": "tool",
+      "occurredAt": "2026-10-24",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c5e0c48c09bbc40300e60102d2f40d0031cdd605dd4a69b8747787650858f05f",
+      "snapshot": {
+        "id": "red-rooster-rrj-8205-20260926-workingpressurebar-1",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+        "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 106",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+      }
+    },
+    {
+      "id": "added:red-rooster-rr-8110:red-rooster-rr-8116-20260926:2026-10-24",
+      "evidenceId": "red-rooster-rr-8116-20260926",
+      "productId": "red-rooster-rr-8110",
+      "productType": "tool",
+      "occurredAt": "2026-10-24",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "488fd2cbf345f8f07ab1ae13ec55a78cfd1275f60320593b4fddeb792f3f8824",
+      "snapshot": {
+        "id": "red-rooster-rr-8116-20260926",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=57",
+        "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 57, réf. RR-8116",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Consommation publiée : 8 L/s, convertis en 480 L/min par multiplication par 60."
+      }
+    },
+    {
+      "id": "added:red-rooster-rr-8110:red-rooster-rr-8116-20260926-workingpressurebar-1:2026-10-24",
+      "evidenceId": "red-rooster-rr-8116-20260926-workingpressurebar-1",
+      "productId": "red-rooster-rr-8110",
+      "productType": "tool",
+      "occurredAt": "2026-10-24",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "5f39c501086102074d19837b6ef2ad6cebfb8375a3fe0679ccd292c5d5329530",
+      "snapshot": {
+        "id": "red-rooster-rr-8116-20260926-workingpressurebar-1",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+        "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 106",
+        "sourceType": "manufacturer",
+        "retrievedAt": "2026-09-26",
+        "confidence": "A",
+        "notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+      }
     }
   ],
-  "historyVersion": "d948581692776d7e9b0ac24c3c9544aeb6c780d3811100682fba458788dad378"
+  "historyVersion": "503ab3e5274ff6e9239d403550d24251899ae63f458ce79279761dfe602094da"
 }

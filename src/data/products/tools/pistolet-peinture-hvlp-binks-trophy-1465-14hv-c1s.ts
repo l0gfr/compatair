@@ -31,7 +31,7 @@ const product: ToolProfileInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
   },
   "editorial": {
-    "overview": "Binks Trophy 1465-14HV-C1S. Les conditions de référence du volume normalisé et/ou le régime de mesure manquent. Le débit publié reste hors du calcul FAD. Assemblage 1465-14HV-C1S, buse 1.4 mm, chapeau C1, HVLP, alimentation pressure / siphon sans godet fourni.",
+    "overview": "Trophy 1465-14HV-C1S est l’assemblage HVLP à buse de 1,4 mm et chapeau C1, utilisable en alimentation sous pression ou par siphon, sans godet fourni. Binks classe cette ligne dans les produits HEAVY, au-delà de 30 secondes Zahn 2, tandis que le 1465-10HV-C1S de 1,0 mm relève de LIGHT/MEDIUM, 15 à 20 secondes Zahn 2. La viscosité documentée du produit à appliquer est donc un critère de choix entre ces deux assemblages. Les valeurs de consommation restent en SCFM et hors du calcul FAD, avec pressions d’entrée et au chapeau séparées.",
     "verifiedFacts": [
       "Code assemblage complet, publié littéralement : 1465-14HV-C1S.",
       "Buse produit publiée : 1.4 mm.",

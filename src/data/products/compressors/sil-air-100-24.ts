@@ -79,7 +79,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "SIL-AIR 100/24. 74 L/min déclarés à 5 bar. Compresseur sur cuve 24 L.",
+		"overview": "Le SIL-AIR 100/24 et le 100/24 V conservent une cuve de 24 L et publient 74 L/min à 5 bar pour la version 230 V/50 Hz. Le suffixe V désigne l’ajout de ventilateurs de refroidissement ; le choix concerne ce dispositif et les conditions d’installation. La valeur 88 L/min appartient à la configuration 115 V/60 Hz, qui reste séparée de cette fiche 50 Hz. Le taux de marche applicable demeure à documenter avant de conclure à une exploitation continue.",
 		"verifiedFacts": [
 			"Configuration de pression documentée : 8 bar.",
 			"Cuve de stockage documentée : 24 L.",

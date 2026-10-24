@@ -81,7 +81,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "ELGi EG 110-P, 50 Hz, 11 bar. 17 500 L/min à 10 bar. Moteur 110 kW ; groupe fixe au sol, sans sécheur ; vitesse fixe.",
+		"overview": "Pour cet EG 110-P de 50 Hz, les 11 bar correspondent au maximum de décharge ; le fabricant déclare le FAD de 17500 L/min à la pression de travail de 10 bar. La version de 8 bar publie 21600 L/min à 7 bar avec le même moteur de 110 kW. La brochure mesure le FAD du groupe complet à la sortie du séparateur d’humidité : c’est ce débit à la pression de travail qui sert au dimensionnement du réseau. Le régime continu applicable et la configuration électrique livrée restent à confirmer pour le site.",
 		"verifiedFacts": [
 			"Débit restitué relié à une pression et aux unités originales de la fiche fabricant.",
 			"Périmètre retenu : groupe seul ; réservoir de stockage externe exclu.",

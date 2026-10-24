@@ -1,0 +1,949 @@
+{
+  "schemaVersion": 1,
+  "reconstructionAmendment": "src/data/imports/catalog-amendments-reviewed-2026-10-24.json",
+  "reconstructionGuard": "scripts/lib/reviewed-catalog-amendments-2026-10-24.mjs",
+  "originalTranscriptionsAndProtectedDigestsUnchanged": true,
+  "publicationDay": "2026-10-24",
+  "amendedAt": "2026-10-24T00:56:00.792Z",
+  "scope": "Targeted editorial comparisons based on primary sources read on the actual day; no technical engine inputs changed, no physical testing.",
+  "entries": [
+    {
+      "path": "/compresseurs/fiac-ax-203bd-8-400-50-ce/",
+      "file": "src/data/products/compressors/fiac-ax-203bd-8-400-50-ce.ts",
+      "originalModuleSha256": "5fdc2a3e1e7d54dae5537a21beee579045db5b59d8d60d004dc63517797bd0e0",
+      "amendedModuleSha256": "7c37084fd02fe6ce83714d7b030d5a2a187bcb283ce06600c0d83c9b41683b71",
+      "overviewBefore": "FIAC AX 203BD 8 400/50 CE, référence 4152026232 : configuration sans cuve intégrée, pression maximale publiée de 8 bar. Le point documenté le plus élevé en pression fournit 2 330 L/min à 8 bar. Sans cuve intégrée. Version de base ; sécheur non intégré.",
+      "overviewAfter": "La référence 4152026232 correspond à la version 8 bar de 15 kW, publiée à 2330 L/min ; la 4152026234 atteint 13 bar et annonce 1690 L/min. Ces deux commandes conservent le montage au sol sans cuve intégrée : le choix porte ici sur la pression demandée et la production d’air publiée, avec le stockage à prévoir sur l’installation. Chaque débit reste rattaché à sa référence de pression ; le taux de marche continu demeure à documenter.",
+      "evidenceIdsAdded": [
+        "fiac-4152026234-20260926"
+      ],
+      "neighborCompared": {
+        "path": "/compresseurs/fiac-ax-203bd-13-400-50-ce/",
+        "file": "src/data/products/compressors/fiac-ax-203bd-13-400-50-ce.ts",
+        "moduleSha256": "b4bab28cf28f4ef39829524fd1ff0ba16ade8e100c9c6edf9a41e118ad6793eb",
+        "readingScope": "Identité, cuve, FAD/pression, puissance et montage pertinents ; pas de validation générale de toutes ses affirmations."
+      },
+      "sourcesActuallyRead": [
+        {
+          "evidenceId": "fiac-4152026232-20260926",
+          "existingOwnerProductId": "fiac-ax-203bd-8-400-50-ce",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://shop.fiac.it/en-IT/products/4152026232/ax-203bd-8-40050-ce",
+          "sourceRole": "primary",
+          "bodySha256": "35f8a7405eaa0abc32f29ef0e0e672a107a8012765323b0c559966aa0f4e8746",
+          "observedAt": "2026-10-24T00:36:52Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/7619fb7db50b71620030.body"
+        },
+        {
+          "evidenceId": "fiac-4152026234-20260926",
+          "existingOwnerProductId": "fiac-ax-203bd-13-400-50-ce",
+          "alreadyInCandidateEvidence": false,
+          "sourceUrl": "https://shop.fiac.it/en-IT/products/4152026234/ax-203bd-13-40050-ce",
+          "sourceRole": "primary",
+          "bodySha256": "c6164a4bc00e0749176cd55262e7baf9ff7b6393926be2144ba7afeb23a0718a",
+          "observedAt": "2026-10-24T00:36:53Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/32f77f7f421f3b87606d.body"
+        }
+      ],
+      "technicalInputsUnchanged": true,
+      "limitationsPreserved": true,
+      "approvalPendingActualHashReview": false,
+      "decisionAfterActualHashReview": "approved"
+    },
+    {
+      "path": "/compresseurs/gentilin-c660-100/",
+      "file": "src/data/products/compressors/gentilin-c660-100.ts",
+      "originalModuleSha256": "bfe2c3ddd949464b9f46798e2bfe613a08df8078873745cf272dbdbb475a6f40",
+      "amendedModuleSha256": "759a318df971d4a2c36f0ede0ad75205679281fdb58909974c188b433f61ad3c",
+      "overviewBefore": "Gentilin C660/100, référence 810310001 : cuve de 90 L, pression maximale publiée de 10 bar. Le point documenté le plus élevé en pression fournit 330 L/min à 8 bar.",
+      "overviewAfter": "Le C660/100 dispose de 90 L et publie 400 L/min à 5 bar, puis 330 L/min à 8 bar ; le C330/50 voisin conserve 50 L avec 200 et 165 L/min aux mêmes pressions. Le passage au C660 apporte donc une production documentée supérieure aux deux points de travail, accompagnée d’un moteur annoncé à 4,4 kW contre 2,2 kW. La mention 230 V doit être rapprochée de l’alimentation et du raccordement exacts à faire confirmer avant installation ; la cuve de 90 L et le débit aspiré de 660 L/min sont des données distinctes du débit disponible à 8 bar.",
+      "evidenceIdsAdded": [
+        "gentilin-810209001-20260926"
+      ],
+      "neighborCompared": {
+        "path": "/compresseurs/gentilin-c330-50/",
+        "file": "src/data/products/compressors/gentilin-c330-50.ts",
+        "moduleSha256": "ac76f52ec903662820c950af341105cc4873d700424bf49637e22e69cac1d6f4",
+        "readingScope": "Identité, cuve, FAD/pression, puissance et montage pertinents ; pas de validation générale de toutes ses affirmations."
+      },
+      "sourcesActuallyRead": [
+        {
+          "evidenceId": "gentilin-810310001-20260926",
+          "existingOwnerProductId": "gentilin-c660-100",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://www.gentilinair.com/en/products/c660-100",
+          "sourceRole": "primary",
+          "bodySha256": "aa789997bce7a52c4ee981e44d93a9ab77f163954fbffdbe69508a191509a773",
+          "observedAt": "2026-10-24T00:36:57Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/a3eb3d24fccd32f9369a.body"
+        },
+        {
+          "evidenceId": "gentilin-810209001-20260926",
+          "existingOwnerProductId": "gentilin-c330-50",
+          "alreadyInCandidateEvidence": false,
+          "sourceUrl": "https://www.gentilinair.com/en/products/c330-50",
+          "sourceRole": "primary",
+          "bodySha256": "6c86848f657c8ff467aa3994cddcd91a0ba4b25dccfd1595611f423f104906cd",
+          "observedAt": "2026-10-24T00:36:56Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/055ebef054f0e9df98d8.body"
+        }
+      ],
+      "technicalInputsUnchanged": true,
+      "limitationsPreserved": true,
+      "approvalPendingActualHashReview": false,
+      "decisionAfterActualHashReview": "approved"
+    },
+    {
+      "path": "/compresseurs/almig-combi-xp-8-270d/",
+      "file": "src/data/products/compressors/almig-combi-xp-8-270d.ts",
+      "originalModuleSha256": "cd60c586481f19f909deea3b6fdbbe5505b9dfb9e14b14916a357a04043b3590",
+      "amendedModuleSha256": "427562027e50ddf43b78040946e0cf450ae1f633f0cc9685be315a4699583e26",
+      "overviewBefore": "ALMiG COMBI XP 8 270D. Station 4-en-1 : réservoir 270 L, sécheur frigorifique, préfiltre et postfiltre. La courbe reprend les capacités maximales publiées, avec les minima conservés séparément.",
+      "overviewAfter": "Le COMBI XP 8 et le XP 6 gardent la cuve de 270 L, le sécheur frigorifique et la pré/post-filtration ; leur différence porte surtout sur la plage de production. À 10 bar, le XP 8 module de 170 à 980 L/min, contre 180 à 690 L/min pour le XP 6. À 13 bar, les plages publiées deviennent 140–750 et 170–590 L/min respectivement, avec des moteurs de 7,5 et 5,5 kW. Ces bornes constructeur servent à examiner la modulation à la pression requise ; le débit moyen réellement demandé par l’atelier reste à mesurer.",
+      "evidenceIdsAdded": [],
+      "neighborCompared": {
+        "path": "/compresseurs/almig-combi-xp-6-270d/",
+        "file": "src/data/products/compressors/almig-combi-xp-6-270d.ts",
+        "moduleSha256": "fcc5ceebb3426252b4dc728216eaa5d79d340543e179fe33e9d4e75a43ceb253",
+        "readingScope": "Identité, cuve, FAD/pression, puissance et montage pertinents ; pas de validation générale de toutes ses affirmations."
+      },
+      "sourcesActuallyRead": [
+        {
+          "evidenceId": "documented-20260930-almig-2026",
+          "existingOwnerProductId": "almig-combi-xp-8-270d",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf",
+          "sourceRole": "primary",
+          "bodySha256": "f5ca167dedaab25352808dc5001ba9badc7acffb2c37168c6d9f89182b752a0e",
+          "observedAt": "2026-10-24T00:36:54Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/49dc062620e5cfb112cb.body"
+        },
+        {
+          "evidenceId": "documented-20260930-almig-2026",
+          "existingOwnerProductId": "almig-combi-xp-6-270d",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf",
+          "sourceRole": "primary",
+          "bodySha256": "f5ca167dedaab25352808dc5001ba9badc7acffb2c37168c6d9f89182b752a0e",
+          "observedAt": "2026-10-24T00:36:54Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/49dc062620e5cfb112cb.body"
+        }
+      ],
+      "technicalInputsUnchanged": true,
+      "limitationsPreserved": true,
+      "approvalPendingActualHashReview": false,
+      "decisionAfterActualHashReview": "approved"
+    },
+    {
+      "path": "/compresseurs/renner-rs-pro-3-0-310001/",
+      "file": "src/data/products/compressors/renner-rs-pro-3-0-310001.ts",
+      "originalModuleSha256": "9f34b20f4e3901864093112a3b7b7b55390384f1402a8962b2e54b65291d46f2",
+      "amendedModuleSha256": "4cb96f77d5150f7491cfc66cb20846d2cfe89f68ce8707bbed44be886ba4ade3",
+      "overviewBefore": "RENNER RS-PRO 3.0, article 310001. Version standard au sol, sans réservoir intégré. Cette référence correspond à la version 10 bar ; son débit est 410 L/min à cette pression.",
+      "overviewAfter": "L’article 310001 est la version 10 bar du RS-PRO 3.0, donnée pour 410 L/min ; l’article 310000 correspond à 7,5 bar et 540 L/min. Le moteur de 3 kW, le montage au sol et les 153 kg restent communs : la référence de commande fixe le compromis de pression et de débit. Le point 410 L/min appartient au 310001 et doit être conservé séparément des performances des autres versions de pression.",
+      "evidenceIdsAdded": [],
+      "neighborCompared": {
+        "path": "/compresseurs/renner-rs-pro-3-0-310000/",
+        "file": "src/data/products/compressors/renner-rs-pro-3-0-310000.ts",
+        "moduleSha256": "c6e084e6758353e45da1ec2ba86624b13c67b854bb6b3e1422bf148c5a5fe4e0",
+        "readingScope": "Identité, cuve, FAD/pression, puissance et montage pertinents ; pas de validation générale de toutes ses affirmations."
+      },
+      "sourcesActuallyRead": [
+        {
+          "evidenceId": "documented-20260930-renner-2026",
+          "existingOwnerProductId": "renner-rs-pro-3-0-310001",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf",
+          "sourceRole": "primary",
+          "bodySha256": "35bd2421c2cc333bc6a0d6cd20c09bbf6b3c2af621021cb6cd2a254d23e74f8a",
+          "observedAt": "2026-10-24T00:36:59Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/74d3082e12db6081d506.body"
+        },
+        {
+          "evidenceId": "documented-20260930-renner-2026",
+          "existingOwnerProductId": "renner-rs-pro-3-0-310000",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf",
+          "sourceRole": "primary",
+          "bodySha256": "35bd2421c2cc333bc6a0d6cd20c09bbf6b3c2af621021cb6cd2a254d23e74f8a",
+          "observedAt": "2026-10-24T00:36:59Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/74d3082e12db6081d506.body"
+        }
+      ],
+      "technicalInputsUnchanged": true,
+      "limitationsPreserved": true,
+      "approvalPendingActualHashReview": false,
+      "decisionAfterActualHashReview": "approved"
+    },
+    {
+      "path": "/compresseurs/kaeser-aircenter-13-secheur-et-cuve-integres-8-bar/",
+      "file": "src/data/products/compressors/kaeser-aircenter-13-secheur-et-cuve-integres-8-bar.ts",
+      "originalModuleSha256": "367e20a91b1a45af3f201ab569c89f4a477b2047ff847ad06012891afb84a5bd",
+      "amendedModuleSha256": "54a4fe5f560a0053072c7dfb23e536cb3945976ee03b906a7fece6cf7333f660",
+      "overviewBefore": "KAESER AIRCENTER 13, sécheur et cuve intégrés, 8 bar. Débit restitué déclaré : 1 320 L/min à 7,5 bar. Puissance moteur : 7,5 kW ; masse : 440 kg.",
+      "overviewAfter": "La configuration AIRCENTER 13 de 8 bar publie 1320 L/min à 7,5 bar, tandis que la configuration 15 bar publie 850 L/min à 13 bar. Les deux stations associent une cuve de 270 L, un moteur de 7,5 kW et le sécheur intégré, pour une masse publiée de 440 kg. Le choix de version part donc de la pression requise au poste et des pertes du réseau ; chaque point de débit reste attaché à sa configuration constructeur. La tension et les options effectivement livrées sont à confirmer sur le devis.",
+      "evidenceIdsAdded": [],
+      "neighborCompared": {
+        "path": "/compresseurs/kaeser-aircenter-13-secheur-et-cuve-integres-15-bar/",
+        "file": "src/data/products/compressors/kaeser-aircenter-13-secheur-et-cuve-integres-15-bar.ts",
+        "moduleSha256": "93694aa878d8f11990c6efef8a1670b9a71eddb5c26339f4b39b538fd0f808b8",
+        "readingScope": "Identité, cuve, FAD/pression, puissance et montage pertinents ; pas de validation générale de toutes ses affirmations."
+      },
+      "sourcesActuallyRead": [
+        {
+          "evidenceId": "october-b-kaeser-sm-p8",
+          "existingOwnerProductId": "kaeser-aircenter-13-secheur-et-cuve-integres-8-bar",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://nl.kaeser.com/download.ashx?id=tcm:32-5920#page=8",
+          "sourceRole": "primary",
+          "bodySha256": "7c4b96a5fb4ea4fb206655af4138d8a90096a61661823528c5f6bf282d66a6d5",
+          "observedAt": "2026-10-24T00:36:52Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/233a6b127caccf654e55.body"
+        },
+        {
+          "evidenceId": "october-b-kaeser-sm-p8",
+          "existingOwnerProductId": "kaeser-aircenter-13-secheur-et-cuve-integres-15-bar",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://nl.kaeser.com/download.ashx?id=tcm:32-5920#page=8",
+          "sourceRole": "primary",
+          "bodySha256": "7c4b96a5fb4ea4fb206655af4138d8a90096a61661823528c5f6bf282d66a6d5",
+          "observedAt": "2026-10-24T00:36:52Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/233a6b127caccf654e55.body"
+        }
+      ],
+      "technicalInputsUnchanged": true,
+      "limitationsPreserved": true,
+      "approvalPendingActualHashReview": false,
+      "decisionAfterActualHashReview": "approved"
+    },
+    {
+      "path": "/compresseurs/elgi-eg-110-p-50-hz-11-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/",
+      "file": "src/data/products/compressors/elgi-eg-110-p-50-hz-11-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe.ts",
+      "originalModuleSha256": "6590232560769abe4260fddca0dedc5c3eb1b65a26b799cb1c78fb1d88399609",
+      "amendedModuleSha256": "1f38d19b0f8a8b2ff0d39feb9eb38823fef1a0cf0d0d48856d684893e3d65d5e",
+      "overviewBefore": "ELGi EG 110-P, 50 Hz, 11 bar. 17 500 L/min à 10 bar. Moteur 110 kW ; groupe fixe au sol, sans sécheur ; vitesse fixe.",
+      "overviewAfter": "Pour cet EG 110-P de 50 Hz, les 11 bar correspondent au maximum de décharge ; le fabricant déclare le FAD de 17500 L/min à la pression de travail de 10 bar. La version de 8 bar publie 21600 L/min à 7 bar avec le même moteur de 110 kW. La brochure mesure le FAD du groupe complet à la sortie du séparateur d’humidité : c’est ce débit à la pression de travail qui sert au dimensionnement du réseau. Le régime continu applicable et la configuration électrique livrée restent à confirmer pour le site.",
+      "evidenceIdsAdded": [],
+      "neighborCompared": {
+        "path": "/compresseurs/elgi-eg-110-p-50-hz-8-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/",
+        "file": "src/data/products/compressors/elgi-eg-110-p-50-hz-8-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe.ts",
+        "moduleSha256": "c361343cf1a95fdabbf60646b537b3048700eed80a8419a9298b63665a5143f5",
+        "readingScope": "Identité, cuve, FAD/pression, puissance et montage pertinents ; pas de validation générale de toutes ses affirmations."
+      },
+      "sourcesActuallyRead": [
+        {
+          "evidenceId": "october2b-elgi-eg-premium-p8",
+          "existingOwnerProductId": "elgi-eg-110-p-50-hz-11-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://www.elgi.com/in/wp-content/uploads/2019/06/EG-Premium-90-160-catalogue_India.pdf#page=8",
+          "sourceRole": "primary",
+          "bodySha256": "2b9f43ec8dff222a8f93b9217c688172836c6c783a2c5af2c5e44ebf448f8b9d",
+          "observedAt": "2026-10-24T00:36:55Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/485b26969a587de8f0d0.body"
+        },
+        {
+          "evidenceId": "october2b-elgi-eg-premium-p8",
+          "existingOwnerProductId": "elgi-eg-110-p-50-hz-8-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://www.elgi.com/in/wp-content/uploads/2019/06/EG-Premium-90-160-catalogue_India.pdf#page=8",
+          "sourceRole": "primary",
+          "bodySha256": "2b9f43ec8dff222a8f93b9217c688172836c6c783a2c5af2c5e44ebf448f8b9d",
+          "observedAt": "2026-10-24T00:36:55Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/485b26969a587de8f0d0.body"
+        }
+      ],
+      "technicalInputsUnchanged": true,
+      "limitationsPreserved": true,
+      "approvalPendingActualHashReview": false,
+      "decisionAfterActualHashReview": "approved"
+    },
+    {
+      "path": "/compresseurs/airpol-55/",
+      "file": "src/data/products/compressors/airpol-55.ts",
+      "originalModuleSha256": "8f0c6f96f993409f8775bd70b13a2ee8bc0df7e018f257dfcb11ce48becd2bf0",
+      "amendedModuleSha256": "54589fddb3adc22b57ac092aec51c5467f1054e3da34be787ef095ec718bd3d5",
+      "overviewBefore": "Airpol 55. 5 833,333 L/min à 15 bar. Groupe Airpol sans réservoir de stockage intégré.",
+      "overviewAfter": "À 15 bar, l’Airpol 55 publie 350 m³/h, soit 5833,333 L/min ; l’Airpol 45 voisin est donné pour 280 m³/h, soit 4666,667 L/min, à la même pression. Le passage de 45 à 55 kW correspond donc ici à un palier de production d’air documenté à 15 bar. Pour un atelier visant cette pression, le choix se fait sur le besoin simultané du réseau et sur ces capacités publiées ; le taux de marche et les conditions de référence complètes restent à obtenir avant un engagement permanent.",
+      "evidenceIdsAdded": [
+        "october3d-airpol-pdf-075-p11"
+      ],
+      "neighborCompared": {
+        "path": "/compresseurs/airpol-45/",
+        "file": "src/data/products/compressors/airpol-45.ts",
+        "moduleSha256": "ac0baba0a0c1d104cd378a1d126816740dd7d508bb188a7855ad6ef91235d372",
+        "readingScope": "Identité, cuve, FAD/pression, puissance et montage pertinents ; pas de validation générale de toutes ses affirmations."
+      },
+      "sourcesActuallyRead": [
+        {
+          "evidenceId": "october3d-airpol-pdf-075-p12",
+          "existingOwnerProductId": "airpol-55",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://airpol.com.pl/wp-content/uploads/2022/05/EN-Karta-Airpol-185-55kW.pdf#page=12",
+          "sourceRole": "primary",
+          "bodySha256": "03765bd3f6325ceba8a938e64a469e120e952843538b1a18f3aac757d0728e64",
+          "observedAt": "2026-10-24T00:36:49Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/e22f723727fd109a682d.body"
+        },
+        {
+          "evidenceId": "october3d-airpol-screw-p9",
+          "existingOwnerProductId": "airpol-55",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://airpol.com.pl/wp-content/uploads/2022/05/Airpol-screw-compressors.pdf#page=9",
+          "sourceRole": "primary",
+          "bodySha256": "93fb6c0baf7deedc619234c8c63575d9edfeab652447ffc07e673ddb9c7cbdd8",
+          "observedAt": "2026-10-24T00:36:49Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/e80a72d2addc3ec0a6f4.body"
+        },
+        {
+          "evidenceId": "october3d-airpol-pdf-075-p11",
+          "existingOwnerProductId": "airpol-45",
+          "alreadyInCandidateEvidence": false,
+          "sourceUrl": "https://airpol.com.pl/wp-content/uploads/2022/05/EN-Karta-Airpol-185-55kW.pdf#page=11",
+          "sourceRole": "primary",
+          "bodySha256": "03765bd3f6325ceba8a938e64a469e120e952843538b1a18f3aac757d0728e64",
+          "observedAt": "2026-10-24T00:36:49Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/e22f723727fd109a682d.body"
+        },
+        {
+          "evidenceId": "october3d-airpol-screw-p9",
+          "existingOwnerProductId": "airpol-45",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://airpol.com.pl/wp-content/uploads/2022/05/Airpol-screw-compressors.pdf#page=9",
+          "sourceRole": "primary",
+          "bodySha256": "93fb6c0baf7deedc619234c8c63575d9edfeab652447ffc07e673ddb9c7cbdd8",
+          "observedAt": "2026-10-24T00:36:49Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/e80a72d2addc3ec0a6f4.body"
+        }
+      ],
+      "technicalInputsUnchanged": true,
+      "limitationsPreserved": true,
+      "approvalPendingActualHashReview": false,
+      "decisionAfterActualHashReview": "approved"
+    },
+    {
+      "path": "/compresseurs/bambi-bb8/",
+      "file": "src/data/products/compressors/bambi-bb8.ts",
+      "originalModuleSha256": "06a7753a0eb6a8d5cde774c33d937a9c154cd4d2941645f35040e73e0d2a8ff4",
+      "amendedModuleSha256": "fad0bae79408b5fde236afceceb809d8a5456c307d6c335f23157bd389b53d3b",
+      "overviewBefore": "Bambi BB8. 35 L/min à 1 bar ; 32 L/min à 2 bar ; 30 L/min à 3 bar ; 28 L/min à 4 bar ; 27 L/min à 5 bar ; 26 L/min à 6 bar ; 25,5 L/min à 7 bar ; 25 L/min à 8 bar. Groupe avec cuve 9 L.",
+      "overviewAfter": "Le BB8 et le BB15 V publient tous deux 27 L/min à 5 bar avec un moteur de 0,34 kW ; leurs cuves sont respectivement de 9 et 15 L. Le choix entre ces formats porte donc sur la réserve d’air et l’encombrement, avec une même production publiée à cette pression. Le fabricant annonce un cycle maximal de 50 % sans fenêtre de temps précisée dans la fiche : l’usage reste intermittent à organiser selon la notice. Les exigences d’air de l’équipement doivent être rapprochées du point FAD correspondant à sa pression.",
+      "evidenceIdsAdded": [
+        "october3d-bambi-product-29"
+      ],
+      "neighborCompared": {
+        "path": "/compresseurs/bambi-bb15v/",
+        "file": "src/data/products/compressors/bambi-bb15v.ts",
+        "moduleSha256": "8c32ded21d6c1f5b621eefbe8b46cfddbcd767b5235e12c0f7a2c80b080187f5",
+        "readingScope": "Identité, cuve, FAD/pression, puissance et montage pertinents ; pas de validation générale de toutes ses affirmations."
+      },
+      "sourcesActuallyRead": [
+        {
+          "evidenceId": "october3d-bambi-product-28",
+          "existingOwnerProductId": "bambi-bb8",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://bambi-air.co.uk/product/bb8/",
+          "sourceRole": "primary",
+          "bodySha256": "66be90466f5e5e6996542060cbbdefbc726a13578c94f34672b51b54761dae81",
+          "observedAt": "2026-10-24T00:36:50Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/679a8f413acc890d9b19.body"
+        },
+        {
+          "evidenceId": "october3d-bambi-product-29",
+          "existingOwnerProductId": "bambi-bb15v",
+          "alreadyInCandidateEvidence": false,
+          "sourceUrl": "https://bambi-air.co.uk/product/bb15v/",
+          "sourceRole": "primary",
+          "bodySha256": "1900646af44d11b474507ba38447acc686d6c600194d2b668c47542d860ec806",
+          "observedAt": "2026-10-24T00:36:49Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/b652a32e9012e80101d0.body"
+        }
+      ],
+      "technicalInputsUnchanged": true,
+      "limitationsPreserved": true,
+      "approvalPendingActualHashReview": false,
+      "decisionAfterActualHashReview": "approved"
+    },
+    {
+      "path": "/compresseurs/ekom-dk50-2v-50s-m/",
+      "file": "src/data/products/compressors/ekom-dk50-2v-50s-m.ts",
+      "originalModuleSha256": "71922f87a91b13b07582d6912ca715609394f7fbbddf6f4ee2c7266d264af0e7",
+      "amendedModuleSha256": "723f11b469b6f0951052e7c3e99f31f47b47f5c580b647b35af504d770bb1a5e",
+      "overviewBefore": "EKOM DK50 2V/50S/M. 104 L/min à 6 bar. Groupe avec cuve et sécheur et armoire acoustique.",
+      "overviewAfter": "Le DK50 2 V/50S/M associe une armoire acoustique et un sécheur à membrane ; son débit publié est 104 L/min à 6 bar. Le DK50 2 V/50 sans ces équipements annonce 135 L/min à 6 bar, avec le même moteur de 1,2 kW et la même cuve de 50 L. Le choix porte ainsi sur le traitement d’air et l’installation acoustique, en dimensionnant le poste avec les 104 L/min de la variante S/M. La plage de travail 6–8 bar reste distincte du réglage de soupape à 9 bar ; cette fiche retient la configuration 50 Hz.",
+      "evidenceIdsAdded": [],
+      "neighborCompared": {
+        "path": "/compresseurs/ekom-dk50-2v-50/",
+        "file": "src/data/products/compressors/ekom-dk50-2v-50.ts",
+        "moduleSha256": "fc4f84a3d1663c1fbf276353c32d9aad63fcc31a4afc0cea197c5f31a073b367",
+        "readingScope": "Identité, cuve, FAD/pression, puissance et montage pertinents ; pas de validation générale de toutes ses affirmations."
+      },
+      "sourcesActuallyRead": [
+        {
+          "evidenceId": "october3d-ekom-manual-08-p18",
+          "existingOwnerProductId": "ekom-dk50-2v-50s-m",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://www.ekom.sk/fileadmin/Ekom/navody/2021/industry_lab/NP-DK50_2V_50__2x2V_110-A-21_06-2026-MD.pdf#page=18",
+          "sourceRole": "primary",
+          "bodySha256": "b732c4bd37b883479e473ebc1bbd69a11f666147cc0b5691360cd381385f442b",
+          "observedAt": "2026-10-24T00:36:55Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/e5ddb8c92c32e2b2fe7a.body"
+        },
+        {
+          "evidenceId": "october3d-ekom-manual-08-p23",
+          "existingOwnerProductId": "ekom-dk50-2v-50s-m",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://www.ekom.sk/fileadmin/Ekom/navody/2021/industry_lab/NP-DK50_2V_50__2x2V_110-A-21_06-2026-MD.pdf#page=23",
+          "sourceRole": "primary",
+          "bodySha256": "b732c4bd37b883479e473ebc1bbd69a11f666147cc0b5691360cd381385f442b",
+          "observedAt": "2026-10-24T00:36:55Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/e5ddb8c92c32e2b2fe7a.body"
+        },
+        {
+          "evidenceId": "october3d-ekom-manual-08-p18",
+          "existingOwnerProductId": "ekom-dk50-2v-50",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://www.ekom.sk/fileadmin/Ekom/navody/2021/industry_lab/NP-DK50_2V_50__2x2V_110-A-21_06-2026-MD.pdf#page=18",
+          "sourceRole": "primary",
+          "bodySha256": "b732c4bd37b883479e473ebc1bbd69a11f666147cc0b5691360cd381385f442b",
+          "observedAt": "2026-10-24T00:36:55Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/e5ddb8c92c32e2b2fe7a.body"
+        },
+        {
+          "evidenceId": "october3d-ekom-manual-08-p23",
+          "existingOwnerProductId": "ekom-dk50-2v-50",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://www.ekom.sk/fileadmin/Ekom/navody/2021/industry_lab/NP-DK50_2V_50__2x2V_110-A-21_06-2026-MD.pdf#page=23",
+          "sourceRole": "primary",
+          "bodySha256": "b732c4bd37b883479e473ebc1bbd69a11f666147cc0b5691360cd381385f442b",
+          "observedAt": "2026-10-24T00:36:55Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/e5ddb8c92c32e2b2fe7a.body"
+        }
+      ],
+      "technicalInputsUnchanged": true,
+      "limitationsPreserved": true,
+      "approvalPendingActualHashReview": false,
+      "decisionAfterActualHashReview": "approved"
+    },
+    {
+      "path": "/compresseurs/mattei-blade-se-12/",
+      "file": "src/data/products/compressors/mattei-blade-se-12.ts",
+      "originalModuleSha256": "8a05b5c2a2844c1df0ce172baba6e8646b0b10162d78fc123a81e4e6ee60d1c5",
+      "amendedModuleSha256": "9c1ceca23b29b9a7c1c402c35136d8e289ef5d912fdeff2625d18cdb3f97e74c",
+      "overviewBefore": "Mattei BLADE SE 12. 1 370 L/min à 9,5 bar. BLADE sur réservoir 270 L avec sécheur.",
+      "overviewAfter": "En 50 Hz, le BLADE SE 12 et le BLADE S 12 publient 1370 L/min à 9,5 bar, avec 11 kW et une cuve de 270 L. Le SE ajoute le sécheur intégré et porte la masse publiée à 428 kg, contre 396 kg pour le S. Le choix de la version SE concerne donc le traitement d’air et son intégration dans l’atelier, avec une même production déclarée à 9,5 bar. Les valeurs 60 Hz et les autres versions de pression restent séparées ; la qualité d’air exigée au poste doit être vérifiée sur l’installation complète.",
+      "evidenceIdsAdded": [],
+      "neighborCompared": {
+        "path": "/compresseurs/mattei-blade-s-12/",
+        "file": "src/data/products/compressors/mattei-blade-s-12.ts",
+        "moduleSha256": "c1c01914036b2710d8523c6e72acc269e2f69731314b90809eefb11f7329c9d0",
+        "readingScope": "Identité, cuve, FAD/pression, puissance et montage pertinents ; pas de validation générale de toutes ses affirmations."
+      },
+      "sourcesActuallyRead": [
+        {
+          "evidenceId": "october3d-mattei-pdf-11-p7",
+          "existingOwnerProductId": "mattei-blade-se-12",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://cdn2.hubspot.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20BLADE/BLADE_8-12_EN_1.pdf#page=7",
+          "sourceRole": "primary",
+          "bodySha256": "af2f2664d3734e56f2b27b6dfb1d86a8b8d10b3491ab3f7813b72110cbb08e55",
+          "observedAt": "2026-10-24T00:36:51Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/13fcbb14b8d487eb0b9a.body"
+        },
+        {
+          "evidenceId": "october3d-mattei-pdf-11-p7",
+          "existingOwnerProductId": "mattei-blade-s-12",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://cdn2.hubspot.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20BLADE/BLADE_8-12_EN_1.pdf#page=7",
+          "sourceRole": "primary",
+          "bodySha256": "af2f2664d3734e56f2b27b6dfb1d86a8b8d10b3491ab3f7813b72110cbb08e55",
+          "observedAt": "2026-10-24T00:36:51Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/13fcbb14b8d487eb0b9a.body"
+        }
+      ],
+      "technicalInputsUnchanged": true,
+      "limitationsPreserved": true,
+      "approvalPendingActualHashReview": false,
+      "decisionAfterActualHashReview": "approved"
+    },
+    {
+      "path": "/compresseurs/sil-air-100-24/",
+      "file": "src/data/products/compressors/sil-air-100-24.ts",
+      "originalModuleSha256": "bd933555dd138e543af276992e1dee62061b0e365283b81bbcb7fd1c2ec703fb",
+      "amendedModuleSha256": "7839ac97b89342937979b43fc51fb529fef8badb9487b7a84318b2999e723434",
+      "overviewBefore": "SIL-AIR 100/24. 74 L/min déclarés à 5 bar. Compresseur sur cuve 24 L.",
+      "overviewAfter": "Le SIL-AIR 100/24 et le 100/24 V conservent une cuve de 24 L et publient 74 L/min à 5 bar pour la version 230 V/50 Hz. Le suffixe V désigne l’ajout de ventilateurs de refroidissement ; le choix concerne ce dispositif et les conditions d’installation. La valeur 88 L/min appartient à la configuration 115 V/60 Hz, qui reste séparée de cette fiche 50 Hz. Le taux de marche applicable demeure à documenter avant de conclure à une exploitation continue.",
+      "evidenceIdsAdded": [],
+      "neighborCompared": {
+        "path": "/compresseurs/sil-air-100-24-v/",
+        "file": "src/data/products/compressors/sil-air-100-24-v.ts",
+        "moduleSha256": "6bb0b3788269e501938cbf65a97695c00e6aac7c7806f4b31f88b6c47c86688d",
+        "readingScope": "Identité, cuve, FAD/pression, puissance et montage pertinents ; pas de validation générale de toutes ses affirmations."
+      },
+      "sourcesActuallyRead": [
+        {
+          "evidenceId": "october4-silair-current-catalog-p25",
+          "existingOwnerProductId": "sil-air-100-24",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://cdn.prod.website-files.com/5ef4a20d28c31157474872b0/6a4fceb90145c46f2acc6262_SILAIR%202025.pdf#page=25",
+          "sourceRole": "primary",
+          "bodySha256": "d93f1024b6fa89f01eaacc77c199f3d2f5deb296b92dedf6081ab8568854468a",
+          "observedAt": "2026-10-24T00:36:51Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/13d419b49922d42677e2.body"
+        },
+        {
+          "evidenceId": "october4-silair-current-catalog-p5",
+          "existingOwnerProductId": "sil-air-100-24",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://cdn.prod.website-files.com/5ef4a20d28c31157474872b0/6a4fceb90145c46f2acc6262_SILAIR%202025.pdf#page=5",
+          "sourceRole": "primary",
+          "bodySha256": "d93f1024b6fa89f01eaacc77c199f3d2f5deb296b92dedf6081ab8568854468a",
+          "observedAt": "2026-10-24T00:36:51Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/13d419b49922d42677e2.body"
+        },
+        {
+          "evidenceId": "october4-silair-current-catalog-p25",
+          "existingOwnerProductId": "sil-air-100-24-v",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://cdn.prod.website-files.com/5ef4a20d28c31157474872b0/6a4fceb90145c46f2acc6262_SILAIR%202025.pdf#page=25",
+          "sourceRole": "primary",
+          "bodySha256": "d93f1024b6fa89f01eaacc77c199f3d2f5deb296b92dedf6081ab8568854468a",
+          "observedAt": "2026-10-24T00:36:51Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/13d419b49922d42677e2.body"
+        },
+        {
+          "evidenceId": "october4-silair-current-catalog-p5",
+          "existingOwnerProductId": "sil-air-100-24-v",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://cdn.prod.website-files.com/5ef4a20d28c31157474872b0/6a4fceb90145c46f2acc6262_SILAIR%202025.pdf#page=5",
+          "sourceRole": "primary",
+          "bodySha256": "d93f1024b6fa89f01eaacc77c199f3d2f5deb296b92dedf6081ab8568854468a",
+          "observedAt": "2026-10-24T00:36:51Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/13d419b49922d42677e2.body"
+        }
+      ],
+      "technicalInputsUnchanged": true,
+      "limitationsPreserved": true,
+      "approvalPendingActualHashReview": false,
+      "decisionAfterActualHashReview": "approved"
+    },
+    {
+      "path": "/compresseurs/fini-cube-4-0-10-270-es-z/",
+      "file": "src/data/products/compressors/fini-cube-4-0-10-270-es-z.ts",
+      "originalModuleSha256": "c992888b33f38e3c4d38f7b9da033e61fb9dfd217f67cf5437e171ed9ccccfc2",
+      "amendedModuleSha256": "9b51d4ae15060b786a744b146acb81c95dfdf43dca5b2fc1afb056ae484d983d",
+      "overviewBefore": "Fini CUBE 4.0-10-270 ES Z. 460 L/min déclarés à 9,5 bar. Configuration constructeur : Cuve 270 L galvanisée avec sécheur frigorifique intégré.",
+      "overviewAfter": "Les références V91PD92FNM501 (ES Z) et V91PD92FNM301 (ES) publient toutes deux 460 L/min à 9,5 bar, avec 4 kW et une cuve de 270 L. Le fabricant définit ES comme la version avec sécheur frigorifique et Z comme la cuve galvanisée : le choix de cette référence porte sur la finition du réservoir, avec une même production d’air déclarée. Le point de mesure 9,5 bar reste distinct du maximum de 10 bar ; le sécheur livré et la qualité d’air requise au poste sont à préciser sur le devis.",
+      "evidenceIdsAdded": [],
+      "neighborCompared": {
+        "path": "/compresseurs/fini-cube-4-0-10-270-es/",
+        "file": "src/data/products/compressors/fini-cube-4-0-10-270-es.ts",
+        "moduleSha256": "471e7fadb4055ef959c7342121ec6040ca44a2fa8072969077af482dc2abfce2",
+        "readingScope": "Identité, cuve, FAD/pression, puissance et montage pertinents ; pas de validation générale de toutes ses affirmations."
+      },
+      "sourcesActuallyRead": [
+        {
+          "evidenceId": "october4b-fini-cube-p3",
+          "existingOwnerProductId": "fini-cube-4-0-10-270-es-z",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://finicompressors.com/wp-content/uploads/Catalogo-Cube-Fini_EN_04-2024_9990397.pdf#page=3",
+          "sourceRole": "primary",
+          "bodySha256": "270d2f554801e15883dd85b3f3b6089c641adf51dd59c15f31e0fd06c7b88e1a",
+          "observedAt": "2026-10-24T00:36:52Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/0e0e3f3928c5a9c0ad47.body"
+        },
+        {
+          "evidenceId": "october4b-fini-cube-p3",
+          "existingOwnerProductId": "fini-cube-4-0-10-270-es",
+          "alreadyInCandidateEvidence": true,
+          "sourceUrl": "https://finicompressors.com/wp-content/uploads/Catalogo-Cube-Fini_EN_04-2024_9990397.pdf#page=3",
+          "sourceRole": "primary",
+          "bodySha256": "270d2f554801e15883dd85b3f3b6089c641adf51dd59c15f31e0fd06c7b88e1a",
+          "observedAt": "2026-10-24T00:36:52Z",
+          "httpStatus": 200,
+          "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/0e0e3f3928c5a9c0ad47.body"
+        }
+      ],
+      "technicalInputsUnchanged": true,
+      "limitationsPreserved": true,
+      "approvalPendingActualHashReview": false,
+      "decisionAfterActualHashReview": "approved"
+    },
+    {
+      "path": "/outils-pneumatiques/sableuse-asturomec-supermistral-50300/",
+      "file": "src/data/products/tools/sableuse-asturomec-supermistral-50300.ts",
+      "originalModuleSha256": "ee826817ae2f018b2cd748ec10ed2c456927be5e5150fc6f27feb148a38baa87",
+      "amendedModuleSha256": "f2b02c75bda0f7c73583200292800093ce0813d7017982361c80fd2e54fdfbe1",
+      "overviewBefore": "Asturomec SUPERMISTRAL (réf. 50300). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+      "overviewAfter": "SUPERMISTRAL 50300 récupère le sable par aspiration et permet de régler la puissance d’aspiration selon le catalogue Asturomec. La ligne du MISTRAL 50301 voisin décrit la récupération, sans mentionner ce réglage. Le SUPERMISTRAL est livré avec quatre buses en caoutchouc et un réservoir de 1 000 cc ; ce kit constitue l’équipement d’un seul outil. La plage de service de 5 à 8 bar ne fournit aucune consommation à un point de pression précis : le dimensionnement reste insuffisamment documenté.",
+      "evidenceIdsAdded": [],
+      "neighborCompared": {
+        "path": "/outils-pneumatiques/sableuse-asturomec-mistral-50301/",
+        "file": "/private/tmp/compatair-dependabot-20261024/src/data/products/tools/sableuse-asturomec-mistral-50301.ts",
+        "moduleSha256": "c99fe21abe5364561cc62fa463b4ddbea2e2df46a4ea58c6cba3c1a7c88561c0"
+      },
+      "sourcesActuallyRead": [
+        {
+          "url": "https://walmec.com/it/cataloghi/catalogo-asturomec/AD_13_24_IT.pdf#page=57",
+          "pagesRead": [
+            57
+          ],
+          "bodySha256": "28bc606b4d5bdb9fb84c9288e42573241454b8347b9623c38854744b09fab5e3",
+          "observedAt": "2026-10-24T00:36:36.399578+00:00"
+        }
+      ],
+      "technicalInputsUnchanged": true,
+      "limitationsPreserved": true,
+      "approvalPendingActualHashReview": false,
+      "decisionAfterActualHashReview": "approved"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-binks-trophy-1465-14hv-c1s/",
+      "file": "src/data/products/tools/pistolet-peinture-hvlp-binks-trophy-1465-14hv-c1s.ts",
+      "originalModuleSha256": "32340a9aa82dc4e6d76625d4029ddb7160602dfd4afc15568c10aab43d7a55d3",
+      "amendedModuleSha256": "6468c223c30326cfe2ce5b80a99fbaece2d3ca9d69fe65fac1580b6661c636d7",
+      "overviewBefore": "Binks Trophy 1465-14HV-C1S. Les conditions de référence du volume normalisé et/ou le régime de mesure manquent. Le débit publié reste hors du calcul FAD. Assemblage 1465-14HV-C1S, buse 1.4 mm, chapeau C1, HVLP, alimentation pressure / siphon sans godet fourni.",
+      "overviewAfter": "Trophy 1465-14HV-C1S est l’assemblage HVLP à buse de 1,4 mm et chapeau C1, utilisable en alimentation sous pression ou par siphon, sans godet fourni. Binks classe cette ligne dans les produits HEAVY, au-delà de 30 secondes Zahn 2, tandis que le 1465-10HV-C1S de 1,0 mm relève de LIGHT/MEDIUM, 15 à 20 secondes Zahn 2. La viscosité documentée du produit à appliquer est donc un critère de choix entre ces deux assemblages. Les valeurs de consommation restent en SCFM et hors du calcul FAD, avec pressions d’entrée et au chapeau séparées.",
+      "evidenceIdsAdded": [],
+      "neighborCompared": {
+        "path": "/outils-pneumatiques/pistolet-peinture-hvlp-binks-trophy-1465-10hv-c1s/",
+        "file": "/private/tmp/compatair-dependabot-20261024/src/data/products/tools/pistolet-peinture-hvlp-binks-trophy-1465-10hv-c1s.ts",
+        "moduleSha256": "bf240a093aa83059cd83ce4170b43ebaf2428b6124828cc2ec8fb9fdfcfedc51"
+      },
+      "sourcesActuallyRead": [
+        {
+          "url": "https://binks.canto.com/direct/document/iu9p1o6ks53mj6m12o5dq7885i/FfNcp6KQ2GpAcwGYCDd-KNWjgbo/original?content-type=application%2Fpdf&name=77-3042_ENGLISH.pdf#page=3",
+          "pagesRead": [
+            3,
+            4
+          ],
+          "bodySha256": "c2a1a7cd728d900e68cf9dae59e0da8f182117f7c7442d8c616ed90dd55c3519",
+          "observedAt": "2026-10-24T00:36:40.221646+00:00"
+        }
+      ],
+      "technicalInputsUnchanged": true,
+      "limitationsPreserved": true,
+      "approvalPendingActualHashReview": false,
+      "decisionAfterActualHashReview": "approved"
+    },
+    {
+      "path": "/outils-pneumatiques/biax-beg-309/",
+      "file": "src/data/products/tools/biax-beg-309.ts",
+      "originalModuleSha256": "efe109dc4b7ffa5529865d0fb366e20ac550ea6232c96513c456f99ac81e7076",
+      "amendedModuleSha256": "cc4ad5a3babd89a01bc051166c0acf90a55e93fd9d04266320594e54c52a336d",
+      "overviewBefore": "BIAX BEG 309, référence 150800745. Le tableau fabricant publie 150 L/min et une plage d’utilisation de 6 à 6 bar. Puissance publiée : 20 W. Vitesse de rotation : adjustable 0-900 tr/min.",
+      "overviewAfter": "BEG 309, référence 150800745, se commande par levier ; le BE 309 voisin, référence 150800710, démarre par appui. Cette différence de déclenchement permet de choisir l’outil selon le positionnement possible du chanfrein sur le trou. Les deux sont réglables de 0 à 900 tr/min, avec 20 W et une queue maximale de 3 mm ; leurs masses publiées sont respectivement 250 et 180 g. BIAX donne 150 l/min et une consigne de 6 bar, sans préciser le régime de mesure de cette consommation.",
+      "evidenceIdsAdded": [
+        "biax-150800710-20260926",
+        "biax-150800710-20260926-workingpressurebar-1"
+      ],
+      "neighborCompared": {
+        "path": "/outils-pneumatiques/biax-be-309/",
+        "file": "/private/tmp/compatair-dependabot-20261024/src/data/products/tools/biax-be-309.ts",
+        "moduleSha256": "5953f5aca74ea41dcac5511dc3faff75a357ee5d835fe7e86e98d203b66179d0"
+      },
+      "sourcesActuallyRead": [
+        {
+          "url": "https://biax.de/en/product/beg-309-bis-senk-o-55-mm/",
+          "pagesRead": [],
+          "bodySha256": "1b3b88329cc33c41933c730a8df1efa4115751557759517af369a2a4b19afc37",
+          "observedAt": "2026-10-24T00:36:44.754999+00:00"
+        },
+        {
+          "url": "https://biax.de/en/product/be-309-bis-senk-o-55-mm/",
+          "pagesRead": [],
+          "bodySha256": "0696a8dc362a982e13b351d8a78e8cdad74e2ce8c83d22c29421172ef22dc73c",
+          "observedAt": "2026-10-24T00:36:45.479239+00:00"
+        },
+        {
+          "url": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=42",
+          "pagesRead": [
+            42
+          ],
+          "bodySha256": "318971fb9ba951f395b81cbca3d1e57938ce23b74db3aef25ff98bb8f0edc6c8",
+          "observedAt": "2026-10-24T00:36:44.955758+00:00"
+        }
+      ],
+      "technicalInputsUnchanged": true,
+      "limitationsPreserved": true,
+      "approvalPendingActualHashReview": false,
+      "decisionAfterActualHashReview": "needs-correction"
+    },
+    {
+      "path": "/outils-pneumatiques/biax-gaa-505/",
+      "file": "src/data/products/tools/biax-gaa-505.ts",
+      "originalModuleSha256": "7f17771b0850511830f919a7c4ed706816f3379517cfba06e087d99a2435f4e0",
+      "amendedModuleSha256": "78de52e111e28cc61581a733e2c9c593eebbce1eb72a5c4792ad3995faf6eabc",
+      "overviewBefore": "BIAX GAA 505, référence 150619445. Le tableau fabricant publie 300 L/min et une plage d’utilisation de 6 à 6 bar. Vitesse à vide publiée : 500 tr/min. Masse publiée : 630 g.",
+      "overviewAfter": "GAA 505, référence 150619445, offre 0,3 à 4,0 Nm sur assemblage dur et 0,3 à 3,5 Nm sur assemblage souple ; le GAA 205 voisin publie 0,04 à 1,1 Nm dans les deux cas. Le porte-outil E6,3 du GAA 505 reçoit des embouts hexagonaux de 1/4 pouce, tandis que le GAA 205 emploie un hexagone A3 de 3 mm. Tous deux tournent à 500 tr/min et intègrent l’aspiration des vis, dont la douille doit être choisie avec la tête de vis et l’embout. Leurs consommations publiées sont respectivement 300 et 150 l/min à la consigne de 6 bar, sans régime de charge détaillé dans ce tableau.",
+      "evidenceIdsAdded": [
+        "biax-150600720-20260926"
+      ],
+      "neighborCompared": {
+        "path": "/outils-pneumatiques/biax-gaa-205/",
+        "file": "/private/tmp/compatair-dependabot-20261024/src/data/products/tools/biax-gaa-205.ts",
+        "moduleSha256": "3c7ebbf2210187133a7622719dfa0d20c606204f876668fd5dce501ba6e64451"
+      },
+      "sourcesActuallyRead": [
+        {
+          "url": "https://biax.de/wp-content/uploads/2025/02/BIAX_Schrauber_DE.pdf#page=12",
+          "pagesRead": [
+            12,
+            14
+          ],
+          "bodySha256": "234541dfd789768204963f04e6df723f00c634bb38ced6d544e88ac762382718",
+          "observedAt": "2026-10-24T00:36:45.759546+00:00"
+        }
+      ],
+      "technicalInputsUnchanged": true,
+      "limitationsPreserved": true,
+      "approvalPendingActualHashReview": false,
+      "decisionAfterActualHashReview": "approved"
+    },
+    {
+      "path": "/outils-pneumatiques/fiam-fde33pa/",
+      "file": "src/data/products/tools/fiam-fde33pa.ts",
+      "originalModuleSha256": "13d2f04743abf3a0a6b3cbf994092b08f14aa00cdad7a41bab895ddf878c8b07",
+      "amendedModuleSha256": "643294c32cfad73677ed78220e03a2b6ffcc387678241c8e8306a22da300a0f1",
+      "overviewBefore": "Fiam FDE33PA, référence 124611552. Le tableau fabricant publie 600 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide : 3300 tr/min. Masse publiée : 1.08 kg.",
+      "overviewAfter": "FDE33PA, référence 124611552, est la version avec mandrin autoserrant de 1 à 10 mm ; FDE33P, référence 124610552, est livré sans mandrin sur sortie filetée 3/8 × 24 UNF. Le choix de la référence détermine donc l’équipement de serrage du foret effectivement fourni. La version PA mesure 223 mm et pèse 1,08 kg, contre 165 mm et 0,72 kg pour P, pour une vitesse commune de 3 300 tr/min. Les deux fiches donnent 10 l/s, soit 600 l/min, et la brochure prescrit 6,3 bar ; le régime de consommation n’est pas précisé.",
+      "evidenceIdsAdded": [
+        "fiam-124610552-20260926",
+        "fiam-124610552-20260926-workingpressurebar-1",
+        "fiam-124611563-20260926-workingpressurebar-1",
+        "fiam-124611553-20260926-workingpressurebar-1",
+        "fiam-122311145-20260926-workingpressurebar-1"
+      ],
+      "neighborCompared": {
+        "path": "/outils-pneumatiques/fiam-fde33p/",
+        "file": "/private/tmp/compatair-dependabot-20261024/src/data/products/tools/fiam-fde33p.ts",
+        "moduleSha256": "0f3c19cbd35e131a15e4dfae029844fd6e2a9cc4d6aceba08a555e530309055b"
+      },
+      "sourcesActuallyRead": [
+        {
+          "url": "https://www.fiamgroup.com/en/products/air-drills/fde33pa/",
+          "pagesRead": [],
+          "bodySha256": "2a196e8c9a26139f145a5e6f9274406dd0a730fa4a851216f963a0e9eb6ca2ae",
+          "observedAt": "2026-10-24T00:36:47.004263+00:00"
+        },
+        {
+          "url": "https://www.fiamgroup.com/en/products/air-drills/fde33p/",
+          "pagesRead": [],
+          "bodySha256": "e7c8856fa3a7247427d5fbfc94773b4b5dc2c21161b5546b362e448eac248908",
+          "observedAt": "2026-10-24T00:36:47.246023+00:00"
+        },
+        {
+          "url": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf#page=13",
+          "pagesRead": [
+            13
+          ],
+          "bodySha256": "4bc7b8a199880ed886511848f97c3d61ae9b8a50dbb5f0f0318dddc819dcbf62",
+          "observedAt": "2026-10-24T00:36:47.175006+00:00"
+        }
+      ],
+      "technicalInputsUnchanged": true,
+      "limitationsPreserved": true,
+      "approvalPendingActualHashReview": false,
+      "decisionAfterActualHashReview": "approved"
+    },
+    {
+      "path": "/outils-pneumatiques/fiam-les30sp/",
+      "file": "src/data/products/tools/fiam-les30sp.ts",
+      "originalModuleSha256": "0b7118f7cff6f874a1afe5407ab6cba82d05a1effc65fd0e29b2bf1464f5af97",
+      "amendedModuleSha256": "452d7df02d7bd39f2ff3b2cab2e29a59085df2602b9fd60eb61b4051f6e78a48",
+      "overviewBefore": "Fiam LES30SP, référence 144631101. Le tableau fabricant publie 540 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide : 3000 tr/min. Masse publiée : 0.7 kg.",
+      "overviewAfter": "LES30SP, référence 144631101, est une ponceuse droite à sortie femelle M8 × 1,25 pour accessoire de 80 mm ; la LES34 voisine est une ponceuse d’angle à sortie M14 pour accessoire de 75 mm. Le montage du plateau doit respecter la forme et le filetage de chaque outil. La LES30SP tourne à 3 000 tr/min et pèse 0,70 kg, contre 3 400 tr/min et 1,00 kg pour LES34. Les deux publient 300 W et 9 l/s, soit 540 l/min, à la pression de mesure de 6,3 bar, sans maximum de consommation garanti à tous les régimes.",
+      "evidenceIdsAdded": [
+        "fiam-144695300-20260926",
+        "fiam-144695300-20260926-workingpressurebar-1"
+      ],
+      "neighborCompared": {
+        "path": "/outils-pneumatiques/fiam-les34/",
+        "file": "/private/tmp/compatair-dependabot-20261024/src/data/products/tools/fiam-les34.ts",
+        "moduleSha256": "319428969c60ec6820e36d6fce4813c5ebaf2ddc98a87c1ca56dc07365c185b5"
+      },
+      "sourcesActuallyRead": [
+        {
+          "url": "https://www.fiamgroup.com/en/products/grinders-and-sanders/les30sp/",
+          "pagesRead": [],
+          "bodySha256": "9573af281a748b099127432792f41008449c8aa6b5f89df6f6dd9947f3c8259e",
+          "observedAt": "2026-10-24T00:36:47.846377+00:00"
+        },
+        {
+          "url": "https://www.fiamgroup.com/en/products/grinders-and-sanders/les34/",
+          "pagesRead": [],
+          "bodySha256": "0bf52b44d326a3ff6a7d0ef42ada29d952844b2db7b2997296c8ee9df0319c3a",
+          "observedAt": "2026-10-24T00:36:48.160553+00:00"
+        },
+        {
+          "url": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-44.pdf#page=13",
+          "pagesRead": [
+            13
+          ],
+          "bodySha256": "01b152f269aeae367daa8a9524f083a1679707b0a3eff4daa59bcec83635f6de",
+          "observedAt": "2026-10-24T00:36:48.021947+00:00"
+        }
+      ],
+      "technicalInputsUnchanged": true,
+      "limitationsPreserved": true,
+      "approvalPendingActualHashReview": false,
+      "decisionAfterActualHashReview": "approved"
+    },
+    {
+      "path": "/outils-pneumatiques/nitto-kohki-b-20d-a/",
+      "file": "src/data/products/tools/nitto-kohki-b-20d-a.ts",
+      "originalModuleSha256": "c466ee4958420f6d29f6adb304193092cf91903497f3bfdb975fc67e815e5f94",
+      "amendedModuleSha256": "b1abb5930cbbdfba0c0c9a68ff21f850c671a2783a66ae435681f1393b3185b6",
+      "overviewBefore": "Nitto Kohki B-20D-A, référence B-20D-A. Le tableau fabricant publie 520 L/min et une plage d’utilisation de 6 à 6 bar. Vitesse de rotation publiée : 17000 tr/min. Masse publiée : 1.5 kg.",
+      "overviewAfter": "B-20D-A soutient son galet avant des deux côtés, tandis que B-20D le soutient d’un seul côté selon le schéma Nitto Kohki. Les deux utilisent une bande de 20 × 520 mm, tournent à 17 000 tr/min et publient une vitesse linéaire de bande de 2 620 m/min. Leurs masses sont respectivement 1,50 et 1,55 kg ; la différence de support du galet doit être examinée avec l’accès à la pièce. Leur consommation commune de 520 l/min est explicitement mesurée à vide à 0,6 MPa, soit 6 bar, et ne couvre pas toutes les conditions de charge.",
+      "evidenceIdsAdded": [
+        "nitto-kohki-b-20d-20260926"
+      ],
+      "neighborCompared": {
+        "path": "/outils-pneumatiques/nitto-kohki-b-20d/",
+        "file": "/private/tmp/compatair-dependabot-20261024/src/data/products/tools/nitto-kohki-b-20d.ts",
+        "moduleSha256": "1aa7e9777b380c9ff8cad0b8abac03fcce18b03a4d55d915655f3f277c888973"
+      },
+      "sourcesActuallyRead": [
+        {
+          "url": "https://www.nitto-kohki.eu/images/stories/products/pdf_catalogs/Tools_Catalog.pdf#page=38",
+          "pagesRead": [
+            38
+          ],
+          "bodySha256": "96df5508b9819bc71611f875b35af9e282e5bb0bf62e324aab2ab87698867bac",
+          "observedAt": "2026-10-24T00:36:49.116787+00:00"
+        }
+      ],
+      "technicalInputsUnchanged": true,
+      "limitationsPreserved": true,
+      "approvalPendingActualHashReview": false,
+      "decisionAfterActualHashReview": "approved"
+    },
+    {
+      "path": "/outils-pneumatiques/red-rooster-rr-0315ns/",
+      "file": "src/data/products/tools/red-rooster-rr-0315ns.ts",
+      "originalModuleSha256": "c1f20409589605a1d87ac279a21d856530b3fa843410bde9d968a4dd653a0533",
+      "amendedModuleSha256": "4b5699f568f4ab5317537e8562eddf9669a5081dc2081e21b64b0f9842733e94",
+      "overviewBefore": "Red Rooster RR-0315NS, référence RR-0315NS. Le tableau fabricant publie 396 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Masse publiée : 2,6 kg. Diamètre intérieur de flexible conseillé : 6,5 mm.",
+      "overviewAfter": "RR-0315NS frappe à 4 000 coups/min, contre 3 000 pour RR-2110NS, avec des courses respectives de 32 et 33 mm. Le catalogue donne des cotes A × B de 415 × 45 mm pour RR-0315NS et 340 × 175 mm pour RR-2110NS : l’encombrement doit être choisi avec l’accès à la surface à décaper. Les deux sont livrés avec 19 aiguilles de 3 mm, tandis que le tableau n’attribue l’option de 29 aiguilles de 2 mm qu’au RR-2110NS. La consommation commune de 6,6 l/s, soit 396 l/min, n’est pas qualifiée en régime dans ce tableau ; la consigne générale est de 6,3 bar moteur en fonctionnement.",
+      "evidenceIdsAdded": [
+        "red-rooster-rr-2110ns-20260926",
+        "red-rooster-rr-2110ns-20260926-workingpressurebar-1"
+      ],
+      "neighborCompared": {
+        "path": "/outils-pneumatiques/red-rooster-rr-2110ns/",
+        "file": "/private/tmp/compatair-dependabot-20261024/src/data/products/tools/red-rooster-rr-2110ns.ts",
+        "moduleSha256": "f8051264f820cd9fedbc2082e10ebc3e1ffbd6cc115b55641a749c3f58ff075d"
+      },
+      "sourcesActuallyRead": [
+        {
+          "url": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=55",
+          "pagesRead": [
+            55,
+            106
+          ],
+          "bodySha256": "f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e",
+          "observedAt": "2026-10-24T00:36:49.134255+00:00"
+        }
+      ],
+      "technicalInputsUnchanged": true,
+      "limitationsPreserved": true,
+      "approvalPendingActualHashReview": false,
+      "decisionAfterActualHashReview": "approved"
+    },
+    {
+      "path": "/outils-pneumatiques/red-rooster-rr-476/",
+      "file": "src/data/products/tools/red-rooster-rr-476.ts",
+      "originalModuleSha256": "31090feb4fb918f9833f47877b10aeda51ff7070d4d54d04842d98b2eb5a5c3a",
+      "amendedModuleSha256": "333d212ef8db147c12262c0340b654e2f27cd400f0cdc9130042777aaeaf6f76",
+      "overviewBefore": "Red Rooster RR-476, référence RR-476. Le tableau fabricant publie 390 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Masse publiée : 1,1 kg. Diamètre intérieur de flexible conseillé : 6,5 mm.",
+      "overviewAfter": "RR-476 est un couteau universel à mouvement oscillant réglable de 0 à 22 000 oscillations/min, utilisable comme scie, coupe-vitres ou ponceuse selon l’accessoire monté. La RRJ-8205 voisine est une scie sabre à 5 000 coups/min et course de 25 mm : mouvement et montage de lame diffèrent. Le catalogue associe la lame 475101 du RR-476 à une coupe d’acier de 1 mm ; cette capacité ne se transfère pas aux autres accessoires. Il donne 6,5 l/s, soit 390 l/min, pour RR-476 contre 2,8 l/s pour RRJ-8205, sans régime de mesure précisé ; la consigne générale est de 6,3 bar en fonctionnement.",
+      "evidenceIdsAdded": [
+        "red-rooster-rrj-8205-20260926",
+        "red-rooster-rrj-8205-20260926-workingpressurebar-1"
+      ],
+      "neighborCompared": {
+        "path": "/outils-pneumatiques/red-rooster-rrj-8205/",
+        "file": "/private/tmp/compatair-dependabot-20261024/src/data/products/tools/red-rooster-rrj-8205.ts",
+        "moduleSha256": "0336d7545b1a64234ac9dfc31cf4ba4d23c55fcc58783748b3aa64625910d6e8"
+      },
+      "sourcesActuallyRead": [
+        {
+          "url": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=60",
+          "pagesRead": [
+            60,
+            56,
+            106
+          ],
+          "bodySha256": "f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e",
+          "observedAt": "2026-10-24T00:36:49.134255+00:00"
+        }
+      ],
+      "technicalInputsUnchanged": true,
+      "limitationsPreserved": true,
+      "approvalPendingActualHashReview": false,
+      "decisionAfterActualHashReview": "approved"
+    },
+    {
+      "path": "/outils-pneumatiques/red-rooster-rr-8110/",
+      "file": "src/data/products/tools/red-rooster-rr-8110.ts",
+      "originalModuleSha256": "661fd78c47b6b13db52c7de7e66d56ca1cfed3792cdb48b1152debec01d8690a",
+      "amendedModuleSha256": "0e80965d4929466e16e45d266b5d72e395775c834e3775d70fb5dde9e9b1c4db",
+      "overviewBefore": "Red Rooster RR-8110, référence RR-8110. Le tableau fabricant publie 564 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Masse publiée : 1,2 kg. Diamètre intérieur de flexible conseillé : 10 mm.",
+      "overviewAfter": "RR-8110 est une cisaille donnée pour 1 mm d’acier ou 1,2 mm d’aluminium, à 2 400 coups/min et 0,3 kW. La RR-8116 voisine est une grignoteuse donnée pour 1,6 mm d’acier ou 2,0 mm d’aluminium, à 3 500 coups/min : ces capacités appartiennent à deux procédés de coupe différents. Leurs masses publiées sont respectivement 1,2 et 0,9 kg, et leurs consommations 9,4 et 8 l/s, soit 564 et 480 l/min. Le tableau ne précise pas le régime de consommation ; la pression générale de service doit être de 6,3 bar au moteur en marche.",
+      "evidenceIdsAdded": [
+        "red-rooster-rr-8116-20260926",
+        "red-rooster-rr-8116-20260926-workingpressurebar-1"
+      ],
+      "neighborCompared": {
+        "path": "/outils-pneumatiques/red-rooster-rr-8116/",
+        "file": "/private/tmp/compatair-dependabot-20261024/src/data/products/tools/red-rooster-rr-8116.ts",
+        "moduleSha256": "03a8c48bb5b2e404f8ff0d1012b91b64ff163558999f0b4490f270dfd031b2d0"
+      },
+      "sourcesActuallyRead": [
+        {
+          "url": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=57",
+          "pagesRead": [
+            57,
+            106
+          ],
+          "bodySha256": "f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e",
+          "observedAt": "2026-10-24T00:36:49.134255+00:00"
+        }
+      ],
+      "technicalInputsUnchanged": true,
+      "limitationsPreserved": true,
+      "approvalPendingActualHashReview": false,
+      "decisionAfterActualHashReview": "approved"
+    }
+  ],
+  "approvalPendingActualHashReview": false
+}

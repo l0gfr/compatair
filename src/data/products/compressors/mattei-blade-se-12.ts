@@ -88,7 +88,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Mattei BLADE SE 12. 1 370 L/min à 9,5 bar. BLADE sur réservoir 270 L avec sécheur.",
+		"overview": "En 50 Hz, le BLADE SE 12 et le BLADE S 12 publient 1370 L/min à 9,5 bar, avec 11 kW et une cuve de 270 L. Le SE ajoute le sécheur intégré et porte la masse publiée à 428 kg, contre 396 kg pour le S. Le choix de la version SE concerne donc le traitement d’air et son intégration dans l’atelier, avec une même production déclarée à 9,5 bar. Les valeurs 60 Hz et les autres versions de pression restent séparées ; la qualité d’air exigée au poste doit être vérifiée sur l’installation complète.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 270 L.",

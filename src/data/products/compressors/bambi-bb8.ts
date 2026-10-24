@@ -164,7 +164,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Bambi BB8. 35 L/min à 1 bar ; 32 L/min à 2 bar ; 30 L/min à 3 bar ; 28 L/min à 4 bar ; 27 L/min à 5 bar ; 26 L/min à 6 bar ; 25,5 L/min à 7 bar ; 25 L/min à 8 bar. Groupe avec cuve 9 L.",
+		"overview": "Le BB8 et le BB15 V publient tous deux 27 L/min à 5 bar avec un moteur de 0,34 kW ; leurs cuves sont respectivement de 9 et 15 L. Le choix entre ces formats porte donc sur la réserve d’air et l’encombrement, avec une même production publiée à cette pression. Le fabricant annonce un cycle maximal de 50 % sans fenêtre de temps précisée dans la fiche : l’usage reste intermittent à organiser selon la notice. Les exigences d’air de l’équipement doivent être rapprochées du point FAD correspondant à sa pression.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 9 L.",
@@ -187,6 +187,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 740630593a4dcfff1a8d8055eb77c3536f8fb3aa209faa2579c3ec75bce26c78 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "october3d-bambi-product-29",
+			"sourceUrl": "https://bambi-air.co.uk/product/bb15v/",
+			"sourceLabel": "Bambi, BB15V, fiche constructeur",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-03",
+			"confidence": "B",
+			"notes": "SHA-256 0602bb7839acf86bbccb9d8abfccc8ca540282e58b62b12341634b0897d93cd1 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
 		}
 	],
 	"fieldSources": {

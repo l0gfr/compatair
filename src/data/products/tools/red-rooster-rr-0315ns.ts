@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Red Rooster RR-0315NS, référence RR-0315NS. Le tableau fabricant publie 396 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Masse publiée : 2,6 kg. Diamètre intérieur de flexible conseillé : 6,5 mm.",
+		"overview": "RR-0315NS frappe à 4 000 coups/min, contre 3 000 pour RR-2110NS, avec des courses respectives de 32 et 33 mm. Le catalogue donne des cotes A × B de 415 × 45 mm pour RR-0315NS et 340 × 175 mm pour RR-2110NS : l’encombrement doit être choisi avec l’accès à la surface à décaper. Les deux sont livrés avec 19 aiguilles de 3 mm, tandis que le tableau n’attribue l’option de 29 aiguilles de 2 mm qu’au RR-2110NS. La consommation commune de 6,6 l/s, soit 396 l/min, n’est pas qualifiée en régime dans ce tableau ; la consigne générale est de 6,3 bar moteur en fonctionnement.",
 		"verifiedFacts": [
 			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
 			"Consommation publiée : 6.6 L/s, convertis en 396 L/min par multiplication par 60.",
@@ -86,6 +86,24 @@ const product: ToolProfileInput = {
 		},
 		{
 			"id": "red-rooster-rr-0315ns-20260926-workingpressurebar-1",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+			"sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 106",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "red-rooster-rr-2110ns-20260926",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=55",
+			"sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 55, réf. RR-2110NS",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation publiée : 6.6 L/s, convertis en 396 L/min par multiplication par 60."
+		},
+		{
+			"id": "red-rooster-rr-2110ns-20260926-workingpressurebar-1",
 			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
 			"sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 106",
 			"sourceType": "manufacturer",

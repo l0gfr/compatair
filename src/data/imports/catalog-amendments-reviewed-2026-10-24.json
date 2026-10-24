@@ -1,0 +1,1590 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-24",
+  "rows": [
+    {
+      "id": "fiac-ax-203bd-8-400-50-ce",
+      "brand": "FIAC",
+      "model": "AX 203BD 8 400/50 CE",
+      "mpn": "4152026232",
+      "fields": [
+        "editorial",
+        "evidence"
+      ],
+      "before": {
+        "editorial": {
+          "overview": "FIAC AX 203BD 8 400/50 CE, référence 4152026232 : configuration sans cuve intégrée, pression maximale publiée de 8 bar. Le point documenté le plus élevé en pression fournit 2 330 L/min à 8 bar. Sans cuve intégrée. Version de base ; sécheur non intégré.",
+          "verifiedFacts": [
+            "Débit restitué publié : 2 330 L/min à 8 bar.",
+            "Compresseur rotatif à vis lubrifié à vitesse fixe. Puissance moteur publiée : 15 kW.",
+            "Masse nette publiée : 270 kg.",
+            "Alimentation publiée : 400 V, 50 Hz, triphasée."
+          ],
+          "limitations": [
+            "Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
+            "Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
+            "La référence commande prime sur le nom commercial : le catalogue utilise AIRBLOK et la fiche en ligne le code AX.",
+            "Les puissances arrondies peuvent différer entre le catalogue PDF et la fiche actuelle. Les valeurs de cette fiche proviennent exclusivement de la fiche individuelle consultée."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "fiac-4152026232-20260926",
+            "sourceUrl": "https://shop.fiac.it/en-IT/products/4152026232/ax-203bd-8-40050-ce",
+            "sourceLabel": "FIAC, fiche officielle 4152026232, réf. 4152026232",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "La fiche individuelle 4152026232 publie un FAD de 2330 L/min pour cette version de 8 bar. Débit restitué fabricant, pas débit aspiré."
+          },
+          {
+            "id": "fiac-4152026232-20260926-oiltype-1",
+            "sourceUrl": "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf#page=34",
+            "sourceLabel": "FIAC, catalogue S226-R1-062026, p. 34",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Mode lubrifié documenté par les huiles prévues pour cette famille."
+          }
+        ]
+      },
+      "after": {
+        "editorial": {
+          "overview": "La référence 4152026232 correspond à la version 8 bar de 15 kW, publiée à 2330 L/min ; la 4152026234 atteint 13 bar et annonce 1690 L/min. Ces deux commandes conservent le montage au sol sans cuve intégrée : le choix porte ici sur la pression demandée et la production d’air publiée, avec le stockage à prévoir sur l’installation. Chaque débit reste rattaché à sa référence de pression ; le taux de marche continu demeure à documenter.",
+          "verifiedFacts": [
+            "Débit restitué publié : 2 330 L/min à 8 bar.",
+            "Compresseur rotatif à vis lubrifié à vitesse fixe. Puissance moteur publiée : 15 kW.",
+            "Masse nette publiée : 270 kg.",
+            "Alimentation publiée : 400 V, 50 Hz, triphasée."
+          ],
+          "limitations": [
+            "Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
+            "Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
+            "La référence commande prime sur le nom commercial : le catalogue utilise AIRBLOK et la fiche en ligne le code AX.",
+            "Les puissances arrondies peuvent différer entre le catalogue PDF et la fiche actuelle. Les valeurs de cette fiche proviennent exclusivement de la fiche individuelle consultée."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "fiac-4152026232-20260926",
+            "sourceUrl": "https://shop.fiac.it/en-IT/products/4152026232/ax-203bd-8-40050-ce",
+            "sourceLabel": "FIAC, fiche officielle 4152026232, réf. 4152026232",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "La fiche individuelle 4152026232 publie un FAD de 2330 L/min pour cette version de 8 bar. Débit restitué fabricant, pas débit aspiré."
+          },
+          {
+            "id": "fiac-4152026232-20260926-oiltype-1",
+            "sourceUrl": "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf#page=34",
+            "sourceLabel": "FIAC, catalogue S226-R1-062026, p. 34",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Mode lubrifié documenté par les huiles prévues pour cette famille."
+          },
+          {
+            "id": "fiac-4152026234-20260926",
+            "sourceUrl": "https://shop.fiac.it/en-IT/products/4152026234/ax-203bd-13-40050-ce",
+            "sourceLabel": "FIAC, fiche officielle 4152026234, réf. 4152026234",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "La fiche individuelle 4152026234 publie un FAD de 1690 L/min pour cette version de 13 bar. Débit restitué fabricant, pas débit aspiré."
+          }
+        ]
+      }
+    },
+    {
+      "id": "gentilin-c660-100",
+      "brand": "Gentilin",
+      "model": "C660/100",
+      "mpn": "810310001",
+      "fields": [
+        "editorial",
+        "evidence"
+      ],
+      "before": {
+        "editorial": {
+          "overview": "Gentilin C660/100, référence 810310001 : cuve de 90 L, pression maximale publiée de 10 bar. Le point documenté le plus élevé en pression fournit 330 L/min à 8 bar.",
+          "verifiedFacts": [
+            "Débit restitué publié : 400 L/min à 5 bar ; 330 L/min à 8 bar.",
+            "Compresseur à pistons sans huile. Puissance moteur publiée : 4,4 kW.",
+            "Débit aspiré : 660 L/min, distinct du débit restitué.",
+            "Masse publiée : 83 kg.",
+            "Alimentation publiée : 230 V, 50 Hz."
+          ],
+          "limitations": [
+            "Les points proviennent de la fiche fabricant, pas d’un essai physique réalisé par CompatAir.",
+            "Le taux de marche est celui déclaré par le fabricant ; les conditions de cycle et de température restent à respecter. La disponibilité commerciale reste à confirmer.",
+            "La disponibilité commerciale et les exigences électriques de l’installation sont à confirmer avant achat."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "gentilin-810310001-20260926",
+            "sourceUrl": "https://www.gentilinair.com/en/products/c660-100",
+            "sourceLabel": "Gentilin, fiche technique C660/100, réf. 810310001",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Débits restitués publiés séparément à 5.0 bar, 8.0 bar. Le débit aspiré est conservé dans un champ distinct."
+          },
+          {
+            "id": "gentilin-810310001-20260926-oiltype-1",
+            "sourceUrl": "https://www.gentilinair.com/docs/41031002_1711018493.pdf#page=13",
+            "sourceLabel": "Gentilin, notice de la famille C660/100, p. 13",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "La notice liée à cette fiche déclare la compression sans huile : Compressing air (no oil) to be used with suitable pneumatic utensils according to current"
+          }
+        ]
+      },
+      "after": {
+        "editorial": {
+          "overview": "Le C660/100 dispose de 90 L et publie 400 L/min à 5 bar, puis 330 L/min à 8 bar ; le C330/50 voisin conserve 50 L avec 200 et 165 L/min aux mêmes pressions. Le passage au C660 apporte donc une production documentée supérieure aux deux points de travail, accompagnée d’un moteur annoncé à 4,4 kW contre 2,2 kW. La mention 230 V doit être rapprochée de l’alimentation et du raccordement exacts à faire confirmer avant installation ; la cuve de 90 L et le débit aspiré de 660 L/min sont des données distinctes du débit disponible à 8 bar.",
+          "verifiedFacts": [
+            "Débit restitué publié : 400 L/min à 5 bar ; 330 L/min à 8 bar.",
+            "Compresseur à pistons sans huile. Puissance moteur publiée : 4,4 kW.",
+            "Débit aspiré : 660 L/min, distinct du débit restitué.",
+            "Masse publiée : 83 kg.",
+            "Alimentation publiée : 230 V, 50 Hz."
+          ],
+          "limitations": [
+            "Les points proviennent de la fiche fabricant, pas d’un essai physique réalisé par CompatAir.",
+            "Le taux de marche est celui déclaré par le fabricant ; les conditions de cycle et de température restent à respecter. La disponibilité commerciale reste à confirmer.",
+            "La disponibilité commerciale et les exigences électriques de l’installation sont à confirmer avant achat."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "gentilin-810310001-20260926",
+            "sourceUrl": "https://www.gentilinair.com/en/products/c660-100",
+            "sourceLabel": "Gentilin, fiche technique C660/100, réf. 810310001",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Débits restitués publiés séparément à 5.0 bar, 8.0 bar. Le débit aspiré est conservé dans un champ distinct."
+          },
+          {
+            "id": "gentilin-810310001-20260926-oiltype-1",
+            "sourceUrl": "https://www.gentilinair.com/docs/41031002_1711018493.pdf#page=13",
+            "sourceLabel": "Gentilin, notice de la famille C660/100, p. 13",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "La notice liée à cette fiche déclare la compression sans huile : Compressing air (no oil) to be used with suitable pneumatic utensils according to current"
+          },
+          {
+            "id": "gentilin-810209001-20260926",
+            "sourceUrl": "https://www.gentilinair.com/en/products/c330-50",
+            "sourceLabel": "Gentilin, fiche technique C330/50, réf. 810209001",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Débits restitués publiés séparément à 5.0 bar, 8.0 bar. Le débit aspiré est conservé dans un champ distinct."
+          }
+        ]
+      }
+    },
+    {
+      "id": "almig-combi-xp-8-270d",
+      "brand": "ALMiG",
+      "model": "COMBI XP 8 270D",
+      "mpn": null,
+      "fields": [
+        "editorial"
+      ],
+      "before": {
+        "editorial": {
+          "overview": "ALMiG COMBI XP 8 270D. Station 4-en-1 : réservoir 270 L, sécheur frigorifique, préfiltre et postfiltre. La courbe reprend les capacités maximales publiées, avec les minima conservés séparément.",
+          "verifiedFacts": [
+            "Puissance moteur publiée : 7,5 kW ; poids de cette configuration : 585 kg.",
+            "Débit restitué documenté : 1 160 L/min à 8 bar ; 980 L/min à 10 bar ; 750 L/min à 13 bar.",
+            "La documentation de la série prévoit le fonctionnement continu, sous ses conditions d’installation et d’entretien."
+          ],
+          "limitations": [
+            "La disponibilité commerciale actuelle n’a pas été confirmée.",
+            "Les minima et maxima de modulation ne décrivent pas un débit moyen de votre atelier. Aucun débit n’est extrapolé hors des points publiés.",
+            "Le service continu documenté ne dispense pas du contrôle du refroidissement, du traitement d’air et des pertes du réseau.",
+            "Le mode de lubrification n’a pas été établi dans les sources consultées ; il reste unknown, sans présumer une qualité d’air."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "Le COMBI XP 8 et le XP 6 gardent la cuve de 270 L, le sécheur frigorifique et la pré/post-filtration ; leur différence porte surtout sur la plage de production. À 10 bar, le XP 8 module de 170 à 980 L/min, contre 180 à 690 L/min pour le XP 6. À 13 bar, les plages publiées deviennent 140–750 et 170–590 L/min respectivement, avec des moteurs de 7,5 et 5,5 kW. Ces bornes constructeur servent à examiner la modulation à la pression requise ; le débit moyen réellement demandé par l’atelier reste à mesurer.",
+          "verifiedFacts": [
+            "Puissance moteur publiée : 7,5 kW ; poids de cette configuration : 585 kg.",
+            "Débit restitué documenté : 1 160 L/min à 8 bar ; 980 L/min à 10 bar ; 750 L/min à 13 bar.",
+            "La documentation de la série prévoit le fonctionnement continu, sous ses conditions d’installation et d’entretien."
+          ],
+          "limitations": [
+            "La disponibilité commerciale actuelle n’a pas été confirmée.",
+            "Les minima et maxima de modulation ne décrivent pas un débit moyen de votre atelier. Aucun débit n’est extrapolé hors des points publiés.",
+            "Le service continu documenté ne dispense pas du contrôle du refroidissement, du traitement d’air et des pertes du réseau.",
+            "Le mode de lubrification n’a pas été établi dans les sources consultées ; il reste unknown, sans présumer une qualité d’air."
+          ]
+        }
+      }
+    },
+    {
+      "id": "renner-rs-pro-3-0-310001",
+      "brand": "RENNER",
+      "model": "RS-PRO 3.0",
+      "mpn": "310001",
+      "fields": [
+        "editorial"
+      ],
+      "before": {
+        "editorial": {
+          "overview": "RENNER RS-PRO 3.0, article 310001. Version standard au sol, sans réservoir intégré. Cette référence correspond à la version 10 bar ; son débit est 410 L/min à cette pression.",
+          "verifiedFacts": [
+            "Puissance moteur publiée : 3 kW ; poids de cette configuration : 153 kg.",
+            "Débit restitué documenté : 410 L/min à 10 bar.",
+            "La documentation de la série prévoit le fonctionnement continu, sous ses conditions d’installation et d’entretien."
+          ],
+          "limitations": [
+            "La disponibilité commerciale actuelle n’a pas été confirmée.",
+            "Les débits des autres versions de pression ne sont pas ajoutés à la courbe de cet article.",
+            "Le service continu documenté ne dispense pas du contrôle du refroidissement, du traitement d’air et des pertes du réseau."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "L’article 310001 est la version 10 bar du RS-PRO 3.0, donnée pour 410 L/min ; l’article 310000 correspond à 7,5 bar et 540 L/min. Le moteur de 3 kW, le montage au sol et les 153 kg restent communs : la référence de commande fixe le compromis de pression et de débit. Le point 410 L/min appartient au 310001 et doit être conservé séparément des performances des autres versions de pression.",
+          "verifiedFacts": [
+            "Puissance moteur publiée : 3 kW ; poids de cette configuration : 153 kg.",
+            "Débit restitué documenté : 410 L/min à 10 bar.",
+            "La documentation de la série prévoit le fonctionnement continu, sous ses conditions d’installation et d’entretien."
+          ],
+          "limitations": [
+            "La disponibilité commerciale actuelle n’a pas été confirmée.",
+            "Les débits des autres versions de pression ne sont pas ajoutés à la courbe de cet article.",
+            "Le service continu documenté ne dispense pas du contrôle du refroidissement, du traitement d’air et des pertes du réseau."
+          ]
+        }
+      }
+    },
+    {
+      "id": "kaeser-aircenter-13-secheur-et-cuve-integres-8-bar",
+      "brand": "KAESER",
+      "model": "AIRCENTER 13",
+      "mpn": null,
+      "fields": [
+        "editorial"
+      ],
+      "before": {
+        "editorial": {
+          "overview": "KAESER AIRCENTER 13, sécheur et cuve intégrés, 8 bar. Débit restitué déclaré : 1 320 L/min à 7,5 bar. Puissance moteur : 7,5 kW ; masse : 440 kg.",
+          "verifiedFacts": [
+            "FAD et pression de référence associés à la configuration exacte du tableau fabricant.",
+            "Cuve intégrée : 270 L ; le volume d’un réservoir externe n’est pas supposé.",
+            "Fonctionnement continu prévu dans la documentation de la série, sous les conditions d’installation et d’entretien du fabricant."
+          ],
+          "limitations": [
+            "Un seul point FAD publié pour cette configuration de pression ; aucune extrapolation vers une pression supérieure.",
+            "Version du catalogue identifiée, sans numéro d’article artificiel. La disponibilité, la tension électrique et les options livrées doivent être confirmées sur le devis.",
+            "Le fluide de refroidissement ne suffit pas à établir le type de lubrification ; aucune qualité d’air garantie."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "La configuration AIRCENTER 13 de 8 bar publie 1320 L/min à 7,5 bar, tandis que la configuration 15 bar publie 850 L/min à 13 bar. Les deux stations associent une cuve de 270 L, un moteur de 7,5 kW et le sécheur intégré, pour une masse publiée de 440 kg. Le choix de version part donc de la pression requise au poste et des pertes du réseau ; chaque point de débit reste attaché à sa configuration constructeur. La tension et les options effectivement livrées sont à confirmer sur le devis.",
+          "verifiedFacts": [
+            "FAD et pression de référence associés à la configuration exacte du tableau fabricant.",
+            "Cuve intégrée : 270 L ; le volume d’un réservoir externe n’est pas supposé.",
+            "Fonctionnement continu prévu dans la documentation de la série, sous les conditions d’installation et d’entretien du fabricant."
+          ],
+          "limitations": [
+            "Un seul point FAD publié pour cette configuration de pression ; aucune extrapolation vers une pression supérieure.",
+            "Version du catalogue identifiée, sans numéro d’article artificiel. La disponibilité, la tension électrique et les options livrées doivent être confirmées sur le devis.",
+            "Le fluide de refroidissement ne suffit pas à établir le type de lubrification ; aucune qualité d’air garantie."
+          ]
+        }
+      }
+    },
+    {
+      "id": "elgi-eg-110-p-50-hz-11-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe",
+      "brand": "ELGi",
+      "model": "EG 110-P",
+      "mpn": null,
+      "fields": [
+        "editorial"
+      ],
+      "before": {
+        "editorial": {
+          "overview": "ELGi EG 110-P, 50 Hz, 11 bar. 17 500 L/min à 10 bar. Moteur 110 kW ; groupe fixe au sol, sans sécheur ; vitesse fixe.",
+          "verifiedFacts": [
+            "Débit restitué relié à une pression et aux unités originales de la fiche fabricant.",
+            "Périmètre retenu : groupe seul ; réservoir de stockage externe exclu.",
+            "Limite de pression documentée : 11 bar ; le point FAD conserve sa pression publiée."
+          ],
+          "limitations": [
+            "Cette entrée correspond à une configuration constructeur de pression maximale ; aucun nouveau produit n’est créé à partir d’un simple point de test.",
+            "Cycle de service non établi par les sources retenues ; la tenue permanente reste indéterminée.",
+            "Les seules pressions FAD retenues sont celles du document. Aucun débit aspiré, extrapolation ou essai d’utilisation CompatAir.",
+            "Documentation et disponibilité de la configuration à confirmer avec le constructeur."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "Pour cet EG 110-P de 50 Hz, les 11 bar correspondent au maximum de décharge ; le fabricant déclare le FAD de 17500 L/min à la pression de travail de 10 bar. La version de 8 bar publie 21600 L/min à 7 bar avec le même moteur de 110 kW. La brochure mesure le FAD du groupe complet à la sortie du séparateur d’humidité : c’est ce débit à la pression de travail qui sert au dimensionnement du réseau. Le régime continu applicable et la configuration électrique livrée restent à confirmer pour le site.",
+          "verifiedFacts": [
+            "Débit restitué relié à une pression et aux unités originales de la fiche fabricant.",
+            "Périmètre retenu : groupe seul ; réservoir de stockage externe exclu.",
+            "Limite de pression documentée : 11 bar ; le point FAD conserve sa pression publiée."
+          ],
+          "limitations": [
+            "Cette entrée correspond à une configuration constructeur de pression maximale ; aucun nouveau produit n’est créé à partir d’un simple point de test.",
+            "Cycle de service non établi par les sources retenues ; la tenue permanente reste indéterminée.",
+            "Les seules pressions FAD retenues sont celles du document. Aucun débit aspiré, extrapolation ou essai d’utilisation CompatAir.",
+            "Documentation et disponibilité de la configuration à confirmer avec le constructeur."
+          ]
+        }
+      }
+    },
+    {
+      "id": "airpol-55",
+      "brand": "Airpol",
+      "model": "55",
+      "mpn": null,
+      "fields": [
+        "editorial",
+        "evidence"
+      ],
+      "before": {
+        "editorial": {
+          "overview": "Airpol 55. 5 833,333 L/min à 15 bar. Groupe Airpol sans réservoir de stockage intégré.",
+          "verifiedFacts": [
+            "Air livré rattaché à une pression et aux unités originales du constructeur.",
+            "Cuve de stockage documentée : 0 L.",
+            "Pression maximale de fonctionnement publiée : 15 bar."
+          ],
+          "limitations": [
+            "Conditions de référence FAD non précisées dans la fiche ; aucun AnnexC ni température/humidité ajouté.",
+            "Une seule configuration par modèle est retenue ; aucune fusion de pressions de fabrication différentes.",
+            "Cycle de service non établi ; la tenue permanente reste indéterminée.",
+            "Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
+            "Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "october3d-airpol-pdf-075-p12",
+            "sourceUrl": "https://airpol.com.pl/wp-content/uploads/2022/05/EN-Karta-Airpol-185-55kW.pdf#page=12",
+            "sourceLabel": "Airpol, manufacturer technical documentation, page PDF 12",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-03",
+            "confidence": "B",
+            "notes": "SHA-256 03765bd3f6325ceba8a938e64a469e120e952843538b1a18f3aac757d0728e64 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+          },
+          {
+            "id": "october3d-airpol-screw-p9",
+            "sourceUrl": "https://airpol.com.pl/wp-content/uploads/2022/05/Airpol-screw-compressors.pdf#page=9",
+            "sourceLabel": "Airpol, screw compressor legacy brochure with ISO1217 capacity tables, page PDF 9",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-03",
+            "confidence": "B",
+            "notes": "SHA-256 93fb6c0baf7deedc619234c8c63575d9edfeab652447ffc07e673ddb9c7cbdd8 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+          },
+          {
+            "id": "october3d-airpol-pdf-075-p2",
+            "sourceUrl": "https://airpol.com.pl/wp-content/uploads/2022/05/EN-Karta-Airpol-185-55kW.pdf#page=2",
+            "sourceLabel": "Airpol, manufacturer technical documentation, page PDF 2",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-03",
+            "confidence": "B",
+            "notes": "SHA-256 03765bd3f6325ceba8a938e64a469e120e952843538b1a18f3aac757d0728e64 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+          }
+        ]
+      },
+      "after": {
+        "editorial": {
+          "overview": "À 15 bar, l’Airpol 55 publie 350 m³/h, soit 5833,333 L/min ; l’Airpol 45 voisin est donné pour 280 m³/h, soit 4666,667 L/min, à la même pression. Le passage de 45 à 55 kW correspond donc ici à un palier de production d’air documenté à 15 bar. Pour un atelier visant cette pression, le choix se fait sur le besoin simultané du réseau et sur ces capacités publiées ; le taux de marche et les conditions de référence complètes restent à obtenir avant un engagement permanent.",
+          "verifiedFacts": [
+            "Air livré rattaché à une pression et aux unités originales du constructeur.",
+            "Cuve de stockage documentée : 0 L.",
+            "Pression maximale de fonctionnement publiée : 15 bar."
+          ],
+          "limitations": [
+            "Conditions de référence FAD non précisées dans la fiche ; aucun AnnexC ni température/humidité ajouté.",
+            "Une seule configuration par modèle est retenue ; aucune fusion de pressions de fabrication différentes.",
+            "Cycle de service non établi ; la tenue permanente reste indéterminée.",
+            "Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
+            "Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "october3d-airpol-pdf-075-p12",
+            "sourceUrl": "https://airpol.com.pl/wp-content/uploads/2022/05/EN-Karta-Airpol-185-55kW.pdf#page=12",
+            "sourceLabel": "Airpol, manufacturer technical documentation, page PDF 12",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-03",
+            "confidence": "B",
+            "notes": "SHA-256 03765bd3f6325ceba8a938e64a469e120e952843538b1a18f3aac757d0728e64 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+          },
+          {
+            "id": "october3d-airpol-screw-p9",
+            "sourceUrl": "https://airpol.com.pl/wp-content/uploads/2022/05/Airpol-screw-compressors.pdf#page=9",
+            "sourceLabel": "Airpol, screw compressor legacy brochure with ISO1217 capacity tables, page PDF 9",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-03",
+            "confidence": "B",
+            "notes": "SHA-256 93fb6c0baf7deedc619234c8c63575d9edfeab652447ffc07e673ddb9c7cbdd8 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+          },
+          {
+            "id": "october3d-airpol-pdf-075-p2",
+            "sourceUrl": "https://airpol.com.pl/wp-content/uploads/2022/05/EN-Karta-Airpol-185-55kW.pdf#page=2",
+            "sourceLabel": "Airpol, manufacturer technical documentation, page PDF 2",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-03",
+            "confidence": "B",
+            "notes": "SHA-256 03765bd3f6325ceba8a938e64a469e120e952843538b1a18f3aac757d0728e64 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+          },
+          {
+            "id": "october3d-airpol-pdf-075-p11",
+            "sourceUrl": "https://airpol.com.pl/wp-content/uploads/2022/05/EN-Karta-Airpol-185-55kW.pdf#page=11",
+            "sourceLabel": "Airpol, manufacturer technical documentation, page PDF 11",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-03",
+            "confidence": "B",
+            "notes": "SHA-256 03765bd3f6325ceba8a938e64a469e120e952843538b1a18f3aac757d0728e64 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+          }
+        ]
+      }
+    },
+    {
+      "id": "bambi-bb8",
+      "brand": "Bambi",
+      "model": "BB8",
+      "mpn": "BB8",
+      "fields": [
+        "editorial",
+        "evidence"
+      ],
+      "before": {
+        "editorial": {
+          "overview": "Bambi BB8. 35 L/min à 1 bar ; 32 L/min à 2 bar ; 30 L/min à 3 bar ; 28 L/min à 4 bar ; 27 L/min à 5 bar ; 26 L/min à 6 bar ; 25,5 L/min à 7 bar ; 25 L/min à 8 bar. Groupe avec cuve 9 L.",
+          "verifiedFacts": [
+            "Air livré rattaché à une pression et aux unités originales du constructeur.",
+            "Cuve de stockage documentée : 9 L.",
+            "Pression maximale de fonctionnement publiée : 8 bar."
+          ],
+          "limitations": [
+            "Le fabricant ne précise pas les conditions de référence ISO 1217 ni la fenêtre de temps du cycle de service dans cette fiche.",
+            "Cycle intermittent déclaré ; durée de référence non précisée. L’exploitation permanente n’est pas assimilée à un service continu.",
+            "Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
+            "Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "october3d-bambi-product-28",
+            "sourceUrl": "https://bambi-air.co.uk/product/bb8/",
+            "sourceLabel": "Bambi, BB8, fiche constructeur",
+            "sourceType": "manufacturer",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-03",
+            "confidence": "B",
+            "notes": "SHA-256 740630593a4dcfff1a8d8055eb77c3536f8fb3aa209faa2579c3ec75bce26c78 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+          }
+        ]
+      },
+      "after": {
+        "editorial": {
+          "overview": "Le BB8 et le BB15 V publient tous deux 27 L/min à 5 bar avec un moteur de 0,34 kW ; leurs cuves sont respectivement de 9 et 15 L. Le choix entre ces formats porte donc sur la réserve d’air et l’encombrement, avec une même production publiée à cette pression. Le fabricant annonce un cycle maximal de 50 % sans fenêtre de temps précisée dans la fiche : l’usage reste intermittent à organiser selon la notice. Les exigences d’air de l’équipement doivent être rapprochées du point FAD correspondant à sa pression.",
+          "verifiedFacts": [
+            "Air livré rattaché à une pression et aux unités originales du constructeur.",
+            "Cuve de stockage documentée : 9 L.",
+            "Pression maximale de fonctionnement publiée : 8 bar."
+          ],
+          "limitations": [
+            "Le fabricant ne précise pas les conditions de référence ISO 1217 ni la fenêtre de temps du cycle de service dans cette fiche.",
+            "Cycle intermittent déclaré ; durée de référence non précisée. L’exploitation permanente n’est pas assimilée à un service continu.",
+            "Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
+            "Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "october3d-bambi-product-28",
+            "sourceUrl": "https://bambi-air.co.uk/product/bb8/",
+            "sourceLabel": "Bambi, BB8, fiche constructeur",
+            "sourceType": "manufacturer",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-03",
+            "confidence": "B",
+            "notes": "SHA-256 740630593a4dcfff1a8d8055eb77c3536f8fb3aa209faa2579c3ec75bce26c78 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+          },
+          {
+            "id": "october3d-bambi-product-29",
+            "sourceUrl": "https://bambi-air.co.uk/product/bb15v/",
+            "sourceLabel": "Bambi, BB15V, fiche constructeur",
+            "sourceType": "manufacturer",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-03",
+            "confidence": "B",
+            "notes": "SHA-256 0602bb7839acf86bbccb9d8abfccc8ca540282e58b62b12341634b0897d93cd1 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ekom-dk50-2v-50s-m",
+      "brand": "EKOM",
+      "model": "DK50 2V/50S/M",
+      "mpn": null,
+      "fields": [
+        "editorial"
+      ],
+      "before": {
+        "editorial": {
+          "overview": "EKOM DK50 2V/50S/M. 104 L/min à 6 bar. Groupe avec cuve et sécheur et armoire acoustique.",
+          "verifiedFacts": [
+            "Air livré rattaché à une pression et aux unités originales du constructeur.",
+            "Cuve de stockage documentée : 50 L.",
+            "Plafond conservateur de la plage de fonctionnement : 8 bar."
+          ],
+          "limitations": [
+            "Plafond conservateur de la plage de fonctionnement publiée ; la pression de soupape est distincte.",
+            "Configuration 50 Hz retenue. Aucun transfert des performances de la variante 60 Hz.",
+            "Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
+            "Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "Le DK50 2 V/50S/M associe une armoire acoustique et un sécheur à membrane ; son débit publié est 104 L/min à 6 bar. Le DK50 2 V/50 sans ces équipements annonce 135 L/min à 6 bar, avec le même moteur de 1,2 kW et la même cuve de 50 L. Le choix porte ainsi sur le traitement d’air et l’installation acoustique, en dimensionnant le poste avec les 104 L/min de la variante S/M. La plage de travail 6–8 bar reste distincte du réglage de soupape à 9 bar ; cette fiche retient la configuration 50 Hz.",
+          "verifiedFacts": [
+            "Air livré rattaché à une pression et aux unités originales du constructeur.",
+            "Cuve de stockage documentée : 50 L.",
+            "Plafond conservateur de la plage de fonctionnement : 8 bar."
+          ],
+          "limitations": [
+            "Plafond conservateur de la plage de fonctionnement publiée ; la pression de soupape est distincte.",
+            "Configuration 50 Hz retenue. Aucun transfert des performances de la variante 60 Hz.",
+            "Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
+            "Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+          ]
+        }
+      }
+    },
+    {
+      "id": "mattei-blade-se-12",
+      "brand": "Mattei",
+      "model": "BLADE SE 12",
+      "mpn": null,
+      "fields": [
+        "editorial"
+      ],
+      "before": {
+        "editorial": {
+          "overview": "Mattei BLADE SE 12. 1 370 L/min à 9,5 bar. BLADE sur réservoir 270 L avec sécheur.",
+          "verifiedFacts": [
+            "Air livré rattaché à une pression et aux unités originales du constructeur.",
+            "Cuve de stockage documentée : 270 L.",
+            "Plafond conservateur de la plage de fonctionnement : 10 bar."
+          ],
+          "limitations": [
+            "Service continu déclaré dans les modes de commande décrits ; réglages et installation de la notice à respecter.",
+            "La version 10 bar est retenue ; FAD à9,5 bar, sans fusion avec 8 bar ou 60 Hz.",
+            "Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
+            "Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "En 50 Hz, le BLADE SE 12 et le BLADE S 12 publient 1370 L/min à 9,5 bar, avec 11 kW et une cuve de 270 L. Le SE ajoute le sécheur intégré et porte la masse publiée à 428 kg, contre 396 kg pour le S. Le choix de la version SE concerne donc le traitement d’air et son intégration dans l’atelier, avec une même production déclarée à 9,5 bar. Les valeurs 60 Hz et les autres versions de pression restent séparées ; la qualité d’air exigée au poste doit être vérifiée sur l’installation complète.",
+          "verifiedFacts": [
+            "Air livré rattaché à une pression et aux unités originales du constructeur.",
+            "Cuve de stockage documentée : 270 L.",
+            "Plafond conservateur de la plage de fonctionnement : 10 bar."
+          ],
+          "limitations": [
+            "Service continu déclaré dans les modes de commande décrits ; réglages et installation de la notice à respecter.",
+            "La version 10 bar est retenue ; FAD à9,5 bar, sans fusion avec 8 bar ou 60 Hz.",
+            "Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
+            "Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+          ]
+        }
+      }
+    },
+    {
+      "id": "sil-air-100-24",
+      "brand": "SIL-AIR",
+      "model": "100/24",
+      "mpn": null,
+      "fields": [
+        "editorial"
+      ],
+      "before": {
+        "editorial": {
+          "overview": "SIL-AIR 100/24. 74 L/min déclarés à 5 bar. Compresseur sur cuve 24 L.",
+          "verifiedFacts": [
+            "Configuration de pression documentée : 8 bar.",
+            "Cuve de stockage documentée : 24 L.",
+            "FAD sous pression identifié séparément des valeurs d’aspiration : 74 L/min déclarés à 5 bar."
+          ],
+          "limitations": [
+            "Colonne 50 Hz retenue. La ligne 60 Hz n’est pas utilisée pour augmenter le FAD.",
+            "La pression du FAD est inférieure au maximum mécanique ; aucun FAD n’est extrapolé jusqu’à ce maximum.",
+            "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
+            "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "Le SIL-AIR 100/24 et le 100/24 V conservent une cuve de 24 L et publient 74 L/min à 5 bar pour la version 230 V/50 Hz. Le suffixe V désigne l’ajout de ventilateurs de refroidissement ; le choix concerne ce dispositif et les conditions d’installation. La valeur 88 L/min appartient à la configuration 115 V/60 Hz, qui reste séparée de cette fiche 50 Hz. Le taux de marche applicable demeure à documenter avant de conclure à une exploitation continue.",
+          "verifiedFacts": [
+            "Configuration de pression documentée : 8 bar.",
+            "Cuve de stockage documentée : 24 L.",
+            "FAD sous pression identifié séparément des valeurs d’aspiration : 74 L/min déclarés à 5 bar."
+          ],
+          "limitations": [
+            "Colonne 50 Hz retenue. La ligne 60 Hz n’est pas utilisée pour augmenter le FAD.",
+            "La pression du FAD est inférieure au maximum mécanique ; aucun FAD n’est extrapolé jusqu’à ce maximum.",
+            "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
+            "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil."
+          ]
+        }
+      }
+    },
+    {
+      "id": "fini-cube-4-0-10-270-es-z",
+      "brand": "Fini",
+      "model": "CUBE 4.0-10-270 ES Z",
+      "mpn": "V91PD92FNM501",
+      "fields": [
+        "editorial"
+      ],
+      "before": {
+        "editorial": {
+          "overview": "Fini CUBE 4.0-10-270 ES Z. 460 L/min déclarés à 9,5 bar. Configuration constructeur : Cuve 270 L galvanisée avec sécheur frigorifique intégré.",
+          "verifiedFacts": [
+            "Pression de la configuration documentée : 10 bar.",
+            "Cuve de stockage documentée : 270 L.",
+            "FAD sous pression identifié séparément des valeurs d’aspiration : 460 L/min déclarés à 9,5 bar."
+          ],
+          "limitations": [
+            "FAD déclaré par le constructeur à la pression de mesure indiquée, distincte du plafond de fonctionnement.",
+            "La normalisation exclut les seules variantes de pression et de tension. Modèle et code fabricant retenus exacts.",
+            "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
+            "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "Les références V91PD92FNM501 (ES Z) et V91PD92FNM301 (ES) publient toutes deux 460 L/min à 9,5 bar, avec 4 kW et une cuve de 270 L. Le fabricant définit ES comme la version avec sécheur frigorifique et Z comme la cuve galvanisée : le choix de cette référence porte sur la finition du réservoir, avec une même production d’air déclarée. Le point de mesure 9,5 bar reste distinct du maximum de 10 bar ; le sécheur livré et la qualité d’air requise au poste sont à préciser sur le devis.",
+          "verifiedFacts": [
+            "Pression de la configuration documentée : 10 bar.",
+            "Cuve de stockage documentée : 270 L.",
+            "FAD sous pression identifié séparément des valeurs d’aspiration : 460 L/min déclarés à 9,5 bar."
+          ],
+          "limitations": [
+            "FAD déclaré par le constructeur à la pression de mesure indiquée, distincte du plafond de fonctionnement.",
+            "La normalisation exclut les seules variantes de pression et de tension. Modèle et code fabricant retenus exacts.",
+            "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
+            "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions."
+          ]
+        }
+      }
+    },
+    {
+      "id": "sableuse-asturomec-supermistral-50300",
+      "brand": "Asturomec",
+      "model": "SUPERMISTRAL",
+      "mpn": "50300",
+      "fields": [
+        "editorial"
+      ],
+      "before": {
+        "editorial": {
+          "overview": "Asturomec SUPERMISTRAL (réf. 50300). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+          "verifiedFacts": [
+            "Fonction : récupération de sable par aspiration.",
+            "Réservoir : aluminium 1000 cc.",
+            "Corps : métal poli nickelé avec soft-touch.",
+            "Kit livré : quatre buses en caoutchouc ; un seul outil compté."
+          ],
+          "limitations": [
+            "Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+            "Édition italienne 2024 ; aucune disponibilité commerciale actuelle n’est vérifiée.",
+            "La plage de service ne constitue pas une pression de mesure de consommation ; aucun facteur de marche implicite.",
+            "Données déclarées dans les documents identifiés ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "SUPERMISTRAL 50300 récupère le sable par aspiration et permet de régler la puissance d’aspiration selon le catalogue Asturomec. La ligne du MISTRAL 50301 voisin décrit la récupération, sans mentionner ce réglage. Le SUPERMISTRAL est livré avec quatre buses en caoutchouc et un réservoir de 1 000 cc ; ce kit constitue l’équipement d’un seul outil. La plage de service de 5 à 8 bar ne fournit aucune consommation à un point de pression précis : le dimensionnement reste insuffisamment documenté.",
+          "verifiedFacts": [
+            "Fonction : récupération de sable par aspiration.",
+            "Réservoir : aluminium 1000 cc.",
+            "Corps : métal poli nickelé avec soft-touch.",
+            "Kit livré : quatre buses en caoutchouc ; un seul outil compté."
+          ],
+          "limitations": [
+            "Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+            "Édition italienne 2024 ; aucune disponibilité commerciale actuelle n’est vérifiée.",
+            "La plage de service ne constitue pas une pression de mesure de consommation ; aucun facteur de marche implicite.",
+            "Données déclarées dans les documents identifiés ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+          ]
+        }
+      }
+    },
+    {
+      "id": "pistolet-peinture-hvlp-binks-trophy-1465-14hv-c1s",
+      "brand": "Binks",
+      "model": "Trophy 1465-14HV-C1S",
+      "mpn": "1465-14HV-C1S",
+      "fields": [
+        "editorial"
+      ],
+      "before": {
+        "editorial": {
+          "overview": "Binks Trophy 1465-14HV-C1S. Les conditions de référence du volume normalisé et/ou le régime de mesure manquent. Le débit publié reste hors du calcul FAD. Assemblage 1465-14HV-C1S, buse 1.4 mm, chapeau C1, HVLP, alimentation pressure / siphon sans godet fourni.",
+          "verifiedFacts": [
+            "Code assemblage complet, publié littéralement : 1465-14HV-C1S.",
+            "Buse produit publiée : 1.4 mm.",
+            "Chapeau publié sur cette ligne : C1.",
+            "Technologie publiée : HVLP.",
+            "Alimentation : pressure / siphon sans godet fourni.",
+            "Consommation publiée dans son unité originale : 2,5 / 4,0 / 5,1 / 6,4 SCFM pour 5 / 10 / 15 / 21 PSI en entrée ; 2 / 4 / 7 / 10 PSI au chapeau.",
+            "Pression dans la source : Voir les couples pression d’entrée / pression au chapeau dans le tableau fabricant ; aucun nominal de travail unique inventé.."
+          ],
+          "limitations": [
+            "Consommation publiée en CFM ou SCFM ; l’état de référence n’est pas défini dans ces tableaux. Aucun coefficient volumique silencieux vers L/min FAD.",
+            "Pression dans le chapeau, pression d’entrée dynamique et pression produit restent des grandeurs séparées.",
+            "Les tailles de buse et les chapeaux proviennent d’une ligne d’assemblage complet. Aucun code commandable absent n’est fabriqué.",
+            "Le compresseur d’une pompe ou d’un réservoir alimentant le produit ajoute une demande distincte à documenter.",
+            "Les limites du point documenté s’appliquent au pistolet ou à l’outil décrit ; les autres consommateurs du réseau sont à ajouter séparément."
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "Trophy 1465-14HV-C1S est l’assemblage HVLP à buse de 1,4 mm et chapeau C1, utilisable en alimentation sous pression ou par siphon, sans godet fourni. Binks classe cette ligne dans les produits HEAVY, au-delà de 30 secondes Zahn 2, tandis que le 1465-10HV-C1S de 1,0 mm relève de LIGHT/MEDIUM, 15 à 20 secondes Zahn 2. La viscosité documentée du produit à appliquer est donc un critère de choix entre ces deux assemblages. Les valeurs de consommation restent en SCFM et hors du calcul FAD, avec pressions d’entrée et au chapeau séparées.",
+          "verifiedFacts": [
+            "Code assemblage complet, publié littéralement : 1465-14HV-C1S.",
+            "Buse produit publiée : 1.4 mm.",
+            "Chapeau publié sur cette ligne : C1.",
+            "Technologie publiée : HVLP.",
+            "Alimentation : pressure / siphon sans godet fourni.",
+            "Consommation publiée dans son unité originale : 2,5 / 4,0 / 5,1 / 6,4 SCFM pour 5 / 10 / 15 / 21 PSI en entrée ; 2 / 4 / 7 / 10 PSI au chapeau.",
+            "Pression dans la source : Voir les couples pression d’entrée / pression au chapeau dans le tableau fabricant ; aucun nominal de travail unique inventé.."
+          ],
+          "limitations": [
+            "Consommation publiée en CFM ou SCFM ; l’état de référence n’est pas défini dans ces tableaux. Aucun coefficient volumique silencieux vers L/min FAD.",
+            "Pression dans le chapeau, pression d’entrée dynamique et pression produit restent des grandeurs séparées.",
+            "Les tailles de buse et les chapeaux proviennent d’une ligne d’assemblage complet. Aucun code commandable absent n’est fabriqué.",
+            "Le compresseur d’une pompe ou d’un réservoir alimentant le produit ajoute une demande distincte à documenter.",
+            "Les limites du point documenté s’appliquent au pistolet ou à l’outil décrit ; les autres consommateurs du réseau sont à ajouter séparément."
+          ]
+        }
+      }
+    },
+    {
+      "id": "biax-beg-309",
+      "brand": "BIAX",
+      "model": "BEG 309",
+      "mpn": "150800745",
+      "fields": [
+        "editorial",
+        "evidence"
+      ],
+      "before": {
+        "editorial": {
+          "overview": "BIAX BEG 309, référence 150800745. Le tableau fabricant publie 150 L/min et une plage d’utilisation de 6 à 6 bar. Puissance publiée : 20 W. Vitesse de rotation : adjustable 0-900 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue de cette référence indique un fonctionnement à 6 bar.",
+            "La fiche fabricant publie une consommation de 150 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
+            "Référence fabricant : 150800745.",
+            "Puissance publiée : 20 W.",
+            "Vitesse de rotation : adjustable 0-900 tr/min.",
+            "Masse publiée : 250 g."
+          ],
+          "limitations": [
+            "Le choix de la fraise, du disque ou de l’accessoire doit respecter la vitesse et les dimensions prescrites par BIAX.",
+            "Débit déclaré par le fabricant, sans mesure physique CompatAir."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "biax-150800745-20260926",
+            "sourceUrl": "https://biax.de/en/product/beg-309-bis-senk-o-55-mm/",
+            "sourceLabel": "BIAX, fiche technique BEG 309 – max. hole Ø 5,5 mm, réf. 150800745",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "La fiche fabricant publie une consommation de 150 L/min. Le régime de charge n’est pas précisé dans ce tableau."
+          },
+          {
+            "id": "biax-150800745-20260926-workingpressurebar-1",
+            "sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=42",
+            "sourceLabel": "BIAX, catalogue technique biax-pneumatic-en, p. 42",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+          }
+        ]
+      },
+      "after": {
+        "editorial": {
+          "overview": "BEG 309, référence 150800745, se commande par levier ; le BE 309 voisin, référence 150800710, démarre par appui. Cette différence de déclenchement permet de choisir l’outil selon le positionnement possible du chanfrein sur le trou. Les deux sont réglables de 0 à 900 tr/min, avec 20 W et une queue maximale de 3 mm ; leurs masses publiées sont respectivement 250 et 180 g. BIAX donne 150 l/min et une consigne de 6 bar, sans préciser le régime de mesure de cette consommation.",
+          "verifiedFacts": [
+            "Le catalogue de cette référence indique un fonctionnement à 6 bar.",
+            "La fiche fabricant publie une consommation de 150 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
+            "Référence fabricant : 150800745.",
+            "Puissance publiée : 20 W.",
+            "Vitesse de rotation : adjustable 0-900 tr/min.",
+            "Masse publiée : 250 g."
+          ],
+          "limitations": [
+            "Le choix de la fraise, du disque ou de l’accessoire doit respecter la vitesse et les dimensions prescrites par BIAX.",
+            "Débit déclaré par le fabricant, sans mesure physique CompatAir."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "biax-150800745-20260926",
+            "sourceUrl": "https://biax.de/en/product/beg-309-bis-senk-o-55-mm/",
+            "sourceLabel": "BIAX, fiche technique BEG 309 – max. hole Ø 5,5 mm, réf. 150800745",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "La fiche fabricant publie une consommation de 150 L/min. Le régime de charge n’est pas précisé dans ce tableau."
+          },
+          {
+            "id": "biax-150800745-20260926-workingpressurebar-1",
+            "sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=42",
+            "sourceLabel": "BIAX, catalogue technique biax-pneumatic-en, p. 42",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+          },
+          {
+            "id": "biax-150800710-20260926",
+            "sourceUrl": "https://biax.de/en/product/be-309-bis-senk-o-55-mm/",
+            "sourceLabel": "BIAX, fiche technique BE 309 – max. hole Ø 5,5 mm, réf. 150800710",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "La fiche fabricant publie une consommation de 150 L/min. Le régime de charge n’est pas précisé dans ce tableau."
+          },
+          {
+            "id": "biax-150800710-20260926-workingpressurebar-1",
+            "sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=42",
+            "sourceLabel": "BIAX, catalogue technique biax-pneumatic-en, p. 42",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+          }
+        ]
+      }
+    },
+    {
+      "id": "biax-gaa-505",
+      "brand": "BIAX",
+      "model": "GAA 505",
+      "mpn": "150619445",
+      "fields": [
+        "editorial",
+        "evidence"
+      ],
+      "before": {
+        "editorial": {
+          "overview": "BIAX GAA 505, référence 150619445. Le tableau fabricant publie 300 L/min et une plage d’utilisation de 6 à 6 bar. Vitesse à vide publiée : 500 tr/min. Masse publiée : 630 g.",
+          "verifiedFacts": [
+            "Le catalogue prescrit un fonctionnement à 6 bar dans la page de cette famille.",
+            "Consommation publiée dans la ligne Luftverbrauch en L/min ; le régime de charge n’est pas détaillé.",
+            "Référence fabricant : 150619445.",
+            "Vitesse à vide publiée : 500 tr/min.",
+            "Masse publiée : 630 g."
+          ],
+          "limitations": [
+            "Le réglage du couple dépend de l’assemblage et des ressorts prévus par le fabricant.",
+            "L’aspiration des vis et les équipements auxiliaires peuvent demander un dimensionnement séparé."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "biax-150619445-20260926",
+            "sourceUrl": "https://biax.de/wp-content/uploads/2025/02/BIAX_Schrauber_DE.pdf#page=14",
+            "sourceLabel": "BIAX, catalogue des visseuses pneumatiques, p. 14, réf. 150619445",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Consommation publiée dans la ligne Luftverbrauch en L/min ; le régime de charge n’est pas détaillé."
+          }
+        ]
+      },
+      "after": {
+        "editorial": {
+          "overview": "GAA 505, référence 150619445, offre 0,3 à 4,0 Nm sur assemblage dur et 0,3 à 3,5 Nm sur assemblage souple ; le GAA 205 voisin publie 0,04 à 1,1 Nm dans les deux cas. Le porte-outil E6,3 du GAA 505 reçoit des embouts hexagonaux de 1/4 pouce, tandis que le GAA 205 emploie un hexagone A3 de 3 mm. Tous deux tournent à 500 tr/min et intègrent l’aspiration des vis, dont la douille doit être choisie avec la tête de vis et l’embout. Leurs consommations publiées sont respectivement 300 et 150 l/min à la consigne de 6 bar, sans régime de charge détaillé dans ce tableau.",
+          "verifiedFacts": [
+            "Le catalogue prescrit un fonctionnement à 6 bar dans la page de cette famille.",
+            "Consommation publiée dans la ligne Luftverbrauch en L/min ; le régime de charge n’est pas détaillé.",
+            "Référence fabricant : 150619445.",
+            "Vitesse à vide publiée : 500 tr/min.",
+            "Masse publiée : 630 g."
+          ],
+          "limitations": [
+            "Le réglage du couple dépend de l’assemblage et des ressorts prévus par le fabricant.",
+            "L’aspiration des vis et les équipements auxiliaires peuvent demander un dimensionnement séparé."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "biax-150619445-20260926",
+            "sourceUrl": "https://biax.de/wp-content/uploads/2025/02/BIAX_Schrauber_DE.pdf#page=14",
+            "sourceLabel": "BIAX, catalogue des visseuses pneumatiques, p. 14, réf. 150619445",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Consommation publiée dans la ligne Luftverbrauch en L/min ; le régime de charge n’est pas détaillé."
+          },
+          {
+            "id": "biax-150600720-20260926",
+            "sourceUrl": "https://biax.de/wp-content/uploads/2025/02/BIAX_Schrauber_DE.pdf#page=12",
+            "sourceLabel": "BIAX, catalogue des visseuses pneumatiques, p. 12, réf. 150600720",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Consommation publiée dans la ligne Luftverbrauch en L/min ; le régime de charge n’est pas détaillé."
+          }
+        ]
+      }
+    },
+    {
+      "id": "fiam-fde33pa",
+      "brand": "Fiam",
+      "model": "FDE33PA",
+      "mpn": "124611552",
+      "fields": [
+        "editorial",
+        "evidence"
+      ],
+      "before": {
+        "editorial": {
+          "overview": "Fiam FDE33PA, référence 124611552. Le tableau fabricant publie 600 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide : 3300 tr/min. Masse publiée : 1.08 kg.",
+          "verifiedFacts": [
+            "La brochure associée à cette fiche indique une pression de mesure et d’utilisation recommandée de 6,3 bar (ISO 2787).",
+            "La fiche fabricant publie 10 L/s, soit 600 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML.",
+            "Référence fabricant : 124611552.",
+            "Vitesse à vide : 3300 tr/min.",
+            "Masse publiée : 1.08 kg.",
+            "Dimensions publiées : Ø 38 x L 223 x H 155 mm."
+          ],
+          "limitations": [
+            "Le couple éventuel est indicatif : l’assemblage, l’accessoire et la pression dynamique influencent le résultat.",
+            "Consommation déclarée par le fabricant, sans essai indépendant ni garantie d’un maximum à tous les régimes."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "fiam-124611552-20260926",
+            "sourceUrl": "https://www.fiamgroup.com/en/products/air-drills/fde33pa/",
+            "sourceLabel": "Fiam, fiche technique FDE33PA, réf. 124611552",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "La fiche fabricant publie 10 L/s, soit 600 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML."
+          },
+          {
+            "id": "fiam-124611552-20260926-workingpressurebar-1",
+            "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf#page=13",
+            "sourceLabel": "Fiam, brochure technique en-34, p. 13",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+          }
+        ]
+      },
+      "after": {
+        "editorial": {
+          "overview": "FDE33PA, référence 124611552, est la version avec mandrin autoserrant de 1 à 10 mm ; FDE33P, référence 124610552, est livré sans mandrin sur sortie filetée 3/8 × 24 UNF. Le choix de la référence détermine donc l’équipement de serrage du foret effectivement fourni. La version PA mesure 223 mm et pèse 1,08 kg, contre 165 mm et 0,72 kg pour P, pour une vitesse commune de 3 300 tr/min. Les deux fiches donnent 10 l/s, soit 600 l/min, et la brochure prescrit 6,3 bar ; le régime de consommation n’est pas précisé.",
+          "verifiedFacts": [
+            "La brochure associée à cette fiche indique une pression de mesure et d’utilisation recommandée de 6,3 bar (ISO 2787).",
+            "La fiche fabricant publie 10 L/s, soit 600 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML.",
+            "Référence fabricant : 124611552.",
+            "Vitesse à vide : 3300 tr/min.",
+            "Masse publiée : 1.08 kg.",
+            "Dimensions publiées : Ø 38 x L 223 x H 155 mm."
+          ],
+          "limitations": [
+            "Le couple éventuel est indicatif : l’assemblage, l’accessoire et la pression dynamique influencent le résultat.",
+            "Consommation déclarée par le fabricant, sans essai indépendant ni garantie d’un maximum à tous les régimes."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "fiam-124611552-20260926",
+            "sourceUrl": "https://www.fiamgroup.com/en/products/air-drills/fde33pa/",
+            "sourceLabel": "Fiam, fiche technique FDE33PA, réf. 124611552",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "La fiche fabricant publie 10 L/s, soit 600 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML."
+          },
+          {
+            "id": "fiam-124611552-20260926-workingpressurebar-1",
+            "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf#page=13",
+            "sourceLabel": "Fiam, brochure technique en-34, p. 13",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+          },
+          {
+            "id": "fiam-124610552-20260926",
+            "sourceUrl": "https://www.fiamgroup.com/en/products/air-drills/fde33p/",
+            "sourceLabel": "Fiam, fiche technique FDE33P, réf. 124610552",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "La fiche fabricant publie 10 L/s, soit 600 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML."
+          },
+          {
+            "id": "fiam-124610552-20260926-workingpressurebar-1",
+            "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf#page=13",
+            "sourceLabel": "Fiam, brochure technique en-34, p. 13",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+          },
+          {
+            "id": "fiam-124611563-20260926-workingpressurebar-1",
+            "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf#page=13",
+            "sourceLabel": "Fiam, brochure technique en-34, p. 13",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+          },
+          {
+            "id": "fiam-124611553-20260926-workingpressurebar-1",
+            "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf#page=13",
+            "sourceLabel": "Fiam, brochure technique en-34, p. 13",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+          },
+          {
+            "id": "fiam-122311145-20260926-workingpressurebar-1",
+            "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf#page=9",
+            "sourceLabel": "Fiam, brochure technique en-34, p. 9",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+          }
+        ]
+      }
+    },
+    {
+      "id": "fiam-les30sp",
+      "brand": "Fiam",
+      "model": "LES30SP",
+      "mpn": "144631101",
+      "fields": [
+        "editorial",
+        "evidence"
+      ],
+      "before": {
+        "editorial": {
+          "overview": "Fiam LES30SP, référence 144631101. Le tableau fabricant publie 540 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide : 3000 tr/min. Masse publiée : 0.7 kg.",
+          "verifiedFacts": [
+            "La brochure associée à cette fiche indique une pression de mesure et d’utilisation recommandée de 6,3 bar (ISO 2787).",
+            "La fiche fabricant publie 9 L/s, soit 540 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML.",
+            "Référence fabricant : 144631101.",
+            "Vitesse à vide : 3000 tr/min.",
+            "Masse publiée : 0.7 kg.",
+            "Dimensions publiées : Ø 40 x L 175 mm."
+          ],
+          "limitations": [
+            "Le couple éventuel est indicatif : l’assemblage, l’accessoire et la pression dynamique influencent le résultat.",
+            "Consommation déclarée par le fabricant, sans essai indépendant ni garantie d’un maximum à tous les régimes."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "fiam-144631101-20260926",
+            "sourceUrl": "https://www.fiamgroup.com/en/products/grinders-and-sanders/les30sp/",
+            "sourceLabel": "Fiam, fiche technique LES30SP, réf. 144631101",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "La fiche fabricant publie 9 L/s, soit 540 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML."
+          },
+          {
+            "id": "fiam-144631101-20260926-workingpressurebar-1",
+            "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-44.pdf#page=13",
+            "sourceLabel": "Fiam, brochure technique en-44, p. 13",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+          }
+        ]
+      },
+      "after": {
+        "editorial": {
+          "overview": "LES30SP, référence 144631101, est une ponceuse droite à sortie femelle M8 × 1,25 pour accessoire de 80 mm ; la LES34 voisine est une ponceuse d’angle à sortie M14 pour accessoire de 75 mm. Le montage du plateau doit respecter la forme et le filetage de chaque outil. La LES30SP tourne à 3 000 tr/min et pèse 0,70 kg, contre 3 400 tr/min et 1,00 kg pour LES34. Les deux publient 300 W et 9 l/s, soit 540 l/min, à la pression de mesure de 6,3 bar, sans maximum de consommation garanti à tous les régimes.",
+          "verifiedFacts": [
+            "La brochure associée à cette fiche indique une pression de mesure et d’utilisation recommandée de 6,3 bar (ISO 2787).",
+            "La fiche fabricant publie 9 L/s, soit 540 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML.",
+            "Référence fabricant : 144631101.",
+            "Vitesse à vide : 3000 tr/min.",
+            "Masse publiée : 0.7 kg.",
+            "Dimensions publiées : Ø 40 x L 175 mm."
+          ],
+          "limitations": [
+            "Le couple éventuel est indicatif : l’assemblage, l’accessoire et la pression dynamique influencent le résultat.",
+            "Consommation déclarée par le fabricant, sans essai indépendant ni garantie d’un maximum à tous les régimes."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "fiam-144631101-20260926",
+            "sourceUrl": "https://www.fiamgroup.com/en/products/grinders-and-sanders/les30sp/",
+            "sourceLabel": "Fiam, fiche technique LES30SP, réf. 144631101",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "La fiche fabricant publie 9 L/s, soit 540 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML."
+          },
+          {
+            "id": "fiam-144631101-20260926-workingpressurebar-1",
+            "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-44.pdf#page=13",
+            "sourceLabel": "Fiam, brochure technique en-44, p. 13",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+          },
+          {
+            "id": "fiam-144695300-20260926",
+            "sourceUrl": "https://www.fiamgroup.com/en/products/grinders-and-sanders/les34/",
+            "sourceLabel": "Fiam, fiche technique LES34, réf. 144695300",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "La fiche fabricant publie 9 L/s, soit 540 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML."
+          },
+          {
+            "id": "fiam-144695300-20260926-workingpressurebar-1",
+            "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-44.pdf#page=13",
+            "sourceLabel": "Fiam, brochure technique en-44, p. 13",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+          }
+        ]
+      }
+    },
+    {
+      "id": "nitto-kohki-b-20d-a",
+      "brand": "Nitto Kohki",
+      "model": "B-20D-A",
+      "mpn": "B-20D-A",
+      "fields": [
+        "editorial",
+        "evidence"
+      ],
+      "before": {
+        "editorial": {
+          "overview": "Nitto Kohki B-20D-A, référence B-20D-A. Le tableau fabricant publie 520 L/min et une plage d’utilisation de 6 à 6 bar. Vitesse de rotation publiée : 17000 tr/min. Masse publiée : 1.5 kg.",
+          "verifiedFacts": [
+            "Pression de 0,6 MPa publiée dans le tableau, soit 6 bar. La valeur en kgf/cm² entre parenthèses n’est pas utilisée pour la conversion.",
+            "Consommation à vide explicitement publiée (No-load) : 0.52 m³/min. Conversion × 1 000 en L/min.",
+            "Référence fabricant : B-20D-A.",
+            "Vitesse de rotation publiée : 17000 tr/min.",
+            "Masse publiée : 1.5 kg."
+          ],
+          "limitations": [
+            "Le débit à vide n’établit pas à lui seul la consommation sous toutes les charges. Respecter les conditions d’emploi de la notice.",
+            "La conformité et la disponibilité de la version exacte doivent être confirmées avant achat."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "nitto-kohki-b-20d-a-20260926",
+            "sourceUrl": "https://www.nitto-kohki.eu/images/stories/products/pdf_catalogs/Tools_Catalog.pdf#page=38",
+            "sourceLabel": "Nitto Kohki, catalogue officiel des outils, p. 38, réf. B-20D-A",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Consommation à vide explicitement publiée (No-load) : 0.52 m³/min. Conversion × 1 000 en L/min."
+          }
+        ]
+      },
+      "after": {
+        "editorial": {
+          "overview": "B-20D-A soutient son galet avant des deux côtés, tandis que B-20D le soutient d’un seul côté selon le schéma Nitto Kohki. Les deux utilisent une bande de 20 × 520 mm, tournent à 17 000 tr/min et publient une vitesse linéaire de bande de 2 620 m/min. Leurs masses sont respectivement 1,50 et 1,55 kg ; la différence de support du galet doit être examinée avec l’accès à la pièce. Leur consommation commune de 520 l/min est explicitement mesurée à vide à 0,6 MPa, soit 6 bar, et ne couvre pas toutes les conditions de charge.",
+          "verifiedFacts": [
+            "Pression de 0,6 MPa publiée dans le tableau, soit 6 bar. La valeur en kgf/cm² entre parenthèses n’est pas utilisée pour la conversion.",
+            "Consommation à vide explicitement publiée (No-load) : 0.52 m³/min. Conversion × 1 000 en L/min.",
+            "Référence fabricant : B-20D-A.",
+            "Vitesse de rotation publiée : 17000 tr/min.",
+            "Masse publiée : 1.5 kg."
+          ],
+          "limitations": [
+            "Le débit à vide n’établit pas à lui seul la consommation sous toutes les charges. Respecter les conditions d’emploi de la notice.",
+            "La conformité et la disponibilité de la version exacte doivent être confirmées avant achat."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "nitto-kohki-b-20d-a-20260926",
+            "sourceUrl": "https://www.nitto-kohki.eu/images/stories/products/pdf_catalogs/Tools_Catalog.pdf#page=38",
+            "sourceLabel": "Nitto Kohki, catalogue officiel des outils, p. 38, réf. B-20D-A",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Consommation à vide explicitement publiée (No-load) : 0.52 m³/min. Conversion × 1 000 en L/min."
+          },
+          {
+            "id": "nitto-kohki-b-20d-20260926",
+            "sourceUrl": "https://www.nitto-kohki.eu/images/stories/products/pdf_catalogs/Tools_Catalog.pdf#page=38",
+            "sourceLabel": "Nitto Kohki, catalogue officiel des outils, p. 38, réf. B-20D",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Consommation à vide explicitement publiée (No-load) : 0.52 m³/min. Conversion × 1 000 en L/min."
+          }
+        ]
+      }
+    },
+    {
+      "id": "red-rooster-rr-0315ns",
+      "brand": "Red Rooster",
+      "model": "RR-0315NS",
+      "mpn": "RR-0315NS",
+      "fields": [
+        "editorial",
+        "evidence"
+      ],
+      "before": {
+        "editorial": {
+          "overview": "Red Rooster RR-0315NS, référence RR-0315NS. Le tableau fabricant publie 396 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Masse publiée : 2,6 kg. Diamètre intérieur de flexible conseillé : 6,5 mm.",
+          "verifiedFacts": [
+            "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+            "Consommation publiée : 6.6 L/s, convertis en 396 L/min par multiplication par 60.",
+            "Référence fabricant : RR-0315NS.",
+            "Masse publiée : 2,6 kg.",
+            "Diamètre intérieur de flexible conseillé : 6,5 mm.",
+            "Raccord pneumatique : PT 1/4\"."
+          ],
+          "limitations": [
+            "Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
+            "La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "red-rooster-rr-0315ns-20260926",
+            "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=55",
+            "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 55, réf. RR-0315NS",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Consommation publiée : 6.6 L/s, convertis en 396 L/min par multiplication par 60."
+          },
+          {
+            "id": "red-rooster-rr-0315ns-20260926-workingpressurebar-1",
+            "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+            "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 106",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+          }
+        ]
+      },
+      "after": {
+        "editorial": {
+          "overview": "RR-0315NS frappe à 4 000 coups/min, contre 3 000 pour RR-2110NS, avec des courses respectives de 32 et 33 mm. Le catalogue donne des cotes A × B de 415 × 45 mm pour RR-0315NS et 340 × 175 mm pour RR-2110NS : l’encombrement doit être choisi avec l’accès à la surface à décaper. Les deux sont livrés avec 19 aiguilles de 3 mm, tandis que le tableau n’attribue l’option de 29 aiguilles de 2 mm qu’au RR-2110NS. La consommation commune de 6,6 l/s, soit 396 l/min, n’est pas qualifiée en régime dans ce tableau ; la consigne générale est de 6,3 bar moteur en fonctionnement.",
+          "verifiedFacts": [
+            "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+            "Consommation publiée : 6.6 L/s, convertis en 396 L/min par multiplication par 60.",
+            "Référence fabricant : RR-0315NS.",
+            "Masse publiée : 2,6 kg.",
+            "Diamètre intérieur de flexible conseillé : 6,5 mm.",
+            "Raccord pneumatique : PT 1/4\"."
+          ],
+          "limitations": [
+            "Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
+            "La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "red-rooster-rr-0315ns-20260926",
+            "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=55",
+            "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 55, réf. RR-0315NS",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Consommation publiée : 6.6 L/s, convertis en 396 L/min par multiplication par 60."
+          },
+          {
+            "id": "red-rooster-rr-0315ns-20260926-workingpressurebar-1",
+            "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+            "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 106",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+          },
+          {
+            "id": "red-rooster-rr-2110ns-20260926",
+            "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=55",
+            "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 55, réf. RR-2110NS",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Consommation publiée : 6.6 L/s, convertis en 396 L/min par multiplication par 60."
+          },
+          {
+            "id": "red-rooster-rr-2110ns-20260926-workingpressurebar-1",
+            "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+            "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 106",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+          }
+        ]
+      }
+    },
+    {
+      "id": "red-rooster-rr-476",
+      "brand": "Red Rooster",
+      "model": "RR-476",
+      "mpn": "RR-476",
+      "fields": [
+        "editorial",
+        "evidence"
+      ],
+      "before": {
+        "editorial": {
+          "overview": "Red Rooster RR-476, référence RR-476. Le tableau fabricant publie 390 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Masse publiée : 1,1 kg. Diamètre intérieur de flexible conseillé : 6,5 mm.",
+          "verifiedFacts": [
+            "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+            "Consommation publiée : 6.5 L/s, convertis en 390 L/min par multiplication par 60.",
+            "Référence fabricant : RR-476.",
+            "Masse publiée : 1,1 kg.",
+            "Diamètre intérieur de flexible conseillé : 6,5 mm.",
+            "Raccord pneumatique : PT 1/4\"."
+          ],
+          "limitations": [
+            "Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
+            "La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "red-rooster-rr-476-20260926",
+            "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=60",
+            "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 60, réf. RR-476",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Consommation publiée : 6.5 L/s, convertis en 390 L/min par multiplication par 60."
+          },
+          {
+            "id": "red-rooster-rr-476-20260926-workingpressurebar-1",
+            "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+            "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 106",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+          }
+        ]
+      },
+      "after": {
+        "editorial": {
+          "overview": "RR-476 est un couteau universel à mouvement oscillant réglable de 0 à 22 000 oscillations/min, utilisable comme scie, coupe-vitres ou ponceuse selon l’accessoire monté. La RRJ-8205 voisine est une scie sabre à 5 000 coups/min et course de 25 mm : mouvement et montage de lame diffèrent. Le catalogue associe la lame 475101 du RR-476 à une coupe d’acier de 1 mm ; cette capacité ne se transfère pas aux autres accessoires. Il donne 6,5 l/s, soit 390 l/min, pour RR-476 contre 2,8 l/s pour RRJ-8205, sans régime de mesure précisé ; la consigne générale est de 6,3 bar en fonctionnement.",
+          "verifiedFacts": [
+            "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+            "Consommation publiée : 6.5 L/s, convertis en 390 L/min par multiplication par 60.",
+            "Référence fabricant : RR-476.",
+            "Masse publiée : 1,1 kg.",
+            "Diamètre intérieur de flexible conseillé : 6,5 mm.",
+            "Raccord pneumatique : PT 1/4\"."
+          ],
+          "limitations": [
+            "Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
+            "La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "red-rooster-rr-476-20260926",
+            "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=60",
+            "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 60, réf. RR-476",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Consommation publiée : 6.5 L/s, convertis en 390 L/min par multiplication par 60."
+          },
+          {
+            "id": "red-rooster-rr-476-20260926-workingpressurebar-1",
+            "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+            "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 106",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+          },
+          {
+            "id": "red-rooster-rrj-8205-20260926",
+            "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=56",
+            "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 56, réf. RRJ-8205",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Consommation publiée : 2.8 L/s, convertis en 168 L/min par multiplication par 60."
+          },
+          {
+            "id": "red-rooster-rrj-8205-20260926-workingpressurebar-1",
+            "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+            "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 106",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+          }
+        ]
+      }
+    },
+    {
+      "id": "red-rooster-rr-8110",
+      "brand": "Red Rooster",
+      "model": "RR-8110",
+      "mpn": "RR-8110",
+      "fields": [
+        "editorial",
+        "evidence"
+      ],
+      "before": {
+        "editorial": {
+          "overview": "Red Rooster RR-8110, référence RR-8110. Le tableau fabricant publie 564 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Masse publiée : 1,2 kg. Diamètre intérieur de flexible conseillé : 10 mm.",
+          "verifiedFacts": [
+            "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+            "Consommation publiée : 9.4 L/s, convertis en 564 L/min par multiplication par 60.",
+            "Référence fabricant : RR-8110.",
+            "Masse publiée : 1,2 kg.",
+            "Diamètre intérieur de flexible conseillé : 10 mm.",
+            "Raccord pneumatique : PT 1/4\"."
+          ],
+          "limitations": [
+            "Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
+            "La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "red-rooster-rr-8110-20260926",
+            "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=57",
+            "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 57, réf. RR-8110",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Consommation publiée : 9.4 L/s, convertis en 564 L/min par multiplication par 60."
+          },
+          {
+            "id": "red-rooster-rr-8110-20260926-workingpressurebar-1",
+            "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+            "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 106",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+          }
+        ]
+      },
+      "after": {
+        "editorial": {
+          "overview": "RR-8110 est une cisaille donnée pour 1 mm d’acier ou 1,2 mm d’aluminium, à 2 400 coups/min et 0,3 kW. La RR-8116 voisine est une grignoteuse donnée pour 1,6 mm d’acier ou 2,0 mm d’aluminium, à 3 500 coups/min : ces capacités appartiennent à deux procédés de coupe différents. Leurs masses publiées sont respectivement 1,2 et 0,9 kg, et leurs consommations 9,4 et 8 l/s, soit 564 et 480 l/min. Le tableau ne précise pas le régime de consommation ; la pression générale de service doit être de 6,3 bar au moteur en marche.",
+          "verifiedFacts": [
+            "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+            "Consommation publiée : 9.4 L/s, convertis en 564 L/min par multiplication par 60.",
+            "Référence fabricant : RR-8110.",
+            "Masse publiée : 1,2 kg.",
+            "Diamètre intérieur de flexible conseillé : 10 mm.",
+            "Raccord pneumatique : PT 1/4\"."
+          ],
+          "limitations": [
+            "Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
+            "La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "red-rooster-rr-8110-20260926",
+            "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=57",
+            "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 57, réf. RR-8110",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Consommation publiée : 9.4 L/s, convertis en 564 L/min par multiplication par 60."
+          },
+          {
+            "id": "red-rooster-rr-8110-20260926-workingpressurebar-1",
+            "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+            "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 106",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+          },
+          {
+            "id": "red-rooster-rr-8116-20260926",
+            "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=57",
+            "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 57, réf. RR-8116",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Consommation publiée : 8 L/s, convertis en 480 L/min par multiplication par 60."
+          },
+          {
+            "id": "red-rooster-rr-8116-20260926-workingpressurebar-1",
+            "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+            "sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 106",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+          }
+        ]
+      }
+    }
+  ],
+  "technicalCards": []
+}

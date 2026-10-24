@@ -81,7 +81,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "ALMiG COMBI XP 8 270D. Station 4-en-1 : réservoir 270 L, sécheur frigorifique, préfiltre et postfiltre. La courbe reprend les capacités maximales publiées, avec les minima conservés séparément.",
+		"overview": "Le COMBI XP 8 et le XP 6 gardent la cuve de 270 L, le sécheur frigorifique et la pré/post-filtration ; leur différence porte surtout sur la plage de production. À 10 bar, le XP 8 module de 170 à 980 L/min, contre 180 à 690 L/min pour le XP 6. À 13 bar, les plages publiées deviennent 140–750 et 170–590 L/min respectivement, avec des moteurs de 7,5 et 5,5 kW. Ces bornes constructeur servent à examiner la modulation à la pression requise ; le débit moyen réellement demandé par l’atelier reste à mesurer.",
 		"verifiedFacts": [
 			"Puissance moteur publiée : 7,5 kW ; poids de cette configuration : 585 kg.",
 			"Débit restitué documenté : 1 160 L/min à 8 bar ; 980 L/min à 10 bar ; 750 L/min à 13 bar.",

@@ -1,3 +1,4 @@
+import { applyReviewedOctober24Amendment } from './reviewed-catalog-amendments-2026-10-24.mjs';
 const DATE = '2026-10-01';
 const slug = value => value.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const round = value => Number(value.toFixed(3));
@@ -47,5 +48,5 @@ export function buildDocumentedExpansionOctoberB(snapshot) {
  });
  const ids = new Set();
  for (const product of [...compressors, ...tools]) { if (ids.has(product.id)) throw new Error('Identité dupliquée'); ids.add(product.id); }
- return { compressors, tools };
+ return { compressors: compressors.map(applyReviewedOctober24Amendment), tools: tools.map(applyReviewedOctober24Amendment) };
 }

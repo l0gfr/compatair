@@ -81,7 +81,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Airpol 55. 5 833,333 L/min à 15 bar. Groupe Airpol sans réservoir de stockage intégré.",
+		"overview": "À 15 bar, l’Airpol 55 publie 350 m³/h, soit 5833,333 L/min ; l’Airpol 45 voisin est donné pour 280 m³/h, soit 4666,667 L/min, à la même pression. Le passage de 45 à 55 kW correspond donc ici à un palier de production d’air documenté à 15 bar. Pour un atelier visant cette pression, le choix se fait sur le besoin simultané du réseau et sur ces capacités publiées ; le taux de marche et les conditions de référence complètes restent à obtenir avant un engagement permanent.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 0 L.",
@@ -120,6 +120,16 @@ const product: CompressorInput = {
 			"id": "october3d-airpol-pdf-075-p2",
 			"sourceUrl": "https://airpol.com.pl/wp-content/uploads/2022/05/EN-Karta-Airpol-185-55kW.pdf#page=2",
 			"sourceLabel": "Airpol, manufacturer technical documentation, page PDF 2",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-03",
+			"confidence": "B",
+			"notes": "SHA-256 03765bd3f6325ceba8a938e64a469e120e952843538b1a18f3aac757d0728e64 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "october3d-airpol-pdf-075-p11",
+			"sourceUrl": "https://airpol.com.pl/wp-content/uploads/2022/05/EN-Karta-Airpol-185-55kW.pdf#page=11",
+			"sourceLabel": "Airpol, manufacturer technical documentation, page PDF 11",
 			"sourceType": "manual",
 			"sourceRole": "primary",
 			"retrievedAt": "2026-10-03",

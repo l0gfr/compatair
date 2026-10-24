@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Asturomec SUPERMISTRAL (réf. 50300). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "SUPERMISTRAL 50300 récupère le sable par aspiration et permet de régler la puissance d’aspiration selon le catalogue Asturomec. La ligne du MISTRAL 50301 voisin décrit la récupération, sans mentionner ce réglage. Le SUPERMISTRAL est livré avec quatre buses en caoutchouc et un réservoir de 1 000 cc ; ce kit constitue l’équipement d’un seul outil. La plage de service de 5 à 8 bar ne fournit aucune consommation à un point de pression précis : le dimensionnement reste insuffisamment documenté.",
 		"verifiedFacts": [
 			"Fonction : récupération de sable par aspiration.",
 			"Réservoir : aluminium 1000 cc.",

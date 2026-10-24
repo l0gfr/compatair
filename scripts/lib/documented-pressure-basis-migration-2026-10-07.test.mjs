@@ -80,6 +80,16 @@ const beforeOctober21 = value => {
  }
  return product;
 };
+const amendments24 = new Map(JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-10-24.json', import.meta.url), 'utf8')).rows.map(row => [row.id, row]));
+const beforeOctober24 = value => {
+ const product = structuredClone(value), amendment = amendments24.get(product.id);
+ if (!amendment) return product;
+ for (const field of amendment.fields) {
+  expect(product[field], `${product.id}:${field}`).toEqual(amendment.after[field]);
+  product[field] = structuredClone(amendment.before[field]);
+ }
+ return product;
+};
 const cards19 = new Map(JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-10-19.json', import.meta.url), 'utf8')).technicalCards.map(card=>[card.path,card]));
 const cards20 = new Map(JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-10-20.json', import.meta.url), 'utf8')).technicalCards.map(card=>[card.path,card]));
 const cards21 = new Map(JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-10-21.json', import.meta.url), 'utf8')).technicalCards.map(card=>[card.path,card]));
@@ -103,7 +113,7 @@ describe('documented pressure basis migration October 7', () => {
    for (const expected of derived) {
     const product = loadProduct(expected.id);
     expect(product, expected.id).toEqual(expected);
-    canonical.push([product.id, withoutBasis(beforeOctober17(beforeOctober18(beforeOctober19(beforeOctober20(beforeOctober21(product))))))]);
+    canonical.push([product.id, withoutBasis(beforeOctober17(beforeOctober18(beforeOctober19(beforeOctober20(beforeOctober21(beforeOctober24(product)))))))]);
     const actualCardHash=digest(readFileSync(new URL(`../../public${product.image.src}`, import.meta.url))), card21=cards21.get(product.image.src);
     if(card21) expect(actualCardHash).toBe(card21.afterSha256);
     const currentCardHash=card21?.beforeSha256??actualCardHash, card20=cards20.get(product.image.src);

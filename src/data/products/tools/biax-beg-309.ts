@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX BEG 309, référence 150800745. Le tableau fabricant publie 150 L/min et une plage d’utilisation de 6 à 6 bar. Puissance publiée : 20 W. Vitesse de rotation : adjustable 0-900 tr/min.",
+		"overview": "BEG 309, référence 150800745, se commande par levier ; le BE 309 voisin, référence 150800710, démarre par appui. Cette différence de déclenchement permet de choisir l’outil selon le positionnement possible du chanfrein sur le trou. Les deux sont réglables de 0 à 900 tr/min, avec 20 W et une queue maximale de 3 mm ; leurs masses publiées sont respectivement 250 et 180 g. BIAX donne 150 l/min et une consigne de 6 bar, sans préciser le régime de mesure de cette consommation.",
 		"verifiedFacts": [
 			"Le catalogue de cette référence indique un fonctionnement à 6 bar.",
 			"La fiche fabricant publie une consommation de 150 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
@@ -93,6 +93,24 @@ const product: ToolProfileInput = {
 		},
 		{
 			"id": "biax-150800745-20260926-workingpressurebar-1",
+			"sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=42",
+			"sourceLabel": "BIAX, catalogue technique biax-pneumatic-en, p. 42",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+		},
+		{
+			"id": "biax-150800710-20260926",
+			"sourceUrl": "https://biax.de/en/product/be-309-bis-senk-o-55-mm/",
+			"sourceLabel": "BIAX, fiche technique BE 309 – max. hole Ø 5,5 mm, réf. 150800710",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "La fiche fabricant publie une consommation de 150 L/min. Le régime de charge n’est pas précisé dans ce tableau."
+		},
+		{
+			"id": "biax-150800710-20260926-workingpressurebar-1",
 			"sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=42",
 			"sourceLabel": "BIAX, catalogue technique biax-pneumatic-en, p. 42",
 			"sourceType": "manufacturer",

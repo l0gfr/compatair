@@ -1,3 +1,4 @@
+import { applyReviewedOctober24Amendment } from './reviewed-catalog-amendments-2026-10-24.mjs';
 import { applyReviewedOctober21Amendment } from './reviewed-catalog-amendments-2026-10-21.mjs';
 import { applyReviewedOctober20Amendment } from './reviewed-catalog-amendments-2026-10-20.mjs';
 import { applyReviewedOctober19Amendment } from './reviewed-catalog-amendments-2026-10-19.mjs';
@@ -142,5 +143,5 @@ export function buildDocumentedToolsOctober7(snapshot) {
 		};
 	});
 	if (digest(snapshot) !== approvedSnapshotDigest) throw new Error('Snapshot outils différent de la capture relue et approuvée');
-	return products.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment);
+	return products.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment).map(applyReviewedOctober24Amendment);
 }

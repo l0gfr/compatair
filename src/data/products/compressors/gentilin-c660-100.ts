@@ -28,7 +28,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Gentilin C660/100, référence 810310001 : cuve de 90 L, pression maximale publiée de 10 bar. Le point documenté le plus élevé en pression fournit 330 L/min à 8 bar.",
+		"overview": "Le C660/100 dispose de 90 L et publie 400 L/min à 5 bar, puis 330 L/min à 8 bar ; le C330/50 voisin conserve 50 L avec 200 et 165 L/min aux mêmes pressions. Le passage au C660 apporte donc une production documentée supérieure aux deux points de travail, accompagnée d’un moteur annoncé à 4,4 kW contre 2,2 kW. La mention 230 V doit être rapprochée de l’alimentation et du raccordement exacts à faire confirmer avant installation ; la cuve de 90 L et le débit aspiré de 660 L/min sont des données distinctes du débit disponible à 8 bar.",
 		"verifiedFacts": [
 			"Débit restitué publié : 400 L/min à 5 bar ; 330 L/min à 8 bar.",
 			"Compresseur à pistons sans huile. Puissance moteur publiée : 4,4 kW.",
@@ -97,6 +97,15 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "La notice liée à cette fiche déclare la compression sans huile : Compressing air (no oil) to be used with suitable pneumatic utensils according to current"
+		},
+		{
+			"id": "gentilin-810209001-20260926",
+			"sourceUrl": "https://www.gentilinair.com/en/products/c330-50",
+			"sourceLabel": "Gentilin, fiche technique C330/50, réf. 810209001",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Débits restitués publiés séparément à 5.0 bar, 8.0 bar. Le débit aspiré est conservé dans un champ distinct."
 		}
 	],
 	"fieldSources": {

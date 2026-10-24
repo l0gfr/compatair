@@ -1,3 +1,4 @@
+import { applyReviewedOctober24Amendment } from './reviewed-catalog-amendments-2026-10-24.mjs';
 import { applyReviewedOctober21Amendment } from './reviewed-catalog-amendments-2026-10-21.mjs';
 import { applyReviewedOctober20Amendment } from './reviewed-catalog-amendments-2026-10-20.mjs';
 import { applyReviewedOctober19Amendment } from './reviewed-catalog-amendments-2026-10-19.mjs';
@@ -57,5 +58,5 @@ export function buildIndustrialExpansion({ industrial, cp, dynabrade }) {
 	}), ...cp.rows.map(row => createCpPdfToolDraft(cp, row)), ...dynabrade.rows.map(row => createDynabradeToolDraft(dynabrade, row))];
 	const products = [...compressors, ...tools];
 	for (const key of [p => p.id, p => p.slug, p => `${p.brand}|${p.mpn}`]) if (new Set(products.map(key)).size !== products.length) throw new Error('Référence en double dans le lot');
-	return { compressors: compressors.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment), tools: tools.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment) };
+	return { compressors: compressors.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment).map(applyReviewedOctober24Amendment), tools: tools.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment).map(applyReviewedOctober24Amendment) };
 }

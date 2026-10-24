@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Fiam LES30SP, référence 144631101. Le tableau fabricant publie 540 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide : 3000 tr/min. Masse publiée : 0.7 kg.",
+		"overview": "LES30SP, référence 144631101, est une ponceuse droite à sortie femelle M8 × 1,25 pour accessoire de 80 mm ; la LES34 voisine est une ponceuse d’angle à sortie M14 pour accessoire de 75 mm. Le montage du plateau doit respecter la forme et le filetage de chaque outil. La LES30SP tourne à 3 000 tr/min et pèse 0,70 kg, contre 3 400 tr/min et 1,00 kg pour LES34. Les deux publient 300 W et 9 l/s, soit 540 l/min, à la pression de mesure de 6,3 bar, sans maximum de consommation garanti à tous les régimes.",
 		"verifiedFacts": [
 			"La brochure associée à cette fiche indique une pression de mesure et d’utilisation recommandée de 6,3 bar (ISO 2787).",
 			"La fiche fabricant publie 9 L/s, soit 540 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML.",
@@ -100,6 +100,24 @@ const product: ToolProfileInput = {
 		},
 		{
 			"id": "fiam-144631101-20260926-workingpressurebar-1",
+			"sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-44.pdf#page=13",
+			"sourceLabel": "Fiam, brochure technique en-44, p. 13",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+		},
+		{
+			"id": "fiam-144695300-20260926",
+			"sourceUrl": "https://www.fiamgroup.com/en/products/grinders-and-sanders/les34/",
+			"sourceLabel": "Fiam, fiche technique LES34, réf. 144695300",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "La fiche fabricant publie 9 L/s, soit 540 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML."
+		},
+		{
+			"id": "fiam-144695300-20260926-workingpressurebar-1",
 			"sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-44.pdf#page=13",
 			"sourceLabel": "Fiam, brochure technique en-44, p. 13",
 			"sourceType": "manufacturer",

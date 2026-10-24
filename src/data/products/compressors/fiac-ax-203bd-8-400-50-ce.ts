@@ -24,7 +24,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "FIAC AX 203BD 8 400/50 CE, référence 4152026232 : configuration sans cuve intégrée, pression maximale publiée de 8 bar. Le point documenté le plus élevé en pression fournit 2 330 L/min à 8 bar. Sans cuve intégrée. Version de base ; sécheur non intégré.",
+		"overview": "La référence 4152026232 correspond à la version 8 bar de 15 kW, publiée à 2330 L/min ; la 4152026234 atteint 13 bar et annonce 1690 L/min. Ces deux commandes conservent le montage au sol sans cuve intégrée : le choix porte ici sur la pression demandée et la production d’air publiée, avec le stockage à prévoir sur l’installation. Chaque débit reste rattaché à sa référence de pression ; le taux de marche continu demeure à documenter.",
 		"verifiedFacts": [
 			"Débit restitué publié : 2 330 L/min à 8 bar.",
 			"Compresseur rotatif à vis lubrifié à vitesse fixe. Puissance moteur publiée : 15 kW.",
@@ -79,6 +79,15 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Mode lubrifié documenté par les huiles prévues pour cette famille."
+		},
+		{
+			"id": "fiac-4152026234-20260926",
+			"sourceUrl": "https://shop.fiac.it/en-IT/products/4152026234/ax-203bd-13-40050-ce",
+			"sourceLabel": "FIAC, fiche officielle 4152026234, réf. 4152026234",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "La fiche individuelle 4152026234 publie un FAD de 1690 L/min pour cette version de 13 bar. Débit restitué fabricant, pas débit aspiré."
 		}
 	],
 	"fieldSources": {

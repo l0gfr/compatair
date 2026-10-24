@@ -66,7 +66,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "KAESER AIRCENTER 13, sécheur et cuve intégrés, 8 bar. Débit restitué déclaré : 1 320 L/min à 7,5 bar. Puissance moteur : 7,5 kW ; masse : 440 kg.",
+		"overview": "La configuration AIRCENTER 13 de 8 bar publie 1320 L/min à 7,5 bar, tandis que la configuration 15 bar publie 850 L/min à 13 bar. Les deux stations associent une cuve de 270 L, un moteur de 7,5 kW et le sécheur intégré, pour une masse publiée de 440 kg. Le choix de version part donc de la pression requise au poste et des pertes du réseau ; chaque point de débit reste attaché à sa configuration constructeur. La tension et les options effectivement livrées sont à confirmer sur le devis.",
 		"verifiedFacts": [
 			"FAD et pression de référence associés à la configuration exacte du tableau fabricant.",
 			"Cuve intégrée : 270 L ; le volume d’un réservoir externe n’est pas supposé.",

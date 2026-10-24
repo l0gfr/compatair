@@ -88,7 +88,7 @@ const product: CompressorInput = {
     }
   ],
   "editorial": {
-    "overview": "Fini CUBE 4.0-10-270 ES Z. 460 L/min déclarés à 9,5 bar. Configuration constructeur : Cuve 270 L galvanisée avec sécheur frigorifique intégré.",
+    "overview": "Les références V91PD92FNM501 (ES Z) et V91PD92FNM301 (ES) publient toutes deux 460 L/min à 9,5 bar, avec 4 kW et une cuve de 270 L. Le fabricant définit ES comme la version avec sécheur frigorifique et Z comme la cuve galvanisée : le choix de cette référence porte sur la finition du réservoir, avec une même production d’air déclarée. Le point de mesure 9,5 bar reste distinct du maximum de 10 bar ; le sécheur livré et la qualité d’air requise au poste sont à préciser sur le devis.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 10 bar.",
       "Cuve de stockage documentée : 270 L.",

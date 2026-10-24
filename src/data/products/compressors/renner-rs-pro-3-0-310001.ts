@@ -68,7 +68,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "RENNER RS-PRO 3.0, article 310001. Version standard au sol, sans réservoir intégré. Cette référence correspond à la version 10 bar ; son débit est 410 L/min à cette pression.",
+		"overview": "L’article 310001 est la version 10 bar du RS-PRO 3.0, donnée pour 410 L/min ; l’article 310000 correspond à 7,5 bar et 540 L/min. Le moteur de 3 kW, le montage au sol et les 153 kg restent communs : la référence de commande fixe le compromis de pression et de débit. Le point 410 L/min appartient au 310001 et doit être conservé séparément des performances des autres versions de pression.",
 		"verifiedFacts": [
 			"Puissance moteur publiée : 3 kW ; poids de cette configuration : 153 kg.",
 			"Débit restitué documenté : 410 L/min à 10 bar.",

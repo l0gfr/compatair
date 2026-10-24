@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Red Rooster RR-8110, référence RR-8110. Le tableau fabricant publie 564 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Masse publiée : 1,2 kg. Diamètre intérieur de flexible conseillé : 10 mm.",
+		"overview": "RR-8110 est une cisaille donnée pour 1 mm d’acier ou 1,2 mm d’aluminium, à 2 400 coups/min et 0,3 kW. La RR-8116 voisine est une grignoteuse donnée pour 1,6 mm d’acier ou 2,0 mm d’aluminium, à 3 500 coups/min : ces capacités appartiennent à deux procédés de coupe différents. Leurs masses publiées sont respectivement 1,2 et 0,9 kg, et leurs consommations 9,4 et 8 l/s, soit 564 et 480 l/min. Le tableau ne précise pas le régime de consommation ; la pression générale de service doit être de 6,3 bar au moteur en marche.",
 		"verifiedFacts": [
 			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
 			"Consommation publiée : 9.4 L/s, convertis en 564 L/min par multiplication par 60.",
@@ -86,6 +86,24 @@ const product: ToolProfileInput = {
 		},
 		{
 			"id": "red-rooster-rr-8110-20260926-workingpressurebar-1",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+			"sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 106",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "red-rooster-rr-8116-20260926",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=57",
+			"sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 57, réf. RR-8116",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation publiée : 8 L/s, convertis en 480 L/min par multiplication par 60."
+		},
+		{
+			"id": "red-rooster-rr-8116-20260926-workingpressurebar-1",
 			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
 			"sourceLabel": "Rami Yokota, catalogue des outils pneumatiques, p. 106",
 			"sourceType": "manufacturer",

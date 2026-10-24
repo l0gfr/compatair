@@ -87,7 +87,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "EKOM DK50 2V/50S/M. 104 L/min à 6 bar. Groupe avec cuve et sécheur et armoire acoustique.",
+		"overview": "Le DK50 2 V/50S/M associe une armoire acoustique et un sécheur à membrane ; son débit publié est 104 L/min à 6 bar. Le DK50 2 V/50 sans ces équipements annonce 135 L/min à 6 bar, avec le même moteur de 1,2 kW et la même cuve de 50 L. Le choix porte ainsi sur le traitement d’air et l’installation acoustique, en dimensionnant le poste avec les 104 L/min de la variante S/M. La plage de travail 6–8 bar reste distincte du réglage de soupape à 9 bar ; cette fiche retient la configuration 50 Hz.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 50 L.",

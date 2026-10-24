@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Fiam FDE33PA, référence 124611552. Le tableau fabricant publie 600 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide : 3300 tr/min. Masse publiée : 1.08 kg.",
+		"overview": "FDE33PA, référence 124611552, est la version avec mandrin autoserrant de 1 à 10 mm ; FDE33P, référence 124610552, est livré sans mandrin sur sortie filetée 3/8 × 24 UNF. Le choix de la référence détermine donc l’équipement de serrage du foret effectivement fourni. La version PA mesure 223 mm et pèse 1,08 kg, contre 165 mm et 0,72 kg pour P, pour une vitesse commune de 3 300 tr/min. Les deux fiches donnent 10 l/s, soit 600 l/min, et la brochure prescrit 6,3 bar ; le régime de consommation n’est pas précisé.",
 		"verifiedFacts": [
 			"La brochure associée à cette fiche indique une pression de mesure et d’utilisation recommandée de 6,3 bar (ISO 2787).",
 			"La fiche fabricant publie 10 L/s, soit 600 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML.",
@@ -95,6 +95,51 @@ const product: ToolProfileInput = {
 			"id": "fiam-124611552-20260926-workingpressurebar-1",
 			"sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf#page=13",
 			"sourceLabel": "Fiam, brochure technique en-34, p. 13",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+		},
+		{
+			"id": "fiam-124610552-20260926",
+			"sourceUrl": "https://www.fiamgroup.com/en/products/air-drills/fde33p/",
+			"sourceLabel": "Fiam, fiche technique FDE33P, réf. 124610552",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "La fiche fabricant publie 10 L/s, soit 600 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML."
+		},
+		{
+			"id": "fiam-124610552-20260926-workingpressurebar-1",
+			"sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf#page=13",
+			"sourceLabel": "Fiam, brochure technique en-34, p. 13",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+		},
+		{
+			"id": "fiam-124611563-20260926-workingpressurebar-1",
+			"sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf#page=13",
+			"sourceLabel": "Fiam, brochure technique en-34, p. 13",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+		},
+		{
+			"id": "fiam-124611553-20260926-workingpressurebar-1",
+			"sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf#page=13",
+			"sourceLabel": "Fiam, brochure technique en-34, p. 13",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+		},
+		{
+			"id": "fiam-122311145-20260926-workingpressurebar-1",
+			"sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf#page=9",
+			"sourceLabel": "Fiam, brochure technique en-34, p. 9",
 			"sourceType": "manufacturer",
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",

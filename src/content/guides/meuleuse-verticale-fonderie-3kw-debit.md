@@ -3,6 +3,7 @@ title: "Meuleuse verticale de fonderie : préparer un besoin de 3 000 L/min"
 seoTitle: "Meuleuse de fonderie : quel débit pour 3 kW ?"
 description: "Les CP3340 et CP3349 demandent plusieurs milliers de litres d’air par minute. Comparer débit en charge, diamètre et version avant de choisir le réseau."
 pubDate: 2026-09-26
+updatedDate: 2026-10-24
 category: "Installer"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
@@ -18,13 +19,13 @@ Les [pages PDF 148 et 149 du catalogue Chicago Pneumatic](https://tools.cp.com/c
 | Référence | Puissance publiée | Régime à vide | Consommation en charge |
 | --- | --- | --- | --- |
 | CP3340-SALAVAD | 3 400 W | 8 500 tr/min | 52 L/s, soit 3 120 L/min |
-| CP3340-SALAVADE | 3 400 W | 6 000 tr/min | 45 L/s, soit 2 700 L/min |
+| CP3340-SALAVELE | 3 400 W | 6 000 tr/min | 45 L/s, soit 2 700 L/min |
 | CP3349-SALAVADE | 3 000 W | 7 700 tr/min | 46 L/s, soit 2 760 L/min |
 
 Les conversions multiplient les L/s par 60. Elles ne constituent pas une mesure CompatAir ni une estimation de la moyenne sur une journée. Le premier et le troisième modèles acceptent une capacité de 180 mm dans ce tableau ; le deuxième est présenté en 230 mm.
 
 <div class="article-infographic article-infographic--compact" tabindex="0" role="group" aria-label="Consommations déclarées en charge, L/min">
-<svg viewBox="0 0 380 371" role="img" aria-labelledby="foundry-title foundry-desc" xmlns="http://www.w3.org/2000/svg"><title id="foundry-title">Consommations déclarées en charge, L/min</title><desc id="foundry-desc">CP3340-SALAVAD: 3120 ; CP3340-SALAVADE: 2700 ; CP3349-SALAVADE: 2760</desc><rect width="380" height="371" rx="18" fill="#eef2e9"/><text x="20" y="34" font-size="20" font-weight="700" fill="#143426">Consommations déclarées en</text><text x="20" y="60" font-size="20" font-weight="700" fill="#143426">charge, L/min</text><text x="20" y="112" font-size="16" font-weight="700" fill="#143426">CP3340-SALAVAD</text><rect x="20" y="126" width="250.00" height="23" rx="4" fill="#19704f"/><text x="352" y="144" text-anchor="end" font-size="16" fill="#143426">3120</text><text x="20" y="183" font-size="16" font-weight="700" fill="#143426">CP3340-SALAVADE</text><rect x="20" y="197" width="216.35" height="23" rx="4" fill="#19704f"/><text x="352" y="215" text-anchor="end" font-size="16" fill="#143426">2700</text><text x="20" y="254" font-size="16" font-weight="700" fill="#143426">CP3349-SALAVADE</text><rect x="20" y="268" width="221.15" height="23" rx="4" fill="#19704f"/><text x="352" y="286" text-anchor="end" font-size="16" fill="#143426">2760</text><text x="20" y="325" font-size="13" font-weight="400" fill="#35473d">Source : Chicago Pneumatic, pages PDF 148</text><text x="20" y="344" font-size="13" font-weight="400" fill="#35473d">et 149 ; versions distinctes.</text></svg>
+<svg viewBox="0 0 380 371" role="img" aria-labelledby="foundry-title foundry-desc" xmlns="http://www.w3.org/2000/svg"><title id="foundry-title">Consommations déclarées en charge, L/min</title><desc id="foundry-desc">CP3340-SALAVAD: 3120 ; CP3340-SALAVELE: 2700 ; CP3349-SALAVADE: 2760</desc><rect width="380" height="371" rx="18" fill="#eef2e9"/><text x="20" y="34" font-size="20" font-weight="700" fill="#143426">Consommations déclarées en</text><text x="20" y="60" font-size="20" font-weight="700" fill="#143426">charge, L/min</text><text x="20" y="112" font-size="16" font-weight="700" fill="#143426">CP3340-SALAVAD</text><rect x="20" y="126" width="250.00" height="23" rx="4" fill="#19704f"/><text x="352" y="144" text-anchor="end" font-size="16" fill="#143426">3120</text><text x="20" y="183" font-size="16" font-weight="700" fill="#143426">CP3340-SALAVELE</text><rect x="20" y="197" width="216.35" height="23" rx="4" fill="#19704f"/><text x="352" y="215" text-anchor="end" font-size="16" fill="#143426">2700</text><text x="20" y="254" font-size="16" font-weight="700" fill="#143426">CP3349-SALAVADE</text><rect x="20" y="268" width="221.15" height="23" rx="4" fill="#19704f"/><text x="352" y="286" text-anchor="end" font-size="16" fill="#143426">2760</text><text x="20" y="325" font-size="13" font-weight="400" fill="#35473d">Source : Chicago Pneumatic, pages PDF 148</text><text x="20" y="344" font-size="13" font-weight="400" fill="#35473d">et 149 ; versions distinctes.</text></svg>
 </div>
 
 ## Vérifier un poste, puis l’atelier

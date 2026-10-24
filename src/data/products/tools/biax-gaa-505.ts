@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX GAA 505, référence 150619445. Le tableau fabricant publie 300 L/min et une plage d’utilisation de 6 à 6 bar. Vitesse à vide publiée : 500 tr/min. Masse publiée : 630 g.",
+		"overview": "GAA 505, référence 150619445, offre 0,3 à 4,0 Nm sur assemblage dur et 0,3 à 3,5 Nm sur assemblage souple ; le GAA 205 voisin publie 0,04 à 1,1 Nm dans les deux cas. Le porte-outil E6,3 du GAA 505 reçoit des embouts hexagonaux de 1/4 pouce, tandis que le GAA 205 emploie un hexagone A3 de 3 mm. Tous deux tournent à 500 tr/min et intègrent l’aspiration des vis, dont la douille doit être choisie avec la tête de vis et l’embout. Leurs consommations publiées sont respectivement 300 et 150 l/min à la consigne de 6 bar, sans régime de charge détaillé dans ce tableau.",
 		"verifiedFacts": [
 			"Le catalogue prescrit un fonctionnement à 6 bar dans la page de cette famille.",
 			"Consommation publiée dans la ligne Luftverbrauch en L/min ; le régime de charge n’est pas détaillé.",
@@ -71,6 +71,15 @@ const product: ToolProfileInput = {
 			"id": "biax-150619445-20260926",
 			"sourceUrl": "https://biax.de/wp-content/uploads/2025/02/BIAX_Schrauber_DE.pdf#page=14",
 			"sourceLabel": "BIAX, catalogue des visseuses pneumatiques, p. 14, réf. 150619445",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "Consommation publiée dans la ligne Luftverbrauch en L/min ; le régime de charge n’est pas détaillé."
+		},
+		{
+			"id": "biax-150600720-20260926",
+			"sourceUrl": "https://biax.de/wp-content/uploads/2025/02/BIAX_Schrauber_DE.pdf#page=12",
+			"sourceLabel": "BIAX, catalogue des visseuses pneumatiques, p. 12, réf. 150600720",
 			"sourceType": "manufacturer",
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",

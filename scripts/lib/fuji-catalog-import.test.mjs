@@ -41,8 +41,11 @@ describe('reviewed Fuji manufacturer import', () => {
 	it('preserves the exact 250 MPNs, loaded flows and separate pressure provenance', () => {
 		expect(snapshot.rows).toHaveLength(250);
 		expect(new Set(snapshot.rows.map(r => r.mpn)).size).toBe(250);
+		const byMpn = new Map();
+		// Keep Array.find's first-match behavior while scanning the full catalog once.
+		for (const tool of tools) if (tool.brand === 'Fuji' && !byMpn.has(tool.mpn)) byMpn.set(tool.mpn, tool);
 		for (const row of snapshot.rows) {
-			const actual = tools.find(t => t.brand === 'Fuji' && t.mpn === row.mpn);
+			const actual = byMpn.get(row.mpn);
 			expect(actual, row.model).toBeDefined();
 			const expected = toolProfileSchema.parse(createFujiToolDraft(snapshot, row));
 			expect(actual).toEqual({ ...expected, category: toolCategoryLabel(expected.categoryId) });
@@ -51,7 +54,8 @@ describe('reviewed Fuji manufacturer import', () => {
 			expect(actual.workingPressureBar).toEqual({ min: 6.3, typical: 6.3, max: 6.3 });
 			expect(actual.recommendedHose).toEqual({ innerDiameterMm: Number(row.attributes.Min_HoseDiameter5mHoseLenght_unit_SI.value), maximumLengthMeters: 5 });
 			expect(actual.fieldSources.airflowLpm).not.toEqual(actual.fieldSources.workingPressureBar);
-			const direct = fujiPressureNotices.find(n => row.documents.some(d => new URL(d.url).href === n.url));
+			const documentUrls = new Set(row.documents.map(d => new URL(d.url).href));
+			const direct = fujiPressureNotices.find(n => documentUrls.has(n.url));
 			const notice = direct ?? fujiPressureNotices.find(n => n.url === row.pressurePortalEvidence?.documentUrl);
 			expect(notice).toBeDefined();
 			expect(actual.evidence.find(e => actual.fieldSources.workingPressureBar.includes(e.id)).sourceUrl).toBe(`${notice.url}#page=${notice.page}`);
