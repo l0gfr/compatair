@@ -37,7 +37,7 @@ Le drill serveur existant couvre déjà MCP invalide, Apache invalide, interrupt
 Pour un retour arrière réel, utiliser le script existant avec un SHA conservé :
 
 ```sh
-bash /home/bluetouff/compatair-deploy/rollback-remote.sh /var/www/html/compatair <sha-conserve>
+sudo -u compatair-deploy bash /home/compatair-deploy/compatair-deploy/rollback-remote.sh /var/www/html/compatair <sha-conserve>
 ```
 
 Le script rebascule vers une release immuable, redémarre le service et en vérifie la santé. Le protocole demande ensuite les smokes publics du SHA exact, les canoniques et le contrat API. Il n'efface ni les releases précédentes ni les cohortes historiques MCP. Aucune étape de validation humaine des références n'est ajoutée. La restauration système réelle et la publication restent des étapes distinctes, explicitement non exécutées dans ce contre-audit local.

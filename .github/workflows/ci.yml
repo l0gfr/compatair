@@ -76,6 +76,9 @@ jobs:
       - name: Check catalog, editorial evidence, contracts, types and tests
         run: pnpm validate:source
 
+      - name: Verify release retention and shared deployment lock
+        run: node --test scripts/prune-releases.node-test.mjs
+
   build:
     needs: preflight
     runs-on: ubuntu-24.04

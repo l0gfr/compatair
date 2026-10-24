@@ -265,10 +265,13 @@ Lister les releases sur le serveur puis réactiver un SHA connu :
 
 ```bash
 ls -1 /var/www/html/compatair/releases
-bash /home/bluetouff/compatair-deploy/rollback-remote.sh /var/www/html/compatair <sha>
+sudo -u compatair-deploy bash /home/compatair-deploy/compatair-deploy/rollback-remote.sh /var/www/html/compatair <sha>
 ```
 
-Le rollback ne reconstruit rien et ne modifie pas les anciennes releases.
+Le workflow transfère le script de rollback du commit déployé au même endroit
+que le script d'activation. Utiliser cette copie avec l'identité du déploiement
+pour partager son verrou de rétention. Le rollback ne reconstruit rien et ne
+modifie pas les anciennes releases.
 
 ## Conservation de l’export historique
 

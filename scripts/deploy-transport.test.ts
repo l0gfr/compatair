@@ -39,6 +39,7 @@ const [digest, file] = fs.readFileSync(process.argv[3], 'utf8').trim().split(/\\
 process.exit(createHash('sha256').update(fs.readFileSync(file)).digest('hex') === digest ? 0 : 1);
 `);
 	writeFileSync(join(root, 'scripts/deploy-remote.sh'), '#!/bin/bash\nset -e\nsha256sum --check "$2"\nprintf "%s\\n" "$@" > "$TEST_ROOT/activated"\nexit "${TEST_ACTIVATION_STATUS:-0}"\n');
+	writeFileSync(join(root, 'scripts/rollback-remote.sh'), '#!/bin/bash\n# rollback fixture\n');
 	writeFileSync(join(root, `compatair-${sha}.tar.xz`), 'release fixture');
 	writeFileSync(join(root, 'approved-config.txt'), 'admin fixture');
 	const archive = spawnSync('tar', ['-czf', `compatair-admin-${sha}.tar.gz`, 'approved-config.txt'], { cwd: root });
@@ -64,6 +65,7 @@ describe('single-session production transfer', () => {
 		expect(result.status, result.stderr).toBe(0);
 		expect(attempts()).toEqual(['knock', 'knock', 'knock', 'ssh']);
 		expect(readFileSync(join(root, 'received/approved-config.txt'), 'utf8')).toBe('admin fixture');
+		expect(readFileSync(join(root, 'received/rollback-remote.sh'), 'utf8')).toBe(readFileSync(join(root, 'scripts/rollback-remote.sh'), 'utf8'));
 		expect(statSync(join(root, 'activated')).mode & 0o444).toBe(0o444);
 		expect(readFileSync(join(root, 'activated'), 'utf8').trim().split('\n')).toEqual([
 			`${root}/received/compatair-${sha}.tar.xz`, `${root}/received/compatair-${sha}.tar.xz.sha256`, '/var/www/html/compatair', sha,
@@ -96,6 +98,13 @@ describe('single-session production transfer', () => {
 	it('refuses missing release files before any network access', () => {
 		const { root, run, attempts } = fixture();
 		rmSync(join(root, `compatair-${sha}.tar.xz`));
+		expect(run().status).not.toBe(0);
+		expect(attempts()).toEqual([]);
+	});
+
+	it('refuses a missing rollback script before any network access', () => {
+		const { root, run, attempts } = fixture();
+		rmSync(join(root, 'scripts/rollback-remote.sh'));
 		expect(run().status).not.toBe(0);
 		expect(attempts()).toEqual([]);
 	});

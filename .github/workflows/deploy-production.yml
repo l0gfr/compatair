@@ -86,6 +86,9 @@ jobs:
       - name: Validate all source gates
         run: pnpm validate:source
 
+      - name: Verify release retention and shared deployment lock
+        run: node --test scripts/prune-releases.node-test.mjs
+
   source-archive:
     needs: preflight
     runs-on: ubuntu-24.04
@@ -330,6 +333,7 @@ jobs:
             scripts/verify-indexation-activation.mjs \
             scripts/lib/indexation-policy.mjs \
             scripts/preserve-verdict-archive.mjs \
+            scripts/prune-releases.mjs \
             scripts/lib/legacy-verdict-archive.mjs \
             scripts/lib/publication-signatures.mjs \
             config/legacy-verdict-archive.json \
@@ -467,7 +471,7 @@ jobs:
           remote="${DEPLOY_USER}@${DEPLOY_HOST}"
           remote_dir="/home/${DEPLOY_USER}/compatair-deploy"
 
-          for file in "compatair-${GITHUB_SHA}.tar.xz" "compatair-${GITHUB_SHA}.tar.xz.sha256" "compatair-admin-${GITHUB_SHA}.tar.gz" "compatair-admin-${GITHUB_SHA}.tar.gz.sha256" scripts/deploy-remote.sh; do
+          for file in "compatair-${GITHUB_SHA}.tar.xz" "compatair-${GITHUB_SHA}.tar.xz.sha256" "compatair-admin-${GITHUB_SHA}.tar.gz" "compatair-admin-${GITHUB_SHA}.tar.gz.sha256" scripts/deploy-remote.sh scripts/rollback-remote.sh; do
             [[ -f "$file" && ! -L "$file" ]] || exit 2
           done
 
@@ -502,7 +506,7 @@ jobs:
           tar -cf - \
             "compatair-${GITHUB_SHA}.tar.xz" "compatair-${GITHUB_SHA}.tar.xz.sha256" \
             "compatair-admin-${GITHUB_SHA}.tar.gz" "compatair-admin-${GITHUB_SHA}.tar.gz.sha256" \
-            -C scripts deploy-remote.sh | \
+            -C scripts deploy-remote.sh rollback-remote.sh | \
             ssh "${ssh_options[@]}" "$remote" \
               "set -eu; umask 022; install -d -m 700 '$remote_dir' && cd '$remote_dir' && tar -xf - --no-same-owner --no-same-permissions && sha256sum --check 'compatair-admin-${GITHUB_SHA}.tar.gz.sha256' && tar -xzf 'compatair-admin-${GITHUB_SHA}.tar.gz' && bash '$remote_dir/deploy-remote.sh' '$remote_dir/compatair-${GITHUB_SHA}.tar.xz' '$remote_dir/compatair-${GITHUB_SHA}.tar.xz.sha256' '$DEPLOY_PATH' '$GITHUB_SHA'"
 
