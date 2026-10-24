@@ -20,23 +20,18 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  validate:
+  preflight:
     if: github.ref == 'refs/heads/main' && vars.DEPLOY_ENABLED == 'true'
     runs-on: ubuntu-24.04
-    # The previous transfer started only 58 seconds before the 45-minute guard.
-    # Reserve cold validation time and both exhaustive three-minute live gates.
-    timeout-minutes: 60
+    timeout-minutes: 10
     outputs:
-      previous_release_sha: ${{ steps.seo_checkpoint.outputs.previous_release_sha }}
+      node_version: ${{ steps.node.outputs.node-version }}
     steps:
-      - name: Record validation clock
-        id: validation_clock
-        run: printf 'started_at=%s\n' "$(date +%s)" >> "$GITHUB_OUTPUT"
-
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
+          ref: ${{ github.sha }}
           fetch-depth: 0
 
       - name: Set up Node.js
@@ -60,8 +55,100 @@ jobs:
       - name: Lint source and workflow policy
         run: pnpm lint:source
 
+  source-tests:
+    needs: preflight
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        id: node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: ${{ needs.preflight.outputs.node_version }}
+          check-latest: false
+
+      - name: Install pnpm
+        run: npm install --global --ignore-scripts pnpm@10.34.4
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Check installed supply-chain policy
+        run: pnpm security:supply-chain
+
+      - name: Validate all source gates
+        run: pnpm validate:source
+
+  source-archive:
+    needs: preflight
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        id: node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: ${{ needs.preflight.outputs.node_version }}
+          check-latest: false
+
+      - name: Install pnpm
+        run: npm install --global --ignore-scripts pnpm@10.34.4
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Check installed supply-chain policy
+        run: pnpm security:supply-chain
+
       - name: Verify source archive and tests without Git metadata
         run: pnpm archive:verify
+
+  validate:
+    needs: preflight
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    outputs:
+      release_artifact_id: ${{ steps.release_artifact.outputs.artifact-id }}
+    environment:
+      name: production
+      url: https://compatair.fr
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        id: node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: ${{ needs.preflight.outputs.node_version }}
+          check-latest: false
+
+      - name: Install pnpm
+        run: npm install --global --ignore-scripts pnpm@10.34.4
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Check installed supply-chain policy
+        run: pnpm security:supply-chain
 
       - name: Restore bounded page calculations
         id: page-calculations
@@ -81,10 +168,10 @@ jobs:
           restore-keys: |
             compatair-pages-v2-${{ runner.os }}-${{ hashFiles('pnpm-lock.yaml') }}-
 
-      - name: Validate source, tests, build and snapshots
+      - name: Build once and validate generated snapshots
         env:
           COMPATAIR_RELEASE_SHA: ${{ github.sha }}
-        run: pnpm validate:full
+        run: pnpm build && pnpm data:validate && pnpm benchmark:mcp-startup && pnpm benchmark:publication-signatures
 
       - name: Enforce repository append-only baseline
         env:
@@ -259,7 +346,11 @@ jobs:
           fi
           echo "Compressed release: ${release_bytes} bytes (limit 201326592)"
 
+      - name: Prepare verified release handoff
+        run: node scripts/production-artifact.mjs prepare
+
       - name: Upload release artifact
+        id: release_artifact
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: compatair-production-${{ github.sha }}
@@ -268,9 +359,68 @@ jobs:
             compatair-${{ github.sha }}.tar.xz.sha256
             compatair-admin-${{ github.sha }}.tar.gz
             compatair-admin-${{ github.sha }}.tar.gz.sha256
+            compatair-plan-${{ github.sha }}.json.gz
+            compatair-plan-${{ github.sha }}.json.gz.sha256
           if-no-files-found: error
           retention-days: 7
           compression-level: 0
+
+  deploy:
+    needs: [preflight, source-tests, source-archive, validate]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    permissions:
+      contents: read
+      actions: read
+    outputs:
+      previous_release_sha: ${{ steps.seo_checkpoint.outputs.previous_release_sha }}
+    environment:
+      name: production
+      url: https://compatair.fr
+    steps:
+      - name: Record validation clock
+        id: validation_clock
+        run: printf 'started_at=%s\n' "$(date +%s)" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          ref: ${{ github.sha }}
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        id: node
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version: ${{ needs.preflight.outputs.node_version }}
+          check-latest: false
+
+      - name: Install pnpm
+        run: npm install --global --ignore-scripts pnpm@10.34.4
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Check installed supply-chain policy
+        run: pnpm security:supply-chain
+
+      - name: Verify release artifact identity
+        shell: bash
+        env:
+          RELEASE_ARTIFACT_ID: ${{ needs.validate.outputs.release_artifact_id }}
+        run: '[[ "$RELEASE_ARTIFACT_ID" =~ ^[1-9][0-9]*$ ]]'
+
+      - name: Download verified release artifact
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          artifact-ids: ${{ needs.validate.outputs.release_artifact_id }}
+          path: .
+          merge-multiple: true
+          digest-mismatch: error
+
+      - name: Restore verified release handoff
+        run: node scripts/production-artifact.mjs restore
 
       - name: Verify SEO publication checkpoint before deployment
         id: seo_checkpoint
@@ -329,7 +479,7 @@ jobs:
               echo "Cannot verify the remaining production time window; transport refused" >&2
               return 2
             fi
-            local remaining=$((60 * 60 - (10#$now - 10#$validation_started) - 60))
+            local remaining=$((15 * 60 - (10#$now - 10#$validation_started) - 60))
             if (( remaining < 600 )); then
               echo "Only ${remaining} seconds remain after setup reserve; transport requires 600 seconds" >&2
               return 1
@@ -383,12 +533,9 @@ jobs:
             config/immutable-assets.json
           if-no-files-found: error
           retention-days: 90
-    environment:
-      name: production
-      url: https://compatair.fr
 
   storage:
-    needs: validate
+    needs: deploy
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
     timeout-minutes: 5
@@ -400,6 +547,7 @@ jobs:
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
+          ref: ${{ github.sha }}
       - name: Set up Node.js
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
@@ -408,5 +556,5 @@ jobs:
       - name: Keep production, rollback and compact evidence
         env:
           GH_TOKEN: ${{ github.token }}
-          COMPATAIR_PREVIOUS_RELEASE_SHA: ${{ needs.validate.outputs.previous_release_sha }}
+          COMPATAIR_PREVIOUS_RELEASE_SHA: ${{ needs.deploy.outputs.previous_release_sha }}
         run: node scripts/prune-actions-storage.mjs --apply

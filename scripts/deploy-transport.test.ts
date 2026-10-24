@@ -7,7 +7,7 @@ import { afterEach, describe, expect, it } from 'vitest';
 import { parseDocument } from 'yaml';
 
 const workflow = parseDocument(readFileSync(new URL('../.github/workflows/deploy-production.yml', import.meta.url), 'utf8')).toJS();
-const transfer = workflow.jobs.validate.steps.find((step: { name: string }) => step.name === 'Transfer and activate release').run;
+const transfer = workflow.jobs.deploy.steps.find((step: { name: string }) => step.name === 'Transfer and activate release').run;
 const roots: string[] = [];
 const sha = 'a'.repeat(40);
 

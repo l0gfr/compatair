@@ -3,6 +3,7 @@ import { basename, extname, relative, resolve } from 'node:path';
 import { parseDocument } from 'yaml';
 import { walkRegularSourceFiles } from './lib/source-tree.mjs';
 import { workflowTimeoutErrors } from './lib/workflow-timeouts.mjs';
+import { productionWorkflowErrors } from './lib/production-workflow-policy.mjs';
 const roots = ['src', 'server', 'scripts', 'deploy', '.github', '.githooks', 'docs', 'public', 'config']; const extensions = new Set(['.ts', '.astro', '.mjs', '.js', '.md', '.json', '.yml', '.yaml', '.sh']); const errors = [];
 async function lintFile(file) {
 	const name = basename(file);
@@ -166,23 +167,7 @@ for (const [name, expected] of Object.entries({
 	'validate:main': 'pnpm lint:source && pnpm validate:full && pnpm audit:dist && pnpm archive:verify && pnpm lighthouse',
 })) if (packageManifest.scripts?.[name] !== expected) errors.push(`package.json: chaîne obligatoire modifiée (${name})`);
 const productionConfig = parseDocument(deployWorkflow).toJS();
-const productionJob = productionConfig?.jobs?.validate;
-const productionSteps = productionJob?.steps ?? [];
-if (productionJob?.if !== "github.ref == 'refs/heads/main' && vars.DEPLOY_ENABLED == 'true'" || productionJob?.['continue-on-error'] !== undefined || JSON.stringify(productionConfig?.on?.push?.branches) !== JSON.stringify(['main'])) errors.push('.github/workflows/deploy-production.yml: la production doit rester bloquante et réservée à main');
-const productionGates = ['pnpm security:audit', 'pnpm lint:source', 'pnpm archive:verify', 'pnpm validate:full', 'pnpm data:sign', 'pnpm data:verify-signatures', 'node scripts/audit-dist.mjs', 'pnpm lighthouse:production', 'node scripts/verify-indexation-release.mjs'];
-let previousProductionGate = -1;
-for (const command of productionGates) {
-	const indices = productionSteps.flatMap((step, index) => step.run?.split('\n').map(line => line.trim()).includes(command) ? [index] : []);
-	const index = indices[0];
-	const step = productionSteps[index];
-	if (indices.length !== 1 || index < previousProductionGate || step?.if !== undefined || step?.['continue-on-error'] !== undefined) errors.push(`.github/workflows/deploy-production.yml: contrôle obligatoire absent, conditionnel ou déplacé (${command})`);
-	previousProductionGate = index ?? previousProductionGate;
-}
-const sshIndex = productionSteps.findIndex(step => step.name === 'Configure SSH');
-const activationIndex = productionSteps.findIndex(step => step.name === 'Transfer and activate release');
-if (sshIndex <= previousProductionGate || activationIndex <= sshIndex) errors.push('.github/workflows/deploy-production.yml: tous les contrôles doivent précéder la connexion et l’activation');
-const productionBuild = productionSteps.find(step => step.run === 'pnpm validate:full');
-if (productionBuild?.env?.COMPATAIR_RELEASE_SHA !== '${{ github.sha }}') errors.push('.github/workflows/deploy-production.yml: la validation complète doit construire le SHA exact de la CI');
+errors.push(...productionWorkflowErrors(productionConfig));
 const ciSourceSteps = parseDocument(ciWorkflow).toJS()?.jobs?.['source-tests']?.steps ?? [];
 const ciSourceGate = ciSourceSteps.filter(step => step.run === 'pnpm validate:source');
 if (ciSourceGate.length !== 1 || ciSourceGate[0].if !== undefined || ciSourceGate[0]['continue-on-error'] !== undefined) errors.push('.github/workflows/ci.yml: la CI doit utiliser la validation source centrale sans condition');

@@ -5,6 +5,7 @@ import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { describe, expect, it } from 'vitest';
 import { parseDocument } from 'yaml';
+import { productionWorkflowErrors } from './lib/production-workflow-policy.mjs';
 
 const deploy = readFileSync(new URL('./deploy-remote.sh', import.meta.url), 'utf8');
 const rollback = readFileSync(new URL('./rollback-remote.sh', import.meta.url), 'utf8');
@@ -84,52 +85,30 @@ describe('release boundary policy', () => {
 	});
 	it('keeps every production gate blocking on the exact main revision before activation', () => {
 		const config = parseDocument(workflow).toJS();
-		expect(config.on.push.branches).toEqual(['main']);
-		expect(config.on.pull_request).toBeUndefined();
-		const job = config.jobs.validate;
-		expect(job.if).toBe("github.ref == 'refs/heads/main' && vars.DEPLOY_ENABLED == 'true'");
-		expect(job['continue-on-error']).toBeUndefined();
-		const steps = job.steps as { name?: string; run?: string; if?: string; env?: Record<string, string>; 'continue-on-error'?: boolean }[];
-		const gates = ['pnpm security:audit', 'pnpm lint:source', 'pnpm archive:verify', 'pnpm validate:full', 'pnpm data:sign', 'pnpm data:verify-signatures', 'node scripts/audit-dist.mjs', 'pnpm lighthouse:production', 'node scripts/verify-indexation-release.mjs'];
-		let previous = -1;
-		for (const command of gates) {
-			const indices = steps.flatMap((step, index) => step.run?.split('\n').map(line => line.trim()).includes(command) ? [index] : []);
-			expect(indices, command).toHaveLength(1);
-			const index = indices[0];
-			expect(index, command).toBeGreaterThanOrEqual(previous);
-			expect(steps[index].if, command).toBeUndefined();
-			expect(steps[index]['continue-on-error'], command).toBeUndefined();
-			previous = index;
-		}
-		const ssh = steps.findIndex(step => step.name === 'Configure SSH');
-		const activation = steps.findIndex(step => step.name === 'Transfer and activate release');
-		expect(ssh).toBeGreaterThan(previous);
-		expect(activation).toBeGreaterThan(ssh);
-		expect(steps.find(step => step.run === 'pnpm validate:full')?.env?.COMPATAIR_RELEASE_SHA).toBe('${{ github.sha }}');
+		expect(productionWorkflowErrors(config)).toEqual([]);
+		expect(config.jobs.deploy.needs).toEqual(['preflight', 'source-tests', 'source-archive', 'validate']);
 		expect(workflow).toContain('COMPATAIR_EXPECTED_RELEASE_SHA: ${{ github.sha }}');
-		const archive = steps.findIndex(step => step.run === 'pnpm archive:verify');
-		for (const [index, step] of steps.entries()) if (String((step as { uses?: string }).uses ?? '').startsWith('actions/cache/restore@')) expect(index).toBeGreaterThan(archive);
+		const build = config.jobs.validate.steps.find((step: { run?: string }) => step.run?.startsWith('pnpm build &&'));
+		expect(build.env.COMPATAIR_RELEASE_SHA).toBe('${{ github.sha }}');
 	});
-	it('audits production dependencies once before caches, validation and signing', () => {
-		const steps = parseDocument(workflow).toJS().jobs.validate.steps as { run?: string; uses?: string; env?: Record<string, string>; if?: string; 'continue-on-error'?: boolean }[];
+	it('audits dependencies before parallel jobs and checks each runner installation', () => {
+		const config = parseDocument(workflow).toJS();
+		const steps = config.jobs.preflight.steps as { run?: string; env?: Record<string, string> }[];
 		const auditIndices = steps.flatMap((step, index) => step.run === 'pnpm security:audit' ? [index] : []);
 		expect(auditIndices).toHaveLength(1);
 		const auditIndex = auditIndices[0];
-		const audit = steps[auditIndex];
-		expect(audit.env?.GITHUB_TOKEN).toBe('${{ github.token }}');
-		expect(audit.if).toBeUndefined();
-		expect(audit['continue-on-error']).toBeUndefined();
+		expect(steps[auditIndex].env?.GITHUB_TOKEN).toBe('${{ github.token }}');
 		expect(steps.findIndex(step => step.run === 'pnpm install --frozen-lockfile')).toBeLessThan(auditIndex);
-		for (const command of ['pnpm lint:source', 'pnpm validate:full', 'pnpm data:sign']) {
-			expect(steps.findIndex(step => step.run?.includes(command)), command).toBeGreaterThan(auditIndex);
+		expect(steps.findIndex(step => step.run === 'pnpm lint:source')).toBeGreaterThan(auditIndex);
+		for (const name of ['source-tests', 'source-archive', 'validate', 'deploy']) {
+			const job = config.jobs[name];
+			expect([job.needs].flat(), name).toContain('preflight');
+			const runnerSteps = job.steps as { run?: string }[];
+			const installed = runnerSteps.findIndex(step => step.run === 'pnpm install --frozen-lockfile');
+			const policy = runnerSteps.findIndex(step => step.run === 'pnpm security:supply-chain');
+			expect(installed, name).toBeGreaterThanOrEqual(0);
+			expect(policy, name).toBeGreaterThan(installed);
 		}
-		for (const [index, step] of steps.entries()) {
-			if (step.uses?.startsWith('actions/cache/restore@')) expect(index).toBeGreaterThan(auditIndex);
-		}
-		expect(steps.some(step => step.run === 'pnpm security:supply-chain')).toBe(false);
-		const buildIndex = steps.findIndex(step => step.run === 'pnpm validate:full');
-		const checkpointIndex = steps.findIndex(step => step.run === 'node scripts/verify-indexation-release.mjs');
-		expect(checkpointIndex).toBeGreaterThan(buildIndex);
 	});
 	it.each([
 		{ smoke: 1, seo: 0, status: 42, calls: ['smoke-live-http.mjs'] },
@@ -196,11 +175,11 @@ describe('release boundary policy', () => {
 	it('isolates storage deletion from build and deployment credentials', () => {
 		const config = parseDocument(workflow).toJS();
 		expect(config.permissions).toEqual({ contents: 'read' });
-		expect(config.jobs.storage.needs).toBe('validate');
+		expect(config.jobs.storage.needs).toBe('deploy');
 		expect(config.jobs.storage.if).toBe("github.ref == 'refs/heads/main'");
 		expect(config.jobs.storage.permissions).toEqual({ contents: 'read', actions: 'write' });
 		expect(JSON.stringify(config.jobs.storage)).not.toContain('secrets.');
-		const uploadSteps = config.jobs.validate.steps.filter((step: { uses?: string }) => step.uses?.startsWith('actions/upload-artifact@'));
+		const uploadSteps = [...config.jobs.validate.steps, ...config.jobs.deploy.steps].filter((step: { uses?: string }) => step.uses?.startsWith('actions/upload-artifact@'));
 		for (const step of uploadSteps) {
 			expect(step.with['retention-days']).toBeLessThanOrEqual(step.with.name.startsWith('compatair-invariants-') ? 90 : 7);
 			if (step.with.path === '.lighthouseci/reports/') expect(step.if).toContain('failure()');

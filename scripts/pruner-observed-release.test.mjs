@@ -35,14 +35,14 @@ function checkpoint({changedLive=false,alreadyPublished=false,unreviewedAdmissio
 }
 describe('observed previous release flows to storage only after verification',()=>{
  it('passes the exact verified pre-activation SHA through defined job outputs',()=>{
-  const job=workflow.jobs.validate;
+  const job=workflow.jobs.deploy;
   expect(job.outputs.previous_release_sha).toBe('${{ steps.seo_checkpoint.outputs.previous_release_sha }}');
   const step=job.steps.find(step=>step.id==='seo_checkpoint');
   expect(step.run).toBe('node scripts/verify-indexation-release.mjs');
   expect(job.steps.indexOf(step)).toBeLessThan(job.steps.findIndex(step=>step.name==='Transfer and activate release'));
-  expect(workflow.jobs.storage.needs).toBe('validate');
+  expect(workflow.jobs.storage.needs).toBe('deploy');
   const prune=workflow.jobs.storage.steps.find(step=>step.name==='Keep production, rollback and compact evidence');
-  expect(prune.env.COMPATAIR_PREVIOUS_RELEASE_SHA).toBe('${{ needs.validate.outputs.previous_release_sha }}');
+  expect(prune.env.COMPATAIR_PREVIOUS_RELEASE_SHA).toBe('${{ needs.deploy.outputs.previous_release_sha }}');
   const code=readFileSync(new URL('./prune-actions-storage.mjs',import.meta.url),'utf8');
   expect(code.indexOf("const previousObservedSha")).toBeLessThan(code.indexOf("const response = await fetch("));
  });
