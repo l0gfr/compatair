@@ -1,7 +1,9 @@
 import { describe, expect, it } from 'vitest';
 import { compressors, tools } from '../data/catalog';
+import type { Compressor } from './catalog';
 import type { CompatibilityResult } from './compatibility';
 import { createCompressorCompatibilitySummary, createToolCompatibilitySummary, rankCompatibleCompressors } from './seo-selection';
+import type { ToolCompatibilityMatch } from './seo-selection';
 
 const continuousResult = (availableFadLpm: number): CompatibilityResult => ({
 	verdict: 'continuous', confidence: 'high', requiredFadLpm: 100, availableFadLpm,
@@ -9,6 +11,45 @@ const continuousResult = (availableFadLpm: number): CompatibilityResult => ({
 });
 
 describe('sélections SEO de compatibilité', () => {
+	it.each([undefined, ['particulier'] as const, ['professionnel'] as const])('conserve le tri global en concaténant les groupes déjà classés (%j)', (audiences) => {
+		const matches: ToolCompatibilityMatch[] = [];
+		const variants: Partial<Compressor>[] = [
+			{ phase: undefined }, { phase: 'single-phase' }, { phase: 'three-phase' },
+			{ mobility: undefined }, { mobility: 'mobile' }, { mobility: 'fixed' },
+			{ phase: 'three-phase', mobility: 'fixed' },
+			{ tankLiters: undefined }, { tankLiters: 0 }, { tankLiters: 50 },
+			...['2026-09-01', '2026-10-01'].map(retrievedAt => ({ evidence: compressors[0].evidence.map(item => ({ ...item, retrievedAt })) })),
+			{ model: 'Égalité' }, { model: 'Zulu' },
+		];
+		for (const verdict of ['continuous', 'intermittent'] as const) {
+			for (const confidence of ['A', 'B', 'C', 'D'] as const) {
+				for (const availableFadLpm of [undefined, 120, 150]) {
+					for (const variant of variants) {
+						const compressor = { ...compressors[0], ...variant, id: `fixture-${matches.length}`, confidence };
+						matches.push({ compressor, result: { ...continuousResult(120), verdict, availableFadLpm } });
+					}
+				}
+			}
+		}
+		const tied = matches[0];
+		const cases = [
+			[], matches, [...matches].reverse(),
+			matches.filter(item => item.result.verdict === 'continuous'),
+			matches.filter(item => item.result.verdict === 'intermittent'),
+			[tied, { compressor: { ...tied.compressor }, result: { ...tied.result } }, tied],
+		];
+		for (const input of cases) {
+			const originalOrder = [...input];
+			const continuous = rankCompatibleCompressors(input.filter(item => item.result.verdict === 'continuous'), { audiences });
+			const intermittent = rankCompatibleCompressors(input.filter(item => item.result.verdict === 'intermittent'), { audiences });
+			const concatenated = [...continuous, ...intermittent];
+			const globallyRanked = rankCompatibleCompressors(input, { audiences });
+			expect(concatenated).toHaveLength(globallyRanked.length);
+			for (const [index, match] of concatenated.entries()) expect(match).toBe(globallyRanked[index]);
+			for (const [index, match] of input.entries()) expect(match).toBe(originalOrder[index]);
+		}
+	});
+
 	it('ranks undocumented tanks after documented ones when the technical criteria are tied', () => {
 		const base = compressors[0];
 		const matches = [undefined, 50, 0].map((tankLiters, index) => ({ compressor: { ...base, id: `fixture-${index}`, tankLiters }, result: continuousResult(120) }));

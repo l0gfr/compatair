@@ -74,7 +74,7 @@ export function createToolCompatibilitySummary(
 	const matches = compressors.map((compressor) => ({ compressor, result: evaluateCompatibility(compressor, tool) }));
 	const continuous = rankCompatibleCompressors(matches.filter((item) => item.result.verdict === 'continuous'), options);
 	const intermittent = rankCompatibleCompressors(matches.filter((item) => item.result.verdict === 'intermittent'), options);
-	const compatible = rankCompatibleCompressors([...continuous, ...intermittent], options);
+	const compatible = [...continuous, ...intermittent];
 	const incompatible = rankIncompatibleCompressors(matches.filter((item) => item.result.verdict === 'incompatible'), options);
 	const insufficient = matches
 		.filter((item) => item.result.verdict === 'insufficient_data')
