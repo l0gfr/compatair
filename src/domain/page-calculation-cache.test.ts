@@ -1,9 +1,9 @@
-import { mkdtempSync, readFileSync, readdirSync, rmSync, statSync, symlinkSync, writeFileSync } from 'node:fs';
+import { mkdtempSync, readFileSync, readdirSync, renameSync, rmSync, statSync, symlinkSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { gzipSync, gunzipSync } from 'node:zlib';
 import { createHash } from 'node:crypto';
-import { afterEach, describe, expect, it } from 'vitest';
+import { afterEach, describe, expect, it, vi } from 'vitest';
 import { compressorSchema, toolProfileSchema } from './catalog';
 import compressor1 from '../data/products/compressors/abac-atf-10-10-bm';
 import compressor2 from '../data/products/compressors/abac-atf-10-10-pp';
@@ -21,8 +21,12 @@ import fixedTool4 from '../data/products/tools/cle-a-chocs-chicago-pneumatic-cp7
 import variableTool from '../data/products/tools/pistolet-gonflage-manometre-einhell-4137000';
 import { PageCalculationCache } from './page-calculation-cache';
 import { evaluateCompatibility } from './compatibility';
+vi.mock('node:fs', async importOriginal => {
+ const fs = await importOriginal<typeof import('node:fs')>();
+ return { ...fs, writeFileSync: vi.fn(fs.writeFileSync), renameSync: vi.fn(fs.renameSync), rmSync: vi.fn(fs.rmSync) };
+});
 const roots: string[] = [];
-afterEach(() => { for (const root of roots.splice(0)) rmSync(root, { recursive: true, force: true }); });
+afterEach(() => { vi.restoreAllMocks(); vi.resetAllMocks(); for (const root of roots.splice(0)) rmSync(root, { recursive: true, force: true }); });
 function fixture() {
  const directory = mkdtempSync(join(tmpdir(), 'compatair-page-results-')); roots.push(directory);
  return { compressors: [compressor1, compressor2, compressor3].map(product => compressorSchema.parse(product)),
@@ -38,7 +42,77 @@ function retainedInternKeys(cache: PageCalculationCache) {
  const rows = (cache as unknown as { rows: Map<string, { intern: Map<string, number> }> }).rows;
  return [...rows.values()].reduce((count, row) => count + row.intern.size, 0);
 }
+function diskBytes(directory: string) {
+ return readdirSync(directory).reduce((total, name) => total + statSync(join(directory, name)).size, 0);
+}
 describe('page calculation reuse across catalog revisions', () => {
+ it('keeps byte accounting exact when stats grow, shrink and are rewritten', () => {
+  const input = fixture(), cache = evaluate(input);
+  for (const memoryHits of [1_000_000_000, 0, 100, 10]) {
+   cache.stats.memoryHits = memoryHits; cache.flush();
+   expect(cache.stats.bytes).toBe(diskBytes(input.options.directory));
+  }
+ });
+ it.each(['engine', 'removed-compressor', 'oversized-cache'])('accounts for constructor cleanup: %s', kind => {
+  const input = fixture(); evaluate(input);
+  if (kind === 'engine') input.options.fingerprint = 'b'.repeat(64);
+  if (kind === 'removed-compressor') input.compressors.pop();
+  if (kind === 'oversized-cache') Object.assign(input.options, { maxBytes: 1 });
+  const cache = evaluate(input);
+  expect(cache.stats.bytes).toBe(diskBytes(input.options.directory));
+ });
+ it.each(['write', 'rename'])('keeps the previous bytes and exact results after a failed stats %s', kind => {
+  const input = fixture(), cache = evaluate(input), bytes = diskBytes(input.options.directory);
+  const fail = () => { throw new Error('fixture filesystem failure'); };
+  if (kind === 'write') vi.mocked(writeFileSync).mockImplementationOnce(fail);
+  else vi.mocked(renameSync).mockImplementationOnce(fail);
+  cache.stats.memoryHits = 1_000_000_000; cache.flush();
+  expect(cache.stats).toMatchObject({ bytes, writable: false });
+  expect(diskBytes(input.options.directory)).toBe(bytes);
+  expect(readdirSync(input.options.directory).some(name => name.endsWith('.partial'))).toBe(false);
+  for (const compressor of input.compressors) for (const tool of input.tools) {
+   expect(cache.evaluate(compressor, tool)).toEqual(evaluateCompatibility(compressor, tool));
+  }
+ });
+ it('prunes an orphaned new column after a failed row replacement while retaining old useful columns', () => {
+  const input = fixture(); evaluate(input);
+  const oldColumn = readdirSync(input.options.directory).find(name => name.startsWith('columns-'))!;
+  input.tools.push({ ...input.tools[0], id: 'new-tool-failed-row-write' });
+  const cache = new PageCalculationCache(input.compressors, input.tools, input.options);
+  const rename = vi.mocked(renameSync).getMockImplementation()!;
+  vi.mocked(renameSync).mockImplementationOnce(rename).mockImplementationOnce(() => { throw new Error('fixture row rename failure'); });
+  for (const tool of input.tools) cache.evaluate(input.compressors[0], tool);
+  expect(cache.stats.writable).toBe(false);
+  expect(readdirSync(input.options.directory).filter(name => name.startsWith('columns-'))).toHaveLength(2);
+  cache.flush(); // Other disk rows have not yet been validated.
+  expect(readdirSync(input.options.directory).filter(name => name.startsWith('columns-'))).toHaveLength(2);
+  for (const compressor of input.compressors.slice(1)) cache.evaluate(compressor, input.tools[0]);
+  cache.flush();
+  expect(readdirSync(input.options.directory).filter(name => name.startsWith('columns-'))).toEqual([oldColumn]);
+  expect(cache.stats.bytes).toBe(diskBytes(input.options.directory));
+ });
+ it('retries a failed column deletion without losing its bytes or restoring writes', () => {
+  const input = fixture(); evaluate(input);
+  const oldColumn = readdirSync(input.options.directory).find(name => name.startsWith('columns-'))!;
+  input.tools.push({ ...input.tools[0], id: 'new-tool-prune-retry' });
+  const cache = new PageCalculationCache(input.compressors, input.tools, input.options);
+  for (const compressor of input.compressors) for (const tool of input.tools) cache.evaluate(compressor, tool);
+  vi.mocked(rmSync).mockImplementationOnce(() => { throw new Error('fixture prune failure'); });
+  cache.flush();
+  expect(readdirSync(input.options.directory)).toContain(oldColumn);
+  expect(cache.stats).toMatchObject({ bytes: diskBytes(input.options.directory), writable: false });
+  cache.flush();
+  expect(readdirSync(input.options.directory)).not.toContain(oldColumn);
+  expect(cache.stats).toMatchObject({ bytes: diskBytes(input.options.directory), writable: false });
+ });
+ it('avoids repeated scans after the row and column state has stopped changing', () => {
+  const input = fixture(), cache = evaluate(input);
+  const sizes = (cache as unknown as { sizes: Map<string, number> }).sizes;
+  const scan = vi.spyOn(sizes, 'keys');
+  for (let index = 0; index < 5; index++) cache.flush();
+  expect(scan).not.toHaveBeenCalled();
+  expect(cache.stats.bytes).toBe(diskBytes(input.options.directory));
+ });
  it('releases completed cold and warm dedup keys while retaining exact in-memory hits', () => {
   const input = fixture();
   for (const phase of ['cold', 'warm']) {
@@ -178,8 +252,10 @@ describe('page calculation reuse across catalog revisions', () => {
   input.tools.push({ ...input.tools[0], id: 'new-tool-for-column-migration' });
   const partial = new PageCalculationCache(input.compressors, input.tools, input.options);
   for (const tool of input.tools) partial.evaluate(input.compressors[0], tool);
-  partial.flush();
-  expect(readdirSync(input.options.directory)).toContain(oldColumns);
+  for (let index = 0; index < 3; index++) {
+   partial.flush();
+   expect(readdirSync(input.options.directory)).toContain(oldColumns);
+  }
   expect(readdirSync(input.options.directory).filter(file => file.startsWith('columns-'))).toHaveLength(2);
   expect(evaluate(input).stats).toMatchObject({ calculated: 2, reused: 13, invalidRows: 0 });
   expect(readdirSync(input.options.directory)).not.toContain(oldColumns);

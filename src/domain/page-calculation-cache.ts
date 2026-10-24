@@ -97,6 +97,8 @@ export class PageCalculationCache {
  private rows = new Map<string, Row>();
  private rowColumnVersions = new Map<string, string>();
  private sizes = new Map<string, number>();
+ private totalBytes = 0;
+ private prunePending = true;
  private budget: number;
  private readable = false;
  constructor(compressors: Compressor[], tools: ToolProfile[], private options: PageCacheOptions) {
@@ -122,12 +124,13 @@ export class PageCalculationCache {
     const info = lstatSync(join(options.directory, name));
     if (!owned.test(name) || !info.isFile()) throw new Error('unsafe_cache_entry');
     this.sizes.set(name, info.size);
+    this.totalBytes += info.size;
    }
    let previousEngine;
    try { previousEngine = JSON.parse(bounded(join(options.directory, 'engine.json'), 1024).toString()); } catch { /* Cold cache. */ }
-   const reset = previousEngine !== options.fingerprint || [...this.sizes.values()].reduce((a, b) => a + b, 0) > this.budget;
+   const reset = previousEngine !== options.fingerprint || this.totalBytes > this.budget;
    for (const name of this.sizes.keys()) if (reset || name.startsWith('row-') && !compressorHashes.has(name.slice(4, -8))) {
-    rmSync(join(options.directory, name)); this.sizes.delete(name);
+    rmSync(join(options.directory, name)); this.totalBytes -= this.sizes.get(name)!; this.sizes.delete(name);
    }
    this.write('engine.json', JSON.stringify(options.fingerprint));
    this.readable = true;
@@ -135,10 +138,15 @@ export class PageCalculationCache {
  }
  private write(name: string, bytes: string | Buffer) {
   if (!this.stats.writable) return false;
-  const size = Buffer.byteLength(bytes), total = [...this.sizes.values()].reduce((a, b) => a + b, 0) - (this.sizes.get(name) ?? 0) + size;
+  const size = Buffer.byteLength(bytes), total = this.totalBytes - (this.sizes.get(name) ?? 0) + size;
   if (total > this.budget) { this.stats.writable = false; return false; }
   const path = join(this.options.directory, name), temporary = `${path}.${randomUUID()}.partial`;
-  try { writeFileSync(temporary, bytes, { flag: 'wx', mode: 0o600 }); renameSync(temporary, path); this.sizes.set(name, size); this.stats.bytes = total; return true; }
+  try {
+   writeFileSync(temporary, bytes, { flag: 'wx', mode: 0o600 }); renameSync(temporary, path);
+   this.sizes.set(name, size); this.totalBytes = total; this.stats.bytes = total;
+   if (name.startsWith('row-') || name.startsWith('columns-')) this.prunePending = true;
+   return true;
+  }
   catch { this.stats.writable = false; return false; }
   finally { try { rmSync(temporary, { force: true }); } catch { this.stats.writable = false; } }
  }
@@ -160,6 +168,7 @@ export class PageCalculationCache {
    }
    if (previous.indexes.length !== columns.size || previous.indexes.some(index => index >= previous.values.length)) throw new Error('invalid_row_index');
    this.rowColumnVersions.set(`row-${key}.json.gz`, previous.columns);
+   this.prunePending = true;
    row.values = previous.values.map(freeze);
    this.columns.forEach((value, index) => { const position = columns.get(value); if (position !== undefined) { row!.indexes[index] = previous.indexes[position]; row!.remaining--; } });
    // Fully covered rows resolve hits through indexes; no new values need interning.
@@ -205,17 +214,21 @@ export class PageCalculationCache {
   return row.values[row.indexes[column]];
  }
  flush() {
-  const rowFiles = [...this.sizes.keys()].filter(name => name.startsWith('row-'));
-  // A partial build cannot prove which columns its untouched disk rows need.
-  // Prune only after every retained row's validated column version is known.
-  if (this.readable && rowFiles.every(name => this.rowColumnVersions.has(name))) {
-   const referenced = new Set(this.rowColumnVersions.values());
-   for (const name of this.sizes.keys()) if (name.startsWith('columns-') && !referenced.has(name.slice(8, -5))) {
-    try { rmSync(join(this.options.directory, name)); this.sizes.delete(name); }
-    catch { this.stats.writable = false; }
+  // Repeat the proof only when row/column files or validated references change.
+  if (this.prunePending) {
+   this.prunePending = false;
+   const rowFiles = [...this.sizes.keys()].filter(name => name.startsWith('row-'));
+   // A partial build cannot prove which columns its untouched disk rows need.
+   // Prune only after every retained row's validated column version is known.
+   if (this.readable && rowFiles.every(name => this.rowColumnVersions.has(name))) {
+    const referenced = new Set(this.rowColumnVersions.values());
+    for (const name of this.sizes.keys()) if (name.startsWith('columns-') && !referenced.has(name.slice(8, -5))) {
+     try { rmSync(join(this.options.directory, name)); this.totalBytes -= this.sizes.get(name)!; this.sizes.delete(name); }
+     catch { this.stats.writable = false; this.prunePending = true; }
+    }
    }
   }
-  this.stats.bytes = [...this.sizes.values()].reduce((total, bytes) => total + bytes, 0);
+  this.stats.bytes = this.totalBytes;
   this.write('stats.json', JSON.stringify(this.stats));
  }
 }
