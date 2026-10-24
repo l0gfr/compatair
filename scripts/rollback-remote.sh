@@ -9,6 +9,14 @@ if [[ "$deploy_root" != "/var/www/html/compatair" ]] || [[ ! "$release_id" =~ ^[
 	exit 2
 fi
 
+script_dir=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)
+retention_helper="$script_dir/scripts/prune-releases.mjs"
+if [[ ! -f "$retention_helper" ]]; then retention_helper="$script_dir/prune-releases.mjs"; fi
+if [[ ${COMPATAIR_RELEASE_LOCK_FD:-} != 3 ]]; then
+	exec /opt/compatair/node/bin/node "$retention_helper" with-lock "$deploy_root" -- /bin/bash "$0" "$@"
+fi
+/opt/compatair/node/bin/node "$retention_helper" check "$deploy_root"
+
 release="$deploy_root/releases/$release_id"
 releases="$deploy_root/releases"
 current="$deploy_root/current"
@@ -64,4 +72,7 @@ if systemctl is-enabled --quiet compatair-mcp.service 2>/dev/null; then
 	fi
 fi
 printf '%s\n' "$release_id" > "$deployed_sha"
+if ! /opt/compatair/node/bin/node "$retention_helper" record "$deploy_root" "$previous_release_id" "$release_id"; then
+	echo "Rollback activated; previous-release marker needs review before any cleanup" >&2
+fi
 printf 'Rolled back to %s\n' "$release_id"

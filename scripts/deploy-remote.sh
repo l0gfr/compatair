@@ -33,6 +33,15 @@ case "$deploy_root" in
 esac
 
 if [[ "$deployment_profile" == production ]]; then
+	retention_helper="$script_dir/scripts/prune-releases.mjs"
+	if [[ ! -f "$retention_helper" ]]; then retention_helper="$script_dir/prune-releases.mjs"; fi
+	if [[ ${COMPATAIR_RELEASE_LOCK_FD:-} != 3 ]]; then
+		exec /opt/compatair/node/bin/node "$retention_helper" with-lock "$deploy_root" -- /bin/bash "$0" "$@"
+	fi
+	/opt/compatair/node/bin/node "$retention_helper" check "$deploy_root" --allow-bootstrap
+fi
+
+if [[ "$deployment_profile" == production ]]; then
 	approved_vhost=/etc/compatair/approved/compatair.fr.conf
 	candidate_vhost="$script_dir/deploy/apache/compatair.fr.conf.example"
 	if [[ ! -f "$approved_vhost" || -L "$approved_vhost" || ! -f "$candidate_vhost" || -L "$candidate_vhost" ]]; then
@@ -227,4 +236,16 @@ if [[ "$deployment_profile" == production ]]; then
 fi
 printf '%s\n' "$release_id" > "$deployed_sha"
 activation_pending=false
+activation_committed=true
 printf 'Activated %s at %s\n' "$release_id" "$(date -u +%FT%TZ)"
+if [[ "$deployment_profile" == production && "$activation_committed" == true && -n "$previous_release_id" ]]; then
+	# Retention runs only after all smokes and the commit point. Its failure must
+	# never roll back a healthy activation or discard the preceding rollback.
+	if /opt/compatair/node/bin/node "$retention_helper" record "$deploy_root" "$previous_release_id" "$release_id"; then
+		if ! /opt/compatair/node/bin/node "$retention_helper" prune "$deploy_root" --artifacts "$(dirname -- "$archive")" --apply; then
+			echo "Release activated; retention failed and requires review" >&2
+		fi
+	else
+		echo "Release activated; rollback marker was not recorded, retention skipped" >&2
+	fi
+fi
