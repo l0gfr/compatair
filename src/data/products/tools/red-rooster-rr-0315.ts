@@ -109,6 +109,9 @@ const product: ToolProfileInput = {
 		],
 		"connectorSize": [
 			"red-rooster-rr-0315-20260926"
+		],
+		"airflowBasis": [
+			"red-rooster-rr-0315-20260926"
 		]
 	},
 	"notes": [
@@ -122,7 +125,8 @@ const product: ToolProfileInput = {
 	"recommendedHose": {
 		"innerDiameterMm": 6.5
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"airflowBasis": "unqualified"
 };
 
 export default product;

@@ -21,7 +21,10 @@ describe('reviewed expansion of 200 compressors and 500 tools', () => {
  it('keeps current FIAC identity, exact electrical variants and single-pressure FAD', () => {
   expect(batch.compressors.find(p => p.mpn === '4152026070')).toMatchObject({model:'AX 703BD 8 400/50 CE', powerKw:5.6, tankLiters:0, fadCurve:[{pressureBar:8,litersPerMinute:880}]});
   expect(batch.compressors.find(p => p.mpn === '4152022526')).toMatchObject({voltage:'230 V, 50 Hz',phase:'three-phase',powerKw:5.5,fadCurve:[{pressureBar:8,litersPerMinute:846}]});
-  expect(batch.compressors.every(p => p.fadCurve.length === 1 && p.status === 'unknown')).toBe(true);
+  for (const p of batch.compressors) {
+   const expectedPoints = p.id === 'fiac-ax-203bd-8-400-50-ce' ? 0 : 1;
+   expect(p.fadCurve.length, p.id).toBe(expectedPoints); expect(p.status, p.id).toBe('unknown');
+  }
   for (const p of batch.compressors) {
    const reviewed = dutyReview.rows.find(row => row.id === p.id);
    const withdrawn = ['abac-formula-e-11-13-400-50', 'abac-formula-e-11-8-400-50', 'abac-formula-e-5-5-10-400-50', 'abac-formula-e-5-5-8-400-50', 'abac-formula-e-7-5-10-400-50'].includes(p.id);

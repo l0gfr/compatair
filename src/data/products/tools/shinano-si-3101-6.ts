@@ -9,11 +9,9 @@ const product: ToolProfileInput = {
 	"categoryId": "ponceuse-orbitale",
 	"category": "ponceuse-orbitale",
 	"label": "Shinano SI-3101-6",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
-		"max": 6.3
+		"typical": 6.3
 	},
 	"confidence": "B",
 	"image": {
@@ -23,7 +21,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-3101-6, référence SI-3101-6. Le tableau fabricant publie 372 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Plateau 150 mm, revêtement Leather selon Shinano ; orbite 5 mm ; sans aspiration intégrée. Vitesse à vide publiée : 10000 tr/min.",
+		"overview": "Shinano SI-3101-6, référence SI-3101-6. Le tableau fabricant publie 372 L/min et une pression de service prescrite de 6,3 bar. Version et équipement : Plateau 150 mm, revêtement Leather selon Shinano ; orbite 5 mm ; sans aspiration intégrée. Vitesse à vide publiée : 10000 tr/min.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Consommation maximale, colonne Max Air Consumption : 13.2 CFM / 6.2 L/s, soit 372 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
@@ -35,7 +33,8 @@ const product: ToolProfileInput = {
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"La pression de service de 6,3 bar ne qualifie pas explicitement la pression de mesure de cette consommation. Celle-ci reste documentaire et ne produit aucun verdict de débit."
 		]
 	},
 	"specifications": [
@@ -73,6 +72,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"shinano-si-3101-6-20260926"
 			]
+		},
+		{
+			"label": "Consommation maximale publiée (pression de mesure non appariée)",
+			"value": "372 L/min",
+			"evidenceIds": [
+				"shinano-si-3101-6-20260926"
+			]
 		}
 	],
 	"evidence": [
@@ -102,18 +108,15 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"shinano-si-3101-6-20260926-workingpressurebar-1"
 		],
-		"airflowLpm": [
-			"shinano-si-3101-6-20260926"
+		"demandExplanation": [
+			"shinano-si-3101-6-20260926",
+			"shinano-si-3101-6-20260926-workingpressurebar-1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 372,
-		"typical": 372,
-		"max": 372
-	}
+	"demandExplanation": "Consommation maximale publiée : 372 L/min. Pression de service prescrite : 6,3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu."
 };
 
 export default product;

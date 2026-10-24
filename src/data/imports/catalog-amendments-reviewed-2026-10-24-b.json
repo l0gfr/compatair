@@ -1,0 +1,3247 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-24",
+  "scope": "Corrective technical qualification after the 61-page admission; no new admissions, no historical review rewrite.",
+  "rows": [
+    {
+      "id": "cleco-19pca07q",
+      "kind": "tools",
+      "brand": "Cleco",
+      "model": "19PCA07Q",
+      "mpn": "19PCA07Q",
+      "fields": [
+        "airflowBasis",
+        "fieldSources"
+      ],
+      "before": {
+        "fieldSources": {
+          "mpn": [
+            "cleco-19pca07q-20260926"
+          ],
+          "workingPressureBar": [
+            "cleco-19pca07q-20260926"
+          ],
+          "airflowLpm": [
+            "cleco-19pca07q-20260926"
+          ]
+        }
+      },
+      "after": {
+        "airflowBasis": "unqualified",
+        "fieldSources": {
+          "mpn": [
+            "cleco-19pca07q-20260926"
+          ],
+          "workingPressureBar": [
+            "cleco-19pca07q-20260926"
+          ],
+          "airflowLpm": [
+            "cleco-19pca07q-20260926"
+          ],
+          "airflowBasis": [
+            "cleco-19pca07q-20260926"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cleco-19raa07ah2",
+      "kind": "tools",
+      "brand": "Cleco",
+      "model": "19RAA07AH2",
+      "mpn": "19RAA07AH2",
+      "fields": [
+        "airflowBasis",
+        "fieldSources"
+      ],
+      "before": {
+        "fieldSources": {
+          "mpn": [
+            "cleco-19raa07ah2-20260926"
+          ],
+          "workingPressureBar": [
+            "cleco-19raa07ah2-20260926"
+          ],
+          "airflowLpm": [
+            "cleco-19raa07ah2-20260926"
+          ]
+        }
+      },
+      "after": {
+        "airflowBasis": "unqualified",
+        "fieldSources": {
+          "mpn": [
+            "cleco-19raa07ah2-20260926"
+          ],
+          "workingPressureBar": [
+            "cleco-19raa07ah2-20260926"
+          ],
+          "airflowLpm": [
+            "cleco-19raa07ah2-20260926"
+          ],
+          "airflowBasis": [
+            "cleco-19raa07ah2-20260926"
+          ]
+        }
+      }
+    },
+    {
+      "id": "cleco-20phh753",
+      "kind": "tools",
+      "brand": "Cleco",
+      "model": "20PHH753",
+      "mpn": "20PHH753",
+      "fields": [
+        "airflowBasis",
+        "fieldSources"
+      ],
+      "before": {
+        "fieldSources": {
+          "mpn": [
+            "cleco-20phh753-20260926"
+          ],
+          "workingPressureBar": [
+            "cleco-20phh753-20260926"
+          ],
+          "airflowLpm": [
+            "cleco-20phh753-20260926"
+          ]
+        }
+      },
+      "after": {
+        "airflowBasis": "free-speed",
+        "fieldSources": {
+          "mpn": [
+            "cleco-20phh753-20260926"
+          ],
+          "workingPressureBar": [
+            "cleco-20phh753-20260926"
+          ],
+          "airflowLpm": [
+            "cleco-20phh753-20260926"
+          ],
+          "airflowBasis": [
+            "cleco-20phh753-20260926"
+          ]
+        }
+      }
+    },
+    {
+      "id": "shinano-si-1166-8a",
+      "kind": "tools",
+      "brand": "Shinano",
+      "model": "SI-1166-8A",
+      "mpn": "SI-1166-8A",
+      "fields": [
+        "airflowLpm",
+        "demandExplanation",
+        "demandModel",
+        "editorial",
+        "fieldSources",
+        "specifications",
+        "workingPressureBar"
+      ],
+      "before": {
+        "airflowLpm": {
+          "min": 558,
+          "typical": 558,
+          "max": 558
+        },
+        "demandModel": "fixed-flow",
+        "editorial": {
+          "overview": "Shinano SI-1166-8A, référence SI-1166-8A. Le tableau fabricant publie 558 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple maximal publié : 9.0 Nm. Vitesse à vide publiée : 800 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 19.8 CFM / 9.3 L/s. Conversion du maximum publié : 9.3 × 60 = 558 L/min.",
+            "Référence fabricant : SI-1166-8A.",
+            "Couple maximal publié : 9.0 Nm.",
+            "Vitesse à vide publiée : 800 tr/min.",
+            "Masse publiée : 1,35 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        },
+        "fieldSources": {
+          "mpn": [
+            "shinano-si-1166-8a-20260926"
+          ],
+          "workingPressureBar": [
+            "shinano-si-1166-8a-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "shinano-si-1166-8a-20260926"
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Condition de pression",
+            "value": "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "evidenceIds": [
+              "shinano-si-1166-8a-20260926-workingpressurebar-1"
+            ]
+          },
+          {
+            "label": "Condition de consommation",
+            "value": "Colonne Max Air Consumption : 19.8 CFM / 9.3 L/s. Conversion du maximum publié : 9.3 × 60 = 558 L/min.",
+            "evidenceIds": [
+              "shinano-si-1166-8a-20260926"
+            ]
+          },
+          {
+            "label": "Couple maximal publié",
+            "value": "9.0 Nm",
+            "evidenceIds": [
+              "shinano-si-1166-8a-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse à vide publiée",
+            "value": "800 tr/min",
+            "evidenceIds": [
+              "shinano-si-1166-8a-20260926"
+            ]
+          },
+          {
+            "label": "Masse publiée",
+            "value": "1,35 kg",
+            "evidenceIds": [
+              "shinano-si-1166-8a-20260926"
+            ]
+          }
+        ],
+        "workingPressureBar": {
+          "min": 6.3,
+          "typical": 6.3,
+          "max": 6.3
+        }
+      },
+      "after": {
+        "demandExplanation": "Consommation maximale publiée : 558 L/min. Pression de service prescrite : 6,3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu.",
+        "demandModel": "variable-volume",
+        "editorial": {
+          "overview": "Shinano SI-1166-8A, référence SI-1166-8A. Le tableau fabricant publie 558 L/min et une pression de service prescrite de 6,3 bar. Couple maximal publié : 9.0 Nm. Vitesse à vide publiée : 800 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 19.8 CFM / 9.3 L/s. Conversion du maximum publié : 9.3 × 60 = 558 L/min.",
+            "Référence fabricant : SI-1166-8A.",
+            "Couple maximal publié : 9.0 Nm.",
+            "Vitesse à vide publiée : 800 tr/min.",
+            "Masse publiée : 1,35 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "La pression de service de 6,3 bar ne qualifie pas explicitement la pression de mesure de cette consommation. Celle-ci reste documentaire et ne produit aucun verdict de débit."
+          ]
+        },
+        "fieldSources": {
+          "mpn": [
+            "shinano-si-1166-8a-20260926"
+          ],
+          "workingPressureBar": [
+            "shinano-si-1166-8a-20260926-workingpressurebar-1"
+          ],
+          "demandExplanation": [
+            "shinano-si-1166-8a-20260926",
+            "shinano-si-1166-8a-20260926-workingpressurebar-1"
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Condition de pression",
+            "value": "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "evidenceIds": [
+              "shinano-si-1166-8a-20260926-workingpressurebar-1"
+            ]
+          },
+          {
+            "label": "Condition de consommation",
+            "value": "Colonne Max Air Consumption : 19.8 CFM / 9.3 L/s. Conversion du maximum publié : 9.3 × 60 = 558 L/min.",
+            "evidenceIds": [
+              "shinano-si-1166-8a-20260926"
+            ]
+          },
+          {
+            "label": "Couple maximal publié",
+            "value": "9.0 Nm",
+            "evidenceIds": [
+              "shinano-si-1166-8a-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse à vide publiée",
+            "value": "800 tr/min",
+            "evidenceIds": [
+              "shinano-si-1166-8a-20260926"
+            ]
+          },
+          {
+            "label": "Masse publiée",
+            "value": "1,35 kg",
+            "evidenceIds": [
+              "shinano-si-1166-8a-20260926"
+            ]
+          },
+          {
+            "label": "Consommation maximale publiée (pression de mesure non appariée)",
+            "value": "558 L/min",
+            "evidenceIds": [
+              "shinano-si-1166-8a-20260926"
+            ]
+          }
+        ],
+        "workingPressureBar": {
+          "typical": 6.3
+        }
+      }
+    },
+    {
+      "id": "shinano-si-1241a",
+      "kind": "tools",
+      "brand": "Shinano",
+      "model": "SI-1241A",
+      "mpn": "SI-1241A",
+      "fields": [
+        "airflowLpm",
+        "demandExplanation",
+        "demandModel",
+        "editorial",
+        "fieldSources",
+        "specifications",
+        "workingPressureBar"
+      ],
+      "before": {
+        "airflowLpm": {
+          "min": 324,
+          "typical": 324,
+          "max": 324
+        },
+        "demandModel": "fixed-flow",
+        "editorial": {
+          "overview": "Shinano SI-1241A, référence SI-1241A. Le tableau fabricant publie 324 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple maximal publié : 30 Nm. Vitesse à vide publiée : 250 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 11.4 CFM / 5.4 L/s. Conversion du maximum publié : 5.4 × 60 = 324 L/min.",
+            "Référence fabricant : SI-1241A.",
+            "Couple maximal publié : 30 Nm.",
+            "Vitesse à vide publiée : 250 tr/min.",
+            "Masse publiée : 0,63 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        },
+        "fieldSources": {
+          "mpn": [
+            "shinano-si-1241a-20260926"
+          ],
+          "workingPressureBar": [
+            "shinano-si-1241a-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "shinano-si-1241a-20260926"
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Condition de pression",
+            "value": "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "evidenceIds": [
+              "shinano-si-1241a-20260926-workingpressurebar-1"
+            ]
+          },
+          {
+            "label": "Condition de consommation",
+            "value": "Colonne Max Air Consumption : 11.4 CFM / 5.4 L/s. Conversion du maximum publié : 5.4 × 60 = 324 L/min.",
+            "evidenceIds": [
+              "shinano-si-1241a-20260926"
+            ]
+          },
+          {
+            "label": "Couple maximal publié",
+            "value": "30 Nm",
+            "evidenceIds": [
+              "shinano-si-1241a-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse à vide publiée",
+            "value": "250 tr/min",
+            "evidenceIds": [
+              "shinano-si-1241a-20260926"
+            ]
+          },
+          {
+            "label": "Masse publiée",
+            "value": "0,63 kg",
+            "evidenceIds": [
+              "shinano-si-1241a-20260926"
+            ]
+          }
+        ],
+        "workingPressureBar": {
+          "min": 6.3,
+          "typical": 6.3,
+          "max": 6.3
+        }
+      },
+      "after": {
+        "demandExplanation": "Consommation maximale publiée : 324 L/min. Pression de service prescrite : 6,3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu.",
+        "demandModel": "variable-volume",
+        "editorial": {
+          "overview": "Shinano SI-1241A, référence SI-1241A. Le tableau fabricant publie 324 L/min et une pression de service prescrite de 6,3 bar. Couple maximal publié : 30 Nm. Vitesse à vide publiée : 250 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 11.4 CFM / 5.4 L/s. Conversion du maximum publié : 5.4 × 60 = 324 L/min.",
+            "Référence fabricant : SI-1241A.",
+            "Couple maximal publié : 30 Nm.",
+            "Vitesse à vide publiée : 250 tr/min.",
+            "Masse publiée : 0,63 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "La pression de service de 6,3 bar ne qualifie pas explicitement la pression de mesure de cette consommation. Celle-ci reste documentaire et ne produit aucun verdict de débit."
+          ]
+        },
+        "fieldSources": {
+          "mpn": [
+            "shinano-si-1241a-20260926"
+          ],
+          "workingPressureBar": [
+            "shinano-si-1241a-20260926-workingpressurebar-1"
+          ],
+          "demandExplanation": [
+            "shinano-si-1241a-20260926",
+            "shinano-si-1241a-20260926-workingpressurebar-1"
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Condition de pression",
+            "value": "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "evidenceIds": [
+              "shinano-si-1241a-20260926-workingpressurebar-1"
+            ]
+          },
+          {
+            "label": "Condition de consommation",
+            "value": "Colonne Max Air Consumption : 11.4 CFM / 5.4 L/s. Conversion du maximum publié : 5.4 × 60 = 324 L/min.",
+            "evidenceIds": [
+              "shinano-si-1241a-20260926"
+            ]
+          },
+          {
+            "label": "Couple maximal publié",
+            "value": "30 Nm",
+            "evidenceIds": [
+              "shinano-si-1241a-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse à vide publiée",
+            "value": "250 tr/min",
+            "evidenceIds": [
+              "shinano-si-1241a-20260926"
+            ]
+          },
+          {
+            "label": "Masse publiée",
+            "value": "0,63 kg",
+            "evidenceIds": [
+              "shinano-si-1241a-20260926"
+            ]
+          },
+          {
+            "label": "Consommation maximale publiée (pression de mesure non appariée)",
+            "value": "324 L/min",
+            "evidenceIds": [
+              "shinano-si-1241a-20260926"
+            ]
+          }
+        ],
+        "workingPressureBar": {
+          "typical": 6.3
+        }
+      }
+    },
+    {
+      "id": "shinano-si-1420t",
+      "kind": "tools",
+      "brand": "Shinano",
+      "model": "SI-1420T",
+      "mpn": "SI-1420T",
+      "fields": [
+        "airflowLpm",
+        "demandExplanation",
+        "demandModel",
+        "editorial",
+        "fieldSources",
+        "specifications",
+        "workingPressureBar"
+      ],
+      "before": {
+        "airflowLpm": {
+          "min": 678,
+          "typical": 678,
+          "max": 678
+        },
+        "demandModel": "fixed-flow",
+        "editorial": {
+          "overview": "Shinano SI-1420T, référence SI-1420T. Le tableau fabricant publie 678 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple maximal publié : 500 Nm. Vitesse à vide publiée : 6 000 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 24 CFM / 11.3 L/s. Conversion du maximum publié : 11.3 × 60 = 678 L/min.",
+            "Référence fabricant : SI-1420T.",
+            "Couple maximal publié : 500 Nm.",
+            "Vitesse à vide publiée : 6 000 tr/min.",
+            "Masse publiée : 2,55 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        },
+        "fieldSources": {
+          "mpn": [
+            "shinano-si-1420t-20260926"
+          ],
+          "workingPressureBar": [
+            "shinano-si-1420t-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "shinano-si-1420t-20260926"
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Condition de pression",
+            "value": "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "evidenceIds": [
+              "shinano-si-1420t-20260926-workingpressurebar-1"
+            ]
+          },
+          {
+            "label": "Condition de consommation",
+            "value": "Colonne Max Air Consumption : 24 CFM / 11.3 L/s. Conversion du maximum publié : 11.3 × 60 = 678 L/min.",
+            "evidenceIds": [
+              "shinano-si-1420t-20260926"
+            ]
+          },
+          {
+            "label": "Couple maximal publié",
+            "value": "500 Nm",
+            "evidenceIds": [
+              "shinano-si-1420t-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse à vide publiée",
+            "value": "6 000 tr/min",
+            "evidenceIds": [
+              "shinano-si-1420t-20260926"
+            ]
+          },
+          {
+            "label": "Masse publiée",
+            "value": "2,55 kg",
+            "evidenceIds": [
+              "shinano-si-1420t-20260926"
+            ]
+          }
+        ],
+        "workingPressureBar": {
+          "min": 6.3,
+          "typical": 6.3,
+          "max": 6.3
+        }
+      },
+      "after": {
+        "demandExplanation": "Consommation maximale publiée : 678 L/min. Pression de service prescrite : 6,3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu.",
+        "demandModel": "variable-volume",
+        "editorial": {
+          "overview": "Shinano SI-1420T, référence SI-1420T. Le tableau fabricant publie 678 L/min et une pression de service prescrite de 6,3 bar. Couple maximal publié : 500 Nm. Vitesse à vide publiée : 6 000 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 24 CFM / 11.3 L/s. Conversion du maximum publié : 11.3 × 60 = 678 L/min.",
+            "Référence fabricant : SI-1420T.",
+            "Couple maximal publié : 500 Nm.",
+            "Vitesse à vide publiée : 6 000 tr/min.",
+            "Masse publiée : 2,55 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "La pression de service de 6,3 bar ne qualifie pas explicitement la pression de mesure de cette consommation. Celle-ci reste documentaire et ne produit aucun verdict de débit."
+          ]
+        },
+        "fieldSources": {
+          "mpn": [
+            "shinano-si-1420t-20260926"
+          ],
+          "workingPressureBar": [
+            "shinano-si-1420t-20260926-workingpressurebar-1"
+          ],
+          "demandExplanation": [
+            "shinano-si-1420t-20260926",
+            "shinano-si-1420t-20260926-workingpressurebar-1"
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Condition de pression",
+            "value": "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "evidenceIds": [
+              "shinano-si-1420t-20260926-workingpressurebar-1"
+            ]
+          },
+          {
+            "label": "Condition de consommation",
+            "value": "Colonne Max Air Consumption : 24 CFM / 11.3 L/s. Conversion du maximum publié : 11.3 × 60 = 678 L/min.",
+            "evidenceIds": [
+              "shinano-si-1420t-20260926"
+            ]
+          },
+          {
+            "label": "Couple maximal publié",
+            "value": "500 Nm",
+            "evidenceIds": [
+              "shinano-si-1420t-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse à vide publiée",
+            "value": "6 000 tr/min",
+            "evidenceIds": [
+              "shinano-si-1420t-20260926"
+            ]
+          },
+          {
+            "label": "Masse publiée",
+            "value": "2,55 kg",
+            "evidenceIds": [
+              "shinano-si-1420t-20260926"
+            ]
+          },
+          {
+            "label": "Consommation maximale publiée (pression de mesure non appariée)",
+            "value": "678 L/min",
+            "evidenceIds": [
+              "shinano-si-1420t-20260926"
+            ]
+          }
+        ],
+        "workingPressureBar": {
+          "typical": 6.3
+        }
+      }
+    },
+    {
+      "id": "shinano-si-2006s-6",
+      "kind": "tools",
+      "brand": "Shinano",
+      "model": "SI-2006S-6",
+      "mpn": "SI-2006S-6",
+      "fields": [
+        "airflowLpm",
+        "demandExplanation",
+        "demandModel",
+        "editorial",
+        "fieldSources",
+        "specifications",
+        "workingPressureBar"
+      ],
+      "before": {
+        "airflowLpm": {
+          "min": 390,
+          "typical": 390,
+          "max": 390
+        },
+        "demandModel": "fixed-flow",
+        "editorial": {
+          "overview": "Shinano SI-2006S-6, référence SI-2006S-6. Le tableau fabricant publie 390 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Pince 6 mm ; puissance publiée 127 W. Vitesse à vide publiée : 20000 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 13.8 CFM / 6.5 L/s, soit 390 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-2006S-6.",
+            "Version et équipement : Pince 6 mm ; puissance publiée 127 W.",
+            "Vitesse à vide publiée : 20000 tr/min.",
+            "Masse publiée : 0.49 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        },
+        "fieldSources": {
+          "mpn": [
+            "shinano-si-2006s-6-20260926"
+          ],
+          "workingPressureBar": [
+            "shinano-si-2006s-6-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "shinano-si-2006s-6-20260926"
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Condition de pression",
+            "value": "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "evidenceIds": [
+              "shinano-si-2006s-6-20260926-workingpressurebar-1"
+            ]
+          },
+          {
+            "label": "Condition de consommation",
+            "value": "Consommation maximale, colonne Max Air Consumption : 13.8 CFM / 6.5 L/s, soit 390 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "evidenceIds": [
+              "shinano-si-2006s-6-20260926"
+            ]
+          },
+          {
+            "label": "Version et équipement",
+            "value": "Pince 6 mm ; puissance publiée 127 W.",
+            "evidenceIds": [
+              "shinano-si-2006s-6-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse à vide publiée",
+            "value": "20000 tr/min",
+            "evidenceIds": [
+              "shinano-si-2006s-6-20260926"
+            ]
+          },
+          {
+            "label": "Masse publiée",
+            "value": "0.49 kg",
+            "evidenceIds": [
+              "shinano-si-2006s-6-20260926"
+            ]
+          }
+        ],
+        "workingPressureBar": {
+          "min": 6.3,
+          "typical": 6.3,
+          "max": 6.3
+        }
+      },
+      "after": {
+        "demandExplanation": "Consommation maximale publiée : 390 L/min. Pression de service prescrite : 6,3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu.",
+        "demandModel": "variable-volume",
+        "editorial": {
+          "overview": "Shinano SI-2006S-6, référence SI-2006S-6. Le tableau fabricant publie 390 L/min et une pression de service prescrite de 6,3 bar. Version et équipement : Pince 6 mm ; puissance publiée 127 W. Vitesse à vide publiée : 20000 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 13.8 CFM / 6.5 L/s, soit 390 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-2006S-6.",
+            "Version et équipement : Pince 6 mm ; puissance publiée 127 W.",
+            "Vitesse à vide publiée : 20000 tr/min.",
+            "Masse publiée : 0.49 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "La pression de service de 6,3 bar ne qualifie pas explicitement la pression de mesure de cette consommation. Celle-ci reste documentaire et ne produit aucun verdict de débit."
+          ]
+        },
+        "fieldSources": {
+          "mpn": [
+            "shinano-si-2006s-6-20260926"
+          ],
+          "workingPressureBar": [
+            "shinano-si-2006s-6-20260926-workingpressurebar-1"
+          ],
+          "demandExplanation": [
+            "shinano-si-2006s-6-20260926",
+            "shinano-si-2006s-6-20260926-workingpressurebar-1"
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Condition de pression",
+            "value": "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "evidenceIds": [
+              "shinano-si-2006s-6-20260926-workingpressurebar-1"
+            ]
+          },
+          {
+            "label": "Condition de consommation",
+            "value": "Consommation maximale, colonne Max Air Consumption : 13.8 CFM / 6.5 L/s, soit 390 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "evidenceIds": [
+              "shinano-si-2006s-6-20260926"
+            ]
+          },
+          {
+            "label": "Version et équipement",
+            "value": "Pince 6 mm ; puissance publiée 127 W.",
+            "evidenceIds": [
+              "shinano-si-2006s-6-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse à vide publiée",
+            "value": "20000 tr/min",
+            "evidenceIds": [
+              "shinano-si-2006s-6-20260926"
+            ]
+          },
+          {
+            "label": "Masse publiée",
+            "value": "0.49 kg",
+            "evidenceIds": [
+              "shinano-si-2006s-6-20260926"
+            ]
+          },
+          {
+            "label": "Consommation maximale publiée (pression de mesure non appariée)",
+            "value": "390 L/min",
+            "evidenceIds": [
+              "shinano-si-2006s-6-20260926"
+            ]
+          }
+        ],
+        "workingPressureBar": {
+          "typical": 6.3
+        }
+      }
+    },
+    {
+      "id": "shinano-si-2202",
+      "kind": "tools",
+      "brand": "Shinano",
+      "model": "SI-2202",
+      "mpn": "SI-2202",
+      "fields": [
+        "airflowLpm",
+        "demandExplanation",
+        "demandModel",
+        "editorial",
+        "fieldSources",
+        "specifications",
+        "workingPressureBar"
+      ],
+      "before": {
+        "airflowLpm": {
+          "min": 426,
+          "typical": 426,
+          "max": 426
+        },
+        "demandModel": "fixed-flow",
+        "editorial": {
+          "overview": "Shinano SI-2202, référence SI-2202. Le tableau fabricant publie 426 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Livré sans plateau ; broche 1/4-20 UNC. Vitesse à vide publiée : 15000 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 15 CFM / 7.1 L/s, soit 426 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-2202.",
+            "Version et équipement : Livré sans plateau ; broche 1/4-20 UNC.",
+            "Vitesse à vide publiée : 15000 tr/min.",
+            "Masse publiée : 0.46 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        },
+        "fieldSources": {
+          "mpn": [
+            "shinano-si-2202-20260926"
+          ],
+          "workingPressureBar": [
+            "shinano-si-2202-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "shinano-si-2202-20260926"
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Condition de pression",
+            "value": "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "evidenceIds": [
+              "shinano-si-2202-20260926-workingpressurebar-1"
+            ]
+          },
+          {
+            "label": "Condition de consommation",
+            "value": "Consommation maximale, colonne Max Air Consumption : 15 CFM / 7.1 L/s, soit 426 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "evidenceIds": [
+              "shinano-si-2202-20260926"
+            ]
+          },
+          {
+            "label": "Version et équipement",
+            "value": "Livré sans plateau ; broche 1/4-20 UNC.",
+            "evidenceIds": [
+              "shinano-si-2202-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse à vide publiée",
+            "value": "15000 tr/min",
+            "evidenceIds": [
+              "shinano-si-2202-20260926"
+            ]
+          },
+          {
+            "label": "Masse publiée",
+            "value": "0.46 kg",
+            "evidenceIds": [
+              "shinano-si-2202-20260926"
+            ]
+          }
+        ],
+        "workingPressureBar": {
+          "min": 6.3,
+          "typical": 6.3,
+          "max": 6.3
+        }
+      },
+      "after": {
+        "demandExplanation": "Consommation maximale publiée : 426 L/min. Pression de service prescrite : 6,3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu.",
+        "demandModel": "variable-volume",
+        "editorial": {
+          "overview": "Shinano SI-2202, référence SI-2202. Le tableau fabricant publie 426 L/min et une pression de service prescrite de 6,3 bar. Version et équipement : Livré sans plateau ; broche 1/4-20 UNC. Vitesse à vide publiée : 15000 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 15 CFM / 7.1 L/s, soit 426 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-2202.",
+            "Version et équipement : Livré sans plateau ; broche 1/4-20 UNC.",
+            "Vitesse à vide publiée : 15000 tr/min.",
+            "Masse publiée : 0.46 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "La pression de service de 6,3 bar ne qualifie pas explicitement la pression de mesure de cette consommation. Celle-ci reste documentaire et ne produit aucun verdict de débit."
+          ]
+        },
+        "fieldSources": {
+          "mpn": [
+            "shinano-si-2202-20260926"
+          ],
+          "workingPressureBar": [
+            "shinano-si-2202-20260926-workingpressurebar-1"
+          ],
+          "demandExplanation": [
+            "shinano-si-2202-20260926",
+            "shinano-si-2202-20260926-workingpressurebar-1"
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Condition de pression",
+            "value": "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "evidenceIds": [
+              "shinano-si-2202-20260926-workingpressurebar-1"
+            ]
+          },
+          {
+            "label": "Condition de consommation",
+            "value": "Consommation maximale, colonne Max Air Consumption : 15 CFM / 7.1 L/s, soit 426 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "evidenceIds": [
+              "shinano-si-2202-20260926"
+            ]
+          },
+          {
+            "label": "Version et équipement",
+            "value": "Livré sans plateau ; broche 1/4-20 UNC.",
+            "evidenceIds": [
+              "shinano-si-2202-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse à vide publiée",
+            "value": "15000 tr/min",
+            "evidenceIds": [
+              "shinano-si-2202-20260926"
+            ]
+          },
+          {
+            "label": "Masse publiée",
+            "value": "0.46 kg",
+            "evidenceIds": [
+              "shinano-si-2202-20260926"
+            ]
+          },
+          {
+            "label": "Consommation maximale publiée (pression de mesure non appariée)",
+            "value": "426 L/min",
+            "evidenceIds": [
+              "shinano-si-2202-20260926"
+            ]
+          }
+        ],
+        "workingPressureBar": {
+          "typical": 6.3
+        }
+      }
+    },
+    {
+      "id": "shinano-si-2415",
+      "kind": "tools",
+      "brand": "Shinano",
+      "model": "SI-2415",
+      "mpn": "SI-2415",
+      "fields": [
+        "airflowLpm",
+        "demandExplanation",
+        "demandModel",
+        "editorial",
+        "fieldSources",
+        "specifications",
+        "workingPressureBar"
+      ],
+      "before": {
+        "airflowLpm": {
+          "min": 576,
+          "typical": 576,
+          "max": 576
+        },
+        "demandModel": "fixed-flow",
+        "editorial": {
+          "overview": "Shinano SI-2415, référence SI-2415. Le tableau fabricant publie 576 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Double action entraînée par engrenage ; orbite 4,4 mm. Le tableau associe 140 mm à 6 pouces : diamètre de plateau à confirmer, sans conversion forcée. Vitesse à vide publiée : 1200 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 20.4 CFM / 9.6 L/s, soit 576 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-2415.",
+            "Version et équipement : Double action entraînée par engrenage ; orbite 4,4 mm. Le tableau associe 140 mm à 6 pouces : diamètre de plateau à confirmer, sans conversion forcée.",
+            "Vitesse à vide publiée : 1200 tr/min.",
+            "Masse publiée : 1.45 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        },
+        "fieldSources": {
+          "mpn": [
+            "shinano-si-2415-20260926"
+          ],
+          "workingPressureBar": [
+            "shinano-si-2415-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "shinano-si-2415-20260926"
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Condition de pression",
+            "value": "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "evidenceIds": [
+              "shinano-si-2415-20260926-workingpressurebar-1"
+            ]
+          },
+          {
+            "label": "Condition de consommation",
+            "value": "Consommation maximale, colonne Max Air Consumption : 20.4 CFM / 9.6 L/s, soit 576 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "evidenceIds": [
+              "shinano-si-2415-20260926"
+            ]
+          },
+          {
+            "label": "Version et équipement",
+            "value": "Double action entraînée par engrenage ; orbite 4,4 mm. Le tableau associe 140 mm à 6 pouces : diamètre de plateau à confirmer, sans conversion forcée.",
+            "evidenceIds": [
+              "shinano-si-2415-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse à vide publiée",
+            "value": "1200 tr/min",
+            "evidenceIds": [
+              "shinano-si-2415-20260926"
+            ]
+          },
+          {
+            "label": "Masse publiée",
+            "value": "1.45 kg",
+            "evidenceIds": [
+              "shinano-si-2415-20260926"
+            ]
+          }
+        ],
+        "workingPressureBar": {
+          "min": 6.3,
+          "typical": 6.3,
+          "max": 6.3
+        }
+      },
+      "after": {
+        "demandExplanation": "Consommation maximale publiée : 576 L/min. Pression de service prescrite : 6,3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu.",
+        "demandModel": "variable-volume",
+        "editorial": {
+          "overview": "Shinano SI-2415, référence SI-2415. Le tableau fabricant publie 576 L/min et une pression de service prescrite de 6,3 bar. Version et équipement : Double action entraînée par engrenage ; orbite 4,4 mm. Le tableau associe 140 mm à 6 pouces : diamètre de plateau à confirmer, sans conversion forcée. Vitesse à vide publiée : 1200 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 20.4 CFM / 9.6 L/s, soit 576 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-2415.",
+            "Version et équipement : Double action entraînée par engrenage ; orbite 4,4 mm. Le tableau associe 140 mm à 6 pouces : diamètre de plateau à confirmer, sans conversion forcée.",
+            "Vitesse à vide publiée : 1200 tr/min.",
+            "Masse publiée : 1.45 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "La pression de service de 6,3 bar ne qualifie pas explicitement la pression de mesure de cette consommation. Celle-ci reste documentaire et ne produit aucun verdict de débit."
+          ]
+        },
+        "fieldSources": {
+          "mpn": [
+            "shinano-si-2415-20260926"
+          ],
+          "workingPressureBar": [
+            "shinano-si-2415-20260926-workingpressurebar-1"
+          ],
+          "demandExplanation": [
+            "shinano-si-2415-20260926",
+            "shinano-si-2415-20260926-workingpressurebar-1"
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Condition de pression",
+            "value": "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "evidenceIds": [
+              "shinano-si-2415-20260926-workingpressurebar-1"
+            ]
+          },
+          {
+            "label": "Condition de consommation",
+            "value": "Consommation maximale, colonne Max Air Consumption : 20.4 CFM / 9.6 L/s, soit 576 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "evidenceIds": [
+              "shinano-si-2415-20260926"
+            ]
+          },
+          {
+            "label": "Version et équipement",
+            "value": "Double action entraînée par engrenage ; orbite 4,4 mm. Le tableau associe 140 mm à 6 pouces : diamètre de plateau à confirmer, sans conversion forcée.",
+            "evidenceIds": [
+              "shinano-si-2415-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse à vide publiée",
+            "value": "1200 tr/min",
+            "evidenceIds": [
+              "shinano-si-2415-20260926"
+            ]
+          },
+          {
+            "label": "Masse publiée",
+            "value": "1.45 kg",
+            "evidenceIds": [
+              "shinano-si-2415-20260926"
+            ]
+          },
+          {
+            "label": "Consommation maximale publiée (pression de mesure non appariée)",
+            "value": "576 L/min",
+            "evidenceIds": [
+              "shinano-si-2415-20260926"
+            ]
+          }
+        ],
+        "workingPressureBar": {
+          "typical": 6.3
+        }
+      }
+    },
+    {
+      "id": "shinano-si-2830",
+      "kind": "tools",
+      "brand": "Shinano",
+      "model": "SI-2830",
+      "mpn": "SI-2830",
+      "fields": [
+        "airflowLpm",
+        "demandExplanation",
+        "demandModel",
+        "editorial",
+        "fieldSources",
+        "specifications",
+        "workingPressureBar"
+      ],
+      "before": {
+        "airflowLpm": {
+          "min": 900,
+          "typical": 900,
+          "max": 900
+        },
+        "demandModel": "fixed-flow",
+        "editorial": {
+          "overview": "Shinano SI-2830, référence SI-2830. Le tableau fabricant publie 900 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 10 000 tr/min. Masse publiée : 2,02 kg.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 31.8 CFM / 15 L/s. Conversion du maximum publié : 15 × 60 = 900 L/min.",
+            "Référence fabricant : SI-2830.",
+            "Vitesse à vide publiée : 10 000 tr/min.",
+            "Masse publiée : 2,02 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        },
+        "fieldSources": {
+          "mpn": [
+            "shinano-si-2830-20260926"
+          ],
+          "workingPressureBar": [
+            "shinano-si-2830-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "shinano-si-2830-20260926"
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Condition de pression",
+            "value": "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "evidenceIds": [
+              "shinano-si-2830-20260926-workingpressurebar-1"
+            ]
+          },
+          {
+            "label": "Condition de consommation",
+            "value": "Colonne Max Air Consumption : 31.8 CFM / 15 L/s. Conversion du maximum publié : 15 × 60 = 900 L/min.",
+            "evidenceIds": [
+              "shinano-si-2830-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse à vide publiée",
+            "value": "10 000 tr/min",
+            "evidenceIds": [
+              "shinano-si-2830-20260926"
+            ]
+          },
+          {
+            "label": "Masse publiée",
+            "value": "2,02 kg",
+            "evidenceIds": [
+              "shinano-si-2830-20260926"
+            ]
+          }
+        ],
+        "workingPressureBar": {
+          "min": 6.3,
+          "typical": 6.3,
+          "max": 6.3
+        }
+      },
+      "after": {
+        "demandExplanation": "Consommation maximale publiée : 900 L/min. Pression de service prescrite : 6,3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu.",
+        "demandModel": "variable-volume",
+        "editorial": {
+          "overview": "Shinano SI-2830, référence SI-2830. Le tableau fabricant publie 900 L/min et une pression de service prescrite de 6,3 bar. Vitesse à vide publiée : 10 000 tr/min. Masse publiée : 2,02 kg.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 31.8 CFM / 15 L/s. Conversion du maximum publié : 15 × 60 = 900 L/min.",
+            "Référence fabricant : SI-2830.",
+            "Vitesse à vide publiée : 10 000 tr/min.",
+            "Masse publiée : 2,02 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "La pression de service de 6,3 bar ne qualifie pas explicitement la pression de mesure de cette consommation. Celle-ci reste documentaire et ne produit aucun verdict de débit."
+          ]
+        },
+        "fieldSources": {
+          "mpn": [
+            "shinano-si-2830-20260926"
+          ],
+          "workingPressureBar": [
+            "shinano-si-2830-20260926-workingpressurebar-1"
+          ],
+          "demandExplanation": [
+            "shinano-si-2830-20260926",
+            "shinano-si-2830-20260926-workingpressurebar-1"
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Condition de pression",
+            "value": "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "evidenceIds": [
+              "shinano-si-2830-20260926-workingpressurebar-1"
+            ]
+          },
+          {
+            "label": "Condition de consommation",
+            "value": "Colonne Max Air Consumption : 31.8 CFM / 15 L/s. Conversion du maximum publié : 15 × 60 = 900 L/min.",
+            "evidenceIds": [
+              "shinano-si-2830-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse à vide publiée",
+            "value": "10 000 tr/min",
+            "evidenceIds": [
+              "shinano-si-2830-20260926"
+            ]
+          },
+          {
+            "label": "Masse publiée",
+            "value": "2,02 kg",
+            "evidenceIds": [
+              "shinano-si-2830-20260926"
+            ]
+          },
+          {
+            "label": "Consommation maximale publiée (pression de mesure non appariée)",
+            "value": "900 L/min",
+            "evidenceIds": [
+              "shinano-si-2830-20260926"
+            ]
+          }
+        ],
+        "workingPressureBar": {
+          "typical": 6.3
+        }
+      }
+    },
+    {
+      "id": "shinano-si-3005",
+      "kind": "tools",
+      "brand": "Shinano",
+      "model": "SI-3005",
+      "mpn": "SI-3005",
+      "fields": [
+        "airflowLpm",
+        "demandExplanation",
+        "demandModel",
+        "editorial",
+        "fieldSources",
+        "specifications",
+        "workingPressureBar"
+      ],
+      "before": {
+        "airflowLpm": {
+          "min": 390,
+          "typical": 390,
+          "max": 390
+        },
+        "demandModel": "fixed-flow",
+        "editorial": {
+          "overview": "Shinano SI-3005, référence SI-3005. Le tableau fabricant publie 390 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 11 000 tr/min. Masse publiée : 1,87 kg.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 13.8 CFM / 6.5 L/s. Conversion du maximum publié : 6.5 × 60 = 390 L/min.",
+            "Référence fabricant : SI-3005.",
+            "Vitesse à vide publiée : 11 000 tr/min.",
+            "Masse publiée : 1,87 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        },
+        "fieldSources": {
+          "mpn": [
+            "shinano-si-3005-20260926"
+          ],
+          "workingPressureBar": [
+            "shinano-si-3005-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "shinano-si-3005-20260926"
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Condition de pression",
+            "value": "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "evidenceIds": [
+              "shinano-si-3005-20260926-workingpressurebar-1"
+            ]
+          },
+          {
+            "label": "Condition de consommation",
+            "value": "Colonne Max Air Consumption : 13.8 CFM / 6.5 L/s. Conversion du maximum publié : 6.5 × 60 = 390 L/min.",
+            "evidenceIds": [
+              "shinano-si-3005-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse à vide publiée",
+            "value": "11 000 tr/min",
+            "evidenceIds": [
+              "shinano-si-3005-20260926"
+            ]
+          },
+          {
+            "label": "Masse publiée",
+            "value": "1,87 kg",
+            "evidenceIds": [
+              "shinano-si-3005-20260926"
+            ]
+          }
+        ],
+        "workingPressureBar": {
+          "min": 6.3,
+          "typical": 6.3,
+          "max": 6.3
+        }
+      },
+      "after": {
+        "demandExplanation": "Consommation maximale publiée : 390 L/min. Pression de service prescrite : 6,3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu.",
+        "demandModel": "variable-volume",
+        "editorial": {
+          "overview": "Shinano SI-3005, référence SI-3005. Le tableau fabricant publie 390 L/min et une pression de service prescrite de 6,3 bar. Vitesse à vide publiée : 11 000 tr/min. Masse publiée : 1,87 kg.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 13.8 CFM / 6.5 L/s. Conversion du maximum publié : 6.5 × 60 = 390 L/min.",
+            "Référence fabricant : SI-3005.",
+            "Vitesse à vide publiée : 11 000 tr/min.",
+            "Masse publiée : 1,87 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "La pression de service de 6,3 bar ne qualifie pas explicitement la pression de mesure de cette consommation. Celle-ci reste documentaire et ne produit aucun verdict de débit."
+          ]
+        },
+        "fieldSources": {
+          "mpn": [
+            "shinano-si-3005-20260926"
+          ],
+          "workingPressureBar": [
+            "shinano-si-3005-20260926-workingpressurebar-1"
+          ],
+          "demandExplanation": [
+            "shinano-si-3005-20260926",
+            "shinano-si-3005-20260926-workingpressurebar-1"
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Condition de pression",
+            "value": "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "evidenceIds": [
+              "shinano-si-3005-20260926-workingpressurebar-1"
+            ]
+          },
+          {
+            "label": "Condition de consommation",
+            "value": "Colonne Max Air Consumption : 13.8 CFM / 6.5 L/s. Conversion du maximum publié : 6.5 × 60 = 390 L/min.",
+            "evidenceIds": [
+              "shinano-si-3005-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse à vide publiée",
+            "value": "11 000 tr/min",
+            "evidenceIds": [
+              "shinano-si-3005-20260926"
+            ]
+          },
+          {
+            "label": "Masse publiée",
+            "value": "1,87 kg",
+            "evidenceIds": [
+              "shinano-si-3005-20260926"
+            ]
+          },
+          {
+            "label": "Consommation maximale publiée (pression de mesure non appariée)",
+            "value": "390 L/min",
+            "evidenceIds": [
+              "shinano-si-3005-20260926"
+            ]
+          }
+        ],
+        "workingPressureBar": {
+          "typical": 6.3
+        }
+      }
+    },
+    {
+      "id": "shinano-si-3101-6",
+      "kind": "tools",
+      "brand": "Shinano",
+      "model": "SI-3101-6",
+      "mpn": "SI-3101-6",
+      "fields": [
+        "airflowLpm",
+        "demandExplanation",
+        "demandModel",
+        "editorial",
+        "fieldSources",
+        "specifications",
+        "workingPressureBar"
+      ],
+      "before": {
+        "airflowLpm": {
+          "min": 372,
+          "typical": 372,
+          "max": 372
+        },
+        "demandModel": "fixed-flow",
+        "editorial": {
+          "overview": "Shinano SI-3101-6, référence SI-3101-6. Le tableau fabricant publie 372 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Plateau 150 mm, revêtement Leather selon Shinano ; orbite 5 mm ; sans aspiration intégrée. Vitesse à vide publiée : 10000 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 13.2 CFM / 6.2 L/s, soit 372 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-3101-6.",
+            "Version et équipement : Plateau 150 mm, revêtement Leather selon Shinano ; orbite 5 mm ; sans aspiration intégrée.",
+            "Vitesse à vide publiée : 10000 tr/min.",
+            "Masse publiée : 0.94 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        },
+        "fieldSources": {
+          "mpn": [
+            "shinano-si-3101-6-20260926"
+          ],
+          "workingPressureBar": [
+            "shinano-si-3101-6-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "shinano-si-3101-6-20260926"
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Condition de pression",
+            "value": "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "evidenceIds": [
+              "shinano-si-3101-6-20260926-workingpressurebar-1"
+            ]
+          },
+          {
+            "label": "Condition de consommation",
+            "value": "Consommation maximale, colonne Max Air Consumption : 13.2 CFM / 6.2 L/s, soit 372 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "evidenceIds": [
+              "shinano-si-3101-6-20260926"
+            ]
+          },
+          {
+            "label": "Version et équipement",
+            "value": "Plateau 150 mm, revêtement Leather selon Shinano ; orbite 5 mm ; sans aspiration intégrée.",
+            "evidenceIds": [
+              "shinano-si-3101-6-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse à vide publiée",
+            "value": "10000 tr/min",
+            "evidenceIds": [
+              "shinano-si-3101-6-20260926"
+            ]
+          },
+          {
+            "label": "Masse publiée",
+            "value": "0.94 kg",
+            "evidenceIds": [
+              "shinano-si-3101-6-20260926"
+            ]
+          }
+        ],
+        "workingPressureBar": {
+          "min": 6.3,
+          "typical": 6.3,
+          "max": 6.3
+        }
+      },
+      "after": {
+        "demandExplanation": "Consommation maximale publiée : 372 L/min. Pression de service prescrite : 6,3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu.",
+        "demandModel": "variable-volume",
+        "editorial": {
+          "overview": "Shinano SI-3101-6, référence SI-3101-6. Le tableau fabricant publie 372 L/min et une pression de service prescrite de 6,3 bar. Version et équipement : Plateau 150 mm, revêtement Leather selon Shinano ; orbite 5 mm ; sans aspiration intégrée. Vitesse à vide publiée : 10000 tr/min.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Consommation maximale, colonne Max Air Consumption : 13.2 CFM / 6.2 L/s, soit 372 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "Référence fabricant : SI-3101-6.",
+            "Version et équipement : Plateau 150 mm, revêtement Leather selon Shinano ; orbite 5 mm ; sans aspiration intégrée.",
+            "Vitesse à vide publiée : 10000 tr/min.",
+            "Masse publiée : 0.94 kg."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "La pression de service de 6,3 bar ne qualifie pas explicitement la pression de mesure de cette consommation. Celle-ci reste documentaire et ne produit aucun verdict de débit."
+          ]
+        },
+        "fieldSources": {
+          "mpn": [
+            "shinano-si-3101-6-20260926"
+          ],
+          "workingPressureBar": [
+            "shinano-si-3101-6-20260926-workingpressurebar-1"
+          ],
+          "demandExplanation": [
+            "shinano-si-3101-6-20260926",
+            "shinano-si-3101-6-20260926-workingpressurebar-1"
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Condition de pression",
+            "value": "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "evidenceIds": [
+              "shinano-si-3101-6-20260926-workingpressurebar-1"
+            ]
+          },
+          {
+            "label": "Condition de consommation",
+            "value": "Consommation maximale, colonne Max Air Consumption : 13.2 CFM / 6.2 L/s, soit 372 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
+            "evidenceIds": [
+              "shinano-si-3101-6-20260926"
+            ]
+          },
+          {
+            "label": "Version et équipement",
+            "value": "Plateau 150 mm, revêtement Leather selon Shinano ; orbite 5 mm ; sans aspiration intégrée.",
+            "evidenceIds": [
+              "shinano-si-3101-6-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse à vide publiée",
+            "value": "10000 tr/min",
+            "evidenceIds": [
+              "shinano-si-3101-6-20260926"
+            ]
+          },
+          {
+            "label": "Masse publiée",
+            "value": "0.94 kg",
+            "evidenceIds": [
+              "shinano-si-3101-6-20260926"
+            ]
+          },
+          {
+            "label": "Consommation maximale publiée (pression de mesure non appariée)",
+            "value": "372 L/min",
+            "evidenceIds": [
+              "shinano-si-3101-6-20260926"
+            ]
+          }
+        ],
+        "workingPressureBar": {
+          "typical": 6.3
+        }
+      }
+    },
+    {
+      "id": "shinano-si-5355",
+      "kind": "tools",
+      "brand": "Shinano",
+      "model": "SI-5355",
+      "mpn": "SI-5355",
+      "fields": [
+        "airflowLpm",
+        "demandExplanation",
+        "demandModel",
+        "editorial",
+        "fieldSources",
+        "specifications",
+        "workingPressureBar"
+      ],
+      "before": {
+        "airflowLpm": {
+          "min": 510,
+          "typical": 510,
+          "max": 510
+        },
+        "demandModel": "fixed-flow",
+        "editorial": {
+          "overview": "Shinano SI-5355, référence SI-5355. Le tableau fabricant publie 510 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 1 200 tr/min. Capacité du mandrin : 10 mm.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 18 CFM / 8.5 L/s. Conversion du maximum publié : 8.5 × 60 = 510 L/min.",
+            "Référence fabricant : SI-5355.",
+            "Vitesse à vide publiée : 1 200 tr/min.",
+            "Capacité du mandrin : 10 mm."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+          ]
+        },
+        "fieldSources": {
+          "mpn": [
+            "shinano-si-5355-20260926"
+          ],
+          "workingPressureBar": [
+            "shinano-si-5355-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "shinano-si-5355-20260926"
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Condition de pression",
+            "value": "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "evidenceIds": [
+              "shinano-si-5355-20260926-workingpressurebar-1"
+            ]
+          },
+          {
+            "label": "Condition de consommation",
+            "value": "Colonne Max Air Consumption : 18 CFM / 8.5 L/s. Conversion du maximum publié : 8.5 × 60 = 510 L/min.",
+            "evidenceIds": [
+              "shinano-si-5355-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse à vide publiée",
+            "value": "1 200 tr/min",
+            "evidenceIds": [
+              "shinano-si-5355-20260926"
+            ]
+          },
+          {
+            "label": "Capacité du mandrin",
+            "value": "10 mm",
+            "evidenceIds": [
+              "shinano-si-5355-20260926"
+            ]
+          }
+        ],
+        "workingPressureBar": {
+          "min": 6.3,
+          "typical": 6.3,
+          "max": 6.3
+        }
+      },
+      "after": {
+        "demandExplanation": "Consommation maximale publiée : 510 L/min. Pression de service prescrite : 6,3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu.",
+        "demandModel": "variable-volume",
+        "editorial": {
+          "overview": "Shinano SI-5355, référence SI-5355. Le tableau fabricant publie 510 L/min et une pression de service prescrite de 6,3 bar. Vitesse à vide publiée : 1 200 tr/min. Capacité du mandrin : 10 mm.",
+          "verifiedFacts": [
+            "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "Colonne Max Air Consumption : 18 CFM / 8.5 L/s. Conversion du maximum publié : 8.5 × 60 = 510 L/min.",
+            "Référence fabricant : SI-5355.",
+            "Vitesse à vide publiée : 1 200 tr/min.",
+            "Capacité du mandrin : 10 mm."
+          ],
+          "limitations": [
+            "Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
+            "La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
+            "La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+            "La pression de service de 6,3 bar ne qualifie pas explicitement la pression de mesure de cette consommation. Celle-ci reste documentaire et ne produit aucun verdict de débit."
+          ]
+        },
+        "fieldSources": {
+          "mpn": [
+            "shinano-si-5355-20260926"
+          ],
+          "workingPressureBar": [
+            "shinano-si-5355-20260926-workingpressurebar-1"
+          ],
+          "demandExplanation": [
+            "shinano-si-5355-20260926",
+            "shinano-si-5355-20260926-workingpressurebar-1"
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Condition de pression",
+            "value": "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+            "evidenceIds": [
+              "shinano-si-5355-20260926-workingpressurebar-1"
+            ]
+          },
+          {
+            "label": "Condition de consommation",
+            "value": "Colonne Max Air Consumption : 18 CFM / 8.5 L/s. Conversion du maximum publié : 8.5 × 60 = 510 L/min.",
+            "evidenceIds": [
+              "shinano-si-5355-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse à vide publiée",
+            "value": "1 200 tr/min",
+            "evidenceIds": [
+              "shinano-si-5355-20260926"
+            ]
+          },
+          {
+            "label": "Capacité du mandrin",
+            "value": "10 mm",
+            "evidenceIds": [
+              "shinano-si-5355-20260926"
+            ]
+          },
+          {
+            "label": "Consommation maximale publiée (pression de mesure non appariée)",
+            "value": "510 L/min",
+            "evidenceIds": [
+              "shinano-si-5355-20260926"
+            ]
+          }
+        ],
+        "workingPressureBar": {
+          "typical": 6.3
+        }
+      }
+    },
+    {
+      "id": "biax-gaa-505",
+      "kind": "tools",
+      "brand": "BIAX",
+      "model": "GAA 505",
+      "mpn": "150619445",
+      "fields": [
+        "airflowBasis",
+        "fieldSources"
+      ],
+      "before": {
+        "fieldSources": {
+          "mpn": [
+            "biax-150619445-20260926"
+          ],
+          "workingPressureBar": [
+            "biax-150619445-20260926"
+          ],
+          "airflowLpm": [
+            "biax-150619445-20260926"
+          ]
+        }
+      },
+      "after": {
+        "airflowBasis": "unqualified",
+        "fieldSources": {
+          "mpn": [
+            "biax-150619445-20260926"
+          ],
+          "workingPressureBar": [
+            "biax-150619445-20260926"
+          ],
+          "airflowLpm": [
+            "biax-150619445-20260926"
+          ],
+          "airflowBasis": [
+            "biax-150619445-20260926"
+          ]
+        }
+      }
+    },
+    {
+      "id": "biax-sbrd-8-12-2",
+      "kind": "tools",
+      "brand": "BIAX",
+      "model": "SBRD 8-12/2",
+      "mpn": "150020750",
+      "fields": [
+        "airflowBasis",
+        "fieldSources"
+      ],
+      "before": {
+        "fieldSources": {
+          "mpn": [
+            "biax-150020750-20260926"
+          ],
+          "workingPressureBar": [
+            "biax-150020750-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "biax-150020750-20260926"
+          ]
+        }
+      },
+      "after": {
+        "airflowBasis": "unqualified",
+        "fieldSources": {
+          "mpn": [
+            "biax-150020750-20260926"
+          ],
+          "workingPressureBar": [
+            "biax-150020750-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "biax-150020750-20260926"
+          ],
+          "airflowBasis": [
+            "biax-150020750-20260926"
+          ]
+        }
+      }
+    },
+    {
+      "id": "deprag-344-140-31u",
+      "kind": "tools",
+      "brand": "DEPRAG",
+      "model": "344-140-31U",
+      "mpn": "202270C",
+      "fields": [
+        "airflowBasis",
+        "fieldSources"
+      ],
+      "before": {
+        "fieldSources": {
+          "mpn": [
+            "deprag-202270c-20260926"
+          ],
+          "workingPressureBar": [
+            "deprag-202270c-20260926"
+          ],
+          "airflowLpm": [
+            "deprag-202270c-20260926"
+          ]
+        }
+      },
+      "after": {
+        "airflowBasis": "unqualified",
+        "fieldSources": {
+          "mpn": [
+            "deprag-202270c-20260926"
+          ],
+          "workingPressureBar": [
+            "deprag-202270c-20260926"
+          ],
+          "airflowLpm": [
+            "deprag-202270c-20260926"
+          ],
+          "airflowBasis": [
+            "deprag-202270c-20260926"
+          ]
+        }
+      }
+    },
+    {
+      "id": "fiam-15c2a30",
+      "kind": "tools",
+      "brand": "Fiam",
+      "model": "15C2A30",
+      "mpn": "112533942",
+      "fields": [
+        "airflowBasis",
+        "fieldSources"
+      ],
+      "before": {
+        "fieldSources": {
+          "mpn": [
+            "fiam-112533942-20260926"
+          ],
+          "workingPressureBar": [
+            "fiam-112533942-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "fiam-112533942-20260926"
+          ]
+        }
+      },
+      "after": {
+        "airflowBasis": "unqualified",
+        "fieldSources": {
+          "mpn": [
+            "fiam-112533942-20260926"
+          ],
+          "workingPressureBar": [
+            "fiam-112533942-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "fiam-112533942-20260926"
+          ],
+          "airflowBasis": [
+            "fiam-112533942-20260926"
+          ]
+        }
+      }
+    },
+    {
+      "id": "fiam-fde33pa",
+      "kind": "tools",
+      "brand": "Fiam",
+      "model": "FDE33PA",
+      "mpn": "124611552",
+      "fields": [
+        "airflowBasis",
+        "fieldSources"
+      ],
+      "before": {
+        "fieldSources": {
+          "mpn": [
+            "fiam-124611552-20260926"
+          ],
+          "workingPressureBar": [
+            "fiam-124611552-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "fiam-124611552-20260926"
+          ]
+        }
+      },
+      "after": {
+        "airflowBasis": "unqualified",
+        "fieldSources": {
+          "mpn": [
+            "fiam-124611552-20260926"
+          ],
+          "workingPressureBar": [
+            "fiam-124611552-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "fiam-124611552-20260926"
+          ],
+          "airflowBasis": [
+            "fiam-124611552-20260926"
+          ]
+        }
+      }
+    },
+    {
+      "id": "fiam-les30sp",
+      "kind": "tools",
+      "brand": "Fiam",
+      "model": "LES30SP",
+      "mpn": "144631101",
+      "fields": [
+        "airflowBasis",
+        "fieldSources"
+      ],
+      "before": {
+        "fieldSources": {
+          "mpn": [
+            "fiam-144631101-20260926"
+          ],
+          "workingPressureBar": [
+            "fiam-144631101-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "fiam-144631101-20260926"
+          ]
+        }
+      },
+      "after": {
+        "airflowBasis": "unqualified",
+        "fieldSources": {
+          "mpn": [
+            "fiam-144631101-20260926"
+          ],
+          "workingPressureBar": [
+            "fiam-144631101-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "fiam-144631101-20260926"
+          ],
+          "airflowBasis": [
+            "fiam-144631101-20260926"
+          ]
+        }
+      }
+    },
+    {
+      "id": "fiam-sms100a",
+      "kind": "tools",
+      "brand": "Fiam",
+      "model": "SMS100A",
+      "mpn": "144691001",
+      "fields": [
+        "airflowBasis",
+        "fieldSources"
+      ],
+      "before": {
+        "fieldSources": {
+          "mpn": [
+            "fiam-144691001-20260926"
+          ],
+          "workingPressureBar": [
+            "fiam-144691001-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "fiam-144691001-20260926"
+          ]
+        }
+      },
+      "after": {
+        "airflowBasis": "unqualified",
+        "fieldSources": {
+          "mpn": [
+            "fiam-144691001-20260926"
+          ],
+          "workingPressureBar": [
+            "fiam-144691001-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "fiam-144691001-20260926"
+          ],
+          "airflowBasis": [
+            "fiam-144691001-20260926"
+          ]
+        }
+      }
+    },
+    {
+      "id": "nitto-kohki-aps-150",
+      "kind": "tools",
+      "brand": "Nitto Kohki",
+      "model": "APS-150",
+      "mpn": "APS-150",
+      "fields": [
+        "airflowBasis",
+        "fieldSources"
+      ],
+      "before": {
+        "fieldSources": {
+          "mpn": [
+            "nitto-kohki-aps-150-20260926"
+          ],
+          "workingPressureBar": [
+            "nitto-kohki-aps-150-20260926"
+          ],
+          "airflowLpm": [
+            "nitto-kohki-aps-150-20260926"
+          ]
+        }
+      },
+      "after": {
+        "airflowBasis": "free-speed",
+        "fieldSources": {
+          "mpn": [
+            "nitto-kohki-aps-150-20260926"
+          ],
+          "workingPressureBar": [
+            "nitto-kohki-aps-150-20260926"
+          ],
+          "airflowLpm": [
+            "nitto-kohki-aps-150-20260926"
+          ],
+          "airflowBasis": [
+            "nitto-kohki-aps-150-20260926"
+          ]
+        }
+      }
+    },
+    {
+      "id": "nitto-kohki-b-20d-a",
+      "kind": "tools",
+      "brand": "Nitto Kohki",
+      "model": "B-20D-A",
+      "mpn": "B-20D-A",
+      "fields": [
+        "airflowBasis",
+        "fieldSources"
+      ],
+      "before": {
+        "fieldSources": {
+          "mpn": [
+            "nitto-kohki-b-20d-a-20260926"
+          ],
+          "workingPressureBar": [
+            "nitto-kohki-b-20d-a-20260926"
+          ],
+          "airflowLpm": [
+            "nitto-kohki-b-20d-a-20260926"
+          ]
+        }
+      },
+      "after": {
+        "airflowBasis": "free-speed",
+        "fieldSources": {
+          "mpn": [
+            "nitto-kohki-b-20d-a-20260926"
+          ],
+          "workingPressureBar": [
+            "nitto-kohki-b-20d-a-20260926"
+          ],
+          "airflowLpm": [
+            "nitto-kohki-b-20d-a-20260926"
+          ],
+          "airflowBasis": [
+            "nitto-kohki-b-20d-a-20260926"
+          ]
+        }
+      }
+    },
+    {
+      "id": "nitto-kohki-ch-24",
+      "kind": "tools",
+      "brand": "Nitto Kohki",
+      "model": "CH-24",
+      "mpn": "CH-24",
+      "fields": [
+        "airflowBasis",
+        "fieldSources"
+      ],
+      "before": {
+        "fieldSources": {
+          "mpn": [
+            "nitto-kohki-ch-24-20260926"
+          ],
+          "workingPressureBar": [
+            "nitto-kohki-ch-24-20260926"
+          ],
+          "airflowLpm": [
+            "nitto-kohki-ch-24-20260926"
+          ]
+        }
+      },
+      "after": {
+        "airflowBasis": "free-speed",
+        "fieldSources": {
+          "mpn": [
+            "nitto-kohki-ch-24-20260926"
+          ],
+          "workingPressureBar": [
+            "nitto-kohki-ch-24-20260926"
+          ],
+          "airflowLpm": [
+            "nitto-kohki-ch-24-20260926"
+          ],
+          "airflowBasis": [
+            "nitto-kohki-ch-24-20260926"
+          ]
+        }
+      }
+    },
+    {
+      "id": "nitto-kohki-jex-20",
+      "kind": "tools",
+      "brand": "Nitto Kohki",
+      "model": "JEX-20",
+      "mpn": "JEX-20",
+      "fields": [
+        "airflowBasis",
+        "fieldSources"
+      ],
+      "before": {
+        "fieldSources": {
+          "mpn": [
+            "nitto-kohki-jex-20-20260926"
+          ],
+          "workingPressureBar": [
+            "nitto-kohki-jex-20-20260926"
+          ],
+          "airflowLpm": [
+            "nitto-kohki-jex-20-20260926"
+          ]
+        }
+      },
+      "after": {
+        "airflowBasis": "free-speed",
+        "fieldSources": {
+          "mpn": [
+            "nitto-kohki-jex-20-20260926"
+          ],
+          "workingPressureBar": [
+            "nitto-kohki-jex-20-20260926"
+          ],
+          "airflowLpm": [
+            "nitto-kohki-jex-20-20260926"
+          ],
+          "airflowBasis": [
+            "nitto-kohki-jex-20-20260926"
+          ]
+        }
+      }
+    },
+    {
+      "id": "nitto-kohki-l-25b",
+      "kind": "tools",
+      "brand": "Nitto Kohki",
+      "model": "L-25B",
+      "mpn": "L-25B",
+      "fields": [
+        "airflowBasis",
+        "fieldSources"
+      ],
+      "before": {
+        "fieldSources": {
+          "mpn": [
+            "nitto-kohki-l-25b-20260926"
+          ],
+          "workingPressureBar": [
+            "nitto-kohki-l-25b-20260926"
+          ],
+          "airflowLpm": [
+            "nitto-kohki-l-25b-20260926"
+          ]
+        }
+      },
+      "after": {
+        "airflowBasis": "free-speed",
+        "fieldSources": {
+          "mpn": [
+            "nitto-kohki-l-25b-20260926"
+          ],
+          "workingPressureBar": [
+            "nitto-kohki-l-25b-20260926"
+          ],
+          "airflowLpm": [
+            "nitto-kohki-l-25b-20260926"
+          ],
+          "airflowBasis": [
+            "nitto-kohki-l-25b-20260926"
+          ]
+        }
+      }
+    },
+    {
+      "id": "nitto-kohki-mys-40",
+      "kind": "tools",
+      "brand": "Nitto Kohki",
+      "model": "MYS-40",
+      "mpn": "MYS-40",
+      "fields": [
+        "airflowBasis",
+        "fieldSources"
+      ],
+      "before": {
+        "fieldSources": {
+          "mpn": [
+            "nitto-kohki-mys-40-20260926"
+          ],
+          "workingPressureBar": [
+            "nitto-kohki-mys-40-20260926"
+          ],
+          "airflowLpm": [
+            "nitto-kohki-mys-40-20260926"
+          ]
+        }
+      },
+      "after": {
+        "airflowBasis": "free-speed",
+        "fieldSources": {
+          "mpn": [
+            "nitto-kohki-mys-40-20260926"
+          ],
+          "workingPressureBar": [
+            "nitto-kohki-mys-40-20260926"
+          ],
+          "airflowLpm": [
+            "nitto-kohki-mys-40-20260926"
+          ],
+          "airflowBasis": [
+            "nitto-kohki-mys-40-20260926"
+          ]
+        }
+      }
+    },
+    {
+      "id": "red-rooster-10rds-4000",
+      "kind": "tools",
+      "brand": "Red Rooster",
+      "model": "10RDS-4000",
+      "mpn": "10RDS-4000",
+      "fields": [
+        "airflowBasis",
+        "fieldSources"
+      ],
+      "before": {
+        "fieldSources": {
+          "mpn": [
+            "red-rooster-10rds-4000-20260926"
+          ],
+          "workingPressureBar": [
+            "red-rooster-10rds-4000-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "red-rooster-10rds-4000-20260926"
+          ],
+          "recommendedHose": [
+            "red-rooster-10rds-4000-20260926"
+          ],
+          "connectorSize": [
+            "red-rooster-10rds-4000-20260926"
+          ]
+        }
+      },
+      "after": {
+        "airflowBasis": "unqualified",
+        "fieldSources": {
+          "mpn": [
+            "red-rooster-10rds-4000-20260926"
+          ],
+          "workingPressureBar": [
+            "red-rooster-10rds-4000-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "red-rooster-10rds-4000-20260926"
+          ],
+          "recommendedHose": [
+            "red-rooster-10rds-4000-20260926"
+          ],
+          "connectorSize": [
+            "red-rooster-10rds-4000-20260926"
+          ],
+          "airflowBasis": [
+            "red-rooster-10rds-4000-20260926"
+          ]
+        }
+      }
+    },
+    {
+      "id": "red-rooster-rr-02sp",
+      "kind": "tools",
+      "brand": "Red Rooster",
+      "model": "RR-02SP",
+      "mpn": "RR-02SP",
+      "fields": [
+        "airflowBasis",
+        "fieldSources"
+      ],
+      "before": {
+        "fieldSources": {
+          "mpn": [
+            "red-rooster-rr-02sp-20260926"
+          ],
+          "workingPressureBar": [
+            "red-rooster-rr-02sp-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "red-rooster-rr-02sp-20260926"
+          ],
+          "recommendedHose": [
+            "red-rooster-rr-02sp-20260926"
+          ],
+          "connectorSize": [
+            "red-rooster-rr-02sp-20260926"
+          ]
+        }
+      },
+      "after": {
+        "airflowBasis": "unqualified",
+        "fieldSources": {
+          "mpn": [
+            "red-rooster-rr-02sp-20260926"
+          ],
+          "workingPressureBar": [
+            "red-rooster-rr-02sp-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "red-rooster-rr-02sp-20260926"
+          ],
+          "recommendedHose": [
+            "red-rooster-rr-02sp-20260926"
+          ],
+          "connectorSize": [
+            "red-rooster-rr-02sp-20260926"
+          ],
+          "airflowBasis": [
+            "red-rooster-rr-02sp-20260926"
+          ]
+        }
+      }
+    },
+    {
+      "id": "red-rooster-rr-0315",
+      "kind": "tools",
+      "brand": "Red Rooster",
+      "model": "RR-0315",
+      "mpn": "RR-0315",
+      "fields": [
+        "airflowBasis",
+        "fieldSources"
+      ],
+      "before": {
+        "fieldSources": {
+          "mpn": [
+            "red-rooster-rr-0315-20260926"
+          ],
+          "workingPressureBar": [
+            "red-rooster-rr-0315-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "red-rooster-rr-0315-20260926"
+          ],
+          "recommendedHose": [
+            "red-rooster-rr-0315-20260926"
+          ],
+          "connectorSize": [
+            "red-rooster-rr-0315-20260926"
+          ]
+        }
+      },
+      "after": {
+        "airflowBasis": "unqualified",
+        "fieldSources": {
+          "mpn": [
+            "red-rooster-rr-0315-20260926"
+          ],
+          "workingPressureBar": [
+            "red-rooster-rr-0315-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "red-rooster-rr-0315-20260926"
+          ],
+          "recommendedHose": [
+            "red-rooster-rr-0315-20260926"
+          ],
+          "connectorSize": [
+            "red-rooster-rr-0315-20260926"
+          ],
+          "airflowBasis": [
+            "red-rooster-rr-0315-20260926"
+          ]
+        }
+      }
+    },
+    {
+      "id": "red-rooster-rr-0315ns",
+      "kind": "tools",
+      "brand": "Red Rooster",
+      "model": "RR-0315NS",
+      "mpn": "RR-0315NS",
+      "fields": [
+        "airflowBasis",
+        "fieldSources"
+      ],
+      "before": {
+        "fieldSources": {
+          "mpn": [
+            "red-rooster-rr-0315ns-20260926"
+          ],
+          "workingPressureBar": [
+            "red-rooster-rr-0315ns-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "red-rooster-rr-0315ns-20260926"
+          ],
+          "recommendedHose": [
+            "red-rooster-rr-0315ns-20260926"
+          ],
+          "connectorSize": [
+            "red-rooster-rr-0315ns-20260926"
+          ]
+        }
+      },
+      "after": {
+        "airflowBasis": "unqualified",
+        "fieldSources": {
+          "mpn": [
+            "red-rooster-rr-0315ns-20260926"
+          ],
+          "workingPressureBar": [
+            "red-rooster-rr-0315ns-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "red-rooster-rr-0315ns-20260926"
+          ],
+          "recommendedHose": [
+            "red-rooster-rr-0315ns-20260926"
+          ],
+          "connectorSize": [
+            "red-rooster-rr-0315ns-20260926"
+          ],
+          "airflowBasis": [
+            "red-rooster-rr-0315ns-20260926"
+          ]
+        }
+      }
+    },
+    {
+      "id": "red-rooster-rr-15a",
+      "kind": "tools",
+      "brand": "Red Rooster",
+      "model": "RR-15A",
+      "mpn": "RR-15A",
+      "fields": [
+        "airflowLpm",
+        "demandExplanation",
+        "demandModel",
+        "editorial",
+        "fieldSources",
+        "specifications",
+        "workingPressureBar"
+      ],
+      "before": {
+        "airflowLpm": {
+          "min": 318,
+          "typical": 318,
+          "max": 318
+        },
+        "demandModel": "fixed-flow",
+        "editorial": {
+          "overview": "Red Rooster RR-15A, référence RR-15A. Le tableau fabricant publie 318 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 7000 tr/min. Masse publiée : 1,8 kg.",
+          "verifiedFacts": [
+            "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+            "Consommation en charge publiée : 5.3 L/s, convertis en 318 L/min par multiplication par 60.",
+            "Référence fabricant : RR-15A.",
+            "Vitesse à vide publiée : 7000 tr/min.",
+            "Masse publiée : 1,8 kg.",
+            "Diamètre intérieur de flexible conseillé : 9,5 mm."
+          ],
+          "limitations": [
+            "Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
+            "La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+          ]
+        },
+        "fieldSources": {
+          "mpn": [
+            "red-rooster-rr-15a-20260926"
+          ],
+          "workingPressureBar": [
+            "red-rooster-rr-15a-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "red-rooster-rr-15a-20260926"
+          ],
+          "recommendedHose": [
+            "red-rooster-rr-15a-20260926"
+          ],
+          "connectorSize": [
+            "red-rooster-rr-15a-20260926"
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Condition de pression",
+            "value": "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+            "evidenceIds": [
+              "red-rooster-rr-15a-20260926-workingpressurebar-1"
+            ]
+          },
+          {
+            "label": "Condition de consommation",
+            "value": "Consommation en charge publiée : 5.3 L/s, convertis en 318 L/min par multiplication par 60.",
+            "evidenceIds": [
+              "red-rooster-rr-15a-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse à vide publiée",
+            "value": "7000 tr/min",
+            "evidenceIds": [
+              "red-rooster-rr-15a-20260926"
+            ]
+          },
+          {
+            "label": "Masse publiée",
+            "value": "1,8 kg",
+            "evidenceIds": [
+              "red-rooster-rr-15a-20260926"
+            ]
+          },
+          {
+            "label": "Diamètre intérieur de flexible conseillé",
+            "value": "9,5 mm",
+            "evidenceIds": [
+              "red-rooster-rr-15a-20260926"
+            ]
+          },
+          {
+            "label": "Raccord pneumatique",
+            "value": "PT 1/4\"",
+            "evidenceIds": [
+              "red-rooster-rr-15a-20260926"
+            ]
+          }
+        ],
+        "workingPressureBar": {
+          "min": 6.3,
+          "typical": 6.3,
+          "max": 6.3
+        }
+      },
+      "after": {
+        "demandExplanation": "Consommation en charge publiée : 318 L/min. Pression de service prescrite : 6,3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu.",
+        "demandModel": "variable-volume",
+        "editorial": {
+          "overview": "Red Rooster RR-15A, référence RR-15A. Le tableau fabricant publie 318 L/min et une pression de service prescrite de 6,3 bar. Vitesse à vide publiée : 7000 tr/min. Masse publiée : 1,8 kg.",
+          "verifiedFacts": [
+            "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+            "Consommation en charge publiée : 5.3 L/s, convertis en 318 L/min par multiplication par 60.",
+            "Référence fabricant : RR-15A.",
+            "Vitesse à vide publiée : 7000 tr/min.",
+            "Masse publiée : 1,8 kg.",
+            "Diamètre intérieur de flexible conseillé : 9,5 mm."
+          ],
+          "limitations": [
+            "Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
+            "La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas.",
+            "La pression de service de 6,3 bar ne qualifie pas explicitement la pression de mesure de cette consommation. Celle-ci reste documentaire et ne produit aucun verdict de débit."
+          ]
+        },
+        "fieldSources": {
+          "mpn": [
+            "red-rooster-rr-15a-20260926"
+          ],
+          "workingPressureBar": [
+            "red-rooster-rr-15a-20260926-workingpressurebar-1"
+          ],
+          "recommendedHose": [
+            "red-rooster-rr-15a-20260926"
+          ],
+          "connectorSize": [
+            "red-rooster-rr-15a-20260926"
+          ],
+          "demandExplanation": [
+            "red-rooster-rr-15a-20260926",
+            "red-rooster-rr-15a-20260926-workingpressurebar-1"
+          ]
+        },
+        "specifications": [
+          {
+            "label": "Condition de pression",
+            "value": "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+            "evidenceIds": [
+              "red-rooster-rr-15a-20260926-workingpressurebar-1"
+            ]
+          },
+          {
+            "label": "Condition de consommation",
+            "value": "Consommation en charge publiée : 5.3 L/s, convertis en 318 L/min par multiplication par 60.",
+            "evidenceIds": [
+              "red-rooster-rr-15a-20260926"
+            ]
+          },
+          {
+            "label": "Vitesse à vide publiée",
+            "value": "7000 tr/min",
+            "evidenceIds": [
+              "red-rooster-rr-15a-20260926"
+            ]
+          },
+          {
+            "label": "Masse publiée",
+            "value": "1,8 kg",
+            "evidenceIds": [
+              "red-rooster-rr-15a-20260926"
+            ]
+          },
+          {
+            "label": "Diamètre intérieur de flexible conseillé",
+            "value": "9,5 mm",
+            "evidenceIds": [
+              "red-rooster-rr-15a-20260926"
+            ]
+          },
+          {
+            "label": "Raccord pneumatique",
+            "value": "PT 1/4\"",
+            "evidenceIds": [
+              "red-rooster-rr-15a-20260926"
+            ]
+          },
+          {
+            "label": "Consommation en charge publiée (pression de mesure non appariée)",
+            "value": "318 L/min",
+            "evidenceIds": [
+              "red-rooster-rr-15a-20260926"
+            ]
+          }
+        ],
+        "workingPressureBar": {
+          "typical": 6.3
+        }
+      }
+    },
+    {
+      "id": "red-rooster-rr-476",
+      "kind": "tools",
+      "brand": "Red Rooster",
+      "model": "RR-476",
+      "mpn": "RR-476",
+      "fields": [
+        "airflowBasis",
+        "fieldSources"
+      ],
+      "before": {
+        "fieldSources": {
+          "mpn": [
+            "red-rooster-rr-476-20260926"
+          ],
+          "workingPressureBar": [
+            "red-rooster-rr-476-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "red-rooster-rr-476-20260926"
+          ],
+          "recommendedHose": [
+            "red-rooster-rr-476-20260926"
+          ],
+          "connectorSize": [
+            "red-rooster-rr-476-20260926"
+          ]
+        }
+      },
+      "after": {
+        "airflowBasis": "unqualified",
+        "fieldSources": {
+          "mpn": [
+            "red-rooster-rr-476-20260926"
+          ],
+          "workingPressureBar": [
+            "red-rooster-rr-476-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "red-rooster-rr-476-20260926"
+          ],
+          "recommendedHose": [
+            "red-rooster-rr-476-20260926"
+          ],
+          "connectorSize": [
+            "red-rooster-rr-476-20260926"
+          ],
+          "airflowBasis": [
+            "red-rooster-rr-476-20260926"
+          ]
+        }
+      }
+    },
+    {
+      "id": "red-rooster-rr-8110",
+      "kind": "tools",
+      "brand": "Red Rooster",
+      "model": "RR-8110",
+      "mpn": "RR-8110",
+      "fields": [
+        "airflowBasis",
+        "fieldSources"
+      ],
+      "before": {
+        "fieldSources": {
+          "mpn": [
+            "red-rooster-rr-8110-20260926"
+          ],
+          "workingPressureBar": [
+            "red-rooster-rr-8110-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "red-rooster-rr-8110-20260926"
+          ],
+          "recommendedHose": [
+            "red-rooster-rr-8110-20260926"
+          ],
+          "connectorSize": [
+            "red-rooster-rr-8110-20260926"
+          ]
+        }
+      },
+      "after": {
+        "airflowBasis": "unqualified",
+        "fieldSources": {
+          "mpn": [
+            "red-rooster-rr-8110-20260926"
+          ],
+          "workingPressureBar": [
+            "red-rooster-rr-8110-20260926-workingpressurebar-1"
+          ],
+          "airflowLpm": [
+            "red-rooster-rr-8110-20260926"
+          ],
+          "recommendedHose": [
+            "red-rooster-rr-8110-20260926"
+          ],
+          "connectorSize": [
+            "red-rooster-rr-8110-20260926"
+          ],
+          "airflowBasis": [
+            "red-rooster-rr-8110-20260926"
+          ]
+        }
+      }
+    },
+    {
+      "id": "fiac-ax-203bd-8-400-50-ce",
+      "kind": "compressors",
+      "brand": "FIAC",
+      "model": "AX 203BD 8 400/50 CE",
+      "mpn": "4152026232",
+      "fields": [
+        "editorial",
+        "fadCurve",
+        "specifications"
+      ],
+      "before": {
+        "editorial": {
+          "overview": "La référence 4152026232 correspond à la version 8 bar de 15 kW, publiée à 2330 L/min ; la 4152026234 atteint 13 bar et annonce 1690 L/min. Ces deux commandes conservent le montage au sol sans cuve intégrée : le choix porte ici sur la pression demandée et la production d’air publiée, avec le stockage à prévoir sur l’installation. Chaque débit reste rattaché à sa référence de pression ; le taux de marche continu demeure à documenter.",
+          "verifiedFacts": [
+            "Débit restitué publié : 2 330 L/min à 8 bar.",
+            "Compresseur rotatif à vis lubrifié à vitesse fixe. Puissance moteur publiée : 15 kW.",
+            "Masse nette publiée : 270 kg.",
+            "Alimentation publiée : 400 V, 50 Hz, triphasée."
+          ],
+          "limitations": [
+            "Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
+            "Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
+            "La référence commande prime sur le nom commercial : le catalogue utilise AIRBLOK et la fiche en ligne le code AX.",
+            "Les puissances arrondies peuvent différer entre le catalogue PDF et la fiche actuelle. Les valeurs de cette fiche proviennent exclusivement de la fiche individuelle consultée."
+          ]
+        },
+        "fadCurve": [
+          {
+            "pressureBar": 8,
+            "litersPerMinute": 2330
+          }
+        ],
+        "specifications": [
+          {
+            "label": "Conditions du débit",
+            "value": "La fiche individuelle 4152026232 publie un FAD de 2330 L/min pour cette version de 8 bar. Débit restitué fabricant, pas débit aspiré.",
+            "evidenceIds": [
+              "fiac-4152026232-20260926"
+            ]
+          },
+          {
+            "label": "Équipement",
+            "value": "Sans cuve intégrée. Version de base ; sécheur non intégré.",
+            "evidenceIds": [
+              "fiac-4152026232-20260926"
+            ]
+          },
+          {
+            "label": "Dimensions publiées",
+            "value": "1065 × 615 × 1070 mm (L × l × H)",
+            "evidenceIds": [
+              "fiac-4152026232-20260926"
+            ]
+          }
+        ]
+      },
+      "after": {
+        "editorial": {
+          "overview": "La référence 4152026232 correspond à la version de pression maximale 8 bar et de puissance 15 kW ; FIAC publie un FAD de 2 330 L/min. La 4152026234 atteint 13 bar et annonce 1 690 L/min. Ces deux commandes conservent le montage au sol sans cuve intégrée : le stockage doit être prévu sur l’installation. La pression de mesure du FAD n’est pas précisée dans la fiche individuelle ; le maximum de 8 bar ne peut pas la remplacer. Le débit reste documentaire et la compatibilité dépendante du débit demeure indéterminée.",
+          "verifiedFacts": [
+            "Débit FAD fabricant : 2 330 L/min pour 4152026232 ; pression de mesure à confirmer.",
+            "Compresseur rotatif à vis lubrifié à vitesse fixe. Puissance moteur publiée : 15 kW.",
+            "Masse nette publiée : 270 kg.",
+            "Alimentation publiée : 400 V, 50 Hz, triphasée."
+          ],
+          "limitations": [
+            "Aucun point FAD à pression de mesure connue n’est établi. Le débit de 2 330 L/min et le maximum de 8 bar sont deux caractéristiques publiées séparément.",
+            "Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
+            "La référence commande prime sur le nom commercial : le catalogue utilise AIRBLOK et la fiche en ligne le code AX.",
+            "Les puissances arrondies peuvent différer entre le catalogue PDF et la fiche actuelle. Les valeurs de cette fiche proviennent exclusivement de la fiche individuelle consultée."
+          ]
+        },
+        "fadCurve": [],
+        "specifications": [
+          {
+            "label": "Conditions du débit",
+            "value": "FAD publié : 2 330 L/min. Pression maximale : 8 bar. La pression de mesure du FAD n’est pas explicitée ; aucun point dimensionnant n’est retenu.",
+            "evidenceIds": [
+              "fiac-4152026232-20260926"
+            ]
+          },
+          {
+            "label": "Équipement",
+            "value": "Sans cuve intégrée. Version de base ; sécheur non intégré.",
+            "evidenceIds": [
+              "fiac-4152026232-20260926"
+            ]
+          },
+          {
+            "label": "Dimensions publiées",
+            "value": "1065 × 615 × 1070 mm (L × l × H)",
+            "evidenceIds": [
+              "fiac-4152026232-20260926"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "almig-combi-xp-8-270d",
+      "kind": "compressors",
+      "brand": "ALMiG",
+      "model": "COMBI XP 8 270D",
+      "mpn": null,
+      "fields": [
+        "dutyCycle",
+        "editorial",
+        "fieldSources"
+      ],
+      "before": {
+        "dutyCycle": 1,
+        "editorial": {
+          "overview": "Le COMBI XP 8 et le XP 6 gardent la cuve de 270 L, le sécheur frigorifique et la pré/post-filtration ; leur différence porte surtout sur la plage de production. À 10 bar, le XP 8 module de 170 à 980 L/min, contre 180 à 690 L/min pour le XP 6. À 13 bar, les plages publiées deviennent 140–750 et 170–590 L/min respectivement, avec des moteurs de 7,5 et 5,5 kW. Ces bornes constructeur servent à examiner la modulation à la pression requise ; le débit moyen réellement demandé par l’atelier reste à mesurer.",
+          "verifiedFacts": [
+            "Puissance moteur publiée : 7,5 kW ; poids de cette configuration : 585 kg.",
+            "Débit restitué documenté : 1 160 L/min à 8 bar ; 980 L/min à 10 bar ; 750 L/min à 13 bar.",
+            "La documentation de la série prévoit le fonctionnement continu, sous ses conditions d’installation et d’entretien."
+          ],
+          "limitations": [
+            "La disponibilité commerciale actuelle n’a pas été confirmée.",
+            "Les minima et maxima de modulation ne décrivent pas un débit moyen de votre atelier. Aucun débit n’est extrapolé hors des points publiés.",
+            "Le service continu documenté ne dispense pas du contrôle du refroidissement, du traitement d’air et des pertes du réseau.",
+            "Le mode de lubrification n’a pas été établi dans les sources consultées ; il reste unknown, sans présumer une qualité d’air."
+          ]
+        },
+        "fieldSources": {
+          "fadCurve": [
+            "documented-20260930-almig-2026"
+          ],
+          "tankLiters": [
+            "documented-20260930-almig-2026"
+          ],
+          "maxPressureBar": [
+            "documented-20260930-almig-2026"
+          ],
+          "powerKw": [
+            "documented-20260930-almig-2026"
+          ],
+          "weightKg": [
+            "documented-20260930-almig-2026"
+          ],
+          "dutyCycle": [
+            "documented-20260930-almig-2026"
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "Le COMBI XP 8 et le XP 6 gardent la cuve de 270 L, le sécheur frigorifique et la pré/post-filtration ; leur différence porte surtout sur la plage de production. À 10 bar, le XP 8 module de 170 à 980 L/min, contre 180 à 690 L/min pour le XP 6. À 13 bar, les plages publiées deviennent 140–750 et 170–590 L/min respectivement, avec des moteurs de 7,5 et 5,5 kW. Ces bornes constructeur servent à examiner la modulation à la pression requise ; le débit moyen réellement demandé par l’atelier reste à mesurer.",
+          "verifiedFacts": [
+            "Puissance moteur publiée : 7,5 kW ; poids de cette configuration : 585 kg.",
+            "Débit restitué documenté : 1 160 L/min à 8 bar ; 980 L/min à 10 bar ; 750 L/min à 13 bar.",
+            "Le tableau 50 Hz publie les débits minimaux et maximaux de cette station ; le taux de marche du groupe complet reste à confirmer."
+          ],
+          "limitations": [
+            "La disponibilité commerciale actuelle n’a pas été confirmée.",
+            "Les minima et maxima de modulation ne décrivent pas un débit moyen de votre atelier. Aucun débit n’est extrapolé hors des points publiés.",
+            "Le taux de marche du groupe complet reste à confirmer dans une notice de cette série. Les déclarations générales du catalogue et celles des autres séries ne suffisent pas.",
+            "Le mode de lubrification n’a pas été établi dans les sources consultées ; il reste unknown, sans présumer une qualité d’air."
+          ]
+        },
+        "fieldSources": {
+          "fadCurve": [
+            "documented-20260930-almig-2026"
+          ],
+          "tankLiters": [
+            "documented-20260930-almig-2026"
+          ],
+          "maxPressureBar": [
+            "documented-20260930-almig-2026"
+          ],
+          "powerKw": [
+            "documented-20260930-almig-2026"
+          ],
+          "weightKg": [
+            "documented-20260930-almig-2026"
+          ]
+        }
+      }
+    }
+  ],
+  "technicalCards": [
+    {
+      "id": "cleco-19pca07q",
+      "path": "/images/products/cleco-19pca07q.webp",
+      "beforeSha256": "d56dc29791717c5abb58706a24b015e274e0da78370fca868c613d17b774dbf9",
+      "afterSha256": "a7d4a096345d2f8bddd15df307263be50c384125c63d9fcc45626ccee5c5961c"
+    },
+    {
+      "id": "cleco-19raa07ah2",
+      "path": "/images/products/cleco-19raa07ah2.webp",
+      "beforeSha256": "099b05f6895289646ea500d50a718d052e79ed7c9fd7dcc0494e60372114a669",
+      "afterSha256": "e073b50f0ea4423f1790efc013f2b01340fc2614dbacbc0a7c7f71749ebc4ff3"
+    },
+    {
+      "id": "cleco-20phh753",
+      "path": "/images/products/cleco-20phh753.webp",
+      "beforeSha256": "d63b84110451afeeebb9fdfb5e8472accfdb76cff41cd34467e3cc6146d02f30",
+      "afterSha256": "1e75754037b6528bfb977bdaad7abec29e48d649b91185265e72658b8316ad08"
+    },
+    {
+      "id": "shinano-si-1166-8a",
+      "path": "/images/products/shinano-si-1166-8a.webp",
+      "beforeSha256": "b8fe1c405f1117ef360c32afdb8d5f276abc35308b3b3c33164e716a9884acf1",
+      "afterSha256": "0404fe137d247be80dc7c2f076039aecb3e571fc38f13b2fd8a20c8f13330961"
+    },
+    {
+      "id": "shinano-si-1241a",
+      "path": "/images/products/shinano-si-1241a.webp",
+      "beforeSha256": "eee1067dc70ed1a5a36914ab00f0450a9bfe1c57f2b29da541bd581c23810f8d",
+      "afterSha256": "9f65400e4eb1dc2ad75e0128e05a6a95084eec6f21f0e6c5684b6c1a71e1d33e"
+    },
+    {
+      "id": "shinano-si-1420t",
+      "path": "/images/products/shinano-si-1420t.webp",
+      "beforeSha256": "8596980718122d96a282f21f4df5efde45b4e8f741e1698a271a8f7862dedad4",
+      "afterSha256": "5e9b678a1224b39ba73271a4655d8ff4706d702dea94f537199c8eda91ea9c00"
+    },
+    {
+      "id": "shinano-si-2006s-6",
+      "path": "/images/products/shinano-si-2006s-6.webp",
+      "beforeSha256": "6d85ce64db53e8aeabd683ff5d8f2e4b3e7159367fa13c4fc58155b9304b9eff",
+      "afterSha256": "25f0ff19ad611a6678c2db896808bdc1582a9b51b544c99e13b7fc12cac84f77"
+    },
+    {
+      "id": "shinano-si-2202",
+      "path": "/images/products/shinano-si-2202.webp",
+      "beforeSha256": "e1a279e22dca63541e9fe34796b9f13234f475d0e3de3ef2bb99b75e52d7ce3d",
+      "afterSha256": "c00f6fe36247df2f5adff080fa14f221195059c1c5d800c1df8867372009861c"
+    },
+    {
+      "id": "shinano-si-2415",
+      "path": "/images/products/shinano-si-2415.webp",
+      "beforeSha256": "f16d58dae669f54bc11dfe02d7217112e0bdb22c6824bd47c4b586ea5f821402",
+      "afterSha256": "c8a1363edf4f14f898eb5add66bce0bb8d66d35bb3aee33b444ab87beef996cd"
+    },
+    {
+      "id": "shinano-si-2830",
+      "path": "/images/products/shinano-si-2830.webp",
+      "beforeSha256": "21ba6375869e23fde02c7b6e12549c1b641401d07140fc1698de9313fb38a765",
+      "afterSha256": "ab46dbb159ff816e98c9dc937411ab5dceffd9b51e3ae0d97e2f674a0a7c5524"
+    },
+    {
+      "id": "shinano-si-3005",
+      "path": "/images/products/shinano-si-3005.webp",
+      "beforeSha256": "816625ef50a80793775db69e34a5551a01994482df42c9bb3ac095bec1aa36a9",
+      "afterSha256": "4ed06b9d6f62d5a8f073b92653471c483e72e2fc96d9bedc0b1729acd423d796"
+    },
+    {
+      "id": "shinano-si-3101-6",
+      "path": "/images/products/shinano-si-3101-6.webp",
+      "beforeSha256": "d8fc6a40bb29dce7a0c86e20b702fbe3f386a232bbd7c80780e79d3b1a3ac7db",
+      "afterSha256": "d29e67910ba91352e1542eb77b316305a1e34ab69cf9e637c47f9133d417c317"
+    },
+    {
+      "id": "shinano-si-5355",
+      "path": "/images/products/shinano-si-5355.webp",
+      "beforeSha256": "7b3dfcd0af45aaaa20092cb117bf4049fc5e99fbf70387710a12cf0ba66113e1",
+      "afterSha256": "a239394f698e6e7fbe6f7aa86f53eeb1a518e9a825b80f2ebc1652a1252a6345"
+    },
+    {
+      "id": "biax-gaa-505",
+      "path": "/images/products/biax-gaa-505.webp",
+      "beforeSha256": "df20d330b02ca09342decee5600aa8738ecd29022cca93f189afd1e9056e1b1b",
+      "afterSha256": "5d914bc114ee662218e9ef9c5efcd1742231c50add211d891ba73fd05336cce6"
+    },
+    {
+      "id": "biax-sbrd-8-12-2",
+      "path": "/images/products/biax-sbrd-8-12-2.webp",
+      "beforeSha256": "89fd77ad3d3d7a1c011e29665d78ad70d0e48e8a94e3ec81d7cd7e5232133702",
+      "afterSha256": "a436bf23c9f6b6c8d73a8365a3f32e1469417ed4167b454885218737b0f51cdf"
+    },
+    {
+      "id": "deprag-344-140-31u",
+      "path": "/images/products/deprag-344-140-31u.webp",
+      "beforeSha256": "38a102349bcfbcba6adb0b1bc67c69dc38e6fc0a10a58a6313c8eed03ae2a7f1",
+      "afterSha256": "320294dbcff6c3c4002121150a4b331045dae83d4929e0c47eb4fc7106a86f45"
+    },
+    {
+      "id": "fiam-15c2a30",
+      "path": "/images/products/fiam-15c2a30.webp",
+      "beforeSha256": "a1139e1b193fe2d5ba078703fcfaa5d0f4a8952e37b9c5783f9837dee570670f",
+      "afterSha256": "7e753e2187bc6bf5577b0186be23830938926793255784c74d011a3135943b6e"
+    },
+    {
+      "id": "fiam-fde33pa",
+      "path": "/images/products/fiam-fde33pa.webp",
+      "beforeSha256": "447714319f9c2b28fad363d0e46102735ac457be384ed2301de3065dc1f4d2c2",
+      "afterSha256": "68d533e6403e156b6ab1fa7b02134d24ee52a9af281bb38410c01ea8d9579971"
+    },
+    {
+      "id": "fiam-les30sp",
+      "path": "/images/products/fiam-les30sp.webp",
+      "beforeSha256": "c057e3d424135c5fabe0ea9e17a9cdd205a9dbe680c6a93624f0a5d228256cab",
+      "afterSha256": "c1bcc50ec10c5d21d580ea56dfcc1fc0bc5c1b25b1b189662a242f951ec35d6a"
+    },
+    {
+      "id": "fiam-sms100a",
+      "path": "/images/products/fiam-sms100a.webp",
+      "beforeSha256": "7cd20cb112e288a64040aa0008533299ce8e5c7dad1b87a87507d360d19b662e",
+      "afterSha256": "7651ecda18fdf1634a3f4518ad1ab831a10477d5d0a9e76cac491790c2745895"
+    },
+    {
+      "id": "nitto-kohki-aps-150",
+      "path": "/images/products/nitto-kohki-aps-150.webp",
+      "beforeSha256": "dc247908b6138b49c7dd116072c0dc0422890f4f6715352995892421c7e0b1b8",
+      "afterSha256": "c694d81ffb4f7e0a7a848e91b56627b10fc6f4a55a45e40f50deef86f5834e9f"
+    },
+    {
+      "id": "nitto-kohki-b-20d-a",
+      "path": "/images/products/nitto-kohki-b-20d-a.webp",
+      "beforeSha256": "2c0311db3f840442164e9cf9a04e879f985a261b87fad11003ca4b333e9763a4",
+      "afterSha256": "b3b0fa8d20e25710eabb347d1ccffddd5ee8abc4be97d4a4a0ff83bb45bd9471"
+    },
+    {
+      "id": "nitto-kohki-ch-24",
+      "path": "/images/products/nitto-kohki-ch-24.webp",
+      "beforeSha256": "50c5122be4125df5e6d019777bc57fe9e8c8ff9f67ff4d71b7b335638f5670d6",
+      "afterSha256": "d933bd70fbf2aa3887dda67170f13c5603e288134f00b26902a13d372794a575"
+    },
+    {
+      "id": "nitto-kohki-jex-20",
+      "path": "/images/products/nitto-kohki-jex-20.webp",
+      "beforeSha256": "b96059e6df60e3c977451dbd69efa6986faa09117741155f8b6e09f71da16384",
+      "afterSha256": "3736aaed7b89eaf6d293215b653813083e2846e99a96b87971e6b02015f91ff3"
+    },
+    {
+      "id": "nitto-kohki-l-25b",
+      "path": "/images/products/nitto-kohki-l-25b.webp",
+      "beforeSha256": "40b756c0527badfd304b6bdfa9a1be5d45feeede0370d019e2aea03fa0ea4349",
+      "afterSha256": "f5df726d0224e17c75fd5f999aa86727deb89a683d943eecf8d150fa283148e5"
+    },
+    {
+      "id": "nitto-kohki-mys-40",
+      "path": "/images/products/nitto-kohki-mys-40.webp",
+      "beforeSha256": "1e85af3e06b5a57cc84186c88e7f5c6b3d94d6cabf8d145f8f492a095d4eac35",
+      "afterSha256": "b9f3f0b5ee3052da32970fa72f6985094522e40e7b5b24ae7e9f61e3fb5a0492"
+    },
+    {
+      "id": "red-rooster-10rds-4000",
+      "path": "/images/products/red-rooster-10rds-4000.webp",
+      "beforeSha256": "0e9255afd8b421b7e104c8c9106cbd575d3dd3fdd252463dcc1c72716c49248d",
+      "afterSha256": "98cd7f1dc11f7e2d64b106a7fa25cb0cae7924791364e728551be111417a9f29"
+    },
+    {
+      "id": "red-rooster-rr-02sp",
+      "path": "/images/products/red-rooster-rr-02sp.webp",
+      "beforeSha256": "f9022bee265ac9ffa55e4ccf38b2fe34da492edf02f4b625bececd8f9b8c399d",
+      "afterSha256": "9bd3c3832084bf0352f5be9004979c6a7019462d1d45279881a5c13a83077036"
+    },
+    {
+      "id": "red-rooster-rr-0315",
+      "path": "/images/products/red-rooster-rr-0315.webp",
+      "beforeSha256": "0795766b62a6b6aac3239a3fbf0e6791b0b2dead06007f448fb22abfdec81286",
+      "afterSha256": "706e1cd9d6115a7cbaaf35a92fccf540adf21d8712342fa1d77a642e31c258b6"
+    },
+    {
+      "id": "red-rooster-rr-0315ns",
+      "path": "/images/products/red-rooster-rr-0315ns.webp",
+      "beforeSha256": "aa93fe02a9dea5f0877c46162cb5f7346545ec71746fbcce3b1a0ce72da31cdf",
+      "afterSha256": "4b45f5e0e20563457023e061b0a81e06e71b623088b54ae38dba94f104801be1"
+    },
+    {
+      "id": "red-rooster-rr-15a",
+      "path": "/images/products/red-rooster-rr-15a.webp",
+      "beforeSha256": "d657a3e6d2af73b3c19b1c263044a82a674a814cebea585d71a4c6029d4a524a",
+      "afterSha256": "3c8ea28cb978a54d99b87373b6a94ab457208c6e818b6b160b8693e88fcbfc70"
+    },
+    {
+      "id": "red-rooster-rr-476",
+      "path": "/images/products/red-rooster-rr-476.webp",
+      "beforeSha256": "345aefa0126661e0bf88ac88d035d81824c1418e65cd1ab0e1e791faeb10ee4f",
+      "afterSha256": "6832668fb4aa3d7124238759e3543ca35248b5321fe095fd448b93b6a86d7e9d"
+    },
+    {
+      "id": "red-rooster-rr-8110",
+      "path": "/images/products/red-rooster-rr-8110.webp",
+      "beforeSha256": "03a4db23dc9e6d1203b73e6a81d7851939b4a586590faba1bdcc27df6391dc2e",
+      "afterSha256": "cfc3d49306fed5c8a2d1ebbe17501604c23fbcd2925f3f20d4c2a3f65ea5b630"
+    },
+    {
+      "id": "fiac-ax-203bd-8-400-50-ce",
+      "path": "/images/products/fiac-ax-203bd-8-400-50-ce.webp",
+      "beforeSha256": "65fefa9cab0a26695c2306624bf7f5a6b1126477845d5f1e3762a5f71d3f9c88",
+      "afterSha256": "9ca6079589a10e079b8a5c44aa36fbfecea135ac0b95bf633fb3f1213d6cd70f"
+    }
+  ]
+}

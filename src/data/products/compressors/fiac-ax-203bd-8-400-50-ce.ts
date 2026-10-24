@@ -8,12 +8,7 @@ const product: CompressorInput = {
 	"mpn": "4152026232",
 	"tankLiters": 0,
 	"maxPressureBar": 8,
-	"fadCurve": [
-		{
-			"pressureBar": 8,
-			"litersPerMinute": 2330
-		}
-	],
+	"fadCurve": [],
 	"oilType": "oil",
 	"confidence": "A",
 	"status": "unknown",
@@ -24,15 +19,15 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "La référence 4152026232 correspond à la version 8 bar de 15 kW, publiée à 2330 L/min ; la 4152026234 atteint 13 bar et annonce 1690 L/min. Ces deux commandes conservent le montage au sol sans cuve intégrée : le choix porte ici sur la pression demandée et la production d’air publiée, avec le stockage à prévoir sur l’installation. Chaque débit reste rattaché à sa référence de pression ; le taux de marche continu demeure à documenter.",
+		"overview": "La référence 4152026232 correspond à la version de pression maximale 8 bar et de puissance 15 kW ; FIAC publie un FAD de 2 330 L/min. La 4152026234 atteint 13 bar et annonce 1 690 L/min. Ces deux commandes conservent le montage au sol sans cuve intégrée : le stockage doit être prévu sur l’installation. La pression de mesure du FAD n’est pas précisée dans la fiche individuelle ; le maximum de 8 bar ne peut pas la remplacer. Le débit reste documentaire et la compatibilité dépendante du débit demeure indéterminée.",
 		"verifiedFacts": [
-			"Débit restitué publié : 2 330 L/min à 8 bar.",
+			"Débit FAD fabricant : 2 330 L/min pour 4152026232 ; pression de mesure à confirmer.",
 			"Compresseur rotatif à vis lubrifié à vitesse fixe. Puissance moteur publiée : 15 kW.",
 			"Masse nette publiée : 270 kg.",
 			"Alimentation publiée : 400 V, 50 Hz, triphasée."
 		],
 		"limitations": [
-			"Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
+			"Aucun point FAD à pression de mesure connue n’est établi. Le débit de 2 330 L/min et le maximum de 8 bar sont deux caractéristiques publiées séparément.",
 			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
 			"La référence commande prime sur le nom commercial : le catalogue utilise AIRBLOK et la fiche en ligne le code AX.",
 			"Les puissances arrondies peuvent différer entre le catalogue PDF et la fiche actuelle. Les valeurs de cette fiche proviennent exclusivement de la fiche individuelle consultée."
@@ -41,7 +36,7 @@ const product: CompressorInput = {
 	"specifications": [
 		{
 			"label": "Conditions du débit",
-			"value": "La fiche individuelle 4152026232 publie un FAD de 2330 L/min pour cette version de 8 bar. Débit restitué fabricant, pas débit aspiré.",
+			"value": "FAD publié : 2 330 L/min. Pression maximale : 8 bar. La pression de mesure du FAD n’est pas explicitée ; aucun point dimensionnant n’est retenu.",
 			"evidenceIds": [
 				"fiac-4152026232-20260926"
 			]

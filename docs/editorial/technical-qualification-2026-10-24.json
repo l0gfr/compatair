@@ -1,0 +1,3768 @@
+{
+  "schemaVersion": 1,
+  "correctedAt": "2026-10-24T03:28:30.875Z",
+  "sourceReleaseSha": "247ccc7764022f9d17e93a270e492a657474af4e",
+  "newAdmissions": 0,
+  "retain61Admissions": true,
+  "retainPrior82Admissions": true,
+  "originalEditorialDecisionDoesNotProveTechnicalQualification": true,
+  "method": [
+    "Lecture des 37 modules natifs du HEAD cité, pas seulement des limites éditoriales.",
+    "Passages primaires déjà téléchargés et lus ; corps sources et extractions vérifiés par SHA-256, aucune nouvelle recherche.",
+    "Deux axes distincts : qualification du régime du débit, et qualification de son appariement à la pression.",
+    "Une consigne dynamique de service ne devient pas implicitement une pression de mesure de la consommation.",
+    "Les 11 réserves de pression sont des appariements non établis dans les passages lus, pas une preuve de pression erronée.",
+    "La précédente validation éditoriale avait manqué le défaut de champs structurés ; elle ne suffit pas à valider un verdict technique."
+  ],
+  "counts": {
+    "tools": {
+      "total": 37,
+      "decision": {
+        "already-inconclusive": 3,
+        "needs-regime-correction": 22,
+        "qualified-loaded": 1,
+        "needs-pressure-qualification": 11
+      },
+      "regime": {
+        "variable-volume": 3,
+        "unqualified": 15,
+        "free-speed": 7,
+        "loaded": 2,
+        "maximum": 10
+      },
+      "pressure": {
+        "service-range-only": 2,
+        "tabulated-inlet-points-with-undefined-standard-volume": 1,
+        "explicit-measurement-pressure": 6,
+        "explicit-rated-pressure": 3,
+        "service-pressure-only": 19,
+        "same-table-rated-pressure": 6
+      }
+    },
+    "compressors": {
+      "reviewed": 14,
+      "requiresCorrection": 2,
+      "supportedWithStatedLimits": 12,
+      "correctionIds": [
+        "fiac-ax-203bd-8-400-50-ce",
+        "almig-combi-xp-8-270d"
+      ],
+      "newAdmissions": 0,
+      "repositoryFilesModified": 0,
+      "newNetworkRequests": 0,
+      "builds": 0,
+      "pushes": 0,
+      "sshOperations": 0,
+      "subagents": 0
+    }
+  },
+  "sourceHealth": {
+    "sourceRevision": "247ccc7764022f9d17e93a270e492a657474af4e",
+    "checkedAt": "2026-10-24T03:06:23.040Z",
+    "checked": 7502,
+    "reachable": 6856,
+    "broken": 2,
+    "unverified": 644,
+    "unsafe": 0,
+    "scope": "Full inventory; two known 404s outside published cohort retained. Targeted readings do not clear inventory alerts."
+  },
+  "toolSources": [
+    {
+      "key": "s04",
+      "url": "https://walmec.com/it/cataloghi/catalogo-asturomec/AD_13_24_IT.pdf",
+      "observedAt": "2026-10-24T00:36:36.399578+00:00",
+      "status": 200,
+      "complete": true,
+      "sha256": "28bc606b4d5bdb9fb84c9288e42573241454b8347b9623c38854744b09fab5e3",
+      "path": "/tmp/compatair-seo-20261024/tool-sources/s04.pdf"
+    },
+    {
+      "key": "s08",
+      "url": "https://www.prowin-tools.com/wp-content/uploads/2023/05/Air-Painting-ToolsNew.pdf",
+      "observedAt": "2026-10-24T00:36:36.811104+00:00",
+      "status": 200,
+      "complete": true,
+      "sha256": "2cd45573cff8decba50b2fbbfe2127d8e4bc1c3f1fdb6550e2f2467703941213",
+      "path": "/tmp/compatair-seo-20261024/tool-sources/s08.pdf"
+    },
+    {
+      "key": "s13",
+      "url": "https://binks.canto.com/direct/document/iu9p1o6ks53mj6m12o5dq7885i/FfNcp6KQ2GpAcwGYCDd-KNWjgbo/original?content-type=application%2Fpdf&name=77-3042_ENGLISH.pdf",
+      "observedAt": "2026-10-24T00:36:40.221646+00:00",
+      "status": 200,
+      "complete": true,
+      "sha256": "c2a1a7cd728d900e68cf9dae59e0da8f182117f7c7442d8c616ed90dd55c3519",
+      "path": "/tmp/compatair-seo-20261024/tool-sources/s13.pdf"
+    },
+    {
+      "key": "s20",
+      "url": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf",
+      "observedAt": "2026-10-24T00:36:43.631226+00:00",
+      "status": 200,
+      "complete": true,
+      "sha256": "8668d5e77a6b2469dc9b9012841e65bbfb947234a8087faa6fdd90384b3babac",
+      "path": "/tmp/compatair-seo-20261024/tool-sources/s20.pdf"
+    },
+    {
+      "key": "s21",
+      "url": "https://tools.cp.com/content/dam/pim/itba/cp/literature/catalogs/General-Industry_catalog_CP_EN.pdf",
+      "observedAt": "2026-10-24T00:34:38.458686+00:00",
+      "status": 200,
+      "complete": true,
+      "sha256": "3aa74571ca6f59e4341bfae4081921dbce238fa63763b80ec222b81b46783b0b",
+      "path": "/tmp/compatair-seo-20261024/sources/630ed2d7be4dab82.pdf"
+    },
+    {
+      "key": "s23",
+      "url": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf",
+      "observedAt": "2026-10-24T00:34:36.899354+00:00",
+      "status": 200,
+      "complete": true,
+      "sha256": "03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b",
+      "path": "/tmp/compatair-seo-20261024/sources/1e49b4b797e99e2b.pdf"
+    },
+    {
+      "key": "s25",
+      "url": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf",
+      "observedAt": "2026-10-24T00:36:44.955758+00:00",
+      "status": 200,
+      "complete": true,
+      "sha256": "318971fb9ba951f395b81cbca3d1e57938ce23b74db3aef25ff98bb8f0edc6c8",
+      "path": "/tmp/compatair-seo-20261024/tool-sources/s25.pdf"
+    },
+    {
+      "key": "s27",
+      "url": "https://biax.de/wp-content/uploads/2025/02/BIAX_Schrauber_DE.pdf",
+      "observedAt": "2026-10-24T00:36:45.759546+00:00",
+      "status": 200,
+      "complete": true,
+      "sha256": "234541dfd789768204963f04e6df723f00c634bb38ced6d544e88ac762382718",
+      "path": "/tmp/compatair-seo-20261024/tool-sources/s27.pdf"
+    },
+    {
+      "key": "s28",
+      "url": "https://biax.de/en/product/sbrd-8-12-2-12-000-1-min-zweihandschl/",
+      "observedAt": "2026-10-24T00:36:45.898870+00:00",
+      "status": 200,
+      "complete": true,
+      "sha256": "8485e05b1c4cecb5f49d276403f32f5c747810b3a96e62b24de98272839b94e8",
+      "path": "/tmp/compatair-seo-20261024/tool-sources/s28.html"
+    },
+    {
+      "key": "s30",
+      "url": "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3130/D3130en.pdf",
+      "observedAt": "2026-10-24T00:36:46.207827+00:00",
+      "status": 200,
+      "complete": true,
+      "sha256": "9d445214624acd388e222274452a61e9bc2026c82f3d78fae74d146516a75dbd",
+      "path": "/tmp/compatair-seo-20261024/tool-sources/s30.pdf"
+    },
+    {
+      "key": "s31",
+      "url": "https://www.fiamgroup.com/en/products/handheld-air-screwdrivers/15c2a30/",
+      "observedAt": "2026-10-24T00:36:46.619852+00:00",
+      "status": 200,
+      "complete": true,
+      "sha256": "1193ded4b57aed35a22e6e392c02f44f3a39a864e733a53422fe795fa049ba67",
+      "path": "/tmp/compatair-seo-20261024/tool-sources/s31.html"
+    },
+    {
+      "key": "s32",
+      "url": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-26.pdf",
+      "observedAt": "2026-10-24T00:36:46.686464+00:00",
+      "status": 200,
+      "complete": true,
+      "sha256": "8f9e9fdc201a6d8374e05867cc5e805e4a31c568e55c43cf120e3fe1a161bb64",
+      "path": "/tmp/compatair-seo-20261024/tool-sources/s32.pdf"
+    },
+    {
+      "key": "s34",
+      "url": "https://www.fiamgroup.com/en/products/air-drills/fde33pa/",
+      "observedAt": "2026-10-24T00:36:47.004263+00:00",
+      "status": 200,
+      "complete": true,
+      "sha256": "2a196e8c9a26139f145a5e6f9274406dd0a730fa4a851216f963a0e9eb6ca2ae",
+      "path": "/tmp/compatair-seo-20261024/tool-sources/s34.html"
+    },
+    {
+      "key": "s35",
+      "url": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf",
+      "observedAt": "2026-10-24T00:36:47.175006+00:00",
+      "status": 200,
+      "complete": true,
+      "sha256": "4bc7b8a199880ed886511848f97c3d61ae9b8a50dbb5f0f0318dddc819dcbf62",
+      "path": "/tmp/compatair-seo-20261024/tool-sources/s35.pdf"
+    },
+    {
+      "key": "s40",
+      "url": "https://www.fiamgroup.com/en/products/grinders-and-sanders/les30sp/",
+      "observedAt": "2026-10-24T00:36:47.846377+00:00",
+      "status": 200,
+      "complete": true,
+      "sha256": "9573af281a748b099127432792f41008449c8aa6b5f89df6f6dd9947f3c8259e",
+      "path": "/tmp/compatair-seo-20261024/tool-sources/s40.html"
+    },
+    {
+      "key": "s41",
+      "url": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-44.pdf",
+      "observedAt": "2026-10-24T00:36:48.021947+00:00",
+      "status": 200,
+      "complete": true,
+      "sha256": "01b152f269aeae367daa8a9524f083a1679707b0a3eff4daa59bcec83635f6de",
+      "path": "/tmp/compatair-seo-20261024/tool-sources/s41.pdf"
+    },
+    {
+      "key": "s43",
+      "url": "https://www.fiamgroup.com/en/products/grinders-and-sanders/sms100a/",
+      "observedAt": "2026-10-24T00:36:48.261480+00:00",
+      "status": 200,
+      "complete": true,
+      "sha256": "09286bac8850849e6794460d4ef177b465bc04cdb681d9b3c627031cc6cf3176",
+      "path": "/tmp/compatair-seo-20261024/tool-sources/s43.html"
+    },
+    {
+      "key": "s55",
+      "url": "https://www.nitto-kohki.eu/images/stories/products/pdf_catalogs/Tools_Catalog.pdf",
+      "observedAt": "2026-10-24T00:36:49.116787+00:00",
+      "status": 200,
+      "complete": true,
+      "sha256": "96df5508b9819bc71611f875b35af9e282e5bb0bf62e324aab2ab87698867bac",
+      "path": "/tmp/compatair-seo-20261024/tool-sources/s55.pdf"
+    },
+    {
+      "key": "s56",
+      "url": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf",
+      "observedAt": "2026-10-24T00:36:49.134255+00:00",
+      "status": 200,
+      "complete": true,
+      "sha256": "f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e",
+      "path": "/tmp/compatair-seo-20261024/tool-sources/s56.pdf"
+    }
+  ],
+  "compressorSources": [
+    {
+      "url": "https://shop.fiac.it/en-IT/products/4152026232/ax-203bd-8-40050-ce",
+      "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/7619fb7db50b71620030.body",
+      "bodySha256": "35f8a7405eaa0abc32f29ef0e0e672a107a8012765323b0c559966aa0f4e8746",
+      "textFile": "/tmp/compatair-seo-20261024/compressor-reading/7619fb7db50b71620030.txt",
+      "textSha256": "d583ca71a29883a287779923cd7ccf5bc1f254bdf8dd3482a53b4683ff76b615",
+      "materialObservedAt": "2026-10-24T00:36:52Z",
+      "materialIsCurrentAtRecordedCapture": true,
+      "currentHttpStatusAtRecordedObservation": 200,
+      "newNetworkRequestDuringThisFollowup": false,
+      "passages": [
+        {
+          "pdfPages": null,
+          "completePassageContextRead": "Fiche entière et PIM exact6232 : deux caractéristiques séparées. Attributs structurés non vides relus : tension400, maxworkingpressure8, fréquence50 ; aucune pression de mesure FAD établie.",
+          "readingScope": "Pages ou tableau décrits seulement ; aucune lecture intégrale du document revendiquée.",
+          "shortLabelExcerpts": [
+            "Max Working Pressure (bar) : 8",
+            "FAD capacity (l/min) : 2330"
+          ],
+          "excerptFormatting": "Retours de ligne et espaces normalisés ; éléments du tableau séparés dans la liste, sans citation continue artificielle."
+        }
+      ]
+    },
+    {
+      "url": "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf",
+      "materialFile": "/tmp/compatair-editorial-20261023/compressors/sources/6809cd2cb0421413f9ff.body",
+      "bodySha256": "55421a11ceb9c201bd873f1d0e4596ea6682b7fd68fc5e03e0c380ddf879ac85",
+      "textFile": "/tmp/compatair-seo-20261024/compressor-reading/6809cd2cb0421413f9ff.txt",
+      "textSha256": "c78596269e032edc91895ccedc6ab18feca4b54f8a6c2f6e36ec3e9dbc4ee59d",
+      "materialObservedAt": "2026-10-23T11:31:24.337053+00:00",
+      "materialIsCurrentAtRecordedCapture": false,
+      "currentHttpStatusAtRecordedObservation": 403,
+      "newNetworkRequestDuringThisFollowup": false,
+      "passages": [
+        {
+          "pdfPages": [
+            32,
+            33,
+            34
+          ],
+          "completePassageContextRead": "CatalogueAIRBLOKBD : description de la série et tableau400/50/3. Ligne4152026232 :8bar maximum,2330L/minFAD,15kW. Le tableau ne formule pasCapacity at maximum pressure ; aucune assimilation ajoutée.",
+          "readingScope": "Pages ou tableau décrits seulement ; aucune lecture intégrale du document revendiquée.",
+          "shortLabelExcerpts": [
+            "Max. working pressure",
+            "Free Air Delivery"
+          ],
+          "excerptFormatting": "Retours de ligne et espaces normalisés ; éléments du tableau séparés dans la liste, sans citation continue artificielle."
+        }
+      ]
+    },
+    {
+      "url": "https://www.gentilinair.com/en/products/c660-100",
+      "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/a3eb3d24fccd32f9369a.body",
+      "bodySha256": "aa789997bce7a52c4ee981e44d93a9ab77f163954fbffdbe69508a191509a773",
+      "textFile": "/tmp/compatair-seo-20261024/compressor-reading/a3eb3d24fccd32f9369a.txt",
+      "textSha256": "bdc7577e576506c53eec93287de3e73efc27f8c3648fc3e2ab27e755bb226310",
+      "materialObservedAt": "2026-10-24T00:36:57Z",
+      "materialIsCurrentAtRecordedCapture": true,
+      "currentHttpStatusAtRecordedObservation": 200,
+      "newNetworkRequestDuringThisFollowup": false,
+      "passages": [
+        {
+          "pdfPages": null,
+          "completePassageContextRead": "PageC660/100 entière : identité810310001 et tableauTechnicalData relus avec alimentation, puissance, absorption, aspiration, deuxAirDelivery, maximum10bar et cuve90L. Le titreDutycycle concerne le produit complet.",
+          "readingScope": "Pages ou tableau décrits seulement ; aucune lecture intégrale du document revendiquée.",
+          "shortLabelExcerpts": [
+            "Duty cycle S1 100%"
+          ],
+          "excerptFormatting": "Retours de ligne et espaces normalisés ; éléments du tableau séparés dans la liste, sans citation continue artificielle."
+        }
+      ]
+    },
+    {
+      "url": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=31",
+      "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/3c8ca0e58b1f3d039f67.body",
+      "bodySha256": "22bf634228622553d64fea92bd8aa8365896bafadc5209c4b4b51ca9c062e78a",
+      "textFile": "/tmp/compatair-seo-20261024/compressor-reading/3c8ca0e58b1f3d039f67.txt",
+      "textSha256": "31dab07ae9500599bc6d8765a8b75c080ded98b756c3e6b7a9732cd9b3002297",
+      "materialObservedAt": "2026-10-24T00:36:52Z",
+      "materialIsCurrentAtRecordedCapture": true,
+      "currentHttpStatusAtRecordedObservation": 200,
+      "newNetworkRequestDuringThisFollowup": false,
+      "passages": [
+        {
+          "pdfPages": [
+            31
+          ],
+          "completePassageContextRead": "PageAIRCRAFT262E/2001247 : colonnes du262E séparées duKITT90.250aspirés,155de remplissageà6bar,10barmax,2,4L et1,5kW230V50Hz.",
+          "readingScope": "Pages ou tableau décrits seulement ; aucune lecture intégrale du document revendiquée.",
+          "shortLabelExcerpts": [
+            "Füllleistung bei 6 bar",
+            "Ansaugleistung"
+          ],
+          "excerptFormatting": "Retours de ligne et espaces normalisés ; éléments du tableau séparés dans la liste, sans citation continue artificielle."
+        }
+      ]
+    },
+    {
+      "url": "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf",
+      "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/49dc062620e5cfb112cb.body",
+      "bodySha256": "f5ca167dedaab25352808dc5001ba9badc7acffb2c37168c6d9f89182b752a0e",
+      "textFile": "/tmp/compatair-seo-20261024/compressor-reading/49dc062620e5cfb112cb.txt",
+      "textSha256": "c31b4e1a5780955234ca3826ac619363d961406db0dd2681ad2c3a1e3b15cfed",
+      "materialObservedAt": "2026-10-24T00:36:54Z",
+      "materialIsCurrentAtRecordedCapture": true,
+      "currentHttpStatusAtRecordedObservation": 200,
+      "newNetworkRequestDuringThisFollowup": false,
+      "passages": [
+        {
+          "pdfPages": [
+            4,
+            6,
+            7,
+            8,
+            10,
+            18
+          ],
+          "completePassageContextRead": "Lecture des paragraphes complets de présentation généralep4, sectionCOMBI XP6–8 et sectionsG-DRIVE/V-DRIVE10/18. Seule la formulation généralep4 couvre potentiellementCOMBI ; aucune qualification100% propre auXP8. XP6 etXP8 partagent la même portée documentaire.",
+          "readingScope": "Pages ou tableau décrits seulement ; aucune lecture intégrale du document revendiquée.",
+          "shortLabelExcerpts": [
+            "Maximum reliability and operational safety during continuous operation"
+          ],
+          "excerptFormatting": "Retours de ligne et espaces normalisés ; éléments du tableau séparés dans la liste, sans citation continue artificielle."
+        }
+      ]
+    },
+    {
+      "url": "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf",
+      "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/74d3082e12db6081d506.body",
+      "bodySha256": "35bd2421c2cc333bc6a0d6cd20c09bbf6b3c2af621021cb6cd2a254d23e74f8a",
+      "textFile": "/tmp/compatair-seo-20261024/compressor-reading/74d3082e12db6081d506.txt",
+      "textSha256": "f6fe8f5840d027e8622b1c0064cb4571eca9c6bdb516cafc118f91e03bb0de38",
+      "materialObservedAt": "2026-10-24T00:36:59Z",
+      "materialIsCurrentAtRecordedCapture": true,
+      "currentHttpStatusAtRecordedObservation": 200,
+      "newNetworkRequestDuringThisFollowup": false,
+      "passages": [
+        {
+          "pdfPages": [
+            18,
+            19
+          ],
+          "completePassageContextRead": "Catalogue2026 : tableauRS-PRO3,0 lie310001à10bar,0,41m³/min et153kg ; équipements et options de la page19 relus.",
+          "readingScope": "Pages ou tableau décrits seulement ; aucune lecture intégrale du document revendiquée.",
+          "shortLabelExcerpts": [
+            "gemäß ISO 1217 Annex C"
+          ],
+          "excerptFormatting": "Retours de ligne et espaces normalisés ; éléments du tableau séparés dans la liste, sans citation continue artificielle."
+        }
+      ]
+    },
+    {
+      "url": "https://shop.hbg-kompressoren.de/wp-content/uploads/2018/11/Prospekt_RS-PRO_RSF-PRO_30-110_DE.pdf",
+      "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/24177f4aceb88381cb5a.body",
+      "bodySha256": "9c0fb8f947202b1d1f0a04ceef4d26ed8863e8b6cbfe9d1f1451bf603a1f0ae8",
+      "textFile": "/tmp/compatair-seo-20261024/compressor-reading/24177f4aceb88381cb5a.txt",
+      "textSha256": "46a66ebf7347cc8816e3873362d275908360cf0d5a230a5e21e0f32a3198586c",
+      "materialObservedAt": "2026-10-24T00:36:54Z",
+      "materialIsCurrentAtRecordedCapture": true,
+      "currentHttpStatusAtRecordedObservation": 200,
+      "newNetworkRequestDuringThisFollowup": false,
+      "passages": [
+        {
+          "pdfPages": [
+            3,
+            6
+          ],
+          "completePassageContextRead": "Brochure fabricant hébergée chezHBG, corps identique à la capture antérieure : paragraphe et listeKonstruktionsmerkmaleRS-PROp3 concernent le groupe complet. P6 inclutRS-PRO3,0,0,41à10bar,3kW et153kg. Pas de simpleS1moteur utilisé.",
+          "readingScope": "Pages ou tableau décrits seulement ; aucune lecture intégrale du document revendiquée.",
+          "shortLabelExcerpts": [
+            "entwickelt für den industriellen Einsatz – auch im Dauerbetrieb"
+          ],
+          "excerptFormatting": "Retours de ligne et espaces normalisés ; éléments du tableau séparés dans la liste, sans citation continue artificielle."
+        }
+      ]
+    },
+    {
+      "url": "https://nl.kaeser.com/download.ashx?id=tcm:32-5920",
+      "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/233a6b127caccf654e55.body",
+      "bodySha256": "7c4b96a5fb4ea4fb206655af4138d8a90096a61661823528c5f6bf282d66a6d5",
+      "textFile": "/tmp/compatair-seo-20261024/compressor-reading/233a6b127caccf654e55.txt",
+      "textSha256": "daeb050be1b2e7c672b212086f2e22df038a4b23ba56c0b0c72f23629f0119b5",
+      "materialObservedAt": "2026-10-24T00:36:52Z",
+      "materialIsCurrentAtRecordedCapture": true,
+      "currentHttpStatusAtRecordedObservation": 200,
+      "newNetworkRequestDuringThisFollowup": false,
+      "passages": [
+        {
+          "pdfPages": [
+            2,
+            8
+          ],
+          "completePassageContextRead": "P2 : concept modulaire desSM, versionsAIRCENTER ajoutant sécheur et cuve. P8 : lignesstandard/T/AIRCENTER etSFC distinctes,7,5bar de mesure contre8bar maximum,1,32m³/min pourAIRCENTER13standard.",
+          "readingScope": "Pages ou tableau décrits seulement ; aucune lecture intégrale du document revendiquée.",
+          "shortLabelExcerpts": [
+            "Flow rate complete system at gauge working pressure"
+          ],
+          "excerptFormatting": "Retours de ligne et espaces normalisés ; éléments du tableau séparés dans la liste, sans citation continue artificielle."
+        }
+      ]
+    },
+    {
+      "url": "https://us.kaeser.com/compressed-air-resources/applications/automotive-services/",
+      "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/fad6430ec26e7c9f5321.body",
+      "bodySha256": "c6b067052dc7b86367e2680e1c70d198f10aee7b3ab93e223571b261ce94e234",
+      "textFile": "/tmp/compatair-seo-20261024/compressor-reading/fad6430ec26e7c9f5321.txt",
+      "textSha256": "eace12ef0b309ae8ee678ff01fe2d2b1c3eb414dc637c152739c0de98ac5a08d",
+      "materialObservedAt": "2026-10-24T00:36:54Z",
+      "materialIsCurrentAtRecordedCapture": true,
+      "currentHttpStatusAtRecordedObservation": 200,
+      "newNetworkRequestDuringThisFollowup": false,
+      "passages": [
+        {
+          "pdfPages": null,
+          "completePassageContextRead": "ParagraphesGeneral Maintenance&Repair et tableauCompressedAirSolutions relus. Le100% est attribué aux compresseursSX/SM/SK et la page explique le fonctionnement toute la journée sans pauses de refroidissement imposées aux pistons. Il n’est pas déduit du seul moteur.",
+          "readingScope": "Pages ou tableau décrits seulement ; aucune lecture intégrale du document revendiquée.",
+          "shortLabelExcerpts": [
+            "SX, SM, SK Rotary Screws",
+            "100% duty cycle"
+          ],
+          "excerptFormatting": "Retours de ligne et espaces normalisés ; éléments du tableau séparés dans la liste, sans citation continue artificielle."
+        }
+      ]
+    },
+    {
+      "url": "https://azure-na-assets.contentstack.com/v3/assets/blt167c47dc7f7db219/blte4df36746553755b/6a82b94b0c5540172c281ba0/25317_BroomWade_No_Price_Book_EURO_EN_Work.pdf",
+      "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/dd549eca3816b6afa5a6.body",
+      "bodySha256": "11f1e7d5dfb0667503a81873214705d3b732290f6c8d46b7e300dd92b7badb3b",
+      "textFile": "/tmp/compatair-seo-20261024/compressor-reading/dd549eca3816b6afa5a6.txt",
+      "textSha256": "3c27be338ee3578d6d8160d0c5e6944f501ece3963d2a4c70a7b20ab354b43e1",
+      "materialObservedAt": "2026-10-24T00:36:49Z",
+      "materialIsCurrentAtRecordedCapture": true,
+      "currentHttpStatusAtRecordedObservation": 200,
+      "newNetworkRequestDuringThisFollowup": false,
+      "passages": [
+        {
+          "pdfPages": [
+            2,
+            20
+          ],
+          "completePassageContextRead": "P20 blocELITE7/11 :codeRSCCP1141V4,270L,11kW,400/50,1,39m³/min à10bar maximum et équipements station. P2 donne le contexte de tests de débitISO1217, pas une pression fictive.",
+          "readingScope": "Pages ou tableau décrits seulement ; aucune lecture intégrale du document revendiquée.",
+          "shortLabelExcerpts": [
+            "Capacity at maximum pressure"
+          ],
+          "excerptFormatting": "Retours de ligne et espaces normalisés ; éléments du tableau séparés dans la liste, sans citation continue artificielle."
+        }
+      ]
+    },
+    {
+      "url": "https://www.elgi.com/in/wp-content/uploads/2019/06/EG-Premium-90-160-catalogue_India.pdf",
+      "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/485b26969a587de8f0d0.body",
+      "bodySha256": "2b9f43ec8dff222a8f93b9217c688172836c6c783a2c5af2c5e44ebf448f8b9d",
+      "textFile": "/tmp/compatair-seo-20261024/compressor-reading/485b26969a587de8f0d0.txt",
+      "textSha256": "cb351b6db07e55999f4f24a00cc459f86841cc4d0f869a678d5cb25aa177d0b1",
+      "materialObservedAt": "2026-10-24T00:36:55Z",
+      "materialIsCurrentAtRecordedCapture": true,
+      "currentHttpStatusAtRecordedObservation": 200,
+      "newNetworkRequestDuringThisFollowup": false,
+      "passages": [
+        {
+          "pdfPages": [
+            8
+          ],
+          "completePassageContextRead": "Page8 entière : blocsstandard etVFD distincts ; notesISO1217:2009AnnexeC, mesure package complet, max/unload1bar au-dessus du workingpressure. LigneEG110-P fixe à10bar :17,5m³/min,110kW.",
+          "readingScope": "Pages ou tableau décrits seulement ; aucune lecture intégrale du document revendiquée.",
+          "shortLabelExcerpts": [
+            "FAD is declared at the working pressure"
+          ],
+          "excerptFormatting": "Retours de ligne et espaces normalisés ; éléments du tableau séparés dans la liste, sans citation continue artificielle."
+        }
+      ]
+    },
+    {
+      "url": "https://airpol.com.pl/wp-content/uploads/2022/05/EN-Karta-Airpol-185-55kW.pdf",
+      "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/e22f723727fd109a682d.body",
+      "bodySha256": "03765bd3f6325ceba8a938e64a469e120e952843538b1a18f3aac757d0728e64",
+      "textFile": "/tmp/compatair-seo-20261024/compressor-reading/e22f723727fd109a682d.txt",
+      "textSha256": "422c060f4e3a87bf68c9adb276e7dbcf35574a5da9c73fc0b2bf4067b6c80ef4",
+      "materialObservedAt": "2026-10-24T00:36:49Z",
+      "materialIsCurrentAtRecordedCapture": true,
+      "currentHttpStatusAtRecordedObservation": 200,
+      "newNetworkRequestDuringThisFollowup": false,
+      "passages": [
+        {
+          "pdfPages": [
+            12
+          ],
+          "completePassageContextRead": "FicheAirpol55 entièrep12 : capacité350m³/h à1,5MPa,55kW,400/3/50 et caractéristiques de la configuration au sol.",
+          "readingScope": "Pages ou tableau décrits seulement ; aucune lecture intégrale du document revendiquée.",
+          "shortLabelExcerpts": [
+            "Capacity [1,5 MPa]"
+          ],
+          "excerptFormatting": "Retours de ligne et espaces normalisés ; éléments du tableau séparés dans la liste, sans citation continue artificielle."
+        }
+      ]
+    },
+    {
+      "url": "https://airpol.com.pl/wp-content/uploads/2022/05/Airpol-screw-compressors.pdf",
+      "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/e80a72d2addc3ec0a6f4.body",
+      "bodySha256": "93fb6c0baf7deedc619234c8c63575d9edfeab652447ffc07e673ddb9c7cbdd8",
+      "textFile": "/tmp/compatair-seo-20261024/compressor-reading/e80a72d2addc3ec0a6f4.txt",
+      "textSha256": "537cd88804e0678bbaa94be6615e2dff80456852f427d92fab57e5aeaf29d228",
+      "materialObservedAt": "2026-10-24T00:36:49Z",
+      "materialIsCurrentAtRecordedCapture": true,
+      "currentHttpStatusAtRecordedObservation": 200,
+      "newNetworkRequestDuringThisFollowup": false,
+      "passages": [
+        {
+          "pdfPages": [
+            9
+          ],
+          "completePassageContextRead": "TableAirpol55 sans réservoir : colonneDischargeoverpressure1,5MPa,350m³/h. Colonne5,83m³/min arrondie séparément ; la conversion350×1000/60 ne crée pas une mesure plus précise.",
+          "readingScope": "Pages ou tableau décrits seulement ; aucune lecture intégrale du document revendiquée.",
+          "shortLabelExcerpts": [
+            "Capacity measured acc. to EN ISO 1217:2009 and EN ISO 5167-2."
+          ],
+          "excerptFormatting": "Retours de ligne et espaces normalisés ; éléments du tableau séparés dans la liste, sans citation continue artificielle."
+        }
+      ]
+    },
+    {
+      "url": "https://bambi-air.co.uk/product/bb8/",
+      "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/679a8f413acc890d9b19.body",
+      "bodySha256": "66be90466f5e5e6996542060cbbdefbc726a13578c94f34672b51b54761dae81",
+      "textFile": "/tmp/compatair-seo-20261024/compressor-reading/679a8f413acc890d9b19.txt",
+      "textSha256": "a5b3ba03dbfa79c7862e0d73153aed96f3952905edf75047c116f7ced13e032c",
+      "materialObservedAt": "2026-10-24T00:36:50Z",
+      "materialIsCurrentAtRecordedCapture": true,
+      "currentHttpStatusAtRecordedObservation": 200,
+      "newNetworkRequestDuringThisFollowup": false,
+      "passages": [
+        {
+          "pdfPages": null,
+          "completePassageContextRead": "FicheBB8 : tableauFreeAirDelivery,Maxdutycycle50%,9L,0,34kW etalimentation240V/50Hz. Le renvoi1 ne définit aucune fenêtre temporelle du cycle ; la note du profil conserve ce manque.",
+          "readingScope": "Pages ou tableau décrits seulement ; aucune lecture intégrale du document revendiquée.",
+          "shortLabelExcerpts": [
+            "Max duty cycle = 50%"
+          ],
+          "excerptFormatting": "Retours de ligne et espaces normalisés ; éléments du tableau séparés dans la liste, sans citation continue artificielle."
+        }
+      ]
+    },
+    {
+      "url": "https://www.ekom.sk/fileadmin/Ekom/navody/2021/industry_lab/NP-DK50_2V_50__2x2V_110-A-21_06-2026-MD.pdf",
+      "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/e5ddb8c92c32e2b2fe7a.body",
+      "bodySha256": "b732c4bd37b883479e473ebc1bbd69a11f666147cc0b5691360cd381385f442b",
+      "textFile": "/tmp/compatair-seo-20261024/compressor-reading/e5ddb8c92c32e2b2fe7a.txt",
+      "textSha256": "084981c459fa7b7fcd859735f548dfad6b2f0652f46c25f857bd338a99aa36a2",
+      "materialObservedAt": "2026-10-24T00:36:55Z",
+      "materialIsCurrentAtRecordedCapture": true,
+      "currentHttpStatusAtRecordedObservation": 200,
+      "newNetworkRequestDuringThisFollowup": false,
+      "passages": [
+        {
+          "pdfPages": [
+            18
+          ],
+          "completePassageContextRead": "PageTechnicalData entièrep18 : quatre modèles, dontS/M, climats admis, tension/fréquence, FAD,workingrange,safetyvalve etOperatingmode. LeS1-100 est dans la ligne de mode du groupe, distincte deMotorpower.",
+          "readingScope": "Pages ou tableau décrits seulement ; aucune lecture intégrale du document revendiquée.",
+          "shortLabelExcerpts": [
+            "Operating mode % S1-100",
+            "Capacity at 6 bar (FAD)"
+          ],
+          "excerptFormatting": "Retours de ligne et espaces normalisés ; éléments du tableau séparés dans la liste, sans citation continue artificielle."
+        }
+      ]
+    },
+    {
+      "url": "https://cdn2.hubspot.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20BLADE/BLADE_8-12_EN_1.pdf",
+      "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/13fcbb14b8d487eb0b9a.body",
+      "bodySha256": "af2f2664d3734e56f2b27b6dfb1d86a8b8d10b3491ab3f7813b72110cbb08e55",
+      "textFile": "/tmp/compatair-seo-20261024/compressor-reading/13fcbb14b8d487eb0b9a.txt",
+      "textSha256": "c77f41f115c17ca82787a6b81e956e1743ee9ff3debc83e9f0aefceaaae2a854",
+      "materialObservedAt": "2026-10-24T00:36:51Z",
+      "materialIsCurrentAtRecordedCapture": true,
+      "currentHttpStatusAtRecordedObservation": 200,
+      "newNetworkRequestDuringThisFollowup": false,
+      "passages": [
+        {
+          "pdfPages": [
+            3,
+            6,
+            7
+          ],
+          "completePassageContextRead": "P3 inclutBLADE/BLADEE/S/SE. P6OPERATIONALMODE entier :Continuous décharge àpressionmax puis recharge,Automatic ajoute l’arrêt sans demande,Modulation ajuste le débit dans0,3bar. P7tableSE12 :bloc400/50/3,1,37m³/min,270L,428kg etnote9,5bar. La continuité concerne le groupe en régulation, pas une production permanente en phase déchargée.",
+          "readingScope": "Pages ou tableau décrits seulement ; aucune lecture intégrale du document revendiquée.",
+          "shortLabelExcerpts": [
+            "This allows the compressor to work continuously"
+          ],
+          "excerptFormatting": "Retours de ligne et espaces normalisés ; éléments du tableau séparés dans la liste, sans citation continue artificielle."
+        }
+      ]
+    },
+    {
+      "url": "https://cdn.prod.website-files.com/5ef4a20d28c31157474872b0/6a4fceb90145c46f2acc6262_SILAIR%202025.pdf",
+      "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/13d419b49922d42677e2.body",
+      "bodySha256": "d93f1024b6fa89f01eaacc77c199f3d2f5deb296b92dedf6081ab8568854468a",
+      "textFile": "/tmp/compatair-seo-20261024/compressor-reading/13d419b49922d42677e2.txt",
+      "textSha256": "a08ae15c1cf6df46a93553ab2fc025eadaf73c071488f5103b8d05520be20228",
+      "materialObservedAt": "2026-10-24T00:36:51Z",
+      "materialIsCurrentAtRecordedCapture": true,
+      "currentHttpStatusAtRecordedObservation": 200,
+      "newNetworkRequestDuringThisFollowup": false,
+      "passages": [
+        {
+          "pdfPages": [
+            5,
+            25
+          ],
+          "completePassageContextRead": "Légendep5 entière puistablep25 :deux colonnesVolt/Hz,74/88L/min,astérisque5bar,24L,680/800W etvariantesV/AL. Aucun service continu déduit des ventilateurs.",
+          "readingScope": "Pages ou tableau décrits seulement ; aucune lecture intégrale du document revendiquée.",
+          "shortLabelExcerpts": [
+            "Aria resa @ 5 bar / FAD @ 5 bar"
+          ],
+          "excerptFormatting": "Retours de ligne et espaces normalisés ; éléments du tableau séparés dans la liste, sans citation continue artificielle."
+        }
+      ]
+    },
+    {
+      "url": "https://finicompressors.com/wp-content/uploads/Catalogo-Cube-Fini_EN_04-2024_9990397.pdf",
+      "materialFile": "/tmp/compatair-seo-20261024/compressor-sources/0e0e3f3928c5a9c0ad47.body",
+      "bodySha256": "270d2f554801e15883dd85b3f3b6089c641adf51dd59c15f31e0fd06c7b88e1a",
+      "textFile": "/tmp/compatair-seo-20261024/compressor-reading/0e0e3f3928c5a9c0ad47.txt",
+      "textSha256": "1a3d276b7ce3d3c6b512ee0b74c4c0c9b8bb68e1e183a4f3e00e641779a45c9c",
+      "materialObservedAt": "2026-10-24T00:36:52Z",
+      "materialIsCurrentAtRecordedCapture": true,
+      "currentHttpStatusAtRecordedObservation": 200,
+      "newNetworkRequestDuringThisFollowup": false,
+      "passages": [
+        {
+          "pdfPages": [
+            3
+          ],
+          "completePassageContextRead": "Page3 entière :tablecode501 cuvegalvanisée etES, noteFADmesuréà9,5bar pourmodèles10bar, conditions20°C/1baratm etparagrapheCUBEdesignedtoruncontinuously. La formulation qualifie le compresseur de la gamme, pas uniquement son moteur.",
+          "readingScope": "Pages ou tableau décrits seulement ; aucune lecture intégrale du document revendiquée.",
+          "shortLabelExcerpts": [
+            "CUBE compressors are designed to run continuously"
+          ],
+          "excerptFormatting": "Retours de ligne et espaces normalisés ; éléments du tableau séparés dans la liste, sans citation continue artificielle."
+        }
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "id": "sableuse-asturomec-supermistral-50300",
+      "path": "/outils-pneumatiques/sableuse-asturomec-supermistral-50300/",
+      "decision": "already-inconclusive",
+      "decisionReason": "Le modèle variable-volume est déjà bloquant dans le moteur ; préserver ce comportement et les limites documentaires.",
+      "flowRegime": {
+        "classification": "variable-volume",
+        "sourceObservation": "SUPERMISTRAL 50300 : plage de service 5 à 8 bar ; aucun débit de consommation utilisable dans le passage lu.",
+        "declaredValue": null,
+        "declaredUnit": null,
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "service-range-only",
+        "reason": "La plage de service ne constitue pas un couple débit/pression de mesure.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s04",
+          "url": "https://walmec.com/it/cataloghi/catalogo-asturomec/AD_13_24_IT.pdf#page=57",
+          "pdfPageOneBased": 57,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s04-p57.txt",
+          "localTextSha256": "9f043074fce7267f50a292f56c00b28fbd10146b4402e8d654f3e8d1d7846209",
+          "technicalLabelLineNumbers": [
+            27,
+            40
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {},
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "pistolet-peinture-hvlp-prowin-k-528g-24",
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-prowin-k-528g-24/",
+      "decision": "already-inconclusive",
+      "decisionReason": "Le modèle variable-volume est déjà bloquant dans le moteur ; préserver ce comportement et les limites documentaires.",
+      "flowRegime": {
+        "classification": "variable-volume",
+        "sourceObservation": "K-528G-24 : consommation publiée 250 L/min et plage de travail 20 à 28 psi ; régime et point de pression associé non précisés.",
+        "declaredValue": 250,
+        "declaredUnit": "L/min",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "service-range-only",
+        "reason": "La plage 20–28 psi ne donne pas la pression exacte du débit publié.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s08",
+          "url": "https://www.prowin-tools.com/wp-content/uploads/2023/05/Air-Painting-ToolsNew.pdf#page=16",
+          "pdfPageOneBased": 16,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s08-p16.txt",
+          "localTextSha256": "e01f5972256c7d9198fcfcaf8322946e6c0c78011f032fba67f85d34dfa5c7c8",
+          "technicalLabelLineNumbers": [
+            10,
+            18,
+            31,
+            40,
+            55,
+            61
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {},
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "pistolet-peinture-hvlp-binks-trophy-1465-14hv-c1s",
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-binks-trophy-1465-14hv-c1s/",
+      "decision": "already-inconclusive",
+      "decisionReason": "Le modèle variable-volume est déjà bloquant dans le moteur ; préserver ce comportement et les limites documentaires.",
+      "flowRegime": {
+        "classification": "variable-volume",
+        "sourceObservation": "1465-14HV-C1S avec chapeau C1 : consommations en SCFM selon pression à l’entrée ; pression au chapeau distincte. Conditions de référence du volume standard non définies dans les passages lus.",
+        "declaredValue": null,
+        "declaredUnit": null,
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "tabulated-inlet-points-with-undefined-standard-volume",
+        "reason": "Les points d’entrée sont documentés, mais aucune conversion silencieuse des SCFM vers un débit FAD ; modèle déjà inconclusif.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s13",
+          "url": "https://binks.canto.com/direct/document/iu9p1o6ks53mj6m12o5dq7885i/FfNcp6KQ2GpAcwGYCDd-KNWjgbo/original?content-type=application%2Fpdf&name=77-3042_ENGLISH.pdf#page=3",
+          "pdfPageOneBased": 3,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s13-p3.txt",
+          "localTextSha256": "2619a02eaec41b8d4fd41eb00580d257ade9341f8c1726682e192a5542d7b013",
+          "technicalLabelLineNumbers": [],
+          "contextRead": true
+        },
+        {
+          "sourceKey": "s13",
+          "url": "https://binks.canto.com/direct/document/iu9p1o6ks53mj6m12o5dq7885i/FfNcp6KQ2GpAcwGYCDd-KNWjgbo/original?content-type=application%2Fpdf&name=77-3042_ENGLISH.pdf#page=4",
+          "pdfPageOneBased": 4,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s13-p4.txt",
+          "localTextSha256": "2f46866550e6797e669b0a89e00f1caa6dc9b2903d65e5fbc5026f78cef40f17",
+          "technicalLabelLineNumbers": [
+            51,
+            60,
+            61,
+            63,
+            71,
+            75,
+            77,
+            79
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {},
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "cleco-19pca07q",
+      "path": "/outils-pneumatiques/cleco-19pca07q/",
+      "decision": "needs-regime-correction",
+      "decisionReason": "La valeur native ne possède pas la qualification nécessaire à un verdict dimensionnant. Une limite éditoriale ne remplit pas airflowBasis.",
+      "flowRegime": {
+        "classification": "unqualified",
+        "sourceObservation": "19PCA07Q : consommation générale 310 L/min, sans qualification maximum, charge, moyenne ou vide.",
+        "declaredValue": 310,
+        "declaredUnit": "L/min",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "explicit-measurement-pressure",
+        "reason": "La note de la page situe explicitement les données mesurées à 6,2 bar à l’entrée du tube.",
+        "explicitMeasurementPressureClaim": true,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s20",
+          "url": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=69",
+          "pdfPageOneBased": 69,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s20-p69.txt",
+          "localTextSha256": "612f4053f6e166d60c3547eab40690796a030f643d297c07d8866c82e13a0cd7",
+          "technicalLabelLineNumbers": [
+            36
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "airflowBasis": "unqualified",
+          "fieldSources.airflowBasis": [
+            "cleco-19pca07q-20260926"
+          ]
+        },
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "cleco-19raa07ah2",
+      "path": "/outils-pneumatiques/cleco-19raa07ah2/",
+      "decision": "needs-regime-correction",
+      "decisionReason": "La valeur native ne possède pas la qualification nécessaire à un verdict dimensionnant. Une limite éditoriale ne remplit pas airflowBasis.",
+      "flowRegime": {
+        "classification": "unqualified",
+        "sourceObservation": "19RAA07AH2 : 0,31 m³/min dans la colonne consommation, sans régime précisé.",
+        "declaredValue": 0.31,
+        "declaredUnit": "m³/min",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "explicit-measurement-pressure",
+        "reason": "La note de la page situe explicitement les données mesurées à 6,2 bar à l’entrée du tube.",
+        "explicitMeasurementPressureClaim": true,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s20",
+          "url": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=75",
+          "pdfPageOneBased": 75,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s20-p75.txt",
+          "localTextSha256": "ddfd1117e4b15b381038535776e885ae7c957f84b2d248ebdc93a4f1b314c052",
+          "technicalLabelLineNumbers": [
+            3,
+            6,
+            26,
+            37,
+            40,
+            66
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "airflowBasis": "unqualified",
+          "fieldSources.airflowBasis": [
+            "cleco-19raa07ah2-20260926"
+          ]
+        },
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "cleco-20phh753",
+      "path": "/outils-pneumatiques/cleco-20phh753/",
+      "decision": "needs-regime-correction",
+      "decisionReason": "La valeur native ne possède pas la qualification nécessaire à un verdict dimensionnant. Une limite éditoriale ne remplit pas airflowBasis.",
+      "flowRegime": {
+        "classification": "free-speed",
+        "sourceObservation": "20PHH753 : 0,4 m³/min à vide et 0,3 m³/min en charge. La donnée native 400 L/min est celle à vide. Le maximum numérique de ces deux cases n’est pas une déclaration de maximum tous régimes.",
+        "declaredValue": 0.4,
+        "declaredUnit": "m³/min",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "explicit-rated-pressure",
+        "reason": "La note de performance de la table spécifie 6 bar pour ces données.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s20",
+          "url": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=86",
+          "pdfPageOneBased": 86,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s20-p86.txt",
+          "localTextSha256": "bc29fb8a3e2e390e32ef4d8f6e98e9e8aa4f5097edf5803bca0f5dc5690a2dc2",
+          "technicalLabelLineNumbers": [
+            3,
+            22,
+            27,
+            46
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "airflowBasis": "free-speed",
+          "fieldSources.airflowBasis": [
+            "cleco-20phh753-20260926"
+          ]
+        },
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "chicago-pneumatic-cp3349-salavele",
+      "path": "/outils-pneumatiques/meuleuse-chicago-pneumatic-cp3349-salavele/",
+      "decision": "qualified-loaded",
+      "decisionReason": "La consommation en charge et son point nominal de pression sont explicitement rattachés à la table du modèle exact ; airflowBasis peut rester absent selon le contrat actuel.",
+      "flowRegime": {
+        "classification": "loaded",
+        "sourceObservation": "CP3349-SALAVELE 6151609130 : 44 L/s dans la colonne de consommation en charge ; 44 × 60 = 2640 L/min.",
+        "declaredValue": 44,
+        "declaredUnit": "L/s",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": true
+      },
+      "pressureQualification": {
+        "classification": "explicit-rated-pressure",
+        "reason": "La note applicable à tous les modèles de la table donne explicitement les caractéristiques à 90 PSI / 6,3 bar.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s21",
+          "url": "https://tools.cp.com/content/dam/pim/itba/cp/literature/catalogs/General-Industry_catalog_CP_EN.pdf#page=149",
+          "pdfPageOneBased": 149,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s21-p149.txt",
+          "localTextSha256": "06536f5b365ef0c2472a5e6e3a31c7ae43a4a3204dae29207079643b353a91ff",
+          "technicalLabelLineNumbers": [
+            31,
+            33
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {},
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "shinano-si-1166-8a",
+      "path": "/outils-pneumatiques/shinano-si-1166-8a/",
+      "decision": "needs-pressure-qualification",
+      "decisionReason": "Le régime est bien qualifié, mais l’appariement de sa valeur à la pression native n’est pas explicitement établi par les passages lus. Avis conservatoire distinct d’une preuve que la pression réelle serait différente.",
+      "flowRegime": {
+        "classification": "maximum",
+        "sourceObservation": "SI-1166-8A : 9.3 L/s dans la colonne de consommation maximale, distincte de la consommation moyenne. Le maximum est explicitement documenté.",
+        "declaredValue": 9.3,
+        "declaredUnit": "L/s",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": true
+      },
+      "pressureQualification": {
+        "classification": "service-pressure-only",
+        "reason": "La page 43 prescrit une alimentation de 0,63 MPa / 6,3 bar gâchette entièrement actionnée. Ce passage donne une consigne dynamique de service, sans dire explicitement que le maximum de la table produit a été mesuré à cette pression. L’appariement demeure non établi dans les passages lus.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s23",
+          "url": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=8",
+          "pdfPageOneBased": 8,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s23-p8.txt",
+          "localTextSha256": "77be636e5ecd6d457e394cd83b6754fc1e7cb7c34cad0df3ba12bedd0686d009",
+          "technicalLabelLineNumbers": [
+            46,
+            49,
+            114,
+            117,
+            175,
+            178
+          ],
+          "contextRead": true
+        },
+        {
+          "sourceKey": "s23",
+          "url": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+          "pdfPageOneBased": 43,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s23-p43.txt",
+          "localTextSha256": "4f8e4b22263d175a0f431345f7a77b383c6b29543c0fd318ea35eadb3ecd58ec",
+          "technicalLabelLineNumbers": [
+            26,
+            50
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "demandModel": "variable-volume",
+          "workingPressureBar": {
+            "typical": 6.3
+          },
+          "demandExplanation": "Consommation maximale publiée : 558 L/min. Pression de service prescrite : 6.3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu.",
+          "fieldSources.demandExplanation": [
+            "shinano-si-1166-8a-20260926",
+            "shinano-si-1166-8a-20260926-workingpressurebar-1"
+          ],
+          "specifications.append": {
+            "label": "Consommation maximale publiée (pression de mesure non appariée)",
+            "value": "558 L/min",
+            "evidenceIds": [
+              "shinano-si-1166-8a-20260926"
+            ]
+          }
+        },
+        "remove": [
+          "airflowLpm",
+          "airflowBasis",
+          "fieldSources.airflowLpm",
+          "fieldSources.airflowBasis"
+        ],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "shinano-si-1241a",
+      "path": "/outils-pneumatiques/shinano-si-1241a/",
+      "decision": "needs-pressure-qualification",
+      "decisionReason": "Le régime est bien qualifié, mais l’appariement de sa valeur à la pression native n’est pas explicitement établi par les passages lus. Avis conservatoire distinct d’une preuve que la pression réelle serait différente.",
+      "flowRegime": {
+        "classification": "maximum",
+        "sourceObservation": "SI-1241A : 5.4 L/s dans la colonne de consommation maximale, distincte de la consommation moyenne. Le maximum est explicitement documenté.",
+        "declaredValue": 5.4,
+        "declaredUnit": "L/s",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": true
+      },
+      "pressureQualification": {
+        "classification": "service-pressure-only",
+        "reason": "La page 43 prescrit une alimentation de 0,63 MPa / 6,3 bar gâchette entièrement actionnée. Ce passage donne une consigne dynamique de service, sans dire explicitement que le maximum de la table produit a été mesuré à cette pression. L’appariement demeure non établi dans les passages lus.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s23",
+          "url": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=10",
+          "pdfPageOneBased": 10,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s23-p10.txt",
+          "localTextSha256": "4b85bc386577924de6a478bb5bdd021a607bcebb3a2f953c3a0c0471ae3381ec",
+          "technicalLabelLineNumbers": [
+            53,
+            55,
+            117,
+            122,
+            187,
+            193,
+            197
+          ],
+          "contextRead": true
+        },
+        {
+          "sourceKey": "s23",
+          "url": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+          "pdfPageOneBased": 43,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s23-p43.txt",
+          "localTextSha256": "4f8e4b22263d175a0f431345f7a77b383c6b29543c0fd318ea35eadb3ecd58ec",
+          "technicalLabelLineNumbers": [
+            26,
+            50
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "demandModel": "variable-volume",
+          "workingPressureBar": {
+            "typical": 6.3
+          },
+          "demandExplanation": "Consommation maximale publiée : 324 L/min. Pression de service prescrite : 6.3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu.",
+          "fieldSources.demandExplanation": [
+            "shinano-si-1241a-20260926",
+            "shinano-si-1241a-20260926-workingpressurebar-1"
+          ],
+          "specifications.append": {
+            "label": "Consommation maximale publiée (pression de mesure non appariée)",
+            "value": "324 L/min",
+            "evidenceIds": [
+              "shinano-si-1241a-20260926"
+            ]
+          }
+        },
+        "remove": [
+          "airflowLpm",
+          "airflowBasis",
+          "fieldSources.airflowLpm",
+          "fieldSources.airflowBasis"
+        ],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "shinano-si-1420t",
+      "path": "/outils-pneumatiques/shinano-si-1420t/",
+      "decision": "needs-pressure-qualification",
+      "decisionReason": "Le régime est bien qualifié, mais l’appariement de sa valeur à la pression native n’est pas explicitement établi par les passages lus. Avis conservatoire distinct d’une preuve que la pression réelle serait différente.",
+      "flowRegime": {
+        "classification": "maximum",
+        "sourceObservation": "SI-1420T : 11.3 L/s dans la colonne de consommation maximale, distincte de la consommation moyenne. Le maximum est explicitement documenté.",
+        "declaredValue": 11.3,
+        "declaredUnit": "L/s",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": true
+      },
+      "pressureQualification": {
+        "classification": "service-pressure-only",
+        "reason": "La page 43 prescrit une alimentation de 0,63 MPa / 6,3 bar gâchette entièrement actionnée. Ce passage donne une consigne dynamique de service, sans dire explicitement que le maximum de la table produit a été mesuré à cette pression. L’appariement demeure non établi dans les passages lus.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s23",
+          "url": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=4",
+          "pdfPageOneBased": 4,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s23-p4.txt",
+          "localTextSha256": "bdbb2ac5f9bf2529980da2ca8713dbd376a25bc2e84dd874264b904309d43ac0",
+          "technicalLabelLineNumbers": [
+            36,
+            41,
+            97,
+            100,
+            159,
+            169,
+            233,
+            238
+          ],
+          "contextRead": true
+        },
+        {
+          "sourceKey": "s23",
+          "url": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+          "pdfPageOneBased": 43,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s23-p43.txt",
+          "localTextSha256": "4f8e4b22263d175a0f431345f7a77b383c6b29543c0fd318ea35eadb3ecd58ec",
+          "technicalLabelLineNumbers": [
+            26,
+            50
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "demandModel": "variable-volume",
+          "workingPressureBar": {
+            "typical": 6.3
+          },
+          "demandExplanation": "Consommation maximale publiée : 678 L/min. Pression de service prescrite : 6.3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu.",
+          "fieldSources.demandExplanation": [
+            "shinano-si-1420t-20260926",
+            "shinano-si-1420t-20260926-workingpressurebar-1"
+          ],
+          "specifications.append": {
+            "label": "Consommation maximale publiée (pression de mesure non appariée)",
+            "value": "678 L/min",
+            "evidenceIds": [
+              "shinano-si-1420t-20260926"
+            ]
+          }
+        },
+        "remove": [
+          "airflowLpm",
+          "airflowBasis",
+          "fieldSources.airflowLpm",
+          "fieldSources.airflowBasis"
+        ],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "shinano-si-2006s-6",
+      "path": "/outils-pneumatiques/shinano-si-2006s-6/",
+      "decision": "needs-pressure-qualification",
+      "decisionReason": "Le régime est bien qualifié, mais l’appariement de sa valeur à la pression native n’est pas explicitement établi par les passages lus. Avis conservatoire distinct d’une preuve que la pression réelle serait différente.",
+      "flowRegime": {
+        "classification": "maximum",
+        "sourceObservation": "SI-2006S-6 : 6.5 L/s dans la colonne de consommation maximale, distincte de la consommation moyenne. Le maximum est explicitement documenté.",
+        "declaredValue": 6.5,
+        "declaredUnit": "L/s",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": true
+      },
+      "pressureQualification": {
+        "classification": "service-pressure-only",
+        "reason": "La page 43 prescrit une alimentation de 0,63 MPa / 6,3 bar gâchette entièrement actionnée. Ce passage donne une consigne dynamique de service, sans dire explicitement que le maximum de la table produit a été mesuré à cette pression. L’appariement demeure non établi dans les passages lus.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s23",
+          "url": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=20",
+          "pdfPageOneBased": 20,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s23-p20.txt",
+          "localTextSha256": "20502177c6bd26cb4c584365aefb82054472a9ebaf41f16d0eef91e07b0ad51d",
+          "technicalLabelLineNumbers": [
+            50,
+            56,
+            71,
+            74,
+            75,
+            77,
+            112,
+            118,
+            161,
+            168,
+            172,
+            176,
+            197,
+            203,
+            261,
+            264,
+            270,
+            273
+          ],
+          "contextRead": true
+        },
+        {
+          "sourceKey": "s23",
+          "url": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+          "pdfPageOneBased": 43,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s23-p43.txt",
+          "localTextSha256": "4f8e4b22263d175a0f431345f7a77b383c6b29543c0fd318ea35eadb3ecd58ec",
+          "technicalLabelLineNumbers": [
+            26,
+            50
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "demandModel": "variable-volume",
+          "workingPressureBar": {
+            "typical": 6.3
+          },
+          "demandExplanation": "Consommation maximale publiée : 390 L/min. Pression de service prescrite : 6.3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu.",
+          "fieldSources.demandExplanation": [
+            "shinano-si-2006s-6-20260926",
+            "shinano-si-2006s-6-20260926-workingpressurebar-1"
+          ],
+          "specifications.append": {
+            "label": "Consommation maximale publiée (pression de mesure non appariée)",
+            "value": "390 L/min",
+            "evidenceIds": [
+              "shinano-si-2006s-6-20260926"
+            ]
+          }
+        },
+        "remove": [
+          "airflowLpm",
+          "airflowBasis",
+          "fieldSources.airflowLpm",
+          "fieldSources.airflowBasis"
+        ],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "shinano-si-2202",
+      "path": "/outils-pneumatiques/shinano-si-2202/",
+      "decision": "needs-pressure-qualification",
+      "decisionReason": "Le régime est bien qualifié, mais l’appariement de sa valeur à la pression native n’est pas explicitement établi par les passages lus. Avis conservatoire distinct d’une preuve que la pression réelle serait différente.",
+      "flowRegime": {
+        "classification": "maximum",
+        "sourceObservation": "SI-2202 : 7.1 L/s dans la colonne de consommation maximale, distincte de la consommation moyenne. Le maximum est explicitement documenté.",
+        "declaredValue": 7.1,
+        "declaredUnit": "L/s",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": true
+      },
+      "pressureQualification": {
+        "classification": "service-pressure-only",
+        "reason": "La page 43 prescrit une alimentation de 0,63 MPa / 6,3 bar gâchette entièrement actionnée. Ce passage donne une consigne dynamique de service, sans dire explicitement que le maximum de la table produit a été mesuré à cette pression. L’appariement demeure non établi dans les passages lus.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s23",
+          "url": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=15",
+          "pdfPageOneBased": 15,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s23-p15.txt",
+          "localTextSha256": "e04e2169b42f0a00ecf85feefb733193004ada9e61ff952b5f7a029a9da80f02",
+          "technicalLabelLineNumbers": [
+            38,
+            42,
+            100,
+            107,
+            121,
+            130,
+            167,
+            170,
+            227,
+            233,
+            235,
+            237,
+            242,
+            248
+          ],
+          "contextRead": true
+        },
+        {
+          "sourceKey": "s23",
+          "url": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+          "pdfPageOneBased": 43,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s23-p43.txt",
+          "localTextSha256": "4f8e4b22263d175a0f431345f7a77b383c6b29543c0fd318ea35eadb3ecd58ec",
+          "technicalLabelLineNumbers": [
+            26,
+            50
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "demandModel": "variable-volume",
+          "workingPressureBar": {
+            "typical": 6.3
+          },
+          "demandExplanation": "Consommation maximale publiée : 426 L/min. Pression de service prescrite : 6.3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu.",
+          "fieldSources.demandExplanation": [
+            "shinano-si-2202-20260926",
+            "shinano-si-2202-20260926-workingpressurebar-1"
+          ],
+          "specifications.append": {
+            "label": "Consommation maximale publiée (pression de mesure non appariée)",
+            "value": "426 L/min",
+            "evidenceIds": [
+              "shinano-si-2202-20260926"
+            ]
+          }
+        },
+        "remove": [
+          "airflowLpm",
+          "airflowBasis",
+          "fieldSources.airflowLpm",
+          "fieldSources.airflowBasis"
+        ],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "shinano-si-2415",
+      "path": "/outils-pneumatiques/shinano-si-2415/",
+      "decision": "needs-pressure-qualification",
+      "decisionReason": "Le régime est bien qualifié, mais l’appariement de sa valeur à la pression native n’est pas explicitement établi par les passages lus. Avis conservatoire distinct d’une preuve que la pression réelle serait différente.",
+      "flowRegime": {
+        "classification": "maximum",
+        "sourceObservation": "SI-2415 : 9.6 L/s dans la colonne de consommation maximale, distincte de la consommation moyenne. Le maximum est explicitement documenté.",
+        "declaredValue": 9.6,
+        "declaredUnit": "L/s",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": true
+      },
+      "pressureQualification": {
+        "classification": "service-pressure-only",
+        "reason": "La page 43 prescrit une alimentation de 0,63 MPa / 6,3 bar gâchette entièrement actionnée. Ce passage donne une consigne dynamique de service, sans dire explicitement que le maximum de la table produit a été mesuré à cette pression. L’appariement demeure non établi dans les passages lus.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s23",
+          "url": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=18",
+          "pdfPageOneBased": 18,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s23-p18.txt",
+          "localTextSha256": "12f3c09a09d22b227d292babeed14c90ce198df0fb4072f1d91becd42f28083f",
+          "technicalLabelLineNumbers": [
+            33,
+            39,
+            67,
+            70,
+            106,
+            111,
+            165,
+            169,
+            185,
+            191,
+            247,
+            249
+          ],
+          "contextRead": true
+        },
+        {
+          "sourceKey": "s23",
+          "url": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+          "pdfPageOneBased": 43,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s23-p43.txt",
+          "localTextSha256": "4f8e4b22263d175a0f431345f7a77b383c6b29543c0fd318ea35eadb3ecd58ec",
+          "technicalLabelLineNumbers": [
+            26,
+            50
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "demandModel": "variable-volume",
+          "workingPressureBar": {
+            "typical": 6.3
+          },
+          "demandExplanation": "Consommation maximale publiée : 576 L/min. Pression de service prescrite : 6.3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu.",
+          "fieldSources.demandExplanation": [
+            "shinano-si-2415-20260926",
+            "shinano-si-2415-20260926-workingpressurebar-1"
+          ],
+          "specifications.append": {
+            "label": "Consommation maximale publiée (pression de mesure non appariée)",
+            "value": "576 L/min",
+            "evidenceIds": [
+              "shinano-si-2415-20260926"
+            ]
+          }
+        },
+        "remove": [
+          "airflowLpm",
+          "airflowBasis",
+          "fieldSources.airflowLpm",
+          "fieldSources.airflowBasis"
+        ],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "shinano-si-2830",
+      "path": "/outils-pneumatiques/shinano-si-2830/",
+      "decision": "needs-pressure-qualification",
+      "decisionReason": "Le régime est bien qualifié, mais l’appariement de sa valeur à la pression native n’est pas explicitement établi par les passages lus. Avis conservatoire distinct d’une preuve que la pression réelle serait différente.",
+      "flowRegime": {
+        "classification": "maximum",
+        "sourceObservation": "SI-2830 : 15 L/s dans la colonne de consommation maximale, distincte de la consommation moyenne. Le maximum est explicitement documenté.",
+        "declaredValue": 15,
+        "declaredUnit": "L/s",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": true
+      },
+      "pressureQualification": {
+        "classification": "service-pressure-only",
+        "reason": "La page 43 prescrit une alimentation de 0,63 MPa / 6,3 bar gâchette entièrement actionnée. Ce passage donne une consigne dynamique de service, sans dire explicitement que le maximum de la table produit a été mesuré à cette pression. L’appariement demeure non établi dans les passages lus.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s23",
+          "url": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=11",
+          "pdfPageOneBased": 11,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s23-p11.txt",
+          "localTextSha256": "12cd98503d41997b483156816feeaef0e00b006e32a5c52c2bdf578ff14d2270",
+          "technicalLabelLineNumbers": [
+            45,
+            49,
+            58,
+            62,
+            110,
+            113,
+            117,
+            123,
+            169,
+            179,
+            187,
+            190,
+            239,
+            246,
+            253,
+            260
+          ],
+          "contextRead": true
+        },
+        {
+          "sourceKey": "s23",
+          "url": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+          "pdfPageOneBased": 43,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s23-p43.txt",
+          "localTextSha256": "4f8e4b22263d175a0f431345f7a77b383c6b29543c0fd318ea35eadb3ecd58ec",
+          "technicalLabelLineNumbers": [
+            26,
+            50
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "demandModel": "variable-volume",
+          "workingPressureBar": {
+            "typical": 6.3
+          },
+          "demandExplanation": "Consommation maximale publiée : 900 L/min. Pression de service prescrite : 6.3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu.",
+          "fieldSources.demandExplanation": [
+            "shinano-si-2830-20260926",
+            "shinano-si-2830-20260926-workingpressurebar-1"
+          ],
+          "specifications.append": {
+            "label": "Consommation maximale publiée (pression de mesure non appariée)",
+            "value": "900 L/min",
+            "evidenceIds": [
+              "shinano-si-2830-20260926"
+            ]
+          }
+        },
+        "remove": [
+          "airflowLpm",
+          "airflowBasis",
+          "fieldSources.airflowLpm",
+          "fieldSources.airflowBasis"
+        ],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "shinano-si-3005",
+      "path": "/outils-pneumatiques/shinano-si-3005/",
+      "decision": "needs-pressure-qualification",
+      "decisionReason": "Le régime est bien qualifié, mais l’appariement de sa valeur à la pression native n’est pas explicitement établi par les passages lus. Avis conservatoire distinct d’une preuve que la pression réelle serait différente.",
+      "flowRegime": {
+        "classification": "maximum",
+        "sourceObservation": "SI-3005 : 6.5 L/s dans la colonne de consommation maximale, distincte de la consommation moyenne. Le maximum est explicitement documenté.",
+        "declaredValue": 6.5,
+        "declaredUnit": "L/s",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": true
+      },
+      "pressureQualification": {
+        "classification": "service-pressure-only",
+        "reason": "La page 43 prescrit une alimentation de 0,63 MPa / 6,3 bar gâchette entièrement actionnée. Ce passage donne une consigne dynamique de service, sans dire explicitement que le maximum de la table produit a été mesuré à cette pression. L’appariement demeure non établi dans les passages lus.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s23",
+          "url": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=13",
+          "pdfPageOneBased": 13,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s23-p13.txt",
+          "localTextSha256": "1e76860873f976f0e6a6068cc3a93d65cb26da4dceb7e08db093f632c0791e4f",
+          "technicalLabelLineNumbers": [
+            32,
+            38,
+            41,
+            92,
+            96,
+            97,
+            100,
+            153,
+            159,
+            161,
+            164,
+            223,
+            224,
+            225,
+            226,
+            230
+          ],
+          "contextRead": true
+        },
+        {
+          "sourceKey": "s23",
+          "url": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+          "pdfPageOneBased": 43,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s23-p43.txt",
+          "localTextSha256": "4f8e4b22263d175a0f431345f7a77b383c6b29543c0fd318ea35eadb3ecd58ec",
+          "technicalLabelLineNumbers": [
+            26,
+            50
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "demandModel": "variable-volume",
+          "workingPressureBar": {
+            "typical": 6.3
+          },
+          "demandExplanation": "Consommation maximale publiée : 390 L/min. Pression de service prescrite : 6.3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu.",
+          "fieldSources.demandExplanation": [
+            "shinano-si-3005-20260926",
+            "shinano-si-3005-20260926-workingpressurebar-1"
+          ],
+          "specifications.append": {
+            "label": "Consommation maximale publiée (pression de mesure non appariée)",
+            "value": "390 L/min",
+            "evidenceIds": [
+              "shinano-si-3005-20260926"
+            ]
+          }
+        },
+        "remove": [
+          "airflowLpm",
+          "airflowBasis",
+          "fieldSources.airflowLpm",
+          "fieldSources.airflowBasis"
+        ],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "shinano-si-3101-6",
+      "path": "/outils-pneumatiques/shinano-si-3101-6/",
+      "decision": "needs-pressure-qualification",
+      "decisionReason": "Le régime est bien qualifié, mais l’appariement de sa valeur à la pression native n’est pas explicitement établi par les passages lus. Avis conservatoire distinct d’une preuve que la pression réelle serait différente.",
+      "flowRegime": {
+        "classification": "maximum",
+        "sourceObservation": "SI-3101-6 : 6.2 L/s dans la colonne de consommation maximale, distincte de la consommation moyenne. Le maximum est explicitement documenté.",
+        "declaredValue": 6.2,
+        "declaredUnit": "L/s",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": true
+      },
+      "pressureQualification": {
+        "classification": "service-pressure-only",
+        "reason": "La page 43 prescrit une alimentation de 0,63 MPa / 6,3 bar gâchette entièrement actionnée. Ce passage donne une consigne dynamique de service, sans dire explicitement que le maximum de la table produit a été mesuré à cette pression. L’appariement demeure non établi dans les passages lus.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s23",
+          "url": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=12",
+          "pdfPageOneBased": 12,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s23-p12.txt",
+          "localTextSha256": "968d67e8058d432dad569b723ae1549591c5490c5573f40153cfc575d5786b23",
+          "technicalLabelLineNumbers": [
+            66,
+            69,
+            125,
+            129,
+            134,
+            191,
+            194,
+            260,
+            267
+          ],
+          "contextRead": true
+        },
+        {
+          "sourceKey": "s23",
+          "url": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+          "pdfPageOneBased": 43,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s23-p43.txt",
+          "localTextSha256": "4f8e4b22263d175a0f431345f7a77b383c6b29543c0fd318ea35eadb3ecd58ec",
+          "technicalLabelLineNumbers": [
+            26,
+            50
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "demandModel": "variable-volume",
+          "workingPressureBar": {
+            "typical": 6.3
+          },
+          "demandExplanation": "Consommation maximale publiée : 372 L/min. Pression de service prescrite : 6.3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu.",
+          "fieldSources.demandExplanation": [
+            "shinano-si-3101-6-20260926",
+            "shinano-si-3101-6-20260926-workingpressurebar-1"
+          ],
+          "specifications.append": {
+            "label": "Consommation maximale publiée (pression de mesure non appariée)",
+            "value": "372 L/min",
+            "evidenceIds": [
+              "shinano-si-3101-6-20260926"
+            ]
+          }
+        },
+        "remove": [
+          "airflowLpm",
+          "airflowBasis",
+          "fieldSources.airflowLpm",
+          "fieldSources.airflowBasis"
+        ],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "shinano-si-5355",
+      "path": "/outils-pneumatiques/shinano-si-5355/",
+      "decision": "needs-pressure-qualification",
+      "decisionReason": "Le régime est bien qualifié, mais l’appariement de sa valeur à la pression native n’est pas explicitement établi par les passages lus. Avis conservatoire distinct d’une preuve que la pression réelle serait différente.",
+      "flowRegime": {
+        "classification": "maximum",
+        "sourceObservation": "SI-5355 : 8.5 L/s dans la colonne de consommation maximale, distincte de la consommation moyenne. Le maximum est explicitement documenté.",
+        "declaredValue": 8.5,
+        "declaredUnit": "L/s",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": true
+      },
+      "pressureQualification": {
+        "classification": "service-pressure-only",
+        "reason": "La page 43 prescrit une alimentation de 0,63 MPa / 6,3 bar gâchette entièrement actionnée. Ce passage donne une consigne dynamique de service, sans dire explicitement que le maximum de la table produit a été mesuré à cette pression. L’appariement demeure non établi dans les passages lus.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s23",
+          "url": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=23",
+          "pdfPageOneBased": 23,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s23-p23.txt",
+          "localTextSha256": "f5fc8b4236d884c4f8eff69b32eeeb9f86364e3f32bd1c9ee718d1073cdc0701",
+          "technicalLabelLineNumbers": [
+            49,
+            55,
+            64,
+            67,
+            71,
+            166,
+            175,
+            256,
+            262,
+            264,
+            270
+          ],
+          "contextRead": true
+        },
+        {
+          "sourceKey": "s23",
+          "url": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+          "pdfPageOneBased": 43,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s23-p43.txt",
+          "localTextSha256": "4f8e4b22263d175a0f431345f7a77b383c6b29543c0fd318ea35eadb3ecd58ec",
+          "technicalLabelLineNumbers": [
+            26,
+            50
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "demandModel": "variable-volume",
+          "workingPressureBar": {
+            "typical": 6.3
+          },
+          "demandExplanation": "Consommation maximale publiée : 510 L/min. Pression de service prescrite : 6.3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu.",
+          "fieldSources.demandExplanation": [
+            "shinano-si-5355-20260926",
+            "shinano-si-5355-20260926-workingpressurebar-1"
+          ],
+          "specifications.append": {
+            "label": "Consommation maximale publiée (pression de mesure non appariée)",
+            "value": "510 L/min",
+            "evidenceIds": [
+              "shinano-si-5355-20260926"
+            ]
+          }
+        },
+        "remove": [
+          "airflowLpm",
+          "airflowBasis",
+          "fieldSources.airflowLpm",
+          "fieldSources.airflowBasis"
+        ],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "biax-gaa-505",
+      "path": "/outils-pneumatiques/biax-gaa-505/",
+      "decision": "needs-regime-correction",
+      "decisionReason": "La valeur native ne possède pas la qualification nécessaire à un verdict dimensionnant. Une limite éditoriale ne remplit pas airflowBasis.",
+      "flowRegime": {
+        "classification": "unqualified",
+        "sourceObservation": "GAA 505 : 300 L/min sous la rubrique consommation, sans régime défini.",
+        "declaredValue": 300,
+        "declaredUnit": "L/min",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "service-pressure-only",
+        "reason": "La prescription BIAX est d’utiliser l’outil à 6 bar avec lubrification ; elle ne déclare pas la pression de mesure des 300 L/min.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s27",
+          "url": "https://biax.de/wp-content/uploads/2025/02/BIAX_Schrauber_DE.pdf#page=14",
+          "pdfPageOneBased": 14,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s27-p14.txt",
+          "localTextSha256": "bc5e93a19b4984688e87c75204a6c6ca29a828f38c8d5b808f075e068e11d43d",
+          "technicalLabelLineNumbers": [
+            2,
+            28
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "airflowBasis": "unqualified",
+          "fieldSources.airflowBasis": [
+            "biax-150619445-20260926"
+          ]
+        },
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "biax-sbrd-8-12-2",
+      "path": "/outils-pneumatiques/biax-sbrd-8-12-2/",
+      "decision": "needs-regime-correction",
+      "decisionReason": "La valeur native ne possède pas la qualification nécessaire à un verdict dimensionnant. Une limite éditoriale ne remplit pas airflowBasis.",
+      "flowRegime": {
+        "classification": "unqualified",
+        "sourceObservation": "SBRD 8-12/2 : fiche exacte 400 L/min, sans régime. Le catalogue décrit un régulateur et environ 120 L/min au ralenti ; cela ne qualifie pas explicitement 400 L/min comme maximum ou débit en charge.",
+        "declaredValue": 400,
+        "declaredUnit": "L/min",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "service-pressure-only",
+        "reason": "La page 24 prescrit une utilisation lubrifiée à 6 bar ; elle ne relie pas explicitement la mesure de 400 L/min à ce point.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s28",
+          "url": "https://biax.de/en/product/sbrd-8-12-2-12-000-1-min-zweihandschl/",
+          "pdfPageOneBased": null,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s28.txt",
+          "localTextSha256": "c79ed76c69b107bcd7ab4b0642d8ebf9b7fd25af081231f76ed684d5f7d33b51",
+          "technicalLabelLineNumbers": [
+            99
+          ],
+          "contextRead": true
+        },
+        {
+          "sourceKey": "s25",
+          "url": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=24",
+          "pdfPageOneBased": 24,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s25-p24.txt",
+          "localTextSha256": "6db4df2b7a199b8263745929b24b5dbab12c490504e56ef2d15236f61f9443e6",
+          "technicalLabelLineNumbers": [
+            31,
+            64,
+            71,
+            82
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "airflowBasis": "unqualified",
+          "fieldSources.airflowBasis": [
+            "biax-150020750-20260926"
+          ]
+        },
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "deprag-344-140-31u",
+      "path": "/outils-pneumatiques/deprag-344-140-31u/",
+      "decision": "needs-regime-correction",
+      "decisionReason": "La valeur native ne possède pas la qualification nécessaire à un verdict dimensionnant. Une limite éditoriale ne remplit pas airflowBasis.",
+      "flowRegime": {
+        "classification": "unqualified",
+        "sourceObservation": "344-140-31U 202270C : 1,1 m³/min (38,8 cfm) dans la ligne consommation ; régime non défini.",
+        "declaredValue": 1.1,
+        "declaredUnit": "m³/min",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "explicit-rated-pressure",
+        "reason": "La note rattache explicitement les données de performance de la table à 6,3 bar.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s30",
+          "url": "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3130/D3130en.pdf#page=12",
+          "pdfPageOneBased": 12,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s30-p12.txt",
+          "localTextSha256": "dbb46ab99048cca52015c123566d941535a7eb1d7f6f98ff3e2d8aae5ef36e56",
+          "technicalLabelLineNumbers": [
+            10,
+            12,
+            13,
+            26,
+            28,
+            29,
+            42,
+            44,
+            45,
+            58,
+            60,
+            61,
+            69
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "airflowBasis": "unqualified",
+          "fieldSources.airflowBasis": [
+            "deprag-202270c-20260926"
+          ]
+        },
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "fiam-15c2a30",
+      "path": "/outils-pneumatiques/fiam-15c2a30/",
+      "decision": "needs-regime-correction",
+      "decisionReason": "La valeur native ne possède pas la qualification nécessaire à un verdict dimensionnant. Une limite éditoriale ne remplit pas airflowBasis.",
+      "flowRegime": {
+        "classification": "unqualified",
+        "sourceObservation": "15C2A30 : 4 L/s dans la consommation publiée ; ni maximum, ni charge, ni moyenne, ni vide explicités dans les passages lus.",
+        "declaredValue": 4,
+        "declaredUnit": "L/s",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "explicit-measurement-pressure",
+        "reason": "La brochure précise que les chiffres présentés sont mesurés à 6,3 bar (ISO 2787). La même pression est recommandée en service, mais la qualification de mesure est bien explicite. Cette note de pression ne qualifie pas à elle seule le régime du débit.",
+        "explicitMeasurementPressureClaim": true,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s31",
+          "url": "https://www.fiamgroup.com/en/products/handheld-air-screwdrivers/15c2a30/",
+          "pdfPageOneBased": null,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s31.txt",
+          "localTextSha256": "2511fb24faa5367dd14105c2f6e0c3779906c20537d1a557a456cb8ab1b783ce",
+          "technicalLabelLineNumbers": [
+            144
+          ],
+          "contextRead": true
+        },
+        {
+          "sourceKey": "s32",
+          "url": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-26.pdf#page=8",
+          "pdfPageOneBased": 8,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s32-p8.txt",
+          "localTextSha256": "6cc9b3f5788f13140b56f7fadb357e7d3101e79eb30ceb5d7bde32c842d77bc8",
+          "technicalLabelLineNumbers": [
+            58,
+            59,
+            60,
+            62,
+            66
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "airflowBasis": "unqualified",
+          "fieldSources.airflowBasis": [
+            "fiam-112533942-20260926"
+          ]
+        },
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "fiam-fde33pa",
+      "path": "/outils-pneumatiques/fiam-fde33pa/",
+      "decision": "needs-regime-correction",
+      "decisionReason": "La valeur native ne possède pas la qualification nécessaire à un verdict dimensionnant. Une limite éditoriale ne remplit pas airflowBasis.",
+      "flowRegime": {
+        "classification": "unqualified",
+        "sourceObservation": "FDE33PA : 10 L/s dans la consommation publiée ; ni maximum, ni charge, ni moyenne, ni vide explicités dans les passages lus.",
+        "declaredValue": 10,
+        "declaredUnit": "L/s",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "explicit-measurement-pressure",
+        "reason": "La brochure précise que les chiffres présentés sont mesurés à 6,3 bar (ISO 2787). La même pression est recommandée en service, mais la qualification de mesure est bien explicite. Cette note de pression ne qualifie pas à elle seule le régime du débit.",
+        "explicitMeasurementPressureClaim": true,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s34",
+          "url": "https://www.fiamgroup.com/en/products/air-drills/fde33pa/",
+          "pdfPageOneBased": null,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s34.txt",
+          "localTextSha256": "03107a95ebf8c9302e96ee4df432d0d1c9dbd44c647f3fd94aab4c7a6d9b9481",
+          "technicalLabelLineNumbers": [
+            136
+          ],
+          "contextRead": true
+        },
+        {
+          "sourceKey": "s35",
+          "url": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf#page=13",
+          "pdfPageOneBased": 13,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s35-p13.txt",
+          "localTextSha256": "ef0e53a84fb1d161ea12c3c2011529ed5b823c9e00cfeceac79976306080d612",
+          "technicalLabelLineNumbers": [
+            246,
+            247,
+            251
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "airflowBasis": "unqualified",
+          "fieldSources.airflowBasis": [
+            "fiam-124611552-20260926"
+          ]
+        },
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "fiam-les30sp",
+      "path": "/outils-pneumatiques/fiam-les30sp/",
+      "decision": "needs-regime-correction",
+      "decisionReason": "La valeur native ne possède pas la qualification nécessaire à un verdict dimensionnant. Une limite éditoriale ne remplit pas airflowBasis.",
+      "flowRegime": {
+        "classification": "unqualified",
+        "sourceObservation": "LES30SP : 9 L/s dans la consommation publiée ; ni maximum, ni charge, ni moyenne, ni vide explicités dans les passages lus.",
+        "declaredValue": 9,
+        "declaredUnit": "L/s",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "explicit-measurement-pressure",
+        "reason": "La brochure précise que les chiffres présentés sont mesurés à 6,3 bar (ISO 2787). La même pression est recommandée en service, mais la qualification de mesure est bien explicite. Cette note de pression ne qualifie pas à elle seule le régime du débit.",
+        "explicitMeasurementPressureClaim": true,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s40",
+          "url": "https://www.fiamgroup.com/en/products/grinders-and-sanders/les30sp/",
+          "pdfPageOneBased": null,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s40.txt",
+          "localTextSha256": "1aed2d99642de1f4581cc939943f40daafb9ccea2bc0aaa9f09f4acbeb1cea4c",
+          "technicalLabelLineNumbers": [
+            142
+          ],
+          "contextRead": true
+        },
+        {
+          "sourceKey": "s41",
+          "url": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-44.pdf#page=13",
+          "pdfPageOneBased": 13,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s41-p13.txt",
+          "localTextSha256": "4ec0f8ac51cd432fc19bbd570f92bd24c7042c6327c2147518499ffa161a177c",
+          "technicalLabelLineNumbers": [
+            39,
+            40
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "airflowBasis": "unqualified",
+          "fieldSources.airflowBasis": [
+            "fiam-144631101-20260926"
+          ]
+        },
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "fiam-sms100a",
+      "path": "/outils-pneumatiques/fiam-sms100a/",
+      "decision": "needs-regime-correction",
+      "decisionReason": "La valeur native ne possède pas la qualification nécessaire à un verdict dimensionnant. Une limite éditoriale ne remplit pas airflowBasis.",
+      "flowRegime": {
+        "classification": "unqualified",
+        "sourceObservation": "SMS100A : 9 L/s dans la consommation publiée ; ni maximum, ni charge, ni moyenne, ni vide explicités dans les passages lus.",
+        "declaredValue": 9,
+        "declaredUnit": "L/s",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "explicit-measurement-pressure",
+        "reason": "La brochure précise que les chiffres présentés sont mesurés à 6,3 bar (ISO 2787). La même pression est recommandée en service, mais la qualification de mesure est bien explicite. Cette note de pression ne qualifie pas à elle seule le régime du débit.",
+        "explicitMeasurementPressureClaim": true,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s43",
+          "url": "https://www.fiamgroup.com/en/products/grinders-and-sanders/sms100a/",
+          "pdfPageOneBased": null,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s43.txt",
+          "localTextSha256": "b0fbd6d787e3fe20aaae00074824d1a3400c5e12fac2bbc7116b52e9266292f8",
+          "technicalLabelLineNumbers": [
+            147
+          ],
+          "contextRead": true
+        },
+        {
+          "sourceKey": "s41",
+          "url": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-44.pdf#page=9",
+          "pdfPageOneBased": 9,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s41-p9.txt",
+          "localTextSha256": "0e460a92d54addaba875c8da4b9ab66eef2e716ba5cd28eade96e60a72d3d380",
+          "technicalLabelLineNumbers": [
+            44,
+            45
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "airflowBasis": "unqualified",
+          "fieldSources.airflowBasis": [
+            "fiam-144691001-20260926"
+          ]
+        },
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "nitto-kohki-aps-150",
+      "path": "/outils-pneumatiques/nitto-kohki-aps-150/",
+      "decision": "needs-regime-correction",
+      "decisionReason": "La valeur native ne possède pas la qualification nécessaire à un verdict dimensionnant. Une limite éditoriale ne remplit pas airflowBasis.",
+      "flowRegime": {
+        "classification": "free-speed",
+        "sourceObservation": "APS-150 : 0.45 m³/min dans la ligne expressément à vide. La conversion en L/min conserve ce régime ; elle n’en fait pas un maximum en charge.",
+        "declaredValue": 0.45,
+        "declaredUnit": "m³/min",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "same-table-rated-pressure",
+        "reason": "Le même tableau associe au modèle une pression nominale de 0,6 MPa, soit 6 bar. Il s’agit d’un point nominal de spécification apparié, sans protocole métrologique supplémentaire établi ; ne pas convertir la parenthèse kgf/cm² à la place de la valeur MPa.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s55",
+          "url": "https://www.nitto-kohki.eu/images/stories/products/pdf_catalogs/Tools_Catalog.pdf#page=44",
+          "pdfPageOneBased": 44,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s55-p44.txt",
+          "localTextSha256": "7985b7be4f6c92c538d71265b028811a160b1ef650847227ae4cf24d2b10def8",
+          "technicalLabelLineNumbers": [
+            14,
+            15,
+            52,
+            53
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "airflowBasis": "free-speed",
+          "fieldSources.airflowBasis": [
+            "nitto-kohki-aps-150-20260926"
+          ]
+        },
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "nitto-kohki-b-20d-a",
+      "path": "/outils-pneumatiques/nitto-kohki-b-20d-a/",
+      "decision": "needs-regime-correction",
+      "decisionReason": "La valeur native ne possède pas la qualification nécessaire à un verdict dimensionnant. Une limite éditoriale ne remplit pas airflowBasis.",
+      "flowRegime": {
+        "classification": "free-speed",
+        "sourceObservation": "B-20D-A : 0.52 m³/min dans la ligne expressément à vide. La conversion en L/min conserve ce régime ; elle n’en fait pas un maximum en charge.",
+        "declaredValue": 0.52,
+        "declaredUnit": "m³/min",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "same-table-rated-pressure",
+        "reason": "Le même tableau associe au modèle une pression nominale de 0,6 MPa, soit 6 bar. Il s’agit d’un point nominal de spécification apparié, sans protocole métrologique supplémentaire établi ; ne pas convertir la parenthèse kgf/cm² à la place de la valeur MPa.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s55",
+          "url": "https://www.nitto-kohki.eu/images/stories/products/pdf_catalogs/Tools_Catalog.pdf#page=38",
+          "pdfPageOneBased": 38,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s55-p38.txt",
+          "localTextSha256": "2c781075fb28cc47bd7dcf78b74ff1fd9529755d267196c0b0455716fd272521",
+          "technicalLabelLineNumbers": [
+            35,
+            36
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "airflowBasis": "free-speed",
+          "fieldSources.airflowBasis": [
+            "nitto-kohki-b-20d-a-20260926"
+          ]
+        },
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "nitto-kohki-ch-24",
+      "path": "/outils-pneumatiques/nitto-kohki-ch-24/",
+      "decision": "needs-regime-correction",
+      "decisionReason": "La valeur native ne possède pas la qualification nécessaire à un verdict dimensionnant. Une limite éditoriale ne remplit pas airflowBasis.",
+      "flowRegime": {
+        "classification": "free-speed",
+        "sourceObservation": "CH-24 : 0.2 m³/min dans la ligne expressément à vide. La conversion en L/min conserve ce régime ; elle n’en fait pas un maximum en charge.",
+        "declaredValue": 0.2,
+        "declaredUnit": "m³/min",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "same-table-rated-pressure",
+        "reason": "Le même tableau associe au modèle une pression nominale de 0,6 MPa, soit 6 bar. Il s’agit d’un point nominal de spécification apparié, sans protocole métrologique supplémentaire établi ; ne pas convertir la parenthèse kgf/cm² à la place de la valeur MPa.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s55",
+          "url": "https://www.nitto-kohki.eu/images/stories/products/pdf_catalogs/Tools_Catalog.pdf#page=31",
+          "pdfPageOneBased": 31,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s55-p31.txt",
+          "localTextSha256": "6e976f42773e5d34ca132056cb53a99b724c3fd94d04738ba00f5e7a00e6965d",
+          "technicalLabelLineNumbers": [
+            21,
+            22
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "airflowBasis": "free-speed",
+          "fieldSources.airflowBasis": [
+            "nitto-kohki-ch-24-20260926"
+          ]
+        },
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "nitto-kohki-jex-20",
+      "path": "/outils-pneumatiques/nitto-kohki-jex-20/",
+      "decision": "needs-regime-correction",
+      "decisionReason": "La valeur native ne possède pas la qualification nécessaire à un verdict dimensionnant. Une limite éditoriale ne remplit pas airflowBasis.",
+      "flowRegime": {
+        "classification": "free-speed",
+        "sourceObservation": "JEX-20 : 0.2 m³/min dans la ligne expressément à vide. La conversion en L/min conserve ce régime ; elle n’en fait pas un maximum en charge.",
+        "declaredValue": 0.2,
+        "declaredUnit": "m³/min",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "same-table-rated-pressure",
+        "reason": "Le même tableau associe au modèle une pression nominale de 0,6 MPa, soit 6 bar. Il s’agit d’un point nominal de spécification apparié, sans protocole métrologique supplémentaire établi ; ne pas convertir la parenthèse kgf/cm² à la place de la valeur MPa.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s55",
+          "url": "https://www.nitto-kohki.eu/images/stories/products/pdf_catalogs/Tools_Catalog.pdf#page=34",
+          "pdfPageOneBased": 34,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s55-p34.txt",
+          "localTextSha256": "6d73d201bba822df9b05395f2ccb9b05a70ba913551edbc5a3f39756dff135a8",
+          "technicalLabelLineNumbers": [
+            30,
+            31,
+            63,
+            64
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "airflowBasis": "free-speed",
+          "fieldSources.airflowBasis": [
+            "nitto-kohki-jex-20-20260926"
+          ]
+        },
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "nitto-kohki-l-25b",
+      "path": "/outils-pneumatiques/nitto-kohki-l-25b/",
+      "decision": "needs-regime-correction",
+      "decisionReason": "La valeur native ne possède pas la qualification nécessaire à un verdict dimensionnant. Une limite éditoriale ne remplit pas airflowBasis.",
+      "flowRegime": {
+        "classification": "free-speed",
+        "sourceObservation": "L-25B : 0.4 m³/min dans la ligne expressément à vide. La conversion en L/min conserve ce régime ; elle n’en fait pas un maximum en charge.",
+        "declaredValue": 0.4,
+        "declaredUnit": "m³/min",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "same-table-rated-pressure",
+        "reason": "Le même tableau associe au modèle une pression nominale de 0,6 MPa, soit 6 bar. Il s’agit d’un point nominal de spécification apparié, sans protocole métrologique supplémentaire établi ; ne pas convertir la parenthèse kgf/cm² à la place de la valeur MPa.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s55",
+          "url": "https://www.nitto-kohki.eu/images/stories/products/pdf_catalogs/Tools_Catalog.pdf#page=45",
+          "pdfPageOneBased": 45,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s55-p45.txt",
+          "localTextSha256": "bfd2509242310fa9c3761e53a13d52cf30900c1226695fade3c728b97a04b35c",
+          "technicalLabelLineNumbers": [
+            25,
+            26,
+            66,
+            67
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "airflowBasis": "free-speed",
+          "fieldSources.airflowBasis": [
+            "nitto-kohki-l-25b-20260926"
+          ]
+        },
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "nitto-kohki-mys-40",
+      "path": "/outils-pneumatiques/nitto-kohki-mys-40/",
+      "decision": "needs-regime-correction",
+      "decisionReason": "La valeur native ne possède pas la qualification nécessaire à un verdict dimensionnant. Une limite éditoriale ne remplit pas airflowBasis.",
+      "flowRegime": {
+        "classification": "free-speed",
+        "sourceObservation": "MYS-40 : 0.45 m³/min dans la ligne expressément à vide. La conversion en L/min conserve ce régime ; elle n’en fait pas un maximum en charge.",
+        "declaredValue": 0.45,
+        "declaredUnit": "m³/min",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "same-table-rated-pressure",
+        "reason": "Le même tableau associe au modèle une pression nominale de 0,6 MPa, soit 6 bar. Il s’agit d’un point nominal de spécification apparié, sans protocole métrologique supplémentaire établi ; ne pas convertir la parenthèse kgf/cm² à la place de la valeur MPa.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s55",
+          "url": "https://www.nitto-kohki.eu/images/stories/products/pdf_catalogs/Tools_Catalog.pdf#page=37",
+          "pdfPageOneBased": 37,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s55-p37.txt",
+          "localTextSha256": "f6885aebc2fe2e930e96f8008e68884aebf9217b378968cbd710911c37564bd3",
+          "technicalLabelLineNumbers": [
+            27,
+            28
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "airflowBasis": "free-speed",
+          "fieldSources.airflowBasis": [
+            "nitto-kohki-mys-40-20260926"
+          ]
+        },
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "red-rooster-10rds-4000",
+      "path": "/outils-pneumatiques/red-rooster-10rds-4000/",
+      "decision": "needs-regime-correction",
+      "decisionReason": "La valeur native ne possède pas la qualification nécessaire à un verdict dimensionnant. Une limite éditoriale ne remplit pas airflowBasis.",
+      "flowRegime": {
+        "classification": "unqualified",
+        "sourceObservation": "10RDS-4000 : 3.5 L/s. La colonne consommation ne précise pas le régime. Ne pas transférer la note des clés à chocs à cette autre famille d’outils.",
+        "declaredValue": 3.5,
+        "declaredUnit": "L/s",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "service-pressure-only",
+        "reason": "La page 106 prescrit 0,63 MPa / 6,3 bar dans la machine, mesurée moteur en marche. C’est une consigne de pression de service, sans mention explicite de la pression utilisée pour mesurer la consommation de la table.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s56",
+          "url": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=42",
+          "pdfPageOneBased": 42,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s56-p42.txt",
+          "localTextSha256": "14091ad23470e615c2bbd43b80e81d2b4c1f64e08fe68a6aee8a220545ae0903",
+          "technicalLabelLineNumbers": [
+            19,
+            41,
+            69,
+            79
+          ],
+          "contextRead": true
+        },
+        {
+          "sourceKey": "s56",
+          "url": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+          "pdfPageOneBased": 106,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s56-p106.txt",
+          "localTextSha256": "52aa612a42a7a9c4ac46fd8b86cdc2ed3f88bba38a738eb715512e1ed568c1ba",
+          "technicalLabelLineNumbers": [
+            9,
+            11,
+            21,
+            22,
+            33,
+            34,
+            37,
+            38
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "airflowBasis": "unqualified",
+          "fieldSources.airflowBasis": [
+            "red-rooster-10rds-4000-20260926"
+          ]
+        },
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "red-rooster-rr-02sp",
+      "path": "/outils-pneumatiques/red-rooster-rr-02sp/",
+      "decision": "needs-regime-correction",
+      "decisionReason": "La valeur native ne possède pas la qualification nécessaire à un verdict dimensionnant. Une limite éditoriale ne remplit pas airflowBasis.",
+      "flowRegime": {
+        "classification": "unqualified",
+        "sourceObservation": "RR-02SP : 10 L/s. La colonne consommation ne précise pas le régime. Ne pas transférer la note des clés à chocs à cette autre famille d’outils.",
+        "declaredValue": 10,
+        "declaredUnit": "L/s",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "service-pressure-only",
+        "reason": "La page 106 prescrit 0,63 MPa / 6,3 bar dans la machine, mesurée moteur en marche. C’est une consigne de pression de service, sans mention explicite de la pression utilisée pour mesurer la consommation de la table.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s56",
+          "url": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=42",
+          "pdfPageOneBased": 42,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s56-p42.txt",
+          "localTextSha256": "14091ad23470e615c2bbd43b80e81d2b4c1f64e08fe68a6aee8a220545ae0903",
+          "technicalLabelLineNumbers": [
+            19,
+            41,
+            69,
+            79
+          ],
+          "contextRead": true
+        },
+        {
+          "sourceKey": "s56",
+          "url": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+          "pdfPageOneBased": 106,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s56-p106.txt",
+          "localTextSha256": "52aa612a42a7a9c4ac46fd8b86cdc2ed3f88bba38a738eb715512e1ed568c1ba",
+          "technicalLabelLineNumbers": [
+            9,
+            11,
+            21,
+            22,
+            33,
+            34,
+            37,
+            38
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "airflowBasis": "unqualified",
+          "fieldSources.airflowBasis": [
+            "red-rooster-rr-02sp-20260926"
+          ]
+        },
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "red-rooster-rr-0315",
+      "path": "/outils-pneumatiques/red-rooster-rr-0315/",
+      "decision": "needs-regime-correction",
+      "decisionReason": "La valeur native ne possède pas la qualification nécessaire à un verdict dimensionnant. Une limite éditoriale ne remplit pas airflowBasis.",
+      "flowRegime": {
+        "classification": "unqualified",
+        "sourceObservation": "RR-0315 : 3 L/s. La colonne consommation ne précise pas le régime. Ne pas transférer la note des clés à chocs à cette autre famille d’outils.",
+        "declaredValue": 3,
+        "declaredUnit": "L/s",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "service-pressure-only",
+        "reason": "La page 106 prescrit 0,63 MPa / 6,3 bar dans la machine, mesurée moteur en marche. C’est une consigne de pression de service, sans mention explicite de la pression utilisée pour mesurer la consommation de la table.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s56",
+          "url": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=49",
+          "pdfPageOneBased": 49,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s56-p49.txt",
+          "localTextSha256": "32abac0199fc003cf7bc05935a65158927b3c59f3175d20d33d47f8ad38a485b",
+          "technicalLabelLineNumbers": [
+            29,
+            57
+          ],
+          "contextRead": true
+        },
+        {
+          "sourceKey": "s56",
+          "url": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+          "pdfPageOneBased": 106,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s56-p106.txt",
+          "localTextSha256": "52aa612a42a7a9c4ac46fd8b86cdc2ed3f88bba38a738eb715512e1ed568c1ba",
+          "technicalLabelLineNumbers": [
+            9,
+            11,
+            21,
+            22,
+            33,
+            34,
+            37,
+            38
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "airflowBasis": "unqualified",
+          "fieldSources.airflowBasis": [
+            "red-rooster-rr-0315-20260926"
+          ]
+        },
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "red-rooster-rr-0315ns",
+      "path": "/outils-pneumatiques/red-rooster-rr-0315ns/",
+      "decision": "needs-regime-correction",
+      "decisionReason": "La valeur native ne possède pas la qualification nécessaire à un verdict dimensionnant. Une limite éditoriale ne remplit pas airflowBasis.",
+      "flowRegime": {
+        "classification": "unqualified",
+        "sourceObservation": "RR-0315NS : 6.6 L/s. La colonne consommation ne précise pas le régime. Ne pas transférer la note des clés à chocs à cette autre famille d’outils.",
+        "declaredValue": 6.6,
+        "declaredUnit": "L/s",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "service-pressure-only",
+        "reason": "La page 106 prescrit 0,63 MPa / 6,3 bar dans la machine, mesurée moteur en marche. C’est une consigne de pression de service, sans mention explicite de la pression utilisée pour mesurer la consommation de la table.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s56",
+          "url": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=55",
+          "pdfPageOneBased": 55,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s56-p55.txt",
+          "localTextSha256": "4c9ee744b6146fba5132888e2958574815561458ce384b9e0332ebe64bb3c6cf",
+          "technicalLabelLineNumbers": [
+            29
+          ],
+          "contextRead": true
+        },
+        {
+          "sourceKey": "s56",
+          "url": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+          "pdfPageOneBased": 106,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s56-p106.txt",
+          "localTextSha256": "52aa612a42a7a9c4ac46fd8b86cdc2ed3f88bba38a738eb715512e1ed568c1ba",
+          "technicalLabelLineNumbers": [
+            9,
+            11,
+            21,
+            22,
+            33,
+            34,
+            37,
+            38
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "airflowBasis": "unqualified",
+          "fieldSources.airflowBasis": [
+            "red-rooster-rr-0315ns-20260926"
+          ]
+        },
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "red-rooster-rr-15a",
+      "path": "/outils-pneumatiques/red-rooster-rr-15a/",
+      "decision": "needs-pressure-qualification",
+      "decisionReason": "Le régime est bien qualifié, mais l’appariement de sa valeur à la pression native n’est pas explicitement établi par les passages lus. Avis conservatoire distinct d’une preuve que la pression réelle serait différente.",
+      "flowRegime": {
+        "classification": "loaded",
+        "sourceObservation": "RR-15A : 5.3 L/s. La note 6 de la table précise la mesure en charge pour les clés à chocs ; cette catégorie comprend RR-15A.",
+        "declaredValue": 5.3,
+        "declaredUnit": "L/s",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": true
+      },
+      "pressureQualification": {
+        "classification": "service-pressure-only",
+        "reason": "La page 106 prescrit 0,63 MPa / 6,3 bar dans la machine, mesurée moteur en marche. C’est une consigne de pression de service, sans mention explicite de la pression utilisée pour mesurer la consommation de la table.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s56",
+          "url": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=38",
+          "pdfPageOneBased": 38,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s56-p38.txt",
+          "localTextSha256": "78a91a3e904b24094576756ff9e9ed97bb585b9fdfcc410a418e2a0087731466",
+          "technicalLabelLineNumbers": [
+            10,
+            59,
+            82
+          ],
+          "contextRead": true
+        },
+        {
+          "sourceKey": "s56",
+          "url": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+          "pdfPageOneBased": 106,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s56-p106.txt",
+          "localTextSha256": "52aa612a42a7a9c4ac46fd8b86cdc2ed3f88bba38a738eb715512e1ed568c1ba",
+          "technicalLabelLineNumbers": [
+            9,
+            11,
+            21,
+            22,
+            33,
+            34,
+            37,
+            38
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "demandModel": "variable-volume",
+          "workingPressureBar": {
+            "typical": 6.3
+          },
+          "demandExplanation": "Consommation en charge publiée : 318 L/min. Pression de service prescrite : 6.3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu.",
+          "fieldSources.demandExplanation": [
+            "red-rooster-rr-15a-20260926",
+            "red-rooster-rr-15a-20260926-workingpressurebar-1"
+          ],
+          "specifications.append": {
+            "label": "Consommation en charge publiée (pression de mesure non appariée)",
+            "value": "318 L/min",
+            "evidenceIds": [
+              "red-rooster-rr-15a-20260926"
+            ]
+          }
+        },
+        "remove": [
+          "airflowLpm",
+          "airflowBasis",
+          "fieldSources.airflowLpm",
+          "fieldSources.airflowBasis"
+        ],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "red-rooster-rr-476",
+      "path": "/outils-pneumatiques/red-rooster-rr-476/",
+      "decision": "needs-regime-correction",
+      "decisionReason": "La valeur native ne possède pas la qualification nécessaire à un verdict dimensionnant. Une limite éditoriale ne remplit pas airflowBasis.",
+      "flowRegime": {
+        "classification": "unqualified",
+        "sourceObservation": "RR-476 : 6.5 L/s. La colonne consommation ne précise pas le régime. Ne pas transférer la note des clés à chocs à cette autre famille d’outils.",
+        "declaredValue": 6.5,
+        "declaredUnit": "L/s",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "service-pressure-only",
+        "reason": "La page 106 prescrit 0,63 MPa / 6,3 bar dans la machine, mesurée moteur en marche. C’est une consigne de pression de service, sans mention explicite de la pression utilisée pour mesurer la consommation de la table.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s56",
+          "url": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=60",
+          "pdfPageOneBased": 60,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s56-p60.txt",
+          "localTextSha256": "3be0b8616f16f465c6da8e588edcb99be4d6ddae1a1797563ffc9a738337d74f",
+          "technicalLabelLineNumbers": [
+            14,
+            33
+          ],
+          "contextRead": true
+        },
+        {
+          "sourceKey": "s56",
+          "url": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+          "pdfPageOneBased": 106,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s56-p106.txt",
+          "localTextSha256": "52aa612a42a7a9c4ac46fd8b86cdc2ed3f88bba38a738eb715512e1ed568c1ba",
+          "technicalLabelLineNumbers": [
+            9,
+            11,
+            21,
+            22,
+            33,
+            34,
+            37,
+            38
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "airflowBasis": "unqualified",
+          "fieldSources.airflowBasis": [
+            "red-rooster-rr-476-20260926"
+          ]
+        },
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    },
+    {
+      "id": "red-rooster-rr-8110",
+      "path": "/outils-pneumatiques/red-rooster-rr-8110/",
+      "decision": "needs-regime-correction",
+      "decisionReason": "La valeur native ne possède pas la qualification nécessaire à un verdict dimensionnant. Une limite éditoriale ne remplit pas airflowBasis.",
+      "flowRegime": {
+        "classification": "unqualified",
+        "sourceObservation": "RR-8110 : 9.4 L/s. La colonne consommation ne précise pas le régime. Ne pas transférer la note des clés à chocs à cette autre famille d’outils.",
+        "declaredValue": 9.4,
+        "declaredUnit": "L/s",
+        "absenceOfAirflowBasisPermissibleForRegimeAlone": false
+      },
+      "pressureQualification": {
+        "classification": "service-pressure-only",
+        "reason": "La page 106 prescrit 0,63 MPa / 6,3 bar dans la machine, mesurée moteur en marche. C’est une consigne de pression de service, sans mention explicite de la pression utilisée pour mesurer la consommation de la table.",
+        "explicitMeasurementPressureClaim": false,
+        "servicePressureIsNotAutomaticallyMeasurementPressure": true
+      },
+      "passages": [
+        {
+          "sourceKey": "s56",
+          "url": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=57",
+          "pdfPageOneBased": 57,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s56-p57.txt",
+          "localTextSha256": "a4c194d58ed2c6376bc95bc113d01fb8dde7c1f50c49224328dd0c437b6a3c31",
+          "technicalLabelLineNumbers": [
+            20,
+            52
+          ],
+          "contextRead": true
+        },
+        {
+          "sourceKey": "s56",
+          "url": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+          "pdfPageOneBased": 106,
+          "localTextFile": "/tmp/compatair-seo-20261024/tool-sources/s56-p106.txt",
+          "localTextSha256": "52aa612a42a7a9c4ac46fd8b86cdc2ed3f88bba38a738eb715512e1ed568c1ba",
+          "technicalLabelLineNumbers": [
+            9,
+            11,
+            21,
+            22,
+            33,
+            34,
+            37,
+            38
+          ],
+          "contextRead": true
+        }
+      ],
+      "requiredFieldChanges": {
+        "set": {
+          "airflowBasis": "unqualified",
+          "fieldSources.airflowBasis": [
+            "red-rooster-rr-8110-20260926"
+          ]
+        },
+        "remove": [],
+        "appliedToCheckout": false
+      }
+    }
+  ],
+  "compressors": [
+    {
+      "path": "/compresseurs/fiac-ax-203bd-8-400-50-ce/",
+      "id": "fiac-ax-203bd-8-400-50-ce",
+      "candidateFile": "src/data/products/compressors/fiac-ax-203bd-8-400-50-ce.ts",
+      "nativeModuleSha256": "7c37084fd02fe6ce83714d7b030d5a2a187bcb283ce06600c0d83c9b41683b71",
+      "nativeTechnicalInputs": {
+        "id": "fiac-ax-203bd-8-400-50-ce",
+        "slug": "fiac-ax-203bd-8-400-50-ce",
+        "brand": "FIAC",
+        "model": "AX 203BD 8 400/50 CE",
+        "mpn": "4152026232",
+        "maxPressureBar": 8,
+        "fadCurve": [
+          {
+            "pressureBar": 8,
+            "litersPerMinute": 2330
+          }
+        ],
+        "tankLiters": 0,
+        "powerKw": 15,
+        "voltage": "400 V, 50 Hz",
+        "phase": "three-phase"
+      },
+      "nativeFieldSources": {
+        "maxPressureBar": [
+          "fiac-4152026232-20260926"
+        ],
+        "fadCurve": [
+          "fiac-4152026232-20260926"
+        ],
+        "powerKw": [
+          "fiac-4152026232-20260926"
+        ],
+        "voltage": [
+          "fiac-4152026232-20260926"
+        ],
+        "phase": [
+          "fiac-4152026232-20260926"
+        ]
+      },
+      "status": "requires_correction",
+      "fadAssessment": "2330 L/min explicitement qualifiés FAD pour4152026232.8bar est libelléMaxWorkingPressure, pas une pression de mesure séparément établie. Le catalogueAIRBLOK p32–34 confirme la même identité et la même association max/FAD, sans qualifier séparément le point8bar. Les notes de mesure7,5/9,5bar de NEW SILVER ne sont pas transférables àAIRBLOK.",
+      "dutyCycleAssessment": "Absent, à conserver absent.",
+      "configurationAndFrequencyAssessment": "400V/50Hz/3 pour cette référence ; aucune autre version de tension/fréquence transférée.",
+      "sourceDocuments": [
+        "https://shop.fiac.it/en-IT/products/4152026232/ax-203bd-8-40050-ce",
+        "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf"
+      ],
+      "proposedCorrections": [
+        {
+          "action": "replace",
+          "path": "fadCurve",
+          "before": [
+            {
+              "pressureBar": 8,
+              "litersPerMinute": 2330
+            }
+          ],
+          "after": []
+        },
+        {
+          "action": "remove",
+          "path": "fieldSources.fadCurve"
+        },
+        {
+          "action": "replace",
+          "path": "editorial.verifiedFacts[0]",
+          "after": "Débit FAD fabricant : 2 330 L/min pour4152026232 ; pression de mesure à confirmer."
+        },
+        {
+          "action": "replace-flow-scope",
+          "paths": [
+            "editorial.overview",
+            "editorial.limitations",
+            "specifications[label=Conditions du débit]"
+          ],
+          "instruction": "Conserver2330L/min comme FAD publié et8bar comme maximum ; retirer toute affirmation de mesureà8bar. Dire explicitement que la compatibilité dépendante du débit reste indéterminée."
+        }
+      ],
+      "physicalTestPerformed": false,
+      "publicationAdmissionDecisionChanged": false,
+      "reason": "Même principe conservateur que les réservesABAC/KTC : une pression maximale seule ne qualifie pas la pression de mesure du FAD."
+    },
+    {
+      "path": "/compresseurs/gentilin-c660-100/",
+      "id": "gentilin-c660-100",
+      "candidateFile": "src/data/products/compressors/gentilin-c660-100.ts",
+      "nativeModuleSha256": "759a318df971d4a2c36f0ede0ad75205679281fdb58909974c188b433f61ad3c",
+      "nativeTechnicalInputs": {
+        "id": "gentilin-c660-100",
+        "slug": "gentilin-c660-100",
+        "brand": "Gentilin",
+        "model": "C660/100",
+        "mpn": "810310001",
+        "maxPressureBar": 10,
+        "fadCurve": [
+          {
+            "pressureBar": 5,
+            "litersPerMinute": 400
+          },
+          {
+            "pressureBar": 8,
+            "litersPerMinute": 330
+          }
+        ],
+        "dutyCycle": 1,
+        "tankLiters": 90,
+        "powerKw": 4.4,
+        "voltage": "230 V, 50 Hz"
+      },
+      "nativeFieldSources": {
+        "maxPressureBar": [
+          "gentilin-810310001-20260926"
+        ],
+        "fadCurve": [
+          "gentilin-810310001-20260926"
+        ],
+        "powerKw": [
+          "gentilin-810310001-20260926"
+        ],
+        "voltage": [
+          "gentilin-810310001-20260926"
+        ],
+        "dutyCycle": [
+          "gentilin-810310001-20260926"
+        ]
+      },
+      "status": "supported_with_limits",
+      "fadAssessment": "Air Delivery400L/min@5bar et330L/min@8bar séparé deAirIntake660L/min.",
+      "dutyCycleAssessment": "Duty cycle S1 100% est une rubrique du tableauTechnicalData du C660/100 exact810310001. Ce n’est pas une mention isolée du service du moteur.1 est étayé comme déclaration fabricant du produit, sans essai physique.",
+      "configurationAndFrequencyAssessment": "230V/50Hz,4,4kW,10A+10A et90L pour810310001 ; le nom/100 ne crée pas100L de cuve.",
+      "sourceDocuments": [
+        "https://www.gentilinair.com/en/products/c660-100"
+      ],
+      "proposedCorrections": [],
+      "physicalTestPerformed": false,
+      "publicationAdmissionDecisionChanged": false
+    },
+    {
+      "path": "/compresseurs/aircraft-airboy-262-e/",
+      "id": "aircraft-airboy-262-e",
+      "candidateFile": "src/data/products/compressors/aircraft-airboy-262-e.ts",
+      "nativeModuleSha256": "abc69a4e5bc881453e8dc202733e78c49c182aa1b1a1399231ea9b9b662e9539",
+      "nativeTechnicalInputs": {
+        "id": "aircraft-airboy-262-e",
+        "slug": "aircraft-airboy-262-e",
+        "brand": "Aircraft",
+        "model": "AIRBOY 262 E",
+        "mpn": "2001247",
+        "maxPressureBar": 10,
+        "fadCurve": [],
+        "tankLiters": 2.4,
+        "powerKw": 1.5,
+        "voltage": "230 V, 50 Hz"
+      },
+      "nativeFieldSources": {
+        "maxPressureBar": [
+          "aircraft-2001247-20260927"
+        ],
+        "fadCurve": [
+          "aircraft-2001247-20260927"
+        ],
+        "powerKw": [
+          "aircraft-2001247-20260927"
+        ],
+        "voltage": [
+          "aircraft-2001247-20260927"
+        ]
+      },
+      "status": "supported_with_limits",
+      "fadAssessment": "Courbe vide correctement conservée. Le fabricant distingue aspiration250L/min etFüllleistung155L/minà6bar. La capacité de remplissage ne devient pas FAD.",
+      "dutyCycleAssessment": "Absent, à conserver absent.",
+      "configurationAndFrequencyAssessment": "1,5kW/230V/~50Hz explicitement publié ; cuve2,4L et maximum10bar.",
+      "sourceDocuments": [
+        "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=31"
+      ],
+      "proposedCorrections": [],
+      "physicalTestPerformed": false,
+      "publicationAdmissionDecisionChanged": false
+    },
+    {
+      "path": "/compresseurs/almig-combi-xp-8-270d/",
+      "id": "almig-combi-xp-8-270d",
+      "candidateFile": "src/data/products/compressors/almig-combi-xp-8-270d.ts",
+      "nativeModuleSha256": "427562027e50ddf43b78040946e0cf450ae1f633f0cc9685be315a4699583e26",
+      "nativeTechnicalInputs": {
+        "id": "almig-combi-xp-8-270d",
+        "slug": "almig-combi-xp-8-270d",
+        "brand": "ALMiG",
+        "model": "COMBI XP 8 270D",
+        "variant": {
+          "familyId": "almig-combi-xp-8-270d",
+          "label": "Station 4-en-1 : réservoir 270 L, sécheur frigorifique, préfiltre et postfiltre ; 13 bar",
+          "distinguishingAttributes": {
+            "pression": "13 bar",
+            "cuve": "270 L",
+            "configuration": "Station 4-en-1 : réservoir 270 L, sécheur frigorifique, préfiltre et postfiltre"
+          }
+        },
+        "maxPressureBar": 13,
+        "fadCurve": [
+          {
+            "pressureBar": 8,
+            "litersPerMinute": 1160
+          },
+          {
+            "pressureBar": 10,
+            "litersPerMinute": 980
+          },
+          {
+            "pressureBar": 13,
+            "litersPerMinute": 750
+          }
+        ],
+        "dutyCycle": 1,
+        "tankLiters": 270,
+        "powerKw": 7.5
+      },
+      "nativeFieldSources": {
+        "fadCurve": [
+          "documented-20260930-almig-2026"
+        ],
+        "maxPressureBar": [
+          "documented-20260930-almig-2026"
+        ],
+        "powerKw": [
+          "documented-20260930-almig-2026"
+        ],
+        "dutyCycle": [
+          "documented-20260930-almig-2026"
+        ]
+      },
+      "status": "requires_correction",
+      "fadAssessment": "Maxima1160@8,980@10,750@13L/min conformes au tableauISO1217AnnexeC2009 ; minima170/170/140L/min distincts. Ce sont des bornes de modulation, pas un débit moyen garanti.",
+      "dutyCycleAssessment": "1 non étayé pour le groupe COMBI XP8 270D. Pages6–8 décrivent le produit, moteurIE4, configuration et débits mais pas son taux de marche. La formule générale du cataloguep4 concerne toute la gamme de compresseurs ; les déclarations plus spécifiquesp10/p18 concernentG-DRIVE/V-DRIVE90–250kW. Aucune preuve distincte de celle ayant conduit à retirer1 auXP6 le21octobre.",
+      "configurationAndFrequencyAssessment": "TableCOMBI XP4-in-1:50Hz ;270D8–15 décrit la bonne station270L avec sécheur et filtres.",
+      "sourceDocuments": [
+        "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf"
+      ],
+      "proposedCorrections": [
+        {
+          "action": "remove",
+          "path": "dutyCycle",
+          "before": 1
+        },
+        {
+          "action": "remove",
+          "path": "fieldSources.dutyCycle"
+        },
+        {
+          "action": "replace",
+          "path": "editorial.verifiedFacts[2]",
+          "after": "Le tableau50Hz publie les débits minimaux et maximaux de la station ; le taux de marche du groupe complet reste à confirmer."
+        },
+        {
+          "action": "replace",
+          "path": "editorial.limitations[2]",
+          "after": "Le taux de marche du groupe complet reste à confirmer dans une notice de cette série."
+        }
+      ],
+      "physicalTestPerformed": false,
+      "publicationAdmissionDecisionChanged": false,
+      "comparisonToOctober21": {
+        "id": "almig-combi-xp-6-270d",
+        "amendmentFile": "src/data/imports/catalog-amendments-reviewed-2026-10-21.json",
+        "removedField": "dutyCycle",
+        "sourceScopeDifferenceFound": false,
+        "conclusion": "Appliquer auXP8 la même limite documentaire queXP6, sans déplacer les déclarationsG-DRIVE/V-DRIVE surCOMBI."
+      }
+    },
+    {
+      "path": "/compresseurs/renner-rs-pro-3-0-310001/",
+      "id": "renner-rs-pro-3-0-310001",
+      "candidateFile": "src/data/products/compressors/renner-rs-pro-3-0-310001.ts",
+      "nativeModuleSha256": "4cb96f77d5150f7491cfc66cb20846d2cfe89f68ce8707bbed44be886ba4ade3",
+      "nativeTechnicalInputs": {
+        "id": "renner-rs-pro-3-0-310001",
+        "slug": "renner-rs-pro-3-0-310001",
+        "brand": "RENNER",
+        "model": "RS-PRO 3.0",
+        "mpn": "310001",
+        "variant": {
+          "familyId": "renner-rs-pro-3-0",
+          "label": "Version standard au sol, sans réservoir intégré ; 10 bar",
+          "distinguishingAttributes": {
+            "reference": "310001",
+            "pression": "10 bar",
+            "cuve": "0 L",
+            "configuration": "Version standard au sol, sans réservoir intégré"
+          }
+        },
+        "maxPressureBar": 10,
+        "fadCurve": [
+          {
+            "pressureBar": 10,
+            "litersPerMinute": 410
+          }
+        ],
+        "dutyCycle": 1,
+        "tankLiters": 0,
+        "powerKw": 3
+      },
+      "nativeFieldSources": {
+        "fadCurve": [
+          "documented-20260930-renner-2026"
+        ],
+        "maxPressureBar": [
+          "documented-20260930-renner-2026"
+        ],
+        "powerKw": [
+          "documented-20260930-renner-2026"
+        ],
+        "dutyCycle": [
+          "documented-20260930-renner-belt-hbg"
+        ]
+      },
+      "status": "supported_with_limits",
+      "fadAssessment": "Article310001, version10bar :0,41m³/min, soit410L/min, dans le tableau ISO1217AnnexeC. Les7,5/13/15bar sont des références distinctes.",
+      "dutyCycleAssessment": "La preuve relue ne dit pas seulementS1 moteur : elle décrit les caractéristiques de laBaureiheRS-PRO et son développement pour l’usage industriel y comprisDauerbetrieb. Le même document inclutRS-PRO3,0,0,41m³/minà10bar,3kW et153kg. La déclaration porte sur le compresseur de cette série.1 peut rester comme service continu déclaré, sous conditions de la notice, pas comme mesure thermique CompatAir.",
+      "configurationAndFrequencyAssessment": "La relecture ne crée aucune tension/fréquence absente de la fiche ; conserver les variantes et options électriques distinctes.",
+      "sourceDocuments": [
+        "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf",
+        "https://shop.hbg-kompressoren.de/wp-content/uploads/2018/11/Prospekt_RS-PRO_RSF-PRO_30-110_DE.pdf"
+      ],
+      "proposedCorrections": [],
+      "physicalTestPerformed": false,
+      "publicationAdmissionDecisionChanged": false
+    },
+    {
+      "path": "/compresseurs/kaeser-aircenter-13-secheur-et-cuve-integres-8-bar/",
+      "id": "kaeser-aircenter-13-secheur-et-cuve-integres-8-bar",
+      "candidateFile": "src/data/products/compressors/kaeser-aircenter-13-secheur-et-cuve-integres-8-bar.ts",
+      "nativeModuleSha256": "54a4fe5f560a0053072c7dfb23e536cb3945976ee03b906a7fece6cf7333f660",
+      "nativeTechnicalInputs": {
+        "id": "kaeser-aircenter-13-secheur-et-cuve-integres-8-bar",
+        "slug": "kaeser-aircenter-13-secheur-et-cuve-integres-8-bar",
+        "brand": "KAESER",
+        "model": "AIRCENTER 13",
+        "variant": {
+          "familyId": "kaeser-aircenter-13",
+          "label": "sécheur et cuve intégrés ; 8 bar",
+          "distinguishingAttributes": {
+            "configuration": "sécheur et cuve intégrés",
+            "pression": "8 bar",
+            "cuve": "270 L"
+          }
+        },
+        "maxPressureBar": 8,
+        "fadCurve": [
+          {
+            "pressureBar": 7.5,
+            "litersPerMinute": 1320
+          }
+        ],
+        "dutyCycle": 1,
+        "tankLiters": 270,
+        "powerKw": 7.5
+      },
+      "nativeFieldSources": {
+        "maxPressureBar": [
+          "october-b-kaeser-sm-p8"
+        ],
+        "fadCurve": [
+          "october-b-kaeser-sm-p8"
+        ],
+        "powerKw": [
+          "october-b-kaeser-sm-p8"
+        ],
+        "dutyCycle": [
+          "october-b-kaeser-duty"
+        ]
+      },
+      "status": "supported_with_limits",
+      "fadAssessment": "AIRCENTER13 standard :débit du système complet1,32m³/minà7,5bar ; maximum8bar. La varianteSFC est une autre ligne0,39–1,40m³/minà7,5bar, exclue du profil fixe.",
+      "dutyCycleAssessment": "Source courante fabricant :100%dutycycle pourSX/SM/SKrotary screws, pas seulement moteurS1. La brochureSMp2 définit explicitementAIRCENTER comme versionSM avec sécheur et cuve ;p8 donne le modèleAIRCENTER13. La chaîne de portée est doncSM complet→AIRCENTER, et non moteur→station. Maintien de1 justifié comme déclaration de famille exacte, pas comme essai de la station ou garantie indépendante des conditions d’installation.",
+      "configurationAndFrequencyAssessment": "La relecture ne crée pas de tension/fréquence absente ; version standard etSFC séparées.",
+      "sourceDocuments": [
+        "https://nl.kaeser.com/download.ashx?id=tcm:32-5920",
+        "https://us.kaeser.com/compressed-air-resources/applications/automotive-services/"
+      ],
+      "proposedCorrections": [],
+      "physicalTestPerformed": false,
+      "publicationAdmissionDecisionChanged": false,
+      "traceabilityNote": "La capture actuellec6b067...diffère de l’empreinte historique3f568...notée dans la preuve native. Si la requalification courante est enregistrée, ajouter une preuve datée2026-10-24 et la chaîneSM→AIRCENTER ; conserver l’ancienne preuve, sans réécrire son historique."
+    },
+    {
+      "path": "/compresseurs/broomwade-elite-11-rsccp1141v4-10-bar/",
+      "id": "broomwade-elite-11-rsccp1141v4-10-bar",
+      "candidateFile": "src/data/products/compressors/broomwade-elite-11-rsccp1141v4-10-bar.ts",
+      "nativeModuleSha256": "64a07159e0c700420cf37442629d9576aab51b2af281ca270959ed9425eda1c3",
+      "nativeTechnicalInputs": {
+        "id": "broomwade-elite-11-rsccp1141v4-10-bar",
+        "slug": "broomwade-elite-11-rsccp1141v4-10-bar",
+        "brand": "BroomWade",
+        "model": "ELITE 11",
+        "mpn": "RSCCP1141V4",
+        "variant": {
+          "familyId": "broomwade-elite-11",
+          "label": "station avec sécheur, filtration et cuve, 270 L, 10 bar, RSCCP1141V4",
+          "distinguishingAttributes": {
+            "équipement": "station avec sécheur, filtration et cuve",
+            "cuve": "270 L",
+            "pression": "10 bar",
+            "référence": "RSCCP1141V4"
+          }
+        },
+        "maxPressureBar": 10,
+        "fadCurve": [
+          {
+            "pressureBar": 10,
+            "litersPerMinute": 1390
+          }
+        ],
+        "tankLiters": 270,
+        "powerKw": 11
+      },
+      "nativeFieldSources": {
+        "maxPressureBar": [
+          "october2-broomwade-full-p20"
+        ],
+        "fadCurve": [
+          "october2-broomwade-full-p20"
+        ],
+        "powerKw": [
+          "october2-broomwade-full-p20"
+        ]
+      },
+      "status": "supported_with_limits",
+      "fadAssessment": "Capacité explicitementat maximum pressure :1,39m³/min pourRSCCP1141V4, maximum10bar. Ici le lien à la pression maximale est formulé par le fabricant, et non déduit de deux caractéristiques séparées.",
+      "dutyCycleAssessment": "Absent, à conserver absent ; aucune réintroduction du100% d’une page complémentaire indisponible.",
+      "configurationAndFrequencyAssessment": "Version400V/50Hz publiée dans le blocELITE11 ; options230V50–60Hz/380V60Hz distinctes, aucune transposition de performances.",
+      "sourceDocuments": [
+        "https://azure-na-assets.contentstack.com/v3/assets/blt167c47dc7f7db219/blte4df36746553755b/6a82b94b0c5540172c281ba0/25317_BroomWade_No_Price_Book_EURO_EN_Work.pdf"
+      ],
+      "proposedCorrections": [],
+      "physicalTestPerformed": false,
+      "publicationAdmissionDecisionChanged": false
+    },
+    {
+      "path": "/compresseurs/elgi-eg-110-p-50-hz-11-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/",
+      "id": "elgi-eg-110-p-50-hz-11-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe",
+      "candidateFile": "src/data/products/compressors/elgi-eg-110-p-50-hz-11-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe.ts",
+      "nativeModuleSha256": "1f38d19b0f8a8b2ff0d39feb9eb38823fef1a0cf0d0d48856d684893e3d65d5e",
+      "nativeTechnicalInputs": {
+        "id": "elgi-eg-110-p-50-hz-11-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe",
+        "slug": "elgi-eg-110-p-50-hz-11-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe",
+        "brand": "ELGi",
+        "model": "EG 110-P",
+        "variant": {
+          "familyId": "elgi-eg-110-p",
+          "label": "groupe fixe au sol, sans sécheur ; vitesse fixe, 50 Hz, 11 bar",
+          "distinguishingAttributes": {
+            "équipement": "groupe fixe au sol, sans sécheur ; vitesse fixe",
+            "pressionMaximale": "11 bar",
+            "cuve": "0 L",
+            "régulation": "vitesse fixe",
+            "fréquence": "50 Hz"
+          }
+        },
+        "maxPressureBar": 11,
+        "fadCurve": [
+          {
+            "pressureBar": 10,
+            "litersPerMinute": 17500
+          }
+        ],
+        "tankLiters": 0,
+        "powerKw": 110
+      },
+      "nativeFieldSources": {
+        "maxPressureBar": [
+          "october2b-elgi-eg-premium-p8"
+        ],
+        "fadCurve": [
+          "october2b-elgi-eg-premium-p8"
+        ],
+        "powerKw": [
+          "october2b-elgi-eg-premium-p8"
+        ]
+      },
+      "status": "supported_with_limits",
+      "fadAssessment": "Standard fixeEG110-P50Hz :17,5m³/minà10bar de travail. La note distingue max/unload11bar et situe la mesure du package complet après séparateur d’humidité. Le blocVFD séparé ne remplace pas cette ligne.",
+      "dutyCycleAssessment": "Absent, à conserver absent. Une vis et une fiche de gamme ne créent pas un service continu.",
+      "configurationAndFrequencyAssessment": "Bloc50Hz explicitement retenu, pas de transposition60Hz.",
+      "sourceDocuments": [
+        "https://www.elgi.com/in/wp-content/uploads/2019/06/EG-Premium-90-160-catalogue_India.pdf"
+      ],
+      "proposedCorrections": [],
+      "physicalTestPerformed": false,
+      "publicationAdmissionDecisionChanged": false
+    },
+    {
+      "path": "/compresseurs/airpol-55/",
+      "id": "airpol-55",
+      "candidateFile": "src/data/products/compressors/airpol-55.ts",
+      "nativeModuleSha256": "54589fddb3adc22b57ac092aec51c5467f1054e3da34be787ef095ec718bd3d5",
+      "nativeTechnicalInputs": {
+        "id": "airpol-55",
+        "slug": "airpol-55",
+        "brand": "Airpol",
+        "model": "55",
+        "variant": {
+          "familyId": "airpol-55",
+          "label": "Groupe Airpol sans réservoir de stockage intégré",
+          "distinguishingAttributes": {
+            "équipement": "Groupe Airpol sans réservoir de stockage intégré",
+            "pressionMaximale": "15 bar",
+            "cuve": "0 L",
+            "fréquence": "50 Hz"
+          }
+        },
+        "maxPressureBar": 15,
+        "fadCurve": [
+          {
+            "pressureBar": 15,
+            "litersPerMinute": 5833.333
+          }
+        ],
+        "tankLiters": 0,
+        "powerKw": 55
+      },
+      "nativeFieldSources": {
+        "maxPressureBar": [
+          "october3d-airpol-pdf-075-p12"
+        ],
+        "fadCurve": [
+          "october3d-airpol-pdf-075-p12",
+          "october3d-airpol-screw-p9"
+        ],
+        "powerKw": [
+          "october3d-airpol-pdf-075-p12"
+        ]
+      },
+      "status": "supported_with_limits",
+      "fadAssessment": "FicheAirpol55 :Capacity[1,5MPa]=350m³/h. Brochure complémentaire :Discharge overpressure1,5MPa etCapacity350m³/h, soit5833,333L/min par conversion. Ce lien de colonne est explicite ; aucune pression maximale seule n’est utilisée. La note citeENISO1217:2009/ENISO5167-2, sans inventerAnnexeC ni température/humidité.",
+      "dutyCycleAssessment": "Absent, à conserver absent.",
+      "configurationAndFrequencyAssessment": "400/3/50 publié pourAirpol55 ; version sans réservoir, pas transfert d’unAirpolK sur cuve.",
+      "sourceDocuments": [
+        "https://airpol.com.pl/wp-content/uploads/2022/05/EN-Karta-Airpol-185-55kW.pdf",
+        "https://airpol.com.pl/wp-content/uploads/2022/05/Airpol-screw-compressors.pdf"
+      ],
+      "proposedCorrections": [],
+      "physicalTestPerformed": false,
+      "publicationAdmissionDecisionChanged": false
+    },
+    {
+      "path": "/compresseurs/bambi-bb8/",
+      "id": "bambi-bb8",
+      "candidateFile": "src/data/products/compressors/bambi-bb8.ts",
+      "nativeModuleSha256": "fad0bae79408b5fde236afceceb809d8a5456c307d6c335f23157bd389b53d3b",
+      "nativeTechnicalInputs": {
+        "id": "bambi-bb8",
+        "slug": "bambi-bb8",
+        "brand": "Bambi",
+        "model": "BB8",
+        "mpn": "BB8",
+        "variant": {
+          "familyId": "bambi-bb8",
+          "label": "Groupe avec cuve 9 L",
+          "distinguishingAttributes": {
+            "équipement": "Groupe avec cuve 9 L",
+            "pressionMaximale": "8 bar",
+            "cuve": "9 L",
+            "fréquence": "50 Hz"
+          }
+        },
+        "maxPressureBar": 8,
+        "fadCurve": [
+          {
+            "pressureBar": 1,
+            "litersPerMinute": 35
+          },
+          {
+            "pressureBar": 2,
+            "litersPerMinute": 32
+          },
+          {
+            "pressureBar": 3,
+            "litersPerMinute": 30
+          },
+          {
+            "pressureBar": 4,
+            "litersPerMinute": 28
+          },
+          {
+            "pressureBar": 5,
+            "litersPerMinute": 27
+          },
+          {
+            "pressureBar": 6,
+            "litersPerMinute": 26
+          },
+          {
+            "pressureBar": 7,
+            "litersPerMinute": 25.5
+          },
+          {
+            "pressureBar": 8,
+            "litersPerMinute": 25
+          }
+        ],
+        "dutyCycle": 0.5,
+        "tankLiters": 9,
+        "powerKw": 0.34
+      },
+      "nativeFieldSources": {
+        "maxPressureBar": [
+          "october3d-bambi-product-28"
+        ],
+        "fadCurve": [
+          "october3d-bambi-product-28"
+        ],
+        "dutyCycle": [
+          "october3d-bambi-product-28"
+        ],
+        "powerKw": [
+          "october3d-bambi-product-28"
+        ]
+      },
+      "status": "supported_with_limits",
+      "fadAssessment": "TableFreeAirDelivery1–8bar :35/32/30/28/27/26/25,5/25L/min ;27à5bar clairement restitués.",
+      "dutyCycleAssessment": "Maximum50% déclaré pourBB8.0,5 est conservé ; aucune fenêtre5min/10min n’est inventée et aucun service continu n’en est déduit.",
+      "configurationAndFrequencyAssessment": "240V/50Hz et priseUK ; priseEU sur demande ne permet pas de promettre une adaptation électrique universelle.",
+      "sourceDocuments": [
+        "https://bambi-air.co.uk/product/bb8/"
+      ],
+      "proposedCorrections": [],
+      "physicalTestPerformed": false,
+      "publicationAdmissionDecisionChanged": false
+    },
+    {
+      "path": "/compresseurs/ekom-dk50-2v-50s-m/",
+      "id": "ekom-dk50-2v-50s-m",
+      "candidateFile": "src/data/products/compressors/ekom-dk50-2v-50s-m.ts",
+      "nativeModuleSha256": "723f11b469b6f0951052e7c3e99f31f47b47f5c580b647b35af504d770bb1a5e",
+      "nativeTechnicalInputs": {
+        "id": "ekom-dk50-2v-50s-m",
+        "slug": "ekom-dk50-2v-50s-m",
+        "brand": "EKOM",
+        "model": "DK50 2V/50S/M",
+        "variant": {
+          "familyId": "ekom-dk50-2v-50s-m",
+          "label": "Groupe avec cuve et sécheur et armoire acoustique",
+          "distinguishingAttributes": {
+            "équipement": "Groupe avec cuve et sécheur et armoire acoustique",
+            "pressionMaximale": "8 bar",
+            "cuve": "50 L",
+            "fréquence": "50 Hz"
+          }
+        },
+        "maxPressureBar": 8,
+        "fadCurve": [
+          {
+            "pressureBar": 6,
+            "litersPerMinute": 104
+          }
+        ],
+        "dutyCycle": 1,
+        "tankLiters": 50,
+        "powerKw": 1.2
+      },
+      "nativeFieldSources": {
+        "maxPressureBar": [
+          "october3d-ekom-manual-08-p18"
+        ],
+        "fadCurve": [
+          "october3d-ekom-manual-08-p18",
+          "october3d-ekom-manual-08-p23"
+        ],
+        "dutyCycle": [
+          "october3d-ekom-manual-08-p18"
+        ],
+        "powerKw": [
+          "october3d-ekom-manual-08-p18"
+        ]
+      },
+      "status": "supported_with_limits",
+      "fadAssessment": "CapacitéFAD104L/minà6bar duDK50 2V/50S/M, différente des135L/min nus/sans sécheur. Workingpressure6–8bar, soupape9bar distincte.",
+      "dutyCycleAssessment": "LigneOperating mode, unité%, S1-100 dans le tableauTechnicalData du compresseur et ses variantes, avec les lignespuissance moteur séparées. Portée groupe complet avec armoires/sécheur, pas simple marquage moteurS1.1 explicitement étayé.",
+      "configurationAndFrequencyAssessment": "ColonneDK50 2V/50S/M,230V50Hz conservée ; aucun chiffre de variante10–12bar ou60Hz importé. Conditions tableau :local sec ventilé5–40°C, humiditémax70%.",
+      "sourceDocuments": [
+        "https://www.ekom.sk/fileadmin/Ekom/navody/2021/industry_lab/NP-DK50_2V_50__2x2V_110-A-21_06-2026-MD.pdf"
+      ],
+      "proposedCorrections": [],
+      "physicalTestPerformed": false,
+      "publicationAdmissionDecisionChanged": false
+    },
+    {
+      "path": "/compresseurs/mattei-blade-se-12/",
+      "id": "mattei-blade-se-12",
+      "candidateFile": "src/data/products/compressors/mattei-blade-se-12.ts",
+      "nativeModuleSha256": "9c1ceca23b29b9a7c1c402c35136d8e289ef5d912fdeff2625d18cdb3f97e74c",
+      "nativeTechnicalInputs": {
+        "id": "mattei-blade-se-12",
+        "slug": "mattei-blade-se-12",
+        "brand": "Mattei",
+        "model": "BLADE SE 12",
+        "variant": {
+          "familyId": "mattei-blade-se-12",
+          "label": "BLADE sur réservoir 270 L avec sécheur",
+          "distinguishingAttributes": {
+            "équipement": "BLADE sur réservoir 270 L avec sécheur",
+            "pressionMaximale": "10 bar",
+            "cuve": "270 L",
+            "fréquence": "50 Hz"
+          }
+        },
+        "maxPressureBar": 10,
+        "fadCurve": [
+          {
+            "pressureBar": 9.5,
+            "litersPerMinute": 1370
+          }
+        ],
+        "dutyCycle": 1,
+        "tankLiters": 270,
+        "powerKw": 11
+      },
+      "nativeFieldSources": {
+        "maxPressureBar": [
+          "october3d-mattei-pdf-11-p6"
+        ],
+        "fadCurve": [
+          "october3d-mattei-pdf-11-p7"
+        ],
+        "powerKw": [
+          "october3d-mattei-pdf-11-p7"
+        ],
+        "dutyCycle": [
+          "october3d-mattei-pdf-11-p6"
+        ]
+      },
+      "status": "supported_with_limits",
+      "fadAssessment": "BLADESE12,400/50/3 :1,37m³/min pourversion10bar ; noteFADà9,5bar,ISO1217AnnexeC. Les1,49m³/min du60Hz ne sont pas retenus.",
+      "dutyCycleAssessment": "La page6 décrit les états du compresseur complet ;Automatic permetexplicitement de travailler continuellement avec arrêt possible si l’air n’est plus demandé. Ce n’est pas une seule classeS1 du moteur. Maintien de1 comme déclaration de service continu du groupe, avec portée limitée aux modes et conditions décrits. Continuous est un modecharge/décharge : il ne signifie pas que le FAD maximal est livré en permanence pendant la décharge.",
+      "configurationAndFrequencyAssessment": "400V/50Hz/3,270L etsécheurSE. Ne pas substituerS12sans sécheur niSE12en60Hz.",
+      "sourceDocuments": [
+        "https://cdn2.hubspot.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20BLADE/BLADE_8-12_EN_1.pdf"
+      ],
+      "proposedCorrections": [],
+      "physicalTestPerformed": false,
+      "publicationAdmissionDecisionChanged": false,
+      "engineCaution": "Ne jamais utiliser le simple nomContinuous pour créer un débit FAD pendant une phaseunloaded. La valeur1 est ici une déclaration de capacité de fonctionnement continu, pas un profil temporel mesuré ni une disponibilité constante de1370L/min en décharge."
+    },
+    {
+      "path": "/compresseurs/sil-air-100-24/",
+      "id": "sil-air-100-24",
+      "candidateFile": "src/data/products/compressors/sil-air-100-24.ts",
+      "nativeModuleSha256": "7839ac97b89342937979b43fc51fb529fef8badb9487b7a84318b2999e723434",
+      "nativeTechnicalInputs": {
+        "id": "sil-air-100-24",
+        "slug": "sil-air-100-24",
+        "brand": "SIL-AIR",
+        "model": "100/24",
+        "variant": {
+          "familyId": "sil-air-100-24",
+          "label": "Compresseur sur cuve 24 L",
+          "distinguishingAttributes": {
+            "équipement": "Compresseur sur cuve 24 L",
+            "pressionDeConfiguration": "8 bar",
+            "cuve": "24 L",
+            "fréquence": "50 Hz"
+          }
+        },
+        "maxPressureBar": 8,
+        "fadCurve": [
+          {
+            "pressureBar": 5,
+            "litersPerMinute": 74
+          }
+        ],
+        "tankLiters": 24,
+        "powerKw": 0.68
+      },
+      "nativeFieldSources": {
+        "maxPressureBar": [
+          "october4-silair-current-catalog-p25"
+        ],
+        "fadCurve": [
+          "october4-silair-current-catalog-p25",
+          "october4-silair-current-catalog-p5"
+        ],
+        "powerKw": [
+          "october4-silair-current-catalog-p25"
+        ]
+      },
+      "status": "supported_with_limits",
+      "fadAssessment": "P25 :74L/minà5bar pour230/50,88pour115/60. P5 légende distingueAirintake etFAD@5bar. Les100L/min du titre sont aspirés, pas ajoutés à la courbe.",
+      "dutyCycleAssessment": "Absent, à conserver absent ; ventilateurs de la varianteV et refroidissement ne prouvent pas un taux de marche continu.",
+      "configurationAndFrequencyAssessment": "230V/50Hz :680W et74L/min ;115/60 :800W/88 exclus. V/AL sont des versions distinctes.",
+      "sourceDocuments": [
+        "https://cdn.prod.website-files.com/5ef4a20d28c31157474872b0/6a4fceb90145c46f2acc6262_SILAIR%202025.pdf"
+      ],
+      "proposedCorrections": [],
+      "physicalTestPerformed": false,
+      "publicationAdmissionDecisionChanged": false
+    },
+    {
+      "path": "/compresseurs/fini-cube-4-0-10-270-es-z/",
+      "id": "fini-cube-4-0-10-270-es-z",
+      "candidateFile": "src/data/products/compressors/fini-cube-4-0-10-270-es-z.ts",
+      "nativeModuleSha256": "9b51d4ae15060b786a744b146acb81c95dfdf43dca5b2fc1afb056ae484d983d",
+      "nativeTechnicalInputs": {
+        "id": "fini-cube-4-0-10-270-es-z",
+        "slug": "fini-cube-4-0-10-270-es-z",
+        "brand": "Fini",
+        "model": "CUBE 4.0-10-270 ES Z",
+        "mpn": "V91PD92FNM501",
+        "variant": {
+          "familyId": "fini-cube-4-0-270-es-z",
+          "label": "Cuve 270 L galvanisée avec sécheur frigorifique intégré",
+          "distinguishingAttributes": {
+            "équipement": "Cuve 270 L galvanisée avec sécheur frigorifique intégré",
+            "pressionDeConfiguration": "10 bar",
+            "cuve": "270 L",
+            "fréquence": "50 Hz"
+          }
+        },
+        "maxPressureBar": 10,
+        "maxPressureBasis": "selected-working-pressure-ceiling",
+        "fadCurve": [
+          {
+            "pressureBar": 9.5,
+            "litersPerMinute": 460
+          }
+        ],
+        "dutyCycle": 1,
+        "tankLiters": 270,
+        "powerKw": 4
+      },
+      "nativeFieldSources": {
+        "maxPressureBar": [
+          "october4b-fini-cube-p3"
+        ],
+        "fadCurve": [
+          "october4b-fini-cube-p3"
+        ],
+        "powerKw": [
+          "october4b-fini-cube-p3"
+        ],
+        "dutyCycle": [
+          "october4b-fini-cube-p3"
+        ]
+      },
+      "status": "supported_with_limits",
+      "fadAssessment": "CodeV91PD92FNM501,460L/minà9,5bar pourversion10bar :note de mesure explicite20°C/pressionatmosphérique1bar/ISO1217.270L galvaniséeZ etsécheurES ; autrecodecuvepeinte séparé.",
+      "dutyCycleAssessment": "Déclaration portant surCUBEcompressors, conçus pour fonctionner continuellement, directement dans la brochure de cette gamme4–7,5kW ; pas un seul moteurS1.1 conservé comme déclaration fabricant de service continu, sous ses conditions d’usage.",
+      "configurationAndFrequencyAssessment": "Ligne400V/3/50Hz ; pas import d’une variante de tension ou fréquence.",
+      "sourceDocuments": [
+        "https://finicompressors.com/wp-content/uploads/Catalogo-Cube-Fini_EN_04-2024_9990397.pdf"
+      ],
+      "proposedCorrections": [],
+      "physicalTestPerformed": false,
+      "publicationAdmissionDecisionChanged": false
+    }
+  ],
+  "amendment": {
+    "path": "src/data/imports/catalog-amendments-reviewed-2026-10-24-b.json",
+    "sha256": "8feb07a9cff60e0b2f486bdeb1a1184eb85440a2e74632a9402ecb893af58e1e"
+  },
+  "catalogScopeAfterCorrection": {
+    "compressor_count": 5159,
+    "tool_count": 20087,
+    "explorable_combination_count": 103628833,
+    "fixed_flow_tool_count": 8918,
+    "fixed_verdict_count": 46007962,
+    "parametric_tool_count": 11169,
+    "parametric_combination_count": 57620871,
+    "incomplete_tool_count": 10826
+  },
+  "scopeExplanation": "Eleven documentary-only demands move from the fixed-flow contract to the existing incomplete-data contract. Compressor and tool counts are unchanged; combination counts are calculated from these exact catalog records and do not count indexable pages."
+}

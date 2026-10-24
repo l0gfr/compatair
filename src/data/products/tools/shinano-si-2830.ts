@@ -9,11 +9,9 @@ const product: ToolProfileInput = {
 	"categoryId": "ponceuse-bande",
 	"category": "ponceuse-bande",
 	"label": "Shinano SI-2830",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
-		"max": 6.3
+		"typical": 6.3
 	},
 	"confidence": "B",
 	"image": {
@@ -23,7 +21,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-2830, référence SI-2830. Le tableau fabricant publie 900 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 10 000 tr/min. Masse publiée : 2,02 kg.",
+		"overview": "Shinano SI-2830, référence SI-2830. Le tableau fabricant publie 900 L/min et une pression de service prescrite de 6,3 bar. Vitesse à vide publiée : 10 000 tr/min. Masse publiée : 2,02 kg.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Colonne Max Air Consumption : 31.8 CFM / 15 L/s. Conversion du maximum publié : 15 × 60 = 900 L/min.",
@@ -34,7 +32,8 @@ const product: ToolProfileInput = {
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"La pression de service de 6,3 bar ne qualifie pas explicitement la pression de mesure de cette consommation. Celle-ci reste documentaire et ne produit aucun verdict de débit."
 		]
 	},
 	"specifications": [
@@ -62,6 +61,13 @@ const product: ToolProfileInput = {
 		{
 			"label": "Masse publiée",
 			"value": "2,02 kg",
+			"evidenceIds": [
+				"shinano-si-2830-20260926"
+			]
+		},
+		{
+			"label": "Consommation maximale publiée (pression de mesure non appariée)",
+			"value": "900 L/min",
 			"evidenceIds": [
 				"shinano-si-2830-20260926"
 			]
@@ -94,18 +100,15 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"shinano-si-2830-20260926-workingpressurebar-1"
 		],
-		"airflowLpm": [
-			"shinano-si-2830-20260926"
+		"demandExplanation": [
+			"shinano-si-2830-20260926",
+			"shinano-si-2830-20260926-workingpressurebar-1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 900,
-		"typical": 900,
-		"max": 900
-	}
+	"demandExplanation": "Consommation maximale publiée : 900 L/min. Pression de service prescrite : 6,3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu."
 };
 
 export default product;

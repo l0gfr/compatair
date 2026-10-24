@@ -86,6 +86,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"nitto-kohki-ch-24-20260926"
+		],
+		"airflowBasis": [
+			"nitto-kohki-ch-24-20260926"
 		]
 	},
 	"notes": [
@@ -95,7 +98,8 @@ const product: ToolProfileInput = {
 		"min": 200,
 		"typical": 200,
 		"max": 200
-	}
+	},
+	"airflowBasis": "free-speed"
 };
 
 export default product;

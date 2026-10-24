@@ -9,11 +9,9 @@ const product: ToolProfileInput = {
 	"categoryId": "cle-a-chocs",
 	"category": "cle-a-chocs",
 	"label": "Red Rooster RR-15A",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
-		"max": 6.3
+		"typical": 6.3
 	},
 	"confidence": "B",
 	"image": {
@@ -23,7 +21,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Red Rooster RR-15A, référence RR-15A. Le tableau fabricant publie 318 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 7000 tr/min. Masse publiée : 1,8 kg.",
+		"overview": "Red Rooster RR-15A, référence RR-15A. Le tableau fabricant publie 318 L/min et une pression de service prescrite de 6,3 bar. Vitesse à vide publiée : 7000 tr/min. Masse publiée : 1,8 kg.",
 		"verifiedFacts": [
 			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
 			"Consommation en charge publiée : 5.3 L/s, convertis en 318 L/min par multiplication par 60.",
@@ -34,7 +32,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas.",
+			"La pression de service de 6,3 bar ne qualifie pas explicitement la pression de mesure de cette consommation. Celle-ci reste documentaire et ne produit aucun verdict de débit."
 		]
 	},
 	"specifications": [
@@ -79,6 +78,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"red-rooster-rr-15a-20260926"
 			]
+		},
+		{
+			"label": "Consommation en charge publiée (pression de mesure non appariée)",
+			"value": "318 L/min",
+			"evidenceIds": [
+				"red-rooster-rr-15a-20260926"
+			]
 		}
 	],
 	"evidence": [
@@ -108,28 +114,25 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"red-rooster-rr-15a-20260926-workingpressurebar-1"
 		],
-		"airflowLpm": [
-			"red-rooster-rr-15a-20260926"
-		],
 		"recommendedHose": [
 			"red-rooster-rr-15a-20260926"
 		],
 		"connectorSize": [
 			"red-rooster-rr-15a-20260926"
+		],
+		"demandExplanation": [
+			"red-rooster-rr-15a-20260926",
+			"red-rooster-rr-15a-20260926-workingpressurebar-1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 318,
-		"typical": 318,
-		"max": 318
-	},
 	"recommendedHose": {
 		"innerDiameterMm": 9.5
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"demandExplanation": "Consommation en charge publiée : 318 L/min. Pression de service prescrite : 6,3 bar. Les passages fabricants lus ne relient pas explicitement cette consommation à sa pression de mesure ; aucun besoin dimensionnant apparié ne peut être retenu."
 };
 
 export default product;

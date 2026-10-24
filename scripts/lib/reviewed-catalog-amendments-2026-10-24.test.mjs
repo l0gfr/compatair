@@ -4,13 +4,25 @@ import { parseCatalogProductSource } from './catalog-tooling.mjs';
 import { applyReviewedOctober24Amendment } from './reviewed-catalog-amendments-2026-10-24.mjs';
 
 const { rows, technicalCards } = JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-10-24.json', import.meta.url), 'utf8'));
+const corrections = new Map(JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-10-24-b.json', import.meta.url), 'utf8')).rows.map(row => [row.id, row]));
+const beforeTechnicalCorrection = product => {
+ const row = corrections.get(product.id);
+ if (!row) return product;
+ for (const key of row.fields) {
+  expect(Object.hasOwn(product, key), `${product.id}:${key}`).toBe(Object.hasOwn(row.after, key));
+  if (Object.hasOwn(row.after, key)) expect(product[key], `${product.id}:${key}`).toEqual(row.after[key]);
+  if (Object.hasOwn(row.before, key)) product[key] = structuredClone(row.before[key]);
+  else delete product[key];
+ }
+ return product;
+};
 const products = new Map();
 const native = id => {
  if (!products.has(id)) {
   const kind = ['sableuse-', 'pistolet-', 'biax-', 'fiam-', 'nitto-', 'red-rooster-'].some(prefix => id.startsWith(prefix)) ? 'tools' : 'compressors';
   products.set(id, parseCatalogProductSource(kind, readFileSync(new URL(`../../src/data/products/${kind}/${id}.ts`, import.meta.url), 'utf8')));
  }
- return structuredClone(products.get(id));
+ return beforeTechnicalCorrection(structuredClone(products.get(id)));
 };
 const original = row => {
  const product = native(row.id);

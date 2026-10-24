@@ -30,7 +30,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 750
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "unknown",
 	"powerKw": 7.5,
 	"weightKg": 585,
@@ -85,12 +84,12 @@ const product: CompressorInput = {
 		"verifiedFacts": [
 			"Puissance moteur publiée : 7,5 kW ; poids de cette configuration : 585 kg.",
 			"Débit restitué documenté : 1 160 L/min à 8 bar ; 980 L/min à 10 bar ; 750 L/min à 13 bar.",
-			"La documentation de la série prévoit le fonctionnement continu, sous ses conditions d’installation et d’entretien."
+			"Le tableau 50 Hz publie les débits minimaux et maximaux de cette station ; le taux de marche du groupe complet reste à confirmer."
 		],
 		"limitations": [
 			"La disponibilité commerciale actuelle n’a pas été confirmée.",
 			"Les minima et maxima de modulation ne décrivent pas un débit moyen de votre atelier. Aucun débit n’est extrapolé hors des points publiés.",
-			"Le service continu documenté ne dispense pas du contrôle du refroidissement, du traitement d’air et des pertes du réseau.",
+			"Le taux de marche du groupe complet reste à confirmer dans une notice de cette série. Les déclarations générales du catalogue et celles des autres séries ne suffisent pas.",
 			"Le mode de lubrification n’a pas été établi dans les sources consultées ; il reste unknown, sans présumer une qualité d’air."
 		]
 	},
@@ -120,9 +119,6 @@ const product: CompressorInput = {
 			"documented-20260930-almig-2026"
 		],
 		"weightKg": [
-			"documented-20260930-almig-2026"
-		],
-		"dutyCycle": [
 			"documented-20260930-almig-2026"
 		]
 	},

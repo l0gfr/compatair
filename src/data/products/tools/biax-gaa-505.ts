@@ -95,6 +95,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"biax-150619445-20260926"
+		],
+		"airflowBasis": [
+			"biax-150619445-20260926"
 		]
 	},
 	"notes": [
@@ -104,7 +107,8 @@ const product: ToolProfileInput = {
 		"min": 300,
 		"typical": 300,
 		"max": 300
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

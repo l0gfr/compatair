@@ -116,6 +116,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"cleco-19raa07ah2-20260926"
+		],
+		"airflowBasis": [
+			"cleco-19raa07ah2-20260926"
 		]
 	},
 	"notes": [
@@ -125,7 +128,8 @@ const product: ToolProfileInput = {
 		"min": 310,
 		"typical": 310,
 		"max": 310
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

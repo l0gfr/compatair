@@ -101,6 +101,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"deprag-202270c-20260926"
+		],
+		"airflowBasis": [
+			"deprag-202270c-20260926"
 		]
 	},
 	"notes": [
@@ -110,7 +113,8 @@ const product: ToolProfileInput = {
 		"min": 1100,
 		"typical": 1100,
 		"max": 1100
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

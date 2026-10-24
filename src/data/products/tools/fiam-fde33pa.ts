@@ -155,6 +155,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"fiam-124611552-20260926"
+		],
+		"airflowBasis": [
+			"fiam-124611552-20260926"
 		]
 	},
 	"notes": [
@@ -164,7 +167,8 @@ const product: ToolProfileInput = {
 		"min": 600,
 		"typical": 600,
 		"max": 600
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;
