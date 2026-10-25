@@ -19,24 +19,21 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "77A25F107 : outil d’angle allongé de 446 mm pour bonnet de polissage de 7 pouces, sortie 5/8-11 et 2 500 tr/min. La 77A45W109 voisine reçoit un plateau de 9 pouces à 4 500 tr/min. Le tableau actuel publie 561 L/min en charge pour la 77A25F107 ; l’ancienne transcription de bibliothèque à 37 cfm n’est plus vérifiable et n’est pas utilisée pour choisir une alimentation. Le montage de polissage et sa vitesse restent le premier choix.",
+		"overview": "77A25F107 : la notice 80221773 identifie 2 500 tr/min, un plateau de 7 pouces (178 mm) et une sortie 5/8-11. La 77A45W109 y est donnée à 4 500 tr/min avec un plateau de 9 pouces (228 mm). Vitesse et diamètre distinguent les montages ; les valeurs de puissance, longueur et consommation de l’ancienne fiche ne sont pas requalifiées par cette notice.",
 		"verifiedFacts": [
-			"Puissance publiée : 1,5 hp / 1,12 kW.",
-			"Vitesse à vide : 2 500 tr/min.",
-			"Échappement : latéral.",
-			"Sortie : 5/8-11 ; bonnet de 7 pouces.",
-			"Consommation en charge documentaire : 19,8 cfm / 561 L/min, sans pression de mesure appariée."
+			"Notice 80221773, édition 3 : 77A25F107 et 77A25F107-EU, 2 500 tr/min, plateau 7 pouces (178 mm), sortie 5/8-11.",
+			"La même notice distingue 77A45W109 et sa variante EU : 4 500 tr/min et plateau 9 pouces (228 mm)."
 		],
 		"limitations": [
-			"La consommation reste hors du calcul de compatibilité : la pression de mesure et les conditions volumétriques complètes ne sont pas établies.",
-			"La bibliothèque ancienne répond429 ; son fragment de page n’est pas un document PDF. Ses transcriptions antérieures restent dans l’historique, sans être traitées comme des valeurs confirmées.",
-			"Lecture documentaire sans essai physique. Le lecteur web ne prouve ni disponibilité commerciale actuelle ni conformité de la fourniture en France.",
-			"La notice donne7pouces/178mm et la page7pouces/180mm ; la dimension en pouces est conservée sans créer un diamètre métrique unique."
+			"La fiche HTML a répondu 429 lors du contrôle direct. La nouvelle lecture s’appuie sur la notice officielle accessible, dont le champ est limité aux modèles et caractéristiques explicitement imprimés.",
+			"Les caractéristiques d’air historiques restent dans les spécifications avec leurs sources datées, mais le régime et la pression de mesure nécessaires au dimensionnement ne sont pas établis ici.",
+			"Le libellé d’une variante EU dans le tableau ne prouve pas que toutes les références régionales ou pièces sont interchangeables.",
+			"Aucun essai physique, disponibilité commerciale actuelle ou exposition individuelle au bruit n’est établi par cette lecture."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Puissance publiée",
+			"label": "Puissance de la fiche historique, non requalifiée par la notice",
 			"value": "1,5 hp / 1,12 kW",
 			"evidenceIds": [
 				"october21-ingersoll-rand-77a25f107-model-table"
@@ -46,11 +43,11 @@ const product: ToolProfileInput = {
 			"label": "Vitesse à vide",
 			"value": "2 500 tr/min",
 			"evidenceIds": [
-				"october21-ingersoll-rand-77a25f107-model-table"
+				"reserved-ir-20261025-ingersoll-rand-77a25f107"
 			]
 		},
 		{
-			"label": "Échappement",
+			"label": "Échappement de la fiche historique, non requalifié par la notice",
 			"value": "latéral",
 			"evidenceIds": [
 				"october21-ingersoll-rand-77a25f107-model-table"
@@ -60,7 +57,7 @@ const product: ToolProfileInput = {
 			"label": "Sortie",
 			"value": "5/8-11 ; bonnet de 7 pouces",
 			"evidenceIds": [
-				"october21-ingersoll-rand-77a25f107-model-table"
+				"reserved-ir-20261025-ingersoll-rand-77a25f107"
 			]
 		},
 		{
@@ -75,6 +72,13 @@ const product: ToolProfileInput = {
 			"value": "Non établie pour la mesure de consommation ; aucune consigne de famille transférée.",
 			"evidenceIds": [
 				"october21-ingersoll-rand-77a25f107-model-table"
+			]
+		},
+		{
+			"label": "Plateau dans la notice",
+			"value": "7 pouces (178 mm) ; sortie 5/8-11",
+			"evidenceIds": [
+				"reserved-ir-20261025-ingersoll-rand-77a25f107"
 			]
 		}
 	],
@@ -96,6 +100,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-21",
 			"confidence": "A",
 			"notes": "Document lié par la page officielle, lu intégralement pour les pages anglaises1–4 ; SHA-256 79bce65a0d457b008e4483ef519ea5a09fcc23eb3463b30e076d2e1216da5542. La consigne PMAX ne fournit pas un point de mesure de consommation."
+		},
+		{
+			"id": "reserved-ir-20261025-ingersoll-rand-77a25f107",
+			"sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/bltd89674ca5491ef9a/blt433cc516ed60e011/680a2474db9ccbf630425ff1/80221773_ed3_C.pdf#page=3",
+			"sourceLabel": "Notice fabricant, relecture ciblée du modèle et du voisin, 25 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Document actuel accessible HTTP 200, réponse SHA-256 79bce65a0d457b008e4483ef519ea5a09fcc23eb3463b30e076d2e1216da5542. Lecture page PDF 3. La fiche HTML inaccessible et les preuves historiques restent séparées ; aucun essai physique."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +124,12 @@ const product: ToolProfileInput = {
 		],
 		"workingPressureBar": [
 			"october21-ingersoll-rand-77a25f107-model-table"
+		],
+		"editorial": [
+			"reserved-ir-20261025-ingersoll-rand-77a25f107"
+		],
+		"specifications": [
+			"reserved-ir-20261025-ingersoll-rand-77a25f107"
 		]
 	},
 	"notes": [

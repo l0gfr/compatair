@@ -30,10 +30,11 @@ const product: ToolProfileInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
   },
   "editorial": {
-    "overview": "1466-10HV-C1S-E : assemblage Binks Trophy Touch-up gravitaire, aiguille inox et technologie HVLP. Le 1466-10LV-B1S-E voisin utilise la technologie LVMP. La brochure liste séparément les chapeaux C1 et B1, mais intitule ce second tableau « TROPHY FULL SIZE GUN » : l’attribution d’un point d’air à l’assemblage Touch-up doit être confirmée avant calcul.",
+    "overview": "Trophy 1466-10HV-C1S-E : assemblage gravitaire Touch-up HVLP à aiguille inox. Le 1466-10LV-B1S-E utilise le chapeau B1 LVMP ; le 1465-08HV-C1S-E est une alimentation sous pression, sans être le même assemblage gravitaire. Le code complet et le mode d’alimentation précèdent toute comparaison du débit. Le titre Full Size de la table C1/B1 reste une ambiguïté du document consulté.",
     "verifiedFacts": [
       "1466-10HV-C1S-E et 1466-10LV-B1S-E sont deux assemblages gravitaires Touch-up : HVLP/C1 et LVMP/B1. Le voisin automatique 1465-10HV-C1S n’est pas la ligne complète publiée dans cette édition ; il est remplacé par le 1466-10LV-B1S-E effectivement listé.",
-      "La consommation ne constitue pas un point de dimensionnement tant que ses conditions de mesure ne sont pas établies."
+      "La consommation ne constitue pas un point de dimensionnement tant que ses conditions de mesure ne sont pas établies.",
+      "Le document oppose 1466-10HV-C1S-E, gravité/HVLP, à 1466-10LV-B1S-E, gravité/LVMP, et à 1465-08HV-C1S-E, alimentation sous pression/HVLP."
     ],
     "limitations": [
       "La ligne de l’assemblage identifie le produit ; elle ne donne pas directement de consommation.",
@@ -83,6 +84,20 @@ const product: ToolProfileInput = {
       "evidenceIds": [
         "october7-tools-binks-trophy-brochure-p5"
       ]
+    },
+    {
+      "label": "Autre alimentation, référence distincte",
+      "value": "1465-08HV-C1S-E : Pressure, HVLP",
+      "evidenceIds": [
+        "reserved-followup-20261025-pistolet-peinture-hvlp-binks-trophy-1466-10hv-c1s-e-1"
+      ]
+    },
+    {
+      "label": "Chapeaux à distinguer",
+      "value": "C1 HVLP ; B1 LVMP, association de l’assemblage au point d’air à confirmer",
+      "evidenceIds": [
+        "reserved-followup-20261025-pistolet-peinture-hvlp-binks-trophy-1466-10hv-c1s-e-1"
+      ]
     }
   ],
   "evidence": [
@@ -105,6 +120,16 @@ const product: ToolProfileInput = {
       "retrievedAt": "2026-10-25",
       "confidence": "B",
       "notes": "Relecture des octets complets récupérés le 2026-10-25T07:20:22.025748+00:00, SHA-256 35d79cbb33d2f08edc4f6e119d4d820e45115ae2b8f9cde2f159fc157867cddd. 1466-10HV-C1S-E et 1466-10LV-B1S-E sont deux assemblages gravitaires Touch-up : HVLP/C1 et LVMP/B1. Le voisin automatique 1465-10HV-C1S n’est pas la ligne complète publiée dans cette édition ; il est remplacé par le 1466-10LV-B1S-E effectivement listé. Limite : La ligne de l’assemblage identifie le produit ; elle ne donne pas directement de consommation."
+    },
+    {
+      "id": "reserved-followup-20261025-pistolet-peinture-hvlp-binks-trophy-1466-10hv-c1s-e-1",
+      "sourceUrl": "https://binks.canto.com/direct/document/i3mg70cimt4e11l20u5rmh4c7c/Bf-sTsAgB3FlX-e4tht1-rzsFxY/original?content-type=application%2Fpdf&name=Trophy+Man.+Guns+03-473-01.pdf#page=5",
+      "sourceLabel": "Relecture ciblée de la référence, des variantes et des pièces, 25 octobre 2026",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-25",
+      "confidence": "B",
+      "notes": "Document lu le 25 octobre 2026 ; réponse SHA-256 35d79cbb33d2f08edc4f6e119d4d820e45115ae2b8f9cde2f159fc157867cddd. Portée : identité, références de pièces et limites décrites dans la fiche. Aucun essai physique CompatAir."
     }
   ],
   "fieldSources": {
@@ -114,6 +139,12 @@ const product: ToolProfileInput = {
     "demandExplanation": [
       "october7-tools-binks-trophy-brochure-p5",
       "review-20261025-pistolet-peinture-hvlp-binks-trophy-1466-10hv-c1s-e-s012"
+    ],
+    "editorial": [
+      "reserved-followup-20261025-pistolet-peinture-hvlp-binks-trophy-1466-10hv-c1s-e-1"
+    ],
+    "specifications": [
+      "reserved-followup-20261025-pistolet-peinture-hvlp-binks-trophy-1466-10hv-c1s-e-1"
     ]
   },
   "notes": [

@@ -19,24 +19,21 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "7P24L : polisseuse à levier, 2 400 tr/min et bonnet de 7 pouces sur sortie 5/8-11. La 7S48L de la même notice utilise un plateau de ponçage et tourne à 4 800 tr/min. La page régionale du fabricant nomme bien 7P24L sans suffixe EU et donne 439 L/min en charge. La fonction et la vitesse distinguent ces deux références ; les valeurs d’une variante EU ne lui sont pas transférées.",
+		"overview": "7P24L : outil de finition à levier, 2 400 tr/min et montage 5/8-11 pour plateau de 7 pouces dans la notice 03529385. La 7S48L utilise le même format de montage mais tourne à 4 800 tr/min : un diamètre et un filetage communs ne prouvent pas la même vitesse admissible des consommables. La notice ne donne pas ici de point de consommation sous pression.",
 		"verifiedFacts": [
-			"Puissance publiée : 0,8 hp / 0,6 kW.",
-			"Vitesse à vide : 2 400 tr/min.",
-			"Échappement : latéral.",
-			"Sortie : 5/8-11 ; bonnet de 7 pouces.",
-			"Consommation en charge documentaire : 15,5 cfm / 439 L/min, sans pression de mesure appariée."
+			"Notice 03529385, édition 14 : 7P24L et 7P24L-EU, commande à levier, 2 400 tr/min, montage 5/8-11 et plateau de 7 pouces.",
+			"La 7S48L et sa variante EU utilisent le même montage mais sont données à 4 800 tr/min."
 		],
 		"limitations": [
-			"La consommation reste hors du calcul de compatibilité : la pression de mesure et les conditions volumétriques complètes ne sont pas établies.",
-			"La bibliothèque ancienne répond429 ; son fragment de page n’est pas un document PDF. Ses transcriptions antérieures restent dans l’historique, sans être traitées comme des valeurs confirmées.",
-			"Lecture documentaire sans essai physique. Le lecteur web ne prouve ni disponibilité commerciale actuelle ni conformité de la fourniture en France.",
-			"Le flexible minimal est donné à8mm sur la page et3/8pouce(9,3mm) dans la notice. Cette divergence doit être résolue avec le montage livré ; aucun diamètre universel n’est conseillé."
+			"La fiche HTML a répondu 429 lors du contrôle direct. La nouvelle lecture s’appuie sur la notice officielle accessible, dont le champ est limité aux modèles et caractéristiques explicitement imprimés.",
+			"Les caractéristiques d’air historiques restent dans les spécifications avec leurs sources datées, mais le régime et la pression de mesure nécessaires au dimensionnement ne sont pas établis ici.",
+			"Le libellé d’une variante EU dans le tableau ne prouve pas que toutes les références régionales ou pièces sont interchangeables.",
+			"Aucun essai physique, disponibilité commerciale actuelle ou exposition individuelle au bruit n’est établi par cette lecture."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Puissance publiée",
+			"label": "Puissance de la fiche historique, non requalifiée par la notice",
 			"value": "0,8 hp / 0,6 kW",
 			"evidenceIds": [
 				"october21-ingersoll-rand-7p24l-model-table"
@@ -46,11 +43,11 @@ const product: ToolProfileInput = {
 			"label": "Vitesse à vide",
 			"value": "2 400 tr/min",
 			"evidenceIds": [
-				"october21-ingersoll-rand-7p24l-model-table"
+				"reserved-ir-20261025-ingersoll-rand-7p24l"
 			]
 		},
 		{
-			"label": "Échappement",
+			"label": "Échappement de la fiche historique, non requalifié par la notice",
 			"value": "latéral",
 			"evidenceIds": [
 				"october21-ingersoll-rand-7p24l-model-table"
@@ -60,7 +57,7 @@ const product: ToolProfileInput = {
 			"label": "Sortie",
 			"value": "5/8-11 ; bonnet de 7 pouces",
 			"evidenceIds": [
-				"october21-ingersoll-rand-7p24l-model-table"
+				"reserved-ir-20261025-ingersoll-rand-7p24l"
 			]
 		},
 		{
@@ -75,6 +72,20 @@ const product: ToolProfileInput = {
 			"value": "Non établie pour la mesure de consommation ; aucune consigne de famille transférée.",
 			"evidenceIds": [
 				"october21-ingersoll-rand-7p24l-model-table"
+			]
+		},
+		{
+			"label": "Commande de la notice",
+			"value": "Lever : levier",
+			"evidenceIds": [
+				"reserved-ir-20261025-ingersoll-rand-7p24l"
+			]
+		},
+		{
+			"label": "Montage de la notice",
+			"value": "5/8-11 ; plateau 7 pouces",
+			"evidenceIds": [
+				"reserved-ir-20261025-ingersoll-rand-7p24l"
 			]
 		}
 	],
@@ -96,6 +107,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-21",
 			"confidence": "A",
 			"notes": "Document lié par la page officielle, lu intégralement pour les pages anglaises1–4 ; SHA-256 6fa6784a22e9dc2f3ccdd9b92cf8325df45139a6f06d14c8416948dc007f66b4. La consigne PMAX ne fournit pas un point de mesure de consommation."
+		},
+		{
+			"id": "reserved-ir-20261025-ingersoll-rand-7p24l",
+			"sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/bltd89674ca5491ef9a/blt6c5df3c845dfca8f/680a19d1caf58865bdb6cdf2/03529385_ed14_P.pdf#page=3",
+			"sourceLabel": "Notice fabricant, relecture ciblée du modèle et du voisin, 25 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Document actuel accessible HTTP 200, réponse SHA-256 6fa6784a22e9dc2f3ccdd9b92cf8325df45139a6f06d14c8416948dc007f66b4. Lecture page PDF 3. La fiche HTML inaccessible et les preuves historiques restent séparées ; aucun essai physique."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +131,12 @@ const product: ToolProfileInput = {
 		],
 		"workingPressureBar": [
 			"october21-ingersoll-rand-7p24l-model-table"
+		],
+		"editorial": [
+			"reserved-ir-20261025-ingersoll-rand-7p24l"
+		],
+		"specifications": [
+			"reserved-ir-20261025-ingersoll-rand-7p24l"
 		]
 	},
 	"notes": [

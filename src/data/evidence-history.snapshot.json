@@ -737675,7 +737675,907 @@
         "confidence": "A",
         "notes": "Le tableau Stanley, catalogue compresseurs 2020 indique « Air displacement » : 180 L/min aspirés. Aucun débit restitué à une pression de mesure n’est fourni dans cette ligne."
       }
+    },
+    {
+      "id": "added:almig-combi-xp-11-standalone:reserved-20261025-almig-brochure-current-p5:2026-10-25",
+      "evidenceId": "reserved-20261025-almig-brochure-current-p5",
+      "productId": "almig-combi-xp-11-standalone",
+      "productType": "compressor",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "57130df2d278162374434b45241e7354f8b84737a3892d71ca7de16db3e12a8a",
+      "snapshot": {
+        "id": "reserved-20261025-almig-brochure-current-p5",
+        "sourceUrl": "https://www.almig.de/fileadmin/user_upload/COMBI_XP_Brochure_en.pdf#page=5",
+        "sourceLabel": "Relecture primaire du 25 octobre 2026 : almig-brochure-current, page PDF 5",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Corps complet SHA-256 4b6faf340058b0ef4e304421d315febacb13080a57dea9859128ec1ada90698b. Page 5 relue et inspectée visuellement: ligne 11*, astérisque sans cuve ni sécheur, plages 0,29–1,67 / 0,29–1,46 / 0,27–1,17 m³/min à 8/10/13 bar; 11 kW; longueur 1051, largeur 691, hauteur 1088 mm; 380 kg. Ligne 11 équipée: 590 kg. Pas de taux de marche chiffré retenu. Données déclarées, aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:almig-combi-xp-11-standalone:reserved-20261025-almig-combi-current:2026-10-25",
+      "evidenceId": "reserved-20261025-almig-combi-current",
+      "productId": "almig-combi-xp-11-standalone",
+      "productType": "compressor",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a5299b35dcd869e48800793381810a4ab5b8bec71bc5fe8be580b0e9b134026e",
+      "snapshot": {
+        "id": "reserved-20261025-almig-combi-current",
+        "sourceUrl": "https://www.almig.de/en/products/compressed-air-generation/screw-compressors/screw-compressor-combi-xp",
+        "sourceLabel": "Relecture primaire du 25 octobre 2026 : almig-combi-current",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Corps complet SHA-256 8d0be8947fd880b0ac723ad22b2c5d5d55e40822c6ea8256c9f40de2a1a4211d. Tableau 50 Hz: ligne 11* séparée de 11, trois plages ISO 1217 annexe C-2009, dimensions et masse; astérisque sans réservoir. Lien vers la brochure COMBI XP. Données déclarées, aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:biax-bew-309-e:reserved-20261025-biax-bew309:2026-10-25",
+      "evidenceId": "reserved-20261025-biax-bew309",
+      "productId": "biax-bew-309-e",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "06007b02d1c218a0f45dfe8501ede714e4240c55f6d7a4911a2cd7e3bf10b509",
+      "snapshot": {
+        "id": "reserved-20261025-biax-bew309",
+        "sourceUrl": "https://biax.de/en/product/bew-309-e-bis-senk-o-11-mm/",
+        "sourceLabel": "Relecture primaire du 25 octobre 2026 : biax-bew309",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Corps complet SHA-256 7177738118ee779691b3cfca59e07f067821072d84527c374977ebe9702f8862. Bloc technique BEW 309 E: 20 W, 150 L/min, réglage 0–900 tr/min, 240 g, queue hexagonale 3 mm; diamètre maximal du trou 11 mm; hauteur avec fraise 20/21,5 mm. Le régime de consommation est non qualifié. Données déclarées, aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:biax-bew-309-e:reserved-20261025-biax-bew605:2026-10-25",
+      "evidenceId": "reserved-20261025-biax-bew605",
+      "productId": "biax-bew-309-e",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e8a86843f2d95d4e66a70f0ffc76e0f0df782669e4fe247b6ad3d165928fa17e",
+      "snapshot": {
+        "id": "reserved-20261025-biax-bew605",
+        "sourceUrl": "https://biax.de/en/product/bew-605-bis-senk-o-24-mm/",
+        "sourceLabel": "Relecture primaire du 25 octobre 2026 : biax-bew605",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Corps complet SHA-256 5571002e748aad205d697dca124aadbd353d9694cedee1b88373dfe88ed88f48. Bloc technique BEW 605: 80 W, 300 L/min, 0–500 tr/min, 820 g, pince 6 mm; hauteur avec fraise 40/48 mm. Comparaison documentaire de géométrie et interface uniquement. Données déclarées, aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:biax-bew-309-e:reserved-20261025-biax-catalog-current-p40:2026-10-25",
+      "evidenceId": "reserved-20261025-biax-catalog-current-p40",
+      "productId": "biax-bew-309-e",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "1dac92e9be9924969dfa6deb75807a1a125c9a5a044b78e4503a589a6b3bb724",
+      "snapshot": {
+        "id": "reserved-20261025-biax-catalog-current-p40",
+        "sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=40",
+        "sourceLabel": "Relecture primaire du 25 octobre 2026 : biax-catalog-current, page PDF 40",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Corps complet SHA-256 318971fb9ba951f395b81cbca3d1e57938ce23b74db3aef25ff98bb8f0edc6c8. Page 24: SBRD 820 réf. 150021135, 310 W, conflit avec 300 W HTML conservé. Pages 40–41: BEW 309 E réf. 150800726, 150 L/min, 20 W, 0–900 tr/min; fonctionnement/lubrification à 6 bar, sans qualification de consommation en charge; diamètre maximal du trou 10 mm, conflit avec 11 mm HTML. Ne pas mélanger BEW 309 EL150 ou SBRH avec les références étudiées. Données déclarées, aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:biax-bew-309-e:reserved-20261025-biax-catalog-current-p41:2026-10-25",
+      "evidenceId": "reserved-20261025-biax-catalog-current-p41",
+      "productId": "biax-bew-309-e",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "28645cd2c314124a14bbf7345912cf6ac0bb8493065701485ee4d969c6853b7d",
+      "snapshot": {
+        "id": "reserved-20261025-biax-catalog-current-p41",
+        "sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=41",
+        "sourceLabel": "Relecture primaire du 25 octobre 2026 : biax-catalog-current, page PDF 41",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Corps complet SHA-256 318971fb9ba951f395b81cbca3d1e57938ce23b74db3aef25ff98bb8f0edc6c8. Page 24: SBRD 820 réf. 150021135, 310 W, conflit avec 300 W HTML conservé. Pages 40–41: BEW 309 E réf. 150800726, 150 L/min, 20 W, 0–900 tr/min; fonctionnement/lubrification à 6 bar, sans qualification de consommation en charge; diamètre maximal du trou 10 mm, conflit avec 11 mm HTML. Ne pas mélanger BEW 309 EL150 ou SBRH avec les références étudiées. Données déclarées, aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:biax-bew-605:reserved-neighbor-20261025-biax-bew-605:2026-10-25",
+      "evidenceId": "reserved-neighbor-20261025-biax-bew-605",
+      "productId": "biax-bew-605",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "877c0d0fada40370ae9fd50ee9380d18bad96dcb3ac6a5562cfba05feb997faf",
+      "snapshot": {
+        "id": "reserved-neighbor-20261025-biax-bew-605",
+        "sourceUrl": "https://biax.de/en/product/bew-605-bis-senk-o-24-mm/",
+        "sourceLabel": "Relecture du voisin signalé pendant la correction des réserves, 25 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Réponse primaire SHA-256 5571002e748aad205d697dca124aadbd353d9694cedee1b88373dfe88ed88f48. Aucun point de mesure ou régime n’est déduit d’une simple pression de service."
+      }
+    },
+    {
+      "id": "added:biax-sbrd-820:reserved-20261025-biax-catalog-current-p24:2026-10-25",
+      "evidenceId": "reserved-20261025-biax-catalog-current-p24",
+      "productId": "biax-sbrd-820",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "2abfd0ca4a4257a5bd3a1ca6160938cb565e847f670a20a5ceaee7e96a66f11f",
+      "snapshot": {
+        "id": "reserved-20261025-biax-catalog-current-p24",
+        "sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=24",
+        "sourceLabel": "Relecture primaire du 25 octobre 2026 : biax-catalog-current, page PDF 24",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Corps complet SHA-256 318971fb9ba951f395b81cbca3d1e57938ce23b74db3aef25ff98bb8f0edc6c8. Page 24: SBRD 820 réf. 150021135, 310 W, conflit avec 300 W HTML conservé. Pages 40–41: BEW 309 E réf. 150800726, 150 L/min, 20 W, 0–900 tr/min; fonctionnement/lubrification à 6 bar, sans qualification de consommation en charge; diamètre maximal du trou 10 mm, conflit avec 11 mm HTML. Ne pas mélanger BEW 309 EL150 ou SBRH avec les références étudiées. Données déclarées, aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:biax-sbrd-820:reserved-20261025-biax-sbrd812:2026-10-25",
+      "evidenceId": "reserved-20261025-biax-sbrd812",
+      "productId": "biax-sbrd-820",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "ba87da6254f85b706ec3383500d276e564b0c1b0ab959c3f34bdcce7da15c133",
+      "snapshot": {
+        "id": "reserved-20261025-biax-sbrd812",
+        "sourceUrl": "https://biax.de/en/product/sbrd-8-12-2-12-000-1-min-zweihandschl/",
+        "sourceLabel": "Relecture primaire du 25 octobre 2026 : biax-sbrd812",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Corps complet SHA-256 f1f3ff8bd35a400b70a06524b29545194c11d737b7e6f4b28cac7b8921ba3b5c. Bloc technique SBRD 8-12/2: 12 000 tr/min, 300 W, 400 L/min, queue maximale 8 mm, fraise carbure maximale 15 mm, pince livrée 6 mm. Données déclarées, aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:biax-sbrd-820:reserved-20261025-biax-sbrd820:2026-10-25",
+      "evidenceId": "reserved-20261025-biax-sbrd820",
+      "productId": "biax-sbrd-820",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c7083f05d858dbd26209a4671e1133464f098864f293788a4f2c39775df3761c",
+      "snapshot": {
+        "id": "reserved-20261025-biax-sbrd820",
+        "sourceUrl": "https://biax.de/en/product/sbrd-820-20-000-1-min-zweihandschl/",
+        "sourceLabel": "Relecture primaire du 25 octobre 2026 : biax-sbrd820",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Corps complet SHA-256 2586265668faf9870879e983258ccd937a98e6281f171226b1eee3082b7e44b4. Bloc technique SBRD 820, réf. 150021135: 300 W, 500 L/min, 20 000 tr/min, 1040 g, queue maximale 8 mm, fraise carbure maximale 12 mm, pince livrée 6 mm. Consommation sans régime de mesure. Données déclarées, aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:dynabrade-52518:dynabrade-52518-followup-20261025-pd0337r:2026-10-25",
+      "evidenceId": "dynabrade-52518-followup-20261025-pd0337r",
+      "productId": "dynabrade-52518",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a101f575644d31bd712f6636c7cc594167442311a3a5b64c7b50178ab6cb419c",
+      "snapshot": {
+        "id": "dynabrade-52518-followup-20261025-pd0337r",
+        "sourceUrl": "https://apac.dynabrade.com/assets/0d88c8f1-7151-42d4-9526-eade4314de4b/4074394753-pd0337r.pdf#page=1",
+        "sourceLabel": "Dynabrade 52518, pd0337r, pages 1, 2",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "A",
+        "notes": "Lecture 2026-10-25; réponse HTTP200, SHA-256 370096010bb52fe0a305b41d63c86af5afbb753cc80dd2760b7e090a73dd99e0; copie locale 1922ab0f0e16b9e2.pdf. Déclaration constructeur, pas de mesure CompatAir."
+      }
+    },
+    {
+      "id": "added:dynabrade-52518:dynabrade-52518-followup-20261025-product:2026-10-25",
+      "evidenceId": "dynabrade-52518-followup-20261025-product",
+      "productId": "dynabrade-52518",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "01875e722b4a4aa5810e2bdeb5cfa0ec55bb0293ba1c158f2ec0209646c70171",
+      "snapshot": {
+        "id": "dynabrade-52518-followup-20261025-product",
+        "sourceUrl": "https://apac.dynabrade.com/en/catalog/55hp-right-angle-disc-sander~65251550-aeb3-4d26-933b-b8f5c84b4575",
+        "sourceLabel": "Dynabrade 52518, fiche officielle",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "A",
+        "notes": "Lecture 2026-10-25; réponse HTTP200, SHA-256 632909560925f94613079420a6a29008273ec1473253a5d2d697062c55193c3e; copie locale e6ffe1d63f2eedf6.html. Déclaration constructeur, pas de mesure CompatAir."
+      }
+    },
+    {
+      "id": "added:dynabrade-53783:dynabrade-53783-followup-20261025-pd0925:2026-10-25",
+      "evidenceId": "dynabrade-53783-followup-20261025-pd0925",
+      "productId": "dynabrade-53783",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "7e89847baa5221bf2b6154ad0cebd8db208b042f5be8b9ed6c5825d26ca7932d",
+      "snapshot": {
+        "id": "dynabrade-53783-followup-20261025-pd0925",
+        "sourceUrl": "https://us.dynabrade.com/assets/2225dfee-1b23-4a16-b4fa-7f3fe2d2ac0b/4074396334-pd0925.pdf#page=1",
+        "sourceLabel": "Dynabrade 53783, pd0925, pages 1, 2, 3, 8",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "A",
+        "notes": "Lecture 2026-10-25; réponse HTTP200, SHA-256 786c3fd41b69236932d2db3b4ed55e8ddc0a4b181ab3330db30a9bc6433a4b41; copie locale d0896dd9fce1c2f3.pdf. Déclaration constructeur, pas de mesure CompatAir."
+      }
+    },
+    {
+      "id": "added:dynabrade-53783:dynabrade-53783-followup-20261025-product:2026-10-25",
+      "evidenceId": "dynabrade-53783-followup-20261025-product",
+      "productId": "dynabrade-53783",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "2c6d6de20f4614b2b911a6b804290c867bb6d6dd1b1677eb4e25ee89195ce726",
+      "snapshot": {
+        "id": "dynabrade-53783-followup-20261025-product",
+        "sourceUrl": "https://us.dynabrade.com/en/catalog/cone-or-plug-grinder-single-extension-steel-housing~5b92fe24-d15d-4ae7-996d-0316a887bfdb",
+        "sourceLabel": "Dynabrade 53783, fiche officielle",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "A",
+        "notes": "Lecture 2026-10-25; réponse HTTP200, SHA-256 167359948ec7ed80eadbcec52bbaac84cded0f678ab8036e4f694c41c0a06fd1; copie locale 3727a3fd923b69f7.html. Déclaration constructeur, pas de mesure CompatAir."
+      }
+    },
+    {
+      "id": "added:dynabrade-58460:dynabrade-58460-followup-20261025-pd0860:2026-10-25",
+      "evidenceId": "dynabrade-58460-followup-20261025-pd0860",
+      "productId": "dynabrade-58460",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "79e85d44e69f7da113fac886455e0452cb99d272cb21560cb4b0150f21f3d2d9",
+      "snapshot": {
+        "id": "dynabrade-58460-followup-20261025-pd0860",
+        "sourceUrl": "https://eu.dynabrade.com/assets/4638d270-32ee-4657-a2e6-f84d6dd95d1f/4074396145-pd0860.pdf#page=1",
+        "sourceLabel": "Dynabrade 58460, pd0860, pages 1, 2",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "A",
+        "notes": "Lecture 2026-10-25; réponse HTTP200, SHA-256 d3d026b7e957d235bf1023217b149ef5b497bec46bea312c5f474edb25c987d3; copie locale 96fa6711ffa15c1a.pdf. Déclaration constructeur, pas de mesure CompatAir."
+      }
+    },
+    {
+      "id": "added:dynabrade-58460:dynabrade-58460-followup-20261025-product:2026-10-25",
+      "evidenceId": "dynabrade-58460-followup-20261025-product",
+      "productId": "dynabrade-58460",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "6b84ac0629d93c045f48020f3fd2f5c52378d6638927e0f3b8808a4b1d1dbc2b",
+      "snapshot": {
+        "id": "dynabrade-58460-followup-20261025-product",
+        "sourceUrl": "https://eu.dynabrade.com/en/catalog/3-76-mm-dia-dynalocke-dual-action-sander-non-vacuum~c1d63ad2-6c8c-4c96-ae6f-819f4c2b4078",
+        "sourceLabel": "Dynabrade 58460, fiche officielle",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "A",
+        "notes": "Lecture 2026-10-25; réponse HTTP200, SHA-256 ed8b4b2a0a55001c406b1cbe46c132e050cf50bd6820551e1b9661da6d3acfcd; copie locale 9a2d9d880933c263.html. Déclaration constructeur, pas de mesure CompatAir."
+      }
+    },
+    {
+      "id": "added:dynabrade-58502:dynabrade-58502-followup-20261025-pd19-01:2026-10-25",
+      "evidenceId": "dynabrade-58502-followup-20261025-pd19-01",
+      "productId": "dynabrade-58502",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "cb89f651cb44490e263072b1978418b8cc3d579132846258846496d0a30b8ba8",
+      "snapshot": {
+        "id": "dynabrade-58502-followup-20261025-pd19-01",
+        "sourceUrl": "https://eu.dynabrade.com/assets/19376dd1-fe85-4fe2-b579-a78fbbfd3e6b/4074402509-pd19-01.pdf#page=1",
+        "sourceLabel": "Dynabrade 58502, pd19-01, pages 1, 2, 4",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "A",
+        "notes": "Lecture 2026-10-25; réponse HTTP200, SHA-256 f51710c924da6c06fc5bc2c4bb42cace40892715d6d695baf7eacb4ad88b310e; copie locale 8334c4df1da20c33.pdf. Déclaration constructeur, pas de mesure CompatAir."
+      }
+    },
+    {
+      "id": "added:dynabrade-58502:dynabrade-58502-followup-20261025-product:2026-10-25",
+      "evidenceId": "dynabrade-58502-followup-20261025-product",
+      "productId": "dynabrade-58502",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "045a235724cde70d5dadd06cb0369d407124bcf605895d7a28fee9994ad316a6",
+      "snapshot": {
+        "id": "dynabrade-58502-followup-20261025-product",
+        "sourceUrl": "https://eu.dynabrade.com/en/catalog/3-76-mm-w-x-4-14-108-mm-l-dynabug-ii-orbital-sander-central-vacuum~59e56665-6b60-48d3-9250-c1fb357a3cbe",
+        "sourceLabel": "Dynabrade 58502, fiche officielle",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "A",
+        "notes": "Lecture 2026-10-25; réponse HTTP200, SHA-256 87be2b2092690264e990c7a38fd846dd333f777954edd5c9c250e76768926418; copie locale fa89d2b9f385cbab.html. Déclaration constructeur, pas de mesure CompatAir."
+      }
+    },
+    {
+      "id": "added:fiac-ax-203bd-dry-10-400-50-ce:reserved-20261025-fiac-current10:2026-10-25",
+      "evidenceId": "reserved-20261025-fiac-current10",
+      "productId": "fiac-ax-203bd-dry-10-400-50-ce",
+      "productType": "compressor",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "2e8ddec1cc90e3fef660ee2e982ea238459e6e43ce7a79b5925761466b01e077",
+      "snapshot": {
+        "id": "reserved-20261025-fiac-current10",
+        "sourceUrl": "https://shop.fiac.it/en-IT/products/4152026242/ax-203bd-dry-10-40050-ce",
+        "sourceLabel": "Relecture primaire du 25 octobre 2026 : fiac-current10",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Corps complet SHA-256 1290a729ca6a052910dc22cc9bc4dbf42fc670c593886e97425c12a0f8242588. Code 4152026242, maximum 10 bar et FAD capacity 2100 L/min présentés séparément; aucune pression d’essai explicitement associée au débit dans le bloc lu. Données déclarées, aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:fiac-ax-203bd-dry-10-400-50-ce:reserved-20261025-fiac-current13:2026-10-25",
+      "evidenceId": "reserved-20261025-fiac-current13",
+      "productId": "fiac-ax-203bd-dry-10-400-50-ce",
+      "productType": "compressor",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c5a6ccf2574c7f4337b2673e43f4958d9248399d101cd0e5417f56483c9d7d07",
+      "snapshot": {
+        "id": "reserved-20261025-fiac-current13",
+        "sourceUrl": "https://shop.fiac.it/en-IT/products/4152026243/ax-203bd-dry-13-40050-ce",
+        "sourceLabel": "Relecture primaire du 25 octobre 2026 : fiac-current13",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Corps complet SHA-256 4766d6cbdcd939270ad096d8979b620b2a8c15822d4d790b1ea04c060c3cf908. Code 4152026243, maximum 13 bar et débit 1690 L/min; aucune pression d’essai explicitement associée dans le bloc lu. Données déclarées, aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:fiac-ax-203bd-dry-13-400-50-ce:reserved-neighbor-20261025-fiac-ax-203bd-dry-13-400-50-ce:2026-10-25",
+      "evidenceId": "reserved-neighbor-20261025-fiac-ax-203bd-dry-13-400-50-ce",
+      "productId": "fiac-ax-203bd-dry-13-400-50-ce",
+      "productType": "compressor",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "31208cbc0a86ce094b130b63b9b745cb1af38b5e7a648eddb3b0282f2a75c33d",
+      "snapshot": {
+        "id": "reserved-neighbor-20261025-fiac-ax-203bd-dry-13-400-50-ce",
+        "sourceUrl": "https://shop.fiac.it/en-IT/products/4152026243/ax-203bd-dry-13-40050-ce",
+        "sourceLabel": "Relecture du voisin signalé pendant la correction des réserves, 25 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Réponse primaire SHA-256 4766d6cbdcd939270ad096d8979b620b2a8c15822d4d790b1ea04c060c3cf908. Aucun point de mesure ou régime n’est déduit d’une simple pression de service."
+      }
+    },
+    {
+      "id": "added:fini-cube-4-0-10-270-es-z:reserved-20261025-s117-p3:2026-10-25",
+      "evidenceId": "reserved-20261025-s117-p3",
+      "productId": "fini-cube-4-0-10-270-es-z",
+      "productType": "compressor",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b00bc5538768d6b3845c07f6e129d4a47a7b7deb097d7e8cd2df3602af19b1ad",
+      "snapshot": {
+        "id": "reserved-20261025-s117-p3",
+        "sourceUrl": "https://finicompressors.com/wp-content/uploads/Catalogo-Cube-Fini_EN_04-2024_9990397.pdf#page=3",
+        "sourceLabel": "Relecture primaire du 25 octobre 2026 : s117, page PDF 3",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Corps complet SHA-256 270d2f554801e15883dd85b3f3b6089c641adf51dd59c15f31e0fd06c7b88e1a. Brochure CUBE 04/2024 page PDF 3: codes V91PD92FNM301 (ES) et V91PD92FNM501 (ES Z), 270 L, 4 kW, 400/3/50, 460 L/min à 9,5 bar pour configuration 10 bar; ES désigne sécheur et Z réservoir galvanisé. Même production d’air publiée; distinction déjà couverte dans la voisine. Données déclarées, aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:ingersoll-rand-312ac4a:reserved-ir-20261025-ingersoll-rand-312ac4a:2026-10-25",
+      "evidenceId": "reserved-ir-20261025-ingersoll-rand-312ac4a",
+      "productId": "ingersoll-rand-312ac4a",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "9126e6a157ce25a9157454faf6bad97fef21c3e238881b669363cbbf34014a4e",
+      "snapshot": {
+        "id": "reserved-ir-20261025-ingersoll-rand-312ac4a",
+        "sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/bltd89674ca5491ef9a/bltaba456f61496c230/680a25bef42c4c5c743e73c4/45760899_ed7_G.pdf#page=3",
+        "sourceLabel": "Notice fabricant, relecture ciblée du modèle et du voisin, 25 octobre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Document actuel accessible HTTP 200, réponse SHA-256 5b41360138aa346aa1b09a2be05db75c15cc72b82cfe642f186fc903f8e2d1ae. Lecture page PDF 3. La fiche HTML inaccessible et les preuves historiques restent séparées ; aucun essai physique."
+      }
+    },
+    {
+      "id": "added:ingersoll-rand-77a25f107:reserved-ir-20261025-ingersoll-rand-77a25f107:2026-10-25",
+      "evidenceId": "reserved-ir-20261025-ingersoll-rand-77a25f107",
+      "productId": "ingersoll-rand-77a25f107",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8963e12e9a28dd0256a5841d8aac4c95377dc2ef5cb22db14c5286828c9e9080",
+      "snapshot": {
+        "id": "reserved-ir-20261025-ingersoll-rand-77a25f107",
+        "sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/bltd89674ca5491ef9a/blt433cc516ed60e011/680a2474db9ccbf630425ff1/80221773_ed3_C.pdf#page=3",
+        "sourceLabel": "Notice fabricant, relecture ciblée du modèle et du voisin, 25 octobre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Document actuel accessible HTTP 200, réponse SHA-256 79bce65a0d457b008e4483ef519ea5a09fcc23eb3463b30e076d2e1216da5542. Lecture page PDF 3. La fiche HTML inaccessible et les preuves historiques restent séparées ; aucun essai physique."
+      }
+    },
+    {
+      "id": "added:ingersoll-rand-7p24l:reserved-ir-20261025-ingersoll-rand-7p24l:2026-10-25",
+      "evidenceId": "reserved-ir-20261025-ingersoll-rand-7p24l",
+      "productId": "ingersoll-rand-7p24l",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "6b37e4037de323a60c9b3129a47559dfb8ddda2dc1e28e0f66825eb163a8644f",
+      "snapshot": {
+        "id": "reserved-ir-20261025-ingersoll-rand-7p24l",
+        "sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/bltd89674ca5491ef9a/blt6c5df3c845dfca8f/680a19d1caf58865bdb6cdf2/03529385_ed14_P.pdf#page=3",
+        "sourceLabel": "Notice fabricant, relecture ciblée du modèle et du voisin, 25 octobre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Document actuel accessible HTTP 200, réponse SHA-256 6fa6784a22e9dc2f3ccdd9b92cf8325df45139a6f06d14c8416948dc007f66b4. Lecture page PDF 3. La fiche HTML inaccessible et les preuves historiques restent séparées ; aucun essai physique."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-9-mm:reserved-followup-20261025-pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-9-mm-1:2026-10-25",
+      "evidenceId": "reserved-followup-20261025-pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-9-mm-1",
+      "productId": "pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-9-mm",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b809ea0d40ef367559e92ec26d851442f66e4226f70c60e762e00e3c29e7fb62",
+      "snapshot": {
+        "id": "reserved-followup-20261025-pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-9-mm-1",
+        "sourceUrl": "https://www.ltf.it/wp-content/uploads/2023/10/Asturo.pdf#page=7",
+        "sourceLabel": "Relecture ciblée de la référence, des variantes et des pièces, 25 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Document lu le 25 octobre 2026 ; réponse SHA-256 1649c2153ad235d9c7303af0aeac4de327f2558f30db378397af3b25af7e9794. Portée : identité, références de pièces et limites décrites dans la fiche. Aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-9-mm:reserved-followup-20261025-pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-9-mm-2:2026-10-25",
+      "evidenceId": "reserved-followup-20261025-pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-9-mm-2",
+      "productId": "pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-9-mm",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e2ec00d0a28ebd098e9b07b93e8b452af0e789618eaa4f7220155ff003549b11",
+      "snapshot": {
+        "id": "reserved-followup-20261025-pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-9-mm-2",
+        "sourceUrl": "https://www.ltf.it/wp-content/uploads/2023/10/Asturo.pdf#page=23",
+        "sourceLabel": "Relecture ciblée de la référence, des variantes et des pièces, 25 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Document lu le 25 octobre 2026 ; réponse SHA-256 1649c2153ad235d9c7303af0aeac4de327f2558f30db378397af3b25af7e9794. Portée : identité, références de pièces et limites décrites dans la fiche. Aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-ani-f1-n-super-i-hvlp-buse-1-2:reserved-followup-20261025-pistolet-peinture-hvlp-ani-f1-n-super-i-hvlp-buse-1-2-1:2026-10-25",
+      "evidenceId": "reserved-followup-20261025-pistolet-peinture-hvlp-ani-f1-n-super-i-hvlp-buse-1-2-1",
+      "productId": "pistolet-peinture-hvlp-ani-f1-n-super-i-hvlp-buse-1-2",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b14b9544fe2f7341686b72fb241d0c23c2785911485308c03aadbbfa11954015",
+      "snapshot": {
+        "id": "reserved-followup-20261025-pistolet-peinture-hvlp-ani-f1-n-super-i-hvlp-buse-1-2-1",
+        "sourceUrl": "https://www.ani.it/wp-content/uploads/2024/10/ANI_CatalogoGenerale_20240711.pdf#page=74",
+        "sourceLabel": "Relecture ciblée de la référence, des variantes et des pièces, 25 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Document lu le 25 octobre 2026 ; réponse SHA-256 b5448fc1dd141675b3ca8ccc71621334fd2ff486c4766f5a6ed4782c60e87386. Portée : identité, références de pièces et limites décrites dans la fiche. Aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-astro-pneumatic-hvlpd512:reserved-followup-20261025-pistolet-peinture-hvlp-astro-pneumatic-hvlpd512-1:2026-10-25",
+      "evidenceId": "reserved-followup-20261025-pistolet-peinture-hvlp-astro-pneumatic-hvlpd512-1",
+      "productId": "pistolet-peinture-hvlp-astro-pneumatic-hvlpd512",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "2afd8fa78c22c53b5fc1359c5158ba0f299a4e7ceaf4ecf03d8d4d061d4c81f9",
+      "snapshot": {
+        "id": "reserved-followup-20261025-pistolet-peinture-hvlp-astro-pneumatic-hvlpd512-1",
+        "sourceUrl": "https://www.astrotools.com/product/hvlp-mini-gravity-feed-spray-gun-1-2mm-nozzle/",
+        "sourceLabel": "Relecture ciblée de la référence, des variantes et des pièces, 25 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Document lu le 25 octobre 2026 ; réponse SHA-256 6df9851722a75d2016d290bad3880b6d42393b488193011b779fed28418f6178. Portée : identité, références de pièces et limites décrites dans la fiche. Aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-binks-trophy-1466-10hv-c1s-e:reserved-followup-20261025-pistolet-peinture-hvlp-binks-trophy-1466-10hv-c1s-e-1:2026-10-25",
+      "evidenceId": "reserved-followup-20261025-pistolet-peinture-hvlp-binks-trophy-1466-10hv-c1s-e-1",
+      "productId": "pistolet-peinture-hvlp-binks-trophy-1466-10hv-c1s-e",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "cef54fad82f8a25bb8e813c9f00353dbaf22c40fc08c77900c56ed2e935f097f",
+      "snapshot": {
+        "id": "reserved-followup-20261025-pistolet-peinture-hvlp-binks-trophy-1466-10hv-c1s-e-1",
+        "sourceUrl": "https://binks.canto.com/direct/document/i3mg70cimt4e11l20u5rmh4c7c/Bf-sTsAgB3FlX-e4tht1-rzsFxY/original?content-type=application%2Fpdf&name=Trophy+Man.+Guns+03-473-01.pdf#page=5",
+        "sourceLabel": "Relecture ciblée de la référence, des variantes et des pièces, 25 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Document lu le 25 octobre 2026 ; réponse SHA-256 35d79cbb33d2f08edc4f6e119d4d820e45115ae2b8f9cde2f159fc157867cddd. Portée : identité, références de pièces et limites décrites dans la fiche. Aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-graco-airpro-pressure-288938-288938:reserved-followup-20261025-pistolet-peinture-hvlp-graco-airpro-pressure-288938-288938-1:2026-10-25",
+      "evidenceId": "reserved-followup-20261025-pistolet-peinture-hvlp-graco-airpro-pressure-288938-288938-1",
+      "productId": "pistolet-peinture-hvlp-graco-airpro-pressure-288938-288938",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "370f2af3ef681efa61b63c04e5fdbe408514a3092b9abd9219320a6023b3be1f",
+      "snapshot": {
+        "id": "reserved-followup-20261025-pistolet-peinture-hvlp-graco-airpro-pressure-288938-288938-1",
+        "sourceUrl": "https://www.graco.com/content/dam/graco/tech_documents/manuals/312/312414/312414EN-U.pdf#page=3",
+        "sourceLabel": "Relecture ciblée de la référence, des variantes et des pièces, 25 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Document lu le 25 octobre 2026 ; réponse SHA-256 db686f2919e70169aab5175ac84b40c5d306d31bd483f4d3723f6b971a0086cb. Portée : identité, références de pièces et limites décrites dans la fiche. Aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-graco-airpro-pressure-288938-288938:reserved-followup-20261025-pistolet-peinture-hvlp-graco-airpro-pressure-288938-288938-2:2026-10-25",
+      "evidenceId": "reserved-followup-20261025-pistolet-peinture-hvlp-graco-airpro-pressure-288938-288938-2",
+      "productId": "pistolet-peinture-hvlp-graco-airpro-pressure-288938-288938",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a80d439c0c37c90674d86d40f3d2d815c2201c56e93f110b475459b8c8b9b646",
+      "snapshot": {
+        "id": "reserved-followup-20261025-pistolet-peinture-hvlp-graco-airpro-pressure-288938-288938-2",
+        "sourceUrl": "https://www.graco.com/content/dam/graco/tech_documents/manuals/312/312414/312414EN-U.pdf#page=23",
+        "sourceLabel": "Relecture ciblée de la référence, des variantes et des pièces, 25 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Document lu le 25 octobre 2026 ; réponse SHA-256 db686f2919e70169aab5175ac84b40c5d306d31bd483f4d3723f6b971a0086cb. Portée : identité, références de pièces et limites décrites dans la fiche. Aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-prowin-k-528g-28:reserved-followup-20261025-pistolet-peinture-hvlp-prowin-k-528g-28-1:2026-10-25",
+      "evidenceId": "reserved-followup-20261025-pistolet-peinture-hvlp-prowin-k-528g-28-1",
+      "productId": "pistolet-peinture-hvlp-prowin-k-528g-28",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "807884d163b929f6bcad82dfc1710c64d1310aa1bdfb7bb9729ccea67d3d0aa3",
+      "snapshot": {
+        "id": "reserved-followup-20261025-pistolet-peinture-hvlp-prowin-k-528g-28-1",
+        "sourceUrl": "https://www.prowin-tools.com/wp-content/uploads/2023/05/Air-Painting-ToolsNew.pdf#page=16",
+        "sourceLabel": "Relecture ciblée de la référence, des variantes et des pièces, 25 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Document lu le 25 octobre 2026 ; réponse SHA-256 2cd45573cff8decba50b2fbbfe2127d8e4bc1c3f1fdb6550e2f2467703941213. Portée : identité, références de pièces et limites décrites dans la fiche. Aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-sagola-3600-xpt-hvlp-buse-1-30-10142505:reserved-followup-20261025-pistolet-peinture-hvlp-sagola-3600-xpt-hvlp-buse-1-30-10142505-1:2026-10-25",
+      "evidenceId": "reserved-followup-20261025-pistolet-peinture-hvlp-sagola-3600-xpt-hvlp-buse-1-30-10142505-1",
+      "productId": "pistolet-peinture-hvlp-sagola-3600-xpt-hvlp-buse-1-30-10142505",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "390048e603cf0f80b061cd8485189acd4cb2077937f6bb281446eeef432752f9",
+      "snapshot": {
+        "id": "reserved-followup-20261025-pistolet-peinture-hvlp-sagola-3600-xpt-hvlp-buse-1-30-10142505-1",
+        "sourceUrl": "https://sagola.com/uploads/documentos/bodyshop-catalogue.pdf#page=29",
+        "sourceLabel": "Relecture ciblée de la référence, des variantes et des pièces, 25 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Document lu le 25 octobre 2026 ; réponse SHA-256 db4cc471805cb5bd9e9a64d16185447c9b5c66a95d4ebd8f3f8e520c41da59c6. Portée : identité, références de pièces et limites décrites dans la fiche. Aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-sagola-3600-xpt-hvlp-buse-1-30-10142505:reserved-followup-20261025-pistolet-peinture-hvlp-sagola-3600-xpt-hvlp-buse-1-30-10142505-2:2026-10-25",
+      "evidenceId": "reserved-followup-20261025-pistolet-peinture-hvlp-sagola-3600-xpt-hvlp-buse-1-30-10142505-2",
+      "productId": "pistolet-peinture-hvlp-sagola-3600-xpt-hvlp-buse-1-30-10142505",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c653686ca44d877bf2bb2f2d3636f1c83c26afa382bd945554b5da2f4238d76b",
+      "snapshot": {
+        "id": "reserved-followup-20261025-pistolet-peinture-hvlp-sagola-3600-xpt-hvlp-buse-1-30-10142505-2",
+        "sourceUrl": "https://sagola.com/uploads/manuales/pistola-sagola-3600-manual.pdf#page=29",
+        "sourceLabel": "Relecture ciblée de la référence, des variantes et des pièces, 25 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Document lu le 25 octobre 2026 ; réponse SHA-256 1f19477b3497285d86a11b144b0ca4a5158ec0453424b5280545aed3f5013db8. Portée : identité, références de pièces et limites décrites dans la fiche. Aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-7-145722:reserved-followup-20261025-pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-7-145722-1:2026-10-25",
+      "evidenceId": "reserved-followup-20261025-pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-7-145722-1",
+      "productId": "pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-7-145722",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "7c79627bdee6d659bcddd941478d35ad09aacab92498d3a95c0e2c86e6a75bb3",
+      "snapshot": {
+        "id": "reserved-followup-20261025-pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-7-145722-1",
+        "sourceUrl": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806#page=34",
+        "sourceLabel": "Relecture ciblée de la référence, des variantes et des pièces, 25 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Document lu le 25 octobre 2026 ; réponse SHA-256 36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3. Portée : identité, références de pièces et limites décrites dans la fiche. Aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-9-145730:reserved-neighbor-20261025-pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-9-145730:2026-10-25",
+      "evidenceId": "reserved-neighbor-20261025-pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-9-145730",
+      "productId": "pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-9-145730",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "bf91433bf3752b27249f6ad350e91e5e6d0a2191b100b18203c0d24ff1125685",
+      "snapshot": {
+        "id": "reserved-neighbor-20261025-pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-9-145730",
+        "sourceUrl": "https://www.sata.com/media/91/a2/99/1791809356/BETRIEBSANLEITUNG-SATAJET-100-B.PDF.PDF?ts=1791809356#page=132",
+        "sourceLabel": "Relecture du voisin pendant la correction des pages réservées, 25 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Lecture ciblée, SHA-256 120fd4b58cf8df73fb5f9e531c66be0167896f63bb7505c55207adb9de4d9f99. Les données de régime, d’unité ou de pression non qualifiées ne sont pas promues en point de dimensionnement."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-walcom-ego-carbonio-190-hvlp-gravite-buse-0-5-mm:reserved-followup-20261025-pistolet-peinture-hvlp-walcom-ego-carbonio-190-hvlp-gravite-buse-0-5-mm-1:2026-10-25",
+      "evidenceId": "reserved-followup-20261025-pistolet-peinture-hvlp-walcom-ego-carbonio-190-hvlp-gravite-buse-0-5-mm-1",
+      "productId": "pistolet-peinture-hvlp-walcom-ego-carbonio-190-hvlp-gravite-buse-0-5-mm",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "0d1b7c79744193b3b06c8600fa3e522aa5de399b4dd4415f378aff9b6affa0b1",
+      "snapshot": {
+        "id": "reserved-followup-20261025-pistolet-peinture-hvlp-walcom-ego-carbonio-190-hvlp-gravite-buse-0-5-mm-1",
+        "sourceUrl": "https://walmec.com/it/products/walcom/ego-carbonio/cat_ego_carbonio_190_en.pdf#page=2",
+        "sourceLabel": "Relecture ciblée de la référence, des variantes et des pièces, 25 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Document lu le 25 octobre 2026 ; réponse SHA-256 e11b941e113540bd916bec4363c830a975456f90f3c463d103b30a00f00d7087. Portée : identité, références de pièces et limites décrites dans la fiche. Aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-walcom-ego-carbonio-190-hvlp-gravite-buse-1-0-mm:reserved-neighbor-20261025-pistolet-peinture-hvlp-walcom-ego-carbonio-190-hvlp-gravite-buse-1-0-mm:2026-10-25",
+      "evidenceId": "reserved-neighbor-20261025-pistolet-peinture-hvlp-walcom-ego-carbonio-190-hvlp-gravite-buse-1-0-mm",
+      "productId": "pistolet-peinture-hvlp-walcom-ego-carbonio-190-hvlp-gravite-buse-1-0-mm",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "d11d6af3ad300d65a8c0fa8db75dc280b129ebc2df6b679f8cd31777ea3f6d42",
+      "snapshot": {
+        "id": "reserved-neighbor-20261025-pistolet-peinture-hvlp-walcom-ego-carbonio-190-hvlp-gravite-buse-1-0-mm",
+        "sourceUrl": "https://walmec.com/en/catalogues/catalogue_walcom/WD16_26EN.pdf#page=10",
+        "sourceLabel": "Relecture du voisin pendant la correction des pages réservées, 25 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Lecture ciblée, SHA-256 82e98909d06567bec6e49964a7a75545cdc5802f4366bd5607a89f8cc01f8376. Les données de régime, d’unité ou de pression non qualifiées ne sont pas promues en point de dimensionnement."
+      }
+    },
+    {
+      "id": "added:red-rooster-rrg-3611:reserved-followup-20261025-red-rooster-rrg-3611-1:2026-10-25",
+      "evidenceId": "reserved-followup-20261025-red-rooster-rrg-3611-1",
+      "productId": "red-rooster-rrg-3611",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "bffd9ad637125433cc3916b8e8df1f5df6a53a0647b0e926f7b7e7c7c2bddc70",
+      "snapshot": {
+        "id": "reserved-followup-20261025-red-rooster-rrg-3611-1",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=48",
+        "sourceLabel": "Relecture ciblée de la référence, des variantes et des pièces, 25 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Document lu le 25 octobre 2026 ; réponse SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. Portée : identité, références de pièces et limites décrites dans la fiche. Aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:red-rooster-rrg-3617k:reserved-neighbor-20261025-red-rooster-rrg-3617k:2026-10-25",
+      "evidenceId": "reserved-neighbor-20261025-red-rooster-rrg-3617k",
+      "productId": "red-rooster-rrg-3617k",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8ede4afcdb952937785017976bf0aa22dddf73d5a5950ea9274d98bac9ad817e",
+      "snapshot": {
+        "id": "reserved-neighbor-20261025-red-rooster-rrg-3617k",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=48",
+        "sourceLabel": "Relecture du voisin pendant la correction des pages réservées, 25 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Lecture ciblée, SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. Les données de régime, d’unité ou de pression non qualifiées ne sont pas promues en point de dimensionnement."
+      }
+    },
+    {
+      "id": "added:shinano-si-2006s:reserved-followup-20261025-shinano-si-2006s-1:2026-10-25",
+      "evidenceId": "reserved-followup-20261025-shinano-si-2006s-1",
+      "productId": "shinano-si-2006s",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "4bd9f455cd3112c3f832af4e1a13412b21bd06e3568d9b2152e93f6dbab8fd54",
+      "snapshot": {
+        "id": "reserved-followup-20261025-shinano-si-2006s-1",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/2022/09/SI-2006S_V5.pdf#page=1",
+        "sourceLabel": "Relecture ciblée de la référence, des variantes et des pièces, 25 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Document lu le 25 octobre 2026 ; réponse SHA-256 484aed4d66b1fda311637b843178eed9963686a87f00087fd6412be435572c83. Portée : identité, références de pièces et limites décrites dans la fiche. Aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:shinano-si-3007:reserved-followup-20261025-shinano-si-3007-1:2026-10-25",
+      "evidenceId": "reserved-followup-20261025-shinano-si-3007-1",
+      "productId": "shinano-si-3007",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "6f10fbd7ff4d442ad0c1d009d68ea059a26c911d9bcfdbbe5d769b6165cbe09a",
+      "snapshot": {
+        "id": "reserved-followup-20261025-shinano-si-3007-1",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/2022/09/3007.pdf#page=1",
+        "sourceLabel": "Relecture ciblée de la référence, des variantes et des pièces, 25 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Document lu le 25 octobre 2026 ; réponse SHA-256 5464ccd57ef3e3af6b65fb2311b870334aac2ebcd7f2292de61b5c97b36aa533. Portée : identité, références de pièces et limites décrites dans la fiche. Aucun essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:shinano-si-3007m:reserved-neighbor-20261025-shinano-si-3007m:2026-10-25",
+      "evidenceId": "reserved-neighbor-20261025-shinano-si-3007m",
+      "productId": "shinano-si-3007m",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "1bf31218f6ff73f7e0a7152774bd30c6544a662fea4e6c8e7cd576bcc8fd2e0d",
+      "snapshot": {
+        "id": "reserved-neighbor-20261025-shinano-si-3007m",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=13",
+        "sourceLabel": "Relecture du voisin pendant la correction des pages réservées, 25 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Lecture ciblée, SHA-256 03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b. Les données de régime, d’unité ou de pression non qualifiées ne sont pas promues en point de dimensionnement."
+      }
+    },
+    {
+      "id": "added:shinano-si-3101-6m:reserved-followup-20261025-shinano-si-3101-6m-1:2026-10-25",
+      "evidenceId": "reserved-followup-20261025-shinano-si-3101-6m-1",
+      "productId": "shinano-si-3101-6m",
+      "productType": "tool",
+      "occurredAt": "2026-10-25",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "cc0c29d1e02fe1f4110fefef8cc2297dfb0b1d721a986ba23c08b55c61191d43",
+      "snapshot": {
+        "id": "reserved-followup-20261025-shinano-si-3101-6m-1",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/2022/09/SI-3101-6_V5.pdf#page=1",
+        "sourceLabel": "Relecture ciblée de la référence, des variantes et des pièces, 25 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-25",
+        "confidence": "B",
+        "notes": "Document lu le 25 octobre 2026 ; réponse SHA-256 bb4e987863b48c091f547c1857a88125fb8b209493bf9b8b9254cd452110f913. Portée : identité, références de pièces et limites décrites dans la fiche. Aucun essai physique CompatAir."
+      }
     }
   ],
-  "historyVersion": "a7d3ce97cb6291ca259ba286c819a0388cd55f24d228da2864afb43d8dce3fbd"
+  "historyVersion": "981998523337f5162cd93e0c0558f34d685c0cb24e1ee5553dc689ce37dce783"
 }

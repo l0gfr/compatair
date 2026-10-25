@@ -23,13 +23,16 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "RRG-3611 : ponceuse à bande de 10 × 330 mm, 0,28 kW et 20 000 tr/min. Le kit RRG-3617K contient la même machine avec deux bras de 6 et 10 × 330 mm. Le catalogue annonce dans les deux cas 6,7 L/s et 0,8 kg : le kit ne crée pas un nouveau besoin de compresseur.",
+		"overview": "RRG-3611 : version à bande de 10 × 330 mm du même outil que le kit RRG-3617K. Le kit ajoute les bras 6 et 10 mm ; il n’ajoute pas de puissance ni de débit. Pour approvisionner les consommables, le catalogue distingue les bandes SSB610100 de 10 × 330 mm et SSB606100 de 6 × 330 mm au même grain 100.",
 		"verifiedFacts": [
 			"Le catalogue dit explicitement que RRG-3611 et RRG-3617K sont identiques : 20 000 tr/min, 0,28 kW, 0,8 kg et 6,7 L/s. La 3617K ajoute deux bras de 6 et 10 × 330 mm ; la 3611 est la version 10 × 330 mm.",
-			"Le régime de la consommation publiée n’est pas précisé ; cette valeur n’est pas assimilée à un maximum de travail."
+			"Le régime de la consommation publiée n’est pas précisé ; cette valeur n’est pas assimilée à un maximum de travail.",
+			"Le fabricant dit les RRG-3611 et RRG-3617K identiques ; le second fournit deux bras de 6 et 10 × 330 mm.",
+			"Au grain 100, SSB610100 est la bande de 10 × 330 mm et SSB606100 celle de 6 × 330 mm ; la largeur est conservée dans le choix du consommable."
 		],
 		"limitations": [
-			"Régime de la consommation non précisé."
+			"Régime de la consommation non précisé.",
+			"Ces bandes sont des consommables, pas de nouveaux outils ni des mesures distinctes de consommation."
 		]
 	},
 	"specifications": [
@@ -74,6 +77,20 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"red-rooster-rrg-3611-20260926"
 			]
+		},
+		{
+			"label": "Exemple de bande pour bras 10 mm",
+			"value": "SSB610100 : 10 × 330 mm, grain 100",
+			"evidenceIds": [
+				"reserved-followup-20261025-red-rooster-rrg-3611-1"
+			]
+		},
+		{
+			"label": "Autre largeur du kit voisin",
+			"value": "SSB606100 : 6 × 330 mm, grain 100",
+			"evidenceIds": [
+				"reserved-followup-20261025-red-rooster-rrg-3611-1"
+			]
 		}
 	],
 	"evidence": [
@@ -104,6 +121,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-25",
 			"confidence": "B",
 			"notes": "Relecture des octets complets récupérés le 2026-10-25T07:20:38.623086+00:00, SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. Le catalogue dit explicitement que RRG-3611 et RRG-3617K sont identiques : 20 000 tr/min, 0,28 kW, 0,8 kg et 6,7 L/s. La 3617K ajoute deux bras de 6 et 10 × 330 mm ; la 3611 est la version 10 × 330 mm. Limite : Ajouter unqualified : régime de la consommation non précisé."
+		},
+		{
+			"id": "reserved-followup-20261025-red-rooster-rrg-3611-1",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=48",
+			"sourceLabel": "Relecture ciblée de la référence, des variantes et des pièces, 25 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Document lu le 25 octobre 2026 ; réponse SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. Portée : identité, références de pièces et limites décrites dans la fiche. Aucun essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -125,6 +152,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"review-20261025-red-rooster-rrg-3611-s068"
+		],
+		"editorial": [
+			"reserved-followup-20261025-red-rooster-rrg-3611-1"
+		],
+		"specifications": [
+			"reserved-followup-20261025-red-rooster-rrg-3611-1"
 		]
 	},
 	"notes": [

@@ -1,3 +1,4 @@
+import { beforeOctober25Followup } from './reviewed-catalog-amendments-2026-10-25-b.mjs';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { describe, expect, it } from 'vitest';
@@ -11,7 +12,7 @@ import { toolCategoryLabel, toolUsageTaxonomy } from '../../src/data/taxonomy';
 import { createRuntimeCatalog, runtimeCatalogSchema } from '../../src/domain/runtime-catalog';
 import { evaluateCompatibility } from '../../server/air-compatibility.mjs';
 const snapshot = JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-10-25.json', import.meta.url), 'utf8'));
-const native = row => parseCatalogProductSource(row.kind, readFileSync(new URL('../../'+row.file, import.meta.url), 'utf8'));
+const native = row => beforeOctober25Followup(parseCatalogProductSource(row.kind, readFileSync(new URL('../../'+row.file, import.meta.url), 'utf8')));
 const selected = snapshot.rows.map(row => native(row));
 const c = selected.filter(p=>p.fadCurve), t = selected.filter(p=>p.demandModel);
 const runtime = runtimeCatalogSchema.parse(createRuntimeCatalog(c.map(p=>compressorSchema.parse(p)), t.map(p=>toolProfileSchema.parse(p)), CATALOG_VERIFIED_AT, 'a'.repeat(64)));
@@ -21,14 +22,14 @@ describe('October25 exact editorial and technical corrections',()=>{
  it('reconstructs 75 exact native records without changing identities, unrelated fields or historical evidence',()=>{
   expect(snapshot.rows).toHaveLength(75);expect(new Set(snapshot.rows.map(r=>r.id)).size).toBe(75);
   for(const row of snapshot.rows){
-   const after=native(row), before=beforeOctober25Review(after), replay=applyReviewedOctober25Amendment(structuredClone(before));
+   const current=parseCatalogProductSource(row.kind, readFileSync(new URL('../../'+row.file, import.meta.url), 'utf8')), after=native(row), before=beforeOctober25Review(current), replay=applyReviewedOctober25Amendment(structuredClone(before));
    expect(replay,row.id).toEqual(after);
    expect(applyReviewedOctober25Amendment(structuredClone(after)),row.id).toEqual(after);
    expect(after.evidence.slice(0,before.evidence.length),row.id).toEqual(before.evidence);
    for(const key of Object.keys(before).filter(k=>!row.fields.includes(k)))expect(after[key],`${row.id}:${key}`).toEqual(before[key]);
    for(const key of row.fields.filter(k=>!Object.hasOwn(row.after,k)))expect(after,row.id).not.toHaveProperty(key);
    const parsed=(row.kind==='tools'?toolProfileSchema:compressorSchema).parse(after);
-   const published=(row.kind==='tools'?tools:compressors).find(p=>p.id===row.id);
+   const published=beforeOctober25Followup((row.kind==='tools'?tools:compressors).find(p=>p.id===row.id));
    expect(published,row.id).toEqual(row.kind==='tools'?{...parsed,category:toolCategoryLabel(parsed.categoryId)}:parsed);
    for(const key of ['brand','model','mpn'])expect(()=>applyReviewedOctober25Amendment({...before,[key]:'different'}),row.id).toThrow('Identité');
    const drift=structuredClone(before);drift[row.fields[0]]='unreviewed';expect(()=>applyReviewedOctober25Amendment(drift),row.id).toThrow('Base différente');
@@ -70,7 +71,10 @@ describe('October25 exact editorial and technical corrections',()=>{
    if(p.airflowBasis==='free-speed')expect(svg).toContain('CONSOMMATION À VIDE');
    if(p.airflowBasis==='unqualified')expect(svg).toContain('RÉGIME NON PRÉCISÉ');
    if(p.demandModel==='variable-volume')expect(svg).toContain('Conditions à confirmer');
-   expect(createHash('sha256').update(readFileSync(new URL('../../public'+card.path,import.meta.url))).digest('hex')).toBe(card.afterSha256);
+   const followup=JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-10-25-b.json',import.meta.url),'utf8')).technicalCards.find(c=>c.id===card.id);
+   const actual=createHash('sha256').update(readFileSync(new URL('../../public'+card.path,import.meta.url))).digest('hex');
+   expect(followup?.beforeSha256 ?? actual).toBe(card.afterSha256);
+   if(followup)expect(actual).toBe(followup.afterSha256);
   }
  });
 });

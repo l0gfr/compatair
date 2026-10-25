@@ -3,14 +3,14 @@ title: "Vérin simple ou double effet : comprendre le retour par ressort et le 
 seoTitle: "Vérin simple ou double effet : quel retour prévoir ?"
 description: "Un vérin simple effet peut pousser ou tirer selon sa version. Comparez mouvement, ressort, circuit et consommation sans supposer une position de sécurité."
 pubDate: "2026-09-26"
-updatedDate: 2026-09-30
+updatedDate: 2026-10-25
 category: "Comprendre"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
 readingTime: 5
 reviewStatus: "internal"
 relatedGuides: ["force-verin-pneumatique-diametre-pression", "consommation-verin-pneumatique-double-effet", "regler-vitesse-verin-pneumatique-echappement"]
-sources: ["https://www.festo.com/us/en/c/products/actuators-and-drives/pneumatic-cylinders-id_pim135", "https://www.festo.com/media/catalog/204284_documentation.pdf"]
+sources: ["https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2026/EN/DPCA_EN.PDF"]
 ---
 
 **Un vérin simple effet utilise l’air pour un sens de mouvement, mais ce sens n’est pas toujours la sortie de tige.** Selon sa version, le ressort peut la rentrer ou la faire sortir. Un vérin double effet utilise l’alimentation pneumatique pour les deux sens décrits dans sa notice.
@@ -19,7 +19,7 @@ Cette distinction aide à lire une référence et à préparer le circuit. Elle 
 
 ## Identifier ce qui produit chaque mouvement
 
-[Festo](https://www.festo.com/us/en/c/products/actuators-and-drives/pneumatic-cylinders-id_pim135) présente les principes du simple et du double effet. Sa [documentation DPCA](https://www.festo.com/media/catalog/204284_documentation.pdf) fournit un exemple précis : la variante **P** est à simple effet en traction, avec tige sortie par le ressort ; la variante **S** est à simple effet en poussée, avec tige rentrée par le ressort. La version double effet décrite comporte deux raccordements alimentés successivement pour commander les deux sens.
+La [documentation Festo DPCA, édition 2026/08, page 2](https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2026/EN/DPCA_EN.PDF#page=2) fournit un exemple précis : la variante **P** est à simple effet en traction, avec tige sortie par le ressort ; la variante **S** est à simple effet en poussée, avec tige rentrée par le ressort. La version double effet décrite comporte deux raccordements alimentés successivement pour commander les deux sens.
 
 Ces lettres ne constituent pas un code universel entre fabricants. La référence complète et la légende de sa propre documentation restent nécessaires.
 
@@ -76,7 +76,6 @@ Ajoutez les capteurs associés à cette référence. Le [guide Reed et électron
 
 ## Sources et méthode
 
-Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture interne, sans essai physique ni validation professionnelle externe. Les grilles de décision sont proposées par CompatAir ; les valeurs constructeur et les exemples hypothétiques sont distingués dans le texte.
+Sources relues le **25 octobre 2026**. Rédaction avec assistance d’IA et relecture interne, sans essai physique ni validation professionnelle externe. Les grilles de décision sont proposées par CompatAir ; les valeurs constructeur et les exemples hypothétiques sont distingués dans le texte.
 
-- [Festo, principes des vérins pneumatiques](https://www.festo.com/us/en/c/products/actuators-and-drives/pneumatic-cylinders-id_pim135)
-- [Festo, documentation DPCA, versions simple et double effet](https://www.festo.com/media/catalog/204284_documentation.pdf)
+- [Festo, DPCA, édition 2026/08, page 2 : versions simple et double effet](https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2026/EN/DPCA_EN.PDF#page=2)

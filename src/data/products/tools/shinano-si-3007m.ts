@@ -9,7 +9,7 @@ const product: ToolProfileInput = {
 	"categoryId": "ponceuse-vibrante",
 	"category": "ponceuse-vibrante",
 	"label": "Shinano SI-3007M",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 6.3,
 		"typical": 6.3,
@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-3007M, référence SI-3007M. Le tableau fabricant publie 474 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Plateau 95 × 175 mm autoagrippant ; orbite 5 mm. Vitesse à vide publiée : 11000 tr/min.",
+		"overview": "SI-3007M : ponceuse rectangulaire avec plateau Velcro M-3007 de 95 × 175 mm. Le maximum publié de 7,9 L/s reste documentaire ; la pression d’essai de ce maximum n’est pas établie par la seule consigne d’alimentation de 6,3 bar.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Consommation maximale, colonne Max Air Consumption : 16.8 CFM / 7.9 L/s, soit 474 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
@@ -35,7 +35,8 @@ const product: ToolProfileInput = {
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"La relecture du voisin retire toute conclusion de dimensionnement fondée sur une unité normalisée, une pression de service ou un régime non qualifiés."
 		]
 	},
 	"specifications": [
@@ -73,6 +74,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"shinano-si-3007m-20260926"
 			]
+		},
+		{
+			"label": "Consommation documentaire, hors calcul",
+			"value": "7,9 L/s, soit 474 L/min, pression de mesure non appariée",
+			"evidenceIds": [
+				"reserved-neighbor-20261025-shinano-si-3007m"
+			]
 		}
 	],
 	"evidence": [
@@ -93,6 +101,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+		},
+		{
+			"id": "reserved-neighbor-20261025-shinano-si-3007m",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=13",
+			"sourceLabel": "Relecture du voisin pendant la correction des pages réservées, 25 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Lecture ciblée, SHA-256 03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b. Les données de régime, d’unité ou de pression non qualifiées ne sont pas promues en point de dimensionnement."
 		}
 	],
 	"fieldSources": {
@@ -102,18 +120,17 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"shinano-si-3007m-20260926-workingpressurebar-1"
 		],
-		"airflowLpm": [
-			"shinano-si-3007m-20260926"
+		"editorial": [
+			"reserved-neighbor-20261025-shinano-si-3007m"
+		],
+		"demandExplanation": [
+			"reserved-neighbor-20261025-shinano-si-3007m"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 474,
-		"typical": 474,
-		"max": 474
-	}
+	"demandExplanation": "Consommation maximale publiée de 7,9 L/s, soit 474 L/min, sans pression de mesure explicitement appariée. La consigne générale de 6,3 bar n’est pas assimilée à un point de mesure du maximum."
 };
 
 export default product;

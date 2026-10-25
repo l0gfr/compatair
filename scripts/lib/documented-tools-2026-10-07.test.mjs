@@ -1,3 +1,4 @@
+import { beforeOctober25Followup } from './reviewed-catalog-amendments-2026-10-25-b.mjs';
 import { readFileSync, statSync } from 'node:fs';
 import { createRequire } from 'node:module';
 import { createHash } from 'node:crypto';
@@ -35,10 +36,13 @@ describe('October 7 primary tool documents', () => {
   }
  });
  it('keeps qualified minute points, qualified action volumes and documentary gaps separate', () => {
-  expect(batch.filter(p => p.demandModel === 'fixed-flow' && !p.airflowBasis)).toHaveLength(443);
-  expect(batch.filter(p => p.demandModel === 'per-action')).toHaveLength(17);
-  expect(batch.filter(p => p.demandModel === 'fixed-flow' && p.airflowBasis === 'unqualified')).toHaveLength(63);
-  expect(batch.filter(p => p.demandModel === 'variable-volume')).toHaveLength(477);
+  // These four protected counts describe the pre-follow-up state. The dated
+  // follow-up suite and governance contract verify the current native/runtime scope.
+  const historicalBatch=batch.map(beforeOctober25Followup);
+  expect(historicalBatch.filter(p => p.demandModel === 'fixed-flow' && !p.airflowBasis)).toHaveLength(443);
+  expect(historicalBatch.filter(p => p.demandModel === 'per-action')).toHaveLength(17);
+  expect(historicalBatch.filter(p => p.demandModel === 'fixed-flow' && p.airflowBasis === 'unqualified')).toHaveLength(63);
+  expect(historicalBatch.filter(p => p.demandModel === 'variable-volume')).toHaveLength(477);
   const withdrawn = batch.find(p=>p.id==='pistolet-peinture-hvlp-walcom-ego-carbonio-190-hvlp-gravite-buse-0-5-mm');
   expect(withdrawn.demandModel).toBe('variable-volume'); expect(withdrawn.airflowLpm).toBeUndefined();
   for (const p of batch.filter(p => p.demandModel === 'variable-volume' || p.airflowBasis)) expect(evaluateCompatibility(compressor, p).verdict, p.id).toBe('insufficient_data');

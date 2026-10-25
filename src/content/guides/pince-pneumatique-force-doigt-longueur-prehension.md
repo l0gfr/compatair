@@ -6,7 +6,7 @@ description: "Force totale ou par doigt ? Lisez les courbes d’une pince
   pneumatique avec le bras de levier et le sens de préhension avant d’en déduire
   une capacité de maintien."
 pubDate: "2026-09-26"
-updatedDate: 2026-10-03
+updatedDate: 2026-10-25
 category: "Choisir"
 audiences: [ "professionnel" ]
 metiers: [ "maintenance-industrielle" ]
@@ -19,7 +19,7 @@ relatedGuides:
     "choisir-distributeur-pneumatique-debit-nominal"
   ]
 sources:
-  - https://www.festo.com/media/catalog/203154_documentation.pdf
+  - https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2026/EN/HGPT_EN.PDF
   - https://assets.fipa.com/assets/06_PDF-Datenblaetter/FIPA-GR04.710-Nadelgreifer_en_Master.pdf
 ---
 
@@ -29,7 +29,7 @@ Ce guide s’appuie sur la documentation d’une famille de pinces. Il ne donne 
 
 ## Force totale et force par mors
 
-La [documentation Festo HGPT](https://www.festo.com/media/catalog/203154_documentation.pdf) distingue la force totale de préhension et la force par mors. Elle sépare l’ouverture et la fermeture, puis fournit des courbes dépendant de la pression et du bras de levier. Les efforts et moments admissibles sur un mors font l’objet d’autres données. Les variantes de maintien par ressort doivent également être identifiées dans la référence.
+La [documentation Festo HGPT](https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2026/EN/HGPT_EN.PDF) distingue la force totale de préhension et la force par mors. Elle sépare l’ouverture et la fermeture, puis fournit des courbes dépendant de la pression et du bras de levier. Les efforts et moments admissibles sur un mors font l’objet d’autres données. Les variantes de maintien par ressort doivent également être identifiées dans la référence. Dans l’édition 2025/12, les pages 6 à 8 donnent les grandeurs et les courbes selon le bras de levier ; les pages 27 et 28 distinguent les contributions pneumatique et mécanique du ressort.
 
 Pour comparer deux offres, recopiez l’intitulé complet de la grandeur. Deux nombres identiques peuvent représenter des périmètres différents : une somme sur plusieurs mors et une force applicable à un seul mors ne constituent pas la même information.
 
@@ -94,6 +94,6 @@ Pour une matière difficile à saisir par le vide, les aiguilles croisées FIPA 
 
 ## Sources et méthode
 
-Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture interne, sans essai physique ni validation professionnelle externe. Les grilles de décision sont proposées par CompatAir ; les valeurs constructeur et les exemples hypothétiques sont distingués dans le texte.
+Sources relues le **25 octobre 2026**. Rédaction avec assistance d’IA et relecture interne, sans essai physique ni validation professionnelle externe. Les grilles de décision sont proposées par CompatAir ; les valeurs constructeur et les exemples hypothétiques sont distingués dans le texte.
 
-- [Festo, documentation HGPT, forces par mors et courbes selon le bras de levier](https://www.festo.com/media/catalog/203154_documentation.pdf)
+- [Festo, documentation HGPT, forces par mors et courbes selon le bras de levier](https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2026/EN/HGPT_EN.PDF)

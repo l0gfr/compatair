@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
   },
   "editorial": {
-    "overview": "Asturo BBS HVLP art. 00198 buse 1,9 mm. Le régime de consommation et/ou la pression de travail appariée ne sont pas définis. Le débit publié reste hors du calcul FAD. Le tableau du pistolet BBS HVLP (article de base 00198) publie le diamètre de buse 1,9 mm sous le code de buse 19. Ce calibre est une configuration de pulvérisation réelle du catalogue ; la consommation commune de la famille n’est pas différenciée par buse.",
+    "overview": "BBS HVLP 00198, buse de 1,9 mm : retrouver la série de réparation 00199 et la colonne de calibre 19, sans confondre cette série avec 00189 destinée au BBS conventionnel 00186. Le godet gravitaire de 600 cc et les 240 L/min sont communs à la famille ; le calibre ne crée pas une autre consommation de compresseur.",
     "verifiedFacts": [
       "Article de base imprimé : 00198.",
       "Code de buse imprimé : 19.",
@@ -45,7 +45,9 @@ const product: ToolProfileInput = {
       "Entrée d’air : 1/4” M.",
       "Godet de produit : 600 cc.",
       "Consommation publiée dans son unité originale : 240 lt./min, Consumo aria.",
-      "Pression dans la source : Pressione esercizio: 3,5 bar ; Pressione massima: 5 bar."
+      "Pression dans la source : Pressione esercizio: 3,5 bar ; Pressione massima: 5 bar.",
+      "La page de pièces associe la série 00199 BBS HVLP au pistolet 00198 ; elle sépare la série 00189 BBS destinée au 00186.",
+      "Dans la table 00199, le code de calibre 19 correspond à 1,9 mm et 17 à 1,7 mm. Aucun code complet n’est fabriqué en concaténant ces cellules."
     ],
     "limitations": [
       "Le catalogue indique une consommation et une pression d’exercice, sans préciser l’ouverture de la gâchette, le régime de mesure ni les conditions de référence volumique. Ces données restent documentaires et ne suffisent pas à un verdict de dimensionnement conclusif.",
@@ -139,6 +141,22 @@ const product: ToolProfileInput = {
       "evidenceIds": [
         "october8-tools-asturo-primary-catalog-p7"
       ]
+    },
+    {
+      "label": "Série de réparation publiée",
+      "value": "00199 : BBS HVLP, aiguille/chapeau/buse",
+      "evidenceIds": [
+        "reserved-followup-20261025-pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-9-mm-1",
+        "reserved-followup-20261025-pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-9-mm-2"
+      ]
+    },
+    {
+      "label": "Série distincte à ne pas confondre",
+      "value": "00189 : BBS conventionnel, pistolet 00186",
+      "evidenceIds": [
+        "reserved-followup-20261025-pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-9-mm-1",
+        "reserved-followup-20261025-pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-9-mm-2"
+      ]
     }
   ],
   "evidence": [
@@ -151,6 +169,26 @@ const product: ToolProfileInput = {
       "retrievedAt": "2026-10-08",
       "confidence": "B",
       "notes": "Réponse primaire SHA-256 1649c2153ad235d9c7303af0aeac4de327f2558f30db378397af3b25af7e9794. Déclaration fabricant, sans essai physique CompatAir."
+    },
+    {
+      "id": "reserved-followup-20261025-pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-9-mm-1",
+      "sourceUrl": "https://www.ltf.it/wp-content/uploads/2023/10/Asturo.pdf#page=7",
+      "sourceLabel": "Relecture ciblée de la référence, des variantes et des pièces, 25 octobre 2026",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-25",
+      "confidence": "B",
+      "notes": "Document lu le 25 octobre 2026 ; réponse SHA-256 1649c2153ad235d9c7303af0aeac4de327f2558f30db378397af3b25af7e9794. Portée : identité, références de pièces et limites décrites dans la fiche. Aucun essai physique CompatAir."
+    },
+    {
+      "id": "reserved-followup-20261025-pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-9-mm-2",
+      "sourceUrl": "https://www.ltf.it/wp-content/uploads/2023/10/Asturo.pdf#page=23",
+      "sourceLabel": "Relecture ciblée de la référence, des variantes et des pièces, 25 octobre 2026",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-25",
+      "confidence": "B",
+      "notes": "Document lu le 25 octobre 2026 ; réponse SHA-256 1649c2153ad235d9c7303af0aeac4de327f2558f30db378397af3b25af7e9794. Portée : identité, références de pièces et limites décrites dans la fiche. Aucun essai physique CompatAir."
     }
   ],
   "fieldSources": {
@@ -159,6 +197,14 @@ const product: ToolProfileInput = {
     ],
     "demandExplanation": [
       "october8-tools-asturo-primary-catalog-p7"
+    ],
+    "editorial": [
+      "reserved-followup-20261025-pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-9-mm-1",
+      "reserved-followup-20261025-pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-9-mm-2"
+    ],
+    "specifications": [
+      "reserved-followup-20261025-pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-9-mm-1",
+      "reserved-followup-20261025-pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-9-mm-2"
     ]
   },
   "notes": [

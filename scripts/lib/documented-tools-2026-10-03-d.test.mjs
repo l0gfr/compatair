@@ -48,6 +48,7 @@ const repinned = async copy => {
  code = code.replace("'./reviewed-catalog-amendments-2026-10-20.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-20.mjs', import.meta.url).href));
  code = code.replace("'./reviewed-catalog-amendments-2026-10-21.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-21.mjs', import.meta.url).href));
  code = code.replace("'./reviewed-catalog-amendments-2026-10-25.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-25.mjs', import.meta.url).href));
+ code = code.replace("'./reviewed-catalog-amendments-2026-10-25-b.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-25-b.mjs', import.meta.url).href));
  code = code.replace("'./reviewed-catalog-amendments-2026-10-24.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-24.mjs', import.meta.url).href));
  const replacement = `const approvedSources = ${JSON.stringify(copy.sources.map(source => ({ id: source.id, sha256: digest(source) })))};\nconst approvedRows = ${JSON.stringify(copy.tools.map(row => ({ documentRowId: row.documentRowId, sha256: digest(row) })))};`;
  const pattern = /const approvedSources = \[[\s\S]*?\];\nconst approvedRows = \[[\s\S]*?\];/;

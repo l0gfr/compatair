@@ -21,7 +21,7 @@ const product: CompressorInput = {
 	"editorial": {
 		"overview": "La référence FIAC 4152026242 est la version DRY de 15 kW, sans cuve intégrée, annoncée pour un maximum de 10 bar. La fiche web publie 2 100 L/min ; le catalogue AIRBLOK donne 2 110 L/min pour ce même code. La version 4152026243 est annoncée pour 13 bar et 1 690 L/min. Ces débits ne sont pas associés explicitement à une pression de mesure dans les blocs lus : ils ne constituent pas ici une courbe FAD utilisable pour dimensionner un poste.",
 		"verifiedFacts": [
-			"Débits publiés non qualifiés pour le calcul :2100 L/min sur le web,2110 L/min au catalogue ; pression de mesure non établie.",
+			"Débits publiés non qualifiés pour le calcul : 2 100 L/min sur le web, 2 110 L/min au catalogue; pression de mesure non établie.",
 			"Compresseur rotatif à vis lubrifié à vitesse fixe. Puissance moteur publiée : 15 kW.",
 			"Masse nette publiée : 297 kg.",
 			"Alimentation publiée : 400 V, 50 Hz, triphasée."
@@ -29,16 +29,18 @@ const product: CompressorInput = {
 		"limitations": [
 			"Écart entre sources primaires conservé : 2 100 L/min sur le web, 2 110 L/min au catalogue. Aucune valeur n’est choisie arbitrairement.",
 			"Le maximum de 10 bar décrit la version ; il ne documente pas la pression d’essai du FAD. La courbe de calcul reste vide.",
-			"Le code de commande identifie la configuration malgré les appellations AX et AIRBLOK. Le taux de marche et la disponibilité restent à confirmer."
+			"Le code de commande identifie la configuration malgré les appellations AX et AIRBLOK. Le taux de marche et la disponibilité restent à confirmer.",
+			"Pour lever la réserve, obtenir une fiche révisée du code 4152026242 associant le débit, sa pression de mesure et le protocole d’essai, puis clarifier l’écart entre les deux valeurs publiées."
 		]
 	},
 	"specifications": [
 		{
 			"label": "Débits publiés et conflit documentaire",
-			"value": "Code 4152026242 :2100 L/min web contre 2110 L/min cataloguep 35. Maximum 10 bar distinct ; aucun point de mesure FAD n’est retenu.",
+			"value": "Code 4152026242 : 2 100 L/min sur le web contre 2 110 L/min au catalogue, page 35. Le maximum de fonctionnement de 10 bar est distinct de la pression d’essai; aucun point FAD n’est retenu.",
 			"evidenceIds": [
 				"review-20261025-s027",
-				"review-20261025-s028-p35"
+				"review-20261025-s028-p35",
+				"reserved-20261025-fiac-current10"
 			]
 		},
 		{
@@ -113,6 +115,26 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-25",
 			"confidence": "B",
 			"notes": "Corps vérifié SHA-256 a60b25d18496e4d9a1db8ec68fe5698a890cab94d4b1dbb2ce0bc039f7bd1ec3. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "reserved-20261025-fiac-current10",
+			"sourceUrl": "https://shop.fiac.it/en-IT/products/4152026242/ax-203bd-dry-10-40050-ce",
+			"sourceLabel": "Relecture primaire du 25 octobre 2026 : fiac-current10",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps complet SHA-256 1290a729ca6a052910dc22cc9bc4dbf42fc670c593886e97425c12a0f8242588. Code 4152026242, maximum 10 bar et FAD capacity 2100 L/min présentés séparément; aucune pression d’essai explicitement associée au débit dans le bloc lu. Données déclarées, aucun essai physique CompatAir."
+		},
+		{
+			"id": "reserved-20261025-fiac-current13",
+			"sourceUrl": "https://shop.fiac.it/en-IT/products/4152026243/ax-203bd-dry-13-40050-ce",
+			"sourceLabel": "Relecture primaire du 25 octobre 2026 : fiac-current13",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps complet SHA-256 4766d6cbdcd939270ad096d8979b620b2a8c15822d4d790b1ea04c060c3cf908. Code 4152026243, maximum 13 bar et débit 1690 L/min; aucune pression d’essai explicitement associée dans le bloc lu. Données déclarées, aucun essai physique CompatAir."
 		}
 	],
 	"fieldSources": {

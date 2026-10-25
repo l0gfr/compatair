@@ -1,0 +1,1556 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-25T11:15:21.907344+00:00",
+  "sourceReleaseSha": "27e1a315b16e3ce477f7a8ee0cc8ce6d858ef935",
+  "scope": "Préparation de 34 réserves pour les prochains lots ; aucune nouvelle admission ni approbation future.",
+  "entries": [
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-astro-pneumatic-hvlpd512/",
+      "file": "src/data/products/tools/pistolet-peinture-hvlp-astro-pneumatic-hvlpd512.ts",
+      "baseModuleSha256": "cba192bac82bcbb69dc6ab07bf9ed1e792d5c5680391f307dff9aa2a35c44644",
+      "preparationStatus": "ready-for-next-review",
+      "apport": [
+        "La fiche du HVLPD512 identifie GF6SNCR pour la buse de 1,2 mm et GF6SNBR pour celle de 1,0 mm.",
+        "Les godets listés sont GF6C en plastique de 130 cc et 354020 en aluminium de 125 cc."
+      ],
+      "neighborCompared": {
+        "id": "pistolet-peinture-hvlp-astro-pneumatic-hvlpd510",
+        "file": "src/data/products/tools/pistolet-peinture-hvlp-astro-pneumatic-hvlpd510.ts",
+        "sha256": "d943673ccf178e1ef91b85be6e262463383493e1367954c228d9ac3a4a4accf2"
+      },
+      "sourcesRead": [
+        {
+          "url": "https://www.astrotools.com/product/hvlp-mini-gravity-feed-spray-gun-1-2mm-nozzle/",
+          "sha256": "6df9851722a75d2016d290bad3880b6d42393b488193011b779fed28418f6178",
+          "observedAt": "2026-10-25T07:20:16.775069+00:00",
+          "pagesRead": []
+        }
+      ],
+      "remaining": null,
+      "publicationApproval": false,
+      "currentModuleSha256": "42af6942ca777de57ce4fcb7bee46aa37a21f0bbd17b65da6601f5e7b265d872"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-7-145722/",
+      "file": "src/data/products/tools/pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-7-145722.ts",
+      "baseModuleSha256": "16c3f1c4a1ef1166f139ced6fdea9e5c3c14e7699cdd0fb1f92901cbc350decc",
+      "preparationStatus": "ready-for-next-review",
+      "apport": [
+        "Pour le calibre HVLP 1,7 mm, le catalogue distingue pistolet QCC plastique 145722, jeu de buses 145417, ensemble RPS 1012682 et pistolet QCC aluminium 146175.",
+        "Le calibre HVLP 1,9 mm correspond au pistolet 145730 et au jeu de buses 145425 ; ces codes ne sont pas substitués à ceux du 1,7 mm."
+      ],
+      "neighborCompared": {
+        "id": "pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-9-145730",
+        "file": "src/data/products/tools/pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-9-145730.ts",
+        "sha256": "a0c2815dfc3fd179ac2bc5bdb0924a611e26605198f32441c6127c63c4532783"
+      },
+      "sourcesRead": [
+        {
+          "url": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806#page=34",
+          "sha256": "36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3",
+          "observedAt": "2026-10-25T07:20:16.775717+00:00",
+          "pagesRead": [
+            34
+          ]
+        }
+      ],
+      "remaining": null,
+      "publicationApproval": false,
+      "currentModuleSha256": "b53a2b7d90f038239ca0806dd898121aa233fd2239b458bc9f1696842504b16e"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-prowin-k-528g-28/",
+      "file": "src/data/products/tools/pistolet-peinture-hvlp-prowin-k-528g-28.ts",
+      "baseModuleSha256": "26c95588d7e84b6c33493ed65d4a9e143e44e08e815c093668092f0bb7d0e6ff",
+      "preparationStatus": "ready-for-next-review",
+      "apport": [
+        "Le tableau distingue K-528G-28 et son Turn-up Kit SG018-528-28 ; la variante K-528G-24 renvoie à SG018-528-24.",
+        "La colonne Fluid Output porte seulement ml : les valeurs 290 et 245 ne sont pas des débits de produit par minute."
+      ],
+      "neighborCompared": {
+        "id": "pistolet-peinture-hvlp-prowin-k-528g-24",
+        "file": "src/data/products/tools/pistolet-peinture-hvlp-prowin-k-528g-24.ts",
+        "sha256": "3855b1b4f651720c16eb6af70360cecc988176a7d4ad3fe2d7a71431cd5ce341"
+      },
+      "sourcesRead": [
+        {
+          "url": "https://www.prowin-tools.com/wp-content/uploads/2023/05/Air-Painting-ToolsNew.pdf#page=16",
+          "sha256": "2cd45573cff8decba50b2fbbfe2127d8e4bc1c3f1fdb6550e2f2467703941213",
+          "observedAt": "2026-10-25T07:20:17.981617+00:00",
+          "pagesRead": [
+            16
+          ]
+        }
+      ],
+      "remaining": null,
+      "publicationApproval": false,
+      "currentModuleSha256": "87922c84c1e4313742657d02c73c836c0e8d899de2592f2d06b287eda56d9e9c"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sagola-3600-xpt-hvlp-buse-1-30-10142505/",
+      "file": "src/data/products/tools/pistolet-peinture-hvlp-sagola-3600-xpt-hvlp-buse-1-30-10142505.ts",
+      "baseModuleSha256": "394fee1fcc43c2074a293ba91494b94ca91fbe53ca56b76d6c0063d235b266ff",
+      "preparationStatus": "needs-manufacturer-clarification",
+      "apport": [
+        "Catalogue : 10142505, 1,30 mm, 179 g/min, jet 250 mm ; 10142506, 1,40 mm, 161 g/min, jet 255 mm.",
+        "Les deux lignes HVLP indiquent une distance d’application de 15 à 18 cm ; ce tableau ne précise pas un résultat pour chaque peinture du marché."
+      ],
+      "neighborCompared": {
+        "id": "pistolet-peinture-hvlp-sagola-3600-xpt-hvlp-buse-1-40-10142506",
+        "file": "src/data/products/tools/pistolet-peinture-hvlp-sagola-3600-xpt-hvlp-buse-1-40-10142506.ts",
+        "sha256": "0f0306172e87fc37fdad614e88e73e1979ea719ae78ff49ce29daa5a55d8c136"
+      },
+      "sourcesRead": [
+        {
+          "url": "https://sagola.com/uploads/documentos/bodyshop-catalogue.pdf#page=29",
+          "sha256": "db4cc471805cb5bd9e9a64d16185447c9b5c66a95d4ebd8f3f8e520c41da59c6",
+          "observedAt": "2026-10-25T07:20:18.322262+00:00",
+          "pagesRead": [
+            29
+          ]
+        },
+        {
+          "url": "https://sagola.com/uploads/manuales/pistola-sagola-3600-manual.pdf#page=29",
+          "sha256": "1f19477b3497285d86a11b144b0ca4a5158ec0453424b5280545aed3f5013db8",
+          "observedAt": "2026-10-25T07:20:18.682585+00:00",
+          "pagesRead": [
+            29
+          ]
+        }
+      ],
+      "remaining": "La pression d’entrée HVLP contredit toujours la notice. Aucun point d’air ni admission anticipée.",
+      "publicationApproval": false,
+      "currentModuleSha256": "984680c40492137e2af3aeba491a7fc33067c5b1ff60e41e30f7bda9b9e06783"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-graco-airpro-pressure-288938-288938/",
+      "file": "src/data/products/tools/pistolet-peinture-hvlp-graco-airpro-pressure-288938-288938.ts",
+      "baseModuleSha256": "88294fea7d4b9fc172cff4af448aad86419693c616cb66e3b816a7ca93e91437",
+      "preparationStatus": "ready-for-next-review",
+      "apport": [
+        "Le tableau General Metal associe 1,4 mm aux codes 288931 conventionnel, 288938 HVLP et 288945 Compliant.",
+        "La ligne General Metal with Stainless Steel Tip du même diamètre identifie 288953 en HVLP ; son matériau n’est pas attribué au 288938.",
+        "Pour le 288938 HVLP, le tableau indique un plafond de 1,3 bar ; le maximum mécanique général de 7 bar ne remplace pas ce plafond."
+      ],
+      "neighborCompared": {
+        "id": "pistolet-peinture-hvlp-graco-airpro-pressure-288937-288937",
+        "file": "src/data/products/tools/pistolet-peinture-hvlp-graco-airpro-pressure-288937-288937.ts",
+        "sha256": "67571ed4ea31bf3dc3f210a537e3f8b73114574922f3bdb1c659ea323c9ac003"
+      },
+      "sourcesRead": [
+        {
+          "url": "https://www.graco.com/content/dam/graco/tech_documents/manuals/312/312414/312414EN-U.pdf#page=3",
+          "sha256": "db686f2919e70169aab5175ac84b40c5d306d31bd483f4d3723f6b971a0086cb",
+          "observedAt": "2026-10-25T07:20:19.425872+00:00",
+          "pagesRead": [
+            3
+          ]
+        },
+        {
+          "url": "https://www.graco.com/content/dam/graco/tech_documents/manuals/312/312414/312414EN-U.pdf#page=23",
+          "sha256": "db686f2919e70169aab5175ac84b40c5d306d31bd483f4d3723f6b971a0086cb",
+          "observedAt": "2026-10-25T07:20:19.425872+00:00",
+          "pagesRead": [
+            23
+          ]
+        }
+      ],
+      "remaining": null,
+      "publicationApproval": false,
+      "currentModuleSha256": "3f90e95601d1e276656ce6fbe3a7aa9654582a42e756c7d54bfa2e3773ab5dbe"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-binks-trophy-1466-10hv-c1s-e/",
+      "file": "src/data/products/tools/pistolet-peinture-hvlp-binks-trophy-1466-10hv-c1s-e.ts",
+      "baseModuleSha256": "cea0cecb18dd92ac22bf168158ebc25365e72ff38ceccc245dfdfe947924cc71",
+      "preparationStatus": "needs-manufacturer-clarification",
+      "apport": [
+        "Le document oppose 1466-10HV-C1S-E, gravité/HVLP, à 1466-10LV-B1S-E, gravité/LVMP, et à 1465-08HV-C1S-E, alimentation sous pression/HVLP."
+      ],
+      "neighborCompared": {
+        "id": "pistolet-peinture-binks-trophy-1466-10lv-b1s-e",
+        "file": "src/data/products/tools/pistolet-peinture-binks-trophy-1466-10lv-b1s-e.ts",
+        "sha256": "68bbbd2f6d0a35a8db574ee092da802c1201791472aa9005f1c2767d6ba927cb"
+      },
+      "sourcesRead": [
+        {
+          "url": "https://binks.canto.com/direct/document/i3mg70cimt4e11l20u5rmh4c7c/Bf-sTsAgB3FlX-e4tht1-rzsFxY/original?content-type=application%2Fpdf&name=Trophy+Man.+Guns+03-473-01.pdf#page=5",
+          "sha256": "35d79cbb33d2f08edc4f6e119d4d820e45115ae2b8f9cde2f159fc157867cddd",
+          "observedAt": "2026-10-25T07:20:22.025748+00:00",
+          "pagesRead": [
+            5
+          ]
+        }
+      ],
+      "remaining": "La nouvelle lecture précise les assemblages, mais ne résout pas le titre Full Size sur le tableau Touch-up ; aucun point d’air transféré.",
+      "publicationApproval": false,
+      "currentModuleSha256": "a79cb52417a0117e5327ea9c8ac4d462c804a1d5dda843565e82e1444e4b244a"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-walcom-ego-carbonio-190-hvlp-gravite-buse-0-5-mm/",
+      "file": "src/data/products/tools/pistolet-peinture-hvlp-walcom-ego-carbonio-190-hvlp-gravite-buse-0-5-mm.ts",
+      "baseModuleSha256": "b56e594e288a10aa6305d4198298318ef18e98745b38343ccc52066e02b98a74",
+      "preparationStatus": "needs-manufacturer-clarification",
+      "apport": [
+        "La fiche dédiée distingue 7130** HVLP/POM 75–180 cc, 7135** HVLP/aluminium 125 cc et 7030** HTE/POM.",
+        "La fiche dédiée conserve 160 L/min à 2 bar pour la famille HVLP et 145 L/min pour HTE ; ces deux technologies ne sont pas fusionnées."
+      ],
+      "neighborCompared": {
+        "id": "pistolet-peinture-hvlp-walcom-ego-carbonio-190-hvlp-gravite-buse-1-0-mm",
+        "file": "src/data/products/tools/pistolet-peinture-hvlp-walcom-ego-carbonio-190-hvlp-gravite-buse-1-0-mm.ts",
+        "sha256": "98091b41f7632d9ff52d0a4e1a0cdbaf50098e9cda155a0b5a5ed72d867ecca3"
+      },
+      "sourcesRead": [
+        {
+          "url": "https://walmec.com/it/products/walcom/ego-carbonio/cat_ego_carbonio_190_en.pdf#page=2",
+          "sha256": "e11b941e113540bd916bec4363c830a975456f90f3c463d103b30a00f00d7087",
+          "observedAt": "2026-10-25T10:58:36.130114+00:00",
+          "pagesRead": [
+            2
+          ]
+        }
+      ],
+      "remaining": "Le suffixe complet et l’écart de la ligne historique 160 L/min / 5 CFM restent non résolus. Le profil non conclusif reste requis.",
+      "publicationApproval": false,
+      "currentModuleSha256": "0c1585a737e8f3c9dc22c94202985fc539d4d1f0ae4aaf416a3e870cf099fafb"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-anest-iwata-airgunsa-az3-hte2-hvlp-buse-1-3-hvlp/",
+      "file": "src/data/products/tools/pistolet-peinture-anest-iwata-airgunsa-az3-hte2-hvlp-buse-1-3-hvlp.ts",
+      "baseModuleSha256": "9611c7e52ca45a2a5a6ec93f2b6b6bda786282b3be83da1bc49d454cb8f01197",
+      "preparationStatus": "needs-manufacturer-identity",
+      "apport": [],
+      "neighborCompared": {
+        "id": "pistolet-peinture-anest-iwata-airgunsa-az3-hte2-hvlp-buse-1-8-hvlp",
+        "file": "src/data/products/tools/pistolet-peinture-anest-iwata-airgunsa-az3-hte2-hvlp-buse-1-8-hvlp.ts"
+      },
+      "sourcesRead": [
+        {
+          "url": "https://www.anest-iwata-coating.com/wp-content/uploads/2022/09/2025_EN_AIRGUNSA_CAT.pdf#page=7",
+          "sha256": "cc4f305737f15bc7b4ed9059ba98efba0873c1c0a8be2dd08e9445326a82182e",
+          "observedAt": "2026-10-25T07:20:24.065086+00:00",
+          "pagesRead": [
+            7
+          ]
+        }
+      ],
+      "remaining": "Le tableau primaire 2025 imprime W0SPG85AG13C. Les documents USA consultés emploient d’autres désignations et codes. Aucun document primaire ne relie sans ambiguïté W0SPG84AG13C à ce code 85 ; aucune identité, équivalence ou consommation transférée.",
+      "publicationApproval": false,
+      "currentModuleSha256": "9611c7e52ca45a2a5a6ec93f2b6b6bda786282b3be83da1bc49d454cb8f01197"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-9-mm/",
+      "file": "src/data/products/tools/pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-9-mm.ts",
+      "baseModuleSha256": "f20bfad5681bda672a5d9f5a95e6e23071cc4f3a287a9b4bf7f9140a0b15b347",
+      "preparationStatus": "ready-for-next-review",
+      "apport": [
+        "La page de pièces associe la série 00199 BBS HVLP au pistolet 00198 ; elle sépare la série 00189 BBS destinée au 00186.",
+        "Dans la table 00199, le code de calibre 19 correspond à 1,9 mm et 17 à 1,7 mm. Aucun code complet n’est fabriqué en concaténant ces cellules."
+      ],
+      "neighborCompared": {
+        "id": "pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-7-mm",
+        "file": "src/data/products/tools/pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-7-mm.ts",
+        "sha256": "c7ec21a93618eed7ba357b7344c02a469029df9a8776b5a3e51a1ead87ed2a8e"
+      },
+      "sourcesRead": [
+        {
+          "url": "https://www.ltf.it/wp-content/uploads/2023/10/Asturo.pdf#page=7",
+          "sha256": "1649c2153ad235d9c7303af0aeac4de327f2558f30db378397af3b25af7e9794",
+          "observedAt": "2026-10-25T07:20:24.138476+00:00",
+          "pagesRead": [
+            7
+          ]
+        },
+        {
+          "url": "https://www.ltf.it/wp-content/uploads/2023/10/Asturo.pdf#page=23",
+          "sha256": "1649c2153ad235d9c7303af0aeac4de327f2558f30db378397af3b25af7e9794",
+          "observedAt": "2026-10-25T07:20:24.138476+00:00",
+          "pagesRead": [
+            23
+          ]
+        }
+      ],
+      "remaining": null,
+      "publicationApproval": false,
+      "currentModuleSha256": "2c166c985e8bde168ca8b4ab09ef7f5abba997baf4efaca2b0b54f4a03ec17e4"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-ani-f1-n-super-i-hvlp-buse-1-2/",
+      "file": "src/data/products/tools/pistolet-peinture-hvlp-ani-f1-n-super-i-hvlp-buse-1-2.ts",
+      "baseModuleSha256": "80210c2d8497720c90532f6bfd79087bdc67a0a2eaa2069da5dbb7734e7d58f3",
+      "preparationStatus": "ready-for-next-review",
+      "apport": [
+        "Catalogue 2024 : AH1508006A, HVLP, 1,2 mm, raccord 1/4M et godet 1 000 cc.",
+        "BH089786 désigne la buse U/F1/N-SUPER/I HVLP de 1,2 mm ; BH089791 désigne U/F1/N-SUPER/S HVLP de 1,2 mm.",
+        "Pour la version I HVLP 1,5 mm, le tableau de pièces donne BH089787, pas BH089786."
+      ],
+      "neighborCompared": {
+        "id": "pistolet-peinture-hvlp-ani-f1-n-super-i-hvlp-buse-1-5",
+        "file": "src/data/products/tools/pistolet-peinture-hvlp-ani-f1-n-super-i-hvlp-buse-1-5.ts",
+        "sha256": "39d53102b34569d25eb6db86542bfaf5624ff7d560853d579d2a52e2638f8893"
+      },
+      "sourcesRead": [
+        {
+          "url": "https://www.ani.it/wp-content/uploads/2024/10/ANI_CatalogoGenerale_20240711.pdf#page=74",
+          "sha256": "b5448fc1dd141675b3ca8ccc71621334fd2ff486c4766f5a6ed4782c60e87386",
+          "observedAt": "2026-10-25T11:00:42.094530+00:00",
+          "pagesRead": [
+            74
+          ]
+        }
+      ],
+      "remaining": null,
+      "publicationApproval": false,
+      "currentModuleSha256": "3129513fe604c5ac92650f00ca6b0fb3d23bb5b3a61661a459e22a435f03a53b"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-prona-r-430-hvlp-14-buse-1-4-hvlp-gravity/",
+      "file": "src/data/products/tools/pistolet-peinture-prona-r-430-hvlp-14-buse-1-4-hvlp-gravity.ts",
+      "baseModuleSha256": "33e1ccc87fb61443b52e9d2ce10837c82d79db1116c4b818bbd0d7d5d2b67354",
+      "preparationStatus": "needs-primary-table-access",
+      "apport": [],
+      "neighborCompared": {
+        "id": "pistolet-peinture-prona-r-430-mp-14-buse-1-4-mp-gravity",
+        "file": "src/data/products/tools/pistolet-peinture-prona-r-430-mp-14-buse-1-4-mp-gravity.ts"
+      },
+      "sourcesRead": [
+        {
+          "url": "https://www.prona.com.cn/Product_dt/1179777375336550400.html",
+          "sha256": "b7d429948911bbdb3a96c4e9935924319137fde677e1f55207725cba5b85b192",
+          "observedAt": "2026-10-25T07:20:25.010163+00:00",
+          "pagesRead": []
+        }
+      ],
+      "remaining": "Le HTML fabricant lie son tableau dans l’image 67fa10f7-0a73-48da-9e04-fdd0340ca427.jpg ; le serveur de cette image répond 567. Le texte HTML seul ne permet pas de vérifier les cellules. Aucune approbation ni retranscription inventée.",
+      "publicationApproval": false,
+      "currentModuleSha256": "33e1ccc87fb61443b52e9d2ce10837c82d79db1116c4b818bbd0d7d5d2b67354"
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-2006s/",
+      "file": "src/data/products/tools/shinano-si-2006s.ts",
+      "baseModuleSha256": "662e9d017d86b8d9d2decb7b5a1bd272dd55306cdd6a7f6f03569b78ba53269b",
+      "preparationStatus": "ready-for-next-review",
+      "apport": [
+        "La nomenclature V5 de mars 2019 donne 330-24 pour 1/4 pouce et 330-19 pour 6 mm ; la pince 6 mm y porte le symbole d’option.",
+        "Les deux autres pinces listées sont 330-25, 1/8 pouce, et 330-26, 3 mm.",
+        "Conversion exacte du diamètre : 1/4 pouce = 6,35 mm, soit 0,35 mm de plus que 6 mm ; cette égalité n’est pas une tolérance de serrage."
+      ],
+      "neighborCompared": {
+        "id": "shinano-si-2006s-6",
+        "file": "src/data/products/tools/shinano-si-2006s-6.ts",
+        "sha256": "7ee7aa267c2d1210d08df96277bf08b79b51ea6a0c9dd5fef276bd43a15f4db8"
+      },
+      "sourcesRead": [
+        {
+          "url": "https://shinanoinc.com/wp-content/uploads/2022/09/SI-2006S_V5.pdf#page=1",
+          "sha256": "484aed4d66b1fda311637b843178eed9963686a87f00087fd6412be435572c83",
+          "observedAt": "2026-10-25T10:58:36.129952+00:00",
+          "pagesRead": [
+            1
+          ]
+        }
+      ],
+      "remaining": null,
+      "publicationApproval": false,
+      "currentModuleSha256": "e320ecc8822ea982816e2789d26ade965b6bafc1726f5d5813df25f367f9b095"
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-3007/",
+      "file": "src/data/products/tools/shinano-si-3007.ts",
+      "baseModuleSha256": "1284bcac8de04f0d98039d0a605d0147407d6bbed6b1c4d6eb73eefa0e0b59da",
+      "preparationStatus": "ready-for-next-review",
+      "apport": [
+        "La nomenclature SI-3007(M), édition d’août 2015, distingue P-3007 Leather Pad et M-3007 Velcro Pad, avec plaque 477-44.",
+        "Le repère 43 de cette nomenclature est le Paper Clip 475-23, quantité 2 ; le M-3007 est marqué pour SI-3007M."
+      ],
+      "neighborCompared": {
+        "id": "shinano-si-3007m",
+        "file": "src/data/products/tools/shinano-si-3007m.ts",
+        "sha256": "bed5dba706c4d6cfc5121bf419f6549bb0fe10c864db65c5d42c3ac749750f20"
+      },
+      "sourcesRead": [
+        {
+          "url": "https://shinanoinc.com/wp-content/uploads/2022/09/3007.pdf#page=1",
+          "sha256": "5464ccd57ef3e3af6b65fb2311b870334aac2ebcd7f2292de61b5c97b36aa533",
+          "observedAt": "2026-10-25T10:58:36.129467+00:00",
+          "pagesRead": [
+            1
+          ]
+        }
+      ],
+      "remaining": null,
+      "publicationApproval": false,
+      "currentModuleSha256": "6ef13268fd0a68e33ec44ad6f2df81c8b393c82c9d036a1fb178c4bf4f508f8a"
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-3101-6m/",
+      "file": "src/data/products/tools/shinano-si-3101-6m.ts",
+      "baseModuleSha256": "6c820bb0501bc6bb9e6df4b8294a43704b6880244665accfc65084c9240e0b08",
+      "preparationStatus": "ready-for-next-review",
+      "apport": [
+        "Nomenclature V5 de juillet 2022 : M-150H, 6 pouces Velcro, et P-150H, 6 pouces Leather, pour SI-3101-6(M).",
+        "Les M-125H et P-125H de 5 pouces sont repérés pour SI-3101(M), pas comme plateaux standard de la SI-3101-6M."
+      ],
+      "neighborCompared": {
+        "id": "shinano-si-3101-6",
+        "file": "src/data/products/tools/shinano-si-3101-6.ts",
+        "sha256": "276d4872dcb02aae29c721c18913f49b30c4edc15bc147b1cc26cbd32b19aaf1"
+      },
+      "sourcesRead": [
+        {
+          "url": "https://shinanoinc.com/wp-content/uploads/2022/09/SI-3101-6_V5.pdf#page=1",
+          "sha256": "bb4e987863b48c091f547c1857a88125fb8b209493bf9b8b9254cd452110f913",
+          "observedAt": "2026-10-25T11:00:42.094911+00:00",
+          "pagesRead": [
+            1
+          ]
+        }
+      ],
+      "remaining": null,
+      "publicationApproval": false,
+      "currentModuleSha256": "e53c0782fcecb17872ad79280b0e6f833df2b5fc61daf13191afe9277693d13b"
+    },
+    {
+      "path": "/outils-pneumatiques/red-rooster-rrg-3611/",
+      "file": "src/data/products/tools/red-rooster-rrg-3611.ts",
+      "baseModuleSha256": "9f3f6c6914bfb3bde8f60536688b11cf90b8fa894378bf4791fd2a802356b17a",
+      "preparationStatus": "ready-for-next-review",
+      "apport": [
+        "Le fabricant dit les RRG-3611 et RRG-3617K identiques ; le second fournit deux bras de 6 et 10 × 330 mm.",
+        "Au grain 100, SSB610100 est la bande de 10 × 330 mm et SSB606100 celle de 6 × 330 mm ; la largeur est conservée dans le choix du consommable."
+      ],
+      "neighborCompared": {
+        "id": "red-rooster-rrg-3617k",
+        "file": "src/data/products/tools/red-rooster-rrg-3617k.ts",
+        "sha256": "877c995c8b7dd68ba6e6e79b6aaa6e471dcfd6c649737cffa9deda519b704295"
+      },
+      "sourcesRead": [
+        {
+          "url": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=48",
+          "sha256": "f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e",
+          "observedAt": "2026-10-25T07:20:38.623086+00:00",
+          "pagesRead": [
+            48
+          ]
+        }
+      ],
+      "remaining": null,
+      "publicationApproval": false,
+      "currentModuleSha256": "9d5f182be645e8e66722daa285671f173bfbae062c5eaa7bc8bfd50195fb9361"
+    },
+    {
+      "path": "/outils-pneumatiques/ingersoll-rand-170pg-cs/",
+      "file": "src/data/products/tools/ingersoll-rand-170pg-cs.ts",
+      "baseModuleSha256": "57d2aa36a0fee2f97a3a447b3e2da7c1a6a216fe985dd6c095396acea3888ca3",
+      "preparationStatus": "needs-primary-reference-document",
+      "publicationApproval": false,
+      "apport": [],
+      "neighborCompared": {
+        "id": "ingersoll-rand-170pg",
+        "file": "src/data/products/tools/ingersoll-rand-170pg.ts",
+        "sha256": "671b4d34bc30d7c4d0374086e17e696157c555a0860d62ee7070b298a068cb7c"
+      },
+      "remaining": "Le document Product Information lié par la fiche 170 renvoie aux séries 172/182 : il ne confirme pas le 170PG. La fiche HTML répondait 429 ; la lecture web d’un index antérieur est séparée du contrôle direct. Ne pas attribuer la notice 172/182 à cette référence.",
+      "sourcesRead": [],
+      "currentModuleSha256": "57d2aa36a0fee2f97a3a447b3e2da7c1a6a216fe985dd6c095396acea3888ca3"
+    },
+    {
+      "path": "/outils-pneumatiques/ingersoll-rand-170pg/",
+      "file": "src/data/products/tools/ingersoll-rand-170pg.ts",
+      "baseModuleSha256": "671b4d34bc30d7c4d0374086e17e696157c555a0860d62ee7070b298a068cb7c",
+      "preparationStatus": "needs-primary-reference-document",
+      "publicationApproval": false,
+      "apport": [],
+      "neighborCompared": {
+        "id": "ingersoll-rand-170pg-cs",
+        "file": "src/data/products/tools/ingersoll-rand-170pg-cs.ts",
+        "sha256": "57d2aa36a0fee2f97a3a447b3e2da7c1a6a216fe985dd6c095396acea3888ca3"
+      },
+      "remaining": "Le document Product Information lié par la fiche 170 renvoie aux séries 172/182 : il ne confirme pas le 170PG. La fiche HTML répondait 429 ; la lecture web d’un index antérieur est séparée du contrôle direct. Ne pas attribuer la notice 172/182 à cette référence.",
+      "sourcesRead": [],
+      "currentModuleSha256": "671b4d34bc30d7c4d0374086e17e696157c555a0860d62ee7070b298a068cb7c"
+    },
+    {
+      "path": "/outils-pneumatiques/ingersoll-rand-312ac4a/",
+      "file": "src/data/products/tools/ingersoll-rand-312ac4a.ts",
+      "baseModuleSha256": "a3af56011e7b935c8376037e8d129672ddf98eb2193785641e4fe6e642026c04",
+      "preparationStatus": "ready-for-next-review",
+      "publicationApproval": false,
+      "apport": [
+        "Notice 45760899, édition 7 : 312AC4A à 12 000 tr/min, 0,40 hp (0,30 kW) ; 320AC4A à 20 000 tr/min, 0,40 hp (0,30 kW).",
+        "Le tableau de la notice imprime la pince « 1/4 pouce (6 mm) » ; la pince réellement installée et la queue de l’accessoire doivent être identifiées sans arrondi."
+      ],
+      "neighborCompared": {
+        "id": "ingersoll-rand-320ac4a",
+        "file": "src/data/products/tools/ingersoll-rand-320ac4a.ts",
+        "sha256": "95df865d151df3efe1dbb20c59b9706b8049a6b73b6da6935ffacbeb7e564c36"
+      },
+      "sourcesRead": [
+        {
+          "url": "https://azure-na-assets.contentstack.com/v3/assets/bltd89674ca5491ef9a/bltaba456f61496c230/680a25bef42c4c5c743e73c4/45760899_ed7_G.pdf#page=3",
+          "sha256": "5b41360138aa346aa1b09a2be05db75c15cc72b82cfe642f186fc903f8e2d1ae",
+          "pagesRead": [
+            3
+          ],
+          "observedAt": "2026-10-25T07:20:38.354689+00:00"
+        }
+      ],
+      "remaining": "La demande reste non concluante. Les sources HTML et leurs limites historiques ne sont pas déclarées rétablies par cette notice.",
+      "currentModuleSha256": "a1c45338dd8e2c9e2532032fa309830ece2823a6b96879c13ff0cd9ba4d2ebad"
+    },
+    {
+      "path": "/outils-pneumatiques/ingersoll-rand-77a25f107/",
+      "file": "src/data/products/tools/ingersoll-rand-77a25f107.ts",
+      "baseModuleSha256": "a8fd5c98d15148d4d79cbedcd11c18bc7e14df309e9e9dce3f706d1f5a1f7ca3",
+      "preparationStatus": "ready-for-next-review",
+      "publicationApproval": false,
+      "apport": [
+        "Notice 80221773, édition 3 : 77A25F107 et 77A25F107-EU, 2 500 tr/min, plateau 7 pouces (178 mm), sortie 5/8-11.",
+        "La même notice distingue 77A45W109 et sa variante EU : 4 500 tr/min et plateau 9 pouces (228 mm)."
+      ],
+      "neighborCompared": {
+        "id": "ingersoll-rand-77a45w109",
+        "file": "src/data/products/tools/ingersoll-rand-77a45w109.ts",
+        "sha256": "58d28eaa8813f60de708a9971f17e2808b240aaa08dddda193e5dcef00f6add6"
+      },
+      "sourcesRead": [
+        {
+          "url": "https://azure-na-assets.contentstack.com/v3/assets/bltd89674ca5491ef9a/blt433cc516ed60e011/680a2474db9ccbf630425ff1/80221773_ed3_C.pdf#page=3",
+          "sha256": "79bce65a0d457b008e4483ef519ea5a09fcc23eb3463b30e076d2e1216da5542",
+          "pagesRead": [
+            3
+          ],
+          "observedAt": "2026-10-25T07:20:38.451225+00:00"
+        }
+      ],
+      "remaining": "La demande reste non concluante. Les sources HTML et leurs limites historiques ne sont pas déclarées rétablies par cette notice.",
+      "currentModuleSha256": "97d065dbbf34298004b63503db907b9300b87ad3e55d1d257f6619a1ea3b87b0"
+    },
+    {
+      "path": "/outils-pneumatiques/ingersoll-rand-7p24l/",
+      "file": "src/data/products/tools/ingersoll-rand-7p24l.ts",
+      "baseModuleSha256": "556d9639de1786fb7d7255d0372f903e16efd08721b47a5c9e38ae3b9787caa2",
+      "preparationStatus": "ready-for-next-review",
+      "publicationApproval": false,
+      "apport": [
+        "Notice 03529385, édition 14 : 7P24L et 7P24L-EU, commande à levier, 2 400 tr/min, montage 5/8-11 et plateau de 7 pouces.",
+        "La 7S48L et sa variante EU utilisent le même montage mais sont données à 4 800 tr/min."
+      ],
+      "neighborCompared": {
+        "id": "ingersoll-rand-7s48l",
+        "file": "src/data/products/tools/ingersoll-rand-7s48l.ts",
+        "sha256": "434c71938f6655d3ff0a228bb0bced0568a91ce9740777b14e8bfab8a7c33c1a"
+      },
+      "sourcesRead": [
+        {
+          "url": "https://azure-na-assets.contentstack.com/v3/assets/bltd89674ca5491ef9a/blt6c5df3c845dfca8f/680a19d1caf58865bdb6cdf2/03529385_ed14_P.pdf#page=3",
+          "sha256": "6fa6784a22e9dc2f3ccdd9b92cf8325df45139a6f06d14c8416948dc007f66b4",
+          "pagesRead": [
+            3
+          ],
+          "observedAt": "2026-10-25T07:20:38.522173+00:00"
+        }
+      ],
+      "remaining": "La demande reste non concluante. Les sources HTML et leurs limites historiques ne sont pas déclarées rétablies par cette notice.",
+      "currentModuleSha256": "905161bc8bb48a379eb8b5972ab31ba5be185646a4c6bbe464419ef65dd90e67"
+    },
+    {
+      "path": "/outils-pneumatiques/ingersoll-rand-g1a120rs418/",
+      "file": "src/data/products/tools/ingersoll-rand-g1a120rs418.ts",
+      "baseModuleSha256": "20dce33c3fe57aa74b9c86916147b9b36aa8030f8c08ed376defb4c4fa55d4af",
+      "preparationStatus": "needs-primary-reference-document",
+      "publicationApproval": false,
+      "apport": [],
+      "neighborCompared": {
+        "id": "ingersoll-rand-g1a200rs818",
+        "file": "src/data/products/tools/ingersoll-rand-g1a200rs818.ts",
+        "sha256": "291198e71f81c201ec03c421b1460660cbb4b83cd2e7243d2111485449539fdf"
+      },
+      "remaining": "Le document Product Information lié à la fiche G1 est une notice de meuleuses, sans modèle exact G1A120RS418 retrouvé. La nomenclature G1 ne résout pas les deux longueurs de bande contradictoires. Aucun bras, consommable ou débit attribué sans correspondance explicite.",
+      "sourcesRead": [],
+      "currentModuleSha256": "20dce33c3fe57aa74b9c86916147b9b36aa8030f8c08ed376defb4c4fa55d4af"
+    },
+    {
+      "path": "/guides/pince-pneumatique-force-doigt-longueur-prehension/",
+      "file": "src/content/guides/pince-pneumatique-force-doigt-longueur-prehension.md",
+      "baseModuleSha256": "7f997fc04b440fc8823e5140c1d3e7fb3228eea811833a6fcd640646934be7fd",
+      "preparationStatus": "ready-for-next-review",
+      "publicationApproval": false,
+      "apport": [
+        "Sélection des mors, origine du bras de levier et sens de serrage; le voisin traite la surface de piston et la force axiale du vérin."
+      ],
+      "neighborCompared": {
+        "file": "src/content/guides/force-verin-pneumatique-diametre-pression.md",
+        "sha256": "4b53617b69c850068165d2f5a6e41e6446f8b2632ec26d0d5ae9a02065a206ef",
+        "readBytes": 9497,
+        "readFor": "Identité, technique, texte éditorial et complémentarité de la décision."
+      },
+      "sourcesRead": [
+        {
+          "key": "festo-hgpt-index",
+          "url": "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/560198.html",
+          "observedAt": "2026-10-25T10:57:37.575423+00:00",
+          "status": 200,
+          "finalUrl": "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/560198.html",
+          "contentType": "text/html",
+          "declaredLength": "4426",
+          "bytes": 4426,
+          "sha256": "beae1911b12ca8bd28c209194c42cedda25d538c12d479e53d693a35fc397af9",
+          "complete": true,
+          "path": "/tmp/compatair-seo-20261025/reserved-sources/festo-hgpt-index.html",
+          "textPath": "/tmp/compatair-seo-20261025/reserved-sources/festo-hgpt-index.txt",
+          "sourceKey": "festo-hgpt-index",
+          "reading": "Index public des références Festo; lien vers HGPT 2026/EN.",
+          "pagesActuallyRead": [],
+          "reusedEarlierSameDayBytes": false
+        },
+        {
+          "key": "festo-hgpt-2026",
+          "url": "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2026/EN/HGPT_EN.PDF",
+          "observedAt": "2026-10-25T10:58:15.402868+00:00",
+          "status": 200,
+          "finalUrl": "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2026/EN/HGPT_EN.PDF",
+          "contentType": "application/pdf",
+          "declaredLength": "4095421",
+          "bytes": 4095421,
+          "sha256": "255fdeb566c5effccbb691138ffc50837bf7b265f6e2001d0b205f16b313fc45",
+          "complete": true,
+          "path": "/tmp/compatair-seo-20261025/reserved-sources/festo-hgpt-2026.pdf",
+          "sourceKey": "festo-hgpt-2026",
+          "reading": "Édition imprimée 2025/12; forces totales et par mors, origine du bras de levier, efforts/moments admissibles et ressorts G1/G2. Courbes page 8 inspectées visuellement; aucun chiffre extrait graphiquement pour dimensionner une application.",
+          "pagesActuallyRead": [
+            3,
+            6,
+            7,
+            8,
+            9,
+            27,
+            28
+          ],
+          "reusedEarlierSameDayBytes": false
+        },
+        {
+          "url": "https://assets.fipa.com/assets/06_PDF-Datenblaetter/FIPA-GR04.710-Nadelgreifer_en_Master.pdf",
+          "observedAt": "2026-10-25T07:20:25.876095+00:00",
+          "status": 200,
+          "finalUrl": "https://assets.fipa.com/assets/06_PDF-Datenblaetter/FIPA-GR04.710-Nadelgreifer_en_Master.pdf",
+          "contentType": "application/pdf",
+          "declaredLength": "785632",
+          "bytes": 785632,
+          "sha256": "b962b5c378ad3be78ca1f6ecd1c3aec93508598d42b86a2b7fb8fbefbe8330f6",
+          "path": "/tmp/compatair-seo-20261025/sources/b356217dc058effc.pdf",
+          "complete": true,
+          "seconds": 0.78,
+          "kind": "pdf",
+          "key": "s021",
+          "pagesPath": "/tmp/compatair-seo-20261025/sources/b356217dc058effc.pages.json",
+          "pageCount": 2,
+          "pagesExtracted": [
+            "1"
+          ],
+          "sourceKey": "s021",
+          "reading": "FIPA GR04.710 et GR04.720 page 1: préhension par aiguilles croisées; suspension de 35 mm spécifique à la famille GR04.720. Pas d’assimilation de cette suspension à la course d’aiguille.",
+          "pagesActuallyRead": [
+            1
+          ],
+          "reusedEarlierSameDayBytes": true
+        }
+      ],
+      "remaining": [
+        "Aucune charge admissible de machine ni coefficient de frottement inféré.",
+        "Réévaluation éditoriale et technique requise avant toute admission future."
+      ],
+      "currentModuleSha256": "11bbc8fff1a3ff61b8c845cf21bd7dae42b38929710d9953b3c6c47678339526"
+    },
+    {
+      "path": "/guides/verin-simple-double-effet-ressort-retour/",
+      "file": "src/content/guides/verin-simple-double-effet-ressort-retour.md",
+      "baseModuleSha256": "62b5498fc259a529194bc644eb881b550ad1d9511853b8dc3ef455b1fac2cbd1",
+      "preparationStatus": "ready-for-next-review",
+      "publicationApproval": false,
+      "apport": [
+        "Choix de fonction P/S et circuit de retour; complément du guide de force, sans convertir un sens de retour en fonction de sécurité."
+      ],
+      "neighborCompared": {
+        "file": "src/content/guides/force-verin-pneumatique-diametre-pression.md",
+        "sha256": "4b53617b69c850068165d2f5a6e41e6446f8b2632ec26d0d5ae9a02065a206ef",
+        "readBytes": 9497,
+        "readFor": "Identité, technique, texte éditorial et complémentarité de la décision."
+      },
+      "sourcesRead": [
+        {
+          "key": "festo-dpca-index",
+          "url": "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/8104871.html",
+          "observedAt": "2026-10-25T10:57:37.575981+00:00",
+          "status": 200,
+          "finalUrl": "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/8104871.html",
+          "contentType": "text/html",
+          "declaredLength": "1008",
+          "bytes": 1008,
+          "sha256": "99e91c53e617676cc61d261c00f6789c037053fb7270c447a9ea49738d53fe1b",
+          "complete": true,
+          "path": "/tmp/compatair-seo-20261025/reserved-sources/festo-dpca-index.html",
+          "textPath": "/tmp/compatair-seo-20261025/reserved-sources/festo-dpca-index.txt",
+          "sourceKey": "festo-dpca-index",
+          "reading": "Index public des références Festo; lien vers DPCA 2026/EN.",
+          "pagesActuallyRead": [],
+          "reusedEarlierSameDayBytes": false
+        },
+        {
+          "key": "festo-dpca-2026",
+          "url": "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2026/EN/DPCA_EN.PDF",
+          "observedAt": "2026-10-25T10:58:15.403254+00:00",
+          "status": 200,
+          "finalUrl": "https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Documentation/2026/EN/DPCA_EN.PDF",
+          "contentType": "application/pdf",
+          "declaredLength": "4060925",
+          "bytes": 4060925,
+          "sha256": "890670d1063de0607b8b5567cb0ae3b2891a7f2842465e57c05440a4e04085e2",
+          "complete": true,
+          "path": "/tmp/compatair-seo-20261025/reserved-sources/festo-dpca-2026.pdf",
+          "sourceKey": "festo-dpca-2026",
+          "reading": "Édition imprimée 2026/08. Page 2 relue et inspectée visuellement: double effet à deux orifices; P simple effet traction, tige sortie par ressort; S simple effet poussée, tige rentrée par ressort.",
+          "pagesActuallyRead": [
+            2,
+            7
+          ],
+          "reusedEarlierSameDayBytes": false
+        }
+      ],
+      "remaining": [
+        "Les lettres P/S sont propres à cette gamme.",
+        "Pas de taux de réduction universel de consommation ni de force de ressort forfaitaire."
+      ],
+      "currentModuleSha256": "7ae9b09adc090bbaad8e5d070a7b60448eaa2185ad8fba054c8c31bc73209c92"
+    },
+    {
+      "path": "/guides/aftercooler-refroidisseur-secheur-air-comprime/",
+      "file": "src/content/guides/aftercooler-refroidisseur-secheur-air-comprime.md",
+      "baseModuleSha256": "916036a88a44acf246876f02ebd2446d68283d5d119523ed93f6010a52d271eb",
+      "preparationStatus": "ready-for-next-review",
+      "publicationApproval": false,
+      "apport": [
+        "Fonctions successives refroidissement/séparation/purge/séchage et réception de la chaîne; le voisin définit le critère de point de rosée."
+      ],
+      "neighborCompared": {
+        "file": "src/content/guides/point-rosee-secheur-filtre-air-comprime.md",
+        "sha256": "b9210331fda407d9ed1099bdf9808f3e5c8a5c9ea0c9bfcd839bbd0c4c388f16",
+        "readBytes": 11506,
+        "readFor": "Identité, technique, texte éditorial et complémentarité de la décision."
+      },
+      "sourcesRead": [
+        {
+          "key": "cagi-treatment",
+          "url": "https://www.cagi.org/assets/documents/pdfs/handbook/Chapter3CompressedAirGasHandbook.pdf?updated=1658947024",
+          "observedAt": "2026-10-25T10:59:37.869997+00:00",
+          "status": 200,
+          "finalUrl": "https://www.cagi.org/assets/documents/pdfs/handbook/Chapter3CompressedAirGasHandbook.pdf?updated=1658947024",
+          "contentType": "application/pdf",
+          "declaredLength": "1885031",
+          "bytes": 1885031,
+          "sha256": "6998e232f7d0dc7a2e1eaf37f26baa3268e9f490f92a672427a61d2f99bb2ad7",
+          "complete": true,
+          "path": "/tmp/compatair-seo-20261025/reserved-sources/cagi-treatment.pdf",
+          "sourceKey": "cagi-treatment",
+          "reading": "Chapitre 3, page PDF 11 / imprimée 10: aftercooler à air/eau, condensation après refroidissement, séparateur en aval et purge; un séparateur n’abaisse pas le point de rosée et ne capture pas nécessairement toute l’eau liquide. Pas de seuil universel ajouté.",
+          "pagesActuallyRead": [
+            11
+          ],
+          "reusedEarlierSameDayBytes": false
+        },
+        {
+          "key": "cagi-drying-guide",
+          "url": "https://www.cagi.org/assets/documents/pdfs/CAGIAirDryingSelectionGuide.pdf?updated=1657044982",
+          "observedAt": "2026-10-25T10:59:37.870236+00:00",
+          "status": 200,
+          "finalUrl": "https://www.cagi.org/assets/documents/pdfs/CAGIAirDryingSelectionGuide.pdf?updated=1657044982",
+          "contentType": "application/pdf",
+          "declaredLength": "375338",
+          "bytes": 375338,
+          "sha256": "bf38fc0a9926b18a99e9c8d4cc06d8a397261530e958436a50206d4befbe3440",
+          "complete": true,
+          "path": "/tmp/compatair-seo-20261025/reserved-sources/cagi-drying-guide.pdf",
+          "sourceKey": "cagi-drying-guide",
+          "reading": "Page PDF 11 / imprimée 9: schémas de traitement, aftercooler, séparateur, purge et sécheur; réservoir avant ou après sécheur selon installation. Schémas illustratifs, pas une succession universelle.",
+          "pagesActuallyRead": [
+            11
+          ],
+          "reusedEarlierSameDayBytes": false
+        }
+      ],
+      "remaining": [
+        "Aucune température ou efficacité universelle promise.",
+        "Les anciens refus 403 sont conservés au journal; ils ne sont pas interprétés comme des lectures."
+      ],
+      "currentModuleSha256": "1e09abc2f1120771448deb0d3c201679ffd0ad0c057eaa5abe7c57d2bbed0e7f"
+    },
+    {
+      "path": "/compresseurs/almig-combi-xp-11-standalone/",
+      "file": "src/data/products/compressors/almig-combi-xp-11-standalone.ts",
+      "baseModuleSha256": "9ac9d773dfd60ec1149e01c7e324171624f47157e62e90f6c91c2fcb394b8e91",
+      "preparationStatus": "ready-for-next-review",
+      "publicationApproval": false,
+      "apport": [
+        "Groupe sans traitement intégré versus station 270D; implantation, masse et équipements à prévoir."
+      ],
+      "neighborCompared": {
+        "file": "src/data/products/compressors/almig-combi-xp-11-270d.ts",
+        "sha256": "422623ea4a40b6fd6e29a57feb9d5b15f3d79aeed0d9cc3bcf9f0ca2fab7293b",
+        "readBytes": 4486,
+        "readFor": "Identité, technique, texte éditorial et complémentarité de la décision."
+      },
+      "sourcesRead": [
+        {
+          "key": "almig-combi-current",
+          "url": "https://www.almig.de/en/products/compressed-air-generation/screw-compressors/screw-compressor-combi-xp",
+          "observedAt": "2026-10-25T10:58:15.403369+00:00",
+          "status": 200,
+          "finalUrl": "https://www.almig.de/en/products/compressed-air-generation/screw-compressors/screw-compressor-combi-xp",
+          "contentType": "text/html; charset=utf-8",
+          "declaredLength": null,
+          "bytes": 101148,
+          "sha256": "8d0be8947fd880b0ac723ad22b2c5d5d55e40822c6ea8256c9f40de2a1a4211d",
+          "complete": true,
+          "path": "/tmp/compatair-seo-20261025/reserved-sources/almig-combi-current.html",
+          "textPath": "/tmp/compatair-seo-20261025/reserved-sources/almig-combi-current.txt",
+          "sourceKey": "almig-combi-current",
+          "reading": "Tableau 50 Hz: ligne 11* séparée de 11, trois plages ISO 1217 annexe C-2009, dimensions et masse; astérisque sans réservoir. Lien vers la brochure COMBI XP.",
+          "pagesActuallyRead": [],
+          "reusedEarlierSameDayBytes": false
+        },
+        {
+          "key": "almig-brochure-current",
+          "url": "https://www.almig.de/fileadmin/user_upload/COMBI_XP_Brochure_en.pdf",
+          "observedAt": "2026-10-25T11:00:28.959732+00:00",
+          "status": 200,
+          "finalUrl": "https://www.almig.de/fileadmin/user_upload/COMBI_XP_Brochure_en.pdf",
+          "contentType": "application/pdf",
+          "declaredLength": "1039837",
+          "bytes": 1039837,
+          "sha256": "4b6faf340058b0ef4e304421d315febacb13080a57dea9859128ec1ada90698b",
+          "complete": true,
+          "path": "/tmp/compatair-seo-20261025/reserved-sources/almig-brochure-current.pdf",
+          "sourceKey": "almig-brochure-current",
+          "reading": "Page 5 relue et inspectée visuellement: ligne 11*, astérisque sans cuve ni sécheur, plages 0,29–1,67 / 0,29–1,46 / 0,27–1,17 m³/min à 8/10/13 bar; 11 kW; longueur 1051, largeur 691, hauteur 1088 mm; 380 kg. Ligne 11 équipée: 590 kg. Pas de taux de marche chiffré retenu.",
+          "pagesActuallyRead": [
+            5
+          ],
+          "reusedEarlierSameDayBytes": false
+        }
+      ],
+      "remaining": [
+        "Taux de marche inconnu conservé; aucune promesse de fonctionnement continu.",
+        "Nouvelle admission non accordée par cette revue."
+      ],
+      "currentModuleSha256": "b30969be108ac56ca79b75f7bbe0f246c1bf9003e9d8fe0f97a3fe66ffdd54f2"
+    },
+    {
+      "path": "/compresseurs/fiac-ax-203bd-dry-10-400-50-ce/",
+      "file": "src/data/products/compressors/fiac-ax-203bd-dry-10-400-50-ce.ts",
+      "baseModuleSha256": "2a8f3bf5081ceb5c1b56941a9c1bf034dad8e0da41102a7268196facdea93235",
+      "preparationStatus": "needs-manufacturer-clarification",
+      "publicationApproval": false,
+      "apport": [
+        "Aucune nouvelle différence autonome prouvée par rapport à la version 13 bar; les données de configuration ne qualifient pas la mesure FAD."
+      ],
+      "neighborCompared": {
+        "file": "src/data/products/compressors/fiac-ax-203bd-dry-13-400-50-ce.ts",
+        "sha256": "c07e17e9c4cf006201612b099807b3a40e442ff6aef4be93ea44aeab24b2f446",
+        "readBytes": 4201,
+        "readFor": "Identité, technique, texte éditorial et complémentarité de la décision."
+      },
+      "sourcesRead": [
+        {
+          "key": "fiac-current10",
+          "url": "https://shop.fiac.it/en-IT/products/4152026242/ax-203bd-dry-10-40050-ce",
+          "observedAt": "2026-10-25T10:58:15.995957+00:00",
+          "status": 200,
+          "finalUrl": "https://shop.fiac.it/en-IT/products/4152026242/ax-203bd-dry-10-40050-ce",
+          "contentType": "text/html; charset=utf-8",
+          "declaredLength": "587339",
+          "bytes": 587339,
+          "sha256": "1290a729ca6a052910dc22cc9bc4dbf42fc670c593886e97425c12a0f8242588",
+          "complete": true,
+          "path": "/tmp/compatair-seo-20261025/reserved-sources/fiac-current10.html",
+          "textPath": "/tmp/compatair-seo-20261025/reserved-sources/fiac-current10.txt",
+          "sourceKey": "fiac-current10",
+          "reading": "Code 4152026242, maximum 10 bar et FAD capacity 2100 L/min présentés séparément; aucune pression d’essai explicitement associée au débit dans le bloc lu.",
+          "pagesActuallyRead": [],
+          "reusedEarlierSameDayBytes": false
+        },
+        {
+          "key": "fiac-current13",
+          "url": "https://shop.fiac.it/en-IT/products/4152026243/ax-203bd-dry-13-40050-ce",
+          "observedAt": "2026-10-25T10:58:16.182543+00:00",
+          "status": 200,
+          "finalUrl": "https://shop.fiac.it/en-IT/products/4152026243/ax-203bd-dry-13-40050-ce",
+          "contentType": "text/html; charset=utf-8",
+          "declaredLength": "586902",
+          "bytes": 586902,
+          "sha256": "4766d6cbdcd939270ad096d8979b620b2a8c15822d4d790b1ea04c060c3cf908",
+          "complete": true,
+          "path": "/tmp/compatair-seo-20261025/reserved-sources/fiac-current13.html",
+          "textPath": "/tmp/compatair-seo-20261025/reserved-sources/fiac-current13.txt",
+          "sourceKey": "fiac-current13",
+          "reading": "Code 4152026243, maximum 13 bar et débit 1690 L/min; aucune pression d’essai explicitement associée dans le bloc lu.",
+          "pagesActuallyRead": [],
+          "reusedEarlierSameDayBytes": false
+        },
+        {
+          "url": "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf",
+          "observedAt": "2026-10-25T07:20:27.345362+00:00",
+          "status": 200,
+          "finalUrl": "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf",
+          "contentType": "application/pdf",
+          "declaredLength": null,
+          "bytes": 4165235,
+          "sha256": "55421a11ceb9c201bd873f1d0e4596ea6682b7fd68fc5e03e0c380ddf879ac85",
+          "path": "/tmp/compatair-seo-20261025/sources/6809cd2cb0421413.pdf",
+          "complete": true,
+          "seconds": 0.35,
+          "kind": "pdf",
+          "key": "s028",
+          "pagesPath": "/tmp/compatair-seo-20261025/sources/6809cd2cb0421413.pages.json",
+          "pageCount": 176,
+          "pagesExtracted": [
+            "35"
+          ],
+          "sourceKey": "s028",
+          "reading": "Catalogue S226-R1-062026, page PDF 35: code 4152026242 à 2110 L/min, maximum 10 bar; code 4152026243 à 1690 L/min, maximum 13 bar. Les colonnes ne lèvent pas le conflit web ni ne prouvent une pression de mesure FAD.",
+          "pagesActuallyRead": [
+            35
+          ],
+          "reusedEarlierSameDayBytes": true
+        }
+      ],
+      "remaining": [
+        "Conflit 2100/2110 L/min confirmé sur les documents lus.",
+        "Courbe FAD vide et taux de marche absent conservés.",
+        "Recherche ciblée sur ces documents officiels; aucune affirmation d’exhaustivité."
+      ],
+      "currentModuleSha256": "0696e060cd734b94649cde69ecf2029ccef4252ea0f50973e478f150dd74e555"
+    },
+    {
+      "path": "/compresseurs/fini-cube-4-0-10-270-es/",
+      "file": "src/data/products/compressors/fini-cube-4-0-10-270-es.ts",
+      "baseModuleSha256": "b68eaafa59a1f0dabd6aa8e1900dc82048c0946c1062055f0f7c8e8202dfe5f0",
+      "preparationStatus": "consolidated-in-existing-page",
+      "publicationApproval": false,
+      "apport": [
+        "La page ES Z compare déjà les deux codes, le sécheur, la galvanisation et le même FAD; aucun nouvel apport autonome démontré pour une deuxième page indexée."
+      ],
+      "neighborCompared": {
+        "file": "src/data/products/compressors/fini-cube-4-0-10-270-es-z.ts",
+        "sha256": "9b51d4ae15060b786a744b146acb81c95dfdf43dca5b2fc1afb056ae484d983d",
+        "readBytes": 5668,
+        "readFor": "Identité, technique, texte éditorial et complémentarité de la décision."
+      },
+      "sourcesRead": [
+        {
+          "url": "https://finicompressors.com/wp-content/uploads/Catalogo-Cube-Fini_EN_04-2024_9990397.pdf",
+          "observedAt": "2026-10-25T07:20:54.825345+00:00",
+          "status": 200,
+          "finalUrl": "https://finicompressors.com/wp-content/uploads/Catalogo-Cube-Fini_EN_04-2024_9990397.pdf",
+          "contentType": "application/pdf",
+          "declaredLength": "745100",
+          "bytes": 745100,
+          "sha256": "270d2f554801e15883dd85b3f3b6089c641adf51dd59c15f31e0fd06c7b88e1a",
+          "path": "/tmp/compatair-seo-20261025/sources/0e0e3f3928c5a9c0.pdf",
+          "complete": true,
+          "seconds": 0.3,
+          "kind": "pdf",
+          "key": "s117",
+          "pagesPath": "/tmp/compatair-seo-20261025/sources/0e0e3f3928c5a9c0.pages.json",
+          "pageCount": 4,
+          "pagesExtracted": [
+            "1",
+            "3"
+          ],
+          "sourceKey": "s117",
+          "reading": "Brochure CUBE 04/2024 page PDF 3: codes V91PD92FNM301 (ES) et V91PD92FNM501 (ES Z), 270 L, 4 kW, 400/3/50, 460 L/min à 9,5 bar pour configuration 10 bar; ES désigne sécheur et Z réservoir galvanisé. Même production d’air publiée; distinction déjà couverte dans la voisine.",
+          "pagesActuallyRead": [
+            3
+          ],
+          "reusedEarlierSameDayBytes": true
+        }
+      ],
+      "remaining": [
+        "Conserver la donnée ES et son noindex; aucune suppression, redirection ou modification de canonical proposée sans revue du routage.",
+        "Cette consolidation ne compte pas comme une nouvelle admission."
+      ],
+      "currentModuleSha256": "b68eaafa59a1f0dabd6aa8e1900dc82048c0946c1062055f0f7c8e8202dfe5f0"
+    },
+    {
+      "path": "/outils-pneumatiques/biax-bew-309-e/",
+      "file": "src/data/products/tools/biax-bew-309-e.ts",
+      "baseModuleSha256": "40ee6c897e6bdb97b9173999924cfa7d37e15fa17b8e6adb2d0f0aab56842230",
+      "preparationStatus": "needs-manufacturer-clarification",
+      "publicationApproval": false,
+      "apport": [
+        "Faible hauteur de passage et queue hexagonale versus BEW 605; comparaison de géométrie et d’interface, pas une simple variante de débit."
+      ],
+      "neighborCompared": {
+        "file": "src/data/products/tools/biax-bew-605.ts",
+        "sha256": "26034b67189df176c968391957f800e2512d975bbf2a7c9a907a6f50c0296e1b",
+        "readBytes": 3800,
+        "readFor": "Identité, technique, texte éditorial et complémentarité de la décision."
+      },
+      "sourcesRead": [
+        {
+          "key": "biax-bew309",
+          "url": "https://biax.de/en/product/bew-309-e-bis-senk-o-11-mm/",
+          "observedAt": "2026-10-25T10:57:37.576124+00:00",
+          "status": 200,
+          "finalUrl": "https://biax.de/en/product/bew-309-e-bis-senk-o-11-mm/",
+          "contentType": "text/html; charset=UTF-8",
+          "declaredLength": null,
+          "bytes": 137246,
+          "sha256": "7177738118ee779691b3cfca59e07f067821072d84527c374977ebe9702f8862",
+          "complete": true,
+          "path": "/tmp/compatair-seo-20261025/reserved-sources/biax-bew309.html",
+          "textPath": "/tmp/compatair-seo-20261025/reserved-sources/biax-bew309.txt",
+          "sourceKey": "biax-bew309",
+          "reading": "Bloc technique BEW 309 E: 20 W, 150 L/min, réglage 0–900 tr/min, 240 g, queue hexagonale 3 mm; diamètre maximal du trou 11 mm; hauteur avec fraise 20/21,5 mm. Le régime de consommation est non qualifié.",
+          "pagesActuallyRead": [],
+          "reusedEarlierSameDayBytes": false
+        },
+        {
+          "key": "biax-bew605",
+          "url": "https://biax.de/en/product/bew-605-bis-senk-o-24-mm/",
+          "observedAt": "2026-10-25T10:57:37.576202+00:00",
+          "status": 200,
+          "finalUrl": "https://biax.de/en/product/bew-605-bis-senk-o-24-mm/",
+          "contentType": "text/html; charset=UTF-8",
+          "declaredLength": null,
+          "bytes": 136776,
+          "sha256": "5571002e748aad205d697dca124aadbd353d9694cedee1b88373dfe88ed88f48",
+          "complete": true,
+          "path": "/tmp/compatair-seo-20261025/reserved-sources/biax-bew605.html",
+          "textPath": "/tmp/compatair-seo-20261025/reserved-sources/biax-bew605.txt",
+          "sourceKey": "biax-bew605",
+          "reading": "Bloc technique BEW 605: 80 W, 300 L/min, 0–500 tr/min, 820 g, pince 6 mm; hauteur avec fraise 40/48 mm. Comparaison documentaire de géométrie et interface uniquement.",
+          "pagesActuallyRead": [],
+          "reusedEarlierSameDayBytes": false
+        },
+        {
+          "key": "biax-catalog-current",
+          "url": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf",
+          "observedAt": "2026-10-25T10:58:15.479857+00:00",
+          "status": 200,
+          "finalUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf",
+          "contentType": "application/pdf",
+          "declaredLength": "15373237",
+          "bytes": 15373237,
+          "sha256": "318971fb9ba951f395b81cbca3d1e57938ce23b74db3aef25ff98bb8f0edc6c8",
+          "complete": true,
+          "path": "/tmp/compatair-seo-20261025/reserved-sources/biax-catalog-current.pdf",
+          "sourceKey": "biax-catalog-current",
+          "reading": "Page 24: SBRD 820 réf. 150021135, 310 W, conflit avec 300 W HTML conservé. Pages 40–41: BEW 309 E réf. 150800726, 150 L/min, 20 W, 0–900 tr/min; fonctionnement/lubrification à 6 bar, sans qualification de consommation en charge; diamètre maximal du trou 10 mm, conflit avec 11 mm HTML. Ne pas mélanger BEW 309 EL150 ou SBRH avec les références étudiées.",
+          "pagesActuallyRead": [
+            24,
+            40,
+            41
+          ],
+          "reusedEarlierSameDayBytes": false
+        }
+      ],
+      "remaining": [
+        "Diamètre maximal 10/11 mm à clarifier auprès du fabricant.",
+        "Ne pas utiliser les 150 L/min comme débit maximal en charge."
+      ],
+      "currentModuleSha256": "528df9ba4487e3d1201782dd1d720f809d71d85d2300b27eedbf9ac9da5df02c"
+    },
+    {
+      "path": "/outils-pneumatiques/biax-sbrd-820/",
+      "file": "src/data/products/tools/biax-sbrd-820.ts",
+      "baseModuleSha256": "48c477a228bcea87b2e9534f7eec1e982377c8ed73cfb4d6d1469cd73ca8790b",
+      "preparationStatus": "needs-manufacturer-clarification",
+      "publicationApproval": false,
+      "apport": [
+        "Enveloppe d’accessoires 12 versus 15 mm et vitesse compatible; ne pas confondre queue maximale et pince fournie."
+      ],
+      "neighborCompared": {
+        "file": "src/data/products/tools/biax-sbrd-8-12-2.ts",
+        "sha256": "064f10851d2bf3ea923f5e5ae0294d618478bb57f75557cb173d793f77793f4e",
+        "readBytes": 3926,
+        "readFor": "Identité, technique, texte éditorial et complémentarité de la décision."
+      },
+      "sourcesRead": [
+        {
+          "key": "biax-sbrd820",
+          "url": "https://biax.de/en/product/sbrd-820-20-000-1-min-zweihandschl/",
+          "observedAt": "2026-10-25T10:57:37.775882+00:00",
+          "status": 200,
+          "finalUrl": "https://biax.de/en/product/sbrd-820-20-000-1-min-zweihandschl/",
+          "contentType": "text/html; charset=UTF-8",
+          "declaredLength": null,
+          "bytes": 138689,
+          "sha256": "2586265668faf9870879e983258ccd937a98e6281f171226b1eee3082b7e44b4",
+          "complete": true,
+          "path": "/tmp/compatair-seo-20261025/reserved-sources/biax-sbrd820.html",
+          "textPath": "/tmp/compatair-seo-20261025/reserved-sources/biax-sbrd820.txt",
+          "sourceKey": "biax-sbrd820",
+          "reading": "Bloc technique SBRD 820, réf. 150021135: 300 W, 500 L/min, 20 000 tr/min, 1040 g, queue maximale 8 mm, fraise carbure maximale 12 mm, pince livrée 6 mm. Consommation sans régime de mesure.",
+          "pagesActuallyRead": [],
+          "reusedEarlierSameDayBytes": false
+        },
+        {
+          "key": "biax-sbrd812",
+          "url": "https://biax.de/en/product/sbrd-8-12-2-12-000-1-min-zweihandschl/",
+          "observedAt": "2026-10-25T10:57:37.798955+00:00",
+          "status": 200,
+          "finalUrl": "https://biax.de/en/product/sbrd-8-12-2-12-000-1-min-zweihandschl/",
+          "contentType": "text/html; charset=UTF-8",
+          "declaredLength": null,
+          "bytes": 137863,
+          "sha256": "f1f3ff8bd35a400b70a06524b29545194c11d737b7e6f4b28cac7b8921ba3b5c",
+          "complete": true,
+          "path": "/tmp/compatair-seo-20261025/reserved-sources/biax-sbrd812.html",
+          "textPath": "/tmp/compatair-seo-20261025/reserved-sources/biax-sbrd812.txt",
+          "sourceKey": "biax-sbrd812",
+          "reading": "Bloc technique SBRD 8-12/2: 12 000 tr/min, 300 W, 400 L/min, queue maximale 8 mm, fraise carbure maximale 15 mm, pince livrée 6 mm.",
+          "pagesActuallyRead": [],
+          "reusedEarlierSameDayBytes": false
+        },
+        {
+          "key": "biax-catalog-current",
+          "url": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf",
+          "observedAt": "2026-10-25T10:58:15.479857+00:00",
+          "status": 200,
+          "finalUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf",
+          "contentType": "application/pdf",
+          "declaredLength": "15373237",
+          "bytes": 15373237,
+          "sha256": "318971fb9ba951f395b81cbca3d1e57938ce23b74db3aef25ff98bb8f0edc6c8",
+          "complete": true,
+          "path": "/tmp/compatair-seo-20261025/reserved-sources/biax-catalog-current.pdf",
+          "sourceKey": "biax-catalog-current",
+          "reading": "Page 24: SBRD 820 réf. 150021135, 310 W, conflit avec 300 W HTML conservé. Pages 40–41: BEW 309 E réf. 150800726, 150 L/min, 20 W, 0–900 tr/min; fonctionnement/lubrification à 6 bar, sans qualification de consommation en charge; diamètre maximal du trou 10 mm, conflit avec 11 mm HTML. Ne pas mélanger BEW 309 EL150 ou SBRH avec les références étudiées.",
+          "pagesActuallyRead": [
+            24,
+            40,
+            41
+          ],
+          "reusedEarlierSameDayBytes": false
+        }
+      ],
+      "remaining": [
+        "Conflit 300/310 W non résolu; aucune révision arbitrairement privilégiée.",
+        "airflowBasis=unqualified déjà présent et conservé; 500 L/min non dimensionnants."
+      ],
+      "currentModuleSha256": "c81c7504f9aaff95d7f6bec854577af8904fddded5a10e4527327eab781c32c2"
+    },
+    {
+      "path": "/outils-pneumatiques/meuleuse-dynabrade-53783/",
+      "file": "src/data/products/tools/meuleuse-dynabrade-53783.ts",
+      "baseModuleSha256": "0786e662338662d0454b3a960ffcc2494a471f0fe3b1c55b085d4b0fc2a308ce",
+      "preparationStatus": "needs-manufacturer-clarification",
+      "publicationApproval": false,
+      "apport": [
+        "53783 : meuleuse droite allongée pour cônes et bouchons abrasifs, moteur de 522 W à 20 000 tr/min et sortie 3/8-24. La notice précise un flexible intérieur de 10 mm. Son tableau publie 39 SCFM et 1 000 L/min, valeurs non équivalentes ; le besoin d’air reste à confirmer avant dimensionnement. Les types de meules et leurs dimensions doivent suivre la notice PD09.25."
+      ],
+      "neighborCompared": {
+        "file": "src/data/products/tools/meuleuse-dynabrade-53531.ts",
+        "sha256": "a112866f95a9ac1ff2ec71a33ff61b18eb677da53806f644ef842cbb8d0dadd0"
+      },
+      "sourcesRead": [
+        {
+          "id": "dynabrade-53783-followup-20261025-pd0925",
+          "sourceUrl": "https://us.dynabrade.com/assets/2225dfee-1b23-4a16-b4fa-7f3fe2d2ac0b/4074396334-pd0925.pdf#page=1",
+          "sourceLabel": "Dynabrade 53783, pd0925, pages1,2,3,8",
+          "sourceType": "manufacturer",
+          "sourceRole": "primary",
+          "retrievedAt": "2026-10-25",
+          "confidence": "A",
+          "notes": "Lecture2026-10-25; réponse HTTP200, SHA-256786c3fd41b69236932d2db3b4ed55e8ddc0a4b181ab3330db30a9bc6433a4b41; copie localed0896dd9fce1c2f3.pdf. Déclaration constructeur, pas de mesure CompatAir."
+        },
+        {
+          "id": "dynabrade-53783-followup-20261025-product",
+          "sourceUrl": "https://us.dynabrade.com/en/catalog/cone-or-plug-grinder-single-extension-steel-housing~5b92fe24-d15d-4ae7-996d-0316a887bfdb",
+          "sourceLabel": "Dynabrade 53783, fiche officielle",
+          "sourceType": "manufacturer",
+          "sourceRole": "primary",
+          "retrievedAt": "2026-10-25",
+          "confidence": "A",
+          "notes": "Lecture2026-10-25; réponse HTTP200, SHA-256167359948ec7ed80eadbcec52bbaac84cded0f678ab8036e4f694c41c0a06fd1; copie locale3727a3fd923b69f7.html. Déclaration constructeur, pas de mesure CompatAir."
+        }
+      ],
+      "remaining": [
+        "Masse non arbitrée : la ligne publie 3,9 lb et 1,7 kg, sans parfaite concordance de conversion.",
+        "Les unités de masse du tableau ne sont pas parfaitement concordantes ; aucune masse unique n’est utilisée pour justifier le choix. Le filetage commun ne valide pas tout cône ou toute meule.",
+        "Hauteur non retenue : le tableau publie des unités contradictoires (1.7 (45)).",
+        "Le catalogue ne fournit pas de courbe de consommation selon la pression pour cette référence. Vérifier la pression dynamique à l’entrée de l’outil pendant son fonctionnement.",
+        "Le diamètre intérieur publié ne suffit pas à valider un réseau : la longueur, les raccords et les pertes de pression restent à contrôler.",
+        "Cette fiche repose sur l’édition D25.01 du catalogue international. Elle ne prouve ni la disponibilité actuelle en France ni l’équipement exact livré par un vendeur.",
+        "Les documents relus sont des déclarations fabricant, pas des mesures CompatAir. Leur date d’édition et le numéro de série applicable restent à vérifier sur la machine.",
+        "La notice PD09.25 donne 39 SCFM et 1 000 L/min dans la même ligne ; aucune de ces valeurs ne fixe un besoin dimensionnant unique."
+      ],
+      "currentModuleSha256": "d8fdd6f1d8ae1e5877610e35097cf80c881e590751691ef91e6cf0fbaea0e81f"
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-orbitale-dynabrade-58460/",
+      "file": "src/data/products/tools/ponceuse-orbitale-dynabrade-58460.ts",
+      "baseModuleSha256": "689e1b1578b402779c4ae748f022d69ad8bcc82ae17e0e2b0cfa56a81f1ab7c4",
+      "preparationStatus": "ready-for-next-review",
+      "publicationApproval": false,
+      "apport": [
+        "La 58460 reçoit un plateau de 76 mm et permet de choisir rotation ou mouvement orbital aléatoire. Cette version DynaLocke est sans aspiration. La notice PD08.60 publie un maximum de 23 SCFM (651 L/min) à 90 PSIG (6,2 bar). La fiche actuelle et la notice divergent sur le diamètre du flexible : ce raccordement doit être confirmé pour la configuration retenue."
+      ],
+      "neighborCompared": {
+        "file": "src/data/products/tools/ponceuse-orbitale-dynabrade-58435.ts",
+        "sha256": "61c6790b3af48ee85be04257c4e4f9955176935e38e675a98b7cf29552ca1e36"
+      },
+      "sourcesRead": [
+        {
+          "id": "dynabrade-58460-followup-20261025-pd0860",
+          "sourceUrl": "https://eu.dynabrade.com/assets/4638d270-32ee-4657-a2e6-f84d6dd95d1f/4074396145-pd0860.pdf#page=1",
+          "sourceLabel": "Dynabrade 58460, pd0860, pages1,2",
+          "sourceType": "manufacturer",
+          "sourceRole": "primary",
+          "retrievedAt": "2026-10-25",
+          "confidence": "A",
+          "notes": "Lecture2026-10-25; réponse HTTP200, SHA-256d3d026b7e957d235bf1023217b149ef5b497bec46bea312c5f474edb25c987d3; copie locale96fa6711ffa15c1a.pdf. Déclaration constructeur, pas de mesure CompatAir."
+        },
+        {
+          "id": "dynabrade-58460-followup-20261025-product",
+          "sourceUrl": "https://eu.dynabrade.com/en/catalog/3-76-mm-dia-dynalocke-dual-action-sander-non-vacuum~c1d63ad2-6c8c-4c96-ae6f-819f4c2b4078",
+          "sourceLabel": "Dynabrade 58460, fiche officielle",
+          "sourceType": "manufacturer",
+          "sourceRole": "primary",
+          "retrievedAt": "2026-10-25",
+          "confidence": "A",
+          "notes": "Lecture2026-10-25; réponse HTTP200, SHA-256ed8b4b2a0a55001c406b1cbe46c132e050cf50bd6820551e1b9661da6d3acfcd; copie locale9a2d9d880933c263.html. Déclaration constructeur, pas de mesure CompatAir."
+        }
+      ],
+      "remaining": [
+        "Le constructeur impose l’arrêt complet avant de changer de mouvement. Le modèle non-vacuum n’acquiert pas une aspiration parce qu’une version voisine en possède une.",
+        "Masse non retenue : le tableau publie des unités contradictoires (2.35 (1.0)).",
+        "Le catalogue ne fournit pas de courbe de consommation selon la pression pour cette référence. Vérifier la pression dynamique à l’entrée de l’outil pendant son fonctionnement.",
+        "Le diamètre intérieur publié ne suffit pas à valider un réseau : la longueur, les raccords et les pertes de pression restent à contrôler.",
+        "Cette fiche repose sur l’édition D25.01 du catalogue international. Elle ne prouve ni la disponibilité actuelle en France ni l’équipement exact livré par un vendeur.",
+        "Les documents relus sont des déclarations fabricant, pas des mesures CompatAir. Leur date d’édition et le numéro de série applicable restent à vérifier sur la machine.",
+        "La notice PD08.60 s’applique aux numéros de série 08K1800 et suivants. Son tableau donne le maximum 651 L/min et sa pression déclarée de 90 PSIG (6,2 bar), sans facteur de marche supposé.",
+        "Le diamètre intérieur du flexible est de 8 mm dans la notice contre 10 mm dans la fiche actuelle ; aucune valeur unique n’est retenue pour le raccordement."
+      ],
+      "currentModuleSha256": "5d93e9f67673cc0b0b01d09ecd5f818a9b1701ae407cb2de711200fd9dbb3efc"
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-rotative-dynabrade-52518/",
+      "file": "src/data/products/tools/ponceuse-rotative-dynabrade-52518.ts",
+      "baseModuleSha256": "4a07467af0b41b3e70ef3e230b70054f3835eb38c2c14ab654a8dbfe33fcff06",
+      "preparationStatus": "ready-for-next-review",
+      "publicationApproval": false,
+      "apport": [
+        "52518 : ponceuse d’angle pour disques de 114 mm, sortie M14 × 2 et vitesse de 15 000 tr/min. La fiche prévoit le carter 07184 et précise que le plateau n’est pas fourni. La notice PD03.37R donne 33 SCFM (934 L/min) maximum à 90 PSIG (6,2 bar), avec entrée 1/4 NPT et flexible intérieur de 10 mm. La masse reste contradictoire entre notice et fiche actuelle."
+      ],
+      "neighborCompared": {
+        "file": "src/data/products/tools/ponceuse-rotative-dynabrade-50570.ts",
+        "sha256": "5ae64758c53b1ef220a672fdb18f258e0f12c2f97c402b5d0532dba76062eefc"
+      },
+      "sourcesRead": [
+        {
+          "id": "dynabrade-52518-followup-20261025-pd0337r",
+          "sourceUrl": "https://apac.dynabrade.com/assets/0d88c8f1-7151-42d4-9526-eade4314de4b/4074394753-pd0337r.pdf#page=1",
+          "sourceLabel": "Dynabrade 52518, pd0337r, pages1,2",
+          "sourceType": "manufacturer",
+          "sourceRole": "primary",
+          "retrievedAt": "2026-10-25",
+          "confidence": "A",
+          "notes": "Lecture2026-10-25; réponse HTTP200, SHA-256370096010bb52fe0a305b41d63c86af5afbb753cc80dd2760b7e090a73dd99e0; copie locale1922ab0f0e16b9e2.pdf. Déclaration constructeur, pas de mesure CompatAir."
+        },
+        {
+          "id": "dynabrade-52518-followup-20261025-product",
+          "sourceUrl": "https://apac.dynabrade.com/en/catalog/55hp-right-angle-disc-sander~65251550-aeb3-4d26-933b-b8f5c84b4575",
+          "sourceLabel": "Dynabrade 52518, fiche officielle",
+          "sourceType": "manufacturer",
+          "sourceRole": "primary",
+          "retrievedAt": "2026-10-25",
+          "confidence": "A",
+          "notes": "Lecture2026-10-25; réponse HTTP200, SHA-256632909560925f94613079420a6a29008273ec1473253a5d2d697062c55193c3e; copie localee6ffe1d63f2eedf6.html. Déclaration constructeur, pas de mesure CompatAir."
+        }
+      ],
+      "remaining": [
+        "La 52515 de la même page utilise 5/8-11 et comprend un plateau ; ces pièces ne sont pas transférées à la 52518 par analogie de famille. Aucune efficacité de captage n’est déduite du nom de gamme.",
+        "Masse non retenue : le tableau publie des unités contradictoires (1.9 (0.8)).",
+        "Le catalogue ne fournit pas de courbe de consommation selon la pression pour cette référence. Vérifier la pression dynamique à l’entrée de l’outil pendant son fonctionnement.",
+        "Le diamètre intérieur publié ne suffit pas à valider un réseau : la longueur, les raccords et les pertes de pression restent à contrôler.",
+        "Cette fiche repose sur l’édition D25.01 du catalogue international. Elle ne prouve ni la disponibilité actuelle en France ni l’équipement exact livré par un vendeur.",
+        "Les documents relus sont des déclarations fabricant, pas des mesures CompatAir. Leur date d’édition et le numéro de série applicable restent à vérifier sur la machine.",
+        "La notice PD03.37R s’applique aux séries 0H1000 et suivantes ; elle appaire le maximum 934 L/min à 90 PSIG (6,2 bar) dans la ligne du modèle.",
+        "La notice donne 1,9 lb / 0,83 kg, tandis que la fiche actuelle donne 3,3 lb / 1,5 kg. Cette masse n’est pas arbitrée silencieusement. Le plateau n’est pas fourni selon la fiche actuelle."
+      ],
+      "currentModuleSha256": "ca8b5bc04b1e3051105e6a8c6068258fb0929e1206e0197e7e3792db3778ba04"
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-vibrante-dynabrade-58502/",
+      "file": "src/data/products/tools/ponceuse-vibrante-dynabrade-58502.ts",
+      "baseModuleSha256": "1d40ae53c9325f77fa2fb4c889cdde508033cd59ed19206fb7f3acd1e81b2af3",
+      "preparationStatus": "needs-manufacturer-clarification",
+      "publicationApproval": false,
+      "apport": [
+        "Dynabug II 58502 : ponceuse rectangulaire à aspiration centrale, port extérieur de 1 pouce et plateau 56316. La notice PD19-01 indique 12 SCFM (340 L/min) ; la fiche produit actuelle annonce 13 SCFM (368 L/min). La puissance est elle aussi contradictoire dans la fiche. Le choix du compresseur reste indéterminé tant que le besoin d’air de la machine et sa série ne sont pas confirmés."
+      ],
+      "neighborCompared": {
+        "file": "src/data/products/tools/ponceuse-vibrante-dynabrade-58501.ts",
+        "sha256": "4d3afeed6a69e0c4ced151e9c770940478c91d050338c002c2d403ed13c87f3f"
+      },
+      "sourcesRead": [
+        {
+          "id": "dynabrade-58502-followup-20261025-pd19-01",
+          "sourceUrl": "https://eu.dynabrade.com/assets/19376dd1-fe85-4fe2-b579-a78fbbfd3e6b/4074402509-pd19-01.pdf#page=1",
+          "sourceLabel": "Dynabrade 58502, pd19-01, pages1,2,4",
+          "sourceType": "manufacturer",
+          "sourceRole": "primary",
+          "retrievedAt": "2026-10-25",
+          "confidence": "A",
+          "notes": "Lecture2026-10-25; réponse HTTP200, SHA-256f51710c924da6c06fc5bc2c4bb42cace40892715d6d695baf7eacb4ad88b310e; copie locale8334c4df1da20c33.pdf. Déclaration constructeur, pas de mesure CompatAir."
+        },
+        {
+          "id": "dynabrade-58502-followup-20261025-product",
+          "sourceUrl": "https://eu.dynabrade.com/en/catalog/3-76-mm-w-x-4-14-108-mm-l-dynabug-ii-orbital-sander-central-vacuum~59e56665-6b60-48d3-9250-c1fb357a3cbe",
+          "sourceLabel": "Dynabrade 58502, fiche officielle",
+          "sourceType": "manufacturer",
+          "sourceRole": "primary",
+          "retrievedAt": "2026-10-25",
+          "confidence": "A",
+          "notes": "Lecture2026-10-25; réponse HTTP200, SHA-25687be2b2092690264e990c7a38fd846dd333f777954edd5c9c250e76768926418; copie localefa89d2b9f385cbab.html. Déclaration constructeur, pas de mesure CompatAir."
+        }
+      ],
+      "remaining": [
+        "Un port de 1 pouce ne constitue pas une preuve de captage suffisante pour tout matériau. Aucun débit égal n’est transformé en résultat de finition ou d’exposition égal.",
+        "Hauteur non retenue : le tableau publie des unités contradictoires (3-1/2 (91)).",
+        "Le catalogue ne fournit pas de courbe de consommation selon la pression pour cette référence. Vérifier la pression dynamique à l’entrée de l’outil pendant son fonctionnement.",
+        "Le diamètre intérieur publié ne suffit pas à valider un réseau : la longueur, les raccords et les pertes de pression restent à contrôler.",
+        "Cette fiche repose sur l’édition D25.01 du catalogue international. Elle ne prouve ni la disponibilité actuelle en France ni l’équipement exact livré par un vendeur.",
+        "Les documents relus sont des déclarations fabricant, pas des mesures CompatAir. Leur date d’édition et le numéro de série applicable restent à vérifier sur la machine.",
+        "La notice PD19-01 de septembre 2022 concerne les séries II10000C et suivantes. Elle donne 340 L/min contre 368 L/min sur la fiche actuelle ; aucun débit unique n’est retenu.",
+        "La fiche présente deux dimensions de plateau, 74 × 109 et 76 × 108 mm : la référence 56316 est conservée sans inventer une dimension unique."
+      ],
+      "currentModuleSha256": "45ed9dccf4773865be1d2d15954d9deaf4cd446514f9134b79c32944f0fad70e"
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-chocs-taylor-pneumatic-t-7231nl-1-2-hd-impact-wrench-2-extended-anvil-t-7231nl/",
+      "file": "src/data/products/tools/cle-a-chocs-taylor-pneumatic-t-7231nl-1-2-hd-impact-wrench-2-extended-anvil-t-7231nl.ts",
+      "baseModuleSha256": "027ec44e5a67f532444f94edff243db8d83527bfec4c8900579ef71c2c89ff56",
+      "preparationStatus": "needs-primary-source-access",
+      "publicationApproval": false,
+      "apport": [],
+      "sourcesRead": [
+        {
+          "key": "exact-long",
+          "url": "https://taylorpneumatic.com/products/t-7231nl-1-2-hd-impact-wrench-2-extended-anvil",
+          "observedAt": "2026-10-25T10:57:33.649759+00:00",
+          "maxBytes": 8388608,
+          "timeoutSeconds": 20,
+          "attempts": 1,
+          "status": 429,
+          "finalUrl": "https://taylorpneumatic.com/products/t-7231nl-1-2-hd-impact-wrench-2-extended-anvil",
+          "contentType": "text/plain",
+          "retryAfter": "60",
+          "bytes": 18,
+          "complete": false,
+          "file": "/tmp/compatair-seo-20261025/reserved-followup-taylor/exact-long.html",
+          "sha256": "fa2dd01ed96d38758e89e354653c39f366bc7a34e485772c8aa2174b53a465d3",
+          "bodyComplete": true,
+          "productBodyRead": false,
+          "useForTechnicalClaims": false,
+          "sourceReadings": {
+            "transportBodyRead": true,
+            "excerptRead": "local_rate_limited",
+            "interpretation": "Réponse de limitation de débit ; aucun texte produit reçu."
+          },
+          "limits": [
+            "HTTP 429 ; Retry-After 60 observé. Aucune répétition de la requête.",
+            "Les 18 octets et leur empreinte décrivent le message de refus, pas une fiche produit."
+          ]
+        },
+        {
+          "key": "exact-short",
+          "url": "https://taylorpneumatic.com/products/t-7231n",
+          "observedAt": "2026-10-25T10:57:33.785766+00:00",
+          "maxBytes": 8388608,
+          "timeoutSeconds": 20,
+          "attempts": 1,
+          "status": 429,
+          "finalUrl": "https://taylorpneumatic.com/products/t-7231n",
+          "contentType": "text/plain",
+          "retryAfter": "60",
+          "bytes": 18,
+          "complete": false,
+          "file": "/tmp/compatair-seo-20261025/reserved-followup-taylor/exact-short.html",
+          "sha256": "fa2dd01ed96d38758e89e354653c39f366bc7a34e485772c8aa2174b53a465d3",
+          "bodyComplete": true,
+          "productBodyRead": false,
+          "useForTechnicalClaims": false,
+          "sourceReadings": {
+            "transportBodyRead": true,
+            "excerptRead": "local_rate_limited",
+            "interpretation": "Réponse de limitation de débit ; aucun texte produit reçu."
+          },
+          "limits": [
+            "HTTP 429 ; Retry-After 60 observé. Aucune répétition de la requête.",
+            "Les 18 octets et leur empreinte décrivent le message de refus, pas une fiche produit."
+          ]
+        },
+        {
+          "key": "official-collection",
+          "url": "https://taylorpneumatic.com/collections/impact-wrenches",
+          "observedAt": "2026-10-25T10:57:33.878278+00:00",
+          "maxBytes": 8388608,
+          "timeoutSeconds": 20,
+          "attempts": 1,
+          "status": 429,
+          "finalUrl": "https://taylorpneumatic.com/collections/impact-wrenches",
+          "contentType": "text/plain",
+          "retryAfter": "60",
+          "bytes": 18,
+          "complete": false,
+          "file": "/tmp/compatair-seo-20261025/reserved-followup-taylor/official-collection.html",
+          "sha256": "fa2dd01ed96d38758e89e354653c39f366bc7a34e485772c8aa2174b53a465d3",
+          "bodyComplete": true,
+          "productBodyRead": false,
+          "useForTechnicalClaims": false,
+          "sourceReadings": {
+            "transportBodyRead": true,
+            "excerptRead": "local_rate_limited",
+            "interpretation": "Réponse de limitation de débit ; aucun texte produit reçu."
+          },
+          "limits": [
+            "HTTP 429 ; Retry-After 60 observé. Aucune répétition de la requête.",
+            "Les 18 octets et leur empreinte décrivent le message de refus, pas une fiche produit."
+          ]
+        }
+      ],
+      "remaining": "La fiche exacte T-7231NL répond 429. Les valeurs sans unités ne reçoivent aucune unité par inférence ; aucun changement éditorial conditionnel n’est appliqué.",
+      "currentModuleSha256": "027ec44e5a67f532444f94edff243db8d83527bfec4c8900579ef71c2c89ff56"
+    }
+  ],
+  "guides": [
+    {
+      "file": "src/content/guides/pince-pneumatique-force-doigt-longueur-prehension.md",
+      "beforeSha256": "7f997fc04b440fc8823e5140c1d3e7fb3228eea811833a6fcd640646934be7fd",
+      "afterSha256": "11bbc8fff1a3ff61b8c845cf21bd7dae42b38929710d9953b3c6c47678339526",
+      "sourceRead": [
+        "festo-hgpt-index",
+        "festo-hgpt-2026",
+        "s021"
+      ]
+    },
+    {
+      "file": "src/content/guides/verin-simple-double-effet-ressort-retour.md",
+      "beforeSha256": "62b5498fc259a529194bc644eb881b550ad1d9511853b8dc3ef455b1fac2cbd1",
+      "afterSha256": "7ae9b09adc090bbaad8e5d070a7b60448eaa2185ad8fba054c8c31bc73209c92",
+      "sourceRead": [
+        "festo-dpca-index",
+        "festo-dpca-2026"
+      ]
+    },
+    {
+      "file": "src/content/guides/aftercooler-refroidisseur-secheur-air-comprime.md",
+      "beforeSha256": "916036a88a44acf246876f02ebd2446d68283d5d119523ed93f6010a52d271eb",
+      "afterSha256": "1e09abc2f1120771448deb0d3c201679ffd0ad0c057eaa5abe7c57d2bbed0e7f",
+      "sourceRead": [
+        "cagi-treatment",
+        "cagi-drying-guide"
+      ]
+    }
+  ],
+  "newAdmissions": 0,
+  "neighborCorrections": [
+    "pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-9-145730",
+    "pistolet-peinture-hvlp-walcom-ego-carbonio-190-hvlp-gravite-buse-1-0-mm",
+    "shinano-si-3007m",
+    "red-rooster-rrg-3617k",
+    "fini-cube-4-0-10-270-es-z",
+    "fiac-ax-203bd-dry-13-400-50-ce",
+    "biax-bew-605"
+  ],
+  "publicationLimits": {
+    "guides": 10,
+    "compressors": 30,
+    "tools": 60
+  },
+  "calendar": "Europe/Paris, sans cumul ni transfert",
+  "collectiveBlocking": false,
+  "validation": {
+    "status": "targeted-passed-full-source-hook-pending",
+    "node": "24.21.0",
+    "pnpm": "10.34.4",
+    "initialFocusedTests": 34,
+    "reconstructionAndScopeTestsPassed": 129,
+    "historicalProjectionFollowupTestsPassed": 35,
+    "catalogCheck": "passed, 25246 produits",
+    "appendOnlyEvidenceEvents": 45,
+    "oldEvidenceEventsUnchanged": true,
+    "preflightFailuresResolved": [
+      {
+        "check": "October 7 fixed-flow count historical assertion",
+        "finding": "La correction Walcom 1,0 mm change le compte actuel. Les quatre assertions historiques restent inchangées et lisent désormais la projection antérieure datée ; les tests actuels natif/runtime vérifient le nouveau périmètre."
+      },
+      {
+        "check": "catalog:check, FIAC13.fadCurve",
+        "finding": "La courbe retirée gardait une provenance insuffisante. Le retrait documenté est maintenant relié à la nouvelle preuve exacte, sans point FAD inventé."
+      },
+      {
+        "check": "Full normal hook, October8 canonical reconstruction",
+        "finding": "Les deux nouvelles corrections ANI/Asturo nécessitaient aussi la projection finale dans le constructeur du 8 octobre. Le constructeur applique désormais le même amendement exact après ses projections historiques ; aucun test, source historique ou seuil n’est assoupli.",
+        "firstRun": "2322 tests passed, 1 failed; unpublished candidate 8f07007b03c79814c52a48557aa696630c13f0eb"
+      }
+    ],
+    "localFullBuild": "not-run; unique build complet en CI"
+  },
+  "summary": {
+    "reviewedReservedPages": 34,
+    "correctedReservedPages": 27,
+    "readyForNextExactProposalReview": 19,
+    "correctedButManufacturerConflictStillPresent": 8,
+    "consolidatedIntoExistingPage": 1,
+    "notChangedWithoutSufficientPrimaryEvidence": 6,
+    "newAdmissions": 0,
+    "preparationStates": {
+      "ready-for-next-review": 19,
+      "needs-manufacturer-clarification": 8,
+      "needs-manufacturer-identity": 1,
+      "needs-primary-table-access": 1,
+      "needs-primary-reference-document": 3,
+      "consolidated-in-existing-page": 1,
+      "needs-primary-source-access": 1
+    }
+  },
+  "normalizedScope": {
+    "compressors": 5159,
+    "tools": 20087,
+    "fixed": 8902,
+    "incomplete": 10842,
+    "perAction": 308,
+    "inflation": 35,
+    "nonFixed": 11185,
+    "fixedPairs": 45925418,
+    "nonFixedPairs": 57703415
+  },
+  "fullSourceHealth": {
+    "runId": 40178030166,
+    "checkedAt": "2026-10-25T09:32:46.069Z",
+    "scope": "inventory",
+    "sourceRevision": "27e1a315b16e3ce477f7a8ee0cc8ce6d858ef935",
+    "summary": {
+      "reachable": 6965,
+      "broken": 2,
+      "unavailable": 11,
+      "unsafe": 1,
+      "unverified": 523,
+      "checked": 7502,
+      "anomalies": 14,
+      "auditUnavailable": false
+    },
+    "qualification": "Les 14 anomalies sont conservées. Metabo 502, Beck/Senco 404 et boucle de redirection FAR sont des défauts de sources précis, sans défaut global TLS, intégrité ou provenance du catalogue constaté. Les lectures ciblées ne remplacent pas ce contrôle complet."
+  },
+  "publicationContinuity": {
+    "admissionRegisterChanged": false,
+    "policyChanged": false,
+    "baselineChanged": false,
+    "historicalHoldsChanged": false,
+    "plannerThresholdsChanged": false,
+    "futureApprovalRequired": "Relire les empreintes et le contenu de la proposition réelle du jour, puis n’admettre que son sous-ensemble réellement approuvé. Une réserve individuelle ne bloque pas les autres pages."
+  }
+}

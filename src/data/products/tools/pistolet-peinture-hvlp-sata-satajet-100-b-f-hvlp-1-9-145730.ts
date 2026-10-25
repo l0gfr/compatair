@@ -9,16 +9,11 @@ const product: ToolProfileInput = {
 	"brand": "SATA",
 	"model": "SATAjet 100 B F HVLP 1.9",
 	"mpn": "145730",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 2,
 		"typical": 2,
 		"max": 2
-	},
-	"airflowLpm": {
-		"min": 350,
-		"typical": 350,
-		"max": 350
 	},
 	"confidence": "B",
 	"image": {
@@ -37,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SATA SATAjet 100 B F HVLP 1.9 (réf. 145730). Consommation de référence en fonctionnement : 350 L/min à 2 bar.",
+		"overview": "SATAjet 100 B F HVLP 1,9 mm, référence 145730 : consommation documentaire de 350 Nl/min à 2 bar. Les conditions normalisées restent à confirmer avant comparaison au FAD ; le jeu de buses correspondant est 145425 dans le catalogue.",
 		"verifiedFacts": [
 			"Technologie de pulvérisation : HVLP.",
 			"Buse : 1,9 mm.",
@@ -53,7 +48,8 @@ const product: ToolProfileInput = {
 			"Nl/min est conservé sans supposer une température ni une humidité de référence absente des passages cités.",
 			"Une version par buse et technologie est retenue ; godet seul, couleur, affichage DIGITAL et accessoires ne multiplient pas le compte.",
 			"Les réglages de pression sont établis en dynamique, gâchette tirée ; la pression maximale de sécurité 10 bar ne sert pas de point de consommation.",
-			"Données déclarées dans les documents identifiés ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"Données déclarées dans les documents identifiés ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué.",
+			"La relecture du voisin retire toute conclusion de dimensionnement fondée sur une unité normalisée, une pression de service ou un régime non qualifiés."
 		]
 	},
 	"specifications": [
@@ -119,6 +115,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october3d-tools-sata-family-100b-manual-0-p132"
 			]
+		},
+		{
+			"label": "Consommation documentaire, hors calcul",
+			"value": "350 Nl/min à 2 bar",
+			"evidenceIds": [
+				"reserved-neighbor-20261025-pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-9-145730"
+			]
 		}
 	],
 	"evidence": [
@@ -161,6 +164,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-13",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 120fd4b58cf8df73fb5f9e531c66be0167896f63bb7505c55207adb9de4d9f99. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "reserved-neighbor-20261025-pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-9-145730",
+			"sourceUrl": "https://www.sata.com/media/91/a2/99/1791809356/BETRIEBSANLEITUNG-SATAJET-100-B.PDF.PDF?ts=1791809356#page=132",
+			"sourceLabel": "Relecture du voisin pendant la correction des pages réservées, 25 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Lecture ciblée, SHA-256 120fd4b58cf8df73fb5f9e531c66be0167896f63bb7505c55207adb9de4d9f99. Les données de régime, d’unité ou de pression non qualifiées ne sont pas promues en point de dimensionnement."
 		}
 	],
 	"fieldSources": {
@@ -170,13 +183,17 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"october3d-tools-sata-family-100b-manual-0-p132"
 		],
-		"airflowLpm": [
-			"october3d-tools-sata-family-100b-manual-0-p132"
+		"editorial": [
+			"reserved-neighbor-20261025-pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-9-145730"
+		],
+		"demandExplanation": [
+			"reserved-neighbor-20261025-pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-9-145730"
 		]
 	},
 	"notes": [
 		"Consommation de référence en fonctionnement : 350 L/min à 2 bar."
-	]
+	],
+	"demandExplanation": "La notice publie 350 Nl/min à 2 bar sans conditions volumétriques de référence complètes dans les passages relus. Ce volume normalisé n’est pas assimilé au débit FAD en L/min."
 };
 
 export default product;

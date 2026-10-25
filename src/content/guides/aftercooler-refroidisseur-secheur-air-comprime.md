@@ -2,6 +2,7 @@
 title: "Aftercooler ou sécheur d’air : pourquoi le refroidisseur ne remplace pas le séchage"
 description: "Un aftercooler refroidit l’air et facilite la séparation des condensats. Vérifier température d’entrée, purge et sécheur sans promettre un air sec universel."
 pubDate: 2026-09-29
+updatedDate: 2026-10-25
 category: Installer
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "carrosserie-peinture"]
@@ -10,17 +11,17 @@ featured: false
 reviewStatus: internal
 relatedGuides: ["separateur-cyclonique-filtre-coalescent-differences", "dimensionner-secheur-frigorifique-ete", "point-rosee-secheur-filtre-air-comprime"]
 sources:
-  - https://www.atlascopco.com/en-us/compressors/wiki/compressed-air-articles/aftercooler
-  - https://www.parker.com/content/dam/Parker-com/Literature/IGFG/PDF-Files/Finite_Compressed_Air_Gas_Desiccant_Dryers_1300_850_USA.pdf
+  - https://www.cagi.org/assets/documents/pdfs/handbook/Chapter3CompressedAirGasHandbook.pdf?updated=1658947024
+  - https://www.cagi.org/assets/documents/pdfs/CAGIAirDryingSelectionGuide.pdf?updated=1657044982
 ---
 
 **Un aftercooler ne remplace pas automatiquement un sécheur.** Le refroidisseur après compression abaisse la température de l’air chaud et facilite la collecte d’eau condensée. La quantité de vapeur restant dans l’air et l’exigence du poste doivent encore être examinées.
 
 ## Comprendre les fonctions successives
 
-[Atlas Copco décrit l’aftercooler](https://www.atlascopco.com/en-us/compressors/wiki/compressed-air-articles/aftercooler) comme un équipement de refroidissement d’air comprimé, généralement associé à un séparateur d’eau et à une évacuation des condensats. Il peut utiliser l’air ou l’eau comme moyen de refroidissement. Certains compresseurs en disposent déjà.
+Le [manuel CAGI sur le traitement d’air, page PDF 11](https://www.cagi.org/assets/documents/pdfs/handbook/Chapter3CompressedAirGasHandbook.pdf?updated=1658947024#page=11) décrit l’aftercooler comme un équipement qui refroidit l’air comprimé par échange avec l’air ou l’eau. Le refroidissement condense une partie de la vapeur ; un séparateur en aval et une purge doivent évacuer l’eau liquide recueillie.
 
-La [documentation Parker Finite sur le séchage](https://www.parker.com/content/dam/Parker-com/Literature/IGFG/PDF-Files/Finite_Compressed_Air_Gas_Desiccant_Dryers_1300_850_USA.pdf) distingue l’élimination de condensats par des dispositifs de refroidissement, séparation ou drainage, et le traitement de la vapeur d’eau résiduelle. Il ne faut donc pas confondre présence d’une purge et maîtrise complète du point de rosée.
+Le même manuel précise qu’un séparateur de condensats n’abaisse pas le point de rosée : un nouveau refroidissement en aval peut encore provoquer de la condensation. Le [guide CAGI de sélection du séchage, page PDF 11](https://www.cagi.org/assets/documents/pdfs/CAGIAirDryingSelectionGuide.pdf?updated=1657044982#page=11) distingue le refroidisseur, le séparateur, la purge et le sécheur dans ses schémas d’installation. La présence d’une purge ne prouve donc pas la maîtrise de la vapeur d’eau résiduelle.
 
 <figure class="article-infographic article-infographic--compact">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 292" role="img" aria-labelledby="aftercooler-refroidisseur-secheur-air-comprime-title aftercooler-refroidisseur-secheur-air-comprime-desc" style="font-family:system-ui,sans-serif">
@@ -61,3 +62,7 @@ Lors de la réception, conservez les relevés pertinents de température, pressi
 La chaîne illustrée est fonctionnelle, à adapter à la conception retenue. Elle n’impose pas une succession universelle ni un dimensionnement de composants. Aucun taux d’élimination d’humidité, perte de pression nulle ou résultat au poste n’est inventé pour conclure qu’un refroidisseur donné suffit.
 
 Le glossaire conserve la définition de l’[aftercooler](/glossaire/#aftercooler) pour distinguer cette fonction dans un devis de traitement d’air.
+
+## Sources et méthode
+
+Documents CAGI relus le **25 octobre 2026** : manuel, chapitre 3, page PDF 11 (page imprimée 10), et guide de sélection du séchage, page PDF 11 (page imprimée 9). Relecture documentaire interne, sans essai physique. La grille de réception est proposée par CompatAir ; les schémas de principe ne remplacent pas la conception de l’installation.

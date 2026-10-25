@@ -85,6 +85,13 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4b-fini-cube-p3"
       ]
+    },
+    {
+      "label": "Références comparées avec sécheur",
+      "value": "ES : V91PD92FNM301. ES Z : V91PD92FNM501, cuve galvanisée. Dans les deux cas : 270 L, 4 kW, 460 L/min à 9,5 bar pour la configuration 10 bar.",
+      "evidenceIds": [
+        "reserved-20261025-s117-p3"
+      ]
     }
   ],
   "editorial": {
@@ -121,6 +128,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 270d2f554801e15883dd85b3f3b6089c641adf51dd59c15f31e0fd06c7b88e1a de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "reserved-20261025-s117-p3",
+      "sourceUrl": "https://finicompressors.com/wp-content/uploads/Catalogo-Cube-Fini_EN_04-2024_9990397.pdf#page=3",
+      "sourceLabel": "Relecture primaire du 25 octobre 2026 : s117, page PDF 3",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-25",
+      "confidence": "B",
+      "notes": "Corps complet SHA-256 270d2f554801e15883dd85b3f3b6089c641adf51dd59c15f31e0fd06c7b88e1a. Brochure CUBE 04/2024 page PDF 3: codes V91PD92FNM301 (ES) et V91PD92FNM501 (ES Z), 270 L, 4 kW, 400/3/50, 460 L/min à 9,5 bar pour configuration 10 bar; ES désigne sécheur et Z réservoir galvanisé. Même production d’air publiée; distinction déjà couverte dans la voisine. Données déclarées, aucun essai physique CompatAir."
     }
   ],
   "fieldSources": {

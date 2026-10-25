@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX BEW 605, référence 150810930. Le tableau fabricant publie 300 L/min et une plage d’utilisation de 6 à 6 bar. Puissance publiée : 80 W. Vitesse de rotation : adjustable 0-500 tr/min.",
+		"overview": "BIAX BEW 605, réf. 150810930 : ébavurage d’angle à vitesse réglable de 0 à 500 tr/min, avec 80 W publiés. La consommation de 300 L/min n’a pas de régime de mesure précisé ; la consigne de 6 bar ne la transforme pas en maximum en charge. Le calcul de besoin d’air reste non conclusif.",
 		"verifiedFacts": [
 			"Le catalogue de cette référence indique un fonctionnement à 6 bar.",
 			"La fiche fabricant publie une consommation de 300 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
@@ -99,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+		},
+		{
+			"id": "reserved-neighbor-20261025-biax-bew-605",
+			"sourceUrl": "https://biax.de/en/product/bew-605-bis-senk-o-24-mm/",
+			"sourceLabel": "Relecture du voisin signalé pendant la correction des réserves, 25 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Réponse primaire SHA-256 5571002e748aad205d697dca124aadbd353d9694cedee1b88373dfe88ed88f48. Aucun point de mesure ou régime n’est déduit d’une simple pression de service."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +120,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"biax-150810930-20260926"
+		],
+		"airflowBasis": [
+			"reserved-neighbor-20261025-biax-bew-605"
+		],
+		"editorial": [
+			"reserved-neighbor-20261025-biax-bew-605"
 		]
 	},
 	"notes": [
@@ -119,7 +135,8 @@ const product: ToolProfileInput = {
 		"min": 300,
 		"typical": 300,
 		"max": 300
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

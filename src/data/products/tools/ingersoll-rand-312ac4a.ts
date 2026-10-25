@@ -19,19 +19,16 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "312AC4A : meuleuse d’angle à 12 000 tr/min et 0,40 hp, contre 20 000 tr/min pour la 320AC4A voisine de même puissance. La fiche indique une pince de 1/4 pouce, 170 mm de longueur et 908 L/min en charge. La notice distingue aussi les montages de pince de 6 mm : ils ne sont pas déclarés interchangeables par arrondi. La vitesse admissible de la fraise et la pince précèdent le bilan d’air.",
+		"overview": "312AC4A : meuleuse à 12 000 tr/min et 0,40 hp (0,30 kW) dans la notice 45760899, contre 20 000 tr/min et la même puissance pour la 320AC4A. Cette différence de vitesse intervient dans le choix de l’accessoire. La notice imprime « 1/4 pouce (6 mm) » pour la pince, sans faire de ces deux diamètres une tolérance d’interchangeabilité. Elle ne donne pas ici de consommation d’air dimensionnante.",
 		"verifiedFacts": [
-			"Puissance publiée : 0,40 hp / 0,30 kW.",
-			"Vitesse à vide : 12 000 tr/min.",
-			"Échappement : arrière.",
-			"Pince de la ligne produit : 1/4 pouce.",
-			"Consommation en charge documentaire : 32 cfm / 908 L/min, sans pression de mesure appariée."
+			"Notice 45760899, édition 7 : 312AC4A à 12 000 tr/min, 0,40 hp (0,30 kW) ; 320AC4A à 20 000 tr/min, 0,40 hp (0,30 kW).",
+			"Le tableau de la notice imprime la pince « 1/4 pouce (6 mm) » ; la pince réellement installée et la queue de l’accessoire doivent être identifiées sans arrondi."
 		],
 		"limitations": [
-			"La consommation reste hors du calcul de compatibilité : la pression de mesure et les conditions volumétriques complètes ne sont pas établies.",
-			"La bibliothèque ancienne répond429 ; son fragment de page n’est pas un document PDF. Ses transcriptions antérieures restent dans l’historique, sans être traitées comme des valeurs confirmées.",
-			"Lecture documentaire sans essai physique. Le lecteur web ne prouve ni disponibilité commerciale actuelle ni conformité de la fourniture en France.",
-			"Les 908 L/min sont imprimés par le fabricant ; ils ne sont pas remplacés par une conversion plus précise des 32 cfm. Aucune équivalence de pince1/4pouce/6mm n’est supposée."
+			"La fiche HTML a répondu 429 lors du contrôle direct. La nouvelle lecture s’appuie sur la notice officielle accessible, dont le champ est limité aux modèles et caractéristiques explicitement imprimés.",
+			"Les caractéristiques d’air historiques restent dans les spécifications avec leurs sources datées, mais le régime et la pression de mesure nécessaires au dimensionnement ne sont pas établis ici.",
+			"Le libellé d’une variante EU dans le tableau ne prouve pas que toutes les références régionales ou pièces sont interchangeables.",
+			"Aucun essai physique, disponibilité commerciale actuelle ou exposition individuelle au bruit n’est établi par cette lecture."
 		]
 	},
 	"specifications": [
@@ -39,18 +36,18 @@ const product: ToolProfileInput = {
 			"label": "Puissance publiée",
 			"value": "0,40 hp / 0,30 kW",
 			"evidenceIds": [
-				"october21-ingersoll-rand-312ac4a-model-table"
+				"reserved-ir-20261025-ingersoll-rand-312ac4a"
 			]
 		},
 		{
 			"label": "Vitesse à vide",
 			"value": "12 000 tr/min",
 			"evidenceIds": [
-				"october21-ingersoll-rand-312ac4a-model-table"
+				"reserved-ir-20261025-ingersoll-rand-312ac4a"
 			]
 		},
 		{
-			"label": "Échappement",
+			"label": "Échappement de la fiche historique, non requalifié par la notice",
 			"value": "arrière",
 			"evidenceIds": [
 				"october21-ingersoll-rand-312ac4a-model-table"
@@ -60,7 +57,7 @@ const product: ToolProfileInput = {
 			"label": "Pince de la ligne produit",
 			"value": "1/4 pouce",
 			"evidenceIds": [
-				"october21-ingersoll-rand-312ac4a-model-table"
+				"reserved-ir-20261025-ingersoll-rand-312ac4a"
 			]
 		},
 		{
@@ -75,6 +72,13 @@ const product: ToolProfileInput = {
 			"value": "Non établie pour la mesure de consommation ; aucune consigne de famille transférée.",
 			"evidenceIds": [
 				"october21-ingersoll-rand-312ac4a-model-table"
+			]
+		},
+		{
+			"label": "Pince, libellé exact de la notice",
+			"value": "1/4 pouce (6 mm) ; ce libellé ne prouve pas une interchangeabilité",
+			"evidenceIds": [
+				"reserved-ir-20261025-ingersoll-rand-312ac4a"
 			]
 		}
 	],
@@ -96,6 +100,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-21",
 			"confidence": "A",
 			"notes": "Document lié par la page officielle, lu intégralement pour les pages anglaises1–4 ; SHA-256 5b41360138aa346aa1b09a2be05db75c15cc72b82cfe642f186fc903f8e2d1ae. La consigne PMAX ne fournit pas un point de mesure de consommation."
+		},
+		{
+			"id": "reserved-ir-20261025-ingersoll-rand-312ac4a",
+			"sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/bltd89674ca5491ef9a/bltaba456f61496c230/680a25bef42c4c5c743e73c4/45760899_ed7_G.pdf#page=3",
+			"sourceLabel": "Notice fabricant, relecture ciblée du modèle et du voisin, 25 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Document actuel accessible HTTP 200, réponse SHA-256 5b41360138aa346aa1b09a2be05db75c15cc72b82cfe642f186fc903f8e2d1ae. Lecture page PDF 3. La fiche HTML inaccessible et les preuves historiques restent séparées ; aucun essai physique."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +124,12 @@ const product: ToolProfileInput = {
 		],
 		"workingPressureBar": [
 			"october21-ingersoll-rand-312ac4a-model-table"
+		],
+		"editorial": [
+			"reserved-ir-20261025-ingersoll-rand-312ac4a"
+		],
+		"specifications": [
+			"reserved-ir-20261025-ingersoll-rand-312ac4a"
 		]
 	},
 	"notes": [

@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Red Rooster RRG-3617K, référence RRG-3617K. Le tableau fabricant publie 402 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 20000 tr/min. Masse publiée : 0,8 kg.",
+		"overview": "RRG-3617K : même ponceuse que la RRG-3611 avec deux bras de 6 et 10 × 330 mm. La consommation publiée de 6,7 L/s, soit 402 L/min, n’a pas de régime de mesure précisé ; elle ne fournit pas une demande dimensionnante en charge.",
 		"verifiedFacts": [
 			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
 			"Consommation publiée : 6.7 L/s, convertis en 402 L/min par multiplication par 60.",
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas.",
+			"La relecture du voisin retire toute conclusion de dimensionnement fondée sur une unité normalisée, une pression de service ou un régime non qualifiés."
 		]
 	},
 	"specifications": [
@@ -99,6 +100,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "reserved-neighbor-20261025-red-rooster-rrg-3617k",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=48",
+			"sourceLabel": "Relecture du voisin pendant la correction des pages réservées, 25 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Lecture ciblée, SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. Les données de régime, d’unité ou de pression non qualifiées ne sont pas promues en point de dimensionnement."
 		}
 	],
 	"fieldSources": {
@@ -116,6 +127,12 @@ const product: ToolProfileInput = {
 		],
 		"connectorSize": [
 			"red-rooster-rrg-3617k-20260926"
+		],
+		"editorial": [
+			"reserved-neighbor-20261025-red-rooster-rrg-3617k"
+		],
+		"airflowBasis": [
+			"reserved-neighbor-20261025-red-rooster-rrg-3617k"
 		]
 	},
 	"notes": [
@@ -129,7 +146,8 @@ const product: ToolProfileInput = {
 	"recommendedHose": {
 		"innerDiameterMm": 10
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"airflowBasis": "unqualified"
 };
 
 export default product;
