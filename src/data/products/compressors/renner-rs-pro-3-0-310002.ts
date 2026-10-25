@@ -65,19 +65,27 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"documented-20260930-renner-2026"
 			]
+		},
+		{
+			"label": "Comparaison documentée et limite de choix",
+			"value": "Montrer le compromis entre les configurations 13 bar et 7,5 bar du même 3 kW sans créer une courbe multi-versions.",
+			"evidenceIds": [
+				"review-20261025-s081-p18",
+				"review-20261025-s082-p3"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "RENNER RS-PRO 3.0, article 310002. Version standard au sol, sans réservoir intégré. Cette référence correspond à la version 13 bar ; son débit est 290 L/min à cette pression.",
+		"overview": "Le RS-PRO 3.0 article 310002 est la configuration 13 bar : le catalogue publie 290 L/min à cette pression, pour 3 kW et 153 kg, sans réservoir intégré. L’article 310000 publie 540 L/min à 7,5 bar avec la même puissance et la même masse. Ces deux points appartiennent à des références distinctes : le choix dépend de la pression nécessaire au poste, et le débit 540 L/min ne doit pas être attribué à l’article 310002.",
 		"verifiedFacts": [
 			"Puissance moteur publiée : 3 kW ; poids de cette configuration : 153 kg.",
 			"Débit restitué documenté : 290 L/min à 13 bar.",
 			"La documentation de la série prévoit le fonctionnement continu, sous ses conditions d’installation et d’entretien."
 		],
 		"limitations": [
-			"La disponibilité commerciale actuelle n’a pas été confirmée.",
-			"Les débits des autres versions de pression ne sont pas ajoutés à la courbe de cet article.",
-			"Le service continu documenté ne dispense pas du contrôle du refroidissement, du traitement d’air et des pertes du réseau."
+			"La pression 13 bar identifie la configuration retenue ; elle ne qualifie pas une soupape ni le réglage d’une autre référence.",
+			"Le catalogue revendique ISO 1217 annexeC. Aucun point de l’article 310000 n’est ajouté à la courbe du 310002.",
+			"La brochure constructeur RS-PRO décrit le service continu de cette série ; installation, refroidissement et entretien restent à respecter. Disponibilité actuelle non confirmée."
 		]
 	},
 	"evidence": [
@@ -100,6 +108,26 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 9c0fb8f947202b1d1f0a04ceef4d26ed8863e8b6cbfe9d1f1451bf603a1f0ae8. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		},
+		{
+			"id": "review-20261025-s081-p18",
+			"sourceUrl": "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf#page=18",
+			"sourceLabel": "RENNER, relecture primaire du 25 octobre 2026, s081, page PDF 18",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps vérifié SHA-256 35bd2421c2cc333bc6a0d6cd20c09bbf6b3c2af621021cb6cd2a254d23e74f8a. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review-20261025-s082-p3",
+			"sourceUrl": "https://shop.hbg-kompressoren.de/wp-content/uploads/2018/11/Prospekt_RS-PRO_RSF-PRO_30-110_DE.pdf#page=3",
+			"sourceLabel": "RENNER, relecture primaire du 25 octobre 2026, s082, page PDF 3",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps vérifié SHA-256 9c0fb8f947202b1d1f0a04ceef4d26ed8863e8b6cbfe9d1f1451bf603a1f0ae8. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -126,12 +154,16 @@ const product: CompressorInput = {
 		],
 		"dutyCycle": [
 			"documented-20260930-renner-belt-hbg"
+		],
+		"maxPressureBasis": [
+			"review-20261025-s081-p18"
 		]
 	},
 	"notes": [
 		"Tableau de configuration : page PDF 18.",
 		"Code d’article constructeur 310002, colonne 3."
-	]
+	],
+	"maxPressureBasis": "selected-working-pressure-ceiling"
 };
 
 export default product;

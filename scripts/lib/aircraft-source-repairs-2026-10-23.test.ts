@@ -1,3 +1,5 @@
+import { beforeOctober25Review } from './reviewed-catalog-test-projection.mjs';
+import { parseCatalogProductSource } from './catalog-tooling.mjs';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
@@ -7,6 +9,8 @@ import aircraftSourceRepairs from '../../src/data/imports/source-url-repairs-air
 import { evidenceSchema } from '../../src/domain/catalog';
 
 const products = new Map([...compressors, ...tools].map(product => [product.id, product]));
+// Replay the exact pre-October25 state for these immutable October23 assertions.
+products.set('aircraft-airboy-kitt-90', beforeOctober25Review(parseCatalogProductSource('compressors', readFileSync(new URL('../../src/data/products/compressors/aircraft-airboy-kitt-90.ts', import.meta.url), 'utf8'))));
 const fixedInputs = ['tankLiters', 'maxPressureBar', 'fadCurve', 'intakeFlowLpm', 'dutyCycle', 'oilType', 'noiseDb', 'powerKw', 'weightKg', 'voltage', 'phase', 'confidence', 'status', 'demandModel', 'workingPressureBar', 'airflowLpm', 'airflowBasis', 'airPerActionLiters', 'minimumCompressorPowerKw', 'recommendedHose'];
 
 describe('Aircraft manufacturer outage source repairs, October23', () => {

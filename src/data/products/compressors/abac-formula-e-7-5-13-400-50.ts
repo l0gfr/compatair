@@ -8,12 +8,7 @@ const product: CompressorInput = {
 	"mpn": "4152025396",
 	"tankLiters": 0,
 	"maxPressureBar": 13,
-	"fadCurve": [
-		{
-			"pressureBar": 13,
-			"litersPerMinute": 830
-		}
-	],
+	"fadCurve": [],
 	"oilType": "oil",
 	"confidence": "A",
 	"status": "unknown",
@@ -24,25 +19,22 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "ABAC FORMULA E 7,5 13 400/50 , référence 4152025396 : configuration sans cuve intégrée, pression maximale publiée de 13 bar. Le point documenté le plus élevé en pression fournit 830 L/min à 13 bar. Configuration Full Feature publiée par le fabricant.",
+		"overview": "La FORMULA E 7,5 13 400/50, référence 4152025396, est la version Full Feature sans cuve, de 7,5 kW en 400 V triphasé à 50 Hz. Le PIM fabricant de cette référence publie un FAD de 830 L/min et une pression maximale de 13 bar. La version voisine 4152025395 est donnée pour un maximum de 10 bar : le besoin de pression départage ces références. La pression de mesure des 830 L/min reste à confirmer pour calculer une compatibilité outil. Le stockage externe et l’alimentation doivent être prévus dans l’installation.",
 		"verifiedFacts": [
-			"Débit restitué publié : 830 L/min à 13 bar.",
+			"Débit FAD fabricant : 830 L/min pour la référence 4152025396 ; pression de mesure à confirmer.",
 			"Compresseur rotatif à vis lubrifié, famille FORMULA. Puissance moteur publiée : 7,5 kW.",
-			"Masse nette publiée : 276 kg.",
-			"Alimentation publiée : 400 V, 50 Hz, triphasée.",
-			"Fonctionnement continu déclaré par le constructeur pour cette gamme ; taux de marche normalisé à 100 %."
+			"Masse publiée, base non précisée : 276 kg.",
+			"Alimentation publiée : 400 V, 50 Hz, triphasée."
 		],
 		"limitations": [
-			"Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
-			"Le fonctionnement continu est une déclaration de gamme ; respecter les conditions de la notice. La disponibilité commerciale reste à confirmer.",
-			"Version électrique exacte à vérifier à la commande ; une alimentation 230 V peut être triphasée.",
-			"Le débit publié appartient à cette référence et à sa version de pression. Il ne définit pas une courbe complète."
+			"Pression de mesure du débit non explicitée dans la source relue ; la pression maximale reste distincte du point de mesure. Compatibilité dépendante du débit indéterminée.",
+			"Le taux de marche du groupe complet reste à confirmer pour cette référence. La déclaration générale de gamme ne renseigne pas ici un taux normalisé de 100 %."
 		]
 	},
 	"specifications": [
 		{
 			"label": "Conditions du débit",
-			"value": "FAD capacity (l/min) : 830 ; Max Working Pressure (bar) : 13, dans le tableau fabricant de la variante 4152025396. Valeur restituée, pas aspirée.",
+			"value": "FAD publié : 830 L/min pour 4152025396. Pression maximale : 13 bar. Pression de mesure du FAD à confirmer.",
 			"evidenceIds": [
 				"abac-4152025396-20260926"
 			]
@@ -62,10 +54,10 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Taux de marche constructeur",
-			"value": "100 %, fonctionnement continu déclaré pour la gamme. Respecter les conditions de la notice de la référence.",
+			"label": "Portée de la déclaration de service",
+			"value": "Déclaration de gamme conservée dans les sources ; taux du groupe complet non qualifié.",
 			"evidenceIds": [
-				"abac-formula-e-7-5-13-400-50-continuous-duty-20260927"
+				"abac-4152025396-20260926"
 			]
 		}
 	],
@@ -87,6 +79,24 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Déclaration de la gamme ABAC à vis ; uniquement les références SPINN, FORMULA et GENESIS revues individuellement dans ce lot."
+		},
+		{
+			"id": "abac-4152025395-20260926",
+			"sourceUrl": "https://shop.abacaircompressors.com/en-FR/products/4152025384/formula-55-8-40050-ce",
+			"sourceLabel": "ABAC, tableau officiel des variantes FORMULA, réf. 4152025395",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-26",
+			"confidence": "A",
+			"notes": "FAD capacity (l/min) : 1080 ; Max Working Pressure (bar) : 10, dans le tableau fabricant de la variante 4152025395. Valeur restituée, pas aspirée."
+		},
+		{
+			"id": "abac-formula-e-7-5-10-400-50-continuous-duty-20260927",
+			"sourceUrl": "https://www.abacaircompressors.com/en-international/products/screw-compressors",
+			"sourceLabel": "ABAC, gamme de compresseurs à vis SPINN, FORMULA et GENESIS",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-27",
+			"confidence": "A",
+			"notes": "Déclaration de la gamme ABAC à vis ; uniquement les références SPINN, FORMULA et GENESIS revues individuellement dans ce lot."
 		}
 	],
 	"fieldSources": {
@@ -97,9 +107,6 @@ const product: CompressorInput = {
 			"abac-4152025396-20260926"
 		],
 		"maxPressureBar": [
-			"abac-4152025396-20260926"
-		],
-		"fadCurve": [
 			"abac-4152025396-20260926"
 		],
 		"oilType": [
@@ -117,8 +124,14 @@ const product: CompressorInput = {
 		"phase": [
 			"abac-4152025396-20260926"
 		],
-		"dutyCycle": [
-			"abac-formula-e-7-5-13-400-50-continuous-duty-20260927"
+		"editorial": [
+			"abac-4152025396-20260926"
+		],
+		"specifications": [
+			"abac-4152025396-20260926"
+		],
+		"fadCurve": [
+			"abac-4152025396-20260926"
 		]
 	},
 	"notes": [
@@ -127,8 +140,7 @@ const product: CompressorInput = {
 	"powerKw": 7.5,
 	"weightKg": 276,
 	"voltage": "400 V, 50 Hz",
-	"phase": "three-phase",
-	"dutyCycle": 1
+	"phase": "three-phase"
 };
 
 export default product;

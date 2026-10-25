@@ -23,17 +23,15 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX GAA 509, référence 150619405. Le tableau fabricant publie 300 L/min et une plage d’utilisation de 6 à 6 bar. Vitesse à vide publiée : 900 tr/min. Masse publiée : 630 g.",
+		"overview": "GAA 509 : visseuse à aspiration de vis intégrée, démarrage par poussée et arrêt automatique. Elle annonce 900 tr/min et 0,4–3,5 Nm en assemblage dur, contre 500 tr/min et 0,3–4,0 Nm pour la GAA 505. Les deux consomment 300 L/min dans le tableau, à une alimentation prescrite de 6 bar.",
 		"verifiedFacts": [
-			"Le catalogue prescrit un fonctionnement à 6 bar dans la page de cette famille.",
-			"Consommation publiée dans la ligne Luftverbrauch en L/min ; le régime de charge n’est pas détaillé.",
-			"Référence fabricant : 150619405.",
-			"Vitesse à vide publiée : 900 tr/min.",
-			"Masse publiée : 630 g."
+			"GAA 509 et GAA 505 intègrent l’aspiration de vis : 900 contre 500 tr/min ; couple en assemblage dur 0,4–3,5 contre 0,3–4,0 Nm. Consommation publiée de 300 L/min et masse de 630 g identiques.",
+			"Le régime de la consommation publiée n’est pas précisé ; cette valeur n’est pas assimilée à un maximum de travail."
 		],
 		"limitations": [
-			"Le réglage du couple dépend de l’assemblage et des ressorts prévus par le fabricant.",
-			"L’aspiration des vis et les équipements auxiliaires peuvent demander un dimensionnement séparé."
+			"Le régime de Luftverbrauch n’est pas qualifié.",
+			"La plage en assemblage souple de la GAA 509 est 0,4–3,0 Nm, distincte de celle en assemblage dur.",
+			"Le tableau ne sépare pas la consommation du moteur de celle de l’aspiration intégrée : ne pas prétendre que 300 L/min exclut ou inclut un auxiliaire externe."
 		]
 	},
 	"specifications": [
@@ -75,6 +73,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation publiée dans la ligne Luftverbrauch en L/min ; le régime de charge n’est pas détaillé."
+		},
+		{
+			"id": "review-20261025-biax-gaa-509-s043",
+			"sourceUrl": "https://biax.de/wp-content/uploads/2025/02/BIAX_Schrauber_DE.pdf#page=14",
+			"sourceLabel": "Relecture fabricant du 25 octobre 2026, s043, pages PDF 14",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Relecture des octets complets récupérés le 2026-10-25T07:20:34.968557+00:00, SHA-256 234541dfd789768204963f04e6df723f00c634bb38ced6d544e88ac762382718. GAA 509 et GAA 505 intègrent l’aspiration de vis : 900 contre 500 tr/min ; couple en assemblage dur 0,4–3,5 contre 0,3–4,0 Nm. Consommation publiée de 300 L/min et masse de 630 g identiques. Limite : Le régime de Luftverbrauch n’est pas qualifié ; ajouter airflowBasis=unqualified."
 		}
 	],
 	"fieldSources": {
@@ -85,17 +93,23 @@ const product: ToolProfileInput = {
 			"biax-150619405-20260926"
 		],
 		"airflowLpm": [
-			"biax-150619405-20260926"
+			"biax-150619405-20260926",
+			"review-20261025-biax-gaa-509-s043"
+		],
+		"airflowBasis": [
+			"review-20261025-biax-gaa-509-s043"
 		]
 	},
 	"notes": [
-		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+		"Données déclarées par le fabricant ; aucune mesure physique CompatAir.",
+		"Relecture proposée du 25 octobre 2026 : Le régime de Luftverbrauch n’est pas qualifié ; ajouter airflowBasis=unqualified."
 	],
 	"airflowLpm": {
 		"min": 300,
 		"typical": 300,
 		"max": 300
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

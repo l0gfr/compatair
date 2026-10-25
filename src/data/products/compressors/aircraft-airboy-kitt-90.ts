@@ -19,7 +19,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
 	},
 	"editorial": {
-		"overview": "Aircraft AIRBOY KITT 90, référence 2001237 : cuve de 2,4 L, pression maximale publiée de 15 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Capacité de remplissage approximative : 49 l/min. Condition de remplissage publiée : à 6 bar de pression de travail.",
+		"overview": "L’AIRBOY KITT 90, article 2001237, privilégie un maximum publié de 15 bar avec une cuve de 2,4 L et un moteur de 0,6 kW. L’AIRBOY 262 E, article 2001247, conserve 2,4 L mais annonce 10 bar et 1,5 kW. Le catalogue donne environ 49 et 155 L/min de remplissage à 6 bar. Cette différence aide à distinguer pression maximale et vitesse de remplissage ; elle ne prouve pas une capacité d’alimentation continue d’un outil.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons. Puissance moteur publiée : 0,6 kW.",
@@ -30,9 +30,10 @@ const product: CompressorInput = {
 			"Nombre de cylindres : 1."
 		],
 		"limitations": [
-			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
-			"La capacité de remplissage et sa pression éventuelle ne sont pas assimilées à un débit FAD certifié. Demander les conditions d’essai et le débit utile à la pression de l’outil."
+			"La pression du remplissage est connue :6 bar. Sa qualification FAD et les conditions complètes d’essai restent à obtenir ; les courbes FAD ne sont pas reconstituées.",
+			"Le débit aspiré 85 L/min du KITT90 est distinct du remplissage 49 L/min. Aucun des deux n’est introduit comme FAD.",
+			"Le taux de marche reste inconnu. Le petit réservoir 2,4 L ne constitue pas une preuve d’autonomie au poste.",
+			"Le PDF lu contient une page extraite, correspondant à la page 31 du catalogue ; les identités exactes sont vérifiées dans ce tableau."
 		]
 	},
 	"specifications": [
@@ -91,6 +92,13 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"aircraft-2001237-20260927"
 			]
+		},
+		{
+			"label": "Comparaison documentée et limite de choix",
+			"value": "Comparer deux petits réservoirs 2,4 L en séparant priorité à la pression et capacité de remplissage, sans transformer le remplissage en FAD.",
+			"evidenceIds": [
+				"review-20261025-s071-p1"
+			]
 		}
 	],
 	"evidence": [
@@ -113,32 +121,42 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer 702076. Empreinte PDF SHA-256 : 22bf634228622553d64fea92bd8aa8365896bafadc5209c4b4b51ca9c062e78a. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
+		},
+		{
+			"id": "review-20261025-s071-p1",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=31",
+			"sourceLabel": "Aircraft, relecture primaire du 25 octobre 2026, s071, page PDF 1",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps vérifié SHA-256 22bf634228622553d64fea92bd8aa8365896bafadc5209c4b4b51ca9c062e78a. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir. PDF extrait : page PDF1 correspondant à la page31 du catalogue."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"aircraft-2001237-20260927"
+			"review-20261025-s071-p1"
 		],
 		"tankLiters": [
-			"aircraft-2001237-20260927"
+			"review-20261025-s071-p1"
 		],
 		"maxPressureBar": [
-			"aircraft-2001237-20260927"
-		],
-		"fadCurve": [
-			"aircraft-2001237-20260927"
+			"review-20261025-s071-p1"
 		],
 		"oilType": [
 			"aircraft-2001237-20260927"
 		],
 		"intakeFlowLpm": [
-			"aircraft-2001237-20260927"
+			"review-20261025-s071-p1"
 		],
 		"powerKw": [
-			"aircraft-2001237-20260927"
+			"review-20261025-s071-p1"
 		],
 		"voltage": [
-			"aircraft-2001237-20260927"
+			"review-20261025-s071-p1"
+		],
+		"fadCurve": [
+			"review-20261025-s071-p1"
 		]
 	},
 	"notes": [

@@ -10,11 +10,8 @@ const product: ToolProfileInput = {
   "model": "3600 XPT HVLP buse 1.30",
   "mpn": "10142505",
   "demandModel": "variable-volume",
-  "workingPressureBar": {
-    "min": 2,
-    "max": 2
-  },
-  "demandExplanation": "Le catalogue et la notice donnent des pressions incompatibles pour ce chapeau. Aucun point de consommation n’est choisi entre ces sources.",
+  "workingPressureBar": {},
+  "demandExplanation": "Le catalogue donne 360 L/min à 2 bar pour la configuration HVLP, tandis que la notice limite l’entrée HVLP à 1,8 bar. Ces sources publient des pressions incompatibles ; elles ne sont pas réconciliées. Aucun point de demande sous pression n’est retenu pour dimensionner le compresseur.",
   "confidence": "B",
   "image": {
     "src": "/images/products/pistolet-peinture-hvlp-sagola-3600-xpt-hvlp-buse-1-30-10142505.svg",
@@ -41,7 +38,8 @@ const product: ToolProfileInput = {
     "limitations": [
       "Le catalogue et la notice donnent des pressions incompatibles pour ce chapeau. Aucun point de consommation n’est choisi entre ces sources.",
       "Le catalogue donne 360 L/min à 2 bar ; la notice liée impose 1,8 bar maximum avec le chapeau HVLP. Le point n’est pas arbitré entre ces deux sources.",
-      "Aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+      "Aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué.",
+      "Relecture du 25 octobre 2026 : catalogue page 29, consommation HVLP 360 L/min à 2 bar ; notice page 29, pression maximale d’entrée HVLP 1,8 bar. La contradiction reste visible et la pression de calcul est retirée."
     ]
   },
   "specifications": [
@@ -107,12 +105,12 @@ const product: ToolProfileInput = {
     "mpn": [
       "october4-tools-sagola-bodyshop-catalogue-p29"
     ],
-    "workingPressureBar": [
-      "october4-tools-sagola-bodyshop-catalogue-p29"
-    ],
     "demandExplanation": [
       "october4-tools-sagola-bodyshop-catalogue-p29",
       "october4-tools-sagola-3600-manual-p29"
+    ],
+    "workingPressureBar": [
+      "october4-tools-sagola-bodyshop-catalogue-p29"
     ]
   },
   "notes": [

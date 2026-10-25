@@ -23,18 +23,14 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Red Rooster RR-2110NS, référence RR-2110NS. Le tableau fabricant publie 396 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Masse publiée : 2,5 kg. Diamètre intérieur de flexible conseillé : 6,5 mm.",
+		"overview": "RR-2110NS : dérouilleur pistolet à 3 000 coups/min, corps de 340 × 175 mm et masse de 2,5 kg. Le RR-0315NS droit atteint 4 000 coups/min avec un corps de 415 × 45 mm et 2,6 kg. Les deux lignes publient 6,6 L/s et un flexible intérieur de 6,5 mm.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation publiée : 6.6 L/s, convertis en 396 L/min par multiplication par 60.",
-			"Référence fabricant : RR-2110NS.",
-			"Masse publiée : 2,5 kg.",
-			"Diamètre intérieur de flexible conseillé : 6,5 mm.",
-			"Raccord pneumatique : PT 1/4\"."
+			"RR-2110NS contre RR-0315NS : 3 000 contre 4 000 coups/min, masses 2,5 et 2,6 kg, dimensions 340 × 175 et 415 × 45 mm. Consommation commune 6,6 L/s ; aiguille standard de 3 mm.",
+			"Le régime de la consommation publiée n’est pas précisé ; cette valeur n’est pas assimilée à un maximum de travail."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"La table ne donne pas le régime des 6,6 L/s.",
+			"La ligne des porte-aiguilles annonce 19 aiguilles de 3 mm, mais une désignation de pièce comporte -17 : ne pas transformer le suffixe de pièce en nombre d’aiguilles."
 		]
 	},
 	"specifications": [
@@ -92,6 +88,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "review-20261025-red-rooster-rr-2110ns-s068",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=55",
+			"sourceLabel": "Relecture fabricant du 25 octobre 2026, s068, pages PDF 55, 106",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Relecture des octets complets récupérés le 2026-10-25T07:20:38.623086+00:00, SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. RR-2110NS contre RR-0315NS : 3 000 contre 4 000 coups/min, masses 2,5 et 2,6 kg, dimensions 340 × 175 et 415 × 45 mm. Consommation commune 6,6 L/s ; aiguille standard de 3 mm. Limite : Ajouter unqualified ; la table ne donne pas le régime des 6,6 L/s."
 		}
 	],
 	"fieldSources": {
@@ -102,17 +108,22 @@ const product: ToolProfileInput = {
 			"red-rooster-rr-2110ns-20260926-workingpressurebar-1"
 		],
 		"airflowLpm": [
-			"red-rooster-rr-2110ns-20260926"
+			"red-rooster-rr-2110ns-20260926",
+			"review-20261025-red-rooster-rr-2110ns-s068"
 		],
 		"recommendedHose": [
 			"red-rooster-rr-2110ns-20260926"
 		],
 		"connectorSize": [
 			"red-rooster-rr-2110ns-20260926"
+		],
+		"airflowBasis": [
+			"review-20261025-red-rooster-rr-2110ns-s068"
 		]
 	},
 	"notes": [
-		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+		"Données déclarées par le fabricant ; aucune mesure physique CompatAir.",
+		"Relecture proposée du 25 octobre 2026 : Ajouter unqualified ; la table ne donne pas le régime des 6,6 L/s."
 	],
 	"airflowLpm": {
 		"min": 396,
@@ -122,7 +133,8 @@ const product: ToolProfileInput = {
 	"recommendedHose": {
 		"innerDiameterMm": 6.5
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"airflowBasis": "unqualified"
 };
 
 export default product;

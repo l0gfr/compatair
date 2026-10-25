@@ -11,19 +11,14 @@ const product: CompressorInput = {
 		"label": "COMPACK sur réservoir 90 L",
 		"distinguishingAttributes": {
 			"équipement": "COMPACK sur réservoir 90 L",
-			"pressionDeConfiguration": "10 bar",
 			"cuve": "90 L",
-			"fréquence": "50 Hz"
+			"fréquence": "50 Hz",
+			"pressionMaximale": "10 bar"
 		}
 	},
 	"tankLiters": 90,
 	"maxPressureBar": 10,
-	"fadCurve": [
-		{
-			"pressureBar": 10,
-			"litersPerMinute": 270
-		}
-	],
+	"fadCurve": [],
 	"powerKw": 2.7,
 	"oilType": "unknown",
 	"confidence": "B",
@@ -57,8 +52,8 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Air livré à 10 bar",
-			"value": "270 L/min",
+			"label": "Débit publié selon ISO 1217, annexe C",
+			"value": "270 L/min ; pression de mesure à confirmer.",
 			"evidenceIds": [
 				"october4-ktc-download-0-p2"
 			]
@@ -79,15 +74,16 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "KTC COMPACK 2 90 L. 270 L/min déclarés à 10 bar. COMPACK sur réservoir 90 L.",
+		"overview": "Le COMPACK 2 90 L, référence 1850120508, réunit un réservoir de 90 L, un moteur de 2,7 kW et une alimentation monophasée de 230 V à 50 Hz. La version verticale 1850120513 porte le stockage à 270 L et conserve les 270 L/min publiés. Leurs dimensions sont de 117 × 46 × 96 cm et 64 × 67 × 170 cm : le choix dépend du stockage et de la hauteur disponible. Le catalogue qualifie le débit selon ISO 1217, annexe C ; il donne séparément un maximum de 10 bar. La pression de mesure du débit reste à confirmer avant un verdict de compatibilité.",
 		"verifiedFacts": [
-			"Configuration de pression documentée : 10 bar.",
+			"Pression maximale publiée : 10 bar.",
 			"Cuve de stockage documentée : 90 L.",
-			"FAD sous pression identifié séparément des valeurs d’aspiration : 270 L/min déclarés à 10 bar."
+			"Débit publié selon ISO 1217, annexe C : 270 L/min ; pression de mesure à confirmer."
 		],
 		"limitations": [
 			"Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil."
+			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
+			"Pression de mesure du débit non explicitée dans la source relue ; la pression maximale reste distincte du point de mesure. Compatibilité dépendante du débit indéterminée."
 		]
 	},
 	"evidence": [
@@ -112,18 +108,23 @@ const product: CompressorInput = {
 		"tankLiters": [
 			"october4-ktc-download-0-p2"
 		],
-		"fadCurve": [
-			"october4-ktc-download-0-p2"
-		],
 		"powerKw": [
 			"october4-ktc-download-0-p2"
 		],
 		"mpn": [
 			"october4-ktc-download-0-p2"
+		],
+		"editorial": [
+			"october4-ktc-download-0-p2"
+		],
+		"specifications": [
+			"october4-ktc-download-0-p2"
+		],
+		"fadCurve": [
+			"october4-ktc-download-0-p2"
 		]
 	},
 	"notes": [
-		"Portée de la source : FAD-pressure-qualified.",
 		"Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées."
 	]
 };

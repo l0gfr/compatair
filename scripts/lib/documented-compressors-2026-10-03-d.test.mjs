@@ -1,3 +1,4 @@
+import { beforeOctober25Review } from './reviewed-catalog-test-projection.mjs';
 import { createHash } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -60,7 +61,7 @@ describe('documented compressors October3D', () => {
   expect(evaluateCompatibility(product('SR 2'),{...tool,workingPressureBar:{min:11,typical:11,max:11}}).verdict).toBe('incompatible');
  });
  it('links every critical value and all display proofs with valid history IDs', () => {
-  for(const p of batch){const ids=new Set(p.evidence.map(e=>e.id));for(const k of ['tankLiters','maxPressureBar','fadCurve',...(p.oilType==='unknown'?[]:['oilType']),...(p.dutyCycle===undefined?[]:['dutyCycle'])])expect(p.fieldSources[k].length).toBeGreaterThan(0);for(const refs of Object.values(p.fieldSources))for(const ref of refs)expect(ids.has(ref)).toBe(true);for(const spec of p.specifications)for(const ref of spec.evidenceIds)expect(ids.has(ref)).toBe(true);for(const id of ids)expect(`added:${p.id}:${id}:2026-10-03`).toMatch(/^[a-z0-9:-]+$/);}
+  for(const p of batch.map(beforeOctober25Review)){const ids=new Set(p.evidence.map(e=>e.id));for(const k of ['tankLiters','maxPressureBar','fadCurve',...(p.oilType==='unknown'?[]:['oilType']),...(p.dutyCycle===undefined?[]:['dutyCycle'])])expect(p.fieldSources[k].length).toBeGreaterThan(0);for(const refs of Object.values(p.fieldSources))for(const ref of refs)expect(ids.has(ref)).toBe(true);for(const spec of p.specifications)for(const ref of spec.evidenceIds)expect(ids.has(ref)).toBe(true);for(const id of ids)expect(`added:${p.id}:${id}:2026-10-03`).toMatch(/^[a-z0-9:-]+$/);}
   expect(product('Allegretto 15').fieldSources.maxPressureBar).toContain('october3d-alup-extra-18');
   expect(product('LARGO 55').fieldSources.mpn).toContain('october3d-alup-shop-largo55-10');
  });

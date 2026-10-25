@@ -1,3 +1,4 @@
+import { beforeOctober25Review } from './reviewed-catalog-test-projection.mjs';
 import { parseCatalogProductSource } from './catalog-tooling.mjs';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
@@ -46,6 +47,7 @@ const repinned = async copy => {
  code = code.replace("'./reviewed-catalog-amendments-2026-10-19.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-19.mjs', import.meta.url).href));
  code = code.replace("'./reviewed-catalog-amendments-2026-10-20.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-20.mjs', import.meta.url).href));
  code = code.replace("'./reviewed-catalog-amendments-2026-10-21.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-21.mjs', import.meta.url).href));
+ code = code.replace("'./reviewed-catalog-amendments-2026-10-25.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-25.mjs', import.meta.url).href));
  code = code.replace("'./reviewed-catalog-amendments-2026-10-24.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-24.mjs', import.meta.url).href));
  const replacement = `const approvedSources = ${JSON.stringify(copy.sources.map(source => ({ id: source.id, sha256: digest(source) })))};\nconst approvedRows = ${JSON.stringify(copy.tools.map(row => ({ documentRowId: row.documentRowId, sha256: digest(row) })))};`;
  const pattern = /const approvedSources = \[[\s\S]*?\];\nconst approvedRows = \[[\s\S]*?\];/;
@@ -90,7 +92,7 @@ describe('documented tools, October 3, fourth batch', () => {
   }
  });
  it('uses96 documented operating flows after excluding the reviewed unqualified normalized-volume SATA reference', () => {
-  const tools = batch.filter(product => product.demandModel === 'fixed-flow');
+  const tools = batch.map(beforeOctober25Review).filter(product => product.demandModel === 'fixed-flow');
   expect(tools).toHaveLength(96);
   expect(tools.some(product => product.id === 'pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-4-146373')).toBe(false);
   for (const product of tools) {
@@ -122,7 +124,7 @@ describe('documented tools, October 3, fourth batch', () => {
   }
  });
  it('keeps823 incomplete, contradictory or unspecified-normal-volume demands outside compatibility calculations', () => {
-  const tools = batch.filter(product => product.demandModel === 'variable-volume');
+  const tools = batch.map(beforeOctober25Review).filter(product => product.demandModel === 'variable-volume');
   expect(tools).toHaveLength(823);
   const sata = tools.find(product => product.id === 'pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-4-146373');
   expect(sata.workingPressureBar.typical).toBe(2);

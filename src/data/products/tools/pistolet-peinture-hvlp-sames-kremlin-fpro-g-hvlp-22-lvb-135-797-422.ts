@@ -11,7 +11,7 @@ const product: ToolProfileInput = {
 	"mpn": "135.797.422",
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
-	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+	"demandExplanation": "Le tableau identifie la référence, le débit de produit et le jet, mais laisse sa consommation d’air vide. Aucun couple débit d’air/pression de mesure n’est disponible pour dimensionner le compresseur.",
 	"confidence": "B",
 	"image": {
 		"src": "/images/products/pistolet-peinture-hvlp-sames-kremlin-fpro-g-hvlp-22-lvb-135-797-422.svg",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sames Kremlin FPro G HVLP-22-Lvb (réf. 135.797.422). Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "FPro G HVLP-22-Lvb, référence 135.797.422 : version sans godet à buse 2,2 mm. Le tableau annonce 280 cm³/min de produit, contre 105 cm³/min pour la 135.797.412 en 1,2 mm ; les deux configurations ont un jet de 30 à 40 cm à 20 cm de distance. La différence porte donc sur le débit de produit publié, sans promesse de finition ou de consommation d’air. La colonne d’air reste vide. La 136.797.422 correspond à la version avec godet et ne remplace pas cette référence.",
 		"verifiedFacts": [
 			"Taille buse (mm) : 2.2.",
 			"Sortie produit (cc/min) : 280.",
@@ -37,10 +37,9 @@ const product: ToolProfileInput = {
 			"Largeur de jet à 20 cm (libellé fabricant) : L : 30 cm – 40 cm."
 		],
 		"limitations": [
+			"La colonne de consommation d’air est vide pour ces configurations de la famille FPro G. Les 280 cm³/min décrivent le produit pulvérisé, jamais l’air. Aucun débit d’air propre à cette buse ni aucune pression de mesure associée ne sont confirmés.",
 			"Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
-			"Le tableau de configuration fournit les consommations par buse, mais n’associe pas un point de pression de mesure complet à chaque débit. Les plages recommandées ne deviennent pas des pressions de mesure.",
 			"Les têtes seules, projecteurs, buses, packs et pistolets Solo incomplets sont exclus. Lorsqu’avec/sans godet sont imprimés, une seule identité de pistolet est retenue.",
-			"Les consommations de famille et les consommations de certaines configurations diffèrent. Les valeurs originales sont conservées ; aucune harmonisation ni verdict conclusif.",
 			"Données déclarées dans les sources identifiées ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
 		]
 	},

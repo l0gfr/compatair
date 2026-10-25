@@ -1,3 +1,4 @@
+import { beforeOctober25Review } from './reviewed-catalog-test-projection.mjs';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
@@ -18,8 +19,8 @@ describe('documented compressors October4', () => {
   for (const p of batch) expect(compressorSchema.safeParse(p).success).toBe(true);
  });
  it('documents 161 pressure-qualified FADs and only 31 declared duty cycles', () => {
-  expect(batch.filter(p => p.fadCurve.length)).toHaveLength(161);
-  expect(batch.filter(p => p.dutyCycle !== undefined)).toHaveLength(31);
+  expect(batch.map(beforeOctober25Review).filter(p => p.fadCurve.length)).toHaveLength(161);
+  expect(batch.map(beforeOctober25Review).filter(p => p.dutyCycle !== undefined)).toHaveLength(31);
   expect(snapshot.compressors.filter(p => p.sourceClaimScope === 'piston-displacement-only')).toHaveLength(27);
   expect(snapshot.compressors.filter(p => p.sourceClaimScope === 'capacity-at-pressure-method-unqualified')).toHaveLength(12);
  });
@@ -70,7 +71,7 @@ describe('documented compressors October4', () => {
   expect(evaluateCompatibility(product('LKV 4 MIT'),{...tool,workingPressureBar:{min:13,typical:13,max:13}}).verdict).toBe('insufficient_data');
  });
  it('links all critical fields and displayed facts to existing, dated primary proof IDs', () => {
-  for (const p of batch) {
+  for (const p of batch.map(beforeOctober25Review)) {
    const ids = new Set(p.evidence.map(e => e.id));
    for (const field of ['model','tankLiters','maxPressureBar','fadCurve',...(p.dutyCycle ? ['dutyCycle'] : []),...(p.oilType !== 'unknown' ? ['oilType'] : [])]) expect(p.fieldSources[field].length).toBeGreaterThan(0);
    for (const refs of Object.values(p.fieldSources)) for (const ref of refs) expect(ids.has(ref)).toBe(true);

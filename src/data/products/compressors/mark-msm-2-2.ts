@@ -22,7 +22,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 281.667
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "oil",
 	"powerKw": 2.2,
 	"confidence": "B",
@@ -63,10 +62,10 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Cycle de service déclaré",
-			"value": "Service continu déclaré sous les conditions constructeur",
+			"label": "Portée de la déclaration de service",
+			"value": "Déclaration de gamme conservée dans les sources ; taux du groupe complet non qualifié.",
 			"evidenceIds": [
-				"october3d-mark-pdf-new-02-p2"
+				"october3d-mark-pdf-new-02-p7"
 			]
 		},
 		{
@@ -85,7 +84,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "MARK MSM 2.2. 281,667 L/min à 9,5 bar. Groupe sur socle sans réservoir de stockage intégré.",
+		"overview": "Le MSM 2.2 à vitesse fixe se compare au MSM 2.2 IVR à la même pression de référence de 9,5 bar. La brochure imprime respectivement 281 et 293 L/min, avec 16,9 et 17,6 m³/h dans la colonne voisine ; les écarts entre conversions reflètent les arrondis du tableau. L’IVR module sa vitesse selon la demande, tandis que cette fiche décrit le modèle fixe. Pour décider si cette modulation présente un intérêt dans l’atelier, il faut connaître les variations de consommation et les durées de charge. Ces deux points de débit seuls ne chiffrent aucune économie d’énergie.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 0 L.",
@@ -96,7 +95,8 @@ const product: CompressorInput = {
 			"Version sur socle retenue ; réservoir externe exclu.",
 			"Fréquence non publiée dans la fiche retenue ; aucune transposition des performances à 50 Hz.",
 			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés.",
+			"Le taux de marche du groupe complet reste à confirmer pour cette référence. La déclaration générale de gamme ne renseigne pas ici un taux normalisé de 100 %."
 		]
 	},
 	"evidence": [
@@ -148,9 +148,6 @@ const product: CompressorInput = {
 		"oilType": [
 			"october3d-mark-pdf-new-02-p1"
 		],
-		"dutyCycle": [
-			"october3d-mark-pdf-new-02-p2"
-		],
 		"maxPressureBar": [
 			"october3d-mark-family-03"
 		],
@@ -159,6 +156,12 @@ const product: CompressorInput = {
 		],
 		"powerKw": [
 			"october3d-mark-family-03"
+		],
+		"editorial": [
+			"october3d-mark-pdf-new-02-p7"
+		],
+		"specifications": [
+			"october3d-mark-pdf-new-02-p7"
 		]
 	},
 	"notes": [

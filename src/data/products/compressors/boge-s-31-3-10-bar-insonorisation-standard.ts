@@ -17,7 +17,6 @@ const product: CompressorInput = {
 	"tankLiters": 0,
 	"maxPressureBar": 10,
 	"fadCurve": [],
-	"dutyCycle": 1,
 	"oilType": "oil",
 	"powerKw": 22,
 	"mobility": "fixed",
@@ -67,16 +66,16 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "BOGE S 31-3, 10 bar, insonorisation standard. S-3, insonorisation standard. La livraison effective est publiée, mais sa pression de mesure n’est pas séparément établie : aucun FAD calculable n’est ajouté.",
+		"overview": "Le S 31-3 en version 10 bar convient à l’étude d’un réseau dont la pression requise dépasse la limite de la version 8 bar. BOGE conserve dans les deux cas un moteur principal de 22 kW et un encombrement de 1 620 × 990 × 1 450 mm. Le tableau associe à ces versions des débits effectifs de 3,35 et 3,88 m³/min respectivement : choisir la version 10 bar engage aussi une autre capacité de production publiée. Pour calculer la compatibilité de l’installation, il reste à faire préciser la pression de mesure de ces débits ; le tableau donne une pression maximale, que CompatAir garde séparée du FAD.",
 		"verifiedFacts": [
 			"Dimensions publiées : 1620 × 990 × 1450 mm.",
-			"Puissance moteur publiée : 22 kW.",
-			"La documentation constructeur de cette série prévoit le service continu, sous ses conditions d’installation et d’entretien."
+			"Puissance moteur publiée : 22 kW."
 		],
 		"limitations": [
 			"La disponibilité actuelle et le contenu de la configuration livrée restent à confirmer.",
 			"Le maximum de pression n’est pas assimilé à une pression de mesure du FAD. Le verdict reste insufficient_data.",
-			"La classe de qualité d’air du réseau, les pertes de pression et le refroidissement nécessitent une vérification sur l’installation."
+			"La classe de qualité d’air du réseau, les pertes de pression et le refroidissement nécessitent une vérification sur l’installation.",
+			"Le taux de marche du groupe complet reste à confirmer pour cette référence. La déclaration générale de gamme ne renseigne pas ici un taux normalisé de 100 %."
 		]
 	},
 	"evidence": [
@@ -117,8 +116,11 @@ const product: CompressorInput = {
 		"oilType": [
 			"documented-d-boge-s3-current-p1"
 		],
-		"dutyCycle": [
-			"documented-d-boge-s3-duty"
+		"editorial": [
+			"documented-d-boge-s3-current-p1"
+		],
+		"specifications": [
+			"documented-d-boge-s3-current-p1"
 		]
 	},
 	"notes": [

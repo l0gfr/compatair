@@ -23,18 +23,14 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Red Rooster RRH-2000, référence RRH-2000. Le tableau fabricant publie 504 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Masse publiée : 1,5 kg. Diamètre intérieur de flexible conseillé : 10 mm.",
+		"overview": "RRH-2000 : marteau à emmanchement 11 × 12,7 × 40 mm, 5 000 coups/min et énergie annoncée de 4,5 J par coup. Le RRH-4309K conserve cet emmanchement, à 3 200 coups/min et 9 J par coup. Le premier pèse 1,5 kg et publie 8,4 L/s, le second 1,7 kg et 7,1 L/s.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation publiée : 8.4 L/s, convertis en 504 L/min par multiplication par 60.",
-			"Référence fabricant : RRH-2000.",
-			"Masse publiée : 1,5 kg.",
-			"Diamètre intérieur de flexible conseillé : 10 mm.",
-			"Raccord pneumatique : PT 1/4\"."
+			"RRH-2000 contre RRH-4309K : même emmanchement 11 × 12,7 × 40 mm ; 5 000 contre 3 200 coups/min et 4,5 contre 9 J/coup. Masses 1,5 et 1,7 kg ; consommations 8,4 et 7,1 L/s.",
+			"Le régime de la consommation publiée n’est pas précisé ; cette valeur n’est pas assimilée à un maximum de travail."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"Le régime des 8,4 L/s n’est pas qualifié.",
+			"L’énergie par coup et la cadence restent séparées ; aucun rendement de burinage n’est calculé depuis leur produit."
 		]
 	},
 	"specifications": [
@@ -92,6 +88,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "review-20261025-red-rooster-rrh-2000-s068",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=49",
+			"sourceLabel": "Relecture fabricant du 25 octobre 2026, s068, pages PDF 49, 106",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Relecture des octets complets récupérés le 2026-10-25T07:20:38.623086+00:00, SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. RRH-2000 contre RRH-4309K : même emmanchement 11 × 12,7 × 40 mm ; 5 000 contre 3 200 coups/min et 4,5 contre 9 J/coup. Masses 1,5 et 1,7 kg ; consommations 8,4 et 7,1 L/s. Limite : Ajouter unqualified : le régime des 8,4 L/s n’est pas qualifié."
 		}
 	],
 	"fieldSources": {
@@ -102,17 +108,22 @@ const product: ToolProfileInput = {
 			"red-rooster-rrh-2000-20260926-workingpressurebar-1"
 		],
 		"airflowLpm": [
-			"red-rooster-rrh-2000-20260926"
+			"red-rooster-rrh-2000-20260926",
+			"review-20261025-red-rooster-rrh-2000-s068"
 		],
 		"recommendedHose": [
 			"red-rooster-rrh-2000-20260926"
 		],
 		"connectorSize": [
 			"red-rooster-rrh-2000-20260926"
+		],
+		"airflowBasis": [
+			"review-20261025-red-rooster-rrh-2000-s068"
 		]
 	},
 	"notes": [
-		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+		"Données déclarées par le fabricant ; aucune mesure physique CompatAir.",
+		"Relecture proposée du 25 octobre 2026 : Ajouter unqualified : le régime des 8,4 L/s n’est pas qualifié."
 	],
 	"airflowLpm": {
 		"min": 504,
@@ -122,7 +133,8 @@ const product: ToolProfileInput = {
 	"recommendedHose": {
 		"innerDiameterMm": 10
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"airflowBasis": "unqualified"
 };
 
 export default product;

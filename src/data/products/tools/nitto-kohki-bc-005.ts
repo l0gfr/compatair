@@ -6,8 +6,8 @@ const product: ToolProfileInput = {
 	"brand": "Nitto Kohki",
 	"model": "BC-005",
 	"mpn": "BC-005",
-	"categoryId": "perceuse",
-	"category": "perceuse",
+	"categoryId": "ebavureuse",
+	"category": "ebavureuse",
 	"label": "Nitto Kohki BC-005",
 	"demandModel": "fixed-flow",
 	"workingPressureBar": {
@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Nitto Kohki BC-005, référence BC-005. Le tableau fabricant publie 220 L/min et une plage d’utilisation de 6 à 6 bar. Vitesse de rotation publiée : 420 tr/min. Masse publiée : 0.75 kg.",
+		"overview": "BC-005 : outil d’ébavurage pour trous déjà usinés de 3 à 34 mm. Le levier et l’appui engagent la fraise à chanfreiner ; le tableau annonce 420 tr/min à vide. L’ADR-100 voisine est une perceuse réversible, ce qui répond à une autre opération. Les mandrins pour queues 6, 8 et 10 mm sont fournis, celui de 12 mm est optionnel ; les fraises à chanfreiner sont à acheter séparément. La consommation de 0,22 m³/min, soit 220 L/min, est explicitement à vide au point nominal de 0,6 MPa : elle ne permet pas un verdict en charge.",
 		"verifiedFacts": [
 			"Pression de 0,6 MPa publiée dans le tableau, soit 6 bar. La valeur en kgf/cm² entre parenthèses n’est pas utilisée pour la conversion.",
 			"Consommation à vide explicitement publiée (No-load) : 0.22 m³/min. Conversion × 1 000 en L/min.",
@@ -33,7 +33,9 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Le débit à vide n’établit pas à lui seul la consommation sous toutes les charges. Respecter les conditions d’emploi de la notice.",
-			"La conformité et la disponibilité de la version exacte doivent être confirmées avant achat."
+			"La conformité et la disponibilité de la version exacte doivent être confirmées avant achat.",
+			"Les fraises à chanfreiner ne sont pas fournies. Le mandrin 12 mm est optionnel, contrairement aux 6/8/10 mm.",
+			"Outil pour ébavurer un trou déjà usiné ; aucun diamètre de queue ou de trou ne constitue ici une capacité de perçage."
 		]
 	},
 	"specifications": [
@@ -86,6 +88,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"nitto-kohki-bc-005-20260926"
+		],
+		"airflowBasis": [
+			"nitto-kohki-bc-005-20260926"
+		],
+		"category": [
+			"nitto-kohki-bc-005-20260926"
 		]
 	},
 	"notes": [
@@ -95,7 +103,8 @@ const product: ToolProfileInput = {
 		"min": 220,
 		"typical": 220,
 		"max": 220
-	}
+	},
+	"airflowBasis": "free-speed"
 };
 
 export default product;

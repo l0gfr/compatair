@@ -9,11 +9,9 @@ const product: ToolProfileInput = {
 	"categoryId": "polisseuse",
 	"category": "polisseuse",
 	"label": "Shinano SI-2451",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
-		"max": 6.3
+		"typical": 6.3
 	},
 	"confidence": "B",
 	"image": {
@@ -23,27 +21,22 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-2451, référence SI-2451. Le tableau fabricant publie 660 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Rotation simple ; plateau 180 mm ; broche mâle 5/8-11 UNC. Vitesse à vide publiée : 2300 tr/min.",
+		"overview": "SI-2451 : polisseuse à rotation simple, plateau de 180 mm et broche mâle 5/8-11 UNC. Elle tourne à 2 300 tr/min pour 482 W et 2,13 kg. La SI-2400 conserve le même format de plateau, à 2 000 tr/min, 511 W et 2,24 kg. Le maximum d’air publié passe de 11,3 à 11,0 L/s.",
 		"verifiedFacts": [
-			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
-			"Consommation maximale, colonne Max Air Consumption : 23.4 CFM / 11 L/s, soit 660 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
-			"Référence fabricant : SI-2451.",
-			"Version et équipement : Rotation simple ; plateau 180 mm ; broche mâle 5/8-11 UNC.",
-			"Vitesse à vide publiée : 2300 tr/min.",
-			"Masse publiée : 2.13 kg."
+			"SI-2451 et SI-2400 : même plateau 180 mm et broche mâle 5/8-11 UNC ; 2 300 contre 2 000 tr/min, 482 contre 511 W et 2,13 contre 2,24 kg. Maxima 11,0 contre 11,3 L/s.",
+			"La consommation ne constitue pas un point de dimensionnement tant que ses conditions de mesure ne sont pas établies."
 		],
 		"limitations": [
-			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
-			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"660 L/min convertis depuis 11 L/s ne forment pas un point de fonctionnement à 6,3 bar démontré.",
+			"Aucun rendement de polissage ou résultat de surface n’est déduit de la seule vitesse."
 		]
 	},
 	"specifications": [
 		{
 			"label": "Condition de pression",
-			"value": "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+			"value": "Consigne générale : 0,63 MPa (6,3 bar) au fonctionnement. Elle ne démontre pas la pression de mesure de la consommation publiée.",
 			"evidenceIds": [
-				"shinano-si-2451-20260926-workingpressurebar-1"
+				"review-20261025-shinano-si-2451-s030"
 			]
 		},
 		{
@@ -73,6 +66,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"shinano-si-2451-20260926"
 			]
+		},
+		{
+			"label": "Consommation maximale publiée (pression de mesure non appariée)",
+			"value": "660 L/min",
+			"evidenceIds": [
+				"review-20261025-shinano-si-2451-s030"
+			]
 		}
 	],
 	"evidence": [
@@ -93,6 +93,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+		},
+		{
+			"id": "review-20261025-shinano-si-2451-s030",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=18",
+			"sourceLabel": "Relecture fabricant du 25 octobre 2026, s030, pages PDF 18, 43",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Relecture des octets complets récupérés le 2026-10-25T07:20:27.990842+00:00, SHA-256 03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b. SI-2451 et SI-2400 : même plateau 180 mm et broche mâle 5/8-11 UNC ; 2 300 contre 2 000 tr/min, 482 contre 511 W et 2,13 contre 2,24 kg. Maxima 11,0 contre 11,3 L/s. Limite : 660 L/min convertis depuis 11 L/s ne forment pas un point de fonctionnement à 6,3 bar démontré."
 		}
 	],
 	"fieldSources": {
@@ -100,20 +110,18 @@ const product: ToolProfileInput = {
 			"shinano-si-2451-20260926"
 		],
 		"workingPressureBar": [
-			"shinano-si-2451-20260926-workingpressurebar-1"
+			"shinano-si-2451-20260926-workingpressurebar-1",
+			"review-20261025-shinano-si-2451-s030"
 		],
-		"airflowLpm": [
-			"shinano-si-2451-20260926"
+		"demandExplanation": [
+			"review-20261025-shinano-si-2451-s030"
 		]
 	},
 	"notes": [
-		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+		"Données déclarées par le fabricant ; aucune mesure physique CompatAir.",
+		"Relecture proposée du 25 octobre 2026 : 660 L/min convertis depuis 11 L/s ne forment pas un point de fonctionnement à 6,3 bar démontré."
 	],
-	"airflowLpm": {
-		"min": 660,
-		"typical": 660,
-		"max": 660
-	}
+	"demandExplanation": "Consommation maximale publiée de 660 L/min, sans pression de mesure explicitement appariée dans les passages lus. La consigne générale de service de 6,3 bar reste distincte de ce débit ; le profil exige un point de consommation et pression documenté avant de conclure."
 };
 
 export default product;

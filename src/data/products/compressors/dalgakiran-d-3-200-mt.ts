@@ -74,7 +74,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Dalgakiran D 3-200 MT. Le débit restitué sous pression reste non qualifié. Groupe sur cuve 200 L.",
+		"overview": "Le D 3-200 MT est le choix double étage à 12,5 bar, face au D 3-200 D simple étage à 7 bar. Les deux lignes du catalogue conservent 200 L de cuve et 2,2 kW. Elles indiquent respectivement 145 et 290 L/min de déplacement des pistons. Ces valeurs décrivent le volume balayé par les pistons et restent séparées du débit restitué à l’outil. Le choix de la version MT se justifie par la pression requise ; pour dimensionner une clé à chocs ou une ponceuse, demander le débit restitué à sa pression de travail ainsi que les conditions de cycle.",
 		"verifiedFacts": [
 			"Configuration de pression documentée : 12,5 bar.",
 			"Cuve de stockage documentée : 200 L."
@@ -119,6 +119,12 @@ const product: CompressorInput = {
 			"october4-dalgakiran-catalog-p50"
 		],
 		"powerKw": [
+			"october4-dalgakiran-catalog-p50"
+		],
+		"editorial": [
+			"october4-dalgakiran-catalog-p50"
+		],
+		"specifications": [
 			"october4-dalgakiran-catalog-p50"
 		]
 	},

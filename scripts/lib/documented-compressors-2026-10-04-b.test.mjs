@@ -1,3 +1,4 @@
+import { beforeOctober25Review } from './reviewed-catalog-test-projection.mjs';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
@@ -112,7 +113,7 @@ describe('documented compressors October4 lot B', () => {
   for(const key of ['usableTankAirLiters','estimatedWorkMinutes','estimatedRecoveryMinutes','burstScenario'])expect(result[key]).toBeUndefined();
  });
  it('links claims to existing dated primary evidence without publishing missing fields as zero', () => {
-  for(const p of batch) {
+  for(const p of batch.map(beforeOctober25Review)) {
    const ids=new Set(p.evidence.map(e=>e.id));
    for(const field of ['model','maxPressureBar','fadCurve',...(p.tankLiters===undefined?[]:['tankLiters']),...(p.dutyCycle?['dutyCycle']:[])])expect(p.fieldSources[field].length,p.id).toBeGreaterThan(0);
    for(const refs of Object.values(p.fieldSources))for(const ref of refs)expect(ids.has(ref)).toBe(true);

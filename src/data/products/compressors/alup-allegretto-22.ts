@@ -74,22 +74,31 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october3d-alup-extra-18"
 			]
+		},
+		{
+			"label": "Comparaison documentée et limite de choix",
+			"value": "Comparer les maxima VSD à 9,5 bar avec le 15 kW, séparer le maximum 10 bar et écarter la famille SCK de la preuve du groupe.",
+			"evidenceIds": [
+				"review-20261025-s103",
+				"review-20261025-s104-p2",
+				"review-20261025-s104-p5",
+				"review-20261025-s104-p6",
+				"review-20261025-s104-p8"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "ALUP Allegretto 22. 3 246,667 L/min à 9,5 bar. Groupe sur socle sans réservoir de stockage intégré.",
+		"overview": "L’Allegretto 22 sur socle publie un FAD maximal de 194,8 m³/h à 9,5 bar, soit 3246,667 L/min pour 22 kW. L’Allegretto 15 annonce 146,2 m³/h à la même pression, soit 2436,667 L/min pour 15 kW. Le maximum de fonctionnement 10 bar et les maxima VSD mesurés à 9,5 bar remplissent des rôles distincts : le dimensionnement ne doit pas supposer que le débit maximal est disponible à tout régime.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 0 L.",
 			"Pression maximale de fonctionnement publiée : 10 bar."
 		],
 		"limitations": [
-			"Points FAD supérieurs au plafond de fonctionnement excluants, y compris lorsque le tableau présente une colonne 12,5 bar pour une famille limitée à 10 bar.",
-			"Version sur socle retenue ; réservoir externe exclu.",
-			"Cycle de service non établi ; la tenue permanente reste indéterminée.",
-			"Fréquence non publiée dans la fiche retenue ; aucune transposition des performances à 50 Hz.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"Le tableau Allegretto 15–22 et sa note ISO 1217 annexeC sont lus séparément de SCK25–40. La colonne 12,5 bar de SCK n’appartient pas à cette configuration.",
+			"Les conversions utilisent les valeursm³/h :194,8× 1000/60. Les affichagesL/s arrondis ne sont pas utilisés pour fabriquer une précision supplémentaire.",
+			"La version sur socle est retenue ; le stockage externe reste exclu. Le taux de marche, l’alimentation exacte et le mode de lubrification du bloc ne sont pas déduits de la sectionSCK.",
+			"La comparaison ne reprend pas le minimum de l’Allegretto 15 : ses unités 34,2 m³/h et 13 L/s ne concordent pas dans le tableau."
 		]
 	},
 	"evidence": [
@@ -122,18 +131,64 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 84829052ca3da402ddeb4b14931753ab9a9c0041d97269b766d5a035b3b90973 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review-20261025-s103",
+			"sourceUrl": "https://www.alup.com/en-international/products/screw-compressors/variable-speed/allegretto-15-22",
+			"sourceLabel": "ALUP, relecture primaire du 25 octobre 2026, s103",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps vérifié SHA-256 a0ac6f0e3fa706a2cfe9ee546c1d12d0ccc66ce84d77afc54d05ca4dca9b1ae0. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review-20261025-s104-p2",
+			"sourceUrl": "https://www.alup.com/content/dam/brands/Alup/products-bp-structure/oil-injected-screw-compressor/ivr/allegretto-15-22-(2025)/leaflets/Alup_SCK25-40_Allegretto15-22_leaflet_6999640680_EN_LR.pdf#page=2",
+			"sourceLabel": "ALUP, relecture primaire du 25 octobre 2026, s104, page PDF 2",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps vérifié SHA-256 84829052ca3da402ddeb4b14931753ab9a9c0041d97269b766d5a035b3b90973. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review-20261025-s104-p5",
+			"sourceUrl": "https://www.alup.com/content/dam/brands/Alup/products-bp-structure/oil-injected-screw-compressor/ivr/allegretto-15-22-(2025)/leaflets/Alup_SCK25-40_Allegretto15-22_leaflet_6999640680_EN_LR.pdf#page=5",
+			"sourceLabel": "ALUP, relecture primaire du 25 octobre 2026, s104, page PDF 5",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps vérifié SHA-256 84829052ca3da402ddeb4b14931753ab9a9c0041d97269b766d5a035b3b90973. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review-20261025-s104-p6",
+			"sourceUrl": "https://www.alup.com/content/dam/brands/Alup/products-bp-structure/oil-injected-screw-compressor/ivr/allegretto-15-22-(2025)/leaflets/Alup_SCK25-40_Allegretto15-22_leaflet_6999640680_EN_LR.pdf#page=6",
+			"sourceLabel": "ALUP, relecture primaire du 25 octobre 2026, s104, page PDF 6",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps vérifié SHA-256 84829052ca3da402ddeb4b14931753ab9a9c0041d97269b766d5a035b3b90973. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review-20261025-s104-p8",
+			"sourceUrl": "https://www.alup.com/content/dam/brands/Alup/products-bp-structure/oil-injected-screw-compressor/ivr/allegretto-15-22-(2025)/leaflets/Alup_SCK25-40_Allegretto15-22_leaflet_6999640680_EN_LR.pdf#page=8",
+			"sourceLabel": "ALUP, relecture primaire du 25 octobre 2026, s104, page PDF 8",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps vérifié SHA-256 84829052ca3da402ddeb4b14931753ab9a9c0041d97269b766d5a035b3b90973. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
 		"tankLiters": [
 			"october3d-alup-pdf-extra-02-p8"
 		],
-		"oilType": [
-			"october3d-alup-pdf-extra-02-p2"
-		],
 		"maxPressureBar": [
-			"october3d-alup-extra-18",
-			"october3d-alup-extra-18"
+			"review-20261025-s103"
 		],
 		"fadCurve": [
 			"october3d-alup-pdf-extra-02-p8"

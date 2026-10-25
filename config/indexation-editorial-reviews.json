@@ -6852,6 +6852,617 @@
           "note": "Le texte distingue exactement les codesESZ/ES par la galvanisation de la cuve, avec460L/min à9,5bar,4kW et270L communs. Le sécheur correspond àES ; la finitionZ n’est pas transformée en gain de débit ni en garantie non sourcée de pureté/corrosion. Le point9,5bar et le maximum10bar restent séparés comme dans la note fabricant."
         }
       ]
+    },
+    {
+      "publicationDay": "2026-10-25",
+      "sourceReleaseSha": "8db387d8c59bc3cd8643db4e0e4d09c1f63d2ce4",
+      "policyHash": "7d2ab5b10bed659bbbb3af6aaab75ef27b7e3527cc3d686072426907bb748645",
+      "corpusHash": "45cc8b24a3d88c66ce278f07d21afc28500e5734ccb77cddf72b2f5400ad833e",
+      "reviewedAt": "2026-10-25T08:20:02.746980+00:00",
+      "status": "partial",
+      "note": "Revue du candidat courant : 66 admissions (7 guides, 27 compresseurs, 32 outils), corrections factuelles reproductibles, aucune substitution approuvée par défaut. Le nouvel entrant de la proposition régénérée reste différé. Dossier : docs/editorial/indexation-review-2026-10-25.json.",
+      "pages": [
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-astro-pneumatic-hvlpd512/",
+          "contentHash": "5e826f51c6d8b97ea200932731ba46c8e944bc0d2c9365f1675f39d4df3c397f",
+          "decision": "needs-correction",
+          "note": "HVLPD512 contre HVLPD510 : buse 1,2 contre 1,0 mm, mais même besoin d’air moyen et même jet. Pas d’apport autonome démontré au-delà du calibre."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-7-145722/",
+          "contentHash": "c5891e2d416dd19587d2ad7c18102074606c3dc8206decba982f3116f432a8bf",
+          "decision": "needs-correction",
+          "note": "La buse 1,7 mm ne démontre pas d’usage autonome face à la 1,9 mm ; les 350 Nl/min gardent leurs conditions normalisées non précisées et restent hors calcul."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-taylor-pneumatic-t-7231nl-1-2-hd-impact-wrench-2-extended-anvil-t-7231nl/",
+          "contentHash": "6742788e09738a1a44aa3bc0f6b24563d1cb73db4a33382a40e9a5377a7cf79e",
+          "decision": "needs-correction",
+          "note": "La source exacte T-7231NL répond 429. La disponibilité du voisin T-7745 ne vérifie ni cette identité ni ses caractéristiques."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-prowin-k-528g-28/",
+          "contentHash": "efca5d56ab7be934a36761151e88c63fe2212597bc2ef0d4274f163e8705d586",
+          "decision": "needs-correction",
+          "note": "K-528G-28 et K-528G-24 : buses 2,8 et 2,4 mm ; même jet annoncé de 310 mm et même consommation publiée de 250 L/min. La différence de buse seule ne démontre pas un besoin de compresseur distinct. Correction technique et/ou éditoriale requise avant admission : Conserver le profil non conclusif : unité L/min connue, régime et pression de mesure unique manquants. Signature de besoin d’air partagée : apport autonome insuffisant en l’état, regroupement de variantes à privilégier."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sagola-3600-xpt-hvlp-buse-1-30-10142505/",
+          "contentHash": "2af5936e461c0cece91c14ef232119900ba8f3a8738e56e0ff21d9f2db5f191a",
+          "decision": "needs-correction",
+          "note": "Catalogue 360 L/min à 2 bar contre maximum HVLP 1,8 bar dans la notice. Contradiction conservée ; pression de calcul retirée, pas de nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-graco-airpro-pressure-288938-288938/",
+          "contentHash": "72f53447109a9d0af1c9447e151b50a0c531e76c76560800c59d4f5a7e731bda",
+          "decision": "needs-correction",
+          "note": "La comparaison 1,4 / 1,1 mm ne documente pas d’apport de choix indépendant au-delà de la buse ; consommation commune de famille insuffisante pour ouvrir une autre page."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sames-kremlin-fpro-g-hvlp-22-lvb-135-797-422/",
+          "contentHash": "7abf0e0b46e402716ac7f74d51ce25a42a7663e9b720fe26d90ce0b9922624a7",
+          "decision": "approved",
+          "note": "FPro G HVLP-22-Lvb, référence 135.797.422 : version sans godet à buse 2,2 mm. Le tableau annonce 280 cm³/min de produit, contre 105 cm³/min pour la 135.797.412 en 1,2 mm ; les deux configurations ont un jet de 30 à 40 cm à 20 cm de distance. La différence porte donc sur le débit de produit publié, sans promesse de finition ou de consommation d’air. La colonne d’air reste vide. La 136.797.422 correspond à la version avec godet et ne remplace pas cette référence. Limites de mesure et de configuration conservées ; champs natifs et projection runtime vérifiés."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-binks-trophy-1466-10hv-c1s-e/",
+          "contentHash": "8873d7326dfa7d60c6279b35fc3f13350488827dab01032de0efcd20db60b203",
+          "decision": "needs-correction",
+          "note": "1466-10HV-C1S-E et 1466-10LV-B1S-E sont deux assemblages gravitaires Touch-up : HVLP/C1 et LVMP/B1. Le voisin automatique 1465-10HV-C1S n’est pas la ligne complète publiée dans cette édition ; il est remplacé par le 1466-10LV-B1S-E effectivement listé. Correction technique et/ou éditoriale requise avant admission : La ligne de l’assemblage identifie le produit ; elle ne donne pas directement de consommation."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-walcom-ego-carbonio-190-hvlp-gravite-buse-0-5-mm/",
+          "contentHash": "ffec0f7b3e49b05de3296b1714ed3335590f688f7d365ad8c619fcfd3cbd34b1",
+          "decision": "needs-correction",
+          "note": "Identité complète non établie par le motif 7130** ; 160 L/min et 5 CFM ne concordent pas exactement. Pas de résolution inventée."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-anest-iwata-airgunsa-az3-hte2-hvlp-buse-1-3-hvlp/",
+          "contentHash": "dc5b756e74b5b7187d4c7227bcd84eeddfefa779a9d75fa9c53d366e18ed8496",
+          "decision": "needs-correction",
+          "note": "Le code candidat W0SPG84AG13C ne correspond pas sans ambiguïté au code actuel lu. Une autre référence ne remplace pas cette identité."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-1-9-mm/",
+          "contentHash": "b1b9f108d7fbd734704031b223e9a166aaa105f753507e815cf252895da119f4",
+          "decision": "needs-correction",
+          "note": "Buses 1,9 et 1,7 mm, consommation commune 240 L/min : manque d’apport autonome et de point d’air sous pression qualifié."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-ani-f1-n-super-i-hvlp-buse-1-2/",
+          "contentHash": "d8d4ed5a8fbf633fb1ccc94b63ed8973f16bf52b6944b11f9d31972765d0ace7",
+          "decision": "needs-correction",
+          "note": "Les variantes 1,2 et 1,5 mm ne démontrent pas encore de décision indépendante et de point de consommation propre qualifié."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-prona-r-430-hvlp-14-buse-1-4-hvlp-gravity/",
+          "contentHash": "c29d2783b6097621cdb0881553349cc2f3a24f2124f59595a58ef945776385a8",
+          "decision": "needs-correction",
+          "note": "Le tableau technique publié dans une image n’a pas été lu avec une portée suffisante pour qualifier les unités et la référence ; pas d’approbation."
+        },
+        {
+          "path": "/guides/pince-pneumatique-force-doigt-longueur-prehension/",
+          "contentHash": "1e76b88366729ec6e092457245a9b5444247f01850b5951336568a29ef8a9412",
+          "decision": "needs-correction",
+          "note": "Force par mors, géométrie des doigts et maintien distincts de la force de vérin. La source déterminante HGPT répond 403 ; FIPA ne confirme pas ses courbes de préhension."
+        },
+        {
+          "path": "/guides/regulateur-air-comprime-fuit-event-decompression/",
+          "contentHash": "f36277c947bd6abf702d7fee1ffb4fdf3aee715084cbf11d1accda9ccf3f7590",
+          "decision": "approved",
+          "note": "Diagnostic par emplacement et chronologie du souffle : distingue décompression, retour et fuite. SMC AR distingue relieving/non-relieving et dépannage (membrane, siège, contre-pression). Le guide du creep examine la montée aval au repos ; cette page traite l’évent, sans prescrire de réparation sous pression."
+        },
+        {
+          "path": "/guides/verin-simple-double-effet-ressort-retour/",
+          "contentHash": "234ebd16a35f318aade171513cf6173fb44c7fd99b2e6c80abc798c2f6574ccf",
+          "decision": "needs-correction",
+          "note": "Le principe et les variantes DPCA P/S sont présentés explicitement, mais les deux sources Festo déterminantes répondent 403. La lecture du contenu ne remplace pas cette vérification."
+        },
+        {
+          "path": "/compresseurs/abac-formula-e-7-5-13-400-50/",
+          "contentHash": "b3c18cf5b50de54e7f36abf36d15b4083d163a9a7cee3fb47b1fb0bdfbe798f7",
+          "decision": "approved",
+          "note": "La FORMULA E 7,5 13 400/50, référence 4152025396, est la version Full Feature sans cuve, de 7,5 kW en 400 V triphasé à 50 Hz. Le PIM fabricant de cette référence publie un FAD de 830 L/min et une pression maximale de 13 bar. La version voisine 4152025395 est donnée pour un maximum de 10 bar : le besoin de pression départage ces références. La pression de mesure des 830 L/min reste à confirmer pour calculer une compatibilité outil. Le stockage externe et l’alimentation doivent être prévus dans l’installation. Limites de mesure et de configuration conservées ; champs natifs et projection runtime vérifiés."
+        },
+        {
+          "path": "/compresseurs/fiac-ax-203bd-dry-10-400-50-ce/",
+          "contentHash": "42c3b65235ae52ec2106f969643d848e21c732cf2574ef6fa64712415a9d8346",
+          "decision": "needs-correction",
+          "note": "Éviter de sélectionner une version 10 bar pour un débit de calcul issu d’une association implicite ; distinguer les codes 4152026242 et 4152026243. FAD non qualifié ; conflit de valeur primaire et pression de mesure absente. Aucun dutyCycle documenté. Clarifier 2100 L/min sur la fiche actuelle contre 2110 L/min dans le catalogue pour le même code 4152026242. Obtenir une pression de mesure explicitement associée au FAD ; le maximum 10 bar ne suffit pas."
+        },
+        {
+          "path": "/guides/fraiseuse-points-soudure-profondeur-si5800/",
+          "contentHash": "d6357ca83717a5f2677dca1709914b9069e9fd116a516b4b8b9f6924fc2c7f5b",
+          "decision": "approved",
+          "note": "Dossier propre à la séparation de points de soudure : guidage, profondeur, fraise8mm/douille6,5mm, et incohérence8mm/5/8pouce exposée. Le voisin compare deux mécanismes de scie ; il ne traite pas la profondeur de fraise sur assemblage. La consommation maximale et la consigne générale sont attribuées à des passages distincts."
+        },
+        {
+          "path": "/outils-pneumatiques/cleco-19pca09q/",
+          "contentHash": "20b43fb0e01d4d1e9100431d39b0dd62c7479989dca5cb0e3245f03bd93b1c8b",
+          "decision": "approved",
+          "note": "19PCA09Q contre 19PCA07Q : 470 contre 660 tr/min, couple 1,7–8,9 contre 1,7–6,8 Nm, longueur 248 contre 216 mm. Les deux partagent la mention générale de 310 L/min ; le régime n’est pas qualifié. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/cleco-19raa07ah3/",
+          "contentHash": "aa2bf5d302acb04e50c4a15a0df6e3c3e1449f812797a72cba6cb535a9d7f0d6",
+          "decision": "approved",
+          "note": "19RAA07AH3 contre 19RAA06AH3 : 500 contre 850 tr/min et longueur 326 contre 316 mm. Plages globales 1,5–6,8 contre 1,5–6,0 Nm ; les deux annoncent 1,5–5,4 Nm avec le ressort standard. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/cleco-20phh75q/",
+          "contentHash": "6067e81d2d76cf872e289c6089d963220c2b82b71b54aada7adf5470b0272962",
+          "decision": "approved",
+          "note": "20PHH75Q sans coupure et 20PTHH40Q avec coupure : même plage 10–20 Nm, mais 7 500 contre 4 000 tr/min. À 6 bar, la PHH annonce 400 L/min à vide et 300 en charge ; la PTHH 150 à vide et 300 en charge. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-chicago-pneumatic-cp3349-salavete/",
+          "contentHash": "89ff43335c36fa89721e0b5045ab80bf17eed2a6b09b757f254734cf4dea519f",
+          "decision": "approved",
+          "note": "CP3349-SALAVETE 6151609150 contre CP3349-SALAVELE 6151609130 : roue maximale 150 contre 230 mm, vitesse 6 000 contre 6 500 tr/min, consommation en charge 43 contre 44 L/s. Puissance 3 000 W et masse 4,4 kg identiques. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-dynabrade-53783/",
+          "contentHash": "5bb16ace5e2e1df7c1e60d50c2c8ee24b9cb66f87ecb70684a45faaa5425d064",
+          "decision": "needs-correction",
+          "note": "Le lien de catalogue actuel livre un portail HTML au lieu du document attendu. Valeurs historiques conservées comme documentaires, demande retirée du calcul ; source et utilité autonome à compléter."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-dynabrade-58460/",
+          "contentHash": "3d54378d69c2355c6474bbd6c5835383f24437c6da471709b4c594a93ba8104e",
+          "decision": "needs-correction",
+          "note": "Le lien de catalogue actuel livre un portail HTML au lieu du document attendu. Valeurs historiques conservées comme documentaires, demande retirée du calcul ; source et utilité autonome à compléter."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-dynabrade-52518/",
+          "contentHash": "6493f814067a8da1b8d60543edd19c1742823944c78a1d5c9c86b7a0ad1fac24",
+          "decision": "needs-correction",
+          "note": "Le lien de catalogue actuel livre un portail HTML au lieu du document attendu. Valeurs historiques conservées comme documentaires, demande retirée du calcul ; source et utilité autonome à compléter."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-vibrante-dynabrade-58502/",
+          "contentHash": "ee71a12e25198a85ad5c7126fdb0bf6c2f143bfc46bfae63ec2b5ba1ddaf3856",
+          "decision": "needs-correction",
+          "note": "Le lien de catalogue actuel livre un portail HTML au lieu du document attendu. Valeurs historiques conservées comme documentaires, demande retirée du calcul ; source et utilité autonome à compléter."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-1166a/",
+          "contentHash": "05ba84c5d366a9b99f8da12dde65cb6c5dcdabdce8c1bcc3e18d2621ef983fed",
+          "decision": "approved",
+          "note": "SI-1166A contre SI-1166-8A : couple maximal 5 contre 9 Nm, vitesse 2 000 contre 800 tr/min, masse 1,18 contre 1,35 kg. Max Air Consumption 9,9 contre 9,3 L/s ; la pression de mesure de ces maxima n’est pas appariée. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-1251/",
+          "contentHash": "51bf59a03605cf15108b26e049ceea6c6f92f5d70626ae8de4b8c54e4c4c5f22",
+          "decision": "approved",
+          "note": "SI-1251 et SI-1252 : carrés 1/4 et 3/8 pouce, couples maximaux 45 et 47 Nm, même vitesse de 200 tr/min, même masse de 0,56 kg et même maximum de 6,8 L/s. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-1422t/",
+          "contentHash": "bfb2ed47f405afe58528aab35a7bd6ff3451e7ed1dec83bd97dae54a171f54b4",
+          "decision": "approved",
+          "note": "SI-1422T à enclume prolongée de 2 pouces contre SI-1420T : 480 contre 500 Nm maximum, 2,65 contre 2,55 kg ; mêmes 6 000 tr/min et maximum de 11,3 L/s. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-2006s/",
+          "contentHash": "d3d14620eb2fa4039bb3aa54e1d2224cbe4dfd5b7da9fbf49ec09898bdcfe520",
+          "decision": "needs-correction",
+          "note": "SI-2006S et SI-2006S-6 : pinces 1/4 pouce et 6 mm ; mêmes 127 W, 20 000 tr/min, 0,49 kg et maximum publié de 6,5 L/s. La pince constitue la différence documentée, pas un besoin d’air propre. Correction technique et/ou éditoriale requise avant admission : 390 L/min est le maximum converti, sans pression de mesure appariée ; remplacer le profil calculable par variable-volume. Signature de besoin d’air partagée : apport autonome insuffisant en l’état, regroupement de variantes à privilégier."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-2210/",
+          "contentHash": "d76715111f9fe2ad76ae544610888e6ba98a266d019166020332123904de0a49",
+          "decision": "approved",
+          "note": "SI-2210 contre SI-2201-2 : plateaux 75 et 50 mm, broches 7/16-20 UNF et 1/4-20 UNC, vitesses 19 000 et 17 000 tr/min. Maxima publiés 11,0 et 7,1 L/s ; ces maxima n’ont pas de pression d’essai appariée. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-2451/",
+          "contentHash": "ccb260dc565063da5a70e5a700331368372adf1bf2c68975c6333d5a95cf7770",
+          "decision": "approved",
+          "note": "SI-2451 et SI-2400 : même plateau 180 mm et broche mâle 5/8-11 UNC ; 2 300 contre 2 000 tr/min, 482 contre 511 W et 2,13 contre 2,24 kg. Maxima 11,0 contre 11,3 L/s. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-3007/",
+          "contentHash": "f8e4ede85c93bc29776cca97f53881cbb402e10d7bc665616b97cd087502c090",
+          "decision": "needs-correction",
+          "note": "SI-3007 contre SI-3007M : même plateau 95 × 175 mm, orbite 5 mm, 11 000 tr/min, 1,82 kg et maximum 7,9 L/s ; la M désigne le plateau autoagrippant plutôt que le plateau Leather/à fixation mécanique de la version standard. Correction technique et/ou éditoriale requise avant admission : 474 L/min est publié hors calcul : pression d’essai du maximum non appariée. Signature de besoin d’air partagée : apport autonome insuffisant en l’état, regroupement de variantes à privilégier."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-3101-6m/",
+          "contentHash": "405eaa75161f261e53e01919edd836eb1c03753edb6ea348666941dde67de1e8",
+          "decision": "needs-correction",
+          "note": "SI-3101-6M contre SI-3101-6 : même plateau 150 mm, orbite 5 mm, 10 000 tr/min, 0,94 kg et maximum 6,2 L/s ; seul le plateau Velcro/Leather diffère dans la table partagée. Correction technique et/ou éditoriale requise avant admission : Le paragraphe Air Supply page 43 est une consigne d’alimentation, pas une preuve du point de mesure du maximum. Signature de besoin d’air partagée : apport autonome insuffisant en l’état, regroupement de variantes à privilégier."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-5405-6/",
+          "contentHash": "660fc259d1f794e1050a6c5f6226741eccd6b55c4ca8fefb7ad58594c6ad241d",
+          "decision": "approved",
+          "note": "SI-5405-6 contre SI-5405 : mandrins 13 et 10 mm, vitesse 600 contre 1 500 tr/min, puissance 186 contre 197 W et masse 1,41 contre 1,08 kg. Maxima 6,5 contre 6,8 L/s. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/compresseurs/airpress-aps-10-basic-combi-364858-13/",
+          "contentHash": "8ea95e3aaeddfe992c39e64eccb48563a905a6ea2bbec8e4aa29bd768a760c4a",
+          "decision": "approved",
+          "note": "Choix entre deux configurations de pression à cuve et puissance identiques ; expliciter la sortie estimée et l’absence de sécheur pour éviter un dimensionnement ou achat erroné. FAD vide correct. dutyCycle = 1 justifié par la cellule 100/0 de la référence exacte, et non par la seule classe du moteur. La correction exacte est appliquée au candidat relu, sans transfert de débit ni de cycle."
+        },
+        {
+          "path": "/compresseurs/gentilin-clinic-3-40/",
+          "contentHash": "96c441886c6e0d2f657c826bf3e42da6f2178f47487d051cf08a328916deecb7",
+          "decision": "approved",
+          "note": "Comparer le débit de la version sans sécheur et de la DRY à 8 bar,  en rendant visibles les divergences à 5 bar ; ne pas substituer le débit aspiré 240 L/min. Retirer le seul point 155@5 contradictoire ; garder 125@8 explicitement publié. dutyCycle = 1 corroboré par le tableau MACHINE DATA, pas seulement par le moteur. La correction exacte est appliquée au candidat relu, sans transfert de débit ni de cycle."
+        },
+        {
+          "path": "/outils-pneumatiques/biax-beg-309/",
+          "contentHash": "d77fe4d75eeaa4fc5f16495ff574accab23f27035af2060e303cb24eb61aa0d2",
+          "decision": "approved",
+          "note": "BEG 309, référence 150800745 : ébavureur de trous à commande au levier. Le BE 309 voisin, référence 150800710, démarre par appui ; BIAX recommande la commande au levier lorsque le positionnement de la fraise à chanfreiner ne permet pas cet appui. Les deux règlent leur vitesse de 0 à 900 tr/min et acceptent une queue de 3 mm. Il s’agit d’ébavurer ou de chanfreiner un trou existant. Les 150 L/min sont publiés sans régime de mesure et la consigne de 6 bar ne les qualifie pas pour un calcul. Limites de mesure et de configuration conservées ; champs natifs et projection runtime vérifiés."
+        },
+        {
+          "path": "/outils-pneumatiques/biax-bew-309-e/",
+          "contentHash": "e3c4b8952b1c1af357dbbf8dd15a959fd96292dea2f545cccc3f281953f7239d",
+          "decision": "deferred",
+          "note": "Nouvel entrant après les corrections du catalogue et la régénération mécanique. Première lecture du natif effectuée ; la comparaison complète et la qualification des sources de cette référence ne sont pas terminées. Aucune approbation transférée depuis la référence remplacée."
+        },
+        {
+          "path": "/outils-pneumatiques/biax-gaa-509/",
+          "contentHash": "f142c7fbd8ebc9574a92b180fad0234e89d80cdbc35a44d39fe54abcacd2c501",
+          "decision": "approved",
+          "note": "GAA 509 et GAA 505 intègrent l’aspiration de vis : 900 contre 500 tr/min ; couple en assemblage dur 0,4–3,5 contre 0,3–4,0 Nm. Consommation publiée de 300 L/min et masse de 630 g identiques. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/biax-sbrd-820/",
+          "contentHash": "84b462377da63758a525d70eb1bb577cc55a5f22afedb6c4aa367b210fa20952",
+          "decision": "needs-correction",
+          "note": "SBRD 820, réf. 150021135, est une meuleuse deux mains à 20 000 tr/min ; la SBRD 8-12/2 voisine est donnée à 12 000 tr/min dans le même catalogue. La fiche HTML de la 820 annonce 300 W, tandis que le PDF page 24 annonce 310 W pour la même référence. Correction technique et/ou éditoriale requise avant admission : Ajouter airflowBasis=unqualified : les 500 L/min HTML ne sont pas qualifiés de maximum ni de valeur en charge."
+        },
+        {
+          "path": "/outils-pneumatiques/deprag-344-240-31/",
+          "contentHash": "7ccbd906c9b0cb28fd815e622f014473d7345ac82578c9da4f3650321d9ab866",
+          "decision": "approved",
+          "note": "344-240-31, 404623D, tourne à droite avec arrêt à droite : 40–180 Nm et 115 tr/min. La 344-240-31U, 202270D, est réversible : 35–150 Nm et 90 tr/min. Toutes deux déclarent 1,1 m³/min à 6,3 bar. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/fiam-15c2a90-2cs/",
+          "contentHash": "d312025a16f98897e5e843d865348412053031c1846af90418ae9b769092c9fb",
+          "decision": "approved",
+          "note": "15C2A90-2CS et 15C2A30-2CS : têtes à 90° et 30°, double signal pneumatique 2CS ; même plage indicative 0,8–2 Nm, 2 000 tr/min, 0,70 kg et 4 L/s. La tête, pas le besoin d’air, est la différence documentée. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/fiam-fde33pc/",
+          "contentHash": "3b2c6554b1e04d4e0f898150d23dc89e6b7951cb88fd4c52b12cee121a8e73d1",
+          "decision": "approved",
+          "note": "FDE33PC et FDE26PC : mandrin à clé de 1–10 mm et même format 38 × 200 × 155 mm ; vitesses 3 300 et 2 600 tr/min, même consommation de 10 L/s. La fiche HTML arrondit la masse à 0,95 kg ; le catalogue indique 0,945 kg. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/fiam-les34/",
+          "contentHash": "b5b06b9aa950fffc21203975c491672e95165126e6279515d8290a65dcedbd16",
+          "decision": "approved",
+          "note": "LES34 et LES45 : même disque maximal de 75 mm, sortie M14, 300 W, 1 kg et 9 L/s ; vitesses respectives de 3 400 et 4 500 tr/min. Le besoin d’air déclaré n’est pas réduit parce que la version tourne moins vite. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/fiam-sms30dc/",
+          "contentHash": "cf5e0582b1b297dc238333a0b05ea1bf4de0ba8a671cf24485c05f8c5def4c86",
+          "decision": "approved",
+          "note": "SMS30DC contre SMS30DCZ : échappement avant contre arrière, vitesses 24 000 contre 22 000 tr/min ; mêmes 300 W, 0,62 kg, 40 × 190 mm et 9 L/s. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/ingersoll-rand-170pg-cs/",
+          "contentHash": "302657657d5df69d75315edd118b2a37569066a5da58f9bb32b4f31ab74da682",
+          "decision": "needs-correction",
+          "note": "La fiche exacte actuelle répond 429. Les notices accessibles de certaines références confirment une portée limitée (vitesse, accessoires), pas tous les faits ni le point de consommation. Le profil non conclusif est conservé."
+        },
+        {
+          "path": "/outils-pneumatiques/ingersoll-rand-170pg/",
+          "contentHash": "77e766114f5e9778fb6719b74247f46b9de055ea50fbd75808d104779dbfe094",
+          "decision": "needs-correction",
+          "note": "La fiche exacte actuelle répond 429. Les notices accessibles de certaines références confirment une portée limitée (vitesse, accessoires), pas tous les faits ni le point de consommation. Le profil non conclusif est conservé."
+        },
+        {
+          "path": "/outils-pneumatiques/ingersoll-rand-312ac4a/",
+          "contentHash": "0a6f97d7b837642968695428a91d298002a622ca7342bdb6d8b65f1955369763",
+          "decision": "needs-correction",
+          "note": "La fiche exacte actuelle répond 429. Les notices accessibles de certaines références confirment une portée limitée (vitesse, accessoires), pas tous les faits ni le point de consommation. Le profil non conclusif est conservé."
+        },
+        {
+          "path": "/outils-pneumatiques/ingersoll-rand-77a25f107/",
+          "contentHash": "9bc570c88758b1ba7792c6160c21cc87d7c25909b0f434510c7d88bf80f96022",
+          "decision": "needs-correction",
+          "note": "La fiche exacte actuelle répond 429. Les notices accessibles de certaines références confirment une portée limitée (vitesse, accessoires), pas tous les faits ni le point de consommation. Le profil non conclusif est conservé."
+        },
+        {
+          "path": "/outils-pneumatiques/ingersoll-rand-7p24l/",
+          "contentHash": "d8c3b9db813c4bb825d87744ec5f7ffc81e6511a6dc7fe299100d806ae7b95db",
+          "decision": "needs-correction",
+          "note": "La fiche exacte actuelle répond 429. Les notices accessibles de certaines références confirment une portée limitée (vitesse, accessoires), pas tous les faits ni le point de consommation. Le profil non conclusif est conservé."
+        },
+        {
+          "path": "/outils-pneumatiques/ingersoll-rand-g1a120rs418/",
+          "contentHash": "a8fb76268f48e12e283f81e9343772d6b87bce645e7adfe6d259187bc66df2e9",
+          "decision": "needs-correction",
+          "note": "La fiche exacte actuelle répond 429. Les notices accessibles de certaines références confirment une portée limitée (vitesse, accessoires), pas tous les faits ni le point de consommation. Le profil non conclusif est conservé."
+        },
+        {
+          "path": "/outils-pneumatiques/nitto-kohki-b-20d/",
+          "contentHash": "c027cc6f8a9aa94e89056ffeada90db954d051487456aeea5dfb26f13f541143",
+          "decision": "approved",
+          "note": "B-20D et B-20D-A : mêmes bandes 20 × 520 mm, vitesse de bande 2 620 m/min et consommation à vide 0,52 m³/min. Le galet est soutenu d’un côté sur B-20D, des deux côtés sur B-20D-A ; masses 1,55 et 1,50 kg. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/nitto-kohki-bc-005/",
+          "contentHash": "47c71501b2ab2ce46435ff0f85e4b4bfe360649084a93da219f327db71eaf0b7",
+          "decision": "approved",
+          "note": "BC-005 : outil d’ébavurage pour trous déjà usinés de 3 à 34 mm. Le levier et l’appui engagent la fraise à chanfreiner ; le tableau annonce 420 tr/min à vide. L’ADR-100 voisine est une perceuse réversible, ce qui répond à une autre opération. Les mandrins pour queues 6, 8 et 10 mm sont fournis, celui de 12 mm est optionnel ; les fraises à chanfreiner sont à acheter séparément. La consommation de 0,22 m³/min, soit 220 L/min, est explicitement à vide au point nominal de 0,6 MPa : elle ne permet pas un verdict en charge. Limites de mesure et de configuration conservées ; champs natifs et projection runtime vérifiés."
+        },
+        {
+          "path": "/outils-pneumatiques/nitto-kohki-fs-100c/",
+          "contentHash": "69a0b03d67903003f8d3ce22df8907362cb2aaa8f00f6fbdf3c8fce4fe02efe6",
+          "decision": "approved",
+          "note": "FS-100C contre FS-50A : patins 110 × 100 et 75 × 82 mm, orbites 1,5 et 1,2 mm, régimes 20 000 et 15 000 tr/min. Consommations à vide 0,20 et 0,14 m³/min ; masse commune 0,50 kg. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/nitto-kohki-jex-24/",
+          "contentHash": "7bf9a8169e7201fb0cc38186c31b32e734fcbf68cd232855cd189af0c946a3e2",
+          "decision": "approved",
+          "note": "JEX-24 contre JEX-20 : 23 contre 12 aiguilles de 3 × 180 mm installées, 4 000 coups/min dans les deux cas. Consommations à vide 0,27 et 0,20 m³/min ; masses 2,70 et 2,75 kg. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/nitto-kohki-l-35c/",
+          "contentHash": "bbf8bcc95eade881b25e8bd4603d8a59c2cb233adcd897ad7cd593e4cab573f3",
+          "decision": "approved",
+          "note": "L-35C contre L-25B : 37 500 contre 27 000 tr/min et masses de 0,45 contre 0,60 kg, sans flexible. Consommations à vide 0,35 contre 0,40 m³/min ; pince de 6 mm dans les deux cas. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rr-06sc/",
+          "contentHash": "f8300729cc28a48973342a50606b736e22ef9b3fdaf7ed4c94c5818b1a07ca83",
+          "decision": "approved",
+          "note": "RR-06SC contre RR-02SC : même corps droit et mécanisme à friction réglable, couple 5–16 contre 1–6 Nm, vitesse 800 contre 1 800 tr/min et masse 1,4 contre 1,2 kg. Les deux déclarent 10 L/s. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rr-10dp/",
+          "contentHash": "251d2db8e2d3dfe30372b6c4d7e7b7bb28faee2cfb65ec41338dd569557990aa",
+          "decision": "approved",
+          "note": "RR-10DP contre RR-13DP : capacités acier 10 et 13 mm, vitesses 1 800 et 800 tr/min, masses 1,1 et 1,3 kg. Puissance 0,35 kW et consommation 8 L/s identiques ; toutes deux réversibles. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rr-15p/",
+          "contentHash": "3e4d20424e126f18b0510240cf2511decd39e196429710ea7edebaf85766782f",
+          "decision": "approved",
+          "note": "RR-15P pistolet contre RR-15A d’angle : carré 1/2 pouce, mécanismes un marteau et Jumbo, couples indicatifs 560 et 310 Nm, masses 2,4 et 1,8 kg. Consommations en charge 8 et 5,3 L/s ; flexible 10 et 9,5 mm. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rr-2110ns/",
+          "contentHash": "a8af093e4afc187dd4015c574c74fd3e9b97e472241d564f88ec0f4a94e242ea",
+          "decision": "approved",
+          "note": "RR-2110NS contre RR-0315NS : 3 000 contre 4 000 coups/min, masses 2,5 et 2,6 kg, dimensions 340 × 175 et 415 × 45 mm. Consommation commune 6,6 L/s ; aiguille standard de 3 mm. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rr-8116/",
+          "contentHash": "78f1f2c7c59246df0f62ede1aea8306ff0bb1d8762528af579206d45ae3413e1",
+          "decision": "approved",
+          "note": "RR-8116 grignoteuse contre RR-8110 cisaille : capacités acier 1,6 et 1,0 mm, aluminium 2,0 et 1,2 mm ; cadences 3 500 et 2 400 coups/min. Consommations 8 et 9,4 L/s, masses 0,9 et 1,2 kg. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rrb-280/",
+          "contentHash": "1412f50839e8ffcf4ec2eaab20f35ec14f0e077d24d003a6f7dbd8fc9d078639",
+          "decision": "approved",
+          "note": "RRB-280 est une brosse métallique rotative de 80 mm, axe M14 × 2, 8 000 tr/min, 0,45 kW et 9,6 L/s. La LES34 est une ponceuse rotative d’angle à sortie M14, accessoire maximal 75 mm, 3 400 tr/min, 0,30 kW et 9 L/s ; sa fiche autorise notamment les brosses. Ce sont deux usages rotatifs proches, pas une comparaison avec une perceuse ou une orbitale. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rrg-1000re/",
+          "contentHash": "469ab92da4fbc5f56f98ddc451f421ede55cdf6b557723fac0b3ed56127ff9ad",
+          "decision": "approved",
+          "note": "RRG-1000RE contre RRG-1000REL : mêmes 0,74 kW, 22 000 tr/min, pince standard 6 mm et 11 L/s ; masses 0,8 et 1,2 kg. Le mandrin 8 mm est sur demande. La longueur d’axe des autres modèles REL n’est pas transférée. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rrg-3611/",
+          "contentHash": "051354ccd19ba913763b3797b303214799ebd7c1810b2c0829f4a74d27bc7bf4",
+          "decision": "needs-correction",
+          "note": "Le catalogue dit explicitement que RRG-3611 et RRG-3617K sont identiques : 20 000 tr/min, 0,28 kW, 0,8 kg et 6,7 L/s. La 3617K ajoute deux bras de 6 et 10 × 330 mm ; la 3611 est la version 10 × 330 mm. Correction technique et/ou éditoriale requise avant admission : Ajouter unqualified : régime de la consommation non précisé. Signature de besoin d’air partagée : apport autonome insuffisant en l’état, regroupement de variantes à privilégier."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rrh-2000/",
+          "contentHash": "c381d6c69d253ee40250e8ac0862c1a45f9ae1c507e341cff8387c236879e7e7",
+          "decision": "approved",
+          "note": "RRH-2000 contre RRH-4309K : même emmanchement 11 × 12,7 × 40 mm ; 5 000 contre 3 200 coups/min et 4,5 contre 9 J/coup. Masses 1,5 et 1,7 kg ; consommations 8,4 et 7,1 L/s. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rri-100/",
+          "contentHash": "34106b04322eb48faf6982ec4c02f1e5c6aa0759e7cfbd16b749f31a09fb9679",
+          "decision": "approved",
+          "note": "RRI-100 sans coupure contre RRI-100T avec coupure : même carré 1/2 pouce, couple indicatif 85–120 Nm, 5 300 tr/min, masse 1,9 kg et 8,7 L/s. Le suffixe T change la commande de coupure, pas le débit publié. La qualification de la demande est corrigée dans les champs du moteur, avec comparaison propre à la référence et limites explicites."
+        },
+        {
+          "path": "/compresseurs/aircraft-airboy-kitt-90/",
+          "contentHash": "fe0a1d2f674da917af8f52299a0313ce4a7fb5aff9cc4a6fffeb0404640ff7e0",
+          "decision": "approved",
+          "note": "Comparer deux petits réservoirs 2,4 L en séparant priorité à la pression et capacité de remplissage, sans transformer le remplissage en FAD. FAD vide et dutyCycle absent corrects. Rattacher les données actuellement confirmées à la documentation primaire OXOMI, en conservant l’archive secondaire historique. La correction exacte est appliquée au candidat relu, sans transfert de débit ni de cycle."
+        },
+        {
+          "path": "/compresseurs/black-decker-bd-195-cubo/",
+          "contentHash": "2a7b9c5a214aa05e00c8c59da07f7ea1b26292e89327637c0f4386b08ebe3bf4",
+          "decision": "approved",
+          "note": "Le BD 195 CUBO, code 8215340BND701, est le choix compact de ce duo : 7 kg et aucune cuve intégrée, contre 10,1 kg et 6 L pour le BD 195/6-NK. Les deux utilisent le groupe OL195 de 1,1 kW en 230 V à 50 Hz, avec un maximum de 8 bar. Le CUBO réduit le poids à transporter ; le 6-NK ajoute une réserve d’air. Pour choisir une clé à chocs ou une ponceuse, il reste à obtenir le débit restitué à la pression de travail : les 180 L/min du catalogue sont publiés sans cette condition. Limites de mesure et de configuration conservées ; champs natifs et projection runtime vérifiés."
+        },
+        {
+          "path": "/compresseurs/nuair-b2800-50-cm2/",
+          "contentHash": "c69af622eda06e4f9eaea2141eacfe454cd6bfcbd2e9dbdf71d139080315944e",
+          "decision": "approved",
+          "note": "Le B2800/50 CM2, code 28DC404NUB010, réunit une cuve de 50 L et une alimentation de 230 V à 50 Hz. Le B2800/30 CT2 voisin, code 28CC441NUB032, possède 30 L et demande du 400 V à 50 Hz. Le choix porte donc sur la réserve d’air et l’alimentation disponible dans l’atelier ; les deux lignes indiquent le même groupe B2800 de 1,5 kW, 255 L/min aspirés et 10 bar au maximum. Le débit restitué sous pression reste à documenter avant de dimensionner un outil. Les 50 kg et les dimensions du tableau décrivent l’emballage du CM2. Limites de mesure et de configuration conservées ; champs natifs et projection runtime vérifiés."
+        },
+        {
+          "path": "/compresseurs/stanley-d-200-10-24/",
+          "contentHash": "8d12595a11daca257c3add4fdced966268395de78e99f988848f24e32e882093",
+          "decision": "approved",
+          "note": "Le D 200/10/24, code B6CC304STN004, et le D 200/10/24V, code 8117190STN598, possèdent chacun 24 L, un groupe OL195 sans huile de 1,1 kW et une alimentation de 230 V à 50 Hz. Le catalogue 2020 distingue leurs emballages : 570 × 255 × 444 mm et 18,4 kg pour le premier ; 323 × 323 × 648 mm et 16 kg pour le 24V. Ces valeurs servent à préparer le transport ; les cotes de la machine en service restent à confirmer pour son emplacement. La sélection d’un outil exige encore un débit restitué sous pression, car les 180 L/min publiés correspondent au débit aspiré. Limites de mesure et de configuration conservées ; champs natifs et projection runtime vérifiés."
+        },
+        {
+          "path": "/guides/aftercooler-refroidisseur-secheur-air-comprime/",
+          "contentHash": "c4199e2f3034ce81ca3b2b129e306e87ed63e08f8eb97796da0414bffe322d26",
+          "decision": "needs-correction",
+          "note": "L’architecture refroidissement/séchage est distincte du guide de point de rosée, mais la source Parker déterminante pour la séparation vapeur/liquide répond403. Le corps Atlas actuel ne lève pas à lui seul cette réserve pour tous les passages."
+        },
+        {
+          "path": "/guides/manometre-air-comprime-precision-pleine-echelle/",
+          "contentHash": "c9a9b44fbceca13417e31dafd53c0cf443a868bd57d3536c5709c6ca22df099c",
+          "decision": "approved",
+          "note": "Apport calculable : ±1% de l’étendue donne±0,10bar sur0–10 et±0,16bar sur0–16. Modèles WIKA4pouces distincts des2,5pouces ; document historique2015 clairement daté. Le voisin traite pulsations et vibrations, sans remplacer la définition de précision ni l’incertitude totale."
+        },
+        {
+          "path": "/guides/cuve-peinture-sous-pression-air-produit-agitation/",
+          "contentHash": "ec0d857f9627d74f501b07306c76cb9b7bb2ad35ee6350ea6458b3d9c3863c96",
+          "decision": "approved",
+          "note": "Méthode de diagnostic du débit produit irrégulier, avec bilan séparé cuve/atomisation/agitation. Binks documente régulateurs, soupape et modes d’agitation. Le voisin choisit le mode d’alimentation ; cette page suit l’auxiliaire d’agitation et les observations de fonctionnement de la cuve."
+        },
+        {
+          "path": "/guides/prise-air-compresseur-fumees-solvants-emplacement/",
+          "contentHash": "1a7f3b032b7c2c1e60c17683c6d9ededc98af1546fefd99bae7aa4665f96b866",
+          "decision": "approved",
+          "note": "Cartographie concrète des rejets autour de l’aspiration et dossier d’entrée déportée. Atlas décrit gaz corrosifs/échappement, préfiltre et perte de pression. Le voisin dimensionne la ventilation thermique du local ; cette page examine les contaminants aspirés et conserve les limites de l’air respirable."
+        },
+        {
+          "path": "/compresseurs/renner-rs-pro-3-0-310002/",
+          "contentHash": "e56e30451cda8eb670c10e1245d5ff0e68bca3dfaa9383af3ae86f339d6bf0c3",
+          "decision": "approved",
+          "note": "Montrer le compromis entre les configurations 13 bar et 7,5 bar du même 3 kW sans créer une courbe multi-versions. 290@13 et dutyCycle = 1 étayés ; plafond traité comme pression de configuration, pas maximum mécanique inventé. La correction exacte est appliquée au candidat relu, sans transfert de débit ni de cycle."
+        },
+        {
+          "path": "/compresseurs/almig-combi-xp-11-standalone/",
+          "contentHash": "eda1f196ef895698d7ab90d1d3d18b8e3c4122cba6266d37947ad316244b03e8",
+          "decision": "needs-correction",
+          "note": "Distinguer le groupe seul de la station 270D, ainsi que leur périmètre de mesure ; ne pas hériter du service continu générique. Retirer la courbe héritée de 4-in-1 et dutyCycle = 1 non qualifié. Conserver les caractéristiques physiques standalone établies page 9. Confirmer que les débits de la table 4-in-1 s’appliquent à la configuration standalone sans réservoir ni sécheur."
+        },
+        {
+          "path": "/compresseurs/boge-s-31-3-10-bar-insonorisation-standard/",
+          "contentHash": "9ac529f0e8e0ae4c271b6fea34a4bbbd4f79cba279c5acf03f10b9487e5bb736",
+          "decision": "approved",
+          "note": "Le S 31-3 en version 10 bar convient à l’étude d’un réseau dont la pression requise dépasse la limite de la version 8 bar. BOGE conserve dans les deux cas un moteur principal de 22 kW et un encombrement de 1 620 × 990 × 1 450 mm. Le tableau associe à ces versions des débits effectifs de 3,35 et 3,88 m³/min respectivement : choisir la version 10 bar engage aussi une autre capacité de production publiée. Pour calculer la compatibilité de l’installation, il reste à faire préciser la pression de mesure de ces débits ; le tableau donne une pression maximale, que CompatAir garde séparée du FAD. Limites de mesure et de configuration conservées ; champs natifs et projection runtime vérifiés."
+        },
+        {
+          "path": "/compresseurs/ceccato-csa-10-pack-au-sol-13-bar/",
+          "contentHash": "ea6172596e00794b2925677dcbf56301243ec111f9267f17ab09158b5bf3214f",
+          "decision": "approved",
+          "note": "La version CSA 10 Pack 13 bar répond à un choix de pression : le tableau 50 Hz publie 53 m³/h à 12,5 bar, soit environ 883,3 L/min. Le CSA 10 Pack 10 bar indique 68 m³/h à 9,5 bar, soit environ 1 133,3 L/min. La version 13 bar permet d’étudier un besoin au-delà du plafond de la 10 bar, avec une production publiée plus faible à son propre point de mesure. Le montage Pack au sol se dimensionne avec le stockage et le traitement d’air nécessaires à l’atelier. Les versions sur cuve de 270 ou 500 L sont des configurations distinctes. Limites de mesure et de configuration conservées ; champs natifs et projection runtime vérifiés."
+        },
+        {
+          "path": "/compresseurs/kaeser-aircenter-16-secheur-et-cuve-integres-11-bar/",
+          "contentHash": "4ee8662419cded1f4760882a612090f29c053e413e577ff57ada519cb2e58710",
+          "decision": "approved",
+          "note": "Séparer pression de service/maximum et versions de pression, puis éviter une garantie de service continu dérivée du sécheur ou du marketing général. FAD1360@10 et maximum 11 exacts. Retrait conservateur du dutyCycle = 1 insuffisamment rattaché au groupe complet. La correction exacte est appliquée au candidat relu, sans transfert de débit ni de cycle."
+        },
+        {
+          "path": "/compresseurs/broomwade-elite-7-rsccp0741v4-10-bar/",
+          "contentHash": "07315decf5c9636851db08ff5098ae41378abf6a30d89ba8940c9abad397f0cb",
+          "decision": "approved",
+          "note": "Comparer la capacité à une pression réellement commune 10 bar entre ELITE 7 et 11, et isoler le taux de marche non confirmé. FAD970@10 établi. dutyCycle = 1 non confirmé, à retirer sans bloquer les autres fiches. La correction exacte est appliquée au candidat relu, sans transfert de débit ni de cycle."
+        },
+        {
+          "path": "/guides/hymair-n851-j1022-agrafes-couronne/",
+          "contentHash": "24aa8dac978af1f7a38e78101e467d4b72d2cc382217d3fb8a3f3f867e09f775",
+          "decision": "approved",
+          "note": "Choix du consommable par section du fil, couronne, longueur et magasin. Le voisin calcule une cadence ; cette page empêche de confondre longueur d’agrafe/corps et SCFM/volume par coup. Pas d’interchangeabilité ou résistance d’assemblage inventée."
+        },
+        {
+          "path": "/guides/max-cn445r3-cn890f3-clous-quinze-degres/",
+          "contentHash": "ef4bc1348a631b2752a2b249a8341073de353c5499b1d8e5481acc69b619516c",
+          "decision": "approved",
+          "note": "La commande de clous associe tête, tige, longueur et assemblage, au-delà de15°. Le voisin calcule le débit moyen par cadence ; cette page qualifie le consommable. Correction ciblée du diamètre de tête CN890F3 dans texte et SVG :6,5–7,7mm, conforme au manuel et à0,256–0,303pouce de la brochure."
+        },
+        {
+          "path": "/compresseurs/chicago-pneumatic-cpi100-60-hz-8-6-bar-std-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/",
+          "contentHash": "7c10008cfa49cf8230a0be34e563e68b9cefa338d7ae7da2206797f349d92bc5",
+          "decision": "approved",
+          "note": "Ce CPI 100 est la version fixe STD à 60 Hz, sans sécheur ni cuve intégrés. Son point fabricant est de 777 m³/h à 8 bar, soit 12 950 L/min, pour un maximum de 8,6 bar. La version 10,3 bar du même tableau fournit 704 m³/h à 9,5 bar, soit environ 11 733,3 L/min. Le besoin de pression du réseau départage ces deux versions ; leurs débits sont mesurés à des pressions différentes. Vérifier l’alimentation et la disponibilité de cette configuration 60 Hz avant de l’intégrer à une installation française. La fiche conserve exclusivement les performances de cette fréquence. Limites de mesure et de configuration conservées ; champs natifs et projection runtime vérifiés."
+        },
+        {
+          "path": "/compresseurs/elgi-eg-110-p-50-hz-13-5-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/",
+          "contentHash": "f6583eb8a90e26ea1e4d52299bb2dccf4b752d756940abb0eac1c4a4560b8ca9",
+          "decision": "approved",
+          "note": "Lire correctement les deux colonnes pression de travail et maximum/décharge dans une même famille industrielle. FAD14900@12,5 et maximum 13,5 valides. dutyCycle absent conservé ; pas de garantie de tenue permanente. La correction exacte est appliquée au candidat relu, sans transfert de débit ni de cycle."
+        },
+        {
+          "path": "/compresseurs/atlas-copco-g-18-50-hz-7-5-bar-pack-au-sol/",
+          "contentHash": "4b0bf27725df8e351e99fbdc8de4e4b5a4caf1b5520b6ec20a0d31eb5b30c8c4",
+          "decision": "approved",
+          "note": "Pour ce G 18 Pack au sol à 50 Hz, le nom de variante 7,5 bar et la pression de mesure du FAD sont deux repères distincts. La note du catalogue fixe le débit de 52,1 L/s, soit 3 126 L/min, à 7 bar. La variante 13 bar publie 38,5 L/s, soit 2 310 L/min, à 12,5 bar. Le choix dépend de la pression requise par le réseau ; ces points caractérisent deux versions et deux conditions de mesure. Le Pack au sol se distingue des montages Full Feature et sur réservoir. Le taux de marche du groupe complet reste à établir pour conclure sur un usage permanent. Limites de mesure et de configuration conservées ; champs natifs et projection runtime vérifiés."
+        },
+        {
+          "path": "/compresseurs/worthington-creyssensac-rlr-1000-50-hz-13-bar-pack-au-sol/",
+          "contentHash": "4fd66c9d71553d895aba741ea85319c0d69bf6f25b73f96405dd19e8dae9629b",
+          "decision": "approved",
+          "note": "Le RLR 1000 Pack au sol à 50 Hz et 13 bar intéresse un atelier qui dimensionne séparément son stockage et son traitement d’air. La ligne fabricant publie 53 m³/h à 12,5 bar, soit environ 883,3 L/min, pour les montages Pack et Full Feature sur cuve. Le Full Feature de 500 L ajoute un réservoir et un sécheur ; la production reste celle de la ligne commune. Le catalogue donne 1 210 × 665 × 1 045 mm pour le montage au sol, contre 1 940 × 665 × 1 665 mm pour le 500 L avec sécheur. Ces différences d’équipement et d’implantation déterminent le choix. Limites de mesure et de configuration conservées ; champs natifs et projection runtime vérifiés."
+        },
+        {
+          "path": "/compresseurs/airpol-kpr-11/",
+          "contentHash": "d3a65f518d5e84cdc628d7805d9516ecacbb6919966118790c46ec28d5c2b476",
+          "decision": "approved",
+          "note": "Expliquer le minimum de modulation conservateur retenu et les plages différentes KPR 11/KPR 15 à pression identique, sans remplacer le minimum par un maximum permanent. 283,333@10 est la borne minimale 17 m³/h, intentionnellement conservatrice. dutyCycle reste absent. La correction exacte est appliquée au candidat relu, sans transfert de débit ni de cycle."
+        },
+        {
+          "path": "/compresseurs/alup-allegretto-22/",
+          "contentHash": "41c1a280a92cab634fb1b4adeabc44566520bd3164960e4c51dd70c0af26b015",
+          "decision": "approved",
+          "note": "Comparer les maxima VSD à 9,5 bar avec le 15 kW, séparer le maximum 10 bar et écarter la famille SCK de la preuve du groupe. FAD3246,667@9,5 exact ; max 10 confirmé par le HTML. Retirer la fausse attribution oilType à SCKp 2, conserver oilTypeunknown. La correction exacte est appliquée au candidat relu, sans transfert de débit ni de cycle."
+        },
+        {
+          "path": "/compresseurs/bambi-pt15/",
+          "contentHash": "d64a12479c7335b8cbc1ada4b56bb4c75bbae13048f673aa432b6f7aed77f87a",
+          "decision": "approved",
+          "note": "Distinguer stockage 15/24 L et débit sous pression identique à 5 bar ; montrer la limitation 60 % sans inventer la durée des cycles. Courbe 1–8 bar et dutyCycle = 0,6 explicitement documentés pourPT15. Comparaison PT 24 limitée aux cellules effectivement lues. La correction exacte est appliquée au candidat relu, sans transfert de débit ni de cycle."
+        },
+        {
+          "path": "/compresseurs/ekom-dk50-2v-50s/",
+          "contentHash": "b87684d06518d0fbb30a3613ead3ecdb41f7224314e8a240cdd4bf2015fefd67",
+          "decision": "approved",
+          "note": "Isoler la différence de débit associée à la variante avec sécheur, avec armoire et cuve identiques, et distinguer plage de service/soupape. 135@6 et dutyCycle = 1 du groupe établis. maxPressureBasis selected-working-pressure-ceiling nécessaire ; voltage textuel actuel mélange les colonnes. La correction exacte est appliquée au candidat relu, sans transfert de débit ni de cycle."
+        },
+        {
+          "path": "/compresseurs/mark-msm-2-2/",
+          "contentHash": "a2321cac7b445d497b0f068d11a9dadf18ad49bb772255f7b76f4bedc0bf76d9",
+          "decision": "approved",
+          "note": "Le MSM 2.2 à vitesse fixe se compare au MSM 2.2 IVR à la même pression de référence de 9,5 bar. La brochure imprime respectivement 281 et 293 L/min, avec 16,9 et 17,6 m³/h dans la colonne voisine ; les écarts entre conversions reflètent les arrondis du tableau. L’IVR module sa vitesse selon la demande, tandis que cette fiche décrit le modèle fixe. Pour décider si cette modulation présente un intérêt dans l’atelier, il faut connaître les variations de consommation et les durées de charge. Ces deux points de débit seuls ne chiffrent aucune économie d’énergie. Limites de mesure et de configuration conservées ; champs natifs et projection runtime vérifiés."
+        },
+        {
+          "path": "/compresseurs/mattei-blade-se-8/",
+          "contentHash": "9b10a2eb56edb66004d9db25a0ffdbeedec8b87fb59aebaccf4dd44c25a6f405",
+          "decision": "approved",
+          "note": "Comparer 995/1370Lmin à 9,5 bar pour la même station 270 L+sécheur, sans fusion des versions 8/10 bar ou 50/60 Hz. 995@9,5, cuve 270, puissance 7,5 et modecontinu du groupe établis. Plafond de configuration explicitement qualifié. La correction exacte est appliquée au candidat relu, sans transfert de débit ni de cycle."
+        },
+        {
+          "path": "/compresseurs/dalgakiran-d-3-200-mt/",
+          "contentHash": "31e0572a973f042aac6731215919e601ccd7d42977987e04e2d4e9ec6c910ff5",
+          "decision": "approved",
+          "note": "Le D 3-200 MT est le choix double étage à 12,5 bar, face au D 3-200 D simple étage à 7 bar. Les deux lignes du catalogue conservent 200 L de cuve et 2,2 kW. Elles indiquent respectivement 145 et 290 L/min de déplacement des pistons. Ces valeurs décrivent le volume balayé par les pistons et restent séparées du débit restitué à l’outil. Le choix de la version MT se justifie par la pression requise ; pour dimensionner une clé à chocs ou une ponceuse, demander le débit restitué à sa pression de travail ainsi que les conditions de cycle. Limites de mesure et de configuration conservées ; champs natifs et projection runtime vérifiés."
+        },
+        {
+          "path": "/compresseurs/hertz-frecon-plus-pm-22/",
+          "contentHash": "3135f8664af5cf18ad67d5a88356ab90f23baaf5e2ccba4be2bb8379b4592500",
+          "decision": "approved",
+          "note": "À 13 bar, le FRECON PLUS PM 22 couvre une plage fabricant de 920 à 2 650 L/min ; le PM 18 couvre 660 à 2 390 L/min à cette même pression. Le PM 22 augmente les deux bornes de la plage publiée. Le profil de calcul de cette fiche retient sa borne minimale de 920 L/min, tandis que le profil PM 18 retient 2 390 L/min, sa borne maximale : comparer ces seules valeurs mélangerait deux régimes de fonctionnement. Utiliser les deux plages pour examiner la demande de l’atelier. Cette version Base Mounted demande un stockage externe ; le montage Tank + Dryer est distinct. Limites de mesure et de configuration conservées ; champs natifs et projection runtime vérifiés."
+        },
+        {
+          "path": "/compresseurs/ktc-compack-2-90-l/",
+          "contentHash": "72f1fe92355fea60b28e2952f22f02b8d99df9d5c552e0c30b4c02999295dd65",
+          "decision": "approved",
+          "note": "Le COMPACK 2 90 L, référence 1850120508, réunit un réservoir de 90 L, un moteur de 2,7 kW et une alimentation monophasée de 230 V à 50 Hz. La version verticale 1850120513 porte le stockage à 270 L et conserve les 270 L/min publiés. Leurs dimensions sont de 117 × 46 × 96 cm et 64 × 67 × 170 cm : le choix dépend du stockage et de la hauteur disponible. Le catalogue qualifie le débit selon ISO 1217, annexe C ; il donne séparément un maximum de 10 bar. La pression de mesure du débit reste à confirmer avant un verdict de compatibilité. Limites de mesure et de configuration conservées ; champs natifs et projection runtime vérifiés."
+        },
+        {
+          "path": "/compresseurs/lupamat-lkv-11-mit/",
+          "contentHash": "e64f7c48da89be8a20c79e88019197fcce8537e7e67bd3428d2b263fc8108f8d",
+          "decision": "approved",
+          "note": "Le LKV 11 MIT et le LKV 7,5 MIT partagent une cuve de 548 L. Dans les colonnes de configuration 13 bar, le catalogue donne respectivement 1,29 et 0,82 m³/min de capacité FAD pour 11 et 7,5 kW. Le passage de puissance change la capacité publiée, sans ajouter de stockage. Le tableau intitule sa pression « Max. Working Pressure » : nous ne l’utilisons pas comme pression de mesure implicite. Le MITK avec sécheur est un montage distinct ; un débit propre et ses conditions sont à demander pour toute version 15 bar sur demande. Limites de mesure et de configuration conservées ; champs natifs et projection runtime vérifiés."
+        },
+        {
+          "path": "/compresseurs/sil-air-100-50-v/",
+          "contentHash": "f11b73a70567cb1465fbf222259af7c1478ce0c7695c9047c541d0ffba593c0c",
+          "decision": "approved",
+          "note": "Éviter de transformer la présence de ventilateurs en preuve de service continu ou de débit supérieur par rapport au 100/50. 74@5,0,68 kW en 230/50 confirmés visuellement. dutyCycle inconnu conservé malgré les ventilateurs. La correction exacte est appliquée au candidat relu, sans transfert de débit ni de cycle."
+        },
+        {
+          "path": "/compresseurs/fini-cube-4-0-10-270-es/",
+          "contentHash": "e4953c6bc3642898b8250c76e7c1bb1182da6c298d98f7aaecb502800160dbf2",
+          "decision": "needs-correction",
+          "note": "Distinguer les codes ES/ES Z et la finition sans inventer un gain de débit ou une durée de vie ; apport déjà couvert par le voisin actuel. Données natives cohérentes ; risque principal de répétition éditoriale, pas erreur FAD/duty. La page ES Z voisine explique déjà exactement la distinction de finition avec ES. La proposition réciproque reste répétitive ; une utilité autonome supplémentaire doit être documentée avant admission."
+        }
+      ]
     }
   ]
 }

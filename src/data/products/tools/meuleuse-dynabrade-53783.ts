@@ -20,16 +20,9 @@ const product: ToolProfileInput = {
 			"Longueur": "322 mm"
 		}
 	},
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.2,
-		"typical": 6.2,
-		"max": 6.2
-	},
-	"airflowLpm": {
-		"min": 1104,
-		"typical": 1104,
-		"max": 1104
+		"typical": 6.2
 	},
 	"usagePattern": "continuous",
 	"confidence": "A",
@@ -44,7 +37,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Dynabrade D25.01"
 	},
 	"editorial": {
-		"overview": "53783 : meuleuse à cônes ou meules-bouchons jusqu’à 38 mm, corps acier, sortie mâle 3/8-24 et 20 000 tr/min. La 53531 voisine possède une extension composite plus longue : 467 mm contre 322 mm dans le tableau. Les maxima d’air à 6,2 bar sont de 1 161 et 1 104 L/min. L’accès à la pièce et la vitesse admissible de l’abrasif précèdent le bilan pneumatique.",
+		"overview": "Le relevé historique du 53783 est conservé dans les spécifications. Le lien constructeur utilisé à l’import répond désormais avec un portail HTML, sans livrer le catalogue et le tableau de mesure attendus. La consommation n’est donc plus utilisée pour le dimensionnement.",
 		"verifiedFacts": [
 			"Puissance moteur : 522 W.",
 			"Vitesse moteur publiée : 20 000 tr/min.",
@@ -56,10 +49,10 @@ const product: ToolProfileInput = {
 			"Masse non arbitrée : la ligne publie 3,9 lb et 1,7 kg, sans parfaite concordance de conversion.",
 			"Les unités de masse du tableau ne sont pas parfaitement concordantes ; aucune masse unique n’est utilisée pour justifier le choix. Le filetage commun ne valide pas tout cône ou toute meule.",
 			"Hauteur non retenue : le tableau publie des unités contradictoires (1.7 (45)).",
-			"Le calcul conserve la consommation maximale publiée, sans la réduire selon un cycle de travail supposé. Cette valeur ne constitue pas une mesure de débit réalisée par CompatAir.",
 			"Le catalogue ne fournit pas de courbe de consommation selon la pression pour cette référence. Vérifier la pression dynamique à l’entrée de l’outil pendant son fonctionnement.",
 			"Le diamètre intérieur publié ne suffit pas à valider un réseau : la longueur, les raccords et les pertes de pression restent à contrôler.",
-			"Cette fiche repose sur l’édition D25.01 du catalogue international. Elle ne prouve ni la disponibilité actuelle en France ni l’équipement exact livré par un vendeur."
+			"Cette fiche repose sur l’édition D25.01 du catalogue international. Elle ne prouve ni la disponibilité actuelle en France ni l’équipement exact livré par un vendeur.",
+			"Le lien primaire actuel ne délivre plus le catalogue cité. Les valeurs historiques restent documentaires, sans calcul de compatibilité tant que les cellules de la référence ne sont pas relues."
 		]
 	},
 	"specifications": [
@@ -90,6 +83,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"dynabrade-53783-catalogue-d25-01"
 			]
+		},
+		{
+			"label": "Consommation historique à requalifier, hors calcul",
+			"value": "1104 L/min ; pression historique 6,2 bar",
+			"evidenceIds": [
+				"dynabrade-53783-catalogue-d25-01"
+			]
 		}
 	],
 	"evidence": [
@@ -116,9 +116,6 @@ const product: ToolProfileInput = {
 		"mpn": [
 			"dynabrade-53783-catalogue-d25-01"
 		],
-		"airflowLpm": [
-			"dynabrade-53783-catalogue-d25-01"
-		],
 		"workingPressureBar": [
 			"dynabrade-53783-catalogue-d25-01"
 		],
@@ -127,12 +124,16 @@ const product: ToolProfileInput = {
 		],
 		"recommendedHose": [
 			"dynabrade-53783-catalogue-d25-01"
+		],
+		"demandExplanation": [
+			"dynabrade-53783-catalogue-d25-01"
 		]
 	},
 	"notes": [
 		"Caractéristiques déclarées par le fabricant, sans essai physique par CompatAir.",
 		"La compatibilité calculée concerne l’alimentation en air. Le choix des abrasifs, carters et équipements de protection relève de la notice de l’outil."
-	]
+	],
+	"demandExplanation": "Le lien du catalogue historique renvoie actuellement à une page HTML de gamme. Les cellules techniques de cette référence ne sont pas requalifiées par cette réponse ; aucun besoin d’air dimensionnant n’est conservé."
 };
 
 export default product;

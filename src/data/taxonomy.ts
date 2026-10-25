@@ -16,6 +16,7 @@ export const toolTaxonomy = [
 	{ id: 'cle-a-cliquet', label: 'Clé à cliquet pneumatique', aliases: [] },
 	{ id: 'visseuse', label: 'Visseuse pneumatique', aliases: [] },
 	{ id: 'perceuse', label: 'Perceuse pneumatique', aliases: [] },
+	{ id: 'ebavureuse', label: 'Ébavureuse de trous pneumatique', aliases: [] },
 	{ id: 'soufflette', label: 'Soufflette', aliases: [] },
 	{ id: 'gonflage', label: 'Gonflage', aliases: ['Pistolet de gonflage'] },
 	{ id: 'agrafeuse-cloueuse', label: 'Agrafeuse et cloueuse', aliases: ['Cloueur pneumatique'] },
@@ -120,7 +121,7 @@ export const toolUsageTaxonomy = [
 		label: 'Meuler et limer',
 		seoTitle: 'Meuleuses et limes pneumatiques',
 		description: 'Meuleuses et limes à bande regroupées pour comparer leurs besoins publiés sans effacer leur famille technique.',
-		categoryIds: ['meuleuse', 'lime-bande', 'lime-alternative'],
+		categoryIds: ['meuleuse', 'lime-bande', 'lime-alternative', 'ebavureuse'],
 	},
 	{
 		id: 'finition',

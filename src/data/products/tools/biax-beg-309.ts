@@ -6,8 +6,8 @@ const product: ToolProfileInput = {
 	"brand": "BIAX",
 	"model": "BEG 309",
 	"mpn": "150800745",
-	"categoryId": "perceuse",
-	"category": "perceuse",
+	"categoryId": "ebavureuse",
+	"category": "ebavureuse",
 	"label": "BIAX BEG 309",
 	"demandModel": "fixed-flow",
 	"workingPressureBar": {
@@ -23,7 +23,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BEG 309, référence 150800745, se commande par levier ; le BE 309 voisin, référence 150800710, démarre par appui. Cette différence de déclenchement permet de choisir l’outil selon le positionnement possible du chanfrein sur le trou. Les deux sont réglables de 0 à 900 tr/min, avec 20 W et une queue maximale de 3 mm ; leurs masses publiées sont respectivement 250 et 180 g. BIAX donne 150 l/min et une consigne de 6 bar, sans préciser le régime de mesure de cette consommation.",
+		"overview": "BEG 309, référence 150800745 : ébavureur de trous à commande au levier. Le BE 309 voisin, référence 150800710, démarre par appui ; BIAX recommande la commande au levier lorsque le positionnement de la fraise à chanfreiner ne permet pas cet appui. Les deux règlent leur vitesse de 0 à 900 tr/min et acceptent une queue de 3 mm. Il s’agit d’ébavurer ou de chanfreiner un trou existant. Les 150 L/min sont publiés sans régime de mesure et la consigne de 6 bar ne les qualifie pas pour un calcul.",
 		"verifiedFacts": [
 			"Le catalogue de cette référence indique un fonctionnement à 6 bar.",
 			"La fiche fabricant publie une consommation de 150 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Le choix de la fraise, du disque ou de l’accessoire doit respecter la vitesse et les dimensions prescrites par BIAX.",
-			"Débit déclaré par le fabricant, sans mesure physique CompatAir."
+			"Débit déclaré par le fabricant, sans mesure physique CompatAir.",
+			"Outil pour ébavurer un trou déjà usiné ; aucun diamètre de queue ou de trou ne constitue ici une capacité de perçage."
 		]
 	},
 	"specifications": [
@@ -128,6 +129,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"biax-150800745-20260926"
+		],
+		"airflowBasis": [
+			"biax-150800745-20260926"
+		],
+		"category": [
+			"biax-150800745-20260926"
 		]
 	},
 	"notes": [
@@ -137,7 +144,8 @@ const product: ToolProfileInput = {
 		"min": 150,
 		"typical": 150,
 		"max": 150
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

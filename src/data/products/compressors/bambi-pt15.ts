@@ -160,21 +160,27 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october3d-bambi-product-22"
 			]
+		},
+		{
+			"label": "Comparaison documentée et limite de choix",
+			"value": "Distinguer stockage 15/24 L et débit sous pression identique à 5 bar ; montrer la limitation 60 % sans inventer la durée des cycles.",
+			"evidenceIds": [
+				"review-20261025-s105"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "Bambi PT15. 105 L/min à 1 bar ; 95 L/min à 2 bar ; 87,5 L/min à 3 bar ; 80 L/min à 4 bar ; 75 L/min à 5 bar ; 70 L/min à 6 bar ; 60 L/min à 7 bar ; 50 L/min à 8 bar. Groupe avec cuve 15 L.",
+		"overview": "Le PT 15 sans huile publie 75 L/min à 5 bar, 70 L/min à 6 bar et 50 L/min à 8 bar, avec une cuve 15 L. Le PT 24 présenté sur la même page annonce lui aussi 75 L/min à 5 bar, mais avec 24 L. Le plus grand réservoir augmente le stockage, sans hausse du débit publié à cette pression. Le PT 15 reste limité au cycle maximal 60 % annoncé par Bambi ; un usage permanent ne se déduit pas de la courbe de débit.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 15 L.",
 			"Pression maximale de fonctionnement publiée : 8 bar."
 		],
 		"limitations": [
-			"Le fabricant ne précise pas les conditions de référence ISO 1217 ni la fenêtre de temps du cycle de service dans cette fiche.",
-			"Cycle intermittent déclaré ; durée de référence non précisée. L’exploitation permanente n’est pas assimilée à un service continu.",
-			"Fréquence non publiée dans la fiche retenue ; aucune transposition des performances à 50 Hz.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"La page ne définit pas la fenêtre de temps du cycle 60 % : aucun nombre de minutes de marche ou de repos n’est calculé.",
+			"La comparaisonPT24 se limite à la vignette primaire actuellement lue :75 L/min à 5 bar, 1 HP,24 L. Sa courbe complète et son cycle ne sont pas revalidés par cette vignette.",
+			"Les conditions ISO 1217 et la fréquence ne sont pas précisées. Aucun passage implicite à 50 Hz ni extrapolation au-delà de 8 bar.",
+			"Les points de débit conservés concernent le PT 15 ; disponibilité et raccordement local à confirmer."
 		]
 	},
 	"evidence": [
@@ -187,6 +193,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 a6b714e0fd45cefb73a70b4d49bad44642dd109884190dcabc6e3180c596ccda de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review-20261025-s105",
+			"sourceUrl": "https://bambi-air.co.uk/product/pt15/",
+			"sourceLabel": "Bambi, relecture primaire du 25 octobre 2026, s105",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps vérifié SHA-256 d5c5a9521453b98d58e23ef5f742a0157b1ca88e0fd8264b27b252358f58cd53. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
 		}
 	],
 	"fieldSources": {

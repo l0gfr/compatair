@@ -16,21 +16,7 @@ const product: CompressorInput = {
 	},
 	"tankLiters": 0,
 	"maxPressureBar": 13,
-	"fadCurve": [
-		{
-			"pressureBar": 8,
-			"litersPerMinute": 1670
-		},
-		{
-			"pressureBar": 10,
-			"litersPerMinute": 1460
-		},
-		{
-			"pressureBar": 13,
-			"litersPerMinute": 1170
-		}
-	],
-	"dutyCycle": 1,
+	"fadCurve": [],
 	"oilType": "unknown",
 	"powerKw": 11,
 	"weightKg": 380,
@@ -66,25 +52,37 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Conditions du débit",
-			"value": "COMBI XP standalone model; flow table page 8, dimensions page 9, no receiver and dryer.",
+			"label": "Périmètre de la table de débit",
+			"value": "La page 8 est intitulée 4-in-1:50 Hz ; la page 9 donne les dimensions standalone. L’applicabilité de la courbe 4-in-1 au groupe seul reste à confirmer.",
 			"evidenceIds": [
-				"documented-d-almig-2026-p9"
+				"review-20261025-s083-p8",
+				"review-20261025-s083-p9"
+			]
+		},
+		{
+			"label": "Comparaison documentée et limite de choix",
+			"value": "Distinguer le groupe seul de la station 270D, ainsi que leur périmètre de mesure ; ne pas hériter du service continu générique.",
+			"evidenceIds": [
+				"review-20261025-s083-p6",
+				"review-20261025-s083-p7",
+				"review-20261025-s083-p8",
+				"review-20261025-s083-p9",
+				"review-20261025-s084"
 			]
 		}
 	],
 	"editorial": {
-		"overview": "ALMiG COMBI XP 11 standalone. Standalone, sans cuve ni sécheur. Débit restitué : 1 670 L/min à 8 bar ; 1 460 L/min à 10 bar ; 1 170 L/min à 13 bar.",
+		"overview": "Le COMBI XP 11 standalone est le groupe sans cuve ni sécheur, donné pour 380 kg et 691 × 1051 × 1088 mm. La station 270D ajoute une cuve 270 L, un sécheur frigorifique et des filtres ; son tableau annonce 590 kg. Les valeurs 1,67/1,46/1,17 m³/min aux pressions 8/10/13 bar figurent sous le titre «4-in-1:50 Hz». Leur applicabilité au groupe seul n’est pas établie dans les pages lues : elles restent des caractéristiques de la station voisine, sans alimenter la courbe du standalone.",
 		"verifiedFacts": [
 			"Dimensions publiées : 691 × 1051 × 1088 mm.",
 			"Puissance moteur publiée : 11 kW.",
-			"La documentation constructeur de cette série prévoit le service continu, sous ses conditions d’installation et d’entretien."
+			"Version standalone sans cuve ni sécheur ; masse publiée 380 kg."
 		],
 		"limitations": [
-			"La disponibilité actuelle et le contenu de la configuration livrée restent à confirmer.",
-			"Aucun débit n’est extrapolé au-delà des pressions publiées ; les minima de modulation ne sont pas des débits moyens d’atelier.",
-			"Le mode de lubrification n’est pas établi ici. Aucun niveau de qualité d’air n’en est déduit.",
-			"La classe de qualité d’air du réseau, les pertes de pression et le refroidissement nécessitent une vérification sur l’installation."
+			"La page 9 documente les dimensions et la masse du groupe seul ; elle ne contient pas son tableau de débit.",
+			"La plage 5–13 bar concerne la famille COMBI XP. Les maxima de la table 4-in-1 ne sont pas transférés au standalone sans confirmation.",
+			"La promesse de fonctionnement continu de la catégorie générale des compresseurs à vis ne chiffre pas un taux de marche de ce groupe : le taux de marche reste indéterminé.",
+			"L’absence de cuve et de sécheur impose de définir le stockage et le traitement d’air de l’installation. Le mode de lubrification reste inconnu."
 		]
 	},
 	"evidence": [
@@ -107,31 +105,87 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 a42ca92be39e4a81a11cf3e4ec6bb3ce237552363c3b0a7d16a43761d852266f. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "review-20261025-s083-p6",
+			"sourceUrl": "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf#page=6",
+			"sourceLabel": "ALMiG, relecture primaire du 25 octobre 2026, s083, page PDF 6",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps vérifié SHA-256 f5ca167dedaab25352808dc5001ba9badc7acffb2c37168c6d9f89182b752a0e. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review-20261025-s083-p7",
+			"sourceUrl": "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf#page=7",
+			"sourceLabel": "ALMiG, relecture primaire du 25 octobre 2026, s083, page PDF 7",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps vérifié SHA-256 f5ca167dedaab25352808dc5001ba9badc7acffb2c37168c6d9f89182b752a0e. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review-20261025-s083-p8",
+			"sourceUrl": "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf#page=8",
+			"sourceLabel": "ALMiG, relecture primaire du 25 octobre 2026, s083, page PDF 8",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps vérifié SHA-256 f5ca167dedaab25352808dc5001ba9badc7acffb2c37168c6d9f89182b752a0e. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review-20261025-s083-p9",
+			"sourceUrl": "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf#page=9",
+			"sourceLabel": "ALMiG, relecture primaire du 25 octobre 2026, s083, page PDF 9",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps vérifié SHA-256 f5ca167dedaab25352808dc5001ba9badc7acffb2c37168c6d9f89182b752a0e. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review-20261025-s084",
+			"sourceUrl": "https://www.almig.de/en/products/compressed-air-generation/screw-compressors",
+			"sourceLabel": "ALMiG, relecture primaire du 25 octobre 2026, s084",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps vérifié SHA-256 7ccde5c0be70ca882cc9d1bf7fe03fadadebb2f4de102293e48490c0954f2d19. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
 		"tankLiters": [
-			"documented-d-almig-2026-p9"
+			"review-20261025-s083-p6",
+			"review-20261025-s083-p9"
 		],
 		"maxPressureBar": [
-			"documented-d-almig-2026-p9"
+			"review-20261025-s083-p6"
 		],
 		"powerKw": [
-			"documented-d-almig-2026-p9"
-		],
-		"fadCurve": [
-			"documented-d-almig-2026-p9"
+			"review-20261025-s083-p8"
 		],
 		"weightKg": [
-			"documented-d-almig-2026-p9"
+			"review-20261025-s083-p9"
 		],
-		"dutyCycle": [
-			"documented-d-almig-screw-duty"
+		"maxPressureBasis": [
+			"review-20261025-s083-p6"
+		],
+		"fadCurve": [
+			"review-20261025-s083-p6",
+			"review-20261025-s083-p7",
+			"review-20261025-s083-p8",
+			"review-20261025-s083-p9",
+			"review-20261025-s084"
 		]
 	},
 	"notes": [
 		"Configuration et unités vérifiées dans la ligne de la page 9."
-	]
+	],
+	"maxPressureBasis": "selected-working-pressure-ceiling"
 };
 
 export default product;

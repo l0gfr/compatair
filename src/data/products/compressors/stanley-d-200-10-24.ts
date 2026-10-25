@@ -19,7 +19,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Stanley D 200/10/24, référence B6CC304STN004 : cuve de 24 L, pression maximale publiée de 10 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Groupe de compression publié : OL195. Groupe de compression : OL195. Nombre de cylindres : 1.",
+		"overview": "Le D 200/10/24, code B6CC304STN004, et le D 200/10/24V, code 8117190STN598, possèdent chacun 24 L, un groupe OL195 sans huile de 1,1 kW et une alimentation de 230 V à 50 Hz. Le catalogue 2020 distingue leurs emballages : 570 × 255 × 444 mm et 18,4 kg pour le premier ; 323 × 323 × 648 mm et 16 kg pour le 24V. Ces valeurs servent à préparer le transport ; les cotes de la machine en service restent à confirmer pour son emplacement. La sélection d’un outil exige encore un débit restitué sous pression, car les 180 L/min publiés correspondent au débit aspiré.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons. Puissance moteur publiée : 1,1 kW.",
@@ -96,6 +96,15 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Le tableau Stanley, catalogue compresseurs 2020 indique « Air displacement » : 180 L/min aspirés. Aucun débit restitué à une pression de mesure n’est fourni dans cette ligne."
+		},
+		{
+			"id": "stanley-8117190stn598-20260927",
+			"sourceUrl": "https://www.nuair.pl/images/katalogi/Catalogo_STANLEY_2020_EN_9990220_LR.pdf#page=14",
+			"sourceLabel": "Stanley, catalogue compresseurs 2020, p. 14, réf. 8117190STN598_",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-27",
+			"confidence": "A",
+			"notes": "Le tableau Stanley, catalogue compresseurs 2020 indique « Air displacement » : 180 L/min aspirés. Aucun débit restitué à une pression de mesure n’est fourni dans cette ligne."
 		}
 	],
 	"fieldSources": {
@@ -121,6 +130,12 @@ const product: CompressorInput = {
 			"stanley-b6cc304stn004-20260927"
 		],
 		"voltage": [
+			"stanley-b6cc304stn004-20260927"
+		],
+		"editorial": [
+			"stanley-b6cc304stn004-20260927"
+		],
+		"specifications": [
 			"stanley-b6cc304stn004-20260927"
 		]
 	},

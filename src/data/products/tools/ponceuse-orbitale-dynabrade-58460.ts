@@ -21,16 +21,9 @@ const product: ToolProfileInput = {
 			"Hauteur": "137 mm"
 		}
 	},
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.2,
-		"typical": 6.2,
-		"max": 6.2
-	},
-	"airflowLpm": {
-		"min": 651,
-		"typical": 651,
-		"max": 651
+		"typical": 6.2
 	},
 	"usagePattern": "continuous",
 	"confidence": "A",
@@ -45,7 +38,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Dynabrade D25.01"
 	},
 	"editorial": {
-		"overview": "DynaLocke 58460 : plateau de 76 mm, contre 152 mm pour la 58435 voisine. La sélection rotation ou mouvement orbital aléatoire appartient aux deux outils ; le débit commun de 651 L/min maximum à 6,2 bar ne signifie pas qu’ils couvrent la même surface ni acceptent les mêmes consommables. Le diamètre et le mouvement requis doivent être choisis avec le travail.",
+		"overview": "Le relevé historique du 58460 est conservé dans les spécifications. Le lien constructeur utilisé à l’import répond désormais avec un portail HTML, sans livrer le catalogue et le tableau de mesure attendus. La consommation n’est donc plus utilisée pour le dimensionnement.",
 		"verifiedFacts": [
 			"Puissance moteur : 336 W.",
 			"Vitesse moteur publiée : 12 000 tr/min.",
@@ -57,10 +50,10 @@ const product: ToolProfileInput = {
 		"limitations": [
 			"Le constructeur impose l’arrêt complet avant de changer de mouvement. Le modèle non-vacuum n’acquiert pas une aspiration parce qu’une version voisine en possède une.",
 			"Masse non retenue : le tableau publie des unités contradictoires (2.35 (1.0)).",
-			"Le calcul conserve la consommation maximale publiée, sans la réduire selon un cycle de travail supposé. Cette valeur ne constitue pas une mesure de débit réalisée par CompatAir.",
 			"Le catalogue ne fournit pas de courbe de consommation selon la pression pour cette référence. Vérifier la pression dynamique à l’entrée de l’outil pendant son fonctionnement.",
 			"Le diamètre intérieur publié ne suffit pas à valider un réseau : la longueur, les raccords et les pertes de pression restent à contrôler.",
-			"Cette fiche repose sur l’édition D25.01 du catalogue international. Elle ne prouve ni la disponibilité actuelle en France ni l’équipement exact livré par un vendeur."
+			"Cette fiche repose sur l’édition D25.01 du catalogue international. Elle ne prouve ni la disponibilité actuelle en France ni l’équipement exact livré par un vendeur.",
+			"Le lien primaire actuel ne délivre plus le catalogue cité. Les valeurs historiques restent documentaires, sans calcul de compatibilité tant que les cellules de la référence ne sont pas relues."
 		]
 	},
 	"specifications": [
@@ -105,6 +98,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"dynabrade-58460-catalogue-d25-01"
 			]
+		},
+		{
+			"label": "Consommation historique à requalifier, hors calcul",
+			"value": "651 L/min ; pression historique 6,2 bar",
+			"evidenceIds": [
+				"dynabrade-58460-catalogue-d25-01"
+			]
 		}
 	],
 	"evidence": [
@@ -140,9 +140,6 @@ const product: ToolProfileInput = {
 		"mpn": [
 			"dynabrade-58460-catalogue-d25-01"
 		],
-		"airflowLpm": [
-			"dynabrade-58460-catalogue-d25-01"
-		],
 		"workingPressureBar": [
 			"dynabrade-58460-catalogue-d25-01"
 		],
@@ -151,12 +148,16 @@ const product: ToolProfileInput = {
 		],
 		"recommendedHose": [
 			"dynabrade-58460-catalogue-d25-01"
+		],
+		"demandExplanation": [
+			"dynabrade-58460-catalogue-d25-01"
 		]
 	},
 	"notes": [
 		"Caractéristiques déclarées par le fabricant, sans essai physique par CompatAir.",
 		"La compatibilité calculée concerne l’alimentation en air. Le choix des abrasifs, carters et équipements de protection relève de la notice de l’outil."
-	]
+	],
+	"demandExplanation": "Le lien du catalogue historique renvoie actuellement à une page HTML de gamme. Les cellules techniques de cette référence ne sont pas requalifiées par cette réponse ; aucun besoin d’air dimensionnant n’est conservé."
 };
 
 export default product;

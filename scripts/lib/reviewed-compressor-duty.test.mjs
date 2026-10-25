@@ -13,7 +13,7 @@ describe('reviewed continuous-duty evidence', () => {
    const product = compressors.find(item => item.id === row.id);
    expect(product, row.id).toMatchObject({ brand: row.brand, model: row.model, mpn: row.mpn });
    const source = reviewed.sources.find(item => item.id === row.sourceId);
-   if (['abac-formula-e-11-13-400-50', 'abac-formula-e-11-8-400-50', 'abac-formula-e-5-5-10-400-50', 'abac-formula-e-5-5-8-400-50', 'abac-formula-e-7-5-10-400-50'].includes(row.id)) {
+   if (['abac-formula-e-11-13-400-50', 'abac-formula-e-11-8-400-50', 'abac-formula-e-5-5-10-400-50', 'abac-formula-e-5-5-8-400-50', 'abac-formula-e-7-5-10-400-50', 'abac-formula-e-7-5-13-400-50'].includes(row.id)) {
     expect(product.dutyCycle).toBeUndefined();
     expect(product.fieldSources.dutyCycle).toBeUndefined();
     expect(product.editorial.limitations.join(' ')).toContain(row.id !== 'abac-formula-e-11-13-400-50' ? 'taux de marche du groupe complet reste à confirmer' : 'jusqu’à 100 %');

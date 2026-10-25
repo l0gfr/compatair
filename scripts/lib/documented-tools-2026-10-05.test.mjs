@@ -27,6 +27,7 @@ async function repinned(copy) {
  code = code.replace("'./reviewed-catalog-amendments-2026-10-19.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-19.mjs', import.meta.url).href));
  code = code.replace("'./reviewed-catalog-amendments-2026-10-20.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-20.mjs', import.meta.url).href));
  code = code.replace("'./reviewed-catalog-amendments-2026-10-21.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-21.mjs', import.meta.url).href));
+ code = code.replace("'./reviewed-catalog-amendments-2026-10-25.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-25.mjs', import.meta.url).href));
  for (const [name, records] of [
   ['approvedSources', copy.sources.map(source => ({ id: source.id, reviewedSourceSha256: digest(source) }))],
   ['approvedRows', copy.tools.map(row => ({ documentRowId: row.documentRowId, reviewedRowSha256: digest(row) }))],

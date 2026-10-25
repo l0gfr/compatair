@@ -81,14 +81,13 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Chicago Pneumatic CPI100, 60 Hz, 8,6 bar. 12 950 L/min à 8 bar. Moteur 75 kW ; STD, groupe fixe au sol, sans sécheur ; vitesse fixe.",
+		"overview": "Ce CPI 100 est la version fixe STD à 60 Hz, sans sécheur ni cuve intégrés. Son point fabricant est de 777 m³/h à 8 bar, soit 12 950 L/min, pour un maximum de 8,6 bar. La version 10,3 bar du même tableau fournit 704 m³/h à 9,5 bar, soit environ 11 733,3 L/min. Le besoin de pression du réseau départage ces deux versions ; leurs débits sont mesurés à des pressions différentes. Vérifier l’alimentation et la disponibilité de cette configuration 60 Hz avant de l’intégrer à une installation française. La fiche conserve exclusivement les performances de cette fréquence.",
 		"verifiedFacts": [
 			"Débit restitué relié à une pression et aux unités originales de la fiche fabricant.",
 			"Périmètre retenu : groupe seul ; réservoir de stockage externe exclu.",
 			"Limite de pression documentée : 8,6 bar ; le point FAD conserve sa pression publiée."
 		],
 		"limitations": [
-			"Page 7, Pression FAD supérieure au maximum de cette configuration ; exclue sans inversion ni correction.",
 			"Cette entrée correspond à une configuration constructeur de pression maximale ; aucun nouveau produit n’est créé à partir d’un simple point de test.",
 			"Cycle de service non établi par les sources retenues ; la tenue permanente reste indéterminée.",
 			"Documentation à 60 Hz ; elle ne démontre pas les performances de la version 50 Hz. Alimentation et marché local à confirmer avant achat.",
@@ -135,6 +134,12 @@ const product: CompressorInput = {
 			"october2b-cp-big-oil-p3"
 		],
 		"weightKg": [
+			"october2b-cp-cpi-cpm75-120-p7"
+		],
+		"editorial": [
+			"october2b-cp-cpi-cpm75-120-p7"
+		],
+		"specifications": [
 			"october2b-cp-cpi-cpm75-120-p7"
 		]
 	},

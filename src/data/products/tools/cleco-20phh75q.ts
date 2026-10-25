@@ -23,18 +23,15 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Cleco 20PHH75Q, référence 20PHH75Q. Le tableau fabricant publie 400 L/min et une plage d’utilisation de 6 à 6 bar. Plage de couple publiée : 10 à 20 Nm. Vitesse à vide publiée : 7500 tr/min.",
+		"overview": "20PHH75Q : clé à impulsions sans arrêt automatique, 10 à 20 Nm et 7 500 tr/min. À 6 bar, Cleco distingue 400 L/min à vide et 300 L/min en charge. La 20PTHH40Q avec arrêt automatique annonce aussi 300 L/min en charge, mais seulement 150 L/min à vide et 4 000 tr/min.",
 		"verifiedFacts": [
-			"Performances publiées à 6 bar à l’entrée de l’outil, note de la page 86.",
-			"Le tableau distingue 400 L/min à vide et 300 L/min en charge à 6 bar. Le calcul conserve la plus élevée des deux valeurs publiées (400 L/min), sans cycle de travail supposé.",
-			"Référence fabricant : 20PHH75Q.",
-			"Plage de couple publiée : 10 à 20 Nm.",
-			"Vitesse à vide publiée : 7500 tr/min.",
-			"Consommation à vide publiée : 400.0 L/min."
+			"20PHH75Q sans coupure et 20PTHH40Q avec coupure : même plage 10–20 Nm, mais 7 500 contre 4 000 tr/min. À 6 bar, la PHH annonce 400 L/min à vide et 300 en charge ; la PTHH 150 à vide et 300 en charge.",
+			"La consommation retenue est publiée à vide ; elle ne décrit pas la demande en charge."
 		],
 		"limitations": [
-			"Données de catalogue industriel, sans essai physique CompatAir. Disponibilité et révision livrée à confirmer avec le fournisseur.",
-			"Source : catalogue GI-1250-EU, édition archivée du fabricant. Vérifier la référence et la notice de la révision effectivement livrée."
+			"La consommation de référence de 400 L/min décrit le fonctionnement à vide, pas le fonctionnement en charge.",
+			"400 est la plus élevée des deux valeurs publiées, pas un maximum fabricant couvrant tout régime. Le moteur ne représente pas les deux états dans un même profil.",
+			"Les 300 L/min en charge restent publiés comme point distinct ; la réserve à vide est un choix conservateur du profil actuel, pas l’affirmation que la source ne donne aucune valeur en charge."
 		]
 	},
 	"specifications": [
@@ -111,6 +108,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Le tableau distingue 400 L/min à vide et 300 L/min en charge à 6 bar. Le calcul conserve la plus élevée des deux valeurs publiées (400 L/min), sans cycle de travail supposé."
+		},
+		{
+			"id": "review-20261025-cleco-20phh75q-s031",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=86",
+			"sourceLabel": "Relecture fabricant du 25 octobre 2026, s031, pages PDF 86",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Relecture des octets complets récupérés le 2026-10-25T07:20:28.474428+00:00, SHA-256 8668d5e77a6b2469dc9b9012841e65bbfb947234a8087faa6fdd90384b3babac. 20PHH75Q sans coupure et 20PTHH40Q avec coupure : même plage 10–20 Nm, mais 7 500 contre 4 000 tr/min. À 6 bar, la PHH annonce 400 L/min à vide et 300 en charge ; la PTHH 150 à vide et 300 en charge. Limite : Le profil actuel utilise 400 L/min à vide sans airflowBasis : ajouter free-speed."
 		}
 	],
 	"fieldSources": {
@@ -121,16 +128,32 @@ const product: ToolProfileInput = {
 			"cleco-20phh75q-20260926"
 		],
 		"airflowLpm": [
-			"cleco-20phh75q-20260926"
+			"cleco-20phh75q-20260926",
+			"review-20261025-cleco-20phh75q-s031"
+		],
+		"airflowBasis": [
+			"review-20261025-cleco-20phh75q-s031"
+		],
+		"connectorSize": [
+			"review-20261025-cleco-20phh75q-s031"
+		],
+		"recommendedHose": [
+			"review-20261025-cleco-20phh75q-s031"
 		]
 	},
 	"notes": [
-		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+		"Données déclarées par le fabricant ; aucune mesure physique CompatAir.",
+		"Relecture proposée du 25 octobre 2026 : Le profil actuel utilise 400 L/min à vide sans airflowBasis : ajouter free-speed."
 	],
 	"airflowLpm": {
 		"min": 400,
 		"typical": 400,
 		"max": 400
+	},
+	"airflowBasis": "free-speed",
+	"connectorSize": "1/4\" NPT",
+	"recommendedHose": {
+		"innerDiameterMm": 9.525
 	}
 };
 

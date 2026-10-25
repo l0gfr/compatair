@@ -8,14 +8,9 @@ const product: CompressorInput = {
 	"mpn": "4152026242",
 	"tankLiters": 0,
 	"maxPressureBar": 10,
-	"fadCurve": [
-		{
-			"pressureBar": 10,
-			"litersPerMinute": 2100
-		}
-	],
+	"fadCurve": [],
 	"oilType": "oil",
-	"confidence": "A",
+	"confidence": "B",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/fiac-ax-203bd-dry-10-400-50-ce.webp",
@@ -24,26 +19,26 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "FIAC AX 203BD DRY 10 400/50 CE, référence 4152026242 : configuration sans cuve intégrée, pression maximale publiée de 10 bar. Le point documenté le plus élevé en pression fournit 2 100 L/min à 10 bar. Sans cuve intégrée. Version DRY avec sécheur intégré.",
+		"overview": "La référence FIAC 4152026242 est la version DRY de 15 kW, sans cuve intégrée, annoncée pour un maximum de 10 bar. La fiche web publie 2 100 L/min ; le catalogue AIRBLOK donne 2 110 L/min pour ce même code. La version 4152026243 est annoncée pour 13 bar et 1 690 L/min. Ces débits ne sont pas associés explicitement à une pression de mesure dans les blocs lus : ils ne constituent pas ici une courbe FAD utilisable pour dimensionner un poste.",
 		"verifiedFacts": [
-			"Débit restitué publié : 2 100 L/min à 10 bar.",
+			"Débits publiés non qualifiés pour le calcul :2100 L/min sur le web,2110 L/min au catalogue ; pression de mesure non établie.",
 			"Compresseur rotatif à vis lubrifié à vitesse fixe. Puissance moteur publiée : 15 kW.",
 			"Masse nette publiée : 297 kg.",
 			"Alimentation publiée : 400 V, 50 Hz, triphasée."
 		],
 		"limitations": [
-			"Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
-			"La référence commande prime sur le nom commercial : le catalogue utilise AIRBLOK et la fiche en ligne le code AX.",
-			"Les puissances arrondies peuvent différer entre le catalogue PDF et la fiche actuelle. Les valeurs de cette fiche proviennent exclusivement de la fiche individuelle consultée."
+			"Écart entre sources primaires conservé : 2 100 L/min sur le web, 2 110 L/min au catalogue. Aucune valeur n’est choisie arbitrairement.",
+			"Le maximum de 10 bar décrit la version ; il ne documente pas la pression d’essai du FAD. La courbe de calcul reste vide.",
+			"Le code de commande identifie la configuration malgré les appellations AX et AIRBLOK. Le taux de marche et la disponibilité restent à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Conditions du débit",
-			"value": "La fiche individuelle 4152026242 publie un FAD de 2100 L/min pour cette version de 10 bar. Débit restitué fabricant, pas débit aspiré.",
+			"label": "Débits publiés et conflit documentaire",
+			"value": "Code 4152026242 :2100 L/min web contre 2110 L/min cataloguep 35. Maximum 10 bar distinct ; aucun point de mesure FAD n’est retenu.",
 			"evidenceIds": [
-				"fiac-4152026242-20260926"
+				"review-20261025-s027",
+				"review-20261025-s028-p35"
 			]
 		},
 		{
@@ -58,6 +53,15 @@ const product: CompressorInput = {
 			"value": "1065 × 615 × 1070 mm (L × l × H)",
 			"evidenceIds": [
 				"fiac-4152026242-20260926"
+			]
+		},
+		{
+			"label": "Comparaison documentée et limite de choix",
+			"value": "Éviter de sélectionner une version 10 bar pour un débit de calcul issu d’une association implicite ; distinguer les codes 4152026242 et 4152026243.",
+			"evidenceIds": [
+				"review-20261025-s027",
+				"review-20261025-s028-p35",
+				"review-20261025-s029"
 			]
 		}
 	],
@@ -79,6 +83,36 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Mode lubrifié documenté par les huiles prévues pour cette famille."
+		},
+		{
+			"id": "review-20261025-s027",
+			"sourceUrl": "https://shop.fiac.it/en-IT/products/4152026242/ax-203bd-dry-10-40050-ce",
+			"sourceLabel": "FIAC, relecture primaire du 25 octobre 2026, s027",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps vérifié SHA-256 26826c9b338b56ddeb7ea30e9f76881ee96af368fcbe9ee7b80b7138cf4cf623. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review-20261025-s028-p35",
+			"sourceUrl": "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf#page=35",
+			"sourceLabel": "FIAC, relecture primaire du 25 octobre 2026, s028, page PDF 35",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps vérifié SHA-256 55421a11ceb9c201bd873f1d0e4596ea6682b7fd68fc5e03e0c380ddf879ac85. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review-20261025-s029",
+			"sourceUrl": "https://shop.fiac.it/en-IT/products/4152026243/ax-203bd-dry-13-40050-ce",
+			"sourceLabel": "FIAC, relecture primaire du 25 octobre 2026, s029",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps vérifié SHA-256 a60b25d18496e4d9a1db8ec68fe5698a890cab94d4b1dbb2ce0bc039f7bd1ec3. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -89,9 +123,6 @@ const product: CompressorInput = {
 			"fiac-4152026242-20260926"
 		],
 		"maxPressureBar": [
-			"fiac-4152026242-20260926"
-		],
-		"fadCurve": [
 			"fiac-4152026242-20260926"
 		],
 		"oilType": [
@@ -108,6 +139,11 @@ const product: CompressorInput = {
 		],
 		"phase": [
 			"fiac-4152026242-20260926"
+		],
+		"fadCurve": [
+			"review-20261025-s027",
+			"review-20261025-s028-p35",
+			"review-20261025-s029"
 		]
 	},
 	"notes": [

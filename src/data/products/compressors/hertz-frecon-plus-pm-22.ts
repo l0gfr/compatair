@@ -68,10 +68,17 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october4-hertz-catalog-p20"
 			]
+		},
+		{
+			"label": "Plages FAD à 13 bar, minimum et maximum",
+			"value": "PM 22 : 920–2 650 L/min ; PM 18 : 660–2 390 L/min. Le profil PM 22 retient le minimum ; le profil PM 18 retient le maximum.",
+			"evidenceIds": [
+				"october4-hertz-catalog-p20"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "Hertz FRECON PLUS PM 22. 920 L/min déclarés à 13 bar. Base Mounted, stockage d’air externe.",
+		"overview": "À 13 bar, le FRECON PLUS PM 22 couvre une plage fabricant de 920 à 2 650 L/min ; le PM 18 couvre 660 à 2 390 L/min à cette même pression. Le PM 22 augmente les deux bornes de la plage publiée. Le profil de calcul de cette fiche retient sa borne minimale de 920 L/min, tandis que le profil PM 18 retient 2 390 L/min, sa borne maximale : comparer ces seules valeurs mélangerait deux régimes de fonctionnement. Utiliser les deux plages pour examiner la demande de l’atelier. Cette version Base Mounted demande un stockage externe ; le montage Tank + Dryer est distinct.",
 		"verifiedFacts": [
 			"Configuration de pression documentée : 13 bar.",
 			"Montage sans réservoir de stockage intégré explicitement documenté.",
@@ -129,6 +136,12 @@ const product: CompressorInput = {
 		],
 		"oilType": [
 			"october4-hertz-catalog-p17"
+		],
+		"editorial": [
+			"october4-hertz-catalog-p20"
+		],
+		"specifications": [
+			"october4-hertz-catalog-p20"
 		]
 	},
 	"notes": [

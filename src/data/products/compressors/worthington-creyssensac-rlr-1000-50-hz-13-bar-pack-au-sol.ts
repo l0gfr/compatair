@@ -73,7 +73,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Worthington Creyssensac RLR 1000, Pack au sol, 13 bar. 883,333 L/min à 12,5 bar.",
+		"overview": "Le RLR 1000 Pack au sol à 50 Hz et 13 bar intéresse un atelier qui dimensionne séparément son stockage et son traitement d’air. La ligne fabricant publie 53 m³/h à 12,5 bar, soit environ 883,3 L/min, pour les montages Pack et Full Feature sur cuve. Le Full Feature de 500 L ajoute un réservoir et un sécheur ; la production reste celle de la ligne commune. Le catalogue donne 1 210 × 665 × 1 045 mm pour le montage au sol, contre 1 940 × 665 × 1 665 mm pour le 500 L avec sécheur. Ces différences d’équipement et d’implantation déterminent le choix.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Configuration de stockage documentée : groupe au sol sans réservoir de stockage intégré.",
@@ -122,6 +122,12 @@ const product: CompressorInput = {
 		],
 		"oilType": [
 			"october3c-worthington-rollair750-2000-p1"
+		],
+		"editorial": [
+			"october3c-worthington-rollair750-2000-p6"
+		],
+		"specifications": [
+			"october3c-worthington-rollair750-2000-p6"
 		]
 	},
 	"notes": [

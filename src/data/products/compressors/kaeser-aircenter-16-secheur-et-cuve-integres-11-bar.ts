@@ -22,7 +22,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 1360
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "unknown",
 	"powerKw": 9,
 	"weightKg": 440,
@@ -63,19 +62,28 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october-b-kaeser-sm-p8"
 			]
+		},
+		{
+			"label": "Comparaison documentée et limite de choix",
+			"value": "Séparer pression de service/maximum et versions de pression, puis éviter une garantie de service continu dérivée du sécheur ou du marketing général.",
+			"evidenceIds": [
+				"review-20261025-s089-p7",
+				"review-20261025-s089-p8",
+				"review-20261025-s090"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "KAESER AIRCENTER 16, sécheur et cuve intégrés, 11 bar. Débit restitué déclaré : 1 360 L/min à 10 bar. Puissance moteur : 9 kW ; masse : 440 kg.",
+		"overview": "L’AIRCENTER 16 avec cuve 270 L et sécheur publie 1,36 m³/min à 10 bar, avec un maximum de 11 bar. La version à maximum 15 bar annonce 1,09 m³/min à 13 bar ; les deux lignes donnent 9 kW et 440 kg. Le choix d’une plage de pression supérieure ne conserve donc pas le débit 1,36 m³/min. Ces lignes décrivent des configurations distinctes, et non deux points d’une courbe unique.",
 		"verifiedFacts": [
 			"FAD et pression de référence associés à la configuration exacte du tableau fabricant.",
 			"Cuve intégrée : 270 L ; le volume d’un réservoir externe n’est pas supposé.",
-			"Fonctionnement continu prévu dans la documentation de la série, sous les conditions d’installation et d’entretien du fabricant."
+			"Taux de marche du groupe AIRCENTER 16 non qualifié dans les passages retenus."
 		],
 		"limitations": [
-			"Un seul point FAD publié pour cette configuration de pression ; aucune extrapolation vers une pression supérieure.",
-			"Version du catalogue identifiée, sans numéro d’article artificiel. La disponibilité, la tension électrique et les options livrées doivent être confirmées sur le devis.",
-			"Le fluide de refroidissement ne suffit pas à établir le type de lubrification ; aucune qualité d’air garantie."
+			"Le débit 1,36 m³/min est mesuré à 10 bar pour le groupe complet selon ISO 1217, annexesC/E ; le maximum 11 bar ne remplace pas la pression de mesure.",
+			"La commande en modecontinu et la phrase relative au fonctionnement continu du sécheur ne constituent pas un taux de marche 100 % qualifié pour l’AIRCENTER 16 complet. La page générale cite notammentSX/SM/SK sans qualification exacte de cette station.",
+			"Le taux de marche reste non documenté pour le calcul. Aucun FAD n’est extrapolé au-delà du point publié ; alimentation et équipements du devis restent à vérifier."
 		]
 	},
 	"evidence": [
@@ -98,6 +106,36 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 3f5687777a06c60ed4f3918036cfb4edab945e750016d89b42305f3a2bc6b9fe. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review-20261025-s089-p7",
+			"sourceUrl": "https://nl.kaeser.com/download.ashx?id=tcm:32-5920#page=7",
+			"sourceLabel": "KAESER, relecture primaire du 25 octobre 2026, s089, page PDF 7",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps vérifié SHA-256 7c4b96a5fb4ea4fb206655af4138d8a90096a61661823528c5f6bf282d66a6d5. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review-20261025-s089-p8",
+			"sourceUrl": "https://nl.kaeser.com/download.ashx?id=tcm:32-5920#page=8",
+			"sourceLabel": "KAESER, relecture primaire du 25 octobre 2026, s089, page PDF 8",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps vérifié SHA-256 7c4b96a5fb4ea4fb206655af4138d8a90096a61661823528c5f6bf282d66a6d5. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review-20261025-s090",
+			"sourceUrl": "https://us.kaeser.com/compressed-air-resources/applications/automotive-services/",
+			"sourceLabel": "KAESER, relecture primaire du 25 octobre 2026, s090",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps vérifié SHA-256 48aa3c93eb7964f8930dc04e033190429df94b6ce68eff9126d840c73208506a. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -115,9 +153,6 @@ const product: CompressorInput = {
 		],
 		"weightKg": [
 			"october-b-kaeser-sm-p8"
-		],
-		"dutyCycle": [
-			"october-b-kaeser-duty"
 		]
 	},
 	"notes": [

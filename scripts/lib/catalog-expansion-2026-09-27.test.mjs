@@ -1,3 +1,4 @@
+import { applyReviewedOctober25Amendment } from './reviewed-catalog-amendments-2026-10-25.mjs';
 import { applyReviewedAircraftSourceRepair } from './reviewed-aircraft-sources-2026-10-23.mjs';
 import { readFileSync } from 'node:fs';
 import { describe, it, expect } from 'vitest';
@@ -36,7 +37,7 @@ const withEarlierReviewedSources = product => {
  for (const fragment of repair.overviewRemovals ?? []) updated.editorial.overview = updated.editorial.overview.replace(fragment, '');
  return updated;
 };
-const withReviewedSources = product => applyReviewedAircraftSourceRepair(withEarlierReviewedSources(product));
+const withReviewedSources = product => product.id === 'aircraft-airboy-kitt-90' ? applyReviewedOctober25Amendment(applyReviewedAircraftSourceRepair(withEarlierReviewedSources(product))) : applyReviewedAircraftSourceRepair(withEarlierReviewedSources(product));
 const mutate = (kind, brand, patch) => {
  const data = structuredClone(snapshots);
  const row = data[kind].rows.find(r => r.brand === brand);

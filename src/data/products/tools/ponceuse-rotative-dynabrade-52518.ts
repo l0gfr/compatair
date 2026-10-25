@@ -20,16 +20,9 @@ const product: ToolProfileInput = {
 			"Hauteur": "98 mm"
 		}
 	},
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.2,
-		"typical": 6.2,
-		"max": 6.2
-	},
-	"airflowLpm": {
-		"min": 934,
-		"typical": 934,
-		"max": 934
+		"typical": 6.2
 	},
 	"usagePattern": "continuous",
 	"confidence": "A",
@@ -44,7 +37,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Dynabrade D25.01"
 	},
 	"editorial": {
-		"overview": "52518 : ponceuse d’angle à sortie M14 × 2, 15 000 tr/min et carter fourni, sans plateau fourni. La 50570 voisine utilise un montage et une aspiration produits par l’échappement différents. Les maxima publiés à 6,2 bar sont de 934 et 595 L/min. Le carter, le plateau à commander et la vitesse admissible du disque doivent être validés ensemble avant la capacité du compresseur.",
+		"overview": "Le relevé historique du 52518 est conservé dans les spécifications. Le lien constructeur utilisé à l’import répond désormais avec un portail HTML, sans livrer le catalogue et le tableau de mesure attendus. La consommation n’est donc plus utilisée pour le dimensionnement.",
 		"verifiedFacts": [
 			"Puissance moteur : 410 W.",
 			"Vitesse moteur publiée : 15 000 tr/min.",
@@ -56,10 +49,10 @@ const product: ToolProfileInput = {
 		"limitations": [
 			"La 52515 de la même page utilise 5/8-11 et comprend un plateau ; ces pièces ne sont pas transférées à la 52518 par analogie de famille. Aucune efficacité de captage n’est déduite du nom de gamme.",
 			"Masse non retenue : le tableau publie des unités contradictoires (1.9 (0.8)).",
-			"Le calcul conserve la consommation maximale publiée, sans la réduire selon un cycle de travail supposé. Cette valeur ne constitue pas une mesure de débit réalisée par CompatAir.",
 			"Le catalogue ne fournit pas de courbe de consommation selon la pression pour cette référence. Vérifier la pression dynamique à l’entrée de l’outil pendant son fonctionnement.",
 			"Le diamètre intérieur publié ne suffit pas à valider un réseau : la longueur, les raccords et les pertes de pression restent à contrôler.",
-			"Cette fiche repose sur l’édition D25.01 du catalogue international. Elle ne prouve ni la disponibilité actuelle en France ni l’équipement exact livré par un vendeur."
+			"Cette fiche repose sur l’édition D25.01 du catalogue international. Elle ne prouve ni la disponibilité actuelle en France ni l’équipement exact livré par un vendeur.",
+			"Le lien primaire actuel ne délivre plus le catalogue cité. Les valeurs historiques restent documentaires, sans calcul de compatibilité tant que les cellules de la référence ne sont pas relues."
 		]
 	},
 	"specifications": [
@@ -94,6 +87,13 @@ const product: ToolProfileInput = {
 		{
 			"label": "Hauteur",
 			"value": "98 mm",
+			"evidenceIds": [
+				"dynabrade-52518-catalogue-d25-01"
+			]
+		},
+		{
+			"label": "Consommation historique à requalifier, hors calcul",
+			"value": "934 L/min ; pression historique 6,2 bar",
 			"evidenceIds": [
 				"dynabrade-52518-catalogue-d25-01"
 			]
@@ -141,9 +141,6 @@ const product: ToolProfileInput = {
 		"mpn": [
 			"dynabrade-52518-catalogue-d25-01"
 		],
-		"airflowLpm": [
-			"dynabrade-52518-catalogue-d25-01"
-		],
 		"workingPressureBar": [
 			"dynabrade-52518-catalogue-d25-01"
 		],
@@ -152,12 +149,16 @@ const product: ToolProfileInput = {
 		],
 		"recommendedHose": [
 			"dynabrade-52518-catalogue-d25-01"
+		],
+		"demandExplanation": [
+			"dynabrade-52518-catalogue-d25-01"
 		]
 	},
 	"notes": [
 		"Caractéristiques déclarées par le fabricant, sans essai physique par CompatAir.",
 		"La compatibilité calculée concerne l’alimentation en air. Le choix des abrasifs, carters et équipements de protection relève de la notice de l’outil."
-	]
+	],
+	"demandExplanation": "Le lien du catalogue historique renvoie actuellement à une page HTML de gamme. Les cellules techniques de cette référence ne sont pas requalifiées par cette réponse ; aucun besoin d’air dimensionnant n’est conservé."
 };
 
 export default product;

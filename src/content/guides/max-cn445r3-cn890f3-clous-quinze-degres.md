@@ -3,6 +3,7 @@ title: "MAX CN445R3 ou CN890F3 : l’angle de 15° ne suffit pas pour choisir le
 seoTitle: "MAX CN445R3 ou CN890F3 : quels clous de 15° ?"
 description: "Les deux cloueurs utilisent des rouleaux à 15°, mais les têtes et longueurs diffèrent. Vérifiez la colonne du manuel avant d’acheter les consommables."
 pubDate: 2026-10-02
+updatedDate: 2026-10-25
 category: Choisir
 audiences: ["professionnel"]
 metiers: ["btp-chantier", "menuiserie-agencement"]
@@ -19,14 +20,14 @@ Deux rouleaux de clous à 15 degrés ne sont pas nécessairement destinés au m�
 
 ## Garder la colonne du cloueur exact
 
-Le manuel indique pour la [CN445R3](/outils-pneumatiques/agrafeuse-cloueuse-max-cn445r3/) des clous assemblés par fil à **15 degrés**, avec une longueur de **19 à 45 mm**, un diamètre de tige de **3,0 mm** et un diamètre de tête de **10,5 mm**. Pour la [CN890F3](/outils-pneumatiques/agrafeuse-cloueuse-max-cn890f3/), il indique également un assemblage par fil à **15 degrés**, mais une longueur de **50 à 90 mm**, des diamètres de tige de **2,5 à 3,3 mm** et des têtes de **6,5 à 7,1 mm**. [Manuel fabricant, page PDF 5](https://www.maxusacorp.com/wp-content/uploads/%E3%80%90%E5%AE%8C%E6%88%90%E7%89%88%E3%80%91_CN890F_5L_c6_250822_MAX.pdf#page=5).
+Le manuel indique pour la [CN445R3](/outils-pneumatiques/agrafeuse-cloueuse-max-cn445r3/) des clous assemblés par fil à **15 degrés**, avec une longueur de **19 à 45 mm**, un diamètre de tige de **3,0 mm** et un diamètre de tête de **10,5 mm**. Pour la [CN890F3](/outils-pneumatiques/agrafeuse-cloueuse-max-cn890f3/), il indique également un assemblage par fil à **15 degrés**, mais une longueur de **50 à 90 mm**, des diamètres de tige de **2,5 à 3,3 mm** et des têtes de **6,5 à 7,7 mm**. [Manuel fabricant, page PDF 5](https://www.maxusacorp.com/wp-content/uploads/%E3%80%90%E5%AE%8C%E6%88%90%E7%89%88%E3%80%91_CN890F_5L_c6_250822_MAX.pdf#page=5).
 
 Ces plages et cotes appartiennent à deux colonnes distinctes. Aucun consommable n’est déclaré interchangeable dans cette analyse. La présence d’une mention « 15° » sur un carton ne résout ni la longueur, ni le diamètre de tige, ni la géométrie de tête.
 
 <figure class="article-infographic article-infographic--compact">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 259" role="img" aria-labelledby="max-clous-title max-clous-desc">
 <title id="max-clous-title">Deux colonnes de consommables dans le manuel</title><desc id="max-clous-desc">Cotes métriques imprimées dans le manuel. Elles ne constituent pas une liste de références commerciales de clous.</desc><rect width="440" height="259" rx="14" fill="#073d2b"/>
-<g font-family="system-ui,sans-serif" font-size="16"><text x="24" y="32" fill="#d3eb56">CN445R3</text><text x="24" y="56" fill="#eef2e9">19–45 mm ; tête de 10,5 mm</text><text x="24" y="89" fill="#d3eb56">CN890F3</text><text x="24" y="113" fill="#eef2e9">50–90 mm ; têtes de 6,5–7,1 mm</text><text x="24" y="146" fill="#d3eb56">Caractéristique commune</text><text x="24" y="170" fill="#eef2e9">Rouleau à 15°, assemblage par fil</text></g></svg>
+<g font-family="system-ui,sans-serif" font-size="16"><text x="24" y="32" fill="#d3eb56">CN445R3</text><text x="24" y="56" fill="#eef2e9">19–45 mm ; tête de 10,5 mm</text><text x="24" y="89" fill="#d3eb56">CN890F3</text><text x="24" y="113" fill="#eef2e9">50–90 mm ; têtes de 6,5–7,7 mm</text><text x="24" y="146" fill="#d3eb56">Caractéristique commune</text><text x="24" y="170" fill="#eef2e9">Rouleau à 15°, assemblage par fil</text></g></svg>
 <figcaption>Cotes métriques imprimées dans le manuel. Elles ne constituent pas une liste de références commerciales de clous.</figcaption>
 </figure>
 

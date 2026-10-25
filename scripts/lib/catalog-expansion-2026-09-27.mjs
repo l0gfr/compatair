@@ -1,3 +1,4 @@
+import { applyReviewedOctober25Amendment } from './reviewed-catalog-amendments-2026-10-25.mjs';
 import { applyReviewedOctober21Amendment } from './reviewed-catalog-amendments-2026-10-21.mjs';
 import { applyReviewedOctober20Amendment } from './reviewed-catalog-amendments-2026-10-20.mjs';
 import { readFileSync } from 'node:fs';
@@ -130,5 +131,7 @@ export function buildCatalogExpansion(compressorSnapshot, toolSnapshot) {
  const products = [...compressors, ...tools];
  const normalize = s => s.normalize('NFKD').replaceAll(/\p{Diacritic}/gu, '').toLowerCase().replaceAll(/[^a-z0-9]/g, '');
  for (const key of [p => p.id, p => `${normalize(p.brand)}:${normalize(p.mpn)}`, p => `${normalize(p.brand)}:${normalize(p.model)}`]) if (new Set(products.map(key)).size !== 700) throw new Error('Référence en double');
- return { compressors: compressors.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(reviewedAirboySource).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment), tools: tools.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment) };
+ // KITT's October25 fields follow its separately versioned October1/23 source
+ // repairs; replay that source-repair pipeline before the exact amendment.
+ return { compressors: compressors.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(reviewedAirboySource).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment).map(p => p.id === 'aircraft-airboy-kitt-90' ? p : applyReviewedOctober25Amendment(p)), tools: tools.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment).map(applyReviewedOctober25Amendment) };
 }

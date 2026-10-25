@@ -19,7 +19,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Nuair B2800/50 CM2, référence 28DC404NUB010 : cuve de 50 L, pression maximale publiée de 10 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Groupe de compression publié : B2800. Groupe de compression : B2800. Nombre de cylindres : 2.",
+		"overview": "Le B2800/50 CM2, code 28DC404NUB010, réunit une cuve de 50 L et une alimentation de 230 V à 50 Hz. Le B2800/30 CT2 voisin, code 28CC441NUB032, possède 30 L et demande du 400 V à 50 Hz. Le choix porte donc sur la réserve d’air et l’alimentation disponible dans l’atelier ; les deux lignes indiquent le même groupe B2800 de 1,5 kW, 255 L/min aspirés et 10 bar au maximum. Le débit restitué sous pression reste à documenter avant de dimensionner un outil. Les 50 kg et les dimensions du tableau décrivent l’emballage du CM2.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons. Puissance moteur publiée : 1,5 kW.",
@@ -96,6 +96,15 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Le tableau Nuair Professional, catalogue 2022 indique « Air displacement » : 255 L/min aspirés. Aucun débit restitué à une pression de mesure n’est fourni dans cette ligne."
+		},
+		{
+			"id": "nuair-28cc441nub032-20260927",
+			"sourceUrl": "https://www.nuair.pl/images/katalogi/Catalogo_Nuair_Professional_2022_9990284_PL.pdf#page=12",
+			"sourceLabel": "Nuair Professional, catalogue 2022, p. 12, réf. 28CC441NUB032",
+			"sourceType": "manufacturer",
+			"retrievedAt": "2026-09-27",
+			"confidence": "A",
+			"notes": "Le tableau Nuair Professional, catalogue 2022 indique « Air displacement » : 255 L/min aspirés. Aucun débit restitué à une pression de mesure n’est fourni dans cette ligne."
 		}
 	],
 	"fieldSources": {
@@ -121,6 +130,12 @@ const product: CompressorInput = {
 			"nuair-28dc404nub010-20260927"
 		],
 		"voltage": [
+			"nuair-28dc404nub010-20260927"
+		],
+		"editorial": [
+			"nuair-28dc404nub010-20260927"
+		],
+		"specifications": [
 			"nuair-28dc404nub010-20260927"
 		]
 	},

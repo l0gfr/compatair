@@ -9,11 +9,9 @@ const product: ToolProfileInput = {
 	"categoryId": "ponceuse-rotative",
 	"category": "ponceuse-rotative",
 	"label": "Shinano SI-2210",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
-		"max": 6.3
+		"typical": 6.3
 	},
 	"confidence": "B",
 	"image": {
@@ -23,27 +21,22 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-2210, référence SI-2210. Le tableau fabricant publie 660 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Plateau nominal 75 mm ; broche 7/16-20 UNF. Vitesse à vide publiée : 19000 tr/min.",
+		"overview": "SI-2210 : ponceuse rotative à disque de 75 mm et broche 7/16-20 UNF, 475 W et 19 000 tr/min. La SI-2201-2 de 50 mm utilise une broche 1/4-20 UNC et annonce 17 000 tr/min. Les deux dimensions de plateau et les filetages doivent rester distincts dans le choix des accessoires.",
 		"verifiedFacts": [
-			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
-			"Consommation maximale, colonne Max Air Consumption : 23.4 CFM / 11 L/s, soit 660 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
-			"Référence fabricant : SI-2210.",
-			"Version et équipement : Plateau nominal 75 mm ; broche 7/16-20 UNF.",
-			"Vitesse à vide publiée : 19000 tr/min.",
-			"Masse publiée : 0.99 kg."
+			"SI-2210 contre SI-2201-2 : plateaux 75 et 50 mm, broches 7/16-20 UNF et 1/4-20 UNC, vitesses 19 000 et 17 000 tr/min. Maxima publiés 11,0 et 7,1 L/s ; ces maxima n’ont pas de pression d’essai appariée.",
+			"La consommation ne constitue pas un point de dimensionnement tant que ses conditions de mesure ne sont pas établies."
 		],
 		"limitations": [
-			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
-			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"Le maximum de 11 L/s, soit 660 L/min, reste hors calcul faute de pression d’essai appariée.",
+			"La SI-2210 est décrite Single Action ; aucune orbite n’est inventée depuis la catégorie de son voisin."
 		]
 	},
 	"specifications": [
 		{
 			"label": "Condition de pression",
-			"value": "Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
+			"value": "Consigne générale : 0,63 MPa (6,3 bar) au fonctionnement. Elle ne démontre pas la pression de mesure de la consommation publiée.",
 			"evidenceIds": [
-				"shinano-si-2210-20260926-workingpressurebar-1"
+				"review-20261025-shinano-si-2210-s030"
 			]
 		},
 		{
@@ -73,6 +66,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"shinano-si-2210-20260926"
 			]
+		},
+		{
+			"label": "Consommation maximale publiée (pression de mesure non appariée)",
+			"value": "660 L/min",
+			"evidenceIds": [
+				"review-20261025-shinano-si-2210-s030"
+			]
 		}
 	],
 	"evidence": [
@@ -93,6 +93,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+		},
+		{
+			"id": "review-20261025-shinano-si-2210-s030",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=15",
+			"sourceLabel": "Relecture fabricant du 25 octobre 2026, s030, pages PDF 15, 43",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Relecture des octets complets récupérés le 2026-10-25T07:20:27.990842+00:00, SHA-256 03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b. SI-2210 contre SI-2201-2 : plateaux 75 et 50 mm, broches 7/16-20 UNF et 1/4-20 UNC, vitesses 19 000 et 17 000 tr/min. Maxima publiés 11,0 et 7,1 L/s ; ces maxima n’ont pas de pression d’essai appariée. Limite : Le maximum de 11 L/s, soit 660 L/min, reste hors calcul faute de pression d’essai appariée."
 		}
 	],
 	"fieldSources": {
@@ -100,20 +110,18 @@ const product: ToolProfileInput = {
 			"shinano-si-2210-20260926"
 		],
 		"workingPressureBar": [
-			"shinano-si-2210-20260926-workingpressurebar-1"
+			"shinano-si-2210-20260926-workingpressurebar-1",
+			"review-20261025-shinano-si-2210-s030"
 		],
-		"airflowLpm": [
-			"shinano-si-2210-20260926"
+		"demandExplanation": [
+			"review-20261025-shinano-si-2210-s030"
 		]
 	},
 	"notes": [
-		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+		"Données déclarées par le fabricant ; aucune mesure physique CompatAir.",
+		"Relecture proposée du 25 octobre 2026 : Le maximum de 11 L/s, soit 660 L/min, reste hors calcul faute de pression d’essai appariée."
 	],
-	"airflowLpm": {
-		"min": 660,
-		"typical": 660,
-		"max": 660
-	}
+	"demandExplanation": "Consommation maximale publiée de 660 L/min, sans pression de mesure explicitement appariée dans les passages lus. La consigne générale de service de 6,3 bar reste distincte de ce débit ; le profil exige un point de consommation et pression documenté avant de conclure."
 };
 
 export default product;

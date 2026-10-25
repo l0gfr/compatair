@@ -73,7 +73,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Atlas Copco G 18, Pack au sol, 7,5 bar. 3 126 L/min à 7 bar.",
+		"overview": "Pour ce G 18 Pack au sol à 50 Hz, le nom de variante 7,5 bar et la pression de mesure du FAD sont deux repères distincts. La note du catalogue fixe le débit de 52,1 L/s, soit 3 126 L/min, à 7 bar. La variante 13 bar publie 38,5 L/s, soit 2 310 L/min, à 12,5 bar. Le choix dépend de la pression requise par le réseau ; ces points caractérisent deux versions et deux conditions de mesure. Le Pack au sol se distingue des montages Full Feature et sur réservoir. Le taux de marche du groupe complet reste à établir pour conclure sur un usage permanent.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Configuration de stockage documentée : groupe au sol sans réservoir de stockage intégré.",
@@ -123,6 +123,12 @@ const product: CompressorInput = {
 		],
 		"oilType": [
 			"october3c-atlas-ga11-37-p1"
+		],
+		"editorial": [
+			"october3c-atlas-ga11-37-p10"
+		],
+		"specifications": [
+			"october3c-atlas-ga11-37-p10"
 		]
 	},
 	"notes": [

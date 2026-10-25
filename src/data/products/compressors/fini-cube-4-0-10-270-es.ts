@@ -85,20 +85,28 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4b-fini-cube-p3"
       ]
+    },
+    {
+      "label": "Comparaison documentée et limite de choix",
+      "value": "Distinguer les codes ES/ES Z et la finition sans inventer un gain de débit ou une durée de vie ; apport déjà couvert par le voisin actuel.",
+      "evidenceIds": [
+        "review-20261025-s117-p1",
+        "review-20261025-s117-p3"
+      ]
     }
   ],
   "editorial": {
-    "overview": "Fini CUBE 4.0-10-270 ES. 460 L/min déclarés à 9,5 bar. Configuration constructeur : Cuve 270 L peinte avec sécheur frigorifique intégré.",
+    "overview": "Le CUBE4.0-10-270 ES, code V91PD92FNM301, et l’ES Z, code V91PD92FNM501, publient tous deux 460 L/min à 9,5 bar avec 4 kW et une cuve 270 L. ES désigne le sécheur frigorifique intégré ; Z identifie la cuve galvanisée. La version ES conserve donc le même débit publié que l’ES Z ; la différence de finition ne documente ni gain de production d’air ni durée de vie chiffrée.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 10 bar.",
       "Cuve de stockage documentée : 270 L.",
       "FAD sous pression identifié séparément des valeurs d’aspiration : 460 L/min déclarés à 9,5 bar."
     ],
     "limitations": [
-      "FAD déclaré par le constructeur à la pression de mesure indiquée, distincte du plafond de fonctionnement.",
-      "La normalisation exclut les seules variantes de pression et de tension. Modèle et code fabricant retenus exacts.",
-      "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions."
+      "Le FAD est mesuré à 9,5 bar pour les versions 10 bar selon ISO 1217, avec aspiration 20 °C et pression atmosphérique 1 bar.",
+      "Le service continu concerne explicitement la gammeCUBE dans la brochure, sous les conditions constructeur ; ce n’est pas une simple classe moteur.",
+      "La comparaison ne justifie pas un avantage de corrosion, de maintenance ou de durée de vie qui ne serait pas documenté.",
+      "L’apport de choix ES/ES Z est déjà couvert par la fiche voisine ; cette reformulation ne suffit pas à démontrer une nouvelle intention utile."
     ]
   },
   "evidence": [
@@ -121,6 +129,26 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 270d2f554801e15883dd85b3f3b6089c641adf51dd59c15f31e0fd06c7b88e1a de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review-20261025-s117-p1",
+      "sourceUrl": "https://finicompressors.com/wp-content/uploads/Catalogo-Cube-Fini_EN_04-2024_9990397.pdf#page=1",
+      "sourceLabel": "Fini, relecture primaire du 25 octobre 2026, s117, page PDF 1",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-25",
+      "confidence": "B",
+      "notes": "Corps vérifié SHA-256 270d2f554801e15883dd85b3f3b6089c641adf51dd59c15f31e0fd06c7b88e1a. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review-20261025-s117-p3",
+      "sourceUrl": "https://finicompressors.com/wp-content/uploads/Catalogo-Cube-Fini_EN_04-2024_9990397.pdf#page=3",
+      "sourceLabel": "Fini, relecture primaire du 25 octobre 2026, s117, page PDF 3",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-25",
+      "confidence": "B",
+      "notes": "Corps vérifié SHA-256 270d2f554801e15883dd85b3f3b6089c641adf51dd59c15f31e0fd06c7b88e1a. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
     }
   ],
   "fieldSources": {

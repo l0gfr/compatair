@@ -85,20 +85,29 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october3d-mattei-pdf-11-p6"
 			]
+		},
+		{
+			"label": "Comparaison documentée et limite de choix",
+			"value": "Comparer 995/1370Lmin à 9,5 bar pour la même station 270 L+sécheur, sans fusion des versions 8/10 bar ou 50/60 Hz.",
+			"evidenceIds": [
+				"review-20261025-s111-p3",
+				"review-20261025-s111-p6",
+				"review-20261025-s111-p7"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "Mattei BLADE SE 8. 995 L/min à 9,5 bar. BLADE sur réservoir 270 L avec sécheur.",
+		"overview": "En 50 Hz, le BLADE SE 8 publie 995 L/min à 9,5 bar pour 7,5 kW, avec cuve 270 L et sécheur. Le BLADE SE 12 annonce 1370 L/min à la même pression pour 11 kW, avec le même volume de cuve et le même type de montage. Le passage au SE 12 répond donc à un besoin de débit plus élevé ; le SE 8 ne récupère pas cette capacité par un simple changement de réglage.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 270 L.",
 			"Plafond conservateur de la plage de fonctionnement : 10 bar."
 		],
 		"limitations": [
-			"Service continu déclaré dans les modes de commande décrits ; réglages et installation de la notice à respecter.",
-			"La version 10 bar est retenue ; FAD à9,5 bar, sans fusion avec 8 bar ou 60 Hz.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"Le point 995 L/min concerne la version 10 bar mesurée à 9,5 bar. La version 8 bar et les données 60 Hz ne sont pas ajoutées à sa courbe.",
+			"Le modecontinu décrit le fonctionnement du groupe avec sa régulation ; il ne signifie pas une livraison permanente du débit maximal indépendamment de la demande.",
+			"Le plafond 10 bar est celui de la configuration retenue. Refroidissement, alimentation et entretien restent soumis à la notice.",
+			"Données constructeur uniquement ; aucune extrapolation de FAD ni essai physique CompatAir."
 		]
 	},
 	"evidence": [
@@ -131,6 +140,36 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 af2f2664d3734e56f2b27b6dfb1d86a8b8d10b3491ab3f7813b72110cbb08e55 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review-20261025-s111-p3",
+			"sourceUrl": "https://cdn2.hubspot.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20BLADE/BLADE_8-12_EN_1.pdf#page=3",
+			"sourceLabel": "Mattei, relecture primaire du 25 octobre 2026, s111, page PDF 3",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps vérifié SHA-256 af2f2664d3734e56f2b27b6dfb1d86a8b8d10b3491ab3f7813b72110cbb08e55. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review-20261025-s111-p6",
+			"sourceUrl": "https://cdn2.hubspot.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20BLADE/BLADE_8-12_EN_1.pdf#page=6",
+			"sourceLabel": "Mattei, relecture primaire du 25 octobre 2026, s111, page PDF 6",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps vérifié SHA-256 af2f2664d3734e56f2b27b6dfb1d86a8b8d10b3491ab3f7813b72110cbb08e55. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review-20261025-s111-p7",
+			"sourceUrl": "https://cdn2.hubspot.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20BLADE/BLADE_8-12_EN_1.pdf#page=7",
+			"sourceLabel": "Mattei, relecture primaire du 25 octobre 2026, s111, page PDF 7",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Corps vérifié SHA-256 af2f2664d3734e56f2b27b6dfb1d86a8b8d10b3491ab3f7813b72110cbb08e55. Portée limitée aux passages décrits dans la revue de cette URL ; aucun essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -152,11 +191,15 @@ const product: CompressorInput = {
 		],
 		"dutyCycle": [
 			"october3d-mattei-pdf-11-p6"
+		],
+		"maxPressureBasis": [
+			"review-20261025-s111-p6"
 		]
 	},
 	"notes": [
 		"Pression FAD, plage de fonctionnement et pression de soupape restent distinctes. ISO 1217 n’est pas ajoutée à une source qui ne la revendique pas."
-	]
+	],
+	"maxPressureBasis": "selected-working-pressure-ceiling"
 };
 
 export default product;

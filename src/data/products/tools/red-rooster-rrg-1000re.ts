@@ -23,18 +23,14 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Red Rooster RRG-1000RE, référence RRG-1000RE. Le tableau fabricant publie 660 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 22000 tr/min. Masse publiée : 0,8 kg.",
+		"overview": "RRG-1000RE : meuleuse droite de 0,74 kW à 22 000 tr/min, pince standard de 6 mm et masse de 0,8 kg. La RRG-1000REL partage ces valeurs et les 11 L/s publiés, mais pèse 1,2 kg. Une pince de 8 mm est disponible sur demande ; elle ne décrit pas l’équipement standard.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation publiée : 11 L/s, convertis en 660 L/min par multiplication par 60.",
-			"Référence fabricant : RRG-1000RE.",
-			"Vitesse à vide publiée : 22000 tr/min.",
-			"Masse publiée : 0,8 kg.",
-			"Diamètre intérieur de flexible conseillé : 10 mm."
+			"RRG-1000RE contre RRG-1000REL : mêmes 0,74 kW, 22 000 tr/min, pince standard 6 mm et 11 L/s ; masses 0,8 et 1,2 kg. Le mandrin 8 mm est sur demande. La longueur d’axe des autres modèles REL n’est pas transférée.",
+			"Le régime de la consommation publiée n’est pas précisé ; cette valeur n’est pas assimilée à un maximum de travail."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"La consommation de 11 L/s n’est pas qualifiée en charge ou au maximum.",
+			"Les longueurs d’axe de 116 et 180 mm de la note concernent RRG-260REL et RRG-541REL, pas RRG-1000REL."
 		]
 	},
 	"specifications": [
@@ -99,6 +95,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "review-20261025-red-rooster-rrg-1000re-s068",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=44",
+			"sourceLabel": "Relecture fabricant du 25 octobre 2026, s068, pages PDF 44, 106",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Relecture des octets complets récupérés le 2026-10-25T07:20:38.623086+00:00, SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. RRG-1000RE contre RRG-1000REL : mêmes 0,74 kW, 22 000 tr/min, pince standard 6 mm et 11 L/s ; masses 0,8 et 1,2 kg. Le mandrin 8 mm est sur demande. La longueur d’axe des autres modèles REL n’est pas transférée. Limite : Ajouter unqualified : la consommation de 11 L/s n’est pas qualifiée en charge ou au maximum."
 		}
 	],
 	"fieldSources": {
@@ -109,17 +115,22 @@ const product: ToolProfileInput = {
 			"red-rooster-rrg-1000re-20260926-workingpressurebar-1"
 		],
 		"airflowLpm": [
-			"red-rooster-rrg-1000re-20260926"
+			"red-rooster-rrg-1000re-20260926",
+			"review-20261025-red-rooster-rrg-1000re-s068"
 		],
 		"recommendedHose": [
 			"red-rooster-rrg-1000re-20260926"
 		],
 		"connectorSize": [
 			"red-rooster-rrg-1000re-20260926"
+		],
+		"airflowBasis": [
+			"review-20261025-red-rooster-rrg-1000re-s068"
 		]
 	},
 	"notes": [
-		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+		"Données déclarées par le fabricant ; aucune mesure physique CompatAir.",
+		"Relecture proposée du 25 octobre 2026 : Ajouter unqualified : la consommation de 11 L/s n’est pas qualifiée en charge ou au maximum."
 	],
 	"airflowLpm": {
 		"min": 660,
@@ -129,7 +140,8 @@ const product: ToolProfileInput = {
 	"recommendedHose": {
 		"innerDiameterMm": 10
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"airflowBasis": "unqualified"
 };
 
 export default product;

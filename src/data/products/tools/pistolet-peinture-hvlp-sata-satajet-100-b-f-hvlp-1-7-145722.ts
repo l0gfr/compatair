@@ -9,16 +9,11 @@ const product: ToolProfileInput = {
 	"brand": "SATA",
 	"model": "SATAjet 100 B F HVLP 1.7",
 	"mpn": "145722",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 2,
 		"typical": 2,
 		"max": 2
-	},
-	"airflowLpm": {
-		"min": 350,
-		"typical": 350,
-		"max": 350
 	},
 	"confidence": "B",
 	"image": {
@@ -37,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SATA SATAjet 100 B F HVLP 1.7 (réf. 145722). Consommation de référence en fonctionnement : 350 L/min à 2 bar.",
+		"overview": "SATAjet 100 B F HVLP, article 145722 : buse de 1,7 mm et consommation documentaire de 350 Nl/min à 2 bar. Les conditions du volume normalisé restent à confirmer avant comparaison au FAD du compresseur.",
 		"verifiedFacts": [
 			"Technologie de pulvérisation : HVLP.",
 			"Buse : 1,7 mm.",
@@ -170,13 +165,14 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"october3d-tools-sata-family-100b-manual-0-p132"
 		],
-		"airflowLpm": [
+		"demandExplanation": [
 			"october3d-tools-sata-family-100b-manual-0-p132"
 		]
 	},
 	"notes": [
 		"Consommation de référence en fonctionnement : 350 L/min à 2 bar."
-	]
+	],
+	"demandExplanation": "La notice publie 350 Nl/min à 2 bar sans conditions volumétriques de référence complètes dans les passages relus. Ce volume normalisé n’est pas assimilé au débit FAD en L/min."
 };
 
 export default product;

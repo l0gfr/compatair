@@ -23,18 +23,14 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Red Rooster RRJ-8205, référence RRJ-8205. Le tableau fabricant publie 168 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Masse publiée : 1 kg. Diamètre intérieur de flexible conseillé : 6,5 mm.",
+		"overview": "RRJ-8205 : scie sabre donnée pour 10 mm d’acier et 12 mm d’aluminium, course de 25 mm à 5 000 coups/min. La RRJ-8210 est destinée aux matériaux fins : course de 10 mm à 9 500 coups/min, capacités de 3,1 et 3,9 mm. Les deux annoncent 2,8 L/s ; la masse passe de 1 à 0,5 kg.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation publiée : 2.8 L/s, convertis en 168 L/min par multiplication par 60.",
-			"Référence fabricant : RRJ-8205.",
-			"Masse publiée : 1 kg.",
-			"Diamètre intérieur de flexible conseillé : 6,5 mm.",
-			"Raccord pneumatique : PT 1/4\"."
+			"RRJ-8205 contre RRJ-8210 : capacités acier 10 et 3,1 mm, aluminium 12 et 3,9 mm ; courses 25 et 10 mm, cadences 5 000 et 9 500 coups/min. Débit publié identique de 2,8 L/s ; masses 1 et 0,5 kg.",
+			"Le régime de la consommation publiée n’est pas précisé ; cette valeur n’est pas assimilée à un maximum de travail."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"Les 2,8 L/s ne sont pas qualifiés en charge ou au maximum.",
+			"La capacité de coupe ne se déduit pas de la seule cadence ; conserver matériau, course et lame adaptée."
 		]
 	},
 	"specifications": [
@@ -92,6 +88,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "review-20261025-red-rooster-rrj-8205-s068",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=56",
+			"sourceLabel": "Relecture fabricant du 25 octobre 2026, s068, pages PDF 56, 106",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-25",
+			"confidence": "B",
+			"notes": "Relecture des octets complets récupérés le 2026-10-25T07:20:38.623086+00:00, SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. RRJ-8205 contre RRJ-8210 : capacités acier 10 et 3,1 mm, aluminium 12 et 3,9 mm ; courses 25 et 10 mm, cadences 5 000 et 9 500 coups/min. Débit publié identique de 2,8 L/s ; masses 1 et 0,5 kg. Limite : Ajouter unqualified : les 2,8 L/s ne sont pas qualifiés en charge ou au maximum."
 		}
 	],
 	"fieldSources": {
@@ -102,17 +108,22 @@ const product: ToolProfileInput = {
 			"red-rooster-rrj-8205-20260926-workingpressurebar-1"
 		],
 		"airflowLpm": [
-			"red-rooster-rrj-8205-20260926"
+			"red-rooster-rrj-8205-20260926",
+			"review-20261025-red-rooster-rrj-8205-s068"
 		],
 		"recommendedHose": [
 			"red-rooster-rrj-8205-20260926"
 		],
 		"connectorSize": [
 			"red-rooster-rrj-8205-20260926"
+		],
+		"airflowBasis": [
+			"review-20261025-red-rooster-rrj-8205-s068"
 		]
 	},
 	"notes": [
-		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+		"Données déclarées par le fabricant ; aucune mesure physique CompatAir.",
+		"Relecture proposée du 25 octobre 2026 : Ajouter unqualified : les 2,8 L/s ne sont pas qualifiés en charge ou au maximum."
 	],
 	"airflowLpm": {
 		"min": 168,
@@ -122,7 +133,8 @@ const product: ToolProfileInput = {
 	"recommendedHose": {
 		"innerDiameterMm": 6.5
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"airflowBasis": "unqualified"
 };
 
 export default product;

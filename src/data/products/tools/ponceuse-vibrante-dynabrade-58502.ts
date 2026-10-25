@@ -19,16 +19,9 @@ const product: ToolProfileInput = {
 			"Longueur": "180 mm"
 		}
 	},
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.2,
-		"typical": 6.2,
-		"max": 6.2
-	},
-	"airflowLpm": {
-		"min": 368,
-		"typical": 368,
-		"max": 368
+		"typical": 6.2
 	},
 	"usagePattern": "continuous",
 	"confidence": "A",
@@ -43,7 +36,7 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Dynabrade D25.01"
 	},
 	"editorial": {
-		"overview": "Dynabug II 58502 : plateau autoagrippant 56316 de 74 × 109 mm et raccordement à une aspiration centralisée externe. La 58501 voisine produit son aspiration par l’échappement. Les deux annoncent 368 L/min maximum à 6,2 bar, mais la liaison au recueil des poussières diffère. Le papier perforé, le plateau et le système d’aspiration doivent donc être définis dans la fourniture.",
+		"overview": "Le relevé historique du 58502 est conservé dans les spécifications. Le lien constructeur utilisé à l’import répond désormais avec un portail HTML, sans livrer le catalogue et le tableau de mesure attendus. La consommation n’est donc plus utilisée pour le dimensionnement.",
 		"verifiedFacts": [
 			"Puissance moteur : 112 W.",
 			"Vitesse moteur publiée : 10 000 tr/min.",
@@ -55,10 +48,10 @@ const product: ToolProfileInput = {
 		"limitations": [
 			"Un port de 1 pouce ne constitue pas une preuve de captage suffisante pour tout matériau. Aucun débit égal n’est transformé en résultat de finition ou d’exposition égal.",
 			"Hauteur non retenue : le tableau publie des unités contradictoires (3-1/2 (91)).",
-			"Le calcul conserve la consommation maximale publiée, sans la réduire selon un cycle de travail supposé. Cette valeur ne constitue pas une mesure de débit réalisée par CompatAir.",
 			"Le catalogue ne fournit pas de courbe de consommation selon la pression pour cette référence. Vérifier la pression dynamique à l’entrée de l’outil pendant son fonctionnement.",
 			"Le diamètre intérieur publié ne suffit pas à valider un réseau : la longueur, les raccords et les pertes de pression restent à contrôler.",
-			"Cette fiche repose sur l’édition D25.01 du catalogue international. Elle ne prouve ni la disponibilité actuelle en France ni l’équipement exact livré par un vendeur."
+			"Cette fiche repose sur l’édition D25.01 du catalogue international. Elle ne prouve ni la disponibilité actuelle en France ni l’équipement exact livré par un vendeur.",
+			"Le lien primaire actuel ne délivre plus le catalogue cité. Les valeurs historiques restent documentaires, sans calcul de compatibilité tant que les cellules de la référence ne sont pas relues."
 		]
 	},
 	"specifications": [
@@ -86,6 +79,13 @@ const product: ToolProfileInput = {
 		{
 			"label": "Longueur",
 			"value": "180 mm",
+			"evidenceIds": [
+				"dynabrade-58502-catalogue-d25-01"
+			]
+		},
+		{
+			"label": "Consommation historique à requalifier, hors calcul",
+			"value": "368 L/min ; pression historique 6,2 bar",
 			"evidenceIds": [
 				"dynabrade-58502-catalogue-d25-01"
 			]
@@ -133,9 +133,6 @@ const product: ToolProfileInput = {
 		"mpn": [
 			"dynabrade-58502-catalogue-d25-01"
 		],
-		"airflowLpm": [
-			"dynabrade-58502-catalogue-d25-01"
-		],
 		"workingPressureBar": [
 			"dynabrade-58502-catalogue-d25-01"
 		],
@@ -144,12 +141,16 @@ const product: ToolProfileInput = {
 		],
 		"recommendedHose": [
 			"dynabrade-58502-catalogue-d25-01"
+		],
+		"demandExplanation": [
+			"dynabrade-58502-catalogue-d25-01"
 		]
 	},
 	"notes": [
 		"Caractéristiques déclarées par le fabricant, sans essai physique par CompatAir.",
 		"La compatibilité calculée concerne l’alimentation en air. Le choix des abrasifs, carters et équipements de protection relève de la notice de l’outil."
-	]
+	],
+	"demandExplanation": "Le lien du catalogue historique renvoie actuellement à une page HTML de gamme. Les cellules techniques de cette référence ne sont pas requalifiées par cette réponse ; aucun besoin d’air dimensionnant n’est conservé."
 };
 
 export default product;

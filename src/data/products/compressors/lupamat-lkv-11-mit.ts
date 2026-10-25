@@ -16,12 +16,7 @@ const product: CompressorInput = {
 	},
 	"tankLiters": 548,
 	"maxPressureBar": 13,
-	"fadCurve": [
-		{
-			"pressureBar": 13,
-			"litersPerMinute": 1290
-		}
-	],
+	"fadCurve": [],
 	"powerKw": 11,
 	"oilType": "unknown",
 	"confidence": "B",
@@ -55,8 +50,8 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Air livré à 13 bar",
-			"value": "1 290 L/min",
+			"label": "Capacité FAD publiée, pression de mesure à confirmer",
+			"value": "1 290 L/min dans la colonne de configuration 13 bar",
 			"evidenceIds": [
 				"october4-lupamat-current-catalog-p13"
 			]
@@ -70,16 +65,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Lupamat LKV 11 MIT. 1 290 L/min déclarés à 13 bar. Groupe sur cuve 548 L.",
+		"overview": "Le LKV 11 MIT et le LKV 7,5 MIT partagent une cuve de 548 L. Dans les colonnes de configuration 13 bar, le catalogue donne respectivement 1,29 et 0,82 m³/min de capacité FAD pour 11 et 7,5 kW. Le passage de puissance change la capacité publiée, sans ajouter de stockage. Le tableau intitule sa pression « Max. Working Pressure » : nous ne l’utilisons pas comme pression de mesure implicite. Le MITK avec sécheur est un montage distinct ; un débit propre et ses conditions sont à demander pour toute version 15 bar sur demande.",
 		"verifiedFacts": [
-			"Configuration de pression documentée : 13 bar.",
+			"Configuration de pression maximale retenue : 13 bar.",
 			"Cuve de stockage documentée : 548 L.",
-			"FAD sous pression identifié séparément des valeurs d’aspiration : 1 290 L/min déclarés à 13 bar."
+			"Capacité FAD de la colonne 13 bar : 1 290 L/min ; pression de mesure à faire préciser."
 		],
 		"limitations": [
 			"Configuration de pression 13 bar retenue dans le triplet 7 / 10 / 13. La version 15 bar sur demande ne fournit pas de FAD dans ce tableau.",
 			"Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil."
+			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
+			"Le maximum de fonctionnement et une note ISO 1217 ne fixent pas, à eux seuls, la pression de mesure du débit. La courbe FAD reste vide en attendant cette précision."
 		]
 	},
 	"evidence": [
@@ -104,10 +100,16 @@ const product: CompressorInput = {
 		"tankLiters": [
 			"october4-lupamat-current-catalog-p13"
 		],
-		"fadCurve": [
+		"powerKw": [
 			"october4-lupamat-current-catalog-p13"
 		],
-		"powerKw": [
+		"editorial": [
+			"october4-lupamat-current-catalog-p13"
+		],
+		"specifications": [
+			"october4-lupamat-current-catalog-p13"
+		],
+		"fadCurve": [
 			"october4-lupamat-current-catalog-p13"
 		]
 	},

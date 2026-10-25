@@ -1,3 +1,4 @@
+import { beforeOctober25Review } from './reviewed-catalog-test-projection.mjs';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { parseCatalogProductSource } from './catalog-tooling.mjs';
@@ -22,7 +23,7 @@ const native = id => {
   const kind = ['sableuse-', 'pistolet-', 'biax-', 'fiam-', 'nitto-', 'red-rooster-'].some(prefix => id.startsWith(prefix)) ? 'tools' : 'compressors';
   products.set(id, parseCatalogProductSource(kind, readFileSync(new URL(`../../src/data/products/${kind}/${id}.ts`, import.meta.url), 'utf8')));
  }
- return beforeTechnicalCorrection(structuredClone(products.get(id)));
+ return beforeTechnicalCorrection(beforeOctober25Review(structuredClone(products.get(id))));
 };
 const original = row => {
  const product = native(row.id);

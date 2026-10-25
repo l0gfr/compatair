@@ -22,7 +22,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 883.333
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "unknown",
 	"powerKw": 7.5,
 	"weightKg": 215,
@@ -66,17 +65,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Ceccato CSA 10, PACK au sol ; 13 bar. PACK au sol. Débit restitué déclaré : 883,333 L/min à 12,5 bar.",
+		"overview": "La version CSA 10 Pack 13 bar répond à un choix de pression : le tableau 50 Hz publie 53 m³/h à 12,5 bar, soit environ 883,3 L/min. Le CSA 10 Pack 10 bar indique 68 m³/h à 9,5 bar, soit environ 1 133,3 L/min. La version 13 bar permet d’étudier un besoin au-delà du plafond de la 10 bar, avec une production publiée plus faible à son propre point de mesure. Le montage Pack au sol se dimensionne avec le stockage et le traitement d’air nécessaires à l’atelier. Les versions sur cuve de 270 ou 500 L sont des configurations distinctes.",
 		"verifiedFacts": [
 			"Dimensions publiées : 1000 × 665 × 1045 mm.",
-			"Masse de cette configuration : 215 kg ; puissance moteur : 7,5 kW.",
-			"La page constructeur de cette série prévoit le fonctionnement continu, sous ses conditions d’installation et d’entretien."
+			"Masse de cette configuration : 215 kg ; puissance moteur : 7,5 kW."
 		],
 		"limitations": [
 			"Le point FAD appartient à cette configuration et à sa pression de référence ; aucune courbe de fonctionnement supplémentaire n’est inventée.",
 			"Mode de lubrification non établi dans cette fiche ; aucune qualité d’air déduite.",
 			"Configuration et pression explicites du catalogue, sans numéro d’article attribué artificiellement ; faire confirmer la version commandée.",
-			"Disponibilité locale, alimentation électrique, dégagements d’entretien et qualité d’air au point d’usage à vérifier avant installation."
+			"Disponibilité locale, alimentation électrique, dégagements d’entretien et qualité d’air au point d’usage à vérifier avant installation.",
+			"Le taux de marche du groupe complet reste à confirmer pour cette référence. La déclaration générale de gamme ne renseigne pas ici un taux normalisé de 100 %."
 		]
 	},
 	"evidence": [
@@ -117,8 +116,11 @@ const product: CompressorInput = {
 		"weightKg": [
 			"october-ceccato-csa-7-5-20-hp-pdf-p6"
 		],
-		"dutyCycle": [
-			"october-ceccato-csa-7-5-20-hp"
+		"editorial": [
+			"october-ceccato-csa-7-5-20-hp-pdf-p6"
+		],
+		"specifications": [
+			"october-ceccato-csa-7-5-20-hp-pdf-p6"
 		]
 	},
 	"notes": [
