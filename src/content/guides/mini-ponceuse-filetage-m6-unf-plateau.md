@@ -41,6 +41,6 @@ Pour une commande à distance, une fiche utile doit identifier les deux côtés 
 
 ## Trois outils, des fonctions et des débits différents
 
-La SI-2008EX est une mini-ponceuse rotative, la SI-2202-2 une ponceuse à disque, la SI-2009EX une polisseuse à rotation simple. Leurs consommations maximales publiées sont respectivement **7,9, 7,1 et 7,1 L/s**, soit **474, 426 et 426 L/min**. La [pression de référence Shinano](https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43) est de 6,3 bar en fonctionnement.
+La SI-2008EX est une mini-ponceuse rotative, la SI-2202-2 une ponceuse à disque, la SI-2009EX une polisseuse à rotation simple. Leurs consommations maximales publiées sont respectivement **7,9, 7,1 et 7,1 L/s**, soit **474, 426 et 426 L/min**. Shinano [recommande une alimentation à 6,3 bar en fonctionnement](https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43). La pression de mesure de ces consommations reste à confirmer.
 
 Les fiches [SI-2008EX](/outils-pneumatiques/shinano-si-2008ex/) et [SI-2009EX](/outils-pneumatiques/shinano-si-2009ex/) conservent cette séparation entre fonction, montage et air requis. Une alimentation compatible n’autorise jamais un plateau dont l’interface ou les conditions d’emploi ne sont pas validées.
