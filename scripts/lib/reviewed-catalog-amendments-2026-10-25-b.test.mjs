@@ -1,3 +1,4 @@
+import { beforeOctober27Amendment } from './reviewed-catalog-amendments-2026-10-27.mjs';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { describe, expect, it } from 'vitest';
@@ -10,7 +11,7 @@ import { createRuntimeCatalog, runtimeCatalogSchema } from '../../src/domain/run
 import { evaluateCompatibility } from '../../server/air-compatibility.mjs';
 
 const snapshot = JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-10-25-b.json', import.meta.url), 'utf8'));
-const native = row => parseCatalogProductSource(row.kind, readFileSync(new URL('../../'+row.file, import.meta.url), 'utf8'));
+const native = row => beforeOctober27Amendment(parseCatalogProductSource(row.kind, readFileSync(new URL('../../'+row.file, import.meta.url), 'utf8')));
 const current = snapshot.rows.map(row => native(row));
 const c = current.filter(p => p.fadCurve), t = current.filter(p => p.demandModel);
 const runtime = runtimeCatalogSchema.parse(createRuntimeCatalog(c.map(p => compressorSchema.parse(p)), t.map(p => toolProfileSchema.parse(p)), CATALOG_VERIFIED_AT, 'b'.repeat(64)));
@@ -26,7 +27,9 @@ describe('October 25 reserved-page factual follow-up', () => {
    expect(after.evidence.slice(0,before.evidence.length),row.id).toEqual(before.evidence);
    for(const key of Object.keys(before).filter(key => !row.fields.includes(key)))expect(after[key],row.id+'/'+key).toEqual(before[key]);
    const parsed=(row.kind==='tools'?toolProfileSchema:compressorSchema).parse(after);
-   const published=(row.kind==='tools'?tools:compressors).find(p => p.id===row.id);
+   const served=(row.kind==='tools'?tools:compressors).find(p => p.id===row.id);
+   const published=beforeOctober27Amendment(row.kind==='tools'?{...served,category:served.categoryId}:served);
+   if(row.kind==='tools')published.category=toolCategoryLabel(published.categoryId);
    expect(published,row.id).toEqual(row.kind==='tools'?{...parsed,category:toolCategoryLabel(parsed.categoryId)}:parsed);
    for(const key of ['brand','model','mpn'])expect(() => applyReviewedOctober25FollowupAmendment({...before,[key]:'unreviewed'}),row.id).toThrow('Identité');
    const drift=structuredClone(before);drift[row.fields[0]]='unreviewed';expect(() => applyReviewedOctober25FollowupAmendment(drift),row.id).toThrow('Base différente');

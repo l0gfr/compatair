@@ -39,7 +39,7 @@ Pour un essai fournisseur, conservez les références des accessoires et la mét
 
 ## Les litres par minute à retenir
 
-Les conversions sont **426 L/min** pour la SI-2009EX et **354 L/min** pour la SI-2009EX-H. Elles utilisent les consommations maximales, par multiplication des L/s par 60. La [pression Shinano](https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43) est de 6,3 bar en fonctionnement ; aucune courbe de consommation selon le réglage de vitesse n’est donnée dans le tableau cité.
+Les conversions sont **426 L/min** pour la SI-2009EX et **354 L/min** pour la SI-2009EX-H. Elles utilisent les consommations maximales, par multiplication des L/s par 60. Shinano [recommande une alimentation à 6,3 bar en fonctionnement](https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43). La pression de mesure de ces consommations reste à confirmer ; le tableau cité ne donne aucune courbe selon le réglage de vitesse.
 
 Retrouvez les détails dans les fiches [SI-2009EX](/outils-pneumatiques/shinano-si-2009ex/) et [SI-2009EX-H](/outils-pneumatiques/shinano-si-2009ex-h/). Pour un travail précédé d’une correction localisée, le [guide du micro-ponçage](/guides/micro-poncage-vernis-ponceuse-30-mm/) précise les informations à demander sur le revêtement.
 

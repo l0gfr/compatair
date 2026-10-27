@@ -190,6 +190,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-25",
 			"confidence": "B",
 			"notes": "Document lu le 25 octobre 2026 ; réponse SHA-256 36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3. Portée : identité, références de pièces et limites décrites dans la fiche. Aucun essai physique CompatAir."
+		},
+		{
+			"id": "review-20261027-sata-normal-volume",
+			"sourceUrl": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806",
+			"sourceLabel": "SATA catalogue2025, page34 :350Nl/min",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-27",
+			"confidence": "B",
+			"notes": "Corps relu le27octobre2026, SHA-256 36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3. Correction limitée à l’unité de la note documentaire ; aucune qualification du besoin d’air."
 		}
 	],
 	"fieldSources": {
@@ -200,7 +210,8 @@ const product: ToolProfileInput = {
 			"october3d-tools-sata-family-100b-manual-0-p132"
 		],
 		"demandExplanation": [
-			"october3d-tools-sata-family-100b-manual-0-p132"
+			"october3d-tools-sata-family-100b-manual-0-p132",
+			"review-20261027-sata-normal-volume"
 		],
 		"editorial": [
 			"reserved-followup-20261025-pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-7-145722-1"
@@ -210,7 +221,7 @@ const product: ToolProfileInput = {
 		]
 	},
 	"notes": [
-		"Consommation de référence en fonctionnement : 350 L/min à 2 bar."
+		"Consommation documentaire : 350 Nl/min à 2 bar ; conditions volumétriques de référence à confirmer."
 	],
 	"demandExplanation": "La notice publie 350 Nl/min à 2 bar sans conditions volumétriques de référence complètes dans les passages relus. Ce volume normalisé n’est pas assimilé au débit FAD en L/min."
 };

@@ -42,6 +42,7 @@ const repinned = async copy => {
  let code = readFileSync(new URL('./documented-tools-2026-10-03-d.mjs', import.meta.url), 'utf8');
  code = code.replace("'./sata-source-repair-fixture.mjs'", JSON.stringify(new URL('./sata-source-repair-fixture.mjs', import.meta.url).href));
  // Preserve the real dated validator when running the mirrored-mutation fixture as a data URL.
+ code = code.replace("'./reviewed-catalog-amendments-2026-10-27.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-27.mjs', import.meta.url).href));
  code = code.replace("'./reviewed-catalog-amendments-2026-10-17.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-17.mjs', import.meta.url).href));
  code = code.replace("'./reviewed-catalog-amendments-2026-10-18.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-18.mjs', import.meta.url).href));
  code = code.replace("'./reviewed-catalog-amendments-2026-10-19.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-19.mjs', import.meta.url).href));

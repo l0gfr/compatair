@@ -8074,6 +8074,617 @@
           "note": "La distinction de finition ES/ES Z est déjà expliquée par la page ES Z. La consolidation du25octobre est conservée ; pas de nouvelle admission par reformulation réciproque."
         }
       ]
+    },
+    {
+      "publicationDay": "2026-10-27",
+      "sourceReleaseSha": "03a24be85b10d9e60c3deaa47884a578ea777d5b",
+      "policyHash": "7d2ab5b10bed659bbbb3af6aaab75ef27b7e3527cc3d686072426907bb748645",
+      "corpusHash": "0789862babe3f6e6196e255424f928ee4d24aaf753aa27e290eab3faafab7696",
+      "reviewedAt": "2026-10-27T07:48:52.141077+00:00",
+      "status": "partial",
+      "note": "17 admissions après revue séquentielle :8 guides,7 compresseurs,2 outils. Corrections exactes de l’unité SATA, de la catégorie BIAX et de deux précisions de guides ; réserves et revues inachevées ne bloquent pas ce sous-ensemble. Aucun quota rempli par défaut.",
+      "pages": [
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-7-145722/",
+          "contentHash": "faadc54862f0ae0f4c7269aa788e0b63e790e307bc3be926a2137bae22045c26",
+          "decision": "approved",
+          "note": "Les codes145722 (pistolet1,7mm/godet QCC0,6L),145417 (jeu de buses),1012682 (RPS) et145730 (1,9mm) répondent à une commande de pièces exacte. Le catalogue et la notice publient350Nl/min à2bar ; la note native en L/min est corrigée. Les conditions volumétriques restent inconnues : profil variable-volume, verdict non conclusif."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-taylor-pneumatic-t-7734-1-2-impact-wrench-t-7734/",
+          "contentHash": "de936015227184450bccf21fe004d863418c7907cf3200e51309198e5a693ede",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-prowin-k-528m-10/",
+          "contentHash": "dacdbd1a64e2c39ba1137256c5ab884f5adbc0b53e1e3d1609bf963ae586c271",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sagola-3600-xpt-hvlp-buse-1-30-10142505/",
+          "contentHash": "5c0a65304d8aa354085bca694862fbfba5c02c7e84d4492730216ef61bfd6ac7",
+          "decision": "needs-correction",
+          "note": "Réserve déjà documentée : divergence de pression entre catalogue2bar et notice HVLP1,8bar. Pas de nouvelle preuve exacte permettant de lever le conflit. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-graco-airpro-pressure-288939-288939/",
+          "contentHash": "66575435d92ccc6921950827c8447acbb0e947f0f3f4ef8cbdb2cabfb3f83c43",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sames-kremlin-fpro-lock-p-hvlp-09-lva-135-767-409/",
+          "contentHash": "40797b71ecd5a01b2d78c322f1237f508a92fc5b572256a010d333242d211343",
+          "decision": "needs-correction",
+          "note": "Réserve Sames : requalification exacte du point d’air et de la configuration non achevée ; les lectures antérieures ne valent pas approbation actuelle. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-binks-trophy-1466-10hv-c1s-e/",
+          "contentHash": "f8c420e7c4c6c0126c9457ce098a4d5029034d22e1c44eea0659f45060d83fe4",
+          "decision": "needs-correction",
+          "note": "Réserve Binks : la caractéristique d’air n’est pas entièrement arbitrée pour la référence/configuration exacte ; aucune validation par défaut. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-walcom-ego-carbonio-190-hvlp-gravite-buse-0-5-mm/",
+          "contentHash": "e07ea7fc198e28456f82168829dc61f16dd730b60b26d4047af64e392a839e7e",
+          "decision": "needs-correction",
+          "note": "Réserve Walcom : motif de référence7130** et divergence160L/min/5CFM ; identité et unités non résolues par une simple lecture de gamme. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-anest-iwata-airgunsa-az3-hte2-hvlp-buse-1-3-hvlp/",
+          "contentHash": "dc5b756e74b5b7187d4c7227bcd84eeddfefa779a9d75fa9c53d366e18ed8496",
+          "decision": "needs-correction",
+          "note": "Identité actuelle W0SPG85AG13C distincte de la référence84 conservée : établir la correspondance exacte avant admission. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-2-2-mm/",
+          "contentHash": "4b3a4e3464ea4fac70b9909f5465418f091b601f8442cc921cdb052b1a510634",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-ani-f1-n-super-i-hvlp-buse-1-5/",
+          "contentHash": "7596cd78f9643a858b9e21146776a397b64db22261dacc440884c200c55381f6",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-prona-r-430-hvlp-14-buse-1-4-hvlp-gravity/",
+          "contentHash": "c29d2783b6097621cdb0881553349cc2f3a24f2124f59595a58ef945776385a8",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/guides/secheur-membrane-air-comprime-debit-balayage/",
+          "contentHash": "346b14677ccf1f2539e6e4db06f033954ec2ead6907f7640536d157e5b7c67d6",
+          "decision": "approved",
+          "note": "Membrane KMM : différencier débit sec livré, balayage à contre-courant et préfiltration ; vanne d’arrêt optionnelle pendant les pauses. La consigne de bilan est une méthode CompatAir avec bases volumétriques communes. Le voisin explique le taux de purge d’une adsorption ; ni technologie identique ni économie universelle attribuée."
+        },
+        {
+          "path": "/compresseurs/abac-formula-e-7-5-8-400-50/",
+          "contentHash": "35812121f950423609eeab80c54f933ee96966a367df7bad846317a96278cccd",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/compresseurs/fiac-ax-203bd-dry-10-400-50-ce/",
+          "contentHash": "e8a6d4809bc45d72cf76979bed039290918e7cdaede6f90b2eb9f7cd35b6200a",
+          "decision": "needs-correction",
+          "note": "Conflit FIAC2100/2110L/min et pression maximale10bar distincte de la pression de mesure ; réserve constructeur conservée. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/guides/boulonneuse-couple-maximal-limite-carre/",
+          "contentHash": "c61e0ca70c13309c452d3544a7419cde8f19ef57855525e59c13d0d4eca74614",
+          "decision": "approved",
+          "note": "L’astérisque Cleco19RAA07AH2 limite l’emploi au-delà5,7Nm malgré une plage1,5–6,8Nm ; comparer carré1/4,AH3en3/8 et ressort standard1,5–5,4Nm. Cas précis distinct d’un guide général de douilles. La précision ajoutée sépare310L/min documentaire et régime de mesure inconnu."
+        },
+        {
+          "path": "/guides/polisseuse-pneumatique-vitesse-2600-5000/",
+          "contentHash": "7552f206bd731aa162e60605bd7aa50292b6b475600f080131baeef0dc29cee7",
+          "decision": "approved",
+          "note": "SI2009EX/H : même plateau75mm et broche mais2600/5000tr/min,180/190W et maxima7,1/5,9L/s. Les conversions426/354L/min sont des calculs, sans proportionnalité vitesse/consommation supposée. Intention différente du filetage de plateau ; consigne6,3bar séparée de la pression de mesure."
+        },
+        {
+          "path": "/outils-pneumatiques/cleco-19pta02q/",
+          "contentHash": "84a6846285d552b8287b27f27736e94abfdf278d28e5b199fe24897858b00103",
+          "decision": "needs-correction",
+          "note": "Qualification à compléter : débit natif fixed-flow sans réserve de régime, alors que les spécifications ou la source ne suffisent pas à établir simultanément le régime dimensionnant et sa pression de mesure. La consigne de réseau seule ne les prouve pas ; aucun verdict conclusif approuvé. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/cleco-19raa09ah2/",
+          "contentHash": "d08486f98f6e17b0935780ede6a08de2ce502160559545bde8ad475b7f377d4e",
+          "decision": "needs-correction",
+          "note": "Qualification à compléter : débit natif fixed-flow sans réserve de régime, alors que les spécifications ou la source ne suffisent pas à établir simultanément le régime dimensionnant et sa pression de mesure. La consigne de réseau seule ne les prouve pas ; aucun verdict conclusif approuvé. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/cleco-20pthh403/",
+          "contentHash": "835f0a2422a5829703a64f940909aaa514790c897dc964a54777d48a6629ce25",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-dynabrade-53783/",
+          "contentHash": "e8dff19e023c2fac2395ed0067006744f32e67c4e1f4a48209f51adaa30d1ff9",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-dynabrade-58460/",
+          "contentHash": "93ac9e3c9ca860d7465841f04904723d30baf7e29699de99eb07b937b218749c",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-dynabrade-52518/",
+          "contentHash": "f9b3dde83b9a29ca0fe90b03911e3563fd1ccceb1b9778975727120cdf7185ed",
+          "decision": "needs-correction",
+          "note": "La notice PD03.37R page2 donne3/8-24 pour52515/52516 ; le candidat présente encore le voisin52515 comme5/8-11. Les éditions doivent être réconciliées avant admission. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-vibrante-dynabrade-58502/",
+          "contentHash": "425286bba223172c7e2a9ce924df84da4a5d743f7ca894ab88914f4b552e9bd9",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-1170/",
+          "contentHash": "056794efcc1db0f3bdf40e45e99bfa35ad8e19a3aabe06ec5f62e0875e58f231",
+          "decision": "needs-correction",
+          "note": "Qualification à compléter : débit natif fixed-flow sans réserve de régime, alors que les spécifications ou la source ne suffisent pas à établir simultanément le régime dimensionnant et sa pression de mesure. La consigne de réseau seule ne les prouve pas ; aucun verdict conclusif approuvé. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-1252/",
+          "contentHash": "eaf8d78d0d5db18e1868ecb64646f7d41389a5c9da24c6412cc7f6121e044fa2",
+          "decision": "needs-correction",
+          "note": "Qualification à compléter : débit natif fixed-flow sans réserve de régime, alors que les spécifications ou la source ne suffisent pas à établir simultanément le régime dimensionnant et sa pression de mesure. La consigne de réseau seule ne les prouve pas ; aucun verdict conclusif approuvé. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-1455sr/",
+          "contentHash": "08555d85d43365d346f236ce3e991798eae7f9d021e616afd551c57c5a50ed42",
+          "decision": "needs-correction",
+          "note": "Qualification à compléter : débit natif fixed-flow sans réserve de régime, alors que les spécifications ou la source ne suffisent pas à établir simultanément le régime dimensionnant et sa pression de mesure. La consigne de réseau seule ne les prouve pas ; aucun verdict conclusif approuvé. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-2010-6/",
+          "contentHash": "e66c94bf815cc002f889049ab723d5c100ef5525c2816b738e14f57d2834b4a5",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-2300/",
+          "contentHash": "36d0812472d84b032bb5d8bfa07cd622a7e0aa51a87ce65c78e79dac35e1278d",
+          "decision": "needs-correction",
+          "note": "Qualification à compléter : débit natif fixed-flow sans réserve de régime, alors que les spécifications ou la source ne suffisent pas à établir simultanément le régime dimensionnant et sa pression de mesure. La consigne de réseau seule ne les prouve pas ; aucun verdict conclusif approuvé. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-3007m/",
+          "contentHash": "febc289ba8298a21b1724f6fe1edaa4e78ec6f2f5ea787073a4ba871d39c9439",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-3100p/",
+          "contentHash": "a4917d6a9e34e6ade0928139e7dd03bcb682952d245ac90795eab8aa5f4bd2ec",
+          "decision": "needs-correction",
+          "note": "Qualification à compléter : débit natif fixed-flow sans réserve de régime, alors que les spécifications ou la source ne suffisent pas à établir simultanément le régime dimensionnant et sa pression de mesure. La consigne de réseau seule ne les prouve pas ; aucun verdict conclusif approuvé. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-3101/",
+          "contentHash": "67e7c4b421e293aab36bfdb6586c739fccf1e4112261e970de3b62933d7c5837",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-5405/",
+          "contentHash": "ad493bff6d40b364890a9b7e59d73c33143f9e20540b5948acad17ce3edecda9",
+          "decision": "needs-correction",
+          "note": "Qualification à compléter : débit natif fixed-flow sans réserve de régime, alors que les spécifications ou la source ne suffisent pas à établir simultanément le régime dimensionnant et sa pression de mesure. La consigne de réseau seule ne les prouve pas ; aucun verdict conclusif approuvé. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/compresseurs/airpress-aps-10-basic-combi-364858-8/",
+          "contentHash": "debe0826d395d905a405f0408b04655b062dfeef12bb772e9e0e2c5a44e170cf",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/compresseurs/gentilin-clinic-6-90-812313012/",
+          "contentHash": "9f5811b63b8a270ebfa62354148796d3f66b7d00b5ef7ecaed16aa7ebb728988",
+          "decision": "approved",
+          "note": "CLINIC6/90 mono812313012 :265L/min à5bar,190à8bar et90L de cuve, contre200/170L/min et40L sur4/40. Ces données distinguent production sous pression et stockage. Le cycle S1 100% vient du tableau de la machine complète ; ni qualité générale de gamme ni classe du seul moteur transposées. Notice : compresseur sans huile, version sans sécheur."
+        },
+        {
+          "path": "/outils-pneumatiques/biax-bew-309-e/",
+          "contentHash": "b93433ec2d21a851625615524609efd6d5eaacf4cf4a58f19acb9aa146639715",
+          "decision": "approved",
+          "note": "BEW309E : tête avec fraise20/21,5mm et hexagone3mm, contre40/48mm et pince6mm pourBEW605. Cette géométrie décide l’accès à un trou croisé. Catégorie corrigée en ébavureuse ; le conflit de capacité10mm PDF/11mm web reste explicite, sans nouvelle capacité garantie. Les150L/min non qualifiés restent insuffisants dans les deux moteurs."
+        },
+        {
+          "path": "/outils-pneumatiques/biax-bew-605-k/",
+          "contentHash": "c742a3421898cc7053635ec50864ee3f3d5ab44896455150bfe7f64b3b9a2743",
+          "decision": "needs-correction",
+          "note": "Nouvelle candidate relue : BEW605K est une ébavureuse de trous, mais categoryId/category restent perceuse. Le profil utilise300L/min sans airflowBasis alors que le régime n’est pas précisé. Pas d’approbation depuis le PDF200."
+        },
+        {
+          "path": "/outils-pneumatiques/biax-gaa-513/",
+          "contentHash": "30a126739207e82f026cee465ba9f80ca1aaf612b3684265be2261a6f63d5ef0",
+          "decision": "needs-correction",
+          "note": "Qualification à compléter : débit natif fixed-flow sans réserve de régime, alors que les spécifications ou la source ne suffisent pas à établir simultanément le régime dimensionnant et sa pression de mesure. La consigne de réseau seule ne les prouve pas ; aucun verdict conclusif approuvé. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/biax-sbrd-830/",
+          "contentHash": "c009e3cdb1247c1fc964f1a08a0cf95dd36f7308847fbac286f94321e2f96af1",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/deprag-344-240-31u/",
+          "contentHash": "63fe6a0bb04d6bce71e3a5059169636fb94bedddfb772ac58da7815037479276",
+          "decision": "needs-correction",
+          "note": "Qualification à compléter : débit natif fixed-flow sans réserve de régime, alors que les spécifications ou la source ne suffisent pas à établir simultanément le régime dimensionnant et sa pression de mesure. La consigne de réseau seule ne les prouve pas ; aucun verdict conclusif approuvé. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/fiam-15c2a90/",
+          "contentHash": "58c063176b7dd566ef03cd3cb0f9261e0e22f71c462dfcda0760c85278e8f260",
+          "decision": "needs-correction",
+          "note": "Qualification à compléter : débit natif fixed-flow sans réserve de régime, alors que les spécifications ou la source ne suffisent pas à établir simultanément le régime dimensionnant et sa pression de mesure. La consigne de réseau seule ne les prouve pas ; aucun verdict conclusif approuvé. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/fiam-fde49p/",
+          "contentHash": "ab10288f7d33ddbe5f3c135be0bf58ff03b0617cdd1ff56174211bd24084abd8",
+          "decision": "needs-correction",
+          "note": "Qualification à compléter : débit natif fixed-flow sans réserve de régime, alors que les spécifications ou la source ne suffisent pas à établir simultanément le régime dimensionnant et sa pression de mesure. La consigne de réseau seule ne les prouve pas ; aucun verdict conclusif approuvé. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/fiam-les45/",
+          "contentHash": "777fbdc36c9dcb35a4c876400acdc1a8cfb30f04d665a5d53d99071816649b28",
+          "decision": "needs-correction",
+          "note": "Qualification à compléter : débit natif fixed-flow sans réserve de régime, alors que les spécifications ou la source ne suffisent pas à établir simultanément le régime dimensionnant et sa pression de mesure. La consigne de réseau seule ne les prouve pas ; aucun verdict conclusif approuvé. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/fiam-sms30dcz/",
+          "contentHash": "458327b5ca91c8f3042f65ddee6a5565b64597d6d341b493707604838f3a84dc",
+          "decision": "needs-correction",
+          "note": "Qualification à compléter : débit natif fixed-flow sans réserve de régime, alors que les spécifications ou la source ne suffisent pas à établir simultanément le régime dimensionnant et sa pression de mesure. La consigne de réseau seule ne les prouve pas ; aucun verdict conclusif approuvé. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/ingersoll-rand-170pg-cs/",
+          "contentHash": "302657657d5df69d75315edd118b2a37569066a5da58f9bb32b4f31ab74da682",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/ingersoll-rand-170pg/",
+          "contentHash": "77e766114f5e9778fb6719b74247f46b9de055ea50fbd75808d104779dbfe094",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/ingersoll-rand-314ac4a/",
+          "contentHash": "66eecbe85bd24045882f0dee2c1e2ede9c9850eb7f67eaf72acf65139062b6e6",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/ingersoll-rand-77a45w109/",
+          "contentHash": "a201e429511beca96f36edea1ffce3eff513abe678479aa5637f22c06d97c9c6",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/ingersoll-rand-g1a120rs418/",
+          "contentHash": "a8fb76268f48e12e283f81e9343772d6b87bce645e7adfe6d259187bc66df2e9",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/nitto-kohki-b-30cl/",
+          "contentHash": "d38d79cf541a81be1cec77babd1f69ccd68e2cc2b3e3296d399f9529c8398488",
+          "decision": "needs-correction",
+          "note": "La source de consommation est libellée à vide, mais le profil natif reste fixed-flow sans airflowBasis free-speed. Corriger par le mécanisme versionné et tester la projection avant admission ; extraction PDF chiffrée non achevée aujourd’hui. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/nitto-kohki-fs-50a/",
+          "contentHash": "56bbb0eef737be93329da98be8c0aa5ad280ff5d8a56d20f506904201b00f9f9",
+          "decision": "needs-correction",
+          "note": "La source de consommation est libellée à vide, mais le profil natif reste fixed-flow sans airflowBasis free-speed. Corriger par le mécanisme versionné et tester la projection avant admission ; extraction PDF chiffrée non achevée aujourd’hui. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/nitto-kohki-jex-28/",
+          "contentHash": "82f7605ab4d68a81503993c73fd8e71babed67641aaf7a9dcbb83c22ee54288d",
+          "decision": "needs-correction",
+          "note": "La source de consommation est libellée à vide, mais le profil natif reste fixed-flow sans airflowBasis free-speed. Corriger par le mécanisme versionné et tester la projection avant admission ; extraction PDF chiffrée non achevée aujourd’hui. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/nitto-kohki-mg-40/",
+          "contentHash": "e7f07877e526733b70a19a8a7064b023945f71ee64ecd9ab00b5d8c2143225c0",
+          "decision": "needs-correction",
+          "note": "La source de consommation est libellée à vide, mais le profil natif reste fixed-flow sans airflowBasis free-speed. Corriger par le mécanisme versionné et tester la projection avant admission ; extraction PDF chiffrée non achevée aujourd’hui. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rr-06sp/",
+          "contentHash": "296b9a971a63a69321dc5aa550364ad06c476ec514da30e14962a634c3da14f1",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rr-13dp/",
+          "contentHash": "4571a52322e2b5ab4b021218b27f149a12a2e4c3d095ce36035636c032c51ab0",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rr-160h/",
+          "contentHash": "27aa5163561741a8da17b4d75cbd6109e1373527da38db0bb2e58b3cf16f7504",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rrg-1000rel/",
+          "contentHash": "dad0680b9823ef64d34afd038391e8ec221f610e5b36260b72f47e28fe03c8f6",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rrg-3611/",
+          "contentHash": "b696f9a838b9102d4bda1261ba30a3d7403ec93438a1e536fa51d16b5e4d8385",
+          "decision": "needs-correction",
+          "note": "La différence annoncée avec RRG3617K concerne les bras du kit ; même outil moteur. Consolider ou démontrer une autre réponse autonome avant de créer une seconde admission. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rrh-4309k/",
+          "contentHash": "87268ad6a8e26e41f25992063731b0b4fb6c3b0ce53d30db4eabfc67a066c001",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rri-100t/",
+          "contentHash": "925915451be1d5cecd48c7db77550958ab95a559b1942f39074b706e0295efce",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rri-4006/",
+          "contentHash": "360353262e40dbae1428082519ecf795a451f65c74b48a3c4ff1f098cea1d5f2",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rri-5125-2cv/",
+          "contentHash": "124ed6360c703f866801525cb8a3b9fc995bf8162da515fe66a829e397238c62",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rrj-8210/",
+          "contentHash": "08f9008379f64304c94f6482a8817d5f432a99b66af30b73f60a5bf0d64ed1c0",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rrw-121/",
+          "contentHash": "fd7669ee8ec544ac5196900d0de0ee5b350cf05658d27444b65fe6ea9c55d01e",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/rupes-ak150a/",
+          "contentHash": "c1b30423ee9af708c8374d8d31043416bc2b37692261f917ed315fc7f4e98d67",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/rupes-lh76p/",
+          "contentHash": "bf018f220af1e5b2b311126c4ac64d6b90d46ca1a96ba3e7cc1ee12f88871614",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/outils-pneumatiques/rupes-re21acm/",
+          "contentHash": "4a775ca4e81c5248c3ebbf16350f9bad67ec757305576de42597f0e6e4c9bb6a",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/compresseurs/aircraft-airboy-silence-111-as-of-e/",
+          "contentHash": "dfdf61dfea780f49f0318255e61e2b858e0b3a2bca1a39156ac798e34a2e41b4",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/compresseurs/black-decker-bd-227-50v-nk/",
+          "contentHash": "b72d379ca42d077d4a23e6acbe1dbc2fccb706e42163ffa6fb966002e5bb3fca",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/compresseurs/nuair-b2800-50-ct2/",
+          "contentHash": "0c607fc9161bb2cccd3d7d2fd7db5a45e9d3843666cab6b1b5f009f475161d73",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/compresseurs/stanley-d-200-10-24v/",
+          "contentHash": "ca4a508edef9f9fe1a40ced839f2dd71c447bd053dec3c9a024917caccbda0fa",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/guides/compresseur-secours-n-plus-un-capacite-restante/",
+          "contentHash": "c4b9bdeb18397adf793da61e1ee89276002588c833ed4cde8b617cdfcdeb29a4",
+          "decision": "approved",
+          "note": "N+1 : calculer le débit restant après perte d’une unité et distinguer redondance du séquencement. Le cas Kaeser illustre base/appoint/secours ;250L/min par unité et besoin400sont explicitement fictifs. Trois unités moins une laissent500, deux moins une250. Éléments communs et reprise encadrée restent à vérifier."
+        },
+        {
+          "path": "/guides/desiccant-change-couleur-point-rosee/",
+          "contentHash": "9ca6b728c5a10bdc8f2fe621970d744a1a4413089622ed3792a326ce13a19a91",
+          "decision": "needs-correction",
+          "note": "Sources Parker PDF et page de gamme403 aujourd’hui. Les limites de couleur/point de rosée ne sont pas requalifiées depuis une copie inaccessible."
+        },
+        {
+          "path": "/guides/metabo-basic-250-50-w-ou-w-of/",
+          "contentHash": "9e60d09ce2d9b6c65f9d8200fb9cfa3eb9d14038a1eb0c9b6d8e0df5b702be7d",
+          "decision": "needs-correction",
+          "note": "Les deux sources Metabo exactes répondent502 aujourd’hui. L’ancienne lecture du catalogue ne vaut pas accès actuel ; guide conservé en attente."
+        },
+        {
+          "path": "/compresseurs/renner-rs-pro-3-0-310003/",
+          "contentHash": "c690db3bd489045e22e41426daf54396bc224ae6a394463f8b3fb38b14f6e7cb",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/compresseurs/almig-combi-xp-15-standalone/",
+          "contentHash": "94f1aa4f1f90f4f6c5abc14585a218d00e902698e731f13c62549bd816f86d6c",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/compresseurs/boge-s-31-3-13-bar-insonorisation-standard/",
+          "contentHash": "03ec023914c81c3eb78a6e639f6db18ae9cc50e012a8bebee44ad05ede30923e",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/compresseurs/ceccato-csa-10-pack-au-sol-8-bar/",
+          "contentHash": "0cf42a1d2b992d44c7f73da93b25e154ae626c0936cf59c0bcb8ee1b7becdeb2",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/compresseurs/kaeser-aircenter-16-secheur-et-cuve-integres-15-bar/",
+          "contentHash": "32d940763131ce8a89d28e75b9faeed8a43a090965ed1dec297c8fb2b23d3e5c",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/compresseurs/broomwade-fm02-dpp-rsccp020650-10-bar/",
+          "contentHash": "35c0ccea9c8b43cb37cb161cc3e6e5a4c68d8e0aff462741e5036a092eaf58a1",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/guides/meite-mt7116-mt8016-mt5016-couronne-agrafes/",
+          "contentHash": "f327ec40e048db53d99ce37e751006d5bb5e24289dcdcde7552bfeb522a28422",
+          "decision": "approved",
+          "note": "Commander les agrafes exactes MT7116/MT8016/MT5016 :22GA/9mm,21GA/12,8mm et20GA/12,6mm malgré le même corps. Tableau Meite lu visuellement ; pas de jauge convertie arbitrairement ni équivalence de couronnes.70–100psi sans volume par tir reste non conclusif."
+        },
+        {
+          "path": "/guides/rodcraft-rc7038-enlever-adhesif-peinture/",
+          "contentHash": "c01899aaa73f1ec0fb148cc80fb23800e1fa9fccbc9a0d22b229cf4231bd43de",
+          "decision": "approved",
+          "note": "RC7038 : roue gomme pour adhésifs/vinyles, pas un abrasif quelconque. Source8951000328 :400W,2800tr/min,0,92kg, filetage3/8-24mâle/5/16femelle ; consignes surface propre/sans poussière/sans appuyer conservées.500moyen/918L/mincontinu à vide ne deviennent pas un maximum en charge."
+        },
+        {
+          "path": "/compresseurs/chicago-pneumatic-cpi120-50-hz-10-bar-std-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/",
+          "contentHash": "f7868ac42053605295871bec79a8423d5284333b660e6e4181354302abfa7415",
+          "decision": "approved",
+          "note": "CPI120 STD50Hz :901m³/h, soit15016,667L/min à9,5bar, pour90kW, contre720m³/h et75kW auCPI10050Hz au même point. Maxima10bar distincts du point FAD. Le tableau60Hz comporte d’autres conditions et des incohérences non reprises. Cycle du groupe inconnu : aucune suffisance continue déduite du seul gros débit."
+        },
+        {
+          "path": "/compresseurs/elgi-eg-110-p-50-hz-5-5-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/",
+          "contentHash": "e8b4f5367fb7c03d71c813e672f58e45572111472e208e0d7b938038ed8130c6",
+          "decision": "approved",
+          "note": "EG110-P50Hz retenu :22,1m³/min à4,5bar, maximum5,5bar. La version8bar publie21,6m³/min à7bar. Un outil à6,2bar dépasse donc la limite de cette version5,5bar malgré son débit élevé ; test réel du moteur incompatible sur le témoin58460. Protocole ISO1217 annexeC et mesure après séparateur explicitement publiés ; cycle inconnu conservé."
+        },
+        {
+          "path": "/guides/paslode-219090-huile-antigel-outil-pneumatique-froid/",
+          "contentHash": "8de032bbc6ac3603959c894647ee63b5b6cfd5071a53fbfec3692f6ca008c317",
+          "decision": "approved",
+          "note": "Huile d’outil Paslode219090 avec antigel :6–20gouttes/jour selon cadence et environnement, notice de l’outil et purge quotidienne des réservoirs. Aucun seuil de température, mélange ou usage en carter inventé. Ce produit précis complète le guide de viscosité de l’huile du compresseur sans le répéter."
+        },
+        {
+          "path": "/compresseurs/atlas-copco-g-22-50-hz-10-bar-pack-au-sol/",
+          "contentHash": "87ff30ac3a86f76aa9240954fda7fea3bee0c29d4ea433b32a717ed98c3e3dc9",
+          "decision": "approved",
+          "note": "G22Pack au sol50Hz :54,1L/s à9,5bar, soit3246L/min, contre45,1L/s pourG18Pack10bar au même point. Les colonnes Pack/FullFeature et50/60Hz restent distinctes. Le100% de l’élément de compression ne qualifie pas le service du groupe complet ; le moteur conserve données insuffisantes pour la tenue continue."
+        },
+        {
+          "path": "/compresseurs/worthington-creyssensac-rlr-1000-50-hz-8-bar-full-feature-sur-reservoir-270-l/",
+          "contentHash": "9bd08d4d6c623c9d822d78f2046df92b16e634b7fc4f45d1650f0d45abc4dd47",
+          "decision": "approved",
+          "note": "RLR1000FullFeature270L,50Hz,8bar :75m³/h à7,5bar, soit1250L/min, contre51m³/h/850L/min auRLR750FullFeature270L8bar. Cuve et pression identiques isolent le changement de production5,5/7,5kW. Le tableau distingue355kg pourRLR1000FF270L et225kg pourPack au sol ; ces équipements ne se confondent pas. Cycle du groupe non établi."
+        },
+        {
+          "path": "/compresseurs/airpol-kpr-15/",
+          "contentHash": "1fef9d8c91125d06be83de54201caf3827c3777b021036611c6303fe01562407",
+          "decision": "approved",
+          "note": "KPR15 à10bar :plage52–120m³/h,500L et15kW, contre17–90m³/h/500L/11kW auKPR11. Le profil retient866,667L/min, borne basse52×1000/60, et non le maximum2000L/min. Cette différence de borne change les résultats de calcul sans prétendre couvrir une demande permanente au maximum ; cycle inconnu conservé."
+        },
+        {
+          "path": "/compresseurs/alup-allegretto-3/",
+          "contentHash": "efdcc51a0e11254e368bf42063ee2cce588f0c8341853fd7a235bc9a14483ba9",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/compresseurs/bambi-pt24/",
+          "contentHash": "521a0514f4bf4566f220ee24be3c4266ae4698b906f5c007a8c5d759ae78e442",
+          "decision": "needs-correction",
+          "note": "La comparaison cuve15/24L à production identique est déjà explicitée dansPT15. La courbe et le cycle complets dePT24 ne sont pas entièrement relus ici ; apport autonome à compléter."
+        },
+        {
+          "path": "/compresseurs/ekom-dk50-2v-m-mobile-mini/",
+          "contentHash": "a9a8f7028d5a0e8acd30d301bd913e29aa7fb06c55c62e9bef40625a0f7fa327",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/compresseurs/mark-msm-3-ivr/",
+          "contentHash": "fa0d31389fe7d9213052ffd28615862f3050a1f50d57d890c4f6f455a9e0a96f",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/compresseurs/mattei-erc-1/",
+          "contentHash": "e0f134bf0a550cc763248bbb766caf7a33ec3f451242755499e223041e2fac8f",
+          "decision": "needs-correction",
+          "note": "La table Classic page14 donne1,5kW pourERC1, contre1kW dans le profil natif. Corriger puissance, provenance et carte technique avant admission."
+        },
+        {
+          "path": "/guides/fasco-f44ac-cn15w-ps65-clous-bobine-fil-plastique/",
+          "contentHash": "20a9ef283e42250a0346bb3a54d1362d6c76823bb1aee64183adee2d263b9bac",
+          "decision": "approved",
+          "note": "F44AC CN15W-PS65 : clous fil25–65mm/pas7–8mm versus plastique32–65mm/pas7,50mm/CN-AG ; angle15° insuffisant. Magasin250–400/200, réglage de platine et séquence de chargement vérifiés.1,20L ou0,042SCF à90psi/6,2bar sont documentaires ; le voisin traite cadence, ici la décision porte sur la bobine."
+        },
+        {
+          "path": "/compresseurs/dalgakiran-d-4-300-t/",
+          "contentHash": "e268e2b1dea5fca7f274149328047741c49f036e27c368063dafafca1ffbe6e5",
+          "decision": "approved",
+          "note": "D4-300T :double étage12,5bar,3kW,250L et déplacement piston334L/min. LeD4-300simple étage est donné à7bar,3kW,250L et501L/min de déplacement. La versionT répond à un besoin de pression ; ni le nom300 ni le déplacement ne deviennent un FAD. Courbe vide et plafond de configuration explicite, verdict d’alimentation non conclusif."
+        },
+        {
+          "path": "/compresseurs/hertz-frecon-plus-pm-30/",
+          "contentHash": "dd06532ea9fa76f5067c05339b739e0fa17fad3e8f7e2a60839d1e342a002dd5",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/compresseurs/ktc-compack-2-90l-e/",
+          "contentHash": "aecc7eaab6f2bf26762333072e841261f2f227c37d9b39f7c89d10354658f72b",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/compresseurs/lupamat-lkv-11-mitk/",
+          "contentHash": "938079b87e9c4c748884151046e3002b54b910a15de21e6fc7a43adfabb70174",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/compresseurs/sil-air-100-50/",
+          "contentHash": "6dc87080a84cb2dbb418bdb257b26919cd13407e7082c5529200249b7c1a7704",
+          "decision": "deferred",
+          "note": "Corps natif et préparation précédente examinés. La revue complète des passages primaires, de la qualification technique et de l’apport distinct du candidat courant reste inachevée ; aucune admission automatique depuis le téléchargement ou le score."
+        },
+        {
+          "path": "/compresseurs/fini-cube-4-0-10-270-es/",
+          "contentHash": "e4953c6bc3642898b8250c76e7c1bb1182da6c298d98f7aaecb502800160dbf2",
+          "decision": "needs-correction",
+          "note": "La distinction de finition ES/ES Z est déjà expliquée par la page ES Z. La consolidation du25octobre est conservée ; pas de nouvelle admission par reformulation réciproque. Réserve conservée pour la proposition du27octobre ; aucune approbation déduite de la préparation antérieure."
+        }
+      ]
     }
   ]
 }

@@ -38,6 +38,6 @@ Un adaptateur de carré ne fait pas disparaître la limite du carré situé en a
 
 ## Ce que CompatAir retient
 
-La [fiche 19RAA07AH2](/outils-pneumatiques/cleco-19raa07ah2/) conserve l’avertissement avec la référence concernée. La [fiche AH3](/outils-pneumatiques/cleco-19raa07ah3/) garde sa sortie propre. Les deux consommations publiées sont de 0,31 m³/min, soit 310 L/min, avec des performances à 6,2 bar à l’entrée selon la note de page.
+La [fiche 19RAA07AH2](/outils-pneumatiques/cleco-19raa07ah2/) conserve l’avertissement avec la référence concernée. La [fiche AH3](/outils-pneumatiques/cleco-19raa07ah3/) garde sa sortie propre. Les deux lignes publient 0,31 m³/min, soit 310 L/min. La note de page situe les performances à 6,2 bar à l’entrée, mais le régime de consommation reste à préciser avant de dimensionner le compresseur.
 
 Cette égalité d’alimentation ne rend pas les sorties mécaniquement interchangeables. Le calcul de compatibilité compresseur-outil traite l’air ; il ne certifie ni le carré ni l’assemblage. Pour une machine livrée aujourd’hui, rapprochez ces données de l’édition de notice et du numéro de référence du devis, le catalogue utilisé ici étant archivé.

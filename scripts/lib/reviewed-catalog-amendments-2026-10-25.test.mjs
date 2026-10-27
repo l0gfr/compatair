@@ -1,3 +1,4 @@
+import { beforeOctober27Amendment } from './reviewed-catalog-amendments-2026-10-27.mjs';
 import { beforeOctober25Followup } from './reviewed-catalog-amendments-2026-10-25-b.mjs';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
@@ -12,7 +13,7 @@ import { toolCategoryLabel, toolUsageTaxonomy } from '../../src/data/taxonomy';
 import { createRuntimeCatalog, runtimeCatalogSchema } from '../../src/domain/runtime-catalog';
 import { evaluateCompatibility } from '../../server/air-compatibility.mjs';
 const snapshot = JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-10-25.json', import.meta.url), 'utf8'));
-const native = row => beforeOctober25Followup(parseCatalogProductSource(row.kind, readFileSync(new URL('../../'+row.file, import.meta.url), 'utf8')));
+const native = row => beforeOctober25Followup(beforeOctober27Amendment(parseCatalogProductSource(row.kind, readFileSync(new URL('../../'+row.file, import.meta.url), 'utf8'))));
 const selected = snapshot.rows.map(row => native(row));
 const c = selected.filter(p=>p.fadCurve), t = selected.filter(p=>p.demandModel);
 const runtime = runtimeCatalogSchema.parse(createRuntimeCatalog(c.map(p=>compressorSchema.parse(p)), t.map(p=>toolProfileSchema.parse(p)), CATALOG_VERIFIED_AT, 'a'.repeat(64)));
@@ -29,7 +30,9 @@ describe('October25 exact editorial and technical corrections',()=>{
    for(const key of Object.keys(before).filter(k=>!row.fields.includes(k)))expect(after[key],`${row.id}:${key}`).toEqual(before[key]);
    for(const key of row.fields.filter(k=>!Object.hasOwn(row.after,k)))expect(after,row.id).not.toHaveProperty(key);
    const parsed=(row.kind==='tools'?toolProfileSchema:compressorSchema).parse(after);
-   const published=beforeOctober25Followup((row.kind==='tools'?tools:compressors).find(p=>p.id===row.id));
+   const served=(row.kind==='tools'?tools:compressors).find(p=>p.id===row.id);
+   const published=beforeOctober25Followup(beforeOctober27Amendment(row.kind==='tools'?{...served,category:served.categoryId}:served));
+   if(row.kind==='tools')published.category=toolCategoryLabel(published.categoryId);
    expect(published,row.id).toEqual(row.kind==='tools'?{...parsed,category:toolCategoryLabel(parsed.categoryId)}:parsed);
    for(const key of ['brand','model','mpn'])expect(()=>applyReviewedOctober25Amendment({...before,[key]:'different'}),row.id).toThrow('Identité');
    const drift=structuredClone(before);drift[row.fields[0]]='unreviewed';expect(()=>applyReviewedOctober25Amendment(drift),row.id).toThrow('Base différente');

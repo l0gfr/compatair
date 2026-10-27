@@ -6,8 +6,8 @@ const product: ToolProfileInput = {
 	"brand": "BIAX",
 	"model": "BEW 309 E",
 	"mpn": "150800726",
-	"categoryId": "perceuse",
-	"category": "perceuse",
+	"categoryId": "ebavureuse",
+	"category": "ebavureuse",
 	"label": "BIAX BEW 309 E",
 	"demandModel": "fixed-flow",
 	"workingPressureBar": {
@@ -155,6 +155,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-25",
 			"confidence": "B",
 			"notes": "Corps complet SHA-256 318971fb9ba951f395b81cbca3d1e57938ce23b74db3aef25ff98bb8f0edc6c8. Page 24: SBRD 820 réf. 150021135, 310 W, conflit avec 300 W HTML conservé. Pages 40–41: BEW 309 E réf. 150800726, 150 L/min, 20 W, 0–900 tr/min; fonctionnement/lubrification à 6 bar, sans qualification de consommation en charge; diamètre maximal du trou 10 mm, conflit avec 11 mm HTML. Ne pas mélanger BEW 309 EL150 ou SBRH avec les références étudiées. Données déclarées, aucun essai physique CompatAir."
+		},
+		{
+			"id": "review-20261027-biax-deburring-category",
+			"sourceUrl": "https://biax.de/en/product/bew-309-e-bis-senk-o-11-mm/",
+			"sourceLabel": "BIAX BEW309E, classement Angled Deburrers",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-27",
+			"confidence": "B",
+			"notes": "Corps relu le27octobre2026, SHA-256 a11b53f80358d4226e2c0045ecffcc0ed61becd67055424b508342b2fc83e990. Correction limitée à la catégorie de l’outil ; les150L/min restent de régime non précisé."
 		}
 	],
 	"fieldSources": {
@@ -171,6 +181,12 @@ const product: ToolProfileInput = {
 		"airflowBasis": [
 			"reserved-20261025-biax-bew309",
 			"reserved-20261025-biax-catalog-current-p41"
+		],
+		"categoryId": [
+			"review-20261027-biax-deburring-category"
+		],
+		"category": [
+			"review-20261027-biax-deburring-category"
 		]
 	},
 	"notes": [
