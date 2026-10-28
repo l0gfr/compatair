@@ -24,7 +24,7 @@ const product: CompressorInput = {
 		}
 	],
 	"oilType": "oil",
-	"powerKw": 1,
+	"powerKw": 1.5,
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
@@ -77,14 +77,23 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october3d-mattei-pdf-03-p6"
 			]
+		},
+		{
+			"label": "Puissance corrigée par relecture de la ligne ERC 1, 50 Hz",
+			"value": "1,5 kW / 2 hp",
+			"evidenceIds": [
+				"review-20261028-mattei-erc-1-1"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "Mattei ERC 1. 160 L/min à 9,5 bar. Groupe Classic sur socle sans réservoir.",
+		"overview": "Mattei ERC 1 : puissance publiée de 1,5 kW et FAD de 160 L/min à 9,5 bar pour la version 10 bar, en 50 Hz. L’ERC 3 publie 320 L/min au même point avec 3 kW. La brochure distingue les alimentations 230 V monophasée et 400 V triphasée de l’ERC 1 ; l’ERC 3 est présenté en 400 V triphasé. La version électrique doit figurer sur le devis.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 0 L.",
-			"Pression maximale de fonctionnement publiée : 10 bar."
+			"Pression maximale de fonctionnement publiée : 10 bar.",
+			"Puissance de l’ERC 1 dans les deux lignes 50 Hz : 1,5 kW, soit 2 hp dans le tableau.",
+			"La note du tableau fixe la pression de travail à 9,5 bar pour les versions 10 bar ; ISO 1217, annexe C."
 		],
 		"limitations": [
 			"La pression FAD est inférieure de 0,5 bar au maximum de la version ; ces deux valeurs restent distinctes.",
@@ -135,6 +144,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review-20261028-mattei-erc-1-1",
+			"sourceUrl": "https://4609801.fs1.hubspotusercontent-na1.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20CLASSIC/Classic_Range_EN.pdf#page=14",
+			"sourceLabel": "Relecture du modèle et de son voisin, 28 octobre 2026, pages PDF 14",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-28",
+			"confidence": "B",
+			"notes": "Réponse primaire complète relue le 28 octobre 2026 ; SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2. Comparaison documentaire, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -149,10 +168,14 @@ const product: CompressorInput = {
 			"october3d-mattei-pdf-03-p14"
 		],
 		"powerKw": [
-			"october3d-mattei-pdf-03-p14"
+			"october3d-mattei-pdf-03-p14",
+			"review-20261028-mattei-erc-1-1"
 		],
 		"oilType": [
 			"october3d-mattei-pdf-03-p3"
+		],
+		"editorial": [
+			"review-20261028-mattei-erc-1-1"
 		]
 	},
 	"notes": [

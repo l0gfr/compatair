@@ -1,3 +1,4 @@
+import { beforeOctober28Amendment } from './reviewed-catalog-amendments-2026-10-28.mjs';
 import { beforeOctober27Amendment } from './reviewed-catalog-amendments-2026-10-27.mjs';
 import { beforeOctober25Followup } from './reviewed-catalog-amendments-2026-10-25-b.mjs';
 import { readFileSync } from 'node:fs';
@@ -7,7 +8,7 @@ const rows = new Map(JSON.parse(readFileSync(new URL('../../src/data/imports/cat
 // Historical assertions inspect the exact earlier state. Current native/runtime
 // reconstruction and qualification are checked separately in the dated suite.
 export function beforeOctober25Review(product) {
- product = beforeOctober25Followup(beforeOctober27Amendment(product));
+ product = beforeOctober25Followup(beforeOctober27Amendment(beforeOctober28Amendment(product)));
  const row = rows.get(product.id);
  if (!row) return product;
  for (const key of ['brand', 'model', 'mpn']) if ((product[key] ?? null) !== row[key]) throw new Error('Historical projection identity drift');

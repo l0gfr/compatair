@@ -1,0 +1,912 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-28",
+  "rows": [
+    {
+      "id": "cle-a-chocs-taylor-pneumatic-t-7734-1-2-impact-wrench-t-7734",
+      "kind": "tools",
+      "file": "src/data/products/tools/cle-a-chocs-taylor-pneumatic-t-7734-1-2-impact-wrench-t-7734.ts",
+      "identity": {
+        "brand": "Taylor Pneumatic",
+        "model": "T-7734 1/2\" Impact Wrench",
+        "mpn": "T-7734"
+      },
+      "fields": [
+        "editorial",
+        "evidence",
+        "fieldSources"
+      ],
+      "sourceIndentation": 2,
+      "sourceSha": "e13fff7240f438f7dac84862675e73d9ce6608eb",
+      "beforeFileSha256": "8fe9d4bc53b013271900ef221bc0bf20aba1ea01abd1aabfc6da7e1f42abf018",
+      "sourceDocumentSha256": "f76011e91fc51ffa3e2beb29c7726816e651e13c17901d07ef7cb5c6573d743b",
+      "reviewedSources": [
+        {
+          "url": "https://taylorpneumatic.com/products/t-7734",
+          "sha256": "f76011e91fc51ffa3e2beb29c7726816e651e13c17901d07ef7cb5c6573d743b",
+          "observedAt": "2026-10-28T18:58:12.383871+00:00",
+          "pages": []
+        },
+        {
+          "url": "https://taylorpneumatic.com/products/t-7734l-1-2-impact-wrench-2-extended-anvil",
+          "sha256": "a2d3a3f3be750fbc0d5e2cfb0d96f7676d53dcff065327c52852f07f9d76bae8",
+          "observedAt": "2026-10-28T19:05:07.304622+00:00",
+          "pages": []
+        }
+      ],
+      "before": {
+        "editorial": {
+          "overview": "Taylor Pneumatic T-7734 1/2\" Impact Wrench (réf. T-7734). La fiche distingue Average Air Cons. et Air Cons. @ Load, mais l’unité et la pression de mesure ne sont pas explicites. Le plafond 90 PSI ne devient pas un point de mesure.",
+          "verifiedFacts": [
+            "SQ. Drive : 1/2\".",
+            "Weight lbs. : 5.25.",
+            "Length in. : 6.75.",
+            "Working Torque : 275.",
+            "Max Torque : 325.",
+            "Air Pressure : 90 PSI Max."
+          ],
+          "limitations": [
+            "La fiche distingue Average Air Cons. et Air Cons. @ Load, mais l’unité et la pression de mesure ne sont pas explicites. Le plafond 90 PSI ne devient pas un point de mesure.",
+            "Les colonnes Average Air Cons. et Air Cons. @ Load sont distinguées dans la fiche, mais l’unité et le point de pression de mesure ne sont pas explicités.",
+            "Air Pressure 90 PSI Max est un plafond de service ; il ne devient pas une pression de mesure par déduction.",
+            "Aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "october4-tools-taylor-product-111-p1",
+            "sourceUrl": "https://taylorpneumatic.com/products/t-7734",
+            "sourceLabel": "Taylor Pneumatic : T-7734 1/2\" Impact Wrench",
+            "sourceType": "manufacturer",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-04",
+            "confidence": "B",
+            "notes": "Déclaration fabricant, réponse primaire SHA-256 ae210affeacd2825c5407ce70d5edf37373f60f7ed00fdc0e06e324695ba5c9f. Aucun essai physique CompatAir."
+          }
+        ],
+        "fieldSources": {
+          "mpn": [
+            "october4-tools-taylor-product-111-p1"
+          ],
+          "workingPressureBar": [
+            "october4-tools-taylor-product-111-p1"
+          ],
+          "demandExplanation": [
+            "october4-tools-taylor-product-111-p1"
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "La T-7734 est la version courte en carré 1/2 pouce : longueur publiée de 6,75 pouces, contre 8,125 pouces pour la T-7734L à enclume allongée de 2 pouces. Le choix porte sur l’accès à l’assemblage. Les deux fiches affichent 4 en consommation moyenne et 15 en charge, sans unité ni pression de mesure explicites ; aucun débit de compresseur n’en est déduit.",
+          "verifiedFacts": [
+            "SQ. Drive : 1/2\".",
+            "Weight lbs. : 5.25.",
+            "Length in. : 6.75.",
+            "Working Torque : 275.",
+            "Max Torque : 325.",
+            "Air Pressure : 90 PSI Max.",
+            "Comparaison des fiches T-7734 et T-7734L : longueurs de 6,75 et 8,125 pouces ; même carré 1/2 pouce et masse publiée de 5,25 lb."
+          ],
+          "limitations": [
+            "La fiche distingue Average Air Cons. et Air Cons. @ Load, mais l’unité et la pression de mesure ne sont pas explicites. Le plafond 90 PSI ne devient pas un point de mesure.",
+            "Les colonnes Average Air Cons. et Air Cons. @ Load sont distinguées dans la fiche, mais l’unité et le point de pression de mesure ne sont pas explicités.",
+            "Air Pressure 90 PSI Max est un plafond de service ; il ne devient pas une pression de mesure par déduction.",
+            "Aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué.",
+            "L’allonge de 2 pouces décrit l’enclume de la version L, pas la différence entre les longueurs totales des deux outils.",
+            "Les couples Working Torque 275 et Max Torque 325 sont conservés sous leurs libellés d’origine ; aucune unité absente n’est ajoutée."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "october4-tools-taylor-product-111-p1",
+            "sourceUrl": "https://taylorpneumatic.com/products/t-7734",
+            "sourceLabel": "Taylor Pneumatic : T-7734 1/2\" Impact Wrench",
+            "sourceType": "manufacturer",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-04",
+            "confidence": "B",
+            "notes": "Déclaration fabricant, réponse primaire SHA-256 ae210affeacd2825c5407ce70d5edf37373f60f7ed00fdc0e06e324695ba5c9f. Aucun essai physique CompatAir."
+          },
+          {
+            "id": "review-20261028-cle-a-chocs-taylor-pneumatic-t-7734-1-2-impact-wrench-t-7734-1",
+            "sourceUrl": "https://taylorpneumatic.com/products/t-7734",
+            "sourceLabel": "Relecture du modèle et de son voisin, 28 octobre 2026",
+            "sourceType": "manufacturer",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-28",
+            "confidence": "B",
+            "notes": "Réponse primaire complète relue le 28 octobre 2026 ; SHA-256 f76011e91fc51ffa3e2beb29c7726816e651e13c17901d07ef7cb5c6573d743b. Comparaison documentaire, sans essai physique CompatAir."
+          },
+          {
+            "id": "review-20261028-cle-a-chocs-taylor-pneumatic-t-7734-1-2-impact-wrench-t-7734-2",
+            "sourceUrl": "https://taylorpneumatic.com/products/t-7734l-1-2-impact-wrench-2-extended-anvil",
+            "sourceLabel": "Relecture du modèle et de son voisin, 28 octobre 2026",
+            "sourceType": "manufacturer",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-28",
+            "confidence": "B",
+            "notes": "Réponse primaire complète relue le 28 octobre 2026 ; SHA-256 a2d3a3f3be750fbc0d5e2cfb0d96f7676d53dcff065327c52852f07f9d76bae8. Comparaison documentaire, sans essai physique CompatAir."
+          }
+        ],
+        "fieldSources": {
+          "mpn": [
+            "october4-tools-taylor-product-111-p1"
+          ],
+          "workingPressureBar": [
+            "october4-tools-taylor-product-111-p1"
+          ],
+          "demandExplanation": [
+            "october4-tools-taylor-product-111-p1"
+          ],
+          "editorial": [
+            "review-20261028-cle-a-chocs-taylor-pneumatic-t-7734-1-2-impact-wrench-t-7734-1",
+            "review-20261028-cle-a-chocs-taylor-pneumatic-t-7734-1-2-impact-wrench-t-7734-2"
+          ]
+        }
+      }
+    },
+    {
+      "id": "mattei-erc-1",
+      "kind": "compressors",
+      "file": "src/data/products/compressors/mattei-erc-1.ts",
+      "identity": {
+        "brand": "Mattei",
+        "model": "ERC 1"
+      },
+      "fields": [
+        "powerKw",
+        "specifications",
+        "editorial",
+        "evidence",
+        "fieldSources"
+      ],
+      "sourceIndentation": "\t",
+      "sourceSha": "e13fff7240f438f7dac84862675e73d9ce6608eb",
+      "beforeFileSha256": "672440c8586dbea4f86fff363ca881704a5fc7cc5e6a16c17ce70fdf3333136c",
+      "sourceDocumentSha256": "db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2",
+      "reviewedSources": [
+        {
+          "url": "https://4609801.fs1.hubspotusercontent-na1.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20CLASSIC/Classic_Range_EN.pdf",
+          "sha256": "db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2",
+          "observedAt": "2026-10-28T18:58:51.938725+00:00",
+          "pages": [
+            14
+          ]
+        }
+      ],
+      "before": {
+        "powerKw": 1,
+        "specifications": [
+          {
+            "label": "Configuration constructeur",
+            "value": "Groupe Classic sur socle sans réservoir",
+            "evidenceIds": [
+              "october3d-mattei-pdf-03-p14",
+              "october3d-mattei-pdf-03-p4"
+            ]
+          },
+          {
+            "label": "Pression maximale de fonctionnement",
+            "value": "10 bar relatifs",
+            "evidenceIds": [
+              "october3d-mattei-pdf-03-p6"
+            ]
+          },
+          {
+            "label": "Air livré à 9,5 bar",
+            "value": "160 L/min",
+            "evidenceIds": [
+              "october3d-mattei-pdf-03-p14"
+            ]
+          },
+          {
+            "label": "Cuve de stockage",
+            "value": "0 L",
+            "evidenceIds": [
+              "october3d-mattei-pdf-03-p14",
+              "october3d-mattei-pdf-03-p4"
+            ]
+          },
+          {
+            "label": "Alimentation publiée",
+            "value": "230/1",
+            "evidenceIds": [
+              "october3d-mattei-pdf-03-p6"
+            ]
+          },
+          {
+            "label": "Fréquence retenue",
+            "value": "50 Hz",
+            "evidenceIds": [
+              "october3d-mattei-pdf-03-p6"
+            ]
+          }
+        ],
+        "editorial": {
+          "overview": "Mattei ERC 1. 160 L/min à 9,5 bar. Groupe Classic sur socle sans réservoir.",
+          "verifiedFacts": [
+            "Air livré rattaché à une pression et aux unités originales du constructeur.",
+            "Cuve de stockage documentée : 0 L.",
+            "Pression maximale de fonctionnement publiée : 10 bar."
+          ],
+          "limitations": [
+            "La pression FAD est inférieure de 0,5 bar au maximum de la version ; ces deux valeurs restent distinctes.",
+            "Aucun cycle de service du groupe complet publié dans la brochure retenue.",
+            "La brochure Classic affiche 175 psig face à 13 bar ; le maximum SI explicite est conservé et cette contre-valeur impériale est exclue.",
+            "Cycle de service non établi ; la tenue permanente reste indéterminée.",
+            "Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
+            "Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "october3d-mattei-pdf-03-p6",
+            "sourceUrl": "https://4609801.fs1.hubspotusercontent-na1.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20CLASSIC/Classic_Range_EN.pdf#page=6",
+            "sourceLabel": "Mattei Classic, brochure constructeur, page PDF 6",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-03",
+            "confidence": "B",
+            "notes": "SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+          },
+          {
+            "id": "october3d-mattei-pdf-03-p14",
+            "sourceUrl": "https://4609801.fs1.hubspotusercontent-na1.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20CLASSIC/Classic_Range_EN.pdf#page=14",
+            "sourceLabel": "Mattei Classic, brochure constructeur, page PDF 14",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-03",
+            "confidence": "B",
+            "notes": "SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+          },
+          {
+            "id": "october3d-mattei-pdf-03-p4",
+            "sourceUrl": "https://4609801.fs1.hubspotusercontent-na1.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20CLASSIC/Classic_Range_EN.pdf#page=4",
+            "sourceLabel": "Mattei Classic, brochure constructeur, page PDF 4",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-03",
+            "confidence": "B",
+            "notes": "SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+          },
+          {
+            "id": "october3d-mattei-pdf-03-p3",
+            "sourceUrl": "https://4609801.fs1.hubspotusercontent-na1.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20CLASSIC/Classic_Range_EN.pdf#page=3",
+            "sourceLabel": "Mattei Classic, brochure constructeur, page PDF 3",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-03",
+            "confidence": "B",
+            "notes": "SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+          }
+        ],
+        "fieldSources": {
+          "maxPressureBar": [
+            "october3d-mattei-pdf-03-p6"
+          ],
+          "tankLiters": [
+            "october3d-mattei-pdf-03-p14",
+            "october3d-mattei-pdf-03-p4"
+          ],
+          "fadCurve": [
+            "october3d-mattei-pdf-03-p14"
+          ],
+          "powerKw": [
+            "october3d-mattei-pdf-03-p14"
+          ],
+          "oilType": [
+            "october3d-mattei-pdf-03-p3"
+          ]
+        }
+      },
+      "after": {
+        "powerKw": 1.5,
+        "specifications": [
+          {
+            "label": "Configuration constructeur",
+            "value": "Groupe Classic sur socle sans réservoir",
+            "evidenceIds": [
+              "october3d-mattei-pdf-03-p14",
+              "october3d-mattei-pdf-03-p4"
+            ]
+          },
+          {
+            "label": "Pression maximale de fonctionnement",
+            "value": "10 bar relatifs",
+            "evidenceIds": [
+              "october3d-mattei-pdf-03-p6"
+            ]
+          },
+          {
+            "label": "Air livré à 9,5 bar",
+            "value": "160 L/min",
+            "evidenceIds": [
+              "october3d-mattei-pdf-03-p14"
+            ]
+          },
+          {
+            "label": "Cuve de stockage",
+            "value": "0 L",
+            "evidenceIds": [
+              "october3d-mattei-pdf-03-p14",
+              "october3d-mattei-pdf-03-p4"
+            ]
+          },
+          {
+            "label": "Alimentation publiée",
+            "value": "230/1",
+            "evidenceIds": [
+              "october3d-mattei-pdf-03-p6"
+            ]
+          },
+          {
+            "label": "Fréquence retenue",
+            "value": "50 Hz",
+            "evidenceIds": [
+              "october3d-mattei-pdf-03-p6"
+            ]
+          },
+          {
+            "label": "Puissance corrigée par relecture de la ligne ERC 1, 50 Hz",
+            "value": "1,5 kW / 2 hp",
+            "evidenceIds": [
+              "review-20261028-mattei-erc-1-1"
+            ]
+          }
+        ],
+        "editorial": {
+          "overview": "Mattei ERC 1 : puissance publiée de 1,5 kW et FAD de 160 L/min à 9,5 bar pour la version 10 bar, en 50 Hz. L’ERC 3 publie 320 L/min au même point avec 3 kW. La brochure distingue les alimentations 230 V monophasée et 400 V triphasée de l’ERC 1 ; l’ERC 3 est présenté en 400 V triphasé. La version électrique doit figurer sur le devis.",
+          "verifiedFacts": [
+            "Air livré rattaché à une pression et aux unités originales du constructeur.",
+            "Cuve de stockage documentée : 0 L.",
+            "Pression maximale de fonctionnement publiée : 10 bar.",
+            "Puissance de l’ERC 1 dans les deux lignes 50 Hz : 1,5 kW, soit 2 hp dans le tableau.",
+            "La note du tableau fixe la pression de travail à 9,5 bar pour les versions 10 bar ; ISO 1217, annexe C."
+          ],
+          "limitations": [
+            "La pression FAD est inférieure de 0,5 bar au maximum de la version ; ces deux valeurs restent distinctes.",
+            "Aucun cycle de service du groupe complet publié dans la brochure retenue.",
+            "La brochure Classic affiche 175 psig face à 13 bar ; le maximum SI explicite est conservé et cette contre-valeur impériale est exclue.",
+            "Cycle de service non établi ; la tenue permanente reste indéterminée.",
+            "Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
+            "Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "october3d-mattei-pdf-03-p6",
+            "sourceUrl": "https://4609801.fs1.hubspotusercontent-na1.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20CLASSIC/Classic_Range_EN.pdf#page=6",
+            "sourceLabel": "Mattei Classic, brochure constructeur, page PDF 6",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-03",
+            "confidence": "B",
+            "notes": "SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+          },
+          {
+            "id": "october3d-mattei-pdf-03-p14",
+            "sourceUrl": "https://4609801.fs1.hubspotusercontent-na1.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20CLASSIC/Classic_Range_EN.pdf#page=14",
+            "sourceLabel": "Mattei Classic, brochure constructeur, page PDF 14",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-03",
+            "confidence": "B",
+            "notes": "SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+          },
+          {
+            "id": "october3d-mattei-pdf-03-p4",
+            "sourceUrl": "https://4609801.fs1.hubspotusercontent-na1.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20CLASSIC/Classic_Range_EN.pdf#page=4",
+            "sourceLabel": "Mattei Classic, brochure constructeur, page PDF 4",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-03",
+            "confidence": "B",
+            "notes": "SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+          },
+          {
+            "id": "october3d-mattei-pdf-03-p3",
+            "sourceUrl": "https://4609801.fs1.hubspotusercontent-na1.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20CLASSIC/Classic_Range_EN.pdf#page=3",
+            "sourceLabel": "Mattei Classic, brochure constructeur, page PDF 3",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-03",
+            "confidence": "B",
+            "notes": "SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+          },
+          {
+            "id": "review-20261028-mattei-erc-1-1",
+            "sourceUrl": "https://4609801.fs1.hubspotusercontent-na1.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20CLASSIC/Classic_Range_EN.pdf#page=14",
+            "sourceLabel": "Relecture du modèle et de son voisin, 28 octobre 2026, pages PDF 14",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-28",
+            "confidence": "B",
+            "notes": "Réponse primaire complète relue le 28 octobre 2026 ; SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2. Comparaison documentaire, sans essai physique CompatAir."
+          }
+        ],
+        "fieldSources": {
+          "maxPressureBar": [
+            "october3d-mattei-pdf-03-p6"
+          ],
+          "tankLiters": [
+            "october3d-mattei-pdf-03-p14",
+            "october3d-mattei-pdf-03-p4"
+          ],
+          "fadCurve": [
+            "october3d-mattei-pdf-03-p14"
+          ],
+          "powerKw": [
+            "october3d-mattei-pdf-03-p14",
+            "review-20261028-mattei-erc-1-1"
+          ],
+          "oilType": [
+            "october3d-mattei-pdf-03-p3"
+          ],
+          "editorial": [
+            "review-20261028-mattei-erc-1-1"
+          ]
+        }
+      }
+    },
+    {
+      "id": "hertz-frecon-plus-pm-30",
+      "kind": "compressors",
+      "file": "src/data/products/compressors/hertz-frecon-plus-pm-30.ts",
+      "identity": {
+        "brand": "Hertz",
+        "model": "FRECON PLUS PM 30"
+      },
+      "fields": [
+        "editorial",
+        "evidence",
+        "fieldSources"
+      ],
+      "sourceIndentation": "\t",
+      "sourceSha": "e13fff7240f438f7dac84862675e73d9ce6608eb",
+      "beforeFileSha256": "6ef3c8f56d54fea9e3cc5f8f1afc69c55601662339f24fd23a8081f3bade2998",
+      "sourceDocumentSha256": "e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339",
+      "reviewedSources": [
+        {
+          "url": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf",
+          "sha256": "e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339",
+          "observedAt": "2026-10-28T18:58:52.493964+00:00",
+          "pages": [
+            20
+          ]
+        }
+      ],
+      "before": {
+        "editorial": {
+          "overview": "Hertz FRECON PLUS PM 30. 1 200 L/min déclarés à 13 bar. Base Mounted, stockage d’air externe.",
+          "verifiedFacts": [
+            "Configuration de pression documentée : 13 bar.",
+            "Montage sans réservoir de stockage intégré explicitement documenté.",
+            "FAD sous pression identifié séparément des valeurs d’aspiration : 1 200 L/min déclarés à 13 bar."
+          ],
+          "limitations": [
+            "Une seule configuration de pression est retenue par modèle. Les autres lignes de pression ne sont pas assemblées en une courbe mesurée.",
+            "La cuve optionnelle Tank + Dryer est distincte du montage Base Mounted retenu.",
+            "Le FAD retenu est le minimum de la plage VSD à cette pression. Le maximum de la plage n’est pas utilisé comme débit garanti.",
+            "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
+            "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
+            "Le plafond CompatAir correspond à la pression de travail de la version retenue. Il ne décrit ni la soupape ni le maximum de toutes les versions de la famille."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "october4-hertz-catalog-p20",
+            "sourceUrl": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf#page=20",
+            "sourceLabel": "Hertz, catalogue constructeur, page PDF 20",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-04",
+            "confidence": "B",
+            "notes": "SHA-256 e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339 de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+          },
+          {
+            "id": "october4-hertz-catalog-p17",
+            "sourceUrl": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf#page=17",
+            "sourceLabel": "Hertz, catalogue constructeur, page PDF 17",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-04",
+            "confidence": "B",
+            "notes": "SHA-256 e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339 de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+          }
+        ],
+        "fieldSources": {
+          "maxPressureBasis": [
+            "october4-hertz-catalog-p20"
+          ],
+          "model": [
+            "october4-hertz-catalog-p20"
+          ],
+          "maxPressureBar": [
+            "october4-hertz-catalog-p20"
+          ],
+          "tankLiters": [
+            "october4-hertz-catalog-p20"
+          ],
+          "fadCurve": [
+            "october4-hertz-catalog-p20"
+          ],
+          "powerKw": [
+            "october4-hertz-catalog-p20"
+          ],
+          "oilType": [
+            "october4-hertz-catalog-p17"
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "FRECON PLUS PM 30 à 13 bar : plage FAD publiée de 1,20 à 3,87 m³/min. Le profil de calcul retient la borne basse de 1 200 L/min. Le PM 37 publie 1,31 à 4,54 m³/min à la même pression. Le tableau prévoit ces deux tailles sur socle et laisse leurs colonnes Tank + Dryer vides ; le stockage et le traitement restent à définir pour l’installation.",
+          "verifiedFacts": [
+            "Configuration de pression documentée : 13 bar.",
+            "Montage sans réservoir de stockage intégré explicitement documenté.",
+            "FAD sous pression identifié séparément des valeurs d’aspiration : 1 200 L/min déclarés à 13 bar.",
+            "Comparaison à 13 bar : PM 30, minimum 1 200 et maximum 3 870 L/min ; PM 37, minimum 1 310 et maximum 4 540 L/min.",
+            "Les capacités FAD sont mesurées selon ISO 1217:2009, annexe E ; la plage du variateur et le cycle de service restent deux informations distinctes."
+          ],
+          "limitations": [
+            "Une seule configuration de pression est retenue par modèle. Les autres lignes de pression ne sont pas assemblées en une courbe mesurée.",
+            "Les colonnes Tank + Dryer sont vides pour le PM 30 dans ce tableau ; aucune cuve ni aucun sécheur intégré n’est attribué à cette version.",
+            "Le FAD retenu est le minimum de la plage VSD à cette pression. Le maximum de la plage n’est pas utilisé comme débit garanti.",
+            "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
+            "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
+            "Le plafond CompatAir correspond à la pression de travail de la version retenue. Il ne décrit ni la soupape ni le maximum de toutes les versions de la famille."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "october4-hertz-catalog-p20",
+            "sourceUrl": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf#page=20",
+            "sourceLabel": "Hertz, catalogue constructeur, page PDF 20",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-04",
+            "confidence": "B",
+            "notes": "SHA-256 e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339 de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+          },
+          {
+            "id": "october4-hertz-catalog-p17",
+            "sourceUrl": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf#page=17",
+            "sourceLabel": "Hertz, catalogue constructeur, page PDF 17",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-04",
+            "confidence": "B",
+            "notes": "SHA-256 e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339 de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+          },
+          {
+            "id": "review-20261028-hertz-frecon-plus-pm-30-1",
+            "sourceUrl": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf#page=20",
+            "sourceLabel": "Relecture du modèle et de son voisin, 28 octobre 2026, pages PDF 20",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-28",
+            "confidence": "B",
+            "notes": "Réponse primaire complète relue le 28 octobre 2026 ; SHA-256 e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339. Comparaison documentaire, sans essai physique CompatAir."
+          }
+        ],
+        "fieldSources": {
+          "maxPressureBasis": [
+            "october4-hertz-catalog-p20"
+          ],
+          "model": [
+            "october4-hertz-catalog-p20"
+          ],
+          "maxPressureBar": [
+            "october4-hertz-catalog-p20"
+          ],
+          "tankLiters": [
+            "october4-hertz-catalog-p20"
+          ],
+          "fadCurve": [
+            "october4-hertz-catalog-p20"
+          ],
+          "powerKw": [
+            "october4-hertz-catalog-p20"
+          ],
+          "oilType": [
+            "october4-hertz-catalog-p17"
+          ],
+          "editorial": [
+            "review-20261028-hertz-frecon-plus-pm-30-1"
+          ]
+        }
+      }
+    },
+    {
+      "id": "lupamat-lkv-11-mitk",
+      "kind": "compressors",
+      "file": "src/data/products/compressors/lupamat-lkv-11-mitk.ts",
+      "identity": {
+        "brand": "Lupamat",
+        "model": "LKV 11 MITK"
+      },
+      "fields": [
+        "editorial",
+        "evidence",
+        "fieldSources"
+      ],
+      "sourceIndentation": "\t",
+      "sourceSha": "e13fff7240f438f7dac84862675e73d9ce6608eb",
+      "beforeFileSha256": "260a9286d98e6745d34aff6650c23d97c922f95afa1f00d1b59a0b536029e901",
+      "sourceDocumentSha256": "3330cc258da3e7cf4f293c5af0da2ae3ced11d881237b550687f50e1f01fd978",
+      "reviewedSources": [
+        {
+          "url": "https://lupamat.com/pdf/Lupamat-EN-Katalog.pdf",
+          "sha256": "3330cc258da3e7cf4f293c5af0da2ae3ced11d881237b550687f50e1f01fd978",
+          "observedAt": "2026-10-28T18:58:53.687557+00:00",
+          "pages": [
+            13
+          ]
+        }
+      ],
+      "before": {
+        "editorial": {
+          "overview": "Lupamat LKV 11 MITK. 1 290 L/min déclarés à 13 bar. Groupe sur cuve 548 L avec sécheur.",
+          "verifiedFacts": [
+            "Configuration de pression documentée : 13 bar.",
+            "Cuve de stockage documentée : 548 L.",
+            "FAD sous pression identifié séparément des valeurs d’aspiration : 1 290 L/min déclarés à 13 bar."
+          ],
+          "limitations": [
+            "Configuration de pression 13 bar retenue dans le triplet 7 / 10 / 13. La version 15 bar sur demande ne fournit pas de FAD dans ce tableau.",
+            "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
+            "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "october4-lupamat-current-catalog-p13",
+            "sourceUrl": "https://lupamat.com/pdf/Lupamat-EN-Katalog.pdf#page=13",
+            "sourceLabel": "Lupamat, catalogue anglais actuellement relié à la page Documents, page PDF 13",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-04",
+            "confidence": "B",
+            "notes": "SHA-256 3330cc258da3e7cf4f293c5af0da2ae3ced11d881237b550687f50e1f01fd978 de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+          }
+        ],
+        "fieldSources": {
+          "model": [
+            "october4-lupamat-current-catalog-p13"
+          ],
+          "maxPressureBar": [
+            "october4-lupamat-current-catalog-p13"
+          ],
+          "tankLiters": [
+            "october4-lupamat-current-catalog-p13"
+          ],
+          "fadCurve": [
+            "october4-lupamat-current-catalog-p13"
+          ],
+          "powerKw": [
+            "october4-lupamat-current-catalog-p13"
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "LKV 11 MITK, version 13 bar : 1 290 L/min de FAD avec une cuve de 548 L et un sécheur. Le LKV 7,5 MITK conserve la même cuve mais publie 820 L/min à 13 bar. Le tableau donne séparément les capacités nominales des sécheurs : 1,67 et 0,88 m³/min pour ces deux lignes à 13 bar. Le volume de cuve ne permet donc pas de comparer leur production d’air.",
+          "verifiedFacts": [
+            "Configuration de pression documentée : 13 bar.",
+            "Cuve de stockage documentée : 548 L.",
+            "FAD sous pression identifié séparément des valeurs d’aspiration : 1 290 L/min déclarés à 13 bar.",
+            "FAD à 13 bar : 1,29 m³/min pour LKV 11 MITK contre 0,82 m³/min pour LKV 7,5 MITK ; cuve commune de 548 L.",
+            "Le tableau MITK distingue les triplets 7/10/13 bar et leurs valeurs de FAD ; le protocole cité est ISO 1217:2009, annexe C."
+          ],
+          "limitations": [
+            "Configuration de pression 13 bar retenue dans le triplet 7 / 10 / 13. La version 15 bar sur demande ne fournit pas de FAD dans ce tableau.",
+            "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
+            "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
+            "La capacité nominale du sécheur ne garantit pas un point de rosée sur l’installation : températures, pression et conditions de référence doivent être confirmées."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "october4-lupamat-current-catalog-p13",
+            "sourceUrl": "https://lupamat.com/pdf/Lupamat-EN-Katalog.pdf#page=13",
+            "sourceLabel": "Lupamat, catalogue anglais actuellement relié à la page Documents, page PDF 13",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-04",
+            "confidence": "B",
+            "notes": "SHA-256 3330cc258da3e7cf4f293c5af0da2ae3ced11d881237b550687f50e1f01fd978 de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+          },
+          {
+            "id": "review-20261028-lupamat-lkv-11-mitk-1",
+            "sourceUrl": "https://lupamat.com/pdf/Lupamat-EN-Katalog.pdf#page=13",
+            "sourceLabel": "Relecture du modèle et de son voisin, 28 octobre 2026, pages PDF 13",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-28",
+            "confidence": "B",
+            "notes": "Réponse primaire complète relue le 28 octobre 2026 ; SHA-256 3330cc258da3e7cf4f293c5af0da2ae3ced11d881237b550687f50e1f01fd978. Comparaison documentaire, sans essai physique CompatAir."
+          }
+        ],
+        "fieldSources": {
+          "model": [
+            "october4-lupamat-current-catalog-p13"
+          ],
+          "maxPressureBar": [
+            "october4-lupamat-current-catalog-p13"
+          ],
+          "tankLiters": [
+            "october4-lupamat-current-catalog-p13"
+          ],
+          "fadCurve": [
+            "october4-lupamat-current-catalog-p13"
+          ],
+          "powerKw": [
+            "october4-lupamat-current-catalog-p13"
+          ],
+          "editorial": [
+            "review-20261028-lupamat-lkv-11-mitk-1"
+          ]
+        }
+      }
+    },
+    {
+      "id": "sil-air-100-50",
+      "kind": "compressors",
+      "file": "src/data/products/compressors/sil-air-100-50.ts",
+      "identity": {
+        "brand": "SIL-AIR",
+        "model": "100/50"
+      },
+      "fields": [
+        "editorial",
+        "evidence",
+        "fieldSources"
+      ],
+      "sourceIndentation": "\t",
+      "sourceSha": "e13fff7240f438f7dac84862675e73d9ce6608eb",
+      "beforeFileSha256": "db287546c7b24c4bd2661f99559534d4b36c5bb1933df9d23e7a0d296f5287d2",
+      "sourceDocumentSha256": "d93f1024b6fa89f01eaacc77c199f3d2f5deb296b92dedf6081ab8568854468a",
+      "reviewedSources": [
+        {
+          "url": "https://cdn.prod.website-files.com/5ef4a20d28c31157474872b0/6a4fceb90145c46f2acc6262_SILAIR%202025.pdf",
+          "sha256": "d93f1024b6fa89f01eaacc77c199f3d2f5deb296b92dedf6081ab8568854468a",
+          "observedAt": "2026-10-28T18:58:54.622988+00:00",
+          "pages": [
+            5,
+            23,
+            26
+          ]
+        }
+      ],
+      "before": {
+        "editorial": {
+          "overview": "SIL-AIR 100/50. 74 L/min déclarés à 5 bar. Compresseur sur cuve 50 L.",
+          "verifiedFacts": [
+            "Configuration de pression documentée : 8 bar.",
+            "Cuve de stockage documentée : 50 L.",
+            "FAD sous pression identifié séparément des valeurs d’aspiration : 74 L/min déclarés à 5 bar."
+          ],
+          "limitations": [
+            "Colonne 50 Hz retenue. La ligne 60 Hz n’est pas utilisée pour augmenter le FAD.",
+            "La pression du FAD est inférieure au maximum mécanique ; aucun FAD n’est extrapolé jusqu’à ce maximum.",
+            "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
+            "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "october4-silair-current-catalog-p26",
+            "sourceUrl": "https://cdn.prod.website-files.com/5ef4a20d28c31157474872b0/6a4fceb90145c46f2acc6262_SILAIR%202025.pdf#page=26",
+            "sourceLabel": "Werther International / SIL-AIR, catalogue constructeur, page PDF 26",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-04",
+            "confidence": "B",
+            "notes": "SHA-256 d93f1024b6fa89f01eaacc77c199f3d2f5deb296b92dedf6081ab8568854468a de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+          },
+          {
+            "id": "october4-silair-current-catalog-p5",
+            "sourceUrl": "https://cdn.prod.website-files.com/5ef4a20d28c31157474872b0/6a4fceb90145c46f2acc6262_SILAIR%202025.pdf#page=5",
+            "sourceLabel": "Werther International / SIL-AIR, catalogue constructeur, page PDF 5",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-04",
+            "confidence": "B",
+            "notes": "SHA-256 d93f1024b6fa89f01eaacc77c199f3d2f5deb296b92dedf6081ab8568854468a de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+          }
+        ],
+        "fieldSources": {
+          "model": [
+            "october4-silair-current-catalog-p26"
+          ],
+          "maxPressureBar": [
+            "october4-silair-current-catalog-p26"
+          ],
+          "tankLiters": [
+            "october4-silair-current-catalog-p26"
+          ],
+          "fadCurve": [
+            "october4-silair-current-catalog-p26",
+            "october4-silair-current-catalog-p5"
+          ],
+          "powerKw": [
+            "october4-silair-current-catalog-p26"
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "SIL-AIR 100/50 en 230 V, 50 Hz : 74 L/min de FAD à 5 bar, deux moteurs et une cuve de 50 L. Le 50/24 publie 37 L/min au même point avec une cuve de 24 L. Le nombre 100 du modèle correspond au débit aspiré affiché de 100 L/min. Le maximum de 8 bar ne fournit aucun nouveau point FAD à 6,3 ou 8 bar.",
+          "verifiedFacts": [
+            "Configuration de pression documentée : 8 bar.",
+            "Cuve de stockage documentée : 50 L.",
+            "FAD sous pression identifié séparément des valeurs d’aspiration : 74 L/min déclarés à 5 bar.",
+            "Comparaison des colonnes 50 Hz : 100/50, 74 L/min à 5 bar et 680 W publiés ; 50/24, 37 L/min à 5 bar et 340 W.",
+            "Les valeurs de 88 et 44 L/min à 5 bar appartiennent aux colonnes 115 V, 60 Hz ; elles restent distinctes de la sélection 50 Hz."
+          ],
+          "limitations": [
+            "Colonne 50 Hz retenue. La ligne 60 Hz n’est pas utilisée pour augmenter le FAD.",
+            "La pression du FAD est inférieure au maximum mécanique ; aucun FAD n’est extrapolé jusqu’à ce maximum.",
+            "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
+            "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
+            "Aucun point de la courbe dessinée n’est estimé à partir des pixels ; seul le point numérique de 5 bar est retenu."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "october4-silair-current-catalog-p26",
+            "sourceUrl": "https://cdn.prod.website-files.com/5ef4a20d28c31157474872b0/6a4fceb90145c46f2acc6262_SILAIR%202025.pdf#page=26",
+            "sourceLabel": "Werther International / SIL-AIR, catalogue constructeur, page PDF 26",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-04",
+            "confidence": "B",
+            "notes": "SHA-256 d93f1024b6fa89f01eaacc77c199f3d2f5deb296b92dedf6081ab8568854468a de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+          },
+          {
+            "id": "october4-silair-current-catalog-p5",
+            "sourceUrl": "https://cdn.prod.website-files.com/5ef4a20d28c31157474872b0/6a4fceb90145c46f2acc6262_SILAIR%202025.pdf#page=5",
+            "sourceLabel": "Werther International / SIL-AIR, catalogue constructeur, page PDF 5",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-04",
+            "confidence": "B",
+            "notes": "SHA-256 d93f1024b6fa89f01eaacc77c199f3d2f5deb296b92dedf6081ab8568854468a de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+          },
+          {
+            "id": "review-20261028-sil-air-100-50-1",
+            "sourceUrl": "https://cdn.prod.website-files.com/5ef4a20d28c31157474872b0/6a4fceb90145c46f2acc6262_SILAIR%202025.pdf#page=5",
+            "sourceLabel": "Relecture du modèle et de son voisin, 28 octobre 2026, pages PDF 5, 23, 26",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-28",
+            "confidence": "B",
+            "notes": "Réponse primaire complète relue le 28 octobre 2026 ; SHA-256 d93f1024b6fa89f01eaacc77c199f3d2f5deb296b92dedf6081ab8568854468a. Comparaison documentaire, sans essai physique CompatAir."
+          }
+        ],
+        "fieldSources": {
+          "model": [
+            "october4-silair-current-catalog-p26"
+          ],
+          "maxPressureBar": [
+            "october4-silair-current-catalog-p26"
+          ],
+          "tankLiters": [
+            "october4-silair-current-catalog-p26"
+          ],
+          "fadCurve": [
+            "october4-silair-current-catalog-p26",
+            "october4-silair-current-catalog-p5"
+          ],
+          "powerKw": [
+            "october4-silair-current-catalog-p26"
+          ],
+          "editorial": [
+            "review-20261028-sil-air-100-50-1"
+          ]
+        }
+      }
+    }
+  ]
+}

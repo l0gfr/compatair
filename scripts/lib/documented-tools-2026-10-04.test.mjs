@@ -20,6 +20,7 @@ async function tamper(find,change){
  expect(()=>buildDocumentedToolsOctober4(copy)).toThrow();
  let code=readFileSync(new URL('./documented-tools-2026-10-04.mjs',import.meta.url),'utf8');
  // Keep the actual amendment guard when loading semantic mutation tests from a data URL.
+ code = code.replace("'./reviewed-catalog-amendments-2026-10-28.mjs'", JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-28.mjs', import.meta.url).href));
  code=code.replace("'./reviewed-catalog-amendments-2026-10-17.mjs'",JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-17.mjs',import.meta.url).href));
  code=code.replace("'./reviewed-catalog-amendments-2026-10-18.mjs'",JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-18.mjs',import.meta.url).href));
  code=code.replace("'./reviewed-catalog-amendments-2026-10-19.mjs'",JSON.stringify(new URL('./reviewed-catalog-amendments-2026-10-19.mjs',import.meta.url).href));

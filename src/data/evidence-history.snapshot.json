@@ -738615,7 +738615,127 @@
         "confidence": "B",
         "notes": "Corps relu le27octobre2026, SHA-256 36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3. Correction limitée à l’unité de la note documentaire ; aucune qualification du besoin d’air."
       }
+    },
+    {
+      "id": "added:cle-a-chocs-taylor-pneumatic-t-7734-1-2-impact-wrench-t-7734:review-20261028-cle-a-chocs-taylor-pneumatic-t-7734-1-2-impact-wrench-t-7734-1:2026-10-28",
+      "evidenceId": "review-20261028-cle-a-chocs-taylor-pneumatic-t-7734-1-2-impact-wrench-t-7734-1",
+      "productId": "cle-a-chocs-taylor-pneumatic-t-7734-1-2-impact-wrench-t-7734",
+      "productType": "tool",
+      "occurredAt": "2026-10-28",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "923d8a963f71738a8d091f62e536a8e9c906871a90b3b839eb80e1ea7afea4b1",
+      "snapshot": {
+        "id": "review-20261028-cle-a-chocs-taylor-pneumatic-t-7734-1-2-impact-wrench-t-7734-1",
+        "sourceUrl": "https://taylorpneumatic.com/products/t-7734",
+        "sourceLabel": "Relecture du modèle et de son voisin, 28 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-28",
+        "confidence": "B",
+        "notes": "Réponse primaire complète relue le 28 octobre 2026 ; SHA-256 f76011e91fc51ffa3e2beb29c7726816e651e13c17901d07ef7cb5c6573d743b. Comparaison documentaire, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:cle-a-chocs-taylor-pneumatic-t-7734-1-2-impact-wrench-t-7734:review-20261028-cle-a-chocs-taylor-pneumatic-t-7734-1-2-impact-wrench-t-7734-2:2026-10-28",
+      "evidenceId": "review-20261028-cle-a-chocs-taylor-pneumatic-t-7734-1-2-impact-wrench-t-7734-2",
+      "productId": "cle-a-chocs-taylor-pneumatic-t-7734-1-2-impact-wrench-t-7734",
+      "productType": "tool",
+      "occurredAt": "2026-10-28",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "4e9107fa982dd929716324ec6427af2feb9b96f1eb425833d8857a94b3b95729",
+      "snapshot": {
+        "id": "review-20261028-cle-a-chocs-taylor-pneumatic-t-7734-1-2-impact-wrench-t-7734-2",
+        "sourceUrl": "https://taylorpneumatic.com/products/t-7734l-1-2-impact-wrench-2-extended-anvil",
+        "sourceLabel": "Relecture du modèle et de son voisin, 28 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-28",
+        "confidence": "B",
+        "notes": "Réponse primaire complète relue le 28 octobre 2026 ; SHA-256 a2d3a3f3be750fbc0d5e2cfb0d96f7676d53dcff065327c52852f07f9d76bae8. Comparaison documentaire, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:hertz-frecon-plus-pm-30:review-20261028-hertz-frecon-plus-pm-30-1:2026-10-28",
+      "evidenceId": "review-20261028-hertz-frecon-plus-pm-30-1",
+      "productId": "hertz-frecon-plus-pm-30",
+      "productType": "compressor",
+      "occurredAt": "2026-10-28",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "24aa9ac63309fd13be8680900254eb178e6f2dda4c03edafcba6097d7ea0797c",
+      "snapshot": {
+        "id": "review-20261028-hertz-frecon-plus-pm-30-1",
+        "sourceUrl": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf#page=20",
+        "sourceLabel": "Relecture du modèle et de son voisin, 28 octobre 2026, pages PDF 20",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-28",
+        "confidence": "B",
+        "notes": "Réponse primaire complète relue le 28 octobre 2026 ; SHA-256 e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339. Comparaison documentaire, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:lupamat-lkv-11-mitk:review-20261028-lupamat-lkv-11-mitk-1:2026-10-28",
+      "evidenceId": "review-20261028-lupamat-lkv-11-mitk-1",
+      "productId": "lupamat-lkv-11-mitk",
+      "productType": "compressor",
+      "occurredAt": "2026-10-28",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e060c78824b66abaf4882bfc6a520966e2cbc1e2e1b6ca0a6bb9c2055f55d837",
+      "snapshot": {
+        "id": "review-20261028-lupamat-lkv-11-mitk-1",
+        "sourceUrl": "https://lupamat.com/pdf/Lupamat-EN-Katalog.pdf#page=13",
+        "sourceLabel": "Relecture du modèle et de son voisin, 28 octobre 2026, pages PDF 13",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-28",
+        "confidence": "B",
+        "notes": "Réponse primaire complète relue le 28 octobre 2026 ; SHA-256 3330cc258da3e7cf4f293c5af0da2ae3ced11d881237b550687f50e1f01fd978. Comparaison documentaire, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:mattei-erc-1:review-20261028-mattei-erc-1-1:2026-10-28",
+      "evidenceId": "review-20261028-mattei-erc-1-1",
+      "productId": "mattei-erc-1",
+      "productType": "compressor",
+      "occurredAt": "2026-10-28",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b0b934f4cfc465bb50ba234b5b09dc783c4e37e49929c1ea39db2bb29f9cdd9c",
+      "snapshot": {
+        "id": "review-20261028-mattei-erc-1-1",
+        "sourceUrl": "https://4609801.fs1.hubspotusercontent-na1.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20CLASSIC/Classic_Range_EN.pdf#page=14",
+        "sourceLabel": "Relecture du modèle et de son voisin, 28 octobre 2026, pages PDF 14",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-28",
+        "confidence": "B",
+        "notes": "Réponse primaire complète relue le 28 octobre 2026 ; SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2. Comparaison documentaire, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:sil-air-100-50:review-20261028-sil-air-100-50-1:2026-10-28",
+      "evidenceId": "review-20261028-sil-air-100-50-1",
+      "productId": "sil-air-100-50",
+      "productType": "compressor",
+      "occurredAt": "2026-10-28",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8f6eef325c5c72eee45613f9f19636cb6a0e89ca71389f7cc5bb26a10329e334",
+      "snapshot": {
+        "id": "review-20261028-sil-air-100-50-1",
+        "sourceUrl": "https://cdn.prod.website-files.com/5ef4a20d28c31157474872b0/6a4fceb90145c46f2acc6262_SILAIR%202025.pdf#page=5",
+        "sourceLabel": "Relecture du modèle et de son voisin, 28 octobre 2026, pages PDF 5, 23, 26",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-28",
+        "confidence": "B",
+        "notes": "Réponse primaire complète relue le 28 octobre 2026 ; SHA-256 d93f1024b6fa89f01eaacc77c199f3d2f5deb296b92dedf6081ab8568854468a. Comparaison documentaire, sans essai physique CompatAir."
+      }
     }
   ],
-  "historyVersion": "081ee9966a09d82c64c1b63e244a4b6485dd609183072e5de0fac26816141371"
+  "historyVersion": "3d4abda66bcccdb3b2896a29faabd73f807ad7c5581e75f5e0703be21e1f736b"
 }
