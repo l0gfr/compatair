@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { planActionsStorage } from './actions-storage.mjs';
+import { planActionsStorage, planCodeqlCacheCleanup } from './actions-storage.mjs';
 
 const shas = ['a', 'b', 'c', 'd'].map((value) => value.repeat(40));
 function fixture() {
@@ -7,7 +7,7 @@ function fixture() {
 	const artifacts = runs.flatMap((run) => ['compatair-production-', 'lighthouse-production-', 'compatair-invariants-', 'source-anomalies-', 'lighthouse-summary-production-'].map((prefix) => ({
 		id: `${prefix}${run.id}`, name: `${prefix}${run.head_sha}`, expired: false, created_at: run.created_at, workflow_run: { id: run.id, head_sha: run.head_sha },
 	})));
-	const caches = runs.map((run) => ({ id: run.id, key: `codeql-overlay-base-database-1-test-javascript-2.27.1-${run.head_sha}-${run.id}-1`, ref: 'refs/heads/main', created_at: run.created_at }));
+	const caches = runs.map((run) => ({ id: run.id + 1, key: `codeql-overlay-base-database-1-test-javascript-2.27.1-${run.head_sha}-${run.id}-1`, ref: 'refs/heads/main', size_in_bytes: 1024, created_at: run.created_at }));
 	return { artifacts, runs, caches, liveSha: shas[0], expectedSha: shas[0], previousLiveSha: shas[1], now: Date.parse('2026-09-26T12:00:00Z') };
 }
 function duplicateArchiveFixture() {
@@ -80,7 +80,7 @@ describe('bounded Actions storage cleanup', () => {
 		const input = fixture();
 		input.caches.push(...[0, 1, 2].map(index => ({ id: 100 + index, key: `compatair-verdict-v1-Linux-24.19.0-${String(index).repeat(64)}`, ref: 'refs/heads/main', created_at: `2026-09-${26 - index}T01:00:00Z` })));
 		input.caches.push({ ...input.caches.at(-1), id: 200, ref: 'refs/pull/42/merge' });
-		expect(planActionsStorage(input).deleteCaches.map(cache => cache.id)).toEqual([1, 2, 3, 101, 102]);
+		expect(planActionsStorage(input).deleteCaches.map(cache => cache.id)).toEqual([2, 3, 4, 101, 102]);
 	});
 	it('retains only the latest disposable main page cache', () => {
 		const input = fixture();
@@ -92,7 +92,7 @@ describe('bounded Actions storage cleanup', () => {
 		const input = fixture();
 		input.caches.push(...[0, 1].map(index => ({ id: 400 + index, key: `compatair-page-calculations-v1-Linux-24.19.0-${shas[index]}`, ref: 'refs/heads/main', created_at: `2026-09-${26 - index}T01:00:00Z` })));
 		input.caches.push({ ...input.caches.at(-1), id: 402, ref: 'refs/pull/42/merge' });
-		expect(planActionsStorage(input).deleteCaches.map(cache => cache.id)).toEqual([1, 2, 3, 401]);
+		expect(planActionsStorage(input).deleteCaches.map(cache => cache.id)).toEqual([2, 3, 4, 401]);
 	});
 	it('preserves production, rollback, signed invariants and source/security evidence', () => {
 		const input = fixture();
@@ -100,7 +100,7 @@ describe('bounded Actions storage cleanup', () => {
 		const plan = planActionsStorage(input);
 		expect(plan.protectedShas).toEqual(shas.slice(0, 2));
 		expect(plan.deleteArtifacts.map((artifact) => artifact.name)).toEqual(shas.slice(2).flatMap((sha) => [`compatair-production-${sha}`, `lighthouse-production-${sha}`]));
-		expect(plan.deleteCaches.map((cache) => cache.id)).toEqual([1, 2, 3]);
+		expect(plan.deleteCaches.map((cache) => cache.id)).toEqual([2, 3, 4]);
 	});
 	it('refuses cleanup when the live SHA, production archive or rollback identity is unavailable', () => {
 		expect(() => planActionsStorage({ ...fixture(), liveSha: shas[1] })).toThrow(/Live release/);
@@ -132,7 +132,7 @@ describe('bounded Actions storage cleanup', () => {
 		const plan = planActionsStorage(input);
 		expect(plan.deleteArtifacts.some((artifact) => artifact.name === `lighthouse-production-${shas[2]}`)).toBe(false);
 		expect(plan.deleteArtifacts.some((artifact) => artifact.name === `compatair-production-${shas[2]}`)).toBe(true);
-		expect(plan.deleteCaches.map((cache) => cache.id)).toEqual([1, 2, 3]);
+		expect(plan.deleteCaches.map((cache) => cache.id)).toEqual([2, 3, 4]);
 	});
 	it('protects the observed previous release even when its workflow was cancelled', () => {
 		const input = fixture();
@@ -154,4 +154,43 @@ describe('bounded Actions storage cleanup', () => {
 		expect(plan.deleteArtifacts.some(artifact => artifact.name.endsWith(shas[1]))).toBe(false);
 	});
 
+});
+
+
+describe('bounded CodeQL overlay caches', () => {
+ const now = Date.parse('2026-10-29T12:00:00Z');
+ const cache = (id, language, version, size, date = '2026-10-29T08:00:00.048878Z') => ({
+  id, key: `codeql-overlay-base-database-1-c801913f1ee29663-${language}-${version}-${'a'.repeat(40)}-123-1`,
+  ref: 'refs/heads/main', created_at: date, size_in_bytes: size,
+ });
+ it('removes old CLI versions and an oversized latest JavaScript base but keeps build and small Python caches', () => {
+  const rows = [cache(1, 'javascript', '2.27.2', 1267841116, '2026-10-21T18:08:13.785903Z'),
+   cache(2, 'javascript', '2.27.3', 1290655384), cache(3, 'python', '2.27.3', 6424422),
+   cache(4, 'python', '2.27.2', 6141910, '2026-10-21T17:53:32.037613Z'),
+   {id: 5, key: 'compatair-pages-v2-Linux-'+ 'a'.repeat(64)+'-'+ 'a'.repeat(40), ref: 'refs/heads/main'}];
+  expect(planCodeqlCacheCleanup(rows, now).map(row => row.id)).toEqual([2,1,4]);
+ });
+ it('retains the latest bounded base across versions without using an older fallback', () => {
+  const old = cache(1,'javascript','2.27.2',100,'2026-10-28T08:00:00Z');
+  expect(planCodeqlCacheCleanup([old,cache(2,'javascript','2.27.3',256*2**20)],now).map(row=>row.id)).toEqual([1]);
+  expect(planCodeqlCacheCleanup([old,cache(2,'javascript','2.27.3',256*2**20+1)],now).map(row=>row.id)).toEqual([2,1]);
+ });
+ it('leaves PR, unrelated, unknown-language and unknown-format caches untouched', () => {
+  const rows=[{...cache(1,'javascript','2.27.3',2**30),ref:'refs/pull/12/merge'},
+   cache(2,'go','2.27.3',2**30),{...cache(3,'python','2.27.3',2**30),key:'dependency-cache'}];
+  expect(planCodeqlCacheCleanup(rows,now)).toEqual([]);
+ });
+ it.each([
+  row=>{row.id=0;},row=>{row.size_in_bytes=-1;},row=>{row.size_in_bytes=undefined;},
+  row=>{row.created_at='invalid';},row=>{row.created_at='2026-02-30T00:00:00Z';},
+  row=>{row.created_at='2026-10-30T00:00:00Z';},
+ ])('preserves a language group with uncertain metadata (%#)',mutate=>{
+  const rows=[cache(1,'javascript','2.27.2',100,'2026-10-28T08:00:00Z'),cache(2,'javascript','2.27.3',2**30)];
+  mutate(rows[1]);expect(planCodeqlCacheCleanup(rows,now)).toEqual([]);
+ });
+ it('preserves ambiguous dates and duplicated identities',()=>{
+  const row=cache(1,'javascript','2.27.3',2**30);
+  expect(planCodeqlCacheCleanup([row,{...row,id:2}],now)).toEqual([]);
+  expect(planCodeqlCacheCleanup([row,{...row,created_at:'2026-10-28T08:00:00Z'}],now)).toEqual([]);
+ });
 });

@@ -7,7 +7,31 @@ function timestamp(value) {
 	return Number.isFinite(parsed) && new Date(parsed).toISOString().slice(0, 19) === value.slice(0, 19) ? parsed : NaN;
 }
 
-// Only generated release archives, full Lighthouse reports and redundant CodeQL
+// Overlay bases are disposable accelerators, never security evidence. Group by
+// language across CLI upgrades so old versions cannot accumulate indefinitely.
+export function planCodeqlCacheCleanup(caches, now = Date.now()) {
+	const groups = new Map();
+	for (const cache of caches) {
+		const match = /^codeql-overlay-base-database-\d+-[A-Za-z0-9]+-(javascript|python)-\d+\.\d+\.\d+-[a-f0-9]{40}-\d+-\d+$/.exec(cache.key);
+		if (!match || cache.ref !== 'refs/heads/main') continue;
+		const group = groups.get(match[1]) ?? [];
+		group.push(cache);
+		groups.set(match[1], group);
+	}
+	return [...groups.values()].flatMap(group => {
+		if (!group.every(cache => Number.isSafeInteger(cache.id) && cache.id > 0)) return [];
+		if (!group.every(cache => caches.filter(row => row.id === cache.id).length === 1
+			&& Number.isSafeInteger(cache.size_in_bytes) && cache.size_in_bytes >= 0
+			&& Number.isFinite(timestamp(cache.created_at)) && timestamp(cache.created_at) <= now)) return [];
+		group.sort((a, b) => timestamp(b.created_at) - timestamp(a.created_at));
+		if (group.length > 1 && timestamp(group[0].created_at) === timestamp(group[1].created_at)) return [];
+		// Keep only a bounded latest base. If it is oversized, keep no stale
+		// fallback: CodeQL performs its normal full analysis on a cache miss.
+		return group.filter((cache, index) => index > 0 || cache.size_in_bytes > 256 * 2 ** 20);
+	});
+}
+
+// Only generated release archives, full Lighthouse reports and disposable CodeQL
 // caches are eligible. Signed invariants and source/security evidence are excluded.
 export function planActionsStorage({ artifacts, runs, caches, liveSha, expectedSha, previousLiveSha, now = Date.now() }) {
 	if (!shaPattern.test(expectedSha) || liveSha !== expectedSha) throw new Error('Live release does not match the expected commit; no cleanup permitted');
@@ -53,19 +77,12 @@ export function planActionsStorage({ artifacts, runs, caches, liveSha, expectedS
 		if (timestamp(group[0].created_at) === timestamp(group[1].created_at)) continue;
 		deleteArtifacts.push(...group.slice(1));
 	}
-	const cacheGroups = new Map();
-	for (const cache of caches) {
-		const match = /^(codeql-overlay-base-database-.+)-[a-f0-9]{40}-\d+-\d+$/.exec(cache.key);
-		if (!match || cache.ref !== 'refs/heads/main') continue;
-		const group = cacheGroups.get(match[1]) ?? [];
-		group.push(cache);
-		cacheGroups.set(match[1], group);
-	}
 	const pageCaches = caches.filter(cache => /^compatair-pages-v[12]-[A-Za-z0-9._-]+-[a-f0-9]{64}-[a-f0-9]{40}$/.test(cache.key) && cache.ref === 'refs/heads/main');
 	const verdictCaches = caches.filter(cache => /^compatair-verdict-v1-[A-Za-z0-9._-]+-[a-f0-9]{64}$/.test(cache.key) && cache.ref === 'refs/heads/main');
 	const calculationCaches = caches.filter(cache => /^compatair-page-calculations-v1-[A-Za-z0-9._-]+-[a-f0-9]{40}$/.test(cache.key) && cache.ref === 'refs/heads/main');
-	const deleteCaches = [...cacheGroups.values(), pageCaches, calculationCaches].flatMap((group) => group
+	const deleteCaches = [pageCaches, calculationCaches].flatMap((group) => group
 		.sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at)).slice(1));
+	deleteCaches.unshift(...planCodeqlCacheCleanup(caches, now));
 	// One latest calculation cache, independently bounded to 64 MiB by the
 	// writer. Never retain one full cache per catalog revision or commit.
 	deleteCaches.push(...verdictCaches.sort((a, b) => Date.parse(b.created_at) - Date.parse(a.created_at)).slice(1));
