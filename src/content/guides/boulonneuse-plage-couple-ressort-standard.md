@@ -39,6 +39,6 @@ Pour la [19RAA05AM2](/outils-pneumatiques/cleco-19raa05am2/), conservez donc les
 
 ## Le réglage ne vaut pas réception de l’assemblage
 
-La note du tableau situe les performances à **6,2 bar à l’entrée de l’outil** et publie une consommation de 0,31 m³/min pour ces références, soit 310 L/min. Une pression différente de la condition déclarée ajoute une autre variable à l’essai.
+La note du tableau situe les performances à **6,2 bar à l’entrée de l’outil** et publie une consommation de 0,31 m³/min pour ces références, soit 310 L/min. Le régime de cette consommation reste à préciser avant de dimensionner le compresseur. Une pression différente de la condition déclarée ajoute une autre variable à l’essai.
 
 Préparez la réception sur l’assemblage réel, avec la méthode de contrôle de couple prévue par votre processus. Le [guide des visseuses à coupure automatique](/guides/visseuse-pneumatique-coupure-automatique/) explique pourquoi le mécanisme de coupure, la plage annoncée et le résultat sur la fixation ne se remplacent pas mutuellement. Les données ci-dessus proviennent d’une édition archivée ; elles doivent être rapprochées de la documentation de la révision achetée.

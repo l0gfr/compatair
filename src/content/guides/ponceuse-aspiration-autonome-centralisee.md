@@ -39,7 +39,7 @@ La documentation de l’outil n’établit pas à elle seule l’adéquation d�
 
 Conservez le même matériau, le même objectif de finition et des consommables autorisés. Relevez séparément la qualité obtenue, le fonctionnement du captage, l’encombrement des flexibles et les opérations de collecte. Une photographie d’un plan de travail propre après quelques secondes n’est pas une mesure d’exposition.
 
-Les fiches [SI-3114M](/outils-pneumatiques/shinano-si-3114m/) et [SI-3121M](/outils-pneumatiques/shinano-si-3121m/) permettent de retrouver les variantes. Le [catalogue, page PDF 43](https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43), fixe l’alimentation Shinano à 6,3 bar en fonctionnement. La compatibilité de débit se vérifie dans ces conditions ; elle ne certifie pas l’ensemble d’aspiration.
+Les fiches [SI-3114M](/outils-pneumatiques/shinano-si-3114m/) et [SI-3121M](/outils-pneumatiques/shinano-si-3121m/) permettent de retrouver les variantes. Le [catalogue, page PDF 43](https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43), fixe l’alimentation Shinano à 6,3 bar en fonctionnement, gâchette entièrement tirée. Cette consigne ne précise pas à quelle pression les consommations maximales du tableau ont été mesurées. Leur appariement reste à confirmer avant de conclure sur le compresseur ; le captage exige son propre contrôle.
 
 Au devis, exigez donc deux réponses distinctes : ce qui alimente le moteur et ce qui collecte les poussières. Cette séparation évite d’acheter un compresseur plus gros pour résoudre un problème relevant du circuit d’extraction.
 
