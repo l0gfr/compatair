@@ -40,6 +40,6 @@ Pour une ponceuse avec aspiration, relevez aussi le dessin des passages et la co
 
 ## La variante M ne change pas ici le débit publié
 
-Les deux SI-3104 de 125 mm publient **7,5 L/s au maximum**, soit **450 L/min**. Elles ont aussi la même vitesse à vide annoncée de 10 000 tr/min et une orbite de 5 mm. La [pression d’utilisation Shinano](https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43) est de 6,3 bar en fonctionnement.
+Les deux SI-3104 de 125 mm publient **7,5 L/s au maximum**, soit **450 L/min**. Elles ont aussi la même vitesse à vide annoncée de 10 000 tr/min et une orbite de 5 mm. La [pression d’utilisation Shinano](https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43) est de 6,3 bar en fonctionnement, commande entièrement actionnée. Cette consigne ne précise pas la pression de mesure des consommations maximales du tableau ; cet appariement reste à confirmer avant de dimensionner le compresseur.
 
 Les fiches [SI-3104](/outils-pneumatiques/shinano-si-3104/) et [SI-3104M](/outils-pneumatiques/shinano-si-3104m/) sont donc séparées pour l’équipement, pas pour inventer deux besoins de compresseur. À réception, vérifiez le marquage du plateau et le contenu du colis. C’est cette configuration réellement livrée qui doit correspondre à votre liste de consommables.

@@ -1,0 +1,360 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-10-30",
+  "rows": [
+    {
+      "id": "gentilin-clinic-6-90-812313013",
+      "kind": "compressors",
+      "file": "src/data/products/compressors/gentilin-clinic-6-90-812313013.ts",
+      "identity": {
+        "brand": "Gentilin",
+        "model": "CLINIC 6/90",
+        "mpn": "812313013"
+      },
+      "fields": [
+        "editorial",
+        "evidence",
+        "fieldSources"
+      ],
+      "sourceIndentation": "\t",
+      "sourceSha": "cac963c12af7182d31e17fd9d409f54269afcac6",
+      "beforeFileSha256": "f210cc8d7343678f0497e568c7e575280acfc16e92ad2d3b4f462ab3ac3b90ce",
+      "sourceDocumentSha256": "982479a5e4e81f489da8271f76d5d5a024bd53c94717fd804c21bf36d25726a4",
+      "reviewedSources": [
+        {
+          "url": "https://www.gentilinair.com/en/products/clinic-6-90-tri",
+          "sha256": "982479a5e4e81f489da8271f76d5d5a024bd53c94717fd804c21bf36d25726a4",
+          "observedAt": "2026-10-30T07:16:31.622184+00:00",
+          "pages": []
+        },
+        {
+          "url": "https://www.gentilinair.com/en/products/clinic-6-90-mono",
+          "sha256": "4d250e290a71dbf46ea129beec76ec9e40bfc458498b41a27d0748ef76d804f2",
+          "observedAt": "2026-10-30T07:27:41.748032+00:00",
+          "pages": []
+        }
+      ],
+      "before": {
+        "editorial": {
+          "overview": "Gentilin CLINIC 6/90, référence 812313013 : cuve de 90 L, pression maximale publiée de 10 bar. Le point documenté le plus élevé en pression fournit 285 L/min à 8 bar.",
+          "verifiedFacts": [
+            "Débit restitué publié : 345 L/min à 5 bar ; 285 L/min à 8 bar.",
+            "Compresseur à pistons sans huile. Puissance moteur publiée : 3 kW.",
+            "Débit aspiré : 480 L/min, distinct du débit restitué.",
+            "Masse publiée : 78 kg.",
+            "Alimentation publiée : 400 V, 50 Hz."
+          ],
+          "limitations": [
+            "Les points proviennent de la fiche fabricant, pas d’un essai physique réalisé par CompatAir.",
+            "Le taux de marche est celui déclaré par le fabricant ; les conditions de cycle et de température restent à respecter. La disponibilité commerciale reste à confirmer.",
+            "La disponibilité commerciale et les exigences électriques de l’installation sont à confirmer avant achat."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "gentilin-812313013-20260926",
+            "sourceUrl": "https://www.gentilinair.com/en/products/clinic-6-90-tri",
+            "sourceLabel": "Gentilin, fiche technique CLINIC 6/90, réf. 812313013",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Débits restitués publiés séparément à 5.0 bar, 8.0 bar. Le débit aspiré est conservé dans un champ distinct."
+          },
+          {
+            "id": "gentilin-812313013-20260926-oiltype-1",
+            "sourceUrl": "https://www.gentilinair.com/docs/41012802_1778061305.pdf#page=15",
+            "sourceLabel": "Gentilin, notice de la famille CLINIC DRY 6/90 HS, p. 15",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "La notice liée à cette fiche déclare la compression sans huile : CLINIC 6.90 • Oil-free air compressor with 90 litres tank without dryer. / CLINIC DRY 6.90 H • Oil free air compressor with 90 litres tank with membrane dryer. / • Oil-free air compressor with 90 litres tank with membrane dryer"
+          }
+        ],
+        "fieldSources": {
+          "mpn": [
+            "gentilin-812313013-20260926"
+          ],
+          "tankLiters": [
+            "gentilin-812313013-20260926"
+          ],
+          "maxPressureBar": [
+            "gentilin-812313013-20260926"
+          ],
+          "fadCurve": [
+            "gentilin-812313013-20260926"
+          ],
+          "oilType": [
+            "gentilin-812313013-20260926-oiltype-1"
+          ],
+          "intakeFlowLpm": [
+            "gentilin-812313013-20260926"
+          ],
+          "powerKw": [
+            "gentilin-812313013-20260926"
+          ],
+          "weightKg": [
+            "gentilin-812313013-20260926"
+          ],
+          "voltage": [
+            "gentilin-812313013-20260926"
+          ],
+          "dutyCycle": [
+            "gentilin-812313013-20260926"
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "CLINIC 6/90 en 400 V, 50 Hz, référence 812313013 : 285 L/min restitués à 8 bar, contre 190 L/min pour le 230 V 812313012. Les deux versions ont une cuve de 90 L et une masse publiée de 78 kg. Pour choisir entre elles, vérifiez l’alimentation disponible et le débit requis à la pression de l’outil ; le nom et le volume de cuve sont identiques.",
+          "verifiedFacts": [
+            "Débit restitué publié : 345 L/min à 5 bar ; 285 L/min à 8 bar.",
+            "Compresseur à pistons sans huile. Puissance moteur publiée : 3 kW.",
+            "Débit aspiré : 480 L/min, distinct du débit restitué.",
+            "Masse publiée : 78 kg.",
+            "Alimentation publiée : 400 V, 50 Hz.",
+            "Comparaison au même point de 8 bar : 285 L/min en 400 V contre 190 L/min en 230 V, soit 95 L/min supplémentaires et 50 % de plus dans les deux fiches fabricant.",
+            "Au point de 5 bar, les fiches publient respectivement 345 et 265 L/min. Les puissances sont de 3 et 2,8 kW ; chaque valeur reste rattachée à sa version électrique.",
+            "La fiche technique du produit complet 812313013 indique Duty cycle S1 100% ; cette indication ne provient pas d’une seule plaque moteur."
+          ],
+          "limitations": [
+            "Les points proviennent de la fiche fabricant, pas d’un essai physique réalisé par CompatAir.",
+            "Le taux de marche est celui déclaré par le fabricant ; les conditions de cycle et de température restent à respecter. La disponibilité commerciale reste à confirmer.",
+            "La disponibilité commerciale et les exigences électriques de l’installation sont à confirmer avant achat.",
+            "La pression maximale de 10 bar ne documente pas un débit restitué à 10 bar. Le bilan à la pression de l’outil doit conserver les points disponibles et les conditions du groupe.",
+            "La comparaison documentaire des versions électriques ne constitue pas une mesure de performance ni une validation de la pureté de l’air pour une application médicale."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "gentilin-812313013-20260926",
+            "sourceUrl": "https://www.gentilinair.com/en/products/clinic-6-90-tri",
+            "sourceLabel": "Gentilin, fiche technique CLINIC 6/90, réf. 812313013",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "Débits restitués publiés séparément à 5.0 bar, 8.0 bar. Le débit aspiré est conservé dans un champ distinct."
+          },
+          {
+            "id": "gentilin-812313013-20260926-oiltype-1",
+            "sourceUrl": "https://www.gentilinair.com/docs/41012802_1778061305.pdf#page=15",
+            "sourceLabel": "Gentilin, notice de la famille CLINIC DRY 6/90 HS, p. 15",
+            "sourceType": "manufacturer",
+            "retrievedAt": "2026-09-26",
+            "confidence": "A",
+            "notes": "La notice liée à cette fiche déclare la compression sans huile : CLINIC 6.90 • Oil-free air compressor with 90 litres tank without dryer. / CLINIC DRY 6.90 H • Oil free air compressor with 90 litres tank with membrane dryer. / • Oil-free air compressor with 90 litres tank with membrane dryer"
+          },
+          {
+            "id": "review-20261030-gentilin-clinic-6-90-812313013-1",
+            "sourceUrl": "https://www.gentilinair.com/en/products/clinic-6-90-tri",
+            "sourceLabel": "Relecture du modèle et de son voisin, 30 octobre 2026",
+            "sourceType": "manufacturer",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-30",
+            "confidence": "B",
+            "notes": "Réponse primaire complète relue le 30 octobre 2026 ; SHA-256 982479a5e4e81f489da8271f76d5d5a024bd53c94717fd804c21bf36d25726a4. Comparaison documentaire, sans essai physique CompatAir."
+          },
+          {
+            "id": "review-20261030-gentilin-clinic-6-90-812313013-2",
+            "sourceUrl": "https://www.gentilinair.com/en/products/clinic-6-90-mono",
+            "sourceLabel": "Relecture du modèle et de son voisin, 30 octobre 2026",
+            "sourceType": "manufacturer",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-30",
+            "confidence": "B",
+            "notes": "Réponse primaire complète relue le 30 octobre 2026 ; SHA-256 4d250e290a71dbf46ea129beec76ec9e40bfc458498b41a27d0748ef76d804f2. Comparaison documentaire, sans essai physique CompatAir."
+          }
+        ],
+        "fieldSources": {
+          "mpn": [
+            "gentilin-812313013-20260926"
+          ],
+          "tankLiters": [
+            "gentilin-812313013-20260926"
+          ],
+          "maxPressureBar": [
+            "gentilin-812313013-20260926"
+          ],
+          "fadCurve": [
+            "gentilin-812313013-20260926"
+          ],
+          "oilType": [
+            "gentilin-812313013-20260926-oiltype-1"
+          ],
+          "intakeFlowLpm": [
+            "gentilin-812313013-20260926"
+          ],
+          "powerKw": [
+            "gentilin-812313013-20260926"
+          ],
+          "weightKg": [
+            "gentilin-812313013-20260926"
+          ],
+          "voltage": [
+            "gentilin-812313013-20260926"
+          ],
+          "dutyCycle": [
+            "gentilin-812313013-20260926"
+          ],
+          "editorial": [
+            "review-20261030-gentilin-clinic-6-90-812313013-1",
+            "review-20261030-gentilin-clinic-6-90-812313013-2"
+          ]
+        }
+      }
+    },
+    {
+      "id": "worthington-creyssensac-rlr-1000-50-hz-8-bar-full-feature-sur-reservoir-500-l",
+      "kind": "compressors",
+      "file": "src/data/products/compressors/worthington-creyssensac-rlr-1000-50-hz-8-bar-full-feature-sur-reservoir-500-l.ts",
+      "identity": {
+        "brand": "Worthington Creyssensac",
+        "model": "RLR 1000"
+      },
+      "fields": [
+        "editorial",
+        "evidence",
+        "fieldSources"
+      ],
+      "sourceIndentation": "\t",
+      "sourceSha": "cac963c12af7182d31e17fd9d409f54269afcac6",
+      "beforeFileSha256": "8234df8fda3b47b66878b901b56efa71ce18cc2402446dd407f18069495c332a",
+      "sourceDocumentSha256": "453e287507815373993e3d0c796c82836a43fbc822fe0f2117a56f7b9635ba9d",
+      "reviewedSources": [
+        {
+          "url": "https://www.worthington-creyssensac.com/content/dam/brands/Worthington%20Creyssensac/products-bp-structure/oil-injected-screw-compressor/fixed-speed/rlr-750-2000-%282022%29/leaflets/wco-rollair-750-2000-leaflet-en.pdf.coredownload.pdf",
+          "sha256": "453e287507815373993e3d0c796c82836a43fbc822fe0f2117a56f7b9635ba9d",
+          "observedAt": "2026-10-30T07:16:42.447438+00:00",
+          "pages": [
+            6
+          ]
+        }
+      ],
+      "before": {
+        "editorial": {
+          "overview": "Worthington Creyssensac RLR 1000, Full Feature sur réservoir 500 L, 8 bar. 1 250 L/min à 7,5 bar.",
+          "verifiedFacts": [
+            "Air livré rattaché à une pression et aux unités originales du constructeur.",
+            "Configuration de stockage documentée : 500 L.",
+            "Pression maximale de fonctionnement publiée : 8 bar."
+          ],
+          "limitations": [
+            "Cycle de service du groupe complet non établi ; la tenue permanente reste indéterminée.",
+            "Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
+            "Configuration publiée dans la documentation citée ; disponibilité commerciale actuelle à confirmer."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "october3c-worthington-rollair750-2000-p6",
+            "sourceUrl": "https://www.worthington-creyssensac.com/content/dam/brands/Worthington%20Creyssensac/products-bp-structure/oil-injected-screw-compressor/fixed-speed/rlr-750-2000-%282022%29/leaflets/wco-rollair-750-2000-leaflet-en.pdf.coredownload.pdf#page=6",
+            "sourceLabel": "Worthington Creyssensac RLR 750–2000 (2022), page PDF 6",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-03",
+            "confidence": "B",
+            "notes": "SHA-256 453e287507815373993e3d0c796c82836a43fbc822fe0f2117a56f7b9635ba9d de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+          },
+          {
+            "id": "october3c-worthington-rollair750-2000-p1",
+            "sourceUrl": "https://www.worthington-creyssensac.com/content/dam/brands/Worthington%20Creyssensac/products-bp-structure/oil-injected-screw-compressor/fixed-speed/rlr-750-2000-%282022%29/leaflets/wco-rollair-750-2000-leaflet-en.pdf.coredownload.pdf#page=1",
+            "sourceLabel": "Worthington Creyssensac RLR 750–2000 (2022), page PDF 1",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-03",
+            "confidence": "B",
+            "notes": "SHA-256 453e287507815373993e3d0c796c82836a43fbc822fe0f2117a56f7b9635ba9d de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+          }
+        ],
+        "fieldSources": {
+          "tankLiters": [
+            "october3c-worthington-rollair750-2000-p6"
+          ],
+          "maxPressureBar": [
+            "october3c-worthington-rollair750-2000-p6"
+          ],
+          "fadCurve": [
+            "october3c-worthington-rollair750-2000-p6"
+          ],
+          "powerKw": [
+            "october3c-worthington-rollair750-2000-p6"
+          ],
+          "oilType": [
+            "october3c-worthington-rollair750-2000-p1"
+          ]
+        }
+      },
+      "after": {
+        "editorial": {
+          "overview": "RLR 1000 Full Feature sur 500 L, 50 Hz, version 8 bar : le débit publié reste de 75 m³/h à 7,5 bar, soit 1 250 L/min, comme sur la station 270 L. Le choix du 500 L change le stockage et l’implantation : 420 kg et 1 940 × 665 × 1 665 mm, contre 355 kg et 1 625 × 665 × 1 535 mm pour le 270 L avec sécheur.",
+          "verifiedFacts": [
+            "Air livré rattaché à une pression et aux unités originales du constructeur.",
+            "Configuration de stockage documentée : 500 L.",
+            "Pression maximale de fonctionnement publiée : 8 bar.",
+            "Comparaison des stations Full Feature avec sécheur : 500 L contre 270 L, soit 230 L de stockage supplémentaires ; masses publiées de 420 et 355 kg.",
+            "Encombrement publié du 500 L avec sécheur : 1 940 × 665 × 1 665 mm. Par rapport au 270 L avec sécheur : 315 mm de longueur et 130 mm de hauteur supplémentaires, même largeur de 665 mm.",
+            "La ligne 50 Hz, pression maximale 8 bar, donne une pression de référence de 7,5 bar et 75 m³/h ; performances du groupe mesurées selon ISO 1217, annexe C."
+          ],
+          "limitations": [
+            "Cycle de service du groupe complet non établi ; la tenue permanente reste indéterminée.",
+            "Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
+            "Configuration publiée dans la documentation citée ; disponibilité commerciale actuelle à confirmer.",
+            "Les 230 L supplémentaires sont un volume de cuve, pas 230 L/min de production. Ils ne comblent pas un déficit de débit soutenu.",
+            "Le cycle de service du groupe complet reste non établi ; aucune durée d’autonomie ou conclusion de service permanent n’est ajoutée à partir de la taille de cuve."
+          ]
+        },
+        "evidence": [
+          {
+            "id": "october3c-worthington-rollair750-2000-p6",
+            "sourceUrl": "https://www.worthington-creyssensac.com/content/dam/brands/Worthington%20Creyssensac/products-bp-structure/oil-injected-screw-compressor/fixed-speed/rlr-750-2000-%282022%29/leaflets/wco-rollair-750-2000-leaflet-en.pdf.coredownload.pdf#page=6",
+            "sourceLabel": "Worthington Creyssensac RLR 750–2000 (2022), page PDF 6",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-03",
+            "confidence": "B",
+            "notes": "SHA-256 453e287507815373993e3d0c796c82836a43fbc822fe0f2117a56f7b9635ba9d de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+          },
+          {
+            "id": "october3c-worthington-rollair750-2000-p1",
+            "sourceUrl": "https://www.worthington-creyssensac.com/content/dam/brands/Worthington%20Creyssensac/products-bp-structure/oil-injected-screw-compressor/fixed-speed/rlr-750-2000-%282022%29/leaflets/wco-rollair-750-2000-leaflet-en.pdf.coredownload.pdf#page=1",
+            "sourceLabel": "Worthington Creyssensac RLR 750–2000 (2022), page PDF 1",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-03",
+            "confidence": "B",
+            "notes": "SHA-256 453e287507815373993e3d0c796c82836a43fbc822fe0f2117a56f7b9635ba9d de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+          },
+          {
+            "id": "review-20261030-worthington-creyssensac-rlr-1000-50-hz-8-bar-full-feature-sur-reservoir-500-l-1",
+            "sourceUrl": "https://www.worthington-creyssensac.com/content/dam/brands/Worthington%20Creyssensac/products-bp-structure/oil-injected-screw-compressor/fixed-speed/rlr-750-2000-%282022%29/leaflets/wco-rollair-750-2000-leaflet-en.pdf.coredownload.pdf#page=6",
+            "sourceLabel": "Relecture du modèle et de son voisin, 30 octobre 2026, pages PDF 6",
+            "sourceType": "manual",
+            "sourceRole": "primary",
+            "retrievedAt": "2026-10-30",
+            "confidence": "B",
+            "notes": "Réponse primaire complète relue le 30 octobre 2026 ; SHA-256 453e287507815373993e3d0c796c82836a43fbc822fe0f2117a56f7b9635ba9d. Comparaison documentaire, sans essai physique CompatAir."
+          }
+        ],
+        "fieldSources": {
+          "tankLiters": [
+            "october3c-worthington-rollair750-2000-p6"
+          ],
+          "maxPressureBar": [
+            "october3c-worthington-rollair750-2000-p6"
+          ],
+          "fadCurve": [
+            "october3c-worthington-rollair750-2000-p6"
+          ],
+          "powerKw": [
+            "october3c-worthington-rollair750-2000-p6"
+          ],
+          "oilType": [
+            "october3c-worthington-rollair750-2000-p1"
+          ],
+          "editorial": [
+            "review-20261030-worthington-creyssensac-rlr-1000-50-hz-8-bar-full-feature-sur-reservoir-500-l-1"
+          ]
+        }
+      }
+    }
+  ]
+}

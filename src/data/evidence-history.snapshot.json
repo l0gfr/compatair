@@ -738735,7 +738735,67 @@
         "confidence": "B",
         "notes": "Réponse primaire complète relue le 28 octobre 2026 ; SHA-256 d93f1024b6fa89f01eaacc77c199f3d2f5deb296b92dedf6081ab8568854468a. Comparaison documentaire, sans essai physique CompatAir."
       }
+    },
+    {
+      "id": "added:gentilin-clinic-6-90-812313013:review-20261030-gentilin-clinic-6-90-812313013-1:2026-10-30",
+      "evidenceId": "review-20261030-gentilin-clinic-6-90-812313013-1",
+      "productId": "gentilin-clinic-6-90-812313013",
+      "productType": "compressor",
+      "occurredAt": "2026-10-30",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "4dd16e4e15a205b3ed963da5e9c49bf7df32663b38e3dd4f9c4960a9bb35ce29",
+      "snapshot": {
+        "id": "review-20261030-gentilin-clinic-6-90-812313013-1",
+        "sourceUrl": "https://www.gentilinair.com/en/products/clinic-6-90-tri",
+        "sourceLabel": "Relecture du modèle et de son voisin, 30 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-30",
+        "confidence": "B",
+        "notes": "Réponse primaire complète relue le 30 octobre 2026 ; SHA-256 982479a5e4e81f489da8271f76d5d5a024bd53c94717fd804c21bf36d25726a4. Comparaison documentaire, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:gentilin-clinic-6-90-812313013:review-20261030-gentilin-clinic-6-90-812313013-2:2026-10-30",
+      "evidenceId": "review-20261030-gentilin-clinic-6-90-812313013-2",
+      "productId": "gentilin-clinic-6-90-812313013",
+      "productType": "compressor",
+      "occurredAt": "2026-10-30",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "d0fa43d5907daac989defb4692280c5729a4b29c6d12766b5a166f7558fbcb28",
+      "snapshot": {
+        "id": "review-20261030-gentilin-clinic-6-90-812313013-2",
+        "sourceUrl": "https://www.gentilinair.com/en/products/clinic-6-90-mono",
+        "sourceLabel": "Relecture du modèle et de son voisin, 30 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-30",
+        "confidence": "B",
+        "notes": "Réponse primaire complète relue le 30 octobre 2026 ; SHA-256 4d250e290a71dbf46ea129beec76ec9e40bfc458498b41a27d0748ef76d804f2. Comparaison documentaire, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:worthington-creyssensac-rlr-1000-50-hz-8-bar-full-feature-sur-reservoir-500-l:review-20261030-worthington-creyssensac-rlr-1000-50-hz-8-bar-full-feature-sur-reservoir-500-l-1:2026-10-30",
+      "evidenceId": "review-20261030-worthington-creyssensac-rlr-1000-50-hz-8-bar-full-feature-sur-reservoir-500-l-1",
+      "productId": "worthington-creyssensac-rlr-1000-50-hz-8-bar-full-feature-sur-reservoir-500-l",
+      "productType": "compressor",
+      "occurredAt": "2026-10-30",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "1b8cce65f16db364ee89d6de5e1710895b394e7a2fe288daf1da6c5c06e48754",
+      "snapshot": {
+        "id": "review-20261030-worthington-creyssensac-rlr-1000-50-hz-8-bar-full-feature-sur-reservoir-500-l-1",
+        "sourceUrl": "https://www.worthington-creyssensac.com/content/dam/brands/Worthington%20Creyssensac/products-bp-structure/oil-injected-screw-compressor/fixed-speed/rlr-750-2000-%282022%29/leaflets/wco-rollair-750-2000-leaflet-en.pdf.coredownload.pdf#page=6",
+        "sourceLabel": "Relecture du modèle et de son voisin, 30 octobre 2026, pages PDF 6",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-30",
+        "confidence": "B",
+        "notes": "Réponse primaire complète relue le 30 octobre 2026 ; SHA-256 453e287507815373993e3d0c796c82836a43fbc822fe0f2117a56f7b9635ba9d. Comparaison documentaire, sans essai physique CompatAir."
+      }
     }
   ],
-  "historyVersion": "3d4abda66bcccdb3b2896a29faabd73f807ad7c5581e75f5e0703be21e1f736b"
+  "historyVersion": "fde5222cb2dd43053532bea66db21694deb3541734af56a272cd287250efb2b4"
 }
