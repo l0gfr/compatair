@@ -2,8 +2,18 @@
   "schemaVersion": 2,
   "paused": false,
   "timeZone": "Europe/Paris",
-  "dailyLimits": { "guides": 10, "compressors": 100, "tools": 400 },
+  "dailyLimits": {
+    "guides": 10,
+    "compressors": 100,
+    "tools": 400
+  },
   "maximumTopicShare": 0.25,
   "similarityThreshold": 0.82,
-  "containmentThreshold": 0.92
+  "containmentThreshold": 0.92,
+  "supplementalPublication": {
+    "publicationDay": "2026-10-31",
+    "sourceReleaseSha": "0746dba53f23e846f1db948d7cfcab59a717fa85",
+    "authorizedAt": "2026-10-31T17:14:13.583354Z",
+    "reason": "Instruction humaine explicite du 31 octobre : lot complémentaire immédiat, plafonds cumulés 10/100/400, sans republier les admissions existantes."
+  }
 }

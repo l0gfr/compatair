@@ -9,7 +9,7 @@ metiers: ["maintenance-industrielle"]
 readingTime: 4
 reviewStatus: "internal"
 relatedGuides: ["moteur-pneumatique-couple-demarrage-debit", "choisir-distributeur-pneumatique-debit-nominal", "regler-vitesse-verin-pneumatique-echappement"]
-sources: ["https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Datasheet/FR_FR/1845719.pdf", "https://www.festo.com/us/en/c/products/actuators-and-drives/pneumatic-cylinders/rotary-actuators-id_pim217"]
+sources: ["https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Datasheet/FR_FR/1845719.pdf"]
 ---
 
 **Le choix d’un vérin rotatif ne se réduit pas au couple disponible.** L’angle, le mouvement de la charge et les efforts appliqués à l’axe doivent être examinés ensemble. Un mécanisme capable de déplacer une charge lentement n’est pas automatiquement validé pour le cycle accéléré d’une machine.
@@ -18,7 +18,7 @@ Le dossier ci-dessous concerne un actionneur oscillant avec une course angulaire
 
 ## Lire une référence complète
 
-[Festo](https://www.festo.com/us/en/c/products/actuators-and-drives/pneumatic-cylinders/rotary-actuators-id_pim217) distingue notamment les actionneurs rotatifs à palette et les mécanismes à pignon-crémaillère. La [fiche du DRVS-32-90-P, article 1845719](https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Datasheet/FR_FR/1845719.pdf) décrit un vérin à palette, à double effet, avec une oscillation de **0 à 90°**. Elle indique **10 N·m de couple théorique à 6 bar** et un **moment d’inertie de masse admissible de 0,02 kg·m²**. Les charges axiales et radiales figurent dans des rubriques séparées.
+La [fiche du DRVS-32-90-P, article 1845719](https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Datasheet/FR_FR/1845719.pdf) décrit un vérin à palette, à double effet, avec une oscillation de **0 à 90°**. Elle indique **10 N·m de couple théorique à 6 bar** et un **moment d’inertie de masse admissible de 0,02 kg·m²**. Les charges axiales et radiales figurent dans des rubriques séparées.
 
 Ces indications ne sont pas interchangeables. L’inertie n’est pas une masse transportable exprimée en kilogrammes, et le couple théorique n’est pas une garantie de cycle pour tout montage.
 
@@ -73,7 +73,6 @@ Conservez les limites acceptées et la configuration exacte. Un changement de su
 
 ## Sources et méthode
 
-Sources consultées le **26 septembre 2026**. Rédaction avec assistance d’IA et relecture interne, sans essai physique ni validation professionnelle externe. Les grilles de décision sont proposées par CompatAir ; les valeurs constructeur et les exemples hypothétiques sont distingués dans le texte.
+Fiche DRVS-32-90-P vérifiée le **31 octobre 2026**. Rédaction avec assistance d’IA et relecture interne, sans essai physique ni validation professionnelle externe. Les grilles de décision sont proposées par CompatAir ; les valeurs constructeur et les exemples hypothétiques sont distingués dans le texte.
 
 - [Festo, fiche DRVS-32-90-P, article 1845719](https://ftp.festo.com/Public/PNEUMATIC/SOFTWARE_SERVICE/Datasheet/FR_FR/1845719.pdf)
-- [Festo, principes et familles d’actionneurs rotatifs](https://www.festo.com/us/en/c/products/actuators-and-drives/pneumatic-cylinders/rotary-actuators-id_pim217)

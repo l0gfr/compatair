@@ -1,3 +1,4 @@
+import { isDeepStrictEqual } from 'node:util';
 export const INDEXATION_ORIGIN = 'https://compatair.fr';
 export const INDEXATION_MANIFEST_PATH = '/data/indexation.json';
 export const MAX_INDEXATION_ARTIFACT_AGE_MS = 86_400_000;
@@ -23,10 +24,67 @@ function validateDailyLimits(limits) {
 		|| dailyGroups.some(group => !Number.isInteger(limits[group]) || limits[group] < 1 || limits[group] > 500)) throw new Error('Plafonds quotidiens invalides.');
 }
 
+export function validateSupplementalPublication(value) {
+ const keys = ['publicationDay', 'sourceReleaseSha', 'authorizedAt', 'reason'];
+ if (!value || Object.keys(value).length !== keys.length || keys.some(key => !Object.hasOwn(value, key))
+  || typeof value.publicationDay !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value.publicationDay)
+  || typeof value.sourceReleaseSha !== 'string' || !/^[a-f0-9]{40}$/.test(value.sourceReleaseSha)
+  || typeof value.authorizedAt !== 'string' || !Number.isFinite(Date.parse(value.authorizedAt))
+  || indexationDay(new Date(value.authorizedAt)) !== value.publicationDay
+  || typeof value.reason !== 'string' || !value.reason.trim()) throw new Error('Autorisation complémentaire invalide.');
+ return value;
+}
+
+export function supplementalPublication(previous, policy, now = new Date()) {
+ const authorization = policy.supplementalPublication;
+ if (!authorization) return undefined;
+ validateSupplementalPublication(authorization);
+ const today = indexationDay(now);
+ if (policy.schemaVersion !== 2 || authorization.publicationDay !== today || authorization.sourceReleaseSha !== previous.gitSha
+  || Date.parse(authorization.authorizedAt) > now.getTime()
+  || !previous.batches.some(batch => batch.publicationDay === today)
+  || previous.batches.some(batch => batch.publicationDay === today && batch.supplementalPublication)) return undefined;
+ return authorization;
+}
+
+export function dailyIndexationUsage(previous, now = new Date()) {
+ const today = indexationDay(now), usage = Object.fromEntries(dailyGroups.map(group => [group, 0]));
+ for (const batch of previous.batches) if (indexationDay(new Date(batch.openedAt)) === today) {
+  for (const path of batch.paths) { const group = candidateQuotaGroup(path); if (group) usage[group]++; }
+ }
+ return usage;
+}
+
 export function indexationBatchReady(previous, policy, now = new Date()) {
-	if (policy.schemaVersion === 2) return !previous.batches.some(batch => indexationDay(new Date(batch.openedAt)) === indexationDay(now));
-	const last = previous.batches.at(-1);
-	return !last || now.getTime() - Date.parse(last.openedAt) >= policy.minimumDaysBetweenBatches * 86_400_000 + MAX_INDEXATION_ARTIFACT_AGE_MS;
+ if (policy.schemaVersion === 2) {
+  const used = previous.batches.some(batch => indexationDay(new Date(batch.openedAt)) === indexationDay(now));
+  if (!used) return true;
+  return Boolean(supplementalPublication(previous, policy, now))
+   && dailyGroups.some(group => dailyIndexationUsage(previous, now)[group] < policy.dailyLimits[group]);
+ }
+ const last = previous.batches.at(-1);
+ return !last || now.getTime() - Date.parse(last.openedAt) >= policy.minimumDaysBetweenBatches * 86_400_000 + MAX_INDEXATION_ARTIFACT_AGE_MS;
+}
+
+// The append-only checkpoint ties a supplementary batch to the release actually
+// active before deployment, not merely to a date copied into a candidate artifact.
+export function assertSupplementalPublicationBase(previous, candidate, policy) {
+ const added = candidate.batches.slice(previous.batches.length);
+ if (added.length > 1) throw new Error('Plusieurs lots ajoutés dans une même release.');
+ for (const batch of added) {
+  const sameDay = previous.batches.filter(entry => indexationDay(new Date(entry.openedAt)) === batch.publicationDay);
+  if (sameDay.length && !batch.supplementalPublication) throw new Error('Lot supplémentaire sans autorisation explicite.');
+  if (!batch.supplementalPublication) continue;
+  const authorization = validateSupplementalPublication(batch.supplementalPublication);
+  if (authorization.sourceReleaseSha !== previous.gitSha || !sameDay.length
+   || authorization.publicationDay !== batch.publicationDay || Date.parse(authorization.authorizedAt) > Date.parse(batch.openedAt)
+   || sameDay.some(entry => entry.supplementalPublication)
+   || (policy && !isDeepStrictEqual(authorization, policy.supplementalPublication))) throw new Error('Base ou autorisation du lot complémentaire divergente.');
+  validateDailyLimits(batch.dailyLimits);
+  const paths = sameDay.flatMap(entry => entry.paths).concat(batch.paths);
+  if (new Set(paths).size !== paths.length) throw new Error('URL déjà ouverte dans le complément.');
+  for (const group of dailyGroups) if (paths.filter(path => candidateQuotaGroup(path) === group).length > batch.dailyLimits[group]) throw new Error('Quota quotidien dépassé (cumulé).');
+ }
 }
 
 // A release that opens a daily batch expires at Paris midnight. Ordinary
@@ -88,6 +146,7 @@ export function validatePolicy(policy) {
 	if (policy.schemaVersion === 2) {
 		if (policy.timeZone !== INDEXATION_TIME_ZONE || policy.stages !== undefined || policy.minimumDaysBetweenBatches !== undefined) throw new Error('Calendrier quotidien invalide.');
 		validateDailyLimits(policy.dailyLimits);
+		if (policy.supplementalPublication !== undefined) validateSupplementalPublication(policy.supplementalPublication);
 	} else {
 		if (!Number.isInteger(policy.minimumDaysBetweenBatches) || policy.minimumDaysBetweenBatches < 7 || !Array.isArray(policy.stages) || !policy.stages.length) throw new Error('Politique d’indexation invalide.');
 		for (const stage of policy.stages) for (const family of ['catalog', 'guides']) {
@@ -122,19 +181,30 @@ export function validateManifest(manifest, baseline, now = new Date()) {
 	const paths = new Set(baseline.paths);
 	let previous = 0;
 	let dailyStarted = false;
-	const publicationDays = new Set();
+	const publicationDays = new Set(), supplementalDays = new Set();
+	const dailyCounts = new Map();
 	for (const batch of manifest.batches) {
 		const date = Date.parse(batch.openedAt);
 		if (!Number.isFinite(date) || date < previous || date > Date.parse(manifest.builtAt) || !Array.isArray(batch.paths) || !batch.paths.length) throw new Error('Lot d’indexation invalide.');
 		const day = indexationDay(new Date(date));
 		if (batch.publicationDay !== undefined) {
 			validateDailyLimits(batch.dailyLimits);
-			if (batch.publicationDay !== day || publicationDays.has(day)) throw new Error('Jour de lot dupliqué ou invalide.');
+			if (batch.publicationDay !== day) throw new Error('Jour de lot dupliqué ou invalide.');
+   if (batch.supplementalPublication) {
+    const authorization = validateSupplementalPublication(batch.supplementalPublication);
+    if (!publicationDays.has(day) || supplementalDays.has(day) || authorization.publicationDay !== day
+     || Date.parse(authorization.authorizedAt) > date) throw new Error('Jour ou autorisation de complément invalide.');
+    supplementalDays.add(day);
+   } else if (publicationDays.has(day)) throw new Error('Jour de lot dupliqué ou invalide.');
+   const used = dailyCounts.get(day) ?? Object.fromEntries(dailyGroups.map(group => [group, 0]));
+   for (const path of batch.paths) { const group = candidateQuotaGroup(path); if (group) used[group]++; }
+   for (const group of dailyGroups) if (used[group] > batch.dailyLimits[group]) throw new Error('Quota quotidien dépassé (cumulé).');
+   dailyCounts.set(day, used);
 			for (const group of dailyGroups) {
 				if (batch.paths.filter(path => candidateQuotaGroup(path) === group).length > batch.dailyLimits[group]) throw new Error('Quota quotidien dépassé.');
 			}
 			dailyStarted = true;
-		} else if (dailyStarted || batch.dailyLimits !== undefined || (previous && date - previous < 7 * 86_400_000)) throw new Error('Lots d’indexation trop rapprochés ou retour au calendrier historique.');
+		} else if (batch.supplementalPublication || dailyStarted || batch.dailyLimits !== undefined || (previous && date - previous < 7 * 86_400_000)) throw new Error('Lots d’indexation trop rapprochés ou retour au calendrier historique.');
 		publicationDays.add(day);
 		previous = date;
 		for (const path of batch.paths) {

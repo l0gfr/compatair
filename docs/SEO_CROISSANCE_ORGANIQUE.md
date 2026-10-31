@@ -136,3 +136,12 @@ Les décisions antérieures `needs-correction` et `rejected` portant sur une emp
 Le rapport quotidien cite les lectures partagées, les reçus réutilisés, les contrôles de sources et les exceptions. La relecture intégrale porte sur les nouvelles sources, les changements et les anomalies ; les pages inchangées couvertes par un reçu vérifié peuvent être contrôlées par échantillonnage éditorial. La qualification technique demeure explicite pour chaque référence. FAD et débit aspiré, pression maximale et pression de mesure, consommation moyenne/à vide/en charge et service moteur/groupe restent distincts. Les valeurs insuffisantes continuent de produire `insufficient_data`.
 
 La publication conserve un seul build complet en CI et tous les contrôles bloquants existants. Les plafonds mesurent une capacité d'ouverture, jamais une promesse d'indexation Google.
+
+
+## Complément ponctuel explicitement autorisé le 31 octobre 2026
+
+L'instruction humaine du 31 octobre autorise un lot complémentaire immédiat, sans republier les pages déjà ouvertes. `supplementalPublication` dans la politique lie cette exception au jour Paris, au SHA de production précis, à l'heure réelle de l'autorisation et à son motif. Elle expire automatiquement pour un autre jour ou une autre base, et devient inutilisable après le premier complément publié. Le timer quotidien conserve son fonctionnement ordinaire.
+
+Les plafonds 10/100/400 portent sur le cumul du jour : le lot initial de 5 guides, 2 compresseurs et 1 outil laisse au maximum 5 guides, 98 compresseurs et 399 outils. Le manifeste ajoute un nouveau lot avec l'autorisation et les plafonds complets en conservant tous les lots antérieurs. Le plan affiche les places restantes ; une place inutilisée ne passe pas à une autre famille.
+
+Une seconde revue, portant sur les seules nouvelles candidates et la nouvelle base exacte, est ajoutée au registre sans remplacer la première. Elle porte la même `supplementalPublication`. Les réserves de la première revue sont prises en compte ; une décision différée reste à examiner. Le checkpoint de déploiement et celui d'activation vérifient la base réellement active, l'absence de doublon, le cumul des quotas et l'unicité de ce complément. Aucune approbation éditoriale ou factuelle n'est déduite de l'autorisation de calendrier.

@@ -1,5 +1,5 @@
 import { createHash } from 'node:crypto';
-import { candidateFamily, candidateQuotaGroup, createIndexationPolicy, indexationBatchReady, indexationDay, validateBaseline, validateManifest, validatePolicy } from './indexation-policy.mjs';
+import { candidateFamily, candidateQuotaGroup, createIndexationPolicy, dailyIndexationUsage, supplementalPublication, indexationBatchReady, indexationDay, validateBaseline, validateManifest, validatePolicy } from './indexation-policy.mjs';
 import { EDITORIAL_HOLD_REASON } from './indexation-editorial-holds.mjs';
 
 function words(text) {
@@ -145,7 +145,9 @@ export function planIndexation({ candidates, baseline, previous, policy, now = n
 	const analyzed = analyzeCandidates(candidates.map((entry) => ({ ...entry, firstSeen: firstSeen.get(entry.path) ?? now.toISOString() })), admitted, policy, { onProgress });
 	const daily = policy.schemaVersion === 2;
 	const ready = indexationBatchReady(previous, policy, now);
-	const limits = daily ? { ...policy.dailyLimits } : Object.fromEntries(['catalog', 'guides'].map((family) => {
+	const authorization = daily ? supplementalPublication(previous, policy, now) : undefined;
+	const usage = dailyIndexationUsage(previous, now);
+	const limits = daily ? Object.fromEntries(Object.entries(policy.dailyLimits).map(([group, limit]) => [group, authorization ? Math.max(0, limit - usage[group]) : limit])) : Object.fromEntries(['catalog', 'guides'].map((family) => {
 		const publishedBatches = previous.batches.filter((batch) => batch.paths.some((path) => candidateFamily(path) === family)).length;
 		return [family, policy.stages[Math.min(publishedBatches, policy.stages.length - 1)][family]];
 	}));
@@ -165,7 +167,7 @@ export function planIndexation({ candidates, baseline, previous, policy, now = n
 	const consolidation = consolidateEquivalentAnswers(analyzed.filter(entry => !held.has(entry.path)), new Set([...admitted, ...selected]));
 	const invalidPublished = analyzed.filter(entry => admitted.has(entry.path) && !held.has(entry.path) && entry.reason && !consolidation.canonicalAliases[entry.path]);
 	if (invalidPublished.length) throw new Error(`Pages publiées sans valeur propre validée : ${invalidPublished.slice(0, 20).map(entry => `${entry.path} (${entry.reason})`).join(', ')}`);
-	const batches = [...previous.batches, ...(selected.length ? [{ openedAt: now.toISOString(), paths: selected.sort(), ...(daily ? { publicationDay: indexationDay(now), dailyLimits: limits } : {}) }] : [])];
+	const batches = [...previous.batches, ...(selected.length ? [{ openedAt: now.toISOString(), paths: selected.sort(), ...(daily ? { publicationDay: indexationDay(now), dailyLimits: { ...policy.dailyLimits }, ...(authorization ? { supplementalPublication: authorization } : {}) } : {}) }] : [])];
 	const pending = analyzed.filter((entry) => !admitted.has(entry.path) && !newPaths.has(entry.path)).map((entry) => ({ path: entry.path, firstSeen: entry.firstSeen }));
 	const manifestBase = { schemaVersion: 1, baselineSha: baseline.sourceSha, gitSha, builtAt: now.toISOString(), batches, pending };
 	const isIndexable = createIndexationPolicy(baseline, { ...manifestBase, ...(heldPaths.length ? { heldPaths } : {}) });
@@ -183,7 +185,7 @@ export function planIndexation({ candidates, baseline, previous, policy, now = n
 		reason: entry.reason ?? (reserved.has(entry.path) && !admitted.has(entry.path) ? 'editorial-reservation-unchanged' : admitted.has(entry.path) ? 'preserved-existing' : newPaths.has(entry.path) ? 'batch-admission' : policy.paused ? 'paused' : !allowRelease ? 'offline' : !ready ? 'cooldown' : 'batch-limit'),
 		...(entry.similar ? { similar: entry.similar } : {}),
 	}));
-	return { manifest, report, consolidation, limits, released: selected.length, previousSha: previous.gitSha, allowRelease };
+	return { manifest, report, consolidation, limits, released: selected.length, previousSha: previous.gitSha, allowRelease, ...(authorization ? { supplementalPublication: authorization } : {}) };
 }
 
 // Consolidation is limited to equal technical signatures within the same brand

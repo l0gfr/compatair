@@ -2,7 +2,7 @@ import { createHash } from 'node:crypto';
 import { isDeepStrictEqual } from 'node:util';
 import { editorialSelection, emptyQualifications, qualificationId, assertQualificationSources, validateQualifications } from './indexation-qualifications.mjs';
 import { planIndexation } from './indexation-planner.mjs';
-import { candidateQuotaGroup, indexationDay, validatePath } from './indexation-policy.mjs';
+import { candidateQuotaGroup, indexationDay, validatePath, validateSupplementalPublication, assertSupplementalPublicationBase } from './indexation-policy.mjs';
 
 export function indexationPolicyHash(policy) {
 	return createHash('sha256').update(JSON.stringify(policy)).digest('hex');
@@ -20,15 +20,23 @@ export function indexationCorpusHash(candidates) {
 export function validateEditorialReviews(registry) {
 	if (registry?.schemaVersion !== 1 || registry.timeZone !== 'Europe/Paris' || !Array.isArray(registry.reviews)) throw new Error('Registre de revue éditoriale invalide.');
 	const days = new Set();
+	const supplementaryDays = new Set();
 	for (const review of registry.reviews) {
-		if (typeof review.publicationDay !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(review.publicationDay) || days.has(review.publicationDay)
+		if (typeof review.publicationDay !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(review.publicationDay) || days.has(`${review.publicationDay}:${review.supplementalPublication ? 'supplement' : 'ordinary'}`)
 			|| typeof review.sourceReleaseSha !== 'string' || !/^[a-f0-9]{40}$/.test(review.sourceReleaseSha)
 			|| typeof review.policyHash !== 'string' || !/^[a-f0-9]{64}$/.test(review.policyHash)
 			|| typeof review.corpusHash !== 'string' || !/^[a-f0-9]{64}$/.test(review.corpusHash)
 			|| typeof review.reviewedAt !== 'string' || !Number.isFinite(Date.parse(review.reviewedAt)) || indexationDay(new Date(review.reviewedAt)) !== review.publicationDay
 			|| !['approved', 'partial', 'blocked'].includes(review.status) || typeof review.note !== 'string' || !review.note.trim()
 			|| !Array.isArray(review.pages) || !review.pages.length) throw new Error('Revue éditoriale invalide ou jour dupliqué.');
-		days.add(review.publicationDay);
+  if (review.supplementalPublication) {
+   const authorization = validateSupplementalPublication(review.supplementalPublication);
+   if (!days.has(`${review.publicationDay}:ordinary`) || supplementaryDays.has(review.publicationDay)
+    || authorization.publicationDay !== review.publicationDay || authorization.sourceReleaseSha !== review.sourceReleaseSha
+    || Date.parse(authorization.authorizedAt) > Date.parse(review.reviewedAt)) throw new Error('Revue complémentaire sans autorisation cohérente.');
+   supplementaryDays.add(review.publicationDay);
+  }
+  days.add(`${review.publicationDay}:${review.supplementalPublication ? 'supplement' : 'ordinary'}`);
 		const paths = new Set();
 		for (const page of review.pages) {
 			validatePath(page.path);
@@ -47,7 +55,10 @@ export function validateEditorialReviews(registry) {
 
 function decision(registry, { now, previousSha, policy, corpusHash }) {
 	validateEditorialReviews(registry);
-	const review = registry.reviews.find(entry => entry.publicationDay === indexationDay(now));
+	const authorization = policy.supplementalPublication;
+ const supplementary = authorization?.publicationDay === indexationDay(now) && authorization.sourceReleaseSha === previousSha;
+ const review = registry.reviews.find(entry => entry.publicationDay === indexationDay(now) && Boolean(entry.supplementalPublication) === supplementary);
+ if (review?.supplementalPublication && !isDeepStrictEqual(review.supplementalPublication, authorization)) return { status: 'blocked', reason: 'stale-supplemental-review' };
 	if (!review) return { status: 'blocked', reason: 'missing-editorial-review' };
 	if (Date.parse(review.reviewedAt) > now.getTime()) return { status: 'blocked', reason: 'future-editorial-review' };
 	if (review.sourceReleaseSha !== previousSha || review.policyHash !== indexationPolicyHash(policy)) return { status: 'blocked', reason: 'stale-editorial-review' };
@@ -73,6 +84,7 @@ export function createIndexationReviewProposal(options, registry = { schemaVersi
 		schemaVersion: 1, proposalOnly: true, createdAt: now.toISOString(), publicationDay: indexationDay(now),
 		sourceReleaseSha: options.previous.gitSha, policyHash: indexationPolicyHash(options.policy),
 		corpusHash: indexationCorpusHash(options.candidates), limits: plan.limits,
+		...(plan.supplementalPublication ? { supplementalPublication: plan.supplementalPublication } : {}),
 		proposed: plan.released, pages: plan.report.filter(page => page.status === 'released').map(page => ({ ...page, status: 'proposed', ...(selection.qualified.has(page.path) ? { qualification: { id: qualificationId(selection.qualified.get(page.path)), sourceDocuments: selection.qualified.get(page.path).sourceDocuments, reviewedAt: selection.qualified.get(page.path).reviewedAt } } : {}) })),
 		reserved: selection.reservedPaths.length,
 	};
@@ -119,6 +131,7 @@ export function planReviewedIndexation(options, registry, qualifications = empty
 export function assertReviewedAdmissions(plan, previous, registry, policy, now = new Date(), qualifications = emptyQualifications(), rulesHash) {
 	validateEditorialReviews(registry);
 	const batches = plan.manifest.batches.slice(previous.batches.length);
+	assertSupplementalPublicationBase(previous, plan.manifest, policy);
 	if (!batches.length) return;
 	const gate = decision(registry, { now, previousSha: previous.gitSha, policy, corpusHash: plan.editorialReview?.corpusHash });
 	validateQualifications(qualifications, now);

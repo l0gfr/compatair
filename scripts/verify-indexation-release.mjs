@@ -3,7 +3,7 @@ import { appendFile, readFile } from 'node:fs/promises';
 import { isDeepStrictEqual } from 'node:util';
 import { readLiveIndexation } from './lib/indexation-live.mjs';
 import { assertReviewedAdmissions } from './lib/indexation-editorial-review.mjs';
-import { MAX_INDEXATION_ARTIFACT_AGE_MS, assertDailyIndexationDate, validateBaseline, validateManifest } from './lib/indexation-policy.mjs';
+import { MAX_INDEXATION_ARTIFACT_AGE_MS, assertDailyIndexationDate, validateBaseline, validateManifest, assertSupplementalPublicationBase } from './lib/indexation-policy.mjs';
 
 const baseline = validateBaseline(JSON.parse(await readFile('config/indexation-baseline.json', 'utf8')));
 const plan = JSON.parse(await readFile('.astro/seo/indexation-build.json', 'utf8'));
@@ -16,6 +16,7 @@ if (artifact.gitSha === live.gitSha) throw new Error('Cette révision est déjà
 if (live.gitSha !== plan.previousSha || !isDeepStrictEqual(live.batches, artifact.batches.slice(0, live.batches.length))) throw new Error('La production a changé depuis le build : reconstruire pour préserver son historique SEO.');
 const editorialReviews = JSON.parse(await readFile('config/indexation-editorial-reviews.json', 'utf8'));
 const policy = JSON.parse(await readFile('config/indexation-policy.json', 'utf8'));
+assertSupplementalPublicationBase(live, artifact, policy);
 const qualifications = JSON.parse(await readFile('config/indexation-qualifications.json', 'utf8'));
 const hasReusedQualifications = plan.editorialReview?.pages?.some(page => page.qualificationId !== undefined);
 const rulesHash = hasReusedQualifications ? await qualificationRulesHash(process.cwd()) : undefined;

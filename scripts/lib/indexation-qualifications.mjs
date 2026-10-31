@@ -3,7 +3,7 @@ import { createHash } from 'node:crypto';
 import { readFile, lstat } from 'node:fs/promises';
 import { join, relative } from 'node:path';
 import { walkRegularSourceFiles } from './source-tree.mjs';
-import { candidateQuotaGroup, indexationDay, validatePath } from './indexation-policy.mjs';
+import { candidateQuotaGroup, indexationDay, validatePath, supplementalPublication } from './indexation-policy.mjs';
 
 const digest = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const hashPattern = /^[a-f0-9]{64}$/;
@@ -113,10 +113,11 @@ export function assertQualificationSources(entry, checks, now = new Date()) {
  for (const source of entry.sourceDocuments) if (byUrl.get(source.url)?.sha256 !== source.sha256) throw new Error('Source primaire changée ou non vérifiée : nouvelle revue requise.');
 }
 
-export function editorialSelection(candidates, reviews, qualifications = empty, { now = new Date(), rulesHash, policy }) {
+export function editorialSelection(candidates, reviews, qualifications = empty, { now = new Date(), rulesHash, policy, previous }) {
+ const supplementary = previous && supplementalPublication(previous, policy, now);
  const qualified = currentQualifications(candidates, qualifications, { now, rulesHash, policy });
  const byPath = new Map(candidates.map(candidate => [candidate.path, candidate])), decisions = new Map();
- for (const review of [...reviews.reviews].sort((a, b) => Date.parse(a.reviewedAt) - Date.parse(b.reviewedAt))) if (review.publicationDay < indexationDay(now) && Date.parse(review.reviewedAt) <= now.getTime()) {
+ for (const review of [...reviews.reviews].sort((a, b) => Date.parse(a.reviewedAt) - Date.parse(b.reviewedAt))) if ((review.publicationDay < indexationDay(now) || (supplementary && review.publicationDay === indexationDay(now) && review.sourceReleaseSha !== previous.gitSha)) && Date.parse(review.reviewedAt) <= now.getTime()) {
   for (const page of review.pages) if (page.decision !== 'deferred') decisions.set(page.path, { ...page, reviewedAt: review.reviewedAt });
  }
  const reservedPaths = [];
