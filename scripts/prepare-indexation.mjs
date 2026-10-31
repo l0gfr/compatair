@@ -1,3 +1,4 @@
+import { qualificationRulesHash } from './lib/indexation-qualifications.mjs';
 import { mkdir, readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { collectIndexationCandidates } from './lib/indexation-candidates.mjs';
@@ -21,7 +22,9 @@ const candidates = await collectIndexationCandidates(root);
 const releaseEnvironmentKey = 'COMPATAIR_RELEASE_SHA';
 const githubEnvironmentKey = 'GITHUB_SHA';
 const gitSha = process.env[releaseEnvironmentKey] ?? process.env[githubEnvironmentKey] ?? 'development';
-const plan = planReviewedIndexation({ candidates, baseline, previous, policy, now, gitSha, allowRelease: !offline }, editorialReviews);
+const qualifications = JSON.parse(await readFile(resolve(root, 'config/indexation-qualifications.json'), 'utf8'));
+const rulesHash = await qualificationRulesHash(root);
+const plan = planReviewedIndexation({ candidates, baseline, previous, policy, now, gitSha, allowRelease: !offline, rulesHash }, editorialReviews, qualifications);
 const directory = resolve(root, '.astro/seo');
 await mkdir(directory, { recursive: true });
 const reportSha256 = await writeIndexationArtifact(resolve(directory, 'indexation-plan.json'), plan);

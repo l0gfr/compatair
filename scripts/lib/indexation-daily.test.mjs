@@ -37,6 +37,21 @@ describe('daily SEO admissions in Paris', () => {
 		const batch = current.manifest.batches.at(-1);
 		for (const prefix of ['guides', 'compresseurs', 'outils-pneumatiques']) expect(() => validateManifest({ ...current.manifest, batches: [...historical.batches, { ...batch, paths: [...batch.paths, `/${prefix}/extra/`] }] }, baseline, now)).toThrow('Quota quotidien dépassé');
 	});
+	it('enforces the deployed 10/100/400 ceilings while retaining earlier batches and no transfer', () => {
+		const increased = { ...policy, dailyLimits: { guides: 10, compressors: 100, tools: 400 } };
+		const large = quotaCandidates(500);
+		const historicalPolicy = { ...policy, dailyLimits: { guides: 10, compressors: 30, tools: 60 } };
+		const yesterday = new Date('2026-09-28T18:15:00Z');
+		const historical = plan({ candidates: large, policy: historicalPolicy, now: yesterday, previous: { ...previous, builtAt: yesterday.toISOString() } }).manifest;
+		const current = plan({ candidates: large, policy: increased, previous: historical });
+		expect(current.released).toBe(510);
+		expect(counts(current.manifest.batches.at(-1).paths)).toEqual(increased.dailyLimits);
+		expect(current.manifest.batches[0]).toEqual(historical.batches[0]);
+		expect(validateManifest(current.manifest, baseline, now)).toBe(current.manifest);
+		expect(plan({ candidates: large, policy: increased, previous: current.manifest }).released).toBe(0);
+		const fewer = plan({ candidates: large.filter(entry => candidateQuotaGroup(entry.path) !== 'compressors'), policy: increased });
+		expect(counts(fewer.manifest.batches.at(-1).paths)).toEqual({ guides: 10, compressors: 0, tools: 400 });
+	});
 	it('recognizes personal-library pagination without exempting article routes', () => {
 		expect(isNavigationPath('/guides/particuliers/page/2/')).toBe(true);
 		expect(isNavigationPath('/guides/particuliers/page/12/')).toBe(true);

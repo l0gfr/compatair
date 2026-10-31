@@ -22,6 +22,7 @@ function checkpoint({changedLive=false,alreadyPublished=false,unreviewedAdmissio
   for(const rel of ['config','.astro/seo','dist/data'])mkdirSync(join(fixture,rel),{recursive:true});
   writeFileSync(join(fixture,'config/indexation-baseline.json'),JSON.stringify(baseline));
   writeFileSync(join(fixture,'config/indexation-policy.json'),JSON.stringify(policy));
+  writeFileSync(join(fixture,'config/indexation-qualifications.json'),JSON.stringify({schemaVersion:1,entries:[]}));
   writeFileSync(join(fixture,'config/indexation-editorial-reviews.json'),JSON.stringify({schemaVersion:1,timeZone:'Europe/Paris',reviews:[]}));
   writeFileSync(join(fixture,'.astro/seo/indexation-build.json'),JSON.stringify({allowRelease:true,previousSha:actualPrevious,manifest}));
   writeFileSync(join(fixture,'dist/data/indexation.json'),JSON.stringify(manifest));

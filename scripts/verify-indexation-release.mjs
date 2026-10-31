@@ -1,3 +1,4 @@
+import { qualificationRulesHash } from './lib/indexation-qualifications.mjs';
 import { appendFile, readFile } from 'node:fs/promises';
 import { isDeepStrictEqual } from 'node:util';
 import { readLiveIndexation } from './lib/indexation-live.mjs';
@@ -15,7 +16,10 @@ if (artifact.gitSha === live.gitSha) throw new Error('Cette révision est déjà
 if (live.gitSha !== plan.previousSha || !isDeepStrictEqual(live.batches, artifact.batches.slice(0, live.batches.length))) throw new Error('La production a changé depuis le build : reconstruire pour préserver son historique SEO.');
 const editorialReviews = JSON.parse(await readFile('config/indexation-editorial-reviews.json', 'utf8'));
 const policy = JSON.parse(await readFile('config/indexation-policy.json', 'utf8'));
-assertReviewedAdmissions(plan, live, editorialReviews, policy);
+const qualifications = JSON.parse(await readFile('config/indexation-qualifications.json', 'utf8'));
+const hasReusedQualifications = plan.editorialReview?.pages?.some(page => page.qualificationId !== undefined);
+const rulesHash = hasReusedQualifications ? await qualificationRulesHash(process.cwd()) : undefined;
+assertReviewedAdmissions(plan, live, editorialReviews, policy, new Date(), qualifications, rulesHash);
 // Export only after every checkpoint passes; the storage job must preserve
 // this observed release even if its earlier workflow was cancelled.
 if (process.env.GITHUB_OUTPUT) await appendFile(process.env.GITHUB_OUTPUT, `previous_release_sha=${live.gitSha}\n`);

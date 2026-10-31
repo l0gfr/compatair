@@ -187,6 +187,12 @@ jobs:
           git cat-file -e "${previous_sha}:src/data/evidence-history.snapshot.json"
           git show "${previous_sha}:src/data/evidence-history.snapshot.json" > previous-repository-evidence-history.json
           node scripts/assert-evidence-history-extension.mjs previous-repository-evidence-history.json dist/data/evidence-history.json
+          if git cat-file -e "${previous_sha}:config/indexation-qualifications.json" 2>/dev/null; then
+            git show "${previous_sha}:config/indexation-qualifications.json" > previous-repository-qualifications.json
+          else
+            echo '{"schemaVersion":1,"entries":[]}' > previous-repository-qualifications.json
+          fi
+          node scripts/assert-qualification-extension.mjs previous-repository-qualifications.json config/indexation-qualifications.json
           if git cat-file -e "${previous_sha}:src/data/document-quality-observatory-history.snapshot.json"; then
             git show "${previous_sha}:src/data/document-quality-observatory-history.snapshot.json" > previous-repository-observatory-history.json
           else

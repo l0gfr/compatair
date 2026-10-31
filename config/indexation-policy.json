@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "paused": false,
   "timeZone": "Europe/Paris",
-  "dailyLimits": { "guides": 10, "compressors": 30, "tools": 60 },
+  "dailyLimits": { "guides": 10, "compressors": 100, "tools": 400 },
   "maximumTopicShare": 0.25,
   "similarityThreshold": 0.82,
   "containmentThreshold": 0.92

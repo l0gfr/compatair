@@ -1,3 +1,4 @@
+import { qualificationRulesHash } from './lib/indexation-qualifications.mjs';
 import { mkdir, readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 import { collectIndexationCandidates } from './lib/indexation-candidates.mjs';
@@ -12,7 +13,10 @@ const baseline = validateBaseline(JSON.parse(await readFile(resolve(root, 'confi
 const policy = validatePolicy(JSON.parse(await readFile(resolve(root, 'config/indexation-policy.json'), 'utf8')));
 const previous = await readLiveIndexation(baseline, { now });
 const candidates = await collectIndexationCandidates(root, { now });
-const proposal = createIndexationReviewProposal({ candidates, baseline, previous, policy, now });
+const registry = JSON.parse(await readFile(resolve(root, 'config/indexation-editorial-reviews.json'), 'utf8'));
+const qualifications = JSON.parse(await readFile(resolve(root, 'config/indexation-qualifications.json'), 'utf8'));
+const rulesHash = await qualificationRulesHash(root);
+const proposal = createIndexationReviewProposal({ candidates, baseline, previous, policy, now, rulesHash }, registry, qualifications);
 const directory = resolve(root, '.astro/seo');
 await mkdir(directory, { recursive: true });
 await writeIndexationArtifact(resolve(directory, 'indexation-review-proposal.json'), proposal);

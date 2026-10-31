@@ -130,12 +130,14 @@ function diverseSelection(entries, limit, share) {
 	return selected;
 }
 
-export function planIndexation({ candidates, baseline, previous, policy, now = new Date(), gitSha = 'development', allowRelease = true, approvedPaths, onProgress }) {
+export function planIndexation({ candidates, baseline, previous, policy, now = new Date(), gitSha = 'development', allowRelease = true, approvedPaths, reservedPaths = [], preferredPaths = [], onProgress }) {
 	validateBaseline(baseline);
 	validatePolicy(policy);
 	validateManifest(previous, baseline, now);
 	if (new Set(candidates.map((entry) => entry.path)).size !== candidates.length) throw new Error('URL candidate dupliquée.');
 	if (candidates.some(entry => entry.editorialHold !== undefined && entry.editorialHold !== true)) throw new Error('Marqueur de réserve éditoriale invalide.');
+	for (const paths of [reservedPaths, preferredPaths]) if (!Array.isArray(paths) || new Set(paths).size !== paths.length || paths.some(path => !candidates.some(candidate => candidate.path === path))) throw new Error('Sélection de revue invalide.');
+	const reserved = new Set(reservedPaths), preferred = new Set(preferredPaths);
 	const heldPaths = candidates.filter(entry => entry.editorialHold === true).map(entry => entry.path).sort();
 	const held = new Set(heldPaths);
 	const admitted = new Set([...baseline.paths, ...previous.batches.flatMap((batch) => batch.paths)]);
@@ -149,7 +151,7 @@ export function planIndexation({ candidates, baseline, previous, policy, now = n
 	}));
 	const selected = [];
 	if (allowRelease && !policy.paused && ready) for (const family of daily ? ['guides', 'compressors', 'tools'] : ['catalog', 'guides']) {
-		selected.push(...diverseSelection(analyzed.filter((entry) => (daily ? candidateQuotaGroup(entry.path) : entry.family) === family && !admitted.has(entry.path) && !held.has(entry.path) && !entry.reason), limits[family], policy.maximumTopicShare));
+		selected.push(...diverseSelection(analyzed.filter((entry) => (daily ? candidateQuotaGroup(entry.path) : entry.family) === family && !admitted.has(entry.path) && !held.has(entry.path) && !reserved.has(entry.path) && !entry.reason).sort((a, b) => Number(preferred.has(b.path)) - Number(preferred.has(a.path))), limits[family], policy.maximumTopicShare));
 	}
 	// Apply explicit editorial approval only after the ordinary quota/diversity
 	// selection. Rejected or deferred pages never select replacement candidates.
@@ -178,7 +180,7 @@ export function planIndexation({ candidates, baseline, previous, policy, now = n
 		value: entry.value, priority: entry.priority,
 		qualityStatus: consolidation.canonicalAliases[entry.path] ? 'consolidated' : entry.reason ? 'needs-review' : 'mechanical-checks-passed',
 		status: held.has(entry.path) ? 'held' : admitted.has(entry.path) ? 'existing' : newPaths.has(entry.path) ? 'released' : entry.reason ? 'held' : 'queued',
-		reason: entry.reason ?? (admitted.has(entry.path) ? 'preserved-existing' : newPaths.has(entry.path) ? 'batch-admission' : policy.paused ? 'paused' : !allowRelease ? 'offline' : !ready ? 'cooldown' : 'batch-limit'),
+		reason: entry.reason ?? (reserved.has(entry.path) && !admitted.has(entry.path) ? 'editorial-reservation-unchanged' : admitted.has(entry.path) ? 'preserved-existing' : newPaths.has(entry.path) ? 'batch-admission' : policy.paused ? 'paused' : !allowRelease ? 'offline' : !ready ? 'cooldown' : 'batch-limit'),
 		...(entry.similar ? { similar: entry.similar } : {}),
 	}));
 	return { manifest, report, consolidation, limits, released: selected.length, previousSha: previous.gitSha, allowRelease };

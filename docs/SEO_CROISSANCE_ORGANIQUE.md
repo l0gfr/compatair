@@ -14,7 +14,7 @@ La publication concurrente de 55 nouveaux guides en `4870e1e` est enregistrée s
 
 ## Rythme automatique
 
-Depuis le 10 octobre 2026, les plafonds demandés sont de 10 guides, 30 compresseurs et 60 outils par jour, en remplacement des quotas 2/2/6 du 29 septembre. Ils sont communs à tous les imports, pas renouvelés par fichier, marque ou commande de build.
+Depuis le 31 octobre 2026, les plafonds demandés sont de 10 guides, 100 compresseurs et 400 outils par jour. Les plafonds précédents restent conservés dans chaque lot historique. Ils sont communs à tous les imports, pas renouvelés par fichier, marque ou commande de build.
 
 | Famille | Nouvelles pages par jour au maximum |
 | --- | ---: |
@@ -117,3 +117,22 @@ Google vise la production à grande échelle sans apport utile ; aucun rythme nu
 L’audit mécanique porte sur 9 049 fiches, usages et guides : 8 607 passent les contrôles de structure et de provenance, 77 URL déjà admises sont regroupées derrière une réponse principale, et 365 réponses similaires restent en attente de relecture, hors nouvelle admission. Un regroupement garde les identités, MPN et sources de chaque référence visibles. Une caractéristique technique différente, notamment dans les spécifications hors schéma normalisé, empêche une fusion automatique.
 
 Ces contrôles ne certifient ni la qualité éditoriale humaine de chaque phrase, ni l’indexation ou le trafic futurs. Ils bloquent les défauts vérifiables et rendent les cas restants examinables. Les 100 requêtes du panel sont des hypothèses éditoriales ; aucune position ou aucun volume de recherche n’est présenté comme observé.
+
+
+## Qualifications réutilisables depuis le 31 octobre 2026
+
+La revue quotidienne conserve le jour Paris, la base de production, les empreintes de politique et de corpus, ainsi que la liste exacte des admissions. Elle distingue les lectures nouvelles des qualifications documentaires réutilisées. Aucun changement ne crée une seconde ouverture le même jour.
+
+`config/indexation-qualifications.json` conserve des reçus append-only par URL. Une même notice ou table primaire peut servir à qualifier plusieurs références dans une seule lecture : le dossier doit identifier chaque ligne exacte, les unités, la pression de mesure, le régime, les différences entre modèles, les limites et la décision effectivement calculée par le moteur natif et runtime. Chaque URL garde une note motivée et ses voisins explicites. Une simple extraction de nombres ou un téléchargement HTTP 200 ne vaut pas qualification.
+
+Après ce travail réel, `pnpm seo:qualify --input fichier.json` enregistre les qualifications sans admettre de pages. Le fichier d'entrée a `schemaVersion: 1`, le `sourceReleaseSha` courant, une liste `pages` (`path`, `contentHash` complet, `neighbors`, `note`, éventuellement `additionalSources`) et des `sourceChecks` communs aux pages (`url`, `sha256` du corps complet, `checkedAt` réel, `httpStatus: 200`, `complete: true`). Les captures documentaires et les exports privés restent hors du dépôt ; le registre ne conserve que leurs empreintes et les conclusions.
+
+Le reçu lie le produit ou guide complet, les voisins explicites, le groupe comparable courant et les règles du moteur et de rendu. Un changement de ces entrées impose une nouvelle qualification. Le groupe comparable couvre tous les guides pour une qualification de guide, et la famille/marque/catégorie pour une fiche produit ; les voisins supplémentaires permettent de comparer des références d'autres marques. Les contrôles de répétition restent exécutés sur tout le corpus à chaque préparation.
+
+`seo:review-plan` privilégie les qualifications valides et indique leur identifiant et les documents à contrôler. Pour réutiliser un reçu dans une décision quotidienne `approved`, ajouter `qualificationId` sur cette page et enregistrer dans la revue les `sourceChecks` du jour. Le build et le checkpoint de déploiement exigent les mêmes empreintes documentaires complètes, vérifiées ce jour civil : une source changée, inaccessible ou incomplète déclenche une nouvelle revue ou le report de cette seule page. Les notes et validations historiques ne sont jamais converties rétroactivement en nouveaux reçus.
+
+Les décisions antérieures `needs-correction` et `rejected` portant sur une empreinte complète inchangée sont séparées de la nouvelle proposition. Elles gardent leur réserve et ne consomment plus les places du prochain lot. Un contenu corrigé ou un nouveau reçu documentaire valide postérieur à la réserve permet une nouvelle proposition. Les décisions `deferred` restent à examiner. Une réserve ne modifie pas les admissions historiques, les témoins `noindex`, les plafonds ni les seuils de comparaison.
+
+Le rapport quotidien cite les lectures partagées, les reçus réutilisés, les contrôles de sources et les exceptions. La relecture intégrale porte sur les nouvelles sources, les changements et les anomalies ; les pages inchangées couvertes par un reçu vérifié peuvent être contrôlées par échantillonnage éditorial. La qualification technique demeure explicite pour chaque référence. FAD et débit aspiré, pression maximale et pression de mesure, consommation moyenne/à vide/en charge et service moteur/groupe restent distincts. Les valeurs insuffisantes continuent de produire `insufficient_data`.
+
+La publication conserve un seul build complet en CI et tous les contrôles bloquants existants. Les plafonds mesurent une capacité d'ouverture, jamais une promesse d'indexation Google.
