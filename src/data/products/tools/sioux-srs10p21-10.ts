@@ -23,19 +23,20 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Sioux SRS10P21-10, référence SRS10P21-10. Le dimensionnement utilise 720 L/min à 6,2 bar, selon les régimes publiés par le fabricant. Vitesse à vide : 21000 tr/min. Diamètre de fraise : 16 mm. Masse : 1.2 kg.",
+		"overview": "Sioux SRS10P21-10. La ligne propre au modèle Sioux donne un débit en L/s à 90 psig (6,2 bar) sous l’intitulé Air Consumption. Le régime n’est pas précisé pour cette ligne ; aucun maximum en charge n’est déduit de la colonne voisine de vitesse à vide. Référence fabricant : SRS10P21-10. Vitesse à vide : 21000 tr/min. Diamètre de fraise : 16 mm. Masse : 1.2 kg.",
 		"verifiedFacts": [
 			"Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur.",
-			"Consommation publiée : 12.0 L/s (25.0 scfm). Le guide du catalogue (page PDF 10) définit ces débits comme de l’air détendu à pression atmosphérique et des consommations maximales, sauf indication contraire. La plus grande valeur publiée est retenue : 720 L/min (L/s × 60).",
 			"Référence fabricant : SRS10P21-10.",
 			"Vitesse à vide : 21000 tr/min.",
 			"Diamètre de fraise : 16 mm.",
-			"Masse : 1.2 kg."
+			"Masse : 1.2 kg.",
+			"Consommation de régime non précisé publiée : 720 L/min."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
 			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
-			"Le diamètre publié concerne la capacité de fraise ; le catalogue précise que les fraises ne sont pas fournies."
+			"Le diamètre publié concerne la capacité de fraise ; le catalogue précise que les fraises ne sont pas fournies.",
+			"La ligne propre au modèle Sioux donne un débit en L/s à 90 psig (6,2 bar) sous l’intitulé Air Consumption. Le régime n’est pas précisé pour cette ligne ; aucun maximum en charge n’est déduit de la colonne voisine de vitesse à vide."
 		]
 	},
 	"specifications": [
@@ -48,9 +49,10 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation publiée : 12.0 L/s (25.0 scfm). Le guide du catalogue (page PDF 10) définit ces débits comme de l’air détendu à pression atmosphérique et des consommations maximales, sauf indication contraire. La plus grande valeur publiée est retenue : 720 L/min (L/s × 60).",
+			"value": "Consommation de régime non précisé publiée : 720 L/min.",
 			"evidenceIds": [
-				"sioux-srs10p21-10-20260927"
+				"sioux-srs10p21-10-reserved-20261031-1",
+				"sioux-srs10p21-10-reserved-20261031-2"
 			]
 		},
 		{
@@ -80,6 +82,15 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"sioux-srs10p21-10-20260927"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":720,\"typical\":720,\"max\":720},\"workingPressureBar\":{\"min\":6.2,\"typical\":6.2,\"max\":6.2}}",
+			"evidenceIds": [
+				"sioux-srs10p21-10-20260927",
+				"sioux-srs10p21-10-reserved-20261031-1",
+				"sioux-srs10p21-10-reserved-20261031-2"
+			]
 		}
 	],
 	"evidence": [
@@ -100,6 +111,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur."
+		},
+		{
+			"id": "sioux-srs10p21-10-reserved-20261031-1",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=85",
+			"sourceLabel": "Sioux SRS10P21-10 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8. La ligne propre au modèle Sioux donne un débit en L/s à 90 psig (6,2 bar) sous l’intitulé Air Consumption. Le régime n’est pas précisé pour cette ligne ; aucun maximum en charge n’est déduit de la colonne voisine de vitesse à vide."
+		},
+		{
+			"id": "sioux-srs10p21-10-reserved-20261031-2",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=85",
+			"sourceLabel": "Sioux SRS10P21-10 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8. La ligne propre au modèle Sioux donne un débit en L/s à 90 psig (6,2 bar) sous l’intitulé Air Consumption. Le régime n’est pas précisé pour cette ligne ; aucun maximum en charge n’est déduit de la colonne voisine de vitesse à vide."
 		}
 	],
 	"fieldSources": {
@@ -111,6 +142,10 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"sioux-srs10p21-10-20260927"
+		],
+		"airflowBasis": [
+			"sioux-srs10p21-10-reserved-20261031-1",
+			"sioux-srs10p21-10-reserved-20261031-2"
 		]
 	},
 	"notes": [
@@ -120,7 +155,8 @@ const product: ToolProfileInput = {
 		"min": 720,
 		"typical": 720,
 		"max": 720
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

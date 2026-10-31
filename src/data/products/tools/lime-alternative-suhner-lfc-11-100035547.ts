@@ -29,10 +29,10 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Suhner LFC 11 (réf. 100035547). La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Désignation de la version : LFC 11. Configuration technique imprimée : 300 12 000 2 – 11 < 2.5 112 014 01.",
+		"overview": "Suhner LFC 11. LFC 11 : consommation à vide 0,230 m³/min, puissance 300 W, fréquence 12 000 min⁻¹ et course réglable de 2 à 11 mm. Distinguer l’outil 100035547 du coffret LFC 11 SET 100035548. Désignation de la version : LFC 11.",
 		"verifiedFacts": [
 			"Désignation de la version : LFC 11.",
-			"Configuration technique imprimée : 300 12 000 2 – 11 < 2.5 112 014 01."
+			"LFC 11 : consommation à vide 0,230 m³/min, puissance 300 W, fréquence 12 000 min⁻¹ et course réglable de 2 à 11 mm. Distinguer l’outil 100035547 du coffret LFC 11 SET 100035548."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -67,6 +67,14 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-suhner-pneumatic-p44"
 			]
+		},
+		{
+			"label": "Lecture du tableau constructeur",
+			"value": "LFC 11 : consommation à vide 0,230 m³/min, puissance 300 W, fréquence 12 000 min⁻¹ et course réglable de 2 à 11 mm. Distinguer l’outil 100035547 du coffret LFC 11 SET 100035548.",
+			"evidenceIds": [
+				"october2-tools-suhner-pneumatic-p44",
+				"lime-alternative-suhner-lfc-11-100035547-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -79,6 +87,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 355401bdbabe6cb5a7bfa85064961b89eabb84f7ebad27a03b193f57bc12f7dd. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "lime-alternative-suhner-lfc-11-100035547-reserved-20261031-1",
+			"sourceUrl": "https://www.suhner-abrasive.com/fileadmin/user_upload/Abrasive/04_Einzelkatalog_Druckluftwerkzeuge_EN.pdf#page=44",
+			"sourceLabel": "Suhner LFC 11 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 355401bdbabe6cb5a7bfa85064961b89eabb84f7ebad27a03b193f57bc12f7dd. LFC 11 : consommation à vide 0,230 m³/min, puissance 300 W, fréquence 12 000 min⁻¹ et course réglable de 2 à 11 mm. Distinguer l’outil 100035547 du coffret LFC 11 SET 100035548."
 		}
 	],
 	"fieldSources": {

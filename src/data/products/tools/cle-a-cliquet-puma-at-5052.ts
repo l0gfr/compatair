@@ -33,7 +33,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "PUMA AT-5052. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Square Drive : 3/8”. Capacity Bolt Size / Inch : 3/8.",
+		"overview": "PUMA AT-5052. Le fabricant publie deux valeurs de couple incompatibles dans les unités affichées : 50 ft-lb et 6,9 N.m. Les deux transcriptions sont conservées ; aucune conversion ni correction d’unité supposée. Confirmation constructeur requise. Square Drive : 3/8”. Capacity Bolt Size / Inch : 3/8. Capacity Bolt Size / mm : 10. Free Speed RPM : 160. Max. Torque / ft-lb : 50. Max. Torque / N.m. : 6.9. Overall Length / inch : 10.24. Overall Length / mm : 260. Air Inlet (PT) : 1/4”. Air Hose (ID) : 3/8”. Net Weight / lb : 2.6. Net Weight / kg : 1.18.",
 		"verifiedFacts": [
 			"Square Drive : 3/8”.",
 			"Capacity Bolt Size / Inch : 3/8.",
@@ -50,7 +50,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée.",
+			"Le fabricant publie deux valeurs de couple incompatibles dans les unités affichées : 50 ft-lb et 6,9 N.m. Les deux transcriptions sont conservées ; aucune conversion ni correction d’unité supposée. Confirmation constructeur requise."
 		]
 	},
 	"specifications": [
@@ -163,6 +164,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 6d013e27f0e9f0aa0bdb27f6d739cac1c8ffcae4054d875afebec54d71672766. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-cliquet-puma-at-5052-reserved-20261031-1",
+			"sourceUrl": "https://www.pumaair.com/product-3-8--Air-Ratchet-Wrench-3-8AirRatchetWrench.html",
+			"sourceLabel": "PUMA AT-5052 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 a366fe582585931ce1156eb0d2861f1b33dace184de266a5dbd378fea2bdcd19. Le fabricant publie deux valeurs de couple incompatibles dans les unités affichées : 50 ft-lb et 6,9 N.m. Les deux transcriptions sont conservées ; aucune conversion ni correction d’unité supposée. Confirmation constructeur requise."
 		}
 	],
 	"fieldSources": {

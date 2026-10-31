@@ -1,3 +1,4 @@
+import { applyReservedOctober31Batch } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { applyReviewedOctober31Amendment } from './reviewed-catalog-amendments-2026-10-31.mjs';
 import { applyReviewedOctober30Amendment } from './reviewed-catalog-amendments-2026-10-30.mjs';
 import { applyReviewedOctober25FollowupAmendment } from './reviewed-catalog-amendments-2026-10-25-b.mjs';
@@ -36,7 +37,7 @@ const middleAnchors = { 'Rollair 16': 3, 'Rollair 21': 7, 'Rollair 26': 11, 'Rol
 const middleVariableAnchors = { 'Rollair 16 V': 4, 'Rollair 21 V': 6, 'Rollair 26 V': 8, 'Rollair 31 V': 10 };
 const key = row => [row.brand, row.model, row.frequencyHz ?? 'unspecified', row.maxPressureBar, row.equipment, row.tankLiters].join('|');
 
-export function buildDocumentedCompressorsOctober3C(snapshot) {
+function buildDocumentedCompressorsOctober3CBeforeReservedFollowup(snapshot) {
  if (snapshot.schemaVersion !== 1 || snapshot.batchId !== 'documented-compressors-2026-10-03-c' || snapshot.compressors.length !== 200) throw new Error('Lot documentaire non reconnu');
  const sources = new Map(snapshot.sources.map(source => [source.id, source]));
  const proofIds = new Set();
@@ -193,4 +194,8 @@ export function buildDocumentedCompressorsOctober3C(snapshot) {
   if (row.model === 'FCOL22LS6') limitations.push('La page espagnole 54 de la notice comporte des valeurs contradictoires pour pression et lubrification ; seules les spécifications anglaises page 10, corroborées en français page 32, sont retenues.');
   return { id,slug:id,brand:row.brand,model:row.model,variant:{ familyId:slug(`${row.brand}-${row.model}`),label:`${row.equipment}, ${fmt(maxBar)} bar`,distinguishingAttributes:{équipement:row.equipment,pressionMaximale:`${fmt(maxBar)} bar`,cuve:`${fmt(row.tankLiters)} L`,régulation:row.variableSpeed?'vitesse variable':'vitesse fixe',...(row.frequencyHz?{fréquence:`${row.frequencyHz} Hz`}:{})}},tankLiters:row.tankLiters,maxPressureBar:maxBar,fadCurve:points.sort((a,b)=>a.pressureBar-b.pressureBar),...(duty!==undefined?{dutyCycle:duty}:{}),oilType:row.oilType,...(power?{powerKw:power}:{}),mobility:row.brand==='Rolair'?'portable':'fixed',confidence:'B',status:'unknown',image:{src:`/images/products/${id}.webp`,alt:`Repères techniques : ${label}`,sourceUrl:sources.get(row.sourceId).url,sourceLabel:'Carte technique CompatAir, données déclarées par le constructeur'},specifications:[spec('Configuration constructeur',row.equipment,fields.tankLiters),spec('Pression maximale de fonctionnement',`${fmt(row.maxPressureOriginal)} ${row.maxPressureUnit==='psi(g)'?'PSI relatifs':'bar relatifs'}`),...row.points.map(point=>spec(`Air livré à ${fmt(point.pressureOriginal)} ${point.pressureUnit==='psi(g)'?'PSI':'bar'}`,`${fmt(point.flowOriginal)} ${units[point.flowUnit]}`)),spec('Cuve de stockage',row.tankLiters?`${fmt(row.tankLiters)} L intégrés à cette configuration`:'Groupe au sol ; réservoir externe exclu',fields.tankLiters),...(duty!==undefined?[spec('Cycle de service déclaré',duty===0.5?'S3/50%, cinq minutes ON et cinq minutes OFF':'100%, famille constructeur citée',fields.dutyCycle)]:[]),spec('Périmètre documentaire',row.market)],editorial:{overview:`${label}. ${points.map(point=>`${fmt(point.litersPerMinute)} L/min à ${fmt(point.pressureBar)} bar`).join(' ; ')}.`,verifiedFacts:['Air livré rattaché à une pression et aux unités originales du constructeur.',`Configuration de stockage documentée : ${row.tankLiters?`${fmt(row.tankLiters)} L`:'groupe au sol sans réservoir de stockage intégré'}.`,`Pression maximale de fonctionnement publiée : ${fmt(maxBar)} bar.`],limitations},evidence,fieldSources:fields,notes:['Pression de mesure, pression maximale relative et pression absolue à l’entrée restent distinctes. ISO 1217 n’est revendiquée que pour les sources qui le citent.'] };
  }).map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment).map(applyReviewedOctober25Amendment).map(applyReviewedOctober25FollowupAmendment).map(applyReviewedOctober30Amendment).map(applyReviewedOctober31Amendment);
+}
+
+export function buildDocumentedCompressorsOctober3C(...args) {
+ return applyReservedOctober31Batch(buildDocumentedCompressorsOctober3CBeforeReservedFollowup(...args));
 }

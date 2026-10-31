@@ -23,19 +23,20 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "PFERD PF 4/84, référence 80600210. Le dimensionnement utilise 30 L/min à 6,3 bar, selon les régimes publiés par le fabricant. Longueur : 200 mm. Poids net de la machine : 0.3 kg. Échappement d'air : Avant.",
+		"overview": "PFERD PF 4/84. La fiche PFERD distingue la consommation à vide de la consommation sous charge. Le débit actuellement retenu correspond à la colonne à vide et conserve cette qualification ; la pression est indiquée comme pression de service. Référence fabricant : 80600210. Longueur : 200 mm. Poids net de la machine : 0.3 kg. Échappement d'air : Avant.",
 		"verifiedFacts": [
 			"Pression de service publiée sur cette fiche : 6.3 bar. Aucune autre pression de fonctionnement n’est déduite.",
-			"Consommation sous charge : 0.03 m³/min ; à vide : 0.03 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 30 L/min (m³/min × 1 000).",
+			"Consommation sous charge : 0.03 m³/min ; à vide : 0.03 m³/min.",
 			"Référence fabricant : 80600210.",
 			"Longueur : 200 mm.",
 			"Poids net de la machine : 0.3 kg.",
-			"Échappement d'air : Avant."
+			"Échappement d'air : Avant.",
+			"Consommation à vide publiée : 30 L/min."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
 			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
-			"La valeur la plus élevée à vide ou en charge couvre les deux régimes documentés ; aucune moyenne de cycle n’est substituée à ces valeurs."
+			"La fiche PFERD distingue la consommation à vide de la consommation sous charge. Le débit actuellement retenu correspond à la colonne à vide et conserve cette qualification ; la pression est indiquée comme pression de service."
 		]
 	},
 	"specifications": [
@@ -48,9 +49,9 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation sous charge : 0.03 m³/min ; à vide : 0.03 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 30 L/min (m³/min × 1 000).",
+			"value": "Consommation sous charge : 0.03 m³/min ; à vide : 0.03 m³/min.",
 			"evidenceIds": [
-				"pferd-80600210-20260927"
+				"pferd-pf-4-84-reserved-20261031-1"
 			]
 		},
 		{
@@ -80,6 +81,14 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"pferd-80600210-20260927"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":30,\"typical\":30,\"max\":30},\"workingPressureBar\":{\"min\":6.3,\"typical\":6.3,\"max\":6.3}}",
+			"evidenceIds": [
+				"pferd-80600210-20260927",
+				"pferd-pf-4-84-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -91,6 +100,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation sous charge : 0.03 m³/min ; à vide : 0.03 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 30 L/min (m³/min × 1 000)."
+		},
+		{
+			"id": "pferd-pf-4-84-reserved-20261031-1",
+			"sourceUrl": "https://fr.pferd.com/fr/appareil-a-limer-pneumatique-pf-484",
+			"sourceLabel": "PFERD PF 4/84 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 ff0e5e8411117c272827c10be27ab51a859bff1605dd1c1c7aef50720feab136. La fiche PFERD distingue la consommation à vide de la consommation sous charge. Le débit actuellement retenu correspond à la colonne à vide et conserve cette qualification ; la pression est indiquée comme pression de service."
 		}
 	],
 	"fieldSources": {
@@ -102,6 +121,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"pferd-80600210-20260927"
+		],
+		"airflowBasis": [
+			"pferd-pf-4-84-reserved-20261031-1"
 		]
 	},
 	"notes": [
@@ -111,7 +133,8 @@ const product: ToolProfileInput = {
 		"min": 30,
 		"typical": 30,
 		"max": 30
-	}
+	},
+	"airflowBasis": "free-speed"
 };
 
 export default product;

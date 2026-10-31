@@ -1,3 +1,4 @@
+import { applyReservedOctober31Batch } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { applyReviewedOctober25FollowupAmendment } from './reviewed-catalog-amendments-2026-10-25-b.mjs';
 import { applyReviewedOctober25Amendment } from './reviewed-catalog-amendments-2026-10-25.mjs';
 import { applyReviewedOctober24Amendment } from './reviewed-catalog-amendments-2026-10-24.mjs';
@@ -106,7 +107,7 @@ const puskaVariableRangeIds = new Set([
  'puska-pke-3-vf-dry-10-200', 'puska-pke-4-vf-dry-10-200', 'puska-pke-5-5-vf-dry-10-200', 'puska-pke-7-5-vf-dry-10-200', 'puska-pke-9-vf-dry-10-200',
 ]);
 const previousPuskaMinimumLimitation = 'La plage de débit publiée est conservée en source ; seul son minimum est utilisé pour cette configuration. Le régime de vitesse associé n’est pas spécifié.';
-export function buildDocumentedCompressorsOctober4B(snapshot) {
+function buildDocumentedCompressorsOctober4BBeforeReservedFollowup(snapshot) {
  if (snapshot.schemaVersion !== 1 || snapshot.batchId !== 'documented-compressors-2026-10-04-b' || snapshot.observedDate !== '2026-10-04' || snapshot.baseline?.sha !== 'dbfbe1fb72d5f9abb04bc9c7cb5ea48a33122f20' || !Array.isArray(snapshot.compressors) || snapshot.compressors.length !== 420 || sha(snapshot.compressors) !== reviewedManifest.recordsSha256) throw new Error('Lot ou transcriptions documentaires non reconnus');
  const sources = new Map(snapshot.sources.map(s => [s.id, s]));
  if (sources.size !== snapshot.sources.length || sources.size !== Object.keys(reviewedManifest.sources).length) throw new Error('Sources documentaires dupliquées ou manquantes');
@@ -197,4 +198,8 @@ export function buildDocumentedCompressorsOctober4B(snapshot) {
   const deliveredText = `${fmt(delivered)} L/min déclarés à ${fmt(measurementPressure)} bar${rangeMinimum === undefined ? '' : ', maximum de la plage FAD publiée, sans qualification du régime moteur'}.`;
   return { id, slug: id, brand: row.brand, model: row.model, ...(row.mpn ? { mpn: row.mpn } : {}), variant: { familyId: slug(`${row.brand} ${row.normalizedModel ?? row.model}`), label: row.equipment, distinguishingAttributes: { équipement: row.equipment, pressionDeConfiguration: `${fmt(maximum)} bar`, cuve: tank === undefined ? 'Non documentée' : `${fmt(tank)} L`, ...(row.electrical ? { fréquence: '50 Hz' } : {}) } }, ...(tank === undefined ? {} : { tankLiters: tank }), maxPressureBar: maximum, ...(row.maxPressureBasis === 'selected-working-pressure-ceiling' ? { maxPressureBasis: row.maxPressureBasis } : {}), fadCurve: points, ...(duty ? { dutyCycle: duty } : {}), ...(power ? { powerKw: power } : {}), oilType: row.oilType, confidence: 'B', status: 'unknown', image: { src: `/images/products/${id}.svg`, alt: `Repères techniques : ${row.brand} ${row.model}`, sourceUrl: sources.get(row.sourceId).url, sourceLabel: 'Carte technique CompatAir, données déclarées par le constructeur' }, specifications: specs, editorial: { overview: `${row.brand} ${row.model}. ${deliveredText} Configuration constructeur : ${row.equipment}.`, verifiedFacts: [`Pression de la configuration documentée : ${fmt(maximum)} bar.`, ...(tank === undefined ? [] : [tank === 0 ? 'Montage sans réservoir intégré explicitement documenté.' : `Cuve de stockage documentée : ${fmt(tank)} L.`]), `FAD sous pression identifié séparément des valeurs d’aspiration : ${deliveredText}`], limitations: limits }, evidence, fieldSources, notes: ['Portée de la source : FAD-pressure-qualified.', 'Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées.', 'Identités de pression, tension, contrôleur et démarreur consolidées avant le décompte du lot.'] };
  }).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment).map(applyReviewedOctober24Amendment).map(applyReviewedOctober25Amendment).map(applyReviewedOctober25FollowupAmendment);
+}
+
+export function buildDocumentedCompressorsOctober4B(...args) {
+ return applyReservedOctober31Batch(buildDocumentedCompressorsOctober4BBeforeReservedFollowup(...args));
 }

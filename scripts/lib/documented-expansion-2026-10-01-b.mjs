@@ -1,3 +1,4 @@
+import { applyReservedOctober31Batch } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { applyReviewedOctober25FollowupAmendment } from './reviewed-catalog-amendments-2026-10-25-b.mjs';
 import { applyReviewedOctober25Amendment } from './reviewed-catalog-amendments-2026-10-25.mjs';
 import { applyReviewedOctober24Amendment } from './reviewed-catalog-amendments-2026-10-24.mjs';
@@ -8,7 +9,7 @@ const fmt = value => value.toLocaleString('fr-FR', { maximumFractionDigits: 3 })
 const positive = value => { if (!Number.isFinite(value) || value <= 0) throw new Error('Caractéristique positive requise'); return value; };
 const multipliers = { 'm3/min': 1000, 'm3/h': 1000 / 60, 'L/s': 60, 'L/min': 1, cfm: 28.316846592, 'L/cycle': 1 };
 
-export function buildDocumentedExpansionOctoberB(snapshot) {
+function buildDocumentedExpansionOctoberBBeforeReservedFollowup(snapshot) {
  if (snapshot.schemaVersion !== 1 || snapshot.batchId !== 'documented-expansion-2026-10-01-b' || snapshot.observedAt !== DATE || snapshot.compressors.length !== 200 || snapshot.tools.length !== 1000) throw new Error('Lot documentaire non reconnu');
  const sources = new Map(snapshot.sources.map(source => [source.id, source]));
  if (sources.size !== snapshot.sources.length) throw new Error('Source dupliquée');
@@ -51,4 +52,8 @@ export function buildDocumentedExpansionOctoberB(snapshot) {
  const ids = new Set();
  for (const product of [...compressors, ...tools]) { if (ids.has(product.id)) throw new Error('Identité dupliquée'); ids.add(product.id); }
  return { compressors: compressors.map(applyReviewedOctober24Amendment).map(applyReviewedOctober25Amendment).map(applyReviewedOctober25FollowupAmendment), tools: tools.map(applyReviewedOctober24Amendment).map(applyReviewedOctober25Amendment).map(applyReviewedOctober25FollowupAmendment) };
+}
+
+export function buildDocumentedExpansionOctoberB(...args) {
+ return applyReservedOctober31Batch(buildDocumentedExpansionOctoberBBeforeReservedFollowup(...args));
 }

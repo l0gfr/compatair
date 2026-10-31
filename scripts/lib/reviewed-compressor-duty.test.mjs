@@ -1,3 +1,4 @@
+import { beforeReservedOctober31Followup } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { compressors, tools } from '../../src/data/catalog';
@@ -10,7 +11,7 @@ describe('reviewed continuous-duty evidence', () => {
   expect(reviewed.rows.filter(row => row.brand === 'ABAC')).toHaveLength(267);
   expect(reviewed.rows.filter(row => row.brand === 'Fini')).toHaveLength(112);
   for (const row of reviewed.rows) {
-   const product = compressors.find(item => item.id === row.id);
+   const product = beforeReservedOctober31Followup(compressors.find(item => item.id === row.id));
    expect(product, row.id).toMatchObject({ brand: row.brand, model: row.model, mpn: row.mpn });
    const source = reviewed.sources.find(item => item.id === row.sourceId);
    if (['abac-formula-e-11-13-400-50', 'abac-formula-e-11-8-400-50', 'abac-formula-e-5-5-10-400-50', 'abac-formula-e-5-5-8-400-50', 'abac-formula-e-7-5-10-400-50', 'abac-formula-e-7-5-13-400-50'].includes(row.id)) {

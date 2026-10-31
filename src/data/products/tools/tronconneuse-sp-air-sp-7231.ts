@@ -41,7 +41,8 @@ const product: ToolProfileInput = {
 		"overview": "SP AIR SP-7231. Consommation publiée, régime non précisé : 800 L/min à 6,2 bar. Raccord publié : 1/4\"NPT. Masse publiée : 1.2 kg.",
 		"verifiedFacts": [
 			"Raccord publié : 1/4\"NPT.",
-			"Masse publiée : 1.2 kg."
+			"Masse publiée : 1.2 kg.",
+			"SP-7231 : disque de 75 mm / 3 pouces, vitesse à vide 18 000 tr/min, longueur 220 mm, consommation publiée 0,8 m³/min. Le voisin SP-7234 utilise un disque de 100 mm et une vitesse différente."
 		],
 		"limitations": [
 			"Régime de consommation non précisé : aucun maximum supposé ; le verdict reste insufficient_data.",
@@ -76,6 +77,14 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october-sp-air-p22"
 			]
+		},
+		{
+			"label": "Lecture du tableau constructeur",
+			"value": "SP-7231 : disque de 75 mm / 3 pouces, vitesse à vide 18 000 tr/min, longueur 220 mm, consommation publiée 0,8 m³/min. Le voisin SP-7234 utilise un disque de 100 mm et une vitesse différente.",
+			"evidenceIds": [
+				"october-sp-air-p22",
+				"tronconneuse-sp-air-sp-7231-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -88,6 +97,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "tronconneuse-sp-air-sp-7231-reserved-20261031-1",
+			"sourceUrl": "https://spair.vessel.co.jp/download/SP_catalog_all_E.pdf#page=22",
+			"sourceLabel": "SP AIR SP-7231 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. SP-7231 : disque de 75 mm / 3 pouces, vitesse à vide 18 000 tr/min, longueur 220 mm, consommation publiée 0,8 m³/min. Le voisin SP-7234 utilise un disque de 100 mm et une vitesse différente."
 		}
 	],
 	"fieldSources": {

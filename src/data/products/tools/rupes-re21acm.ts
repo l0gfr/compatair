@@ -23,18 +23,19 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "RUPES RE21ACM, référence RE21ACM. Le tableau fabricant publie 360 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Diamètre d’orbite : 3 mm. Format de plateau : 80x130 mm.",
+		"overview": "RUPES RE21ACM. La table donne la consommation et la pression de travail, sans qualifier le débit de maximum, de moyenne ni de débit en charge. Le moteur conserve un résultat indéterminé pour ce point. Référence fabricant : RE21ACM. Diamètre d’orbite : 3 mm. Format de plateau : 80x130 mm. Masse publiée : 0,87 kg.",
 		"verifiedFacts": [
 			"Pression de service de 6,2 bar / 90 PSIG indiquée dans le même tableau.",
-			"Consommation maximale explicitement publiée dans le tableau « Air consumption max », en L/min.",
 			"Référence fabricant : RE21ACM.",
 			"Diamètre d’orbite : 3 mm.",
 			"Format de plateau : 80x130 mm.",
-			"Masse publiée : 0,87 kg."
+			"Masse publiée : 0,87 kg.",
+			"Consommation de régime non précisé publiée : 360 L/min."
 		],
 		"limitations": [
 			"Le débit concerne l’outil. L’aspiration externe et les autres consommateurs de l’atelier doivent être examinés séparément.",
-			"Les variantes d’orbite et de plateau ne sont pas interchangeables pour un même objectif de finition."
+			"Les variantes d’orbite et de plateau ne sont pas interchangeables pour un même objectif de finition.",
+			"La table donne la consommation et la pression de travail, sans qualifier le débit de maximum, de moyenne ni de débit en charge. Le moteur conserve un résultat indéterminé pour ce point."
 		]
 	},
 	"specifications": [
@@ -47,9 +48,9 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation maximale explicitement publiée dans le tableau « Air consumption max », en L/min.",
+			"value": "Consommation de régime non précisé publiée : 360 L/min.",
 			"evidenceIds": [
-				"rupes-re21acm-20260926"
+				"rupes-re21acm-reserved-20261031-1"
 			]
 		},
 		{
@@ -79,6 +80,14 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"rupes-re21acm-20260926"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":360,\"typical\":360,\"max\":360},\"workingPressureBar\":{\"min\":6.2,\"typical\":6.2,\"max\":6.2}}",
+			"evidenceIds": [
+				"rupes-re21acm-20260926",
+				"rupes-re21acm-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -90,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation maximale explicitement publiée dans le tableau « Air consumption max », en L/min."
+		},
+		{
+			"id": "rupes-re21acm-reserved-20261031-1",
+			"sourceUrl": "https://www.rupes.com/catalogue/2026/RUPES_Catalogue-2026_EN.pdf#page=55",
+			"sourceLabel": "RUPES RE21ACM : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 018272fb053802b4e419d3f70bb75a46a02a62aec2a0404862ded7c21b443a63. La table donne la consommation et la pression de travail, sans qualifier le débit de maximum, de moyenne ni de débit en charge. Le moteur conserve un résultat indéterminé pour ce point."
 		}
 	],
 	"fieldSources": {
@@ -101,6 +120,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"rupes-re21acm-20260926"
+		],
+		"airflowBasis": [
+			"rupes-re21acm-reserved-20261031-1"
 		]
 	},
 	"notes": [
@@ -110,7 +132,8 @@ const product: ToolProfileInput = {
 		"min": 360,
 		"typical": 360,
 		"max": 360
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

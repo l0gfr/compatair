@@ -9,7 +9,7 @@ const product: ToolProfileInput = {
 	"categoryId": "meuleuse",
 	"category": "meuleuse",
 	"label": "Ingersoll Rand 320AC4A",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 6.2,
 		"typical": 6.2,
@@ -23,18 +23,20 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Ingersoll Rand 320AC4A, référence 320AC4A. Le tableau fabricant publie 906,139 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Puissance publiée : 0.40 hp. Vitesse à vide : 20000 tr/min.",
+		"overview": "Ingersoll Rand 320AC4A. La notice constructeur alternative est accessible, tandis que l’ancienne bibliothèque reste en réserve d’accès. Elle ne rétablit pas un point débit/pression maximal apparié pour cette configuration ; les anciennes valeurs restent documentaires. Le fabricant donne les performances à 90 psi, avec l’équivalence publiée de 6,2 bar dans les consignes du même catalogue. Valeur de la colonne CFM : 32. Conversion en L/min par le facteur 28,316846592 ; arrondi à 0,001 L/min. Référence fabricant : 320AC4A. Puissance publiée : 0.40 hp. Vitesse à vide : 20000 tr/min. Échappement : Arrière.",
 		"verifiedFacts": [
 			"Le fabricant donne les performances à 90 psi, avec l’équivalence publiée de 6,2 bar dans les consignes du même catalogue.",
 			"Valeur de la colonne CFM : 32. Conversion en L/min par le facteur 28,316846592 ; arrondi à 0,001 L/min.",
 			"Référence fabricant : 320AC4A.",
 			"Puissance publiée : 0.40 hp.",
 			"Vitesse à vide : 20000 tr/min.",
-			"Échappement : Arrière."
+			"Échappement : Arrière.",
+			"Valeur documentaire conservée : 906.139 L/min. La notice constructeur alternative est accessible, tandis que l’ancienne bibliothèque reste en réserve d’accès. Elle ne rétablit pas un point débit/pression maximal apparié pour cette configuration ; les anciennes valeurs restent documentaires."
 		],
 		"limitations": [
 			"Le catalogue est conservé dans la bibliothèque du fabricant ; la disponibilité commerciale du modèle doit être confirmée.",
-			"Les valeurs sont déclarées par le fabricant. Les débits en CFM ne sont pas des mesures indépendantes CompatAir."
+			"Les valeurs sont déclarées par le fabricant. Les débits en CFM ne sont pas des mesures indépendantes CompatAir.",
+			"La notice constructeur alternative est accessible, tandis que l’ancienne bibliothèque reste en réserve d’accès. Elle ne rétablit pas un point débit/pression maximal apparié pour cette configuration ; les anciennes valeurs restent documentaires."
 		]
 	},
 	"specifications": [
@@ -47,9 +49,9 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Valeur de la colonne CFM : 32. Conversion en L/min par le facteur 28,316846592 ; arrondi à 0,001 L/min.",
+			"value": "Valeur documentaire conservée : 906.139 L/min. La notice constructeur alternative est accessible, tandis que l’ancienne bibliothèque reste en réserve d’accès. Elle ne rétablit pas un point débit/pression maximal apparié pour cette configuration ; les anciennes valeurs restent documentaires.",
 			"evidenceIds": [
-				"ingersoll-rand-320ac4a-20260926"
+				"ingersoll-rand-320ac4a-reserved-20261031-1"
 			]
 		},
 		{
@@ -72,6 +74,14 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"ingersoll-rand-320ac4a-20260926"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":906.139,\"typical\":906.139,\"max\":906.139},\"workingPressureBar\":{\"min\":6.2,\"typical\":6.2,\"max\":6.2}}",
+			"evidenceIds": [
+				"ingersoll-rand-320ac4a-20260926",
+				"ingersoll-rand-320ac4a-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -92,6 +102,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consigne de fonctionnement à 90 psi avec l’équivalence de 6,2 bar, et tableaux de performances à 90 psi."
+		},
+		{
+			"id": "ingersoll-rand-320ac4a-reserved-20261031-1",
+			"sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/bltd89674ca5491ef9a/bltaba456f61496c230/680a25bef42c4c5c743e73c4/45760899_ed7_G.pdf",
+			"sourceLabel": "Ingersoll Rand 320AC4A : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 5b41360138aa346aa1b09a2be05db75c15cc72b82cfe642f186fc903f8e2d1ae. La notice constructeur alternative est accessible, tandis que l’ancienne bibliothèque reste en réserve d’accès. Elle ne rétablit pas un point débit/pression maximal apparié pour cette configuration ; les anciennes valeurs restent documentaires."
 		}
 	],
 	"fieldSources": {
@@ -101,18 +121,17 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"ingersoll-rand-320ac4a-20260926-workingpressurebar-1"
 		],
-		"airflowLpm": [
-			"ingersoll-rand-320ac4a-20260926"
+		"demandModel": [
+			"ingersoll-rand-320ac4a-reserved-20261031-1"
+		],
+		"demandExplanation": [
+			"ingersoll-rand-320ac4a-reserved-20261031-1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 906.139,
-		"typical": 906.139,
-		"max": 906.139
-	}
+	"demandExplanation": "La notice constructeur alternative est accessible, tandis que l’ancienne bibliothèque reste en réserve d’accès. Elle ne rétablit pas un point débit/pression maximal apparié pour cette configuration ; les anciennes valeurs restent documentaires."
 };
 
 export default product;

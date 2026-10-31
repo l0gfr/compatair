@@ -38,12 +38,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-854. Consommation de régime non précisé : 490 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 0.50 kg. Longueur : 170 mm.",
+		"overview": "GISON GP-854. Carré d’entraînement : 1/4 pouce. Couple maximal publié : 30 ft-lb (40 Nm). Longueur publiée : 170 mm. La consommation du tableau n’est pas qualifiée de maximum en charge.",
 		"verifiedFacts": [
 			"Masse : 0.50 kg.",
 			"Longueur : 170 mm.",
 			"Diamètre de flexible publié : 6.5 mm.",
-			"Référence constructeur : GP-854."
+			"Référence constructeur : GP-854.",
+			"Carré d’entraînement : 1/4 pouce.",
+			"Couple maximal publié : 30 ft-lb (40 Nm).",
+			"Longueur publiée : 170 mm."
 		],
 		"limitations": [
 			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
@@ -92,6 +95,30 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october-b-gison-tools-p22"
 			]
+		},
+		{
+			"label": "Carré d’entraînement",
+			"value": "1/4 pouce",
+			"evidenceIds": [
+				"october-b-gison-tools-p22",
+				"cle-a-cliquet-gison-gp-854-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Couple maximal publié",
+			"value": "30 ft-lb (40 Nm)",
+			"evidenceIds": [
+				"october-b-gison-tools-p22",
+				"cle-a-cliquet-gison-gp-854-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Longueur publiée",
+			"value": "170 mm",
+			"evidenceIds": [
+				"october-b-gison-tools-p22",
+				"cle-a-cliquet-gison-gp-854-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -104,6 +131,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-cliquet-gison-gp-854-reserved-20261031-1",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=22",
+			"sourceLabel": "GISON GP-854 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Table GISON rendue et relue : identité exacte, unités et caractéristiques propres au modèle. Les consommations non qualifiées restent hors verdict conclusif."
 		}
 	],
 	"fieldSources": {

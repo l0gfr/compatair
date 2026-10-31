@@ -47,7 +47,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Une consommation moyenne, à vide ou de régime non précisé ne confirme pas le débit maximal en charge ; le verdict reste insufficient_data.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée.",
+			"La présence dans le catalogue de cette famille ne prouve ni la disponibilité en France, ni une conformité particulière de la version livrée."
 		]
 	},
 	"specifications": [
@@ -92,6 +93,14 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-steed-6-p2"
 			]
+		},
+		{
+			"label": "Provenance de marque",
+			"value": "Catalogue constructeur Steed, couverture portant la marque Hymair ; référence de la table conservée.",
+			"evidenceIds": [
+				"october2-tools-steed-6-p2",
+				"agrafeuse-cloueuse-hymair-9021a-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -104,6 +113,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 2ba54ea32cf0ef4aa86123d86f6ea822cce25a4e72cea15b8bda4c0c6cccb524. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "agrafeuse-cloueuse-hymair-9021a-reserved-20261031-1",
+			"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=PWKUAfLuMrCV&dp=GvUApKfKKUAU#page=2",
+			"sourceLabel": "Hymair 9021A : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 2ba54ea32cf0ef4aa86123d86f6ea822cce25a4e72cea15b8bda4c0c6cccb524. La couverture du document Steed de cette famille affiche la marque Hymair sur les outils. La provenance de marque est documentée par la page 1 et la référence exacte demeure celle de la table, sans équivalence de version commerciale supposée. Pages complémentaires relues : 1."
 		}
 	],
 	"fieldSources": {

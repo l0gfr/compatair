@@ -9,7 +9,7 @@ const product: ToolProfileInput = {
 	"categoryId": "meuleuse",
 	"category": "meuleuse",
 	"label": "PFERD PG 3/250 S",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 6.3,
 		"typical": 6.3,
@@ -23,19 +23,19 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "PFERD PG 3/250 S, référence 80107060. Le dimensionnement utilise 490 L/min à 6,3 bar, selon les régimes publiés par le fabricant. Longueur : 162 mm. Pince de serrage Ø comprise [mm] : 6 mm. Poids net de la machine : 0.37 kg.",
+		"overview": "PFERD PG 3/250 S. La fiche PFERD publie 0,49 m³/min sous charge et 0,21 m³/min à vide. Les 6,3 bar sont une pression de service ; la pression de mesure du débit en charge reste à documenter. Référence fabricant : 80107060. Longueur : 162 mm. Pince de serrage Ø comprise [mm] : 6 mm. Poids net de la machine : 0.37 kg.",
 		"verifiedFacts": [
 			"Pression de service publiée sur cette fiche : 6.3 bar. Aucune autre pression de fonctionnement n’est déduite.",
-			"Consommation sous charge : 0.49 m³/min ; à vide : 0.21 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 490 L/min (m³/min × 1 000).",
 			"Référence fabricant : 80107060.",
 			"Longueur : 162 mm.",
 			"Pince de serrage Ø comprise [mm] : 6 mm.",
-			"Poids net de la machine : 0.37 kg."
+			"Poids net de la machine : 0.37 kg.",
+			"Valeur documentaire conservée : 490 L/min. La fiche PFERD publie 0,49 m³/min sous charge et 0,21 m³/min à vide. Les 6,3 bar sont une pression de service ; la pression de mesure du débit en charge reste à documenter."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
 			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
-			"La valeur la plus élevée à vide ou en charge couvre les deux régimes documentés ; aucune moyenne de cycle n’est substituée à ces valeurs."
+			"La fiche PFERD publie 0,49 m³/min sous charge et 0,21 m³/min à vide. Les 6,3 bar sont une pression de service ; la pression de mesure du débit en charge reste à documenter."
 		]
 	},
 	"specifications": [
@@ -48,9 +48,9 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation sous charge : 0.49 m³/min ; à vide : 0.21 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 490 L/min (m³/min × 1 000).",
+			"value": "Consommation sous charge : 0.49 m³/min ; à vide : 0.21 m³/min. Pression de mesure à confirmer ; valeurs conservées hors calcul.",
 			"evidenceIds": [
-				"pferd-80107060-20260927"
+				"pferd-pg-3-250-s-reserved-20261031-1"
 			]
 		},
 		{
@@ -101,6 +101,14 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"pferd-80107060-20260927"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":490,\"typical\":490,\"max\":490},\"workingPressureBar\":{\"min\":6.3,\"typical\":6.3,\"max\":6.3}}",
+			"evidenceIds": [
+				"pferd-80107060-20260927",
+				"pferd-pg-3-250-s-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -112,6 +120,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation sous charge : 0.49 m³/min ; à vide : 0.21 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 490 L/min (m³/min × 1 000)."
+		},
+		{
+			"id": "pferd-pg-3-250-s-reserved-20261031-1",
+			"sourceUrl": "https://fr.pferd.com/fr/meuleuse-droite-pneumatique-pg-3250",
+			"sourceLabel": "PFERD PG 3/250 S : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 a23485bc41a41db7bc9afa36a4ae9811744e07eeb0a845e164c08e31d1d0bf2f. La fiche PFERD publie 0,49 m³/min sous charge et 0,21 m³/min à vide. Les 6,3 bar sont une pression de service ; la pression de mesure du débit en charge reste à documenter."
 		}
 	],
 	"fieldSources": {
@@ -121,18 +139,17 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"pferd-80107060-20260927"
 		],
-		"airflowLpm": [
-			"pferd-80107060-20260927"
+		"demandModel": [
+			"pferd-pg-3-250-s-reserved-20261031-1"
+		],
+		"demandExplanation": [
+			"pferd-pg-3-250-s-reserved-20261031-1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 490,
-		"typical": 490,
-		"max": 490
-	}
+	"demandExplanation": "La fiche PFERD publie 0,49 m³/min sous charge et 0,21 m³/min à vide. Les 6,3 bar sont une pression de service ; la pression de mesure du débit en charge reste à documenter."
 };
 
 export default product;

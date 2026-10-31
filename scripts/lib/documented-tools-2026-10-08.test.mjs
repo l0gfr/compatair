@@ -221,7 +221,11 @@ describe('October 8 primary tool documents', () => {
    expect(generatedTechnicalCardDimensions(svg), p.id).toEqual({ width: 1200, height: 800 });
   }
   // The prior Prona correction remains; the selected Iwata pressure is now unknown (+34 bytes).
-  expect(bytes).toBe(1522790);
+  const cards31 = JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-10-31-reserved.json', import.meta.url))).technicalCards;
+   const currentPaths = new Set(batch.map(p => p.image.src));
+   const documentedDelta = cards31.filter(card => currentPaths.has(card.path)).reduce((total, card) => total + card.afterBytes - card.beforeBytes, 0);
+   expect(bytes - documentedDelta).toBe(1522790);
+   expect(bytes).toBe(1522824);
   expect(bytes).toBeLessThan(12 * 1024 * 1024);
  });
  it('retains capture integrity, original units, dates and all critical field provenance without private paths', () => {

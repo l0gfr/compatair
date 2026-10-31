@@ -68,13 +68,23 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october8-sullivan-legacy-p1"
       ]
+    },
+    {
+      "label": "Lecture du tableau constructeur",
+      "value": "Ligne D15 : 50,1 cfm à 125 psi, moteur 15 HP et vitesse publiée 1 750 tr/min. Les D20 et DH20 du tableau restent des références distinctes.",
+      "evidenceIds": [
+        "october8-sullivan-legacy-p1",
+        "sullivan-palatek-d-15-reserved-20261031-1",
+        "sullivan-palatek-d-15-reserved-20261031-2"
+      ]
     }
   ],
   "editorial": {
     "overview": "Sullivan-Palatek D-15. 1 418,674 L/min déclarés à 8,618 bar. Configuration publiée : Compresseur à vis électrique, vitesse fixe, D-15.",
     "verifiedFacts": [
       "Débit réellement livré identifié séparément du déplacement : 1 418,674 L/min déclarés à 8,618 bar.",
-      "Plafond documentaire du point retenu : 8,618 bar."
+      "Plafond documentaire du point retenu : 8,618 bar.",
+      "Ligne D15 : 50,1 cfm à 125 psi, moteur 15 HP et vitesse publiée 1 750 tr/min. Les D20 et DH20 du tableau restent des références distinctes."
     ],
     "limitations": [
       "Un seul point constructeur est retenu. Les autres pressions de la famille ne deviennent pas une courbe mesurée sur cette configuration.",
@@ -106,6 +116,26 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-08",
       "confidence": "B",
       "notes": "SHA-256 d27889a3ac6ba50e0bfacaf4e011378054cfc515d050082f4c8d0760f2c75e59 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "sullivan-palatek-d-15-reserved-20261031-1",
+      "sourceUrl": "https://www.sullivan-palatek.com/product-detail/legacy-series-15-40-hp/",
+      "sourceLabel": "Sullivan-Palatek D-15 : relecture documentaire du 31 octobre 2026",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-31",
+      "confidence": "B",
+      "notes": "SHA-256 7b028011cd7c8fed10f5bf2fb8ff4072f54dc7e4cf55c007671dfaf791fc6d44. Ligne D15 : 50,1 cfm à 125 psi, moteur 15 HP et vitesse publiée 1 750 tr/min. Les D20 et DH20 du tableau restent des références distinctes."
+    },
+    {
+      "id": "sullivan-palatek-d-15-reserved-20261031-2",
+      "sourceUrl": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+      "sourceLabel": "NIST, Guide for the Use of the International System of Units, Appendix B.8",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-31",
+      "confidence": "B",
+      "notes": "SHA-256 992d3ba563c488bafab61059fe47eb7238178b9def650a0b8c11707cc887699f. Facteurs de conversion d’unités uniquement. La référence, le régime et la pression de mesure de la machine dépendent de ses documents constructeur, cités séparément."
     }
   ],
   "fieldSources": {

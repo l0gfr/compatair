@@ -23,19 +23,20 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
 	},
 	"editorial": {
-		"overview": "Aircraft BS-C 10-2 PRO VS, référence 2403771. Consommation moyenne publiée : 260 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Longueur de bande : 330 mm. Largeur de bande : 10 mm.",
+		"overview": "Aircraft BS-C 10-2 PRO VS. Le passage Aircraft cité indique un besoin d’air (éventuellement approximatif), sans le qualifier de moyenne ni de maximum en charge. Le libellé « moyen » est retiré ; la consommation reste non dimensionnante. Référence fabricant : 2403771. Longueur de bande : 330 mm. Largeur de bande : 10 mm. Longueur approximative : 316 mm.",
 		"verifiedFacts": [
 			"Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
-			"Consommation moyenne publiée : 260 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
 			"Référence fabricant : 2403771.",
 			"Longueur de bande : 330 mm.",
 			"Largeur de bande : 10 mm.",
-			"Longueur approximative : 316 mm."
+			"Longueur approximative : 316 mm.",
+			"Consommation de régime non précisé publiée : 260 L/min."
 		],
 		"limitations": [
 			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
 			"Une consommation moyenne ne constitue pas un débit maximal en usage continu. Vérifier le régime réel auprès du fabricant avant dimensionnement.",
-			"Écarts entre documents fabricant : Masse approximative : relevé de fiche du 27/09/2026 = 0.95 kg ; AIRCRAFT Hauptkatalog 2026/27 = 1kg."
+			"Écarts entre documents fabricant : Masse approximative : relevé de fiche du 27/09/2026 = 0.95 kg ; AIRCRAFT Hauptkatalog 2026/27 = 1kg.",
+			"Le passage Aircraft cité indique un besoin d’air (éventuellement approximatif), sans le qualifier de moyenne ni de maximum en charge. Le libellé « moyen » est retiré ; la consommation reste non dimensionnante."
 		]
 	},
 	"specifications": [
@@ -48,9 +49,9 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation moyenne publiée : 260 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
+			"value": "Consommation de régime non précisé publiée : 260 L/min.",
 			"evidenceIds": [
-				"aircraft-2403771-20260927"
+				"aircraft-bs-c-10-2-pro-vs-reserved-20261031-1"
 			]
 		},
 		{
@@ -109,6 +110,14 @@ const product: ToolProfileInput = {
 				"aircraft-2403771-20260927",
 				"aircraft-2403771-documentation-20261023"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":260,\"typical\":260,\"max\":260},\"workingPressureBar\":{\"min\":6.2,\"typical\":6.2,\"max\":6.2}}",
+			"evidenceIds": [
+				"aircraft-2403771-20260927",
+				"aircraft-bs-c-10-2-pro-vs-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -131,6 +140,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer 702076. Empreinte PDF SHA-256 : 158cd83471fda3ebcfd7706ed5f391ee72fdaf3a2a7881066d30139b88104996. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
+		},
+		{
+			"id": "aircraft-bs-c-10-2-pro-vs-reserved-20261031-1",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=265",
+			"sourceLabel": "Aircraft BS-C 10-2 PRO VS : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 158cd83471fda3ebcfd7706ed5f391ee72fdaf3a2a7881066d30139b88104996. Le passage Aircraft cité indique un besoin d’air (éventuellement approximatif), sans le qualifier de moyenne ni de maximum en charge. Le libellé « moyen » est retiré ; la consommation reste non dimensionnante."
 		}
 	],
 	"fieldSources": {
@@ -144,7 +163,7 @@ const product: ToolProfileInput = {
 			"aircraft-2403771-20260927"
 		],
 		"airflowBasis": [
-			"aircraft-2403771-20260927"
+			"aircraft-bs-c-10-2-pro-vs-reserved-20261031-1"
 		]
 	},
 	"notes": [
@@ -155,7 +174,7 @@ const product: ToolProfileInput = {
 		"typical": 260,
 		"max": 260
 	},
-	"airflowBasis": "average"
+	"airflowBasis": "unqualified"
 };
 
 export default product;

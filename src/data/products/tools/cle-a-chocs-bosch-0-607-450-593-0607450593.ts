@@ -33,14 +33,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Bosch 0 607 450 593 (réf. 0607450593). Les deux unités de consommation du tableau constructeur ne concordent pas. Aucune valeur corrigée n’est choisie. Une confirmation fabricant est nécessaire pour dimensionner. Vitesse à vide : 3100 tr/min. Masse : 9.6 kg.",
+		"overview": "Bosch 0 607 450 593. Le catalogue Bosch présente la référence sur la page de gauche et les consommations sur la page suivante. Relier les deux pages et conserver le régime exact de la colonne. Vitesse à vide : 3100 tr/min. Masse : 9.6 kg.",
 		"verifiedFacts": [
 			"Vitesse à vide : 3100 tr/min.",
 			"Masse : 9.6 kg."
 		],
 		"limitations": [
 			"Les deux unités de consommation du tableau constructeur ne concordent pas. Aucune valeur corrigée n’est choisie. Une confirmation fabricant est nécessaire pour dimensionner.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer.",
+			"La colonne Bosch de cette référence donne la consommation à vide ; elle ne sert pas à confirmer un débit en charge."
 		]
 	},
 	"specifications": [
@@ -101,6 +102,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-chocs-bosch-0-607-450-593-0607450593-reserved-20261031-1",
+			"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf#page=72",
+			"sourceLabel": "Bosch 0 607 450 593 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. Le catalogue Bosch présente la référence sur la page de gauche et les consommations sur la page suivante. Relier les deux pages et conserver le régime exact de la colonne. Pages complémentaires relues : 73."
+		},
+		{
+			"id": "cle-a-chocs-bosch-0-607-450-593-0607450593-reserved-20261031-2",
+			"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf#page=4",
+			"sourceLabel": "Bosch 0 607 450 593 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. Le catalogue Bosch présente la référence sur la page de gauche et les consommations sur la page suivante. Relier les deux pages et conserver le régime exact de la colonne. Pages complémentaires relues : 73."
 		}
 	],
 	"fieldSources": {

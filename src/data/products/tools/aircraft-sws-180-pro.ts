@@ -6,8 +6,8 @@ const product: ToolProfileInput = {
 	"brand": "Aircraft",
 	"model": "SWS 180 PRO",
 	"mpn": "2403520",
-	"categoryId": "ponceuse-rotative",
-	"category": "ponceuse-rotative",
+	"categoryId": "ponceuse-vibrante",
+	"category": "ponceuse-vibrante",
 	"label": "Aircraft SWS 180 PRO",
 	"demandModel": "fixed-flow",
 	"workingPressureBar": {
@@ -101,6 +101,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer 702076. Empreinte PDF SHA-256 : 0f0c4b393e231488377db351c3f98ca6e5ef53d3ffe664a41048f13421d86f51. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
+		},
+		{
+			"id": "aircraft-sws-180-pro-reserved-20261031-1",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10716868&portal=3001205&pageNumber=67",
+			"sourceLabel": "Aircraft SWS 180 PRO : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 0f0c4b393e231488377db351c3f98ca6e5ef53d3ffe664a41048f13421d86f51. La fiche constructeur 2403520 décrit une ponceuse orbitale à plateau rectangulaire ; corriger la catégorie de classement en ponceuse-vibrante. La consommation moyenne publiée reste hors verdict conclusif."
 		}
 	],
 	"fieldSources": {
@@ -115,6 +125,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"aircraft-2403520-20260927"
+		],
+		"categoryId": [
+			"aircraft-sws-180-pro-reserved-20261031-1"
 		]
 	},
 	"notes": [

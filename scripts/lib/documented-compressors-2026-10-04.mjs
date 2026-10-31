@@ -1,3 +1,4 @@
+import { applyReservedOctober31Batch } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { applyReviewedOctober28Amendment } from './reviewed-catalog-amendments-2026-10-28.mjs';
 import { applyReviewedOctober25FollowupAmendment } from './reviewed-catalog-amendments-2026-10-25-b.mjs';
 import { applyReviewedOctober25Amendment } from './reviewed-catalog-amendments-2026-10-25.mjs';
@@ -61,7 +62,7 @@ const reviewedManifest = {
   }
 };
 const allowedHosts = new Set(['www.hertz-kompressoren.com', 'www.dalgakiran.com', 'lupamat.com', 'www.ktc-air.com', 'cdn.prod.website-files.com', 'azure-na-assets.contentstack.com', 'gastmfg.com']);
-export function buildDocumentedCompressorsOctober4(snapshot) {
+function buildDocumentedCompressorsOctober4BeforeReservedFollowup(snapshot) {
  if (snapshot.schemaVersion !== 1 || snapshot.batchId !== 'documented-compressors-2026-10-04' || snapshot.observedDate !== '2026-10-04' || !Array.isArray(snapshot.compressors) || snapshot.compressors.length !== 200 || sha(snapshot.compressors) !== reviewedManifest.recordsSha256) throw new Error('Lot ou transcriptions documentaires non reconnus');
  const sources = new Map(snapshot.sources.map(s => [s.id, s]));
  if (sources.size !== snapshot.sources.length || sources.size !== Object.keys(reviewedManifest.sources).length) throw new Error('Sources documentaires dupliquées ou manquantes');
@@ -145,4 +146,8 @@ export function buildDocumentedCompressorsOctober4(snapshot) {
   const deliveredText = points.length ? `${fmt(points[0].litersPerMinute)} L/min déclarés à ${fmt(points[0].pressureBar)} bar.` : 'Le débit restitué sous pression reste non qualifié.';
   return { id, slug: id, brand: row.brand, model: row.model, ...(row.mpn ? { mpn: row.mpn } : {}), variant: { familyId: id, label: row.equipment, distinguishingAttributes: { équipement: row.equipment, pressionDeConfiguration: `${fmt(maximum)} bar`, cuve: `${fmt(tank)} L`, ...(row.electrical ? { fréquence: '50 Hz' } : {}) } }, tankLiters: tank, maxPressureBar: maximum, ...(row.maxPressureBasis === 'selected-working-pressure-ceiling' ? { maxPressureBasis: row.maxPressureBasis } : {}), fadCurve: points, ...(intake ? { intakeFlowLpm: intake } : {}), ...(duty ? { dutyCycle: duty } : {}), ...(power ? { powerKw: power } : {}), oilType: row.oilType, confidence: 'B', status: 'unknown', image: { src: `/images/products/${id}.svg`, alt: `Repères techniques : ${row.brand} ${row.model}`, sourceUrl: sources.get(row.sourceId).url, sourceLabel: 'Carte technique CompatAir, données déclarées par le constructeur' }, specifications: specs, editorial: { overview: `${row.brand} ${row.model}. ${deliveredText} ${row.equipment}.`, verifiedFacts: [`Configuration de pression documentée : ${fmt(maximum)} bar.`, tank === 0 ? 'Montage sans réservoir de stockage intégré explicitement documenté.' : `Cuve de stockage documentée : ${fmt(tank)} L.`, ...(points.length ? [`FAD sous pression identifié séparément des valeurs d’aspiration : ${deliveredText}`] : [])], limitations: limits }, evidence, fieldSources, notes: [`Portée de la source : ${row.sourceClaimScope}.`, 'Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées.'] };
  }).map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment).map(applyReviewedOctober24Amendment).map(applyReviewedOctober25Amendment).map(applyReviewedOctober25FollowupAmendment).map(applyReviewedOctober28Amendment);
+}
+
+export function buildDocumentedCompressorsOctober4(...args) {
+ return applyReservedOctober31Batch(buildDocumentedCompressorsOctober4BeforeReservedFollowup(...args));
 }

@@ -38,17 +38,18 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Atlas Copco LTV009 R035-42 (réf. 8431027804). Consommation maximale : 360 L/min à 6,3 bar. Consommations originales : 6 L/s ; 13 cfm. Vitesse à vide : 1100 tr/min.",
+		"overview": "Atlas Copco LTV009 R035-42. Le tableau Atlas Copco nomme explicitement cette colonne « Air consumption at free speed ». La convention générale de consommation maximale ne remplace pas cette exception ; le débit reste à vide. Désignation et configuration documentées à la page PDF 15. Vitesse à vide : 1100 tr/min. Masse : 0.7 kg.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 15.",
-			"Consommations originales : 6 L/s ; 13 cfm.",
 			"Vitesse à vide : 1100 tr/min.",
-			"Masse : 0.7 kg."
+			"Masse : 0.7 kg.",
+			"Consommation à vide publiée : 360 L/min."
 		],
 		"limitations": [
 			"Le débit publié conserve son régime de mesure ; aucun cycle supposé ne réduit la consommation.",
 			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier.",
+			"Le tableau Atlas Copco nomme explicitement cette colonne « Air consumption at free speed ». La convention générale de consommation maximale ne remplace pas cette exception ; le débit reste à vide."
 		]
 	},
 	"specifications": [
@@ -79,6 +80,15 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-d-atlas-tools-p15"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":360,\"typical\":360,\"max\":360},\"workingPressureBar\":{\"min\":6.3,\"typical\":6.3,\"max\":6.3}}",
+			"evidenceIds": [
+				"documented-d-atlas-tools-p15",
+				"visseuse-atlas-copco-ltv009-r035-42-8431027804-reserved-20261031-1",
+				"visseuse-atlas-copco-ltv009-r035-42-8431027804-reserved-20261031-2"
+			]
 		}
 	],
 	"evidence": [
@@ -101,6 +111,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "visseuse-atlas-copco-ltv009-r035-42-8431027804-reserved-20261031-1",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf#page=15",
+			"sourceLabel": "Atlas Copco LTV009 R035-42 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Le tableau Atlas Copco nomme explicitement cette colonne « Air consumption at free speed ». La convention générale de consommation maximale ne remplace pas cette exception ; le débit reste à vide."
+		},
+		{
+			"id": "visseuse-atlas-copco-ltv009-r035-42-8431027804-reserved-20261031-2",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf#page=3",
+			"sourceLabel": "Atlas Copco LTV009 R035-42 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Le tableau Atlas Copco nomme explicitement cette colonne « Air consumption at free speed ». La convention générale de consommation maximale ne remplace pas cette exception ; le débit reste à vide."
 		}
 	],
 	"fieldSources": {
@@ -113,11 +143,14 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"documented-d-atlas-tools-p15"
+		],
+		"airflowBasis": [
+			"visseuse-atlas-copco-ltv009-r035-42-8431027804-reserved-20261031-1",
+			"visseuse-atlas-copco-ltv009-r035-42-8431027804-reserved-20261031-2"
 		]
 	},
-	"notes": [
-		"Consommation maximale : 360 L/min à 6,3 bar."
-	]
+	"notes": [],
+	"airflowBasis": "free-speed"
 };
 
 export default product;

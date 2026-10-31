@@ -38,7 +38,8 @@ const product: CompressorInput = {
     "overview": "Kaishan KRSP-110. 21 000 L/min déclarés à 8 bar. Configuration constructeur : KRSP-110-8.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 8,5 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 21 000 L/min déclarés à 8 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 21 000 L/min déclarés à 8 bar.",
+      "Ligne KRSP110-8 en 50 Hz : 21 m³/min à 8 bar en pleine charge, maximum 8,5 bar, moteur 110 kW, masse 3 380 kg. Conditions de référence : 1 bar absolu et 20 °C, ISO 1217 édition 3 annexe C (1996), selon la note du tableau."
     ],
     "limitations": [
       "Brochure officielle Kaishan Australie, 50 Hz. Une seule identité par modèle KRSP : les variantes de pression 8/10/13 ne sont pas additionnées. Point de capacité à pleine charge 8 bar, distinct du maximum 8,5 bar. Cuve et cycle de service non publiés.",
@@ -89,6 +90,14 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october5-kaishan-krsp-p5"
       ]
+    },
+    {
+      "label": "Lecture du tableau constructeur",
+      "value": "Ligne KRSP110-8 en 50 Hz : 21 m³/min à 8 bar en pleine charge, maximum 8,5 bar, moteur 110 kW, masse 3 380 kg. Conditions de référence : 1 bar absolu et 20 °C, ISO 1217 édition 3 annexe C (1996), selon la note du tableau.",
+      "evidenceIds": [
+        "october5-kaishan-krsp-p5",
+        "kaishan-krsp-110-reserved-20261031-1"
+      ]
     }
   ],
   "evidence": [
@@ -101,6 +110,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-05",
       "confidence": "B",
       "notes": "SHA-256 e6c541d4660dda7212e2455f09b4368e93fedc81fa6b701264b32db0f86dac60 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "kaishan-krsp-110-reserved-20261031-1",
+      "sourceUrl": "https://www.kaishan.com.au/wp-content/uploads/2024/07/KRSP-2023-Digital.pdf#page=5",
+      "sourceLabel": "Kaishan KRSP-110 : relecture documentaire du 31 octobre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-31",
+      "confidence": "B",
+      "notes": "SHA-256 e6c541d4660dda7212e2455f09b4368e93fedc81fa6b701264b32db0f86dac60. Ligne KRSP110-8 en 50 Hz : 21 m³/min à 8 bar en pleine charge, maximum 8,5 bar, moteur 110 kW, masse 3 380 kg. Conditions de référence : 1 bar absolu et 20 °C, ISO 1217 édition 3 annexe C (1996), selon la note du tableau."
     }
   ],
   "fieldSources": {

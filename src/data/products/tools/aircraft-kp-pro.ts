@@ -23,19 +23,20 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
 	},
 	"editorial": {
-		"overview": "Aircraft KP PRO, référence 2102270. Consommation moyenne publiée : 100 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 8 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Capacité maximale de cartouche : 310 ml. Masse approximative : 1.04 kg.",
+		"overview": "Aircraft KP PRO. Le passage Aircraft cité indique un besoin d’air (éventuellement approximatif), sans le qualifier de moyenne ni de maximum en charge. Le libellé « moyen » est retiré ; la consommation reste non dimensionnante. Référence fabricant : 2102270. Capacité maximale de cartouche : 310 ml. Masse approximative : 1.04 kg. Type indiqué par le fabricant : Caulking gun.",
 		"verifiedFacts": [
 			"Pression de travail publiée : 8 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
-			"Consommation moyenne publiée : 100 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
 			"Référence fabricant : 2102270.",
 			"Capacité maximale de cartouche : 310 ml.",
 			"Masse approximative : 1.04 kg.",
-			"Type indiqué par le fabricant : Caulking gun."
+			"Type indiqué par le fabricant : Caulking gun.",
+			"Consommation de régime non précisé publiée : 100 L/min."
 		],
 		"limitations": [
 			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
 			"Une consommation moyenne ne constitue pas un débit maximal en usage continu. Vérifier le régime réel auprès du fabricant avant dimensionnement.",
-			"Écarts entre documents fabricant : Masse approximative : relevé de fiche du 27/09/2026 = 1.04 kg ; AIRCRAFT Hauptkatalog 2026/27 = 1kg."
+			"Écarts entre documents fabricant : Masse approximative : relevé de fiche du 27/09/2026 = 1.04 kg ; AIRCRAFT Hauptkatalog 2026/27 = 1kg.",
+			"Le passage Aircraft cité indique un besoin d’air (éventuellement approximatif), sans le qualifier de moyenne ni de maximum en charge. Le libellé « moyen » est retiré ; la consommation reste non dimensionnante."
 		]
 	},
 	"specifications": [
@@ -48,9 +49,9 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation moyenne publiée : 100 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
+			"value": "Consommation de régime non précisé publiée : 100 L/min.",
 			"evidenceIds": [
-				"aircraft-2102270-20260927"
+				"aircraft-kp-pro-reserved-20261031-1"
 			]
 		},
 		{
@@ -81,6 +82,14 @@ const product: ToolProfileInput = {
 				"aircraft-2102270-20260927",
 				"aircraft-2102270-documentation-20261023"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":100,\"typical\":100,\"max\":100},\"workingPressureBar\":{\"min\":8,\"typical\":8,\"max\":8}}",
+			"evidenceIds": [
+				"aircraft-2102270-20260927",
+				"aircraft-kp-pro-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -103,6 +112,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer 702076. Empreinte PDF SHA-256 : 09fc54df17fbb94185f0f908c05f730839632d33ab4ece61184455e12ea2469d. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
+		},
+		{
+			"id": "aircraft-kp-pro-reserved-20261031-1",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=282",
+			"sourceLabel": "Aircraft KP PRO : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 09fc54df17fbb94185f0f908c05f730839632d33ab4ece61184455e12ea2469d. Le passage Aircraft cité indique un besoin d’air (éventuellement approximatif), sans le qualifier de moyenne ni de maximum en charge. Le libellé « moyen » est retiré ; la consommation reste non dimensionnante."
 		}
 	],
 	"fieldSources": {
@@ -116,7 +135,7 @@ const product: ToolProfileInput = {
 			"aircraft-2102270-20260927"
 		],
 		"airflowBasis": [
-			"aircraft-2102270-20260927"
+			"aircraft-kp-pro-reserved-20261031-1"
 		]
 	},
 	"notes": [
@@ -127,7 +146,7 @@ const product: ToolProfileInput = {
 		"typical": 100,
 		"max": 100
 	},
-	"airflowBasis": "average"
+	"airflowBasis": "unqualified"
 };
 
 export default product;

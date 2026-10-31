@@ -1,3 +1,4 @@
+import { applyReservedOctober31Batch } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { createMultiBrandTool } from './multi-brand-catalog-import.mjs';
 
 const same = (a, b, field) => {
@@ -19,7 +20,7 @@ const attribute = (fields, name, expectedUnit) => {
 	return number(value.value);
 };
 
-export function buildQualifiedTools(snapshot) {
+function buildQualifiedToolsBeforeReservedFollowup(snapshot) {
 	if (snapshot.schemaVersion !== 1 || snapshot.batchId !== 'qualified-tools-2026-09-27' || snapshot.observedAt !== '2026-09-27' || snapshot.rows.length !== 800) throw new Error('Lot qualifié non revu');
 	if (new Set(snapshot.sources.map(source => source.id)).size !== snapshot.sources.length) throw new Error('Source dupliquée');
 	const identities = new Set();
@@ -68,4 +69,8 @@ export function buildQualifiedTools(snapshot) {
 	});
 	if (new Set(products.map(product => product.id)).size !== products.length) throw new Error('Identifiant produit dupliqué');
 	return { compressors: [], tools: products };
+}
+
+export function buildQualifiedTools(...args) {
+ return applyReservedOctober31Batch(buildQualifiedToolsBeforeReservedFollowup(...args));
 }

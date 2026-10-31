@@ -39,12 +39,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-7841SB. Consommation publiée, régime non précisé : 540 L/min à 6,2 bar. Consommation dans les unités du tableau : 540 L/min ; 19 cfm. Configuration complète publiée : ST-7841SB.",
+		"overview": "Sumake ST-7841SB. Diamètre de lame : 4 pouces. Vitesse à vide : 15 000 tr/min. Arbres publiés : 5/8 et 3/8 pouce. Le catalogue publie 540 L/min, sans préciser le régime de consommation.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 28.",
 			"Consommation dans les unités du tableau : 540 L/min ; 19 cfm.",
 			"Configuration complète publiée : ST-7841SB.",
-			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé."
+			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé.",
+			"Diamètre de lame : 4 pouces.",
+			"Vitesse à vide : 15 000 tr/min.",
+			"Arbres publiés : 5/8 et 3/8 pouce."
 		],
 		"limitations": [
 			"Le régime de consommation n’est pas indiqué. Aucun débit maximal ou en charge n’est inventé ; le verdict reste insufficient_data.",
@@ -87,6 +90,30 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-d-sumake-na-2024-p28"
 			]
+		},
+		{
+			"label": "Diamètre de lame",
+			"value": "4 pouces",
+			"evidenceIds": [
+				"documented-d-sumake-na-2024-p28",
+				"tronconneuse-sumake-st-7841sb-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "15 000 tr/min",
+			"evidenceIds": [
+				"documented-d-sumake-na-2024-p28",
+				"tronconneuse-sumake-st-7841sb-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Arbres publiés",
+			"value": "5/8 et 3/8 pouce",
+			"evidenceIds": [
+				"documented-d-sumake-na-2024-p28",
+				"tronconneuse-sumake-st-7841sb-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -99,6 +126,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "tronconneuse-sumake-st-7841sb-reserved-20261031-1",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf#page=28",
+			"sourceLabel": "Sumake ST-7841SB : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Table Sumake relue : enrichissement avec les caractéristiques propres à ce modèle, en conservant la consommation de régime non précisé hors verdict conclusif."
 		}
 	],
 	"fieldSources": {

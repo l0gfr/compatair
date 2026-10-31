@@ -39,12 +39,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-4450. Consommation publiée, régime non précisé : 270 L/min à 6,2 bar. Consommation dans les unités du tableau : 270 L/min ; 9.5 cfm. Configuration complète publiée : ST-4450.",
+		"overview": "Sumake ST-4450. Hexagone d’entraînement : 6,35 mm (1/4 pouce). Vitesse à vide : 1 700 tr/min. Couple maximal publié : 3 Nm. Le catalogue publie 270 L/min, sans préciser le régime de consommation.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 12.",
 			"Consommation dans les unités du tableau : 270 L/min ; 9.5 cfm.",
 			"Configuration complète publiée : ST-4450.",
-			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé."
+			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé.",
+			"Hexagone d’entraînement : 6,35 mm (1/4 pouce).",
+			"Vitesse à vide : 1 700 tr/min.",
+			"Couple maximal publié : 3 Nm."
 		],
 		"limitations": [
 			"Le régime de consommation n’est pas indiqué. Aucun débit maximal ou en charge n’est inventé ; le verdict reste insufficient_data.",
@@ -87,6 +90,30 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-d-sumake-na-2024-p12"
 			]
+		},
+		{
+			"label": "Hexagone d’entraînement",
+			"value": "6,35 mm (1/4 pouce)",
+			"evidenceIds": [
+				"documented-d-sumake-na-2024-p12",
+				"visseuse-sumake-st-4450-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "1 700 tr/min",
+			"evidenceIds": [
+				"documented-d-sumake-na-2024-p12",
+				"visseuse-sumake-st-4450-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Couple maximal publié",
+			"value": "3 Nm",
+			"evidenceIds": [
+				"documented-d-sumake-na-2024-p12",
+				"visseuse-sumake-st-4450-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -99,6 +126,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "visseuse-sumake-st-4450-reserved-20261031-1",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf#page=12",
+			"sourceLabel": "Sumake ST-4450 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Table Sumake relue : enrichissement avec les caractéristiques propres à ce modèle, en conservant la consommation de régime non précisé hors verdict conclusif."
 		}
 	],
 	"fieldSources": {

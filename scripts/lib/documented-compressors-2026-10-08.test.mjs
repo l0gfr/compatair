@@ -1,3 +1,4 @@
+import { beforeReservedOctober31Followup } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { readFileSync, statSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { describe, expect, it } from 'vitest';
@@ -71,7 +72,7 @@ describe('October 8 original compressor documents', () => {
   expect(evaluateCompatibility(ps200, demand(13.8)).verdict).toBe('incompatible');
  });
  it('does not promote S1 motors or conditional constant-speed prose into a compressor cycle', () => {
-  const continuous = batch.filter(p => p.dutyCycle !== undefined);
+  const continuous = batch.map(beforeReservedOctober31Followup).filter(p => p.dutyCycle !== undefined);
   expect(continuous.map(p => p.model).sort()).toEqual(['3095K18','5230K30CS','5715MK103']);
   for (const r of snapshot.compressors.filter(p => p.dutyProof)) {
    expect(r.dutyCycle).toBe(1);

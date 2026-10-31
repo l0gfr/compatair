@@ -23,18 +23,19 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Sioux STP10P3C20, référence STP10P3C20. Le dimensionnement utilise 840 L/min à 6,2 bar, selon les régimes publiés par le fabricant. Vitesse à vide : 300 tr/min. Couple maximal : 45 Nm. Masse : 1.3 kg.",
+		"overview": "Sioux STP10P3C20. La ligne propre au modèle Sioux donne un débit en L/s à 90 psig (6,2 bar) sous l’intitulé Air Consumption. Le régime n’est pas précisé pour cette ligne ; aucun maximum en charge n’est déduit de la colonne voisine de vitesse à vide. Référence fabricant : STP10P3C20. Vitesse à vide : 300 tr/min. Couple maximal : 45 Nm. Masse : 1.3 kg.",
 		"verifiedFacts": [
 			"Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur.",
-			"Consommation publiée : 14.0 L/s (30.0 scfm). Le guide du catalogue (page PDF 10) définit ces débits comme de l’air détendu à pression atmosphérique et des consommations maximales, sauf indication contraire. La plus grande valeur publiée est retenue : 840 L/min (L/s × 60).",
 			"Référence fabricant : STP10P3C20.",
 			"Vitesse à vide : 300 tr/min.",
 			"Couple maximal : 45 Nm.",
-			"Masse : 1.3 kg."
+			"Masse : 1.3 kg.",
+			"Consommation de régime non précisé publiée : 840 L/min."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
-			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes."
+			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
+			"La ligne propre au modèle Sioux donne un débit en L/s à 90 psig (6,2 bar) sous l’intitulé Air Consumption. Le régime n’est pas précisé pour cette ligne ; aucun maximum en charge n’est déduit de la colonne voisine de vitesse à vide."
 		]
 	},
 	"specifications": [
@@ -47,9 +48,10 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation publiée : 14.0 L/s (30.0 scfm). Le guide du catalogue (page PDF 10) définit ces débits comme de l’air détendu à pression atmosphérique et des consommations maximales, sauf indication contraire. La plus grande valeur publiée est retenue : 840 L/min (L/s × 60).",
+			"value": "Consommation de régime non précisé publiée : 840 L/min.",
 			"evidenceIds": [
-				"sioux-stp10p3c20-20260927"
+				"sioux-stp10p3c20-reserved-20261031-1",
+				"sioux-stp10p3c20-reserved-20261031-2"
 			]
 		},
 		{
@@ -79,6 +81,15 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"sioux-stp10p3c20-20260927"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":840,\"typical\":840,\"max\":840},\"workingPressureBar\":{\"min\":6.2,\"typical\":6.2,\"max\":6.2}}",
+			"evidenceIds": [
+				"sioux-stp10p3c20-20260927",
+				"sioux-stp10p3c20-reserved-20261031-1",
+				"sioux-stp10p3c20-reserved-20261031-2"
+			]
 		}
 	],
 	"evidence": [
@@ -99,6 +110,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur."
+		},
+		{
+			"id": "sioux-stp10p3c20-reserved-20261031-1",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=84",
+			"sourceLabel": "Sioux STP10P3C20 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8. La ligne propre au modèle Sioux donne un débit en L/s à 90 psig (6,2 bar) sous l’intitulé Air Consumption. Le régime n’est pas précisé pour cette ligne ; aucun maximum en charge n’est déduit de la colonne voisine de vitesse à vide."
+		},
+		{
+			"id": "sioux-stp10p3c20-reserved-20261031-2",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=84",
+			"sourceLabel": "Sioux STP10P3C20 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8. La ligne propre au modèle Sioux donne un débit en L/s à 90 psig (6,2 bar) sous l’intitulé Air Consumption. Le régime n’est pas précisé pour cette ligne ; aucun maximum en charge n’est déduit de la colonne voisine de vitesse à vide."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +141,10 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"sioux-stp10p3c20-20260927"
+		],
+		"airflowBasis": [
+			"sioux-stp10p3c20-reserved-20261031-1",
+			"sioux-stp10p3c20-reserved-20261031-2"
 		]
 	},
 	"notes": [
@@ -119,7 +154,8 @@ const product: ToolProfileInput = {
 		"min": 840,
 		"typical": 840,
 		"max": 840
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

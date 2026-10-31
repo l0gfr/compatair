@@ -23,17 +23,18 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX GAF 205, référence 150600715. Le tableau fabricant publie 150 L/min et une plage d’utilisation de 6 à 6 bar. Vitesse à vide publiée : 500 tr/min. Masse publiée : 150 g.",
+		"overview": "BIAX GAF 205. Le document propre à cette référence publie une consommation sans préciser son régime de mesure. Le débit en charge maximal reste à confirmer auprès du fabricant. Le catalogue prescrit un fonctionnement à 6 bar dans la page de cette famille. Référence fabricant : 150600715. Vitesse à vide publiée : 500 tr/min. Masse publiée : 150 g.",
 		"verifiedFacts": [
 			"Le catalogue prescrit un fonctionnement à 6 bar dans la page de cette famille.",
-			"Consommation publiée dans la ligne Luftverbrauch en L/min ; le régime de charge n’est pas détaillé.",
 			"Référence fabricant : 150600715.",
 			"Vitesse à vide publiée : 500 tr/min.",
-			"Masse publiée : 150 g."
+			"Masse publiée : 150 g.",
+			"Consommation de régime non précisé publiée : 150 L/min."
 		],
 		"limitations": [
 			"Le réglage du couple dépend de l’assemblage et des ressorts prévus par le fabricant.",
-			"L’aspiration des vis et les équipements auxiliaires peuvent demander un dimensionnement séparé."
+			"L’aspiration des vis et les équipements auxiliaires peuvent demander un dimensionnement séparé.",
+			"Le document propre à cette référence publie une consommation sans préciser son régime de mesure. Le débit en charge maximal reste à confirmer auprès du fabricant."
 		]
 	},
 	"specifications": [
@@ -46,9 +47,9 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation publiée dans la ligne Luftverbrauch en L/min ; le régime de charge n’est pas détaillé.",
+			"value": "Consommation de régime non précisé publiée : 150 L/min.",
 			"evidenceIds": [
-				"biax-150600715-20260926"
+				"biax-gaf-205-reserved-20261031-1"
 			]
 		},
 		{
@@ -64,6 +65,14 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"biax-150600715-20260926"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":150,\"typical\":150,\"max\":150},\"workingPressureBar\":{\"min\":6,\"typical\":6,\"max\":6}}",
+			"evidenceIds": [
+				"biax-150600715-20260926",
+				"biax-gaf-205-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -75,6 +84,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation publiée dans la ligne Luftverbrauch en L/min ; le régime de charge n’est pas détaillé."
+		},
+		{
+			"id": "biax-gaf-205-reserved-20261031-1",
+			"sourceUrl": "https://biax.de/wp-content/uploads/2025/02/BIAX_Schrauber_DE.pdf#page=6",
+			"sourceLabel": "BIAX GAF 205 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 234541dfd789768204963f04e6df723f00c634bb38ced6d544e88ac762382718. Le document propre à cette référence publie une consommation sans préciser son régime de mesure. Le débit en charge maximal reste à confirmer auprès du fabricant."
 		}
 	],
 	"fieldSources": {
@@ -86,6 +105,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"biax-150600715-20260926"
+		],
+		"airflowBasis": [
+			"biax-gaf-205-reserved-20261031-1"
 		]
 	},
 	"notes": [
@@ -95,7 +117,8 @@ const product: ToolProfileInput = {
 		"min": 150,
 		"typical": 150,
 		"max": 150
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

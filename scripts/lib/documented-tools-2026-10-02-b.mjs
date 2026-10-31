@@ -1,3 +1,4 @@
+import { applyReservedOctober31Batch } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { applyReviewedOctober17Amendment } from './reviewed-catalog-amendments-2026-10-17.mjs';
 const slug = value => value.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 const rounded = value => Number(value.toFixed(3));
@@ -118,7 +119,7 @@ const reviewedMeasurementContracts = [
   }
 ];
 
-export function buildDocumentedToolsOctober2B(snapshot) {
+function buildDocumentedToolsOctober2BBeforeReservedFollowup(snapshot) {
  if (snapshot.schemaVersion !== 1 || snapshot.batchId !== 'documented-tools-2026-10-02-b' || snapshot.reviewedAt !== '2026-10-02' || snapshot.tools.length !== snapshot.toolCount || snapshot.toolCount !== 2000) throw new Error('Lot documentaire non reconnu');
  const sources = new Map(snapshot.sources.map(source => [source.id, source]));
  if (sources.size !== snapshot.sources.length) throw new Error('Source dupliquée');
@@ -205,4 +206,8 @@ export function buildDocumentedToolsOctober2B(snapshot) {
   const specifications = [...row.details.map(field => ({ ...field, evidenceIds: [primary.id] })), ...connection.specifications.map(field => ({ ...field, evidenceIds: [primary.id] })), { label: 'Portée de la pression dans la source', value: row.pressureQuote, evidenceIds: demandEvidenceIds }, ...(flow !== null ? [{ label: missing ? `Consommation ${regime}, hors calcul` : 'Consommation dans son unité originale', value: `${row.flowOriginal} ${row.flowUnit}`, evidenceIds: demandEvidenceIds }] : [])];
   return { id, slug: id, categoryId: row.categoryId, category: row.categoryId, label, brand: row.brand, model: row.model, mpn: row.mpn, ...demand, ...(connection.connectorSize ? { connectorSize: connection.connectorSize } : {}), ...(connection.recommendedHose ? { recommendedHose: connection.recommendedHose } : {}), confidence: 'B', image: { src: `/images/products/${id}.webp`, alt: `Repères techniques : ${label}`, sourceUrl: source.url, sourceLabel: 'Carte technique CompatAir, données déclarées par le fabricant' }, variant: { familyId: slug(`${row.brand}-${row.model}`), label: `Référence ${row.mpn}`, distinguishingAttributes: { reference: row.mpn, ...Object.fromEntries(row.details.slice(0, 2).map(field => [field.label, field.value])) } }, editorial: { overview: `${label}. ${summary} ${row.details.slice(0, 2).map(field => `${field.label} : ${field.value}.`).join(' ')}`, verifiedFacts: row.details.map(field => `${field.label} : ${field.value}.`), limitations: [missing ? explanation : row.flowBasis === 'maximum' ? 'La consommation maximale est déclarée dans les conventions du fabricant ; les exceptions explicites du modèle restent prioritaires.' : row.flowBasis === 'load' ? 'Le débit en charge est associé au point de pression documenté ; aucun facteur de marche supposé ne le réduit.' : row.flowBasis === 'per-action' ? 'Une cadence déclarée permet le calcul moyen ; la pointe instantanée de déclenchement reste distincte.' : 'Une consommation moyenne, à vide ou de régime non précisé ne confirme pas le débit maximal en charge ; le verdict reste insufficient_data.', ...(row.pressureScope === 'power-and-speed' ? ['La pression de 6 bar est donnée pour la puissance et la vitesse ; son application à la consommation n’est pas supposée.'] : []), ...(row.sourceLimitations ?? []), ...connection.limitations, 'Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée.'] }, specifications, evidence: [primary, ...supplementary], fieldSources: { ...(connection.connectorSize ? { connectorSize: [primary.id] } : {}), ...(connection.recommendedHose ? { recommendedHose: [primary.id] } : {}), mpn: [primary.id], workingPressureBar: demandEvidenceIds, ...(missing ? { demandExplanation: [primary.id] } : row.flowBasis === 'per-action' ? { airPerActionLiters: demandEvidenceIds, actionLabel: demandEvidenceIds } : { airflowLpm: demandEvidenceIds, ...(demand.airflowBasis ? { airflowBasis: [primary.id] } : {}) }) }, notes: [summary] };
  }).map(applyReviewedOctober17Amendment);
+}
+
+export function buildDocumentedToolsOctober2B(...args) {
+ return applyReservedOctober31Batch(buildDocumentedToolsOctober2BBeforeReservedFollowup(...args));
 }

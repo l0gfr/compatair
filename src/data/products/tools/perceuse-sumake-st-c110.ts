@@ -39,12 +39,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-C110. Consommation publiée, régime non précisé : 340 L/min à 6,2 bar. Consommation dans les unités du tableau : 340 L/min ; 12 cfm. Configuration complète publiée : ST-C110.",
+		"overview": "Sumake ST-C110. Capacité de perçage : 10 mm. Vitesse à vide : 2 000 tr/min. Longueur publiée : 210 mm. Le catalogue publie 340 L/min, sans préciser le régime de consommation.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 20.",
 			"Consommation dans les unités du tableau : 340 L/min ; 12 cfm.",
 			"Configuration complète publiée : ST-C110.",
-			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé."
+			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé.",
+			"Capacité de perçage : 10 mm.",
+			"Vitesse à vide : 2 000 tr/min.",
+			"Longueur publiée : 210 mm."
 		],
 		"limitations": [
 			"Le régime de consommation n’est pas indiqué. Aucun débit maximal ou en charge n’est inventé ; le verdict reste insufficient_data.",
@@ -87,6 +90,30 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-d-sumake-na-2024-p20"
 			]
+		},
+		{
+			"label": "Capacité de perçage",
+			"value": "10 mm",
+			"evidenceIds": [
+				"documented-d-sumake-na-2024-p20",
+				"perceuse-sumake-st-c110-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "2 000 tr/min",
+			"evidenceIds": [
+				"documented-d-sumake-na-2024-p20",
+				"perceuse-sumake-st-c110-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Longueur publiée",
+			"value": "210 mm",
+			"evidenceIds": [
+				"documented-d-sumake-na-2024-p20",
+				"perceuse-sumake-st-c110-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -99,6 +126,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "perceuse-sumake-st-c110-reserved-20261031-1",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf#page=20",
+			"sourceLabel": "Sumake ST-C110 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Table Sumake relue : enrichissement avec les caractéristiques propres à ce modèle, en conservant la consommation de régime non précisé hors verdict conclusif."
 		}
 	],
 	"fieldSources": {

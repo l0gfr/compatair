@@ -17,7 +17,6 @@ const product: CompressorInput = {
 	"tankLiters": 0,
 	"maxPressureBar": 13,
 	"fadCurve": [],
-	"dutyCycle": 1,
 	"oilType": "oil",
 	"powerKw": 22,
 	"mobility": "fixed",
@@ -70,13 +69,13 @@ const product: CompressorInput = {
 		"overview": "BOGE S 31-3, 13 bar, insonorisation standard. S-3, insonorisation standard. La livraison effective est publiée, mais sa pression de mesure n’est pas séparément établie : aucun FAD calculable n’est ajouté.",
 		"verifiedFacts": [
 			"Dimensions publiées : 1620 × 990 × 1450 mm.",
-			"Puissance moteur publiée : 22 kW.",
-			"La documentation constructeur de cette série prévoit le service continu, sous ses conditions d’installation et d’entretien."
+			"Puissance moteur publiée : 22 kW."
 		],
 		"limitations": [
 			"La disponibilité actuelle et le contenu de la configuration livrée restent à confirmer.",
 			"Le maximum de pression n’est pas assimilé à une pression de mesure du FAD. Le verdict reste insufficient_data.",
-			"La classe de qualité d’air du réseau, les pertes de pression et le refroidissement nécessitent une vérification sur l’installation."
+			"La classe de qualité d’air du réseau, les pertes de pression et le refroidissement nécessitent une vérification sur l’installation.",
+			"Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
 		]
 	},
 	"evidence": [
@@ -99,6 +98,26 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 721b071d19957929d82543cb2851fa494476c228f6440fe41e5ee21bcc5e038c. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "boge-s-31-3-13-bar-insonorisation-standard-reserved-20261031-1",
+			"sourceUrl": "https://www.boge.com/f/287325279136465/x/55679246a0/boge-datenblatt-schraubenkompressor-s-3.pdf#page=1",
+			"sourceLabel": "BOGE S 31-3 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 516b7e8e9ad6af00cbdea1444d9394ba099b039f5d01c72db9c295211d69ef27. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
+		},
+		{
+			"id": "boge-s-31-3-13-bar-insonorisation-standard-reserved-20261031-2",
+			"sourceUrl": "https://www.boge.com/en-us/products/compressors/screw-compressors/",
+			"sourceLabel": "BOGE S 31-3 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 07fdb22c7b89ab35a462076f2060d1b3b02cc36a74ab4b1fd1d9afdc3540e26e. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
 		}
 	],
 	"fieldSources": {
@@ -116,9 +135,6 @@ const product: CompressorInput = {
 		],
 		"oilType": [
 			"documented-d-boge-s3-current-p1"
-		],
-		"dutyCycle": [
-			"documented-d-boge-s3-duty"
 		]
 	},
 	"notes": [

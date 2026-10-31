@@ -39,12 +39,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-TT100. Consommation publiée, régime non précisé : 396 L/min à 6,2 bar. Consommation dans les unités du tableau : 396 L/min ; 14 cfm. Configuration complète publiée : ST-TT100.",
+		"overview": "Sumake ST-TT100. Capacité de taraudage : M3 à M8. Vitesse à vide : 400 tr/min. Montage publié : B12. Le catalogue publie 396 L/min, sans préciser le régime de consommation.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 27.",
 			"Consommation dans les unités du tableau : 396 L/min ; 14 cfm.",
 			"Configuration complète publiée : ST-TT100.",
-			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé."
+			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé.",
+			"Capacité de taraudage : M3 à M8.",
+			"Vitesse à vide : 400 tr/min.",
+			"Montage publié : B12."
 		],
 		"limitations": [
 			"Le régime de consommation n’est pas indiqué. Aucun débit maximal ou en charge n’est inventé ; le verdict reste insufficient_data.",
@@ -87,6 +90,30 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-d-sumake-na-2024-p27"
 			]
+		},
+		{
+			"label": "Capacité de taraudage",
+			"value": "M3 à M8",
+			"evidenceIds": [
+				"documented-d-sumake-na-2024-p27",
+				"taraudeuse-sumake-st-tt100-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "400 tr/min",
+			"evidenceIds": [
+				"documented-d-sumake-na-2024-p27",
+				"taraudeuse-sumake-st-tt100-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Montage publié",
+			"value": "B12",
+			"evidenceIds": [
+				"documented-d-sumake-na-2024-p27",
+				"taraudeuse-sumake-st-tt100-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -99,6 +126,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "taraudeuse-sumake-st-tt100-reserved-20261031-1",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf#page=27",
+			"sourceLabel": "Sumake ST-TT100 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Table Sumake relue : enrichissement avec les caractéristiques propres à ce modèle, en conservant la consommation de régime non précisé hors verdict conclusif."
 		}
 	],
 	"fieldSources": {

@@ -3,8 +3,8 @@ import type { ToolProfileInput } from '../../../domain/catalog';
 const product: ToolProfileInput = {
 	"id": "ponceuse-rotative-gison-gp-822a",
 	"slug": "ponceuse-rotative-gison-gp-822a",
-	"categoryId": "ponceuse-rotative",
-	"category": "ponceuse-rotative",
+	"categoryId": "ponceuse-orbitale",
+	"category": "ponceuse-orbitale",
 	"label": "GISON GP-822A",
 	"brand": "GISON",
 	"model": "GP-822A",
@@ -38,11 +38,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-822A. Consommation de régime non précisé : 420 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Longueur : 152 mm. Diamètre de flexible publié : 5.0 mm.",
+		"overview": "GISON GP-822A. Mouvement publié : Dual Action. Diamètre du plateau : 2 pouces. Vitesse à vide : 15 000 tr/min. La consommation du tableau n’est pas qualifiée de maximum en charge.",
 		"verifiedFacts": [
 			"Longueur : 152 mm.",
 			"Diamètre de flexible publié : 5.0 mm.",
-			"Référence constructeur : GP-822A."
+			"Référence constructeur : GP-822A.",
+			"Mouvement publié : Dual Action.",
+			"Diamètre du plateau : 2 pouces.",
+			"Vitesse à vide : 15 000 tr/min."
 		],
 		"limitations": [
 			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
@@ -84,6 +87,30 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october-b-gison-tools-p43"
 			]
+		},
+		{
+			"label": "Mouvement publié",
+			"value": "Dual Action",
+			"evidenceIds": [
+				"october-b-gison-tools-p43",
+				"ponceuse-rotative-gison-gp-822a-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Diamètre du plateau",
+			"value": "2 pouces",
+			"evidenceIds": [
+				"october-b-gison-tools-p43",
+				"ponceuse-rotative-gison-gp-822a-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "15 000 tr/min",
+			"evidenceIds": [
+				"october-b-gison-tools-p43",
+				"ponceuse-rotative-gison-gp-822a-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -96,6 +123,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-rotative-gison-gp-822a-reserved-20261031-1",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=43",
+			"sourceLabel": "GISON GP-822A : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Table GISON rendue et relue : identité exacte, unités et caractéristiques propres au modèle. Les consommations non qualifiées restent hors verdict conclusif. La GP-822A est annoncée Dual Action. Reclasser de ponceuse-rotative en ponceuse-orbitale."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +147,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-b-gison-tools-p43"
+		],
+		"categoryId": [
+			"ponceuse-rotative-gison-gp-822a-reserved-20261031-1"
 		]
 	},
 	"notes": [

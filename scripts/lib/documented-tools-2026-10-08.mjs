@@ -1,3 +1,4 @@
+import { applyReservedOctober31Batch } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { applyReviewedOctober25FollowupAmendment } from './reviewed-catalog-amendments-2026-10-25-b.mjs';
 import { applyReviewedOctober21Amendment } from './reviewed-catalog-amendments-2026-10-21.mjs';
 import { applyReviewedOctober20Amendment } from './reviewed-catalog-amendments-2026-10-20.mjs';
@@ -98,7 +99,7 @@ function evidenceFor(source, page, locator) {
 	};
 }
 
-export function buildDocumentedToolsOctober8(snapshot) {
+function buildDocumentedToolsOctober8BeforeReservedFollowup(snapshot) {
 	if (snapshot.capturedAt !== '2026-10-08' || !Array.isArray(snapshot.tools) || snapshot.tools.length !== snapshot.toolCount) throw new Error('Lot outils incohérent');
 	const sources = new Map();
 	for (const source of snapshot.sources) {
@@ -170,4 +171,8 @@ export function buildDocumentedToolsOctober8(snapshot) {
 	});
 	if (digest(snapshot) !== approvedSnapshotDigest) throw new Error('Snapshot outils différent de la capture relue et approuvée');
 	return products.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment).map(applyReviewedOctober25FollowupAmendment);
+}
+
+export function buildDocumentedToolsOctober8(...args) {
+ return applyReservedOctober31Batch(buildDocumentedToolsOctober8BeforeReservedFollowup(...args));
 }

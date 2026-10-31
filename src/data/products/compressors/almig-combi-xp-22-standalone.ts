@@ -30,7 +30,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 2630
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "unknown",
 	"powerKw": 22,
 	"weightKg": 520,
@@ -77,14 +76,14 @@ const product: CompressorInput = {
 		"overview": "ALMiG COMBI XP 22 standalone. Standalone, sans cuve ni sécheur. Débit restitué : 3 940 L/min à 8 bar ; 3 430 L/min à 10 bar ; 2 630 L/min à 13 bar.",
 		"verifiedFacts": [
 			"Dimensions publiées : 740 × 1130 × 1344 mm.",
-			"Puissance moteur publiée : 22 kW.",
-			"La documentation constructeur de cette série prévoit le service continu, sous ses conditions d’installation et d’entretien."
+			"Puissance moteur publiée : 22 kW."
 		],
 		"limitations": [
 			"La disponibilité actuelle et le contenu de la configuration livrée restent à confirmer.",
 			"Aucun débit n’est extrapolé au-delà des pressions publiées ; les minima de modulation ne sont pas des débits moyens d’atelier.",
 			"Le mode de lubrification n’est pas établi ici. Aucun niveau de qualité d’air n’en est déduit.",
-			"La classe de qualité d’air du réseau, les pertes de pression et le refroidissement nécessitent une vérification sur l’installation."
+			"La classe de qualité d’air du réseau, les pertes de pression et le refroidissement nécessitent une vérification sur l’installation.",
+			"Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
 		]
 	},
 	"evidence": [
@@ -107,6 +106,26 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 a42ca92be39e4a81a11cf3e4ec6bb3ce237552363c3b0a7d16a43761d852266f. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "almig-combi-xp-22-standalone-reserved-20261031-1",
+			"sourceUrl": "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf#page=9",
+			"sourceLabel": "ALMiG COMBI XP 22 standalone : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 f5ca167dedaab25352808dc5001ba9badc7acffb2c37168c6d9f89182b752a0e. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
+		},
+		{
+			"id": "almig-combi-xp-22-standalone-reserved-20261031-2",
+			"sourceUrl": "https://www.almig.de/en/products/compressed-air-generation/screw-compressors",
+			"sourceLabel": "ALMiG COMBI XP 22 standalone : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 0e4d23e62a70441fd959600ade30b73e12e039e03582b85a94b9e1ef8490a9c7. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
 		}
 	],
 	"fieldSources": {
@@ -124,9 +143,6 @@ const product: CompressorInput = {
 		],
 		"weightKg": [
 			"documented-d-almig-2026-p9"
-		],
-		"dutyCycle": [
-			"documented-d-almig-screw-duty"
 		]
 	},
 	"notes": [

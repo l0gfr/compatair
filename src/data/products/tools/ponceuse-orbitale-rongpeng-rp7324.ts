@@ -3,8 +3,8 @@ import type { ToolProfileInput } from '../../../domain/catalog';
 const product: ToolProfileInput = {
 	"id": "ponceuse-orbitale-rongpeng-rp7324",
 	"slug": "ponceuse-orbitale-rongpeng-rp7324",
-	"categoryId": "ponceuse-orbitale",
-	"category": "ponceuse-orbitale",
+	"categoryId": "ponceuse-vibrante",
+	"category": "ponceuse-vibrante",
 	"label": "Rongpeng RP7324",
 	"brand": "Rongpeng",
 	"model": "RP7324",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Rongpeng RP7324. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 2.3 kg. Dimensions du plateau : 90x165 mm.",
+		"overview": "Rongpeng RP7324. Le RP7324 est une ponceuse à plateau rectangulaire 90 × 165 mm et fixation de papier par pinces, annoncée Square Orbit. Classement dans la famille ponceuse-vibrante. Masse publiée : 2.3 kg. Dimensions du plateau : 90x165 mm.",
 		"verifiedFacts": [
 			"Masse publiée : 2.3 kg.",
 			"Dimensions du plateau : 90x165 mm."
@@ -79,6 +79,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 531fd4775741bd28673d7fe40be80b550a29770e3ae2944cab7c3410010ce38d. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-orbitale-rongpeng-rp7324-reserved-20261031-1",
+			"sourceUrl": "https://www.rongpeng.com/RONGPENG-Air-Square-Orbit-Sander-RP7324",
+			"sourceLabel": "Rongpeng RP7324 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 1af05a7d32d0949d5001f4793c2b79e59b38fcfc2097540001d1bd6ffe4f3d83. Le RP7324 est une ponceuse à plateau rectangulaire 90 × 165 mm et fixation de papier par pinces, annoncée Square Orbit. Classement dans la famille ponceuse-vibrante."
 		}
 	],
 	"fieldSources": {
@@ -90,6 +100,9 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-rongpeng-pdp-99-p1"
+		],
+		"categoryId": [
+			"ponceuse-orbitale-rongpeng-rp7324-reserved-20261031-1"
 		]
 	},
 	"notes": [

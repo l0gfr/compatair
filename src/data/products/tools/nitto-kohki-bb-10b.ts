@@ -23,18 +23,19 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Nitto Kohki BB-10B, référence BB-10B. Le tableau fabricant publie 200 L/min et une plage d’utilisation de 6 à 6 bar. Vitesse de rotation publiée : 17000 tr/min. Masse publiée : 0.6 kg.",
+		"overview": "Nitto Kohki BB-10B. La table Nitto Kohki nomme explicitement la consommation « No-load » à 0,6 MPa. Le débit à vide est conservé comme tel et ne valide pas une demande en charge. Référence fabricant : BB-10B. Vitesse de rotation publiée : 17000 tr/min. Masse publiée : 0.6 kg. Version retenue : Commande par levier (Lever Switch Type), distincte de la version à bague Non-CE.",
 		"verifiedFacts": [
 			"Pression de 0,6 MPa publiée dans le tableau, soit 6 bar. La valeur en kgf/cm² entre parenthèses n’est pas utilisée pour la conversion.",
-			"Consommation à vide explicitement publiée (No-load) : 0.2 m³/min. Conversion × 1 000 en L/min.",
 			"Référence fabricant : BB-10B.",
 			"Vitesse de rotation publiée : 17000 tr/min.",
 			"Masse publiée : 0.6 kg.",
-			"Version retenue : Commande par levier (Lever Switch Type), distincte de la version à bague Non-CE."
+			"Version retenue : Commande par levier (Lever Switch Type), distincte de la version à bague Non-CE.",
+			"Consommation à vide publiée : 200 L/min."
 		],
 		"limitations": [
 			"Le débit à vide n’établit pas à lui seul la consommation sous toutes les charges. Respecter les conditions d’emploi de la notice.",
-			"La conformité et la disponibilité de la version exacte doivent être confirmées avant achat."
+			"La conformité et la disponibilité de la version exacte doivent être confirmées avant achat.",
+			"La table Nitto Kohki nomme explicitement la consommation « No-load » à 0,6 MPa. Le débit à vide est conservé comme tel et ne valide pas une demande en charge."
 		]
 	},
 	"specifications": [
@@ -47,9 +48,9 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation à vide explicitement publiée (No-load) : 0.2 m³/min. Conversion × 1 000 en L/min.",
+			"value": "Consommation à vide publiée : 200 L/min.",
 			"evidenceIds": [
-				"nitto-kohki-bb-10b-20260926"
+				"nitto-kohki-bb-10b-reserved-20261031-1"
 			]
 		},
 		{
@@ -72,6 +73,14 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"nitto-kohki-bb-10b-20260926"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":200,\"typical\":200,\"max\":200},\"workingPressureBar\":{\"min\":6,\"typical\":6,\"max\":6}}",
+			"evidenceIds": [
+				"nitto-kohki-bb-10b-20260926",
+				"nitto-kohki-bb-10b-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -83,6 +92,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation à vide explicitement publiée (No-load) : 0.2 m³/min. Conversion × 1 000 en L/min."
+		},
+		{
+			"id": "nitto-kohki-bb-10b-reserved-20261031-1",
+			"sourceUrl": "https://www.nitto-kohki.eu/images/stories/products/pdf_catalogs/Tools_Catalog.pdf#page=40",
+			"sourceLabel": "Nitto Kohki BB-10B : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 96df5508b9819bc71611f875b35af9e282e5bb0bf62e324aab2ab87698867bac. La table Nitto Kohki nomme explicitement la consommation « No-load » à 0,6 MPa. Le débit à vide est conservé comme tel et ne valide pas une demande en charge."
 		}
 	],
 	"fieldSources": {
@@ -94,6 +113,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"nitto-kohki-bb-10b-20260926"
+		],
+		"airflowBasis": [
+			"nitto-kohki-bb-10b-reserved-20261031-1"
 		]
 	},
 	"notes": [
@@ -103,7 +125,8 @@ const product: ToolProfileInput = {
 		"min": 200,
 		"typical": 200,
 		"max": 200
-	}
+	},
+	"airflowBasis": "free-speed"
 };
 
 export default product;

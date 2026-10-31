@@ -23,18 +23,19 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Yokota HS-4, référence HS-4. Le tableau fabricant publie 552 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 12000 tr/min. Masse publiée : 1,1 kg.",
+		"overview": "Yokota HS-4. Le tableau Yokota/Red Rooster/Toku indique une consommation en L/s et une pression de service de 6,3 bar. Le régime de consommation n’est pas défini ; la valeur publiée ne sert pas à confirmer un besoin maximal en charge. La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement. Référence fabricant : HS-4. Vitesse à vide publiée : 12000 tr/min. Masse publiée : 1,1 kg. Diamètre intérieur de flexible conseillé : 10 mm.",
 		"verifiedFacts": [
 			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation publiée : 9.2 L/s, convertis en 552 L/min par multiplication par 60.",
 			"Référence fabricant : HS-4.",
 			"Vitesse à vide publiée : 12000 tr/min.",
 			"Masse publiée : 1,1 kg.",
-			"Diamètre intérieur de flexible conseillé : 10 mm."
+			"Diamètre intérieur de flexible conseillé : 10 mm.",
+			"Consommation de régime non précisé publiée : 552 L/min."
 		],
 		"limitations": [
 			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas.",
+			"Le tableau Yokota/Red Rooster/Toku indique une consommation en L/s et une pression de service de 6,3 bar. Le régime de consommation n’est pas défini ; la valeur publiée ne sert pas à confirmer un besoin maximal en charge."
 		]
 	},
 	"specifications": [
@@ -47,9 +48,10 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation publiée : 9.2 L/s, convertis en 552 L/min par multiplication par 60.",
+			"value": "Consommation de régime non précisé publiée : 552 L/min.",
 			"evidenceIds": [
-				"yokota-hs-4-20260926"
+				"yokota-hs-4-reserved-20261031-1",
+				"yokota-hs-4-reserved-20261031-2"
 			]
 		},
 		{
@@ -79,6 +81,15 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"yokota-hs-4-20260926"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":552,\"typical\":552,\"max\":552},\"workingPressureBar\":{\"min\":6.3,\"typical\":6.3,\"max\":6.3}}",
+			"evidenceIds": [
+				"yokota-hs-4-20260926",
+				"yokota-hs-4-reserved-20261031-1",
+				"yokota-hs-4-reserved-20261031-2"
+			]
 		}
 	],
 	"evidence": [
@@ -99,6 +110,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "yokota-hs-4-reserved-20261031-1",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=47",
+			"sourceLabel": "Yokota HS-4 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. Le tableau Yokota/Red Rooster/Toku indique une consommation en L/s et une pression de service de 6,3 bar. Le régime de consommation n’est pas défini ; la valeur publiée ne sert pas à confirmer un besoin maximal en charge."
+		},
+		{
+			"id": "yokota-hs-4-reserved-20261031-2",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+			"sourceLabel": "Yokota HS-4 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. Le tableau Yokota/Red Rooster/Toku indique une consommation en L/s et une pression de service de 6,3 bar. Le régime de consommation n’est pas défini ; la valeur publiée ne sert pas à confirmer un besoin maximal en charge."
 		}
 	],
 	"fieldSources": {
@@ -116,6 +147,10 @@ const product: ToolProfileInput = {
 		],
 		"connectorSize": [
 			"yokota-hs-4-20260926"
+		],
+		"airflowBasis": [
+			"yokota-hs-4-reserved-20261031-1",
+			"yokota-hs-4-reserved-20261031-2"
 		]
 	},
 	"notes": [
@@ -129,7 +164,8 @@ const product: ToolProfileInput = {
 	"recommendedHose": {
 		"innerDiameterMm": 10
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"airflowBasis": "unqualified"
 };
 
 export default product;

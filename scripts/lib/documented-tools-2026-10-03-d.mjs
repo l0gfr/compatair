@@ -1,3 +1,4 @@
+import { applyReservedOctober31Batch } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { applyReviewedOctober27Amendment } from './reviewed-catalog-amendments-2026-10-27.mjs';
 import { applyReviewedOctober25FollowupAmendment } from './reviewed-catalog-amendments-2026-10-25-b.mjs';
 import { applyReviewedOctober25Amendment } from './reviewed-catalog-amendments-2026-10-25.mjs';
@@ -5643,7 +5644,7 @@ function sourceDefinedReference(row) {
  return true;
 }
 
-export function buildDocumentedToolsOctober3D(snapshot) {
+function buildDocumentedToolsOctober3DBeforeReservedFollowup(snapshot) {
  if (snapshot.schemaVersion !== 1 || snapshot.batchId !== 'documented-tools-2026-10-03-d' || snapshot.reviewedAt !== '2026-10-03' || snapshot.toolCount !== expectedCount || snapshot.tools.length !== expectedCount || snapshot.technicalRows.length !== expectedCount) throw new Error('Unrecognized reviewed batch');
  const sources = new Map(snapshot.sources.map(source => [source.id, source]));
  if (sources.size !== snapshot.sources.length || sources.size !== approvedSources.length) throw new Error('Duplicate or unreviewed source');
@@ -5737,4 +5738,8 @@ export function buildDocumentedToolsOctober3D(snapshot) {
   const hose = row.hoseInternalDiameterMm;
   return { id, slug: id, categoryId: row.categoryId, category: row.categoryId, label, brand: row.brand, model: row.model, ...(!constructedReference ? { mpn: row.mpn } : {}), ...demand, ...(hose ? { recommendedHose: { innerDiameterMm: positive(hose) } } : {}), confidence: 'B', image: { src: `/images/products/${id}.svg`, alt: `Repères techniques : ${label}`, sourceUrl: source.url, sourceLabel: 'Carte technique CompatAir, données déclarées par le fabricant' }, variant: { familyId: slug(`${row.brand}-${row.model}`), label: constructedReference ? `Configuration ${row.mpn}, référence composée` : `Référence ${row.mpn}`, distinguishingAttributes: { [constructedReference ? 'sourceDefinedReference' : 'reference']: row.mpn, ...Object.fromEntries(row.details.slice(0, 2).map(item => [item.label, item.value])) } }, editorial: { overview: `${label}. ${summary}`, verifiedFacts: row.details.map(item => `${item.label} : ${item.value}.`), limitations: [!qualified ? explanation : row.flowBasis === 'per-action' ? 'La cadence réelle est indispensable au calcul moyen ; aucun rythme de travail ni besoin instantané de tir n’est supposé.' : 'La demande au point documenté n’est réduite par aucun facteur de marche implicite.', ...row.sourceLimitations, 'Données déclarées dans les documents identifiés ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué.'] }, specifications, evidence: proofs, fieldSources: { ...(!constructedReference ? { mpn: [primary.id] } : { model: [primary.id], variant: [primary.id, evidence(source, 96).id] }), workingPressureBar: [qualified ? demandProof.id : primary.id], ...(hose ? { recommendedHose: row.details.filter(item => /intérieur.*flexible|I.D.*hose/i.test(item.label)).map(item => evidence(sources.get(item.evidenceSourceId), item.evidencePage).id) } : {}), ...(!qualified ? { demandExplanation: proofs.map(item => item.id) } : row.flowBasis === 'per-action' ? { airPerActionLiters: [demandProof.id], actionLabel: [demandProof.id] } : { airflowLpm: [demandProof.id] }) }, notes: [summary] };
  }).map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(reviewedSataSource).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment).map(applyReviewedOctober24Amendment).map(applyReviewedOctober25Amendment).map(applyReviewedOctober25FollowupAmendment).map(applyReviewedOctober27Amendment);
+}
+
+export function buildDocumentedToolsOctober3D(...args) {
+ return applyReservedOctober31Batch(buildDocumentedToolsOctober3DBeforeReservedFollowup(...args));
 }

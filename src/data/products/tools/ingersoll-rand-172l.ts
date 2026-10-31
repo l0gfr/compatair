@@ -9,7 +9,7 @@ const product: ToolProfileInput = {
 	"categoryId": "derouilleur-a-aiguilles",
 	"category": "derouilleur-a-aiguilles",
 	"label": "Ingersoll Rand 172L",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 6.2,
 		"typical": 6.2,
@@ -23,17 +23,19 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Ingersoll Rand 172L, référence 172L. Le tableau fabricant publie 339,802 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Masse publiée : 1.7 kg. Cadence de frappe publiée : 5500 coups/min.",
+		"overview": "Ingersoll Rand 172L. La notice constructeur alternative est accessible, tandis que l’ancienne bibliothèque reste en réserve d’accès. Elle ne rétablit pas un point débit/pression maximal apparié pour cette configuration ; les anciennes valeurs restent documentaires. Le fabricant donne les performances à 90 psi, avec l’équivalence publiée de 6,2 bar dans les consignes du même catalogue. Valeur de la colonne CFM : 12. Conversion en L/min par le facteur 28,316846592 ; arrondi à 0,001 L/min. Référence fabricant : 172L. Masse publiée : 1.7 kg. Cadence de frappe publiée : 5500 coups/min.",
 		"verifiedFacts": [
 			"Le fabricant donne les performances à 90 psi, avec l’équivalence publiée de 6,2 bar dans les consignes du même catalogue.",
 			"Valeur de la colonne CFM : 12. Conversion en L/min par le facteur 28,316846592 ; arrondi à 0,001 L/min.",
 			"Référence fabricant : 172L.",
 			"Masse publiée : 1.7 kg.",
-			"Cadence de frappe publiée : 5500 coups/min."
+			"Cadence de frappe publiée : 5500 coups/min.",
+			"Valeur documentaire conservée : 339.802 L/min. La notice constructeur alternative est accessible, tandis que l’ancienne bibliothèque reste en réserve d’accès. Elle ne rétablit pas un point débit/pression maximal apparié pour cette configuration ; les anciennes valeurs restent documentaires."
 		],
 		"limitations": [
 			"Le catalogue est conservé dans la bibliothèque du fabricant ; la disponibilité commerciale du modèle doit être confirmée.",
-			"Les valeurs sont déclarées par le fabricant. Les débits en CFM ne sont pas des mesures indépendantes CompatAir."
+			"Les valeurs sont déclarées par le fabricant. Les débits en CFM ne sont pas des mesures indépendantes CompatAir.",
+			"La notice constructeur alternative est accessible, tandis que l’ancienne bibliothèque reste en réserve d’accès. Elle ne rétablit pas un point débit/pression maximal apparié pour cette configuration ; les anciennes valeurs restent documentaires."
 		]
 	},
 	"specifications": [
@@ -46,9 +48,9 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Valeur de la colonne CFM : 12. Conversion en L/min par le facteur 28,316846592 ; arrondi à 0,001 L/min.",
+			"value": "Valeur documentaire conservée : 339.802 L/min. La notice constructeur alternative est accessible, tandis que l’ancienne bibliothèque reste en réserve d’accès. Elle ne rétablit pas un point débit/pression maximal apparié pour cette configuration ; les anciennes valeurs restent documentaires.",
 			"evidenceIds": [
-				"ingersoll-rand-172l-20260926"
+				"ingersoll-rand-172l-reserved-20261031-1"
 			]
 		},
 		{
@@ -63,6 +65,14 @@ const product: ToolProfileInput = {
 			"value": "5500 coups/min",
 			"evidenceIds": [
 				"ingersoll-rand-172l-20260926"
+			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":339.802,\"typical\":339.802,\"max\":339.802},\"workingPressureBar\":{\"min\":6.2,\"typical\":6.2,\"max\":6.2}}",
+			"evidenceIds": [
+				"ingersoll-rand-172l-20260926",
+				"ingersoll-rand-172l-reserved-20261031-1"
 			]
 		}
 	],
@@ -84,6 +94,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consigne de fonctionnement à 90 psi avec l’équivalence de 6,2 bar, et tableaux de performances à 90 psi."
+		},
+		{
+			"id": "ingersoll-rand-172l-reserved-20261031-1",
+			"sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/bltd89674ca5491ef9a/blt4b8115c084109f9c/6968c806fa1f6657ebab2bee/16574121_ed6_F.pdf",
+			"sourceLabel": "Ingersoll Rand 172L : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 6d85d6deeca96e70861f4e86d98e30b2cf0476f84ab28c3cf1065a28a72942c2. La notice constructeur alternative est accessible, tandis que l’ancienne bibliothèque reste en réserve d’accès. Elle ne rétablit pas un point débit/pression maximal apparié pour cette configuration ; les anciennes valeurs restent documentaires."
 		}
 	],
 	"fieldSources": {
@@ -93,18 +113,17 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"ingersoll-rand-172l-20260926-workingpressurebar-1"
 		],
-		"airflowLpm": [
-			"ingersoll-rand-172l-20260926"
+		"demandModel": [
+			"ingersoll-rand-172l-reserved-20261031-1"
+		],
+		"demandExplanation": [
+			"ingersoll-rand-172l-reserved-20261031-1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 339.802,
-		"typical": 339.802,
-		"max": 339.802
-	}
+	"demandExplanation": "La notice constructeur alternative est accessible, tandis que l’ancienne bibliothèque reste en réserve d’accès. Elle ne rétablit pas un point débit/pression maximal apparié pour cette configuration ; les anciennes valeurs restent documentaires."
 };
 
 export default product;

@@ -25,7 +25,6 @@ const product: CompressorInput = {
       "litersPerMinute": 460
     }
   ],
-  "dutyCycle": 1,
   "powerKw": 4,
   "oilType": "oil",
   "confidence": "B",
@@ -73,13 +72,6 @@ const product: CompressorInput = {
       ]
     },
     {
-      "label": "Cycle de service déclaré",
-      "value": "100 %",
-      "evidenceIds": [
-        "october4b-fini-cube-p3"
-      ]
-    },
-    {
       "label": "Fréquence de la configuration retenue",
       "value": "50 Hz",
       "evidenceIds": [
@@ -88,17 +80,19 @@ const product: CompressorInput = {
     }
   ],
   "editorial": {
-    "overview": "Fini CUBE 4.0-10-270. 460 L/min déclarés à 9,5 bar. Configuration constructeur : Cuve 270 L peinte.",
+    "overview": "Fini CUBE 4.0-10-270. 460 L/min déclarés à 9,5 bar. Configuration constructeur : Cuve 270 L peinte. Cuve peinte, code V91PD92FNM201.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 10 bar.",
       "Cuve de stockage documentée : 270 L.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 460 L/min déclarés à 9,5 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 460 L/min déclarés à 9,5 bar.",
+      "Cuve peinte, code V91PD92FNM201."
     ],
     "limitations": [
       "FAD déclaré par le constructeur à la pression de mesure indiquée, distincte du plafond de fonctionnement.",
       "La normalisation exclut les seules variantes de pression et de tension. Modèle et code fabricant retenus exacts.",
       "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions."
+      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions.",
+      "La brochure CUBE décrit le fonctionnement continu de la gamme, sans fenêtre de cycle chiffrée propre au groupe complet. Le taux de marche reste non documenté."
     ]
   },
   "evidence": [
@@ -121,6 +115,26 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 270d2f554801e15883dd85b3f3b6089c641adf51dd59c15f31e0fd06c7b88e1a de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "fini-cube-4-0-10-270-reserved-20261031-1",
+      "sourceUrl": "https://finicompressors.com/wp-content/uploads/Catalogo-Cube-Fini_EN_04-2024_9990397.pdf#page=3",
+      "sourceLabel": "Fini CUBE 4.0-10-270 : relecture documentaire du 31 octobre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-31",
+      "confidence": "B",
+      "notes": "SHA-256 270d2f554801e15883dd85b3f3b6089c641adf51dd59c15f31e0fd06c7b88e1a. La brochure CUBE décrit le fonctionnement continu de la gamme, sans fenêtre de cycle chiffrée propre au groupe complet. Le taux de marche reste non documenté."
+    },
+    {
+      "id": "fini-cube-4-0-10-270-reserved-20261031-2",
+      "sourceUrl": "https://finicompressors.com/wp-content/uploads/Catalogo-Cube-Fini_EN_04-2024_9990397.pdf#page=1",
+      "sourceLabel": "Fini CUBE 4.0-10-270 : relecture documentaire du 31 octobre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-31",
+      "confidence": "B",
+      "notes": "SHA-256 270d2f554801e15883dd85b3f3b6089c641adf51dd59c15f31e0fd06c7b88e1a. La brochure CUBE décrit le fonctionnement continu de la gamme, sans fenêtre de cycle chiffrée propre au groupe complet. Le taux de marche reste non documenté."
     }
   ],
   "fieldSources": {
@@ -144,9 +158,6 @@ const product: CompressorInput = {
     ],
     "oilType": [
       "october4b-fini-cube-p1"
-    ],
-    "dutyCycle": [
-      "october4b-fini-cube-p3"
     ],
     "mpn": [
       "october4b-fini-cube-p3"

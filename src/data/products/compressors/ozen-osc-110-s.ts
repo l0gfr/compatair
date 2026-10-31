@@ -74,13 +74,22 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4c-ozen-catalog-2025-p38"
       ]
+    },
+    {
+      "label": "Lecture du tableau constructeur",
+      "value": "OSC 110 S : débit de la configuration 13 bar mesuré à 12,5 bar selon la note du tableau ; 15,30 m³/min, masse publiée 4 070 kg. Le voisin OSC 110 D est une autre configuration de 2 740 kg.",
+      "evidenceIds": [
+        "october4c-ozen-catalog-2025-p38",
+        "ozen-osc-110-s-reserved-20261031-1"
+      ]
     }
   ],
   "editorial": {
     "overview": "Ozen OSC 110 S. 15 300 L/min déclarés à 12,5 bar. Configuration constructeur : OSC 110 S.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 13 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 15 300 L/min déclarés à 12,5 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 15 300 L/min déclarés à 12,5 bar.",
+      "OSC 110 S : débit de la configuration 13 bar mesuré à 12,5 bar selon la note du tableau ; 15,30 m³/min, masse publiée 4 070 kg. Le voisin OSC 110 D est une autre configuration de 2 740 kg."
     ],
     "limitations": [
       "Marque officielle Özen ; alias Ozen utilisé pour la recherche. Cuve, fréquence électrique et cycle de service non documentés.",
@@ -100,6 +109,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 cfcfbd23c05cfe5db69ec1bb59c552a6543cf1597869b67811a985d1b7458b60 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "ozen-osc-110-s-reserved-20261031-1",
+      "sourceUrl": "https://ozenkompresor.com.tr/wp-content/uploads/2026/01/katalog-2025.pdf#page=38",
+      "sourceLabel": "Ozen OSC 110 S : relecture documentaire du 31 octobre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-31",
+      "confidence": "B",
+      "notes": "SHA-256 cfcfbd23c05cfe5db69ec1bb59c552a6543cf1597869b67811a985d1b7458b60. OSC 110 S : débit de la configuration 13 bar mesuré à 12,5 bar selon la note du tableau ; 15,30 m³/min, masse publiée 4 070 kg. Le voisin OSC 110 D est une autre configuration de 2 740 kg."
     }
   ],
   "fieldSources": {
@@ -125,4 +144,5 @@ const product: CompressorInput = {
     "Les caractéristiques décrivent la configuration constructeur indiquée dans cette fiche ; les autres équipements ou alimentations doivent être vérifiés séparément."
   ]
 };
+
 export default product;

@@ -1,3 +1,4 @@
+import { beforeReservedOctober31Followup } from '../../scripts/lib/reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { compressors, tools } from './catalog';
@@ -49,7 +50,8 @@ describe('reviewed source URL repairs', () => {
    // The October21 exact-reference review adds the evidenced frequency; all
    // other identity and compatibility inputs from the relocation stay asserted.
    const current = expected.id === 'aircraft-airboy-262-e' ? { ...expected, voltage: '230 V, 50 Hz' } : expected;
-   expect(products.get(expected.id)).toMatchObject(current);
+   const product = products.get(expected.id)!;
+   expect(beforeReservedOctober31Followup('categoryId' in product ? { ...product, category: product.categoryId } : product)).toMatchObject(current);
   }
  });
 

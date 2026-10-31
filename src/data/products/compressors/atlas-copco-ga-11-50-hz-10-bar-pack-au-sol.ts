@@ -24,7 +24,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 1566
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "oil",
 	"powerKw": 11,
 	"mobility": "fixed",
@@ -66,13 +65,6 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Cycle de service déclaré",
-			"value": "100%, famille constructeur citée",
-			"evidenceIds": [
-				"october3c-atlas-ga-duty"
-			]
-		},
-		{
 			"label": "Périmètre documentaire",
 			"value": "Documentation constructeur européenne ; commercialisation actuelle à confirmer",
 			"evidenceIds": [
@@ -90,7 +82,8 @@ const product: CompressorInput = {
 		"limitations": [
 			"Service continu déclaré pour cette famille ; installation, refroidissement et entretien conformes au constructeur restent nécessaires.",
 			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Configuration publiée dans la documentation citée ; disponibilité commerciale actuelle à confirmer."
+			"Configuration publiée dans la documentation citée ; disponibilité commerciale actuelle à confirmer.",
+			"Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
 		]
 	},
 	"evidence": [
@@ -123,6 +116,36 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 1061fe3edf7c5afd1ede36fd30a1ffd9deb9951ee795cd66a55ceddfc3561a30 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "atlas-copco-ga-11-50-hz-10-bar-pack-au-sol-reserved-20261031-1",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/kazakhstan/documents/aii-materials-for-exhibition-2024/compressors/GA5-11_antwerp_leaflet_EN_2935087547.pdf#page=6",
+			"sourceLabel": "Atlas Copco GA 11 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 83df92251704597bda4b770f01badd351183571a3adf687e70cc3b50e9ef1de4. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
+		},
+		{
+			"id": "atlas-copco-ga-11-50-hz-10-bar-pack-au-sol-reserved-20261031-2",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/kazakhstan/documents/aii-materials-for-exhibition-2024/compressors/GA5-11_antwerp_leaflet_EN_2935087547.pdf#page=1",
+			"sourceLabel": "Atlas Copco GA 11 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 83df92251704597bda4b770f01badd351183571a3adf687e70cc3b50e9ef1de4. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
+		},
+		{
+			"id": "atlas-copco-ga-11-50-hz-10-bar-pack-au-sol-reserved-20261031-3",
+			"sourceUrl": "https://www.atlascopco.com/en-eg/compressors/air-compressor-blog/learn-more/g-vs-ga-compressors",
+			"sourceLabel": "Atlas Copco GA 11 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 9edfdbb36f7c7221c97755ce67d63dc07c3219d5fc14e073db61caa9fc2c3d96. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
 		}
 	],
 	"fieldSources": {
@@ -140,9 +163,6 @@ const product: CompressorInput = {
 		],
 		"oilType": [
 			"october3c-atlas-ga5-11-p1"
-		],
-		"dutyCycle": [
-			"october3c-atlas-ga-duty"
 		]
 	},
 	"notes": [

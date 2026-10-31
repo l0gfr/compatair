@@ -30,11 +30,12 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Aircat 4337. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 2.4 lb. Puissance publiée : 0.75 HP.",
+		"overview": "Aircat 4337. La fiche 4337 annonce un mandrin de 3/8 pouce et 1 600 tr/min. La valeur 46089 ne constitue pas un diamètre de mandrin. Masse publiée : 2.4 lb. Puissance publiée : 0.75 HP. Capacité du mandrin : 3/8 pouce. Vitesse à vide : 1 600 tr/min.",
 		"verifiedFacts": [
 			"Masse publiée : 2.4 lb.",
 			"Puissance publiée : 0.75 HP.",
-			"Mandrin : 46089."
+			"Capacité du mandrin : 3/8 pouce.",
+			"Vitesse à vide : 1 600 tr/min."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -52,13 +53,6 @@ const product: ToolProfileInput = {
 		{
 			"label": "Puissance publiée",
 			"value": "0.75 HP",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-128-p1"
-			]
-		},
-		{
-			"label": "Mandrin",
-			"value": "46089",
 			"evidenceIds": [
 				"october2-tools-ctg-pdp-128-p1"
 			]
@@ -90,6 +84,22 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-ctg-pdp-128-p1"
 			]
+		},
+		{
+			"label": "Capacité du mandrin",
+			"value": "3/8 pouce",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-128-p1",
+				"perceuse-aircat-4337-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "1 600 tr/min",
+			"evidenceIds": [
+				"october2-tools-ctg-pdp-128-p1",
+				"perceuse-aircat-4337-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -102,6 +112,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : ef69e714f80a8d85f603d457a3e6f2d30a2906fa5c353cf4e6779845269f2efa. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "perceuse-aircat-4337-reserved-20261031-1",
+			"sourceUrl": "https://continentaltoolgroup.com/product/aircat-75-hp-3-8-angle-drill/",
+			"sourceLabel": "Aircat 4337 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 94d43884a36e93096818ae82c3a1ba71aa2102a2a1cfa3dab1420281989d7fa6. La fiche 4337 annonce un mandrin de 3/8 pouce et 1 600 tr/min. La valeur 46089 ne constitue pas un diamètre de mandrin."
 		}
 	],
 	"fieldSources": {

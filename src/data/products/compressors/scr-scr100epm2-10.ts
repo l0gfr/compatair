@@ -81,13 +81,22 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4c-scr-61-p1"
       ]
+    },
+    {
+      "label": "Lecture du tableau constructeur",
+      "value": "SCR100EPM2 à 10 bar : plage FAD publiée de 2,9 à 13,7 m³/min. Les 13 700 L/min représentent la borne haute, sans taux de marche déduit.",
+      "evidenceIds": [
+        "october4c-scr-61-p1",
+        "scr-scr100epm2-10-reserved-20261031-1"
+      ]
     }
   ],
   "editorial": {
     "overview": "SCR SCR100EPM2-10. 13 700 L/min déclarés à 10 bar, maximum de la plage FAD publiée, sans qualification du régime moteur. Configuration constructeur : SCR100EPM2-10.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 10 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 13 700 L/min déclarés à 10 bar, maximum de la plage FAD publiée, sans qualification du régime moteur."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 13 700 L/min déclarés à 10 bar, maximum de la plage FAD publiée, sans qualification du régime moteur.",
+      "SCR100EPM2 à 10 bar : plage FAD publiée de 2,9 à 13,7 m³/min. Les 13 700 L/min représentent la borne haute, sans taux de marche déduit."
     ],
     "limitations": [
       "Cuve et cycle de service non documentés. Pressions et tensions variantes regroupées avant décompte.",
@@ -109,6 +118,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 1f1c4450eaf9248adc2b2a9eace76ee7d7d5bfcb52b7fc3bd6c8c4cea9f9bfb8 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "scr-scr100epm2-10-reserved-20261031-1",
+      "sourceUrl": "https://www.scrcompressor.com/en/products/pm_screw_compressor/61.html",
+      "sourceLabel": "SCR SCR100EPM2-10 : relecture documentaire du 31 octobre 2026",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-31",
+      "confidence": "B",
+      "notes": "SHA-256 1f1c4450eaf9248adc2b2a9eace76ee7d7d5bfcb52b7fc3bd6c8c4cea9f9bfb8. SCR100EPM2 à 10 bar : plage FAD publiée de 2,9 à 13,7 m³/min. Les 13 700 L/min représentent la borne haute, sans taux de marche déduit."
     }
   ],
   "fieldSources": {
@@ -137,4 +156,5 @@ const product: CompressorInput = {
     "Les caractéristiques décrivent la configuration constructeur indiquée dans cette fiche ; les autres équipements ou alimentations doivent être vérifiés séparément."
   ]
 };
+
 export default product;

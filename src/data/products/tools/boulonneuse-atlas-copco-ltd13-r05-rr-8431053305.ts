@@ -38,17 +38,18 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Atlas Copco LTD13 R05-RR (réf. 8431053305). Consommation maximale : 420 L/min à 6,3 bar. Consommations originales : 7 L/s ; 15 cfm. Vitesse à vide : 850 tr/min.",
+		"overview": "Atlas Copco LTD13 R05-RR. Le tableau Atlas Copco nomme explicitement cette colonne « Air consumption at free speed ». La convention générale de consommation maximale ne remplace pas cette exception ; le débit reste à vide. Désignation et configuration documentées à la page PDF 50. Vitesse à vide : 850 tr/min. Masse : 0.7 kg.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 50.",
-			"Consommations originales : 7 L/s ; 15 cfm.",
 			"Vitesse à vide : 850 tr/min.",
-			"Masse : 0.7 kg."
+			"Masse : 0.7 kg.",
+			"Consommation à vide publiée : 420 L/min."
 		],
 		"limitations": [
 			"Le débit publié conserve son régime de mesure ; aucun cycle supposé ne réduit la consommation.",
 			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier.",
+			"Le tableau Atlas Copco nomme explicitement cette colonne « Air consumption at free speed ». La convention générale de consommation maximale ne remplace pas cette exception ; le débit reste à vide."
 		]
 	},
 	"specifications": [
@@ -79,6 +80,15 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-d-atlas-tools-p50"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":420,\"typical\":420,\"max\":420},\"workingPressureBar\":{\"min\":6.3,\"typical\":6.3,\"max\":6.3}}",
+			"evidenceIds": [
+				"documented-d-atlas-tools-p50",
+				"boulonneuse-atlas-copco-ltd13-r05-rr-8431053305-reserved-20261031-1",
+				"boulonneuse-atlas-copco-ltd13-r05-rr-8431053305-reserved-20261031-2"
+			]
 		}
 	],
 	"evidence": [
@@ -101,6 +111,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "boulonneuse-atlas-copco-ltd13-r05-rr-8431053305-reserved-20261031-1",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf#page=50",
+			"sourceLabel": "Atlas Copco LTD13 R05-RR : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Le tableau Atlas Copco nomme explicitement cette colonne « Air consumption at free speed ». La convention générale de consommation maximale ne remplace pas cette exception ; le débit reste à vide."
+		},
+		{
+			"id": "boulonneuse-atlas-copco-ltd13-r05-rr-8431053305-reserved-20261031-2",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf#page=3",
+			"sourceLabel": "Atlas Copco LTD13 R05-RR : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Le tableau Atlas Copco nomme explicitement cette colonne « Air consumption at free speed ». La convention générale de consommation maximale ne remplace pas cette exception ; le débit reste à vide."
 		}
 	],
 	"fieldSources": {
@@ -113,11 +143,14 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"documented-d-atlas-tools-p50"
+		],
+		"airflowBasis": [
+			"boulonneuse-atlas-copco-ltd13-r05-rr-8431053305-reserved-20261031-1",
+			"boulonneuse-atlas-copco-ltd13-r05-rr-8431053305-reserved-20261031-2"
 		]
 	},
-	"notes": [
-		"Consommation maximale : 420 L/min à 6,3 bar."
-	]
+	"notes": [],
+	"airflowBasis": "free-speed"
 };
 
 export default product;

@@ -39,12 +39,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-66002. Consommation publiée, régime non précisé : 240 L/min à 6,2 bar. Consommation dans les unités du tableau : 240 L/min ; 8.5 cfm. Configuration complète publiée : ST-66002.",
+		"overview": "Sumake ST-66002. Cadence publiée : 9 500 coups/min. Course publiée : 10 mm. Capacité acier / aluminium : 2 / 3 mm. Le catalogue publie 240 L/min, sans préciser le régime de consommation.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 21.",
 			"Consommation dans les unités du tableau : 240 L/min ; 8.5 cfm.",
 			"Configuration complète publiée : ST-66002.",
-			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé."
+			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé.",
+			"Cadence publiée : 9 500 coups/min.",
+			"Course publiée : 10 mm.",
+			"Capacité acier / aluminium : 2 / 3 mm."
 		],
 		"limitations": [
 			"Le régime de consommation n’est pas indiqué. Aucun débit maximal ou en charge n’est inventé ; le verdict reste insufficient_data.",
@@ -87,6 +90,30 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-d-sumake-na-2024-p21"
 			]
+		},
+		{
+			"label": "Cadence publiée",
+			"value": "9 500 coups/min",
+			"evidenceIds": [
+				"documented-d-sumake-na-2024-p21",
+				"scie-sumake-st-66002-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Course publiée",
+			"value": "10 mm",
+			"evidenceIds": [
+				"documented-d-sumake-na-2024-p21",
+				"scie-sumake-st-66002-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Capacité acier / aluminium",
+			"value": "2 / 3 mm",
+			"evidenceIds": [
+				"documented-d-sumake-na-2024-p21",
+				"scie-sumake-st-66002-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -99,6 +126,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "scie-sumake-st-66002-reserved-20261031-1",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf#page=21",
+			"sourceLabel": "Sumake ST-66002 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Table Sumake relue : enrichissement avec les caractéristiques propres à ce modèle, en conservant la consommation de régime non précisé hors verdict conclusif."
 		}
 	],
 	"fieldSources": {

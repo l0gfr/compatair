@@ -24,7 +24,7 @@ const product: CompressorInput = {
 		}
 	],
 	"oilType": "oil",
-	"powerKw": 18,
+	"powerKw": 18.5,
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
@@ -135,6 +135,46 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "mattei-erc-18-reserved-20261031-1",
+			"sourceUrl": "https://4609801.fs1.hubspotusercontent-na1.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20CLASSIC/Classic_Range_EN.pdf#page=7",
+			"sourceLabel": "Mattei ERC 18 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2. Le tableau ERC 18 page 14 donne une puissance moteur de 18,5 kW, distincte du nombre 18 dans le nom de modèle. FAD 2,26 m³/min à 12,5 bar conservé."
+		},
+		{
+			"id": "mattei-erc-18-reserved-20261031-2",
+			"sourceUrl": "https://4609801.fs1.hubspotusercontent-na1.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20CLASSIC/Classic_Range_EN.pdf#page=14",
+			"sourceLabel": "Mattei ERC 18 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2. Le tableau ERC 18 page 14 donne une puissance moteur de 18,5 kW, distincte du nombre 18 dans le nom de modèle. FAD 2,26 m³/min à 12,5 bar conservé."
+		},
+		{
+			"id": "mattei-erc-18-reserved-20261031-3",
+			"sourceUrl": "https://4609801.fs1.hubspotusercontent-na1.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20CLASSIC/Classic_Range_EN.pdf#page=4",
+			"sourceLabel": "Mattei ERC 18 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2. Le tableau ERC 18 page 14 donne une puissance moteur de 18,5 kW, distincte du nombre 18 dans le nom de modèle. FAD 2,26 m³/min à 12,5 bar conservé."
+		},
+		{
+			"id": "mattei-erc-18-reserved-20261031-4",
+			"sourceUrl": "https://4609801.fs1.hubspotusercontent-na1.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20CLASSIC/Classic_Range_EN.pdf#page=3",
+			"sourceLabel": "Mattei ERC 18 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2. Le tableau ERC 18 page 14 donne une puissance moteur de 18,5 kW, distincte du nombre 18 dans le nom de modèle. FAD 2,26 m³/min à 12,5 bar conservé."
 		}
 	],
 	"fieldSources": {
@@ -149,7 +189,10 @@ const product: CompressorInput = {
 			"october3d-mattei-pdf-03-p14"
 		],
 		"powerKw": [
-			"october3d-mattei-pdf-03-p14"
+			"mattei-erc-18-reserved-20261031-1",
+			"mattei-erc-18-reserved-20261031-2",
+			"mattei-erc-18-reserved-20261031-3",
+			"mattei-erc-18-reserved-20261031-4"
 		],
 		"oilType": [
 			"october3d-mattei-pdf-03-p3"

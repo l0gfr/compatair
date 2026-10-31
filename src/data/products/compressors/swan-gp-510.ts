@@ -39,7 +39,8 @@ const product: CompressorInput = {
     "verifiedFacts": [
       "Pression de la configuration documentée : 7,845 bar.",
       "Cuve de stockage documentée : 165 L.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 485 L/min déclarés à 7,845 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 485 L/min déclarés à 7,845 bar.",
+      "GP-510 : la colonne constructeur porte F.A.D. 485 L/min à 8 kg/cm², soit environ 7,845 bar. Moteur 3,7 kW, cuve 165 L, dimensions publiées 1 440 × 1 230 × 1 400 mm, masse 400 kg."
     ],
     "limitations": [
       "L’unité historique « kg/cm² » de la pression est transcrite comme kgf/cm² et convertie avec NIST. La pression de soupape et les réglages du pressostat ne sont pas documentés par cette table.",
@@ -93,6 +94,15 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october7-swan-oil-less-p9"
       ]
+    },
+    {
+      "label": "Lecture du tableau constructeur",
+      "value": "GP-510 : la colonne constructeur porte F.A.D. 485 L/min à 8 kg/cm², soit environ 7,845 bar. Moteur 3,7 kW, cuve 165 L, dimensions publiées 1 440 × 1 230 × 1 400 mm, masse 400 kg.",
+      "evidenceIds": [
+        "october7-swan-oil-less-p9",
+        "swan-gp-510-reserved-20261031-1",
+        "swan-gp-510-reserved-20261031-2"
+      ]
     }
   ],
   "evidence": [
@@ -115,6 +125,26 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-07",
       "confidence": "B",
       "notes": "SHA-256 99092c3ae6a5030fdb6901f601cb87d99c07d62f31a164a4a0b6786847c5cc6c de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "swan-gp-510-reserved-20261031-1",
+      "sourceUrl": "https://www.swan-aircompressor.com/en/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZzBQIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f21f3a426d479c9a27849c7f499ea9b940b557b7/Oil-less%20Compressor%20Series.pdf?disposition=preview#page=9",
+      "sourceLabel": "SWAN GP-510 : relecture documentaire du 31 octobre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-31",
+      "confidence": "B",
+      "notes": "SHA-256 ba27dceb7bc711898ad3b2f485fdb7734a1487fb2494d253ac319020abe9821b. GP-510 : la colonne constructeur porte F.A.D. 485 L/min à 8 kg/cm², soit environ 7,845 bar. Moteur 3,7 kW, cuve 165 L, dimensions publiées 1 440 × 1 230 × 1 400 mm, masse 400 kg."
+    },
+    {
+      "id": "swan-gp-510-reserved-20261031-2",
+      "sourceUrl": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+      "sourceLabel": "NIST, Guide for the Use of the International System of Units, Appendix B.8",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-31",
+      "confidence": "B",
+      "notes": "SHA-256 992d3ba563c488bafab61059fe47eb7238178b9def650a0b8c11707cc887699f. Facteurs de conversion d’unités uniquement. La référence, le régime et la pression de mesure de la machine dépendent de ses documents constructeur, cités séparément."
     }
   ],
   "fieldSources": {

@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Rongpeng RP7319. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Vitesse à vide : 10000 tr/min. Masse publiée : 1.3 kg.",
+		"overview": "Rongpeng RP7319. La page RP7319 est titrée 5 pouces, décrit une famille 4 ou 5 pouces et publie un plateau de 4 pouces dans sa table. Conserver cette divergence au lieu d’assimiler les variantes. Vitesse à vide : 10000 tr/min. Masse publiée : 1.3 kg. Diamètre du plateau publié : 4 in.",
 		"verifiedFacts": [
 			"Vitesse à vide : 10000 tr/min.",
 			"Masse publiée : 1.3 kg.",
@@ -37,7 +37,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée.",
+			"La page RP7319 est titrée 5 pouces, décrit une famille 4 ou 5 pouces et publie un plateau de 4 pouces dans sa table. Conserver cette divergence au lieu d’assimiler les variantes."
 		]
 	},
 	"specifications": [
@@ -87,6 +88,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 061d0adfd4cdeb7433843abad7a7e7a9d65a008458f1787708cb2dff272ec415. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-rotative-rongpeng-rp7319-reserved-20261031-1",
+			"sourceUrl": "https://www.rongpeng.com/5-Inch-Air-Angle-Sander-RP7319",
+			"sourceLabel": "Rongpeng RP7319 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 abf0237e79f5e79b785481f728b7b6e5b2d951e91dfe8f39d5fd4be1d9d3a5e6. La page RP7319 est titrée 5 pouces, décrit une famille 4 ou 5 pouces et publie un plateau de 4 pouces dans sa table. Conserver cette divergence au lieu d’assimiler les variantes."
 		}
 	],
 	"fieldSources": {

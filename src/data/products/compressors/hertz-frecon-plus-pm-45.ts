@@ -68,6 +68,15 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october4-hertz-catalog-p20"
 			]
+		},
+		{
+			"label": "Lecture du tableau constructeur",
+			"value": "FRECON PLUS PM 45 à 10 bar : plage FAD publiée de 1,37 à 7,22 m³/min. Le point de calcul conservateur conserve la borne basse, 1 370 L/min, et non la capacité maximale de 7 220 L/min.",
+			"evidenceIds": [
+				"october4-hertz-catalog-p20",
+				"hertz-frecon-plus-pm-45-reserved-20261031-1",
+				"hertz-frecon-plus-pm-45-reserved-20261031-2"
+			]
 		}
 	],
 	"editorial": {
@@ -75,7 +84,8 @@ const product: CompressorInput = {
 		"verifiedFacts": [
 			"Configuration de pression documentée : 10 bar.",
 			"Montage sans réservoir de stockage intégré explicitement documenté.",
-			"FAD sous pression identifié séparément des valeurs d’aspiration : 1 370 L/min déclarés à 10 bar."
+			"FAD sous pression identifié séparément des valeurs d’aspiration : 1 370 L/min déclarés à 10 bar.",
+			"FRECON PLUS PM 45 à 10 bar : plage FAD publiée de 1,37 à 7,22 m³/min. Le point de calcul conservateur conserve la borne basse, 1 370 L/min, et non la capacité maximale de 7 220 L/min."
 		],
 		"limitations": [
 			"Une seule configuration de pression est retenue par modèle. Les autres lignes de pression ne sont pas assemblées en une courbe mesurée.",
@@ -106,6 +116,26 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-04",
 			"confidence": "B",
 			"notes": "SHA-256 e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339 de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "hertz-frecon-plus-pm-45-reserved-20261031-1",
+			"sourceUrl": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf#page=20",
+			"sourceLabel": "Hertz FRECON PLUS PM 45 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339. FRECON PLUS PM 45 à 10 bar : plage FAD publiée de 1,37 à 7,22 m³/min. Le point de calcul conservateur conserve la borne basse, 1 370 L/min, et non la capacité maximale de 7 220 L/min."
+		},
+		{
+			"id": "hertz-frecon-plus-pm-45-reserved-20261031-2",
+			"sourceUrl": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf#page=17",
+			"sourceLabel": "Hertz FRECON PLUS PM 45 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339. FRECON PLUS PM 45 à 10 bar : plage FAD publiée de 1,37 à 7,22 m³/min. Le point de calcul conservateur conserve la borne basse, 1 370 L/min, et non la capacité maximale de 7 220 L/min."
 		}
 	],
 	"fieldSources": {

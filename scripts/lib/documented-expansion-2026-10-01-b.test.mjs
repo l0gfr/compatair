@@ -1,3 +1,4 @@
+import { beforeReservedOctober31Followup } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { parseCatalogProductSource } from './catalog-tooling.mjs';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
@@ -65,7 +66,7 @@ describe('reviewed manufacturer tables, October 1 batch B', () => {
   for (const p of batch.tools.filter(p => p.airflowBasis)) expect(evaluateCompatibility(ample, p).verdict).toBe('insufficient_data');
  });
  it('uses documented litres per cycle without deriving a fictitious cadence', () => {
-  const p = byMpn('GP-101RN');
+  const p = beforeReservedOctober31Followup(byMpn('GP-101RN'));
   expect(p.demandModel).toBe('per-action'); expect(p.airPerActionLiters).toBe(1.5);
   expect(p.airflowLpm).toBeUndefined();
   expect(byMpn('GP-250RM').airPerActionLiters).toBe(2);

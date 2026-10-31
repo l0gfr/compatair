@@ -83,13 +83,23 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4c-ekomak-extra-1-p7"
       ]
+    },
+    {
+      "label": "Lecture du tableau constructeur",
+      "value": "CNR 150 : 1,33 m³/min FAD mesuré à 7 bar, pression maximale 10 bar, moteur 11 kW. Version BM sans volume de cuve déduit ; le taux de marche de 100 % est déclaré pour la famille CNR 55–200 page 4.",
+      "evidenceIds": [
+        "october4c-ekomak-extra-1-p7",
+        "ekomak-cnr-150-reserved-20261031-1",
+        "ekomak-cnr-150-reserved-20261031-2"
+      ]
     }
   ],
   "editorial": {
     "overview": "Ekomak CNR 150. 1 330 L/min déclarés à 7 bar. Configuration constructeur : CNR 150 BM (base mounted).",
     "verifiedFacts": [
       "Pression de la configuration documentée : 10 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 1 330 L/min déclarés à 7 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 1 330 L/min déclarés à 7 bar.",
+      "CNR 150 : 1,33 m³/min FAD mesuré à 7 bar, pression maximale 10 bar, moteur 11 kW. Version BM sans volume de cuve déduit ; le taux de marche de 100 % est déclaré pour la famille CNR 55–200 page 4."
     ],
     "limitations": [
       "Le débit est mesuré à 7 bar, distinct du plafond de pression 10 bar. Configuration TM sélectionnée uniquement quand le réservoir 270 L est explicitement disponible.",
@@ -118,6 +128,26 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 b30f2f05ef5cc0e1a58c5951233fd76d3f8df91f47dd1754290997ce13418538 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "ekomak-cnr-150-reserved-20261031-1",
+      "sourceUrl": "https://www.ekomak.com/content/dam/brands/Mark/products-bp-structure/non-mark/oil-free-compressors/cleanair/cnr-55-200/products-leaflets/CNR%2055-200%20Sales%20Leaflet%20EN_LR.pdf#page=7",
+      "sourceLabel": "Ekomak CNR 150 : relecture documentaire du 31 octobre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-31",
+      "confidence": "B",
+      "notes": "SHA-256 b30f2f05ef5cc0e1a58c5951233fd76d3f8df91f47dd1754290997ce13418538. CNR 150 : 1,33 m³/min FAD mesuré à 7 bar, pression maximale 10 bar, moteur 11 kW. Version BM sans volume de cuve déduit ; le taux de marche de 100 % est déclaré pour la famille CNR 55–200 page 4."
+    },
+    {
+      "id": "ekomak-cnr-150-reserved-20261031-2",
+      "sourceUrl": "https://www.ekomak.com/content/dam/brands/Mark/products-bp-structure/non-mark/oil-free-compressors/cleanair/cnr-55-200/products-leaflets/CNR%2055-200%20Sales%20Leaflet%20EN_LR.pdf#page=4",
+      "sourceLabel": "Ekomak CNR 150 : relecture documentaire du 31 octobre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-31",
+      "confidence": "B",
+      "notes": "SHA-256 b30f2f05ef5cc0e1a58c5951233fd76d3f8df91f47dd1754290997ce13418538. CNR 150 : 1,33 m³/min FAD mesuré à 7 bar, pression maximale 10 bar, moteur 11 kW. Version BM sans volume de cuve déduit ; le taux de marche de 100 % est déclaré pour la famille CNR 55–200 page 4."
     }
   ],
   "fieldSources": {
@@ -149,4 +179,5 @@ const product: CompressorInput = {
     "Les caractéristiques décrivent la configuration constructeur indiquée dans cette fiche ; les autres équipements ou alimentations doivent être vérifiés séparément."
   ]
 };
+
 export default product;

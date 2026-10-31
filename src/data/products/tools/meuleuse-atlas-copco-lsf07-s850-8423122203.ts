@@ -9,16 +9,11 @@ const product: ToolProfileInput = {
 	"brand": "Atlas Copco",
 	"model": "LSF07 S850",
 	"mpn": "8423122203",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 6.3,
 		"typical": 6.3,
 		"max": 6.3
-	},
-	"airflowLpm": {
-		"min": 138,
-		"typical": 138,
-		"max": 138
 	},
 	"confidence": "B",
 	"image": {
@@ -38,17 +33,18 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Atlas Copco LSF07 S850 (réf. 8423122203). Consommation maximale : 138 L/min à 6,3 bar. Consommations originales : 2.2 L/s ; 4.9 cfm ; 2.3 L/s ; 4.6 cfm. Vitesse à vide : 88000 tr/min.",
+		"overview": "Atlas Copco LSF07 S850. La ligne LSF07 S850 distingue 2,2 L/s à puissance maximale et 2,3 L/s à vide ; les colonnes cfm 4,9 et 4,6 ne concordent pas avec ces conversions. Les unités originales restent visibles ; aucun point unique dimensionnant n’est retenu sans clarification constructeur. Désignation et configuration documentées à la page PDF 211. Vitesse à vide : 88000 tr/min. Masse : 0.4 kg.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 211.",
-			"Consommations originales : 2.2 L/s ; 4.9 cfm ; 2.3 L/s ; 4.6 cfm.",
 			"Vitesse à vide : 88000 tr/min.",
-			"Masse : 0.4 kg."
+			"Masse : 0.4 kg.",
+			"Valeur documentaire conservée : 138 L/min. La ligne LSF07 S850 distingue 2,2 L/s à puissance maximale et 2,3 L/s à vide ; les colonnes cfm 4,9 et 4,6 ne concordent pas avec ces conversions. Les unités originales restent visibles ; aucun point unique dimensionnant n’est retenu sans clarification constructeur."
 		],
 		"limitations": [
 			"Le débit publié conserve son régime de mesure ; aucun cycle supposé ne réduit la consommation.",
 			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier.",
+			"La ligne LSF07 S850 distingue 2,2 L/s à puissance maximale et 2,3 L/s à vide ; les colonnes cfm 4,9 et 4,6 ne concordent pas avec ces conversions. Les unités originales restent visibles ; aucun point unique dimensionnant n’est retenu sans clarification constructeur."
 		]
 	},
 	"specifications": [
@@ -79,6 +75,15 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-d-atlas-tools-p211"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":138,\"typical\":138,\"max\":138},\"workingPressureBar\":{\"min\":6.3,\"typical\":6.3,\"max\":6.3}}",
+			"evidenceIds": [
+				"documented-d-atlas-tools-p211",
+				"meuleuse-atlas-copco-lsf07-s850-8423122203-reserved-20261031-1",
+				"meuleuse-atlas-copco-lsf07-s850-8423122203-reserved-20261031-2"
+			]
 		}
 	],
 	"evidence": [
@@ -101,6 +106,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "meuleuse-atlas-copco-lsf07-s850-8423122203-reserved-20261031-1",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf#page=211",
+			"sourceLabel": "Atlas Copco LSF07 S850 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. La ligne LSF07 S850 distingue 2,2 L/s à puissance maximale et 2,3 L/s à vide ; les colonnes cfm 4,9 et 4,6 ne concordent pas avec ces conversions. Les unités originales restent visibles ; aucun point unique dimensionnant n’est retenu sans clarification constructeur."
+		},
+		{
+			"id": "meuleuse-atlas-copco-lsf07-s850-8423122203-reserved-20261031-2",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf#page=3",
+			"sourceLabel": "Atlas Copco LSF07 S850 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. La ligne LSF07 S850 distingue 2,2 L/s à puissance maximale et 2,3 L/s à vide ; les colonnes cfm 4,9 et 4,6 ne concordent pas avec ces conversions. Les unités originales restent visibles ; aucun point unique dimensionnant n’est retenu sans clarification constructeur."
 		}
 	],
 	"fieldSources": {
@@ -111,13 +136,17 @@ const product: ToolProfileInput = {
 			"documented-d-atlas-tools-p211",
 			"documented-d-atlas-tools-p3"
 		],
-		"airflowLpm": [
-			"documented-d-atlas-tools-p211"
+		"demandModel": [
+			"meuleuse-atlas-copco-lsf07-s850-8423122203-reserved-20261031-1",
+			"meuleuse-atlas-copco-lsf07-s850-8423122203-reserved-20261031-2"
+		],
+		"demandExplanation": [
+			"meuleuse-atlas-copco-lsf07-s850-8423122203-reserved-20261031-1",
+			"meuleuse-atlas-copco-lsf07-s850-8423122203-reserved-20261031-2"
 		]
 	},
-	"notes": [
-		"Consommation maximale : 138 L/min à 6,3 bar."
-	]
+	"notes": [],
+	"demandExplanation": "La ligne LSF07 S850 distingue 2,2 L/s à puissance maximale et 2,3 L/s à vide ; les colonnes cfm 4,9 et 4,6 ne concordent pas avec ces conversions. Les unités originales restent visibles ; aucun point unique dimensionnant n’est retenu sans clarification constructeur."
 };
 
 export default product;

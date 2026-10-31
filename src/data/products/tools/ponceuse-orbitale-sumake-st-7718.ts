@@ -39,12 +39,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-7718. Consommation publiée, régime non précisé : 430 L/min à 6,2 bar. Consommation dans les unités du tableau : 430 L/min ; 15 cfm. Configuration complète publiée : ST-7718.",
+		"overview": "Sumake ST-7718. Dimensions du plateau : 90 × 197 mm. Vitesse à vide : 8 000 tr/min. Longueur publiée : 203 mm. Le catalogue publie 430 L/min, sans préciser le régime de consommation.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 46.",
 			"Consommation dans les unités du tableau : 430 L/min ; 15 cfm.",
 			"Configuration complète publiée : ST-7718.",
-			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé."
+			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé.",
+			"Dimensions du plateau : 90 × 197 mm.",
+			"Vitesse à vide : 8 000 tr/min.",
+			"Longueur publiée : 203 mm."
 		],
 		"limitations": [
 			"Le régime de consommation n’est pas indiqué. Aucun débit maximal ou en charge n’est inventé ; le verdict reste insufficient_data.",
@@ -87,6 +90,30 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-d-sumake-na-2024-p46"
 			]
+		},
+		{
+			"label": "Dimensions du plateau",
+			"value": "90 × 197 mm",
+			"evidenceIds": [
+				"documented-d-sumake-na-2024-p46",
+				"ponceuse-orbitale-sumake-st-7718-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "8 000 tr/min",
+			"evidenceIds": [
+				"documented-d-sumake-na-2024-p46",
+				"ponceuse-orbitale-sumake-st-7718-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Longueur publiée",
+			"value": "203 mm",
+			"evidenceIds": [
+				"documented-d-sumake-na-2024-p46",
+				"ponceuse-orbitale-sumake-st-7718-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -99,6 +126,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "ponceuse-orbitale-sumake-st-7718-reserved-20261031-1",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf#page=46",
+			"sourceLabel": "Sumake ST-7718 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Table Sumake relue : enrichissement avec les caractéristiques propres à ce modèle, en conservant la consommation de régime non précisé hors verdict conclusif."
 		}
 	],
 	"fieldSources": {

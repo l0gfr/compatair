@@ -1,3 +1,4 @@
+import { beforeReservedOctober31Followup } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { createHash } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -46,9 +47,9 @@ describe('documented compressor configurations, October 3 C', () => {
   expect(product('FCOL22LS6').tankLiters).toBe(20.8);
  });
  it('preserves whole-group duty scope and the explicit five-minute S3 window', () => {
-  expect(batch.filter(value => value.dutyCycle === 1)).toHaveLength(120);
-  expect(batch.filter(value => value.dutyCycle === 0.5)).toHaveLength(1);
-  expect(batch.filter(value => value.dutyCycle === undefined)).toHaveLength(79);
+  expect(batch.map(beforeReservedOctober31Followup).filter(value => value.dutyCycle === 1)).toHaveLength(120);
+  expect(batch.map(beforeReservedOctober31Followup).filter(value => value.dutyCycle === 0.5)).toHaveLength(1);
+  expect(batch.map(beforeReservedOctober31Followup).filter(value => value.dutyCycle === undefined)).toHaveLength(79);
   expect(product('G 15').dutyCycle).toBeUndefined(); expect(product('RLR 750').dutyCycle).toBeUndefined();
   expect(product('FC229MK103').dutyCycle).toBeUndefined();
   expect(product('FCOL22LS6').editorial.limitations.join(' ')).toContain('cinq minutes de marche suivies de cinq minutes d’arrêt');

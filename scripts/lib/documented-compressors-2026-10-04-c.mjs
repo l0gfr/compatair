@@ -1,3 +1,4 @@
+import { applyReservedOctober31Batch } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { applyReviewedOctober21Amendment } from './reviewed-catalog-amendments-2026-10-21.mjs';
 import { applyReviewedOctober20Amendment } from './reviewed-catalog-amendments-2026-10-20.mjs';
 import { applyReviewedOctober19Amendment } from './reviewed-catalog-amendments-2026-10-19.mjs';
@@ -325,7 +326,7 @@ const reviewedManifest = {
   }
 };
 const allowedHosts = new Set(["azure-na-assets.contentstack.com","europe.sullair.com","ozenkompresor.com.tr","www.alup.com","www.ekomak.com","www.matteigroup.com","www.nist.gov","www.scrcompressor.com","www.sullair.com"]);
-export function buildDocumentedCompressorsOctober4C(snapshot) {
+function buildDocumentedCompressorsOctober4CBeforeReservedFollowup(snapshot) {
  if (snapshot.schemaVersion !== 1 || snapshot.batchId !== 'documented-compressors-2026-10-04-c' || snapshot.observedDate !== '2026-10-04' || snapshot.baseline?.sha !== '73062f1df852d326376ffa85e8cd623b4da5687d' || !Array.isArray(snapshot.compressors) || snapshot.compressors.length !== 420 || sha(snapshot.compressors) !== reviewedManifest.recordsSha256) throw new Error('Lot ou transcriptions documentaires non reconnus');
  const sources = new Map(snapshot.sources.map(s => [s.id, s]));
  if (sources.size !== snapshot.sources.length || sources.size !== Object.keys(reviewedManifest.sources).length) throw new Error('Sources documentaires dupliquées ou manquantes');
@@ -409,4 +410,8 @@ export function buildDocumentedCompressorsOctober4C(snapshot) {
   const deliveredText = `${fmt(delivered)} L/min déclarés à ${fmt(measurementPressure)} bar${row.capacityBasis === 'minimum-of-published-FAD-range' ? ', minimum de la plage FAD publiée' : row.capacityBasis === 'maximum-of-published-FAD-range' ? ', maximum de la plage FAD publiée, sans qualification du régime moteur' : ''}.`;
   return { id, slug: id, brand: row.brand, model: row.model, ...(row.mpn ? { mpn: row.mpn } : {}), variant: { familyId: slug(`${row.brand} ${row.normalizedModel ?? row.model}`), label: row.equipment, distinguishingAttributes: { équipement: row.equipment, pressionDeConfiguration: `${fmt(maximum)} bar`, cuve: tank === undefined ? 'Non documentée' : `${fmt(tank)} L`, ...(row.electrical ? { fréquence: `${row.electrical.frequencyHz} Hz` } : {}) } }, ...(tank === undefined ? {} : { tankLiters: tank }), maxPressureBar: maximum, ...(row.maxPressureBasis === 'selected-working-pressure-ceiling' ? { maxPressureBasis: row.maxPressureBasis } : {}), fadCurve: points, ...(duty ? { dutyCycle: duty } : {}), ...(power ? { powerKw: power } : {}), oilType: row.oilType, confidence: 'B', status: 'unknown', image: { src: `/images/products/${id}.svg`, alt: `Repères techniques : ${row.brand} ${row.model}`, sourceUrl: sources.get(row.sourceId).url, sourceLabel: 'Carte technique CompatAir, données déclarées par le constructeur' }, specifications: specs, editorial: { overview: `${row.brand} ${row.model}. ${deliveredText} Configuration constructeur : ${row.equipment}.`, verifiedFacts: [`Pression de la configuration documentée : ${fmt(maximum)} bar.`, ...(tank === undefined ? [] : [tank === 0 ? 'Montage sans réservoir intégré explicitement documenté.' : `Cuve de stockage documentée : ${fmt(tank)} L.`]), `FAD sous pression identifié séparément des valeurs d’aspiration : ${deliveredText}`], limitations: limits }, evidence, fieldSources, notes: ['Portée de la source : FAD-pressure-qualified.', 'Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées.', 'Les caractéristiques décrivent la configuration constructeur indiquée dans cette fiche ; les autres équipements ou alimentations doivent être vérifiés séparément.'] };
  }).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment);
+}
+
+export function buildDocumentedCompressorsOctober4C(...args) {
+ return applyReservedOctober31Batch(buildDocumentedCompressorsOctober4CBeforeReservedFollowup(...args));
 }

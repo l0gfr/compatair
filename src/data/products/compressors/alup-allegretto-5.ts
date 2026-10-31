@@ -22,7 +22,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 756.667
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "oil",
 	"powerKw": 5.5,
 	"confidence": "B",
@@ -63,13 +62,6 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Cycle de service déclaré",
-			"value": "Service continu déclaré sous les conditions constructeur",
-			"evidenceIds": [
-				"october3d-alup-pdf-02-p2"
-			]
-		},
-		{
 			"label": "Alimentation publiée",
 			"value": "Alimentation non précisée dans les extraits retenus",
 			"evidenceIds": [
@@ -96,7 +88,8 @@ const product: CompressorInput = {
 			"Version sur socle retenue ; réservoir externe exclu.",
 			"Fréquence non publiée dans la fiche retenue ; aucune transposition des performances à 50 Hz.",
 			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés.",
+			"Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
 		]
 	},
 	"evidence": [
@@ -129,6 +122,36 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 f1bacd0d7a6c5e66d6a8137febef22fe654b4ed1679b2c90f1492999931a453b de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "alup-allegretto-5-reserved-20261031-1",
+			"sourceUrl": "https://www.alup.com/content/dam/brands/Alup/Product%20Portfolio/Screw%20Compressors/allegretto-2023/leaflet/Alup-Allegretto%202-7%20Sonetto%203-9-Sales%20leaflet-6999640532-EN.pdf#page=7",
+			"sourceLabel": "ALUP Allegretto 5 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 f1bacd0d7a6c5e66d6a8137febef22fe654b4ed1679b2c90f1492999931a453b. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
+		},
+		{
+			"id": "alup-allegretto-5-reserved-20261031-2",
+			"sourceUrl": "https://www.alup.com/content/dam/brands/Alup/Product%20Portfolio/Screw%20Compressors/allegretto-2023/leaflet/Alup-Allegretto%202-7%20Sonetto%203-9-Sales%20leaflet-6999640532-EN.pdf#page=1",
+			"sourceLabel": "ALUP Allegretto 5 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 f1bacd0d7a6c5e66d6a8137febef22fe654b4ed1679b2c90f1492999931a453b. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
+		},
+		{
+			"id": "alup-allegretto-5-reserved-20261031-3",
+			"sourceUrl": "https://www.alup.com/content/dam/brands/Alup/Product%20Portfolio/Screw%20Compressors/allegretto-2023/leaflet/Alup-Allegretto%202-7%20Sonetto%203-9-Sales%20leaflet-6999640532-EN.pdf#page=2",
+			"sourceLabel": "ALUP Allegretto 5 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 f1bacd0d7a6c5e66d6a8137febef22fe654b4ed1679b2c90f1492999931a453b. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
 		}
 	],
 	"fieldSources": {
@@ -137,9 +160,6 @@ const product: CompressorInput = {
 		],
 		"oilType": [
 			"october3d-alup-pdf-02-p1"
-		],
-		"dutyCycle": [
-			"october3d-alup-pdf-02-p2"
 		],
 		"maxPressureBar": [
 			"october3d-alup-pdf-02-p7"

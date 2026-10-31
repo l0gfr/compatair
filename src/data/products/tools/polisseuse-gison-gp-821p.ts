@@ -38,13 +38,16 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-821P. Consommation de régime non précisé : 630 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 2.60 kg. Longueur : 190 mm.",
+		"overview": "GISON GP-821P. Diamètre du plateau : 7 pouces. Vitesse à vide : 2 000 tr/min. Filetage de broche : 5/8 pouce-11. La consommation du tableau n’est pas qualifiée de maximum en charge.",
 		"verifiedFacts": [
 			"Masse : 2.60 kg.",
 			"Longueur : 190 mm.",
 			"Vitesse à vide : 2000 tr/min.",
 			"Diamètre de flexible publié : 6.5 mm.",
-			"Référence constructeur : GP-821P."
+			"Référence constructeur : GP-821P.",
+			"Diamètre du plateau : 7 pouces.",
+			"Vitesse à vide : 2 000 tr/min.",
+			"Filetage de broche : 5/8 pouce-11."
 		],
 		"limitations": [
 			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
@@ -100,6 +103,30 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october-b-gison-tools-p46"
 			]
+		},
+		{
+			"label": "Diamètre du plateau",
+			"value": "7 pouces",
+			"evidenceIds": [
+				"october-b-gison-tools-p46",
+				"polisseuse-gison-gp-821p-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "2 000 tr/min",
+			"evidenceIds": [
+				"october-b-gison-tools-p46",
+				"polisseuse-gison-gp-821p-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Filetage de broche",
+			"value": "5/8 pouce-11",
+			"evidenceIds": [
+				"october-b-gison-tools-p46",
+				"polisseuse-gison-gp-821p-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -112,6 +139,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "polisseuse-gison-gp-821p-reserved-20261031-1",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=46",
+			"sourceLabel": "GISON GP-821P : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Table GISON rendue et relue : identité exacte, unités et caractéristiques propres au modèle. Les consommations non qualifiées restent hors verdict conclusif."
 		}
 	],
 	"fieldSources": {

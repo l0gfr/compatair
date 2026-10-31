@@ -35,7 +35,8 @@ const product: ToolProfileInput = {
 		"limitations": [
 			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
 			"Une consommation moyenne ne constitue pas un débit maximal en usage continu. Vérifier le régime réel auprès du fabricant avant dimensionnement.",
-			"Écarts entre documents fabricant : Masse approximative : relevé de fiche du 27/09/2026 = 0.48 kg ; AIRCRAFT Hauptkatalog 2026/27 = 0.5kg."
+			"Écarts entre documents fabricant : Masse approximative : relevé de fiche du 27/09/2026 = 0.48 kg ; AIRCRAFT Hauptkatalog 2026/27 = 0.5kg.",
+			"La moyenne de 48 L/min n’est pas une consommation maximale ; les treize aiguilles de 1,4 mm et le flexible de 2 m restent propres à la NE Mini PRO."
 		]
 	},
 	"specifications": [
@@ -145,6 +146,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer 702076. Empreinte PDF SHA-256 : 50a8d5b48033badc32fdbd2714265b1bc8d03f5b3127a33c863150e1d9a32cd9. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
+		},
+		{
+			"id": "aircraft-ne-mini-pro-reserved-20261031-1",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=251",
+			"sourceLabel": "Aircraft NE Mini PRO : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 50a8d5b48033badc32fdbd2714265b1bc8d03f5b3127a33c863150e1d9a32cd9. La ligne Aircraft propre à cette référence emploie explicitement une consommation moyenne. Conserver cette moyenne comme observation documentaire, avec la portée de pression indiquée par la table."
 		}
 	],
 	"fieldSources": {

@@ -45,7 +45,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Consommation à vide seule : aucun maximum ou débit en charge supposé ; le verdict reste insufficient_data.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer.",
+			"La colonne Bosch de cette référence donne la consommation à vide ; elle ne sert pas à confirmer un débit en charge."
 		]
 	},
 	"specifications": [
@@ -99,6 +100,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "derouilleur-a-aiguilles-bosch-0-607-560-502-0607560502-reserved-20261031-1",
+			"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf#page=92",
+			"sourceLabel": "Bosch 0 607 560 502 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. Le catalogue Bosch présente la référence sur la page de gauche et les consommations sur la page suivante. Relier les deux pages et conserver le régime exact de la colonne. Pages complémentaires relues : 93."
+		},
+		{
+			"id": "derouilleur-a-aiguilles-bosch-0-607-560-502-0607560502-reserved-20261031-2",
+			"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf#page=4",
+			"sourceLabel": "Bosch 0 607 560 502 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. Le catalogue Bosch présente la référence sur la page de gauche et les consommations sur la page suivante. Relier les deux pages et conserver le régime exact de la colonne. Pages complémentaires relues : 93."
 		}
 	],
 	"fieldSources": {

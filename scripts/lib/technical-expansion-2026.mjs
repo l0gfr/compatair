@@ -1,3 +1,4 @@
+import { applyReservedOctober31Batch } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { applyReviewedOctober31Amendment } from './reviewed-catalog-amendments-2026-10-31.mjs';
 import { applyReviewedOctober30Amendment } from './reviewed-catalog-amendments-2026-10-30.mjs';
 import { applyReviewedOctober27Amendment } from './reviewed-catalog-amendments-2026-10-27.mjs';
@@ -99,7 +100,7 @@ function validateTool(row) {
  equal(row.workingPressureBar.max, pressure, 'Pression maximale du profil différente');
  equal(row.workingPressureBar.min, raw?.flowRegime === 'max-load-free' ? 5 : pressure, 'Pression minimale du profil différente');
 }
-export function buildTechnicalExpansion(compressorSnapshot, toolSnapshot) {
+function buildTechnicalExpansionBeforeReservedFollowup(compressorSnapshot, toolSnapshot) {
  if (compressorSnapshot.rows.length !== 500 || toolSnapshot.rows.length !== 1500) throw new Error('Périmètre du lot technique modifié');
  const compressors = compressorSnapshot.rows.map(row => {
   validateCompressor(row);
@@ -124,4 +125,8 @@ export function buildTechnicalExpansion(compressorSnapshot, toolSnapshot) {
  const products = [...compressors, ...tools];
  for (const key of [p => p.id, p => p.slug, p => `${p.brand}|${p.mpn}`]) if (new Set(products.map(key)).size !== products.length) throw new Error('Référence en double dans le lot technique');
  return { compressors: compressors.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment).map(applyReviewedOctober24Amendment).map(applyReviewedOctober24TechnicalAmendment).map(applyReviewedOctober25Amendment).map(applyReviewedOctober25FollowupAmendment).map(applyReviewedOctober27Amendment).map(applyReviewedOctober30Amendment).map(applyReviewedOctober31Amendment), tools: tools.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment).map(applyReviewedOctober24Amendment).map(applyReviewedOctober24TechnicalAmendment).map(applyReviewedOctober25Amendment).map(applyReviewedOctober25FollowupAmendment).map(applyReviewedOctober27Amendment) };
+}
+
+export function buildTechnicalExpansion(...args) {
+ return applyReservedOctober31Batch(buildTechnicalExpansionBeforeReservedFollowup(...args));
 }

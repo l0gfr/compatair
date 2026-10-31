@@ -1,3 +1,4 @@
+import { applyReservedOctober31Batch } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { createHash } from 'node:crypto';
 const sha = value => createHash('sha256').update(JSON.stringify(value)).digest('hex');
 const slug = value => value.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
@@ -20,7 +21,7 @@ const CFM_TO_LPM = .4719474 * 60;
 const reviewedSnapshotSha256 = '59b1d4e69cef47fcca25ad511f081808582372a97ed142c37ac2b262ac079cbb';
 const allowedHosts = new Set(['www.rolair.com', 'www.sullivan-palatek.com', 'www.airman.co.jp', 'anest-iwata.com.au', 'www.nist.gov']);
 
-export function buildDocumentedCompressorsOctober8(snapshot) {
+function buildDocumentedCompressorsOctober8BeforeReservedFollowup(snapshot) {
  if (snapshot.schemaVersion !== 1 || snapshot.batchId !== 'documented-compressors-2026-10-08' || snapshot.observedDate !== '2026-10-08' || snapshot.baseline?.sha !== 'cf46ffaac88d9a4c05c4cda47573175bfbe7cdf3' || snapshot.baseline.compressors !== 4959 || !Array.isArray(snapshot.compressors) || snapshot.compressors.length !== 200 || sha(snapshot) !== reviewedSnapshotSha256) throw new Error('Lot ou transcriptions documentaires non reconnus');
  const sources = new Map(snapshot.sources.map(s => [s.id, s]));
  if (sources.size !== snapshot.sources.length || sources.size !== 108) throw new Error('Sources documentaires dupliquées ou absentes');
@@ -135,4 +136,8 @@ export function buildDocumentedCompressorsOctober8(snapshot) {
    notes: ['Portée de la source : FAD-pressure-qualified.', 'Originaux archivés en privé avec date, HTTP, MIME, URL finale, octets et SHA-256 ; seuls les extraits techniques utiles sont versionnés.', 'Les caractéristiques décrivent la référence et le marché constructeur documentés ; aucun maximum ou cycle numérique n’est extrapolé.'],
   };
  });
+}
+
+export function buildDocumentedCompressorsOctober8(...args) {
+ return applyReservedOctober31Batch(buildDocumentedCompressorsOctober8BeforeReservedFollowup(...args));
 }

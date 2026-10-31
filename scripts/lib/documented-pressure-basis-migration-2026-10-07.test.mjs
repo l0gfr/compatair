@@ -94,6 +94,7 @@ const beforeOctober24 = value => {
 const cards19 = new Map(JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-10-19.json', import.meta.url), 'utf8')).technicalCards.map(card=>[card.path,card]));
 const cards20 = new Map(JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-10-20.json', import.meta.url), 'utf8')).technicalCards.map(card=>[card.path,card]));
 const cards21 = new Map(JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-10-21.json', import.meta.url), 'utf8')).technicalCards.map(card=>[card.path,card]));
+const cards31 = new Map(JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-10-31-reserved.json', import.meta.url), 'utf8')).technicalCards.map(card=>[card.path,card]));
 const cards25 = new Map(JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-10-25.json', import.meta.url), 'utf8')).technicalCards.map(card=>[card.path,card]));
 const withoutBasis = value => { const p = structuredClone(value); delete p.maxPressureBasis; delete p.fieldSources.maxPressureBasis; return p; };
 const demand = pressure => ({ id: 'fixture', demandModel: 'fixed-flow', workingPressureBar: { min: pressure, typical: pressure, max: pressure }, airflowLpm: { min: 100, typical: 100, max: 100 }, confidence: 'B' });
@@ -116,7 +117,9 @@ describe('documented pressure basis migration October 7', () => {
     const product = loadProduct(expected.id);
     expect(product, expected.id).toEqual(expected);
     canonical.push([product.id, withoutBasis(beforeOctober17(beforeOctober18(beforeOctober19(beforeOctober20(beforeOctober21(beforeOctober24(beforeOctober25Review(product))))))))]);
-    const actualCardHash=digest(readFileSync(new URL(`../../public${product.image.src}`, import.meta.url))), card25=cards25.get(product.image.src);
+    const servedCardHash=digest(readFileSync(new URL(`../../public${product.image.src}`, import.meta.url))), card31=cards31.get(product.image.src);
+    if(card31)expect(servedCardHash,product.id).toBe(card31.afterSha256);
+    const actualCardHash=card31?.beforeSha256??servedCardHash, card25=cards25.get(product.image.src);
     if(card25)expect(actualCardHash,product.id).toBe(card25.afterSha256);
     const beforeOctober25CardHash=card25?.beforeSha256??actualCardHash, card21=cards21.get(product.image.src);
     if(card21) expect(beforeOctober25CardHash).toBe(card21.afterSha256);

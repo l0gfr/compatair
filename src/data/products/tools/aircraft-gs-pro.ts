@@ -23,18 +23,19 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
 	},
 	"editorial": {
-		"overview": "Aircraft GS PRO, référence 2403110. Consommation moyenne publiée : 60 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Course de travail : 1.2 mm. Masse approximative : 0.19 kg.",
+		"overview": "Aircraft GS PRO. Le passage Aircraft cité indique un besoin d’air (éventuellement approximatif), sans le qualifier de moyenne ni de maximum en charge. Le libellé « moyen » est retiré ; la consommation reste non dimensionnante. Référence fabricant : 2403110. Course de travail : 1.2 mm. Masse approximative : 0.19 kg. Type indiqué par le fabricant : Engraving pen.",
 		"verifiedFacts": [
 			"Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
-			"Consommation moyenne publiée : 60 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
 			"Référence fabricant : 2403110.",
 			"Course de travail : 1.2 mm.",
 			"Masse approximative : 0.19 kg.",
-			"Type indiqué par le fabricant : Engraving pen."
+			"Type indiqué par le fabricant : Engraving pen.",
+			"Consommation de régime non précisé publiée : 60 L/min."
 		],
 		"limitations": [
 			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
-			"Une consommation moyenne ne constitue pas un débit maximal en usage continu. Vérifier le régime réel auprès du fabricant avant dimensionnement."
+			"Une consommation moyenne ne constitue pas un débit maximal en usage continu. Vérifier le régime réel auprès du fabricant avant dimensionnement.",
+			"Le passage Aircraft cité indique un besoin d’air (éventuellement approximatif), sans le qualifier de moyenne ni de maximum en charge. Le libellé « moyen » est retiré ; la consommation reste non dimensionnante."
 		]
 	},
 	"specifications": [
@@ -47,9 +48,9 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation moyenne publiée : 60 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
+			"value": "Consommation de régime non précisé publiée : 60 L/min.",
 			"evidenceIds": [
-				"aircraft-2403110-20260927"
+				"aircraft-gs-pro-reserved-20261031-1"
 			]
 		},
 		{
@@ -71,6 +72,14 @@ const product: ToolProfileInput = {
 			"value": "Engraving pen",
 			"evidenceIds": [
 				"aircraft-2403110-20260927"
+			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":60,\"typical\":60,\"max\":60},\"workingPressureBar\":{\"min\":6.3,\"typical\":6.3,\"max\":6.3}}",
+			"evidenceIds": [
+				"aircraft-2403110-20260927",
+				"aircraft-gs-pro-reserved-20261031-1"
 			]
 		}
 	],
@@ -94,6 +103,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer702076. Empreinte PDF SHA-256 : 0135ade86db54fb361677036be1c9de8879e9938de283f62feadbaf24ea824be. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
+		},
+		{
+			"id": "aircraft-gs-pro-reserved-20261031-1",
+			"sourceUrl": "https://oxomi.com/p/3001205/datasheet/download/702076/2403110.pdf?language=de",
+			"sourceLabel": "Aircraft GS PRO : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 9bae60f73e5a955dd43c4eb0ce6ba12c7ed8aad0454ef352988e01dd7c62aa82. Le passage Aircraft cité indique un besoin d’air (éventuellement approximatif), sans le qualifier de moyenne ni de maximum en charge. Le libellé « moyen » est retiré ; la consommation reste non dimensionnante."
 		}
 	],
 	"fieldSources": {
@@ -107,7 +126,7 @@ const product: ToolProfileInput = {
 			"aircraft-2403110-20260927"
 		],
 		"airflowBasis": [
-			"aircraft-2403110-20260927"
+			"aircraft-gs-pro-reserved-20261031-1"
 		]
 	},
 	"notes": [
@@ -118,7 +137,7 @@ const product: ToolProfileInput = {
 		"typical": 60,
 		"max": 60
 	},
-	"airflowBasis": "average"
+	"airflowBasis": "unqualified"
 };
 
 export default product;

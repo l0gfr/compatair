@@ -1,3 +1,4 @@
+import { beforeReservedOctober31Followup } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { beforeOctober31Amendment } from './reviewed-catalog-amendments-2026-10-31.mjs';
 import { beforeOctober30Amendment } from './reviewed-catalog-amendments-2026-10-30.mjs';
 import { beforeOctober28Amendment } from './reviewed-catalog-amendments-2026-10-28.mjs';
@@ -10,6 +11,7 @@ const rows = new Map(JSON.parse(readFileSync(new URL('../../src/data/imports/cat
 // Historical assertions inspect the exact earlier state. Current native/runtime
 // reconstruction and qualification are checked separately in the dated suite.
 export function beforeOctober25Review(product) {
+ product = beforeReservedOctober31Followup(product);
  product = beforeOctober25Followup(beforeOctober27Amendment(beforeOctober28Amendment(beforeOctober30Amendment(beforeOctober31Amendment(product)))));
  const row = rows.get(product.id);
  if (!row) return product;

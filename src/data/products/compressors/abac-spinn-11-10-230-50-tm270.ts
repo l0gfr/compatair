@@ -8,35 +8,30 @@ const product: CompressorInput = {
 	"mpn": "4152022591",
 	"tankLiters": 270,
 	"maxPressureBar": 10,
-	"fadCurve": [
-		{
-			"pressureBar": 10,
-			"litersPerMinute": 1416
-		}
-	],
+	"fadCurve": [],
 	"oilType": "oil",
 	"confidence": "A",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/abac-spinn-11-10-230-50-tm270.webp",
 		"alt": "Repères techniques ABAC SPINN 11 10 230/50 TM270, référence 4152022591",
-		"sourceUrl": "https://shop.abacaircompressors.com/en-INT/products/4152054944/spinn22-8-40050k-e-ce",
+		"sourceUrl": "https://shop.abacaircompressors.com/en-INT/products/4152022591/spinn-11-10-23050-tm270-ce",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "ABAC SPINN 11 10 230/50 TM270, référence 4152022591 : cuve de 270 L, pression maximale publiée de 10 bar. Le point documenté le plus élevé en pression fournit 1 416 L/min à 10 bar. Version sur cuve.",
+		"overview": "ABAC SPINN 11 10 230/50 TM270. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté. La fiche exacte du SPINN 11 remplace la fiche SPINN 2.2 mal rattachée. Elle donne 1 416 L/min FAD et 10 bar maximum, sans pression de mesure explicitement appariée.",
 		"verifiedFacts": [
-			"Débit restitué publié : 1 416 L/min à 10 bar.",
 			"Compresseur rotatif à vis lubrifié, famille SPINN. Puissance moteur publiée : 11,2 kW.",
 			"Masse nette publiée : 232 kg.",
-			"Alimentation publiée : 230 V, 50 Hz, triphasée.",
-			"Fonctionnement continu déclaré par le constructeur pour cette gamme ; taux de marche normalisé à 100 %."
+			"Alimentation publiée : 230 V, 50 Hz, triphasée."
 		],
 		"limitations": [
 			"Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
 			"Le fonctionnement continu est une déclaration de gamme ; respecter les conditions de la notice. La disponibilité commerciale reste à confirmer.",
 			"Version électrique exacte à vérifier à la commande ; une alimentation 230 V peut être triphasée.",
-			"Le débit publié appartient à cette référence et à sa version de pression. Il ne définit pas une courbe complète."
+			"Le débit publié appartient à cette référence et à sa version de pression. Il ne définit pas une courbe complète.",
+			"Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté.",
+			"La fiche exacte du SPINN 11 remplace la fiche SPINN 2.2 mal rattachée. Elle donne 1 416 L/min FAD et 10 bar maximum, sans pression de mesure explicitement appariée."
 		]
 	},
 	"specifications": [
@@ -62,10 +57,11 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Taux de marche constructeur",
-			"value": "100 %, fonctionnement continu déclaré pour la gamme. Respecter les conditions de la notice de la référence.",
+			"label": "Relevé historique FAD, pression de mesure à confirmer",
+			"value": "[{\"pressureBar\":10,\"litersPerMinute\":1416}]",
 			"evidenceIds": [
-				"abac-spinn-11-10-230-50-tm270-continuous-duty-20260927"
+				"abac-4152022591-20260926",
+				"abac-spinn-11-10-230-50-tm270-reserved-20261031-1"
 			]
 		}
 	],
@@ -87,6 +83,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Déclaration de la gamme ABAC à vis ; uniquement les références SPINN, FORMULA et GENESIS revues individuellement dans ce lot."
+		},
+		{
+			"id": "abac-spinn-11-10-230-50-tm270-reserved-20261031-1",
+			"sourceUrl": "https://shop.abacaircompressors.com/en-INT/products/4152022591/spinn-11-10-23050-tm270-ce",
+			"sourceLabel": "ABAC SPINN 11 10 230/50 TM270 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 13e5808bdb26946f71fa98bea80229e62527e11fe96ba43b72d6a95c6c4a95bc. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté. La fiche exacte du SPINN 11 remplace la fiche SPINN 2.2 mal rattachée. Elle donne 1 416 L/min FAD et 10 bar maximum, sans pression de mesure explicitement appariée."
 		}
 	],
 	"fieldSources": {
@@ -97,9 +103,6 @@ const product: CompressorInput = {
 			"abac-4152022591-20260926"
 		],
 		"maxPressureBar": [
-			"abac-4152022591-20260926"
-		],
-		"fadCurve": [
 			"abac-4152022591-20260926"
 		],
 		"oilType": [
@@ -117,8 +120,8 @@ const product: CompressorInput = {
 		"phase": [
 			"abac-4152022591-20260926"
 		],
-		"dutyCycle": [
-			"abac-spinn-11-10-230-50-tm270-continuous-duty-20260927"
+		"fadCurve": [
+			"abac-spinn-11-10-230-50-tm270-reserved-20261031-1"
 		]
 	},
 	"notes": [
@@ -127,8 +130,7 @@ const product: CompressorInput = {
 	"powerKw": 11.2,
 	"weightKg": 232,
 	"voltage": "230 V, 50 Hz",
-	"phase": "three-phase",
-	"dutyCycle": 1
+	"phase": "three-phase"
 };
 
 export default product;

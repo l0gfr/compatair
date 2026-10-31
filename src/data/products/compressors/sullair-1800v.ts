@@ -77,13 +77,23 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4c-sullair-senergy-p8"
       ]
+    },
+    {
+      "label": "Lecture du tableau constructeur",
+      "value": "Tableau S-energy 50 Hz : modèle 1800V, 84 cfm à 175 psi en pleine charge. La vitesse variable ne documente pas à elle seule un taux de marche du groupe.",
+      "evidenceIds": [
+        "october4c-sullair-senergy-p8",
+        "sullair-1800v-reserved-20261031-1",
+        "sullair-1800v-reserved-20261031-2"
+      ]
     }
   ],
   "editorial": {
     "overview": "Sullair 1800V. 2 378,615 L/min déclarés à 12,066 bar. Configuration constructeur : Compresseur S-energy à vitesse variable, configuration 50 Hz.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 12,066 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 2 378,615 L/min déclarés à 12,066 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 2 378,615 L/min déclarés à 12,066 bar.",
+      "Tableau S-energy 50 Hz : modèle 1800V, 84 cfm à 175 psi en pleine charge. La vitesse variable ne documente pas à elle seule un taux de marche du groupe."
     ],
     "limitations": [
       "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
@@ -112,6 +122,26 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 057d9641caab13e6632aa7f70eeb1b76d676ae3e131b3e6ed73b8bf6ca0c28c3 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "sullair-1800v-reserved-20261031-1",
+      "sourceUrl": "https://europe.sullair.com/sites/default/files/2024-09/LIT_S-energy%2025-40%20hp%20Brochure_en.pdf#page=8",
+      "sourceLabel": "Sullair 1800V : relecture documentaire du 31 octobre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-31",
+      "confidence": "B",
+      "notes": "SHA-256 0bfcedbf70fc8d6c6c7cb4255d260d7d029e3372c9459abec79267e5893786cd. Tableau S-energy 50 Hz : modèle 1800V, 84 cfm à 175 psi en pleine charge. La vitesse variable ne documente pas à elle seule un taux de marche du groupe."
+    },
+    {
+      "id": "sullair-1800v-reserved-20261031-2",
+      "sourceUrl": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+      "sourceLabel": "NIST, Guide for the Use of the International System of Units, Appendix B.8",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-31",
+      "confidence": "B",
+      "notes": "SHA-256 992d3ba563c488bafab61059fe47eb7238178b9def650a0b8c11707cc887699f. Facteurs de conversion d’unités uniquement. La référence, le régime et la pression de mesure de la machine dépendent de ses documents constructeur, cités séparément."
     }
   ],
   "fieldSources": {
@@ -139,4 +169,5 @@ const product: CompressorInput = {
     "Les caractéristiques décrivent la configuration constructeur indiquée dans cette fiche ; les autres équipements ou alimentations doivent être vérifiés séparément."
   ]
 };
+
 export default product;

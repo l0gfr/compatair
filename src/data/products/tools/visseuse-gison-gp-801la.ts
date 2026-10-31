@@ -33,13 +33,16 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-801LA. La consommation par minute ou par cycle n’est pas établie dans ce tableau ; aucune demande n’est déduite de la vitesse ou de la puissance. Masse : 0.90 kg. Longueur : 150 mm.",
+		"overview": "GISON GP-801LA. Table GISON rendue et relue : identité exacte, unités et caractéristiques propres au modèle. Les consommations non qualifiées restent hors verdict conclusif. Masse : 0.90 kg. Longueur : 150 mm. Vitesse à vide : 13000 tr/min. Diamètre de flexible publié : 6.5 mm. Référence constructeur : GP-801LA. Vitesse à vide : 13 000 tr/min. Hexagone d’entraînement : 1/4 pouce. Couple maximal publié : 26 ft-lb (35 Nm).",
 		"verifiedFacts": [
 			"Masse : 0.90 kg.",
 			"Longueur : 150 mm.",
 			"Vitesse à vide : 13000 tr/min.",
 			"Diamètre de flexible publié : 6.5 mm.",
-			"Référence constructeur : GP-801LA."
+			"Référence constructeur : GP-801LA.",
+			"Vitesse à vide : 13 000 tr/min.",
+			"Hexagone d’entraînement : 1/4 pouce.",
+			"Couple maximal publié : 26 ft-lb (35 Nm)."
 		],
 		"limitations": [
 			"La consommation par minute ou par cycle n’est pas établie dans ce tableau ; aucune demande n’est déduite de la vitesse ou de la puissance.",
@@ -95,6 +98,30 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october-b-gison-tools-p66"
 			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "13 000 tr/min",
+			"evidenceIds": [
+				"october-b-gison-tools-p66",
+				"visseuse-gison-gp-801la-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Hexagone d’entraînement",
+			"value": "1/4 pouce",
+			"evidenceIds": [
+				"october-b-gison-tools-p66",
+				"visseuse-gison-gp-801la-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Couple maximal publié",
+			"value": "26 ft-lb (35 Nm)",
+			"evidenceIds": [
+				"october-b-gison-tools-p66",
+				"visseuse-gison-gp-801la-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -107,6 +134,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "visseuse-gison-gp-801la-reserved-20261031-1",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=66",
+			"sourceLabel": "GISON GP-801LA : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Table GISON rendue et relue : identité exacte, unités et caractéristiques propres au modèle. Les consommations non qualifiées restent hors verdict conclusif."
 		}
 	],
 	"fieldSources": {

@@ -37,7 +37,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SATA SATAjet 100 B F HVLP 2.1 (réf. 145748). Consommation de référence en fonctionnement : 350 L/min à 2 bar.",
+		"overview": "SATA SATAjet 100 B F HVLP 2.1 (réf. 145748). Consommation de référence en fonctionnement : 350 Nl/min à 2 bar.",
 		"verifiedFacts": [
 			"Technologie de pulvérisation : HVLP.",
 			"Buse : 2,1 mm.",
@@ -161,6 +161,46 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-13",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 120fd4b58cf8df73fb5f9e531c66be0167896f63bb7505c55207adb9de4d9f99. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-2-1-145748-reserved-20261031-1",
+			"sourceUrl": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806#page=34",
+			"sourceLabel": "SATA SATAjet 100 B F HVLP 2.1 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3. Les deux passages SATA relus donnent 350 Nl/min à 2 bar. Corriger les libellés résiduels L/min dans la présentation sans changer la valeur technique ni sa pression."
+		},
+		{
+			"id": "pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-2-1-145748-reserved-20261031-2",
+			"sourceUrl": "https://www.sata.com/media/91/a2/99/1791809356/BETRIEBSANLEITUNG-SATAJET-100-B.PDF.PDF?ts=1791809356#page=132",
+			"sourceLabel": "SATA SATAjet 100 B F HVLP 2.1 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 120fd4b58cf8df73fb5f9e531c66be0167896f63bb7505c55207adb9de4d9f99. Les deux passages SATA relus donnent 350 Nl/min à 2 bar. Corriger les libellés résiduels L/min dans la présentation sans changer la valeur technique ni sa pression."
+		},
+		{
+			"id": "pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-2-1-145748-reserved-20261031-3",
+			"sourceUrl": "https://www.sata.com/media/91/a2/99/1791809356/BETRIEBSANLEITUNG-SATAJET-100-B.PDF.PDF?ts=1791809356#page=134",
+			"sourceLabel": "SATA SATAjet 100 B F HVLP 2.1 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 120fd4b58cf8df73fb5f9e531c66be0167896f63bb7505c55207adb9de4d9f99. Les deux passages SATA relus donnent 350 Nl/min à 2 bar. Corriger les libellés résiduels L/min dans la présentation sans changer la valeur technique ni sa pression."
+		},
+		{
+			"id": "pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-2-1-145748-reserved-20261031-4",
+			"sourceUrl": "https://www.sata.com/media/91/a2/99/1791809356/BETRIEBSANLEITUNG-SATAJET-100-B.PDF.PDF?ts=1791809356#page=135",
+			"sourceLabel": "SATA SATAjet 100 B F HVLP 2.1 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 120fd4b58cf8df73fb5f9e531c66be0167896f63bb7505c55207adb9de4d9f99. Les deux passages SATA relus donnent 350 Nl/min à 2 bar. Corriger les libellés résiduels L/min dans la présentation sans changer la valeur technique ni sa pression."
 		}
 	],
 	"fieldSources": {
@@ -175,7 +215,7 @@ const product: ToolProfileInput = {
 		]
 	},
 	"notes": [
-		"Consommation de référence en fonctionnement : 350 L/min à 2 bar."
+		"Consommation de référence en fonctionnement : 350 Nl/min à 2 bar."
 	]
 };
 

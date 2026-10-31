@@ -23,18 +23,19 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Mirka AP 300NV, référence 8992340311. Consommation publiée : 626 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Puissance publiée : 298 W. Vitesse de rotation : 3200 tr/min.",
+		"overview": "Mirka AP 300NV. La table donne la consommation et la pression de travail, sans qualifier le débit de maximum, de moyenne ni de débit en charge. Le moteur conserve un résultat indéterminé pour ce point. Référence fabricant : 8992340311. Puissance publiée : 298 W. Vitesse de rotation : 3200 tr/min. Diamètre de plateau publié : 77 mm.",
 		"verifiedFacts": [
 			"Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
-			"Consommation publiée : 626 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
 			"Référence fabricant : 8992340311.",
 			"Puissance publiée : 298 W.",
 			"Vitesse de rotation : 3200 tr/min.",
-			"Diamètre de plateau publié : 77 mm."
+			"Diamètre de plateau publié : 77 mm.",
+			"Consommation de régime non précisé publiée : 626 L/min."
 		],
 		"limitations": [
 			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
-			"Catalogue 2022/2023 : vérifier la disponibilité actuelle et la référence de plateau avant commande."
+			"Catalogue 2022/2023 : vérifier la disponibilité actuelle et la référence de plateau avant commande.",
+			"La table donne la consommation et la pression de travail, sans qualifier le débit de maximum, de moyenne ni de débit en charge. Le moteur conserve un résultat indéterminé pour ce point."
 		]
 	},
 	"specifications": [
@@ -47,9 +48,9 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation publiée : 626 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
+			"value": "Consommation de régime non précisé publiée : 626 L/min.",
 			"evidenceIds": [
-				"mirka-8992340311-20260927"
+				"mirka-ap-300nv-reserved-20261031-1"
 			]
 		},
 		{
@@ -86,6 +87,14 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"mirka-8992340311-20260927"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":626,\"typical\":626,\"max\":626},\"workingPressureBar\":{\"min\":6.2,\"typical\":6.2,\"max\":6.2}}",
+			"evidenceIds": [
+				"mirka-8992340311-20260927",
+				"mirka-ap-300nv-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -97,6 +106,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation publiée : 626 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+		},
+		{
+			"id": "mirka-ap-300nv-reserved-20261031-1",
+			"sourceUrl": "https://cms.mirka.com/globalassets/msc/pdf/mirka-product-catalog-2022-low-res.pdf#page=118",
+			"sourceLabel": "Mirka AP 300NV : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 2ced0651411b4d8c2cd50ec1e250c15d9fda73d452ffd72b2a9cbe8910647fc2. La table donne la consommation et la pression de travail, sans qualifier le débit de maximum, de moyenne ni de débit en charge. Le moteur conserve un résultat indéterminé pour ce point."
 		}
 	],
 	"fieldSources": {
@@ -108,6 +127,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"mirka-8992340311-20260927"
+		],
+		"airflowBasis": [
+			"mirka-ap-300nv-reserved-20261031-1"
 		]
 	},
 	"notes": [
@@ -117,7 +139,8 @@ const product: ToolProfileInput = {
 		"min": 626,
 		"typical": 626,
 		"max": 626
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

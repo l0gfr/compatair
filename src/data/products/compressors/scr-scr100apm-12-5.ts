@@ -82,13 +82,22 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4c-scr-59-p1"
       ]
+    },
+    {
+      "label": "Lecture du tableau constructeur",
+      "value": "SCR100APM à 12,5 bar : plage FAD publiée de 2,3 à 10,1 m³/min. Les 10 100 L/min représentent la borne haute ; aucune borne minimale ni capacité continue du groupe n’en est déduite.",
+      "evidenceIds": [
+        "october4c-scr-59-p1",
+        "scr-scr100apm-12-5-reserved-20261031-1"
+      ]
     }
   ],
   "editorial": {
     "overview": "SCR SCR100APM-12.5. 10 100 L/min déclarés à 12,5 bar, maximum de la plage FAD publiée, sans qualification du régime moteur. Configuration constructeur : SCR100APM-12.5.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 12,5 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 10 100 L/min déclarés à 12,5 bar, maximum de la plage FAD publiée, sans qualification du régime moteur."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 10 100 L/min déclarés à 12,5 bar, maximum de la plage FAD publiée, sans qualification du régime moteur.",
+      "SCR100APM à 12,5 bar : plage FAD publiée de 2,3 à 10,1 m³/min. Les 10 100 L/min représentent la borne haute ; aucune borne minimale ni capacité continue du groupe n’en est déduite."
     ],
     "limitations": [
       "Cuve et cycle de service non documentés. Pressions et tensions variantes regroupées avant décompte.",
@@ -109,6 +118,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 a62f53f2a9a024efab7183c6053e620439a81162ab801a7efa11efcf46bf6ddf de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "scr-scr100apm-12-5-reserved-20261031-1",
+      "sourceUrl": "https://www.scrcompressor.com/en/products/pm_screw_compressor/59.html",
+      "sourceLabel": "SCR SCR100APM-12.5 : relecture documentaire du 31 octobre 2026",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-31",
+      "confidence": "B",
+      "notes": "SHA-256 a62f53f2a9a024efab7183c6053e620439a81162ab801a7efa11efcf46bf6ddf. SCR100APM à 12,5 bar : plage FAD publiée de 2,3 à 10,1 m³/min. Les 10 100 L/min représentent la borne haute ; aucune borne minimale ni capacité continue du groupe n’en est déduite."
     }
   ],
   "fieldSources": {
@@ -137,4 +156,5 @@ const product: CompressorInput = {
     "Les caractéristiques décrivent la configuration constructeur indiquée dans cette fiche ; les autres équipements ou alimentations doivent être vérifiés séparément."
   ]
 };
+
 export default product;

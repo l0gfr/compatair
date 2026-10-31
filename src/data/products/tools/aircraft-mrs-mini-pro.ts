@@ -23,18 +23,19 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
 	},
 	"editorial": {
-		"overview": "Aircraft MRS Mini PRO, référence 2406100. Consommation moyenne publiée : 84 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Diamètre intérieur du flexible : 10 mm. Vitesse de rotation : 400 min¯¹.",
+		"overview": "Aircraft MRS Mini PRO. Le passage Aircraft cité indique un besoin d’air (éventuellement approximatif), sans le qualifier de moyenne ni de maximum en charge. Le libellé « moyen » est retiré ; la consommation reste non dimensionnante. Référence fabricant : 2406100. Diamètre intérieur du flexible : 10 mm. Vitesse de rotation : 400 min¯¹. Mandrin ou entraînement publié : Square 3/8 \".",
 		"verifiedFacts": [
 			"Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
-			"Consommation moyenne publiée : 84 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
 			"Référence fabricant : 2406100.",
 			"Diamètre intérieur du flexible : 10 mm.",
 			"Vitesse de rotation : 400 min¯¹.",
-			"Mandrin ou entraînement publié : Square 3/8 \"."
+			"Mandrin ou entraînement publié : Square 3/8 \".",
+			"Consommation de régime non précisé publiée : 84 L/min."
 		],
 		"limitations": [
 			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
-			"Une consommation moyenne ne constitue pas un débit maximal en usage continu. Vérifier le régime réel auprès du fabricant avant dimensionnement."
+			"Une consommation moyenne ne constitue pas un débit maximal en usage continu. Vérifier le régime réel auprès du fabricant avant dimensionnement.",
+			"Le passage Aircraft cité indique un besoin d’air (éventuellement approximatif), sans le qualifier de moyenne ni de maximum en charge. Le libellé « moyen » est retiré ; la consommation reste non dimensionnante."
 		]
 	},
 	"specifications": [
@@ -47,9 +48,9 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation moyenne publiée : 84 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
+			"value": "Consommation de régime non précisé publiée : 84 L/min.",
 			"evidenceIds": [
-				"aircraft-2406100-20260927"
+				"aircraft-mrs-mini-pro-reserved-20261031-1"
 			]
 		},
 		{
@@ -114,6 +115,14 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"aircraft-2406100-20260927"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":84,\"typical\":84,\"max\":84},\"workingPressureBar\":{\"min\":6.3,\"typical\":6.3,\"max\":6.3}}",
+			"evidenceIds": [
+				"aircraft-2406100-20260927",
+				"aircraft-mrs-mini-pro-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -136,6 +145,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer 702076. Empreinte PDF SHA-256 : d3ff1227dfeec8ba33219f229723e8cbd9f1ae309a7d5950cdadd05cecc9eee3. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
+		},
+		{
+			"id": "aircraft-mrs-mini-pro-reserved-20261031-1",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=254",
+			"sourceLabel": "Aircraft MRS Mini PRO : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 d3ff1227dfeec8ba33219f229723e8cbd9f1ae309a7d5950cdadd05cecc9eee3. Le passage Aircraft cité indique un besoin d’air (éventuellement approximatif), sans le qualifier de moyenne ni de maximum en charge. Le libellé « moyen » est retiré ; la consommation reste non dimensionnante."
 		}
 	],
 	"fieldSources": {
@@ -149,7 +168,7 @@ const product: ToolProfileInput = {
 			"aircraft-2406100-20260927"
 		],
 		"airflowBasis": [
-			"aircraft-2406100-20260927"
+			"aircraft-mrs-mini-pro-reserved-20261031-1"
 		]
 	},
 	"notes": [
@@ -160,7 +179,7 @@ const product: ToolProfileInput = {
 		"typical": 84,
 		"max": 84
 	},
-	"airflowBasis": "average"
+	"airflowBasis": "unqualified"
 };
 
 export default product;

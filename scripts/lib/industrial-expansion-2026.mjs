@@ -1,3 +1,4 @@
+import { applyReservedOctober31Batch } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { applyReviewedOctober25FollowupAmendment } from './reviewed-catalog-amendments-2026-10-25-b.mjs';
 import { applyReviewedOctober25Amendment } from './reviewed-catalog-amendments-2026-10-25.mjs';
 import { applyReviewedOctober24TechnicalAmendment } from './reviewed-catalog-amendments-2026-10-24-b.mjs';
@@ -31,7 +32,7 @@ export function validateIndustrialRow(row) {
 		if (row.oilType !== 'oil' || (row.brand === 'ABAC' ? !(Number(fields['Oil capacity']) > 0) : !row.fieldEvidence?.oilType?.length)) throw new Error('Lubrification non prouvée');
 	}
 }
-export function buildIndustrialExpansion({ industrial, cp, dynabrade }) {
+function buildIndustrialExpansionBeforeReservedFollowup({ industrial, cp, dynabrade }) {
 	if (industrial.rows.length !== 200 || industrial.toolRows.length !== 454 || cp.rows.length !== 10 || dynabrade.rows.length !== 36) throw new Error('Périmètre du lot modifié');
 	const compressors = industrial.rows.map(row => {
 		validateIndustrialRow(row);
@@ -62,4 +63,8 @@ export function buildIndustrialExpansion({ industrial, cp, dynabrade }) {
 	const products = [...compressors, ...tools];
 	for (const key of [p => p.id, p => p.slug, p => `${p.brand}|${p.mpn}`]) if (new Set(products.map(key)).size !== products.length) throw new Error('Référence en double dans le lot');
 	return { compressors: compressors.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment).map(applyReviewedOctober24Amendment).map(applyReviewedOctober24TechnicalAmendment).map(applyReviewedOctober25Amendment).map(applyReviewedOctober25FollowupAmendment), tools: tools.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment).map(applyReviewedOctober24Amendment).map(applyReviewedOctober24TechnicalAmendment).map(applyReviewedOctober25Amendment).map(applyReviewedOctober25FollowupAmendment) };
+}
+
+export function buildIndustrialExpansion(...args) {
+ return applyReservedOctober31Batch(buildIndustrialExpansionBeforeReservedFollowup(...args));
 }

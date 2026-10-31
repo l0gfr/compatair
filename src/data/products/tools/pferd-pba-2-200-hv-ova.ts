@@ -23,19 +23,20 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "PFERD PBA 2/200 HV oVA, référence 80705052. Le dimensionnement utilise 550 L/min à 6,3 bar, selon les régimes publiés par le fabricant. Longueur : 210 mm. Poids net de la machine : 0.604 kg. Puissance délivrée : 230 Watt.",
+		"overview": "PFERD PBA 2/200 HV oVA. La fiche PFERD distingue la consommation à vide de la consommation sous charge. Le débit actuellement retenu correspond à la colonne à vide et conserve cette qualification ; la pression est indiquée comme pression de service. Référence fabricant : 80705052. Longueur : 210 mm. Poids net de la machine : 0.604 kg. Puissance délivrée : 230 Watt.",
 		"verifiedFacts": [
 			"Pression de service publiée sur cette fiche : 6.3 bar. Aucune autre pression de fonctionnement n’est déduite.",
-			"Consommation sous charge : 0.45 m³/min ; à vide : 0.55 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 550 L/min (m³/min × 1 000).",
+			"Consommation sous charge : 0.45 m³/min ; à vide : 0.55 m³/min.",
 			"Référence fabricant : 80705052.",
 			"Longueur : 210 mm.",
 			"Poids net de la machine : 0.604 kg.",
-			"Puissance délivrée : 230 Watt."
+			"Puissance délivrée : 230 Watt.",
+			"Consommation à vide publiée : 550 L/min."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
 			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
-			"La valeur la plus élevée à vide ou en charge couvre les deux régimes documentés ; aucune moyenne de cycle n’est substituée à ces valeurs."
+			"La fiche PFERD distingue la consommation à vide de la consommation sous charge. Le débit actuellement retenu correspond à la colonne à vide et conserve cette qualification ; la pression est indiquée comme pression de service."
 		]
 	},
 	"specifications": [
@@ -48,9 +49,9 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation sous charge : 0.45 m³/min ; à vide : 0.55 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 550 L/min (m³/min × 1 000).",
+			"value": "Consommation sous charge : 0.45 m³/min ; à vide : 0.55 m³/min.",
 			"evidenceIds": [
-				"pferd-80705052-20260927"
+				"pferd-pba-2-200-hv-ova-reserved-20261031-1"
 			]
 		},
 		{
@@ -87,6 +88,14 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"pferd-80705052-20260927"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":550,\"typical\":550,\"max\":550},\"workingPressureBar\":{\"min\":6.3,\"typical\":6.3,\"max\":6.3}}",
+			"evidenceIds": [
+				"pferd-80705052-20260927",
+				"pferd-pba-2-200-hv-ova-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -98,6 +107,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation sous charge : 0.45 m³/min ; à vide : 0.55 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 550 L/min (m³/min × 1 000)."
+		},
+		{
+			"id": "pferd-pba-2-200-hv-ova-reserved-20261031-1",
+			"sourceUrl": "https://fr.pferd.com/fr/ponceuse-a-bande-pneumatique-pba-2200-hv-ova",
+			"sourceLabel": "PFERD PBA 2/200 HV oVA : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 9b9899992bb900430ce7ef5549586d22010c118677bb276982448904f4553ebd. La fiche PFERD distingue la consommation à vide de la consommation sous charge. Le débit actuellement retenu correspond à la colonne à vide et conserve cette qualification ; la pression est indiquée comme pression de service."
 		}
 	],
 	"fieldSources": {
@@ -109,6 +128,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"pferd-80705052-20260927"
+		],
+		"airflowBasis": [
+			"pferd-pba-2-200-hv-ova-reserved-20261031-1"
 		]
 	},
 	"notes": [
@@ -118,7 +140,8 @@ const product: ToolProfileInput = {
 		"min": 550,
 		"typical": 550,
 		"max": 550
-	}
+	},
+	"airflowBasis": "free-speed"
 };
 
 export default product;

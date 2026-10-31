@@ -38,17 +38,18 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Atlas Copco LSO30 H070-3 (réf. 8423036024). Consommation maximale : 450 L/min à 6,3 bar. Consommations originales : 7.5 L/s ; 16 cfm. Vitesse à vide : 7000 tr/min.",
+		"overview": "Atlas Copco LSO30 H070-3. Le tableau Atlas Copco nomme explicitement cette colonne « Air consumption at free speed ». La convention générale de consommation maximale ne remplace pas cette exception ; le débit reste à vide. Désignation et configuration documentées à la page PDF 224. Vitesse à vide : 7000 tr/min. Masse : 1.7 kg.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 224.",
-			"Consommations originales : 7.5 L/s ; 16 cfm.",
 			"Vitesse à vide : 7000 tr/min.",
-			"Masse : 1.7 kg."
+			"Masse : 1.7 kg.",
+			"Consommation à vide publiée : 450 L/min."
 		],
 		"limitations": [
 			"Le débit publié conserve son régime de mesure ; aucun cycle supposé ne réduit la consommation.",
 			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier.",
+			"Le tableau Atlas Copco nomme explicitement cette colonne « Air consumption at free speed ». La convention générale de consommation maximale ne remplace pas cette exception ; le débit reste à vide."
 		]
 	},
 	"specifications": [
@@ -79,6 +80,15 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-d-atlas-tools-p224"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":450,\"typical\":450,\"max\":450},\"workingPressureBar\":{\"min\":6.3,\"typical\":6.3,\"max\":6.3}}",
+			"evidenceIds": [
+				"documented-d-atlas-tools-p224",
+				"ponceuse-vibrante-atlas-copco-lso30-h070-3-8423036024-reserved-20261031-1",
+				"ponceuse-vibrante-atlas-copco-lso30-h070-3-8423036024-reserved-20261031-2"
+			]
 		}
 	],
 	"evidence": [
@@ -101,6 +111,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "ponceuse-vibrante-atlas-copco-lso30-h070-3-8423036024-reserved-20261031-1",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf#page=224",
+			"sourceLabel": "Atlas Copco LSO30 H070-3 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Le tableau Atlas Copco nomme explicitement cette colonne « Air consumption at free speed ». La convention générale de consommation maximale ne remplace pas cette exception ; le débit reste à vide."
+		},
+		{
+			"id": "ponceuse-vibrante-atlas-copco-lso30-h070-3-8423036024-reserved-20261031-2",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf#page=3",
+			"sourceLabel": "Atlas Copco LSO30 H070-3 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Le tableau Atlas Copco nomme explicitement cette colonne « Air consumption at free speed ». La convention générale de consommation maximale ne remplace pas cette exception ; le débit reste à vide."
 		}
 	],
 	"fieldSources": {
@@ -113,11 +143,14 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"documented-d-atlas-tools-p224"
+		],
+		"airflowBasis": [
+			"ponceuse-vibrante-atlas-copco-lso30-h070-3-8423036024-reserved-20261031-1",
+			"ponceuse-vibrante-atlas-copco-lso30-h070-3-8423036024-reserved-20261031-2"
 		]
 	},
-	"notes": [
-		"Consommation maximale : 450 L/min à 6,3 bar."
-	]
+	"notes": [],
+	"airflowBasis": "free-speed"
 };
 
 export default product;

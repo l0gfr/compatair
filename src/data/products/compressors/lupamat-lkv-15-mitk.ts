@@ -67,6 +67,14 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october4-lupamat-current-catalog-p13"
 			]
+		},
+		{
+			"label": "Lecture du tableau constructeur",
+			"value": "Le tableau distingue les configurations 7, 10 et 13 bar : 2,39 / 2,01 / 1,65 m³/min. Seule la configuration 13 bar est retenue dans le calcul ; ces versions ne forment pas une courbe mesurée d’une même machine.",
+			"evidenceIds": [
+				"october4-lupamat-current-catalog-p13",
+				"lupamat-lkv-15-mitk-reserved-20261031-1"
+			]
 		}
 	],
 	"editorial": {
@@ -74,7 +82,8 @@ const product: CompressorInput = {
 		"verifiedFacts": [
 			"Configuration de pression documentée : 13 bar.",
 			"Cuve de stockage documentée : 548 L.",
-			"FAD sous pression identifié séparément des valeurs d’aspiration : 1 650 L/min déclarés à 13 bar."
+			"FAD sous pression identifié séparément des valeurs d’aspiration : 1 650 L/min déclarés à 13 bar.",
+			"Le tableau distingue les configurations 7, 10 et 13 bar : 2,39 / 2,01 / 1,65 m³/min. Seule la configuration 13 bar est retenue dans le calcul ; ces versions ne forment pas une courbe mesurée d’une même machine."
 		],
 		"limitations": [
 			"Configuration de pression 13 bar retenue dans le triplet 7 / 10 / 13. La version 15 bar sur demande ne fournit pas de FAD dans ce tableau.",
@@ -92,6 +101,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-04",
 			"confidence": "B",
 			"notes": "SHA-256 3330cc258da3e7cf4f293c5af0da2ae3ced11d881237b550687f50e1f01fd978 de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "lupamat-lkv-15-mitk-reserved-20261031-1",
+			"sourceUrl": "https://lupamat.com/pdf/Lupamat-EN-Katalog.pdf#page=13",
+			"sourceLabel": "Lupamat LKV 15 MITK : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 3330cc258da3e7cf4f293c5af0da2ae3ced11d881237b550687f50e1f01fd978. Le tableau distingue les configurations 7, 10 et 13 bar : 2,39 / 2,01 / 1,65 m³/min. Seule la configuration 13 bar est retenue dans le calcul ; ces versions ne forment pas une courbe mesurée d’une même machine."
 		}
 	],
 	"fieldSources": {

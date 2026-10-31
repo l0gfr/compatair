@@ -1,3 +1,4 @@
+import { applyReservedOctober31Batch } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { applyReviewedOctober25FollowupAmendment } from './reviewed-catalog-amendments-2026-10-25-b.mjs';
 import { applyReviewedOctober25Amendment } from './reviewed-catalog-amendments-2026-10-25.mjs';
 import { applyReviewedOctober24TechnicalAmendment } from './reviewed-catalog-amendments-2026-10-24-b.mjs';
@@ -12,7 +13,7 @@ const slug = value => value.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').to
 const finite = value => { if (!Number.isFinite(value) || value <= 0) throw new Error('Valeur source positive requise'); return value; };
 const format = value => value.toLocaleString('fr-FR', { maximumFractionDigits: 3 });
 
-export function buildDocumentedExpansion(snapshot) {
+function buildDocumentedExpansionBeforeReservedFollowup(snapshot) {
 	if (snapshot.schemaVersion !== 1 || snapshot.batchId !== 'documented-expansion-2026-09-30' || snapshot.observedAt !== DATE || snapshot.compressors.length !== 200 || snapshot.tools.length !== 1000) throw new Error('Lot documentaire non reconnu');
 	const sources = new Map(snapshot.sources.map(s => [s.id, s]));
 	if (sources.size !== snapshot.sources.length) throw new Error('Source dupliquée');
@@ -65,4 +66,8 @@ export function buildDocumentedExpansion(snapshot) {
 	const identities = new Set();
 	for (const p of [...compressors, ...tools]) { if (identities.has(p.id)) throw new Error('Identifiant dupliqué'); identities.add(p.id); }
 	return { compressors: compressors.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment).map(applyReviewedOctober24Amendment).map(applyReviewedOctober24TechnicalAmendment).map(applyReviewedOctober25Amendment).map(applyReviewedOctober25FollowupAmendment), tools: tools.map(applyReviewedOctober17Amendment).map(applyReviewedOctober18Amendment).map(applyReviewedOctober19Amendment).map(applyReviewedOctober20Amendment).map(applyReviewedOctober21Amendment).map(applyReviewedOctober24Amendment).map(applyReviewedOctober24TechnicalAmendment).map(applyReviewedOctober25Amendment).map(applyReviewedOctober25FollowupAmendment) };
+}
+
+export function buildDocumentedExpansion(...args) {
+ return applyReservedOctober31Batch(buildDocumentedExpansionBeforeReservedFollowup(...args));
 }

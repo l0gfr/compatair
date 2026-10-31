@@ -37,15 +37,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU U-310SD, code 19662. Le tableau publie une consommation moyenne de 0,15 m³/min, soit 150 L/min. Pression de référence retenue : 6 bar.",
+		"overview": "URYU U-310SD, code 19662. Le tableau publie une consommation moyenne de 0,15 m³/min, soit 150 L/min. Pression de service recommandée : 6 bar.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 19662, page PDF 5.",
-			"Consommation moyenne publiée : 150 L/min après conversion de l’unité originale.",
-			"SPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85psi)\nSPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85psi)\nSPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85psi)"
+			"Consommation moyenne publiée : 150 L/min après conversion de l’unité originale."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
-			"La disponibilité actuelle, les accessoires inclus et les conditions de sécurité doivent être confirmés sur la notice de cette référence."
+			"La disponibilité actuelle, les accessoires inclus et les conditions de sécurité doivent être confirmés sur la notice de cette référence.",
+			"La pression recommandée du tableau n’est pas une attestation de pression de mesure d’un maximum de consommation. La moyenne reste hors verdict conclusif."
 		]
 	},
 	"specifications": [
@@ -88,6 +88,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 bfedea87f312ccc461b6512e0086d674afcec922db3881306259e050187bb373. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		},
+		{
+			"id": "cle-a-impulsions-uryu-u-310sd-19662-reserved-20261031-1",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P30_34.pdf",
+			"sourceLabel": "URYU U-310SD : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 bfedea87f312ccc461b6512e0086d674afcec922db3881306259e050187bb373. La table URYU distingue Average Consumption et Recommended Air Pressure. Nettoyer les lignes OCR répétées et qualifier la pression comme une recommandation de service, sans maximum en charge déduit."
 		}
 	],
 	"fieldSources": {

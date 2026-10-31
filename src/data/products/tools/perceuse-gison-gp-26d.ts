@@ -38,12 +38,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-26D. Consommation de régime non précisé : 800 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 6.40 kg. Longueur : 380 mm.",
+		"overview": "GISON GP-26D. Vitesse à vide publiée : 600 à 1 000 tr/min. Longueur publiée : 380 mm. Masse publiée : 6,40 kg. La consommation du tableau n’est pas qualifiée de maximum en charge.",
 		"verifiedFacts": [
 			"Masse : 6.40 kg.",
 			"Longueur : 380 mm.",
 			"Diamètre de flexible publié : 10 mm.",
-			"Référence constructeur : GP-26D."
+			"Référence constructeur : GP-26D.",
+			"Vitesse à vide publiée : 600 à 1 000 tr/min.",
+			"Longueur publiée : 380 mm.",
+			"Masse publiée : 6,40 kg."
 		],
 		"limitations": [
 			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
@@ -92,6 +95,30 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october-b-gison-tools-p62"
 			]
+		},
+		{
+			"label": "Vitesse à vide publiée",
+			"value": "600 à 1 000 tr/min",
+			"evidenceIds": [
+				"october-b-gison-tools-p62",
+				"perceuse-gison-gp-26d-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Longueur publiée",
+			"value": "380 mm",
+			"evidenceIds": [
+				"october-b-gison-tools-p62",
+				"perceuse-gison-gp-26d-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Masse publiée",
+			"value": "6,40 kg",
+			"evidenceIds": [
+				"october-b-gison-tools-p62",
+				"perceuse-gison-gp-26d-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -104,6 +131,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "perceuse-gison-gp-26d-reserved-20261031-1",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=62",
+			"sourceLabel": "GISON GP-26D : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Table GISON rendue et relue : identité exacte, unités et caractéristiques propres au modèle. Les consommations non qualifiées restent hors verdict conclusif."
 		}
 	],
 	"fieldSources": {

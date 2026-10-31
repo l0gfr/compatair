@@ -24,7 +24,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 690
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "oil",
 	"powerKw": 4,
 	"weightKg": 153,
@@ -71,13 +70,13 @@ const product: CompressorInput = {
 		"overview": "RENNER RS-PRO 4.0, article 310004. Version standard au sol, sans réservoir intégré. Cette référence correspond à la version 7,5 bar ; son débit est 690 L/min à cette pression.",
 		"verifiedFacts": [
 			"Puissance moteur publiée : 4 kW ; poids de cette configuration : 153 kg.",
-			"Débit restitué documenté : 690 L/min à 7,5 bar.",
-			"La documentation de la série prévoit le fonctionnement continu, sous ses conditions d’installation et d’entretien."
+			"Débit restitué documenté : 690 L/min à 7,5 bar."
 		],
 		"limitations": [
 			"La disponibilité commerciale actuelle n’a pas été confirmée.",
 			"Les débits des autres versions de pression ne sont pas ajoutés à la courbe de cet article.",
-			"Le service continu documenté ne dispense pas du contrôle du refroidissement, du traitement d’air et des pertes du réseau."
+			"Le service continu documenté ne dispense pas du contrôle du refroidissement, du traitement d’air et des pertes du réseau.",
+			"Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
 		]
 	},
 	"evidence": [
@@ -100,6 +99,26 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 9c0fb8f947202b1d1f0a04ceef4d26ed8863e8b6cbfe9d1f1451bf603a1f0ae8. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		},
+		{
+			"id": "renner-rs-pro-4-0-310004-reserved-20261031-1",
+			"sourceUrl": "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf",
+			"sourceLabel": "RENNER RS-PRO 4.0 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 35bd2421c2cc333bc6a0d6cd20c09bbf6b3c2af621021cb6cd2a254d23e74f8a. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
+		},
+		{
+			"id": "renner-rs-pro-4-0-310004-reserved-20261031-2",
+			"sourceUrl": "https://shop.hbg-kompressoren.de/wp-content/uploads/2018/11/Prospekt_RS-PRO_RSF-PRO_30-110_DE.pdf",
+			"sourceLabel": "RENNER RS-PRO 4.0 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 9c0fb8f947202b1d1f0a04ceef4d26ed8863e8b6cbfe9d1f1451bf603a1f0ae8. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
 		}
 	],
 	"fieldSources": {
@@ -123,9 +142,6 @@ const product: CompressorInput = {
 		],
 		"weightKg": [
 			"documented-20260930-renner-2026"
-		],
-		"dutyCycle": [
-			"documented-20260930-renner-belt-hbg"
 		]
 	},
 	"notes": [

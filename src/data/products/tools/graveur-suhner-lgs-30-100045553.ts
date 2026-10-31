@@ -29,10 +29,10 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Suhner LGS 30 (réf. 100045553). La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Désignation de la version : LGS 30. Configuration technique imprimée : 4 30 000 057 950 01.",
+		"overview": "Suhner LGS 30. LGS 30 : consommation à vide 0,030 m³/min, fréquence 30 000 min⁻¹, flexible de diamètre 4 mm ; livraison avec flexible de 2 m et raccord G 1/4. La pression de mesure manque. Désignation de la version : LGS 30.",
 		"verifiedFacts": [
 			"Désignation de la version : LGS 30.",
-			"Configuration technique imprimée : 4 30 000 057 950 01."
+			"LGS 30 : consommation à vide 0,030 m³/min, fréquence 30 000 min⁻¹, flexible de diamètre 4 mm ; livraison avec flexible de 2 m et raccord G 1/4. La pression de mesure manque."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -67,6 +67,14 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-suhner-pneumatic-p43"
 			]
+		},
+		{
+			"label": "Lecture du tableau constructeur",
+			"value": "LGS 30 : consommation à vide 0,030 m³/min, fréquence 30 000 min⁻¹, flexible de diamètre 4 mm ; livraison avec flexible de 2 m et raccord G 1/4. La pression de mesure manque.",
+			"evidenceIds": [
+				"october2-tools-suhner-pneumatic-p43",
+				"graveur-suhner-lgs-30-100045553-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -79,6 +87,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 355401bdbabe6cb5a7bfa85064961b89eabb84f7ebad27a03b193f57bc12f7dd. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "graveur-suhner-lgs-30-100045553-reserved-20261031-1",
+			"sourceUrl": "https://www.suhner-abrasive.com/fileadmin/user_upload/Abrasive/04_Einzelkatalog_Druckluftwerkzeuge_EN.pdf#page=43",
+			"sourceLabel": "Suhner LGS 30 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 355401bdbabe6cb5a7bfa85064961b89eabb84f7ebad27a03b193f57bc12f7dd. LGS 30 : consommation à vide 0,030 m³/min, fréquence 30 000 min⁻¹, flexible de diamètre 4 mm ; livraison avec flexible de 2 m et raccord G 1/4. La pression de mesure manque."
 		}
 	],
 	"fieldSources": {

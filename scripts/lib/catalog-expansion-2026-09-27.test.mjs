@@ -1,3 +1,4 @@
+import { applyReservedOctober31Followup } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { applyReviewedOctober25Amendment } from './reviewed-catalog-amendments-2026-10-25.mjs';
 import { applyReviewedAircraftSourceRepair } from './reviewed-aircraft-sources-2026-10-23.mjs';
 import { readFileSync } from 'node:fs';
@@ -37,7 +38,8 @@ const withEarlierReviewedSources = product => {
  for (const fragment of repair.overviewRemovals ?? []) updated.editorial.overview = updated.editorial.overview.replace(fragment, '');
  return updated;
 };
-const withReviewedSources = product => product.id === 'aircraft-airboy-kitt-90' ? applyReviewedOctober25Amendment(applyReviewedAircraftSourceRepair(withEarlierReviewedSources(product))) : applyReviewedAircraftSourceRepair(withEarlierReviewedSources(product));
+const withReviewedSourcesBeforeReserved = product => product.id === 'aircraft-airboy-kitt-90' ? applyReviewedOctober25Amendment(applyReviewedAircraftSourceRepair(withEarlierReviewedSources(product))) : applyReviewedAircraftSourceRepair(withEarlierReviewedSources(product));
+const withReviewedSources = product => applyReservedOctober31Followup(withReviewedSourcesBeforeReserved(product));
 const mutate = (kind, brand, patch) => {
  const data = structuredClone(snapshots);
  const row = data[kind].rows.find(r => r.brand === brand);
@@ -54,7 +56,7 @@ describe('700 additional documented manufacturer references', () => {
  });
  it('reproduces the published products and every critical field from source transcriptions', () => {
   for (const p of expansion.compressors) expect(compressors.find(x => x.id === p.id)).toEqual(compressorSchema.parse(withReviewedSources(p)));
-  for (const p of expansion.tools) expect(tools.find(x => x.id === p.id)).toEqual({ ...toolProfileSchema.parse(withReviewedSources(p)), category: toolCategoryLabel(p.categoryId) });
+  for (const p of expansion.tools) expect(tools.find(x => x.id === p.id)).toEqual({ ...toolProfileSchema.parse(withReviewedSources(p)), category: toolCategoryLabel(withReviewedSources(p).categoryId) });
  });
  it('rejects a relocation that would overwrite an unreviewed source observation', () => {
   const original = expansion.compressors.find(product => relocations.has(product.id) && !['aircraft-airboy-131-of-e', 'aircraft-airboy-186-of-e', 'aircraft-airboy-262-e'].includes(product.id));

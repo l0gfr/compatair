@@ -22,7 +22,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 358.333
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "oil",
 	"powerKw": 3,
 	"confidence": "B",
@@ -63,13 +62,6 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Cycle de service déclaré",
-			"value": "Service continu déclaré sous les conditions constructeur",
-			"evidenceIds": [
-				"october3d-mark-pdf-new-02-p2"
-			]
-		},
-		{
 			"label": "Alimentation publiée",
 			"value": "Alimentation non précisée dans les extraits retenus",
 			"evidenceIds": [
@@ -96,7 +88,8 @@ const product: CompressorInput = {
 			"Version sur socle retenue ; réservoir externe exclu.",
 			"Fréquence non publiée dans la fiche retenue ; aucune transposition des performances à 50 Hz.",
 			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés.",
+			"Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
 		]
 	},
 	"evidence": [
@@ -139,6 +132,46 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 28c022685dd878e93695b877a9a23fda56d17a95ae53e8a61903355e2e4d03cf de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "mark-msm-3-reserved-20261031-1",
+			"sourceUrl": "https://www.mark-compressors.com/content/dam/brands/Mark/products-bp-structure/oil-injected-screw-compressor/fixed-speed/msm-2-2-7/leaflets/Mark_MSM_2.2-7_MSM%202.2-7%20IVR_Sales_Leaflet_EN_Brendola_6999200582.pdf#page=7",
+			"sourceLabel": "MARK MSM 3 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 64d6ab7907e7a65c5c76e427626d86890e4361dbe459f470c317a15b25e3b530. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
+		},
+		{
+			"id": "mark-msm-3-reserved-20261031-2",
+			"sourceUrl": "https://www.mark-compressors.com/content/dam/brands/Mark/products-bp-structure/oil-injected-screw-compressor/fixed-speed/msm-2-2-7/leaflets/Mark_MSM_2.2-7_MSM%202.2-7%20IVR_Sales_Leaflet_EN_Brendola_6999200582.pdf#page=1",
+			"sourceLabel": "MARK MSM 3 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 64d6ab7907e7a65c5c76e427626d86890e4361dbe459f470c317a15b25e3b530. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
+		},
+		{
+			"id": "mark-msm-3-reserved-20261031-3",
+			"sourceUrl": "https://www.mark-compressors.com/content/dam/brands/Mark/products-bp-structure/oil-injected-screw-compressor/fixed-speed/msm-2-2-7/leaflets/Mark_MSM_2.2-7_MSM%202.2-7%20IVR_Sales_Leaflet_EN_Brendola_6999200582.pdf#page=2",
+			"sourceLabel": "MARK MSM 3 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 64d6ab7907e7a65c5c76e427626d86890e4361dbe459f470c317a15b25e3b530. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
+		},
+		{
+			"id": "mark-msm-3-reserved-20261031-4",
+			"sourceUrl": "https://www.mark-compressors.com/en-int/products/screw-compressors/fixed-speed/belt-driven-msm",
+			"sourceLabel": "MARK MSM 3 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 503375c5c238c535b7119970761c5bc076121fcf1404edecce0b0976a33f7811. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
 		}
 	],
 	"fieldSources": {
@@ -147,9 +180,6 @@ const product: CompressorInput = {
 		],
 		"oilType": [
 			"october3d-mark-pdf-new-02-p1"
-		],
-		"dutyCycle": [
-			"october3d-mark-pdf-new-02-p2"
 		],
 		"maxPressureBar": [
 			"october3d-mark-family-03"

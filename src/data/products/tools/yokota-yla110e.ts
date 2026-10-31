@@ -23,18 +23,19 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Yokota YLA110E, référence YLA110E. Le tableau fabricant publie 786 L/min et une plage d’utilisation de 5 à 6 bar. Couple indicatif publié : 65 à 105 Nm. Vitesse à vide : 6000 tr/min.",
+		"overview": "Yokota YLA110E. Le tableau Yokota/Red Rooster/Toku indique une consommation en L/s et une pression de service de 6,3 bar. Le régime de consommation n’est pas défini ; la valeur publiée ne sert pas à confirmer un besoin maximal en charge. La plage du tableau Yokota va de 0,5 à 0,6 MPa, soit 5 à 6 bar ; le point de comparaison retenu est 6 bar. Référence fabricant : YLA110E. Couple indicatif publié : 65 à 105 Nm. Vitesse à vide : 6000 tr/min. Entraînement : 1/2\" carré.",
 		"verifiedFacts": [
 			"La plage du tableau Yokota va de 0,5 à 0,6 MPa, soit 5 à 6 bar ; le point de comparaison retenu est 6 bar.",
-			"Le maximum entre la consommation en charge et à vide est retenu : 13.1 L/s, convertis en 786 L/min par multiplication par 60.",
 			"Référence fabricant : YLA110E.",
 			"Couple indicatif publié : 65 à 105 Nm.",
 			"Vitesse à vide : 6000 tr/min.",
-			"Entraînement : 1/2\" carré."
+			"Entraînement : 1/2\" carré.",
+			"Consommation de régime non précisé publiée : 786 L/min."
 		],
 		"limitations": [
 			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas.",
+			"Le tableau Yokota/Red Rooster/Toku indique une consommation en L/s et une pression de service de 6,3 bar. Le régime de consommation n’est pas défini ; la valeur publiée ne sert pas à confirmer un besoin maximal en charge."
 		]
 	},
 	"specifications": [
@@ -47,9 +48,10 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Le maximum entre la consommation en charge et à vide est retenu : 13.1 L/s, convertis en 786 L/min par multiplication par 60.",
+			"value": "Consommation de régime non précisé publiée : 786 L/min.",
 			"evidenceIds": [
-				"yokota-yla110e-20260926"
+				"yokota-yla110e-reserved-20261031-1",
+				"yokota-yla110e-reserved-20261031-2"
 			]
 		},
 		{
@@ -93,6 +95,15 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"yokota-yla110e-20260926"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":786,\"typical\":786,\"max\":786},\"workingPressureBar\":{\"min\":5,\"typical\":6,\"max\":6}}",
+			"evidenceIds": [
+				"yokota-yla110e-20260926",
+				"yokota-yla110e-reserved-20261031-1",
+				"yokota-yla110e-reserved-20261031-2"
+			]
 		}
 	],
 	"evidence": [
@@ -113,6 +124,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Condition de pression spécifique du tableau Yokota à impulsions."
+		},
+		{
+			"id": "yokota-yla110e-reserved-20261031-1",
+			"sourceUrl": "https://www.rami-yokota.com/media/godd0tdm/2026_fr_outils_d-assemblage_spreads.pdf#page=17",
+			"sourceLabel": "Yokota YLA110E : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 6b7dca4923bfef1dbe2c7f6691e91e07f92fec5c1fa3b8d56f211ecbdb5e4845. Le tableau Yokota/Red Rooster/Toku indique une consommation en L/s et une pression de service de 6,3 bar. Le régime de consommation n’est pas défini ; la valeur publiée ne sert pas à confirmer un besoin maximal en charge."
+		},
+		{
+			"id": "yokota-yla110e-reserved-20261031-2",
+			"sourceUrl": "https://www.rami-yokota.com/media/godd0tdm/2026_fr_outils_d-assemblage_spreads.pdf#page=17",
+			"sourceLabel": "Yokota YLA110E : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 6b7dca4923bfef1dbe2c7f6691e91e07f92fec5c1fa3b8d56f211ecbdb5e4845. Le tableau Yokota/Red Rooster/Toku indique une consommation en L/s et une pression de service de 6,3 bar. Le régime de consommation n’est pas défini ; la valeur publiée ne sert pas à confirmer un besoin maximal en charge."
 		}
 	],
 	"fieldSources": {
@@ -127,6 +158,10 @@ const product: ToolProfileInput = {
 		],
 		"recommendedHose": [
 			"yokota-yla110e-20260926"
+		],
+		"airflowBasis": [
+			"yokota-yla110e-reserved-20261031-1",
+			"yokota-yla110e-reserved-20261031-2"
 		]
 	},
 	"notes": [
@@ -139,7 +174,8 @@ const product: ToolProfileInput = {
 	},
 	"recommendedHose": {
 		"innerDiameterMm": 9.5
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

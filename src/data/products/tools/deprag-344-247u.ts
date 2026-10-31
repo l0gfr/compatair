@@ -23,18 +23,19 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "DEPRAG 344-247U, référence 400320F. Le tableau fabricant publie 1 000 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple minimal : 2 Nm. Couple maximal, assemblage souple : 17 Nm.",
+		"overview": "DEPRAG 344-247U. Le document propre à cette référence publie une consommation sans préciser son régime de mesure. Le débit en charge maximal reste à confirmer auprès du fabricant. Référence fabricant : 400320F. Couple minimal : 2 Nm. Couple maximal, assemblage souple : 17 Nm. Couple maximal, assemblage dur : 17 Nm.",
 		"verifiedFacts": [
 			"La note du tableau indique une pression de fonctionnement de 6,3 bar.",
-			"Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine.",
 			"Référence fabricant : 400320F.",
 			"Couple minimal : 2 Nm.",
 			"Couple maximal, assemblage souple : 17 Nm.",
-			"Couple maximal, assemblage dur : 17 Nm."
+			"Couple maximal, assemblage dur : 17 Nm.",
+			"Consommation de régime non précisé publiée : 1000 L/min."
 		],
 		"limitations": [
 			"Le couple et la vitesse correspondent à la colonne de cette référence commande, pas à l’ensemble de la famille.",
-			"Les broches intégrées nécessitent aussi le dimensionnement des auxiliaires de l’installation, qui ne sont pas inclus dans la consommation du moteur de vissage."
+			"Les broches intégrées nécessitent aussi le dimensionnement des auxiliaires de l’installation, qui ne sont pas inclus dans la consommation du moteur de vissage.",
+			"Le document propre à cette référence publie une consommation sans préciser son régime de mesure. Le débit en charge maximal reste à confirmer auprès du fabricant."
 		]
 	},
 	"specifications": [
@@ -47,9 +48,9 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine.",
+			"value": "Consommation de régime non précisé publiée : 1000 L/min.",
 			"evidenceIds": [
-				"deprag-400320f-20260926"
+				"deprag-344-247u-reserved-20261031-1"
 			]
 		},
 		{
@@ -93,6 +94,14 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"deprag-400320f-20260926"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":1000,\"typical\":1000,\"max\":1000},\"workingPressureBar\":{\"min\":6.3,\"typical\":6.3,\"max\":6.3}}",
+			"evidenceIds": [
+				"deprag-400320f-20260926",
+				"deprag-344-247u-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -104,6 +113,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine."
+		},
+		{
+			"id": "deprag-344-247u-reserved-20261031-1",
+			"sourceUrl": "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3435/D3435en.pdf#page=3",
+			"sourceLabel": "DEPRAG 344-247U : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 d706aaf47698877463b3afd6bd5266d9fb101447bf98306210e484e55134db5e. Le document propre à cette référence publie une consommation sans préciser son régime de mesure. Le débit en charge maximal reste à confirmer auprès du fabricant."
 		}
 	],
 	"fieldSources": {
@@ -115,6 +134,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"deprag-400320f-20260926"
+		],
+		"airflowBasis": [
+			"deprag-344-247u-reserved-20261031-1"
 		]
 	},
 	"notes": [
@@ -124,7 +146,8 @@ const product: ToolProfileInput = {
 		"min": 1000,
 		"typical": 1000,
 		"max": 1000
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

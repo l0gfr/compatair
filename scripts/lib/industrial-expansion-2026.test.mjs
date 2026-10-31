@@ -1,3 +1,4 @@
+import { beforeReservedOctober31Followup } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { beforeOctober25Review } from './reviewed-catalog-test-projection.mjs';
 import { readFile } from 'node:fs/promises';
 import { describe, expect, it } from 'vitest';
@@ -35,7 +36,7 @@ describe('reviewed expansion of 200 compressors and 500 tools', () => {
   }
  });
  it('binds Shinano dynamic pressure to the separate instruction page and retains maximum demand', () => {
-  const t=batch.tools.find(p => p.mpn === 'SI-3011A');
+  const t=beforeReservedOctober31Followup(batch.tools.find(p => p.mpn === 'SI-3011A'));
   expect(t.airflowLpm.typical).toBe(426);
   expect(t.workingPressureBar).toEqual({min:6.3,typical:6.3,max:6.3});
   const id=t.fieldSources.workingPressureBar[0];

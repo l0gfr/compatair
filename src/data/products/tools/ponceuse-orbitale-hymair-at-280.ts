@@ -33,7 +33,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Hymair AT-280. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Vitesse à vide : 10,000 rpm. Masse publiée (kg/lb) : 1.74/3.83.",
+		"overview": "Hymair AT-280. La couverture du document Steed de cette famille affiche la marque Hymair sur les outils. La provenance de marque est documentée par la page 1 et la référence exacte demeure celle de la table, sans équivalence de version commerciale supposée. Vitesse à vide : 10,000 rpm. Masse publiée (kg/lb) : 1.74/3.83. Longueur × hauteur : 255x143 mm.",
 		"verifiedFacts": [
 			"Vitesse à vide : 10,000 rpm.",
 			"Masse publiée (kg/lb) : 1.74/3.83.",
@@ -41,7 +41,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée.",
+			"La présence dans le catalogue de cette famille ne prouve ni la disponibilité en France, ni une conformité particulière de la version livrée."
 		]
 	},
 	"specifications": [
@@ -79,6 +80,14 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-steed-3-p16"
 			]
+		},
+		{
+			"label": "Provenance de marque",
+			"value": "Catalogue constructeur Steed, couverture portant la marque Hymair ; référence de la table conservée.",
+			"evidenceIds": [
+				"october2-tools-steed-3-p16",
+				"ponceuse-orbitale-hymair-at-280-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -91,6 +100,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 074602b959f2f30ac405df0c8ab2c02739cb7ec400ee95c071217a43d1f7ab36. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-orbitale-hymair-at-280-reserved-20261031-1",
+			"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=aGAfKUBkhgoV&dp=GvUApKfKKUAU#page=16",
+			"sourceLabel": "Hymair AT-280 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 074602b959f2f30ac405df0c8ab2c02739cb7ec400ee95c071217a43d1f7ab36. La couverture du document Steed de cette famille affiche la marque Hymair sur les outils. La provenance de marque est documentée par la page 1 et la référence exacte demeure celle de la table, sans équivalence de version commerciale supposée. Pages complémentaires relues : 1."
 		}
 	],
 	"fieldSources": {

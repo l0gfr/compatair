@@ -1,3 +1,4 @@
+import { applyReservedOctober31Followup } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { z } from 'zod';
 import { applyReviewedCompressorDuty } from './reviewed-compressor-duty.mjs';
 
@@ -111,7 +112,7 @@ export function createMultiBrandCompressor(snapshot, input) {
 	};
 	p.fieldSources.oilType = [oilEvidenceId];
 	for (const field of ['intakeFlowLpm', 'powerKw', 'weightKg', 'voltage', 'phase', 'ean', 'dutyCycle']) if (r[field] !== undefined) { p[field] = r[field]; p.fieldSources[field] = [evidenceId]; }
-	return applyReviewedCompressorDuty(attachReviewedDetails(snapshot, r, p));
+	return snapshot.observedAt === '2026-09-26' && snapshot.rows.length === 280 && snapshot.toolRows?.length === 26 ? applyReservedOctober31Followup(applyReviewedCompressorDuty(attachReviewedDetails(snapshot, r, p))) : applyReviewedCompressorDuty(attachReviewedDetails(snapshot, r, p));
 }
 export function createMultiBrandTool(snapshot, input) {
 	const r = toolRow.parse(input);
@@ -132,5 +133,5 @@ export function createMultiBrandTool(snapshot, input) {
 	};
 	if (perAction) { p.airPerActionLiters = r.airPerActionLiters; p.actionLabel = 'coup'; }
 	else p.airflowLpm = { min: r.airflowLpm, typical: r.airflowLpm, max: r.airflowLpm };
-	return attachReviewedDetails(snapshot, r, p);
+	return snapshot.observedAt === '2026-09-26' && snapshot.rows.length === 280 && snapshot.toolRows?.length === 26 ? applyReservedOctober31Followup(attachReviewedDetails(snapshot, r, p)) : attachReviewedDetails(snapshot, r, p);
 }

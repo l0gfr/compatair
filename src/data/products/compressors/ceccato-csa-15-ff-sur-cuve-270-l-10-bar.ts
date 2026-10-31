@@ -22,7 +22,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 1550
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "unknown",
 	"powerKw": 11,
 	"weightKg": 385,
@@ -69,14 +68,14 @@ const product: CompressorInput = {
 		"overview": "Ceccato CSA 15, FF sur cuve 270 L ; 10 bar. FF sur cuve 270 L. Débit restitué déclaré : 1 550 L/min à 9,5 bar.",
 		"verifiedFacts": [
 			"Dimensions publiées : 1540 × 665 × 1535 mm.",
-			"Masse de cette configuration : 385 kg ; puissance moteur : 11 kW.",
-			"La page constructeur de cette série prévoit le fonctionnement continu, sous ses conditions d’installation et d’entretien."
+			"Masse de cette configuration : 385 kg ; puissance moteur : 11 kW."
 		],
 		"limitations": [
 			"Le point FAD appartient à cette configuration et à sa pression de référence ; aucune courbe de fonctionnement supplémentaire n’est inventée.",
 			"Mode de lubrification non établi dans cette fiche ; aucune qualité d’air déduite.",
 			"Configuration et pression explicites du catalogue, sans numéro d’article attribué artificiellement ; faire confirmer la version commandée.",
-			"Disponibilité locale, alimentation électrique, dégagements d’entretien et qualité d’air au point d’usage à vérifier avant installation."
+			"Disponibilité locale, alimentation électrique, dégagements d’entretien et qualité d’air au point d’usage à vérifier avant installation.",
+			"Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
 		]
 	},
 	"evidence": [
@@ -99,6 +98,26 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 a396f7642312e7bc1e0f7624ec55b4836b176f0deb7ba6e0ae70e4ce9cbe4df6. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "ceccato-csa-15-ff-sur-cuve-270-l-10-bar-reserved-20261031-1",
+			"sourceUrl": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csa-7-5-20-hp/leaflets/Ceccato_CSA_7.5-20_Leaflet_EN.pdf#page=6",
+			"sourceLabel": "Ceccato CSA 15 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 b36c0fbb8a63a69867b66a6e663923588ccfd8e2def16303b3be948aa706c23c. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
+		},
+		{
+			"id": "ceccato-csa-15-ff-sur-cuve-270-l-10-bar-reserved-20261031-2",
+			"sourceUrl": "https://www.ceccato.com/fr-international/air-compressor-products/rotary-screw-compressor/fixed-speed/csa-7-5-20-hp",
+			"sourceLabel": "Ceccato CSA 15 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 27813fb0dac3fee9440eba60d232494e009513adeed225f55d7d6fead2fba478. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
 		}
 	],
 	"fieldSources": {
@@ -116,9 +135,6 @@ const product: CompressorInput = {
 		],
 		"weightKg": [
 			"october-ceccato-csa-7-5-20-hp-pdf-p6"
-		],
-		"dutyCycle": [
-			"october-ceccato-csa-7-5-20-hp"
 		]
 	},
 	"notes": [

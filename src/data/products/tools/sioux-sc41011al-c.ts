@@ -23,18 +23,19 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Sioux SC41011AL-C, référence SC41011AL-C. Le dimensionnement utilise 360 L/min à 6,2 bar, selon les régimes publiés par le fabricant. Cadence de frappe : 4600 coups/min. Course : 28 mm. Masse : 2.1 kg.",
+		"overview": "Sioux SC41011AL-C. La ligne propre au modèle Sioux donne un débit en L/s à 90 psig (6,2 bar) sous l’intitulé Air Consumption. Le régime n’est pas précisé pour cette ligne ; aucun maximum en charge n’est déduit de la colonne voisine de vitesse à vide. Référence fabricant : SC41011AL-C. Cadence de frappe : 4600 coups/min. Course : 28 mm. Masse : 2.1 kg.",
 		"verifiedFacts": [
 			"Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur.",
-			"Consommation publiée : 6.0 L/s (12.0 scfm). Le guide du catalogue (page PDF 10) définit ces débits comme de l’air détendu à pression atmosphérique et des consommations maximales, sauf indication contraire. La plus grande valeur publiée est retenue : 360 L/min (L/s × 60).",
 			"Référence fabricant : SC41011AL-C.",
 			"Cadence de frappe : 4600 coups/min.",
 			"Course : 28 mm.",
-			"Masse : 2.1 kg."
+			"Masse : 2.1 kg.",
+			"Consommation de régime non précisé publiée : 360 L/min."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
-			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes."
+			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
+			"La ligne propre au modèle Sioux donne un débit en L/s à 90 psig (6,2 bar) sous l’intitulé Air Consumption. Le régime n’est pas précisé pour cette ligne ; aucun maximum en charge n’est déduit de la colonne voisine de vitesse à vide."
 		]
 	},
 	"specifications": [
@@ -47,9 +48,10 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation publiée : 6.0 L/s (12.0 scfm). Le guide du catalogue (page PDF 10) définit ces débits comme de l’air détendu à pression atmosphérique et des consommations maximales, sauf indication contraire. La plus grande valeur publiée est retenue : 360 L/min (L/s × 60).",
+			"value": "Consommation de régime non précisé publiée : 360 L/min.",
 			"evidenceIds": [
-				"sioux-sc41011al-c-20260927"
+				"sioux-sc41011al-c-reserved-20261031-1",
+				"sioux-sc41011al-c-reserved-20261031-2"
 			]
 		},
 		{
@@ -79,6 +81,15 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"sioux-sc41011al-c-20260927"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":360,\"typical\":360,\"max\":360},\"workingPressureBar\":{\"min\":6.2,\"typical\":6.2,\"max\":6.2}}",
+			"evidenceIds": [
+				"sioux-sc41011al-c-20260927",
+				"sioux-sc41011al-c-reserved-20261031-1",
+				"sioux-sc41011al-c-reserved-20261031-2"
+			]
 		}
 	],
 	"evidence": [
@@ -99,6 +110,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur."
+		},
+		{
+			"id": "sioux-sc41011al-c-reserved-20261031-1",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=75",
+			"sourceLabel": "Sioux SC41011AL-C : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8. La ligne propre au modèle Sioux donne un débit en L/s à 90 psig (6,2 bar) sous l’intitulé Air Consumption. Le régime n’est pas précisé pour cette ligne ; aucun maximum en charge n’est déduit de la colonne voisine de vitesse à vide."
+		},
+		{
+			"id": "sioux-sc41011al-c-reserved-20261031-2",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=75",
+			"sourceLabel": "Sioux SC41011AL-C : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8. La ligne propre au modèle Sioux donne un débit en L/s à 90 psig (6,2 bar) sous l’intitulé Air Consumption. Le régime n’est pas précisé pour cette ligne ; aucun maximum en charge n’est déduit de la colonne voisine de vitesse à vide."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +141,10 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"sioux-sc41011al-c-20260927"
+		],
+		"airflowBasis": [
+			"sioux-sc41011al-c-reserved-20261031-1",
+			"sioux-sc41011al-c-reserved-20261031-2"
 		]
 	},
 	"notes": [
@@ -119,7 +154,8 @@ const product: ToolProfileInput = {
 		"min": 360,
 		"typical": 360,
 		"max": 360
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

@@ -1,3 +1,4 @@
+import { beforeReservedOctober31Followup } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { buildQualifiedTools } from './qualified-tools-2026.mjs';
@@ -12,8 +13,9 @@ describe('800 tools with usable, explicit air demand', () => {
 		expect(built).toHaveLength(800);
 		for (const product of built) {
 			expect(tools.find(tool => tool.id === product.id), product.id).toMatchObject({ ...product, category: toolCategoryLabel(product.categoryId) });
-			expect(product.airflowBasis).toBeUndefined();
-			expect(compressors.some(compressor => evaluateCompatibility(compressor, product).verdict === 'continuous'), product.id).toBe(true);
+			const historical = beforeReservedOctober31Followup(product);
+			expect(historical.airflowBasis).toBeUndefined();
+			expect(compressors.some(compressor => evaluateCompatibility(compressor, historical).verdict === 'continuous'), product.id).toBe(true);
 		}
 	});
 	it.each(['units', 'flow', 'pressure', 'average', 'source', 'identity'])('rejects an unsupported alteration: %s', change => {

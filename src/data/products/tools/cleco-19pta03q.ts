@@ -23,18 +23,19 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Cleco 19PTA03Q, référence 19PTA03Q. Le tableau fabricant publie 310 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Plage de couple publiée : 0.6 à 2.9 Nm. Vitesse à vide publiée : 1900 tr/min.",
+		"overview": "Cleco 19PTA03Q. Le catalogue GI-1250-EU rattache les performances à 6,2 bar, mais ne qualifie pas les 310 L/min de maximum ni de consommation en charge. Cette valeur reste documentaire et le verdict reste indéterminé. Performances publiées à 6,2 bar à l’entrée de l’outil, note de la page 69. Référence fabricant : 19PTA03Q. Plage de couple publiée : 0.6 à 2.9 Nm. Vitesse à vide publiée : 1900 tr/min. Série et commande : 19P ; gâchette.",
 		"verifiedFacts": [
 			"Performances publiées à 6,2 bar à l’entrée de l’outil, note de la page 69.",
-			"Consommation générale publiée de 310 L/min pour la série 19 ; le catalogue ne la qualifie pas de maximum ou de moyenne.",
 			"Référence fabricant : 19PTA03Q.",
 			"Plage de couple publiée : 0.6 à 2.9 Nm.",
 			"Vitesse à vide publiée : 1900 tr/min.",
-			"Série et commande : 19P ; gâchette."
+			"Série et commande : 19P ; gâchette.",
+			"Consommation de régime non précisé publiée : 310 L/min."
 		],
 		"limitations": [
 			"Données de catalogue industriel, sans essai physique CompatAir. Disponibilité et révision livrée à confirmer avec le fournisseur.",
-			"Source : catalogue GI-1250-EU, édition archivée du fabricant. Vérifier la référence et la notice de la révision effectivement livrée."
+			"Source : catalogue GI-1250-EU, édition archivée du fabricant. Vérifier la référence et la notice de la révision effectivement livrée.",
+			"Le catalogue GI-1250-EU rattache les performances à 6,2 bar, mais ne qualifie pas les 310 L/min de maximum ni de consommation en charge. Cette valeur reste documentaire et le verdict reste indéterminé."
 		]
 	},
 	"specifications": [
@@ -47,9 +48,9 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation générale publiée de 310 L/min pour la série 19 ; le catalogue ne la qualifie pas de maximum ou de moyenne.",
+			"value": "Consommation de régime non précisé publiée : 310 L/min.",
 			"evidenceIds": [
-				"cleco-19pta03q-20260926"
+				"cleco-19pta03q-reserved-20261031-1"
 			]
 		},
 		{
@@ -93,6 +94,14 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"cleco-19pta03q-20260926"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":310,\"typical\":310,\"max\":310},\"workingPressureBar\":{\"min\":6.2,\"typical\":6.2,\"max\":6.2}}",
+			"evidenceIds": [
+				"cleco-19pta03q-20260926",
+				"cleco-19pta03q-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -104,6 +113,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation générale publiée de 310 L/min pour la série 19 ; le catalogue ne la qualifie pas de maximum ou de moyenne."
+		},
+		{
+			"id": "cleco-19pta03q-reserved-20261031-1",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=69",
+			"sourceLabel": "Cleco 19PTA03Q : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 8668d5e77a6b2469dc9b9012841e65bbfb947234a8087faa6fdd90384b3babac. Le catalogue GI-1250-EU rattache les performances à 6,2 bar, mais ne qualifie pas les 310 L/min de maximum ni de consommation en charge. Cette valeur reste documentaire et le verdict reste indéterminé."
 		}
 	],
 	"fieldSources": {
@@ -115,6 +134,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"cleco-19pta03q-20260926"
+		],
+		"airflowBasis": [
+			"cleco-19pta03q-reserved-20261031-1"
 		]
 	},
 	"notes": [
@@ -124,7 +146,8 @@ const product: ToolProfileInput = {
 		"min": 310,
 		"typical": 310,
 		"max": 310
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

@@ -23,7 +23,6 @@ const product: CompressorInput = {
       "litersPerMinute": 353.961
     }
   ],
-  "dutyCycle": 1,
   "voltage": "230 V",
   "oilType": "oil",
   "confidence": "B",
@@ -109,13 +108,6 @@ const product: CompressorInput = {
       ]
     },
     {
-      "label": "Cycle de service déclaré pour ce modèle",
-      "value": "100 %",
-      "evidenceIds": [
-        "october8-rolair-portable-3095k18-spec-p1"
-      ]
-    },
-    {
       "label": "Fréquence de la configuration publiée",
       "value": "60 Hz",
       "evidenceIds": [
@@ -136,7 +128,8 @@ const product: CompressorInput = {
       "Le cycle 100 % provient de la fiche du modèle exact encore liée par le fabricant ; il ne documente ni les conditions thermiques du site ni un autre réglage de pression.",
       "Aucune interpolation de débit, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
       "Cuve non qualifiée en litres : l’autonomie ne peut pas être conclue à partir de ce profil.",
-      "Le point de pression ne prouve pas le maximum matériel ; au-delà, le verdict doit rester données insuffisantes."
+      "Le point de pression ne prouve pas le maximum matériel ; au-delà, le verdict doit rester données insuffisantes.",
+      "Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
     ]
   },
   "evidence": [
@@ -179,6 +172,46 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-08",
       "confidence": "B",
       "notes": "SHA-256 0ab86e21b08d630cbef21c7ff54528a01001f73428583170c86b6862b813528a de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "rolair-3095k18-reserved-20261031-1",
+      "sourceUrl": "https://www.rolair.com/air-compressors/wheeled-electric-air-compressors/3095k18",
+      "sourceLabel": "Rolair 3095K18 : relecture documentaire du 31 octobre 2026",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-31",
+      "confidence": "B",
+      "notes": "SHA-256 6704c080b25a51aee9ff03b118fedc6e7484c8b2983c6130e118b9e61ecbb78f. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
+    },
+    {
+      "id": "rolair-3095k18-reserved-20261031-2",
+      "sourceUrl": "https://www.rolair.com/service-support/frequently-asked-questions",
+      "sourceLabel": "Rolair 3095K18 : relecture documentaire du 31 octobre 2026",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-31",
+      "confidence": "B",
+      "notes": "SHA-256 ae21694393cf32ac920521ccd7090c288cf7a457b0331b8ca3fd05bc5e1fdea4. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
+    },
+    {
+      "id": "rolair-3095k18-reserved-20261031-3",
+      "sourceUrl": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+      "sourceLabel": "NIST, Guide for the Use of the International System of Units, Appendix B.8",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-31",
+      "confidence": "B",
+      "notes": "SHA-256 992d3ba563c488bafab61059fe47eb7238178b9def650a0b8c11707cc887699f. Facteurs de conversion d’unités uniquement. La référence, le régime et la pression de mesure de la machine dépendent de ses documents constructeur, cités séparément."
+    },
+    {
+      "id": "rolair-3095k18-reserved-20261031-4",
+      "sourceUrl": "https://www.rolair.com/sites/default/files/2025-02/3095K18%20Spec%20Sheet%2010-15.pdf#page=1",
+      "sourceLabel": "Rolair 3095K18 : relecture documentaire du 31 octobre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-31",
+      "confidence": "B",
+      "notes": "SHA-256 0ab86e21b08d630cbef21c7ff54528a01001f73428583170c86b6862b813528a. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
     }
   ],
   "fieldSources": {
@@ -199,9 +232,6 @@ const product: CompressorInput = {
     ],
     "oilType": [
       "october8-rolair-portable-3095k18-p1"
-    ],
-    "dutyCycle": [
-      "october8-rolair-portable-3095k18-spec-p1"
     ],
     "voltage": [
       "october8-rolair-portable-3095k18-p1"

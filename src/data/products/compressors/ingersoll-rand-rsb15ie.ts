@@ -15,12 +15,7 @@ const product: CompressorInput = {
     }
   },
   "maxPressureBar": 13.5,
-  "fadCurve": [
-    {
-      "pressureBar": 13.5,
-      "litersPerMinute": 1699.011
-    }
-  ],
+  "fadCurve": [],
   "powerKw": 15,
   "oilType": "unknown",
   "confidence": "B",
@@ -54,14 +49,6 @@ const product: CompressorInput = {
       ]
     },
     {
-      "label": "Air livré à 13,5 bar",
-      "value": "1 699,011 L/min (60 cfm publiés)",
-      "evidenceIds": [
-        "october4c-ir-rsb15-22-p2",
-        "october4c-nist-conversions-p1"
-      ]
-    },
-    {
       "label": "Puissance publiée",
       "value": "15 kW",
       "evidenceIds": [
@@ -74,20 +61,30 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4c-ir-rsb15-22-p2"
       ]
+    },
+    {
+      "label": "Relevé historique FAD, pression de mesure à confirmer",
+      "value": "[{\"pressureBar\":13.5,\"litersPerMinute\":1699.011}]",
+      "evidenceIds": [
+        "october4c-ir-rsb15-22-p2",
+        "ingersoll-rand-rsb15ie-reserved-20261031-1",
+        "ingersoll-rand-rsb15ie-reserved-20261031-2"
+      ]
     }
   ],
   "editorial": {
-    "overview": "Ingersoll Rand RSb15ie. 1 699,011 L/min déclarés à 13,5 bar. Configuration constructeur : Compresseur RSb à vitesse fixe, fiche du fabricant pour le marché indien.",
+    "overview": "Ingersoll Rand RSb15ie. Le tableau RSb15–22ie sépare Capacity FAD de Max Pressure. Les 13,5 bar sont un maximum ; la pression de mesure des 60 ou 78 cfm reste à confirmer.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 13,5 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 1 699,011 L/min déclarés à 13,5 bar."
+      "Capacité FAD publiée : 60 cfm ; pression de mesure non explicitée dans la table."
     ],
     "limitations": [
       "Fiche commerciale Ingersoll Rand India de février 2025 ; disponibilité, certification et raccordement sur le marché français à confirmer.",
       "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
       "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
       "La fréquence électrique de cette configuration n’est pas documentée.",
-      "Cuve non documentée : l’autonomie et le volume de stockage ne peuvent pas être conclus à partir de ce profil."
+      "Cuve non documentée : l’autonomie et le volume de stockage ne peuvent pas être conclus à partir de ce profil.",
+      "Le tableau RSb15–22ie sépare Capacity FAD de Max Pressure. Les 13,5 bar sont un maximum ; la pression de mesure des 60 ou 78 cfm reste à confirmer."
     ]
   },
   "evidence": [
@@ -110,6 +107,26 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 057d9641caab13e6632aa7f70eeb1b76d676ae3e131b3e6ed73b8bf6ca0c28c3 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "ingersoll-rand-rsb15ie-reserved-20261031-1",
+      "sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/blta3c1d56420975795/blt018ce183b6dac062/6a882c594d1fbd2b5ae5a9e8/IR_RSb15-22ie-ne_Flyer_2_Page_2025-02.pdf#page=2",
+      "sourceLabel": "Ingersoll Rand RSb15ie : relecture documentaire du 31 octobre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-31",
+      "confidence": "B",
+      "notes": "SHA-256 18e0d3f6818b7b0656c8406b227e19fdd2ce5390486cd6c3b867c6eb71dbaabc. Le tableau RSb15–22ie sépare Capacity FAD de Max Pressure. Les 13,5 bar sont un maximum ; la pression de mesure des 60 ou 78 cfm reste à confirmer."
+    },
+    {
+      "id": "ingersoll-rand-rsb15ie-reserved-20261031-2",
+      "sourceUrl": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+      "sourceLabel": "NIST, Guide for the Use of the International System of Units, Appendix B.8",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-10-31",
+      "confidence": "B",
+      "notes": "SHA-256 992d3ba563c488bafab61059fe47eb7238178b9def650a0b8c11707cc887699f. Facteurs de conversion d’unités uniquement. La référence, le régime et la pression de mesure de la machine dépendent de ses documents constructeur, cités séparément."
     }
   ],
   "fieldSources": {
@@ -119,18 +136,18 @@ const product: CompressorInput = {
     "maxPressureBar": [
       "october4c-ir-rsb15-22-p2"
     ],
-    "fadCurve": [
-      "october4c-ir-rsb15-22-p2",
-      "october4c-nist-conversions-p1"
-    ],
     "powerKw": [
       "october4c-ir-rsb15-22-p2"
+    ],
+    "fadCurve": [
+      "ingersoll-rand-rsb15ie-reserved-20261031-1",
+      "ingersoll-rand-rsb15ie-reserved-20261031-2"
     ]
   },
   "notes": [
-    "Portée de la source : FAD-pressure-qualified.",
     "Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées.",
     "Les caractéristiques décrivent la configuration constructeur indiquée dans cette fiche ; les autres équipements ou alimentations doivent être vérifiés séparément."
   ]
 };
+
 export default product;

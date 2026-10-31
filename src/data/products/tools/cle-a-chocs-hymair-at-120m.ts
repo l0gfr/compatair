@@ -33,7 +33,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Hymair AT-120M. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Vitesse à vide : 9,000 rpm. Masse publiée (kg/lb) : 1.50/3.31.",
+		"overview": "Hymair AT-120M. La couverture du document Steed de cette famille affiche la marque Hymair sur les outils. La provenance de marque est documentée par la page 1 et la référence exacte demeure celle de la table, sans équivalence de version commerciale supposée. Vitesse à vide : 9,000 rpm. Masse publiée (kg/lb) : 1.50/3.31. Longueur × hauteur : 130x190 mm.",
 		"verifiedFacts": [
 			"Vitesse à vide : 9,000 rpm.",
 			"Masse publiée (kg/lb) : 1.50/3.31.",
@@ -41,7 +41,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée.",
+			"La présence dans le catalogue de cette famille ne prouve ni la disponibilité en France, ni une conformité particulière de la version livrée."
 		]
 	},
 	"specifications": [
@@ -79,6 +80,14 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-steed-1-p2"
 			]
+		},
+		{
+			"label": "Provenance de marque",
+			"value": "Catalogue constructeur Steed, couverture portant la marque Hymair ; référence de la table conservée.",
+			"evidenceIds": [
+				"october2-tools-steed-1-p2",
+				"cle-a-chocs-hymair-at-120m-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -91,6 +100,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 47d13da4c5b0263c82d7e669236b74a7dd1e71b7669074c79e9f5cb13b499b9b. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-chocs-hymair-at-120m-reserved-20261031-1",
+			"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=RUpfAKgFCVcq&dp=GvUApKfKKUAU#page=2",
+			"sourceLabel": "Hymair AT-120M : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 47d13da4c5b0263c82d7e669236b74a7dd1e71b7669074c79e9f5cb13b499b9b. La couverture du document Steed de cette famille affiche la marque Hymair sur les outils. La provenance de marque est documentée par la page 1 et la référence exacte demeure celle de la table, sans équivalence de version commerciale supposée. Pages complémentaires relues : 1."
 		}
 	],
 	"fieldSources": {

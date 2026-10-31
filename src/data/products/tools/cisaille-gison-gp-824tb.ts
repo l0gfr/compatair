@@ -3,8 +3,8 @@ import type { ToolProfileInput } from '../../../domain/catalog';
 const product: ToolProfileInput = {
 	"id": "cisaille-gison-gp-824tb",
 	"slug": "cisaille-gison-gp-824tb",
-	"categoryId": "cisaille",
-	"category": "cisaille",
+	"categoryId": "meuleuse",
+	"category": "meuleuse",
 	"label": "GISON GP-824TB",
 	"brand": "GISON",
 	"model": "GP-824TB",
@@ -38,13 +38,17 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-824TB. Consommation de régime non précisé : 700 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 0.89 kg. Longueur : 205 mm.",
+		"overview": "GISON GP-824TB. Type constructeur : Fraiseuse de préparation de pneus, Air Tire Buffer. Vitesse maximale publiée : 2 500 tr/min. Roue publiée : 67 × 29 mm. Filetage de broche : 3/8 pouce-24. La consommation du tableau n’est pas qualifiée de maximum en charge.",
 		"verifiedFacts": [
 			"Masse : 0.89 kg.",
 			"Longueur : 205 mm.",
 			"Vitesse à vide : 2500 tr/min.",
 			"Diamètre de flexible publié : 6.5 mm.",
-			"Référence constructeur : GP-824TB."
+			"Référence constructeur : GP-824TB.",
+			"Type constructeur : Fraiseuse de préparation de pneus, Air Tire Buffer.",
+			"Vitesse maximale publiée : 2 500 tr/min.",
+			"Roue publiée : 67 × 29 mm.",
+			"Filetage de broche : 3/8 pouce-24."
 		],
 		"limitations": [
 			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
@@ -100,6 +104,38 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october-b-gison-tools-p74"
 			]
+		},
+		{
+			"label": "Type constructeur",
+			"value": "Fraiseuse de préparation de pneus, Air Tire Buffer",
+			"evidenceIds": [
+				"october-b-gison-tools-p74",
+				"cisaille-gison-gp-824tb-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Vitesse maximale publiée",
+			"value": "2 500 tr/min",
+			"evidenceIds": [
+				"october-b-gison-tools-p74",
+				"cisaille-gison-gp-824tb-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Roue publiée",
+			"value": "67 × 29 mm",
+			"evidenceIds": [
+				"october-b-gison-tools-p74",
+				"cisaille-gison-gp-824tb-reserved-20261031-1"
+			]
+		},
+		{
+			"label": "Filetage de broche",
+			"value": "3/8 pouce-24",
+			"evidenceIds": [
+				"october-b-gison-tools-p74",
+				"cisaille-gison-gp-824tb-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -112,6 +148,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "cisaille-gison-gp-824tb-reserved-20261031-1",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=74",
+			"sourceLabel": "GISON GP-824TB : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Table GISON rendue et relue : identité exacte, unités et caractéristiques propres au modèle. Les consommations non qualifiées restent hors verdict conclusif. La GP-824TB est une Air Tire Buffer, pas une cisaille. Reclasser en meuleuse et conserver son régime de débit non précisé."
 		}
 	],
 	"fieldSources": {
@@ -126,6 +172,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-b-gison-tools-p74"
+		],
+		"categoryId": [
+			"cisaille-gison-gp-824tb-reserved-20261031-1"
 		]
 	},
 	"notes": [

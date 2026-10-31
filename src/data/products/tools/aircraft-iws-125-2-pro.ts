@@ -9,7 +9,7 @@ const product: ToolProfileInput = {
 	"categoryId": "meuleuse",
 	"category": "meuleuse",
 	"label": "Aircraft IWS 125-2 PRO",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 6.2,
 		"typical": 6.2,
@@ -23,19 +23,20 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
 	},
 	"editorial": {
-		"overview": "Aircraft IWS 125-2 PRO, référence 2403483. Consommation moyenne publiée : 326 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Diamètre intérieur du flexible : 10 mm. Diamètre de disque : 125 mm.",
+		"overview": "Aircraft IWS 125-2 PRO. Les documents Aircraft de la même référence divergent : 326 L/min dans la notice 2019 contre 113 L/min dans le catalogue 2026/27. Ces éditions restent séparées ; une consommation unique doit être confirmée pour la machine livrée. Référence fabricant : 2403483. Diamètre intérieur du flexible : 10 mm. Diamètre de disque : 125 mm. Longueur approximative : 239 mm.",
 		"verifiedFacts": [
 			"Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
-			"Consommation moyenne publiée : 326 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
 			"Référence fabricant : 2403483.",
 			"Diamètre intérieur du flexible : 10 mm.",
 			"Diamètre de disque : 125 mm.",
-			"Longueur approximative : 239 mm."
+			"Longueur approximative : 239 mm.",
+			"Valeur documentaire conservée : 326 L/min. Les documents Aircraft de la même référence divergent : 326 L/min dans la notice 2019 contre 113 L/min dans le catalogue 2026/27. Ces éditions restent séparées ; une consommation unique doit être confirmée pour la machine livrée."
 		],
 		"limitations": [
 			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
 			"Une consommation moyenne ne constitue pas un débit maximal en usage continu. Vérifier le régime réel auprès du fabricant avant dimensionnement.",
-			"Écarts entre documents fabricant : Consommation : relevé du 27/09/2026 et notice 2019 = 326 L/min moyens ; catalogue 2026/27 = 113 L/min, régime non précisé."
+			"Écarts entre documents fabricant : Consommation : relevé du 27/09/2026 et notice 2019 = 326 L/min moyens ; catalogue 2026/27 = 113 L/min, régime non précisé.",
+			"Les documents Aircraft de la même référence divergent : 326 L/min dans la notice 2019 contre 113 L/min dans le catalogue 2026/27. Ces éditions restent séparées ; une consommation unique doit être confirmée pour la machine livrée."
 		]
 	},
 	"specifications": [
@@ -48,9 +49,10 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation moyenne publiée : 326 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
+			"value": "Valeur documentaire conservée : 326 L/min. Les documents Aircraft de la même référence divergent : 326 L/min dans la notice 2019 contre 113 L/min dans le catalogue 2026/27. Ces éditions restent séparées ; une consommation unique doit être confirmée pour la machine livrée.",
 			"evidenceIds": [
-				"aircraft-2403483-20260927"
+				"aircraft-iws-125-2-pro-reserved-20261031-1",
+				"aircraft-iws-125-2-pro-reserved-20261031-2"
 			]
 		},
 		{
@@ -110,6 +112,15 @@ const product: ToolProfileInput = {
 				"aircraft-2403483-documentation-20261023",
 				"aircraft-2403483-documentation-20261023-catalogue"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":326,\"typical\":326,\"max\":326},\"workingPressureBar\":{\"min\":6.2,\"typical\":6.2,\"max\":6.2}}",
+			"evidenceIds": [
+				"aircraft-2403483-20260927",
+				"aircraft-iws-125-2-pro-reserved-20261031-1",
+				"aircraft-iws-125-2-pro-reserved-20261031-2"
+			]
 		}
 	],
 	"evidence": [
@@ -142,6 +153,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Catalogue fabricant consulté le 23/10/2026, régime de consommation non précisé. PDF SHA-256 : 6a7136e5780ad551227d2378d940de7431077324181b3a3b23435803482cb56c. Cette déclaration reste distincte du débit moyen publié dans la notice ou brochure."
+		},
+		{
+			"id": "aircraft-iws-125-2-pro-reserved-20261031-1",
+			"sourceUrl": "https://www.mystuermer.com/MeDaPro/Rohdaten/Dokumente/Betriebsanleitung_de/AC_BA_2403483_IWS_125-2_PRO_DE.pdf#page=4",
+			"sourceLabel": "Aircraft IWS 125-2 PRO : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 0bfee895f08697d6a85946afdb643e38112b7c73c3ae2162792be081d50222ca. Les documents Aircraft de la même référence divergent : 326 L/min dans la notice 2019 contre 113 L/min dans le catalogue 2026/27. Ces éditions restent séparées ; une consommation unique doit être confirmée pour la machine livrée."
+		},
+		{
+			"id": "aircraft-iws-125-2-pro-reserved-20261031-2",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=258",
+			"sourceLabel": "Aircraft IWS 125-2 PRO : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 6a7136e5780ad551227d2378d940de7431077324181b3a3b23435803482cb56c. Les documents Aircraft de la même référence divergent : 326 L/min dans la notice 2019 contre 113 L/min dans le catalogue 2026/27. Ces éditions restent séparées ; une consommation unique doit être confirmée pour la machine livrée."
 		}
 	],
 	"fieldSources": {
@@ -151,22 +182,19 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"aircraft-2403483-20260927"
 		],
-		"airflowLpm": [
-			"aircraft-2403483-20260927"
+		"demandModel": [
+			"aircraft-iws-125-2-pro-reserved-20261031-1",
+			"aircraft-iws-125-2-pro-reserved-20261031-2"
 		],
-		"airflowBasis": [
-			"aircraft-2403483-20260927"
+		"demandExplanation": [
+			"aircraft-iws-125-2-pro-reserved-20261031-1",
+			"aircraft-iws-125-2-pro-reserved-20261031-2"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 326,
-		"typical": 326,
-		"max": 326
-	},
-	"airflowBasis": "average"
+	"demandExplanation": "Les documents Aircraft de la même référence divergent : 326 L/min dans la notice 2019 contre 113 L/min dans le catalogue 2026/27. Ces éditions restent séparées ; une consommation unique doit être confirmée pour la machine livrée."
 };
 
 export default product;

@@ -22,7 +22,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 1090
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "unknown",
 	"powerKw": 9,
 	"weightKg": 440,
@@ -69,13 +68,13 @@ const product: CompressorInput = {
 		"overview": "KAESER AIRCENTER 16, sécheur et cuve intégrés, 15 bar. Débit restitué déclaré : 1 090 L/min à 13 bar. Puissance moteur : 9 kW ; masse : 440 kg.",
 		"verifiedFacts": [
 			"FAD et pression de référence associés à la configuration exacte du tableau fabricant.",
-			"Cuve intégrée : 270 L ; le volume d’un réservoir externe n’est pas supposé.",
-			"Fonctionnement continu prévu dans la documentation de la série, sous les conditions d’installation et d’entretien du fabricant."
+			"Cuve intégrée : 270 L ; le volume d’un réservoir externe n’est pas supposé."
 		],
 		"limitations": [
 			"Un seul point FAD publié pour cette configuration de pression ; aucune extrapolation vers une pression supérieure.",
 			"Version du catalogue identifiée, sans numéro d’article artificiel. La disponibilité, la tension électrique et les options livrées doivent être confirmées sur le devis.",
-			"Le fluide de refroidissement ne suffit pas à établir le type de lubrification ; aucune qualité d’air garantie."
+			"Le fluide de refroidissement ne suffit pas à établir le type de lubrification ; aucune qualité d’air garantie.",
+			"Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
 		]
 	},
 	"evidence": [
@@ -98,6 +97,26 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 3f5687777a06c60ed4f3918036cfb4edab945e750016d89b42305f3a2bc6b9fe. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "kaeser-aircenter-16-secheur-et-cuve-integres-15-bar-reserved-20261031-1",
+			"sourceUrl": "https://nl.kaeser.com/download.ashx?id=tcm:32-5920#page=8",
+			"sourceLabel": "KAESER AIRCENTER 16 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 7c4b96a5fb4ea4fb206655af4138d8a90096a61661823528c5f6bf282d66a6d5. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
+		},
+		{
+			"id": "kaeser-aircenter-16-secheur-et-cuve-integres-15-bar-reserved-20261031-2",
+			"sourceUrl": "https://us.kaeser.com/compressed-air-resources/applications/automotive-services/",
+			"sourceLabel": "KAESER AIRCENTER 16 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 9d5a7408bf0fa6edd636bf4403f0cc37ce2900af756988337d33c891103ae5d8. Les passages cités décrivent le fonctionnement continu de la gamme ou le service du moteur. Ils ne définissent pas un taux de marche chiffré du groupe complet pour cette configuration ; le champ dutyCycle reste non documenté."
 		}
 	],
 	"fieldSources": {
@@ -115,9 +134,6 @@ const product: CompressorInput = {
 		],
 		"weightKg": [
 			"october-b-kaeser-sm-p8"
-		],
-		"dutyCycle": [
-			"october-b-kaeser-duty"
 		]
 	},
 	"notes": [

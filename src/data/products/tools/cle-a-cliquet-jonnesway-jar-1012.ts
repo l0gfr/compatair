@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Jonnesway JAR-1012. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Square Drive : 1/4\". Max Torque : 25 Ft-lb (40 N.M.).",
+		"overview": "Jonnesway JAR-1012. Le fabricant publie deux valeurs de couple incompatibles dans les unités affichées : 25 ft-lb et 40 N.m. Les deux transcriptions sont conservées ; aucune conversion ni correction d’unité supposée. Confirmation constructeur requise. Square Drive : 1/4\". Max Torque : 25 Ft-lb (40 N.M.). Free Speed : 230 (грm). Std. Bolt Size : 3/8\" (M10). Overall Length : 5.5\" (140 mm). Weight : 1 Ibs (0.46 kgs). Air Inlet Size : 1/4\". Air Hose (I.D.) : 3/8\".",
 		"verifiedFacts": [
 			"Square Drive : 1/4\".",
 			"Max Torque : 25 Ft-lb (40 N.M.).",
@@ -42,7 +42,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée.",
+			"Le fabricant publie deux valeurs de couple incompatibles dans les unités affichées : 25 ft-lb et 40 N.m. Les deux transcriptions sont conservées ; aucune conversion ni correction d’unité supposée. Confirmation constructeur requise."
 		]
 	},
 	"specifications": [
@@ -127,6 +128,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 501b7a702a51eb9406cec1d75204c874f9974c54bd115347ec0b76efaa5d9464. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-cliquet-jonnesway-jar-1012-reserved-20261031-1",
+			"sourceUrl": "https://www.jonnesway.com/pImages/JAR-1012_1013_666.jpg",
+			"sourceLabel": "Jonnesway JAR-1012 : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 501b7a702a51eb9406cec1d75204c874f9974c54bd115347ec0b76efaa5d9464. Le fabricant publie deux valeurs de couple incompatibles dans les unités affichées : 25 ft-lb et 40 N.m. Les deux transcriptions sont conservées ; aucune conversion ni correction d’unité supposée. Confirmation constructeur requise."
 		}
 	],
 	"fieldSources": {

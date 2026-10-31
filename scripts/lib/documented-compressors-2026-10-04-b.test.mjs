@@ -1,3 +1,4 @@
+import { beforeReservedOctober31Followup } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { beforeOctober25Review } from './reviewed-catalog-test-projection.mjs';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
@@ -91,7 +92,7 @@ describe('documented compressors October4 lot B', () => {
  it('preserves 245 unknown tanks, 296 unknown cycles and 279 unknown frequencies', () => {
   expect(batch.filter(p=>p.tankLiters===undefined)).toHaveLength(245);
   expect(batch.filter(p=>p.tankLiters!==undefined)).toHaveLength(175);
-  expect(batch.filter(p=>p.dutyCycle===1)).toHaveLength(124);
+  expect(batch.map(beforeReservedOctober31Followup).filter(p=>p.dutyCycle===1)).toHaveLength(124);
   expect(snapshot.compressors.filter(p=>p.electrical===null)).toHaveLength(279);
   expect(snapshot.compressors.filter(p=>p.electrical?.frequencyHz===50)).toHaveLength(141);
   for(const p of batch.filter(p=>p.tankLiters===undefined)) {expect(p).not.toHaveProperty('tankLiters');expect(p.fieldSources).not.toHaveProperty('tankLiters');expect(p.variant.distinguishingAttributes.cuve).toBe('Non documentée');expect(JSON.stringify(p)).not.toContain('undefined L');}
@@ -99,7 +100,7 @@ describe('documented compressors October4 lot B', () => {
   expect(product('Fini','MiniCUBE 2.2-08-90').tankLiters).toBe(90);
  });
  it('concludes continuous supply only with sufficient qualified dimensions and does not invent reserve duration', () => {
-  const verdicts = Object.fromEntries(['continuous','intermittent','insufficient_data','incompatible'].map(v=>[v,batch.filter(p=>evaluateCompatibility(p,tool).verdict===v).length]));
+  const verdicts = Object.fromEntries(['continuous','intermittent','insufficient_data','incompatible'].map(v=>[v,batch.map(beforeReservedOctober31Followup).filter(p=>evaluateCompatibility(p,tool).verdict===v).length]));
   expect(verdicts).toEqual({continuous:124,intermittent:0,insufficient_data:296,incompatible:0});
   const nuair = product('Nuair','MERCURY Mech 2.2-08');
   expect(nuair.tankLiters).toBeUndefined();

@@ -23,18 +23,19 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "RUPES LH76P, référence LH76P. Le tableau fabricant publie 644 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Diamètre de plateau : 75 mm. Masse publiée : 1 kg.",
+		"overview": "RUPES LH76P. La table donne la consommation et la pression de travail, sans qualifier le débit de maximum, de moyenne ni de débit en charge. Le moteur conserve un résultat indéterminé pour ce point. Référence fabricant : LH76P. Diamètre de plateau : 75 mm. Masse publiée : 1 kg. Vitesse publiée : 5000 tr/min.",
 		"verifiedFacts": [
 			"Pression de service de 6,2 bar / 90 PSIG indiquée dans le même tableau.",
-			"Consommation maximale explicitement publiée dans le tableau « Air consumption max », en L/min.",
 			"Référence fabricant : LH76P.",
 			"Diamètre de plateau : 75 mm.",
 			"Masse publiée : 1 kg.",
-			"Vitesse publiée : 5000 tr/min."
+			"Vitesse publiée : 5000 tr/min.",
+			"Consommation de régime non précisé publiée : 644 L/min."
 		],
 		"limitations": [
 			"Le débit concerne l’outil. L’aspiration externe et les autres consommateurs de l’atelier doivent être examinés séparément.",
-			"Les variantes d’orbite et de plateau ne sont pas interchangeables pour un même objectif de finition."
+			"Les variantes d’orbite et de plateau ne sont pas interchangeables pour un même objectif de finition.",
+			"La table donne la consommation et la pression de travail, sans qualifier le débit de maximum, de moyenne ni de débit en charge. Le moteur conserve un résultat indéterminé pour ce point."
 		]
 	},
 	"specifications": [
@@ -47,9 +48,9 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation maximale explicitement publiée dans le tableau « Air consumption max », en L/min.",
+			"value": "Consommation de régime non précisé publiée : 644 L/min.",
 			"evidenceIds": [
-				"rupes-lh76p-20260926"
+				"rupes-lh76p-reserved-20261031-1"
 			]
 		},
 		{
@@ -72,6 +73,14 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"rupes-lh76p-20260926"
 			]
+		},
+		{
+			"label": "Observation historique conservée, hors calcul",
+			"value": "{\"airflowLpm\":{\"min\":644,\"typical\":644,\"max\":644},\"workingPressureBar\":{\"min\":6.2,\"typical\":6.2,\"max\":6.2}}",
+			"evidenceIds": [
+				"rupes-lh76p-20260926",
+				"rupes-lh76p-reserved-20261031-1"
+			]
 		}
 	],
 	"evidence": [
@@ -83,6 +92,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation maximale explicitement publiée dans le tableau « Air consumption max », en L/min."
+		},
+		{
+			"id": "rupes-lh76p-reserved-20261031-1",
+			"sourceUrl": "https://www.rupes.com/catalogue/2026/RUPES_Catalogue-2026_EN.pdf#page=65",
+			"sourceLabel": "RUPES LH76P : relecture documentaire du 31 octobre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-10-31",
+			"confidence": "B",
+			"notes": "SHA-256 018272fb053802b4e419d3f70bb75a46a02a62aec2a0404862ded7c21b443a63. La table donne la consommation et la pression de travail, sans qualifier le débit de maximum, de moyenne ni de débit en charge. Le moteur conserve un résultat indéterminé pour ce point."
 		}
 	],
 	"fieldSources": {
@@ -94,6 +113,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"rupes-lh76p-20260926"
+		],
+		"airflowBasis": [
+			"rupes-lh76p-reserved-20261031-1"
 		]
 	},
 	"notes": [
@@ -103,7 +125,8 @@ const product: ToolProfileInput = {
 		"min": 644,
 		"typical": 644,
 		"max": 644
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;
