@@ -56,7 +56,7 @@ L’interface de lame peut également limiter un ensemble guidé. La notice REMS
 
 ## Même kit d’accessoires ne signifie pas même débit
 
-Les consommations maximales converties valent **168 L/min** pour la famille SI-4710 et **288 L/min** pour la famille SI-4740. Le [catalogue fixe la pression de référence](https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43) à 6,3 bar en fonctionnement. La différence de débit relève ici de la machine, pas du simple nombre d’embouts livrés.
+Les consommations maximales converties valent **168 L/min** pour la famille SI-4710 et **288 L/min** pour la famille SI-4740. Le [catalogue prescrit une alimentation](https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43) à 6,3 bar en fonctionnement, commande entièrement actionnée. Cette consigne ne précise pas la pression de mesure des consommations maximales ; cet appariement reste à confirmer avant de dimensionner le compresseur. La différence de débit relève ici de la machine, pas du simple nombre d’embouts livrés.
 
 Les fiches [SI-4710](/outils-pneumatiques/shinano-si-4710/) et [SI-4740](/outils-pneumatiques/shinano-si-4740/) permettent de revenir à la base technique. Le [guide piston contre moteur rotatif](/guides/scie-pneumatique-moteur-rotatif-piston/) complète le choix lorsque le mécanisme compte autant que le contenu du coffret.
 

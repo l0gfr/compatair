@@ -1,0 +1,2402 @@
+{
+  "schemaVersion": 1,
+  "publicationDay": "2026-10-31",
+  "sourceReleaseSha": "293ff33782ba31a2a0ecfb0735f13a3436223f8f",
+  "policyHash": "7d2ab5b10bed659bbbb3af6aaab75ef27b7e3527cc3d686072426907bb748645",
+  "corpusHash": "a571e097c0df45462cf31db92f552f961542d72a1b951b3c00d11924a5a099f6",
+  "reviewedAt": "2026-10-31T07:28:24.070421+00:00",
+  "status": "partial",
+  "sourceMainSha": "293ff33782ba31a2a0ecfb0735f13a3436223f8f",
+  "limits": {
+    "guides": 10,
+    "compressors": 30,
+    "tools": 60
+  },
+  "countsApproved": {
+    "guides": 5,
+    "compressors": 2,
+    "tools": 1
+  },
+  "currentProposal": {
+    "createdAt": "2026-10-31T07:26:06.378Z",
+    "sha256": "5b4b45823466fbbf702e856263a53f73d5c545223d14d087ee698e688432df71",
+    "selectionUnchanged": true,
+    "changedCandidateFiles": 4,
+    "hashField": "value.contentHash"
+  },
+  "globalSourceHealth": {
+    "runId": 41022499148,
+    "sourceRevision": "293ff33782ba31a2a0ecfb0735f13a3436223f8f",
+    "scope": {
+      "kind": "inventory"
+    },
+    "checkedAt": "2026-10-30T08:38:39.252Z",
+    "summary": {
+      "reachable": 7034,
+      "broken": 4,
+      "unavailable": 1,
+      "unsafe": 0,
+      "unverified": 478,
+      "acknowledged": 0,
+      "recovered": 0,
+      "reviewedRecoveries": 1,
+      "checked": 7517,
+      "anomalies": 5,
+      "auditUnavailable": false
+    },
+    "anomalies": [
+      {
+        "url": "https://airpress.fr/compresseur-a-vis-aps-x-20-combi-dry-10-bar-20-ch-15-kw-1900-l-min-500-l-369020-p",
+        "state": "broken",
+        "status": 404
+      },
+      {
+        "url": "https://www.beck-fastening.com/en/f48ac-cn15w-57a~p309",
+        "state": "broken",
+        "status": 404
+      },
+      {
+        "url": "https://www.ekomak.com/en-global/products/screw-compressors/variable-speed/direct-drive-eko-8-22-vst",
+        "state": "broken",
+        "status": 404
+      },
+      {
+        "url": "https://www.kyocera-senco.eu/wp-content/uploads/2018/11/Senco_catalogue_EN.pdf",
+        "state": "broken",
+        "status": 404
+      },
+      {
+        "url": "https://www.masterpalm.com/product/industrial-324",
+        "state": "unavailable",
+        "status": 502
+      }
+    ],
+    "qualification": "Dernier inventaire complet :4HTTP404individuelles et1HTTP502MasterPalm,478nonvérifiées. Aucun défaut globalTLS,intégrité,provenance ou cohérence des releases constaté. Les lectures ciblées du31 ne remplacent pas cet inventaire et n’effacent aucune anomalie."
+  },
+  "sources": [
+    {
+      "key": "S003",
+      "url": "https://www.prowin-tools.com/wp-content/uploads/2023/05/Air-Painting-ToolsNew.pdf",
+      "observedAt": "2026-10-31T07:16:35.420900+00:00",
+      "previousBodySha256": "2cd45573cff8decba50b2fbbfe2127d8e4bc1c3f1fdb6550e2f2467703941213",
+      "status": 200,
+      "finalUrl": "https://www.prowin-tools.com/wp-content/uploads/2023/05/Air-Painting-ToolsNew.pdf",
+      "contentType": "application/pdf",
+      "bytes": 21077454,
+      "sha256": "2cd45573cff8decba50b2fbbfe2127d8e4bc1c3f1fdb6550e2f2467703941213",
+      "complete": true,
+      "kind": "pdf",
+      "state": "reachable",
+      "unchangedBody": true,
+      "actuallyReadScope": "Page15 entière texte et rendu : K-528M/KL-528M, unités, colonnes, buses, kits et pression de service. Pas de régime dimensionnant ajouté."
+    },
+    {
+      "key": "S017",
+      "url": "https://shop.abacaircompressors.com/en-FR/products/4152025384/formula-55-8-40050-ce",
+      "observedAt": "2026-10-31T07:16:35.420956+00:00",
+      "previousBodySha256": "522aa9a3bab3e012ec847e6d953441535ea1addb9764db280b2afa665559e9c1",
+      "status": 200,
+      "finalUrl": "https://shop.abacaircompressors.com/en-FR/products/4152025384/formula-55-8-40050-ce",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 6821187,
+      "sha256": "3a1e19ee53da13ad2380c6e3a6f63c7d607d3813a7899c1d0a99417fe76fd1e3",
+      "complete": true,
+      "kind": "html",
+      "state": "reachable",
+      "unchangedBody": false,
+      "actuallyReadScope": "Identité et réserve de la variante ABAC ; pas de qualification complète des conditions FAD et du service du groupe, aucune admission."
+    },
+    {
+      "key": "S018",
+      "url": "https://www.abacaircompressors.com/en-international/products/screw-compressors",
+      "observedAt": "2026-10-31T07:16:35.420589+00:00",
+      "previousBodySha256": "aba8d998a6e607e64054b24a4100e7c650b927aea911aae33204f1f5858f02f3",
+      "status": 200,
+      "finalUrl": "https://www.abacaircompressors.com/en-international/products/screw-compressors",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 133496,
+      "sha256": "b36554f639441a8e9910a9806f607a2d68e3943752c03e2a0b09c7a1a2e5bc38",
+      "complete": true,
+      "kind": "html",
+      "state": "reachable",
+      "unchangedBody": false,
+      "actuallyReadScope": "Page de gamme ABAC ; une promesse générale ne qualifie pas dutyCycle=1. Aucune admission."
+    },
+    {
+      "key": "S025",
+      "url": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf",
+      "observedAt": "2026-10-31T07:16:35.421000+00:00",
+      "previousBodySha256": "03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b",
+      "status": 200,
+      "finalUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf",
+      "contentType": "application/pdf",
+      "bytes": 13390181,
+      "sha256": "03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b",
+      "complete": true,
+      "kind": "pdf",
+      "state": "reachable",
+      "unchangedBody": true,
+      "actuallyReadScope": "Pages25et43 complètes ; rendu25 lu. Références exactes, kits, consommations maximale/moyenne et consigne de service distinctes."
+    },
+    {
+      "key": "S026",
+      "url": "https://www.suhner-abrasive.com/en/services/download-center?cHash=e31546df478867207107d44af53da6c5&tx_suhnerext_suhnerext%5Baction%5D=getDownload&tx_suhnerext_suhnerext%5Bcontroller%5D=Download&tx_suhnerext_suhnerext%5Buid%5D=2145&type=871",
+      "observedAt": "2026-10-31T07:16:37.564226+00:00",
+      "previousBodySha256": null,
+      "status": 200,
+      "finalUrl": "https://www.suhner-abrasive.com/en/services/download-center?cHash=e31546df478867207107d44af53da6c5&tx_suhnerext_suhnerext%5Baction%5D=getDownload&tx_suhnerext_suhnerext%5Bcontroller%5D=Download&tx_suhnerext_suhnerext%5Buid%5D=2145&type=871",
+      "contentType": "application/pdf",
+      "bytes": 8745162,
+      "sha256": "9f299f4564968be338e594b43abc97580d48e94bbd4d7edf8331940f3f2559ac",
+      "complete": true,
+      "kind": "pdf",
+      "state": "reachable",
+      "unchangedBody": false,
+      "actuallyReadScope": "Page15 complète texte+rendu, sections3.2.2/3.2.3 et4.1 ; réglage course/fréquence et entretien, sans extrapolation àShinano."
+    },
+    {
+      "key": "S027",
+      "url": "https://www.rems.de/dlbatv2/566008RX",
+      "observedAt": "2026-10-31T07:16:38.215332+00:00",
+      "previousBodySha256": null,
+      "status": 200,
+      "finalUrl": "https://www.rems.de/batv2/BA/566008_RX_BA001_V002.pdf",
+      "contentType": "application/pdf",
+      "bytes": 6274522,
+      "sha256": "a99b48220b800bbcd26431f8ae001b1552172e1359f3b48e7f6e3da243574e0c",
+      "complete": true,
+      "kind": "pdf",
+      "state": "reachable",
+      "unchangedBody": false,
+      "actuallyReadScope": "Pages19–20,versionpneumatic et guides/talons ; section2.4/2.5 intégrale relue, pas de reprise de procédure électrique sur pneumatique."
+    },
+    {
+      "key": "S039",
+      "url": "https://www.gentilinair.com/en/products/clinic-8-90",
+      "observedAt": "2026-10-31T07:16:38.699020+00:00",
+      "previousBodySha256": null,
+      "status": 200,
+      "finalUrl": "https://www.gentilinair.com/en/products/clinic-8-90",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 94002,
+      "sha256": "69708e5dc92fe43b9a01a41ef653f565a089fe33741f095725e51bde5126660f",
+      "complete": true,
+      "kind": "html",
+      "state": "reachable",
+      "unchangedBody": false,
+      "actuallyReadScope": "Fiche technique actuelle817013001 entièrement lue, identité, FAD5/8bar,cycle,cuve,électricité,drainage,cotes et acoustique."
+    },
+    {
+      "key": "S040",
+      "url": "https://www.gentilinair.com/en/categories/process-air",
+      "observedAt": "2026-10-31T07:16:39.780055+00:00",
+      "previousBodySha256": null,
+      "status": 200,
+      "finalUrl": "https://www.gentilinair.com/en/categories/process-air",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 162579,
+      "sha256": "90386bc3da709316e500a83bef007a615e1a7b70f811c956efdef17d14ed1e05",
+      "complete": true,
+      "kind": "html",
+      "state": "reachable",
+      "unchangedBody": false,
+      "actuallyReadScope": "Catégorie Processair : compression sanshuile ; aucun service de la gammeHUSH transféré àCLINIC. Qualification du cycle par les sources exactes039/105."
+    },
+    {
+      "key": "S065",
+      "url": "https://www.parker.com/content/dam/Parker-com/Literature/IGFG/PDF-Files/Finite_Compressed_Air_Gas_Desiccant_Dryers_1300_850_USA.pdf",
+      "observedAt": "2026-10-31T07:16:38.766780+00:00",
+      "previousBodySha256": null,
+      "status": 403,
+      "state": "http-error",
+      "complete": false,
+      "unchangedBody": false,
+      "actuallyReadScope": "Corps non reçu ou revue complète non achevée ; aucun accord par défaut."
+    },
+    {
+      "key": "S066",
+      "url": "https://ph.parker.com/us/en/compressed-air-gas-up-to-300-psig-fdd-desiccant-dryer-series",
+      "observedAt": "2026-10-31T07:16:39.134397+00:00",
+      "previousBodySha256": null,
+      "status": 403,
+      "state": "http-error",
+      "complete": false,
+      "unchangedBody": false,
+      "actuallyReadScope": "Corps non reçu ou revue complète non achevée ; aucun accord par défaut."
+    },
+    {
+      "key": "S067",
+      "url": "https://www.festo.com/media/catalog/204326_documentation.pdf",
+      "observedAt": "2026-10-31T07:16:39.172346+00:00",
+      "previousBodySha256": null,
+      "status": 403,
+      "state": "http-error",
+      "complete": false,
+      "unchangedBody": false,
+      "actuallyReadScope": "Corps non reçu ou revue complète non achevée ; aucun accord par défaut."
+    },
+    {
+      "key": "S068",
+      "url": "https://www.kaercher.com/gb/en/professional/products/ib-10-8-l2p-p15742000",
+      "observedAt": "2026-10-31T07:16:39.245129+00:00",
+      "previousBodySha256": null,
+      "status": 200,
+      "finalUrl": "https://www.kaercher.com/gb/en/professional/products/ib-10-8-l2p-p15742000",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 517045,
+      "sha256": "4543a2fb5977650a33a8de7ba27b77d42dd29d500bafcd5b2d1527b91c6a699a",
+      "complete": true,
+      "kind": "html",
+      "state": "reachable",
+      "unchangedBody": false,
+      "actuallyReadScope": "Fiche15742000 : identité, plages d’air/pression, qualité sec/sanshuile, productionL2P ; aucune courbe reconstruite."
+    },
+    {
+      "key": "S069",
+      "url": "https://s1.kaercher-media.com/documents/manuals/html/BTA-5778340-000-04/DE.html",
+      "observedAt": "2026-10-31T07:16:39.318165+00:00",
+      "previousBodySha256": null,
+      "status": 200,
+      "finalUrl": "https://s1.kaercher-media.com/documents/manuals/html/BTA-5778340-000-04/DE.html",
+      "contentType": "text/html",
+      "bytes": 112325,
+      "sha256": "dc3d1157104fa7945b84c66eb461776eb4af943ff2326866483ccd50c4655e40",
+      "complete": true,
+      "kind": "html",
+      "state": "reachable",
+      "unchangedBody": false,
+      "actuallyReadScope": "Sections fonctionnement, raccordement air/CO2, sécurité ventilation et tableau technique complet des deux modèles séparés.10/8max0,8m³/min,min0,5pouce ; ventilation2000m³/h non confondue avec l’air comprimé."
+    },
+    {
+      "key": "S072",
+      "url": "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf",
+      "observedAt": "2026-10-31T07:16:39.568266+00:00",
+      "previousBodySha256": "f5ca167dedaab25352808dc5001ba9badc7acffb2c37168c6d9f89182b752a0e",
+      "status": 200,
+      "finalUrl": "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf",
+      "contentType": "application/pdf",
+      "bytes": 4383400,
+      "sha256": "f5ca167dedaab25352808dc5001ba9badc7acffb2c37168c6d9f89182b752a0e",
+      "complete": true,
+      "kind": "pdf",
+      "state": "reachable",
+      "unchangedBody": true,
+      "actuallyReadScope": "Accès actuel uniquement ; relecture complète du périmètre de service ALMiG non achevée, pas d’admission."
+    },
+    {
+      "key": "S073",
+      "url": "https://www.almig.de/en/products/compressed-air-generation/screw-compressors",
+      "observedAt": "2026-10-31T07:16:40.082537+00:00",
+      "previousBodySha256": "a42ca92be39e4a81a11cf3e4ec6bb3ce237552363c3b0a7d16a43761d852266f",
+      "status": 200,
+      "finalUrl": "https://www.almig.de/en/products/compressed-air-generation/screw-compressors",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 129630,
+      "sha256": "a42ca92be39e4a81a11cf3e4ec6bb3ce237552363c3b0a7d16a43761d852266f",
+      "complete": true,
+      "kind": "html",
+      "state": "reachable",
+      "unchangedBody": true,
+      "actuallyReadScope": "Accès à la présentation de gamme, insuffisant pour qualifier le service du groupe COMBIXP15 ; pas d’admission."
+    },
+    {
+      "key": "S083",
+      "url": "https://www.graco.com/content/dam/graco/tech_documents/manuals/333/333011/333011EN-L.pdf",
+      "observedAt": "2026-10-31T07:16:39.845069+00:00",
+      "previousBodySha256": "061f9e324d76016b03c9a153a14e57026e7bf512b38fe9cc7fc93323ff0830d4",
+      "status": 200,
+      "finalUrl": "https://www.graco.com/content/dam/graco/tech_documents/manuals/333/333011/333011EN-L.pdf",
+      "contentType": "application/pdf",
+      "bytes": 3225579,
+      "sha256": "061f9e324d76016b03c9a153a14e57026e7bf512b38fe9cc7fc93323ff0830d4",
+      "complete": true,
+      "kind": "pdf",
+      "state": "reachable",
+      "unchangedBody": true,
+      "actuallyReadScope": "Pages7et9 entières relues : principe électrostatique, versionsStandard/Smart et ports exactsTA/CYL/A1/A2/P."
+    },
+    {
+      "key": "S085",
+      "url": "https://www.worthington-creyssensac.com/content/dam/brands/Worthington%20Creyssensac/products-bp-structure/oil-injected-screw-compressor/fixed-speed/rlr-750-2000-%282022%29/leaflets/wco-rollair-750-2000-leaflet-en.pdf.coredownload.pdf",
+      "observedAt": "2026-10-31T07:16:40.495460+00:00",
+      "previousBodySha256": "453e287507815373993e3d0c796c82836a43fbc822fe0f2117a56f7b9635ba9d",
+      "status": 200,
+      "finalUrl": "https://www.worthington-creyssensac.com/content/dam/brands/Worthington%20Creyssensac/products-bp-structure/oil-injected-screw-compressor/fixed-speed/rlr-750-2000-%282022%29/leaflets/wco-rollair-750-2000-leaflet-en.pdf.coredownload.pdf",
+      "contentType": "application/pdf",
+      "bytes": 10365876,
+      "sha256": "453e287507815373993e3d0c796c82836a43fbc822fe0f2117a56f7b9635ba9d",
+      "complete": true,
+      "kind": "pdf",
+      "state": "reachable",
+      "unchangedBody": true,
+      "actuallyReadScope": "Pages3et6 complètes, table des performances, montages, masses et cotes. Rendu exact du même PDF conservé le30, empreinte identique actuellement ; tables relues dans la nouvelle capture."
+    },
+    {
+      "key": "S099",
+      "url": "https://portal.metabo-service.com/fileadmin/metabo_material/BA/17027246_00_1024_84_A5_de_en_fr_nl_es_fi_no_pl_hu_cs_uk_%20DL-Tacker%20NLO%2062841%20UKCA.pdf",
+      "observedAt": "2026-10-31T07:16:40.825696+00:00",
+      "previousBodySha256": "452fa51899e0b4361d92fdc247728e6934e9b311974f132d705b073bb0b8c7df",
+      "status": 200,
+      "finalUrl": "https://portal.metabo-service.com/fileadmin/metabo_material/BA/17027246_00_1024_84_A5_de_en_fr_nl_es_fi_no_pl_hu_cs_uk_%20DL-Tacker%20NLO%2062841%20UKCA.pdf",
+      "contentType": "application/pdf",
+      "bytes": 2970279,
+      "sha256": "452fa51899e0b4361d92fdc247728e6934e9b311974f132d705b073bb0b8c7df",
+      "complete": true,
+      "kind": "pdf",
+      "state": "reachable",
+      "unchangedBody": true,
+      "actuallyReadScope": "Page3 actuelle relue ; celluleDKNGKL15x40 toujours imprimée contre15-40du voisin. Cette ambiguïté ne devient pas une plage silencieusement corrigée."
+    },
+    {
+      "key": "S101",
+      "url": "https://www.agre.de/content/dam/brands/ceccatocluster/agre/piston-compressors/professional-compressors/worker/AGRE-DFE-Kolbenkompressoren-Portfolio.pdf",
+      "observedAt": "2026-10-31T07:16:40.873239+00:00",
+      "previousBodySha256": null,
+      "status": 200,
+      "finalUrl": "https://www.agre.de/content/dam/brands/ceccatocluster/agre/piston-compressors/professional-compressors/worker/AGRE-DFE-Kolbenkompressoren-Portfolio.pdf",
+      "contentType": "application/pdf",
+      "bytes": 5647642,
+      "sha256": "04774dd3a9dddf3b99389a7243f5068eda3e456d3e63c736157723a0df12ee67",
+      "complete": true,
+      "kind": "pdf",
+      "state": "reachable",
+      "unchangedBody": false,
+      "actuallyReadScope": "Page44 entière, texte+rendu, y compris note6bar relatifs, unités et conditions de bruit ; aucune généralisation de rendement."
+    },
+    {
+      "key": "S102",
+      "url": "https://www.balma.com/fr/products/screw-compressors/rotary-srew-compressor-unico",
+      "observedAt": "2026-10-31T07:16:41.301532+00:00",
+      "previousBodySha256": null,
+      "status": 200,
+      "finalUrl": "https://www.balma.com/fr/products/screw-compressors/rotary-srew-compressor-unico",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 54714,
+      "sha256": "385dba6ada248c24e9f7b0ecf051ac517df987b804b3b379913bd54a22de1bb5",
+      "complete": true,
+      "kind": "html",
+      "state": "reachable",
+      "unchangedBody": false,
+      "actuallyReadScope": "Tableaux web performances et quatre configurations de dimensions intégralement relus, sans considérer la date de consultation comme une révision mécanique."
+    },
+    {
+      "key": "S103",
+      "url": "https://www.balma.com/content/dam/brands/balma/ois/unico/Balma%20Unico.pdf",
+      "observedAt": "2026-10-31T07:16:43.135413+00:00",
+      "previousBodySha256": null,
+      "status": 200,
+      "finalUrl": "https://www.balma.com/content/dam/brands/balma/ois/unico/Balma%20Unico.pdf",
+      "contentType": "application/pdf",
+      "bytes": 4137926,
+      "sha256": "0a000b7a6ea09229259f2b178ca6c4970974896ea4ee7aee572473f87b01338f",
+      "complete": true,
+      "kind": "pdf",
+      "state": "reachable",
+      "unchangedBody": false,
+      "actuallyReadScope": "Page7 entière texte+rendu : performances, conditions ISO et dimensions, restriction100Lau500."
+    },
+    {
+      "key": "S104",
+      "url": "https://www.gentilinair.com/en/products/clinic-6-90-tri",
+      "observedAt": "2026-10-31T07:18:52.375392+00:00",
+      "previousBodySha256": null,
+      "status": 200,
+      "finalUrl": "https://www.gentilinair.com/en/products/clinic-6-90-tri",
+      "contentType": "text/html; charset=UTF-8",
+      "bytes": 96761,
+      "sha256": "91a66f65eae7c1ae12935c85e0e68f518aa8655033939cc1b63cef474fa5f902",
+      "complete": true,
+      "kind": "html",
+      "state": "reachable",
+      "unchangedBody": false,
+      "actuallyReadScope": "Fiche6/90triphasée812313013 entièrement relue : FAD5/8bar,électricité,cuve,masses,drainage et comparaison8/90."
+    },
+    {
+      "key": "S105",
+      "url": "https://www.gentilinair.com/docs/documento-provvisorio-clinic-8-90_1778060807.pdf",
+      "observedAt": "2026-10-31T07:18:53.226499+00:00",
+      "previousBodySha256": null,
+      "status": 200,
+      "finalUrl": "https://www.gentilinair.com/docs/documento-provvisorio-clinic-8-90_1778060807.pdf",
+      "contentType": "application/pdf",
+      "bytes": 887189,
+      "sha256": "20f23d37209d3788b2ade87906b9cf531620f3e06b8611c0f6a87289d20a8a4c",
+      "complete": true,
+      "kind": "pdf",
+      "state": "reachable",
+      "unchangedBody": false,
+      "actuallyReadScope": "PDF reçu intégralement8pages. Passages textuels1,4,5,8 lus ; tableau imagep6 rendu et lu entièrement, version8/90 distincteDRY. Conditions0–40°C,humiditémax50%à40°C,cycle du groupe et cotes A/B/C conservés."
+    }
+  ],
+  "sourceCoverage": "Les sources téléchargées ici concernent les candidats réellement travaillés et leurs voisins. Les autres sources gardent les constats de l’inventaire complet, sans prétendre à une relecture ciblée actuelle.",
+  "guideCorrections": [
+    {
+      "file": "src/content/guides/scie-lime-pneumatique-kit-embouts.md",
+      "beforeSha256": "3582ff68d8f0dee099c533f163099672553ccfe65b83feb837c7a218444d6a80",
+      "afterSha256": "b34d6182f2f01a58c86c5b0be575380c8da6805b23fd53abe707beb760d9e32f",
+      "before": "Le [catalogue fixe la pression de référence](https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43) à 6,3 bar en fonctionnement.",
+      "after": "Le [catalogue prescrit une alimentation](https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43) à 6,3 bar en fonctionnement, commande entièrement actionnée. Cette consigne ne précise pas la pression de mesure des consommations maximales ; cet appariement reste à confirmer avant de dimensionner le compresseur."
+    }
+  ],
+  "catalogAmendments": "src/data/imports/catalog-amendments-reviewed-2026-10-31.json",
+  "technicalFieldsChanged": false,
+  "evidenceHistoryAdded": 5,
+  "publicScopeCountersChanged": false,
+  "physicalTests": false,
+  "pages": [
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-9-145730/",
+      "kind": "tool",
+      "file": "src/data/products/tools/pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-1-9-145730.ts",
+      "fileSha256": "fbe7f0d1380c73a699fb4e5fea385b9dd345f672ca50c49f2ef4f552272c5556",
+      "contentHash": "2b8c86799c9b8b2b676931e372af5741cd91da63b4f5e3e7a0a6162c6b037580",
+      "sourceAccessKeys": [
+        "S000",
+        "S001"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-chocs-taylor-pneumatic-t-7734l-1-2-impact-wrench-2-extended-anvil-t-7734l/",
+      "kind": "tool",
+      "file": "src/data/products/tools/cle-a-chocs-taylor-pneumatic-t-7734l-1-2-impact-wrench-2-extended-anvil-t-7734l.ts",
+      "fileSha256": "3b208824fd2bea27bc63cb49063cf887e111162d3317267a72d47af8c24ed707",
+      "contentHash": "b865fb9d0dba71064824936ccdb873381ea677307fb79cce815ccd18833d25ce",
+      "sourceAccessKeys": [
+        "S002"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-prowin-k-528m-10/",
+      "kind": "tool",
+      "file": "src/data/products/tools/pistolet-peinture-hvlp-prowin-k-528m-10.ts",
+      "fileSha256": "48a6c26f3ca8bebc61600cf8dab539949db7571edc5d50810582f1d91d875feb",
+      "contentHash": "7d93153092dadc11e0a5357fae63fe43e0bb82681a70c2b3f0fe03fea23a878a",
+      "sourceAccessKeys": [
+        "S003"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": false,
+      "sourcesActuallyRead": [
+        "S003"
+      ],
+      "neighbors": [
+        {
+          "candidateIndex": 2,
+          "file": "src/data/products/tools/pistolet-peinture-hvlp-prowin-k-528m-14.ts",
+          "sha256": "9361da117f971a975fe6cd09e52d56e9b3ec0d656f420cfff2e0007658ccd2a3",
+          "scope": "Fiche native complète comparée aux valeurs des mêmes documents primaires ; distinction expliquée dans la décision."
+        }
+      ],
+      "decision": "approved",
+      "note": "Réserve reprise : le K-528M-10 de1,0mm ne documente pas un compresseur plus petit que le1,4mm standard. Page15 entière, texte et rendu :250L/min pour les sept buses1,0–2,8mm ; jet290contre300mm, kitsSG018-528-10/14 distincts des pistolets. FluidOutput90/150ml sans période conservé. Le voisinM14 reste une fiche générique, cette réponse explique le choix de buse sans fausse réduction du besoin d’air. Variable-volume, absence de débit calculable et pression20–28psi de service conservées ; moteur natif/runtime non conclusifs.",
+      "limits": "Revue documentaire, sans essai physique ni garantie de performance au poste ou d’indexationGoogle ; conditions et inconnues de mesure conservées."
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sagola-3600-xpt-hvlp-buse-1-30-10142505/",
+      "kind": "tool",
+      "file": "src/data/products/tools/pistolet-peinture-hvlp-sagola-3600-xpt-hvlp-buse-1-30-10142505.ts",
+      "fileSha256": "984680c40492137e2af3aeba491a7fc33067c5b1ff60e41e30f7bda9b9e06783",
+      "contentHash": "5c0a65304d8aa354085bca694862fbfba5c02c7e84d4492730216ef61bfd6ac7",
+      "sourceAccessKeys": [
+        "S004",
+        "S005"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-graco-airpro-pressure-288939-288939/",
+      "kind": "tool",
+      "file": "src/data/products/tools/pistolet-peinture-hvlp-graco-airpro-pressure-288939-288939.ts",
+      "fileSha256": "40996b839b1b7316a557d4de3d2798ac2d51cff85e62e01754bb2e855ed14096",
+      "contentHash": "66575435d92ccc6921950827c8447acbb0e947f0f3f4ef8cbdb2cabfb3f83c43",
+      "sourceAccessKeys": [
+        "S006"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sames-kremlin-fpro-lock-p-hvlp-09-lva-135-767-409/",
+      "kind": "tool",
+      "file": "src/data/products/tools/pistolet-peinture-hvlp-sames-kremlin-fpro-lock-p-hvlp-09-lva-135-767-409.ts",
+      "fileSha256": "0792d9c543769554f9cc1edd751fca8aad20592254d9f946d7c0c897d04740dd",
+      "contentHash": "40797b71ecd5a01b2d78c322f1237f508a92fc5b572256a010d333242d211343",
+      "sourceAccessKeys": [
+        "S007"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-binks-trophy-1466-10hv-c1s-e/",
+      "kind": "tool",
+      "file": "src/data/products/tools/pistolet-peinture-hvlp-binks-trophy-1466-10hv-c1s-e.ts",
+      "fileSha256": "a79cb52417a0117e5327ea9c8ac4d462c804a1d5dda843565e82e1444e4b244a",
+      "contentHash": "f8c420e7c4c6c0126c9457ce098a4d5029034d22e1c44eea0659f45060d83fe4",
+      "sourceAccessKeys": [
+        "S008"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-walcom-ego-carbonio-190-hvlp-gravite-buse-0-5-mm/",
+      "kind": "tool",
+      "file": "src/data/products/tools/pistolet-peinture-hvlp-walcom-ego-carbonio-190-hvlp-gravite-buse-0-5-mm.ts",
+      "fileSha256": "0c1585a737e8f3c9dc22c94202985fc539d4d1f0ae4aaf416a3e870cf099fafb",
+      "contentHash": "e07ea7fc198e28456f82168829dc61f16dd730b60b26d4047af64e392a839e7e",
+      "sourceAccessKeys": [
+        "S009",
+        "S010",
+        "S011"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-anest-iwata-airgunsa-az3-hte2-hvlp-buse-1-3-hvlp/",
+      "kind": "tool",
+      "file": "src/data/products/tools/pistolet-peinture-anest-iwata-airgunsa-az3-hte2-hvlp-buse-1-3-hvlp.ts",
+      "fileSha256": "9611c7e52ca45a2a5a6ec93f2b6b6bda786282b3be83da1bc49d454cb8f01197",
+      "contentHash": "dc5b756e74b5b7187d4c7227bcd84eeddfefa779a9d75fa9c53d366e18ed8496",
+      "sourceAccessKeys": [
+        "S012"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-2-2-mm/",
+      "kind": "tool",
+      "file": "src/data/products/tools/pistolet-peinture-asturo-bbs-hvlp-art-00198-buse-2-2-mm.ts",
+      "fileSha256": "20866f440694f1a769505fa2a1aed8a66ef7b92899fc335b27f7936f277a9122",
+      "contentHash": "4b3a4e3464ea4fac70b9909f5465418f091b601f8442cc921cdb052b1a510634",
+      "sourceAccessKeys": [
+        "S013"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-ani-f1-n-super-i-hvlp-buse-1-5/",
+      "kind": "tool",
+      "file": "src/data/products/tools/pistolet-peinture-hvlp-ani-f1-n-super-i-hvlp-buse-1-5.ts",
+      "fileSha256": "39d53102b34569d25eb6db86542bfaf5624ff7d560853d579d2a52e2638f8893",
+      "contentHash": "7596cd78f9643a858b9e21146776a397b64db22261dacc440884c200c55381f6",
+      "sourceAccessKeys": [
+        "S014"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-prona-r-430-hvlp-14-buse-1-4-hvlp-gravity/",
+      "kind": "tool",
+      "file": "src/data/products/tools/pistolet-peinture-prona-r-430-hvlp-14-buse-1-4-hvlp-gravity.ts",
+      "fileSha256": "33e1ccc87fb61443b52e9d2ce10837c82d79db1116c4b818bbd0d7d5d2b67354",
+      "contentHash": "c29d2783b6097621cdb0881553349cc2f3a24f2124f59595a58ef945776385a8",
+      "sourceAccessKeys": [
+        "S015"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/guides/separateur-cyclonique-filtre-coalescent-differences/",
+      "kind": "guide",
+      "file": "src/content/guides/separateur-cyclonique-filtre-coalescent-differences.md",
+      "fileSha256": "2b8ca6c93f5cca1c9f7542badd50d7ba031d1f3dc2669f29576371d5408874bd",
+      "contentHash": "f55193f0e08cdc066d1cab05d7eb915416b6c01b8ce63c51f6ff450af270d53a",
+      "sourceAccessKeys": [
+        "S016"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/abac-formula-e-7-5-8-400-50/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/abac-formula-e-7-5-8-400-50.ts",
+      "fileSha256": "ac57086f52544a5284a90923edc37a05df866d7c1f3ba8595b1fcc0b2be7f144",
+      "contentHash": "35812121f950423609eeab80c54f933ee96966a367df7bad846317a96278cccd",
+      "sourceAccessKeys": [
+        "S017",
+        "S018"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Le cycle1natiffait partie du calcul ; une promesse de gamme ou une classe moteur ne suffit pas à qualifier le groupe entier. Qualification documentaire de cette valeur et/ou des points FAD non achevée : aucune admission, ni neutralisation par une précaution de texte.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/fiac-ax-203bd-dry-10-400-50-ce/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/fiac-ax-203bd-dry-10-400-50-ce.ts",
+      "fileSha256": "0696e060cd734b94649cde69ecf2029ccef4252ea0f50973e478f150dd74e555",
+      "contentHash": "e8a6d4809bc45d72cf76979bed039290918e7cdaede6f90b2eb9f7cd35b6200a",
+      "sourceAccessKeys": [
+        "S019",
+        "S020",
+        "S021"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/guides/bruit-outil-pneumatique-pression-puissance-acoustique/",
+      "kind": "guide",
+      "file": "src/content/guides/bruit-outil-pneumatique-pression-puissance-acoustique.md",
+      "fileSha256": "aa4da1b3a9406f26a50f49f7097583dcfc0f7862db658fef66f344c13cd504c1",
+      "contentHash": "732dd2b7e9b6903bb712a87ad77950c690fab8508d5cb2519ace7dcf3853cf9d",
+      "sourceAccessKeys": [
+        "S022",
+        "S023",
+        "S024"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/guides/scie-lime-pneumatique-kit-embouts/",
+      "kind": "guide",
+      "file": "src/content/guides/scie-lime-pneumatique-kit-embouts.md",
+      "fileSha256": "b34d6182f2f01a58c86c5b0be575380c8da6805b23fd53abe707beb760d9e32f",
+      "contentHash": "83cc5e6bc93cd5614d67d98bb14bb9f33fc9cf17c9a9ab118a2f7ab986fc2ea3",
+      "sourceAccessKeys": [
+        "S025",
+        "S026",
+        "S027"
+      ],
+      "previousReport": null,
+      "previousDecision": null,
+      "previousContentUnchanged": null,
+      "sourcesActuallyRead": [
+        "S025",
+        "S026",
+        "S027"
+      ],
+      "neighbors": [
+        {
+          "candidateIndex": 16,
+          "file": "src/content/guides/scie-pneumatique-moteur-rotatif-piston.md",
+          "sha256": "74c149837592e18b733c370d3a96b961c645b19c10cbf362dcba01bfcaf07ddc",
+          "scope": "Corps complet comparé ; portée distincte expliquée dans la décision."
+        },
+        {
+          "candidateIndex": 16,
+          "file": "src/content/guides/suhner-umc6rl-lime-course-rainure.md",
+          "sha256": "34a9f0e175730bc921e35ff9add5e6bd9edfd0fe80d060f28bfa30672919d66e",
+          "scope": "Corps complet comparé ; portée distincte expliquée dans la décision."
+        },
+        {
+          "candidateIndex": 16,
+          "file": "src/content/guides/rems-tiger-pneumatic-lame-guide-tube.md",
+          "sha256": "5420ac237c3e0a58e68199d545717dbc9bf6bb647c475058a5c11fb75690e6bb",
+          "scope": "Corps complet comparé ; portée distincte expliquée dans la décision."
+        }
+      ],
+      "decision": "approved",
+      "note": "Machines nues et kits SI-4710/F etSI-4740/F : page25 entière relue et rendu vérifié ; trois limes506P-56F/R/T, courses10/5mm,cadences10000/10500,masses0,80/0,52kg,maxima2,8/4,8L/s→168/288L/min. La consigne6,3bar p43 ne prouve pas la pression de mesure : clarification ajoutée. Voisins : mécanisme piston/rotatif, réglage courseSuhner et talonsREMS ; aucun ne répond à la composition des deux kits. Suhnerp15 confirme fréquence séparée de course ; REMSp20 confirme double talon et vis de maintien.",
+      "limits": "Revue documentaire, sans essai physique ni garantie de performance au poste ou d’indexationGoogle ; conditions et inconnues de mesure conservées."
+    },
+    {
+      "path": "/outils-pneumatiques/cleco-19pta02q/",
+      "kind": "tool",
+      "file": "src/data/products/tools/cleco-19pta02q.ts",
+      "fileSha256": "fbd224646666e8c7a8cc6ca64f383dad9b17f3e2b9f548e14ff7d734be6a456d",
+      "contentHash": "84a6846285d552b8287b27f27736e94abfdf278d28e5b199fe24897858b00103",
+      "sourceAccessKeys": [
+        "S028"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/cleco-19raa09ah2/",
+      "kind": "tool",
+      "file": "src/data/products/tools/cleco-19raa09ah2.ts",
+      "fileSha256": "7e5fd8e75698aea77845be06a8d52ee0200c768d4d2773a87f7fe2e1ac9a21a4",
+      "contentHash": "d08486f98f6e17b0935780ede6a08de2ce502160559545bde8ad475b7f377d4e",
+      "sourceAccessKeys": [
+        "S028"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/cleco-20pthh403/",
+      "kind": "tool",
+      "file": "src/data/products/tools/cleco-20pthh403.ts",
+      "fileSha256": "a32a81ab40963246e03da3a50e59345aee4c0de6c9b60728b03b730d91287ae2",
+      "contentHash": "835f0a2422a5829703a64f940909aaa514790c897dc964a54777d48a6629ce25",
+      "sourceAccessKeys": [
+        "S028"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/meuleuse-dynabrade-53783/",
+      "kind": "tool",
+      "file": "src/data/products/tools/meuleuse-dynabrade-53783.ts",
+      "fileSha256": "d8fdd6f1d8ae1e5877610e35097cf80c881e590751691ef91e6cf0fbaea0e81f",
+      "contentHash": "e8dff19e023c2fac2395ed0067006744f32e67c4e1f4a48209f51adaa30d1ff9",
+      "sourceAccessKeys": [
+        "S029",
+        "S030",
+        "S031"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-orbitale-dynabrade-58460/",
+      "kind": "tool",
+      "file": "src/data/products/tools/ponceuse-orbitale-dynabrade-58460.ts",
+      "fileSha256": "5d93e9f67673cc0b0b01d09ecd5f818a9b1701ae407cb2de711200fd9dbb3efc",
+      "contentHash": "93ac9e3c9ca860d7465841f04904723d30baf7e29699de99eb07b937b218749c",
+      "sourceAccessKeys": [
+        "S029",
+        "S032",
+        "S033"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-rotative-dynabrade-52518/",
+      "kind": "tool",
+      "file": "src/data/products/tools/ponceuse-rotative-dynabrade-52518.ts",
+      "fileSha256": "ca8b5bc04b1e3051105e6a8c6068258fb0929e1206e0197e7e3792db3778ba04",
+      "contentHash": "f9b3dde83b9a29ca0fe90b03911e3563fd1ccceb1b9778975727120cdf7185ed",
+      "sourceAccessKeys": [
+        "S029",
+        "S034",
+        "S035"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-vibrante-dynabrade-58502/",
+      "kind": "tool",
+      "file": "src/data/products/tools/ponceuse-vibrante-dynabrade-58502.ts",
+      "fileSha256": "45ed9dccf4773865be1d2d15954d9deaf4cd446514f9134b79c32944f0fad70e",
+      "contentHash": "425286bba223172c7e2a9ce924df84da4a5d743f7ca894ab88914f4b552e9bd9",
+      "sourceAccessKeys": [
+        "S029",
+        "S036",
+        "S037"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-1170/",
+      "kind": "tool",
+      "file": "src/data/products/tools/shinano-si-1170.ts",
+      "fileSha256": "65ab38341570f8de6f32d68a627ebc96511058152ffead7737d849b10e0c9cf0",
+      "contentHash": "056794efcc1db0f3bdf40e45e99bfa35ad8e19a3aabe06ec5f62e0875e58f231",
+      "sourceAccessKeys": [
+        "S025"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-1252/",
+      "kind": "tool",
+      "file": "src/data/products/tools/shinano-si-1252.ts",
+      "fileSha256": "44655e3bd8da49a400a6ad57013f5cab9f4b9c5f8e5810e01efffe485a272373",
+      "contentHash": "eaf8d78d0d5db18e1868ecb64646f7d41389a5c9da24c6412cc7f6121e044fa2",
+      "sourceAccessKeys": [
+        "S025"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-1455sr/",
+      "kind": "tool",
+      "file": "src/data/products/tools/shinano-si-1455sr.ts",
+      "fileSha256": "f11019502469130e7259981846d597157ef8e7de981b0ecb50035b882dd5f4f3",
+      "contentHash": "08555d85d43365d346f236ce3e991798eae7f9d021e616afd551c57c5a50ed42",
+      "sourceAccessKeys": [
+        "S025"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-2010-6/",
+      "kind": "tool",
+      "file": "src/data/products/tools/shinano-si-2010-6.ts",
+      "fileSha256": "440986acfccd71d1b6a798e37fc2918adc9d31d6b82747d31d052afd7bea8bb1",
+      "contentHash": "e66c94bf815cc002f889049ab723d5c100ef5525c2816b738e14f57d2834b4a5",
+      "sourceAccessKeys": [
+        "S025"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-2300/",
+      "kind": "tool",
+      "file": "src/data/products/tools/shinano-si-2300.ts",
+      "fileSha256": "2719958393188bd83ae5e41fb02f83d72fa981d7c20c7130f8915ed58293e595",
+      "contentHash": "36d0812472d84b032bb5d8bfa07cd622a7e0aa51a87ce65c78e79dac35e1278d",
+      "sourceAccessKeys": [
+        "S025"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-3007m/",
+      "kind": "tool",
+      "file": "src/data/products/tools/shinano-si-3007m.ts",
+      "fileSha256": "5062d65b38928b9c0006a1253ee701a2cb6892ad730bcc9ad726c389b89533d4",
+      "contentHash": "febc289ba8298a21b1724f6fe1edaa4e78ec6f2f5ea787073a4ba871d39c9439",
+      "sourceAccessKeys": [
+        "S025"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-3100p/",
+      "kind": "tool",
+      "file": "src/data/products/tools/shinano-si-3100p.ts",
+      "fileSha256": "751397ffa8f46b62441f890dfbd1f5d6c9c21f645166c97ec760eb666a0155d5",
+      "contentHash": "a4917d6a9e34e6ade0928139e7dd03bcb682952d245ac90795eab8aa5f4bd2ec",
+      "sourceAccessKeys": [
+        "S025"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-3101/",
+      "kind": "tool",
+      "file": "src/data/products/tools/shinano-si-3101.ts",
+      "fileSha256": "f902ece8bec3a07d15ef655ce4ffc4cf2481f7aae617af6d66777cfa14d31748",
+      "contentHash": "67e7c4b421e293aab36bfdb6586c739fccf1e4112261e970de3b62933d7c5837",
+      "sourceAccessKeys": [
+        "S025"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/shinano-si-5405/",
+      "kind": "tool",
+      "file": "src/data/products/tools/shinano-si-5405.ts",
+      "fileSha256": "69473afb2b2f75edc01ac4270d425ef572ee83cfa533948266af6b870c17e96d",
+      "contentHash": "ad493bff6d40b364890a9b7e59d73c33143f9e20540b5948acad17ce3edecda9",
+      "sourceAccessKeys": [
+        "S025"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/airpress-aps-10-basic-combi-364858-8/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/airpress-aps-10-basic-combi-364858-8.ts",
+      "fileSha256": "8615994138477412762ff6152f1fccde7ebfb1e903efdf7ce114ac674eedba12",
+      "contentHash": "debe0826d395d905a405f0408b04655b062dfeef12bb772e9e0e2c5a44e170cf",
+      "sourceAccessKeys": [
+        "S038"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/gentilin-clinic-8-90/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/gentilin-clinic-8-90.ts",
+      "fileSha256": "10d5b3f98c41996184cf1053689e4fc6576a5152419a189bbda447bd592f5ecd",
+      "contentHash": "b2301eb349f6630a46dfb9f0eea51611fb14426884e2e8aa253c30dd55184569",
+      "sourceAccessKeys": [
+        "S039",
+        "S040"
+      ],
+      "previousReport": null,
+      "previousDecision": null,
+      "previousContentUnchanged": null,
+      "sourcesActuallyRead": [
+        "S039",
+        "S040",
+        "S104",
+        "S105"
+      ],
+      "neighbors": [
+        {
+          "candidateIndex": 34,
+          "file": "src/data/products/compressors/gentilin-clinic-6-90-812313013.ts",
+          "sha256": "a013aa84e0269b815589147d0e868259d687ac69dc40aa8296147d582939348a",
+          "scope": "Fiche native complète comparée aux valeurs des mêmes documents primaires ; distinction expliquée dans la décision."
+        }
+      ],
+      "decision": "approved",
+      "note": "CLINIC8/90/817013001 comparé au6/90triphasé812313013 : même90L/78kg,400contre345L/min à5bar et370contre285à8bar ;4contre3kW. Addendum propre au8/90, pages5,6,8 :400L/min à5bar pour8/90,360pourDRYH/HS,cycleS1-100% du groupe complet et conditions de fonctionnement. Cotes web et addendum dans leurs ordres différents, indications acoustiques74/76avec libelléLwA ambigu conservées comme réserves d’implantation/bruit ; aucun classement déduit. Le voisin6/90compare les alimentations230/400V ; cette réponse traite la capacité8/90 et la distinctionDRY. Tous les champs moteur conservés et testés.",
+      "limits": "Revue documentaire, sans essai physique ni garantie de performance au poste ou d’indexationGoogle ; conditions et inconnues de mesure conservées."
+    },
+    {
+      "path": "/outils-pneumatiques/biax-bew-605-k/",
+      "kind": "tool",
+      "file": "src/data/products/tools/biax-bew-605-k.ts",
+      "fileSha256": "e995fbba8fb00b6f65bf1bda7a4df0668983e16276201d9c12b6d838e374ae9a",
+      "contentHash": "c742a3421898cc7053635ec50864ee3f3d5ab44896455150bfe7f64b3b9a2743",
+      "sourceAccessKeys": [
+        "S041",
+        "S042"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/biax-gaa-513/",
+      "kind": "tool",
+      "file": "src/data/products/tools/biax-gaa-513.ts",
+      "fileSha256": "0be9a184b1b7172de52a5e32616747eff78fe6e897e8a907c02feb20622b4811",
+      "contentHash": "30a126739207e82f026cee465ba9f80ca1aaf612b3684265be2261a6f63d5ef0",
+      "sourceAccessKeys": [
+        "S043"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/biax-sbrd-830/",
+      "kind": "tool",
+      "file": "src/data/products/tools/biax-sbrd-830.ts",
+      "fileSha256": "7a7e5e68d0b26675393ca07aa5e79789ebd5f3c0cfda5fa87ebaa0b9e345a90e",
+      "contentHash": "c009e3cdb1247c1fc964f1a08a0cf95dd36f7308847fbac286f94321e2f96af1",
+      "sourceAccessKeys": [
+        "S042",
+        "S044"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/deprag-344-240-31u/",
+      "kind": "tool",
+      "file": "src/data/products/tools/deprag-344-240-31u.ts",
+      "fileSha256": "0b2109175aea3fb6b4330e31200a224a267445ebbf04ff892cd0af7c76345a85",
+      "contentHash": "63fe6a0bb04d6bce71e3a5059169636fb94bedddfb772ac58da7815037479276",
+      "sourceAccessKeys": [
+        "S045"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/fiam-15c2a90/",
+      "kind": "tool",
+      "file": "src/data/products/tools/fiam-15c2a90.ts",
+      "fileSha256": "e5fbffd4bb6fac225eca6c3aad17294699932a43b8de9419f1f3489e934556be",
+      "contentHash": "58c063176b7dd566ef03cd3cb0f9261e0e22f71c462dfcda0760c85278e8f260",
+      "sourceAccessKeys": [
+        "S046",
+        "S047"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/fiam-fde49p/",
+      "kind": "tool",
+      "file": "src/data/products/tools/fiam-fde49p.ts",
+      "fileSha256": "4702da3b96f43d26433749c96e7adf316aca7b0025ec22aa334645cfbf9ea558",
+      "contentHash": "ab10288f7d33ddbe5f3c135be0bf58ff03b0617cdd1ff56174211bd24084abd8",
+      "sourceAccessKeys": [
+        "S048",
+        "S049"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/fiam-les45/",
+      "kind": "tool",
+      "file": "src/data/products/tools/fiam-les45.ts",
+      "fileSha256": "6c177cdca4c79cc5fd6bcd94bd43658d4046fa0805a43b56e47a74a6df5056a9",
+      "contentHash": "777fbdc36c9dcb35a4c876400acdc1a8cfb30f04d665a5d53d99071816649b28",
+      "sourceAccessKeys": [
+        "S050",
+        "S051"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/fiam-sms30dcz/",
+      "kind": "tool",
+      "file": "src/data/products/tools/fiam-sms30dcz.ts",
+      "fileSha256": "edb39fd3f8e44c2cf48aa1a757b736d0c699f1a22a9512042d22b055f1546727",
+      "contentHash": "458327b5ca91c8f3042f65ddee6a5565b64597d6d341b493707604838f3a84dc",
+      "sourceAccessKeys": [
+        "S051",
+        "S052"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/ingersoll-rand-170pg-cs/",
+      "kind": "tool",
+      "file": "src/data/products/tools/ingersoll-rand-170pg-cs.ts",
+      "fileSha256": "57d2aa36a0fee2f97a3a447b3e2da7c1a6a216fe985dd6c095396acea3888ca3",
+      "contentHash": "302657657d5df69d75315edd118b2a37569066a5da58f9bb32b4f31ab74da682",
+      "sourceAccessKeys": [
+        "S053"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/ingersoll-rand-170pg/",
+      "kind": "tool",
+      "file": "src/data/products/tools/ingersoll-rand-170pg.ts",
+      "fileSha256": "671b4d34bc30d7c4d0374086e17e696157c555a0860d62ee7070b298a068cb7c",
+      "contentHash": "77e766114f5e9778fb6719b74247f46b9de055ea50fbd75808d104779dbfe094",
+      "sourceAccessKeys": [
+        "S054"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/ingersoll-rand-314ac4a/",
+      "kind": "tool",
+      "file": "src/data/products/tools/ingersoll-rand-314ac4a.ts",
+      "fileSha256": "b16173580beaa1e9d03bf6a6c5deae8527706ec3126392bd001454f48561caa1",
+      "contentHash": "66eecbe85bd24045882f0dee2c1e2ede9c9850eb7f67eaf72acf65139062b6e6",
+      "sourceAccessKeys": [
+        "S055"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/ingersoll-rand-77a45w109/",
+      "kind": "tool",
+      "file": "src/data/products/tools/ingersoll-rand-77a45w109.ts",
+      "fileSha256": "58d28eaa8813f60de708a9971f17e2808b240aaa08dddda193e5dcef00f6add6",
+      "contentHash": "a201e429511beca96f36edea1ffce3eff513abe678479aa5637f22c06d97c9c6",
+      "sourceAccessKeys": [
+        "S055"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/ingersoll-rand-g1a120rs418/",
+      "kind": "tool",
+      "file": "src/data/products/tools/ingersoll-rand-g1a120rs418.ts",
+      "fileSha256": "20dce33c3fe57aa74b9c86916147b9b36aa8030f8c08ed376defb4c4fa55d4af",
+      "contentHash": "a8fb76268f48e12e283f81e9343772d6b87bce645e7adfe6d259187bc66df2e9",
+      "sourceAccessKeys": [
+        "S056"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/nitto-kohki-b-30cl/",
+      "kind": "tool",
+      "file": "src/data/products/tools/nitto-kohki-b-30cl.ts",
+      "fileSha256": "d842eeabd3fbdbc0043337bee3ff87ac826a77c59265ca7bffbaf0fe4d923e48",
+      "contentHash": "d38d79cf541a81be1cec77babd1f69ccd68e2cc2b3e3296d399f9529c8398488",
+      "sourceAccessKeys": [
+        "S057"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/nitto-kohki-fs-50a/",
+      "kind": "tool",
+      "file": "src/data/products/tools/nitto-kohki-fs-50a.ts",
+      "fileSha256": "fbd9974f6dc055b04f49adb70acd4c0670fa5a2306f9438e8dc4062a91315e91",
+      "contentHash": "56bbb0eef737be93329da98be8c0aa5ad280ff5d8a56d20f506904201b00f9f9",
+      "sourceAccessKeys": [
+        "S057"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/nitto-kohki-jex-28/",
+      "kind": "tool",
+      "file": "src/data/products/tools/nitto-kohki-jex-28.ts",
+      "fileSha256": "718532e5a62e7f4e4b98be08b4edf96d2dd432144763692bd5c47346249ea48b",
+      "contentHash": "82f7605ab4d68a81503993c73fd8e71babed67641aaf7a9dcbb83c22ee54288d",
+      "sourceAccessKeys": [
+        "S057"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/nitto-kohki-mg-40/",
+      "kind": "tool",
+      "file": "src/data/products/tools/nitto-kohki-mg-40.ts",
+      "fileSha256": "3347004eb187b7c29d92fe593bc9300562c74e8fc452f471a0203c0c187a562d",
+      "contentHash": "e7f07877e526733b70a19a8a7064b023945f71ee64ecd9ab00b5d8c2143225c0",
+      "sourceAccessKeys": [
+        "S057"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/red-rooster-rr-06sp/",
+      "kind": "tool",
+      "file": "src/data/products/tools/red-rooster-rr-06sp.ts",
+      "fileSha256": "d5de627f64a0208b25c076aedf647933c41e4959ee58a73a67d19e1c7feb5787",
+      "contentHash": "296b9a971a63a69321dc5aa550364ad06c476ec514da30e14962a634c3da14f1",
+      "sourceAccessKeys": [
+        "S058"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/red-rooster-rr-13dp/",
+      "kind": "tool",
+      "file": "src/data/products/tools/red-rooster-rr-13dp.ts",
+      "fileSha256": "f7c87a9fca5d916cd9cab786c49442065e1c3ef01abe9124809ef1b7b209cd31",
+      "contentHash": "4571a52322e2b5ab4b021218b27f149a12a2e4c3d095ce36035636c032c51ab0",
+      "sourceAccessKeys": [
+        "S058"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/red-rooster-rr-160h/",
+      "kind": "tool",
+      "file": "src/data/products/tools/red-rooster-rr-160h.ts",
+      "fileSha256": "85a141ac4f6e656d7e6729d2ba99ed58a79b37db53b40a034537ccbe1820483b",
+      "contentHash": "27aa5163561741a8da17b4d75cbd6109e1373527da38db0bb2e58b3cf16f7504",
+      "sourceAccessKeys": [
+        "S058"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/red-rooster-rrg-1000rel/",
+      "kind": "tool",
+      "file": "src/data/products/tools/red-rooster-rrg-1000rel.ts",
+      "fileSha256": "bb0a890fe3030530bf922924d88c031364b6217a6776cd8b67d26c972653c93c",
+      "contentHash": "dad0680b9823ef64d34afd038391e8ec221f610e5b36260b72f47e28fe03c8f6",
+      "sourceAccessKeys": [
+        "S058"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/red-rooster-rrg-3611/",
+      "kind": "tool",
+      "file": "src/data/products/tools/red-rooster-rrg-3611.ts",
+      "fileSha256": "9d5f182be645e8e66722daa285671f173bfbae062c5eaa7bc8bfd50195fb9361",
+      "contentHash": "b696f9a838b9102d4bda1261ba30a3d7403ec93438a1e536fa51d16b5e4d8385",
+      "sourceAccessKeys": [
+        "S058"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/red-rooster-rrh-4309k/",
+      "kind": "tool",
+      "file": "src/data/products/tools/red-rooster-rrh-4309k.ts",
+      "fileSha256": "5dde5aaac2dade4918ab0f8a14076b8ab327f439bdd411335abfcf81460e5ba3",
+      "contentHash": "87268ad6a8e26e41f25992063731b0b4fb6c3b0ce53d30db4eabfc67a066c001",
+      "sourceAccessKeys": [
+        "S058"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/red-rooster-rri-100t/",
+      "kind": "tool",
+      "file": "src/data/products/tools/red-rooster-rri-100t.ts",
+      "fileSha256": "4da8d8a2ef02dd8024297cf78b98c72eb41b86bc30c09e4a350c3325a2dc56f0",
+      "contentHash": "925915451be1d5cecd48c7db77550958ab95a559b1942f39074b706e0295efce",
+      "sourceAccessKeys": [
+        "S058",
+        "S059"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/red-rooster-rri-4006/",
+      "kind": "tool",
+      "file": "src/data/products/tools/red-rooster-rri-4006.ts",
+      "fileSha256": "940caf7b693c26e39e043a9c3f09868bb9adfbb144d6e42c57cf0de036550d9a",
+      "contentHash": "360353262e40dbae1428082519ecf795a451f65c74b48a3c4ff1f098cea1d5f2",
+      "sourceAccessKeys": [
+        "S058"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/red-rooster-rri-5125-2cv/",
+      "kind": "tool",
+      "file": "src/data/products/tools/red-rooster-rri-5125-2cv.ts",
+      "fileSha256": "e74217fc8eda6d3d21c157cbb07458cbc8090c905acf8011a30d8779549b6d12",
+      "contentHash": "124ed6360c703f866801525cb8a3b9fc995bf8162da515fe66a829e397238c62",
+      "sourceAccessKeys": [
+        "S058"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/red-rooster-rrj-8210/",
+      "kind": "tool",
+      "file": "src/data/products/tools/red-rooster-rrj-8210.ts",
+      "fileSha256": "737a6f4b894667943815bcba2f518b0f8adcf0d0ba964a1cf98048ca4c7e6bc9",
+      "contentHash": "08f9008379f64304c94f6482a8817d5f432a99b66af30b73f60a5bf0d64ed1c0",
+      "sourceAccessKeys": [
+        "S058"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/red-rooster-rrw-121/",
+      "kind": "tool",
+      "file": "src/data/products/tools/red-rooster-rrw-121.ts",
+      "fileSha256": "b1e4696156d361f21bf994d9a79be704d5380e04d02ceb3cf710cf52e9ad3905",
+      "contentHash": "fd7669ee8ec544ac5196900d0de0ee5b350cf05658d27444b65fe6ea9c55d01e",
+      "sourceAccessKeys": [
+        "S058"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/rupes-ak150a/",
+      "kind": "tool",
+      "file": "src/data/products/tools/rupes-ak150a.ts",
+      "fileSha256": "157949ef1b93a6dd75ccbcda6f9dd34afb74465c1055378edded7d0cdfaa3adb",
+      "contentHash": "c1b30423ee9af708c8374d8d31043416bc2b37692261f917ed315fc7f4e98d67",
+      "sourceAccessKeys": [
+        "S060"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/rupes-lh76p/",
+      "kind": "tool",
+      "file": "src/data/products/tools/rupes-lh76p.ts",
+      "fileSha256": "52556733697a74648e2e49fd689a5f35fcae22f0cdad1f95916607044a3ca84d",
+      "contentHash": "bf018f220af1e5b2b311126c4ac64d6b90d46ca1a96ba3e7cc1ee12f88871614",
+      "sourceAccessKeys": [
+        "S060"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/rupes-re21acm/",
+      "kind": "tool",
+      "file": "src/data/products/tools/rupes-re21acm.ts",
+      "fileSha256": "8c88dd8bc055478e3a736686ac05951536638fc02c13bbe5170b1ffe30ea619d",
+      "contentHash": "4a775ca4e81c5248c3ebbf16350f9bad67ec757305576de42597f0e6e4c9bb6a",
+      "sourceAccessKeys": [
+        "S060"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/outils-pneumatiques/toku-md-3312b/",
+      "kind": "tool",
+      "file": "src/data/products/tools/toku-md-3312b.ts",
+      "fileSha256": "d8b3dbe763195c569c5b84ff8568912758959fd72b8c9ed3ca1c0a433b49ba7f",
+      "contentHash": "000aea714e8f002aa15084fbd58e206e767bbe2b8907145672d6be8ad986dd64",
+      "sourceAccessKeys": [
+        "S058"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/aircraft-airboy-silence-111-as-of-e/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/aircraft-airboy-silence-111-as-of-e.ts",
+      "fileSha256": "c89933fc0b257e53eabda59c40cb7a260337edfb9799bfcc206f01133e7b5c19",
+      "contentHash": "dfdf61dfea780f49f0318255e61e2b858e0b3a2bca1a39156ac798e34a2e41b4",
+      "sourceAccessKeys": [
+        "S061"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/black-decker-bd-227-50v-nk/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/black-decker-bd-227-50v-nk.ts",
+      "fileSha256": "8f3dd93193c7e540160efa071c6424a1afb9161bf943c037a6a24ae120b7990e",
+      "contentHash": "b72d379ca42d077d4a23e6acbe1dbc2fccb706e42163ffa6fb966002e5bb3fca",
+      "sourceAccessKeys": [
+        "S062"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/nuair-b2800-50-ct2/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/nuair-b2800-50-ct2.ts",
+      "fileSha256": "3cd3373653f2444a4921ec34b17100a12d831197ec97ecc0bb6048b226d296a8",
+      "contentHash": "0c607fc9161bb2cccd3d7d2fd7db5a45e9d3843666cab6b1b5f009f475161d73",
+      "sourceAccessKeys": [
+        "S063"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/stanley-d-200-10-24v/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/stanley-d-200-10-24v.ts",
+      "fileSha256": "59e2579b3c9bb95cef44d9be0ad20f6fc533becb547a9426324845c60bdf857a",
+      "contentHash": "ca4a508edef9f9fe1a40ced839f2dd71c447bd053dec3c9a024917caccbda0fa",
+      "sourceAccessKeys": [
+        "S064"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/guides/desiccant-change-couleur-point-rosee/",
+      "kind": "guide",
+      "file": "src/content/guides/desiccant-change-couleur-point-rosee.md",
+      "fileSha256": "80ed3ccc1ac9480865cb95ac8b202f37b1f54275df3b0fab14148bb4a0b79b39",
+      "contentHash": "9ca6b728c5a10bdc8f2fe621970d744a1a4413089622ed3792a326ce13a19a91",
+      "sourceAccessKeys": [
+        "S065",
+        "S066"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Parker : accès primaire actuel403, corps non reçu. Réserve individuelle conservée ; aucun contournement ni approbation depuis une copie ancienne.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/guides/blocage-tige-verin-dsnu-kp-maintien-securite/",
+      "kind": "guide",
+      "file": "src/content/guides/blocage-tige-verin-dsnu-kp-maintien-securite.md",
+      "fileSha256": "3203824f3a1feaeb40bc5f6e427e1ac4ef162d02ec78c63bc5f28662f3c772fd",
+      "contentHash": "ee84e17b93c1c23a100c17f291d2250fb05f82af5d5af7c4d9321f48bf9ef3ad",
+      "sourceAccessKeys": [
+        "S067"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Festo : accès primaire actuel403, corps non reçu. Réserve individuelle conservée ; aucun contournement ni approbation depuis une copie ancienne.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/guides/compresseur-nettoyage-cryogenique-karcher-ib10-8-l2p/",
+      "kind": "guide",
+      "file": "src/content/guides/compresseur-nettoyage-cryogenique-karcher-ib10-8-l2p.md",
+      "fileSha256": "40a2c5f27a10b3b92d8c332ca631903539ec7806231b05a4a5e06690343f6d7f",
+      "contentHash": "084a5c244174bf9f959e786d8d57500fca7c34c2609322237ff77e59b0272a24",
+      "sourceAccessKeys": [
+        "S068",
+        "S069"
+      ],
+      "previousReport": null,
+      "previousDecision": null,
+      "previousContentUnchanged": null,
+      "sourcesActuallyRead": [
+        "S068",
+        "S069"
+      ],
+      "neighbors": [
+        {
+          "candidateIndex": 73,
+          "file": "src/content/guides/karcher-ib15-120-air-glace-puissance-electrique.md",
+          "sha256": "a27f1ce8a7ca97898f65b93a60ba7d83b7497ddcb553690a6c630d9d5a3e7eda",
+          "scope": "Corps complet comparé ; portée distincte expliquée dans la décision."
+        }
+      ],
+      "decision": "approved",
+      "note": "IB10/8L2P15742000 :70–800L/min,0,7–10bar,air sec/sanshuile dans la fiche ; notice commune sépare10/8maximum0,8m³/min et10/15maximum1,55,flexiblemin0,5pouce. Sectionsfonctionnement,raccordement,CO2 et ventilation relues ; aucune association arbitraire d’extrémités de plages. Le voisinIB15/120traite l’approvisionnement en pellets et la puissance électrique ; cette page traite la productionL2P de glace depuisCO2liquide et son poste avec ventilation séparée. Aucun compresseur déclaré compatible par défaut.",
+      "limits": "Revue documentaire, sans essai physique ni garantie de performance au poste ou d’indexationGoogle ; conditions et inconnues de mesure conservées."
+    },
+    {
+      "path": "/compresseurs/renner-rs-pro-3-0-310003/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/renner-rs-pro-3-0-310003.ts",
+      "fileSha256": "3b2deb35e301d57c16dfcb7b5dc53e565e3f3b8d60121f314d69cb78e444c447",
+      "contentHash": "c690db3bd489045e22e41426daf54396bc224ae6a394463f8b3fb38b14f6e7cb",
+      "sourceAccessKeys": [
+        "S070",
+        "S071"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Le cycle1natiffait partie du calcul ; une promesse de gamme ou une classe moteur ne suffit pas à qualifier le groupe entier. Qualification documentaire de cette valeur et/ou des points FAD non achevée : aucune admission, ni neutralisation par une précaution de texte.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/almig-combi-xp-15-standalone/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/almig-combi-xp-15-standalone.ts",
+      "fileSha256": "39f54817a463cb481e91bb5f41de9de1869ae5eba341ad00f846c871fc4195b6",
+      "contentHash": "94f1aa4f1f90f4f6c5abc14585a218d00e902698e731f13c62549bd816f86d6c",
+      "sourceAccessKeys": [
+        "S072",
+        "S073"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Le cycle1natiffait partie du calcul ; une promesse de gamme ou une classe moteur ne suffit pas à qualifier le groupe entier. Qualification documentaire de cette valeur et/ou des points FAD non achevée : aucune admission, ni neutralisation par une précaution de texte.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/boge-s-31-3-13-bar-insonorisation-standard/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/boge-s-31-3-13-bar-insonorisation-standard.ts",
+      "fileSha256": "4a62fc401920433514a2baa3accd17fac2cc9e46cd17173db364ca5e81e20f09",
+      "contentHash": "03ec023914c81c3eb78a6e639f6db18ae9cc50e012a8bebee44ad05ede30923e",
+      "sourceAccessKeys": [
+        "S074",
+        "S075"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/ceccato-csa-10-pack-au-sol-8-bar/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/ceccato-csa-10-pack-au-sol-8-bar.ts",
+      "fileSha256": "d8a9e478599636296869266c435032b1547f3bed7a344400d42dd90cb9e0bc9b",
+      "contentHash": "0cf42a1d2b992d44c7f73da93b25e154ae626c0936cf59c0bcb8ee1b7becdeb2",
+      "sourceAccessKeys": [
+        "S076",
+        "S077"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/kaeser-aircenter-16-secheur-et-cuve-integres-15-bar/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/kaeser-aircenter-16-secheur-et-cuve-integres-15-bar.ts",
+      "fileSha256": "f0008f6bc847cb28c35ea4e50bdd97459f26f947e08588ceec79e1f612023272",
+      "contentHash": "32d940763131ce8a89d28e75b9faeed8a43a090965ed1dec297c8fb2b23d3e5c",
+      "sourceAccessKeys": [
+        "S078",
+        "S079"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/broomwade-fm02-dpp-rsccp020650-10-bar/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/broomwade-fm02-dpp-rsccp020650-10-bar.ts",
+      "fileSha256": "abb10720fe67006af80b3e7767bfacc2f885c11cc4708feeb8f99940007bc2c8",
+      "contentHash": "35c0ccea9c8b43cb37cb161cc3e6e5a4c68d8e0aff462741e5036a092eaf58a1",
+      "sourceAccessKeys": [
+        "S080"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "deferred",
+      "note": "Revue décisive non achevée. La continuité avec la fiche et le compte rendu antérieurs est vérifiée par empreinte quand disponible ; les conditions de mesure et la comparaison complète des voisins restent à établir. Ni le score ni un accès200 ne valent approbation.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/chicago-pneumatic-cpi120-50-hz-13-bar-std-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/chicago-pneumatic-cpi120-50-hz-13-bar-std-groupe-fixe-au-sol-sans-secheur-vitesse-fixe.ts",
+      "fileSha256": "72d3b4e27eced57ca43022cacf3165f0ff33f9c6798514c81abd8faaafadfd6d",
+      "contentHash": "038a05511c9dd0fc336e81f886fe06cff8c3a72cfbae082bf61f911e72178eb2",
+      "sourceAccessKeys": [
+        "S081"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/elgi-eg-110-p-50-hz-8-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/elgi-eg-110-p-50-hz-8-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe.ts",
+      "fileSha256": "c361343cf1a95fdabbf60646b537b3048700eed80a8419a9298b63665a5143f5",
+      "contentHash": "a497693fc3a58c520b8fe3e462326f3cd44ff5fd3ce14cf2bd524183c71d49a5",
+      "sourceAccessKeys": [
+        "S082"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/guides/graco-pro-xp-auto-turbine-ta-electrostatique/",
+      "kind": "guide",
+      "file": "src/content/guides/graco-pro-xp-auto-turbine-ta-electrostatique.md",
+      "fileSha256": "38b2df8123b93fca161b7b0fd8663ecb1673ba9b4923670f6d27404235aac5b9",
+      "contentHash": "ec12a133b39a229cb0bc7b91405b599798efd93608d5c34b77814f0fa6a72b6f",
+      "sourceAccessKeys": [
+        "S083"
+      ],
+      "previousReport": null,
+      "previousDecision": null,
+      "previousContentUnchanged": null,
+      "sourcesActuallyRead": [
+        "S083"
+      ],
+      "neighbors": [
+        {
+          "candidateIndex": 82,
+          "file": "src/content/guides/graco-pro-xp-auto-cyl-sequence-air-fluide.md",
+          "sha256": "88ce75462313b1accd4fb3342a1f0d2ff7238ebec526612b7e0707a0de7bfd2f",
+          "scope": "Corps complet comparé ; portée distincte expliquée dans la décision."
+        },
+        {
+          "candidateIndex": 82,
+          "file": "src/content/guides/graco-pro-xp-aa-queues-jet-air-fluide.md",
+          "sha256": "d56e41df2b98f01e4710709eb5a314ccb1074a6584aa9e1a305b45047139b67b",
+          "scope": "Corps complet comparé ; portée distincte expliquée dans la décision."
+        }
+      ],
+      "decision": "approved",
+      "note": "ProXpAutoAA : p7et9 relues, TA entraîne la turbine et le générateur haute tension par flexibleGraco mis à la terre ; CYL etA1/A2/P restent séparés. Le voisinCYLpubliéle30traite la chronologie air/fluide, celui des queues de jet l’atomisation. Cette réponse concerne la pulvérisation visible sans preuve de charge électrostatique, sans convertir un voyant ou un débit global en tension mesurée ni inventer de dépannage.",
+      "limits": "Revue documentaire, sans essai physique ni garantie de performance au poste ou d’indexationGoogle ; conditions et inconnues de mesure conservées."
+    },
+    {
+      "path": "/compresseurs/atlas-copco-g-22-50-hz-13-bar-pack-au-sol/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/atlas-copco-g-22-50-hz-13-bar-pack-au-sol.ts",
+      "fileSha256": "60e79178dce5deaffd7d6b6cefd92178f3eb28d517f48d6e04a54c2be91ff371",
+      "contentHash": "61d815c67e9a99adc1482d9db4da13e504a79672458a9f1ee4d679fecf2bdf58",
+      "sourceAccessKeys": [
+        "S084"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/worthington-creyssensac-rlr-1000-50-hz-8-bar-pack-au-sol/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/worthington-creyssensac-rlr-1000-50-hz-8-bar-pack-au-sol.ts",
+      "fileSha256": "a0913a93b2948e8756fe9440f4171001271dab5a0d084a14605db4c9d4c8b050",
+      "contentHash": "a878b362d56977a3aca31807c0a72154d8285ed75084db3b49cc55d5c85a6bac",
+      "sourceAccessKeys": [
+        "S085"
+      ],
+      "previousReport": null,
+      "previousDecision": null,
+      "previousContentUnchanged": null,
+      "sourcesActuallyRead": [
+        "S085"
+      ],
+      "neighbors": [
+        {
+          "candidateIndex": 84,
+          "file": "src/data/products/compressors/worthington-creyssensac-rlr-1000-50-hz-8-bar-full-feature-sur-reservoir-500-l.ts",
+          "sha256": "f00d8ec2870aad39426fc1297b5a91d8481f84b58d35263a6fac88ae8b280822",
+          "scope": "Fiche native complète comparée aux valeurs des mêmes documents primaires ; distinction expliquée dans la décision."
+        },
+        {
+          "candidateIndex": 84,
+          "file": "src/data/products/compressors/worthington-creyssensac-rlr-1000-50-hz-8-bar-full-feature-sur-reservoir-270-l.ts",
+          "sha256": "0fb79adf484ff339bf10b7853aa50727909f595fd5a23e489cbbc4f4035e70d4",
+          "scope": "Fiche native complète comparée aux valeurs des mêmes documents primaires ; distinction expliquée dans la décision."
+        }
+      ],
+      "decision": "approved",
+      "note": "Réserve de valeur propre traitée : RLR1000Pack au sol ne reçoit ni la cuve ni le sécheur des stations voisines. Pages3et6 entières :225kgPack/260kgFF,sol1210×665×1045mm/sol+sécheur1460×665×1045mm,écarts35kg/250mm ; même75m³/h=1250L/min à7,5bar pour8barmax50Hz. Les voisins500/270Lcomparent le stockage, cette réponse distingue le traitement et l’implantation du groupe sans cuve. Dutycycle inconnu et verdict non conclusif conservés, aucun supplément de production inventé.",
+      "limits": "Revue documentaire, sans essai physique ni garantie de performance au poste ou d’indexationGoogle ; conditions et inconnues de mesure conservées."
+    },
+    {
+      "path": "/compresseurs/airpol-kpr-5/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/airpol-kpr-5.ts",
+      "fileSha256": "2a3a6a6d508e810a24cd1fbe3e3ac33a3d709b533641963d5255f5fd1d499609",
+      "contentHash": "4c159c3e3e814cc279d47713469c942709f699607caa3d91fdfcb37b73f61ed6",
+      "sourceAccessKeys": [
+        "S086",
+        "S087"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/alup-allegretto-3/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/alup-allegretto-3.ts",
+      "fileSha256": "57d3a494b930e7941ea600d57218ba21c7678fa2a271007e07dda42634272cc5",
+      "contentHash": "efdcc51a0e11254e368bf42063ee2cce588f0c8341853fd7a235bc9a14483ba9",
+      "sourceAccessKeys": [
+        "S088"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Le cycle1natiffait partie du calcul ; une promesse de gamme ou une classe moteur ne suffit pas à qualifier le groupe entier. Qualification documentaire de cette valeur et/ou des points FAD non achevée : aucune admission, ni neutralisation par une précaution de texte.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/bambi-pt24/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/bambi-pt24.ts",
+      "fileSha256": "a26528fd488d49d514bd8238ecc407a399dbd905d45f44125c5907f34053a18f",
+      "contentHash": "521a0514f4bf4566f220ee24be3c4266ae4698b906f5c007a8c5d759ae78e442",
+      "sourceAccessKeys": [
+        "S089"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/ekom-dk50-2v-m-mobile-mini/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/ekom-dk50-2v-m-mobile-mini.ts",
+      "fileSha256": "69e46f5afd394220af7ac1ae5b2ba5639e615eacae1bd164cdd28d7f9ef5fc18",
+      "contentHash": "a9a8f7028d5a0e8acd30d301bd913e29aa7fb06c55c62e9bef40625a0f7fa327",
+      "sourceAccessKeys": [
+        "S090"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Le cycle1natiffait partie du calcul ; une promesse de gamme ou une classe moteur ne suffit pas à qualifier le groupe entier. Qualification documentaire de cette valeur et/ou des points FAD non achevée : aucune admission, ni neutralisation par une précaution de texte.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/mark-msm-3-ivr/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/mark-msm-3-ivr.ts",
+      "fileSha256": "173468fe55687dfd3ba668c39720f31411dd71858206637f4fa21523decd0470",
+      "contentHash": "fa0d31389fe7d9213052ffd28615862f3050a1f50d57d890c4f6f455a9e0a96f",
+      "sourceAccessKeys": [
+        "S091",
+        "S092"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "deferred",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Le cycle1natiffait partie du calcul ; une promesse de gamme ou une classe moteur ne suffit pas à qualifier le groupe entier. Qualification documentaire de cette valeur et/ou des points FAD non achevée : aucune admission, ni neutralisation par une précaution de texte.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/mattei-erc-11/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/mattei-erc-11.ts",
+      "fileSha256": "b1fb9cdb0c2f6713311e1d0e3e1d3b5e414320d3f19f286a0d80f0d62646c5bf",
+      "contentHash": "bfb813b1e7e8aec73d0b9cbb1e5f004669617f0e7246f158f738704ef26e41f9",
+      "sourceAccessKeys": [
+        "S093"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/dalgakiran-d-4-300/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/dalgakiran-d-4-300.ts",
+      "fileSha256": "d5cffe2870a4b83b7d41d01140a25872470e528f34fc52dd5e046766572d762c",
+      "contentHash": "0f7307e4d3caeb2c6276679324a6af8b4e3c94c21492c8e17c9603804423dd47",
+      "sourceAccessKeys": [
+        "S094"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/hertz-frecon-plus-pm-37/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/hertz-frecon-plus-pm-37.ts",
+      "fileSha256": "f01ad0355ad6f1686ccf70ff9f8add8fb705d2820e76db43c47d4d6beb1c69d9",
+      "contentHash": "151a3b90765c31e44066dcdc073884a1fb72878193223a0303b154c84a895e64",
+      "sourceAccessKeys": [
+        "S095"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/ktc-compack-2-90l-e/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/ktc-compack-2-90l-e.ts",
+      "fileSha256": "0436ac7fe1d6f4b59ecbf708bba931102b40becdb560d45cd90acaa7f320abf8",
+      "contentHash": "aecc7eaab6f2bf26762333072e841261f2f227c37d9b39f7c89d10354658f72b",
+      "sourceAccessKeys": [
+        "S096"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/lupamat-lkv-15-mit/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/lupamat-lkv-15-mit.ts",
+      "fileSha256": "6efece7ab0bd7f1ce2d7460d6d2bbf7b50492e25c9267eaa3776e55f0089ea56",
+      "contentHash": "56c7142a1a94a75b816100d8d4e62bb69dbe0bc08b0decdfb7a50841cf21395b",
+      "sourceAccessKeys": [
+        "S097"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/sil-air-15-d/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/sil-air-15-d.ts",
+      "fileSha256": "7bbbd8cdab7deaf94e8b1a616dc3057eb5d2be8192bc07d3cebad8a3aa101c02",
+      "contentHash": "22a702eefe40fae2d91a75978b0f6815c59e2154ce64fbc6a249d12bf29444ce",
+      "sourceAccessKeys": [
+        "S098"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/guides/metabo-dkng4050-clous-agrafes-chargeur/",
+      "kind": "guide",
+      "file": "src/content/guides/metabo-dkng4050-clous-agrafes-chargeur.md",
+      "fileSha256": "17cbb460c6eabb8e05970b78f43f120aab0dd2a77cf91778bb372582471c3b47",
+      "contentHash": "2af2d505642afe10885a6de332e9d731843c937870c43dbba09e5779b3164dba",
+      "sourceAccessKeys": [
+        "S099"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [
+        "S099"
+      ],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "NoticeMetabo page3 actuelle : celluleKLduDKNG40/50toujours15x40,pression de mesure du0,66L/coup non établie. Le défaut signaléle30 n’est pas levé ; le voisinDKGne permet pas de corriger silencieusement cette cellule.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/compresseurs/fini-cube-4-0-10-270-es/",
+      "kind": "compressor",
+      "file": "src/data/products/compressors/fini-cube-4-0-10-270-es.ts",
+      "fileSha256": "b68eaafa59a1f0dabd6aa8e1900dc82048c0946c1062055f0f7c8e8202dfe5f0",
+      "contentHash": "e4953c6bc3642898b8250c76e7c1bb1182da6c298d98f7aaecb502800160dbf2",
+      "sourceAccessKeys": [
+        "S100"
+      ],
+      "previousReport": "docs/editorial/indexation-review-2026-10-30.json",
+      "previousDecision": "needs-correction",
+      "previousContentUnchanged": true,
+      "sourcesActuallyRead": [],
+      "neighbors": [],
+      "decision": "needs-correction",
+      "note": "Réserve individuelle conservée depuis le compte rendu du30octobre, à l’URL identique et avec son empreinte de fichier vérifiée. Aucune preuve décisive nouvelle ne la lève ; consulter la décision antérieure pour le conflit, le doublon ou le champ moteur concerné.",
+      "limits": "Reste noindex. Aucun remplacement hors proposition et aucune admission par défaut ; cette revue inachevée ou réserve individuelle ne bloque pas les pages approuvées."
+    },
+    {
+      "path": "/guides/agre-worker-240-tw-debit-144-litres-6-bar/",
+      "kind": "guide",
+      "file": "src/content/guides/agre-worker-240-tw-debit-144-litres-6-bar.md",
+      "fileSha256": "3600063aaec0e7c22abc9e21569b8b78ff0c820c57c747de277e598fb4eba73d",
+      "contentHash": "4715a0e6f794cf6cd9d82c485f221d2ce46f83b99ca562346d8a8217c4742b34",
+      "sourceAccessKeys": [
+        "S101"
+      ],
+      "previousReport": null,
+      "previousDecision": null,
+      "previousContentUnchanged": null,
+      "sourcesActuallyRead": [
+        "S101"
+      ],
+      "neighbors": [
+        {
+          "candidateIndex": 98,
+          "file": "src/content/guides/debit-restitue-fad-vs-debit-aspire.md",
+          "sha256": "a5e02aed169c039a1a6daf7921f2c80d3c0205a6a0e945ef7ab06e3b0a9180a9",
+          "scope": "Corps complet comparé ; portée distincte expliquée dans la décision."
+        },
+        {
+          "candidateIndex": 98,
+          "file": "src/content/guides/choisir-compresseur-mobile-chantier-fad-autonomie.md",
+          "sha256": "97c4aaed3f26cb72464f75c2cb165d885dee4952d578636f3e35063cb3879c5c",
+          "scope": "Corps complet comparé ; portée distincte expliquée dans la décision."
+        }
+      ],
+      "decision": "approved",
+      "note": "WORKER240TW4116021582 : page44 entière texte+rendu ; Hubvolumen240,Liefermenge144,Füllleistung160L/min,note6bar relatifs,maximum8bar,cuve6L,1,5kW,230V50Hz,20kg,46×45×45cm. Ratio144/240=60%explicitement documentaire, jamais rendement universel ni point6,3bar inventé. VoisinsFADgénérique et mobilechantier ne lisent pas ces trois colonnes de cette référence ; le cas explique une confusion d’achat précise et conserve cycle de service inconnu.",
+      "limits": "Revue documentaire, sans essai physique ni garantie de performance au poste ou d’indexationGoogle ; conditions et inconnues de mesure conservées."
+    },
+    {
+      "path": "/guides/balma-unico-dimensions-page-brochure-contradiction/",
+      "kind": "guide",
+      "file": "src/content/guides/balma-unico-dimensions-page-brochure-contradiction.md",
+      "fileSha256": "8d6879ebe2db7f8a40bfecc5a1280b06c3b0984bce8658e9b8216ea0ee4cc0c8",
+      "contentHash": "05532c3cfd062c2548b34723132311d5396ba9cab3c422eb36c1bebfb2220594",
+      "sourceAccessKeys": [
+        "S102",
+        "S103"
+      ],
+      "previousReport": null,
+      "previousDecision": null,
+      "previousContentUnchanged": null,
+      "sourcesActuallyRead": [
+        "S102",
+        "S103"
+      ],
+      "neighbors": [
+        {
+          "candidateIndex": 99,
+          "file": "src/content/guides/balma-unico-500-900-debit-9-5-bar.md",
+          "sha256": "0691f43345b6d09d75c774e3abc576788b3cd00f0b5bb15fc4b13427e8c640d9",
+          "scope": "Corps complet comparé ; portée distincte expliquée dans la décision."
+        },
+        {
+          "candidateIndex": 99,
+          "file": "src/content/guides/acheter-compresseur-occasion-controles-documents.md",
+          "sha256": "56f578522f73c1113789d57c9dcc9bbe9a977d53b5cf800098738f8d4edf7f24",
+          "scope": "Corps complet comparé ; portée distincte expliquée dans la décision."
+        }
+      ],
+      "decision": "approved",
+      "note": "UNICO : page web actuelle et brochurep7texte+rendu relus. Quatre montages,poids99/123/153/180kg concordants et cotes divergentes,restriction100L au500conservée. Écarts châssis90/135/159mm calculés. Les débits498/848à9,5bar concordent, sans départager arbitrairement les cotes ni inventer une date de révision. Le voisin500/900compare la production, celui de l’occasion les documents ; cette réponse prépare un plan d’implantation face à une contradiction fabricant actuelle.",
+      "limits": "Revue documentaire, sans essai physique ni garantie de performance au poste ou d’indexationGoogle ; conditions et inconnues de mesure conservées."
+    }
+  ]
+}

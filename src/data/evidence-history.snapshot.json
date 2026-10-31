@@ -738795,7 +738795,107 @@
         "confidence": "B",
         "notes": "Réponse primaire complète relue le 30 octobre 2026 ; SHA-256 453e287507815373993e3d0c796c82836a43fbc822fe0f2117a56f7b9635ba9d. Comparaison documentaire, sans essai physique CompatAir."
       }
+    },
+    {
+      "id": "added:gentilin-clinic-8-90:review-20261031-gentilin-clinic-8-90-1:2026-10-31",
+      "evidenceId": "review-20261031-gentilin-clinic-8-90-1",
+      "productId": "gentilin-clinic-8-90",
+      "productType": "compressor",
+      "occurredAt": "2026-10-31",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e624356bb3a84c7cebebe6e3c54a6f7648a9c276d3c98baf293258f06cb212ab",
+      "snapshot": {
+        "id": "review-20261031-gentilin-clinic-8-90-1",
+        "sourceUrl": "https://www.gentilinair.com/en/products/clinic-8-90",
+        "sourceLabel": "Relecture du modèle et de son voisin, 31 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-31",
+        "confidence": "B",
+        "notes": "Réponse primaire complète reçue le 31 octobre 2026 ; passages déterminants relus. SHA-256 69708e5dc92fe43b9a01a41ef653f565a089fe33741f095725e51bde5126660f. Comparaison documentaire, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:gentilin-clinic-8-90:review-20261031-gentilin-clinic-8-90-2:2026-10-31",
+      "evidenceId": "review-20261031-gentilin-clinic-8-90-2",
+      "productId": "gentilin-clinic-8-90",
+      "productType": "compressor",
+      "occurredAt": "2026-10-31",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "3e852a622c6c80e2826e73dad9702d9aaec162e07945e70de8e46504ce41c664",
+      "snapshot": {
+        "id": "review-20261031-gentilin-clinic-8-90-2",
+        "sourceUrl": "https://www.gentilinair.com/en/products/clinic-6-90-tri",
+        "sourceLabel": "Relecture du modèle et de son voisin, 31 octobre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-31",
+        "confidence": "B",
+        "notes": "Réponse primaire complète reçue le 31 octobre 2026 ; passages déterminants relus. SHA-256 91a66f65eae7c1ae12935c85e0e68f518aa8655033939cc1b63cef474fa5f902. Comparaison documentaire, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:gentilin-clinic-8-90:review-20261031-gentilin-clinic-8-90-3:2026-10-31",
+      "evidenceId": "review-20261031-gentilin-clinic-8-90-3",
+      "productId": "gentilin-clinic-8-90",
+      "productType": "compressor",
+      "occurredAt": "2026-10-31",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c5ab816be5101553c356baf81d6629fd08e38617278aaeb909f9a5f8e0827e4d",
+      "snapshot": {
+        "id": "review-20261031-gentilin-clinic-8-90-3",
+        "sourceUrl": "https://www.gentilinair.com/docs/documento-provvisorio-clinic-8-90_1778060807.pdf#page=5",
+        "sourceLabel": "Relecture du modèle et de son voisin, 31 octobre 2026, pages PDF 5, 6, 8",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-31",
+        "confidence": "B",
+        "notes": "Réponse primaire complète reçue le 31 octobre 2026 ; passages déterminants relus. SHA-256 20f23d37209d3788b2ade87906b9cf531620f3e06b8611c0f6a87289d20a8a4c. Comparaison documentaire, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-prowin-k-528m-10:review-20261031-pistolet-peinture-hvlp-prowin-k-528m-10-1:2026-10-31",
+      "evidenceId": "review-20261031-pistolet-peinture-hvlp-prowin-k-528m-10-1",
+      "productId": "pistolet-peinture-hvlp-prowin-k-528m-10",
+      "productType": "tool",
+      "occurredAt": "2026-10-31",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "2d8857ab7cb8ea1d9a9c5bf69914d18c9933872b9d690cfd0dfe15905adb2ce2",
+      "snapshot": {
+        "id": "review-20261031-pistolet-peinture-hvlp-prowin-k-528m-10-1",
+        "sourceUrl": "https://www.prowin-tools.com/wp-content/uploads/2023/05/Air-Painting-ToolsNew.pdf#page=15",
+        "sourceLabel": "Relecture du modèle et de son voisin, 31 octobre 2026, pages PDF 15",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-31",
+        "confidence": "B",
+        "notes": "Réponse primaire complète reçue le 31 octobre 2026 ; passages déterminants relus. SHA-256 2cd45573cff8decba50b2fbbfe2127d8e4bc1c3f1fdb6550e2f2467703941213. Comparaison documentaire, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "added:worthington-creyssensac-rlr-1000-50-hz-8-bar-pack-au-sol:review-20261031-worthington-creyssensac-rlr-1000-50-hz-8-bar-pack-au-sol-1:2026-10-31",
+      "evidenceId": "review-20261031-worthington-creyssensac-rlr-1000-50-hz-8-bar-pack-au-sol-1",
+      "productId": "worthington-creyssensac-rlr-1000-50-hz-8-bar-pack-au-sol",
+      "productType": "compressor",
+      "occurredAt": "2026-10-31",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "ce7dc4693e7c82686977f942dd9ae06f63faaacfe5f398df51ce9f01f2000b4d",
+      "snapshot": {
+        "id": "review-20261031-worthington-creyssensac-rlr-1000-50-hz-8-bar-pack-au-sol-1",
+        "sourceUrl": "https://www.worthington-creyssensac.com/content/dam/brands/Worthington%20Creyssensac/products-bp-structure/oil-injected-screw-compressor/fixed-speed/rlr-750-2000-%282022%29/leaflets/wco-rollair-750-2000-leaflet-en.pdf.coredownload.pdf#page=3",
+        "sourceLabel": "Relecture du modèle et de son voisin, 31 octobre 2026, pages PDF 3, 6",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-10-31",
+        "confidence": "B",
+        "notes": "Réponse primaire complète reçue le 31 octobre 2026 ; passages déterminants relus. SHA-256 453e287507815373993e3d0c796c82836a43fbc822fe0f2117a56f7b9635ba9d. Comparaison documentaire, sans essai physique CompatAir."
+      }
     }
   ],
-  "historyVersion": "fde5222cb2dd43053532bea66db21694deb3541734af56a272cd287250efb2b4"
+  "historyVersion": "cbc2e1a432d08778af559f9715016d438b12637efcad89bb44359fc858f641a6"
 }
