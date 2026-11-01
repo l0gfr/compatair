@@ -19,9 +19,8 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Airpress APS 10 Basic Combi Dry, référence 364958-8 : cuve de 500 L, pression maximale publiée de 8 bar. Aucun débit restitué relié à une pression de mesure n’est documenté ; la compatibilité pneumatique reste indéterminée.",
+		"overview": "Airpress APS 10 Basic Combi Dry. La possibilité de fonctionnement continu annoncée ne qualifie pas un taux de marche numérique du groupe complet. Le taux 1 est retiré ; fonctionnement continu non confirmé par le moteur.",
 		"verifiedFacts": [
-			"Débit restitué à une pression de mesure précise : non documenté.",
 			"Compresseur à vis. Puissance moteur publiée : 7,5 kW.",
 			"Alimentation publiée : 400 V / 50 Hz / 3 Ph, triphasée."
 		],
@@ -29,7 +28,8 @@ const product: CompressorInput = {
 			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
 			"Le taux de marche est celui déclaré par le fabricant ; les conditions de cycle et de température restent à respecter. La disponibilité commerciale reste à confirmer.",
 			"La pression maximale du compresseur n’est pas utilisée comme pression de mesure implicite du débit.",
-			"La compatibilité nécessite un débit restitué documenté à la pression de l’outil."
+			"La compatibilité nécessite un débit restitué documenté à la pression de l’outil.",
+			"La possibilité de fonctionnement continu annoncée ne qualifie pas un taux de marche numérique du groupe complet. Le taux 1 est retiré ; fonctionnement continu non confirmé par le moteur."
 		]
 	},
 	"specifications": [
@@ -99,6 +99,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Le débit restitué indiqué sur la fiche n’est pas accompagné d’une pression de mesure explicite. Il est conservé comme valeur publiée, sans l’assimiler à un point de FAD utilisable pour la compatibilité."
+		},
+		{
+			"id": "airpress-aps-10-basic-combi-dry-364958-8-reserved-20261101-1",
+			"sourceUrl": "https://airpress.fr/compresseur-a-vis-aps-10-basic-combi-dry-8-bar-10-ch-7-5-kw-1140-l-min-500-l-364958-8",
+			"sourceLabel": "Airpress : revue factuelle du 1 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 d32a6bc7a6597746682e5893b3cc2ecadbd4ca0ee2bed421d97a759b22a0fd3e. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -130,7 +140,13 @@ const product: CompressorInput = {
 			"airpress-364958-8-20260926"
 		],
 		"dutyCycle": [
-			"airpress-364958-8-20260926"
+			"airpress-aps-10-basic-combi-dry-364958-8-reserved-20261101-1"
+		],
+		"editorial": [
+			"airpress-aps-10-basic-combi-dry-364958-8-reserved-20261101-1"
+		],
+		"specifications": [
+			"airpress-aps-10-basic-combi-dry-364958-8-reserved-20261101-1"
 		]
 	},
 	"notes": [
@@ -140,7 +156,6 @@ const product: CompressorInput = {
 	"voltage": "400 V / 50 Hz / 3 Ph",
 	"phase": "three-phase",
 	"ean": "8712418366310",
-	"dutyCycle": 1,
 	"variant": {
 		"familyId": "airpress-aps-10-basic-combi-dry",
 		"label": "Référence 364958-8",

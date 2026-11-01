@@ -29,10 +29,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "NPK S-2. La consommation moyenne déclarée ne fournit pas la demande maximale à un point de pression de mesure identifié. Aucun débit en charge n’est reconstitué. Masse publiée : 4.6 lbs. Consommation documentaire, hors calcul : 14.1 cfm.",
+		"overview": "NPK S-2. S-2L partage course et cadence, mais mesure 19-1/2 pouces pour 5,9 lb. Le S-2 est la version plus légère de cette table ; la moyenne 14,1 cfm partagée reste hors dimensionnement faute de point qualifié. Course : 9/16 pouce. Diamètre de piston : 1-3/16 pouce. Cadence : 3 500 coups/min.",
 		"verifiedFacts": [
 			"Masse publiée : 4.6 lbs.",
-			"Consommation documentaire, hors calcul : 14.1 cfm."
+			"Consommation documentaire, hors calcul : 14.1 cfm.",
+			"Course : 9/16 pouce.",
+			"Diamètre de piston : 1-3/16 pouce.",
+			"Cadence : 3 500 coups/min.",
+			"Longueur : 19-5/16 pouces.",
+			"Masse publiée : 4,6 lb."
 		],
 		"limitations": [
 			"La consommation moyenne déclarée ne fournit pas la demande maximale à un point de pression de mesure identifié. Aucun débit en charge n’est reconstitué.",
@@ -62,6 +67,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-michigan-15-npk-pdf-p4"
 			]
+		},
+		{
+			"label": "Course",
+			"value": "9/16 pouce",
+			"evidenceIds": [
+				"burineur-npk-s-2-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Diamètre de piston",
+			"value": "1-3/16 pouce",
+			"evidenceIds": [
+				"burineur-npk-s-2-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Cadence",
+			"value": "3 500 coups/min",
+			"evidenceIds": [
+				"burineur-npk-s-2-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "19-5/16 pouces",
+			"evidenceIds": [
+				"burineur-npk-s-2-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Masse publiée",
+			"value": "4,6 lb",
+			"evidenceIds": [
+				"burineur-npk-s-2-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -74,6 +114,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 8991587b6147dedde29a8ca888682d24a45127a873a1fb3a753e048fd2696462. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "burineur-npk-s-2-reserved-20261101-1",
+			"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/15-NPK.pdf#page=4",
+			"sourceLabel": "NPK : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 8991587b6147dedde29a8ca888682d24a45127a873a1fb3a753e048fd2696462. Passage page=4. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -85,6 +135,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-michigan-15-npk-pdf-p4"
+		],
+		"editorial": [
+			"burineur-npk-s-2-reserved-20261101-1"
+		],
+		"specifications": [
+			"burineur-npk-s-2-reserved-20261101-1"
 		]
 	},
 	"notes": [

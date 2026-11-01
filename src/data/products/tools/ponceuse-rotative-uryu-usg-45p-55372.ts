@@ -37,10 +37,17 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU USG-45P, code 55372. Le tableau publie une consommation moyenne de 0,55 m³/min, soit 550 L/min. Pression de service recommandée : 6 bar.",
+		"overview": "URYU USG-45P. La polisseuse UP-15 de la même page publie 125 mm mais 8500 tr/min et 1,20 kg, contre 12000 tr/min et 0,87 kg pour USG-45P. Les vitesses et montages d’accessoires restent propres à chaque outil. Diamètre de plateau/papier publié : 125 mm. Vitesse à vide maximale : 12 000 tr/min. Puissance publiée : 225 W.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 55372, page PDF 1.",
-			"Consommation moyenne publiée : 550 L/min après conversion de l’unité originale."
+			"Consommation moyenne publiée : 550 L/min après conversion de l’unité originale.",
+			"Diamètre de plateau/papier publié : 125 mm.",
+			"Vitesse à vide maximale : 12 000 tr/min.",
+			"Puissance publiée : 225 W.",
+			"Longueur totale : 187 mm.",
+			"Hauteur : 104 mm.",
+			"Masse hors accessoire : 0,87 kg.",
+			"Filetage de broche : 3/8-24."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
@@ -76,6 +83,55 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-uryu-p62"
 			]
+		},
+		{
+			"label": "Diamètre de plateau/papier publié",
+			"value": "125 mm",
+			"evidenceIds": [
+				"ponceuse-rotative-uryu-usg-45p-55372-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide maximale",
+			"value": "12 000 tr/min",
+			"evidenceIds": [
+				"ponceuse-rotative-uryu-usg-45p-55372-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Puissance publiée",
+			"value": "225 W",
+			"evidenceIds": [
+				"ponceuse-rotative-uryu-usg-45p-55372-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "187 mm",
+			"evidenceIds": [
+				"ponceuse-rotative-uryu-usg-45p-55372-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Hauteur",
+			"value": "104 mm",
+			"evidenceIds": [
+				"ponceuse-rotative-uryu-usg-45p-55372-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Masse hors accessoire",
+			"value": "0,87 kg",
+			"evidenceIds": [
+				"ponceuse-rotative-uryu-usg-45p-55372-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Filetage de broche",
+			"value": "3/8-24",
+			"evidenceIds": [
+				"ponceuse-rotative-uryu-usg-45p-55372-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -98,6 +154,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-31",
 			"confidence": "B",
 			"notes": "SHA-256 daaddcba105d4bd9dc97a38929d5b89c6543ad8e8d447e6b9c00c1bb64865b3b. La table URYU distingue Average Consumption et Recommended Air Pressure. Nettoyer les lignes OCR répétées et qualifier la pression comme une recommandation de service, sans maximum en charge déduit."
+		},
+		{
+			"id": "ponceuse-rotative-uryu-usg-45p-55372-reserved-20261101-1",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P62.pdf",
+			"sourceLabel": "URYU : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 daaddcba105d4bd9dc97a38929d5b89c6543ad8e8d447e6b9c00c1bb64865b3b. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -112,6 +178,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-20260930-uryu-p62"
+		],
+		"editorial": [
+			"ponceuse-rotative-uryu-usg-45p-55372-reserved-20261101-1"
+		],
+		"specifications": [
+			"ponceuse-rotative-uryu-usg-45p-55372-reserved-20261101-1"
 		]
 	},
 	"notes": [

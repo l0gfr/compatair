@@ -4,7 +4,7 @@ description: "Pompe AODD qui s’arrête ou ne débite plus : distinguer air,
   aspiration, refoulement et usure, avec une méthode de relevé utile au service
   technique."
 pubDate: 2026-09-29
-updatedDate: 2026-10-03
+updatedDate: 2026-11-01
 category: Utiliser
 audiences: [ "professionnel" ]
 metiers: [ "maintenance-industrielle" ]
@@ -18,7 +18,7 @@ relatedGuides:
     "silencieux-pneumatique-colmate-contre-pression"
   ]
 sources:
-  - https://store.psgdover.com/blog/tech-tips/aodd-pump-troubleshooting.html
+  - https://store.psgdover.com/resources/blog/troubleshooting/aodd-pump-troubleshooting.html
   - https://literature.enerpac.com/pdf/L2080_e.pdf
 ---
 
@@ -26,7 +26,7 @@ Une pompe à membrane pneumatique qui ne fournit plus de liquide n’a pas néce
 
 ## Observer avant de modifier
 
-Le [guide de dépannage AODD publié par PSG en avril 2026](https://store.psgdover.com/blog/tech-tips/aodd-pump-troubleshooting.html) distingue ces symptômes et leurs familles de causes. Il cite l’alimentation en air et l’échappement pour une absence de cycles, les conditions d’aspiration pour des cycles sans débit, et le refoulement, les clapets ou la distribution d’air pour un arrêt sous charge.
+Le [guide de dépannage AODD publié par PSG en avril 2026](https://store.psgdover.com/resources/blog/troubleshooting/aodd-pump-troubleshooting.html) distingue ces symptômes et leurs familles de causes. Il cite l’alimentation en air et l’échappement pour une absence de cycles, les conditions d’aspiration pour des cycles sans débit, et le refoulement, les clapets ou la distribution d’air pour un arrêt sous charge.
 
 Il demande aussi d’isoler l’équipement, de dissiper les pressions et de tenir compte des conditions chimiques avant une intervention. La notice de la pompe et la procédure de consignation du site définissent la mise en sécurité, y compris côté fluide.
 

@@ -21,7 +21,7 @@ const product: ToolProfileInput = {
 	"image": {
 		"src": "/images/products/agrafeuse-cloueuse-metabo-hpt-nr90ad-s1.webp",
 		"alt": "Repères techniques : Metabo HPT NR90AD(S1)",
-		"sourceUrl": "https://www.metabo-hpt.com/docs/default-source/product-owners-manuals/bf9aff2e3a40407cb9486114fc12e71e.pdf?sfvrsn=e4dabf4c_2",
+		"sourceUrl": "https://www.metabo-hpt.com/docs/default-source/product-owners-manuals/bf9aff2e3a40407cb9486114fc12e71e.pdf?sfvrsn=e4dabf4c_2#page=9",
 		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
 	},
 	"variant": {
@@ -34,10 +34,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Metabo HPT NR90AD(S1). Volume déclaré : 2,5 L par cycle à 6,9 bar ; la cadence doit être renseignée. Point du tableau retenu : 100 psi (6.9 bar), 2.5 ltr/cycle. Autres points explicitement publiés : 80 psi (5.5 bar) : 1.7 L/cycle ; 90 psi (6.2 bar) : 2.1 L/cycle.",
+		"overview": "Metabo HPT NR90AD(S1). NR90AE(S1) mesure 527 mm et 3,4 kg, avec 64–70 clous. NR90AD(S1) est le magasin plus court 462 mm pour bandes papier à tête tronquée. La même table pneumatique ne rend pas leurs fixations et magasins interchangeables. Clous compatibles selon la notice : Bande papier, tête tronquée (clipped head). Longueur de clou : 50–90 mm. Capacité du magasin : 50–74 clous, deux bandes.",
 		"verifiedFacts": [
 			"Point du tableau retenu : 100 psi (6.9 bar), 2.5 ltr/cycle.",
-			"Autres points explicitement publiés : 80 psi (5.5 bar) : 1.7 L/cycle ; 90 psi (6.2 bar) : 2.1 L/cycle."
+			"Autres points explicitement publiés : 80 psi (5.5 bar) : 1.7 L/cycle ; 90 psi (6.2 bar) : 2.1 L/cycle.",
+			"Clous compatibles selon la notice : Bande papier, tête tronquée (clipped head).",
+			"Longueur de clou : 50–90 mm.",
+			"Capacité du magasin : 50–74 clous, deux bandes.",
+			"Dimensions : 462 × 322 × 125 mm.",
+			"Masse : 3,2 kg."
 		],
 		"limitations": [
 			"Une cadence déclarée permet le calcul moyen ; la pointe instantanée de déclenchement reste distincte.",
@@ -74,6 +79,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-metabohpt-nr90-manual-pdf-p11"
 			]
+		},
+		{
+			"label": "Clous compatibles selon la notice",
+			"value": "Bande papier, tête tronquée (clipped head)",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-metabo-hpt-nr90ad-s1-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur de clou",
+			"value": "50–90 mm",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-metabo-hpt-nr90ad-s1-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Capacité du magasin",
+			"value": "50–74 clous, deux bandes",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-metabo-hpt-nr90ad-s1-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Dimensions",
+			"value": "462 × 322 × 125 mm",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-metabo-hpt-nr90ad-s1-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "3,2 kg",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-metabo-hpt-nr90ad-s1-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -86,6 +126,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 57defa88fed01f027ef22ca41d56ffd67867d9e7cce0a381d48d3c39a906a86a. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "agrafeuse-cloueuse-metabo-hpt-nr90ad-s1-reserved-20261101-1",
+			"sourceUrl": "https://www.metabo-hpt.com/docs/default-source/product-owners-manuals/bf9aff2e3a40407cb9486114fc12e71e.pdf?sfvrsn=e4dabf4c_2#page=9",
+			"sourceLabel": "Metabo HPT : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 57defa88fed01f027ef22ca41d56ffd67867d9e7cce0a381d48d3c39a906a86a. Passage page=9. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -100,6 +150,15 @@ const product: ToolProfileInput = {
 		],
 		"actionLabel": [
 			"october2b-tools-oct2b-metabohpt-nr90-manual-pdf-p11"
+		],
+		"editorial": [
+			"agrafeuse-cloueuse-metabo-hpt-nr90ad-s1-reserved-20261101-1"
+		],
+		"specifications": [
+			"agrafeuse-cloueuse-metabo-hpt-nr90ad-s1-reserved-20261101-1"
+		],
+		"image": [
+			"agrafeuse-cloueuse-metabo-hpt-nr90ad-s1-reserved-20261101-1"
 		]
 	},
 	"notes": [

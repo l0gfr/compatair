@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { isDeepStrictEqual } from 'node:util';
+import { applyReservedNovember1Batch, beforeReservedNovember1IfApplied } from './reviewed-catalog-amendments-2026-11-01-reserved.mjs';
 
 const bytes = readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-10-31-reserved.json', import.meta.url));
 if (createHash('sha256').update(bytes).digest('hex') !== '218eabecf5220be0bf68808e7c501d5296a0313bc2d644f6ffc77619787261fc') throw new Error('Reserved followup provenance changed');
@@ -32,6 +33,7 @@ export function applyReservedOctober31Followup(product) {
 }
 /** @template {{ id: string }} T @param {T} product @returns {T} */
 export function beforeReservedOctober31Followup(product) {
+ product = beforeReservedNovember1IfApplied(product);
  const row = rows.get(product.id);
  if (!row) return product;
  if (matches(product, row, 'before')) return product;
@@ -39,6 +41,7 @@ export function beforeReservedOctober31Followup(product) {
  return project(structuredClone(product), row, 'before');
 }
 export function applyReservedOctober31Batch(batch) {
- if (Array.isArray(batch)) return batch.map(applyReservedOctober31Followup);
- return { ...batch, compressors: batch.compressors.map(applyReservedOctober31Followup), tools: batch.tools.map(applyReservedOctober31Followup) };
+ const dated = product => applyReservedOctober31Followup(beforeReservedNovember1IfApplied(product));
+ if (Array.isArray(batch)) return applyReservedNovember1Batch(batch.map(dated));
+ return applyReservedNovember1Batch({ ...batch, compressors: batch.compressors.map(dated), tools: batch.tools.map(dated) });
 }

@@ -3,8 +3,8 @@ import type { ToolProfileInput } from '../../../domain/catalog';
 const product: ToolProfileInput = {
 	"id": "ponceuse-orbitale-cleco-mp4201",
 	"slug": "ponceuse-orbitale-cleco-mp4201",
-	"categoryId": "ponceuse-orbitale",
-	"category": "ponceuse-orbitale",
+	"categoryId": "meuleuse",
+	"category": "meuleuse",
 	"label": "Cleco MP4201",
 	"brand": "Cleco",
 	"model": "MP4201",
@@ -33,16 +33,23 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Cleco MP4201. La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner. Terminaison publiée : 1/8 in. Échappement : Arrière.",
+		"overview": "Cleco MP4201. MP4200 est droit et mesure 5,4 pouces ; MP4201 est coudé et mesure 5,9 pouces. SP-1081 annonce 44 W pour la famille, alors que GI-1250-EU publie 100 W. Les éditions restent séparées ; une puissance unique pour la machine livrée demande confirmation. La page est classée meuleuse, pas ponceuse orbitale. Type mécanique : Meuleuse crayon coudée. Pince fournie : 1/8 pouce. Vitesse à vide : 70 000 tr/min.",
 		"verifiedFacts": [
 			"Terminaison publiée : 1/8 in.",
 			"Échappement : Arrière.",
 			"Terminaison publiée : 1/8 in.",
-			"Terminaison publiée : 1/8 in."
+			"Terminaison publiée : 1/8 in.",
+			"Type mécanique : Meuleuse crayon coudée.",
+			"Pince fournie : 1/8 pouce.",
+			"Vitesse à vide : 70 000 tr/min.",
+			"Longueur publiée : 5,9 pouces.",
+			"Puissance selon SP-1081 : 0,06 hp (0,044 kW).",
+			"Puissance selon GI-1250-EU : 100 W."
 		],
 		"limitations": [
 			"La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer.",
+			"MP4200 est droit et mesure 5,4 pouces ; MP4201 est coudé et mesure 5,9 pouces. SP-1081 annonce 44 W pour la famille, alors que GI-1250-EU publie 100 W. Les éditions restent séparées ; une puissance unique pour la machine livrée demande confirmation. La page est classée meuleuse, pas ponceuse orbitale."
 		]
 	},
 	"specifications": [
@@ -83,9 +90,51 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de pression originale",
-			"value": "All tools performance rated @ 90psi (620 kPa) air pressure.",
+			"value": "All tools performance rated @ 90 psi (620 kPa) air pressure.",
 			"evidenceIds": [
 				"october-cleco-p256-p256"
+			]
+		},
+		{
+			"label": "Type mécanique",
+			"value": "Meuleuse crayon coudée",
+			"evidenceIds": [
+				"ponceuse-orbitale-cleco-mp4201-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Pince fournie",
+			"value": "1/8 pouce",
+			"evidenceIds": [
+				"ponceuse-orbitale-cleco-mp4201-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "70 000 tr/min",
+			"evidenceIds": [
+				"ponceuse-orbitale-cleco-mp4201-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur publiée",
+			"value": "5,9 pouces",
+			"evidenceIds": [
+				"ponceuse-orbitale-cleco-mp4201-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Puissance selon SP-1081",
+			"value": "0,06 hp (0,044 kW)",
+			"evidenceIds": [
+				"ponceuse-orbitale-cleco-mp4201-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Puissance selon GI-1250-EU",
+			"value": "100 W",
+			"evidenceIds": [
+				"ponceuse-orbitale-cleco-mp4201-reserved-20261101-1"
 			]
 		}
 	],
@@ -99,6 +148,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 202180f0eff8d96becccb66c7ad0f9e21c2a545ed2fa94a2e2b94cc8e738cfd1. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-orbitale-cleco-mp4201-reserved-20261101-1",
+			"sourceUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=256#page=256",
+			"sourceLabel": "Cleco : revue factuelle du 1 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 29655fbc96d18a7fea857c8eaedda028ec7a5ecbecf5a74ea72ba0da2bd5bbf7. Passage page=256. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +169,18 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october-cleco-p256-p256"
+		],
+		"categoryId": [
+			"ponceuse-orbitale-cleco-mp4201-reserved-20261101-1"
+		],
+		"category": [
+			"ponceuse-orbitale-cleco-mp4201-reserved-20261101-1"
+		],
+		"editorial": [
+			"ponceuse-orbitale-cleco-mp4201-reserved-20261101-1"
+		],
+		"specifications": [
+			"ponceuse-orbitale-cleco-mp4201-reserved-20261101-1"
 		]
 	},
 	"notes": [

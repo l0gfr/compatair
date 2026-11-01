@@ -38,11 +38,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZAT22AK. Consommation moyenne : 184 L/min ; pression publiée : 6,2 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Vitesse à vide : 150 tr/min. Masse : 1.73 kg.",
+		"overview": "ZIPP ZAT22AK. ZAT19AK : aluminium 2–8 mm,fer 2–4 mm et 350 tr/min ; ZAT23AK : aluminium 3–12 mm,fer 3–10 mm et 100 tr/min. La capacité dans le matériau et la vitesse départagent ces trois taraudeuses, pas leur masse voisine. Capacité de taraudage aluminium : 3–12 mm. Capacité de taraudage fer : 3–8 mm. Vitesse à vide : 150 tr/min.",
 		"verifiedFacts": [
 			"Vitesse à vide : 150 tr/min.",
 			"Masse : 1.73 kg.",
-			"Référence constructeur : ZAT22AK."
+			"Référence constructeur : ZAT22AK.",
+			"Capacité de taraudage aluminium : 3–12 mm.",
+			"Capacité de taraudage fer : 3–8 mm.",
+			"Vitesse à vide : 150 tr/min.",
+			"Longueur totale : 255 mm."
 		],
 		"limitations": [
 			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
@@ -73,7 +77,7 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de pression originale",
-			"value": "Specification(air pressure at 90psi, 6.2",
+			"value": "Specification(air pressure at 90 psi, 6.2",
 			"evidenceIds": [
 				"october-b-zipp-tools-p158"
 			]
@@ -83,6 +87,34 @@ const product: ToolProfileInput = {
 			"value": "ZIPP, catalogue général pneumatique, page PDF 158",
 			"evidenceIds": [
 				"october-b-zipp-tools-p158"
+			]
+		},
+		{
+			"label": "Capacité de taraudage aluminium",
+			"value": "3–12 mm",
+			"evidenceIds": [
+				"taraudeuse-zipp-zat22ak-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Capacité de taraudage fer",
+			"value": "3–8 mm",
+			"evidenceIds": [
+				"taraudeuse-zipp-zat22ak-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "150 tr/min",
+			"evidenceIds": [
+				"taraudeuse-zipp-zat22ak-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "255 mm",
+			"evidenceIds": [
+				"taraudeuse-zipp-zat22ak-reserved-20261101-1"
 			]
 		}
 	],
@@ -96,6 +128,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "taraudeuse-zipp-zat22ak-reserved-20261101-1",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=158",
+			"sourceLabel": "ZIPP : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Passage page=158. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +152,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-b-zipp-tools-p158"
+		],
+		"editorial": [
+			"taraudeuse-zipp-zat22ak-reserved-20261101-1"
+		],
+		"specifications": [
+			"taraudeuse-zipp-zat22ak-reserved-20261101-1"
 		]
 	},
 	"notes": [

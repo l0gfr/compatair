@@ -18,12 +18,7 @@ const product: CompressorInput = {
   },
   "maxPressureBar": 10,
   "maxPressureBasis": "selected-working-pressure-ceiling",
-  "fadCurve": [
-    {
-      "pressureBar": 10,
-      "litersPerMinute": 1332
-    }
-  ],
+  "fadCurve": [],
   "powerKw": 11,
   "oilType": "oil-free",
   "confidence": "B",
@@ -57,13 +52,6 @@ const product: CompressorInput = {
       ]
     },
     {
-      "label": "Air livré à 10 bar",
-      "value": "1 332 L/min",
-      "evidenceIds": [
-        "october4b-puska-catalog-2025-p18"
-      ]
-    },
-    {
       "label": "Puissance publiée",
       "value": "11 kW",
       "evidenceIds": [
@@ -76,20 +64,28 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4b-puska-catalog-2025-p18"
       ]
+    },
+    {
+      "label": "Débit déclaré, pression de mesure non appariée",
+      "value": "1332 L/min",
+      "evidenceIds": [
+        "puska-cnr-155-bm-s-yd-reserved-20261101-1"
+      ]
     }
   ],
   "editorial": {
-    "overview": "Puska CNR 155/BM S YD. 1 332 L/min déclarés à 10 bar. Configuration constructeur : CNR 155/BM S YD.",
+    "overview": "Puska CNR 155/BM S YD. La table distingue une pression maximale ou de configuration et le débit déclaré, sans convention explicite qui apparie le FAD à ce point. Retrait du point calculé ; conservation des chiffres documentaires et des unités.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 10 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 1 332 L/min déclarés à 10 bar."
+      "Débit publié dans la documentation : 1332 L/min. Les limites de qualification du profil restent applicables."
     ],
     "limitations": [
       "La cuve n’est pas qualifiée : le tiret dans la colonne L ne démontre pas à lui seul un stockage nul.",
       "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
       "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
       "Cuve non documentée : l’autonomie et le volume de stockage ne peuvent pas être conclus à partir de ce profil.",
-      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions."
+      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions.",
+      "La table distingue une pression maximale ou de configuration et le débit déclaré, sans convention explicite qui apparie le FAD à ce point. Retrait du point calculé ; conservation des chiffres documentaires et des unités."
     ]
   },
   "evidence": [
@@ -102,6 +98,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 62ce74f8e02f84d3c021f7162c9e8fd8cd9fc17fa41131797a1d7b3465e92454 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "puska-cnr-155-bm-s-yd-reserved-20261101-1",
+      "sourceUrl": "https://www.puska.com/content/dam/brands/Puska/catalogos/Cat%C3%A1logo%20Puska%202025.pdf#page=18",
+      "sourceLabel": "Puska : revue factuelle du 1 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-01",
+      "confidence": "B",
+      "notes": "Corps complet GET HTTP200 SHA-256 62ce74f8e02f84d3c021f7162c9e8fd8cd9fc17fa41131797a1d7b3465e92454. Passage page=18. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
     }
   ],
   "fieldSources": {
@@ -115,7 +121,7 @@ const product: CompressorInput = {
       "october4b-puska-catalog-2025-p18"
     ],
     "fadCurve": [
-      "october4b-puska-catalog-2025-p18"
+      "puska-cnr-155-bm-s-yd-reserved-20261101-1"
     ],
     "powerKw": [
       "october4b-puska-catalog-2025-p18"
@@ -125,6 +131,12 @@ const product: CompressorInput = {
     ],
     "mpn": [
       "october4b-puska-catalog-2025-p18"
+    ],
+    "editorial": [
+      "puska-cnr-155-bm-s-yd-reserved-20261101-1"
+    ],
+    "specifications": [
+      "puska-cnr-155-bm-s-yd-reserved-20261101-1"
     ]
   },
   "notes": [

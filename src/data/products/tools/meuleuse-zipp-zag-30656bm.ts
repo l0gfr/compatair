@@ -29,11 +29,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZAG-30656BM. La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé. Vitesse à vide : 11000 tr/min. Masse : 1 kg.",
+		"overview": "ZIPP ZAG-30656BM. ZAG-30656B partage le diamètre 4-1/2 pouces avec une broche 5/8-11 ; ZAG-306BM conserve M14×2 mais utilise 4 pouces. Le montage et le diamètre distinguent 30656BM ; le débit moyen 4,1 cfm reste documentaire. Diamètre de disque : 4-1/2 pouces (115 mm dans le descriptif). Broche : M14 × 2. Vitesse à vide : 11 000 tr/min.",
 		"verifiedFacts": [
 			"Vitesse à vide : 11000 tr/min.",
 			"Masse : 1 kg.",
-			"Référence constructeur : ZAG-30656BM."
+			"Référence constructeur : ZAG-30656BM.",
+			"Diamètre de disque : 4-1/2 pouces (115 mm dans le descriptif).",
+			"Broche : M14 × 2.",
+			"Vitesse à vide : 11 000 tr/min."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé.",
@@ -82,6 +85,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october-b-zipp-tools-p121"
 			]
+		},
+		{
+			"label": "Diamètre de disque",
+			"value": "4-1/2 pouces (115 mm dans le descriptif)",
+			"evidenceIds": [
+				"meuleuse-zipp-zag-30656bm-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Broche",
+			"value": "M14 × 2",
+			"evidenceIds": [
+				"meuleuse-zipp-zag-30656bm-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "11 000 tr/min",
+			"evidenceIds": [
+				"meuleuse-zipp-zag-30656bm-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -94,6 +118,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "meuleuse-zipp-zag-30656bm-reserved-20261101-1",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=121",
+			"sourceLabel": "ZIPP : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Passage page=121. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -105,6 +139,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october-b-zipp-tools-p121"
+		],
+		"editorial": [
+			"meuleuse-zipp-zag-30656bm-reserved-20261101-1"
+		],
+		"specifications": [
+			"meuleuse-zipp-zag-30656bm-reserved-20261101-1"
 		]
 	},
 	"notes": [

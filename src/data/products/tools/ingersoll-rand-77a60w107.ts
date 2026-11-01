@@ -19,69 +19,44 @@ const product: ToolProfileInput = {
 	"image": {
 		"src": "/images/products/ingersoll-rand-77a60w107.webp",
 		"alt": "Repères techniques Ingersoll Rand 77A60W107, référence 77A60W107",
-		"sourceUrl": "https://powertools.ingersollrand.com/en-gb/asset-library/#page=16",
+		"sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/bltd89674ca5491ef9a/blt433cc516ed60e011/680a2474db9ccbf630425ff1/80221773_ed3_C.pdf#page=2",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Ingersoll Rand 77A60W107. La notice constructeur alternative est accessible, tandis que l’ancienne bibliothèque reste en réserve d’accès. Elle ne rétablit pas un point débit/pression maximal apparié pour cette configuration ; les anciennes valeurs restent documentaires. Le fabricant donne les performances à 90 psi, avec l’équivalence publiée de 6,2 bar dans les consignes du même catalogue. Valeur de la colonne CFM : 37. Conversion en L/min par le facteur 28,316846592 ; arrondi à 0,001 L/min. Référence fabricant : 77A60W107. Puissance publiée : 1.5 hp. Vitesse à vide : 6000 tr/min. Échappement : Latéral.",
+		"overview": "Ingersoll Rand 77A60W107. La notice 80221773 édition 3 distingue 77A60W107,6000 tr/min/7 pouces, de 77A45W109,4500 tr/min/9 pouces. Aucune consommation n’apparaît dans cette notice ; les 37 cfm historiques restent dans l’archive et ne sont pas présentés comme une mesure actuelle. Vitesse à vide : 6 000 tr/min. Plateau de support : 7 pouces (178 mm). Broche : 5/8-11, 7 pouces dans la table.",
 		"verifiedFacts": [
-			"Le fabricant donne les performances à 90 psi, avec l’équivalence publiée de 6,2 bar dans les consignes du même catalogue.",
-			"Valeur de la colonne CFM : 37. Conversion en L/min par le facteur 28,316846592 ; arrondi à 0,001 L/min.",
-			"Référence fabricant : 77A60W107.",
-			"Puissance publiée : 1.5 hp.",
-			"Vitesse à vide : 6000 tr/min.",
-			"Échappement : Latéral.",
-			"Valeur documentaire conservée : 1047.72 L/min. La notice constructeur alternative est accessible, tandis que l’ancienne bibliothèque reste en réserve d’accès. Elle ne rétablit pas un point débit/pression maximal apparié pour cette configuration ; les anciennes valeurs restent documentaires."
+			"Vitesse à vide : 6 000 tr/min.",
+			"Plateau de support : 7 pouces (178 mm).",
+			"Broche : 5/8-11, 7 pouces dans la table."
 		],
 		"limitations": [
 			"Le catalogue est conservé dans la bibliothèque du fabricant ; la disponibilité commerciale du modèle doit être confirmée.",
 			"Les valeurs sont déclarées par le fabricant. Les débits en CFM ne sont pas des mesures indépendantes CompatAir.",
 			"La notice constructeur alternative est accessible, tandis que l’ancienne bibliothèque reste en réserve d’accès. Elle ne rétablit pas un point débit/pression maximal apparié pour cette configuration ; les anciennes valeurs restent documentaires.",
-			"La fiche courante annonce 29 cfm en charge, contre 37 cfm dans la transcription historique ; les régimes et éditions ne sont pas fusionnés."
+			"La fiche courante annonce 29 cfm en charge, contre 37 cfm dans la transcription historique ; les régimes et éditions ne sont pas fusionnés.",
+			"La bibliothèque historique reste en réserve d’accès. La notice alternative ne rétablit pas ce lien."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Le fabricant donne les performances à 90 psi, avec l’équivalence publiée de 6,2 bar dans les consignes du même catalogue.",
-			"evidenceIds": [
-				"ingersoll-rand-77a60w107-20260926-workingpressurebar-1"
-			]
-		},
-		{
-			"label": "Condition de consommation",
-			"value": "Valeur documentaire conservée : 1047.72 L/min. La notice constructeur alternative est accessible, tandis que l’ancienne bibliothèque reste en réserve d’accès. Elle ne rétablit pas un point débit/pression maximal apparié pour cette configuration ; les anciennes valeurs restent documentaires.",
-			"evidenceIds": [
-				"ingersoll-rand-77a60w107-reserved-20261031-1"
-			]
-		},
-		{
-			"label": "Puissance publiée",
-			"value": "1.5 hp",
-			"evidenceIds": [
-				"ingersoll-rand-77a60w107-20260926"
-			]
-		},
-		{
 			"label": "Vitesse à vide",
-			"value": "6000 tr/min",
+			"value": "6 000 tr/min",
 			"evidenceIds": [
-				"ingersoll-rand-77a60w107-20260926"
+				"ingersoll-rand-77a60w107-reserved-20261101-1"
 			]
 		},
 		{
-			"label": "Échappement",
-			"value": "Latéral",
+			"label": "Plateau de support",
+			"value": "7 pouces (178 mm)",
 			"evidenceIds": [
-				"ingersoll-rand-77a60w107-20260926"
+				"ingersoll-rand-77a60w107-reserved-20261101-1"
 			]
 		},
 		{
-			"label": "Observation historique conservée, hors calcul",
-			"value": "{\"airflowLpm\":{\"min\":1047.723,\"typical\":1047.723,\"max\":1047.723},\"workingPressureBar\":{\"min\":6.2,\"typical\":6.2,\"max\":6.2}}",
+			"label": "Broche",
+			"value": "5/8-11, 7 pouces dans la table",
 			"evidenceIds": [
-				"ingersoll-rand-77a60w107-20260926",
-				"ingersoll-rand-77a60w107-reserved-20261031-1"
+				"ingersoll-rand-77a60w107-reserved-20261101-1"
 			]
 		}
 	],
@@ -113,20 +88,39 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-31",
 			"confidence": "B",
 			"notes": "SHA-256 79bce65a0d457b008e4483ef519ea5a09fcc23eb3463b30e076d2e1216da5542. La notice constructeur alternative est accessible, tandis que l’ancienne bibliothèque reste en réserve d’accès. Elle ne rétablit pas un point débit/pression maximal apparié pour cette configuration ; les anciennes valeurs restent documentaires."
+		},
+		{
+			"id": "ingersoll-rand-77a60w107-reserved-20261101-1",
+			"sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/bltd89674ca5491ef9a/blt433cc516ed60e011/680a2474db9ccbf630425ff1/80221773_ed3_C.pdf#page=2",
+			"sourceLabel": "Ingersoll Rand : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 79bce65a0d457b008e4483ef519ea5a09fcc23eb3463b30e076d2e1216da5542. Passage page=2. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"ingersoll-rand-77a60w107-20260926"
+			"ingersoll-rand-77a60w107-reserved-20261101-1"
 		],
 		"workingPressureBar": [
-			"ingersoll-rand-77a60w107-20260926-workingpressurebar-1"
+			"ingersoll-rand-77a60w107-reserved-20261101-1"
 		],
 		"demandModel": [
-			"ingersoll-rand-77a60w107-reserved-20261031-1"
+			"ingersoll-rand-77a60w107-reserved-20261101-1"
 		],
 		"demandExplanation": [
-			"ingersoll-rand-77a60w107-reserved-20261031-1"
+			"ingersoll-rand-77a60w107-reserved-20261101-1"
+		],
+		"editorial": [
+			"ingersoll-rand-77a60w107-reserved-20261101-1"
+		],
+		"specifications": [
+			"ingersoll-rand-77a60w107-reserved-20261101-1"
+		],
+		"image": [
+			"ingersoll-rand-77a60w107-reserved-20261101-1"
 		]
 	},
 	"notes": [

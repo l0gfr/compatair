@@ -37,10 +37,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU UT-60-04, code 67872. Le tableau publie une consommation moyenne de 0,5 m³/min, soit 500 L/min. Pression de service recommandée : 6 bar.",
+		"overview": "URYU UT-60-04. UT-60-07 partage 244 mm et 1,80 kg mais tourne à 680 tr/min ; UT-60S-04 conserve 400 tr/min avec 316 mm et 1,65 kg. Le suffixe et la longueur distinguent les taraudeuses malgré la moyenne commune 0,5 m³/min. Capacité publiée : 8 mm. Vitesse à vide approximative : 400 tr/min. Longueur totale : 244 mm.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 67872, page PDF 3.",
-			"Consommation moyenne publiée : 500 L/min après conversion de l’unité originale."
+			"Consommation moyenne publiée : 500 L/min après conversion de l’unité originale.",
+			"Capacité publiée : 8 mm.",
+			"Vitesse à vide approximative : 400 tr/min.",
+			"Longueur totale : 244 mm.",
+			"Masse : 1,80 kg."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
@@ -76,6 +80,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-uryu-p66-68"
 			]
+		},
+		{
+			"label": "Capacité publiée",
+			"value": "8 mm",
+			"evidenceIds": [
+				"taraudeuse-uryu-ut-60-04-67872-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide approximative",
+			"value": "400 tr/min",
+			"evidenceIds": [
+				"taraudeuse-uryu-ut-60-04-67872-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "244 mm",
+			"evidenceIds": [
+				"taraudeuse-uryu-ut-60-04-67872-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "1,80 kg",
+			"evidenceIds": [
+				"taraudeuse-uryu-ut-60-04-67872-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -98,6 +130,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-31",
 			"confidence": "B",
 			"notes": "SHA-256 36cfc8fdae9f6c8df69d64bdd9f1a6047a1ad848e1c1ea528c04c0c20b07963d. La table URYU distingue Average Consumption et Recommended Air Pressure. Nettoyer les lignes OCR répétées et qualifier la pression comme une recommandation de service, sans maximum en charge déduit."
+		},
+		{
+			"id": "taraudeuse-uryu-ut-60-04-67872-reserved-20261101-1",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P66_68.pdf",
+			"sourceLabel": "URYU : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 36cfc8fdae9f6c8df69d64bdd9f1a6047a1ad848e1c1ea528c04c0c20b07963d. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -112,6 +154,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-20260930-uryu-p66-68"
+		],
+		"editorial": [
+			"taraudeuse-uryu-ut-60-04-67872-reserved-20261101-1"
+		],
+		"specifications": [
+			"taraudeuse-uryu-ut-60-04-67872-reserved-20261101-1"
 		]
 	},
 	"notes": [

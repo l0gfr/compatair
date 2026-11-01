@@ -39,11 +39,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "VESSEL GT-CD60-34. Consommation publiée, régime non précisé : 420 L/min à 6 bar. Raccord publié : Rc 1/4. Vitesse à vide : 3,400 tr/min.",
+		"overview": "VESSEL GT-CD60-34. GT-CD60-34L démarre par levier, mesure 251 mm et 840 g ; les deux lignes partagent 3400 tr/min et 0,42 m³/min. La commande par poussée différencie GT-CD60-34 dans l’accès à la pièce. Commande : Démarrage par poussée. Longueur hors accessoires : 250 mm. Masse hors accessoires : 820 g.",
 		"verifiedFacts": [
 			"Raccord publié : Rc 1/4.",
 			"Vitesse à vide : 3,400 tr/min.",
-			"Code EDP publié : 336141."
+			"Code EDP publié : 336141.",
+			"Commande : Démarrage par poussée.",
+			"Longueur hors accessoires : 250 mm.",
+			"Masse hors accessoires : 820 g.",
+			"Raccord de foret : 1/4-28 UNF."
 		],
 		"limitations": [
 			"Régime de consommation non précisé : aucun maximum supposé ; le verdict reste insufficient_data.",
@@ -81,9 +85,37 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de pression originale",
-			"value": "air pressure: 0.6MPa",
+			"value": "air pressure: 0.6 MPa",
 			"evidenceIds": [
 				"october-vessel-air-p39"
+			]
+		},
+		{
+			"label": "Commande",
+			"value": "Démarrage par poussée",
+			"evidenceIds": [
+				"perceuse-vessel-gt-cd60-34-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur hors accessoires",
+			"value": "250 mm",
+			"evidenceIds": [
+				"perceuse-vessel-gt-cd60-34-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Masse hors accessoires",
+			"value": "820 g",
+			"evidenceIds": [
+				"perceuse-vessel-gt-cd60-34-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Raccord de foret",
+			"value": "1/4-28 UNF",
+			"evidenceIds": [
+				"perceuse-vessel-gt-cd60-34-reserved-20261101-1"
 			]
 		}
 	],
@@ -97,6 +129,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 16761fb825c735f6ebff0614f708d44f28eb21392b11568d7224019e2dc296d0. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "perceuse-vessel-gt-cd60-34-reserved-20261101-1",
+			"sourceUrl": "https://www.vessel.co.jp/userfiles/airtools/air-tools_E.pdf#page=39",
+			"sourceLabel": "VESSEL : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 16761fb825c735f6ebff0614f708d44f28eb21392b11568d7224019e2dc296d0. Passage page=39. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -111,6 +153,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-vessel-air-p39"
+		],
+		"editorial": [
+			"perceuse-vessel-gt-cd60-34-reserved-20261101-1"
+		],
+		"specifications": [
+			"perceuse-vessel-gt-cd60-34-reserved-20261101-1"
 		]
 	},
 	"notes": [

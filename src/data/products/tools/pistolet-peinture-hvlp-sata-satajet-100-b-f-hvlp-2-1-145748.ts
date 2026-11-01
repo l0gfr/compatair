@@ -9,16 +9,11 @@ const product: ToolProfileInput = {
 	"brand": "SATA",
 	"model": "SATAjet 100 B F HVLP 2.1",
 	"mpn": "145748",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 2,
 		"typical": 2,
 		"max": 2
-	},
-	"airflowLpm": {
-		"min": 350,
-		"typical": 350,
-		"max": 350
 	},
 	"confidence": "B",
 	"image": {
@@ -37,15 +32,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SATA SATAjet 100 B F HVLP 2.1 (réf. 145748). Consommation de référence en fonctionnement : 350 Nl/min à 2 bar.",
+		"overview": "SATA SATAjet 100 B F HVLP 2.1. Le diamètre de buse 2,1 mm identifie cette version ; le volume normalisé reste documentaire tant que son rapprochement au FAD n’est pas justifié. Unité constructeur : 350 Nl/min à 2 bar ; conditions de référence normalisées non établies.",
 		"verifiedFacts": [
 			"Technologie de pulvérisation : HVLP.",
 			"Buse : 2,1 mm.",
 			"Configuration de buse : Buse standard.",
 			"Livraison constructeur : Godet gravitaire QCC en plastique réutilisable, 0,6 l ; sans raccord articulé.",
-			"Consommation au point de la notice : 350 Nl/min à 2 bar.",
 			"Distance de pulvérisation recommandée : 10–15 cm.",
-			"Température maximale du produit pulvérisé : 50 °C."
+			"Température maximale du produit pulvérisé : 50 °C.",
+			"Unité constructeur : 350 Nl/min à 2 bar ; conditions de référence normalisées non établies."
 		],
 		"limitations": [
 			"La demande au point documenté n’est réduite par aucun facteur de marche implicite.",
@@ -53,7 +48,8 @@ const product: ToolProfileInput = {
 			"Nl/min est conservé sans supposer une température ni une humidité de référence absente des passages cités.",
 			"Une version par buse et technologie est retenue ; godet seul, couleur, affichage DIGITAL et accessoires ne multiplient pas le compte.",
 			"Les réglages de pression sont établis en dynamique, gâchette tirée ; la pression maximale de sécurité 10 bar ne sert pas de point de consommation.",
-			"Données déclarées dans les documents identifiés ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"Données déclarées dans les documents identifiés ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué.",
+			"Le diamètre de buse 2,1 mm identifie cette version ; le volume normalisé reste documentaire tant que son rapprochement au FAD n’est pas justifié."
 		]
 	},
 	"specifications": [
@@ -86,13 +82,6 @@ const product: ToolProfileInput = {
 			]
 		},
 		{
-			"label": "Consommation au point de la notice",
-			"value": "350 Nl/min à 2 bar",
-			"evidenceIds": [
-				"october3d-tools-sata-family-100b-manual-0-p132"
-			]
-		},
-		{
 			"label": "Distance de pulvérisation recommandée",
 			"value": "10–15 cm",
 			"evidenceIds": [
@@ -107,17 +96,17 @@ const product: ToolProfileInput = {
 			]
 		},
 		{
-			"label": "Consommation dans son unité originale",
-			"value": "350 Nl/min",
+			"label": "Portée de la pression dans la source",
+			"value": "Air consumption at 2,0 bar / 29 psi spray gun inlet pressure",
 			"evidenceIds": [
 				"october3d-tools-sata-family-100b-manual-0-p132"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "Air consumption at 2,0 bar / 29 psi spray gun inlet pressure",
+			"label": "Unité constructeur",
+			"value": "350 Nl/min à 2 bar ; conditions de référence normalisées non établies",
 			"evidenceIds": [
-				"october3d-tools-sata-family-100b-manual-0-p132"
+				"pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-2-1-145748-reserved-20261101-1"
 			]
 		}
 	],
@@ -201,6 +190,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-31",
 			"confidence": "B",
 			"notes": "SHA-256 120fd4b58cf8df73fb5f9e531c66be0167896f63bb7505c55207adb9de4d9f99. Les deux passages SATA relus donnent 350 Nl/min à 2 bar. Corriger les libellés résiduels L/min dans la présentation sans changer la valeur technique ni sa pression."
+		},
+		{
+			"id": "pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-2-1-145748-reserved-20261101-1",
+			"sourceUrl": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806#page=34",
+			"sourceLabel": "SATA : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3. Passage page=34. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -211,12 +210,28 @@ const product: ToolProfileInput = {
 			"october3d-tools-sata-family-100b-manual-0-p132"
 		],
 		"airflowLpm": [
-			"october3d-tools-sata-family-100b-manual-0-p132"
+			"pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-2-1-145748-reserved-20261101-1"
+		],
+		"demandModel": [
+			"pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-2-1-145748-reserved-20261101-1"
+		],
+		"airflowBasis": [
+			"pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-2-1-145748-reserved-20261101-1"
+		],
+		"demandExplanation": [
+			"pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-2-1-145748-reserved-20261101-1"
+		],
+		"editorial": [
+			"pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-2-1-145748-reserved-20261101-1"
+		],
+		"specifications": [
+			"pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-2-1-145748-reserved-20261101-1"
 		]
 	},
 	"notes": [
 		"Consommation de référence en fonctionnement : 350 Nl/min à 2 bar."
-	]
+	],
+	"demandExplanation": "Consommation publiée en Nl/min sans conditions de référence établies pour la comparaison FAD. Valeur conservée en spécification ; besoin en action insuffisamment qualifié."
 };
 
 export default product;

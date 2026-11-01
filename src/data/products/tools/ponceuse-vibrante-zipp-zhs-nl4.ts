@@ -29,10 +29,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZHS-NL4. La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé. Référence constructeur : ZHS-NL4. Configuration publiée : / ZHS-NL4A ZHS-CL4 ZHS-SL4.",
+		"overview": "ZIPP ZHS-NL4. ZHS-CL4 est la version à aspiration centrale et ZHS-SL4 la version à aspiration autogénérée. Le modèle ZHS-NL4 est explicitement Non-Vacuum ; la moyenne commune 3,1 cfm ne décrit pas cet équipement. Aspiration : Sans aspiration intégrée. Fixation de l’abrasif : Par pinces (Clip Type). Orbite publiée : 5 mm.",
 		"verifiedFacts": [
 			"Référence constructeur : ZHS-NL4.",
-			"Configuration publiée : / ZHS-NL4A ZHS-CL4 ZHS-SL4."
+			"Configuration publiée : / ZHS-NL4A ZHS-CL4 ZHS-SL4.",
+			"Aspiration : Sans aspiration intégrée.",
+			"Fixation de l’abrasif : Par pinces (Clip Type).",
+			"Orbite publiée : 5 mm.",
+			"Vitesse publiée : 7 500 tr/min."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé.",
@@ -67,6 +71,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october-b-zipp-tools-p148"
 			]
+		},
+		{
+			"label": "Aspiration",
+			"value": "Sans aspiration intégrée",
+			"evidenceIds": [
+				"ponceuse-vibrante-zipp-zhs-nl4-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Fixation de l’abrasif",
+			"value": "Par pinces (Clip Type)",
+			"evidenceIds": [
+				"ponceuse-vibrante-zipp-zhs-nl4-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Orbite publiée",
+			"value": "5 mm",
+			"evidenceIds": [
+				"ponceuse-vibrante-zipp-zhs-nl4-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Vitesse publiée",
+			"value": "7 500 tr/min",
+			"evidenceIds": [
+				"ponceuse-vibrante-zipp-zhs-nl4-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -79,6 +111,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-vibrante-zipp-zhs-nl4-reserved-20261101-1",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=148",
+			"sourceLabel": "ZIPP : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Passage page=148. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -90,6 +132,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october-b-zipp-tools-p148"
+		],
+		"editorial": [
+			"ponceuse-vibrante-zipp-zhs-nl4-reserved-20261101-1"
+		],
+		"specifications": [
+			"ponceuse-vibrante-zipp-zhs-nl4-reserved-20261101-1"
 		]
 	},
 	"notes": [

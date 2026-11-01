@@ -20,16 +20,11 @@ const product: ToolProfileInput = {
 			"Hauteur": "98 mm"
 		}
 	},
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 6.2,
 		"typical": 6.2,
 		"max": 6.2
-	},
-	"airflowLpm": {
-		"min": 934,
-		"typical": 934,
-		"max": 934
 	},
 	"usagePattern": "continuous",
 	"confidence": "A",
@@ -38,27 +33,31 @@ const product: ToolProfileInput = {
 		"innerDiameterMm": 10
 	},
 	"image": {
-		"src": "/images/products/dynabrade-57127-technical.webp",
-		"alt": "Repères techniques Dynabrade 57127 : consommation maximale publiée de 934 L/min à 6,2 bar",
-		"sourceUrl": "https://www17.dynabrade.com/pdf/dynabrade-industrial-catalog.pdf#page=95",
-		"sourceLabel": "Repères techniques CompatAir d’après le catalogue Dynabrade D25.01"
+		"src": "/images/products/dynabrade-57127-technical.svg",
+		"alt": "Repères techniques Dynabrade 57127 : débit dimensionnant non établi",
+		"sourceUrl": "https://apac.dynabrade.com/assets/05dbd0b7-eb77-4b78-b67a-6d3dda34b75b/4074394753-pd0337r.pdf#page=2",
+		"sourceLabel": "Carte technique CompatAir, notice constructeur et unités originales dans les spécifications"
 	},
 	"editorial": {
-		"overview": "Dynabrade 57127, référence 57127, présente une consommation maximale publiée de 934 L/min. Le catalogue D25.01 indique une pression de 90 PSIG (6,2 bar), page 95. Puissance moteur : 410 W. Vitesse moteur publiée : 15 000 tr/min.",
+		"overview": "Dynabrade 57127. La notice PD03.37R retrouvée couvre 57127 et les numéros de série 0H1000 et suivants. Les unités CFM et SCFM sont conservées distinctes ; aucun rapprochement silencieux des volumes standard au FAD. Le catalogue D25.01 reste indisponible à son ancienne adresse. Consommation maximale, unités de la notice : 5 CFM / 33 SCFM (934 L/min). Pression du tableau : 90 PSIG (6,2 bar). Filetage de broche : 3/8-24 mâle.",
 		"verifiedFacts": [
 			"Puissance moteur : 410 W.",
 			"Vitesse moteur publiée : 15 000 tr/min.",
 			"Filetage de sortie : 3/8\"-24 Male.",
 			"Longueur : 152 mm.",
 			"Entrée d’air : 1/4 pouce NPT.",
-			"Flexible : 10 mm de diamètre intérieur publié."
+			"Flexible : 10 mm de diamètre intérieur publié.",
+			"Consommation maximale, unités de la notice : 5 CFM / 33 SCFM (934 L/min).",
+			"Pression du tableau : 90 PSIG (6,2 bar).",
+			"Filetage de broche : 3/8-24 mâle.",
+			"Puissance publiée : 0,55 hp (410 W)."
 		],
 		"limitations": [
-			"Masse non retenue : le tableau publie des unités contradictoires (1.9 (0.8)).",
-			"Le calcul conserve la consommation maximale publiée, sans la réduire selon un cycle de travail supposé. Cette valeur ne constitue pas une mesure de débit réalisée par CompatAir.",
 			"Le catalogue ne fournit pas de courbe de consommation selon la pression pour cette référence. Vérifier la pression dynamique à l’entrée de l’outil pendant son fonctionnement.",
 			"Le diamètre intérieur publié ne suffit pas à valider un réseau : la longueur, les raccords et les pertes de pression restent à contrôler.",
-			"Cette fiche repose sur l’édition D25.01 du catalogue international. Elle ne prouve ni la disponibilité actuelle en France ni l’équipement exact livré par un vendeur."
+			"Cette fiche repose sur l’édition D25.01 du catalogue international. Elle ne prouve ni la disponibilité actuelle en France ni l’équipement exact livré par un vendeur.",
+			"La notice PD03.37R retrouvée couvre 57127 et les numéros de série 0H1000 et suivants. Les unités CFM et SCFM sont conservées distinctes ; aucun rapprochement silencieux des volumes standard au FAD. Le catalogue D25.01 reste indisponible à son ancienne adresse.",
+			"Les unités SCFM restent documentaires : les conditions de référence ne permettent pas ici un rapprochement dimensionnant avec le FAD du compresseur."
 		]
 	},
 	"specifications": [
@@ -96,6 +95,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"dynabrade-57127-catalogue-d25-01"
 			]
+		},
+		{
+			"label": "Consommation maximale, unités de la notice",
+			"value": "5 CFM / 33 SCFM (934 L/min)",
+			"evidenceIds": [
+				"dynabrade-57127-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Pression du tableau",
+			"value": "90 PSIG (6,2 bar)",
+			"evidenceIds": [
+				"dynabrade-57127-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Filetage de broche",
+			"value": "3/8-24 mâle",
+			"evidenceIds": [
+				"dynabrade-57127-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Puissance publiée",
+			"value": "0,55 hp (410 W)",
+			"evidenceIds": [
+				"dynabrade-57127-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -107,6 +134,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Tableau 95-0, ligne 5. Consommation maximale publiée : 33 (934) SCFM (L/min). Pression : 90 PSIG (6,2 bar). Cellules sources et empreinte SHA-256 versionnées."
+		},
+		{
+			"id": "dynabrade-57127-reserved-20261101-1",
+			"sourceUrl": "https://apac.dynabrade.com/assets/05dbd0b7-eb77-4b78-b67a-6d3dda34b75b/4074394753-pd0337r.pdf#page=2",
+			"sourceLabel": "Dynabrade : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 370096010bb52fe0a305b41d63c86af5afbb753cc80dd2760b7e090a73dd99e0. Passage page=2. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -114,7 +151,7 @@ const product: ToolProfileInput = {
 			"dynabrade-57127-catalogue-d25-01"
 		],
 		"airflowLpm": [
-			"dynabrade-57127-catalogue-d25-01"
+			"dynabrade-57127-reserved-20261101-1"
 		],
 		"workingPressureBar": [
 			"dynabrade-57127-catalogue-d25-01"
@@ -124,12 +161,31 @@ const product: ToolProfileInput = {
 		],
 		"recommendedHose": [
 			"dynabrade-57127-catalogue-d25-01"
+		],
+		"demandModel": [
+			"dynabrade-57127-reserved-20261101-1"
+		],
+		"airflowBasis": [
+			"dynabrade-57127-reserved-20261101-1"
+		],
+		"demandExplanation": [
+			"dynabrade-57127-reserved-20261101-1"
+		],
+		"editorial": [
+			"dynabrade-57127-reserved-20261101-1"
+		],
+		"specifications": [
+			"dynabrade-57127-reserved-20261101-1"
+		],
+		"image": [
+			"dynabrade-57127-reserved-20261101-1"
 		]
 	},
 	"notes": [
 		"Caractéristiques déclarées par le fabricant, sans essai physique par CompatAir.",
 		"La compatibilité calculée concerne l’alimentation en air. Le choix des abrasifs, carters et équipements de protection relève de la notice de l’outil."
-	]
+	],
+	"demandExplanation": "Le document publie un débit en SCFM ; les conditions de référence nécessaires au rapprochement avec le FAD ne sont pas qualifiées ici. Les unités originales restent visibles."
 };
 
 export default product;

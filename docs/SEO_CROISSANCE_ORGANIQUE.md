@@ -135,6 +135,8 @@ Les décisions antérieures `needs-correction` et `rejected` portant sur une emp
 
 Le rapport quotidien cite les lectures partagées, les reçus réutilisés, les contrôles de sources et les exceptions. La relecture intégrale porte sur les nouvelles sources, les changements et les anomalies ; les pages inchangées couvertes par un reçu vérifié peuvent être contrôlées par échantillonnage éditorial. La qualification technique demeure explicite pour chaque référence. FAD et débit aspiré, pression maximale et pression de mesure, consommation moyenne/à vide/en charge et service moteur/groupe restent distincts. Les valeurs insuffisantes continuent de produire `insufficient_data`.
 
+Le [suivi des 82 réserves du 1 novembre 2026](editorial/indexation-reserved-followup-2026-11-01.json) consigne 72 corrections de produits et deux corrections de guides : 65 dossiers préparés pour une nouvelle revue, 15 réserves de source ou de confirmation constructeur, et deux doublons écartés. Les [amendements reproductibles](../src/data/imports/catalog-amendments-reviewed-2026-11-01-reserved.json) conservent les états exacts avant et après correction. Le prochain lot reprend ces preuves avec l'empreinte courante, les voisins et l'accès du jour aux documents ; les décisions d'admission restent enregistrées par la revue quotidienne.
+
 La publication conserve un seul build complet en CI et tous les contrôles bloquants existants. Les plafonds mesurent une capacité d'ouverture, jamais une promesse d'indexation Google.
 
 

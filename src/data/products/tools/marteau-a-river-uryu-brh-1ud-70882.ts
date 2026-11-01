@@ -37,10 +37,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU BRH-1UD, code 70882. Le tableau publie une consommation moyenne de 0,34 m³/min, soit 340 L/min. Pression de service recommandée : 6 bar.",
+		"overview": "URYU BRH-1UD. BRH-5UD :1800 coups/min,211 mm et course 100 mm. BRH-1UD est l’ensemble 143 mm/course 38 mm ; la table regroupe les variantes R/H et leurs codes. La queue exacte doit être confirmée à la commande. Cadence approximative : 2 800 coups/min. Longueur totale : 143 mm. Masse sans bouterolle : 1,40 kg.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 70882, page PDF 1.",
-			"Consommation moyenne publiée : 340 L/min après conversion de l’unité originale."
+			"Consommation moyenne publiée : 340 L/min après conversion de l’unité originale.",
+			"Cadence approximative : 2 800 coups/min.",
+			"Longueur totale : 143 mm.",
+			"Masse sans bouterolle : 1,40 kg.",
+			"Course de piston : 38 mm.",
+			"Codes associés à la ligne R/H : 70882 / 70892."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
@@ -76,6 +81,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-uryu-p70-71"
 			]
+		},
+		{
+			"label": "Cadence approximative",
+			"value": "2 800 coups/min",
+			"evidenceIds": [
+				"marteau-a-river-uryu-brh-1ud-70882-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "143 mm",
+			"evidenceIds": [
+				"marteau-a-river-uryu-brh-1ud-70882-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Masse sans bouterolle",
+			"value": "1,40 kg",
+			"evidenceIds": [
+				"marteau-a-river-uryu-brh-1ud-70882-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Course de piston",
+			"value": "38 mm",
+			"evidenceIds": [
+				"marteau-a-river-uryu-brh-1ud-70882-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Codes associés à la ligne R/H",
+			"value": "70882 / 70892",
+			"evidenceIds": [
+				"marteau-a-river-uryu-brh-1ud-70882-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -98,6 +138,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-31",
 			"confidence": "B",
 			"notes": "SHA-256 51a1fe7622e1fe09d10ce44fc0fdbe4bc87c11f14d72836a26e18c2a733d7884. La table URYU distingue Average Consumption et Recommended Air Pressure. Nettoyer les lignes OCR répétées et qualifier la pression comme une recommandation de service, sans maximum en charge déduit."
+		},
+		{
+			"id": "marteau-a-river-uryu-brh-1ud-70882-reserved-20261101-1",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P70_71.pdf",
+			"sourceLabel": "URYU : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 51a1fe7622e1fe09d10ce44fc0fdbe4bc87c11f14d72836a26e18c2a733d7884. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -112,6 +162,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-20260930-uryu-p70-71"
+		],
+		"editorial": [
+			"marteau-a-river-uryu-brh-1ud-70882-reserved-20261101-1"
+		],
+		"specifications": [
+			"marteau-a-river-uryu-brh-1ud-70882-reserved-20261101-1"
 		]
 	},
 	"notes": [

@@ -29,10 +29,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "JET JSM-204. Les caractéristiques mécaniques sont documentées ; aucune consommation n’est associée à une pression de mesure et à un régime suffisant pour le calcul. Masse publiée : 6 lbs. Ligne technique constructeur : JSm-204 18 2200 90 4 1/4 3/8 4.2 8-1/4 6.",
+		"overview": "JET JSM-204. Le tableau JSM-204 exprime la capacité en gauge sans identifier la matière dans cette cellule : aucune épaisseur en millimètres n’est calculée. La capacité 18 gauge et le jeu de mâchoires remplacent la ligne brute de catalogue ; débit 4 cfm et pression 90 psi restent documentaires. Capacité métal publiée : 18 gauge, matériau non précisé par cette cellule. Cadence à vide publiée : 2 200 par minute. Longueur totale : 8-1/4 pouces.",
 		"verifiedFacts": [
 			"Masse publiée : 6 lbs.",
-			"Ligne technique constructeur : JSm-204 18 2200 90 4 1/4 3/8 4.2 8-1/4 6."
+			"Ligne technique constructeur : JSm-204 18 2200 90 4 1/4 3/8 4.2 8-1/4 6.",
+			"Capacité métal publiée : 18 gauge, matériau non précisé par cette cellule.",
+			"Cadence à vide publiée : 2 200 par minute.",
+			"Longueur totale : 8-1/4 pouces.",
+			"Masse publiée : 6 lb."
 		],
 		"limitations": [
 			"Les caractéristiques mécaniques sont documentées ; aucune consommation n’est associée à une pression de mesure et à un régime suffisant pour le calcul.",
@@ -61,6 +65,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-jet-catalog-pdf-p75"
 			]
+		},
+		{
+			"label": "Capacité métal publiée",
+			"value": "18 gauge, matériau non précisé par cette cellule",
+			"evidenceIds": [
+				"cisaille-jet-jsm-204-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Cadence à vide publiée",
+			"value": "2 200 par minute",
+			"evidenceIds": [
+				"cisaille-jet-jsm-204-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "8-1/4 pouces",
+			"evidenceIds": [
+				"cisaille-jet-jsm-204-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Masse publiée",
+			"value": "6 lb",
+			"evidenceIds": [
+				"cisaille-jet-jsm-204-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -73,6 +105,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 9381736270fc03a7d3233abbb4c97f401cc4f8f453822e2b9eabc85c4e4f6ec6. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cisaille-jet-jsm-204-reserved-20261101-1",
+			"sourceUrl": "https://d29c95q8mcesvj.cloudfront.net/wysiwyg/pdf/414700_Catalog.pdf#page=75",
+			"sourceLabel": "JET : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 9381736270fc03a7d3233abbb4c97f401cc4f8f453822e2b9eabc85c4e4f6ec6. Passage page=75. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -84,6 +126,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-jet-catalog-pdf-p75"
+		],
+		"editorial": [
+			"cisaille-jet-jsm-204-reserved-20261101-1"
+		],
+		"specifications": [
+			"cisaille-jet-jsm-204-reserved-20261101-1"
 		]
 	},
 	"notes": [

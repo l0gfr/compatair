@@ -29,10 +29,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Michigan Pneumatic MP-100CR-RET. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 14.75 lbs. Ligne technique constructeur : MP-100CR-RET 1\" 1-1/8\" 2800 13-1/2\" 14.75 lbs 3/8\" 1/2\" 22 cfm.",
+		"overview": "Michigan Pneumatic MP-100CR-RET. MP-200CR-RET porte la course à 2 pouces et 2400 coups/min. La famille propose une queue 0,580 pouce hexagonale ou 0,680 pouce ronde ; la cellule commune CH/CR ne suffit pas à confirmer seule le montage livré. Vérifier cette sortie à la commande. Course : 1 pouce. Cadence : 2 800 coups/min. Longueur : 13-1/2 pouces.",
 		"verifiedFacts": [
 			"Masse publiée : 14.75 lbs.",
-			"Ligne technique constructeur : MP-100CR-RET 1\" 1-1/8\" 2800 13-1/2\" 14.75 lbs 3/8\" 1/2\" 22 cfm."
+			"Ligne technique constructeur : MP-100CR-RET 1\" 1-1/8\" 2800 13-1/2\" 14.75 lbs 3/8\" 1/2\" 22 cfm.",
+			"Course : 1 pouce.",
+			"Cadence : 2 800 coups/min.",
+			"Longueur : 13-1/2 pouces.",
+			"Masse publiée : 14,75 lb."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -68,6 +72,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-michigan-3-pdf-p16"
 			]
+		},
+		{
+			"label": "Course",
+			"value": "1 pouce",
+			"evidenceIds": [
+				"burineur-michigan-pneumatic-mp-100cr-ret-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Cadence",
+			"value": "2 800 coups/min",
+			"evidenceIds": [
+				"burineur-michigan-pneumatic-mp-100cr-ret-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "13-1/2 pouces",
+			"evidenceIds": [
+				"burineur-michigan-pneumatic-mp-100cr-ret-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Masse publiée",
+			"value": "14,75 lb",
+			"evidenceIds": [
+				"burineur-michigan-pneumatic-mp-100cr-ret-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -80,6 +112,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : a11683057b26ed84ebb5e32d6e57b8a71d893d427fac414b42f396c07bdb6908. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "burineur-michigan-pneumatic-mp-100cr-ret-reserved-20261101-1",
+			"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/3-Rivet%20Busters_Chipping-Hammers_v2.pdf#page=16",
+			"sourceLabel": "Michigan Pneumatic : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 a11683057b26ed84ebb5e32d6e57b8a71d893d427fac414b42f396c07bdb6908. Passage page=16. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -91,6 +133,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-michigan-3-pdf-p16"
+		],
+		"editorial": [
+			"burineur-michigan-pneumatic-mp-100cr-ret-reserved-20261101-1"
+		],
+		"specifications": [
+			"burineur-michigan-pneumatic-mp-100cr-ret-reserved-20261101-1"
 		]
 	},
 	"notes": [

@@ -37,10 +37,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU UFC-0N, code 75412. Le tableau publie une consommation moyenne de 0,3 m³/min, soit 300 L/min. Pression de service recommandée : 6 bar.",
+		"overview": "URYU UFC-0N. UFC-1N :4200 coups/min,190 mm,1,50 kg et course 34 mm, contre 5300,180 mm,1,38 kg et 28 mm pour UFC-0N. Les deux lignes publient 0,3 m³/min en moyenne ; la moyenne ne départage pas la frappe. Cadence approximative : 5 300 coups/min. Longueur totale : 180 mm. Masse sans burin : 1,38 kg.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 75412, page PDF 1.",
-			"Consommation moyenne publiée : 300 L/min après conversion de l’unité originale."
+			"Consommation moyenne publiée : 300 L/min après conversion de l’unité originale.",
+			"Cadence approximative : 5 300 coups/min.",
+			"Longueur totale : 180 mm.",
+			"Masse sans burin : 1,38 kg.",
+			"Course du piston : 28 mm."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
@@ -76,6 +80,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-uryu-p72"
 			]
+		},
+		{
+			"label": "Cadence approximative",
+			"value": "5 300 coups/min",
+			"evidenceIds": [
+				"burineur-uryu-ufc-0n-75412-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "180 mm",
+			"evidenceIds": [
+				"burineur-uryu-ufc-0n-75412-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Masse sans burin",
+			"value": "1,38 kg",
+			"evidenceIds": [
+				"burineur-uryu-ufc-0n-75412-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Course du piston",
+			"value": "28 mm",
+			"evidenceIds": [
+				"burineur-uryu-ufc-0n-75412-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -98,6 +130,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-31",
 			"confidence": "B",
 			"notes": "SHA-256 b852cff1aa468efb0c05768f060a38ec591cdddaec940b8593cf70b67e6daf01. La table URYU distingue Average Consumption et Recommended Air Pressure. Nettoyer les lignes OCR répétées et qualifier la pression comme une recommandation de service, sans maximum en charge déduit."
+		},
+		{
+			"id": "burineur-uryu-ufc-0n-75412-reserved-20261101-1",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P72.pdf",
+			"sourceLabel": "URYU : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 b852cff1aa468efb0c05768f060a38ec591cdddaec940b8593cf70b67e6daf01. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -112,6 +154,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-20260930-uryu-p72"
+		],
+		"editorial": [
+			"burineur-uryu-ufc-0n-75412-reserved-20261101-1"
+		],
+		"specifications": [
+			"burineur-uryu-ufc-0n-75412-reserved-20261101-1"
 		]
 	},
 	"notes": [

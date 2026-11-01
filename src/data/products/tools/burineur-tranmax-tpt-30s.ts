@@ -29,10 +29,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Tranmax TPT-30S. Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse. Masse publiée : 24.6 kg (54.2 lb). Longueur hors tout publiée : 880 mm (34.6 inch).",
+		"overview": "Tranmax TPT-30S. TPT-10S utilise une queue ronde 26 mm,une course 151 mm et 1300 coups/min pour 14,1 kg ; TPT-30S reçoit 30 mm et 235 mm pour 24,6 kg. La table exprime une consommation moyenne en charge, sans en faire une pointe maximale. Queue d’outil : Ronde, 30 mm. Course : 235 mm. Cadence : 1 000 coups/min.",
 		"verifiedFacts": [
 			"Masse publiée : 24.6 kg (54.2 lb).",
-			"Longueur hors tout publiée : 880 mm (34.6 inch)."
+			"Longueur hors tout publiée : 880 mm (34.6 inch).",
+			"Queue d’outil : Ronde, 30 mm.",
+			"Course : 235 mm.",
+			"Cadence : 1 000 coups/min.",
+			"Masse nette : 24,6 kg.",
+			"Longueur totale : 880 mm."
 		],
 		"limitations": [
 			"Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse.",
@@ -62,6 +67,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-tranmax-tp-pdf-p35"
 			]
+		},
+		{
+			"label": "Queue d’outil",
+			"value": "Ronde, 30 mm",
+			"evidenceIds": [
+				"burineur-tranmax-tpt-30s-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Course",
+			"value": "235 mm",
+			"evidenceIds": [
+				"burineur-tranmax-tpt-30s-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Cadence",
+			"value": "1 000 coups/min",
+			"evidenceIds": [
+				"burineur-tranmax-tpt-30s-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Masse nette",
+			"value": "24,6 kg",
+			"evidenceIds": [
+				"burineur-tranmax-tpt-30s-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "880 mm",
+			"evidenceIds": [
+				"burineur-tranmax-tpt-30s-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -74,6 +114,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : c2e29dbb1f9d433e1d65568bc327d3ea21eadd7d39f8edbb0d98145850f7c7d2. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "burineur-tranmax-tpt-30s-reserved-20261101-1",
+			"sourceUrl": "https://ss-client-website.s3-ap-northeast-1.amazonaws.com/tranmax/2023_01_09_113224_2212-Professional-Power-Tools-TP.pdf#page=35",
+			"sourceLabel": "Tranmax : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 c2e29dbb1f9d433e1d65568bc327d3ea21eadd7d39f8edbb0d98145850f7c7d2. Passage page=35. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -85,6 +135,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-tranmax-tp-pdf-p35"
+		],
+		"editorial": [
+			"burineur-tranmax-tpt-30s-reserved-20261101-1"
+		],
+		"specifications": [
+			"burineur-tranmax-tpt-30s-reserved-20261101-1"
 		]
 	},
 	"notes": [

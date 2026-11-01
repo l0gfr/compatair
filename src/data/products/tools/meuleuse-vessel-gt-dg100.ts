@@ -25,7 +25,7 @@ const product: ToolProfileInput = {
 	"image": {
 		"src": "/images/products/meuleuse-vessel-gt-dg100.webp",
 		"alt": "Repères techniques : VESSEL GT-DG100",
-		"sourceUrl": "https://www.vessel.co.jp/userfiles/airtools/air-tools_E.pdf",
+		"sourceUrl": "https://www.vessel.co.jp/userfiles/airtools/air-tools_E.pdf#page=33",
 		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
 	},
 	"variant": {
@@ -39,11 +39,16 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "VESSEL GT-DG100. Consommation publiée, régime non précisé : 700 L/min à 6 bar. Raccord publié : Rc 1/4. Vitesse à vide : 13,500 tr/min.",
+		"overview": "VESSEL GT-DG100. GT-DG50 : meule 50×4×9,5 mm,15000 tr/min et 800 g ; GT-DG100 :100×6×15 mm,13500 tr/min et 1390 g. La fiche exacte est page PDF33 ; la limite d’accessoire 70,6 m/s ne devient pas un débit ni un couple. Dimensions de meule publiées : 100 × 6 × 15 mm (diamètre × épaisseur × alésage). Vitesse périphérique maximale de l’accessoire : 70,6 m/s. Longueur totale : 205 mm.",
 		"verifiedFacts": [
 			"Raccord publié : Rc 1/4.",
 			"Vitesse à vide : 13,500 tr/min.",
-			"Code EDP publié : 310630."
+			"Code EDP publié : 310630.",
+			"Dimensions de meule publiées : 100 × 6 × 15 mm (diamètre × épaisseur × alésage).",
+			"Vitesse périphérique maximale de l’accessoire : 70,6 m/s.",
+			"Longueur totale : 205 mm.",
+			"Hauteur : 92 mm.",
+			"Masse : 1 390 g."
 		],
 		"limitations": [
 			"Régime de consommation non précisé : aucun maximum supposé ; le verdict reste insufficient_data.",
@@ -81,9 +86,44 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de pression originale",
-			"value": "Air pressure: 0.6MPa",
+			"value": "Air pressure: 0.6 MPa",
 			"evidenceIds": [
 				"october-vessel-air-p34"
+			]
+		},
+		{
+			"label": "Dimensions de meule publiées",
+			"value": "100 × 6 × 15 mm (diamètre × épaisseur × alésage)",
+			"evidenceIds": [
+				"meuleuse-vessel-gt-dg100-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Vitesse périphérique maximale de l’accessoire",
+			"value": "70,6 m/s",
+			"evidenceIds": [
+				"meuleuse-vessel-gt-dg100-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "205 mm",
+			"evidenceIds": [
+				"meuleuse-vessel-gt-dg100-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Hauteur",
+			"value": "92 mm",
+			"evidenceIds": [
+				"meuleuse-vessel-gt-dg100-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "1 390 g",
+			"evidenceIds": [
+				"meuleuse-vessel-gt-dg100-reserved-20261101-1"
 			]
 		}
 	],
@@ -97,6 +137,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 16761fb825c735f6ebff0614f708d44f28eb21392b11568d7224019e2dc296d0. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "meuleuse-vessel-gt-dg100-reserved-20261101-1",
+			"sourceUrl": "https://www.vessel.co.jp/userfiles/airtools/air-tools_E.pdf#page=33",
+			"sourceLabel": "VESSEL : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 16761fb825c735f6ebff0614f708d44f28eb21392b11568d7224019e2dc296d0. Passage page=33. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -111,6 +161,15 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-vessel-air-p34"
+		],
+		"editorial": [
+			"meuleuse-vessel-gt-dg100-reserved-20261101-1"
+		],
+		"specifications": [
+			"meuleuse-vessel-gt-dg100-reserved-20261101-1"
+		],
+		"image": [
+			"meuleuse-vessel-gt-dg100-reserved-20261101-1"
 		]
 	},
 	"notes": [

@@ -37,10 +37,16 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU AG-100(IN), code 53922. Le tableau publie une consommation moyenne de 0,5 m³/min, soit 500 L/min. Pression de service recommandée : 6 bar.",
+		"overview": "URYU AG-100(IN). AG-100L(IN) conserve 100 mm,13500 tr/min et 315 W mais mesure 179 mm et 1,05 kg. La version courte AG-100(IN) ne devient pas la 100L malgré les mêmes valeurs de rotation et de consommation moyenne. Diamètre de meule publié : 100 mm. Vitesse à vide maximale : 13 500 tr/min. Puissance publiée : 315 W.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 53922, page PDF 2.",
-			"Consommation moyenne publiée : 500 L/min après conversion de l’unité originale."
+			"Consommation moyenne publiée : 500 L/min après conversion de l’unité originale.",
+			"Diamètre de meule publié : 100 mm.",
+			"Vitesse à vide maximale : 13 500 tr/min.",
+			"Puissance publiée : 315 W.",
+			"Longueur totale : 175 mm.",
+			"Masse hors meule : 0,95 kg.",
+			"Configuration de broche : IN."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
@@ -76,6 +82,48 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-uryu-p57-61"
 			]
+		},
+		{
+			"label": "Diamètre de meule publié",
+			"value": "100 mm",
+			"evidenceIds": [
+				"meuleuse-uryu-ag-100-in-53922-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide maximale",
+			"value": "13 500 tr/min",
+			"evidenceIds": [
+				"meuleuse-uryu-ag-100-in-53922-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Puissance publiée",
+			"value": "315 W",
+			"evidenceIds": [
+				"meuleuse-uryu-ag-100-in-53922-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "175 mm",
+			"evidenceIds": [
+				"meuleuse-uryu-ag-100-in-53922-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Masse hors meule",
+			"value": "0,95 kg",
+			"evidenceIds": [
+				"meuleuse-uryu-ag-100-in-53922-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Configuration de broche",
+			"value": "IN",
+			"evidenceIds": [
+				"meuleuse-uryu-ag-100-in-53922-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -98,6 +146,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-31",
 			"confidence": "B",
 			"notes": "SHA-256 f00ce52018de3cd2c8f093e9762bb4f6c63230f68c6a1b04217089408fe89245. La table URYU distingue Average Consumption et Recommended Air Pressure. Nettoyer les lignes OCR répétées et qualifier la pression comme une recommandation de service, sans maximum en charge déduit."
+		},
+		{
+			"id": "meuleuse-uryu-ag-100-in-53922-reserved-20261101-1",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P57_61.pdf",
+			"sourceLabel": "URYU : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 f00ce52018de3cd2c8f093e9762bb4f6c63230f68c6a1b04217089408fe89245. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -112,6 +170,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-20260930-uryu-p57-61"
+		],
+		"editorial": [
+			"meuleuse-uryu-ag-100-in-53922-reserved-20261101-1"
+		],
+		"specifications": [
+			"meuleuse-uryu-ag-100-in-53922-reserved-20261101-1"
 		]
 	},
 	"notes": [

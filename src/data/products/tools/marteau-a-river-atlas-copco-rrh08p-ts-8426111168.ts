@@ -38,30 +38,23 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Atlas Copco RRH08P TS (réf. 8426111168). Consommation maximale : 600 L/min à 6,3 bar. Consommations originales : 10 L/s ; 21 cfm. Masse : 1.4 kg.",
+		"overview": "Atlas Copco RRH08P TS. La convention générale Atlas distingue consommation à vide sans régulateur et consommation à puissance maximale avec régulateur ; le tableau de percussion ne résout pas ce régime. La consommation reste documentaire.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 242.",
-			"Consommations originales : 10 L/s ; 21 cfm.",
 			"Masse : 1.4 kg.",
 			"Ligne de configuration originale : RRH08P TS 4X 1440 10.2 0.4 15 0.6 137 5.4 8.0 5.9 1.4 3.0 10.0 21 10.0 3/8 1/4 8426 1111 68."
 		],
 		"limitations": [
 			"Le débit publié conserve son régime de mesure ; aucun cycle supposé ne réduit la consommation.",
 			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier.",
+			"La convention générale Atlas distingue consommation à vide sans régulateur et consommation à puissance maximale avec régulateur ; le tableau de percussion ne résout pas ce régime. La consommation reste documentaire."
 		]
 	},
 	"specifications": [
 		{
 			"label": "Localisation du tableau",
 			"value": "Page PDF 242",
-			"evidenceIds": [
-				"documented-d-atlas-tools-p242"
-			]
-		},
-		{
-			"label": "Consommations originales",
-			"value": "10 L/s ; 21 cfm",
 			"evidenceIds": [
 				"documented-d-atlas-tools-p242"
 			]
@@ -78,6 +71,13 @@ const product: ToolProfileInput = {
 			"value": "RRH08P TS 4X 1440 10.2 0.4 15 0.6 137 5.4 8.0 5.9 1.4 3.0 10.0 21 10.0 3/8 1/4 8426 1111 68",
 			"evidenceIds": [
 				"documented-d-atlas-tools-p242"
+			]
+		},
+		{
+			"label": "Ancienne valeur volumique, portée documentaire",
+			"value": "600 L/min ; régime, unité de référence ou pression de mesure insuffisamment qualifiés pour le FAD",
+			"evidenceIds": [
+				"marteau-a-river-atlas-copco-rrh08p-ts-8426111168-reserved-20261101-1"
 			]
 		}
 	],
@@ -101,6 +101,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "marteau-a-river-atlas-copco-rrh08p-ts-8426111168-reserved-20261101-1",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf#page=242",
+			"sourceLabel": "Atlas Copco : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Passage page=242. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -113,11 +123,21 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"documented-d-atlas-tools-p242"
+		],
+		"airflowBasis": [
+			"marteau-a-river-atlas-copco-rrh08p-ts-8426111168-reserved-20261101-1"
+		],
+		"editorial": [
+			"marteau-a-river-atlas-copco-rrh08p-ts-8426111168-reserved-20261101-1"
+		],
+		"specifications": [
+			"marteau-a-river-atlas-copco-rrh08p-ts-8426111168-reserved-20261101-1"
 		]
 	},
 	"notes": [
 		"Consommation maximale : 600 L/min à 6,3 bar."
-	]
+	],
+	"airflowBasis": "unqualified"
 };
 
 export default product;

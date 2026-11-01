@@ -33,11 +33,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Mannesmann DEMAG GST 540 M (réf. 29943-71-6). La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse sans tuyau : 0.15 kg. Référence fabricant : 29943-71-6.",
+		"overview": "Mannesmann DEMAG GST 540 M. GST540M est décrit pour le burinage et les travaux sur fossiles ; GST540 est livré avec une aiguille moyenne pour écrire et graver. Le débit 0,85L/s et la fréquence 540 Hz sont partagés ; le porte-accessoire et la fourniture distinguent la version M. Accessoire fourni : Insert burin. Accessoire de la version standard GST 540 : Aiguille moyenne. Longueur : 162 mm.",
 		"verifiedFacts": [
 			"Masse sans tuyau : 0.15 kg.",
 			"Référence fabricant : 29943-71-6.",
-			"Longueur publiée : 162 mm."
+			"Longueur publiée : 162 mm.",
+			"Accessoire fourni : Insert burin.",
+			"Accessoire de la version standard GST 540 : Aiguille moyenne.",
+			"Longueur : 162 mm.",
+			"Masse sans flexible : 0,15 kg."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -80,6 +84,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-mannesmann-0-p32"
 			]
+		},
+		{
+			"label": "Accessoire fourni",
+			"value": "Insert burin",
+			"evidenceIds": [
+				"graveur-mannesmann-demag-gst-540-m-29943-71-6-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Accessoire de la version standard GST 540",
+			"value": "Aiguille moyenne",
+			"evidenceIds": [
+				"graveur-mannesmann-demag-gst-540-m-29943-71-6-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "162 mm",
+			"evidenceIds": [
+				"graveur-mannesmann-demag-gst-540-m-29943-71-6-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Masse sans flexible",
+			"value": "0,15 kg",
+			"evidenceIds": [
+				"graveur-mannesmann-demag-gst-540-m-29943-71-6-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -92,6 +124,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 9de8eb77aad6c7412b390db54a16646c71c0a4f9925ddf3ddfba1048b1779f3b. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "graveur-mannesmann-demag-gst-540-m-29943-71-6-reserved-20261101-1",
+			"sourceUrl": "https://www.mannesmann-demag.com/bilder-und-dateien/downloads/kataloge/md_airtools_05_2017_e.pdf?type=download#page=32",
+			"sourceLabel": "Mannesmann DEMAG : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 9de8eb77aad6c7412b390db54a16646c71c0a4f9925ddf3ddfba1048b1779f3b. Passage page=32. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -103,6 +145,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-mannesmann-0-p32"
+		],
+		"editorial": [
+			"graveur-mannesmann-demag-gst-540-m-29943-71-6-reserved-20261101-1"
+		],
+		"specifications": [
+			"graveur-mannesmann-demag-gst-540-m-29943-71-6-reserved-20261101-1"
 		]
 	},
 	"notes": [

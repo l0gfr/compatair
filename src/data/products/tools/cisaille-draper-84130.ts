@@ -31,17 +31,18 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Draper 84130. La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué. Champ fabricant : Air Inlet : 1/4\" BSP. Champ fabricant : Average Air Consumption : 5.5cfm(1,132L/min).",
+		"overview": "Draper 84130. Les deux valeurs Draper 84130 ne sont pas équivalentes. Conserver la discordance évite de dimensionner le réseau depuis une unité choisie arbitrairement. Consommation moyenne publiée, unités originales : 5,5 cfm ; 1132 L/min.",
 		"verifiedFacts": [
 			"Champ fabricant : Air Inlet : 1/4\" BSP.",
-			"Champ fabricant : Average Air Consumption : 5.5cfm(1,132L/min).",
-			"Champ fabricant : Cutting Capacity : 18 Gauge (1.2mm).",
-			"Champ fabricant : Cutting Capacity (Mild Steel) : 18 Gauge (1.2mm).",
-			"Champ fabricant : Min Hose Size : 3/8\" (10mm).",
-			"Champ fabricant : Operating Air Pressure : 90psi (6.3bar).",
-			"Champ fabricant : Strokes per Minute : 3,200spm.",
-			"Champ fabricant : Vibration Level : 4.3m/s2.",
-			"Champ fabricant : Weight : 1.28kg."
+			"Champ fabricant : Average Air Consumption : 5.5 cfm(1,132 L/min).",
+			"Champ fabricant : Cutting Capacity : 18 Gauge (1.2 mm).",
+			"Champ fabricant : Cutting Capacity (Mild Steel) : 18 Gauge (1.2 mm).",
+			"Champ fabricant : Min Hose Size : 3/8\" (10 mm).",
+			"Champ fabricant : Operating Air Pressure : 90 psi (6.3 bar).",
+			"Champ fabricant : Strokes per Minute : 3,200 spm.",
+			"Champ fabricant : Vibration Level : 4.3 m/s 2.",
+			"Champ fabricant : Weight : 1.28 kg.",
+			"Consommation moyenne publiée, unités originales : 5,5 cfm ; 1132 L/min."
 		],
 		"limitations": [
 			"La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué.",
@@ -61,56 +62,56 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Average Air Consumption",
-			"value": "5.5cfm(1,132L/min)",
+			"value": "5.5 cfm(1,132 L/min)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-84130-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Cutting Capacity",
-			"value": "18 Gauge (1.2mm)",
+			"value": "18 Gauge (1.2 mm)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-84130-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Cutting Capacity (Mild Steel)",
-			"value": "18 Gauge (1.2mm)",
+			"value": "18 Gauge (1.2 mm)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-84130-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Min Hose Size",
-			"value": "3/8\" (10mm)",
+			"value": "3/8\" (10 mm)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-84130-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Operating Air Pressure",
-			"value": "90psi (6.3bar)",
+			"value": "90 psi (6.3 bar)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-84130-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Strokes per Minute",
-			"value": "3,200spm",
+			"value": "3,200 spm",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-84130-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Vibration Level",
-			"value": "4.3m/s2",
+			"value": "4.3 m/s 2",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-84130-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Weight",
-			"value": "1.28kg",
+			"value": "1.28 kg",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-84130-html-p1"
 			]
@@ -124,16 +125,23 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Min Hose Size",
-			"value": "3/8\" (10mm)",
+			"value": "3/8\" (10 mm)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-84130-html-p1"
 			]
 		},
 		{
 			"label": "Portée de la pression dans la source",
-			"value": "Operating Air Pressure: 90psi (6.3bar)",
+			"value": "Operating Air Pressure: 90 psi (6.3 bar)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-84130-html-p1"
+			]
+		},
+		{
+			"label": "Consommation moyenne publiée, unités originales",
+			"value": "5,5 cfm ; 1132 L/min",
+			"evidenceIds": [
+				"cisaille-draper-84130-reserved-20261101-1"
 			]
 		}
 	],
@@ -147,6 +155,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : fe9bfb73f6f497be834ba4072f2d76f7155f3134e4fd35e718e6a118f1c8c40c. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cisaille-draper-84130-reserved-20261101-1",
+			"sourceUrl": "https://www.drapertools.com/product/84130/air-shears/",
+			"sourceLabel": "Draper : revue factuelle du 1 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 267148000d2ad4762632495d690baccff7da827782b6ac4ebc17dd967ab61e46. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -158,6 +176,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-draper-84130-html-p1"
+		],
+		"editorial": [
+			"cisaille-draper-84130-reserved-20261101-1"
+		],
+		"specifications": [
+			"cisaille-draper-84130-reserved-20261101-1"
 		]
 	},
 	"notes": [

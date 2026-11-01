@@ -31,15 +31,16 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Draper 41096. La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué. Champ fabricant : Air inlet : 1/4\" BSP. Champ fabricant : Average air consumption : 4.4cfm (125L/min).",
+		"overview": "Draper 41096. La fiche actuelle Draper 41096 publie désormais une consommation moyenne. Elle remplace l’ancienne mention de valeur absente dans la synthèse, avec une preuve datée ; la moyenne et une pression maximale ne forment pas une consommation en charge appariée. Consommation moyenne publiée : 4,4 cfm ; 125 L/min.",
 		"verifiedFacts": [
 			"Champ fabricant : Air inlet : 1/4\" BSP.",
-			"Champ fabricant : Average air consumption : 4.4cfm (125L/min).",
-			"Champ fabricant : Free speed : 7,000rpm.",
-			"Champ fabricant : Min hose size : 3/8\" (10mm).",
-			"Champ fabricant : Operating air pressure : 90psi (6.2bar).",
+			"Champ fabricant : Average air consumption : 4.4 cfm (125 L/min).",
+			"Champ fabricant : Free speed : 7,000 rpm.",
+			"Champ fabricant : Min hose size : 3/8\" (10 mm).",
+			"Champ fabricant : Operating air pressure : 90 psi (6.2 bar).",
 			"Champ fabricant : Square drive : 1/2\".",
-			"Champ fabricant : Ultimate torque : 813Nm (600ft/lb)."
+			"Champ fabricant : Ultimate torque : 813 Nm (600 ft/lb).",
+			"Consommation moyenne publiée : 4,4 cfm ; 125 L/min."
 		],
 		"limitations": [
 			"La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué.",
@@ -60,28 +61,28 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Average air consumption",
-			"value": "4.4cfm (125L/min)",
+			"value": "4.4 cfm (125 L/min)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-41096-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Free speed",
-			"value": "7,000rpm",
+			"value": "7,000 rpm",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-41096-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Min hose size",
-			"value": "3/8\" (10mm)",
+			"value": "3/8\" (10 mm)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-41096-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Operating air pressure",
-			"value": "90psi (6.2bar)",
+			"value": "90 psi (6.2 bar)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-41096-html-p1"
 			]
@@ -95,7 +96,7 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Ultimate torque",
-			"value": "813Nm (600ft/lb)",
+			"value": "813 Nm (600 ft/lb)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-41096-html-p1"
 			]
@@ -109,16 +110,23 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Min hose size",
-			"value": "3/8\" (10mm)",
+			"value": "3/8\" (10 mm)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-41096-html-p1"
 			]
 		},
 		{
 			"label": "Portée de la pression dans la source",
-			"value": "Operating air pressure: 90psi (6.2bar)",
+			"value": "Operating air pressure: 90 psi (6.2 bar)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-41096-html-p1"
+			]
+		},
+		{
+			"label": "Consommation moyenne publiée",
+			"value": "4,4 cfm ; 125 L/min",
+			"evidenceIds": [
+				"cle-a-chocs-draper-41096-reserved-20261101-1"
 			]
 		}
 	],
@@ -132,6 +140,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 86947f0354b4990fb88075894f74e15a851de2f542b5aaffdc0ee793dd11a863. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-chocs-draper-41096-reserved-20261101-1",
+			"sourceUrl": "https://www.drapertools.com/product/41096/draper-expert-composite-body-air-impact-wrench-1-2-sq-dr/",
+			"sourceLabel": "Draper : revue factuelle du 1 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 c2909322878a76305559720c8f475640c1e31af66bf66d779f915581704cf625. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -143,6 +161,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-draper-41096-html-p1"
+		],
+		"editorial": [
+			"cle-a-chocs-draper-41096-reserved-20261101-1"
+		],
+		"specifications": [
+			"cle-a-chocs-draper-41096-reserved-20261101-1"
 		]
 	},
 	"notes": [

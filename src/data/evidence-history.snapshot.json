@@ -746375,7 +746375,1447 @@
         "confidence": "B",
         "notes": "SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. Le tableau Yokota/Red Rooster/Toku indique une consommation en L/s et une pression de service de 6,3 bar. Le régime de consommation n’est pas défini ; la valeur publiée ne sert pas à confirmer un besoin maximal en charge."
       }
+    },
+    {
+      "id": "review:2026-11-01:pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-2-1-145748:pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-2-1-145748-reserved-20261101-1",
+      "evidenceId": "pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-2-1-145748-reserved-20261101-1",
+      "productId": "pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-2-1-145748",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "78a709b61ea87c8adb7eabb83857bad3c2eb849e7d572b7d658de4bb9d49f6db",
+      "snapshot": {
+        "id": "pistolet-peinture-hvlp-sata-satajet-100-b-f-hvlp-2-1-145748-reserved-20261101-1",
+        "sourceUrl": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806#page=34",
+        "sourceLabel": "SATA : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3. Passage page=34. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:pistolet-peinture-anest-iwata-airgunsa-az3-hte2-hvlp-buse-1-5-hvlp:pistolet-peinture-anest-iwata-airgunsa-az3-hte2-hvlp-buse-1-5-hvlp-reserved-20261101-1",
+      "evidenceId": "pistolet-peinture-anest-iwata-airgunsa-az3-hte2-hvlp-buse-1-5-hvlp-reserved-20261101-1",
+      "productId": "pistolet-peinture-anest-iwata-airgunsa-az3-hte2-hvlp-buse-1-5-hvlp",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "1c638917ba59fc1b4f87acd2279c4867d9f48c32c37db339427e83cf87964503",
+      "snapshot": {
+        "id": "pistolet-peinture-anest-iwata-airgunsa-az3-hte2-hvlp-buse-1-5-hvlp-reserved-20261101-1",
+        "sourceUrl": "https://www.anest-iwata-coating.com/wp-content/uploads/2022/09/2025_EN_AIRGUNSA_CAT.pdf#page=7",
+        "sourceLabel": "Anest Iwata : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 cc4f305737f15bc7b4ed9059ba98efba0873c1c0a8be2dd08e9445326a82182e. Passage page=7. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:fiac-ax-253bd-10-400-50-ce:fiac-ax-253bd-10-400-50-ce-reserved-20261101-1",
+      "evidenceId": "fiac-ax-253bd-10-400-50-ce-reserved-20261101-1",
+      "productId": "fiac-ax-253bd-10-400-50-ce",
+      "productType": "compressor",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "78c935a5beff8c1eb063a593b98fc5e5941d05566c797962867033045d614ea8",
+      "snapshot": {
+        "id": "fiac-ax-253bd-10-400-50-ce-reserved-20261101-1",
+        "sourceUrl": "https://shop.fiac.it/en-IT/products/4152026236/ax-253bd-10-40050-ce",
+        "sourceLabel": "FIAC : revue factuelle du 1 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 706807ac7e347ffe5210a32f44c1c286846d0e0eddf50fb421efb7bb605f8325. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:dynabrade-57127:dynabrade-57127-reserved-20261101-1",
+      "evidenceId": "dynabrade-57127-reserved-20261101-1",
+      "productId": "dynabrade-57127",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "c196f84af48e439969780cbdcb128920a2ec177be62452c9366d14b1eccad75b",
+      "snapshot": {
+        "id": "dynabrade-57127-reserved-20261101-1",
+        "sourceUrl": "https://apac.dynabrade.com/assets/05dbd0b7-eb77-4b78-b67a-6d3dda34b75b/4074394753-pd0337r.pdf#page=2",
+        "sourceLabel": "Dynabrade : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 370096010bb52fe0a305b41d63c86af5afbb753cc80dd2760b7e090a73dd99e0. Passage page=2. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:dynabrade-58465:dynabrade-58465-reserved-20261101-1",
+      "evidenceId": "dynabrade-58465-reserved-20261101-1",
+      "productId": "dynabrade-58465",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "38021111c81b610feb7446f287ecb794e11ed5688bb2587bb55e4df1edafbdad",
+      "snapshot": {
+        "id": "dynabrade-58465-reserved-20261101-1",
+        "sourceUrl": "https://us.dynabrade.com/assets/5d0c0639-b4dd-4036-ada9-3b6e6555ba82/4074396145-pd0860.pdf#page=2",
+        "sourceLabel": "Dynabrade : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 d3d026b7e957d235bf1023217b149ef5b497bec46bea312c5f474edb25c987d3. Passage page=2. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:dynabrade-58503:dynabrade-58503-reserved-20261101-1",
+      "evidenceId": "dynabrade-58503-reserved-20261101-1",
+      "productId": "dynabrade-58503",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "7a9b201f01f5d255d45319692cd943414d3e5475a23331337cf202e393d92c04",
+      "snapshot": {
+        "id": "dynabrade-58503-reserved-20261101-1",
+        "sourceUrl": "https://us.dynabrade.com/assets/585e7532-fca2-4c64-9c06-42632ef71ffe/4074395848-pd0725.pdf#page=2",
+        "sourceLabel": "Dynabrade : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 9a1ed2f9dc88464d7c2a33ba7e56477090865ab2f79c1ba5a543a29f7b382292. Passage page=2. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:airpress-aps-10-basic-combi-dry-364958-8:airpress-aps-10-basic-combi-dry-364958-8-reserved-20261101-1",
+      "evidenceId": "airpress-aps-10-basic-combi-dry-364958-8-reserved-20261101-1",
+      "productId": "airpress-aps-10-basic-combi-dry-364958-8",
+      "productType": "compressor",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "70377010ca569483d125975046158709a0f53db5a4242b72fca58e5b0a7ab81e",
+      "snapshot": {
+        "id": "airpress-aps-10-basic-combi-dry-364958-8-reserved-20261101-1",
+        "sourceUrl": "https://airpress.fr/compresseur-a-vis-aps-10-basic-combi-dry-8-bar-10-ch-7-5-kw-1140-l-min-500-l-364958-8",
+        "sourceLabel": "Airpress : revue factuelle du 1 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 d32a6bc7a6597746682e5893b3cc2ecadbd4ca0ee2bed421d97a759b22a0fd3e. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:biax-bew-606-k:biax-bew-606-k-reserved-20261101-1",
+      "evidenceId": "biax-bew-606-k-reserved-20261101-1",
+      "productId": "biax-bew-606-k",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "22d78589612e409668392065e835679568e656e6840b009dc38975be19dee47f",
+      "snapshot": {
+        "id": "biax-bew-606-k-reserved-20261101-1",
+        "sourceUrl": "https://biax.de/en/product/bew-606-k-bis-senk-o-14-mm/",
+        "sourceLabel": "BIAX : revue factuelle du 1 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 55e3df95adc13672c8775a42d2ac152e0979f826a13b1b58722dba82ee70026c. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:ingersoll-rand-172l:ingersoll-rand-172l-reserved-20261101-1",
+      "evidenceId": "ingersoll-rand-172l-reserved-20261101-1",
+      "productId": "ingersoll-rand-172l",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "a28c2454ea4cd9a0d95a9620a4e20546eeafa2695e151ab000f9f4d1fba5ed11",
+      "snapshot": {
+        "id": "ingersoll-rand-172l-reserved-20261101-1",
+        "sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/bltd89674ca5491ef9a/blt4b8115c084109f9c/6968c806fa1f6657ebab2bee/16574121_ed6_F.pdf#page=2",
+        "sourceLabel": "Ingersoll Rand : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 6d85d6deeca96e70861f4e86d98e30b2cf0476f84ab28c3cf1065a28a72942c2. Passage page=2. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:ingersoll-rand-320ac4a:ingersoll-rand-320ac4a-reserved-20261101-1",
+      "evidenceId": "ingersoll-rand-320ac4a-reserved-20261101-1",
+      "productId": "ingersoll-rand-320ac4a",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "cfcd5ac7bcbe42e4e4ee7ceaab18cd126e20fb4bebed38f179f04460b68ff74d",
+      "snapshot": {
+        "id": "ingersoll-rand-320ac4a-reserved-20261101-1",
+        "sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/bltd89674ca5491ef9a/bltaba456f61496c230/680a25bef42c4c5c743e73c4/45760899_ed7_G.pdf#page=2",
+        "sourceLabel": "Ingersoll Rand : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 5b41360138aa346aa1b09a2be05db75c15cc72b82cfe642f186fc903f8e2d1ae. Passage page=2. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:ingersoll-rand-77a60w107:ingersoll-rand-77a60w107-reserved-20261101-1",
+      "evidenceId": "ingersoll-rand-77a60w107-reserved-20261101-1",
+      "productId": "ingersoll-rand-77a60w107",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "0e5997bc69d837a81febaeba906ac80e5de73bbd9ae18fa1106de7b48d526d16",
+      "snapshot": {
+        "id": "ingersoll-rand-77a60w107-reserved-20261101-1",
+        "sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/bltd89674ca5491ef9a/blt433cc516ed60e011/680a2474db9ccbf630425ff1/80221773_ed3_C.pdf#page=2",
+        "sourceLabel": "Ingersoll Rand : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 79bce65a0d457b008e4483ef519ea5a09fcc23eb3463b30e076d2e1216da5542. Passage page=2. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:boulonneuse-uryu-uan-611r-30c-26862:boulonneuse-uryu-uan-611r-30c-26862-reserved-20261101-1",
+      "evidenceId": "boulonneuse-uryu-uan-611r-30c-26862-reserved-20261101-1",
+      "productId": "boulonneuse-uryu-uan-611r-30c-26862",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "0f17d55433557417b9547d4b6fb383453d66430d7cc3693ccde3fc9bc7d64354",
+      "snapshot": {
+        "id": "boulonneuse-uryu-uan-611r-30c-26862-reserved-20261101-1",
+        "sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P37.pdf",
+        "sourceLabel": "URYU : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 89b37c84865085c98aa0bfaa6639cfbe9e7634d09c3657d12e05e9a8cef17a7b. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:burineur-uryu-ufc-0n-75412:burineur-uryu-ufc-0n-75412-reserved-20261101-1",
+      "evidenceId": "burineur-uryu-ufc-0n-75412-reserved-20261101-1",
+      "productId": "burineur-uryu-ufc-0n-75412",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "7c2ca8cc9ba9fc718710e95be730ab7950ac0755c3f19b66e95b6fe5bd894a1f",
+      "snapshot": {
+        "id": "burineur-uryu-ufc-0n-75412-reserved-20261101-1",
+        "sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P72.pdf",
+        "sourceLabel": "URYU : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 b852cff1aa468efb0c05768f060a38ec591cdddaec940b8593cf70b67e6daf01. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:cle-a-chocs-npk-naw-1200-s-20026:cle-a-chocs-npk-naw-1200-s-20026-reserved-20261101-1",
+      "evidenceId": "cle-a-chocs-npk-naw-1200-s-20026-reserved-20261101-1",
+      "productId": "cle-a-chocs-npk-naw-1200-s-20026",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "204988bebd5a04a7b278e3f893c4b46e8c27264071a07cb2b440a9b0b1e886b3",
+      "snapshot": {
+        "id": "cle-a-chocs-npk-naw-1200-s-20026-reserved-20261101-1",
+        "sourceUrl": "https://www.npk-en.com/app/download/10804376570/NPK_air_tool_catologue_apr2026.pdf?t=1777353985",
+        "sourceLabel": "NPK : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 bd5e6718ea1d625e053449706fd6e72b801cd772ef6c74826614889dfb8ca90c. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:cle-a-chocs-uryu-uw-101erk-05532:cle-a-chocs-uryu-uw-101erk-05532-reserved-20261101-1",
+      "evidenceId": "cle-a-chocs-uryu-uw-101erk-05532-reserved-20261101-1",
+      "productId": "cle-a-chocs-uryu-uw-101erk-05532",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "fabda2bd868bf39b39b9af9e55fb5976c32cf8175465c300891881aedf432891",
+      "snapshot": {
+        "id": "cle-a-chocs-uryu-uw-101erk-05532-reserved-20261101-1",
+        "sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P38_43.pdf",
+        "sourceLabel": "URYU : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 90b725f7cea6b3034cca423bf66e2277b337b80dc68d216aa85b8105caf2b941. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:cle-a-cliquet-uryu-urw-10n-21412:cle-a-cliquet-uryu-urw-10n-21412-reserved-20261101-1",
+      "evidenceId": "cle-a-cliquet-uryu-urw-10n-21412-reserved-20261101-1",
+      "productId": "cle-a-cliquet-uryu-urw-10n-21412",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "9825949b373de19a05f5bddbe4474f46457c4b1af17b2f8a80760fcedd5ec1c1",
+      "snapshot": {
+        "id": "cle-a-cliquet-uryu-urw-10n-21412-reserved-20261101-1",
+        "sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P35.pdf",
+        "sourceLabel": "URYU : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 4ef07a7843585c8812e74e00d36b3d928ce3793e180ffa30a9ea530ffaa7ab17. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:cle-a-impulsions-uryu-u-310sd-19662:cle-a-impulsions-uryu-u-310sd-19662-reserved-20261101-1",
+      "evidenceId": "cle-a-impulsions-uryu-u-310sd-19662-reserved-20261101-1",
+      "productId": "cle-a-impulsions-uryu-u-310sd-19662",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "87474fd6f798fea3d120deb6cbfe2bbc843c58485034938c2fddfe0db3ce347b",
+      "snapshot": {
+        "id": "cle-a-impulsions-uryu-u-310sd-19662-reserved-20261101-1",
+        "sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P30_34.pdf",
+        "sourceLabel": "URYU : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 bfedea87f312ccc461b6512e0086d674afcec922db3881306259e050187bb373. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:marteau-a-river-uryu-brh-1ud-70882:marteau-a-river-uryu-brh-1ud-70882-reserved-20261101-1",
+      "evidenceId": "marteau-a-river-uryu-brh-1ud-70882-reserved-20261101-1",
+      "productId": "marteau-a-river-uryu-brh-1ud-70882",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "946893c7292017861854cdd7c28a50844432fe108f5120c60f815bd96fe9df19",
+      "snapshot": {
+        "id": "marteau-a-river-uryu-brh-1ud-70882-reserved-20261101-1",
+        "sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P70_71.pdf",
+        "sourceLabel": "URYU : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 51a1fe7622e1fe09d10ce44fc0fdbe4bc87c11f14d72836a26e18c2a733d7884. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:meuleuse-top-cat-300eh-30000-1-4:meuleuse-top-cat-300eh-30000-1-4-reserved-20261101-1",
+      "evidenceId": "meuleuse-top-cat-300eh-30000-1-4-reserved-20261101-1",
+      "productId": "meuleuse-top-cat-300eh-30000-1-4",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "2c01fe55c369087559dde568db7f0f92f6b300ed06131cfdb635c894514dd717",
+      "snapshot": {
+        "id": "meuleuse-top-cat-300eh-30000-1-4-reserved-20261101-1",
+        "sourceUrl": "https://www.intlairtool.com/content/catalogs-page-pdfs/Top-Cat-Air-Tools.pdf",
+        "sourceLabel": "Top Cat : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 4b4cea2c0cb0cfea87b1e287908e271388254005eda2136bb116549893decf7a. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:meuleuse-uryu-ag-100-in-53922:meuleuse-uryu-ag-100-in-53922-reserved-20261101-1",
+      "evidenceId": "meuleuse-uryu-ag-100-in-53922-reserved-20261101-1",
+      "productId": "meuleuse-uryu-ag-100-in-53922",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "72c591fadb0058afbae95adf7ed060970d4f1a23bace015caf8d86da646efda2",
+      "snapshot": {
+        "id": "meuleuse-uryu-ag-100-in-53922-reserved-20261101-1",
+        "sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P57_61.pdf",
+        "sourceLabel": "URYU : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 f00ce52018de3cd2c8f093e9762bb4f6c63230f68c6a1b04217089408fe89245. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:perceuse-top-cat-300d21mk-1350-d3-8:perceuse-top-cat-300d21mk-1350-d3-8-reserved-20261101-1",
+      "evidenceId": "perceuse-top-cat-300d21mk-1350-d3-8-reserved-20261101-1",
+      "productId": "perceuse-top-cat-300d21mk-1350-d3-8",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "ec8d8126ef5bb16c119a551afce905c032e72755371ac39d8bd1e065822dec0b",
+      "snapshot": {
+        "id": "perceuse-top-cat-300d21mk-1350-d3-8-reserved-20261101-1",
+        "sourceUrl": "https://www.intlairtool.com/content/catalogs-page-pdfs/Top-Cat-Air-Tools.pdf",
+        "sourceLabel": "Top Cat : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 4b4cea2c0cb0cfea87b1e287908e271388254005eda2136bb116549893decf7a. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:perceuse-uryu-ud-50-200-61172:perceuse-uryu-ud-50-200-61172-reserved-20261101-1",
+      "evidenceId": "perceuse-uryu-ud-50-200-61172-reserved-20261101-1",
+      "productId": "perceuse-uryu-ud-50-200-61172",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "c344c824b6e36b316ffa1ff7849208b4131ce98b38012ecc3d9e635c10a61a38",
+      "snapshot": {
+        "id": "perceuse-uryu-ud-50-200-61172-reserved-20261101-1",
+        "sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P66_68.pdf",
+        "sourceLabel": "URYU : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 36cfc8fdae9f6c8df69d64bdd9f1a6047a1ad848e1c1ea528c04c0c20b07963d. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:polisseuse-uryu-up-15-53812:polisseuse-uryu-up-15-53812-reserved-20261101-1",
+      "evidenceId": "polisseuse-uryu-up-15-53812-reserved-20261101-1",
+      "productId": "polisseuse-uryu-up-15-53812",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "e105378291013bb44a84587fb43acd766f385181fb51f7fb17334e7b0fc69338",
+      "snapshot": {
+        "id": "polisseuse-uryu-up-15-53812-reserved-20261101-1",
+        "sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P62.pdf",
+        "sourceLabel": "URYU : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 daaddcba105d4bd9dc97a38929d5b89c6543ad8e8d447e6b9c00c1bb64865b3b. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:ponceuse-rotative-top-cat-300ra2k-15000-45sp:ponceuse-rotative-top-cat-300ra2k-15000-45sp-reserved-20261101-1",
+      "evidenceId": "ponceuse-rotative-top-cat-300ra2k-15000-45sp-reserved-20261101-1",
+      "productId": "ponceuse-rotative-top-cat-300ra2k-15000-45sp",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "9d4167e0806525dcc83a85d3eca5d1daad2eb5ed8f4430037f3356de7fd55e15",
+      "snapshot": {
+        "id": "ponceuse-rotative-top-cat-300ra2k-15000-45sp-reserved-20261101-1",
+        "sourceUrl": "https://www.intlairtool.com/content/catalogs-page-pdfs/Top-Cat-Air-Tools.pdf",
+        "sourceLabel": "Top Cat : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 4b4cea2c0cb0cfea87b1e287908e271388254005eda2136bb116549893decf7a. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:ponceuse-rotative-uryu-usg-45p-55372:ponceuse-rotative-uryu-usg-45p-55372-reserved-20261101-1",
+      "evidenceId": "ponceuse-rotative-uryu-usg-45p-55372-reserved-20261101-1",
+      "productId": "ponceuse-rotative-uryu-usg-45p-55372",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "c0dda2bb55fe086f58e0b126de7e88bb8686d5cb7df03884c3c6945fa3827c18",
+      "snapshot": {
+        "id": "ponceuse-rotative-uryu-usg-45p-55372-reserved-20261101-1",
+        "sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P62.pdf",
+        "sourceLabel": "URYU : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 daaddcba105d4bd9dc97a38929d5b89c6543ad8e8d447e6b9c00c1bb64865b3b. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:taraudeuse-uryu-ut-60-04-67872:taraudeuse-uryu-ut-60-04-67872-reserved-20261101-1",
+      "evidenceId": "taraudeuse-uryu-ut-60-04-67872-reserved-20261101-1",
+      "productId": "taraudeuse-uryu-ut-60-04-67872",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "71489bbb293194274609b3d0ff78c21a9e45747b6d53f24f08af14301cbc250d",
+      "snapshot": {
+        "id": "taraudeuse-uryu-ut-60-04-67872-reserved-20261101-1",
+        "sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P66_68.pdf",
+        "sourceLabel": "URYU : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 36cfc8fdae9f6c8df69d64bdd9f1a6047a1ad848e1c1ea528c04c0c20b07963d. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:visseuse-uryu-us-3-5a-41012:visseuse-uryu-us-3-5a-41012-reserved-20261101-1",
+      "evidenceId": "visseuse-uryu-us-3-5a-41012-reserved-20261101-1",
+      "productId": "visseuse-uryu-us-3-5a-41012",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "2c44af6bf5911d8783f5c8e4e2e6f34ef461e75c6006e65fcb3dec02b71be059",
+      "snapshot": {
+        "id": "visseuse-uryu-us-3-5a-41012-reserved-20261101-1",
+        "sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P52_54.pdf",
+        "sourceLabel": "URYU : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 15cc571b3d9bc9b5a4542ac02a3a00b86fd1d9f6b42e32a6d6aae70d357b8ae5. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:agrafeuse-cloueuse-senco-coilpro50:agrafeuse-cloueuse-senco-coilpro50-reserved-20261101-1",
+      "evidenceId": "agrafeuse-cloueuse-senco-coilpro50-reserved-20261101-1",
+      "productId": "agrafeuse-cloueuse-senco-coilpro50",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "6f8313bcff05a7149864c6c2cb9f77e7be6c955704e202ad5bb25da94cb3eb7f",
+      "snapshot": {
+        "id": "agrafeuse-cloueuse-senco-coilpro50-reserved-20261101-1",
+        "sourceUrl": "https://www.senco.eu/en/products/tools/nailers/coil-nailers/p/4U2001N",
+        "sourceLabel": "Senco : revue factuelle du 1 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 1c9272cea5b6ffbeb89cc6ede2e4e5d3b7e55f80cbbaf05d2bb396a272911358. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:burineur-atlas-copco-rrc22f-02-8425020230:burineur-atlas-copco-rrc22f-02-8425020230-reserved-20261101-1",
+      "evidenceId": "burineur-atlas-copco-rrc22f-02-8425020230-reserved-20261101-1",
+      "productId": "burineur-atlas-copco-rrc22f-02-8425020230",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "9157a2610dbdebacefed170420e849e4593c2e70a45800f14b6d4cfa522181f8",
+      "snapshot": {
+        "id": "burineur-atlas-copco-rrc22f-02-8425020230-reserved-20261101-1",
+        "sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf#page=234",
+        "sourceLabel": "Atlas Copco : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Passage page=234. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:marteau-a-river-atlas-copco-rrh08p-ts-8426111168:marteau-a-river-atlas-copco-rrh08p-ts-8426111168-reserved-20261101-1",
+      "evidenceId": "marteau-a-river-atlas-copco-rrh08p-ts-8426111168-reserved-20261101-1",
+      "productId": "marteau-a-river-atlas-copco-rrh08p-ts-8426111168",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "c5d94dd4184b447aca67a5d196fc411fbc3a6d1a7c969e81ae462b82bbd4018b",
+      "snapshot": {
+        "id": "marteau-a-river-atlas-copco-rrh08p-ts-8426111168-reserved-20261101-1",
+        "sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf#page=242",
+        "sourceLabel": "Atlas Copco : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Passage page=242. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:cle-a-chocs-vessel-gt-1400p:cle-a-chocs-vessel-gt-1400p-reserved-20261101-1",
+      "evidenceId": "cle-a-chocs-vessel-gt-1400p-reserved-20261101-1",
+      "productId": "cle-a-chocs-vessel-gt-1400p",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "829ef95c8b5e084bef053deaae96a895b044a88ad397dbac991bad85b7ade001",
+      "snapshot": {
+        "id": "cle-a-chocs-vessel-gt-1400p-reserved-20261101-1",
+        "sourceUrl": "https://www.vessel.co.jp/userfiles/airtools/air-tools_E.pdf#page=22",
+        "sourceLabel": "VESSEL : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 16761fb825c735f6ebff0614f708d44f28eb21392b11568d7224019e2dc296d0. Passage page=22. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:meuleuse-dotco-10l1000-3608:meuleuse-dotco-10l1000-3608-reserved-20261101-1",
+      "evidenceId": "meuleuse-dotco-10l1000-3608-reserved-20261101-1",
+      "productId": "meuleuse-dotco-10l1000-3608",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "2c6ac68fde99cf17fbb383eb6da4ad06d12906b040034b207956a56820614582",
+      "snapshot": {
+        "id": "meuleuse-dotco-10l1000-3608-reserved-20261101-1",
+        "sourceUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=216#page=216",
+        "sourceLabel": "Dotco : revue factuelle du 1 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 f041c4498f2f1c5ffa7e977ddebb36dc17cc66871576caa48005a3c61b7e897c. Passage page=216. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:meuleuse-vessel-gt-dg100:meuleuse-vessel-gt-dg100-reserved-20261101-1",
+      "evidenceId": "meuleuse-vessel-gt-dg100-reserved-20261101-1",
+      "productId": "meuleuse-vessel-gt-dg100",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "d6611bba8a115e4102038675ee102a74279250e0fafeabdd9c17ec04be0ab3da",
+      "snapshot": {
+        "id": "meuleuse-vessel-gt-dg100-reserved-20261101-1",
+        "sourceUrl": "https://www.vessel.co.jp/userfiles/airtools/air-tools_E.pdf#page=33",
+        "sourceLabel": "VESSEL : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 16761fb825c735f6ebff0614f708d44f28eb21392b11568d7224019e2dc296d0. Passage page=33. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:perceuse-vessel-gt-cd60-34:perceuse-vessel-gt-cd60-34-reserved-20261101-1",
+      "evidenceId": "perceuse-vessel-gt-cd60-34-reserved-20261101-1",
+      "productId": "perceuse-vessel-gt-cd60-34",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "f5c2e0eeacb96f6058acf76317a88035c29158cc0054d6fe7ab9d8e47fc115ac",
+      "snapshot": {
+        "id": "perceuse-vessel-gt-cd60-34-reserved-20261101-1",
+        "sourceUrl": "https://www.vessel.co.jp/userfiles/airtools/air-tools_E.pdf#page=39",
+        "sourceLabel": "VESSEL : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 16761fb825c735f6ebff0614f708d44f28eb21392b11568d7224019e2dc296d0. Passage page=39. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:ponceuse-orbitale-cleco-mp4201:ponceuse-orbitale-cleco-mp4201-reserved-20261101-1",
+      "evidenceId": "ponceuse-orbitale-cleco-mp4201-reserved-20261101-1",
+      "productId": "ponceuse-orbitale-cleco-mp4201",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "934f80d6baa07d73b5bd1dec81dc84a3e062ce73c13e0bbe2796238f109b1aba",
+      "snapshot": {
+        "id": "ponceuse-orbitale-cleco-mp4201-reserved-20261101-1",
+        "sourceUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=256#page=256",
+        "sourceLabel": "Cleco : revue factuelle du 1 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 29655fbc96d18a7fea857c8eaedda028ec7a5ecbecf5a74ea72ba0da2bd5bbf7. Passage page=256. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:cisaille-gison-gp-824te:cisaille-gison-gp-824te-reserved-20261101-1",
+      "evidenceId": "cisaille-gison-gp-824te-reserved-20261101-1",
+      "productId": "cisaille-gison-gp-824te",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "f848e915d75622d9d6b61843705c744e295574e417ffa7f3d45fbaa5cb5e98d2",
+      "snapshot": {
+        "id": "cisaille-gison-gp-824te-reserved-20261101-1",
+        "sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=74",
+        "sourceLabel": "GISON : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Passage page=74. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:cle-a-impulsions-zipp-pn043:cle-a-impulsions-zipp-pn043-reserved-20261101-1",
+      "evidenceId": "cle-a-impulsions-zipp-pn043-reserved-20261101-1",
+      "productId": "cle-a-impulsions-zipp-pn043",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "161393688854bbda5c9ab6684261cde79c7be5bd392fbc1e296a9ad683eff447",
+      "snapshot": {
+        "id": "cle-a-impulsions-zipp-pn043-reserved-20261101-1",
+        "sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=35",
+        "sourceLabel": "ZIPP : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Passage page=35. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:derouilleur-a-aiguilles-zipp-zkj211-2b-29:derouilleur-a-aiguilles-zipp-zkj211-2b-29-reserved-20261101-1",
+      "evidenceId": "derouilleur-a-aiguilles-zipp-zkj211-2b-29-reserved-20261101-1",
+      "productId": "derouilleur-a-aiguilles-zipp-zkj211-2b-29",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "43e03a1db69d8267fdc1fc0af3971e2a53b77789335e3fd1c96f15b7e659bf10",
+      "snapshot": {
+        "id": "derouilleur-a-aiguilles-zipp-zkj211-2b-29-reserved-20261101-1",
+        "sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=166",
+        "sourceLabel": "ZIPP : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Passage page=166. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:meuleuse-zipp-zag-30656bm:meuleuse-zipp-zag-30656bm-reserved-20261101-1",
+      "evidenceId": "meuleuse-zipp-zag-30656bm-reserved-20261101-1",
+      "productId": "meuleuse-zipp-zag-30656bm",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "1846ae68ae2dfc1dacdae4e6d71578e4725cb3c7a8603505b09f92ba407150ed",
+      "snapshot": {
+        "id": "meuleuse-zipp-zag-30656bm-reserved-20261101-1",
+        "sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=121",
+        "sourceLabel": "ZIPP : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Passage page=121. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:ponceuse-orbitale-zipp-zgs-n8:ponceuse-orbitale-zipp-zgs-n8-reserved-20261101-1",
+      "evidenceId": "ponceuse-orbitale-zipp-zgs-n8-reserved-20261101-1",
+      "productId": "ponceuse-orbitale-zipp-zgs-n8",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "0910edf1fc737508cc9d114181b0bd9ef6ae32b48b950340e62bc18e1b6f0648",
+      "snapshot": {
+        "id": "ponceuse-orbitale-zipp-zgs-n8-reserved-20261101-1",
+        "sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=145",
+        "sourceLabel": "ZIPP : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Passage page=145. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:ponceuse-rotative-gison-gp-822c:ponceuse-rotative-gison-gp-822c-reserved-20261101-1",
+      "evidenceId": "ponceuse-rotative-gison-gp-822c-reserved-20261101-1",
+      "productId": "ponceuse-rotative-gison-gp-822c",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "8c2a84e43ddb891f8ab87cadf3a43ed56d2ff5deaa6b1f481dfc9c9e205da028",
+      "snapshot": {
+        "id": "ponceuse-rotative-gison-gp-822c-reserved-20261101-1",
+        "sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=43",
+        "sourceLabel": "GISON : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Passage page=43. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:ponceuse-vibrante-zipp-zhs-nl4:ponceuse-vibrante-zipp-zhs-nl4-reserved-20261101-1",
+      "evidenceId": "ponceuse-vibrante-zipp-zhs-nl4-reserved-20261101-1",
+      "productId": "ponceuse-vibrante-zipp-zhs-nl4",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "093c646990ce1aa887afe58db38a91a5e2013de54d7072f1c68dd553fe214b36",
+      "snapshot": {
+        "id": "ponceuse-vibrante-zipp-zhs-nl4-reserved-20261101-1",
+        "sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=148",
+        "sourceLabel": "ZIPP : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Passage page=148. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:riveteuse-zipp-zar0818v:riveteuse-zipp-zar0818v-reserved-20261101-1",
+      "evidenceId": "riveteuse-zipp-zar0818v-reserved-20261101-1",
+      "productId": "riveteuse-zipp-zar0818v",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "a2eef78b42ad94f5524d57bec6a38540d2511f1ab3026b2b7d6a2de04e91e28f",
+      "snapshot": {
+        "id": "riveteuse-zipp-zar0818v-reserved-20261101-1",
+        "sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=49",
+        "sourceLabel": "ZIPP : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Passage page=49. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:soufflette-zipp-zbg-1211:soufflette-zipp-zbg-1211-reserved-20261101-1",
+      "evidenceId": "soufflette-zipp-zbg-1211-reserved-20261101-1",
+      "productId": "soufflette-zipp-zbg-1211",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "37edb093bd29b7b5c1fc011c5db0bb37d5374be58861642ff85401a3ca20e89c",
+      "snapshot": {
+        "id": "soufflette-zipp-zbg-1211-reserved-20261101-1",
+        "sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=186",
+        "sourceLabel": "ZIPP : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Passage page=186. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:taraudeuse-zipp-zat22ak:taraudeuse-zipp-zat22ak-reserved-20261101-1",
+      "evidenceId": "taraudeuse-zipp-zat22ak-reserved-20261101-1",
+      "productId": "taraudeuse-zipp-zat22ak",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "5049dec391a3ef89b5e44af3b445fc8f0901a2207013f80b63d022d045671417",
+      "snapshot": {
+        "id": "taraudeuse-zipp-zat22ak-reserved-20261101-1",
+        "sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=158",
+        "sourceLabel": "ZIPP : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Passage page=158. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:tronconneuse-zipp-zac-30540:tronconneuse-zipp-zac-30540-reserved-20261101-1",
+      "evidenceId": "tronconneuse-zipp-zac-30540-reserved-20261101-1",
+      "productId": "tronconneuse-zipp-zac-30540",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "1e1f2fce8ccceb75b7a5bfea44f01083e71f6ab9ba33639a3ca7fb696fb1d7f3",
+      "snapshot": {
+        "id": "tronconneuse-zipp-zac-30540-reserved-20261101-1",
+        "sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=122",
+        "sourceLabel": "ZIPP : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Passage page=122. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:agrafeuse-cloueuse-meite-1022j:agrafeuse-cloueuse-meite-1022j-reserved-20261101-1",
+      "evidenceId": "agrafeuse-cloueuse-meite-1022j-reserved-20261101-1",
+      "productId": "agrafeuse-cloueuse-meite-1022j",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "cdeee22db31f00f06bc891b82e5f00ed10ff021a4dbbf6675308777f306f2f39",
+      "snapshot": {
+        "id": "agrafeuse-cloueuse-meite-1022j-reserved-20261101-1",
+        "sourceUrl": "https://www.meitetools.com/_files/ugd/db8665_9c0a9d5b848f4c52b660bc3ad7fddada.pdf?index=true#page=24",
+        "sourceLabel": "Meite : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 f7f01ffd0c2ff84645d694199df4ac6740b32aa8e1abe7483e9b9c73dbda76a7. Passage page=24. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:burineur-jonnesway-jah-1002:burineur-jonnesway-jah-1002-reserved-20261101-1",
+      "evidenceId": "burineur-jonnesway-jah-1002-reserved-20261101-1",
+      "productId": "burineur-jonnesway-jah-1002",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "60cd03713293912e59c7d200aa29a80a5016b7bd074354ea35ccbea7dd5d56df",
+      "snapshot": {
+        "id": "burineur-jonnesway-jah-1002-reserved-20261101-1",
+        "sourceUrl": "https://www.jonnesway.com/pImages/JAH-1002%201002H_666.jpg",
+        "sourceLabel": "Jonnesway : revue factuelle du 1 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 6f0a81584f695a501c66e7df42d497d0f6dec8b97219698d9342d8b1deadbc46. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:burineur-mannesmann-demag-shv-150-b-35970-01-6:burineur-mannesmann-demag-shv-150-b-35970-01-6-reserved-20261101-1",
+      "evidenceId": "burineur-mannesmann-demag-shv-150-b-35970-01-6-reserved-20261101-1",
+      "productId": "burineur-mannesmann-demag-shv-150-b-35970-01-6",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "cc15c987a3c1bd0999282fa63b7495587be331b4a327688dd130390667574f9c",
+      "snapshot": {
+        "id": "burineur-mannesmann-demag-shv-150-b-35970-01-6-reserved-20261101-1",
+        "sourceUrl": "https://www.mannesmann-demag.com/bilder-und-dateien/downloads/kataloge/md_airtools_05_2017_e.pdf?type=download#page=66",
+        "sourceLabel": "Mannesmann DEMAG : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 9de8eb77aad6c7412b390db54a16646c71c0a4f9925ddf3ddfba1048b1779f3b. Passage page=66. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:graveur-mannesmann-demag-gst-540-m-29943-71-6:graveur-mannesmann-demag-gst-540-m-29943-71-6-reserved-20261101-1",
+      "evidenceId": "graveur-mannesmann-demag-gst-540-m-29943-71-6-reserved-20261101-1",
+      "productId": "graveur-mannesmann-demag-gst-540-m-29943-71-6",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "45f0462929ca0df6817507930ca6ad3a64a01786b52d30e4c51883b23163ecde",
+      "snapshot": {
+        "id": "graveur-mannesmann-demag-gst-540-m-29943-71-6-reserved-20261101-1",
+        "sourceUrl": "https://www.mannesmann-demag.com/bilder-und-dateien/downloads/kataloge/md_airtools_05_2017_e.pdf?type=download#page=32",
+        "sourceLabel": "Mannesmann DEMAG : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 9de8eb77aad6c7412b390db54a16646c71c0a4f9925ddf3ddfba1048b1779f3b. Passage page=32. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:meuleuse-jonnesway-jag-0903r:meuleuse-jonnesway-jag-0903r-reserved-20261101-1",
+      "evidenceId": "meuleuse-jonnesway-jag-0903r-reserved-20261101-1",
+      "productId": "meuleuse-jonnesway-jag-0903r",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "d079de4748ee3fbd57650d35b511c44ced92460832d129c102ce7c3b7fb7e745",
+      "snapshot": {
+        "id": "meuleuse-jonnesway-jag-0903r-reserved-20261101-1",
+        "sourceUrl": "https://www.jonnesway.com/pImages/JAG-0903series_666.jpg",
+        "sourceLabel": "Jonnesway : revue factuelle du 1 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 8fa60628046148f6a51676022eb4ea9a31139a2ac76fb539f631648ddeb90692. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:meuleuse-mannesmann-demag-g-100-h-200-60009-37-5:meuleuse-mannesmann-demag-g-100-h-200-60009-37-5-reserved-20261101-1",
+      "evidenceId": "meuleuse-mannesmann-demag-g-100-h-200-60009-37-5-reserved-20261101-1",
+      "productId": "meuleuse-mannesmann-demag-g-100-h-200-60009-37-5",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "d85f3566fce0d3f346f7a202dfff6efe731cfeef7ea3b3be6387ec19728012b8",
+      "snapshot": {
+        "id": "meuleuse-mannesmann-demag-g-100-h-200-60009-37-5-reserved-20261101-1",
+        "sourceUrl": "https://www.mannesmann-demag.com/bilder-und-dateien/downloads/kataloge/md_airtools_05_2017_e.pdf?type=download#page=16",
+        "sourceLabel": "Mannesmann DEMAG : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 9de8eb77aad6c7412b390db54a16646c71c0a4f9925ddf3ddfba1048b1779f3b. Passage page=16. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:pistolet-peinture-hymair-as-j4001:pistolet-peinture-hymair-as-j4001-reserved-20261101-1",
+      "evidenceId": "pistolet-peinture-hymair-as-j4001-reserved-20261101-1",
+      "productId": "pistolet-peinture-hymair-as-j4001",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "92129b4c639b18a4ceb785affc90ce5acfa05b3dc5c0be4f4a48e447000bacab",
+      "snapshot": {
+        "id": "pistolet-peinture-hymair-as-j4001-reserved-20261101-1",
+        "sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SZUfKpLkrMNq&dp=GvUApKfKKUAU#page=6",
+        "sourceLabel": "Hymair : revue factuelle du 1 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 971e9f3f662af10d3c638d5e9c29c8847ee04672c40e29957ad4ca4eb13d61c1. Passage page=6. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:ponceuse-rotative-rongpeng-rp7319:ponceuse-rotative-rongpeng-rp7319-reserved-20261101-1",
+      "evidenceId": "ponceuse-rotative-rongpeng-rp7319-reserved-20261101-1",
+      "productId": "ponceuse-rotative-rongpeng-rp7319",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "ebc0921f5aa440033aea020a87ea53f20a8f2547172c7303001a31b7e8dbb14a",
+      "snapshot": {
+        "id": "ponceuse-rotative-rongpeng-rp7319-reserved-20261101-1",
+        "sourceUrl": "https://www.rongpeng.com/5-Inch-Air-Angle-Sander-RP7319",
+        "sourceLabel": "Rongpeng : revue factuelle du 1 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 abf0237e79f5e79b785481f728b7b6e5b2d951e91dfe8f39d5fd4be1d9d3a5e6. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:visseuse-universal-tool-ut2964:visseuse-universal-tool-ut2964-reserved-20261101-1",
+      "evidenceId": "visseuse-universal-tool-ut2964-reserved-20261101-1",
+      "productId": "visseuse-universal-tool-ut2964",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "ddef9711ada6769b5e1cc2d2163bf8b40cc4be72fa4a89401a179c7af87b2ed4",
+      "snapshot": {
+        "id": "visseuse-universal-tool-ut2964-reserved-20261101-1",
+        "sourceUrl": "https://continentaltoolgroup.com/product/adjustable-clutch-screwdriver-3/",
+        "sourceLabel": "Universal Tool : revue factuelle du 1 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 c978a1dd076dab73afdffe2da8bc27b8f96084dd7a29e28a6fecbeca22de3445. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:agrafeuse-cloueuse-draper-14607:agrafeuse-cloueuse-draper-14607-reserved-20261101-1",
+      "evidenceId": "agrafeuse-cloueuse-draper-14607-reserved-20261101-1",
+      "productId": "agrafeuse-cloueuse-draper-14607",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "a58cc244f3fff5270f4baa6c6fafb5a5a0dd7dce79a0ca470002662e56dd11de",
+      "snapshot": {
+        "id": "agrafeuse-cloueuse-draper-14607-reserved-20261101-1",
+        "sourceUrl": "https://www.drapertools.com/product/14607/air-nailer-10-50mm/",
+        "sourceLabel": "Draper : revue factuelle du 1 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 9dccf86a6af1ce9a2e27927d92d8f0d7b8c0bc317cb6bbee0712f19f1c6563c8. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:agrafeuse-cloueuse-metabo-hpt-nr90ad-s1:agrafeuse-cloueuse-metabo-hpt-nr90ad-s1-reserved-20261101-1",
+      "evidenceId": "agrafeuse-cloueuse-metabo-hpt-nr90ad-s1-reserved-20261101-1",
+      "productId": "agrafeuse-cloueuse-metabo-hpt-nr90ad-s1",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "9976221e6eac9e30b3ea601b6b5fcccaba31d66bf6848ff6e298cb6964284d69",
+      "snapshot": {
+        "id": "agrafeuse-cloueuse-metabo-hpt-nr90ad-s1-reserved-20261101-1",
+        "sourceUrl": "https://www.metabo-hpt.com/docs/default-source/product-owners-manuals/bf9aff2e3a40407cb9486114fc12e71e.pdf?sfvrsn=e4dabf4c_2#page=9",
+        "sourceLabel": "Metabo HPT : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 57defa88fed01f027ef22ca41d56ffd67867d9e7cce0a381d48d3c39a906a86a. Passage page=9. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:boulonneuse-ingersoll-rand-41aa6lth4:boulonneuse-ingersoll-rand-41aa6lth4-reserved-20261101-1",
+      "evidenceId": "boulonneuse-ingersoll-rand-41aa6lth4-reserved-20261101-1",
+      "productId": "boulonneuse-ingersoll-rand-41aa6lth4",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "8cce9a0c76a5152d0a5dc89977c927b0559f39a53032ca68ca82a4f459b7953c",
+      "snapshot": {
+        "id": "boulonneuse-ingersoll-rand-41aa6lth4-reserved-20261101-1",
+        "sourceUrl": "https://irtoolhelp.ingersollrand.com/hc/en-us/article_attachments/4410723358739#page=49",
+        "sourceLabel": "Ingersoll Rand : revue factuelle du 1 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 58f6dd413f360beb3c24048bfe40e3e325ba005dc2b3b1d3e02a21110a0be9c1. Passage page=49. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:burineur-michigan-pneumatic-mp-100cr-ret:burineur-michigan-pneumatic-mp-100cr-ret-reserved-20261101-1",
+      "evidenceId": "burineur-michigan-pneumatic-mp-100cr-ret-reserved-20261101-1",
+      "productId": "burineur-michigan-pneumatic-mp-100cr-ret",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "0587dfc82b35f20d68e20ab2bdd99ea9ce1caa074a082abcb357692d1b16ef42",
+      "snapshot": {
+        "id": "burineur-michigan-pneumatic-mp-100cr-ret-reserved-20261101-1",
+        "sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/3-Rivet%20Busters_Chipping-Hammers_v2.pdf#page=16",
+        "sourceLabel": "Michigan Pneumatic : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 a11683057b26ed84ebb5e32d6e57b8a71d893d427fac414b42f396c07bdb6908. Passage page=16. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:burineur-npk-s-2:burineur-npk-s-2-reserved-20261101-1",
+      "evidenceId": "burineur-npk-s-2-reserved-20261101-1",
+      "productId": "burineur-npk-s-2",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "ce6670ddc4aaabd291e0cbbc5469a71fa1194b4d162f34b80ef40852ecdace73",
+      "snapshot": {
+        "id": "burineur-npk-s-2-reserved-20261101-1",
+        "sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/15-NPK.pdf#page=4",
+        "sourceLabel": "NPK : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 8991587b6147dedde29a8ca888682d24a45127a873a1fb3a753e048fd2696462. Passage page=4. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:burineur-tranmax-tpt-30s:burineur-tranmax-tpt-30s-reserved-20261101-1",
+      "evidenceId": "burineur-tranmax-tpt-30s-reserved-20261101-1",
+      "productId": "burineur-tranmax-tpt-30s",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "cac61638021451a4d9188bb3983afeb6bf4b8eefa867d5c1603e73858e9479fd",
+      "snapshot": {
+        "id": "burineur-tranmax-tpt-30s-reserved-20261101-1",
+        "sourceUrl": "https://ss-client-website.s3-ap-northeast-1.amazonaws.com/tranmax/2023_01_09_113224_2212-Professional-Power-Tools-TP.pdf#page=35",
+        "sourceLabel": "Tranmax : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 c2e29dbb1f9d433e1d65568bc327d3ea21eadd7d39f8edbb0d98145850f7c7d2. Passage page=35. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:cisaille-draper-84130:cisaille-draper-84130-reserved-20261101-1",
+      "evidenceId": "cisaille-draper-84130-reserved-20261101-1",
+      "productId": "cisaille-draper-84130",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "6ce1f012a8a2a52791c53df4afefffb96b08926fd00a90fb0b27b98af593f73e",
+      "snapshot": {
+        "id": "cisaille-draper-84130-reserved-20261101-1",
+        "sourceUrl": "https://www.drapertools.com/product/84130/air-shears/",
+        "sourceLabel": "Draper : revue factuelle du 1 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 267148000d2ad4762632495d690baccff7da827782b6ac4ebc17dd967ab61e46. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:cisaille-jet-jsm-204:cisaille-jet-jsm-204-reserved-20261101-1",
+      "evidenceId": "cisaille-jet-jsm-204-reserved-20261101-1",
+      "productId": "cisaille-jet-jsm-204",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "88191eb932856a1da57fbe4eb2f6b236d15a014d8d30a5412f4da4880c332322",
+      "snapshot": {
+        "id": "cisaille-jet-jsm-204-reserved-20261101-1",
+        "sourceUrl": "https://d29c95q8mcesvj.cloudfront.net/wysiwyg/pdf/414700_Catalog.pdf#page=75",
+        "sourceLabel": "JET : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 9381736270fc03a7d3233abbb4c97f401cc4f8f453822e2b9eabc85c4e4f6ec6. Passage page=75. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:cle-a-chocs-cleco-wl-200-3:cle-a-chocs-cleco-wl-200-3-reserved-20261101-1",
+      "evidenceId": "cle-a-chocs-cleco-wl-200-3-reserved-20261101-1",
+      "productId": "cle-a-chocs-cleco-wl-200-3",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "aff6f8bbcc822fa1a564121df60c2b10d51ee1623be86251c03adb8222ca3832",
+      "snapshot": {
+        "id": "cle-a-chocs-cleco-wl-200-3-reserved-20261101-1",
+        "sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/Cleco_SP-1000-EN_en.pdf#page=50",
+        "sourceLabel": "Cleco : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 d4b1a134c27b40febe6ad33aa138bad7b337e6775f0fdc06fa8a058d4c99a3e9. Passage page=50. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:cle-a-chocs-draper-41096:cle-a-chocs-draper-41096-reserved-20261101-1",
+      "evidenceId": "cle-a-chocs-draper-41096-reserved-20261101-1",
+      "productId": "cle-a-chocs-draper-41096",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "2dcaad16d245c4f7cedb5973f1ab29fe4489f088b9981a8db04af4a3f911bf98",
+      "snapshot": {
+        "id": "cle-a-chocs-draper-41096-reserved-20261101-1",
+        "sourceUrl": "https://www.drapertools.com/product/41096/draper-expert-composite-body-air-impact-wrench-1-2-sq-dr/",
+        "sourceLabel": "Draper : revue factuelle du 1 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 c2909322878a76305559720c8f475640c1e31af66bf66d779f915581704cf625. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:cle-a-chocs-jet-j-1700p-505983:cle-a-chocs-jet-j-1700p-505983-reserved-20261101-1",
+      "evidenceId": "cle-a-chocs-jet-j-1700p-505983-reserved-20261101-1",
+      "productId": "cle-a-chocs-jet-j-1700p-505983",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "b491385cf57b2037a96baaa557ca675ba723467067884c96d46e6d15ccbdcdd3",
+      "snapshot": {
+        "id": "cle-a-chocs-jet-j-1700p-505983-reserved-20261101-1",
+        "sourceUrl": "https://d29c95q8mcesvj.cloudfront.net/wysiwyg/pdf/414700_Catalog.pdf#page=55",
+        "sourceLabel": "JET : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 9381736270fc03a7d3233abbb4c97f401cc4f8f453822e2b9eabc85c4e4f6ec6. Passage page=55. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:cle-a-chocs-master-power-mp2264b:cle-a-chocs-master-power-mp2264b-reserved-20261101-1",
+      "evidenceId": "cle-a-chocs-master-power-mp2264b-reserved-20261101-1",
+      "productId": "cle-a-chocs-master-power-mp2264b",
+      "productType": "tool",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "ddf0d04a780dad6ca6fc92bc4556e7c2476642b1736d7ef1b769efa568960989",
+      "snapshot": {
+        "id": "cle-a-chocs-master-power-mp2264b-reserved-20261101-1",
+        "sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=63",
+        "sourceLabel": "Master Power : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 8668d5e77a6b2469dc9b9012841e65bbfb947234a8087faa6fdd90384b3babac. Passage page=63. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:ktc-compack-3-8l-trolley:ktc-compack-3-8l-trolley-reserved-20261101-1",
+      "evidenceId": "ktc-compack-3-8l-trolley-reserved-20261101-1",
+      "productId": "ktc-compack-3-8l-trolley",
+      "productType": "compressor",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "781cdeaf80253fb2b01f471ca09ca5e5c0a6427dd164b2028abb744f9aa38608",
+      "snapshot": {
+        "id": "ktc-compack-3-8l-trolley-reserved-20261101-1",
+        "sourceUrl": "https://www.ktc-air.com/uploaded_files/attachments/202511171763374769/ktc_compack_2_3_smart_en.pdf#page=3",
+        "sourceLabel": "KTC : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 fb8e9e3d886333a85e6b0fd720cf06c451a2fc0826c8f816c536109d9bcb06ea. Passage page=3. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:puska-cnr-155-bm-s-yd:puska-cnr-155-bm-s-yd-reserved-20261101-1",
+      "evidenceId": "puska-cnr-155-bm-s-yd-reserved-20261101-1",
+      "productId": "puska-cnr-155-bm-s-yd",
+      "productType": "compressor",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "5cea50cd30d14acdb6668ed7cf26a74b8285dc0016d130963bd30d0ad6110256",
+      "snapshot": {
+        "id": "puska-cnr-155-bm-s-yd-reserved-20261101-1",
+        "sourceUrl": "https://www.puska.com/content/dam/brands/Puska/catalogos/Cat%C3%A1logo%20Puska%202025.pdf#page=18",
+        "sourceLabel": "Puska : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 62ce74f8e02f84d3c021f7162c9e8fd8cd9fc17fa41131797a1d7b3465e92454. Passage page=18. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:denair-da-132-w:denair-da-132-w-reserved-20261101-1",
+      "evidenceId": "denair-da-132-w-reserved-20261101-1",
+      "productId": "denair-da-132-w",
+      "productType": "compressor",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "62e5a6453a5f8aa42d49ca6e1a863e26e9219ef50bfe29597c0dff2fc2fe71f7",
+      "snapshot": {
+        "id": "denair-da-132-w-reserved-20261101-1",
+        "sourceUrl": "https://www.denair.net/uploads/DENAIR_Screw_Air_Compressor.pdf#page=6",
+        "sourceLabel": "DENAIR : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 855ce551cd3fa5294b576c1865d99fbb9c2ae58ee346ac5459d24fd79899b9ad. Passage page=6. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:swan-sds-205:swan-sds-205-reserved-20261101-1",
+      "evidenceId": "swan-sds-205-reserved-20261101-1",
+      "productId": "swan-sds-205",
+      "productType": "compressor",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "6ab22f709661ee76821966aac6dca3ef6890ddc13bc6a5ed7e90420673c34b95",
+      "snapshot": {
+        "id": "swan-sds-205-reserved-20261101-1",
+        "sourceUrl": "https://www.swan-aircompressor.com/en/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZzBQIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f21f3a426d479c9a27849c7f499ea9b940b557b7/Oil-less%20Compressor%20Series.pdf?disposition=preview#page=9",
+        "sourceLabel": "SWAN : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 ba27dceb7bc711898ad3b2f485fdb7734a1487fb2494d253ac319020abe9821b. Passage page=9. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
+    },
+    {
+      "id": "review:2026-11-01:rolair-3230k24cs:rolair-3230k24cs-reserved-20261101-1",
+      "evidenceId": "rolair-3230k24cs-reserved-20261101-1",
+      "productId": "rolair-3230k24cs",
+      "productType": "compressor",
+      "occurredAt": "2026-11-01",
+      "kind": "added",
+      "summary": "Source primaire relue pour la correction factuelle d’une référence en réserve, sans nouvelle admission.",
+      "fingerprint": "e6a3cc23993d8137de0983d63ed9202fac717710aed163f6b103f2cc22ceaa6f",
+      "snapshot": {
+        "id": "rolair-3230k24cs-reserved-20261101-1",
+        "sourceUrl": "https://www.rolair.com/sites/default/files/literature/GunStatSheet.pdf",
+        "sourceLabel": "Rolair : revue factuelle du 1 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-01",
+        "confidence": "B",
+        "notes": "Corps complet GET HTTP200 SHA-256 8452de2bf1eb5ecc333220527f0f71033ca9f80a86fb2f2d0a139784e634ad66. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+      }
     }
   ],
-  "historyVersion": "7140d8482b8710f1fbea93f96c6ecc4d432c65b59939d9ebe3ec5885615b560c"
+  "historyVersion": "2a0e48d3a094f09eb36f4163918655539c21be0d4af2339376fc99d30270b6b7"
 }

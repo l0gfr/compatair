@@ -34,10 +34,12 @@ const product: CompressorInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
   },
   "editorial": {
-    "overview": "SWAN SDS-205. 485 L/min déclarés à 7,845 bar. Configuration constructeur : Groupe complet SDS-205 ; configuration de la table constructeur.",
+    "overview": "SWAN SDS-205. Le GP-510 partage 3,7 kW et 485 L/min à 8 kgf/cm² mais possède une cuve 165L, mesure 1440×1230×1400 mm et pèse 400 kg. SDS-205 est l’ensemble compact 200 kg ; aucune cuve absente de sa ligne n’est inventée. Encombrement publié : 700 × 620 × 1120 mm. Masse publiée : 200 kg.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 7,845 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 485 L/min déclarés à 7,845 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 485 L/min déclarés à 7,845 bar.",
+      "Encombrement publié : 700 × 620 × 1120 mm.",
+      "Masse publiée : 200 kg."
     ],
     "limitations": [
       "L’unité historique « kg/cm² » de la pression est transcrite comme kgf/cm² et convertie avec NIST. La pression de soupape et les réglages du pressostat ne sont pas documentés par cette table.",
@@ -45,7 +47,8 @@ const product: CompressorInput = {
       "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
       "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
       "Cuve non documentée : l’autonomie et le volume de stockage ne peuvent pas être conclus à partir de ce profil.",
-      "La source documente ce point de pression. Elle ne prouve pas le maximum matériel ; au-delà, le verdict doit rester données insuffisantes."
+      "La source documente ce point de pression. Elle ne prouve pas le maximum matériel ; au-delà, le verdict doit rester données insuffisantes.",
+      "Le GP-510 partage 3,7 kW et 485 L/min à 8 kgf/cm² mais possède une cuve 165L, mesure 1440×1230×1400 mm et pèse 400 kg. SDS-205 est l’ensemble compact 200 kg ; aucune cuve absente de sa ligne n’est inventée."
     ]
   },
   "specifications": [
@@ -92,6 +95,20 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october7-swan-oil-less-p9"
       ]
+    },
+    {
+      "label": "Encombrement publié",
+      "value": "700 × 620 × 1120 mm",
+      "evidenceIds": [
+        "swan-sds-205-reserved-20261101-1"
+      ]
+    },
+    {
+      "label": "Masse publiée",
+      "value": "200 kg",
+      "evidenceIds": [
+        "swan-sds-205-reserved-20261101-1"
+      ]
     }
   ],
   "evidence": [
@@ -114,6 +131,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-07",
       "confidence": "B",
       "notes": "SHA-256 99092c3ae6a5030fdb6901f601cb87d99c07d62f31a164a4a0b6786847c5cc6c de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "swan-sds-205-reserved-20261101-1",
+      "sourceUrl": "https://www.swan-aircompressor.com/en/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZzBQIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f21f3a426d479c9a27849c7f499ea9b940b557b7/Oil-less%20Compressor%20Series.pdf?disposition=preview#page=9",
+      "sourceLabel": "SWAN : revue factuelle du 1 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-01",
+      "confidence": "B",
+      "notes": "Corps complet GET HTTP200 SHA-256 ba27dceb7bc711898ad3b2f485fdb7734a1487fb2494d253ac319020abe9821b. Passage page=9. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
     }
   ],
   "fieldSources": {
@@ -133,6 +160,15 @@ const product: CompressorInput = {
     ],
     "powerKw": [
       "october7-swan-oil-less-p9"
+    ],
+    "weightKg": [
+      "swan-sds-205-reserved-20261101-1"
+    ],
+    "editorial": [
+      "swan-sds-205-reserved-20261101-1"
+    ],
+    "specifications": [
+      "swan-sds-205-reserved-20261101-1"
     ]
   },
   "notes": [
@@ -140,7 +176,8 @@ const product: CompressorInput = {
     "Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées.",
     "Les caractéristiques décrivent la configuration constructeur indiquée dans cette fiche ; les autres équipements ou alimentations doivent être vérifiés séparément."
   ],
-  "maxPressureBasis": "selected-working-pressure-ceiling"
+  "maxPressureBasis": "selected-working-pressure-ceiling",
+  "weightKg": 200
 };
 
 export default product;

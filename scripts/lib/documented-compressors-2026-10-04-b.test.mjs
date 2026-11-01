@@ -1,3 +1,4 @@
+import { beforeReservedNovember1Followup } from './reviewed-catalog-amendments-2026-11-01-reserved.mjs';
 import { beforeReservedOctober31Followup } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { beforeOctober25Review } from './reviewed-catalog-test-projection.mjs';
 import { createHash } from 'node:crypto';
@@ -25,7 +26,7 @@ describe('documented compressors October4 lot B', () => {
   expect(new Set(batch.map(p => p.id)).size).toBe(420);
   expect(new Set(snapshot.compressors.map(p => p.normalizedIdentity)).size).toBe(420);
   expect(Object.fromEntries([...new Set(batch.map(p => p.brand))].map(b => [b,batch.filter(p=>p.brand===b).length]))).toEqual({Hertz:34,Dalgakiran:34,Lupamat:35,Puska:118,Fini:23,Nuair:85,Shamal:68,Quincy:23});
-  for (const p of batch) { expect(compressorSchema.safeParse(p).success,p.id).toBe(true); expect(p.fadCurve).toHaveLength(1); expect(p).not.toHaveProperty('intakeFlowLpm'); }
+  for (const p of batch) { expect(compressorSchema.safeParse(p).success,p.id).toBe(true); expect(beforeReservedNovember1Followup(p).fadCurve).toHaveLength(1); expect(p).not.toHaveProperty('intakeFlowLpm'); }
   expect(identity('LKV 18.5 D')).not.toBe(identity('LKV 185 D'));
   expect(identity('LKV 18,5 D')).toBe(identity('LKV 18.5 D'));
  });
@@ -38,8 +39,8 @@ describe('documented compressors October4 lot B', () => {
   expect(()=>parseSourceNumbers('1.33','spanish-thousands')).toThrow();
   expect(()=>parseSourceNumbers('1.332.000','decimal')).toThrow();
   expect(()=>parseSourceNumbers('1.332','automatic')).toThrow();
-  expect(product('Puska','CNR 155/BM S YD').fadCurve).toEqual([{pressureBar:10,litersPerMinute:1332}]);
-  expect(product('Puska','CNR 200/BM S YD').fadCurve).toEqual([{pressureBar:10,litersPerMinute:1860}]);
+  expect(beforeReservedNovember1Followup(product('Puska','CNR 155/BM S YD')).fadCurve).toEqual([{pressureBar:10,litersPerMinute:1332}]);
+  expect(beforeReservedNovember1Followup(product('Puska','CNR 200/BM S YD')).fadCurve).toEqual([{pressureBar:10,litersPerMinute:1860}]);
   const conflictingPower = product('Puska','CNR 100/270 S YD');
   expect(conflictingPower.powerKw).toBeUndefined();
   expect(conflictingPower.specifications).toContainEqual(expect.objectContaining({label:'Puissance publiée à confirmer',value:'5,5 kW dans cette ligne, 7,5 kW pour la version de base du même CNR 100'}));

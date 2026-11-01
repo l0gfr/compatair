@@ -8,12 +8,7 @@ const product: CompressorInput = {
 	"mpn": "4152026236",
 	"tankLiters": 0,
 	"maxPressureBar": 10,
-	"fadCurve": [
-		{
-			"pressureBar": 10,
-			"litersPerMinute": 2720
-		}
-	],
+	"fadCurve": [],
 	"oilType": "oil",
 	"confidence": "A",
 	"status": "unknown",
@@ -24,9 +19,8 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "FIAC AX 253BD 10 400/50 CE, référence 4152026236 : configuration sans cuve intégrée, pression maximale publiée de 10 bar. Le point documenté le plus élevé en pression fournit 2 720 L/min à 10 bar. Sans cuve intégrée. Version de base ; sécheur non intégré.",
+		"overview": "FIAC AX 253BD 10 400/50 CE. Le tableau FIAC publie le FAD et une pression maximale, sans apparier le débit à une pression de mesure. Le point moteur est retiré ; les valeurs déclarées restent visibles séparément.",
 		"verifiedFacts": [
-			"Débit restitué publié : 2 720 L/min à 10 bar.",
 			"Compresseur rotatif à vis lubrifié à vitesse fixe. Puissance moteur publiée : 18,6 kW.",
 			"Masse nette publiée : 361 kg.",
 			"Alimentation publiée : 400 V, 50 Hz, triphasée."
@@ -35,17 +29,11 @@ const product: CompressorInput = {
 			"Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
 			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
 			"La référence commande prime sur le nom commercial : le catalogue utilise AIRBLOK et la fiche en ligne le code AX.",
-			"Les puissances arrondies peuvent différer entre le catalogue PDF et la fiche actuelle. Les valeurs de cette fiche proviennent exclusivement de la fiche individuelle consultée."
+			"Les puissances arrondies peuvent différer entre le catalogue PDF et la fiche actuelle. Les valeurs de cette fiche proviennent exclusivement de la fiche individuelle consultée.",
+			"Le tableau FIAC publie le FAD et une pression maximale, sans apparier le débit à une pression de mesure. Le point moteur est retiré ; les valeurs déclarées restent visibles séparément."
 		]
 	},
 	"specifications": [
-		{
-			"label": "Conditions du débit",
-			"value": "La fiche individuelle 4152026236 publie un FAD de 2720 L/min pour cette version de 10 bar. Débit restitué fabricant, pas débit aspiré.",
-			"evidenceIds": [
-				"fiac-4152026236-20260926"
-			]
-		},
 		{
 			"label": "Équipement",
 			"value": "Sans cuve intégrée. Version de base ; sécheur non intégré.",
@@ -58,6 +46,13 @@ const product: CompressorInput = {
 			"value": "1130 × 780 × 1220 mm (L × l × H)",
 			"evidenceIds": [
 				"fiac-4152026236-20260926"
+			]
+		},
+		{
+			"label": "Débit déclaré, pression de mesure non appariée",
+			"value": "2720 L/min",
+			"evidenceIds": [
+				"fiac-ax-253bd-10-400-50-ce-reserved-20261101-1"
 			]
 		}
 	],
@@ -79,6 +74,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Mode lubrifié documenté par les huiles prévues pour cette famille."
+		},
+		{
+			"id": "fiac-ax-253bd-10-400-50-ce-reserved-20261101-1",
+			"sourceUrl": "https://shop.fiac.it/en-IT/products/4152026236/ax-253bd-10-40050-ce",
+			"sourceLabel": "FIAC : revue factuelle du 1 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 706807ac7e347ffe5210a32f44c1c286846d0e0eddf50fb421efb7bb605f8325. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -92,7 +97,7 @@ const product: CompressorInput = {
 			"fiac-4152026236-20260926"
 		],
 		"fadCurve": [
-			"fiac-4152026236-20260926"
+			"fiac-ax-253bd-10-400-50-ce-reserved-20261101-1"
 		],
 		"oilType": [
 			"fiac-4152026236-20260926-oiltype-1"
@@ -108,6 +113,12 @@ const product: CompressorInput = {
 		],
 		"phase": [
 			"fiac-4152026236-20260926"
+		],
+		"editorial": [
+			"fiac-ax-253bd-10-400-50-ce-reserved-20261101-1"
+		],
+		"specifications": [
+			"fiac-ax-253bd-10-400-50-ce-reserved-20261101-1"
 		]
 	},
 	"notes": [

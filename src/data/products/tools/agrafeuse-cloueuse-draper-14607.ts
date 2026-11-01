@@ -31,15 +31,16 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Draper 14607. La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué. Champ fabricant : Air Inlet : 1/4\" BSP. Champ fabricant : Average Air Consumption : 0.26cfm (0.75L/min).",
+		"overview": "Draper 14607. La fiche Draper 14607 présente ces deux valeurs comme équivalentes alors que leur conversion diffère. Elles restent citées ensemble, sans consommation dimensionnante fabriquée. Consommation moyenne publiée, unités originales : 0,26 cfm ; 0,75 L/min.",
 		"verifiedFacts": [
 			"Champ fabricant : Air Inlet : 1/4\" BSP.",
-			"Champ fabricant : Average Air Consumption : 0.26cfm (0.75L/min).",
-			"Champ fabricant : Min Hose Size : 3/8\" (10mm).",
-			"Champ fabricant : Nail Size : 10-50mm, Head 2mm, Gauge 18.",
-			"Champ fabricant : Operating Air Pressure : 75 - 100psi.",
-			"Champ fabricant : Shank Size : Width 1.25mm, Thickness 1.05mm.",
-			"Champ fabricant : Weight : 1.4kg."
+			"Champ fabricant : Average Air Consumption : 0.26 cfm (0.75 L/min).",
+			"Champ fabricant : Min Hose Size : 3/8\" (10 mm).",
+			"Champ fabricant : Nail Size : 10-50 mm, Head 2 mm, Gauge 18.",
+			"Champ fabricant : Operating Air Pressure : 75 - 100 psi.",
+			"Champ fabricant : Shank Size : Width 1.25 mm, Thickness 1.05 mm.",
+			"Champ fabricant : Weight : 1.4 kg.",
+			"Consommation moyenne publiée, unités originales : 0,26 cfm ; 0,75 L/min."
 		],
 		"limitations": [
 			"La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué.",
@@ -59,42 +60,42 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Average Air Consumption",
-			"value": "0.26cfm (0.75L/min)",
+			"value": "0.26 cfm (0.75 L/min)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-14607-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Min Hose Size",
-			"value": "3/8\" (10mm)",
+			"value": "3/8\" (10 mm)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-14607-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Nail Size",
-			"value": "10-50mm, Head 2mm, Gauge 18",
+			"value": "10-50 mm, Head 2 mm, Gauge 18",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-14607-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Operating Air Pressure",
-			"value": "75 - 100psi",
+			"value": "75 - 100 psi",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-14607-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Shank Size",
-			"value": "Width 1.25mm, Thickness 1.05mm",
+			"value": "Width 1.25 mm, Thickness 1.05 mm",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-14607-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Weight",
-			"value": "1.4kg",
+			"value": "1.4 kg",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-14607-html-p1"
 			]
@@ -108,16 +109,23 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Min Hose Size",
-			"value": "3/8\" (10mm)",
+			"value": "3/8\" (10 mm)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-14607-html-p1"
 			]
 		},
 		{
 			"label": "Portée de la pression dans la source",
-			"value": "Operating Air Pressure: 75 - 100psi",
+			"value": "Operating Air Pressure: 75 - 100 psi",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-14607-html-p1"
+			]
+		},
+		{
+			"label": "Consommation moyenne publiée, unités originales",
+			"value": "0,26 cfm ; 0,75 L/min",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-draper-14607-reserved-20261101-1"
 			]
 		}
 	],
@@ -131,6 +139,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : d9c7663007db47af9c593e02934b3e422bb2dd1ccd1473a2b4406b31c1f45b22. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "agrafeuse-cloueuse-draper-14607-reserved-20261101-1",
+			"sourceUrl": "https://www.drapertools.com/product/14607/air-nailer-10-50mm/",
+			"sourceLabel": "Draper : revue factuelle du 1 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 9dccf86a6af1ce9a2e27927d92d8f0d7b8c0bc317cb6bbee0712f19f1c6563c8. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -142,6 +160,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-draper-14607-html-p1"
+		],
+		"editorial": [
+			"agrafeuse-cloueuse-draper-14607-reserved-20261101-1"
+		],
+		"specifications": [
+			"agrafeuse-cloueuse-draper-14607-reserved-20261101-1"
 		]
 	},
 	"notes": [

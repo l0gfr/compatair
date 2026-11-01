@@ -37,10 +37,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU UW-101ERK, code 05532. Le tableau publie une consommation moyenne de 0,45 m³/min, soit 450 L/min. Pression de service recommandée : 6 bar.",
+		"overview": "URYU UW-101ERK. UW-61ERK utilise un carré 9,5 mm à 7300 tr/min et 1,51 kg ; UW-131ERK conserve 12,7 mm et 5500 tr/min mais mesure 205 mm et 2,97 kg. UW-101ERK est la configuration intermédiaire identifiée par le code 05532. Carré de sortie : 12,7 mm (1/2\"). Capacité publiée : 10 mm. Vitesse à vide approximative : 5 500 tr/min.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 05532, page PDF 3.",
-			"Consommation moyenne publiée : 450 L/min après conversion de l’unité originale."
+			"Consommation moyenne publiée : 450 L/min après conversion de l’unité originale.",
+			"Carré de sortie : 12,7 mm (1/2\").",
+			"Capacité publiée : 10 mm.",
+			"Vitesse à vide approximative : 5 500 tr/min.",
+			"Longueur totale : 179 mm.",
+			"Masse sans douille : 2,27 kg."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
@@ -76,6 +81,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-uryu-p38-43"
 			]
+		},
+		{
+			"label": "Carré de sortie",
+			"value": "12,7 mm (1/2\")",
+			"evidenceIds": [
+				"cle-a-chocs-uryu-uw-101erk-05532-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Capacité publiée",
+			"value": "10 mm",
+			"evidenceIds": [
+				"cle-a-chocs-uryu-uw-101erk-05532-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide approximative",
+			"value": "5 500 tr/min",
+			"evidenceIds": [
+				"cle-a-chocs-uryu-uw-101erk-05532-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "179 mm",
+			"evidenceIds": [
+				"cle-a-chocs-uryu-uw-101erk-05532-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Masse sans douille",
+			"value": "2,27 kg",
+			"evidenceIds": [
+				"cle-a-chocs-uryu-uw-101erk-05532-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -98,6 +138,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-31",
 			"confidence": "B",
 			"notes": "SHA-256 90b725f7cea6b3034cca423bf66e2277b337b80dc68d216aa85b8105caf2b941. La table URYU distingue Average Consumption et Recommended Air Pressure. Nettoyer les lignes OCR répétées et qualifier la pression comme une recommandation de service, sans maximum en charge déduit."
+		},
+		{
+			"id": "cle-a-chocs-uryu-uw-101erk-05532-reserved-20261101-1",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P38_43.pdf",
+			"sourceLabel": "URYU : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 90b725f7cea6b3034cca423bf66e2277b337b80dc68d216aa85b8105caf2b941. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -112,6 +162,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-20260930-uryu-p38-43"
+		],
+		"editorial": [
+			"cle-a-chocs-uryu-uw-101erk-05532-reserved-20261101-1"
+		],
+		"specifications": [
+			"cle-a-chocs-uryu-uw-101erk-05532-reserved-20261101-1"
 		]
 	},
 	"notes": [

@@ -23,18 +23,19 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX BEW 606 K, référence 150810927. Le tableau fabricant publie 300 L/min et une plage d’utilisation de 6 à 6 bar. Puissance publiée : 80 W. Vitesse de rotation : adjustable 0-600 tr/min.",
+		"overview": "BIAX BEW 606 K. La pression de service et la valeur de consommation restent des déclarations séparées. Le moteur conserve une donnée non conclusive. Régime de consommation : 300 L/min publiés sans régime en charge, moyen ou maximal explicite.",
 		"verifiedFacts": [
 			"Le catalogue de cette référence indique un fonctionnement à 6 bar.",
-			"La fiche fabricant publie une consommation de 300 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
 			"Référence fabricant : 150810927.",
 			"Puissance publiée : 80 W.",
 			"Vitesse de rotation : adjustable 0-600 tr/min.",
-			"Masse publiée : 630 g."
+			"Masse publiée : 630 g.",
+			"Régime de consommation : 300 L/min publiés sans régime en charge, moyen ou maximal explicite."
 		],
 		"limitations": [
 			"Le choix de la fraise, du disque ou de l’accessoire doit respecter la vitesse et les dimensions prescrites par BIAX.",
-			"Débit déclaré par le fabricant, sans mesure physique CompatAir."
+			"Débit déclaré par le fabricant, sans mesure physique CompatAir.",
+			"La pression de service et la valeur de consommation restent des déclarations séparées. Le moteur conserve une donnée non conclusive."
 		]
 	},
 	"specifications": [
@@ -43,13 +44,6 @@ const product: ToolProfileInput = {
 			"value": "Le catalogue de cette référence indique un fonctionnement à 6 bar.",
 			"evidenceIds": [
 				"biax-150810927-20260926-workingpressurebar-1"
-			]
-		},
-		{
-			"label": "Condition de consommation",
-			"value": "La fiche fabricant publie une consommation de 300 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
-			"evidenceIds": [
-				"biax-150810927-20260926"
 			]
 		},
 		{
@@ -79,6 +73,20 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"biax-150810927-20260926"
 			]
+		},
+		{
+			"label": "Régime de consommation",
+			"value": "300 L/min publiés sans régime en charge, moyen ou maximal explicite",
+			"evidenceIds": [
+				"biax-bew-606-k-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Ancienne valeur volumique, portée documentaire",
+			"value": "300 L/min ; régime, unité de référence ou pression de mesure insuffisamment qualifiés pour le FAD",
+			"evidenceIds": [
+				"biax-bew-606-k-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -99,6 +107,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+		},
+		{
+			"id": "biax-bew-606-k-reserved-20261101-1",
+			"sourceUrl": "https://biax.de/en/product/bew-606-k-bis-senk-o-14-mm/",
+			"sourceLabel": "BIAX : revue factuelle du 1 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 55e3df95adc13672c8775a42d2ac152e0979f826a13b1b58722dba82ee70026c. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +128,15 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"biax-150810927-20260926"
+		],
+		"airflowBasis": [
+			"biax-bew-606-k-reserved-20261101-1"
+		],
+		"editorial": [
+			"biax-bew-606-k-reserved-20261101-1"
+		],
+		"specifications": [
+			"biax-bew-606-k-reserved-20261101-1"
 		]
 	},
 	"notes": [
@@ -119,7 +146,8 @@ const product: ToolProfileInput = {
 		"min": 300,
 		"typical": 300,
 		"max": 300
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

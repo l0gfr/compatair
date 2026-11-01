@@ -1,4 +1,5 @@
 import { beforeReservedOctober31Followup } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
+import { beforeReservedNovember1Followup } from './reviewed-catalog-amendments-2026-11-01-reserved.mjs';
 import { readFileSync, statSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { describe, expect, it } from 'vitest';
@@ -52,7 +53,7 @@ describe('October 8 original compressor documents', () => {
   }
  });
  it('qualifies Rolair delivered air with its manufacturer definition without asserting ISO1217', () => {
-  for (const p of batch.filter(p => p.brand === 'Rolair')) {
+  for (const p of batch.map(beforeReservedNovember1Followup).filter(p => p.brand === 'Rolair')) {
    expect(p.fieldSources.fadCurve).toContain('october8-rolair-faq-p1');
    expect(p.editorial.limitations.some(t => /atmosphériques/.test(t))).toBe(true);
   }

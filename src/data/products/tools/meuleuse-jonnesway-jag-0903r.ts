@@ -33,13 +33,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Jonnesway JAG-0903R. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Free Speed : 25,000RPM. Overall Length : 152MM (6\").",
+		"overview": "Jonnesway JAG-0903R. JAG-0903RM utilise une pince 6 mm. JAG-0903R est la version 1/4 pouce ; ces deux dimensions ne sont pas assimilées malgré une géométrie proche. Pince de serrage : 1/4 pouce.",
 		"verifiedFacts": [
 			"Free Speed : 25,000RPM.",
 			"Overall Length : 152MM (6\").",
 			"Weight : 0.35KGS (0.77LBS).",
 			"Air Inlet Size : 1/4\".",
-			"Air Hose (I.D.) : 3/8\"."
+			"Air Hose (I.D.) : 3/8\".",
+			"Pince de serrage : 1/4 pouce."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -84,7 +85,7 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Portée de la pression dans la source",
-			"value": "Air Pressure: 90PSI",
+			"value": "Air Pressure: 90 PSI",
 			"evidenceIds": [
 				"october2-tools-jonnes-cat-27-pdp-60-spec38-p1"
 			]
@@ -94,6 +95,13 @@ const product: ToolProfileInput = {
 			"value": "113 L/min",
 			"evidenceIds": [
 				"october2-tools-jonnes-cat-27-pdp-60-spec38-p1"
+			]
+		},
+		{
+			"label": "Pince de serrage",
+			"value": "1/4 pouce",
+			"evidenceIds": [
+				"meuleuse-jonnesway-jag-0903r-reserved-20261101-1"
 			]
 		}
 	],
@@ -107,6 +115,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 8fa60628046148f6a51676022eb4ea9a31139a2ac76fb539f631648ddeb90692. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "meuleuse-jonnesway-jag-0903r-reserved-20261101-1",
+			"sourceUrl": "https://www.jonnesway.com/pImages/JAG-0903series_666.jpg",
+			"sourceLabel": "Jonnesway : revue factuelle du 1 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 8fa60628046148f6a51676022eb4ea9a31139a2ac76fb539f631648ddeb90692. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -118,6 +136,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-jonnes-cat-27-pdp-60-spec38-p1"
+		],
+		"editorial": [
+			"meuleuse-jonnesway-jag-0903r-reserved-20261101-1"
+		],
+		"specifications": [
+			"meuleuse-jonnesway-jag-0903r-reserved-20261101-1"
 		]
 	},
 	"notes": [

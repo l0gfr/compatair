@@ -23,14 +23,13 @@ const product: CompressorInput = {
       "litersPerMinute": 359.624
     }
   ],
-  "voltage": "230 V",
   "oilType": "oil",
   "confidence": "B",
   "status": "unknown",
   "image": {
     "src": "/images/products/rolair-3230k24cs.svg",
     "alt": "Repères techniques : Rolair 3230K24CS",
-    "sourceUrl": "https://www.rolair.com/air-compressors/wheeled-electric-air-compressors/3230k24cs",
+    "sourceUrl": "https://www.rolair.com/sites/default/files/literature/GunStatSheet.pdf",
     "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
   },
   "specifications": [
@@ -66,7 +65,7 @@ const product: CompressorInput = {
       ]
     },
     {
-      "label": "Cuve publiée, unité native",
+      "label": "Cuve de la transcription HTML historique, non confirmée par GunStatSheet",
       "value": "9 Gallons",
       "evidenceIds": [
         "october8-rolair-portable-3230k24cs-p1"
@@ -113,13 +112,45 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october8-rolair-portable-3230k24cs-p1"
       ]
+    },
+    {
+      "label": "Débit livré publié",
+      "value": "12,7 CFM à 90 PSI",
+      "evidenceIds": [
+        "rolair-3230k24cs-reserved-20261101-1"
+      ]
+    },
+    {
+      "label": "Déplacement, distinct du débit livré",
+      "value": "18,4 CFM",
+      "evidenceIds": [
+        "rolair-3230k24cs-reserved-20261101-1"
+      ]
+    },
+    {
+      "label": "Alimentation de la fiche technique",
+      "value": "3 HP, 220 V dans la fiche GunStatSheet",
+      "evidenceIds": [
+        "rolair-3230k24cs-reserved-20261101-1"
+      ]
+    },
+    {
+      "label": "Alimentation de la transcription HTML historique",
+      "value": "230 V, 60 Hz dans le descriptif courant",
+      "evidenceIds": [
+        "october8-rolair-portable-3230k24cs-p1"
+      ]
     }
   ],
   "editorial": {
-    "overview": "Rolair 3230K24CS. 359,624 L/min déclarés à 6,205 bar. Configuration publiée : 3230K24CS Wheeled Electric Air Compressors.",
+    "overview": "Rolair 3230K24CS. La fiche Rolair GunStatSheet accessible confirme 12,7 CFM Delivered at 90 PSI et 18,4 CFM Displaced pour 3230K24CS. Sa tension 220 V diffère du 230 V de la transcription HTML historique ; vérifier la plaque de la machine destinée au site. La FAQ ne remplace pas cette ligne de modèle. Le PDF ne prouve pas un cycle numérique du groupe. Débit livré publié : 12,7 CFM à 90 PSI. Déplacement, distinct du débit livré : 18,4 CFM. Alimentation de la fiche technique : 3 HP, 220 V dans la fiche GunStatSheet.",
     "verifiedFacts": [
       "Débit réellement livré identifié séparément du déplacement : 359,624 L/min déclarés à 6,205 bar.",
-      "Plafond documentaire du point retenu : 6,205 bar."
+      "Plafond documentaire du point retenu : 6,205 bar.",
+      "Débit livré publié : 12,7 CFM à 90 PSI.",
+      "Déplacement, distinct du débit livré : 18,4 CFM.",
+      "Alimentation de la fiche technique : 3 HP, 220 V dans la fiche GunStatSheet.",
+      "Alimentation de la transcription HTML historique : 230 V, 60 Hz dans le descriptif courant."
     ],
     "limitations": [
       "La cuve est publiée en gallons sans identification US ou impériale ; aucun volume en litres n’est calculé.",
@@ -128,7 +159,8 @@ const product: CompressorInput = {
       "Aucune interpolation de débit, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
       "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
       "Cuve non qualifiée en litres : l’autonomie ne peut pas être conclue à partir de ce profil.",
-      "Le point de pression ne prouve pas le maximum matériel ; au-delà, le verdict doit rester données insuffisantes."
+      "Le point de pression ne prouve pas le maximum matériel ; au-delà, le verdict doit rester données insuffisantes.",
+      "Tension retirée du profil calculé : la fiche GunStatSheet indique 220 V, la transcription de la fiche HTML 230 V. Vérifier la plaque et la configuration livrée."
     ]
   },
   "evidence": [
@@ -161,29 +193,47 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-08",
       "confidence": "B",
       "notes": "SHA-256 d27889a3ac6ba50e0bfacaf4e011378054cfc515d050082f4c8d0760f2c75e59 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "rolair-3230k24cs-reserved-20261101-1",
+      "sourceUrl": "https://www.rolair.com/sites/default/files/literature/GunStatSheet.pdf",
+      "sourceLabel": "Rolair : revue factuelle du 1 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-01",
+      "confidence": "B",
+      "notes": "Corps complet GET HTTP200 SHA-256 8452de2bf1eb5ecc333220527f0f71033ca9f80a86fb2f2d0a139784e634ad66. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
     }
   ],
   "fieldSources": {
     "model": [
-      "october8-rolair-portable-3230k24cs-p1"
+      "rolair-3230k24cs-reserved-20261101-1"
     ],
     "maxPressureBar": [
-      "october8-rolair-portable-3230k24cs-p1",
+      "rolair-3230k24cs-reserved-20261101-1",
       "october8-nist-conversions-p1"
     ],
     "maxPressureBasis": [
-      "october8-rolair-portable-3230k24cs-p1"
+      "rolair-3230k24cs-reserved-20261101-1"
     ],
     "fadCurve": [
-      "october8-rolair-portable-3230k24cs-p1",
-      "october8-rolair-faq-p1",
+      "rolair-3230k24cs-reserved-20261101-1",
       "october8-nist-conversions-p1"
     ],
     "oilType": [
-      "october8-rolair-portable-3230k24cs-p1"
+      "rolair-3230k24cs-reserved-20261101-1"
     ],
     "voltage": [
       "october8-rolair-portable-3230k24cs-p1"
+    ],
+    "editorial": [
+      "rolair-3230k24cs-reserved-20261101-1"
+    ],
+    "specifications": [
+      "rolair-3230k24cs-reserved-20261101-1"
+    ],
+    "image": [
+      "rolair-3230k24cs-reserved-20261101-1"
     ]
   },
   "notes": [

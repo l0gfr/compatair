@@ -31,15 +31,16 @@ const product: ToolProfileInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
   },
   "editorial": {
-    "overview": "Anest Iwata AIRGUNSA AZ3 HTE2 HVLP buse 1.5 HVLP. Le code natif W0SPG84AG15C doit être confirmé : la table courante AIRGUNSA emploie la série de codes W0SPG85 pour le HVLP. Aucune substitution de MPN à partir du seul diamètre de buse. Buse : 1.5 mm. Chapeau : HVLP. Alimentation : gravité. Débit de produit au point du tableau : 185 mL/min. Largeur de jet au point du tableau : 290 mm.",
+    "overview": "Anest Iwata AIRGUNSA AZ3 HTE2 HVLP buse 1.5 HVLP. Le catalogue distingue la série de commande HVLP courante de la référence historique 84. Aucun MPN85 ni équivalence de technologie ne sont créés par déduction ; confirmer la référence commerciale exacte avant commande. Identité de commande à confirmer : MPN historique W0SPG84AG15C ; catalogue HVLP courant série W0SPG85.",
     "verifiedFacts": [
       "Buse : 1.5 mm.",
       "Chapeau : HVLP.",
       "Alimentation : gravité.",
-      "Débit de produit au point du tableau : 185 mL/min.",
+      "Débit de produit au point du tableau : 185 m L/min.",
       "Largeur de jet au point du tableau : 290 mm.",
       "Consommation publiée dans son unité originale : 340 Nℓ/min, consommation normalisée du tableau.",
-      "Pression dans la source : 2 bar, pression au point du tableau."
+      "Pression dans la source : 2 bar, pression au point du tableau.",
+      "Identité de commande à confirmer : MPN historique W0SPG84AG15C ; catalogue HVLP courant série W0SPG85."
     ],
     "limitations": [
       "Le catalogue 2025 publie la consommation en Nℓ/min, sans définir les conditions de référence du volume normalisé ; cette valeur n’est pas assimilée au FAD en L/min.",
@@ -73,7 +74,7 @@ const product: ToolProfileInput = {
     },
     {
       "label": "Débit de produit au point du tableau",
-      "value": "185 mL/min",
+      "value": "185 m L/min",
       "evidenceIds": [
         "october8-tools-iwata-catalog-current-4-p7"
       ]
@@ -98,6 +99,13 @@ const product: ToolProfileInput = {
       "evidenceIds": [
         "october8-tools-iwata-catalog-current-4-p7"
       ]
+    },
+    {
+      "label": "Identité de commande à confirmer",
+      "value": "MPN historique W0SPG84AG15C ; catalogue HVLP courant série W0SPG85",
+      "evidenceIds": [
+        "pistolet-peinture-anest-iwata-airgunsa-az3-hte2-hvlp-buse-1-5-hvlp-reserved-20261101-1"
+      ]
     }
   ],
   "evidence": [
@@ -120,6 +128,16 @@ const product: ToolProfileInput = {
       "retrievedAt": "2026-10-31",
       "confidence": "B",
       "notes": "SHA-256 cc4f305737f15bc7b4ed9059ba98efba0873c1c0a8be2dd08e9445326a82182e. Le code natif W0SPG84AG15C doit être confirmé : la table courante AIRGUNSA emploie la série de codes W0SPG85 pour le HVLP. Aucune substitution de MPN à partir du seul diamètre de buse."
+    },
+    {
+      "id": "pistolet-peinture-anest-iwata-airgunsa-az3-hte2-hvlp-buse-1-5-hvlp-reserved-20261101-1",
+      "sourceUrl": "https://www.anest-iwata-coating.com/wp-content/uploads/2022/09/2025_EN_AIRGUNSA_CAT.pdf#page=7",
+      "sourceLabel": "Anest Iwata : revue factuelle du 1 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-01",
+      "confidence": "B",
+      "notes": "Corps complet GET HTTP200 SHA-256 cc4f305737f15bc7b4ed9059ba98efba0873c1c0a8be2dd08e9445326a82182e. Passage page=7. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
     }
   ],
   "fieldSources": {
@@ -128,6 +146,12 @@ const product: ToolProfileInput = {
     ],
     "demandExplanation": [
       "october8-tools-iwata-catalog-current-4-p7"
+    ],
+    "editorial": [
+      "pistolet-peinture-anest-iwata-airgunsa-az3-hte2-hvlp-buse-1-5-hvlp-reserved-20261101-1"
+    ],
+    "specifications": [
+      "pistolet-peinture-anest-iwata-airgunsa-az3-hte2-hvlp-buse-1-5-hvlp-reserved-20261101-1"
     ]
   },
   "notes": [

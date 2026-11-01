@@ -11,6 +11,7 @@ import { buildDocumentedCompressorsOctober4C } from './documented-compressors-20
 import { buildDocumentedCompressorsOctober5 } from './documented-compressors-2026-10-05.mjs';
 
 // Reviewed before migration: snapshots, all other canonical product fields, and every image.
+const cardsNovember1 = new Map(JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-11-01-reserved.json', import.meta.url))).technicalCards.map(card => [card.path, card]));
 const batches = [
  ['2026-10-04', 114, 86, buildDocumentedCompressorsOctober4, 'dcebd1d2a771b8475d1e8d3579c04a3a2dd24e0aae5d5d3ff53a818415398208', '5a2032f64d210ec198aee88b3ab89ec3e017c9dc911339d7101816d12b4809f7', '8508ffc405fcd6df22698bf4579a3a41686d10598a4579a4c24a1be725f99a7f'],
  ['2026-10-04-b', 284, 136, buildDocumentedCompressorsOctober4B, '3824c0956078f5cdb15ae77526a76c421b46d71bd36fa4c6fd7a37cb03fe8594', '8d69acef56117133e35ed568e672f5c8731b00a78e9113202d998e4c597f4d18', '6c07a9b76244b314f3b7b2054d951b65836dd1772d392a3be1e78a100ef27b0d'],
@@ -117,7 +118,9 @@ describe('documented pressure basis migration October 7', () => {
     const product = loadProduct(expected.id);
     expect(product, expected.id).toEqual(expected);
     canonical.push([product.id, withoutBasis(beforeOctober17(beforeOctober18(beforeOctober19(beforeOctober20(beforeOctober21(beforeOctober24(beforeOctober25Review(product))))))))]);
-    const servedCardHash=digest(readFileSync(new URL(`../../public${product.image.src}`, import.meta.url))), card31=cards31.get(product.image.src);
+    const liveCardHash=digest(readFileSync(new URL(`../../public${product.image.src}`, import.meta.url))), cardNovember1=cardsNovember1.get(product.image.src);
+    if(cardNovember1)expect(liveCardHash,product.id).toBe(cardNovember1.afterSha256);
+    const servedCardHash=cardNovember1?.beforeSha256??liveCardHash, card31=cards31.get(product.image.src);
     if(card31)expect(servedCardHash,product.id).toBe(card31.afterSha256);
     const actualCardHash=card31?.beforeSha256??servedCardHash, card25=cards25.get(product.image.src);
     if(card25)expect(actualCardHash,product.id).toBe(card25.afterSha256);

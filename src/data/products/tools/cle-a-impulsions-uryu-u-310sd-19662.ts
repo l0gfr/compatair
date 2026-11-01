@@ -37,10 +37,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU U-310SD, code 19662. Le tableau publie une consommation moyenne de 0,15 m³/min, soit 150 L/min. Pression de service recommandée : 6 bar.",
+		"overview": "URYU U-310SD. U-350SD mesure 238 mm et 0,71 kg, avec la même consommation moyenne 0,15 m³/min. Le tableau distingue aussi les plages de couple selon le type d’assemblage ; aucune plage unique n’est fabriquée à partir de ces colonnes. Capacité de vis publiée : 3–4 mm. Longueur totale : 222 mm. Masse publiée : 0,62 kg.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 19662, page PDF 5.",
-			"Consommation moyenne publiée : 150 L/min après conversion de l’unité originale."
+			"Consommation moyenne publiée : 150 L/min après conversion de l’unité originale.",
+			"Capacité de vis publiée : 3–4 mm.",
+			"Longueur totale : 222 mm.",
+			"Masse publiée : 0,62 kg.",
+			"Sortie hexagonale : 6,35 mm (1/4\")."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
@@ -76,6 +80,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-uryu-p30-34"
 			]
+		},
+		{
+			"label": "Capacité de vis publiée",
+			"value": "3–4 mm",
+			"evidenceIds": [
+				"cle-a-impulsions-uryu-u-310sd-19662-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "222 mm",
+			"evidenceIds": [
+				"cle-a-impulsions-uryu-u-310sd-19662-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Masse publiée",
+			"value": "0,62 kg",
+			"evidenceIds": [
+				"cle-a-impulsions-uryu-u-310sd-19662-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Sortie hexagonale",
+			"value": "6,35 mm (1/4\")",
+			"evidenceIds": [
+				"cle-a-impulsions-uryu-u-310sd-19662-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -98,6 +130,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-31",
 			"confidence": "B",
 			"notes": "SHA-256 bfedea87f312ccc461b6512e0086d674afcec922db3881306259e050187bb373. La table URYU distingue Average Consumption et Recommended Air Pressure. Nettoyer les lignes OCR répétées et qualifier la pression comme une recommandation de service, sans maximum en charge déduit."
+		},
+		{
+			"id": "cle-a-impulsions-uryu-u-310sd-19662-reserved-20261101-1",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P30_34.pdf",
+			"sourceLabel": "URYU : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 bfedea87f312ccc461b6512e0086d674afcec922db3881306259e050187bb373. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -112,6 +154,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-20260930-uryu-p30-34"
+		],
+		"editorial": [
+			"cle-a-impulsions-uryu-u-310sd-19662-reserved-20261101-1"
+		],
+		"specifications": [
+			"cle-a-impulsions-uryu-u-310sd-19662-reserved-20261101-1"
 		]
 	},
 	"notes": [

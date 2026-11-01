@@ -29,11 +29,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZGS-N8. La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé. Vitesse à vide : 900 tr/min. Masse : 1.6 kg.",
+		"overview": "ZIPP ZGS-N8. ZGS-C8 utilise une aspiration centrale et ZGS-S8 une aspiration autogénérée. Les trois versions partagent 200 mm,orbite 5 mm et 900 tr/min ; le suffixe N de ZGS-N8 détermine ici le raccordement d’aspiration. Diamètre du plateau : 8 pouces (200 mm publiés). Mouvement : Entraînement par engrenage, orbite 5 mm. Aspiration : Sans aspiration intégrée.",
 		"verifiedFacts": [
 			"Vitesse à vide : 900 tr/min.",
 			"Masse : 1.6 kg.",
-			"Référence constructeur : ZGS-N8."
+			"Référence constructeur : ZGS-N8.",
+			"Diamètre du plateau : 8 pouces (200 mm publiés).",
+			"Mouvement : Entraînement par engrenage, orbite 5 mm.",
+			"Aspiration : Sans aspiration intégrée.",
+			"Vitesse publiée : 900 tr/min."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé.",
@@ -82,6 +86,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october-b-zipp-tools-p145"
 			]
+		},
+		{
+			"label": "Diamètre du plateau",
+			"value": "8 pouces (200 mm publiés)",
+			"evidenceIds": [
+				"ponceuse-orbitale-zipp-zgs-n8-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Mouvement",
+			"value": "Entraînement par engrenage, orbite 5 mm",
+			"evidenceIds": [
+				"ponceuse-orbitale-zipp-zgs-n8-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Aspiration",
+			"value": "Sans aspiration intégrée",
+			"evidenceIds": [
+				"ponceuse-orbitale-zipp-zgs-n8-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Vitesse publiée",
+			"value": "900 tr/min",
+			"evidenceIds": [
+				"ponceuse-orbitale-zipp-zgs-n8-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -94,6 +126,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-orbitale-zipp-zgs-n8-reserved-20261101-1",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=145",
+			"sourceLabel": "ZIPP : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Passage page=145. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -105,6 +147,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october-b-zipp-tools-p145"
+		],
+		"editorial": [
+			"ponceuse-orbitale-zipp-zgs-n8-reserved-20261101-1"
+		],
+		"specifications": [
+			"ponceuse-orbitale-zipp-zgs-n8-reserved-20261101-1"
 		]
 	},
 	"notes": [

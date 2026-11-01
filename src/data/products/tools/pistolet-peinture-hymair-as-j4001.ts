@@ -32,11 +32,12 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Hymair AS-J4001. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Capacité du godet : 1000 ml. Buse standard déclarée : 1.8 mm.",
+		"overview": "Hymair AS-J4001. La marque n’est pas déduite de l’hébergement du catalogue. La référence reste sous réserve d’identité, avec débit hors calcul et sans assimilation à un pistolet visuellement proche. Provenance de marque : Le document hébergé par Steed identifie AS-J4001 ; le rattachement à Hymair reste non confirmé.",
 		"verifiedFacts": [
 			"Capacité du godet : 1000 ml.",
 			"Buse standard déclarée : 1.8 mm.",
-			"Largeur de jet publiée : 280 mm."
+			"Largeur de jet publiée : 280 mm.",
+			"Provenance de marque : Le document hébergé par Steed identifie AS-J4001 ; le rattachement à Hymair reste non confirmé."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -78,6 +79,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-steed-7-p6"
 			]
+		},
+		{
+			"label": "Provenance de marque",
+			"value": "Le document hébergé par Steed identifie AS-J4001 ; le rattachement à Hymair reste non confirmé",
+			"evidenceIds": [
+				"pistolet-peinture-hymair-as-j4001-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -90,6 +98,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 971e9f3f662af10d3c638d5e9c29c8847ee04672c40e29957ad4ca4eb13d61c1. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "pistolet-peinture-hymair-as-j4001-reserved-20261101-1",
+			"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SZUfKpLkrMNq&dp=GvUApKfKKUAU#page=6",
+			"sourceLabel": "Hymair : revue factuelle du 1 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 971e9f3f662af10d3c638d5e9c29c8847ee04672c40e29957ad4ca4eb13d61c1. Passage page=6. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -101,6 +119,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-steed-7-p6"
+		],
+		"editorial": [
+			"pistolet-peinture-hymair-as-j4001-reserved-20261101-1"
+		],
+		"specifications": [
+			"pistolet-peinture-hymair-as-j4001-reserved-20261101-1"
 		]
 	},
 	"notes": [

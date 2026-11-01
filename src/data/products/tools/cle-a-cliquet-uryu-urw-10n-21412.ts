@@ -37,10 +37,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU URW-10N, code 21412. Le tableau publie une consommation moyenne de 0,7 m³/min, soit 700 L/min. Pression de service recommandée : 4 bar.",
+		"overview": "URYU URW-10N. URW-12N partage la moyenne 0,70 m³/min mais publie 59 Nm,145 tr/min,397 mm et 2,70 kg. La tête et les douilles prévues doivent être vérifiées ; une moyenne identique ne rend pas les versions interchangeables. Couple publié : 57 Nm. Vitesse à vide approximative : 155 tr/min. Longueur totale : 394 mm.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 21412, page PDF 1.",
-			"Consommation moyenne publiée : 700 L/min après conversion de l’unité originale."
+			"Consommation moyenne publiée : 700 L/min après conversion de l’unité originale.",
+			"Couple publié : 57 Nm.",
+			"Vitesse à vide approximative : 155 tr/min.",
+			"Longueur totale : 394 mm.",
+			"Masse : 2,65 kg.",
+			"Douilles métriques listées : 10, 12, 13, 14, 15, 16, 17, 18, 19 mm."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
@@ -76,6 +81,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-uryu-p35"
 			]
+		},
+		{
+			"label": "Couple publié",
+			"value": "57 Nm",
+			"evidenceIds": [
+				"cle-a-cliquet-uryu-urw-10n-21412-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide approximative",
+			"value": "155 tr/min",
+			"evidenceIds": [
+				"cle-a-cliquet-uryu-urw-10n-21412-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "394 mm",
+			"evidenceIds": [
+				"cle-a-cliquet-uryu-urw-10n-21412-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "2,65 kg",
+			"evidenceIds": [
+				"cle-a-cliquet-uryu-urw-10n-21412-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Douilles métriques listées",
+			"value": "10, 12, 13, 14, 15, 16, 17, 18, 19 mm",
+			"evidenceIds": [
+				"cle-a-cliquet-uryu-urw-10n-21412-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -98,6 +138,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-31",
 			"confidence": "B",
 			"notes": "SHA-256 4ef07a7843585c8812e74e00d36b3d928ce3793e180ffa30a9ea530ffaa7ab17. La table URYU distingue Average Consumption et Recommended Air Pressure. Nettoyer les lignes OCR répétées et qualifier la pression comme une recommandation de service, sans maximum en charge déduit."
+		},
+		{
+			"id": "cle-a-cliquet-uryu-urw-10n-21412-reserved-20261101-1",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P35.pdf",
+			"sourceLabel": "URYU : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 4ef07a7843585c8812e74e00d36b3d928ce3793e180ffa30a9ea530ffaa7ab17. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -112,6 +162,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-20260930-uryu-p35"
+		],
+		"editorial": [
+			"cle-a-cliquet-uryu-urw-10n-21412-reserved-20261101-1"
+		],
+		"specifications": [
+			"cle-a-cliquet-uryu-urw-10n-21412-reserved-20261101-1"
 		]
 	},
 	"notes": [

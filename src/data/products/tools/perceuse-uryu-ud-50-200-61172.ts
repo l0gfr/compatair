@@ -37,10 +37,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU UD-50-200, code 61172. Le tableau publie une consommation moyenne de 0,4 m³/min, soit 400 L/min. Pression de service recommandée : 6 bar.",
+		"overview": "URYU UD-50-200. UD-50-45 : capacité 6 mm,5000 tr/min,145 mm et 0,86 kg ; même moyenne 0,40 m³/min. Le régime rapide de UD-50-200 et sa capacité 3 mm répondent à un autre choix de perçage. Capacité de perçage publiée : 3 mm. Vitesse à vide approximative : 23 000 tr/min. Longueur totale : 135 mm.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 61172, page PDF 1.",
-			"Consommation moyenne publiée : 400 L/min après conversion de l’unité originale."
+			"Consommation moyenne publiée : 400 L/min après conversion de l’unité originale.",
+			"Capacité de perçage publiée : 3 mm.",
+			"Vitesse à vide approximative : 23 000 tr/min.",
+			"Longueur totale : 135 mm.",
+			"Masse : 0,70 kg.",
+			"Filetage de broche : 3/8-24 UNF."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
@@ -76,6 +81,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-uryu-p66-68"
 			]
+		},
+		{
+			"label": "Capacité de perçage publiée",
+			"value": "3 mm",
+			"evidenceIds": [
+				"perceuse-uryu-ud-50-200-61172-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide approximative",
+			"value": "23 000 tr/min",
+			"evidenceIds": [
+				"perceuse-uryu-ud-50-200-61172-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "135 mm",
+			"evidenceIds": [
+				"perceuse-uryu-ud-50-200-61172-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "0,70 kg",
+			"evidenceIds": [
+				"perceuse-uryu-ud-50-200-61172-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Filetage de broche",
+			"value": "3/8-24 UNF",
+			"evidenceIds": [
+				"perceuse-uryu-ud-50-200-61172-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -98,6 +138,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-31",
 			"confidence": "B",
 			"notes": "SHA-256 36cfc8fdae9f6c8df69d64bdd9f1a6047a1ad848e1c1ea528c04c0c20b07963d. La table URYU distingue Average Consumption et Recommended Air Pressure. Nettoyer les lignes OCR répétées et qualifier la pression comme une recommandation de service, sans maximum en charge déduit."
+		},
+		{
+			"id": "perceuse-uryu-ud-50-200-61172-reserved-20261101-1",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P66_68.pdf",
+			"sourceLabel": "URYU : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 36cfc8fdae9f6c8df69d64bdd9f1a6047a1ad848e1c1ea528c04c0c20b07963d. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -112,6 +162,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-20260930-uryu-p66-68"
+		],
+		"editorial": [
+			"perceuse-uryu-ud-50-200-61172-reserved-20261101-1"
+		],
+		"specifications": [
+			"perceuse-uryu-ud-50-200-61172-reserved-20261101-1"
 		]
 	},
 	"notes": [

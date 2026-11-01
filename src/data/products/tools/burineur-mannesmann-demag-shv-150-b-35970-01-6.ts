@@ -33,11 +33,13 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Mannesmann DEMAG SHV 150 B (réf. 35970-01-6). La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 1.45 kg. Référence fabricant : 35970-01-6.",
+		"overview": "Mannesmann DEMAG SHV 150 B. SHV150 et SHV150B partagent 9000 coups/min,210 mm et 1,45 kg. Le catalogue mentionne un soufflage disponible sur demande, sans l’attribuer explicitement au suffixe B. Cette fonction ne doit pas lui être attribuée par déduction. Configuration publiée : SHV 150 B, code 35970-01-6. Différence de version : La table ne distingue pas ses valeurs techniques de celles du SHV 150.",
 		"verifiedFacts": [
 			"Masse publiée : 1.45 kg.",
 			"Référence fabricant : 35970-01-6.",
-			"Longueur publiée : 210 mm."
+			"Longueur publiée : 210 mm.",
+			"Configuration publiée : SHV 150 B, code 35970-01-6.",
+			"Différence de version : La table ne distingue pas ses valeurs techniques de celles du SHV 150."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -80,6 +82,20 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-mannesmann-0-p66"
 			]
+		},
+		{
+			"label": "Configuration publiée",
+			"value": "SHV 150 B, code 35970-01-6",
+			"evidenceIds": [
+				"burineur-mannesmann-demag-shv-150-b-35970-01-6-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Différence de version",
+			"value": "La table ne distingue pas ses valeurs techniques de celles du SHV 150",
+			"evidenceIds": [
+				"burineur-mannesmann-demag-shv-150-b-35970-01-6-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -92,6 +108,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 9de8eb77aad6c7412b390db54a16646c71c0a4f9925ddf3ddfba1048b1779f3b. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "burineur-mannesmann-demag-shv-150-b-35970-01-6-reserved-20261101-1",
+			"sourceUrl": "https://www.mannesmann-demag.com/bilder-und-dateien/downloads/kataloge/md_airtools_05_2017_e.pdf?type=download#page=66",
+			"sourceLabel": "Mannesmann DEMAG : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 9de8eb77aad6c7412b390db54a16646c71c0a4f9925ddf3ddfba1048b1779f3b. Passage page=66. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -103,6 +129,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-mannesmann-0-p66"
+		],
+		"editorial": [
+			"burineur-mannesmann-demag-shv-150-b-35970-01-6-reserved-20261101-1"
+		],
+		"specifications": [
+			"burineur-mannesmann-demag-shv-150-b-35970-01-6-reserved-20261101-1"
 		]
 	},
 	"notes": [

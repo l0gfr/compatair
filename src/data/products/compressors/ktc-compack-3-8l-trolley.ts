@@ -18,12 +18,7 @@ const product: CompressorInput = {
 	},
 	"tankLiters": 8,
 	"maxPressureBar": 10,
-	"fadCurve": [
-		{
-			"pressureBar": 10,
-			"litersPerMinute": 380
-		}
-	],
+	"fadCurve": [],
 	"powerKw": 4,
 	"oilType": "unknown",
 	"confidence": "B",
@@ -57,13 +52,6 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Air livré à 10 bar",
-			"value": "380 L/min",
-			"evidenceIds": [
-				"october4-ktc-download-0-p3"
-			]
-		},
-		{
 			"label": "Puissance publiée",
 			"value": "4 kW",
 			"evidenceIds": [
@@ -76,18 +64,25 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october4-ktc-download-0-p3"
 			]
+		},
+		{
+			"label": "Débit déclaré, pression de mesure non appariée",
+			"value": "380 L/min",
+			"evidenceIds": [
+				"ktc-compack-3-8l-trolley-reserved-20261101-1"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "KTC COMPACK 3 8L Trolley. 380 L/min déclarés à 10 bar. COMPACK sur réservoir 8 L.",
+		"overview": "KTC COMPACK 3 8L Trolley. La table distingue une pression maximale ou de configuration et le débit déclaré, sans convention explicite qui apparie le FAD à ce point. Retrait du point calculé ; conservation des chiffres documentaires et des unités.",
 		"verifiedFacts": [
 			"Configuration de pression documentée : 10 bar.",
-			"Cuve de stockage documentée : 8 L.",
-			"FAD sous pression identifié séparément des valeurs d’aspiration : 380 L/min déclarés à 10 bar."
+			"Cuve de stockage documentée : 8 L."
 		],
 		"limitations": [
 			"Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil."
+			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
+			"La table distingue une pression maximale ou de configuration et le débit déclaré, sans convention explicite qui apparie le FAD à ce point. Retrait du point calculé ; conservation des chiffres documentaires et des unités."
 		]
 	},
 	"evidence": [
@@ -100,6 +95,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-04",
 			"confidence": "B",
 			"notes": "SHA-256 fb8e9e3d886333a85e6b0fd720cf06c451a2fc0826c8f816c536109d9bcb06ea de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "ktc-compack-3-8l-trolley-reserved-20261101-1",
+			"sourceUrl": "https://www.ktc-air.com/uploaded_files/attachments/202511171763374769/ktc_compack_2_3_smart_en.pdf#page=3",
+			"sourceLabel": "KTC : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 fb8e9e3d886333a85e6b0fd720cf06c451a2fc0826c8f816c536109d9bcb06ea. Passage page=3. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -113,13 +118,19 @@ const product: CompressorInput = {
 			"october4-ktc-download-0-p3"
 		],
 		"fadCurve": [
-			"october4-ktc-download-0-p3"
+			"ktc-compack-3-8l-trolley-reserved-20261101-1"
 		],
 		"powerKw": [
 			"october4-ktc-download-0-p3"
 		],
 		"mpn": [
 			"october4-ktc-download-0-p3"
+		],
+		"editorial": [
+			"ktc-compack-3-8l-trolley-reserved-20261101-1"
+		],
+		"specifications": [
+			"ktc-compack-3-8l-trolley-reserved-20261101-1"
 		]
 	},
 	"notes": [

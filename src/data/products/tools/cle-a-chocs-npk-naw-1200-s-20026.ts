@@ -37,11 +37,16 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "NPK NAW-1200(S), code 20026. Le tableau publie une consommation moyenne de 0,1 m³/min, soit 100 L/min. Pression de référence retenue : 6 bar.",
+		"overview": "NPK NAW-1200(S). NAW-1600HA(S) publie capacité 14 mm,5000 tr/min,282 mm et 3,6 kg. NAW-1200(S) est plus long et plus léger dans cette table ; aucun couple absent n’est déduit de la capacité de boulon. Carré de sortie : 12,7 mm (1/2\"). Capacité de boulon publiée : 12 mm. Vitesse à vide : 6 500 tr/min.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 20026, page PDF 6.",
 			"Consommation moyenne publiée : 100 L/min après conversion de l’unité originale.",
-			"Use appropriate air pressure (0.6 MPa at the tool), impact-wrench instructions, PDF page 4."
+			"Use appropriate air pressure (0.6 MPa at the tool), impact-wrench instructions, PDF page 4.",
+			"Carré de sortie : 12,7 mm (1/2\").",
+			"Capacité de boulon publiée : 12 mm.",
+			"Vitesse à vide : 6 500 tr/min.",
+			"Longueur totale : 364 mm.",
+			"Masse : 3,0 kg."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
@@ -76,6 +81,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-npk-2026"
 			]
+		},
+		{
+			"label": "Carré de sortie",
+			"value": "12,7 mm (1/2\")",
+			"evidenceIds": [
+				"cle-a-chocs-npk-naw-1200-s-20026-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Capacité de boulon publiée",
+			"value": "12 mm",
+			"evidenceIds": [
+				"cle-a-chocs-npk-naw-1200-s-20026-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "6 500 tr/min",
+			"evidenceIds": [
+				"cle-a-chocs-npk-naw-1200-s-20026-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "364 mm",
+			"evidenceIds": [
+				"cle-a-chocs-npk-naw-1200-s-20026-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "3,0 kg",
+			"evidenceIds": [
+				"cle-a-chocs-npk-naw-1200-s-20026-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -88,6 +128,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 bd5e6718ea1d625e053449706fd6e72b801cd772ef6c74826614889dfb8ca90c. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		},
+		{
+			"id": "cle-a-chocs-npk-naw-1200-s-20026-reserved-20261101-1",
+			"sourceUrl": "https://www.npk-en.com/app/download/10804376570/NPK_air_tool_catologue_apr2026.pdf?t=1777353985",
+			"sourceLabel": "NPK : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 bd5e6718ea1d625e053449706fd6e72b801cd772ef6c74826614889dfb8ca90c. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -102,6 +152,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-20260930-npk-2026"
+		],
+		"editorial": [
+			"cle-a-chocs-npk-naw-1200-s-20026-reserved-20261101-1"
+		],
+		"specifications": [
+			"cle-a-chocs-npk-naw-1200-s-20026-reserved-20261101-1"
 		]
 	},
 	"notes": [

@@ -29,11 +29,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZKJ211-2B-29. La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé. Cadence : 3700 coups/min. Masse : 2.8 kg.",
+		"overview": "ZIPP ZKJ211-2B-29. ZKJ211-2B-19 possède 19 aiguilles de 3×180 mm ; la 29 conserve 3700 coups/min et 2,8 kg mais travaille avec 29 aiguilles plus fines. ZKJ211A est la version Vacuum Type ; cette aspiration ne s’applique pas par défaut à la 2B-29. Faisceau d’aiguilles : 29 aiguilles de 2 × 180 mm. Cadence publiée : 3 700 coups/min. Longueur totale : 375 mm.",
 		"verifiedFacts": [
 			"Cadence : 3700 coups/min.",
 			"Masse : 2.8 kg.",
-			"Référence constructeur : ZKJ211-2B-29."
+			"Référence constructeur : ZKJ211-2B-29.",
+			"Faisceau d’aiguilles : 29 aiguilles de 2 × 180 mm.",
+			"Cadence publiée : 3 700 coups/min.",
+			"Longueur totale : 375 mm."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé.",
@@ -64,7 +67,7 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de pression originale",
-			"value": "Recommended air pressure must equal or below @90psi (6.2 bar). lAir Inlet Size: 1/4 inch-NPT/PT",
+			"value": "Recommended air pressure must equal or below @90 psi (6.2 bar). l Air Inlet Size: 1/4 inch-NPT/PT",
 			"evidenceIds": [
 				"october-b-zipp-tools-p166"
 			]
@@ -82,6 +85,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october-b-zipp-tools-p166"
 			]
+		},
+		{
+			"label": "Faisceau d’aiguilles",
+			"value": "29 aiguilles de 2 × 180 mm",
+			"evidenceIds": [
+				"derouilleur-a-aiguilles-zipp-zkj211-2b-29-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Cadence publiée",
+			"value": "3 700 coups/min",
+			"evidenceIds": [
+				"derouilleur-a-aiguilles-zipp-zkj211-2b-29-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "375 mm",
+			"evidenceIds": [
+				"derouilleur-a-aiguilles-zipp-zkj211-2b-29-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -94,6 +118,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "derouilleur-a-aiguilles-zipp-zkj211-2b-29-reserved-20261101-1",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=166",
+			"sourceLabel": "ZIPP : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Passage page=166. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -105,6 +139,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october-b-zipp-tools-p166"
+		],
+		"editorial": [
+			"derouilleur-a-aiguilles-zipp-zkj211-2b-29-reserved-20261101-1"
+		],
+		"specifications": [
+			"derouilleur-a-aiguilles-zipp-zkj211-2b-29-reserved-20261101-1"
 		]
 	},
 	"notes": [

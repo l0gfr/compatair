@@ -33,11 +33,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Mannesmann DEMAG G 100 H-200 (réf. 60009-37-5). La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse sans tuyau : 3.8 kg. Référence fabricant : 60009-37-5.",
+		"overview": "Mannesmann DEMAG G 100 H-200. G100H-100 reçoit une extension 100 mm et mesure 623 mm pour 3,5 kg ; G100H-200 reçoit 200 mm et mesure 723 mm pour 3,8 kg. G101H-200 est la version à filetage M12, distincte de la pince 6 mm de G100H-200. Extension de la version : 200 mm. Pince standard : 6 mm. Longueur de la version G 100 H-200 : 723 mm.",
 		"verifiedFacts": [
 			"Masse sans tuyau : 3.8 kg.",
 			"Référence fabricant : 60009-37-5.",
-			"Vitesse à vide : 10 000 tr/min."
+			"Vitesse à vide : 10 000 tr/min.",
+			"Extension de la version : 200 mm.",
+			"Pince standard : 6 mm.",
+			"Longueur de la version G 100 H-200 : 723 mm.",
+			"Masse sans flexible : 3,8 kg."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -80,6 +84,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-mannesmann-0-p16"
 			]
+		},
+		{
+			"label": "Extension de la version",
+			"value": "200 mm",
+			"evidenceIds": [
+				"meuleuse-mannesmann-demag-g-100-h-200-60009-37-5-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Pince standard",
+			"value": "6 mm",
+			"evidenceIds": [
+				"meuleuse-mannesmann-demag-g-100-h-200-60009-37-5-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur de la version G 100 H-200",
+			"value": "723 mm",
+			"evidenceIds": [
+				"meuleuse-mannesmann-demag-g-100-h-200-60009-37-5-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Masse sans flexible",
+			"value": "3,8 kg",
+			"evidenceIds": [
+				"meuleuse-mannesmann-demag-g-100-h-200-60009-37-5-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -92,6 +124,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 9de8eb77aad6c7412b390db54a16646c71c0a4f9925ddf3ddfba1048b1779f3b. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "meuleuse-mannesmann-demag-g-100-h-200-60009-37-5-reserved-20261101-1",
+			"sourceUrl": "https://www.mannesmann-demag.com/bilder-und-dateien/downloads/kataloge/md_airtools_05_2017_e.pdf?type=download#page=16",
+			"sourceLabel": "Mannesmann DEMAG : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 9de8eb77aad6c7412b390db54a16646c71c0a4f9925ddf3ddfba1048b1779f3b. Passage page=16. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -103,6 +145,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-mannesmann-0-p16"
+		],
+		"editorial": [
+			"meuleuse-mannesmann-demag-g-100-h-200-60009-37-5-reserved-20261101-1"
+		],
+		"specifications": [
+			"meuleuse-mannesmann-demag-g-100-h-200-60009-37-5-reserved-20261101-1"
 		]
 	},
 	"notes": [

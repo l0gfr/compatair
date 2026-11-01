@@ -37,10 +37,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU US-3.5A, code 41012. Le tableau publie une consommation moyenne de 0,2 m³/min, soit 200 L/min. Pression de service recommandée : 4 bar.",
+		"overview": "URYU US-3.5A. US-3.5B utilise un embout 6,35 mm et mesure 214 mm pour 0,63 kg. US-3.5A est bien la sortie 5,00 mm ; ne pas transférer l’embout 1/4 pouce de la version B. La moyenne 0,20 m³/min est commune. Capacité de vis publiée : 4 mm (No.8). Vitesse à vide approximative : 2 000 tr/min. Longueur sans embout : 196 mm.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 41012, page PDF 1.",
-			"Consommation moyenne publiée : 200 L/min après conversion de l’unité originale."
+			"Consommation moyenne publiée : 200 L/min après conversion de l’unité originale.",
+			"Capacité de vis publiée : 4 mm (No.8).",
+			"Vitesse à vide approximative : 2 000 tr/min.",
+			"Longueur sans embout : 196 mm.",
+			"Masse sans embout : 0,60 kg.",
+			"Hexagone de l’embout : 5,00 mm."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
@@ -76,6 +81,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-uryu-p52-54"
 			]
+		},
+		{
+			"label": "Capacité de vis publiée",
+			"value": "4 mm (No.8)",
+			"evidenceIds": [
+				"visseuse-uryu-us-3-5a-41012-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide approximative",
+			"value": "2 000 tr/min",
+			"evidenceIds": [
+				"visseuse-uryu-us-3-5a-41012-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur sans embout",
+			"value": "196 mm",
+			"evidenceIds": [
+				"visseuse-uryu-us-3-5a-41012-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Masse sans embout",
+			"value": "0,60 kg",
+			"evidenceIds": [
+				"visseuse-uryu-us-3-5a-41012-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Hexagone de l’embout",
+			"value": "5,00 mm",
+			"evidenceIds": [
+				"visseuse-uryu-us-3-5a-41012-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -98,6 +138,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-31",
 			"confidence": "B",
 			"notes": "SHA-256 15cc571b3d9bc9b5a4542ac02a3a00b86fd1d9f6b42e32a6d6aae70d357b8ae5. La table URYU distingue Average Consumption et Recommended Air Pressure. Nettoyer les lignes OCR répétées et qualifier la pression comme une recommandation de service, sans maximum en charge déduit."
+		},
+		{
+			"id": "visseuse-uryu-us-3-5a-41012-reserved-20261101-1",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P52_54.pdf",
+			"sourceLabel": "URYU : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 15cc571b3d9bc9b5a4542ac02a3a00b86fd1d9f6b42e32a6d6aae70d357b8ae5. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -112,6 +162,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-20260930-uryu-p52-54"
+		],
+		"editorial": [
+			"visseuse-uryu-us-3-5a-41012-reserved-20261101-1"
+		],
+		"specifications": [
+			"visseuse-uryu-us-3-5a-41012-reserved-20261101-1"
 		]
 	},
 	"notes": [

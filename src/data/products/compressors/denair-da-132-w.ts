@@ -19,12 +19,7 @@ const product: CompressorInput = {
   },
   "maxPressureBar": 7,
   "maxPressureBasis": "selected-working-pressure-ceiling",
-  "fadCurve": [
-    {
-      "pressureBar": 7,
-      "litersPerMinute": 24100
-    }
-  ],
+  "fadCurve": [],
   "oilType": "oil",
   "powerKw": 132,
   "confidence": "B",
@@ -36,17 +31,18 @@ const product: CompressorInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
   },
   "editorial": {
-    "overview": "DENAIR DA-132(W). 24 100 L/min déclarés à 7 bar. Configuration constructeur : DA-132(W).",
+    "overview": "DENAIR DA-132(W). La table distingue une pression maximale ou de configuration et le débit déclaré, sans convention explicite qui apparie le FAD à ce point. Retrait du point calculé ; conservation des chiffres documentaires et des unités.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 7 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 24 100 L/min déclarés à 7 bar."
+      "Débit publié dans la documentation : 24100 L/min. Les limites de qualification du profil restent applicables."
     ],
     "limitations": [
       "Point documenté pour la variante 50 Hz et cette pression ; aucune disponibilité française déduite. Cuve et cycle de marche non chiffrés.",
       "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
       "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
       "Cuve non documentée : l’autonomie et le volume de stockage ne peuvent pas être conclus à partir de ce profil.",
-      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions."
+      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions.",
+      "La table distingue une pression maximale ou de configuration et le débit déclaré, sans convention explicite qui apparie le FAD à ce point. Retrait du point calculé ; conservation des chiffres documentaires et des unités."
     ]
   },
   "specifications": [
@@ -72,13 +68,6 @@ const product: CompressorInput = {
       ]
     },
     {
-      "label": "Air livré à 7 bar",
-      "value": "24 100 L/min",
-      "evidenceIds": [
-        "october5-denair-screw-p6"
-      ]
-    },
-    {
       "label": "Puissance publiée",
       "value": "132 kW",
       "evidenceIds": [
@@ -90,6 +79,13 @@ const product: CompressorInput = {
       "value": "50 Hz",
       "evidenceIds": [
         "october5-denair-screw-p6"
+      ]
+    },
+    {
+      "label": "Débit déclaré, pression de mesure non appariée",
+      "value": "24100 L/min",
+      "evidenceIds": [
+        "denair-da-132-w-reserved-20261101-1"
       ]
     }
   ],
@@ -113,6 +109,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-05",
       "confidence": "B",
       "notes": "SHA-256 855ce551cd3fa5294b576c1865d99fbb9c2ae58ee346ac5459d24fd79899b9ad de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "denair-da-132-w-reserved-20261101-1",
+      "sourceUrl": "https://www.denair.net/uploads/DENAIR_Screw_Air_Compressor.pdf#page=6",
+      "sourceLabel": "DENAIR : revue factuelle du 1 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-01",
+      "confidence": "B",
+      "notes": "Corps complet GET HTTP200 SHA-256 855ce551cd3fa5294b576c1865d99fbb9c2ae58ee346ac5459d24fd79899b9ad. Passage page=6. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
     }
   ],
   "fieldSources": {
@@ -126,13 +132,19 @@ const product: CompressorInput = {
       "october5-denair-screw-p6"
     ],
     "fadCurve": [
-      "october5-denair-screw-p6"
+      "denair-da-132-w-reserved-20261101-1"
     ],
     "powerKw": [
       "october5-denair-screw-p6"
     ],
     "oilType": [
       "october5-denair-screw-p1"
+    ],
+    "editorial": [
+      "denair-da-132-w-reserved-20261101-1"
+    ],
+    "specifications": [
+      "denair-da-132-w-reserved-20261101-1"
     ]
   },
   "notes": [

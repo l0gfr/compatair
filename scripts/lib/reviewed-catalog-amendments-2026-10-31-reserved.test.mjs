@@ -9,8 +9,10 @@ import { toolCategoryLabel } from '../../src/data/taxonomy';
 import { createRuntimeCatalog } from '../../src/domain/runtime-catalog';
 import { evaluateCompatibility } from '../../server/air-compatibility.mjs';
 import { technicalCardSvg } from './technical-card.mjs';
+import { beforeReservedNovember1Followup } from './reviewed-catalog-amendments-2026-11-01-reserved.mjs';
 const snapshot = JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-10-31-reserved.json', import.meta.url)));
-const native = row => parseCatalogProductSource(row.kind, readFileSync(new URL('../../' + row.file, import.meta.url), 'utf8'));
+const native = row => beforeReservedNovember1Followup(parseCatalogProductSource(row.kind, readFileSync(new URL('../../' + row.file, import.meta.url), 'utf8')));
+const laterCards = JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-11-01-reserved.json', import.meta.url))).technicalCards;
 describe('October31 reserved candidate factual followup', () => {
  it('binds every changed technical card to its current record and exact dated byte proof', () => {
   const products = new Map(snapshot.rows.map(row => { const p = native(row); return [p.image.src, { kind: row.kind, product: p }]; }));
@@ -19,11 +21,20 @@ describe('October31 reserved candidate factual followup', () => {
    const current = products.get(card.path);
    expect(current, card.path).toBeDefined();
    const bytes = readFileSync(new URL('../../public' + card.path, import.meta.url));
-   expect(createHash('sha256').update(bytes).digest('hex'), card.path).toBe(card.afterSha256);
-   expect(bytes.length, card.path).toBe(card.afterBytes);
+   const later = laterCards.find(proof => proof.path === card.path);
+   if (later) {
+    expect(later.beforeSha256, card.path).toBe(card.afterSha256);
+    expect(later.beforeBytes, card.path).toBe(card.afterBytes);
+   }
+   expect(createHash('sha256').update(bytes).digest('hex'), card.path).toBe(later?.afterSha256 ?? card.afterSha256);
+   expect(bytes.length, card.path).toBe(later?.afterBytes ?? card.afterBytes);
    expect(bytes.length, card.path).toBeLessThanOrEqual(250 * 1024);
    expect(card.beforeSha256, card.path).not.toBe(card.afterSha256);
-   if (card.path.endsWith('.svg')) expect(bytes.toString('utf8'), card.path).toBe(technicalCardSvg(current.product, current.kind));
+   if (card.path.endsWith('.svg')) {
+    const datedSvg = technicalCardSvg(current.product, current.kind);
+    expect(createHash('sha256').update(datedSvg).digest('hex'), card.path).toBe(card.afterSha256);
+    if (!later) expect(bytes.toString('utf8'), card.path).toBe(datedSvg);
+   }
   }
  });
  it('replays all241 exact records, preserves evidence and rejects identity, field or deletion drift', () => {
@@ -44,7 +55,9 @@ describe('October31 reserved candidate factual followup', () => {
    const ids = new Set(after.evidence.map(e => e.id));
    for (const refs of Object.values(after.fieldSources)) for (const id of refs) expect(ids.has(id), row.id).toBe(true);
    const schema = row.kind === 'tools' ? toolProfileSchema : compressorSchema;
-   const parsed = schema.parse(after), current = (row.kind === 'tools' ? tools : compressors).find(p => p.id === row.id);
+   const parsed = schema.parse(after), currentRecord = (row.kind === 'tools' ? tools : compressors).find(p => p.id === row.id);
+   const current = { ...beforeReservedNovember1Followup(currentRecord) };
+   if (row.kind === 'tools') current.category = toolCategoryLabel(parsed.categoryId);
    for (const key of Object.keys(after)) expect(Object.hasOwn(parsed, key), row.id + '/ignored-field/' + key).toBe(true);
    if (after.demandModel === 'fixed-flow' && after.airflowBasis !== before.airflowBasis) {
     const flowFacts = after.editorial.verifiedFacts.filter(fact => /consommation|débit/i.test(fact)).join(' ');

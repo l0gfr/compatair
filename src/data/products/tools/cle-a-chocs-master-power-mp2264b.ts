@@ -29,10 +29,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Master Power MP2264B. Le tableau établit la référence et ses caractéristiques mécaniques. La consommation n’est pas associée à un point de pression et un régime suffisants pour le calcul. Fonction dans le catalogue : cle-a-chocs. Caractéristiques du tableau constructeur : MP2264B 1/4” Hex Quick Change 14-122 150 10000 84 91 2000 2,2 0,98 152 4 16 1/4” 10.",
+		"overview": "Master Power MP2264B. MP2265B partage 14–122 Nm de plage,150 Nm maximum et 10000 tr/min, mais reçoit une sortie carrée 3/8 pouce avec retenue Pin-Detent. MP2264B est la version hexagonale à changement rapide ; une même consommation ne rend pas les sorties interchangeables. Sortie : Hexagone 1/4 pouce, changement rapide. Couple maximal publié : 150 Nm. Vitesse à vide : 10 000 tr/min.",
 		"verifiedFacts": [
 			"Fonction dans le catalogue : cle-a-chocs.",
-			"Caractéristiques du tableau constructeur : MP2264B 1/4” Hex Quick Change 14-122 150 10000 84 91 2000 2,2 0,98 152 4 16 1/4” 10."
+			"Caractéristiques du tableau constructeur : MP2264B 1/4” Hex Quick Change 14-122 150 10000 84 91 2000 2,2 0,98 152 4 16 1/4” 10.",
+			"Sortie : Hexagone 1/4 pouce, changement rapide.",
+			"Couple maximal publié : 150 Nm.",
+			"Vitesse à vide : 10 000 tr/min.",
+			"Longueur totale : 152 mm.",
+			"Masse : 0,98 kg."
 		],
 		"limitations": [
 			"Le tableau établit la référence et ses caractéristiques mécaniques. La consommation n’est pas associée à un point de pression et un régime suffisants pour le calcul.",
@@ -61,6 +66,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-cleco-gi1250-pdf-p63"
 			]
+		},
+		{
+			"label": "Sortie",
+			"value": "Hexagone 1/4 pouce, changement rapide",
+			"evidenceIds": [
+				"cle-a-chocs-master-power-mp2264b-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Couple maximal publié",
+			"value": "150 Nm",
+			"evidenceIds": [
+				"cle-a-chocs-master-power-mp2264b-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "10 000 tr/min",
+			"evidenceIds": [
+				"cle-a-chocs-master-power-mp2264b-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "152 mm",
+			"evidenceIds": [
+				"cle-a-chocs-master-power-mp2264b-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "0,98 kg",
+			"evidenceIds": [
+				"cle-a-chocs-master-power-mp2264b-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -73,6 +113,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 8668d5e77a6b2469dc9b9012841e65bbfb947234a8087faa6fdd90384b3babac. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-chocs-master-power-mp2264b-reserved-20261101-1",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=63",
+			"sourceLabel": "Master Power : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 8668d5e77a6b2469dc9b9012841e65bbfb947234a8087faa6fdd90384b3babac. Passage page=63. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -84,6 +134,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-cleco-gi1250-pdf-p63"
+		],
+		"editorial": [
+			"cle-a-chocs-master-power-mp2264b-reserved-20261101-1"
+		],
+		"specifications": [
+			"cle-a-chocs-master-power-mp2264b-reserved-20261101-1"
 		]
 	},
 	"notes": [

@@ -29,10 +29,16 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "JET J-1700P (réf. 505983). Les caractéristiques mécaniques sont documentées ; aucune consommation n’est associée à une pression de mesure et à un régime suffisant pour le calcul. Masse publiée : 7 lbs. Ligne technique constructeur : 505983 J-1700p 1/2 5/8 ring 407 82-325 6500 23 1/4 3/8 3.2 7 7.",
+		"overview": "JET J-1700P. J-2000P utilise un carré 3/4 pouce,5500 tr/min et une longueur 8-7/8 pouces, contre 1/2 pouce,6500 tr/min et 7 pouces pour J-1700P. Le couple de travail 82–325 ft-lb reste distinct du maximum 407 ft-lb. Carré de sortie : 1/2 pouce. Retenue de douille : Bague (Ring). Plage de couple de travail publiée : 82–325 ft-lb.",
 		"verifiedFacts": [
 			"Masse publiée : 7 lbs.",
-			"Ligne technique constructeur : 505983 J-1700p 1/2 5/8 ring 407 82-325 6500 23 1/4 3/8 3.2 7 7."
+			"Ligne technique constructeur : 505983 J-1700 p 1/2 5/8 ring 407 82-325 6500 23 1/4 3/8 3.2 7 7.",
+			"Carré de sortie : 1/2 pouce.",
+			"Retenue de douille : Bague (Ring).",
+			"Plage de couple de travail publiée : 82–325 ft-lb.",
+			"Couple maximal publié : 407 ft-lb.",
+			"Vitesse à vide : 6 500 tr/min.",
+			"Longueur totale : 7 pouces."
 		],
 		"limitations": [
 			"Les caractéristiques mécaniques sont documentées ; aucune consommation n’est associée à une pression de mesure et à un régime suffisant pour le calcul.",
@@ -50,7 +56,7 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Ligne technique constructeur",
-			"value": "505983 J-1700p 1/2 5/8 ring 407 82-325 6500 23 1/4 3/8 3.2 7 7",
+			"value": "505983 J-1700 p 1/2 5/8 ring 407 82-325 6500 23 1/4 3/8 3.2 7 7",
 			"evidenceIds": [
 				"october2b-tools-oct2b-jet-catalog-pdf-p55"
 			]
@@ -60,6 +66,48 @@ const product: ToolProfileInput = {
 			"value": "La pression de mesure de la consommation de la ligne n’est pas établie.",
 			"evidenceIds": [
 				"october2b-tools-oct2b-jet-catalog-pdf-p55"
+			]
+		},
+		{
+			"label": "Carré de sortie",
+			"value": "1/2 pouce",
+			"evidenceIds": [
+				"cle-a-chocs-jet-j-1700p-505983-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Retenue de douille",
+			"value": "Bague (Ring)",
+			"evidenceIds": [
+				"cle-a-chocs-jet-j-1700p-505983-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Plage de couple de travail publiée",
+			"value": "82–325 ft-lb",
+			"evidenceIds": [
+				"cle-a-chocs-jet-j-1700p-505983-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Couple maximal publié",
+			"value": "407 ft-lb",
+			"evidenceIds": [
+				"cle-a-chocs-jet-j-1700p-505983-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "6 500 tr/min",
+			"evidenceIds": [
+				"cle-a-chocs-jet-j-1700p-505983-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "7 pouces",
+			"evidenceIds": [
+				"cle-a-chocs-jet-j-1700p-505983-reserved-20261101-1"
 			]
 		}
 	],
@@ -73,6 +121,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 9381736270fc03a7d3233abbb4c97f401cc4f8f453822e2b9eabc85c4e4f6ec6. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-chocs-jet-j-1700p-505983-reserved-20261101-1",
+			"sourceUrl": "https://d29c95q8mcesvj.cloudfront.net/wysiwyg/pdf/414700_Catalog.pdf#page=55",
+			"sourceLabel": "JET : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 9381736270fc03a7d3233abbb4c97f401cc4f8f453822e2b9eabc85c4e4f6ec6. Passage page=55. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -84,6 +142,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-jet-catalog-pdf-p55"
+		],
+		"editorial": [
+			"cle-a-chocs-jet-j-1700p-505983-reserved-20261101-1"
+		],
+		"specifications": [
+			"cle-a-chocs-jet-j-1700p-505983-reserved-20261101-1"
 		]
 	},
 	"notes": [

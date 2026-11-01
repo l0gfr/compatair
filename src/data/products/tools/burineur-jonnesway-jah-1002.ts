@@ -29,13 +29,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Jonnesway JAH-1002. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Piston Diameter (I.D.) : 1-1/8\" (28.5mm). Piston Stroke Length : 3.03\" (77mm).",
+		"overview": "Jonnesway JAH-1002. JAH-1002H utilise une queue hexagonale 14,7 mm ; JAH-1002 utilise la queue ronde 17,3 mm. La forme et le diamètre du porte-outil priment sur les cotes communes du marteau. Queue d’outil : Ronde, 17,3 mm.",
 		"verifiedFacts": [
-			"Piston Diameter (I.D.) : 1-1/8\" (28.5mm).",
-			"Piston Stroke Length : 3.03\" (77mm).",
+			"Piston Diameter (I.D.) : 1-1/8\" (28.5 mm).",
+			"Piston Stroke Length : 3.03\" (77 mm).",
 			"Overall Length : 9.5\" (241 mm).",
 			"Air Inlet Size : 3/8\".",
-			"Air Hose (I.D.) : 3/8\"."
+			"Air Hose (I.D.) : 3/8\".",
+			"Queue d’outil : Ronde, 17,3 mm."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -45,14 +46,14 @@ const product: ToolProfileInput = {
 	"specifications": [
 		{
 			"label": "Piston Diameter (I.D.)",
-			"value": "1-1/8\" (28.5mm)",
+			"value": "1-1/8\" (28.5 mm)",
 			"evidenceIds": [
 				"october2-tools-jonnes-cat-28-pdp-52-spec47-p1"
 			]
 		},
 		{
 			"label": "Piston Stroke Length",
-			"value": "3.03\" (77mm)",
+			"value": "3.03\" (77 mm)",
 			"evidenceIds": [
 				"october2-tools-jonnes-cat-28-pdp-52-spec47-p1"
 			]
@@ -91,6 +92,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-jonnes-cat-28-pdp-52-spec47-p1"
 			]
+		},
+		{
+			"label": "Queue d’outil",
+			"value": "Ronde, 17,3 mm",
+			"evidenceIds": [
+				"burineur-jonnesway-jah-1002-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -103,6 +111,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 6f0a81584f695a501c66e7df42d497d0f6dec8b97219698d9342d8b1deadbc46. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "burineur-jonnesway-jah-1002-reserved-20261101-1",
+			"sourceUrl": "https://www.jonnesway.com/pImages/JAH-1002%201002H_666.jpg",
+			"sourceLabel": "Jonnesway : revue factuelle du 1 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 6f0a81584f695a501c66e7df42d497d0f6dec8b97219698d9342d8b1deadbc46. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -114,6 +132,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-jonnes-cat-28-pdp-52-spec47-p1"
+		],
+		"editorial": [
+			"burineur-jonnesway-jah-1002-reserved-20261101-1"
+		],
+		"specifications": [
+			"burineur-jonnesway-jah-1002-reserved-20261101-1"
 		]
 	},
 	"notes": [

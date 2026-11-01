@@ -29,11 +29,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZAC-30540. La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé. Vitesse à vide : 14000 tr/min. Masse : 1.4 kg.",
+		"overview": "ZIPP ZAC-30540. ZAC-305640 accepte 4-1/2 pouces, contre 4 pouces pour ZAC-30540. Les deux lignes partagent 345 mm,14000 tr/min et 1,4 kg ; le diamètre autorisé reste propre à la référence. Diamètre de disque : 4 pouces. Longueur totale : 345 mm. Hauteur de tête publiée : 39 mm.",
 		"verifiedFacts": [
 			"Vitesse à vide : 14000 tr/min.",
 			"Masse : 1.4 kg.",
-			"Référence constructeur : ZAC-30540."
+			"Référence constructeur : ZAC-30540.",
+			"Diamètre de disque : 4 pouces.",
+			"Longueur totale : 345 mm.",
+			"Hauteur de tête publiée : 39 mm.",
+			"Vitesse à vide : 14 000 tr/min."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé.",
@@ -82,6 +86,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october-b-zipp-tools-p122"
 			]
+		},
+		{
+			"label": "Diamètre de disque",
+			"value": "4 pouces",
+			"evidenceIds": [
+				"tronconneuse-zipp-zac-30540-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "345 mm",
+			"evidenceIds": [
+				"tronconneuse-zipp-zac-30540-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Hauteur de tête publiée",
+			"value": "39 mm",
+			"evidenceIds": [
+				"tronconneuse-zipp-zac-30540-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "14 000 tr/min",
+			"evidenceIds": [
+				"tronconneuse-zipp-zac-30540-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -94,6 +126,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "tronconneuse-zipp-zac-30540-reserved-20261101-1",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=122",
+			"sourceLabel": "ZIPP : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Passage page=122. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -105,6 +147,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october-b-zipp-tools-p122"
+		],
+		"editorial": [
+			"tronconneuse-zipp-zac-30540-reserved-20261101-1"
+		],
+		"specifications": [
+			"tronconneuse-zipp-zac-30540-reserved-20261101-1"
 		]
 	},
 	"notes": [

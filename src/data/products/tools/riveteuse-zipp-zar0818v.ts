@@ -29,10 +29,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZAR0818V. La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé. Course publiée : 18 mm. Référence constructeur : ZAR0818V.",
+		"overview": "ZIPP ZAR0818 V. ZAR0818 est la version sans désignation Vacuum ; ZAR0818 V ajoute l’aspiration. ZAR0921 V publie 860 kgf et 19 mm, contre 800 kgf et 18 mm pour 0818 V. La table ne donne pas de volume par course pour 0818 V ; le 0,03 cu.ft de 0921 ne lui est pas transféré. Collecte des rivets : Version avec aspiration (Vacuum). Force de traction publiée : 800 kgf (1763 lbf publiés). Course : 18 mm.",
 		"verifiedFacts": [
 			"Course publiée : 18 mm.",
-			"Référence constructeur : ZAR0818V."
+			"Référence constructeur : ZAR0818 V.",
+			"Collecte des rivets : Version avec aspiration (Vacuum).",
+			"Force de traction publiée : 800 kgf (1763 lbf publiés).",
+			"Course : 18 mm.",
+			"Embouts listés : 2,4 ; 3,2 ; 4,0 ; 4,8 mm."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé.",
@@ -49,7 +53,7 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Référence constructeur",
-			"value": "ZAR0818V",
+			"value": "ZAR0818 V",
 			"evidenceIds": [
 				"october-b-zipp-tools-p49"
 			]
@@ -67,6 +71,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october-b-zipp-tools-p49"
 			]
+		},
+		{
+			"label": "Collecte des rivets",
+			"value": "Version avec aspiration (Vacuum)",
+			"evidenceIds": [
+				"riveteuse-zipp-zar0818v-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Force de traction publiée",
+			"value": "800 kgf (1763 lbf publiés)",
+			"evidenceIds": [
+				"riveteuse-zipp-zar0818v-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Course",
+			"value": "18 mm",
+			"evidenceIds": [
+				"riveteuse-zipp-zar0818v-reserved-20261101-1"
+			]
+		},
+		{
+			"label": "Embouts listés",
+			"value": "2,4 ; 3,2 ; 4,0 ; 4,8 mm",
+			"evidenceIds": [
+				"riveteuse-zipp-zar0818v-reserved-20261101-1"
+			]
 		}
 	],
 	"evidence": [
@@ -79,6 +111,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "riveteuse-zipp-zar0818v-reserved-20261101-1",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=49",
+			"sourceLabel": "ZIPP : revue factuelle du 1 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-01",
+			"confidence": "B",
+			"notes": "Corps complet GET HTTP200 SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Passage page=49. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
 		}
 	],
 	"fieldSources": {
@@ -90,6 +132,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october-b-zipp-tools-p49"
+		],
+		"editorial": [
+			"riveteuse-zipp-zar0818v-reserved-20261101-1"
+		],
+		"specifications": [
+			"riveteuse-zipp-zar0818v-reserved-20261101-1"
 		]
 	},
 	"notes": [
