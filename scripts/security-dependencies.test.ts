@@ -461,23 +461,35 @@ describe('installed dependency security boundaries', () => {
 		`);
 	});
 
-	it('bounds nested, repeated and wide brace groups without losing ordinary expansion', () => {
-		checkInstalledDependency('@lhci/cli/package.json', ['chrome-launcher', 'rimraf', 'glob', 'minimatch'], 'brace-expansion', `
-			const { expand } = library;
-			assert.deepEqual(expand('src/{a,b}.md'), ['src/a.md', 'src/b.md']);
-			const patterns = [
-				'{a,'.repeat(4_000) + 'z' + '}'.repeat(4_000),
-				'{'.repeat(3_200) + 'a,b' + '}'.repeat(3_200),
-				'{' + '{a},'.repeat(8_000) + 'b}',
-				'{{x},' + 'a,'.repeat(125_000) + 'b}',
-				'{a}' + '}'.repeat(64_000) + ',z}',
-			];
-			for (const pattern of patterns) {
-				const result = expand(pattern, { max: 10, maxLength: 1_024 });
-				assert.ok(Array.isArray(result));
-				assert.ok(result.length <= 10);
-			}
-		`);
+	it('uses patched qs serialization through both Lighthouse Express paths', () => {
+		for (const chain of [['express'], ['express', 'body-parser']]) {
+			checkInstalledDependency('@lhci/cli/package.json', chain, 'qs', `
+				assert.equal(installedVersion('qs'), '6.16.1');
+				for (const { options, expected } of [
+					{ options: { arrayFormat: 'comma' }, expected: 'a=x%2Cy' },
+					{ options: { arrayFormat: 'comma', encodeValuesOnly: true }, expected: 'a=x,y' },
+				]) {
+					assert.doesNotThrow(() => library.stringify(JSON.parse('{"a":[{"toString":"x"}]}'), options));
+					assert.equal(library.stringify({ a: ['x', 'y'] }, options), expected);
+				}
+			`);
+		}
+	});
+
+	it('keeps the Lighthouse launcher API while removing the legacy minimatch chain', () => {
+		const root = createRequire(pathToFileURL(join(process.cwd(), 'package.json')));
+		const lhci = createRequire(root.resolve('@lhci/cli/package.json'));
+		const launcherManifest = JSON.parse(readFileSync(lhci.resolve('chrome-launcher/package.json'), 'utf8'));
+		const launcher = lhci('chrome-launcher');
+		const lockfile = readFileSync(join(process.cwd(), 'pnpm-lock.yaml'), 'utf8');
+
+		assert.equal(launcherManifest.version, '0.15.2');
+		assert.equal(launcherManifest.dependencies?.rimraf, undefined);
+		assert.equal(typeof launcher.Launcher?.getInstallations, 'function');
+		assert.equal(typeof launcher.launch, 'function');
+		assert.doesNotMatch(lockfile, /^  minimatch@/m);
+		assert.doesNotMatch(lockfile, /^  glob@7\.2\.3:/m);
+		assert.doesNotMatch(lockfile, /^  rimraf@3\.0\.2:/m);
 	});
 
 	it('normalizes percent-encoded uppercase hosts in scheme-relative URIs', () => {

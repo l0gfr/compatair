@@ -12,11 +12,11 @@ const RECENT_WINDOW_MS = 72 * 60 * 60 * 1000;
 const EXPECTED_BUILD_ALLOWLIST = new Set(['esbuild']);
 const DISALLOWED_LOCKED_PACKAGES = new Set(['extract-zip']);
 const EXPECTED_OVERRIDES = new Map([
+  ['@lhci/cli@0.15.1>chrome-launcher', '0.15.2'],
   ['@lhci/utils@0.15.1>js-yaml', '4.3.2'],
   ['@puppeteer/browsers', '3.2.0'],
   ['basic-ftp', '6.2.1'],
   ['body-parser@1', '1.20.9'],
-  ['brace-expansion', '5.0.12'],
   ['compression', '1.8.2'],
   ['devalue', '5.9.3'],
   ['fast-uri', '3.1.9'],
@@ -26,7 +26,7 @@ const EXPECTED_OVERRIDES = new Map([
   ['js-yaml@4', '4.3.2'],
   ['nanoid@3', '3.3.18'],
   ['postcss', '8.5.23'],
-  ['qs', '6.16.0'],
+  ['qs', '6.16.1'],
   ['proxy-addr', '2.0.8'],
   ['smol-toml', '1.9.0'],
   ['source-map-js', '1.2.2'],
