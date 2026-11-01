@@ -20,6 +20,8 @@ La sélection mécanique du vibreur reste une autre étape : ce guide ne déduit
 
 La [fiche technique Netter NCT](https://www.nettervibration.com/files/NetterVibration/Products/NCT/Documents/TD_NCT_EN.pdf) indique une plage de fonctionnement de **2 à 6 bar**, avec de l’air comprimé ou de l’azote filtré à **5 µm ou moins**, et un fonctionnement sans lubrification. Dans son tableau, le NCT 1 consomme **19 à 45 L/min** et le NCT 5 **93 à 284 L/min** sur cette plage de pression.
 
+Pour les **NCT 1 et NCT 2**, la [notice, page PDF 16](https://www.nettervibration.com/files/NetterVibration/Products/NCT/Documents/KBA_NCT_NCB_NCR-1882DE_EN.pdf#page=16), recommande **2 à 3 bar ou un fonctionnement par intervalles** : leurs fréquences élevées réduisent la durée de vie des roulements et augmentent le bruit. La plage du tableau ne constitue donc pas une recommandation de fonctionnement continu à 6 bar pour ces deux modèles.
+
 La fiche emploie L/min. Le tableau consulté ne suffit pas à transformer ces nombres en débit volumique à une autre référence : faites confirmer les conditions de référence pour les rapprocher du débit restitué d’un compresseur.
 
 <figure class="article-infographic article-infographic--compact">
