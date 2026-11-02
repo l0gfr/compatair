@@ -14,6 +14,19 @@ import { evidenceHistory } from '../../src/data/evidence-history';
 const snapshot = JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-11-01-reserved.json', import.meta.url)));
 const native = row => parseCatalogProductSource(row.kind, readFileSync(new URL('../../' + row.file, import.meta.url), 'utf8'));
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
+const ledgerBytesAtReview = (bytes, file, reviewedAt) => {
+ const key = file === 'config/indexation-editorial-reviews.json' ? 'reviews'
+  : file === 'config/indexation-qualifications.json' ? 'entries' : undefined;
+ if (!key) return bytes;
+ const cutoff = Date.parse(reviewedAt), ledger = JSON.parse(bytes);
+ if (!Number.isFinite(cutoff)) throw new Error('Invalid historical review time');
+ ledger[key] = ledger[key].filter(entry => {
+  const timestamp = Date.parse(entry.reviewedAt);
+  if (!Number.isFinite(timestamp)) throw new Error('Invalid ledger review time');
+  return timestamp <= cutoff;
+ });
+ return JSON.stringify(ledger, null, 2) + '\n';
+};
 describe('November1 factual corrections of reserved references', () => {
  it('accounts for the82 reserves without opening pages or rewriting a publication ledger', () => {
   const report = JSON.parse(readFileSync(new URL('../../docs/editorial/indexation-reserved-followup-2026-11-01.json', import.meta.url)));
@@ -22,10 +35,25 @@ describe('November1 factual corrections of reserved references', () => {
   expect(report.candidates.map(c => c.path).sort()).toEqual(original.pages.filter(p => p.decision !== 'approved').map(p => p.path).sort());
   expect(report.summary).toEqual({ 'ready-for-review': 65, 'needs-manufacturer-clarification': 7, 'needs-source-access': 7, 'rejected-duplicate': 2, 'needs-source-or-comparison': 1 });
   for (const page of report.candidates) expect(page.admissionDecision).toBe('not-admitted-by-this-followup');
-  for (const ledger of report.preservedLedgers) expect(digest(readFileSync(new URL('../../' + ledger.file, import.meta.url)))).toBe(ledger.sha256);
+  // The exact dated ledger remains immutable while later daily reviews append.
+  for (const ledger of report.preservedLedgers) expect(digest(ledgerBytesAtReview(readFileSync(new URL('../../' + ledger.file, import.meta.url), 'utf8'), ledger.file, report.reviewedAt))).toBe(ledger.sha256);
   expect(report.completeSourceAudit.scope.kind).toBe('inventory');
   expect(report.completeSourceAudit.summary).toMatchObject({ checked: 7521, broken: 10, unverified: 472, auditUnavailable: false });
   expect(report.completeSourceAudit.anomalies).toHaveLength(482);
+ });
+ it('retains the cutoff entry and detects historical mutations despite later appends', () => {
+  const cutoff = '2026-11-01T13:19:56.128Z';
+  for (const [file, key] of [['config/indexation-editorial-reviews.json', 'reviews'], ['config/indexation-qualifications.json', 'entries']]) {
+   const historical = { schemaVersion: 1, [key]: [{ reviewedAt: cutoff, note: 'historical proof' }] };
+   const bytes = JSON.stringify(historical, null, 2) + '\n';
+   const appended = { ...historical, [key]: [...historical[key], { reviewedAt: '2026-11-02T07:00:00.000Z', note: 'later review' }] };
+   expect(ledgerBytesAtReview(JSON.stringify(appended), file, cutoff)).toBe(bytes);
+   const changed = structuredClone(appended); changed[key][0].note = 'changed historical proof';
+   expect(digest(ledgerBytesAtReview(JSON.stringify(changed), file, cutoff))).not.toBe(digest(bytes));
+   const removed = { ...appended, [key]: appended[key].slice(1) };
+   expect(digest(ledgerBytesAtReview(JSON.stringify(removed), file, cutoff))).not.toBe(digest(bytes));
+   expect(() => ledgerBytesAtReview(JSON.stringify({ ...historical, [key]: [{ reviewedAt: 'invalid' }] }), file, cutoff)).toThrow('Invalid ledger review time');
+  }
  });
  it('explains the scope delta from exactly seven retired fixed-flow profiles', () => {
   const retired = snapshot.rows.filter(row => row.before.demandModel === 'fixed-flow' && row.after.demandModel === 'variable-volume');
