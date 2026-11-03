@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "measuredAt": "2026-11-03T20:33:34.245382+00:00",
+  "measurementScope": "Recompression of the existing signed production artifact, without a site build; the new candidate remains subject to every CI gate.",
+  "inputReleaseSha": "c582d5d3a14cc9bb51789f6ddd0fd22ad1b90d93",
+  "inputWorkflowRun": 41598946587,
+  "inputCompressedBytes": 200067732,
+  "outputCompressedBytes": 195919632,
+  "bytesSaved": 4148100,
+  "maximumArchiveBytes": 201326592,
+  "remainingBytes": 5406960,
+  "entryCount": 123518,
+  "regularFileCount": 74355,
+  "expandedFileBytes": 2037358934,
+  "perFileComparison": [
+    "path",
+    "type",
+    "mode",
+    "mtime",
+    "byteCount",
+    "sha256"
+  ],
+  "perFileInventorySha256": "646df8027ab24556fddfb799c7a3f640b3a492190ba1e16d7f995e61ef1014e3",
+  "allFileBytesAndMetadataIdentical": true,
+  "allDirectoryPathsAndModesPreserved": true,
+  "rootDirectoryMtime": {
+    "inputArchive": 1793693308,
+    "restoredInputDirectory": 1793736383,
+    "outputArchive": 1793736383,
+    "note": "The temporary root directory already has this mtime after the existing artifact restore. No file or child directory differs; compression preserves the timestamp of its restored input."
+  },
+  "compression": {
+    "threads": 1,
+    "lzma2Preset": 9,
+    "dictionaryMiB": 256,
+    "compressionMemoryLimitMiB": 5120,
+    "noAdjustment": true,
+    "reportedRequiredCompressionMiB": 2690,
+    "reportedRequiredDecompressionMiB": 257
+  },
+  "tools": {
+    "xz": "5.8.4",
+    "tar": "bsdtar 3.5.3"
+  },
+  "checks": {
+    "originalChecksum": true,
+    "xzIntegrity": true,
+    "exactEntryInventory": true,
+    "regeneratedOrderIdentical": true,
+    "targetedTestFiles": 4,
+    "targetedTests": 98,
+    "targetedResult": "passed",
+    "helperStrictTypeCheck": "passed with the existing Node 24 declarations"
+  },
+  "productionResultAtMeasurement": "Not deployed; the actual GNU tar archive for the candidate SHA must pass the unchanged 192 MiB CI ceiling."
+}

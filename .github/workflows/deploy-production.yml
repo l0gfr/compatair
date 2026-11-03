@@ -326,8 +326,13 @@ jobs:
           install -D -m 644 scripts/lib/rank-demand.mjs dist/_ops/lib/rank-demand.mjs
           install -D -m 644 scripts/lib/report-product-funnel.mjs dist/_ops/lib/report-product-funnel.mjs
           install -D -m 644 scripts/lib/report-acquisition.mjs dist/_ops/lib/report-acquisition.mjs
-          # Group neighboring pages and dataset formats in a stable order.
-          tar -C dist --sort=name -cf - . | xz -T2 -9 --lzma2=preset=9,dict=128MiB --memlimit-compress=5GiB --no-adjust > "compatair-${GITHUB_SHA}.tar.xz"
+          # Group all catalogue representations; preserve every other entry.
+          node scripts/production-archive-order.mjs dist > production-archive-files.list
+          # A single solid stream keeps matches across page and dataset boundaries.
+          # Preserve every tar byte, the 5 GiB memory cap and the 192 MiB archive cap.
+          tar -C dist --null --no-recursion -T "$PWD/production-archive-files.list" -cf - | xz -T1 -9 --lzma2=preset=9,dict=256MiB --memlimit-compress=5GiB --no-adjust > "compatair-${GITHUB_SHA}.tar.xz"
+          xz --test "compatair-${GITHUB_SHA}.tar.xz"
+          tar -tf "compatair-${GITHUB_SHA}.tar.xz" | node scripts/production-archive-order.mjs --verify-list production-archive-files.list
           sha256sum "compatair-${GITHUB_SHA}.tar.xz" > "compatair-${GITHUB_SHA}.tar.xz.sha256"
           tar -czf "compatair-admin-${GITHUB_SHA}.tar.gz" \
             deploy \
@@ -350,11 +355,11 @@ jobs:
         shell: bash
         run: |
           release_bytes=$(wc -c < "compatair-${GITHUB_SHA}.tar.xz")
+          echo "Compressed release: ${release_bytes} bytes (limit 201326592)"
           if (( release_bytes > 201326592 )); then
             echo "Compressed release exceeds the 192 MiB GitHub storage budget" >&2
             exit 1
           fi
-          echo "Compressed release: ${release_bytes} bytes (limit 201326592)"
 
       - name: Prepare verified release handoff
         run: node scripts/production-artifact.mjs prepare

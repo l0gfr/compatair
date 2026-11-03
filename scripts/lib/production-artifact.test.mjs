@@ -5,6 +5,8 @@ import { lstat, mkdir, mkdtemp, open, readFile, readdir, rm, symlink, writeFile 
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { gzipSync } from 'node:zlib';
+import { readFileSync } from 'node:fs';
+import { parse } from 'yaml';
 import { prepareProductionArtifact, restoreProductionArtifact } from './production-artifact.mjs';
 
 const sha = 'a'.repeat(40), roots = [], MiB = 1024 * 1024;
@@ -60,6 +62,23 @@ function tarBytes(entries) {
 }
 
 describe('production artifacts crossing isolated CI runners', () => {
+ it('restores every file and the plan using the current solid production compression settings', async () => {
+  const { root, plan, archive } = await fixture({ ready: false });
+  const workflow = parse(readFileSync(new URL('../../.github/workflows/deploy-production.yml', import.meta.url), 'utf8'));
+  const packaging = workflow.jobs.validate.steps.find(step => step.name === 'Package immutable release');
+  const options = /\| xz (.+) > "compatair-/.exec(packaging.run)[1].split(' ');
+  const originalTar = command('xz', ['--decompress', '--stdout', archive]);
+  const compressed = command('xz', [...options, '--stdout'], originalTar);
+  expect(command('xz', ['--decompress', '--stdout'], compressed)).toEqual(originalTar);
+  await checkedWrite(root, `compatair-${sha}.tar.xz`, compressed);
+  await rm(join(root, 'dist'), { recursive: true });
+  await rm(join(root, '.astro/seo/indexation-build.json'));
+  await expect(restoreProductionArtifact(root, sha)).resolves.toMatchObject({ release: sha });
+  expect(await readFile(join(root, 'dist/index.html'), 'utf8')).toBe('complete immutable site');
+  expect(await readFile(join(root, 'dist/data/catalog.json'), 'utf8')).toBe('{"catalog":"must survive restoration"}');
+  expect(await readFile(join(root, 'dist/sitemap-index.xml'), 'utf8')).toBe('<sitemapindex/>');
+  expect(JSON.parse(await readFile(join(root, '.astro/seo/indexation-build.json'), 'utf8'))).toEqual(plan);
+ });
  it.each([false, true])('restores the exact complete dist and plan, with existing empty dist=%s', async empty => {
   const { root, plan } = await fixture();
   if (empty) await mkdir(join(root, 'dist'));
