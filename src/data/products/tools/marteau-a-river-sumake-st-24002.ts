@@ -39,53 +39,76 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-24002. Consommation publiée, régime non précisé : 400 L/min à 6,2 bar. Consommation dans les unités du tableau : 400 L/min ; 14 cfm. Configuration complète publiée : ST-24002.",
+		"overview": "Sumake ST-24002. La ST-24002 à amortissement publie course 102 mm, 2 160 coups/min et 225 mm de longueur. La ST-2402, sans le zéro supplémentaire, publie course 57,2 mm et 2 580 coups/min. Ces deux codes proches ne désignent pas le même marteau.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 57.",
-			"Consommation dans les unités du tableau : 400 L/min ; 14 cfm.",
-			"Configuration complète publiée : ST-24002.",
-			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé."
+			"Type : Marteau à river à piston.",
+			"Queue de burin : 0,401 pouce.",
+			"Course : 102 mm.",
+			"Cadence : 2 160 coups/min.",
+			"Longueur : 225 mm.",
+			"Masse : 1,35 kg.",
+			"Consommation documentaire : 400 L/min, régime non précisé.",
+			"Pression de service recommandée : 6,2 bar ; pression de mesure de la consommation non démontrée."
 		],
 		"limitations": [
-			"Le régime de consommation n’est pas indiqué. Aucun débit maximal ou en charge n’est inventé ; le verdict reste insufficient_data.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"La recommandation de service 6,2 bar ne prouve pas la pression de mesure de la consommation. Le régime reste non qualifié et le calcul indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 57",
+			"label": "Type",
+			"value": "Marteau à river à piston",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p57"
+				"marteau-a-river-sumake-st-24002-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation dans les unités du tableau",
-			"value": "400 L/min ; 14 cfm",
+			"label": "Queue de burin",
+			"value": "0,401 pouce",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p57"
+				"marteau-a-river-sumake-st-24002-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Configuration complète publiée",
-			"value": "ST-24002",
+			"label": "Course",
+			"value": "102 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p57"
+				"marteau-a-river-sumake-st-24002-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Régime de consommation",
-			"value": "Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé",
+			"label": "Cadence",
+			"value": "2 160 coups/min",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p57"
+				"marteau-a-river-sumake-st-24002-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Ligne technique originale du modèle",
-			"value": "ST-24002 0.401 15.24 3/5 102 4 2,160 - - 225 8-9/10 1/4 3/8 400 14 1.35 2.98",
+			"label": "Longueur",
+			"value": "225 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p57"
+				"marteau-a-river-sumake-st-24002-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "1,35 kg",
+			"evidenceIds": [
+				"marteau-a-river-sumake-st-24002-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "400 L/min, régime non précisé",
+			"evidenceIds": [
+				"marteau-a-river-sumake-st-24002-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression de service recommandée",
+			"value": "6,2 bar ; pression de mesure de la consommation non démontrée",
+			"evidenceIds": [
+				"marteau-a-river-sumake-st-24002-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +122,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "marteau-a-river-sumake-st-24002-reserved-20261103-1",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf#page=57",
+			"sourceLabel": "Sumake : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. La ST-24002 à amortissement publie course 102 mm, 2 160 coups/min et 225 mm de longueur. La ST-2402, sans le zéro supplémentaire, publie course 57,2 mm et 2 580 coups/min. Ces deux codes proches ne désignent pas le même marteau."
 		}
 	],
 	"fieldSources": {
@@ -113,6 +146,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-d-sumake-na-2024-p57"
+		],
+		"editorial": [
+			"marteau-a-river-sumake-st-24002-reserved-20261103-1"
+		],
+		"specifications": [
+			"marteau-a-river-sumake-st-24002-reserved-20261103-1"
 		]
 	},
 	"notes": [

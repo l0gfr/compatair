@@ -33,51 +33,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Hymair AT-4060A. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Vitesse à vide : 9,000 rpm. Masse publiée (kg/lb) : 0.78/1.72.",
+		"overview": "Hymair AT-4060A. La AT-4060A est la visseuse 1/4 pouce à 9 000 tr/min ; la AT-4055 est donnée pour 1 000 tr/min et une autre présentation du couple. La plage 0–480 est en in-lb, elle n’est pas recopiée en Nm. Les 4,5 CFM sont explicitement moyens ; le moteur conserve un état non conclusif.",
 		"verifiedFacts": [
-			"Vitesse à vide : 9,000 rpm.",
-			"Masse publiée (kg/lb) : 0.78/1.72.",
-			"Longueur × hauteur : 191x74 mm."
+			"Entraînement : Hexagonal 1/4 pouce, colonne 6,35 mm.",
+			"Plage de couple publiée : 0–480 in-lb.",
+			"Vitesse à vide : 9 000 tr/min.",
+			"Dimensions : 191 × 74 mm.",
+			"Masse : 0,78 kg.",
+			"Consommation moyenne publiée : 4,5 CFM."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Consommation moyenne publiée conservée dans les spécifications ; aucun débit maximal ni volume par action déduit.",
+			"Catalogue constructeur identifié ; configuration et disponibilité actuelles à confirmer."
 		]
 	},
 	"specifications": [
 		{
+			"label": "Entraînement",
+			"value": "Hexagonal 1/4 pouce, colonne 6,35 mm",
+			"evidenceIds": [
+				"visseuse-hymair-at-4060a-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Plage de couple publiée",
+			"value": "0–480 in-lb",
+			"evidenceIds": [
+				"visseuse-hymair-at-4060a-reserved-20261103-1"
+			]
+		},
+		{
 			"label": "Vitesse à vide",
-			"value": "9,000 rpm",
+			"value": "9 000 tr/min",
 			"evidenceIds": [
-				"october2-tools-steed-2-p36"
+				"visseuse-hymair-at-4060a-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée (kg/lb)",
-			"value": "0.78/1.72",
+			"label": "Dimensions",
+			"value": "191 × 74 mm",
 			"evidenceIds": [
-				"october2-tools-steed-2-p36"
+				"visseuse-hymair-at-4060a-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur × hauteur",
-			"value": "191x74 mm",
+			"label": "Masse",
+			"value": "0,78 kg",
 			"evidenceIds": [
-				"october2-tools-steed-2-p36"
+				"visseuse-hymair-at-4060a-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "WORKING PRESSURE : 6.2 Bar",
+			"label": "Consommation moyenne publiée",
+			"value": "4,5 CFM",
 			"evidenceIds": [
-				"october2-tools-steed-2-p36"
-			]
-		},
-		{
-			"label": "Consommation moyenne, hors calcul",
-			"value": "4.5 cfm",
-			"evidenceIds": [
-				"october2-tools-steed-2-p36"
+				"visseuse-hymair-at-4060a-reserved-20261103-1"
 			]
 		}
 	],
@@ -91,6 +101,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : b9c6143d5502d453b5b2e0846bcfec263fb763d42a478fbc52089a41725e7d8d. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "visseuse-hymair-at-4060a-reserved-20261103-1",
+			"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SAUfKpBkCgyL&dp=GvUApKfKKUAU#page=36",
+			"sourceLabel": "Hymair : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 b9c6143d5502d453b5b2e0846bcfec263fb763d42a478fbc52089a41725e7d8d. La AT-4060A est la visseuse 1/4 pouce à 9 000 tr/min ; la AT-4055 est donnée pour 1 000 tr/min et une autre présentation du couple. La plage 0–480 est en in-lb, elle n’est pas recopiée en Nm. Les 4,5 CFM sont explicitement moyens ; le moteur conserve un état non conclusif."
 		}
 	],
 	"fieldSources": {
@@ -102,6 +122,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-steed-2-p36"
+		],
+		"editorial": [
+			"visseuse-hymair-at-4060a-reserved-20261103-1"
+		],
+		"specifications": [
+			"visseuse-hymair-at-4060a-reserved-20261103-1"
 		]
 	},
 	"notes": [

@@ -22,7 +22,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 1700
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "unknown",
 	"powerKw": 11,
 	"weightKg": 385,
@@ -38,45 +37,43 @@ const product: CompressorInput = {
 	"specifications": [
 		{
 			"label": "Configuration",
-			"value": "FF sur cuve 270 L",
+			"value": "CSA 15 Full Feature, cuve 270 L, 8 bar",
 			"evidenceIds": [
-				"october-ceccato-csa-7-5-20-hp-pdf-p6"
+				"ceccato-csa-15-ff-sur-cuve-270-l-8-bar-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Dimensions (L × l × h)",
-			"value": "1540 × 665 × 1535 mm",
+			"label": "FAD à 7,5 bar",
+			"value": "102 m³/h",
 			"evidenceIds": [
-				"october-ceccato-csa-7-5-20-hp-pdf-p6"
+				"ceccato-csa-15-ff-sur-cuve-270-l-8-bar-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition du FAD",
-			"value": "Débit d’air réel, ISO 1217 annexe C ; pression de référence séparée du maximum",
+			"label": "Puissance",
+			"value": "11 kW",
 			"evidenceIds": [
-				"october-ceccato-csa-7-5-20-hp-pdf-p6"
+				"ceccato-csa-15-ff-sur-cuve-270-l-8-bar-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Pression maximale et pression de référence",
-			"value": "8 bar maximum ; FAD mesuré à 7,5 bar",
+			"label": "Masse de la version",
+			"value": "385 kg",
 			"evidenceIds": [
-				"october-ceccato-csa-7-5-20-hp-pdf-p6"
+				"ceccato-csa-15-ff-sur-cuve-270-l-8-bar-reserved-20261103-1"
 			]
 		}
 	],
 	"editorial": {
-		"overview": "Ceccato CSA 15, FF sur cuve 270 L ; 8 bar. FF sur cuve 270 L. Débit restitué déclaré : 1 700 L/min à 7,5 bar.",
+		"overview": "Ceccato CSA 15. La CSA 15 FF sur 270 L en version 8 bar pèse 385 kg. La cuve 270 L avec sécheur donne 385 kg, celle de 500 L donne 450 kg, contre 255 kg pour le Pack au sol. Le tableau distingue le maximum 8 bar de la mesure à 7,5 bar. La page HTML reste inaccessible ; seule la brochure complète constitue ici la preuve actuelle.",
 		"verifiedFacts": [
-			"Dimensions publiées : 1540 × 665 × 1535 mm.",
-			"Masse de cette configuration : 385 kg ; puissance moteur : 11 kW.",
-			"La page constructeur de cette série prévoit le fonctionnement continu, sous ses conditions d’installation et d’entretien."
+			"Configuration : CSA 15 Full Feature, cuve 270 L, 8 bar.",
+			"FAD à 7,5 bar : 102 m³/h.",
+			"Puissance : 11 kW.",
+			"Masse de la version : 385 kg."
 		],
 		"limitations": [
-			"Le point FAD appartient à cette configuration et à sa pression de référence ; aucune courbe de fonctionnement supplémentaire n’est inventée.",
-			"Mode de lubrification non établi dans cette fiche ; aucune qualité d’air déduite.",
-			"Configuration et pression explicites du catalogue, sans numéro d’article attribué artificiellement ; faire confirmer la version commandée.",
-			"Disponibilité locale, alimentation électrique, dégagements d’entretien et qualité d’air au point d’usage à vérifier avant installation."
+			"Mode de lubrification et taux de marche du groupe non établis dans la brochure. La page HTML inaccessible reste signalée."
 		]
 	},
 	"evidence": [
@@ -99,6 +96,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 a396f7642312e7bc1e0f7624ec55b4836b176f0deb7ba6e0ae70e4ce9cbe4df6. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "ceccato-csa-15-ff-sur-cuve-270-l-8-bar-reserved-20261103-1",
+			"sourceUrl": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csa-7-5-20-hp/leaflets/Ceccato_CSA_7.5-20_Leaflet_EN.pdf#page=6",
+			"sourceLabel": "Ceccato : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 b36c0fbb8a63a69867b66a6e663923588ccfd8e2def16303b3be948aa706c23c. La CSA 15 FF sur 270 L en version 8 bar pèse 385 kg. La cuve 270 L avec sécheur donne 385 kg, celle de 500 L donne 450 kg, contre 255 kg pour le Pack au sol. Le tableau distingue le maximum 8 bar de la mesure à 7,5 bar. La page HTML reste inaccessible ; seule la brochure complète constitue ici la preuve actuelle."
 		}
 	],
 	"fieldSources": {
@@ -117,8 +124,11 @@ const product: CompressorInput = {
 		"weightKg": [
 			"october-ceccato-csa-7-5-20-hp-pdf-p6"
 		],
-		"dutyCycle": [
-			"october-ceccato-csa-7-5-20-hp"
+		"editorial": [
+			"ceccato-csa-15-ff-sur-cuve-270-l-8-bar-reserved-20261103-1"
+		],
+		"specifications": [
+			"ceccato-csa-15-ff-sur-cuve-270-l-8-bar-reserved-20261103-1"
 		]
 	},
 	"notes": [

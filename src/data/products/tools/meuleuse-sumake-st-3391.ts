@@ -39,53 +39,68 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-3391. Consommation publiée, régime non précisé : 170 L/min à 6,2 bar. Consommation dans les unités du tableau : 170 L/min ; 6 cfm. Configuration complète publiée : ST-3391.",
+		"overview": "Sumake ST-3391. La ST-3391 possède une tête 90 degrés ; la ST-3392 est à 120 degrés. Elles publient 30 mm, 21 000 tr/min et 160 mm, mais des masses respectives 0,2 et 0,13 kg. L’angle de tête est un critère d’accès, distinct de la consommation commune de gamme.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 35.",
-			"Consommation dans les unités du tableau : 170 L/min ; 6 cfm.",
-			"Configuration complète publiée : ST-3391.",
-			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé."
+			"Tête : 90 degrés.",
+			"Capacité publiée : 30 mm.",
+			"Vitesse à vide : 21 000 tr/min.",
+			"Longueur : 160 mm.",
+			"Masse : 0,2 kg.",
+			"Consommation documentaire : 170 L/min, régime non précisé.",
+			"Pression de service recommandée : 6,2 bar ; pression de mesure de la consommation non démontrée."
 		],
 		"limitations": [
-			"Le régime de consommation n’est pas indiqué. Aucun débit maximal ou en charge n’est inventé ; le verdict reste insufficient_data.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"La recommandation de service 6,2 bar ne prouve pas la pression de mesure de la consommation. Le régime reste non qualifié et le calcul indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 35",
+			"label": "Tête",
+			"value": "90 degrés",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p35"
+				"meuleuse-sumake-st-3391-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation dans les unités du tableau",
-			"value": "170 L/min ; 6 cfm",
+			"label": "Capacité publiée",
+			"value": "30 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p35"
+				"meuleuse-sumake-st-3391-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Configuration complète publiée",
-			"value": "ST-3391",
+			"label": "Vitesse à vide",
+			"value": "21 000 tr/min",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p35"
+				"meuleuse-sumake-st-3391-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Régime de consommation",
-			"value": "Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé",
+			"label": "Longueur",
+			"value": "160 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p35"
+				"meuleuse-sumake-st-3391-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Ligne technique originale du modèle",
-			"value": "ST-3391 1-3/16 (30mm) 21,000 160 6-2/5 1/4\" 3/8\" 170 6 0.2 0.5 20Pcs/Ctn/9/1.13’",
+			"label": "Masse",
+			"value": "0,2 kg",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p35"
+				"meuleuse-sumake-st-3391-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "170 L/min, régime non précisé",
+			"evidenceIds": [
+				"meuleuse-sumake-st-3391-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression de service recommandée",
+			"value": "6,2 bar ; pression de mesure de la consommation non démontrée",
+			"evidenceIds": [
+				"meuleuse-sumake-st-3391-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +114,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "meuleuse-sumake-st-3391-reserved-20261103-1",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf#page=35",
+			"sourceLabel": "Sumake : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. La ST-3391 possède une tête 90 degrés ; la ST-3392 est à 120 degrés. Elles publient 30 mm, 21 000 tr/min et 160 mm, mais des masses respectives 0,2 et 0,13 kg. L’angle de tête est un critère d’accès, distinct de la consommation commune de gamme."
 		}
 	],
 	"fieldSources": {
@@ -113,6 +138,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-d-sumake-na-2024-p35"
+		],
+		"editorial": [
+			"meuleuse-sumake-st-3391-reserved-20261103-1"
+		],
+		"specifications": [
+			"meuleuse-sumake-st-3391-reserved-20261103-1"
 		]
 	},
 	"notes": [

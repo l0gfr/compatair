@@ -38,51 +38,60 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZP228. Consommation moyenne : 104,772 L/min ; pression publiée : 6,2 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Vitesse à vide : 2600 tr/min. Masse : 1 kg.",
+		"overview": "ZIPP ZP228. La ZP228 est la cisaille à poignée pistolet de longueur 200 mm. La ZP229 est la version ciseaux de 240 mm ; la ZP227 est aussi une version ciseaux de 290 mm. Les capacités acier 1,2 mm et aluminium 1,6 mm sont distinctes et communes aux lignes du tableau.",
 		"verifiedFacts": [
-			"Vitesse à vide : 2600 tr/min.",
-			"Masse : 1 kg.",
-			"Référence constructeur : ZP228."
+			"Type : Pistol-Grip Air Shear.",
+			"Capacité acier : 1,2 mm.",
+			"Capacité aluminium : 1,6 mm.",
+			"Cadence publiée : 2 600 tr/min.",
+			"Longueur : 200 mm.",
+			"Masse : 1,0 kg."
 		],
 		"limitations": [
-			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
-			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+			"Consommation moyenne ou de régime non précisé, sans qualification maximale/en charge ni appariement de pression de mesure suffisant : aucun verdict conclusif n’en est déduit."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Vitesse à vide",
-			"value": "2600 tr/min",
+			"label": "Type",
+			"value": "Pistol-Grip Air Shear",
 			"evidenceIds": [
-				"october-b-zipp-tools-p104"
+				"cisaille-zipp-zp228-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Capacité acier",
+			"value": "1,2 mm",
+			"evidenceIds": [
+				"cisaille-zipp-zp228-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Capacité aluminium",
+			"value": "1,6 mm",
+			"evidenceIds": [
+				"cisaille-zipp-zp228-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cadence publiée",
+			"value": "2 600 tr/min",
+			"evidenceIds": [
+				"cisaille-zipp-zp228-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "200 mm",
+			"evidenceIds": [
+				"cisaille-zipp-zp228-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Masse",
-			"value": "1 kg",
+			"value": "1,0 kg",
 			"evidenceIds": [
-				"october-b-zipp-tools-p104"
-			]
-		},
-		{
-			"label": "Référence constructeur",
-			"value": "ZP228",
-			"evidenceIds": [
-				"october-b-zipp-tools-p104"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "Operating Air Pressure: 90psi/6.2",
-			"evidenceIds": [
-				"october-b-zipp-tools-p104"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "ZIPP, catalogue général pneumatique, page PDF 104",
-			"evidenceIds": [
-				"october-b-zipp-tools-p104"
+				"cisaille-zipp-zp228-reserved-20261103-1"
 			]
 		}
 	],
@@ -96,6 +105,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "cisaille-zipp-zp228-reserved-20261103-1",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=104",
+			"sourceLabel": "ZIPP : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. La ZP228 est la cisaille à poignée pistolet de longueur 200 mm. La ZP229 est la version ciseaux de 240 mm ; la ZP227 est aussi une version ciseaux de 290 mm. Les capacités acier 1,2 mm et aluminium 1,6 mm sont distinctes et communes aux lignes du tableau."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +129,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-b-zipp-tools-p104"
+		],
+		"editorial": [
+			"cisaille-zipp-zp228-reserved-20261103-1"
+		],
+		"specifications": [
+			"cisaille-zipp-zp228-reserved-20261103-1"
 		]
 	},
 	"notes": [

@@ -23,61 +23,53 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Red Rooster RR-1800DD, référence RR-1800DD. Le tableau fabricant publie 588 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 1800 tr/min. Masse publiée : 1 kg.",
+		"overview": "Red Rooster RR-1800DD. La RR-1800DD est la version à entraînement direct 1 800 tr/min et 7,5 Nm. La RR-0800DD donne 800 tr/min et 10,5 Nm, avec le même débit publié 9,8 L/s. Une consommation identique ne rend pas leurs vitesses et capacités de serrage équivalentes ; le régime de mesure du débit demeure non précisé.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation publiée : 9.8 L/s, convertis en 588 L/min par multiplication par 60.",
-			"Référence fabricant : RR-1800DD.",
-			"Vitesse à vide publiée : 1800 tr/min.",
-			"Masse publiée : 1 kg.",
-			"Diamètre intérieur de flexible conseillé : 10 mm."
+			"Entraînement : Hexagonal 1/4 pouce.",
+			"Mécanisme : Entraînement direct.",
+			"Couple indicatif : 7,5 Nm.",
+			"Vitesse à vide : 1 800 tr/min.",
+			"Consommation publiée, régime non précisé : 9,8 L/s."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"Consommation conservée avec son unité et son régime non précisé ; aucune mesure maximale/en charge appariée à la pression n’est déduite de la consigne de service.",
+			"Catalogue historique identifié ; référence et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+			"label": "Entraînement",
+			"value": "Hexagonal 1/4 pouce",
 			"evidenceIds": [
-				"red-rooster-rr-1800dd-20260926-workingpressurebar-1"
+				"red-rooster-rr-1800dd-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation publiée : 9.8 L/s, convertis en 588 L/min par multiplication par 60.",
+			"label": "Mécanisme",
+			"value": "Entraînement direct",
 			"evidenceIds": [
-				"red-rooster-rr-1800dd-20260926"
+				"red-rooster-rr-1800dd-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse à vide publiée",
-			"value": "1800 tr/min",
+			"label": "Couple indicatif",
+			"value": "7,5 Nm",
 			"evidenceIds": [
-				"red-rooster-rr-1800dd-20260926"
+				"red-rooster-rr-1800dd-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
-			"value": "1 kg",
+			"label": "Vitesse à vide",
+			"value": "1 800 tr/min",
 			"evidenceIds": [
-				"red-rooster-rr-1800dd-20260926"
+				"red-rooster-rr-1800dd-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre intérieur de flexible conseillé",
-			"value": "10 mm",
+			"label": "Consommation publiée, régime non précisé",
+			"value": "9,8 L/s",
 			"evidenceIds": [
-				"red-rooster-rr-1800dd-20260926"
-			]
-		},
-		{
-			"label": "Raccord pneumatique",
-			"value": "PT 1/4\"",
-			"evidenceIds": [
-				"red-rooster-rr-1800dd-20260926"
+				"red-rooster-rr-1800dd-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +91,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "red-rooster-rr-1800dd-reserved-20261103-1",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=41",
+			"sourceLabel": "Red Rooster : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. La RR-1800DD est la version à entraînement direct 1 800 tr/min et 7,5 Nm. La RR-0800DD donne 800 tr/min et 10,5 Nm, avec le même débit publié 9,8 L/s. Une consommation identique ne rend pas leurs vitesses et capacités de serrage équivalentes ; le régime de mesure du débit demeure non précisé."
 		}
 	],
 	"fieldSources": {
@@ -116,6 +118,15 @@ const product: ToolProfileInput = {
 		],
 		"connectorSize": [
 			"red-rooster-rr-1800dd-20260926"
+		],
+		"airflowBasis": [
+			"red-rooster-rr-1800dd-reserved-20261103-1"
+		],
+		"editorial": [
+			"red-rooster-rr-1800dd-reserved-20261103-1"
+		],
+		"specifications": [
+			"red-rooster-rr-1800dd-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -129,7 +140,8 @@ const product: ToolProfileInput = {
 	"recommendedHose": {
 		"innerDiameterMm": 10
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"airflowBasis": "unqualified"
 };
 
 export default product;

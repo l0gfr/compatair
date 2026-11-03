@@ -23,68 +23,60 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "DEPRAG 344-340-31, référence 389730A. Le tableau fabricant publie 1 100 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple minimal : 4 Nm. Couple maximal : 8 Nm.",
+		"overview": "DEPRAG 344-340-31. La 344-340-31, code 389730A, est la broche à rotation et coupure à droite, 4–8 Nm et 2 800 tr/min. La version réversible 344-340-31U, code 384210A, donne 3,5–6,5 Nm et 2 400 tr/min. Le tableau relie les performances à 6,3 bar, mais ne nomme pas le régime de consommation : les 1 100 L/min ne deviennent pas un maximum par défaut.",
 		"verifiedFacts": [
-			"La note du tableau indique une pression de fonctionnement de 6,3 bar.",
-			"Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine.",
-			"Référence fabricant : 389730A.",
-			"Couple minimal : 4 Nm.",
-			"Couple maximal : 8 Nm.",
-			"Vitesse à vide : 2800 tr/min."
+			"Commande : Rotation et coupure à droite, départ à distance.",
+			"Plage de couple : 4–8 Nm.",
+			"Vitesse à vide : 2 800 tr/min.",
+			"Masse : 2,5 kg.",
+			"Entraînement interne : F6,3, 1/4 pouce.",
+			"Consommation, régime non précisé : 1,1 m³/min à 6,3 bar."
 		],
 		"limitations": [
-			"Le couple et la vitesse correspondent à la colonne de cette référence commande, pas à l’ensemble de la famille.",
-			"Les broches intégrées nécessitent aussi le dimensionnement des auxiliaires de l’installation, qui ne sont pas inclus dans la consommation du moteur de vissage."
+			"Le régime de consommation n’est pas précisé ; la valeur reste non dimensionnante et le verdict demeure insufficient_data."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "La note du tableau indique une pression de fonctionnement de 6,3 bar.",
+			"label": "Commande",
+			"value": "Rotation et coupure à droite, départ à distance",
 			"evidenceIds": [
-				"deprag-389730a-20260926"
+				"deprag-344-340-31-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine.",
+			"label": "Plage de couple",
+			"value": "4–8 Nm",
 			"evidenceIds": [
-				"deprag-389730a-20260926"
-			]
-		},
-		{
-			"label": "Couple minimal",
-			"value": "4 Nm",
-			"evidenceIds": [
-				"deprag-389730a-20260926"
-			]
-		},
-		{
-			"label": "Couple maximal",
-			"value": "8 Nm",
-			"evidenceIds": [
-				"deprag-389730a-20260926"
+				"deprag-344-340-31-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Vitesse à vide",
-			"value": "2800 tr/min",
+			"value": "2 800 tr/min",
 			"evidenceIds": [
-				"deprag-389730a-20260926"
+				"deprag-344-340-31-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Démarrage / exécution du catalogue",
-			"value": "Remote Start",
+			"label": "Masse",
+			"value": "2,5 kg",
 			"evidenceIds": [
-				"deprag-389730a-20260926"
+				"deprag-344-340-31-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Type de corps / rotation",
-			"value": "Spindle right rotation, right shut-off",
+			"label": "Entraînement interne",
+			"value": "F6,3, 1/4 pouce",
 			"evidenceIds": [
-				"deprag-389730a-20260926"
+				"deprag-344-340-31-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation, régime non précisé",
+			"value": "1,1 m³/min à 6,3 bar",
+			"evidenceIds": [
+				"deprag-344-340-31-reserved-20261103-1"
 			]
 		}
 	],
@@ -97,6 +89,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine."
+		},
+		{
+			"id": "deprag-344-340-31-reserved-20261103-1",
+			"sourceUrl": "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3130/D3130en.pdf#page=12",
+			"sourceLabel": "DEPRAG : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9d445214624acd388e222274452a61e9bc2026c82f3d78fae74d146516a75dbd. La 344-340-31, code 389730A, est la broche à rotation et coupure à droite, 4–8 Nm et 2 800 tr/min. La version réversible 344-340-31U, code 384210A, donne 3,5–6,5 Nm et 2 400 tr/min. Le tableau relie les performances à 6,3 bar, mais ne nomme pas le régime de consommation : les 1 100 L/min ne deviennent pas un maximum par défaut."
 		}
 	],
 	"fieldSources": {
@@ -108,6 +110,15 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"deprag-389730a-20260926"
+		],
+		"airflowBasis": [
+			"deprag-344-340-31-reserved-20261103-1"
+		],
+		"editorial": [
+			"deprag-344-340-31-reserved-20261103-1"
+		],
+		"specifications": [
+			"deprag-344-340-31-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -117,7 +128,8 @@ const product: ToolProfileInput = {
 		"min": 1100,
 		"typical": 1100,
 		"max": 1100
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

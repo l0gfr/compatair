@@ -75,13 +75,53 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4b-quincy-qgs-qgsv-p2"
       ]
+    },
+    {
+      "label": "Modèle",
+      "value": "QGS-25",
+      "evidenceIds": [
+        "quincy-qgs-25-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Point publié",
+      "value": "99,4 cfm à 125 psig",
+      "evidenceIds": [
+        "quincy-qgs-25-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Puissance moteur",
+      "value": "25 hp",
+      "evidenceIds": [
+        "quincy-qgs-25-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Réservoir publié",
+      "value": "120 gallon, définition US/impériale non précisée",
+      "evidenceIds": [
+        "quincy-qgs-25-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Mesure",
+      "value": "ISO 1217 annexe E, édition 4:2009",
+      "evidenceIds": [
+        "quincy-qgs-25-reserved-20261103-1"
+      ]
     }
   ],
   "editorial": {
-    "overview": "Quincy QGS-25. 2 814,694 L/min déclarés à 8,618 bar. Configuration constructeur : QGS-25.",
+    "overview": "Quincy QGS-25. La QGS-25 annonce 99,4 cfm à 125 psig et 25 hp ; QGS-30 : 113,8 cfm à 125 psig. La table sépare les dimensions et masses des versions TM/TMD. Aucun poids générique ni volume en litres n’est attribué sans choisir et documenter la configuration exacte.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 8,618 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 2 814,694 L/min déclarés à 8,618 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 2 814,694 L/min déclarés à 8,618 bar.",
+      "Modèle : QGS-25.",
+      "Point publié : 99,4 cfm à 125 psig.",
+      "Puissance moteur : 25 hp.",
+      "Réservoir publié : 120 gallon, définition US/impériale non précisée.",
+      "Mesure : ISO 1217 annexe E, édition 4:2009."
     ],
     "limitations": [
       "Les valeurs originales sont exprimées en psig et cfm ; conversion SI selon NIST, sans interpolation de FAD.",
@@ -113,6 +153,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 d3ba38edef97bc380f20879b3c5b16067cc25bf230584cc7af67638b500c8c30 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "quincy-qgs-25-reserved-20261103-1",
+      "sourceUrl": "https://www.quincycompressor.com/wp-content/uploads/2023/12/QC-QGS-QGSV-4p-AP-1-min.pdf#page=2",
+      "sourceLabel": "Quincy : revue factuelle du 3 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-03",
+      "confidence": "B",
+      "notes": "GET complet HTTP200 SHA-256 3846893a6d89c68cf8053db3ba68ff0fdc4a1b20e9f71940c73a2813bb8245f8. La QGS-25 annonce 99,4 cfm à 125 psig et 25 hp ; QGS-30 : 113,8 cfm à 125 psig. La table sépare les dimensions et masses des versions TM/TMD. Aucun poids générique ni volume en litres n’est attribué sans choisir et documenter la configuration exacte."
     }
   ],
   "fieldSources": {
@@ -129,6 +179,12 @@ const product: CompressorInput = {
     "fadCurve": [
       "october4b-quincy-qgs-qgsv-p2",
       "october4b-nist-conversions-p1"
+    ],
+    "editorial": [
+      "quincy-qgs-25-reserved-20261103-1"
+    ],
+    "specifications": [
+      "quincy-qgs-25-reserved-20261103-1"
     ]
   },
   "notes": [

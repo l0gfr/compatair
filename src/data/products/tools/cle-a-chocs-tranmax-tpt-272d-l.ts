@@ -29,10 +29,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Tranmax TPT-272D-L. Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse. Masse publiée : 4.2 kg (9.2 lb). Longueur hors tout publiée : 361 mm (14.2 inch).",
+		"overview": "Tranmax TPT-272D-L. La TPT-272D-L porte une enclume rallongée de 152 mm ; elle mesure 361 mm et pèse 4,2 kg contre 236 mm et 3,7 kg pour la TPT-272D. Le maximum inverse de 2 103 Nm n’est pas un couple de serrage recommandé. Les 221 L/min sont moyens en charge, sans protocole de pression apparié.",
 		"verifiedFacts": [
 			"Masse publiée : 4.2 kg (9.2 lb).",
-			"Longueur hors tout publiée : 361 mm (14.2 inch)."
+			"Longueur hors tout publiée : 361 mm (14.2 inch).",
+			"Carré : 3/4 pouce.",
+			"Rallonge d’enclume : 6 pouces (152 mm).",
+			"Couple maximal inverse : 2 103 Nm.",
+			"Vitesse à vide : 5 000 tr/min.",
+			"Consommation moyenne en charge : 221 L/min."
 		],
 		"limitations": [
 			"Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse.",
@@ -62,6 +67,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-tranmax-tp-pdf-p12"
 			]
+		},
+		{
+			"label": "Carré",
+			"value": "3/4 pouce",
+			"evidenceIds": [
+				"cle-a-chocs-tranmax-tpt-272d-l-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Rallonge d’enclume",
+			"value": "6 pouces (152 mm)",
+			"evidenceIds": [
+				"cle-a-chocs-tranmax-tpt-272d-l-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Couple maximal inverse",
+			"value": "2 103 Nm",
+			"evidenceIds": [
+				"cle-a-chocs-tranmax-tpt-272d-l-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "5 000 tr/min",
+			"evidenceIds": [
+				"cle-a-chocs-tranmax-tpt-272d-l-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation moyenne en charge",
+			"value": "221 L/min",
+			"evidenceIds": [
+				"cle-a-chocs-tranmax-tpt-272d-l-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -74,6 +114,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : c2e29dbb1f9d433e1d65568bc327d3ea21eadd7d39f8edbb0d98145850f7c7d2. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-chocs-tranmax-tpt-272d-l-reserved-20261103-1",
+			"sourceUrl": "https://ss-client-website.s3-ap-northeast-1.amazonaws.com/tranmax/2023_01_09_113224_2212-Professional-Power-Tools-TP.pdf#page=12",
+			"sourceLabel": "Tranmax : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 c2e29dbb1f9d433e1d65568bc327d3ea21eadd7d39f8edbb0d98145850f7c7d2. La TPT-272D-L porte une enclume rallongée de 152 mm ; elle mesure 361 mm et pèse 4,2 kg contre 236 mm et 3,7 kg pour la TPT-272D. Le maximum inverse de 2 103 Nm n’est pas un couple de serrage recommandé. Les 221 L/min sont moyens en charge, sans protocole de pression apparié."
 		}
 	],
 	"fieldSources": {
@@ -85,6 +135,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-tranmax-tp-pdf-p12"
+		],
+		"editorial": [
+			"cle-a-chocs-tranmax-tpt-272d-l-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-chocs-tranmax-tpt-272d-l-reserved-20261103-1"
 		]
 	},
 	"notes": [

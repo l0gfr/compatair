@@ -19,11 +19,17 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Airpress APS 10 Basic G2, référence 362809 : configuration sans cuve intégrée, pression maximale publiée de 10 bar. Aucun débit restitué relié à une pression de mesure n’est documenté ; la compatibilité pneumatique reste indéterminée.",
+		"overview": "Airpress APS 10 Basic G2. La Basic G2 est le groupe sans cuve ; la Combi G2 de même puissance ajoute une cuve de 500 L. Les deux configurations sont sans sécheur et déclarées 100/0. Les 984 L/min restent documentaires, faute de pression de mesure appariée.",
 		"verifiedFacts": [
 			"Débit restitué à une pression de mesure précise : non documenté.",
 			"Compresseur à vis. Puissance moteur publiée : 7,5 kW.",
-			"Alimentation publiée : 400 V / 50 Hz / 3 Ph, triphasée."
+			"Alimentation publiée : 400 V / 50 Hz / 3 Ph, triphasée.",
+			"Cuve intégrée : Sans cuve intégrée.",
+			"Sécheur intégré : Non.",
+			"Cycle de service annoncé : 100/0.",
+			"Plage de service publiée : Minimum 8 bar ; maximum 10 bar.",
+			"Débit de sortie annoncé, mesure non appariée : 984 L/min, présenté comme valeur estimée.",
+			"Puissance moteur : 7,5 kW."
 		],
 		"limitations": [
 			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
@@ -88,6 +94,48 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"airpress-362809-20260926"
 			]
+		},
+		{
+			"label": "Cuve intégrée",
+			"value": "Sans cuve intégrée",
+			"evidenceIds": [
+				"airpress-aps-10-basic-g2-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Sécheur intégré",
+			"value": "Non",
+			"evidenceIds": [
+				"airpress-aps-10-basic-g2-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cycle de service annoncé",
+			"value": "100/0",
+			"evidenceIds": [
+				"airpress-aps-10-basic-g2-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Plage de service publiée",
+			"value": "Minimum 8 bar ; maximum 10 bar",
+			"evidenceIds": [
+				"airpress-aps-10-basic-g2-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Débit de sortie annoncé, mesure non appariée",
+			"value": "984 L/min, présenté comme valeur estimée",
+			"evidenceIds": [
+				"airpress-aps-10-basic-g2-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Puissance moteur",
+			"value": "7,5 kW",
+			"evidenceIds": [
+				"airpress-aps-10-basic-g2-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -99,6 +147,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Le débit restitué indiqué sur la fiche n’est pas accompagné d’une pression de mesure explicite. Il est conservé comme valeur publiée, sans l’assimiler à un point de FAD utilisable pour la compatibilité."
+		},
+		{
+			"id": "airpress-aps-10-basic-g2-reserved-20261103-1",
+			"sourceUrl": "https://airpress.fr/compresseur-a-vis-aps-10-basic-g2-10-bar-10-ch-7-5-kw-984-l-min-362809",
+			"sourceLabel": "Airpress : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9643276a56dc68ca138fe53183ef7464dbe439df79c0c2c56ec2a88ef2eba3f7. La Basic G2 est le groupe sans cuve ; la Combi G2 de même puissance ajoute une cuve de 500 L. Les deux configurations sont sans sécheur et déclarées 100/0. Les 984 L/min restent documentaires, faute de pression de mesure appariée."
 		}
 	],
 	"fieldSources": {
@@ -131,6 +189,12 @@ const product: CompressorInput = {
 		],
 		"dutyCycle": [
 			"airpress-362809-20260926"
+		],
+		"editorial": [
+			"airpress-aps-10-basic-g2-reserved-20261103-1"
+		],
+		"specifications": [
+			"airpress-aps-10-basic-g2-reserved-20261103-1"
 		]
 	},
 	"notes": [

@@ -38,51 +38,52 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZAH-393S. Consommation moyenne : 140 L/min ; pression publiée : 6,2 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Cadence : 3000 coups/min. Masse : 1.8 kg.",
+		"overview": "ZIPP ZAH-393S. La ZAH-393S a une course 66 mm à 3 000 coups/min. La ZAH-394S garde la queue 0,401 pouce mais passe à 89 mm et 2 100 coups/min, pour 2,1 kg contre 1,8 kg ici. La consommation moyenne de 140 L/min ne décrit pas la pointe en charge.",
 		"verifiedFacts": [
-			"Cadence : 3000 coups/min.",
-			"Masse : 1.8 kg.",
-			"Référence constructeur : ZAH-393S."
+			"Queue de burin : 0,401 pouce (10,2 mm).",
+			"Course : 66 mm.",
+			"Cadence : 3 000 coups/min.",
+			"Masse : 1,8 kg.",
+			"Consommation moyenne : 140 L/min."
 		],
 		"limitations": [
-			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
-			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+			"Consommation moyenne ou de régime non précisé, sans qualification maximale/en charge ni appariement de pression de mesure suffisant : aucun verdict conclusif n’en est déduit."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Cadence",
-			"value": "3000 coups/min",
+			"label": "Queue de burin",
+			"value": "0,401 pouce (10,2 mm)",
 			"evidenceIds": [
-				"october-b-zipp-tools-p89"
+				"burineur-zipp-zah-393s-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Course",
+			"value": "66 mm",
+			"evidenceIds": [
+				"burineur-zipp-zah-393s-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cadence",
+			"value": "3 000 coups/min",
+			"evidenceIds": [
+				"burineur-zipp-zah-393s-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Masse",
-			"value": "1.8 kg",
+			"value": "1,8 kg",
 			"evidenceIds": [
-				"october-b-zipp-tools-p89"
+				"burineur-zipp-zah-393s-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Référence constructeur",
-			"value": "ZAH-393S",
+			"label": "Consommation moyenne",
+			"value": "140 L/min",
 			"evidenceIds": [
-				"october-b-zipp-tools-p89"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "Operating Air Pressure: 90psi/6.2",
-			"evidenceIds": [
-				"october-b-zipp-tools-p89"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "ZIPP, catalogue général pneumatique, page PDF 89",
-			"evidenceIds": [
-				"october-b-zipp-tools-p89"
+				"burineur-zipp-zah-393s-reserved-20261103-1"
 			]
 		}
 	],
@@ -96,6 +97,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "burineur-zipp-zah-393s-reserved-20261103-1",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=89",
+			"sourceLabel": "ZIPP : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. La ZAH-393S a une course 66 mm à 3 000 coups/min. La ZAH-394S garde la queue 0,401 pouce mais passe à 89 mm et 2 100 coups/min, pour 2,1 kg contre 1,8 kg ici. La consommation moyenne de 140 L/min ne décrit pas la pointe en charge."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +121,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-b-zipp-tools-p89"
+		],
+		"editorial": [
+			"burineur-zipp-zah-393s-reserved-20261103-1"
+		],
+		"specifications": [
+			"burineur-zipp-zah-393s-reserved-20261103-1"
 		]
 	},
 	"notes": [

@@ -1,3 +1,4 @@
+import { beforeReservedNovember3Followup } from './reviewed-catalog-amendments-2026-11-03-reserved.mjs';
 import { beforeReservedOctober31Followup } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
@@ -35,7 +36,7 @@ describe('documented compressor lot C, original manufacturer data', () => {
   expect(product('alup-largo-23').fadCurve).toEqual([{ pressureBar: 13, litersPerMinute: 2916.667 }]);
   expect(beforeReservedOctober31Followup(product('ingersoll-rand-rsb15ie')).fadCurve).toEqual([{ pressureBar: 13.5, litersPerMinute: 1699.011 }]);
   expect(beforeReservedOctober31Followup(product('ingersoll-rand-rsb18ie')).fadCurve).toEqual([{ pressureBar: 13.5, litersPerMinute: 2208.714 }]);
-  expect(product('ingersoll-rand-rsb22ie').fadCurve).toEqual([{ pressureBar: 13.5, litersPerMinute: 2690.1 }]);
+  expect(beforeReservedNovember3Followup(product('ingersoll-rand-rsb22ie')).fadCurve).toEqual([{ pressureBar: 13.5, litersPerMinute: 2690.1 }]);
   expect(product('compair-l200fc').powerKw).toBe(200);
  });
  it('keeps documented US configurations at 60 Hz and omits unknown storage and duty', () => {

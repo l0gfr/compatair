@@ -23,54 +23,53 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Yokota YRW-8NS, référence YRW-8NS. Le tableau fabricant publie 498 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Masse publiée : 2 kg. Diamètre intérieur de flexible conseillé : 10 mm.",
+		"overview": "Yokota YRW-8NS. La YRW-8NS publie les tailles de douilles 10, 12, 13 et 14 mm, 30 Nm et 250 tr/min. La YRW-10N donne les tailles 14 et 17 mm, 45 Nm et 140 tr/min pour 2,7 kg. Ces tailles ne sont pas transcrites en un carré standard non documenté. Les 8,3 L/s demeurent une consommation de régime non précisé.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation publiée : 8.3 L/s, convertis en 498 L/min par multiplication par 60.",
-			"Référence fabricant : YRW-8NS.",
-			"Masse publiée : 2 kg.",
-			"Diamètre intérieur de flexible conseillé : 10 mm.",
-			"Raccord pneumatique : PT 1/4\"."
+			"Douilles, tailles publiées : 10 / 12 / 13 / 14 mm, renvoi du catalogue.",
+			"Couple indicatif : 30 Nm.",
+			"Vitesse : 250 tr/min.",
+			"Masse : 2 kg.",
+			"Consommation publiée : 8,3 L/s."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"Régime et pression de mesure ne sont pas complétés par hypothèse. Les données non dimensionnantes restent dans les spécifications.",
+			"Catalogue constructeur historique ; configuration livrée et disponibilité actuelles à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+			"label": "Douilles, tailles publiées",
+			"value": "10 / 12 / 13 / 14 mm, renvoi du catalogue",
 			"evidenceIds": [
-				"yokota-yrw-8ns-20260926-workingpressurebar-1"
+				"yokota-yrw-8ns-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation publiée : 8.3 L/s, convertis en 498 L/min par multiplication par 60.",
+			"label": "Couple indicatif",
+			"value": "30 Nm",
 			"evidenceIds": [
-				"yokota-yrw-8ns-20260926"
+				"yokota-yrw-8ns-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
+			"label": "Vitesse",
+			"value": "250 tr/min",
+			"evidenceIds": [
+				"yokota-yrw-8ns-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
 			"value": "2 kg",
 			"evidenceIds": [
-				"yokota-yrw-8ns-20260926"
+				"yokota-yrw-8ns-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre intérieur de flexible conseillé",
-			"value": "10 mm",
+			"label": "Consommation publiée",
+			"value": "8,3 L/s",
 			"evidenceIds": [
-				"yokota-yrw-8ns-20260926"
-			]
-		},
-		{
-			"label": "Raccord pneumatique",
-			"value": "PT 1/4\"",
-			"evidenceIds": [
-				"yokota-yrw-8ns-20260926"
+				"yokota-yrw-8ns-reserved-20261103-1"
 			]
 		}
 	],
@@ -92,6 +91,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "yokota-yrw-8ns-reserved-20261103-1",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=40",
+			"sourceLabel": "Yokota : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. La YRW-8NS publie les tailles de douilles 10, 12, 13 et 14 mm, 30 Nm et 250 tr/min. La YRW-10N donne les tailles 14 et 17 mm, 45 Nm et 140 tr/min pour 2,7 kg. Ces tailles ne sont pas transcrites en un carré standard non documenté. Les 8,3 L/s demeurent une consommation de régime non précisé."
 		}
 	],
 	"fieldSources": {
@@ -109,6 +118,15 @@ const product: ToolProfileInput = {
 		],
 		"connectorSize": [
 			"yokota-yrw-8ns-20260926"
+		],
+		"airflowBasis": [
+			"yokota-yrw-8ns-reserved-20261103-1"
+		],
+		"editorial": [
+			"yokota-yrw-8ns-reserved-20261103-1"
+		],
+		"specifications": [
+			"yokota-yrw-8ns-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -122,7 +140,8 @@ const product: ToolProfileInput = {
 	"recommendedHose": {
 		"innerDiameterMm": 10
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"airflowBasis": "unqualified"
 };
 
 export default product;

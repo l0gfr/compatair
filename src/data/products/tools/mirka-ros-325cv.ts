@@ -23,68 +23,61 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Mirka ROS 325CV, référence 8993325111. Consommation publiée : 481 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Puissance publiée : 209 W. Vitesse de rotation : 12000 tr/min.",
+		"overview": "Mirka ROS 325CV. La ROS 325CV est la ponceuse 77 mm à aspiration centrale et orbite 2,5 mm. La ROS 325NV conserve le diamètre et l’orbite sans aspiration ; les ROS 525CV et 625CV reçoivent 125 et 150 mm. Le débit commun publié ne distingue pas à lui seul ces usages. Son régime reste non précisé.",
 		"verifiedFacts": [
-			"Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
-			"Consommation publiée : 481 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
-			"Référence fabricant : 8993325111.",
-			"Puissance publiée : 209 W.",
-			"Vitesse de rotation : 12000 tr/min.",
-			"Diamètre de plateau publié : 77 mm."
+			"Plateau : 77 mm.",
+			"Orbite : 2,5 mm.",
+			"Aspiration : Centrale, CV.",
+			"Puissance : 209 W.",
+			"Vitesse : 12 000 tr/min.",
+			"Consommation, régime non précisé : 481 L/min."
 		],
 		"limitations": [
-			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
-			"Catalogue 2022/2023 : vérifier la disponibilité actuelle et la référence de plateau avant commande."
+			"Régime du débit non précisé dans ce catalogue ; la pression de travail ne suffit pas à définir une mesure maximale/en charge.",
+			"Catalogue 2022/2023 identifié ; équipement et disponibilité actuels à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
-			"evidenceIds": [
-				"mirka-8993325111-20260927"
-			]
-		},
-		{
-			"label": "Condition de consommation",
-			"value": "Consommation publiée : 481 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
-			"evidenceIds": [
-				"mirka-8993325111-20260927"
-			]
-		},
-		{
-			"label": "Puissance publiée",
-			"value": "209 W",
-			"evidenceIds": [
-				"mirka-8993325111-20260927"
-			]
-		},
-		{
-			"label": "Vitesse de rotation",
-			"value": "12000 tr/min",
-			"evidenceIds": [
-				"mirka-8993325111-20260927"
-			]
-		},
-		{
-			"label": "Diamètre de plateau publié",
+			"label": "Plateau",
 			"value": "77 mm",
 			"evidenceIds": [
-				"mirka-8993325111-20260927"
+				"mirka-ros-325cv-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Orbite",
-			"value": "2.5 mm",
+			"value": "2,5 mm",
 			"evidenceIds": [
-				"mirka-8993325111-20260927"
+				"mirka-ros-325cv-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Collecte des poussières",
-			"value": "Aspiration centralisée",
+			"label": "Aspiration",
+			"value": "Centrale, CV",
 			"evidenceIds": [
-				"mirka-8993325111-20260927"
+				"mirka-ros-325cv-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Puissance",
+			"value": "209 W",
+			"evidenceIds": [
+				"mirka-ros-325cv-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse",
+			"value": "12 000 tr/min",
+			"evidenceIds": [
+				"mirka-ros-325cv-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation, régime non précisé",
+			"value": "481 L/min",
+			"evidenceIds": [
+				"mirka-ros-325cv-reserved-20261103-1"
 			]
 		}
 	],
@@ -97,6 +90,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation publiée : 481 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+		},
+		{
+			"id": "mirka-ros-325cv-reserved-20261103-1",
+			"sourceUrl": "https://cms.mirka.com/globalassets/msc/pdf/mirka-product-catalog-2022-low-res.pdf#page=110",
+			"sourceLabel": "Mirka : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 2ced0651411b4d8c2cd50ec1e250c15d9fda73d452ffd72b2a9cbe8910647fc2. La ROS 325CV est la ponceuse 77 mm à aspiration centrale et orbite 2,5 mm. La ROS 325NV conserve le diamètre et l’orbite sans aspiration ; les ROS 525CV et 625CV reçoivent 125 et 150 mm. Le débit commun publié ne distingue pas à lui seul ces usages. Son régime reste non précisé."
 		}
 	],
 	"fieldSources": {
@@ -108,6 +111,15 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"mirka-8993325111-20260927"
+		],
+		"airflowBasis": [
+			"mirka-ros-325cv-reserved-20261103-1"
+		],
+		"editorial": [
+			"mirka-ros-325cv-reserved-20261103-1"
+		],
+		"specifications": [
+			"mirka-ros-325cv-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -117,7 +129,8 @@ const product: ToolProfileInput = {
 		"min": 481,
 		"typical": 481,
 		"max": 481
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

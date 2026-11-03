@@ -29,50 +29,60 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Aircat 5250-A-T. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 5.38 lb. Type de retenue : Quick-change.",
+		"overview": "Aircat 5250-A-T. La 5250-A-T est le marteau à queue 0,401 pouce et course 3 pouces, retenue rapide et régulateur à quatre positions. Les 5200-A-T et 5100-A-T ont d’autres masses et systèmes de retenue. Les 4,2 CFM ne constituent ni un volume par frappe ni un débit en charge qualifié à pression exacte.",
 		"verifiedFacts": [
-			"Masse publiée : 5.38 lb.",
-			"Type de retenue : Quick-change."
+			"Queue : 0,401 pouce.",
+			"Course : 3 pouces.",
+			"Cadence : 2 500 coups/min.",
+			"Retenue : Changement rapide.",
+			"Longueur : 9,25 pouces.",
+			"Consommation, régime non précisé : 4,2 CFM."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"La fiche ne documente pas suffisamment le régime de consommation et son appariement à une pression ; le calcul reste indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "5.38 lb",
+			"label": "Queue",
+			"value": "0,401 pouce",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-26-p1"
+				"burineur-aircat-5250-a-t-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Type de retenue",
-			"value": "Quick-change",
+			"label": "Course",
+			"value": "3 pouces",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-26-p1"
+				"burineur-aircat-5250-a-t-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Champ fabricant : Rec. Hose Size (in.)",
-			"value": "3/8-in.",
+			"label": "Cadence",
+			"value": "2 500 coups/min",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-26-p1"
+				"burineur-aircat-5250-a-t-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "Pression de mesure de la consommation non établie dans la fiche.",
+			"label": "Retenue",
+			"value": "Changement rapide",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-26-p1"
+				"burineur-aircat-5250-a-t-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation de régime non précisé, hors calcul",
-			"value": "4.2 cfm",
+			"label": "Longueur",
+			"value": "9,25 pouces",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-26-p1"
+				"burineur-aircat-5250-a-t-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation, régime non précisé",
+			"value": "4,2 CFM",
+			"evidenceIds": [
+				"burineur-aircat-5250-a-t-reserved-20261103-1"
 			]
 		}
 	],
@@ -86,6 +96,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : e5fb1b562b5cf51c4af914933520c39282c710cdfbcda0d8e8c72954cd0d102d. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "burineur-aircat-5250-a-t-reserved-20261103-1",
+			"sourceUrl": "https://continentaltoolgroup.com/product/aircat-401-shank-super-duty-air-hammer/",
+			"sourceLabel": "Aircat : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 c7a56d363eba4576f0dc0af89b840fc0c7ea032dc9f2e5e1ee82da1760b100b7. La 5250-A-T est le marteau à queue 0,401 pouce et course 3 pouces, retenue rapide et régulateur à quatre positions. Les 5200-A-T et 5100-A-T ont d’autres masses et systèmes de retenue. Les 4,2 CFM ne constituent ni un volume par frappe ni un débit en charge qualifié à pression exacte."
 		}
 	],
 	"fieldSources": {
@@ -97,6 +117,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-ctg-pdp-26-p1"
+		],
+		"editorial": [
+			"burineur-aircat-5250-a-t-reserved-20261103-1"
+		],
+		"specifications": [
+			"burineur-aircat-5250-a-t-reserved-20261103-1"
 		]
 	},
 	"notes": [

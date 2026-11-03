@@ -31,16 +31,19 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Draper 70835. La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué. Champ fabricant : Working pressure : 90psi (6.2bar). Champ fabricant : Average air consumption : 9.8cfm (278L/min).",
+		"overview": "Draper 70835. La 70835 grignote une tôle d’acier jusqu’à 1,5 mm selon la description constructeur. Sa matrice réglable permet de changer la direction de coupe ; cette capacité ne vaut pas une épaisseur inox. Les 278 L/min moyens et la pression de service 6,2 bar ne prouvent pas un débit maximal à pression mesurée.",
 		"verifiedFacts": [
-			"Champ fabricant : Working pressure : 90psi (6.2bar).",
-			"Champ fabricant : Average air consumption : 9.8cfm (278L/min).",
+			"Champ fabricant : Working pressure : 90 psi (6.2 bar).",
+			"Champ fabricant : Average air consumption : 9.8 cfm (278 L/min).",
 			"Champ fabricant : Air inlet : 1/4\" BSP.",
-			"Champ fabricant : Air hose size : 3/8\" (10mm).",
+			"Champ fabricant : Air hose size : 3/8\" (10 mm).",
 			"Champ fabricant : Strokes per min : 3800spm.",
-			"Champ fabricant : Length : 195mm.",
+			"Champ fabricant : Length : 195 mm.",
 			"Champ fabricant : Weight : 0.83 kg.",
-			"Champ fabricant : Operating air pressure : 90psi (6.2bar)."
+			"Champ fabricant : Operating air pressure : 90 psi (6.2 bar).",
+			"Capacité acier déclarée : 1,5 mm.",
+			"Matrice : Réglable pour varier la direction de coupe.",
+			"Cadence : 3 800 coups/min."
 		],
 		"limitations": [
 			"La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué.",
@@ -54,14 +57,14 @@ const product: ToolProfileInput = {
 	"specifications": [
 		{
 			"label": "Champ fabricant : Working pressure",
-			"value": "90psi (6.2bar)",
+			"value": "90 psi (6.2 bar)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-70835-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Average air consumption",
-			"value": "9.8cfm (278L/min)",
+			"value": "9.8 cfm (278 L/min)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-70835-html-p1"
 			]
@@ -75,7 +78,7 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Air hose size",
-			"value": "3/8\" (10mm)",
+			"value": "3/8\" (10 mm)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-70835-html-p1"
 			]
@@ -89,7 +92,7 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Length",
-			"value": "195mm",
+			"value": "195 mm",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-70835-html-p1"
 			]
@@ -103,7 +106,7 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Operating air pressure",
-			"value": "90psi (6.2bar)",
+			"value": "90 psi (6.2 bar)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-70835-html-p1"
 			]
@@ -117,16 +120,37 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Air hose size",
-			"value": "3/8\" (10mm)",
+			"value": "3/8\" (10 mm)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-70835-html-p1"
 			]
 		},
 		{
 			"label": "Portée de la pression dans la source",
-			"value": "Operating air pressure: 90psi (6.2bar)",
+			"value": "Operating air pressure: 90 psi (6.2 bar)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-70835-html-p1"
+			]
+		},
+		{
+			"label": "Capacité acier déclarée",
+			"value": "1,5 mm",
+			"evidenceIds": [
+				"grignoteuse-draper-70835-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Matrice",
+			"value": "Réglable pour varier la direction de coupe",
+			"evidenceIds": [
+				"grignoteuse-draper-70835-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cadence",
+			"value": "3 800 coups/min",
+			"evidenceIds": [
+				"grignoteuse-draper-70835-reserved-20261103-1"
 			]
 		}
 	],
@@ -140,6 +164,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : bcb1d49095f56db76053ae0179e91bee6cfd7e92e698c2922f36d8c0ff2cacef. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "grignoteuse-draper-70835-reserved-20261103-1",
+			"sourceUrl": "https://www.drapertools.com/product/70835/air-nibbler/",
+			"sourceLabel": "Draper : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 85957cfe99f68c3d5b0b6733c74260f0367e8dc089834784ca10095c7c7ce5b9. La 70835 grignote une tôle d’acier jusqu’à 1,5 mm selon la description constructeur. Sa matrice réglable permet de changer la direction de coupe ; cette capacité ne vaut pas une épaisseur inox. Les 278 L/min moyens et la pression de service 6,2 bar ne prouvent pas un débit maximal à pression mesurée."
 		}
 	],
 	"fieldSources": {
@@ -151,6 +185,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-draper-70835-html-p1"
+		],
+		"editorial": [
+			"grignoteuse-draper-70835-reserved-20261103-1"
+		],
+		"specifications": [
+			"grignoteuse-draper-70835-reserved-20261103-1"
 		]
 	},
 	"notes": [

@@ -29,19 +29,21 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "FACOM V.352F. La fiche établit les dimensions ou caractéristiques mécaniques du modèle. Aucun débit d’air n’est déduit du couple, de la vitesse ni de la puissance. Champ fabricant : Power Source : Pneumatic. Champ fabricant : Product Height [mm] : 75.",
+		"overview": "FACOM V.352F. Le V.352F est livré avec 27 aiguilles de 2 mm. Passer aux 12 aiguilles de 3 mm impose aussi le plateau V.352FSAV16B, pas seulement le jeu V.352FA1D3. La page publie 24 L/min moyens et une pression de service 6,2 bar ; l’ancienne formule de débit absent était trop générale, mais la moyenne ne permet toujours pas le calcul continu.",
 		"verifiedFacts": [
 			"Champ fabricant : Power Source : Pneumatic.",
 			"Champ fabricant : Product Height [mm] : 75.",
 			"Champ fabricant : Product Length [mm] : 360.",
 			"Champ fabricant : Product Weight [Kg] : 1.7.",
-			"Champ fabricant : Product Width [mm] : 36."
+			"Champ fabricant : Product Width [mm] : 36.",
+			"Montage livré : 27 aiguilles de 2 mm avec plateau correspondant.",
+			"Autre montage : 12 aiguilles de 3 mm, plateau spécifique.",
+			"Cadence : 4 200 coups/min.",
+			"Consommation moyenne publiée : 24 L/min ; 0,9 CFM."
 		],
 		"limitations": [
-			"La fiche établit les dimensions ou caractéristiques mécaniques du modèle. Aucun débit d’air n’est déduit du couple, de la vitesse ni de la puissance.",
-			"Fiche constructeur FACOM ; données déclaratives sans essai CompatAir.",
-			"Les kits, pièces, raccords, consommables et modèles non pneumatiques sont exclus.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Le débit moyen 24 L/min et la pression de service 6,2 bar ne prouvent pas une consommation maximale en charge à pression de mesure appariée.",
+			"Fiche constructeur, sans essai physique CompatAir."
 		]
 	},
 	"specifications": [
@@ -86,6 +88,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-facom-v352f-html-p1"
 			]
+		},
+		{
+			"label": "Montage livré",
+			"value": "27 aiguilles de 2 mm avec plateau correspondant",
+			"evidenceIds": [
+				"derouilleur-a-aiguilles-facom-v-352f-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Autre montage",
+			"value": "12 aiguilles de 3 mm, plateau spécifique",
+			"evidenceIds": [
+				"derouilleur-a-aiguilles-facom-v-352f-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cadence",
+			"value": "4 200 coups/min",
+			"evidenceIds": [
+				"derouilleur-a-aiguilles-facom-v-352f-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation moyenne publiée",
+			"value": "24 L/min ; 0,9 CFM",
+			"evidenceIds": [
+				"derouilleur-a-aiguilles-facom-v-352f-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -98,6 +128,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : b2690fb8d45486338799026d2c6bf3a6348c7bead0d7be89aca70d3020252d4e. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "derouilleur-a-aiguilles-facom-v-352f-reserved-20261103-1",
+			"sourceUrl": "https://www.facom.com/product/v352f/pneumatic-needle-scaler?tid=610786",
+			"sourceLabel": "FACOM : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 fea2b0c1f8075c66283a46b4a6e6f5cfbd7923c62547f7636eb9eeedfb1ecc9c. Le V.352F est livré avec 27 aiguilles de 2 mm. Passer aux 12 aiguilles de 3 mm impose aussi le plateau V.352FSAV16B, pas seulement le jeu V.352FA1D3. La page publie 24 L/min moyens et une pression de service 6,2 bar ; l’ancienne formule de débit absent était trop générale, mais la moyenne ne permet toujours pas le calcul continu."
 		}
 	],
 	"fieldSources": {
@@ -109,6 +149,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-facom-v352f-html-p1"
+		],
+		"editorial": [
+			"derouilleur-a-aiguilles-facom-v-352f-reserved-20261103-1"
+		],
+		"specifications": [
+			"derouilleur-a-aiguilles-facom-v-352f-reserved-20261103-1"
 		]
 	},
 	"notes": [

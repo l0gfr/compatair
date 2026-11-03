@@ -30,74 +30,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Universal Tool UT1555EI-TH. Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse. Masse publiée : 16.1 kg. Longueur publiée : 411.4 mm.",
+		"overview": "Universal Tool UT1555EI-TH. La UT1555EI-TH est la clé 1-1/2 pouce à gâchette intérieure et retenue par trou traversant, 4 339 Nm de travail et 5 694 Nm maximum. La différence entre travail et maximum est conservée ; les autres grandes clés UT1045EI-TH et UT1520EI-TH ne reçoivent pas ces valeurs. Les libellés de flexible 3/4 pouce et 19 mm sont arrondis, sans diamètre ajusté inventé. Aucune consommation n’est publiée.",
 		"verifiedFacts": [
-			"Masse publiée : 16.1 kg.",
-			"Longueur publiée : 411.4 mm.",
-			"Couple de travail déclaré : 4339 Nm.",
-			"Retenue de douille : Through Hole."
+			"Carré : 1-1/2 pouce.",
+			"Commande : Poignée de bout, gâchette intérieure.",
+			"Couple de travail : 4 339 Nm.",
+			"Couple maximal : 5 694 Nm.",
+			"Retenue de douille : Trou traversant.",
+			"Flexible, libellés source : 3/4 pouce / 19 mm."
 		],
 		"limitations": [
-			"Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse.",
-			"Les diamètres intérieurs publiés diffèrent après conversion ; aucune valeur unique n’est retenue sans clarification.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Régime et pression de mesure non suffisamment documentés ; les valeurs restent hors calcul conclusif.",
+			"Les colonnes contradictoires éventuelles restent attribuées à la source, sans correction devinée."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "16.1 kg",
+			"label": "Carré",
+			"value": "1-1/2 pouce",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-3-p1"
+				"cle-a-chocs-universal-tool-ut1555ei-th-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur publiée",
-			"value": "411.4 mm",
+			"label": "Commande",
+			"value": "Poignée de bout, gâchette intérieure",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-3-p1"
+				"cle-a-chocs-universal-tool-ut1555ei-th-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Couple de travail déclaré",
-			"value": "4339 Nm",
+			"label": "Couple de travail",
+			"value": "4 339 Nm",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-3-p1"
+				"cle-a-chocs-universal-tool-ut1555ei-th-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Couple maximal",
+			"value": "5 694 Nm",
+			"evidenceIds": [
+				"cle-a-chocs-universal-tool-ut1555ei-th-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Retenue de douille",
-			"value": "Through Hole",
+			"value": "Trou traversant",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-3-p1"
+				"cle-a-chocs-universal-tool-ut1555ei-th-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Champ fabricant : Air Inlet NPT/BSP",
-			"value": "1/2-in.",
+			"label": "Flexible, libellés source",
+			"value": "3/4 pouce / 19 mm",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-3-p1"
-			]
-		},
-		{
-			"label": "Champ fabricant : Hose ID (in.)",
-			"value": "3/4-in.",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-3-p1"
-			]
-		},
-		{
-			"label": "Champ fabricant : Hose ID (mm)",
-			"value": "19",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-3-p1"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "Pression de mesure de la consommation non établie dans la fiche.",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-3-p1"
+				"cle-a-chocs-universal-tool-ut1555ei-th-reserved-20261103-1"
 			]
 		}
 	],
@@ -111,6 +98,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : e7b5c9e0f9ee3da0c8ed0c9ae5642dee16feba21b41ca8268abc409b4037e364. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-chocs-universal-tool-ut1555ei-th-reserved-20261103-1",
+			"sourceUrl": "https://continentaltoolgroup.com/product/1-1-2-grip-handle-inside-trigger-impact-wrench-2/",
+			"sourceLabel": "Universal Tool : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 e837e99d0c98fbcdbb04790e9a0a3bf7c0c93bca77f18b8f7e62f0417af44dac. La UT1555EI-TH est la clé 1-1/2 pouce à gâchette intérieure et retenue par trou traversant, 4 339 Nm de travail et 5 694 Nm maximum. La différence entre travail et maximum est conservée ; les autres grandes clés UT1045EI-TH et UT1520EI-TH ne reçoivent pas ces valeurs. Les libellés de flexible 3/4 pouce et 19 mm sont arrondis, sans diamètre ajusté inventé. Aucune consommation n’est publiée."
 		}
 	],
 	"fieldSources": {
@@ -125,6 +122,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-ctg-pdp-3-p1"
+		],
+		"editorial": [
+			"cle-a-chocs-universal-tool-ut1555ei-th-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-chocs-universal-tool-ut1555ei-th-reserved-20261103-1"
 		]
 	},
 	"notes": [

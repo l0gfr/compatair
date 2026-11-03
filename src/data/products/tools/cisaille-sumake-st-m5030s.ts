@@ -39,53 +39,60 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-M5030S. Consommation publiée, régime non précisé : 340 L/min à 6,2 bar. Consommation dans les unités du tableau : 340 L/min ; 12 cfm. Configuration complète publiée : ST-M5030S.",
+		"overview": "Sumake ST-M5030S. La ST-M5030S est donnée pour acier 1,2 mm et aluminium 2,4 mm. La ST-M5030B donne acier 1,6 mm, aluminium 2,0 mm et inox 0,8 mm ; la ligne S ne documente pas l’inox. Les capacités matière sont distinctes malgré la même consommation publiée.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 17.",
-			"Consommation dans les unités du tableau : 340 L/min ; 12 cfm.",
-			"Configuration complète publiée : ST-M5030S.",
-			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé."
+			"Capacité acier : 1,2 mm.",
+			"Capacité aluminium : 2,4 mm.",
+			"Cadence publiée : 2 500 tr/min, libellé du tableau.",
+			"Masse : 1,28 kg.",
+			"Consommation documentaire : 340 L/min, régime non précisé.",
+			"Pression de service recommandée : 6,2 bar ; pression de mesure de la consommation non démontrée."
 		],
 		"limitations": [
-			"Le régime de consommation n’est pas indiqué. Aucun débit maximal ou en charge n’est inventé ; le verdict reste insufficient_data.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"La recommandation de service 6,2 bar ne prouve pas la pression de mesure de la consommation. Le régime reste non qualifié et le calcul indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 17",
+			"label": "Capacité acier",
+			"value": "1,2 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p17"
+				"cisaille-sumake-st-m5030s-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation dans les unités du tableau",
-			"value": "340 L/min ; 12 cfm",
+			"label": "Capacité aluminium",
+			"value": "2,4 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p17"
+				"cisaille-sumake-st-m5030s-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Configuration complète publiée",
-			"value": "ST-M5030S",
+			"label": "Cadence publiée",
+			"value": "2 500 tr/min, libellé du tableau",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p17"
+				"cisaille-sumake-st-m5030s-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Régime de consommation",
-			"value": "Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé",
+			"label": "Masse",
+			"value": "1,28 kg",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p17"
+				"cisaille-sumake-st-m5030s-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Ligne technique originale du modèle",
-			"value": "ST-M5030S - 1.2 2.4 5.5 1/4 2,500 1/4” 3/8” 340 12 1.28 2.83 10Pcs/Ctn/17/1'",
+			"label": "Consommation documentaire",
+			"value": "340 L/min, régime non précisé",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p17"
+				"cisaille-sumake-st-m5030s-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression de service recommandée",
+			"value": "6,2 bar ; pression de mesure de la consommation non démontrée",
+			"evidenceIds": [
+				"cisaille-sumake-st-m5030s-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +106,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "cisaille-sumake-st-m5030s-reserved-20261103-1",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf#page=17",
+			"sourceLabel": "Sumake : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. La ST-M5030S est donnée pour acier 1,2 mm et aluminium 2,4 mm. La ST-M5030B donne acier 1,6 mm, aluminium 2,0 mm et inox 0,8 mm ; la ligne S ne documente pas l’inox. Les capacités matière sont distinctes malgré la même consommation publiée."
 		}
 	],
 	"fieldSources": {
@@ -113,6 +130,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-d-sumake-na-2024-p17"
+		],
+		"editorial": [
+			"cisaille-sumake-st-m5030s-reserved-20261103-1"
+		],
+		"specifications": [
+			"cisaille-sumake-st-m5030s-reserved-20261103-1"
 		]
 	},
 	"notes": [

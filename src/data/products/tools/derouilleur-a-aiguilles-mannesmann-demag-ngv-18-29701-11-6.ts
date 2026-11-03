@@ -33,52 +33,52 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Mannesmann DEMAG NGV 18 (réf. 29701-11-6). La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 1.95 kg. Référence fabricant : 29701-11-6.",
+		"overview": "Mannesmann DEMAG NGV 18. Le NGV 18 utilise dix-huit aiguilles 3 × 127 mm à 8 700 coups/min. Le GNV 19 reçoit dix-neuf aiguilles de diamètre 3,2 mm à 6 600 coups/min, tandis que le GNV 28 passe à vingt-huit. La note 6 bar concerne puissance et cadence, sans extension implicite à la mesure des 1,6 L/s.",
 		"verifiedFacts": [
-			"Masse publiée : 1.95 kg.",
-			"Référence fabricant : 29701-11-6.",
-			"Longueur publiée : 310 mm."
+			"Aiguilles : 18, diamètre 3,0 mm × longueur 127 mm.",
+			"Cadence : 8 700 coups/min.",
+			"Longueur : 310 mm.",
+			"Masse : 1,95 kg.",
+			"Consommation, régime non précisé : 1,6 L/s."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"La pression de 6 bar est donnée pour la puissance et la vitesse ; son application à la consommation n’est pas supposée.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"La note constructeur à 6 bar concerne explicitement puissance et vitesse/cadence ; elle n’est pas étendue à la consommation sans preuve."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "1.95 kg",
+			"label": "Aiguilles",
+			"value": "18, diamètre 3,0 mm × longueur 127 mm",
 			"evidenceIds": [
-				"october2-tools-mannesmann-0-p67"
+				"derouilleur-a-aiguilles-mannesmann-demag-ngv-18-29701-11-6-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Référence fabricant",
-			"value": "29701-11-6",
+			"label": "Cadence",
+			"value": "8 700 coups/min",
 			"evidenceIds": [
-				"october2-tools-mannesmann-0-p67"
+				"derouilleur-a-aiguilles-mannesmann-demag-ngv-18-29701-11-6-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur publiée",
+			"label": "Longueur",
 			"value": "310 mm",
 			"evidenceIds": [
-				"october2-tools-mannesmann-0-p67"
+				"derouilleur-a-aiguilles-mannesmann-demag-ngv-18-29701-11-6-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "Power and number of blows at 6 bar operating pressure. Compressed air quality: lubricated.",
+			"label": "Masse",
+			"value": "1,95 kg",
 			"evidenceIds": [
-				"october2-tools-mannesmann-0-p67"
+				"derouilleur-a-aiguilles-mannesmann-demag-ngv-18-29701-11-6-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation de régime non précisé, hors calcul",
-			"value": "1.6 L/s",
+			"label": "Consommation, régime non précisé",
+			"value": "1,6 L/s",
 			"evidenceIds": [
-				"october2-tools-mannesmann-0-p67"
+				"derouilleur-a-aiguilles-mannesmann-demag-ngv-18-29701-11-6-reserved-20261103-1"
 			]
 		}
 	],
@@ -92,6 +92,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 9de8eb77aad6c7412b390db54a16646c71c0a4f9925ddf3ddfba1048b1779f3b. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "derouilleur-a-aiguilles-mannesmann-demag-ngv-18-29701-11-6-reserved-20261103-1",
+			"sourceUrl": "https://www.mannesmann-demag.com/bilder-und-dateien/downloads/kataloge/md_airtools_05_2017_e.pdf?type=download#page=67",
+			"sourceLabel": "Mannesmann DEMAG : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9de8eb77aad6c7412b390db54a16646c71c0a4f9925ddf3ddfba1048b1779f3b. Le NGV 18 utilise dix-huit aiguilles 3 × 127 mm à 8 700 coups/min. Le GNV 19 reçoit dix-neuf aiguilles de diamètre 3,2 mm à 6 600 coups/min, tandis que le GNV 28 passe à vingt-huit. La note 6 bar concerne puissance et cadence, sans extension implicite à la mesure des 1,6 L/s."
 		}
 	],
 	"fieldSources": {
@@ -103,6 +113,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-mannesmann-0-p67"
+		],
+		"editorial": [
+			"derouilleur-a-aiguilles-mannesmann-demag-ngv-18-29701-11-6-reserved-20261103-1"
+		],
+		"specifications": [
+			"derouilleur-a-aiguilles-mannesmann-demag-ngv-18-29701-11-6-reserved-20261103-1"
 		]
 	},
 	"notes": [

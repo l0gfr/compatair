@@ -34,10 +34,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Metabo HPT NR90AE(S1). Volume déclaré : 2,5 L par cycle à 6,9 bar ; la cadence doit être renseignée. Point du tableau retenu : 100 psi (6.9 bar), 2.5 ltr/cycle. Autres points explicitement publiés : 80 psi (5.5 bar) : 1.7 L/cycle ; 90 psi (6.2 bar) : 2.1 L/cycle.",
+		"overview": "Metabo HPT NR90AE(S1). Le NR90AE(S1) emploie des clous à tête pleine assemblés en plastique ; le NR90AD(S1) utilise des têtes tronquées assemblées en papier. L’AE mesure527 mm et pèse3,4 kg contre 462 mm et 3,2 kg pour l’AD. Les 2,5 L/tir à6,9 bar sont explicitement appariés dans la notice ; une cadence déclarée reste nécessaire.",
 		"verifiedFacts": [
 			"Point du tableau retenu : 100 psi (6.9 bar), 2.5 ltr/cycle.",
-			"Autres points explicitement publiés : 80 psi (5.5 bar) : 1.7 L/cycle ; 90 psi (6.2 bar) : 2.1 L/cycle."
+			"Autres points explicitement publiés : 80 psi (5.5 bar) : 1.7 L/cycle ; 90 psi (6.2 bar) : 2.1 L/cycle.",
+			"Clous compatibles : Tête pleine, assemblage plastique, longueur50–90 mm.",
+			"Diamètre du fil : 2,9–3,8 mm.",
+			"Magasin : 64–70 clous, deux bandes.",
+			"Masse : 3,4 kg.",
+			"Dimensions L×H×W : 527 × 322 × 125 mm."
 		],
 		"limitations": [
 			"Une cadence déclarée permet le calcul moyen ; la pointe instantanée de déclenchement reste distincte.",
@@ -74,6 +79,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-metabohpt-nr90-manual-pdf-p11"
 			]
+		},
+		{
+			"label": "Clous compatibles",
+			"value": "Tête pleine, assemblage plastique, longueur50–90 mm",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-metabo-hpt-nr90ae-s1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Diamètre du fil",
+			"value": "2,9–3,8 mm",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-metabo-hpt-nr90ae-s1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Magasin",
+			"value": "64–70 clous, deux bandes",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-metabo-hpt-nr90ae-s1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "3,4 kg",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-metabo-hpt-nr90ae-s1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Dimensions L×H×W",
+			"value": "527 × 322 × 125 mm",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-metabo-hpt-nr90ae-s1-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -86,6 +126,36 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 57defa88fed01f027ef22ca41d56ffd67867d9e7cce0a381d48d3c39a906a86a. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "agrafeuse-cloueuse-metabo-hpt-nr90ae-s1-reserved-20261103-1",
+			"sourceUrl": "https://www.metabo-hpt.com/docs/default-source/product-owners-manuals/bf9aff2e3a40407cb9486114fc12e71e.pdf?sfvrsn=e4dabf4c_2#page=11",
+			"sourceLabel": "Metabo HPT : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 57defa88fed01f027ef22ca41d56ffd67867d9e7cce0a381d48d3c39a906a86a. Le NR90AE(S1) emploie des clous à tête pleine assemblés en plastique ; le NR90AD(S1) utilise des têtes tronquées assemblées en papier. L’AE mesure527 mm et pèse3,4 kg contre 462 mm et 3,2 kg pour l’AD. Les 2,5 L/tir à6,9 bar sont explicitement appariés dans la notice ; une cadence déclarée reste nécessaire."
+		},
+		{
+			"id": "agrafeuse-cloueuse-metabo-hpt-nr90ae-s1-reserved-20261103-1-2",
+			"sourceUrl": "https://www.metabo-hpt.com/docs/default-source/product-owners-manuals/bf9aff2e3a40407cb9486114fc12e71e.pdf?sfvrsn=e4dabf4c_2#page=9",
+			"sourceLabel": "Metabo HPT : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 57defa88fed01f027ef22ca41d56ffd67867d9e7cce0a381d48d3c39a906a86a. Le NR90AE(S1) emploie des clous à tête pleine assemblés en plastique ; le NR90AD(S1) utilise des têtes tronquées assemblées en papier. L’AE mesure527 mm et pèse3,4 kg contre 462 mm et 3,2 kg pour l’AD. Les 2,5 L/tir à6,9 bar sont explicitement appariés dans la notice ; une cadence déclarée reste nécessaire."
+		},
+		{
+			"id": "agrafeuse-cloueuse-metabo-hpt-nr90ae-s1-reserved-20261103-1-3",
+			"sourceUrl": "https://www.metabo-hpt.com/docs/default-source/product-owners-manuals/bf9aff2e3a40407cb9486114fc12e71e.pdf?sfvrsn=e4dabf4c_2#page=10",
+			"sourceLabel": "Metabo HPT : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 57defa88fed01f027ef22ca41d56ffd67867d9e7cce0a381d48d3c39a906a86a. Le NR90AE(S1) emploie des clous à tête pleine assemblés en plastique ; le NR90AD(S1) utilise des têtes tronquées assemblées en papier. L’AE mesure527 mm et pèse3,4 kg contre 462 mm et 3,2 kg pour l’AD. Les 2,5 L/tir à6,9 bar sont explicitement appariés dans la notice ; une cadence déclarée reste nécessaire."
 		}
 	],
 	"fieldSources": {
@@ -100,6 +170,12 @@ const product: ToolProfileInput = {
 		],
 		"actionLabel": [
 			"october2b-tools-oct2b-metabohpt-nr90-manual-pdf-p11"
+		],
+		"editorial": [
+			"agrafeuse-cloueuse-metabo-hpt-nr90ae-s1-reserved-20261103-1"
+		],
+		"specifications": [
+			"agrafeuse-cloueuse-metabo-hpt-nr90ae-s1-reserved-20261103-1"
 		]
 	},
 	"notes": [

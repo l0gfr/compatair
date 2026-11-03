@@ -29,14 +29,17 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Omer 12.28 D. Le volume par coup publié n’est pas rattaché à un point de pression de mesure. La plage de fonctionnement ne permet pas de reconstituer ce point. Longueur des fixations utilisables : 10 ÷ 28 mm. Capacité du magasin : 100 fixations.",
+		"overview": "Omer 12.28 D. La 12.28D pèse1,10 kg et mesure182 mm de haut contre 1,04 kg et 162 mm pour la 12.28 standard. La famille Brads12 utilise des pointes10–28 mm ; les versions12.40 et 12.40G ont d’autres longueurs et encombrements. La consommation0,15 L/coup reste sans pression de mesure appariée.",
 		"verifiedFacts": [
 			"Longueur des fixations utilisables : 10 ÷ 28 mm.",
 			"Capacité du magasin : 100 fixations.",
 			"Masse publiée : 1,10 kg.",
 			"Dimensions (L × W × H) : 226 x 43 x 182 mm.",
 			"Pression de fonctionnement originale : 4,5 ÷ 6 kg/cm².",
-			"Volume par cycle original : 0,15 litri/colpo."
+			"Volume par cycle original : 0,15 litri/colpo.",
+			"Fixation : Pointes Brads12,10–28 mm.",
+			"Dimensions de la version D : 226 × 43 × 182 mm.",
+			"Masse de la version D : 1,10 kg."
 		],
 		"limitations": [
 			"Le volume par coup publié n’est pas rattaché à un point de pression de mesure. La plage de fonctionnement ne permet pas de reconstituer ce point.",
@@ -94,6 +97,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-omer-2017-pdf-p46"
 			]
+		},
+		{
+			"label": "Fixation",
+			"value": "Pointes Brads12,10–28 mm",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-omer-12-28-d-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Dimensions de la version D",
+			"value": "226 × 43 × 182 mm",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-omer-12-28-d-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse de la version D",
+			"value": "1,10 kg",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-omer-12-28-d-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -106,6 +130,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : fd0c4d3cc4edfbb1e60aefe73acde4739f3e3919f580d97e4c3b26bca75fca44. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "agrafeuse-cloueuse-omer-12-28-d-reserved-20261103-1",
+			"sourceUrl": "https://www.omertools.com/wp-content/uploads/2024/03/CATALOGO_2017.pdf#page=46",
+			"sourceLabel": "Omer : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 fd0c4d3cc4edfbb1e60aefe73acde4739f3e3919f580d97e4c3b26bca75fca44. La 12.28D pèse1,10 kg et mesure182 mm de haut contre 1,04 kg et 162 mm pour la 12.28 standard. La famille Brads12 utilise des pointes10–28 mm ; les versions12.40 et 12.40G ont d’autres longueurs et encombrements. La consommation0,15 L/coup reste sans pression de mesure appariée."
 		}
 	],
 	"fieldSources": {
@@ -117,6 +151,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-omer-2017-pdf-p46"
+		],
+		"editorial": [
+			"agrafeuse-cloueuse-omer-12-28-d-reserved-20261103-1"
+		],
+		"specifications": [
+			"agrafeuse-cloueuse-omer-12-28-d-reserved-20261103-1"
 		]
 	},
 	"notes": [

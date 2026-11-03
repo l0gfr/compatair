@@ -38,67 +38,60 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-925. Consommation de régime non précisé : 300 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 1.32 kg. Longueur : 135 mm.",
+		"overview": "GISON GP-925. La GP-925 est la version à aspiration centrale de plateau 5 pouces et orbite 2,5 mm. La GP-827T est sans aspiration et accepte 5 ou 6 pouces ; la GP-937RD est à aspiration autogénérée. Les légendes sont relues sur le rendu du PDF, car l’extraction textuelle mélange l’ordre des colonnes.",
 		"verifiedFacts": [
-			"Masse : 1.32 kg.",
+			"Aspiration : Centrale, légende visuelle Central Vacuum.",
+			"Plateau : 5 pouces.",
+			"Orbite : 2,5 mm.",
+			"Vitesse à vide : 10 000 tr/min.",
 			"Longueur : 135 mm.",
-			"Vitesse à vide : 10000 tr/min.",
-			"Diamètre de flexible publié : 6.5 mm.",
-			"Référence constructeur : GP-925."
+			"Masse : 1,32 kg."
 		],
 		"limitations": [
-			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
-			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+			"Recommandation de service 90 psi (6,3 kg/cm² dans le catalogue), distincte d’un point de mesure de consommation démontré. Régime non qualifié ; pas de conclusion de dimensionnement."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse",
-			"value": "1.32 kg",
+			"label": "Aspiration",
+			"value": "Centrale, légende visuelle Central Vacuum",
 			"evidenceIds": [
-				"october-b-gison-tools-p37"
+				"ponceuse-orbitale-gison-gp-925-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Plateau",
+			"value": "5 pouces",
+			"evidenceIds": [
+				"ponceuse-orbitale-gison-gp-925-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Orbite",
+			"value": "2,5 mm",
+			"evidenceIds": [
+				"ponceuse-orbitale-gison-gp-925-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "10 000 tr/min",
+			"evidenceIds": [
+				"ponceuse-orbitale-gison-gp-925-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Longueur",
 			"value": "135 mm",
 			"evidenceIds": [
-				"october-b-gison-tools-p37"
+				"ponceuse-orbitale-gison-gp-925-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse à vide",
-			"value": "10000 tr/min",
+			"label": "Masse",
+			"value": "1,32 kg",
 			"evidenceIds": [
-				"october-b-gison-tools-p37"
-			]
-		},
-		{
-			"label": "Diamètre de flexible publié",
-			"value": "6.5 mm",
-			"evidenceIds": [
-				"october-b-gison-tools-p37"
-			]
-		},
-		{
-			"label": "Référence constructeur",
-			"value": "GP-925",
-			"evidenceIds": [
-				"october-b-gison-tools-p37"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "Recommended Air Pressure 90 psi (6.3 kg/cm2)",
-			"evidenceIds": [
-				"october-b-gison-tools-p37"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "GISON, catalogue pneumatique 2018–2019, page PDF 37",
-			"evidenceIds": [
-				"october-b-gison-tools-p37"
+				"ponceuse-orbitale-gison-gp-925-reserved-20261103-1"
 			]
 		}
 	],
@@ -112,6 +105,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-orbitale-gison-gp-925-reserved-20261103-1",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=37",
+			"sourceLabel": "GISON : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. La GP-925 est la version à aspiration centrale de plateau 5 pouces et orbite 2,5 mm. La GP-827T est sans aspiration et accepte 5 ou 6 pouces ; la GP-937RD est à aspiration autogénérée. Les légendes sont relues sur le rendu du PDF, car l’extraction textuelle mélange l’ordre des colonnes."
 		}
 	],
 	"fieldSources": {
@@ -126,6 +129,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-b-gison-tools-p37"
+		],
+		"editorial": [
+			"ponceuse-orbitale-gison-gp-925-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-orbitale-gison-gp-925-reserved-20261103-1"
 		]
 	},
 	"notes": [

@@ -23,14 +23,19 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Sioux GO459-60SRH, référence GO459-60SRH. Le dimensionnement utilise 420 L/min à 6,2 bar, selon les régimes publiés par le fabricant. Vitesse à vide : 900 tr/min. Diamètre du plateau : 150 mm. Masse : 2.0 kg.",
+		"overview": "Sioux GO459-60SRH. La GO459-60SRH associe aspiration déportée et plateau autoagrippant. La GO459-60SRP reçoit un abrasif PSA ; les versions SN sont sans aspiration. Les 420 L/min ne choisissent ni le raccord d’aspiration ni la fixation de l’abrasif.",
 		"verifiedFacts": [
 			"Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur.",
 			"Consommation publiée : 7.0 L/s (15.0 scfm). Le guide du catalogue (page PDF 10) définit ces débits comme de l’air détendu à pression atmosphérique et des consommations maximales, sauf indication contraire. La plus grande valeur publiée est retenue : 420 L/min (L/s × 60).",
 			"Référence fabricant : GO459-60SRH.",
 			"Vitesse à vide : 900 tr/min.",
 			"Diamètre du plateau : 150 mm.",
-			"Masse : 2.0 kg."
+			"Masse : 2.0 kg.",
+			"Fixation de l’abrasif : Plateau H & L, autoagrippant.",
+			"Aspiration : Remote Vacuum.",
+			"Diamètre de plateau : 150 mm.",
+			"Diamètre d’orbite : 5 mm.",
+			"Vitesse à vide : 900 tr/min."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
@@ -93,6 +98,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"sioux-go459-60srh-20260927"
 			]
+		},
+		{
+			"label": "Fixation de l’abrasif",
+			"value": "Plateau H & L, autoagrippant",
+			"evidenceIds": [
+				"sioux-go459-60srh-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Aspiration",
+			"value": "Remote Vacuum",
+			"evidenceIds": [
+				"sioux-go459-60srh-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Diamètre de plateau",
+			"value": "150 mm",
+			"evidenceIds": [
+				"sioux-go459-60srh-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Diamètre d’orbite",
+			"value": "5 mm",
+			"evidenceIds": [
+				"sioux-go459-60srh-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "900 tr/min",
+			"evidenceIds": [
+				"sioux-go459-60srh-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -113,6 +153,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur."
+		},
+		{
+			"id": "sioux-go459-60srh-reserved-20261103-1",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=64",
+			"sourceLabel": "Sioux : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8. La GO459-60SRH associe aspiration déportée et plateau autoagrippant. La GO459-60SRP reçoit un abrasif PSA ; les versions SN sont sans aspiration. Les 420 L/min ne choisissent ni le raccord d’aspiration ni la fixation de l’abrasif."
 		}
 	],
 	"fieldSources": {
@@ -124,6 +174,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"sioux-go459-60srh-20260927"
+		],
+		"editorial": [
+			"sioux-go459-60srh-reserved-20261103-1"
+		],
+		"specifications": [
+			"sioux-go459-60srh-reserved-20261103-1"
 		]
 	},
 	"notes": [

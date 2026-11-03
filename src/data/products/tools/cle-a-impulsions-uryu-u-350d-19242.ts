@@ -37,11 +37,17 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU U-350D, code 19242. Le tableau publie une consommation moyenne de 0,15 m³/min, soit 150 L/min. Pression de référence retenue : 6 bar.",
+		"overview": "URYU U-350D. La U-350D mesure 154 mm contre 238 mm pour la U-350SD, à plages de couple publiées identiques. La U-310SD de 222 mm vise une plage de couple inférieure. Les deux pressions de couple restent séparées et les 150 L/min sont une moyenne.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 19242, page PDF 5.",
 			"Consommation moyenne publiée : 150 L/min après conversion de l’unité originale.",
-			"SPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85psi)\nSPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85psi)\nSPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85psi)"
+			"SPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85 psi)\nSPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85 psi)\nSPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85 psi)",
+			"Capacité nominale de vis : 3–4 mm.",
+			"Longueur totale : 154 mm.",
+			"Masse hors douille ou embout : 0,77 kg.",
+			"Sortie hexagonale rapide : 6,35 mm (1/4\").",
+			"Couple indicatif à 0,5 MPa : 3,0–5,0 Nm.",
+			"Couple indicatif à 0,6 MPa : 3,5–5,8 Nm."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
@@ -76,6 +82,48 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-uryu-p30-34"
 			]
+		},
+		{
+			"label": "Capacité nominale de vis",
+			"value": "3–4 mm",
+			"evidenceIds": [
+				"cle-a-impulsions-uryu-u-350d-19242-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "154 mm",
+			"evidenceIds": [
+				"cle-a-impulsions-uryu-u-350d-19242-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse hors douille ou embout",
+			"value": "0,77 kg",
+			"evidenceIds": [
+				"cle-a-impulsions-uryu-u-350d-19242-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Sortie hexagonale rapide",
+			"value": "6,35 mm (1/4\")",
+			"evidenceIds": [
+				"cle-a-impulsions-uryu-u-350d-19242-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Couple indicatif à 0,5 MPa",
+			"value": "3,0–5,0 Nm",
+			"evidenceIds": [
+				"cle-a-impulsions-uryu-u-350d-19242-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Couple indicatif à 0,6 MPa",
+			"value": "3,5–5,8 Nm",
+			"evidenceIds": [
+				"cle-a-impulsions-uryu-u-350d-19242-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -88,6 +136,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 bfedea87f312ccc461b6512e0086d674afcec922db3881306259e050187bb373. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		},
+		{
+			"id": "cle-a-impulsions-uryu-u-350d-19242-reserved-20261103-1",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P30_34.pdf",
+			"sourceLabel": "URYU : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 bfedea87f312ccc461b6512e0086d674afcec922db3881306259e050187bb373. La U-350D mesure 154 mm contre 238 mm pour la U-350SD, à plages de couple publiées identiques. La U-310SD de 222 mm vise une plage de couple inférieure. Les deux pressions de couple restent séparées et les 150 L/min sont une moyenne."
 		}
 	],
 	"fieldSources": {
@@ -102,6 +160,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-20260930-uryu-p30-34"
+		],
+		"editorial": [
+			"cle-a-impulsions-uryu-u-350d-19242-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-impulsions-uryu-u-350d-19242-reserved-20261103-1"
 		]
 	},
 	"notes": [

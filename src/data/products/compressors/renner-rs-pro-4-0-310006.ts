@@ -24,7 +24,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 440
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "oil",
 	"powerKw": 4,
 	"weightKg": 153,
@@ -39,45 +38,68 @@ const product: CompressorInput = {
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 20",
+			"label": "Article",
+			"value": "310006",
 			"evidenceIds": [
-				"documented-20260930-renner-2026"
+				"renner-rs-pro-4-0-310006-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Configuration publiée",
-			"value": "Version standard au sol, sans réservoir intégré",
+			"label": "Montage",
+			"value": "RS-PRO 4,0 sur socle",
 			"evidenceIds": [
-				"documented-20260930-renner-2026"
+				"renner-rs-pro-4-0-310006-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Dimensions (L × l × h)",
-			"value": "540 × 553 × 1014 mm",
+			"label": "Débit livré à 13 bar",
+			"value": "440 L/min",
 			"evidenceIds": [
-				"documented-20260930-renner-2026"
+				"renner-rs-pro-4-0-310006-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Technologie",
-			"value": "Vis lubrifiée à entraînement par courroie",
+			"label": "Puissance",
+			"value": "4 kW",
 			"evidenceIds": [
-				"documented-20260930-renner-2026"
+				"renner-rs-pro-4-0-310006-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Dimensions actuelles L×B×H",
+			"value": "540 × 553 × 1 014 mm",
+			"evidenceIds": [
+				"renner-rs-pro-4-0-310006-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "153 kg",
+			"evidenceIds": [
+				"renner-rs-pro-4-0-310006-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Mesure",
+			"value": "ISO 1217 annexe C",
+			"evidenceIds": [
+				"renner-rs-pro-4-0-310006-reserved-20261103-1"
 			]
 		}
 	],
 	"editorial": {
-		"overview": "RENNER RS-PRO 4.0, article 310006. Version standard au sol, sans réservoir intégré. Cette référence correspond à la version 13 bar ; son débit est 440 L/min à cette pression.",
+		"overview": "RENNER RS-PRO 4.0. L’article 310006 est la version 13 bar au sol. La table 2026 associe 310006 à 0,44 m³/min à 13 bar et 310007 à 0,37 m³/min à 15 bar. La RSK ajoute un sécheur et pèse 203 kg ; la RSD ajoute une cuve. La mention de service continu de gamme ne définit pas le taux du groupe.",
 		"verifiedFacts": [
-			"Puissance moteur publiée : 4 kW ; poids de cette configuration : 153 kg.",
-			"Débit restitué documenté : 440 L/min à 13 bar.",
-			"La documentation de la série prévoit le fonctionnement continu, sous ses conditions d’installation et d’entretien."
+			"Article : 310006.",
+			"Montage : RS-PRO 4,0 sur socle.",
+			"Débit livré à 13 bar : 440 L/min.",
+			"Puissance : 4 kW.",
+			"Dimensions actuelles L×B×H : 540 × 553 × 1 014 mm.",
+			"Masse : 153 kg.",
+			"Mesure : ISO 1217 annexe C."
 		],
 		"limitations": [
-			"La disponibilité commerciale actuelle n’a pas été confirmée.",
-			"Les débits des autres versions de pression ne sont pas ajoutés à la courbe de cet article.",
-			"Le service continu documenté ne dispense pas du contrôle du refroidissement, du traitement d’air et des pertes du réseau."
+			"Taux de marche du groupe complet non quantifié. Les articles de pression restent séparés."
 		]
 	},
 	"evidence": [
@@ -100,6 +122,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 9c0fb8f947202b1d1f0a04ceef4d26ed8863e8b6cbfe9d1f1451bf603a1f0ae8. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		},
+		{
+			"id": "renner-rs-pro-4-0-310006-reserved-20261103-1",
+			"sourceUrl": "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf#page=20",
+			"sourceLabel": "RENNER : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 35bd2421c2cc333bc6a0d6cd20c09bbf6b3c2af621021cb6cd2a254d23e74f8a. L’article 310006 est la version 13 bar au sol. La table 2026 associe 310006 à 0,44 m³/min à 13 bar et 310007 à 0,37 m³/min à 15 bar. La RSK ajoute un sécheur et pèse 203 kg ; la RSD ajoute une cuve. La mention de service continu de gamme ne définit pas le taux du groupe."
 		}
 	],
 	"fieldSources": {
@@ -124,8 +156,11 @@ const product: CompressorInput = {
 		"weightKg": [
 			"documented-20260930-renner-2026"
 		],
-		"dutyCycle": [
-			"documented-20260930-renner-belt-hbg"
+		"editorial": [
+			"renner-rs-pro-4-0-310006-reserved-20261103-1"
+		],
+		"specifications": [
+			"renner-rs-pro-4-0-310006-reserved-20261103-1"
 		]
 	},
 	"notes": [

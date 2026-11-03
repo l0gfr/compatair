@@ -38,67 +38,44 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-902A. Consommation de régime non précisé : 530 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 1.18 kg. Longueur : 345 mm.",
+		"overview": "GISON GP-902A. La GP-902A est la version à bande 20 × 520 mm. La GP-902 utilise 10 × 330 mm pour 0,78 kg et la GP-902C 60 × 260 mm à 7 000 tr/min pour 1,65 kg. Ces formats de bande ne sont pas interchangeables ; le chiffre de débit ne suffit pas à choisir l’outil.",
 		"verifiedFacts": [
-			"Masse : 1.18 kg.",
+			"Bande : 20 × 520 mm.",
+			"Vitesse à vide : 18 000 tr/min.",
 			"Longueur : 345 mm.",
-			"Vitesse à vide : 18000 tr/min.",
-			"Diamètre de flexible publié : 6.5 mm.",
-			"Référence constructeur : GP-902A."
+			"Masse : 1,18 kg."
 		],
 		"limitations": [
-			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
-			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+			"Recommandation de service 90 psi (6,3 kg/cm² dans le catalogue), distincte d’un point de mesure de consommation démontré. Régime non qualifié ; pas de conclusion de dimensionnement."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse",
-			"value": "1.18 kg",
+			"label": "Bande",
+			"value": "20 × 520 mm",
 			"evidenceIds": [
-				"october-b-gison-tools-p45"
+				"ponceuse-bande-gison-gp-902a-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "18 000 tr/min",
+			"evidenceIds": [
+				"ponceuse-bande-gison-gp-902a-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Longueur",
 			"value": "345 mm",
 			"evidenceIds": [
-				"october-b-gison-tools-p45"
+				"ponceuse-bande-gison-gp-902a-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse à vide",
-			"value": "18000 tr/min",
+			"label": "Masse",
+			"value": "1,18 kg",
 			"evidenceIds": [
-				"october-b-gison-tools-p45"
-			]
-		},
-		{
-			"label": "Diamètre de flexible publié",
-			"value": "6.5 mm",
-			"evidenceIds": [
-				"october-b-gison-tools-p45"
-			]
-		},
-		{
-			"label": "Référence constructeur",
-			"value": "GP-902A",
-			"evidenceIds": [
-				"october-b-gison-tools-p45"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "Recommended Air Pressure 90 psi (6.3 kg/cm2)",
-			"evidenceIds": [
-				"october-b-gison-tools-p45"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "GISON, catalogue pneumatique 2018–2019, page PDF 45",
-			"evidenceIds": [
-				"october-b-gison-tools-p45"
+				"ponceuse-bande-gison-gp-902a-reserved-20261103-1"
 			]
 		}
 	],
@@ -112,6 +89,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-bande-gison-gp-902a-reserved-20261103-1",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=45",
+			"sourceLabel": "GISON : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. La GP-902A est la version à bande 20 × 520 mm. La GP-902 utilise 10 × 330 mm pour 0,78 kg et la GP-902C 60 × 260 mm à 7 000 tr/min pour 1,65 kg. Ces formats de bande ne sont pas interchangeables ; le chiffre de débit ne suffit pas à choisir l’outil."
 		}
 	],
 	"fieldSources": {
@@ -126,6 +113,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-b-gison-tools-p45"
+		],
+		"editorial": [
+			"ponceuse-bande-gison-gp-902a-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-bande-gison-gp-902a-reserved-20261103-1"
 		]
 	},
 	"notes": [

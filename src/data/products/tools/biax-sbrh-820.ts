@@ -23,61 +23,68 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX SBRH 820, référence 150021115. Le tableau fabricant publie 500 L/min et une plage d’utilisation de 6 à 6 bar. Puissance publiée : 300 W. Vitesse de rotation : 20.000 tr/min.",
+		"overview": "BIAX SBRH 820. La SBRH 820 est la version à levier de 1 100 g ; la SBRD 820 à valve rotative pèse 1 040 g. Le tableau PDF donne 310 W au groupe, alors que la fiche HTML publie 300 W : cet écart reste visible, sans choisir une révision supposée. La SBRH 818 donne 18 000 tr/min et 750 L/min. Le régime des 500 L/min de la 820 reste non précisé.",
 		"verifiedFacts": [
-			"Le catalogue de cette référence indique un fonctionnement à 6 bar.",
-			"La fiche fabricant publie une consommation de 500 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
-			"Référence fabricant : 150021115.",
-			"Puissance publiée : 300 W.",
-			"Vitesse de rotation : 20.000 tr/min.",
-			"Masse publiée : 1100 g."
+			"Commande : Levier, SBRH distincte de SBRD à valve rotative.",
+			"Vitesse : 20 000 tr/min.",
+			"Puissance, table PDF : 310 W.",
+			"Puissance, fiche HTML : 300 W.",
+			"Masse SBRH : 1 100 g.",
+			"Diamètre maximal de queue : 8 mm.",
+			"Consommation, régime non précisé : 500 L/min."
 		],
 		"limitations": [
-			"Le choix de la fraise, du disque ou de l’accessoire doit respecter la vitesse et les dimensions prescrites par BIAX.",
-			"Débit déclaré par le fabricant, sans mesure physique CompatAir."
+			"Le régime de consommation n’est pas précisé ; la valeur reste non dimensionnante et le verdict demeure insufficient_data."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Le catalogue de cette référence indique un fonctionnement à 6 bar.",
+			"label": "Commande",
+			"value": "Levier, SBRH distincte de SBRD à valve rotative",
 			"evidenceIds": [
-				"biax-150021115-20260926-workingpressurebar-1"
+				"biax-sbrh-820-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "La fiche fabricant publie une consommation de 500 L/min. Le régime de charge n’est pas précisé dans ce tableau.",
+			"label": "Vitesse",
+			"value": "20 000 tr/min",
 			"evidenceIds": [
-				"biax-150021115-20260926"
+				"biax-sbrh-820-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Puissance publiée",
+			"label": "Puissance, table PDF",
+			"value": "310 W",
+			"evidenceIds": [
+				"biax-sbrh-820-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Puissance, fiche HTML",
 			"value": "300 W",
 			"evidenceIds": [
-				"biax-150021115-20260926"
+				"biax-sbrh-820-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse de rotation",
-			"value": "20.000 tr/min",
+			"label": "Masse SBRH",
+			"value": "1 100 g",
 			"evidenceIds": [
-				"biax-150021115-20260926"
-			]
-		},
-		{
-			"label": "Masse publiée",
-			"value": "1100 g",
-			"evidenceIds": [
-				"biax-150021115-20260926"
+				"biax-sbrh-820-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Diamètre maximal de queue",
 			"value": "8 mm",
 			"evidenceIds": [
-				"biax-150021115-20260926"
+				"biax-sbrh-820-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation, régime non précisé",
+			"value": "500 L/min",
+			"evidenceIds": [
+				"biax-sbrh-820-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +106,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+		},
+		{
+			"id": "biax-sbrh-820-reserved-20261103-1",
+			"sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=25",
+			"sourceLabel": "BIAX : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 318971fb9ba951f395b81cbca3d1e57938ce23b74db3aef25ff98bb8f0edc6c8. La SBRH 820 est la version à levier de 1 100 g ; la SBRD 820 à valve rotative pèse 1 040 g. Le tableau PDF donne 310 W au groupe, alors que la fiche HTML publie 300 W : cet écart reste visible, sans choisir une révision supposée. La SBRH 818 donne 18 000 tr/min et 750 L/min. Le régime des 500 L/min de la 820 reste non précisé."
+		},
+		{
+			"id": "biax-sbrh-820-reserved-20261103-1-3",
+			"sourceUrl": "https://biax.de/en/product/sbrh-820-20-000-1-min-zweihandschl/",
+			"sourceLabel": "BIAX : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 318971fb9ba951f395b81cbca3d1e57938ce23b74db3aef25ff98bb8f0edc6c8. La SBRH 820 est la version à levier de 1 100 g ; la SBRD 820 à valve rotative pèse 1 040 g. Le tableau PDF donne 310 W au groupe, alors que la fiche HTML publie 300 W : cet écart reste visible, sans choisir une révision supposée. La SBRH 818 donne 18 000 tr/min et 750 L/min. Le régime des 500 L/min de la 820 reste non précisé."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +137,15 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"biax-150021115-20260926"
+		],
+		"airflowBasis": [
+			"biax-sbrh-820-reserved-20261103-1"
+		],
+		"editorial": [
+			"biax-sbrh-820-reserved-20261103-1"
+		],
+		"specifications": [
+			"biax-sbrh-820-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -119,7 +155,8 @@ const product: ToolProfileInput = {
 		"min": 500,
 		"typical": 500,
 		"max": 500
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

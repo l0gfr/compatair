@@ -23,68 +23,53 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Red Rooster RRI-130T, référence RRI-130T. Le tableau fabricant publie 696 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple indicatif publié : 123 à 148 Nm. Vitesse à vide : 3600 tr/min.",
+		"overview": "Red Rooster RRI-130T. La RRI-130T donne 123–148 Nm, 2,3 kg et un carré 1/2 pouce ; la RRI-150T passe à 165–210 Nm, 3,1 kg et 3/4 pouce, avec le même débit publié. La pression de 0,63 MPa citée pour les mesures de couple ne qualifie pas le régime du débit. Les 11,6 L/s restent documentaires.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation publiée : 11.6 L/s, convertis en 696 L/min par multiplication par 60.",
-			"Référence fabricant : RRI-130T.",
-			"Couple indicatif publié : 123 à 148 Nm.",
-			"Vitesse à vide : 3600 tr/min.",
-			"Entraînement : 1/2\" carré."
+			"Carré : 1/2 pouce.",
+			"Couple indicatif : 123–148 Nm.",
+			"Vitesse à vide : 3 600 tr/min.",
+			"Masse : 2,3 kg.",
+			"Consommation publiée, régime non précisé : 11,6 L/s."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"Consommation conservée avec son unité et son régime non précisé ; aucune mesure maximale/en charge appariée à la pression n’est déduite de la consigne de service.",
+			"Catalogue historique identifié ; référence et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+			"label": "Carré",
+			"value": "1/2 pouce",
 			"evidenceIds": [
-				"red-rooster-rri-130t-20260926-workingpressurebar-1"
+				"red-rooster-rri-130t-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation publiée : 11.6 L/s, convertis en 696 L/min par multiplication par 60.",
+			"label": "Couple indicatif",
+			"value": "123–148 Nm",
 			"evidenceIds": [
-				"red-rooster-rri-130t-20260926"
-			]
-		},
-		{
-			"label": "Couple indicatif publié",
-			"value": "123 à 148 Nm",
-			"evidenceIds": [
-				"red-rooster-rri-130t-20260926"
+				"red-rooster-rri-130t-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Vitesse à vide",
-			"value": "3600 tr/min",
+			"value": "3 600 tr/min",
 			"evidenceIds": [
-				"red-rooster-rri-130t-20260926"
+				"red-rooster-rri-130t-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Entraînement",
-			"value": "1/2\" carré",
-			"evidenceIds": [
-				"red-rooster-rri-130t-20260926"
-			]
-		},
-		{
-			"label": "Masse publiée",
+			"label": "Masse",
 			"value": "2,3 kg",
 			"evidenceIds": [
-				"red-rooster-rri-130t-20260926"
+				"red-rooster-rri-130t-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre intérieur de flexible conseillé",
-			"value": "11 mm",
+			"label": "Consommation publiée, régime non précisé",
+			"value": "11,6 L/s",
 			"evidenceIds": [
-				"red-rooster-rri-130t-20260926"
+				"red-rooster-rri-130t-reserved-20261103-1"
 			]
 		}
 	],
@@ -106,6 +91,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "red-rooster-rri-130t-reserved-20261103-1",
+			"sourceUrl": "https://www.rami-yokota.com/media/godd0tdm/2026_fr_outils_d-assemblage_spreads.pdf#page=21",
+			"sourceLabel": "Red Rooster : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 6b7dca4923bfef1dbe2c7f6691e91e07f92fec5c1fa3b8d56f211ecbdb5e4845. La RRI-130T donne 123–148 Nm, 2,3 kg et un carré 1/2 pouce ; la RRI-150T passe à 165–210 Nm, 3,1 kg et 3/4 pouce, avec le même débit publié. La pression de 0,63 MPa citée pour les mesures de couple ne qualifie pas le régime du débit. Les 11,6 L/s restent documentaires."
 		}
 	],
 	"fieldSources": {
@@ -120,6 +115,15 @@ const product: ToolProfileInput = {
 		],
 		"recommendedHose": [
 			"red-rooster-rri-130t-20260926"
+		],
+		"airflowBasis": [
+			"red-rooster-rri-130t-reserved-20261103-1"
+		],
+		"editorial": [
+			"red-rooster-rri-130t-reserved-20261103-1"
+		],
+		"specifications": [
+			"red-rooster-rri-130t-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -132,7 +136,8 @@ const product: ToolProfileInput = {
 	},
 	"recommendedHose": {
 		"innerDiameterMm": 11
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

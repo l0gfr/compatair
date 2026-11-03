@@ -37,11 +37,18 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU USG-4S, code 55462. Le tableau publie une consommation moyenne de 0,6 m³/min, soit 600 L/min. Pression de référence retenue : 6 bar.",
+		"overview": "URYU USG-4S. La USG-4S associe 100 mm et 13 500 tr/min à la broche IN. La USG-7S passe à 180 mm et 7 600 tr/min, pour une moyenne de 1 300 L/min contre 600 ici. La AG-100(OUT) a un autre montage de broche ; accessoires et vitesse doivent correspondre.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 55462, page PDF 2.",
 			"Consommation moyenne publiée : 600 L/min après conversion de l’unité originale.",
-			"SPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85psi)\nSPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85psi)"
+			"SPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85 psi)\nSPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85 psi)",
+			"Diamètre de meule : 100 mm.",
+			"Vitesse à vide maximale : 13 500 tr/min.",
+			"Puissance publiée : 450 W.",
+			"Longueur totale : 236 mm.",
+			"Hauteur : 94 mm.",
+			"Masse hors meule : 1,65 kg.",
+			"Type de broche : IN, broche spéciale URYU avec petite bride."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
@@ -76,6 +83,55 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-uryu-p57-61"
 			]
+		},
+		{
+			"label": "Diamètre de meule",
+			"value": "100 mm",
+			"evidenceIds": [
+				"ponceuse-rotative-uryu-usg-4s-55462-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide maximale",
+			"value": "13 500 tr/min",
+			"evidenceIds": [
+				"ponceuse-rotative-uryu-usg-4s-55462-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Puissance publiée",
+			"value": "450 W",
+			"evidenceIds": [
+				"ponceuse-rotative-uryu-usg-4s-55462-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "236 mm",
+			"evidenceIds": [
+				"ponceuse-rotative-uryu-usg-4s-55462-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Hauteur",
+			"value": "94 mm",
+			"evidenceIds": [
+				"ponceuse-rotative-uryu-usg-4s-55462-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse hors meule",
+			"value": "1,65 kg",
+			"evidenceIds": [
+				"ponceuse-rotative-uryu-usg-4s-55462-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Type de broche",
+			"value": "IN, broche spéciale URYU avec petite bride",
+			"evidenceIds": [
+				"ponceuse-rotative-uryu-usg-4s-55462-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -88,6 +144,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 f00ce52018de3cd2c8f093e9762bb4f6c63230f68c6a1b04217089408fe89245. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		},
+		{
+			"id": "ponceuse-rotative-uryu-usg-4s-55462-reserved-20261103-1",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P57_61.pdf",
+			"sourceLabel": "URYU : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 f00ce52018de3cd2c8f093e9762bb4f6c63230f68c6a1b04217089408fe89245. La USG-4S associe 100 mm et 13 500 tr/min à la broche IN. La USG-7S passe à 180 mm et 7 600 tr/min, pour une moyenne de 1 300 L/min contre 600 ici. La AG-100(OUT) a un autre montage de broche ; accessoires et vitesse doivent correspondre."
 		}
 	],
 	"fieldSources": {
@@ -102,6 +168,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-20260930-uryu-p57-61"
+		],
+		"editorial": [
+			"ponceuse-rotative-uryu-usg-4s-55462-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-rotative-uryu-usg-4s-55462-reserved-20261103-1"
 		]
 	},
 	"notes": [

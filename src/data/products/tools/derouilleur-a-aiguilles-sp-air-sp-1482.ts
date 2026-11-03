@@ -38,43 +38,53 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SP AIR SP-1482. Consommation publiée, régime non précisé : 130 L/min à 6,2 bar. Raccord publié : 1/4\"NPT. Masse publiée : 2.5 kg.",
+		"overview": "SP AIR SP-1482. Le SP-1482 reçoit 19 aiguilles de 3 × 180 mm et possède une course 34 mm. Le SP-1460 reçoit 12 aiguilles avec course 12 mm et cadence 5 000 coups/min, contre 4 200 ici. Le faisceau et la course distinguent le travail possible ; les 0,13 m³/min ne sont pas un volume par coup.",
 		"verifiedFacts": [
-			"Raccord publié : 1/4\"NPT.",
-			"Masse publiée : 2.5 kg."
+			"Aiguilles : 19, diamètre 3 mm × longueur 180 mm.",
+			"Piston : 20 mm.",
+			"Course : 34 mm.",
+			"Cadence : 4 200 coups/min.",
+			"Longueur : 260 mm."
 		],
 		"limitations": [
-			"Régime de consommation non précisé : aucun maximum supposé ; le verdict reste insufficient_data.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"Le catalogue ne précise pas le régime du débit ; la valeur reste non dimensionnante, sans maximum supposé.",
+			"Source constructeur historique ; disponibilité actuelle et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Raccord publié",
-			"value": "1/4\"NPT",
+			"label": "Aiguilles",
+			"value": "19, diamètre 3 mm × longueur 180 mm",
 			"evidenceIds": [
-				"october-sp-air-p23"
+				"derouilleur-a-aiguilles-sp-air-sp-1482-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
-			"value": "2.5 kg",
+			"label": "Piston",
+			"value": "20 mm",
 			"evidenceIds": [
-				"october-sp-air-p23"
+				"derouilleur-a-aiguilles-sp-air-sp-1482-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Localisation documentaire",
-			"value": "SP AIR, catalogue Air Tools, page 23",
+			"label": "Course",
+			"value": "34 mm",
 			"evidenceIds": [
-				"october-sp-air-p23"
+				"derouilleur-a-aiguilles-sp-air-sp-1482-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de pression originale",
-			"value": "Air pressure: 0.62 MPa",
+			"label": "Cadence",
+			"value": "4 200 coups/min",
 			"evidenceIds": [
-				"october-sp-air-p23"
+				"derouilleur-a-aiguilles-sp-air-sp-1482-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "260 mm",
+			"evidenceIds": [
+				"derouilleur-a-aiguilles-sp-air-sp-1482-reserved-20261103-1"
 			]
 		}
 	],
@@ -88,6 +98,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "derouilleur-a-aiguilles-sp-air-sp-1482-reserved-20261103-1",
+			"sourceUrl": "https://spair.vessel.co.jp/download/SP_catalog_all_E.pdf#page=23",
+			"sourceLabel": "SP AIR : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. Le SP-1482 reçoit 19 aiguilles de 3 × 180 mm et possède une course 34 mm. Le SP-1460 reçoit 12 aiguilles avec course 12 mm et cadence 5 000 coups/min, contre 4 200 ici. Le faisceau et la course distinguent le travail possible ; les 0,13 m³/min ne sont pas un volume par coup."
 		}
 	],
 	"fieldSources": {
@@ -102,6 +122,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-sp-air-p23"
+		],
+		"editorial": [
+			"derouilleur-a-aiguilles-sp-air-sp-1482-reserved-20261103-1"
+		],
+		"specifications": [
+			"derouilleur-a-aiguilles-sp-air-sp-1482-reserved-20261103-1"
 		]
 	},
 	"notes": [

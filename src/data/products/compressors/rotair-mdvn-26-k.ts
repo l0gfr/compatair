@@ -33,10 +33,13 @@ const product: CompressorInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
   },
   "editorial": {
-    "overview": "Rotair MDVN 26 K. 2 500 L/min déclarés à 6,5 bar. Configuration constructeur : Configuration constructeur MDVN 26 K à 6,5 bar.",
+    "overview": "Rotair MDVN 26 K. La MDVN 26 K publie 2 500 L/min à 6,5 bar avec moteur Kubota Stage V. La MDVN 26 K et la MDVN 30 donnent toutes deux 1 900 L/min dans leur version 10 bar, malgré des débits différents à basse pression. Les versions de sablage avec refroidissement et séchage sont des équipements à choisir, non des capacités attribuées au groupe générique.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 6,5 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 2 500 L/min déclarés à 6,5 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 2 500 L/min déclarés à 6,5 bar.",
+      "Modèle : MDVN 26 K.",
+      "FAD à 6,5 bar : 2 500 L/min.",
+      "Motorisation publiée : Kubota Stage V."
     ],
     "limitations": [
       "Les autres colonnes de pression décrivent les versions proposées ; aucun débit intermédiaire ni pression de sécurité de cette configuration ne sont déduits.",
@@ -97,6 +100,27 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october7-rotair-mdvn-p1"
       ]
+    },
+    {
+      "label": "Modèle",
+      "value": "MDVN 26 K",
+      "evidenceIds": [
+        "rotair-mdvn-26-k-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "FAD à 6,5 bar",
+      "value": "2 500 L/min",
+      "evidenceIds": [
+        "rotair-mdvn-26-k-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Motorisation publiée",
+      "value": "Kubota Stage V",
+      "evidenceIds": [
+        "rotair-mdvn-26-k-reserved-20261103-1"
+      ]
     }
   ],
   "evidence": [
@@ -109,6 +133,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-07",
       "confidence": "B",
       "notes": "SHA-256 c46081e4b4e881c8aa68ca24a3f3a545a35014031c6793bb91f8a4809e9050a2 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "rotair-mdvn-26-k-reserved-20261103-1",
+      "sourceUrl": "https://www.rotairspa.com/portable-compressors-diesel/mdvn-range/",
+      "sourceLabel": "Rotair : revue factuelle du 3 novembre 2026",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-03",
+      "confidence": "B",
+      "notes": "GET complet HTTP200 SHA-256 08f8898f47139287006db5925860a61fcd2826989eb9c87e0675e36b97010f36. La MDVN 26 K publie 2 500 L/min à 6,5 bar avec moteur Kubota Stage V. La MDVN 26 K et la MDVN 30 donnent toutes deux 1 900 L/min dans leur version 10 bar, malgré des débits différents à basse pression. Les versions de sablage avec refroidissement et séchage sont des équipements à choisir, non des capacités attribuées au groupe générique."
     }
   ],
   "fieldSources": {
@@ -123,6 +157,12 @@ const product: CompressorInput = {
     ],
     "fadCurve": [
       "october7-rotair-mdvn-p1"
+    ],
+    "editorial": [
+      "rotair-mdvn-26-k-reserved-20261103-1"
+    ],
+    "specifications": [
+      "rotair-mdvn-26-k-reserved-20261103-1"
     ]
   },
   "notes": [

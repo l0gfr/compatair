@@ -9,10 +9,8 @@ const product: ToolProfileInput = {
 	"categoryId": "burineur",
 	"category": "burineur",
 	"label": "Rodcraft RC5150",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
 		"max": 6.3
 	},
 	"confidence": "B",
@@ -23,61 +21,68 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Rodcraft RC5150, référence 8951171023. Le dimensionnement utilise 402 L/min à 6,3 bar, selon les régimes publiés par le fabricant. Masse : 1.5 kg. Longueur : 200 mm. Diamètre intérieur du tuyau (longueur 5 m) : 8 mm.",
+		"overview": "Rodcraft RC5150. La RC5150 est le marteau à emmanchement hexagonal 11 mm, course 60 mm et 6 J. La fiche distingue 6,7 L/s en charge de 3,3 L/s à vide. Elle publie séparément un maximum dynamique de 6,3 bar : ce maximum n’établit pas la pression exacte de la mesure de consommation.",
 		"verifiedFacts": [
-			"Pression dynamique de travail maximale publiée : 6.3 bar, retenue comme point de fonctionnement. Respecter cette limite à l’entrée de l’outil.",
-			"Consommation en charge publiée : 6.7 L/s. Consommation à vide publiée : 3.3 L/s. Valeur retenue : 402 L/min (maximum des régimes documentés, L/s × 60).",
-			"Référence fabricant : 8951171023.",
-			"Masse : 1.5 kg.",
-			"Longueur : 200 mm.",
-			"Diamètre intérieur du tuyau (longueur 5 m) : 8 mm."
+			"Emmanchement : Hexagonal 11 mm.",
+			"Cadence : 3 000 coups/min.",
+			"Course : 60 mm.",
+			"Énergie : 6 J.",
+			"Masse : 1,5 kg.",
+			"Débit en charge publié : 6,7 L/s (402 L/min).",
+			"Débit à vide distinct : 3,3 L/s."
 		],
 		"limitations": [
-			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
-			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes."
+			"Pression de mesure de consommation non explicitement appariée au débit en charge. Le calcul demeure indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression dynamique de travail maximale publiée : 6.3 bar, retenue comme point de fonctionnement. Respecter cette limite à l’entrée de l’outil.",
+			"label": "Emmanchement",
+			"value": "Hexagonal 11 mm",
 			"evidenceIds": [
-				"rodcraft-8951171023-20260927"
+				"rodcraft-rc5150-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation en charge publiée : 6.7 L/s. Consommation à vide publiée : 3.3 L/s. Valeur retenue : 402 L/min (maximum des régimes documentés, L/s × 60).",
+			"label": "Cadence",
+			"value": "3 000 coups/min",
 			"evidenceIds": [
-				"rodcraft-8951171023-20260927"
+				"rodcraft-rc5150-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Course",
+			"value": "60 mm",
+			"evidenceIds": [
+				"rodcraft-rc5150-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Énergie",
+			"value": "6 J",
+			"evidenceIds": [
+				"rodcraft-rc5150-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Masse",
-			"value": "1.5 kg",
+			"value": "1,5 kg",
 			"evidenceIds": [
-				"rodcraft-8951171023-20260927"
+				"rodcraft-rc5150-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur",
-			"value": "200 mm",
+			"label": "Débit en charge publié",
+			"value": "6,7 L/s (402 L/min)",
 			"evidenceIds": [
-				"rodcraft-8951171023-20260927"
+				"rodcraft-rc5150-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre intérieur du tuyau (longueur 5 m)",
-			"value": "8 mm",
+			"label": "Débit à vide distinct",
+			"value": "3,3 L/s",
 			"evidenceIds": [
-				"rodcraft-8951171023-20260927"
-			]
-		},
-		{
-			"label": "Filetage d’entrée d’air",
-			"value": "1/4",
-			"evidenceIds": [
-				"rodcraft-8951171023-20260927"
+				"rodcraft-rc5150-reserved-20261103-1"
 			]
 		}
 	],
@@ -90,6 +95,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation en charge publiée : 6.7 L/s. Consommation à vide publiée : 3.3 L/s. Valeur retenue : 402 L/min (maximum des régimes documentés, L/s × 60)."
+		},
+		{
+			"id": "rodcraft-rc5150-reserved-20261103-1",
+			"sourceUrl": "https://www.rodcraft.com/en/products/8951171023",
+			"sourceLabel": "Rodcraft : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 33c6016376cfc4301a729b97b3b5549845fa2fd76dd9204481e5ea25cc46e2ec. La RC5150 est le marteau à emmanchement hexagonal 11 mm, course 60 mm et 6 J. La fiche distingue 6,7 L/s en charge de 3,3 L/s à vide. Elle publie séparément un maximum dynamique de 6,3 bar : ce maximum n’établit pas la pression exacte de la mesure de consommation."
 		}
 	],
 	"fieldSources": {
@@ -97,20 +112,25 @@ const product: ToolProfileInput = {
 			"rodcraft-8951171023-20260927"
 		],
 		"workingPressureBar": [
-			"rodcraft-8951171023-20260927"
+			"rodcraft-rc5150-reserved-20261103-1"
 		],
-		"airflowLpm": [
-			"rodcraft-8951171023-20260927"
+		"demandModel": [
+			"rodcraft-rc5150-reserved-20261103-1"
+		],
+		"demandExplanation": [
+			"rodcraft-rc5150-reserved-20261103-1"
+		],
+		"editorial": [
+			"rodcraft-rc5150-reserved-20261103-1"
+		],
+		"specifications": [
+			"rodcraft-rc5150-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 402,
-		"typical": 402,
-		"max": 402
-	}
+	"demandExplanation": "Le débit en charge est conservé dans les spécifications ; la fiche indique séparément le plafond de pression, sans appariement explicite de la mesure."
 };
 
 export default product;

@@ -39,53 +39,68 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-66007. Consommation publiée, régime non précisé : 240 L/min à 6,2 bar. Consommation dans les unités du tableau : 240 L/min ; 8.5 cfm. Configuration complète publiée : ST-66007.",
+		"overview": "Sumake ST-66007. La ST-66007 mini possède course 8 mm, cadence 11 000 coups/min et longueur 185 mm. La ST-66008 pour tubes passe à 20 mm, 5 500 coups/min et 220 mm. Le tableau ne permet pas de déduire une même capacité de coupe à partir des 240 L/min communs.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 21.",
-			"Consommation dans les unités du tableau : 240 L/min ; 8.5 cfm.",
-			"Configuration complète publiée : ST-66007.",
-			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé."
+			"Type : Mini scie de carrosserie.",
+			"Course : 8 mm.",
+			"Cadence : 11 000 coups/min.",
+			"Longueur : 185 mm.",
+			"Masse : 0,50 kg.",
+			"Consommation documentaire : 240 L/min, régime non précisé.",
+			"Pression de service recommandée : 6,2 bar ; pression de mesure de la consommation non démontrée."
 		],
 		"limitations": [
-			"Le régime de consommation n’est pas indiqué. Aucun débit maximal ou en charge n’est inventé ; le verdict reste insufficient_data.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"La recommandation de service 6,2 bar ne prouve pas la pression de mesure de la consommation. Le régime reste non qualifié et le calcul indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 21",
+			"label": "Type",
+			"value": "Mini scie de carrosserie",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p21"
+				"scie-sumake-st-66007-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation dans les unités du tableau",
-			"value": "240 L/min ; 8.5 cfm",
+			"label": "Course",
+			"value": "8 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p21"
+				"scie-sumake-st-66007-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Configuration complète publiée",
-			"value": "ST-66007",
+			"label": "Cadence",
+			"value": "11 000 coups/min",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p21"
+				"scie-sumake-st-66007-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Régime de consommation",
-			"value": "Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé",
+			"label": "Longueur",
+			"value": "185 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p21"
+				"scie-sumake-st-66007-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Ligne technique originale du modèle",
-			"value": "ST-66007 3 5 11,000 8 240 8.5 1/4\" 1/4\" 185 0.50 20Pcs/Ctn/15/1.8'",
+			"label": "Masse",
+			"value": "0,50 kg",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p21"
+				"scie-sumake-st-66007-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "240 L/min, régime non précisé",
+			"evidenceIds": [
+				"scie-sumake-st-66007-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression de service recommandée",
+			"value": "6,2 bar ; pression de mesure de la consommation non démontrée",
+			"evidenceIds": [
+				"scie-sumake-st-66007-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +114,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "scie-sumake-st-66007-reserved-20261103-1",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf#page=21",
+			"sourceLabel": "Sumake : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. La ST-66007 mini possède course 8 mm, cadence 11 000 coups/min et longueur 185 mm. La ST-66008 pour tubes passe à 20 mm, 5 500 coups/min et 220 mm. Le tableau ne permet pas de déduire une même capacité de coupe à partir des 240 L/min communs."
 		}
 	],
 	"fieldSources": {
@@ -113,6 +138,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-d-sumake-na-2024-p21"
+		],
+		"editorial": [
+			"scie-sumake-st-66007-reserved-20261103-1"
+		],
+		"specifications": [
+			"scie-sumake-st-66007-reserved-20261103-1"
 		]
 	},
 	"notes": [

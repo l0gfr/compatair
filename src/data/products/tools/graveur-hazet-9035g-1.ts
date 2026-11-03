@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "HAZET 9035G-1. La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi. Champ fabricant : Revolutions per minute : 13000. Champ fabricant : Net weight : 0.22 kg.",
+		"overview": "HAZET 9035G-1. Le 9035G-1 est un stylet de marquage de 150 mm et 0,22 kg pour matériaux jusqu’à HRC55 selon le fabricant. Le ressort protège le flexible du pliage. La page donne 13 000 sous Revolutions per minute ; cette unité n’est pas réécrite en coups/min sans notice. Les 28,31 L/min restent sans régime de mesure.",
 		"verifiedFacts": [
 			"Champ fabricant : Revolutions per minute : 13000.",
 			"Champ fabricant : Net weight : 0.22 kg.",
@@ -37,7 +37,10 @@ const product: ToolProfileInput = {
 			"Champ fabricant : Vibration acceleration : 2.50 m/s2.",
 			"Champ fabricant : Dimension : 150 mm.",
 			"Champ fabricant : Sound pressure level : 78 dB(A) Lp A.",
-			"Champ fabricant : Sound power level : 90 db(A) Lp W."
+			"Champ fabricant : Sound power level : 90 db(A) Lp W.",
+			"Matériaux annoncés : Métal, pierre, céramique et plastique.",
+			"Dureté maximale annoncée : HRC 55.",
+			"Commande : Régulation par molette moletée."
 		],
 		"limitations": [
 			"La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi.",
@@ -103,6 +106,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-hazet-4000896246625-html-p1"
 			]
+		},
+		{
+			"label": "Matériaux annoncés",
+			"value": "Métal, pierre, céramique et plastique",
+			"evidenceIds": [
+				"graveur-hazet-9035g-1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Dureté maximale annoncée",
+			"value": "HRC 55",
+			"evidenceIds": [
+				"graveur-hazet-9035g-1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Commande",
+			"value": "Régulation par molette moletée",
+			"evidenceIds": [
+				"graveur-hazet-9035g-1-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -115,6 +139,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : a17acff1f41aab945e0d8d7e37679d9e38328529cede6c047964ed4632a482e1. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "graveur-hazet-9035g-1-reserved-20261103-1",
+			"sourceUrl": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/drilling-machine-sander-chisel-sabre-saw-shears/product/ean-4000896246625",
+			"sourceLabel": "HAZET : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 b02bac38c7ae876270730d584dd1b39e149ff7a3c07ebf629db9c765c892e463. Le 9035G-1 est un stylet de marquage de 150 mm et 0,22 kg pour matériaux jusqu’à HRC55 selon le fabricant. Le ressort protège le flexible du pliage. La page donne 13 000 sous Revolutions per minute ; cette unité n’est pas réécrite en coups/min sans notice. Les 28,31 L/min restent sans régime de mesure."
 		}
 	],
 	"fieldSources": {
@@ -126,6 +160,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-hazet-4000896246625-html-p1"
+		],
+		"editorial": [
+			"graveur-hazet-9035g-1-reserved-20261103-1"
+		],
+		"specifications": [
+			"graveur-hazet-9035g-1-reserved-20261103-1"
 		]
 	},
 	"notes": [

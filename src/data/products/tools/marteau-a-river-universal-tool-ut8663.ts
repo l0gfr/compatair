@@ -37,73 +37,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Universal Tool UT8663. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 1.3 kg. Longueur publiée : 170 mm.",
+		"overview": "Universal Tool UT8663. La UT8663 est le marteau de rivetage 3X, corps aluminium et retenue à ressort. La version UT8663-TC possède un autre équipement de retenue, et la UT8664 un corps plus long ; la capacité de rivet n’est pas déduite de la seule classe 3X. Les 28 CFM et 7,8 CFM moyens restent documentaires, sans pression de mesure appariée.",
 		"verifiedFacts": [
-			"Masse publiée : 1.3 kg.",
-			"Longueur publiée : 170 mm.",
-			"Matériau du corps : Aluminum.",
-			"Type de retenue : Spring."
+			"Classe : Marteau de rivetage aéronautique 3X.",
+			"Queue : 0,401 pouce.",
+			"Piston : 1/2 pouce.",
+			"Cadence : 2 160 coups/min.",
+			"Consommation de régime non précisé : 28 CFM.",
+			"Consommation moyenne distincte : 7,8 CFM."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Régime et pression de mesure non suffisamment documentés ; les valeurs restent hors calcul conclusif.",
+			"Les colonnes contradictoires éventuelles restent attribuées à la source, sans correction devinée."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "1.3 kg",
+			"label": "Classe",
+			"value": "Marteau de rivetage aéronautique 3X",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-222-p1"
+				"marteau-a-river-universal-tool-ut8663-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur publiée",
-			"value": "170 mm",
+			"label": "Queue",
+			"value": "0,401 pouce",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-222-p1"
+				"marteau-a-river-universal-tool-ut8663-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Matériau du corps",
-			"value": "Aluminum",
+			"label": "Piston",
+			"value": "1/2 pouce",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-222-p1"
+				"marteau-a-river-universal-tool-ut8663-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Type de retenue",
-			"value": "Spring",
+			"label": "Cadence",
+			"value": "2 160 coups/min",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-222-p1"
+				"marteau-a-river-universal-tool-ut8663-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Champ fabricant : Air Inlet (NPT/BSP)",
-			"value": "1/4-in.",
+			"label": "Consommation de régime non précisé",
+			"value": "28 CFM",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-222-p1"
+				"marteau-a-river-universal-tool-ut8663-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Champ fabricant : Rec. Hose (I.D. in.)",
-			"value": "3/8-in.",
+			"label": "Consommation moyenne distincte",
+			"value": "7,8 CFM",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-222-p1"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "Rec. Air Pressure: 90 psi-6.2 bar",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-222-p1"
-			]
-		},
-		{
-			"label": "Consommation de régime non précisé, hors calcul",
-			"value": "28 cfm",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-222-p1"
+				"marteau-a-river-universal-tool-ut8663-reserved-20261103-1"
 			]
 		}
 	],
@@ -117,6 +105,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 2cb5d9ee52192be12b53df10119ac25e43f4a1832e404cdc2f3e8c059fcb2817. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "marteau-a-river-universal-tool-ut8663-reserved-20261103-1",
+			"sourceUrl": "https://continentaltoolgroup.com/product/aero-riveting-hammer-2/",
+			"sourceLabel": "Universal Tool : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 2220b6653acf76929181b701bc0c93c6696fc0de18764da513c5202603b190d0. La UT8663 est le marteau de rivetage 3X, corps aluminium et retenue à ressort. La version UT8663-TC possède un autre équipement de retenue, et la UT8664 un corps plus long ; la capacité de rivet n’est pas déduite de la seule classe 3X. Les 28 CFM et 7,8 CFM moyens restent documentaires, sans pression de mesure appariée."
 		}
 	],
 	"fieldSources": {
@@ -134,6 +132,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-ctg-pdp-222-p1"
+		],
+		"editorial": [
+			"marteau-a-river-universal-tool-ut8663-reserved-20261103-1"
+		],
+		"specifications": [
+			"marteau-a-river-universal-tool-ut8663-reserved-20261103-1"
 		]
 	},
 	"notes": [

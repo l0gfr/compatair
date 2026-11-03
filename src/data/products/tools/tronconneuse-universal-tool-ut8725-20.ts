@@ -15,7 +15,7 @@ const product: ToolProfileInput = {
 		"typical": 6.2,
 		"max": 6.2
 	},
-	"demandExplanation": "Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse.",
+	"demandExplanation": "Consommation documentaire présente dans la fiche, mais régime/unité ou pression de mesure insuffisamment qualifiés pour le calcul.",
 	"connectorSize": "1/4-in. (Air Inlet  (NPT / BSP))",
 	"confidence": "B",
 	"image": {
@@ -34,74 +34,53 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Universal Tool UT8725-20. Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse. Masse publiée : 0.82 kg. Longueur publiée : 190 mm.",
+		"overview": "Universal Tool UT8725-20. La UT8725-20 est la tronçonneuse droite de 190 mm à 20 000 tr/min ; la UT8726 est plus courte, 171 mm. La fiche publie une consommation moyenne 4 sous le libellé Avg. Air Cons (CMF), anciennement omise ; l’unité typographiée n’est pas corrigée silencieusement. Les colonnes 0,7 HP et 0,32 kW sont discordantes, sans puissance alternative supposée.",
 		"verifiedFacts": [
-			"Masse publiée : 0.82 kg.",
-			"Longueur publiée : 190 mm.",
-			"Vitesse publiée : 20000 tr/min.",
-			"Puissance publiée : 0.7 HP.",
-			"Échappement : Rear."
+			"Type : Tronçonneuse droite à échappement arrière.",
+			"Vitesse : 20 000 tr/min.",
+			"Longueur : 190 mm.",
+			"Puissance, colonnes source : 0,7 HP / 0,32 kW.",
+			"Consommation moyenne publiée : 4 CMF, libellé littéral du champ constructeur."
 		],
 		"limitations": [
-			"Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Régime et pression de mesure non suffisamment documentés ; les valeurs restent hors calcul conclusif.",
+			"Les colonnes contradictoires éventuelles restent attribuées à la source, sans correction devinée."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "0.82 kg",
+			"label": "Type",
+			"value": "Tronçonneuse droite à échappement arrière",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-112-p1"
+				"tronconneuse-universal-tool-ut8725-20-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur publiée",
+			"label": "Vitesse",
+			"value": "20 000 tr/min",
+			"evidenceIds": [
+				"tronconneuse-universal-tool-ut8725-20-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
 			"value": "190 mm",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-112-p1"
+				"tronconneuse-universal-tool-ut8725-20-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse publiée",
-			"value": "20000 tr/min",
+			"label": "Puissance, colonnes source",
+			"value": "0,7 HP / 0,32 kW",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-112-p1"
+				"tronconneuse-universal-tool-ut8725-20-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Puissance publiée",
-			"value": "0.7 HP",
+			"label": "Consommation moyenne publiée",
+			"value": "4 CMF, libellé littéral du champ constructeur",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-112-p1"
-			]
-		},
-		{
-			"label": "Échappement",
-			"value": "Rear",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-112-p1"
-			]
-		},
-		{
-			"label": "Champ fabricant : Air Inlet  (NPT / BSP)",
-			"value": "1/4-in.",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-112-p1"
-			]
-		},
-		{
-			"label": "Champ fabricant : Rec. Hose Size (in)",
-			"value": "3/8-in.",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-112-p1"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "Rec. Air Pressure: 90 psi-6.2 bar",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-112-p1"
+				"tronconneuse-universal-tool-ut8725-20-reserved-20261103-1"
 			]
 		}
 	],
@@ -115,6 +94,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 1bd8f62cfd55e8b6bc91dd722ddf6b2b9973f749af3af4b2cbdee0ed215baf93. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "tronconneuse-universal-tool-ut8725-20-reserved-20261103-1",
+			"sourceUrl": "https://continentaltoolgroup.com/product/straight-cut-off-tool/",
+			"sourceLabel": "Universal Tool : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 4ac2925055ab01acb1b30ad8bc707d63bcc145ac5378e9a18566ea9a19511555. La UT8725-20 est la tronçonneuse droite de 190 mm à 20 000 tr/min ; la UT8726 est plus courte, 171 mm. La fiche publie une consommation moyenne 4 sous le libellé Avg. Air Cons (CMF), anciennement omise ; l’unité typographiée n’est pas corrigée silencieusement. Les colonnes 0,7 HP et 0,32 kW sont discordantes, sans puissance alternative supposée."
 		}
 	],
 	"fieldSources": {
@@ -128,7 +117,13 @@ const product: ToolProfileInput = {
 			"october2-tools-ctg-pdp-112-p1"
 		],
 		"demandExplanation": [
-			"october2-tools-ctg-pdp-112-p1"
+			"tronconneuse-universal-tool-ut8725-20-reserved-20261103-1"
+		],
+		"editorial": [
+			"tronconneuse-universal-tool-ut8725-20-reserved-20261103-1"
+		],
+		"specifications": [
+			"tronconneuse-universal-tool-ut8725-20-reserved-20261103-1"
 		]
 	},
 	"notes": [

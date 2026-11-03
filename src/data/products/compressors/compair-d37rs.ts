@@ -74,13 +74,61 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4c-compair-d37-75-p11"
       ]
+    },
+    {
+      "label": "Régulation",
+      "value": "RS, vitesse régulée",
+      "evidenceIds": [
+        "compair-d37rs-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "FAD àpression nominale8,5 bar",
+      "value": "5,1 m³/min",
+      "evidenceIds": [
+        "compair-d37rs-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Puissance moteur",
+      "value": "37 kW",
+      "evidenceIds": [
+        "compair-d37rs-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Dimensions L×W×H",
+      "value": "2 080 × 1 115 × 2 070 mm",
+      "evidenceIds": [
+        "compair-d37rs-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Masses selon refroidissement",
+      "value": "Air1 579 kg ; eau1 624 kg",
+      "evidenceIds": [
+        "compair-d37rs-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Conditions de mesure",
+      "value": "ISO 1217 édition4 annexesC/E ; entrée1 bar absolu,20 °C, humidité0%",
+      "evidenceIds": [
+        "compair-d37rs-reserved-20261103-1"
+      ]
     }
   ],
   "editorial": {
-    "overview": "CompAir D37RS. 5 100 L/min déclarés à 8,5 bar. Configuration constructeur : D37RS.",
+    "overview": "CompAir D37RS. La D37RS publie5,1 m³/min à8,5 bar pour les deux refroidissements. La D37 fixe annonce5,1 par air et 5,2 par eau ; sa masse et son encombrement sont différents. Choisir refroidissement et régulation avant d’attribuer une masse au groupe.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 8,5 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 5 100 L/min déclarés à 8,5 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 5 100 L/min déclarés à 8,5 bar.",
+      "Régulation : RS, vitesse régulée.",
+      "FAD àpression nominale8,5 bar : 5,1 m³/min.",
+      "Puissance moteur : 37 kW.",
+      "Dimensions L×W×H : 2 080 × 1 115 × 2 070 mm.",
+      "Masses selon refroidissement : Air1 579 kg ; eau1 624 kg.",
+      "Conditions de mesure : ISO 1217 édition4 annexesC/E ; entrée1 bar absolu,20 °C, humidité0%."
     ],
     "limitations": [
       "Débit nominal publié pour la version régulée ; le cycle de service reste non qualifié.",
@@ -111,6 +159,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 ccc615617535035c2b712685ba0cc0c6965acb052fe352f07efe51b7cd19931f de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "compair-d37rs-reserved-20261103-1",
+      "sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/blta76611689adb5848/blte7fea97cc5d50fc3/67ef980e3c659585a8e56a5b/D_SERIES_37_75_12PP_EN.pdf#page=11",
+      "sourceLabel": "CompAir : revue factuelle du 3 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-03",
+      "confidence": "B",
+      "notes": "GET complet HTTP200 SHA-256 ccc615617535035c2b712685ba0cc0c6965acb052fe352f07efe51b7cd19931f. La D37RS publie5,1 m³/min à8,5 bar pour les deux refroidissements. La D37 fixe annonce5,1 par air et 5,2 par eau ; sa masse et son encombrement sont différents. Choisir refroidissement et régulation avant d’attribuer une masse au groupe."
     }
   ],
   "fieldSources": {
@@ -127,10 +185,16 @@ const product: CompressorInput = {
       "october4c-compair-d37-75-p11"
     ],
     "powerKw": [
-      "october4c-compair-d37-75-p11"
+      "compair-d37rs-reserved-20261103-1"
     ],
     "oilType": [
       "october4c-compair-d37-75-p1"
+    ],
+    "editorial": [
+      "compair-d37rs-reserved-20261103-1"
+    ],
+    "specifications": [
+      "compair-d37rs-reserved-20261103-1"
     ]
   },
   "notes": [

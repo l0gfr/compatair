@@ -38,43 +38,53 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SP AIR SP-1470FC. Consommation publiée, régime non précisé : 400 L/min à 6,2 bar. Raccord publié : 1/4\"NPT. Masse publiée : 1.7 kg.",
+		"overview": "SP AIR SP-1470FC. Le SP-1470FC est le burineur plat coudé, piston 25 mm et course 22 mm. Le SP-1460FC est la version plus petite, piston 20 mm, course 12 mm et 5 000 coups/min. Ces différences expliquent l’écart de masse 1,7 contre 0,9 kg ; le régime du débit publié reste non précisé.",
 		"verifiedFacts": [
-			"Raccord publié : 1/4\"NPT.",
-			"Masse publiée : 1.7 kg."
+			"Forme du burin : Plat coudé, famille 12,7 mm.",
+			"Piston : 25 mm.",
+			"Course : 22 mm.",
+			"Cadence : 4 000 coups/min.",
+			"Longueur : 215 mm."
 		],
 		"limitations": [
-			"Régime de consommation non précisé : aucun maximum supposé ; le verdict reste insufficient_data.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"Le catalogue ne précise pas le régime du débit ; la valeur reste non dimensionnante, sans maximum supposé.",
+			"Source constructeur historique ; disponibilité actuelle et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Raccord publié",
-			"value": "1/4\"NPT",
+			"label": "Forme du burin",
+			"value": "Plat coudé, famille 12,7 mm",
 			"evidenceIds": [
-				"october-sp-air-p23"
+				"burineur-sp-air-sp-1470fc-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
-			"value": "1.7 kg",
+			"label": "Piston",
+			"value": "25 mm",
 			"evidenceIds": [
-				"october-sp-air-p23"
+				"burineur-sp-air-sp-1470fc-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Localisation documentaire",
-			"value": "SP AIR, catalogue Air Tools, page 23",
+			"label": "Course",
+			"value": "22 mm",
 			"evidenceIds": [
-				"october-sp-air-p23"
+				"burineur-sp-air-sp-1470fc-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de pression originale",
-			"value": "Air pressure: 0.62 MPa",
+			"label": "Cadence",
+			"value": "4 000 coups/min",
 			"evidenceIds": [
-				"october-sp-air-p23"
+				"burineur-sp-air-sp-1470fc-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "215 mm",
+			"evidenceIds": [
+				"burineur-sp-air-sp-1470fc-reserved-20261103-1"
 			]
 		}
 	],
@@ -88,6 +98,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "burineur-sp-air-sp-1470fc-reserved-20261103-1",
+			"sourceUrl": "https://spair.vessel.co.jp/download/SP_catalog_all_E.pdf#page=23",
+			"sourceLabel": "SP AIR : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. Le SP-1470FC est le burineur plat coudé, piston 25 mm et course 22 mm. Le SP-1460FC est la version plus petite, piston 20 mm, course 12 mm et 5 000 coups/min. Ces différences expliquent l’écart de masse 1,7 contre 0,9 kg ; le régime du débit publié reste non précisé."
 		}
 	],
 	"fieldSources": {
@@ -102,6 +122,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-sp-air-p23"
+		],
+		"editorial": [
+			"burineur-sp-air-sp-1470fc-reserved-20261103-1"
+		],
+		"specifications": [
+			"burineur-sp-air-sp-1470fc-reserved-20261103-1"
 		]
 	},
 	"notes": [

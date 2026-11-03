@@ -38,51 +38,60 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZAW-410B. Consommation moyenne : 212 L/min ; pression publiée : 6,2 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Vitesse à vide : 8300 tr/min. Masse : 0.98 kg.",
+		"overview": "ZIPP ZAW-410B. La ZAW-410B 3/8 pouce donne 80 Nm de travail et 200 Nm maximum. La ZAW-421B3 donne 90 et 240 Nm pour 1,06 kg ; la ZAW-910B1 est en 1/4 pouce et annonce 130 Nm maximum. Couple de travail, maximum et taille du carré restent séparés.",
 		"verifiedFacts": [
-			"Vitesse à vide : 8300 tr/min.",
-			"Masse : 0.98 kg.",
-			"Référence constructeur : ZAW-410B."
+			"Carré : 3/8 pouce.",
+			"Couple de travail publié : 80 Nm.",
+			"Couple maximal publié : 200 Nm.",
+			"Vitesse à vide : 8 300 tr/min.",
+			"Longueur : 190 mm.",
+			"Masse : 0,98 kg."
 		],
 		"limitations": [
-			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
-			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+			"Consommation moyenne ou de régime non précisé, sans qualification maximale/en charge ni appariement de pression de mesure suffisant : aucun verdict conclusif n’en est déduit."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Vitesse à vide",
-			"value": "8300 tr/min",
+			"label": "Carré",
+			"value": "3/8 pouce",
 			"evidenceIds": [
-				"october-b-zipp-tools-p9"
+				"cle-a-chocs-zipp-zaw-410b-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Couple de travail publié",
+			"value": "80 Nm",
+			"evidenceIds": [
+				"cle-a-chocs-zipp-zaw-410b-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Couple maximal publié",
+			"value": "200 Nm",
+			"evidenceIds": [
+				"cle-a-chocs-zipp-zaw-410b-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "8 300 tr/min",
+			"evidenceIds": [
+				"cle-a-chocs-zipp-zaw-410b-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "190 mm",
+			"evidenceIds": [
+				"cle-a-chocs-zipp-zaw-410b-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Masse",
-			"value": "0.98 kg",
+			"value": "0,98 kg",
 			"evidenceIds": [
-				"october-b-zipp-tools-p9"
-			]
-		},
-		{
-			"label": "Référence constructeur",
-			"value": "ZAW-410B",
-			"evidenceIds": [
-				"october-b-zipp-tools-p9"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "Operating Air Pressure: 90(6.2",
-			"evidenceIds": [
-				"october-b-zipp-tools-p9"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "ZIPP, catalogue général pneumatique, page PDF 9",
-			"evidenceIds": [
-				"october-b-zipp-tools-p9"
+				"cle-a-chocs-zipp-zaw-410b-reserved-20261103-1"
 			]
 		}
 	],
@@ -96,6 +105,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-chocs-zipp-zaw-410b-reserved-20261103-1",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=9",
+			"sourceLabel": "ZIPP : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. La ZAW-410B 3/8 pouce donne 80 Nm de travail et 200 Nm maximum. La ZAW-421B3 donne 90 et 240 Nm pour 1,06 kg ; la ZAW-910B1 est en 1/4 pouce et annonce 130 Nm maximum. Couple de travail, maximum et taille du carré restent séparés."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +129,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-b-zipp-tools-p9"
+		],
+		"editorial": [
+			"cle-a-chocs-zipp-zaw-410b-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-chocs-zipp-zaw-410b-reserved-20261103-1"
 		]
 	},
 	"notes": [

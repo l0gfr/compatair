@@ -37,11 +37,16 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU UFC-1N, code 75712. Le tableau publie une consommation moyenne de 0,3 m³/min, soit 300 L/min. Pression de référence retenue : 6 bar.",
+		"overview": "URYU UFC-1N. La UFC-1N donne une course de 34 mm à environ 4 200 coups/min ; la UFC-0N donne 28 mm à 5 300 coups/min et mesure 180 mm. Leur moyenne commune de 300 L/min ne décrit pas cette différence de frappe.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 75712, page PDF 1.",
 			"Consommation moyenne publiée : 300 L/min après conversion de l’unité originale.",
-			"SPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85psi)"
+			"SPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85 psi)",
+			"Cadence approximative : 4 200 coups/min.",
+			"Longueur totale : 190 mm.",
+			"Masse sans burin : 1,50 kg.",
+			"Diamètre de piston : 25 mm.",
+			"Course de piston : 34 mm."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
@@ -76,6 +81,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-uryu-p72"
 			]
+		},
+		{
+			"label": "Cadence approximative",
+			"value": "4 200 coups/min",
+			"evidenceIds": [
+				"burineur-uryu-ufc-1n-75712-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "190 mm",
+			"evidenceIds": [
+				"burineur-uryu-ufc-1n-75712-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse sans burin",
+			"value": "1,50 kg",
+			"evidenceIds": [
+				"burineur-uryu-ufc-1n-75712-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Diamètre de piston",
+			"value": "25 mm",
+			"evidenceIds": [
+				"burineur-uryu-ufc-1n-75712-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Course de piston",
+			"value": "34 mm",
+			"evidenceIds": [
+				"burineur-uryu-ufc-1n-75712-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -88,6 +128,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 b852cff1aa468efb0c05768f060a38ec591cdddaec940b8593cf70b67e6daf01. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		},
+		{
+			"id": "burineur-uryu-ufc-1n-75712-reserved-20261103-1",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P72.pdf",
+			"sourceLabel": "URYU : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 b852cff1aa468efb0c05768f060a38ec591cdddaec940b8593cf70b67e6daf01. La UFC-1N donne une course de 34 mm à environ 4 200 coups/min ; la UFC-0N donne 28 mm à 5 300 coups/min et mesure 180 mm. Leur moyenne commune de 300 L/min ne décrit pas cette différence de frappe."
 		}
 	],
 	"fieldSources": {
@@ -102,6 +152,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-20260930-uryu-p72"
+		],
+		"editorial": [
+			"burineur-uryu-ufc-1n-75712-reserved-20261103-1"
+		],
+		"specifications": [
+			"burineur-uryu-ufc-1n-75712-reserved-20261103-1"
 		]
 	},
 	"notes": [

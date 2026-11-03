@@ -23,82 +23,69 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
 	},
 	"editorial": {
-		"overview": "Aircraft BS-C 10 PRO 15 VS, référence 2403730. Consommation moyenne publiée : 400 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Longueur de bande : 330 mm. Largeur de bande : 10 mm.",
+		"overview": "Aircraft BS-C 10 PRO 15 VS. La BS-C 10 PRO 15 VS utilise la bande 330 × 10 mm ; la BS-C 20 PRO 15 VS utilise 520 × 20 mm et pèse 0,96 kg contre 0,77 kg dans cette notice. Les 400 L/min sont explicitement moyens et les 520 L/min maximaux. Le maximum reste documentaire faute de pression de mesure explicitement appariée ; les 8 bar d’entrée ne sont pas une mesure de débit.",
 		"verifiedFacts": [
-			"Pression de travail publiée : 6 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
-			"Consommation moyenne publiée : 400 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
-			"Référence fabricant : 2403730.",
-			"Longueur de bande : 330 mm.",
-			"Largeur de bande : 10 mm.",
-			"Longueur approximative : 320 mm."
+			"Bande : 330 × 10 mm.",
+			"Vitesse à vide : 18 000 tr/min.",
+			"Masse, notice : 0,77 kg.",
+			"Consommation moyenne explicite : 400 L/min.",
+			"Consommation maximale distincte : 520 L/min.",
+			"Pression de service : 6 bar.",
+			"Pression maximale d’entrée : 8 bar."
 		],
 		"limitations": [
-			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
-			"Une consommation moyenne ne constitue pas un débit maximal en usage continu. Vérifier le régime réel auprès du fabricant avant dimensionnement."
+			"Aucune moyenne, aucun maximum ni aucune pression de mesure supplémentaires ne sont déduits d’un simple débit approximatif ou d’une consigne de service.",
+			"Source fabricant et édition identifiées ; équipement actuel à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression de travail publiée : 6 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
+			"label": "Bande",
+			"value": "330 × 10 mm",
 			"evidenceIds": [
-				"aircraft-2403730-20260927"
+				"aircraft-bs-c-10-pro-15-vs-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation moyenne publiée : 400 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
+			"label": "Vitesse à vide",
+			"value": "18 000 tr/min",
 			"evidenceIds": [
-				"aircraft-2403730-20260927"
+				"aircraft-bs-c-10-pro-15-vs-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur de bande",
-			"value": "330 mm",
+			"label": "Masse, notice",
+			"value": "0,77 kg",
 			"evidenceIds": [
-				"aircraft-2403730-20260927"
+				"aircraft-bs-c-10-pro-15-vs-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Largeur de bande",
-			"value": "10 mm",
+			"label": "Consommation moyenne explicite",
+			"value": "400 L/min",
 			"evidenceIds": [
-				"aircraft-2403730-20260927"
+				"aircraft-bs-c-10-pro-15-vs-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur approximative",
-			"value": "320 mm",
+			"label": "Consommation maximale distincte",
+			"value": "520 L/min",
 			"evidenceIds": [
-				"aircraft-2403730-20260927"
+				"aircraft-bs-c-10-pro-15-vs-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Largeur approximative",
-			"value": "85 mm",
+			"label": "Pression de service",
+			"value": "6 bar",
 			"evidenceIds": [
-				"aircraft-2403730-20260927"
+				"aircraft-bs-c-10-pro-15-vs-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Hauteur approximative",
-			"value": "95 mm",
+			"label": "Pression maximale d’entrée",
+			"value": "8 bar",
 			"evidenceIds": [
-				"aircraft-2403730-20260927"
-			]
-		},
-		{
-			"label": "Masse approximative",
-			"value": "0.77 kg",
-			"evidenceIds": [
-				"aircraft-2403730-20260927"
-			]
-		},
-		{
-			"label": "Type indiqué par le fabricant",
-			"value": "Belt sander",
-			"evidenceIds": [
-				"aircraft-2403730-20260927"
+				"aircraft-bs-c-10-pro-15-vs-reserved-20261103-1"
 			]
 		}
 	],
@@ -122,6 +109,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : Public retailer mirror vaentek.de; document publisher explicitly AIRCRAFT on page2. Empreinte PDF SHA-256 : 016c91679a5160feb528bfaa49ff8c37f9f7ef4d672d5884a8ca49d96250ff1d. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
+		},
+		{
+			"id": "aircraft-bs-c-10-pro-15-vs-reserved-20261103-1",
+			"sourceUrl": "https://www.vaentek.de/WebRoot/Store22/Shops/93216177/61FD/808C/7F37/57EE/46D3/0A0C/6D10/7775/AC_BA_BS-C_10_20-PRO-VS_10_20-PRO-15-VS_DE.pdf#page=6",
+			"sourceLabel": "Aircraft : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 016c91679a5160feb528bfaa49ff8c37f9f7ef4d672d5884a8ca49d96250ff1d. La BS-C 10 PRO 15 VS utilise la bande 330 × 10 mm ; la BS-C 20 PRO 15 VS utilise 520 × 20 mm et pèse 0,96 kg contre 0,77 kg dans cette notice. Les 400 L/min sont explicitement moyens et les 520 L/min maximaux. Le maximum reste documentaire faute de pression de mesure explicitement appariée ; les 8 bar d’entrée ne sont pas une mesure de débit."
 		}
 	],
 	"fieldSources": {
@@ -136,6 +133,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"aircraft-2403730-20260927"
+		],
+		"editorial": [
+			"aircraft-bs-c-10-pro-15-vs-reserved-20261103-1"
+		],
+		"specifications": [
+			"aircraft-bs-c-10-pro-15-vs-reserved-20261103-1"
 		]
 	},
 	"notes": [

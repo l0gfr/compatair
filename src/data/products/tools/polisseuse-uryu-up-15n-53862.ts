@@ -37,11 +37,17 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU UP-15N, code 53862. Le tableau publie une consommation moyenne de 0,45 m³/min, soit 450 L/min. Pression de référence retenue : 6 bar.",
+		"overview": "URYU UP-15N. La UP-15N annonce 9 000 tr/min, 225 W et 175 mm, contre 8 500 tr/min, 210 W et 112 mm pour la UP-15. La UP-80-15 utilise un plateau de 160 mm à 1 500 tr/min. Le besoin moyen de 450 L/min ne décrit pas ces différences d’usage.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 53862, page PDF 1.",
 			"Consommation moyenne publiée : 450 L/min après conversion de l’unité originale.",
-			"SPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85psi)"
+			"SPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85 psi)",
+			"Diamètre de plateau ou papier : 125 mm.",
+			"Vitesse à vide maximale : 9 000 tr/min.",
+			"Puissance publiée : 225 W.",
+			"Longueur totale : 175 mm.",
+			"Hauteur : 103 mm.",
+			"Masse hors accessoire : 1,50 kg."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
@@ -76,6 +82,48 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-uryu-p62"
 			]
+		},
+		{
+			"label": "Diamètre de plateau ou papier",
+			"value": "125 mm",
+			"evidenceIds": [
+				"polisseuse-uryu-up-15n-53862-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide maximale",
+			"value": "9 000 tr/min",
+			"evidenceIds": [
+				"polisseuse-uryu-up-15n-53862-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Puissance publiée",
+			"value": "225 W",
+			"evidenceIds": [
+				"polisseuse-uryu-up-15n-53862-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "175 mm",
+			"evidenceIds": [
+				"polisseuse-uryu-up-15n-53862-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Hauteur",
+			"value": "103 mm",
+			"evidenceIds": [
+				"polisseuse-uryu-up-15n-53862-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse hors accessoire",
+			"value": "1,50 kg",
+			"evidenceIds": [
+				"polisseuse-uryu-up-15n-53862-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -88,6 +136,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 daaddcba105d4bd9dc97a38929d5b89c6543ad8e8d447e6b9c00c1bb64865b3b. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		},
+		{
+			"id": "polisseuse-uryu-up-15n-53862-reserved-20261103-1",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P62.pdf",
+			"sourceLabel": "URYU : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 daaddcba105d4bd9dc97a38929d5b89c6543ad8e8d447e6b9c00c1bb64865b3b. La UP-15N annonce 9 000 tr/min, 225 W et 175 mm, contre 8 500 tr/min, 210 W et 112 mm pour la UP-15. La UP-80-15 utilise un plateau de 160 mm à 1 500 tr/min. Le besoin moyen de 450 L/min ne décrit pas ces différences d’usage."
 		}
 	],
 	"fieldSources": {
@@ -102,6 +160,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-20260930-uryu-p62"
+		],
+		"editorial": [
+			"polisseuse-uryu-up-15n-53862-reserved-20261103-1"
+		],
+		"specifications": [
+			"polisseuse-uryu-up-15n-53862-reserved-20261103-1"
 		]
 	},
 	"notes": [

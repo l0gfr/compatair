@@ -37,11 +37,16 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU US-3.5B, code 41412. Le tableau publie une consommation moyenne de 0,2 m³/min, soit 200 L/min. Pression de référence retenue : 4 bar.",
+		"overview": "URYU US-3.5B. La US-3.5B donne une sortie hexagonale de 6,35 mm et une longueur de 214 mm ; la US-3.5A utilise 5 mm et mesure 196 mm. La US-3.5PB de même vitesse mesure 200 mm et pèse 0,75 kg. Les 200 L/min restent une moyenne et ne chiffrent pas la pointe.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 41412, page PDF 1.",
 			"Consommation moyenne publiée : 200 L/min après conversion de l’unité originale.",
-			"SPECIFICATIONS                                       Recommended Air Pressure : 0.4MPa (57psi)\nSPECIFICATIONS                                       Recommended Air Pressure : 0.4MPa (57psi)\nSPECIFICATIONS                                       Recommended Air Pressure : 0.4MPa (57psi)\nSPECIFICATIONS                                       Recommended Air Pressure : 0.4MPa (57psi)"
+			"SPECIFICATIONS                                       Recommended Air Pressure : 0.4MPa (57 psi)\nSPECIFICATIONS                                       Recommended Air Pressure : 0.4MPa (57 psi)\nSPECIFICATIONS                                       Recommended Air Pressure : 0.4MPa (57 psi)\nSPECIFICATIONS                                       Recommended Air Pressure : 0.4MPa (57 psi)",
+			"Capacité nominale de vis : 4 mm.",
+			"Vitesse à vide : 2 000 tr/min.",
+			"Longueur totale : 214 mm.",
+			"Masse hors douille ou embout : 0,63 kg.",
+			"Sortie hexagonale : 6,35 mm (1/4\")."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
@@ -76,6 +81,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-uryu-p52-54"
 			]
+		},
+		{
+			"label": "Capacité nominale de vis",
+			"value": "4 mm",
+			"evidenceIds": [
+				"visseuse-uryu-us-3-5b-41412-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "2 000 tr/min",
+			"evidenceIds": [
+				"visseuse-uryu-us-3-5b-41412-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "214 mm",
+			"evidenceIds": [
+				"visseuse-uryu-us-3-5b-41412-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse hors douille ou embout",
+			"value": "0,63 kg",
+			"evidenceIds": [
+				"visseuse-uryu-us-3-5b-41412-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Sortie hexagonale",
+			"value": "6,35 mm (1/4\")",
+			"evidenceIds": [
+				"visseuse-uryu-us-3-5b-41412-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -88,6 +128,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 15cc571b3d9bc9b5a4542ac02a3a00b86fd1d9f6b42e32a6d6aae70d357b8ae5. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		},
+		{
+			"id": "visseuse-uryu-us-3-5b-41412-reserved-20261103-1",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P52_54.pdf",
+			"sourceLabel": "URYU : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 15cc571b3d9bc9b5a4542ac02a3a00b86fd1d9f6b42e32a6d6aae70d357b8ae5. La US-3.5B donne une sortie hexagonale de 6,35 mm et une longueur de 214 mm ; la US-3.5A utilise 5 mm et mesure 196 mm. La US-3.5PB de même vitesse mesure 200 mm et pèse 0,75 kg. Les 200 L/min restent une moyenne et ne chiffrent pas la pointe."
 		}
 	],
 	"fieldSources": {
@@ -102,6 +152,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-20260930-uryu-p52-54"
+		],
+		"editorial": [
+			"visseuse-uryu-us-3-5b-41412-reserved-20261103-1"
+		],
+		"specifications": [
+			"visseuse-uryu-us-3-5b-41412-reserved-20261103-1"
 		]
 	},
 	"notes": [

@@ -1,3 +1,4 @@
+import { applyReservedNovember3Followup } from './reviewed-catalog-amendments-2026-11-03-reserved.mjs';
 import { parseCatalogProductSource } from './catalog-tooling.mjs';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
@@ -45,7 +46,7 @@ describe('documented tools October4',()=>{
   for(const product of batch){
    expect(toolProfileSchema.safeParse(product).success,product.id).toBe(true);
    const module=readFileSync(new URL(`../../src/data/products/tools/${product.slug}.ts`,import.meta.url),'utf8');
-   expect(toolProfileSchema.parse(parseCatalogProductSource('tools', module))).toEqual(toolProfileSchema.parse(product));
+   expect(toolProfileSchema.parse(parseCatalogProductSource('tools', module))).toEqual(toolProfileSchema.parse(applyReservedNovember3Followup(structuredClone(product))));
   }
  },30_000);
  it('preserves captured HTTP200 originals, SHA/date/edition and field citations without raw files or private paths',()=>{

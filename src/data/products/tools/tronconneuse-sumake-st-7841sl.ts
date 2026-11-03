@@ -39,53 +39,68 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-7841SL. Consommation publiée, régime non précisé : 540 L/min à 6,2 bar. Consommation dans les unités du tableau : 540 L/min ; 19 cfm. Configuration complète publiée : ST-7841SL.",
+		"overview": "Sumake ST-7841SL. La ST-7841SL possède un corps de 376 mm et pèse 1,7 kg, contre 234 mm et 1,1 kg pour la ST-7841SB. Les deux utilisent le disque 4 pouces à 15 000 tr/min. Le bras long change l’accès et la prise en main, pas le point de consommation publié.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 28.",
-			"Consommation dans les unités du tableau : 540 L/min ; 19 cfm.",
-			"Configuration complète publiée : ST-7841SL.",
-			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé."
+			"Disque : 4 pouces.",
+			"Arbre publié : 5/8 et 3/8 pouce.",
+			"Vitesse à vide : 15 000 tr/min.",
+			"Longueur : 376 mm.",
+			"Masse : 1,7 kg.",
+			"Consommation documentaire : 540 L/min, régime non précisé.",
+			"Pression de service recommandée : 6,2 bar ; pression de mesure de la consommation non démontrée."
 		],
 		"limitations": [
-			"Le régime de consommation n’est pas indiqué. Aucun débit maximal ou en charge n’est inventé ; le verdict reste insufficient_data.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"La recommandation de service 6,2 bar ne prouve pas la pression de mesure de la consommation. Le régime reste non qualifié et le calcul indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 28",
+			"label": "Disque",
+			"value": "4 pouces",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p28"
+				"tronconneuse-sumake-st-7841sl-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation dans les unités du tableau",
-			"value": "540 L/min ; 19 cfm",
+			"label": "Arbre publié",
+			"value": "5/8 et 3/8 pouce",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p28"
+				"tronconneuse-sumake-st-7841sl-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Configuration complète publiée",
-			"value": "ST-7841SL",
+			"label": "Vitesse à vide",
+			"value": "15 000 tr/min",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p28"
+				"tronconneuse-sumake-st-7841sl-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Régime de consommation",
-			"value": "Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé",
+			"label": "Longueur",
+			"value": "376 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p28"
+				"tronconneuse-sumake-st-7841sl-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Ligne technique originale du modèle",
-			"value": "ST-7841SL 5/8” & 3/8” 15,000 4 376 14-4/5 1/4” 3/8” 540 19 1.7 3.8 12/Ctn/21.5/2'",
+			"label": "Masse",
+			"value": "1,7 kg",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p28"
+				"tronconneuse-sumake-st-7841sl-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "540 L/min, régime non précisé",
+			"evidenceIds": [
+				"tronconneuse-sumake-st-7841sl-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression de service recommandée",
+			"value": "6,2 bar ; pression de mesure de la consommation non démontrée",
+			"evidenceIds": [
+				"tronconneuse-sumake-st-7841sl-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +114,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "tronconneuse-sumake-st-7841sl-reserved-20261103-1",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf#page=28",
+			"sourceLabel": "Sumake : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. La ST-7841SL possède un corps de 376 mm et pèse 1,7 kg, contre 234 mm et 1,1 kg pour la ST-7841SB. Les deux utilisent le disque 4 pouces à 15 000 tr/min. Le bras long change l’accès et la prise en main, pas le point de consommation publié."
 		}
 	],
 	"fieldSources": {
@@ -113,6 +138,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-d-sumake-na-2024-p28"
+		],
+		"editorial": [
+			"tronconneuse-sumake-st-7841sl-reserved-20261103-1"
+		],
+		"specifications": [
+			"tronconneuse-sumake-st-7841sl-reserved-20261103-1"
 		]
 	},
 	"notes": [

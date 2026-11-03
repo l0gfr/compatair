@@ -39,53 +39,68 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-AH603H-Q. Consommation publiée, régime non précisé : 480 L/min à 6,2 bar. Consommation dans les unités du tableau : 480 L/min ; 17 cfm. Configuration complète publiée : ST-AH603H-Q.",
+		"overview": "Sumake ST-AH603H-Q. La ST-AH603H-Q accepte un burin hexagonal 10 mm ; la 603R-Q est ronde 0,41 pouce. La 605H-Q conserve l’hexagonal 10 mm mais passe à 89 mm de course et 2 500 coups/min, contre 58 mm et 3 500 ici. Le choix du burin et de la course précède le choix du compresseur.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 53.",
-			"Consommation dans les unités du tableau : 480 L/min ; 17 cfm.",
-			"Configuration complète publiée : ST-AH603H-Q.",
-			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé."
+			"Emmanchement : Hexagonal 10 mm.",
+			"Cadence : 3 500 coups/min.",
+			"Course piston : 58 mm.",
+			"Longueur : 242 mm.",
+			"Masse : 2,2 kg.",
+			"Consommation documentaire : 480 L/min, régime non précisé.",
+			"Pression de service recommandée : 6,2 bar ; pression de mesure de la consommation non démontrée."
 		],
 		"limitations": [
-			"Le régime de consommation n’est pas indiqué. Aucun débit maximal ou en charge n’est inventé ; le verdict reste insufficient_data.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"La recommandation de service 6,2 bar ne prouve pas la pression de mesure de la consommation. Le régime reste non qualifié et le calcul indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 53",
+			"label": "Emmanchement",
+			"value": "Hexagonal 10 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p53"
+				"burineur-sumake-st-ah603h-q-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation dans les unités du tableau",
-			"value": "480 L/min ; 17 cfm",
+			"label": "Cadence",
+			"value": "3 500 coups/min",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p53"
+				"burineur-sumake-st-ah603h-q-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Configuration complète publiée",
-			"value": "ST-AH603H-Q",
+			"label": "Course piston",
+			"value": "58 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p53"
+				"burineur-sumake-st-ah603h-q-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Régime de consommation",
-			"value": "Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé",
+			"label": "Longueur",
+			"value": "242 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p53"
+				"burineur-sumake-st-ah603h-q-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Ligne technique originale du modèle",
-			"value": "ST-AH603H-Q Hex:10mm 19 3/4 58 2-2/7 3,500 242 9-1/2 1/4’’ 3/8’’ 480 17 2.2 4.85",
+			"label": "Masse",
+			"value": "2,2 kg",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p53"
+				"burineur-sumake-st-ah603h-q-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "480 L/min, régime non précisé",
+			"evidenceIds": [
+				"burineur-sumake-st-ah603h-q-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression de service recommandée",
+			"value": "6,2 bar ; pression de mesure de la consommation non démontrée",
+			"evidenceIds": [
+				"burineur-sumake-st-ah603h-q-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +114,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "burineur-sumake-st-ah603h-q-reserved-20261103-1",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf#page=53",
+			"sourceLabel": "Sumake : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. La ST-AH603H-Q accepte un burin hexagonal 10 mm ; la 603R-Q est ronde 0,41 pouce. La 605H-Q conserve l’hexagonal 10 mm mais passe à 89 mm de course et 2 500 coups/min, contre 58 mm et 3 500 ici. Le choix du burin et de la course précède le choix du compresseur."
 		}
 	],
 	"fieldSources": {
@@ -113,6 +138,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-d-sumake-na-2024-p53"
+		],
+		"editorial": [
+			"burineur-sumake-st-ah603h-q-reserved-20261103-1"
+		],
+		"specifications": [
+			"burineur-sumake-st-ah603h-q-reserved-20261103-1"
 		]
 	},
 	"notes": [

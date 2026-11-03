@@ -39,53 +39,68 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-55503. Consommation publiée, régime non précisé : 283 L/min à 6,2 bar. Consommation dans les unités du tableau : 283 L/min ; 10 cfm. Configuration complète publiée : ST-55503.",
+		"overview": "Sumake ST-55503. La ST-55503 a un carré 3/8 pouce ; la ST-55502 est en 1/4 pouce. Elles annoncent 20 Nm, 260 tr/min et 133 mm. La ST-RW931 atteint 27 Nm pour 0,49 kg contre 20 Nm et 0,45 kg ici : changer de carré seul ne prouve pas plus de couple.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 11.",
-			"Consommation dans les unités du tableau : 283 L/min ; 10 cfm.",
-			"Configuration complète publiée : ST-55503.",
-			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé."
+			"Carré : 3/8 pouce.",
+			"Couple déclaré : 20 Nm.",
+			"Vitesse à vide : 260 tr/min.",
+			"Longueur : 133 mm.",
+			"Masse : 0,45 kg.",
+			"Consommation documentaire : 283 L/min, régime non précisé.",
+			"Pression de service recommandée : 6,2 bar ; pression de mesure de la consommation non démontrée."
 		],
 		"limitations": [
-			"Le régime de consommation n’est pas indiqué. Aucun débit maximal ou en charge n’est inventé ; le verdict reste insufficient_data.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"La recommandation de service 6,2 bar ne prouve pas la pression de mesure de la consommation. Le régime reste non qualifié et le calcul indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 11",
+			"label": "Carré",
+			"value": "3/8 pouce",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p11"
+				"cle-a-cliquet-sumake-st-55503-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation dans les unités du tableau",
-			"value": "283 L/min ; 10 cfm",
+			"label": "Couple déclaré",
+			"value": "20 Nm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p11"
+				"cle-a-cliquet-sumake-st-55503-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Configuration complète publiée",
-			"value": "ST-55503",
+			"label": "Vitesse à vide",
+			"value": "260 tr/min",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p11"
+				"cle-a-cliquet-sumake-st-55503-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Régime de consommation",
-			"value": "Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé",
+			"label": "Longueur",
+			"value": "133 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p11"
+				"cle-a-cliquet-sumake-st-55503-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Ligne technique originale du modèle",
-			"value": "ST-55503 3/8 M10 3/8 260 20 15 133 5-1/4 1/4” 1/4” 283 10 0.45 0.99 20Pcs/Ctn/10/0.47’",
+			"label": "Masse",
+			"value": "0,45 kg",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p11"
+				"cle-a-cliquet-sumake-st-55503-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "283 L/min, régime non précisé",
+			"evidenceIds": [
+				"cle-a-cliquet-sumake-st-55503-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression de service recommandée",
+			"value": "6,2 bar ; pression de mesure de la consommation non démontrée",
+			"evidenceIds": [
+				"cle-a-cliquet-sumake-st-55503-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +114,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "cle-a-cliquet-sumake-st-55503-reserved-20261103-1",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf#page=11",
+			"sourceLabel": "Sumake : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. La ST-55503 a un carré 3/8 pouce ; la ST-55502 est en 1/4 pouce. Elles annoncent 20 Nm, 260 tr/min et 133 mm. La ST-RW931 atteint 27 Nm pour 0,49 kg contre 20 Nm et 0,45 kg ici : changer de carré seul ne prouve pas plus de couple."
 		}
 	],
 	"fieldSources": {
@@ -113,6 +138,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-d-sumake-na-2024-p11"
+		],
+		"editorial": [
+			"cle-a-cliquet-sumake-st-55503-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-cliquet-sumake-st-55503-reserved-20261103-1"
 		]
 	},
 	"notes": [

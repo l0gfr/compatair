@@ -74,13 +74,69 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4c-ozen-catalog-2025-p20"
       ]
+    },
+    {
+      "label": "Suffixe constructeur",
+      "value": "U, entraînement direct",
+      "evidenceIds": [
+        "ozen-osc-110-u-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Point de travail publié13 bar",
+      "value": "12,74 m³/min",
+      "evidenceIds": [
+        "ozen-osc-110-u-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Puissance moteur",
+      "value": "110 kW",
+      "evidenceIds": [
+        "ozen-osc-110-u-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Masse publiée",
+      "value": "2 650 kg",
+      "evidenceIds": [
+        "ozen-osc-110-u-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Raccord",
+      "value": "2\"",
+      "evidenceIds": [
+        "ozen-osc-110-u-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Dimensions En×Boy×Yükseklik",
+      "value": "1 600 × 3 200 × 1 855 mm",
+      "evidenceIds": [
+        "ozen-osc-110-u-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Référence de mesure",
+      "value": "ISO 1217:2009 annexe C ; entrée1 bar, température20 °C",
+      "evidenceIds": [
+        "ozen-osc-110-u-reserved-20261103-1"
+      ]
     }
   ],
   "editorial": {
-    "overview": "Ozen OSC 110 U. 12 740 L/min déclarés à 13 bar. Configuration constructeur : OSC 110 U.",
+    "overview": "Ozen OSC 110 U. La OSC110U publie12,74 m³/min àla ligne de travail13 bar et 2 650 kg. La OSC110D est une autre configuration, avec table et note de pression différentes ; ses15,28 m³/min ne sont pas transférés àU. Les dimensions conservées sont celles de la colonne U.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 13 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 12 740 L/min déclarés à 13 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 12 740 L/min déclarés à 13 bar.",
+      "Suffixe constructeur : U, entraînement direct.",
+      "Point de travail publié13 bar : 12,74 m³/min.",
+      "Puissance moteur : 110 kW.",
+      "Masse publiée : 2 650 kg.",
+      "Raccord : 2\".",
+      "Dimensions En×Boy×Yükseklik : 1 600 × 3 200 × 1 855 mm.",
+      "Référence de mesure : ISO 1217:2009 annexe C ; entrée1 bar, température20 °C."
     ],
     "limitations": [
       "Marque officielle Özen ; alias Ozen utilisé pour la recherche. La cuve, la fréquence et le cycle de service ne sont pas qualifiés dans le tableau.",
@@ -100,6 +156,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 cfcfbd23c05cfe5db69ec1bb59c552a6543cf1597869b67811a985d1b7458b60 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "ozen-osc-110-u-reserved-20261103-1",
+      "sourceUrl": "https://ozenkompresor.com.tr/wp-content/uploads/2026/01/katalog-2025.pdf#page=20",
+      "sourceLabel": "Ozen : revue factuelle du 3 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-03",
+      "confidence": "B",
+      "notes": "GET complet HTTP200 SHA-256 cfcfbd23c05cfe5db69ec1bb59c552a6543cf1597869b67811a985d1b7458b60. La OSC110U publie12,74 m³/min àla ligne de travail13 bar et 2 650 kg. La OSC110D est une autre configuration, avec table et note de pression différentes ; ses15,28 m³/min ne sont pas transférés àU. Les dimensions conservées sont celles de la colonne U."
     }
   ],
   "fieldSources": {
@@ -116,13 +182,23 @@ const product: CompressorInput = {
       "october4c-ozen-catalog-2025-p20"
     ],
     "powerKw": [
-      "october4c-ozen-catalog-2025-p20"
+      "ozen-osc-110-u-reserved-20261103-1"
+    ],
+    "weightKg": [
+      "ozen-osc-110-u-reserved-20261103-1"
+    ],
+    "editorial": [
+      "ozen-osc-110-u-reserved-20261103-1"
+    ],
+    "specifications": [
+      "ozen-osc-110-u-reserved-20261103-1"
     ]
   },
   "notes": [
     "Portée de la source : FAD-pressure-qualified.",
     "Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées.",
     "Les caractéristiques décrivent la configuration constructeur indiquée dans cette fiche ; les autres équipements ou alimentations doivent être vérifiés séparément."
-  ]
+  ],
+  "weightKg": 2650
 };
 export default product;

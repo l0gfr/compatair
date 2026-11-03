@@ -77,14 +77,62 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4b-puska-catalog-2025-p18"
       ]
+    },
+    {
+      "label": "Code",
+      "value": "4116 0023 15",
+      "evidenceIds": [
+        "puska-cnr-55-270-s-yd-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Configuration",
+      "value": "CNR 55/270 S YD sur cuve 270 L",
+      "evidenceIds": [
+        "puska-cnr-55-270-s-yd-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Débit de la ligne 10 bar",
+      "value": "492 L/min, caudal real ISO 1217 annexe C",
+      "evidenceIds": [
+        "puska-cnr-55-270-s-yd-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Puissance",
+      "value": "4 kW",
+      "evidenceIds": [
+        "puska-cnr-55-270-s-yd-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Masse",
+      "value": "303 kg",
+      "evidenceIds": [
+        "puska-cnr-55-270-s-yd-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Alimentation",
+      "value": "400 V / 3 phases / 50 Hz",
+      "evidenceIds": [
+        "puska-cnr-55-270-s-yd-reserved-20261103-1"
+      ]
     }
   ],
   "editorial": {
-    "overview": "Puska CNR 55/270 S YD. 492 L/min déclarés à 10 bar. Configuration constructeur : CNR 55/270 S YD.",
+    "overview": "Puska CNR 55/270 S YD. La CNR 55/270 S YD sur cuve 270 L pèse 303 kg. La CNR 55 sur cuve et la CNR 55/BM partagent 492 L/min, mais annoncent 303 et 228 kg. La CNR 200/BM donne 1 860 L/min contre 1 332 pour la CNR 155/BM. Ces valeurs sont celles de Puska ; les valeurs d’une autre marque CNR ne sont pas transférées.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 10 bar.",
       "Cuve de stockage documentée : 270 L.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 492 L/min déclarés à 10 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 492 L/min déclarés à 10 bar.",
+      "Code : 4116 0023 15.",
+      "Configuration : CNR 55/270 S YD sur cuve 270 L.",
+      "Débit de la ligne 10 bar : 492 L/min, caudal real ISO 1217 annexe C.",
+      "Puissance : 4 kW.",
+      "Masse : 303 kg.",
+      "Alimentation : 400 V / 3 phases / 50 Hz."
     ],
     "limitations": [
       "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
@@ -102,6 +150,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 62ce74f8e02f84d3c021f7162c9e8fd8cd9fc17fa41131797a1d7b3465e92454 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "puska-cnr-55-270-s-yd-reserved-20261103-1",
+      "sourceUrl": "https://www.puska.com/content/dam/brands/Puska/catalogos/Cat%C3%A1logo%20Puska%202025.pdf#page=18",
+      "sourceLabel": "Puska : revue factuelle du 3 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-03",
+      "confidence": "B",
+      "notes": "GET complet HTTP200 SHA-256 62ce74f8e02f84d3c021f7162c9e8fd8cd9fc17fa41131797a1d7b3465e92454. La CNR 55/270 S YD sur cuve 270 L pèse 303 kg. La CNR 55 sur cuve et la CNR 55/BM partagent 492 L/min, mais annoncent 303 et 228 kg. La CNR 200/BM donne 1 860 L/min contre 1 332 pour la CNR 155/BM. Ces valeurs sont celles de Puska ; les valeurs d’une autre marque CNR ne sont pas transférées."
     }
   ],
   "fieldSources": {
@@ -128,13 +186,31 @@ const product: CompressorInput = {
     ],
     "mpn": [
       "october4b-puska-catalog-2025-p18"
+    ],
+    "weightKg": [
+      "puska-cnr-55-270-s-yd-reserved-20261103-1"
+    ],
+    "phase": [
+      "puska-cnr-55-270-s-yd-reserved-20261103-1"
+    ],
+    "voltage": [
+      "puska-cnr-55-270-s-yd-reserved-20261103-1"
+    ],
+    "editorial": [
+      "puska-cnr-55-270-s-yd-reserved-20261103-1"
+    ],
+    "specifications": [
+      "puska-cnr-55-270-s-yd-reserved-20261103-1"
     ]
   },
   "notes": [
     "Portée de la source : FAD-pressure-qualified.",
     "Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées.",
     "Identités de pression, tension, contrôleur et démarreur consolidées avant le décompte du lot."
-  ]
+  ],
+  "weightKg": 303,
+  "phase": "three-phase",
+  "voltage": "400 V / 50 Hz"
 };
 
 export default product;

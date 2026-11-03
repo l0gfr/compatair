@@ -74,13 +74,61 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4c-scr-173-p1"
       ]
+    },
+    {
+      "label": "Modèle exact du tableau",
+      "value": "SCR100GPM2-8",
+      "evidenceIds": [
+        "scr-scr100gpm2-8-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Capacité publiée à8 bar",
+      "value": "11,8 m³/min",
+      "evidenceIds": [
+        "scr-scr100gpm2-8-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Puissance dans la ligne du tableau",
+      "value": "75 kW /100 HP",
+      "evidenceIds": [
+        "scr-scr100gpm2-8-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Puissance de l’en-tête de page",
+      "value": "37–45 kW, incohérence avec cette ligne",
+      "evidenceIds": [
+        "scr-scr100gpm2-8-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Dimensions de la ligne",
+      "value": "2 500 × 1 700 × 1 950 mm",
+      "evidenceIds": [
+        "scr-scr100gpm2-8-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Masse de la ligne",
+      "value": "2 500 kg",
+      "evidenceIds": [
+        "scr-scr100gpm2-8-reserved-20261103-1"
+      ]
     }
   ],
   "editorial": {
-    "overview": "SCR SCR100GPM2-8. 11 800 L/min déclarés à 8 bar. Configuration constructeur : SCR100GPM2-8.",
+    "overview": "SCR SCR100GPM2-8. La table nomme SCR100GPM2-8 à75 kW et 11,8 m³/min à8 bar ; la SCR50GPM2-8 est à37 kW et 5,5 m³/min. L’en-tête de page ne couvre que37–45 kW : la fiche signale cette contradiction, sans extrapoler une plage de modulation ni reprendre les données électriques de la sérieG.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 8 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 11 800 L/min déclarés à 8 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 11 800 L/min déclarés à 8 bar.",
+      "Modèle exact du tableau : SCR100GPM2-8.",
+      "Capacité publiée à8 bar : 11,8 m³/min.",
+      "Puissance dans la ligne du tableau : 75 kW /100 HP.",
+      "Puissance de l’en-tête de page : 37–45 kW, incohérence avec cette ligne.",
+      "Dimensions de la ligne : 2 500 × 1 700 × 1 950 mm.",
+      "Masse de la ligne : 2 500 kg."
     ],
     "limitations": [
       "Cuve et cycle de service non documentés. Pressions et tensions variantes regroupées avant décompte.",
@@ -89,7 +137,9 @@ const product: CompressorInput = {
       "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
       "La fréquence électrique de cette configuration n’est pas documentée.",
       "Cuve non documentée : l’autonomie et le volume de stockage ne peuvent pas être conclus à partir de ce profil.",
-      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions."
+      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions.",
+      "La ligne nominative est conservée comme déclaration constructeur ; en-tête de gamme et configuration livrée à faire confirmer.",
+      "Fréquence, alimentation et taux de marche de cette configuration non établis ; aucune tenue continue promise."
     ]
   },
   "evidence": [
@@ -102,6 +152,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 c8f881898562b28a7db336b4dee5580a73bb2af7a803aff0162aa3a6d7cb7fef de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "scr-scr100gpm2-8-reserved-20261103-1",
+      "sourceUrl": "https://www.scrcompressor.com/en/products/oil_free_compressor/173.html",
+      "sourceLabel": "SCR : revue factuelle du 3 novembre 2026",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-03",
+      "confidence": "B",
+      "notes": "GET complet HTTP200 SHA-256 c8f881898562b28a7db336b4dee5580a73bb2af7a803aff0162aa3a6d7cb7fef. La table nomme SCR100GPM2-8 à75 kW et 11,8 m³/min à8 bar ; la SCR50GPM2-8 est à37 kW et 5,5 m³/min. L’en-tête de page ne couvre que37–45 kW : la fiche signale cette contradiction, sans extrapoler une plage de modulation ni reprendre les données électriques de la sérieG."
     }
   ],
   "fieldSources": {
@@ -122,6 +182,12 @@ const product: CompressorInput = {
     ],
     "oilType": [
       "october4c-scr-173-p1"
+    ],
+    "editorial": [
+      "scr-scr100gpm2-8-reserved-20261103-1"
+    ],
+    "specifications": [
+      "scr-scr100gpm2-8-reserved-20261103-1"
     ]
   },
   "notes": [

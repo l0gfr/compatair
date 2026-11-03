@@ -37,44 +37,53 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Bosch 0 607 350 199 (réf. 0607350199). Consommation en charge : 450 L/min à 6,3 bar. Vitesse à vide : 12000 tr/min. Masse : 0.7 kg.",
+		"overview": "Bosch 0 607 350 199. La 0 607 350 199 est la ponceuse 150 mm à orbite 5 mm. La 198 reçoit 80 mm et une orbite 2,5 mm ; la 200 reste une autre référence 150 mm. Le diamètre et l’orbite sont utiles au choix du consommable et du travail de finition. Le débit en charge reste rattaché au protocole 6,3 bar et 4 m de flexible.",
 		"verifiedFacts": [
-			"Vitesse à vide : 12000 tr/min.",
-			"Masse : 0.7 kg."
+			"Abrasif : 150 mm.",
+			"Orbite publiée : 5 mm.",
+			"Puissance : 170 W.",
+			"Vitesse à vide : 12 000 tr/min.",
+			"Débit en charge : 7,5 L/s (450 L/min)."
 		],
 		"limitations": [
-			"Dimensionnement à la consommation publiée, sans réduction par un cycle d’utilisation supposé.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"Performances déclarées sous le protocole du catalogue : pression dynamique 6,3 bar, flexible de 4 m. Les régimes à vide/en charge restent distincts.",
+			"Catalogue historique ; équipement et disponibilité actuels à confirmer."
 		]
 	},
 	"specifications": [
 		{
+			"label": "Abrasif",
+			"value": "150 mm",
+			"evidenceIds": [
+				"ponceuse-orbitale-bosch-0-607-350-199-0607350199-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Orbite publiée",
+			"value": "5 mm",
+			"evidenceIds": [
+				"ponceuse-orbitale-bosch-0-607-350-199-0607350199-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Puissance",
+			"value": "170 W",
+			"evidenceIds": [
+				"ponceuse-orbitale-bosch-0-607-350-199-0607350199-reserved-20261103-1"
+			]
+		},
+		{
 			"label": "Vitesse à vide",
-			"value": "12000 tr/min",
+			"value": "12 000 tr/min",
 			"evidenceIds": [
-				"october-bosch-industry-p32"
+				"ponceuse-orbitale-bosch-0-607-350-199-0607350199-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse",
-			"value": "0.7 kg",
+			"label": "Débit en charge",
+			"value": "7,5 L/s (450 L/min)",
 			"evidenceIds": [
-				"october-bosch-industry-p32"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "Bosch, Industrial air tools catalogue, page 32 ; tableau réparti sur les pages 32–33",
-			"evidenceIds": [
-				"october-bosch-industry-p32"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "All of the performance data / specifications in this catalogue refer to 6.3 bar (91 PSI) flow pressure with 4 m hose length.",
-			"evidenceIds": [
-				"october-bosch-industry-p32",
-				"october-bosch-industry-p4"
+				"ponceuse-orbitale-bosch-0-607-350-199-0607350199-reserved-20261103-1"
 			]
 		}
 	],
@@ -98,6 +107,36 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-orbitale-bosch-0-607-350-199-0607350199-reserved-20261103-1",
+			"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf#page=32",
+			"sourceLabel": "Bosch : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. La 0 607 350 199 est la ponceuse 150 mm à orbite 5 mm. La 198 reçoit 80 mm et une orbite 2,5 mm ; la 200 reste une autre référence 150 mm. Le diamètre et l’orbite sont utiles au choix du consommable et du travail de finition. Le débit en charge reste rattaché au protocole 6,3 bar et 4 m de flexible."
+		},
+		{
+			"id": "ponceuse-orbitale-bosch-0-607-350-199-0607350199-reserved-20261103-1-3",
+			"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf#page=33",
+			"sourceLabel": "Bosch : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. La 0 607 350 199 est la ponceuse 150 mm à orbite 5 mm. La 198 reçoit 80 mm et une orbite 2,5 mm ; la 200 reste une autre référence 150 mm. Le diamètre et l’orbite sont utiles au choix du consommable et du travail de finition. Le débit en charge reste rattaché au protocole 6,3 bar et 4 m de flexible."
+		},
+		{
+			"id": "ponceuse-orbitale-bosch-0-607-350-199-0607350199-reserved-20261103-1-4",
+			"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf#page=4",
+			"sourceLabel": "Bosch : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. La 0 607 350 199 est la ponceuse 150 mm à orbite 5 mm. La 198 reçoit 80 mm et une orbite 2,5 mm ; la 200 reste une autre référence 150 mm. Le diamètre et l’orbite sont utiles au choix du consommable et du travail de finition. Le débit en charge reste rattaché au protocole 6,3 bar et 4 m de flexible."
 		}
 	],
 	"fieldSources": {
@@ -109,6 +148,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"october-bosch-industry-p32"
+		],
+		"editorial": [
+			"ponceuse-orbitale-bosch-0-607-350-199-0607350199-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-orbitale-bosch-0-607-350-199-0607350199-reserved-20261103-1"
 		]
 	},
 	"notes": [

@@ -31,15 +31,18 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sealey SA791. La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué. Champ fabricant : Inlet Size : 1/4\"BSP. Champ fabricant : Maximum Pressure : 100psi.",
+		"overview": "Sealey SA791. Le SA791 est un cloueur pour pointes 18 gauge de 10–50 mm, magasin 100 pointes et profondeur réglable par molette. Le SA789 est une agrafeuse et le SA792 un combiné distinct. Aucun volume d’air par tir n’est publié dans la fiche exacte ; les débits de raccords présentés en produits associés ne sont pas ceux du cloueur.",
 		"verifiedFacts": [
 			"Champ fabricant : Inlet Size : 1/4\"BSP.",
-			"Champ fabricant : Maximum Pressure : 100psi.",
-			"Champ fabricant : Nail Capacity : 10-50mm 18SWG.",
-			"Champ fabricant : Noise Power/Pressure : 99/92dB(A).",
-			"Champ fabricant : Operating Pressure : 60-100psi.",
+			"Champ fabricant : Maximum Pressure : 100 psi.",
+			"Champ fabricant : Nail Capacity : 10-50 mm 18SWG.",
+			"Champ fabricant : Noise Power/Pressure : 99/92 dB(A).",
+			"Champ fabricant : Operating Pressure : 60-100 psi.",
 			"Champ fabricant : Vibration/Uncertainty : 2.8/1.5m/s².",
-			"Champ fabricant : Nett Weight : 1.25kg."
+			"Champ fabricant : Nett Weight : 1.25 kg.",
+			"Magasin : 100 pointes, indicateur de remplissage.",
+			"Pointes : 18 gauge, 10–50 mm.",
+			"Commande : Déclenchement par contact, profondeur réglable."
 		],
 		"limitations": [
 			"La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué.",
@@ -59,28 +62,28 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Maximum Pressure",
-			"value": "100psi",
+			"value": "100 psi",
 			"evidenceIds": [
 				"october2b-tools-oct2b-sealey-sa791-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Nail Capacity",
-			"value": "10-50mm 18SWG",
+			"value": "10-50 mm 18SWG",
 			"evidenceIds": [
 				"october2b-tools-oct2b-sealey-sa791-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Noise Power/Pressure",
-			"value": "99/92dB(A)",
+			"value": "99/92 dB(A)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-sealey-sa791-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Operating Pressure",
-			"value": "60-100psi",
+			"value": "60-100 psi",
 			"evidenceIds": [
 				"october2b-tools-oct2b-sealey-sa791-html-p1"
 			]
@@ -94,16 +97,37 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Nett Weight",
-			"value": "1.25kg",
+			"value": "1.25 kg",
 			"evidenceIds": [
 				"october2b-tools-oct2b-sealey-sa791-html-p1"
 			]
 		},
 		{
 			"label": "Portée de la pression dans la source",
-			"value": "Operating Pressure: 60-100psi",
+			"value": "Operating Pressure: 60-100 psi",
 			"evidenceIds": [
 				"october2b-tools-oct2b-sealey-sa791-html-p1"
+			]
+		},
+		{
+			"label": "Magasin",
+			"value": "100 pointes, indicateur de remplissage",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-sealey-sa791-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pointes",
+			"value": "18 gauge, 10–50 mm",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-sealey-sa791-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Commande",
+			"value": "Déclenchement par contact, profondeur réglable",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-sealey-sa791-reserved-20261103-1"
 			]
 		}
 	],
@@ -117,6 +141,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 6172dcf35b264efb5eddc03602b00e4f565c51a22719ba26648fb2330567b058. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "agrafeuse-cloueuse-sealey-sa791-reserved-20261103-1",
+			"sourceUrl": "https://www.sealey.co.uk/air-nail-gun-10-50mm-capacity-sa791/",
+			"sourceLabel": "Sealey : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 3cd522a2c3e3260e235da69b8a9150190a23cd101a080595fbf2380b4ba2659e. Le SA791 est un cloueur pour pointes 18 gauge de 10–50 mm, magasin 100 pointes et profondeur réglable par molette. Le SA789 est une agrafeuse et le SA792 un combiné distinct. Aucun volume d’air par tir n’est publié dans la fiche exacte ; les débits de raccords présentés en produits associés ne sont pas ceux du cloueur."
 		}
 	],
 	"fieldSources": {
@@ -128,6 +162,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-sealey-sa791-html-p1"
+		],
+		"editorial": [
+			"agrafeuse-cloueuse-sealey-sa791-reserved-20261103-1"
+		],
+		"specifications": [
+			"agrafeuse-cloueuse-sealey-sa791-reserved-20261103-1"
 		]
 	},
 	"notes": [

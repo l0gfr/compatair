@@ -34,51 +34,68 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Cleco BR-C-LT. La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner. Masse publiée : 1.95 kg. Longueur publiée : 264 mm.",
+		"overview": "Cleco BR-C-LT. Le BR-C-LT utilise un outil de stock rond 5/8 pouce ; le B1-C-LT est donné pour stock carré 1/2 pouce. Ils partagent la masse 1,95 kg, mais donnent 4 200 et 4 600 coups/min, pour 264 et 262 mm. Le tableau ne documente pas de consommation d’air : la cadence ne permet pas de l’estimer.",
 		"verifiedFacts": [
-			"Masse publiée : 1.95 kg.",
-			"Longueur publiée : 264 mm.",
-			"Cadence publiée : 4,200 coups/min."
+			"Type : Burineur.",
+			"Stock d’outil indiqué : Rond 5/8 pouce.",
+			"Piston : 1 pouce.",
+			"Course : 1,1 pouce.",
+			"Cadence : 4 200 coups/min.",
+			"Longueur : 264 mm.",
+			"Masse : 1,95 kg."
 		],
 		"limitations": [
-			"La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"La vitesse, la puissance et la cadence ne remplacent pas une consommation maximale/en charge documentée avec ses conditions. Les données insuffisantes restent hors calcul conclusif."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "1.95 kg",
+			"label": "Type",
+			"value": "Burineur",
 			"evidenceIds": [
-				"october-dotco-p103"
+				"burineur-cleco-br-c-lt-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur publiée",
+			"label": "Stock d’outil indiqué",
+			"value": "Rond 5/8 pouce",
+			"evidenceIds": [
+				"burineur-cleco-br-c-lt-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Piston",
+			"value": "1 pouce",
+			"evidenceIds": [
+				"burineur-cleco-br-c-lt-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Course",
+			"value": "1,1 pouce",
+			"evidenceIds": [
+				"burineur-cleco-br-c-lt-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cadence",
+			"value": "4 200 coups/min",
+			"evidenceIds": [
+				"burineur-cleco-br-c-lt-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
 			"value": "264 mm",
 			"evidenceIds": [
-				"october-dotco-p103"
+				"burineur-cleco-br-c-lt-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Cadence publiée",
-			"value": "4,200 coups/min",
+			"label": "Masse",
+			"value": "1,95 kg",
 			"evidenceIds": [
-				"october-dotco-p103"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "Cleco/Dotco, Material Removal SP-102EN, page 103",
-			"evidenceIds": [
-				"october-dotco-p103"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "All tools performance rated @ 90 psi / 620 kPa air pressure.",
-			"evidenceIds": [
-				"october-dotco-p103"
+				"burineur-cleco-br-c-lt-reserved-20261103-1"
 			]
 		}
 	],
@@ -92,6 +109,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 93b7d3cdb96a91eecf95baaf172ed0953f2021cb336460e5f9a202ce7e687c10. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "burineur-cleco-br-c-lt-reserved-20261103-1",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/DOTCO%20Material%20Removal_SP-102EN_en.pdf#page=103",
+			"sourceLabel": "Cleco : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 93b7d3cdb96a91eecf95baaf172ed0953f2021cb336460e5f9a202ce7e687c10. Le BR-C-LT utilise un outil de stock rond 5/8 pouce ; le B1-C-LT est donné pour stock carré 1/2 pouce. Ils partagent la masse 1,95 kg, mais donnent 4 200 et 4 600 coups/min, pour 264 et 262 mm. Le tableau ne documente pas de consommation d’air : la cadence ne permet pas de l’estimer."
 		}
 	],
 	"fieldSources": {
@@ -103,6 +130,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october-dotco-p103"
+		],
+		"editorial": [
+			"burineur-cleco-br-c-lt-reserved-20261103-1"
+		],
+		"specifications": [
+			"burineur-cleco-br-c-lt-reserved-20261103-1"
 		]
 	},
 	"notes": [

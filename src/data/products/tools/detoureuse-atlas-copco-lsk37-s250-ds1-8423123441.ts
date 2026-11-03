@@ -37,61 +37,68 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Atlas Copco LSK37 S250-DS1 (réf. 8423123441). Consommation maximale : 906,139 L/min à 6,3 bar. Vitesse à vide : 25000 tr/min. Pince : 6 mm.",
+		"overview": "Atlas Copco LSK37 S250-DS1. La LSK37 S250-DS1 possède une pince 6 mm ; la DS2 utilise 1/4 pouce avec la même masse 6,1 lb et la même consommation. Le catalogue décrit l’aspiration des poussières et le roulement de guidage intégrés. Le besoin d’aspiration 200 m³/h est un débit de collecte, distinct des 32 cfm d’air comprimé consommés.",
 		"verifiedFacts": [
-			"Vitesse à vide : 25000 tr/min.",
+			"Code : 8423 1234 41.",
 			"Pince : 6 mm.",
-			"Masse publiée : 6.1 lb.",
-			"Puissance publiée : 0.95 hp."
+			"Vitesse à vide : 25 000 tr/min.",
+			"Masse publiée : 6,1 lb.",
+			"Puissance publiée : 0,95 hp.",
+			"Consommation maximale publiée : 32 cfm à 6,3 bar.",
+			"Besoin d’aspiration distinct : 200 m³/h."
 		],
 		"limitations": [
-			"La consommation maximale est déclarée dans les conventions du fabricant ; les exceptions explicites du modèle restent prioritaires.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Conditions générales constructeur : air libre, pression 6,3 bar ; les régimes explicitement inscrits dans la table restent prioritaires."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Vitesse à vide",
-			"value": "25000 tr/min",
+			"label": "Code",
+			"value": "8423 1234 41",
 			"evidenceIds": [
-				"october2-tools-atlas-industrial-p225"
+				"detoureuse-atlas-copco-lsk37-s250-ds1-8423123441-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Pince",
 			"value": "6 mm",
 			"evidenceIds": [
-				"october2-tools-atlas-industrial-p225"
+				"detoureuse-atlas-copco-lsk37-s250-ds1-8423123441-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "25 000 tr/min",
+			"evidenceIds": [
+				"detoureuse-atlas-copco-lsk37-s250-ds1-8423123441-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Masse publiée",
-			"value": "6.1 lb",
+			"value": "6,1 lb",
 			"evidenceIds": [
-				"october2-tools-atlas-industrial-p225"
+				"detoureuse-atlas-copco-lsk37-s250-ds1-8423123441-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Puissance publiée",
-			"value": "0.95 hp",
+			"value": "0,95 hp",
 			"evidenceIds": [
-				"october2-tools-atlas-industrial-p225"
+				"detoureuse-atlas-copco-lsk37-s250-ds1-8423123441-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "6.3 bar : point de consommation maximale déclaré dans les conventions fabricant, page PDF 4, sauf exception explicite.",
+			"label": "Consommation maximale publiée",
+			"value": "32 cfm à 6,3 bar",
 			"evidenceIds": [
-				"october2-tools-atlas-industrial-p225",
-				"october2-tools-atlas-industrial-p4"
+				"detoureuse-atlas-copco-lsk37-s250-ds1-8423123441-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation dans son unité originale",
-			"value": "32 cfm",
+			"label": "Besoin d’aspiration distinct",
+			"value": "200 m³/h",
 			"evidenceIds": [
-				"october2-tools-atlas-industrial-p225",
-				"october2-tools-atlas-industrial-p4"
+				"detoureuse-atlas-copco-lsk37-s250-ds1-8423123441-reserved-20261103-1"
 			]
 		}
 	],
@@ -115,6 +122,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 03eb69cef54f9a52be2a2bd73342620448907b5706ed365db2b3c8a4ca9d3617. Document complémentaire de la référence exacte, sans essai CompatAir."
+		},
+		{
+			"id": "detoureuse-atlas-copco-lsk37-s250-ds1-8423123441-reserved-20261103-1",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/itba/catalogs/Atlas%20Copco%20Industrial%20Tools%20and%20Solutions.pdf#page=225",
+			"sourceLabel": "Atlas Copco : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 03eb69cef54f9a52be2a2bd73342620448907b5706ed365db2b3c8a4ca9d3617. La LSK37 S250-DS1 possède une pince 6 mm ; la DS2 utilise 1/4 pouce avec la même masse 6,1 lb et la même consommation. Le catalogue décrit l’aspiration des poussières et le roulement de guidage intégrés. Le besoin d’aspiration 200 m³/h est un débit de collecte, distinct des 32 cfm d’air comprimé consommés."
+		},
+		{
+			"id": "detoureuse-atlas-copco-lsk37-s250-ds1-8423123441-reserved-20261103-1-3",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/itba/catalogs/Atlas%20Copco%20Industrial%20Tools%20and%20Solutions.pdf#page=4",
+			"sourceLabel": "Atlas Copco : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 03eb69cef54f9a52be2a2bd73342620448907b5706ed365db2b3c8a4ca9d3617. La LSK37 S250-DS1 possède une pince 6 mm ; la DS2 utilise 1/4 pouce avec la même masse 6,1 lb et la même consommation. Le catalogue décrit l’aspiration des poussières et le roulement de guidage intégrés. Le besoin d’aspiration 200 m³/h est un débit de collecte, distinct des 32 cfm d’air comprimé consommés."
 		}
 	],
 	"fieldSources": {
@@ -128,6 +155,12 @@ const product: ToolProfileInput = {
 		"airflowLpm": [
 			"october2-tools-atlas-industrial-p225",
 			"october2-tools-atlas-industrial-p4"
+		],
+		"editorial": [
+			"detoureuse-atlas-copco-lsk37-s250-ds1-8423123441-reserved-20261103-1"
+		],
+		"specifications": [
+			"detoureuse-atlas-copco-lsk37-s250-ds1-8423123441-reserved-20261103-1"
 		]
 	},
 	"notes": [

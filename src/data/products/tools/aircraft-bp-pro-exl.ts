@@ -23,77 +23,53 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
 	},
 	"editorial": {
-		"overview": "Aircraft BP PRO EXL, référence 2102185. Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Longueur du tube de soufflage : 1000 mm. Diamètre extérieur du tube : 12 mm.",
+		"overview": "Aircraft BP PRO EXL. La BP PRO EXL comprend le tube de 1 000 mm, une buse Venturi et une buse à jet latéral. Les BP PRO L, XL et XXL sont d’autres configurations de la même page ; leurs accessoires ne sont pas supposés identiques. Les 150 L/min sont approximatifs, sans mention de moyenne ni de régime de mesure dans la source allemande.",
 		"verifiedFacts": [
-			"Pression de travail publiée : 6 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
-			"Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
-			"Référence fabricant : 2102185.",
-			"Longueur du tube de soufflage : 1000 mm.",
-			"Diamètre extérieur du tube : 12 mm.",
-			"Longueur approximative : 1150 mm."
+			"Tube de soufflage : 1 000 mm.",
+			"Buses fournies : Venturi et jet latéral.",
+			"Raccordement : Au choix à la tête ou à la poignée.",
+			"Masse approximative : 0,5 kg.",
+			"Consommation approximative, régime non précisé : 150 L/min."
 		],
 		"limitations": [
-			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
-			"Une consommation moyenne ne constitue pas un débit maximal en usage continu. Vérifier le régime réel auprès du fabricant avant dimensionnement.",
-			"Écarts entre documents fabricant : Masse approximative : relevé de fiche du 27/09/2026 = 0.462 kg ; AIRCRAFT Hauptkatalog 2026/27 = 0.5kg."
+			"Aucune moyenne, aucun maximum ni aucune pression de mesure supplémentaires ne sont déduits d’un simple débit approximatif ou d’une consigne de service.",
+			"Source fabricant et édition identifiées ; équipement actuel à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression de travail publiée : 6 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
+			"label": "Tube de soufflage",
+			"value": "1 000 mm",
 			"evidenceIds": [
-				"aircraft-2102185-20260927"
+				"aircraft-bp-pro-exl-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
+			"label": "Buses fournies",
+			"value": "Venturi et jet latéral",
 			"evidenceIds": [
-				"aircraft-2102185-20260927"
+				"aircraft-bp-pro-exl-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur du tube de soufflage",
-			"value": "1000 mm",
+			"label": "Raccordement",
+			"value": "Au choix à la tête ou à la poignée",
 			"evidenceIds": [
-				"aircraft-2102185-20260927"
-			]
-		},
-		{
-			"label": "Diamètre extérieur du tube",
-			"value": "12 mm",
-			"evidenceIds": [
-				"aircraft-2102185-20260927"
-			]
-		},
-		{
-			"label": "Longueur approximative",
-			"value": "1150 mm",
-			"evidenceIds": [
-				"aircraft-2102185-20260927"
+				"aircraft-bp-pro-exl-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Masse approximative",
-			"value": "0.462 kg",
+			"value": "0,5 kg",
 			"evidenceIds": [
-				"aircraft-2102185-20260927"
+				"aircraft-bp-pro-exl-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Type indiqué par le fabricant",
-			"value": "Blow gun",
+			"label": "Consommation approximative, régime non précisé",
+			"value": "150 L/min",
 			"evidenceIds": [
-				"aircraft-2102185-20260927"
-			]
-		},
-		{
-			"label": "Écart documentaire fabricant",
-			"value": "Masse approximative : relevé de fiche du 27/09/2026 = 0.462 kg ; AIRCRAFT Hauptkatalog 2026/27 = 0.5kg.",
-			"evidenceIds": [
-				"aircraft-2102185-20260927",
-				"aircraft-2102185-documentation-20261023"
+				"aircraft-bp-pro-exl-reserved-20261103-1"
 			]
 		}
 	],
@@ -117,6 +93,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer 702076. Empreinte PDF SHA-256 : bc60546f310ec633fe500c22a71abb07b8a23499e7359d7ef6a8a505c786fa2f. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
+		},
+		{
+			"id": "aircraft-bp-pro-exl-reserved-20261103-1",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=231#page=1",
+			"sourceLabel": "Aircraft : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 bc60546f310ec633fe500c22a71abb07b8a23499e7359d7ef6a8a505c786fa2f. La BP PRO EXL comprend le tube de 1 000 mm, une buse Venturi et une buse à jet latéral. Les BP PRO L, XL et XXL sont d’autres configurations de la même page ; leurs accessoires ne sont pas supposés identiques. Les 150 L/min sont approximatifs, sans mention de moyenne ni de régime de mesure dans la source allemande."
 		}
 	],
 	"fieldSources": {
@@ -130,7 +116,13 @@ const product: ToolProfileInput = {
 			"aircraft-2102185-20260927"
 		],
 		"airflowBasis": [
-			"aircraft-2102185-20260927"
+			"aircraft-bp-pro-exl-reserved-20261103-1"
+		],
+		"editorial": [
+			"aircraft-bp-pro-exl-reserved-20261103-1"
+		],
+		"specifications": [
+			"aircraft-bp-pro-exl-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -141,7 +133,7 @@ const product: ToolProfileInput = {
 		"typical": 150,
 		"max": 150
 	},
-	"airflowBasis": "average"
+	"airflowBasis": "unqualified"
 };
 
 export default product;

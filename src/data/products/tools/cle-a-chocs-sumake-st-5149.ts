@@ -39,53 +39,68 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-5149. Consommation publiée, régime non précisé : 430 L/min à 6,2 bar. Consommation dans les unités du tableau : 430 L/min ; 15 cfm. Configuration complète publiée : ST-5149.",
+		"overview": "Sumake ST-5149. La ST-5149 utilise un carré 1/2 pouce et annonce 678 Nm maximum. La ST-5139 utilise un carré 3/8 pouce et annonce 610 Nm, pour la même longueur 99 mm et masse 1,35 kg. Le couple maximal ne décrit pas un couple de serrage garanti en atelier.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 5.",
-			"Consommation dans les unités du tableau : 430 L/min ; 15 cfm.",
-			"Configuration complète publiée : ST-5149.",
-			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé."
+			"Carré : 1/2 pouce.",
+			"Couple maximal déclaré : 678 Nm.",
+			"Vitesse à vide : 11 000 tr/min.",
+			"Longueur : 99 mm.",
+			"Masse : 1,35 kg.",
+			"Consommation documentaire : 430 L/min, régime non précisé.",
+			"Pression de service recommandée : 6,2 bar ; pression de mesure de la consommation non démontrée."
 		],
 		"limitations": [
-			"Le régime de consommation n’est pas indiqué. Aucun débit maximal ou en charge n’est inventé ; le verdict reste insufficient_data.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"La recommandation de service 6,2 bar ne prouve pas la pression de mesure de la consommation. Le régime reste non qualifié et le calcul indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 5",
+			"label": "Carré",
+			"value": "1/2 pouce",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p5"
+				"cle-a-chocs-sumake-st-5149-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation dans les unités du tableau",
-			"value": "430 L/min ; 15 cfm",
+			"label": "Couple maximal déclaré",
+			"value": "678 Nm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p5"
+				"cle-a-chocs-sumake-st-5149-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Configuration complète publiée",
-			"value": "ST-5149",
+			"label": "Vitesse à vide",
+			"value": "11 000 tr/min",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p5"
+				"cle-a-chocs-sumake-st-5149-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Régime de consommation",
-			"value": "Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé",
+			"label": "Longueur",
+			"value": "99 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p5"
+				"cle-a-chocs-sumake-st-5149-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Ligne technique originale du modèle",
-			"value": "ST-5149 1/2 M16 5/8 11,000 678 500 99 3-8/9 1/4\" 3/8\" 430 15 1.35 2.98 10Pcs/Ctn/16/1.5'",
+			"label": "Masse",
+			"value": "1,35 kg",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p5"
+				"cle-a-chocs-sumake-st-5149-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "430 L/min, régime non précisé",
+			"evidenceIds": [
+				"cle-a-chocs-sumake-st-5149-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression de service recommandée",
+			"value": "6,2 bar ; pression de mesure de la consommation non démontrée",
+			"evidenceIds": [
+				"cle-a-chocs-sumake-st-5149-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +114,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "cle-a-chocs-sumake-st-5149-reserved-20261103-1",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf#page=5",
+			"sourceLabel": "Sumake : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. La ST-5149 utilise un carré 1/2 pouce et annonce 678 Nm maximum. La ST-5139 utilise un carré 3/8 pouce et annonce 610 Nm, pour la même longueur 99 mm et masse 1,35 kg. Le couple maximal ne décrit pas un couple de serrage garanti en atelier."
 		}
 	],
 	"fieldSources": {
@@ -113,6 +138,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-d-sumake-na-2024-p5"
+		],
+		"editorial": [
+			"cle-a-chocs-sumake-st-5149-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-chocs-sumake-st-5149-reserved-20261103-1"
 		]
 	},
 	"notes": [

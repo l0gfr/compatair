@@ -29,10 +29,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Master Power MP2265B. Le tableau établit la référence et ses caractéristiques mécaniques. La consommation n’est pas associée à un point de pression et un régime suffisants pour le calcul. Fonction dans le catalogue : cle-a-chocs. Caractéristiques du tableau constructeur : MP2265B 3/8” Pin-Detent Square 14-122 150 10000 84 91 2000 2,2 0,98 152 4 16 1/4” 10.",
+		"overview": "Master Power MP2265B. La MP2265B possède un carré 3/8 à retenue Pin-Detent, contre un porte-embout hexagonal 1/4 rapide sur MP2264B. Les deux partagent 14–122 Nm au travail, maximum150 Nm et 152 mm. La table distingue 4 L/s à vide et 16 L/s moyens en charge à 6,2 bar ; une moyenne ne devient pas une consommation maximale.",
 		"verifiedFacts": [
 			"Fonction dans le catalogue : cle-a-chocs.",
-			"Caractéristiques du tableau constructeur : MP2265B 3/8” Pin-Detent Square 14-122 150 10000 84 91 2000 2,2 0,98 152 4 16 1/4” 10."
+			"Caractéristiques du tableau constructeur : MP2265B 3/8” Pin-Detent Square 14-122 150 10000 84 91 2000 2,2 0,98 152 4 16 1/4” 10.",
+			"Sortie : Carré 3/8 pouce, retenue Pin-Detent.",
+			"Plage de travail : 14–122 Nm.",
+			"Couple maximal : 150 Nm.",
+			"Consommation moyenne à vide / en charge : 4 / 16 L/s.",
+			"Pression nominale des performances : 6,2 bar."
 		],
 		"limitations": [
 			"Le tableau établit la référence et ses caractéristiques mécaniques. La consommation n’est pas associée à un point de pression et un régime suffisants pour le calcul.",
@@ -61,6 +66,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-cleco-gi1250-pdf-p63"
 			]
+		},
+		{
+			"label": "Sortie",
+			"value": "Carré 3/8 pouce, retenue Pin-Detent",
+			"evidenceIds": [
+				"cle-a-chocs-master-power-mp2265b-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Plage de travail",
+			"value": "14–122 Nm",
+			"evidenceIds": [
+				"cle-a-chocs-master-power-mp2265b-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Couple maximal",
+			"value": "150 Nm",
+			"evidenceIds": [
+				"cle-a-chocs-master-power-mp2265b-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation moyenne à vide / en charge",
+			"value": "4 / 16 L/s",
+			"evidenceIds": [
+				"cle-a-chocs-master-power-mp2265b-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression nominale des performances",
+			"value": "6,2 bar",
+			"evidenceIds": [
+				"cle-a-chocs-master-power-mp2265b-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -73,6 +113,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 8668d5e77a6b2469dc9b9012841e65bbfb947234a8087faa6fdd90384b3babac. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-chocs-master-power-mp2265b-reserved-20261103-1",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=63",
+			"sourceLabel": "Master Power : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 8668d5e77a6b2469dc9b9012841e65bbfb947234a8087faa6fdd90384b3babac. La MP2265B possède un carré 3/8 à retenue Pin-Detent, contre un porte-embout hexagonal 1/4 rapide sur MP2264B. Les deux partagent 14–122 Nm au travail, maximum150 Nm et 152 mm. La table distingue 4 L/s à vide et 16 L/s moyens en charge à 6,2 bar ; une moyenne ne devient pas une consommation maximale."
 		}
 	],
 	"fieldSources": {
@@ -84,6 +134,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-cleco-gi1250-pdf-p63"
+		],
+		"editorial": [
+			"cle-a-chocs-master-power-mp2265b-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-chocs-master-power-mp2265b-reserved-20261103-1"
 		]
 	},
 	"notes": [

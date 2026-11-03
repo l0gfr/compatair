@@ -3,7 +3,7 @@ import type { ToolProfileInput } from '../../../domain/catalog';
 const product: ToolProfileInput = {
 	"id": "ponceuse-rotative-zipp-zas-982",
 	"slug": "ponceuse-rotative-zipp-zas-982",
-	"categoryId": "ponceuse-rotative",
+	"categoryId": "polisseuse",
 	"category": "ponceuse-rotative",
 	"label": "ZIPP ZAS-982",
 	"brand": "ZIPP",
@@ -29,58 +29,52 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZAS-982. La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé. Vitesse à vide : 4500 tr/min. Masse : 2.3 kg.",
+		"overview": "ZIPP ZAS-982. La ZAS-982 est nommée polisseuse d’angle 7 pouces par le constructeur, à 4 500 tr/min. La ZAS-983 donne 2 500 tr/min pour le même encombrement et la même masse. La catégorie est corrigée en polisseuse ; le filetage livré doit être confirmé parmi les deux montages publiés.",
 		"verifiedFacts": [
-			"Vitesse à vide : 4500 tr/min.",
-			"Masse : 2.3 kg.",
-			"Référence constructeur : ZAS-982."
+			"Désignation constructeur : Angle Polisher 7 pouces.",
+			"Vitesse à vide : 4 500 tr/min.",
+			"Filetages proposés : 5/8 pouce–11 ou M14 × 2.",
+			"Longueur : 328 mm.",
+			"Masse : 2,3 kg."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé.",
-			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+			"Consommation moyenne ou de régime non précisé, sans qualification maximale/en charge ni appariement de pression de mesure suffisant : aucun verdict conclusif n’en est déduit."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Vitesse à vide",
-			"value": "4500 tr/min",
+			"label": "Désignation constructeur",
+			"value": "Angle Polisher 7 pouces",
 			"evidenceIds": [
-				"october-b-zipp-tools-p136"
+				"ponceuse-rotative-zipp-zas-982-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "4 500 tr/min",
+			"evidenceIds": [
+				"ponceuse-rotative-zipp-zas-982-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Filetages proposés",
+			"value": "5/8 pouce–11 ou M14 × 2",
+			"evidenceIds": [
+				"ponceuse-rotative-zipp-zas-982-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "328 mm",
+			"evidenceIds": [
+				"ponceuse-rotative-zipp-zas-982-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Masse",
-			"value": "2.3 kg",
+			"value": "2,3 kg",
 			"evidenceIds": [
-				"october-b-zipp-tools-p136"
-			]
-		},
-		{
-			"label": "Référence constructeur",
-			"value": "ZAS-982",
-			"evidenceIds": [
-				"october-b-zipp-tools-p136"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "Pression de consommation non établie sur cette page.",
-			"evidenceIds": [
-				"october-b-zipp-tools-p136"
-			]
-		},
-		{
-			"label": "Consommation hors calcul, pression non établie",
-			"value": "107,604 L/min",
-			"evidenceIds": [
-				"october-b-zipp-tools-p136"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "ZIPP, catalogue général pneumatique, page PDF 136",
-			"evidenceIds": [
-				"october-b-zipp-tools-p136"
+				"ponceuse-rotative-zipp-zas-982-reserved-20261103-1"
 			]
 		}
 	],
@@ -94,6 +88,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-rotative-zipp-zas-982-reserved-20261103-1",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=136",
+			"sourceLabel": "ZIPP : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. La ZAS-982 est nommée polisseuse d’angle 7 pouces par le constructeur, à 4 500 tr/min. La ZAS-983 donne 2 500 tr/min pour le même encombrement et la même masse. La catégorie est corrigée en polisseuse ; le filetage livré doit être confirmé parmi les deux montages publiés."
 		}
 	],
 	"fieldSources": {
@@ -105,6 +109,15 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october-b-zipp-tools-p136"
+		],
+		"categoryId": [
+			"ponceuse-rotative-zipp-zas-982-reserved-20261103-1"
+		],
+		"editorial": [
+			"ponceuse-rotative-zipp-zas-982-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-rotative-zipp-zas-982-reserved-20261103-1"
 		]
 	},
 	"notes": [

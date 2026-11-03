@@ -31,45 +31,53 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Rodcraft RC6220 (réf. 8951076010). La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 0.65 kg. Caractéristiques de la fiche constructeur : 48 ; www.rodcraft.com ; Model Part# ; RC6220 8951076010 ; Model RC6220 ; Weight 0.65 kg ; Hose 8 mm ; ø inner ; Dimensions axbxc 258x116x120 mm ; Air cons. 0.5 l/min ; average ; Air inlet 1/4\" IG ; Sound LpA 65.2 dB(A) ; Vibration 2.97 m/s2 ; For wood, twigs & plastic ; 1 2 3 4 ; DUTY ; - Pruning shear for max. diameter 15 mm ; - Cuts wood, plastics and other soft materials, ; profiles, rods ; - Safety latch against accidental cutting ; - Knuckle protector.",
+		"overview": "Rodcraft RC6220. La RC6220 est un sécateur pour branches, bois et matériaux tendres jusqu’à 15 mm, pas une cisaille à tôle. La RC6210 accepte la tôle de carrosserie et l’aluminium jusqu’à 1,5 mm et la RC6212 est une cisaille à lames d’un autre type. Le faible débit 0,5 L/min est publié comme moyenne ; aucun volume par coupe ni débit de pointe n’est inventé.",
 		"verifiedFacts": [
-			"Masse publiée : 0.65 kg.",
-			"Caractéristiques de la fiche constructeur : 48 ; www.rodcraft.com ; Model Part# ; RC6220 8951076010 ; Model RC6220 ; Weight 0.65 kg ; Hose 8 mm ; ø inner ; Dimensions axbxc 258x116x120 mm ; Air cons. 0.5 l/min ; average ; Air inlet 1/4\" IG ; Sound LpA 65.2 dB(A) ; Vibration 2.97 m/s2 ; For wood, twigs & plastic ; 1 2 3 4 ; DUTY ; - Pruning shear for max. diameter 15 mm ; - Cuts wood, plastics and other soft materials, ; profiles, rods ; - Safety latch against accidental cutting ; - Knuckle protector."
+			"Type : Sécateur pneumatique.",
+			"Capacité déclarée : Branches, bois, plastiques et matériaux tendres jusqu’à 15 mm.",
+			"Masse : 0,65 kg.",
+			"Dimensions : 258 × 116 × 120 mm.",
+			"Consommation moyenne publiée : 0,5 L/min."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Catalogue constructeur : « average » désigne la consommation moyenne en charge et « cont. » la consommation à vide, selon le glossaire p.4. Le plafond d’entrée de 6,3 bar n’est pas transformé en mesure à une pression exacte.",
-			"La configuration physique et le numéro de pièce sont explicitement listés. Les coffrets et accessoires sont exclus.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Glossaire constructeur p.4 : average = moyenne en charge ; cont. = consommation à vide. Le maximum d’entrée 6,3 bar n’est pas une pression exacte de mesure.",
+			"Catalogue historique identifié ; équipement et disponibilité actuels à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "0.65 kg",
+			"label": "Type",
+			"value": "Sécateur pneumatique",
 			"evidenceIds": [
-				"october2b-tools-oct2b-rodcraft-catalog-pdf-p48"
+				"cisaille-rodcraft-rc6220-8951076010-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Caractéristiques de la fiche constructeur",
-			"value": "48 ; www.rodcraft.com ; Model Part# ; RC6220 8951076010 ; Model RC6220 ; Weight 0.65 kg ; Hose 8 mm ; ø inner ; Dimensions axbxc 258x116x120 mm ; Air cons. 0.5 l/min ; average ; Air inlet 1/4\" IG ; Sound LpA 65.2 dB(A) ; Vibration 2.97 m/s2 ; For wood, twigs & plastic ; 1 2 3 4 ; DUTY ; - Pruning shear for max. diameter 15 mm ; - Cuts wood, plastics and other soft materials, ; profiles, rods ; - Safety latch against accidental cutting ; - Knuckle protector",
+			"label": "Capacité déclarée",
+			"value": "Branches, bois, plastiques et matériaux tendres jusqu’à 15 mm",
 			"evidenceIds": [
-				"october2b-tools-oct2b-rodcraft-catalog-pdf-p48"
+				"cisaille-rodcraft-rc6220-8951076010-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), p.4. Cette limite ne désigne pas un point exact de mesure.",
+			"label": "Masse",
+			"value": "0,65 kg",
 			"evidenceIds": [
-				"october2b-tools-oct2b-rodcraft-catalog-pdf-p48"
+				"cisaille-rodcraft-rc6220-8951076010-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation moyenne, hors calcul",
-			"value": "0.5 L/min",
+			"label": "Dimensions",
+			"value": "258 × 116 × 120 mm",
 			"evidenceIds": [
-				"october2b-tools-oct2b-rodcraft-catalog-pdf-p48"
+				"cisaille-rodcraft-rc6220-8951076010-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation moyenne publiée",
+			"value": "0,5 L/min",
+			"evidenceIds": [
+				"cisaille-rodcraft-rc6220-8951076010-reserved-20261103-1"
 			]
 		}
 	],
@@ -83,6 +91,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cisaille-rodcraft-rc6220-8951076010-reserved-20261103-1",
+			"sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=48",
+			"sourceLabel": "Rodcraft : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. La RC6220 est un sécateur pour branches, bois et matériaux tendres jusqu’à 15 mm, pas une cisaille à tôle. La RC6210 accepte la tôle de carrosserie et l’aluminium jusqu’à 1,5 mm et la RC6212 est une cisaille à lames d’un autre type. Le faible débit 0,5 L/min est publié comme moyenne ; aucun volume par coupe ni débit de pointe n’est inventé."
+		},
+		{
+			"id": "cisaille-rodcraft-rc6220-8951076010-reserved-20261103-1-2",
+			"sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=4",
+			"sourceLabel": "Rodcraft : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. La RC6220 est un sécateur pour branches, bois et matériaux tendres jusqu’à 15 mm, pas une cisaille à tôle. La RC6210 accepte la tôle de carrosserie et l’aluminium jusqu’à 1,5 mm et la RC6212 est une cisaille à lames d’un autre type. Le faible débit 0,5 L/min est publié comme moyenne ; aucun volume par coupe ni débit de pointe n’est inventé."
 		}
 	],
 	"fieldSources": {
@@ -94,6 +122,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-rodcraft-catalog-pdf-p48"
+		],
+		"editorial": [
+			"cisaille-rodcraft-rc6220-8951076010-reserved-20261103-1"
+		],
+		"specifications": [
+			"cisaille-rodcraft-rc6220-8951076010-reserved-20261103-1"
 		]
 	},
 	"notes": [

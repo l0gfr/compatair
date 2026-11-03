@@ -31,53 +31,53 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Rodcraft RC5620 (réf. 8951076003). La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 3.6 kg. Dimensions publiées : 345x180x61 mm.",
+		"overview": "Rodcraft RC5620. La RC5620 reçoit les jeux 28 × 3 mm ou 14 × 4 mm ; la RC5625 propose 29 × 2 mm ou 19 × 3 mm, à 3 000 coups/min contre 4 500 ici. La table et la légende intermédiaire se contredisent sur 19 ou 28 aiguilles de 3 mm ; la liste des accessoires et le paragraphe final confirment 28, à vérifier dans le kit livré. Les 200 L/min restent une moyenne, les 300 L/min une valeur à vide.",
 		"verifiedFacts": [
-			"Masse publiée : 3.6 kg.",
-			"Dimensions publiées : 345x180x61 mm.",
-			"Diamètre de tuyau : 13 mm."
+			"Aiguilles admises : 28 × 3 mm ou 14 × 4 mm.",
+			"Cadence : 4 500 coups/min.",
+			"Masse : 3,6 kg.",
+			"Flexible intérieur : 13 mm.",
+			"Consommations moyenne / à vide : 200 / 300 L/min."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Glossaire constructeur p.4 : average = moyenne en charge ; cont. = consommation à vide. Le maximum d’entrée 6,3 bar n’est pas une pression exacte de mesure.",
+			"Catalogue historique identifié ; équipement et disponibilité actuels à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "3.6 kg",
+			"label": "Aiguilles admises",
+			"value": "28 × 3 mm ou 14 × 4 mm",
 			"evidenceIds": [
-				"october2-tools-rodcraft-catalog-p44"
+				"derouilleur-a-aiguilles-rodcraft-rc5620-8951076003-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Dimensions publiées",
-			"value": "345x180x61 mm",
+			"label": "Cadence",
+			"value": "4 500 coups/min",
 			"evidenceIds": [
-				"october2-tools-rodcraft-catalog-p44"
+				"derouilleur-a-aiguilles-rodcraft-rc5620-8951076003-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre de tuyau",
+			"label": "Masse",
+			"value": "3,6 kg",
+			"evidenceIds": [
+				"derouilleur-a-aiguilles-rodcraft-rc5620-8951076003-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Flexible intérieur",
 			"value": "13 mm",
 			"evidenceIds": [
-				"october2-tools-rodcraft-catalog-p44"
+				"derouilleur-a-aiguilles-rodcraft-rc5620-8951076003-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
+			"label": "Consommations moyenne / à vide",
+			"value": "200 / 300 L/min",
 			"evidenceIds": [
-				"october2-tools-rodcraft-catalog-p44",
-				"october2-tools-rodcraft-catalog-p4"
-			]
-		},
-		{
-			"label": "Consommation à vide, hors calcul",
-			"value": "300 L/min",
-			"evidenceIds": [
-				"october2-tools-rodcraft-catalog-p44",
-				"october2-tools-rodcraft-catalog-p4"
+				"derouilleur-a-aiguilles-rodcraft-rc5620-8951076003-reserved-20261103-1"
 			]
 		}
 	],
@@ -101,6 +101,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Document complémentaire de la référence exacte, sans essai CompatAir."
+		},
+		{
+			"id": "derouilleur-a-aiguilles-rodcraft-rc5620-8951076003-reserved-20261103-1",
+			"sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=44",
+			"sourceLabel": "Rodcraft : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. La RC5620 reçoit les jeux 28 × 3 mm ou 14 × 4 mm ; la RC5625 propose 29 × 2 mm ou 19 × 3 mm, à 3 000 coups/min contre 4 500 ici. La table et la légende intermédiaire se contredisent sur 19 ou 28 aiguilles de 3 mm ; la liste des accessoires et le paragraphe final confirment 28, à vérifier dans le kit livré. Les 200 L/min restent une moyenne, les 300 L/min une valeur à vide."
+		},
+		{
+			"id": "derouilleur-a-aiguilles-rodcraft-rc5620-8951076003-reserved-20261103-1-3",
+			"sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=4",
+			"sourceLabel": "Rodcraft : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. La RC5620 reçoit les jeux 28 × 3 mm ou 14 × 4 mm ; la RC5625 propose 29 × 2 mm ou 19 × 3 mm, à 3 000 coups/min contre 4 500 ici. La table et la légende intermédiaire se contredisent sur 19 ou 28 aiguilles de 3 mm ; la liste des accessoires et le paragraphe final confirment 28, à vérifier dans le kit livré. Les 200 L/min restent une moyenne, les 300 L/min une valeur à vide."
 		}
 	],
 	"fieldSources": {
@@ -113,6 +133,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-rodcraft-catalog-p44"
+		],
+		"editorial": [
+			"derouilleur-a-aiguilles-rodcraft-rc5620-8951076003-reserved-20261103-1"
+		],
+		"specifications": [
+			"derouilleur-a-aiguilles-rodcraft-rc5620-8951076003-reserved-20261103-1"
 		]
 	},
 	"notes": [

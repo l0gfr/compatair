@@ -38,59 +38,52 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-854D. Consommation de régime non précisé : 540 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 0.54 kg. Longueur : 174 mm.",
+		"overview": "GISON GP-854D. La GP-854D est le cliquet 1/4 pouce de 174 mm et 0,54 kg ; la GP-854 donne aussi 40 Nm mais mesure 170 mm et pèse 0,50 kg. La GP-854J est une tête traversante distincte. Le débit de régime non précisé reste hors du dimensionnement conclusif.",
 		"verifiedFacts": [
-			"Masse : 0.54 kg.",
+			"Carré : 1/4 pouce.",
+			"Couple maximal déclaré : 40 Nm (30 ft-lb).",
 			"Longueur : 174 mm.",
-			"Diamètre de flexible publié : 6.5 mm.",
-			"Référence constructeur : GP-854D."
+			"Masse : 0,54 kg.",
+			"Consommation documentaire : 0,54 m³/min."
 		],
 		"limitations": [
-			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
-			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+			"Recommandation de service 90 psi (6,3 kg/cm² dans le catalogue), distincte d’un point de mesure de consommation démontré. Régime non qualifié ; pas de conclusion de dimensionnement."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse",
-			"value": "0.54 kg",
+			"label": "Carré",
+			"value": "1/4 pouce",
 			"evidenceIds": [
-				"october-b-gison-tools-p22"
+				"cle-a-cliquet-gison-gp-854d-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Couple maximal déclaré",
+			"value": "40 Nm (30 ft-lb)",
+			"evidenceIds": [
+				"cle-a-cliquet-gison-gp-854d-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Longueur",
 			"value": "174 mm",
 			"evidenceIds": [
-				"october-b-gison-tools-p22"
+				"cle-a-cliquet-gison-gp-854d-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre de flexible publié",
-			"value": "6.5 mm",
+			"label": "Masse",
+			"value": "0,54 kg",
 			"evidenceIds": [
-				"october-b-gison-tools-p22"
+				"cle-a-cliquet-gison-gp-854d-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Référence constructeur",
-			"value": "GP-854D",
+			"label": "Consommation documentaire",
+			"value": "0,54 m³/min",
 			"evidenceIds": [
-				"october-b-gison-tools-p22"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "Recommended Air Pressure 90 psi (6.3 kg/cm2)",
-			"evidenceIds": [
-				"october-b-gison-tools-p22"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "GISON, catalogue pneumatique 2018–2019, page PDF 22",
-			"evidenceIds": [
-				"october-b-gison-tools-p22"
+				"cle-a-cliquet-gison-gp-854d-reserved-20261103-1"
 			]
 		}
 	],
@@ -104,6 +97,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-cliquet-gison-gp-854d-reserved-20261103-1",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=22",
+			"sourceLabel": "GISON : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. La GP-854D est le cliquet 1/4 pouce de 174 mm et 0,54 kg ; la GP-854 donne aussi 40 Nm mais mesure 170 mm et pèse 0,50 kg. La GP-854J est une tête traversante distincte. Le débit de régime non précisé reste hors du dimensionnement conclusif."
 		}
 	],
 	"fieldSources": {
@@ -118,6 +121,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-b-gison-tools-p22"
+		],
+		"editorial": [
+			"cle-a-cliquet-gison-gp-854d-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-cliquet-gison-gp-854d-reserved-20261103-1"
 		]
 	},
 	"notes": [

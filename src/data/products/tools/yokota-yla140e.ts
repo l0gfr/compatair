@@ -9,10 +9,8 @@ const product: ToolProfileInput = {
 	"categoryId": "cle-a-impulsions",
 	"category": "cle-a-impulsions",
 	"label": "Yokota YLA140E",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 5,
-		"typical": 6,
 		"max": 6
 	},
 	"confidence": "B",
@@ -23,75 +21,69 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Yokota YLA140E, référence YLA140E. Le tableau fabricant publie 1 134 L/min et une plage d’utilisation de 5 à 6 bar. Couple indicatif publié : 100 à 160 Nm. Vitesse à vide : 6000 tr/min.",
+		"overview": "Yokota YLA140E. La YLA140E sans coupure d’air donne 100–160 Nm pour la plage de couple 0,5–0,6 MPa. La YLA120E donne 80–130 Nm et 1,8 kg, contre 2,2 kg ici. Le tableau sépare 13 L/s à plein régime et 18,9 L/s à vide. L’ancien maximum des deux colonnes retenait le débit à vide ; il est retiré du moteur. La plage de pression inscrite pour le couple ne devient pas une pression exacte de consommation.",
 		"verifiedFacts": [
-			"La plage du tableau Yokota va de 0,5 à 0,6 MPa, soit 5 à 6 bar ; le point de comparaison retenu est 6 bar.",
-			"Le maximum entre la consommation en charge et à vide est retenu : 18.9 L/s, convertis en 1134 L/min par multiplication par 60.",
-			"Référence fabricant : YLA140E.",
-			"Couple indicatif publié : 100 à 160 Nm.",
-			"Vitesse à vide : 6000 tr/min.",
-			"Entraînement : 1/2\" carré."
+			"Carré : 1/2 pouce.",
+			"Calibre de vissage : M14.",
+			"Couple indicatif à 0,5–0,6 MPa : 100–160 Nm.",
+			"Vitesse à vide : 6 000 tr/min.",
+			"Masse : 2,2 kg.",
+			"Consommation à plein régime publiée : 13 L/s.",
+			"Consommation à vide distincte : 18,9 L/s."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"Régime et pression de mesure ne sont pas complétés par hypothèse. Les données non dimensionnantes restent dans les spécifications.",
+			"Catalogue constructeur historique ; configuration livrée et disponibilité actuelles à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "La plage du tableau Yokota va de 0,5 à 0,6 MPa, soit 5 à 6 bar ; le point de comparaison retenu est 6 bar.",
+			"label": "Carré",
+			"value": "1/2 pouce",
 			"evidenceIds": [
-				"yokota-yla140e-20260926-workingpressurebar-1"
+				"yokota-yla140e-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Le maximum entre la consommation en charge et à vide est retenu : 18.9 L/s, convertis en 1134 L/min par multiplication par 60.",
+			"label": "Calibre de vissage",
+			"value": "M14",
 			"evidenceIds": [
-				"yokota-yla140e-20260926"
+				"yokota-yla140e-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Couple indicatif publié",
-			"value": "100 à 160 Nm",
+			"label": "Couple indicatif à 0,5–0,6 MPa",
+			"value": "100–160 Nm",
 			"evidenceIds": [
-				"yokota-yla140e-20260926"
+				"yokota-yla140e-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Vitesse à vide",
-			"value": "6000 tr/min",
+			"value": "6 000 tr/min",
 			"evidenceIds": [
-				"yokota-yla140e-20260926"
+				"yokota-yla140e-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Entraînement",
-			"value": "1/2\" carré",
-			"evidenceIds": [
-				"yokota-yla140e-20260926"
-			]
-		},
-		{
-			"label": "Masse publiée",
+			"label": "Masse",
 			"value": "2,2 kg",
 			"evidenceIds": [
-				"yokota-yla140e-20260926"
+				"yokota-yla140e-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre intérieur de flexible conseillé",
-			"value": "9,5 mm",
+			"label": "Consommation à plein régime publiée",
+			"value": "13 L/s",
 			"evidenceIds": [
-				"yokota-yla140e-20260926"
+				"yokota-yla140e-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation en charge / à vide",
-			"value": "13.0 / 18.9 L/s",
+			"label": "Consommation à vide distincte",
+			"value": "18,9 L/s",
 			"evidenceIds": [
-				"yokota-yla140e-20260926"
+				"yokota-yla140e-reserved-20261103-1"
 			]
 		}
 	],
@@ -113,6 +105,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Condition de pression spécifique du tableau Yokota à impulsions."
+		},
+		{
+			"id": "yokota-yla140e-reserved-20261103-1",
+			"sourceUrl": "https://www.rami-yokota.com/media/godd0tdm/2026_fr_outils_d-assemblage_spreads.pdf#page=17",
+			"sourceLabel": "Yokota : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 6b7dca4923bfef1dbe2c7f6691e91e07f92fec5c1fa3b8d56f211ecbdb5e4845. La YLA140E sans coupure d’air donne 100–160 Nm pour la plage de couple 0,5–0,6 MPa. La YLA120E donne 80–130 Nm et 1,8 kg, contre 2,2 kg ici. Le tableau sépare 13 L/s à plein régime et 18,9 L/s à vide. L’ancien maximum des deux colonnes retenait le débit à vide ; il est retiré du moteur. La plage de pression inscrite pour le couple ne devient pas une pression exacte de consommation."
 		}
 	],
 	"fieldSources": {
@@ -120,26 +122,31 @@ const product: ToolProfileInput = {
 			"yokota-yla140e-20260926"
 		],
 		"workingPressureBar": [
-			"yokota-yla140e-20260926-workingpressurebar-1"
-		],
-		"airflowLpm": [
-			"yokota-yla140e-20260926"
+			"yokota-yla140e-reserved-20261103-1"
 		],
 		"recommendedHose": [
 			"yokota-yla140e-20260926"
+		],
+		"demandModel": [
+			"yokota-yla140e-reserved-20261103-1"
+		],
+		"demandExplanation": [
+			"yokota-yla140e-reserved-20261103-1"
+		],
+		"editorial": [
+			"yokota-yla140e-reserved-20261103-1"
+		],
+		"specifications": [
+			"yokota-yla140e-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 1134,
-		"typical": 1134,
-		"max": 1134
-	},
 	"recommendedHose": {
 		"innerDiameterMm": 9.5
-	}
+	},
+	"demandExplanation": "Consommations et régimes conservés dans les spécifications ; pression de mesure exacte non appariée par le document."
 };
 
 export default product;

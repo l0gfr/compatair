@@ -29,10 +29,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Michigan Pneumatic MP-241A1M. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 26.0 lbs. Ligne technique constructeur : MP-241A1M 3-1/4\" Rubber 803 1-5/16\" 4\" 1590 52-1/2\" 26.0 lbs 1/2\" 1/2\" 29 cfm TX-00203.",
+		"overview": "Michigan Pneumatic MP-241A1M. Le MP-241A1M est le fouloir long 52½ pouces de 26 lb, avec semelle caoutchouc 3¼ pouces. Le MP-241C1M mesure 24 pouces pour 16 lb ; le MP-241A1MFR porte une semelle de forme différente. Les 29 CFM moyens n’établissent pas le besoin maximal.",
 		"verifiedFacts": [
 			"Masse publiée : 26.0 lbs.",
-			"Ligne technique constructeur : MP-241A1M 3-1/4\" Rubber 803 1-5/16\" 4\" 1590 52-1/2\" 26.0 lbs 1/2\" 1/2\" 29 cfm TX-00203."
+			"Ligne technique constructeur : MP-241A1M 3-1/4\" Rubber 803 1-5/16\" 4\" 1590 52-1/2\" 26.0 lbs 1/2\" 1/2\" 29 cfm TX-00203.",
+			"Semelle : Caoutchouc 3¼ pouces, cône 803.",
+			"Longueur : 52½ pouces.",
+			"Course : 4 pouces.",
+			"Cadence : 1 590 coups/min."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -68,6 +72,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-michigan-5-pdf-p3"
 			]
+		},
+		{
+			"label": "Semelle",
+			"value": "Caoutchouc 3¼ pouces, cône 803",
+			"evidenceIds": [
+				"fouloir-michigan-pneumatic-mp-241a1m-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "52½ pouces",
+			"evidenceIds": [
+				"fouloir-michigan-pneumatic-mp-241a1m-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Course",
+			"value": "4 pouces",
+			"evidenceIds": [
+				"fouloir-michigan-pneumatic-mp-241a1m-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cadence",
+			"value": "1 590 coups/min",
+			"evidenceIds": [
+				"fouloir-michigan-pneumatic-mp-241a1m-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -80,6 +112,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : daa0a640fccce93e6ce22aa4d173f30872ad77ea4f3d710917b36dcf6b85bab5. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "fouloir-michigan-pneumatic-mp-241a1m-reserved-20261103-1",
+			"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/5-Rammers_V3.pdf#page=3",
+			"sourceLabel": "Michigan Pneumatic : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 daa0a640fccce93e6ce22aa4d173f30872ad77ea4f3d710917b36dcf6b85bab5. Le MP-241A1M est le fouloir long 52½ pouces de 26 lb, avec semelle caoutchouc 3¼ pouces. Le MP-241C1M mesure 24 pouces pour 16 lb ; le MP-241A1MFR porte une semelle de forme différente. Les 29 CFM moyens n’établissent pas le besoin maximal."
 		}
 	],
 	"fieldSources": {
@@ -91,6 +133,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-michigan-5-pdf-p3"
+		],
+		"editorial": [
+			"fouloir-michigan-pneumatic-mp-241a1m-reserved-20261103-1"
+		],
+		"specifications": [
+			"fouloir-michigan-pneumatic-mp-241a1m-reserved-20261103-1"
 		]
 	},
 	"notes": [

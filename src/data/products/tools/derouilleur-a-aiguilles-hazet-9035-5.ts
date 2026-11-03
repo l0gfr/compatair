@@ -29,14 +29,17 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "HAZET 9035-5. La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi. Champ fabricant : Handle : Cold insulated handle. Champ fabricant : Net weight : 2.6 kg.",
+		"overview": "HAZET 9035-5. Le 9035-5 est un dérouilleur à poignée pistolet, 19 aiguilles de 3 mm, 330 mm et 2,6 kg. Le 9035M-6 est un outil de 0,48 kg, pas la même configuration. Les 170 L/min documentaires ne donnent pas un volume par frappe.",
 		"verifiedFacts": [
 			"Champ fabricant : Handle : Cold insulated handle.",
 			"Champ fabricant : Net weight : 2.6 kg.",
 			"Champ fabricant : Air requirement : 170 l/min.",
 			"Champ fabricant : Dimension : 330 mm.",
 			"Champ fabricant : Vibration acceleration : 8.70 m/s2.",
-			"Champ fabricant : Sound pressure level : 97 dB(A) Lp A."
+			"Champ fabricant : Sound pressure level : 97 dB(A) Lp A.",
+			"Aiguilles : 19 de diamètre 3 mm.",
+			"Cadence : 3 200 coups/min.",
+			"Capot : Réglable pour utiliser la longueur des aiguilles."
 		],
 		"limitations": [
 			"La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi.",
@@ -95,6 +98,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-hazet-4000896132355-html-p1"
 			]
+		},
+		{
+			"label": "Aiguilles",
+			"value": "19 de diamètre 3 mm",
+			"evidenceIds": [
+				"derouilleur-a-aiguilles-hazet-9035-5-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cadence",
+			"value": "3 200 coups/min",
+			"evidenceIds": [
+				"derouilleur-a-aiguilles-hazet-9035-5-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Capot",
+			"value": "Réglable pour utiliser la longueur des aiguilles",
+			"evidenceIds": [
+				"derouilleur-a-aiguilles-hazet-9035-5-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -107,6 +131,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 7af3da5da27d948fe01b202c4727fc0929c999067791db6ed0aceb01af256feb. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "derouilleur-a-aiguilles-hazet-9035-5-reserved-20261103-1",
+			"sourceUrl": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/drilling-machine-sander-chisel-sabre-saw-shears/product/ean-4000896132355",
+			"sourceLabel": "HAZET : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 66ec334a9384d5c3813188d05e2ac962d8aa0e3e3f04e9b580c66c6c7b59abdc. Le 9035-5 est un dérouilleur à poignée pistolet, 19 aiguilles de 3 mm, 330 mm et 2,6 kg. Le 9035M-6 est un outil de 0,48 kg, pas la même configuration. Les 170 L/min documentaires ne donnent pas un volume par frappe."
 		}
 	],
 	"fieldSources": {
@@ -118,6 +152,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-hazet-4000896132355-html-p1"
+		],
+		"editorial": [
+			"derouilleur-a-aiguilles-hazet-9035-5-reserved-20261103-1"
+		],
+		"specifications": [
+			"derouilleur-a-aiguilles-hazet-9035-5-reserved-20261103-1"
 		]
 	},
 	"notes": [

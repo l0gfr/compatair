@@ -1,3 +1,4 @@
+import { reviewedDesoutterSource } from './desoutter-source-repair-fixture.mjs';
 import { applyReservedOctober31Batch } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { applyReviewedOctober25FollowupAmendment } from './reviewed-catalog-amendments-2026-10-25-b.mjs';
 import { applyReviewedOctober25Amendment } from './reviewed-catalog-amendments-2026-10-25.mjs';
@@ -94,5 +95,6 @@ function buildDocumentedExpansionDBeforeReservedFollowup(snapshot) {
 }
 
 export function buildDocumentedExpansionD(...args) {
- return applyReservedOctober31Batch(buildDocumentedExpansionDBeforeReservedFollowup(...args));
+ const batch = buildDocumentedExpansionDBeforeReservedFollowup(...args);
+ return applyReservedOctober31Batch({ ...batch, tools: batch.tools.map(reviewedDesoutterSource) });
 }

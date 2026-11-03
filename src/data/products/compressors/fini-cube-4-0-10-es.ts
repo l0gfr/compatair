@@ -25,7 +25,6 @@ const product: CompressorInput = {
       "litersPerMinute": 460
     }
   ],
-  "dutyCycle": 1,
   "powerKw": 4,
   "oilType": "oil",
   "confidence": "B",
@@ -38,67 +37,69 @@ const product: CompressorInput = {
   },
   "specifications": [
     {
-      "label": "Configuration constructeur",
-      "value": "Montage au sol sans cuve intégrée avec sécheur frigorifique intégré",
+      "label": "Code",
+      "value": "V51PD92FNM543",
       "evidenceIds": [
-        "october4b-fini-cube-p3"
+        "fini-cube-4-0-10-es-reserved-20261103-1"
       ]
     },
     {
-      "label": "Pression de la configuration retenue",
-      "value": "10 bar",
+      "label": "Montage",
+      "value": "Au sol, ES avec sécheur",
       "evidenceIds": [
-        "october4b-fini-cube-p3"
+        "fini-cube-4-0-10-es-reserved-20261103-1"
       ]
     },
     {
-      "label": "Cuve de stockage",
-      "value": "Montage au sol sans stockage intégré documenté",
-      "evidenceIds": [
-        "october4b-fini-cube-p3"
-      ]
-    },
-    {
-      "label": "Air livré à 9,5 bar",
+      "label": "FAD à 9,5 bar",
       "value": "460 L/min",
       "evidenceIds": [
-        "october4b-fini-cube-p3"
+        "fini-cube-4-0-10-es-reserved-20261103-1"
       ]
     },
     {
-      "label": "Puissance publiée",
+      "label": "Puissance",
       "value": "4 kW",
       "evidenceIds": [
-        "october4b-fini-cube-p3"
+        "fini-cube-4-0-10-es-reserved-20261103-1"
       ]
     },
     {
-      "label": "Cycle de service déclaré",
-      "value": "100 %",
+      "label": "Masse nette",
+      "value": "119 kg",
       "evidenceIds": [
-        "october4b-fini-cube-p3"
+        "fini-cube-4-0-10-es-reserved-20261103-1"
       ]
     },
     {
-      "label": "Fréquence de la configuration retenue",
-      "value": "50 Hz",
+      "label": "Dimensions nettes",
+      "value": "650 × 580 × 750 mm",
       "evidenceIds": [
-        "october4b-fini-cube-p3"
+        "fini-cube-4-0-10-es-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Alimentation",
+      "value": "400 V / 3 phases / 50 Hz",
+      "evidenceIds": [
+        "fini-cube-4-0-10-es-reserved-20261103-1"
       ]
     }
   ],
   "editorial": {
-    "overview": "Fini CUBE 4.0-10 ES. 460 L/min déclarés à 9,5 bar. Configuration constructeur : Montage au sol sans cuve intégrée avec sécheur frigorifique intégré.",
+    "overview": "Fini CUBE 4.0-10 ES. La CUBE 4.0-10 ES avec sécheur pèse 119 kg. Les codes au sol avec et sans ES partagent 460 L/min à 9,5 bar et le même encombrement, contre 119 et 98 kg nets. Les codes -270 ajoutent une cuve 270 L ; le sécheur ES exige son alimentation dédiée. La promesse 24/7 de gamme ne fournit pas un cycle numérique avec conditions thermiques.",
     "verifiedFacts": [
-      "Pression de la configuration documentée : 10 bar.",
-      "Montage sans réservoir intégré explicitement documenté.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 460 L/min déclarés à 9,5 bar."
+      "Code : V51PD92FNM543.",
+      "Montage : Au sol, ES avec sécheur.",
+      "FAD à 9,5 bar : 460 L/min.",
+      "Puissance : 4 kW.",
+      "Masse nette : 119 kg.",
+      "Dimensions nettes : 650 × 580 × 750 mm.",
+      "Alimentation : 400 V / 3 phases / 50 Hz."
     ],
     "limitations": [
-      "FAD déclaré par le constructeur à la pression de mesure indiquée, distincte du plafond de fonctionnement.",
-      "La normalisation exclut les seules variantes de pression et de tension. Modèle et code fabricant retenus exacts.",
-      "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions."
+      "FAD mesuré à 9,5 bar pour les versions 10 bar, entrée 20 °C et 1 bar atmosphérique, selon ISO 1217.",
+      "Taux de marche numérique du groupe complet non établi par la promesse de gamme 24/7."
     ]
   },
   "evidence": [
@@ -121,6 +122,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 270d2f554801e15883dd85b3f3b6089c641adf51dd59c15f31e0fd06c7b88e1a de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "fini-cube-4-0-10-es-reserved-20261103-1",
+      "sourceUrl": "https://finicompressors.com/wp-content/uploads/Catalogo-Cube-Fini_EN_04-2024_9990397.pdf#page=3",
+      "sourceLabel": "Fini : revue factuelle du 3 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-03",
+      "confidence": "B",
+      "notes": "GET complet HTTP200 SHA-256 270d2f554801e15883dd85b3f3b6089c641adf51dd59c15f31e0fd06c7b88e1a. La CUBE 4.0-10 ES avec sécheur pèse 119 kg. Les codes au sol avec et sans ES partagent 460 L/min à 9,5 bar et le même encombrement, contre 119 et 98 kg nets. Les codes -270 ajoutent une cuve 270 L ; le sécheur ES exige son alimentation dédiée. La promesse 24/7 de gamme ne fournit pas un cycle numérique avec conditions thermiques."
     }
   ],
   "fieldSources": {
@@ -145,18 +156,33 @@ const product: CompressorInput = {
     "oilType": [
       "october4b-fini-cube-p1"
     ],
-    "dutyCycle": [
-      "october4b-fini-cube-p3"
-    ],
     "mpn": [
       "october4b-fini-cube-p3"
+    ],
+    "weightKg": [
+      "fini-cube-4-0-10-es-reserved-20261103-1"
+    ],
+    "voltage": [
+      "fini-cube-4-0-10-es-reserved-20261103-1"
+    ],
+    "phase": [
+      "fini-cube-4-0-10-es-reserved-20261103-1"
+    ],
+    "editorial": [
+      "fini-cube-4-0-10-es-reserved-20261103-1"
+    ],
+    "specifications": [
+      "fini-cube-4-0-10-es-reserved-20261103-1"
     ]
   },
   "notes": [
     "Portée de la source : FAD-pressure-qualified.",
     "Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées.",
     "Identités de pression, tension, contrôleur et démarreur consolidées avant le décompte du lot."
-  ]
+  ],
+  "weightKg": 119,
+  "voltage": "400 V / 50 Hz",
+  "phase": "three-phase"
 };
 
 export default product;

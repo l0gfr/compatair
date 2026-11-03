@@ -29,10 +29,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Michigan Pneumatic MP-200D-ST. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 1.9 lbs. Ligne technique constructeur : MP-200D-ST 1/4\" 600 rpm 3/8\"-24 8\" 1.9 lbs 1/4\" 3/8\" 4 cfm.",
+		"overview": "Michigan Pneumatic MP-200D-ST. La MP-200D-ST est une perceuse à paume réversible 1/4 pouce, 600 tr/min et 8 pouces. La MP-201D-ST garde la même masse 1,9 lb mais tourne à 1 100 tr/min et mesure 7¾ pouces. Le format du mandrin et la vitesse guident le choix ; les 4 CFM moyens ne suffisent pas au dimensionnement continu.",
 		"verifiedFacts": [
 			"Masse publiée : 1.9 lbs.",
-			"Ligne technique constructeur : MP-200D-ST 1/4\" 600 rpm 3/8\"-24 8\" 1.9 lbs 1/4\" 3/8\" 4 cfm."
+			"Ligne technique constructeur : MP-200D-ST 1/4\" 600 rpm 3/8\"-24 8\" 1.9 lbs 1/4\" 3/8\" 4 cfm.",
+			"Mandrin : 1/4 pouce, remplacement Jacobs SM1G61-T1.",
+			"Broche : 3/8-24.",
+			"Vitesse à vide : 600 tr/min.",
+			"Sens : Réversible."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -68,6 +72,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-michigan-9-pdf-p3"
 			]
+		},
+		{
+			"label": "Mandrin",
+			"value": "1/4 pouce, remplacement Jacobs SM1G61-T1",
+			"evidenceIds": [
+				"perceuse-michigan-pneumatic-mp-200d-st-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Broche",
+			"value": "3/8-24",
+			"evidenceIds": [
+				"perceuse-michigan-pneumatic-mp-200d-st-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "600 tr/min",
+			"evidenceIds": [
+				"perceuse-michigan-pneumatic-mp-200d-st-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Sens",
+			"value": "Réversible",
+			"evidenceIds": [
+				"perceuse-michigan-pneumatic-mp-200d-st-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -80,6 +112,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 551c618f343aa18c70a0d669a0bd9c70065142f614e83cf879859d6835562ad2. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "perceuse-michigan-pneumatic-mp-200d-st-reserved-20261103-1",
+			"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/9-Drills_V2.pdf#page=3",
+			"sourceLabel": "Michigan Pneumatic : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 551c618f343aa18c70a0d669a0bd9c70065142f614e83cf879859d6835562ad2. La MP-200D-ST est une perceuse à paume réversible 1/4 pouce, 600 tr/min et 8 pouces. La MP-201D-ST garde la même masse 1,9 lb mais tourne à 1 100 tr/min et mesure 7¾ pouces. Le format du mandrin et la vitesse guident le choix ; les 4 CFM moyens ne suffisent pas au dimensionnement continu."
 		}
 	],
 	"fieldSources": {
@@ -91,6 +133,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-michigan-9-pdf-p3"
+		],
+		"editorial": [
+			"perceuse-michigan-pneumatic-mp-200d-st-reserved-20261103-1"
+		],
+		"specifications": [
+			"perceuse-michigan-pneumatic-mp-200d-st-reserved-20261103-1"
 		]
 	},
 	"notes": [

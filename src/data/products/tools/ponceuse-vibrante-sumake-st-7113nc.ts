@@ -39,53 +39,76 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-7113NC. Consommation publiée, régime non précisé : 430 L/min à 6,2 bar. Consommation dans les unités du tableau : 430 L/min ; 15 cfm. Configuration complète publiée : ST-7113NC.",
+		"overview": "Sumake ST-7113NC. La ST-7113NC est sans aspiration ; la ST-7113DC est prévue pour aspiration centrale et mesure 220 mm contre 190 mm. La ST-7111NC a un patin 75 × 100 mm, 10 000 tr/min et 0,7 kg. Le suffixe d’aspiration et le format du patin sont des choix séparés.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 46.",
-			"Consommation dans les unités du tableau : 430 L/min ; 15 cfm.",
-			"Configuration complète publiée : ST-7113NC.",
-			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé."
+			"Aspiration : Sans aspiration, NC.",
+			"Patin : 100 × 180 mm.",
+			"Orbite : 3,2 mm.",
+			"Vitesse à vide : 8 500 tr/min.",
+			"Longueur : 190 mm.",
+			"Masse : 1,2 kg.",
+			"Consommation documentaire : 430 L/min, régime non précisé.",
+			"Pression de service recommandée : 6,2 bar ; pression de mesure de la consommation non démontrée."
 		],
 		"limitations": [
-			"Le régime de consommation n’est pas indiqué. Aucun débit maximal ou en charge n’est inventé ; le verdict reste insufficient_data.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"La recommandation de service 6,2 bar ne prouve pas la pression de mesure de la consommation. Le régime reste non qualifié et le calcul indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 46",
+			"label": "Aspiration",
+			"value": "Sans aspiration, NC",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p46"
+				"ponceuse-vibrante-sumake-st-7113nc-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation dans les unités du tableau",
-			"value": "430 L/min ; 15 cfm",
+			"label": "Patin",
+			"value": "100 × 180 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p46"
+				"ponceuse-vibrante-sumake-st-7113nc-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Configuration complète publiée",
-			"value": "ST-7113NC",
+			"label": "Orbite",
+			"value": "3,2 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p46"
+				"ponceuse-vibrante-sumake-st-7113nc-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Régime de consommation",
-			"value": "Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé",
+			"label": "Vitesse à vide",
+			"value": "8 500 tr/min",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p46"
+				"ponceuse-vibrante-sumake-st-7113nc-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Ligne technique originale du modèle",
-			"value": "ST-7113NC 100 X 180 4 X 7-1/10 3.2 8,500 190 7-1/2 1/4” 3/8” 430 15 1.2 2.6 6Pcs/Ctn/8/1.1’",
+			"label": "Longueur",
+			"value": "190 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p46"
+				"ponceuse-vibrante-sumake-st-7113nc-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "1,2 kg",
+			"evidenceIds": [
+				"ponceuse-vibrante-sumake-st-7113nc-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "430 L/min, régime non précisé",
+			"evidenceIds": [
+				"ponceuse-vibrante-sumake-st-7113nc-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression de service recommandée",
+			"value": "6,2 bar ; pression de mesure de la consommation non démontrée",
+			"evidenceIds": [
+				"ponceuse-vibrante-sumake-st-7113nc-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +122,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "ponceuse-vibrante-sumake-st-7113nc-reserved-20261103-1",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf#page=46",
+			"sourceLabel": "Sumake : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. La ST-7113NC est sans aspiration ; la ST-7113DC est prévue pour aspiration centrale et mesure 220 mm contre 190 mm. La ST-7111NC a un patin 75 × 100 mm, 10 000 tr/min et 0,7 kg. Le suffixe d’aspiration et le format du patin sont des choix séparés."
 		}
 	],
 	"fieldSources": {
@@ -113,6 +146,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-d-sumake-na-2024-p46"
+		],
+		"editorial": [
+			"ponceuse-vibrante-sumake-st-7113nc-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-vibrante-sumake-st-7113nc-reserved-20261103-1"
 		]
 	},
 	"notes": [

@@ -29,10 +29,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "JET JNS-4031KL. Les caractéristiques mécaniques sont documentées ; aucune consommation n’est associée à une pression de mesure et à un régime suffisant pour le calcul. Masse publiée : 2-1/2 lbs. Ligne technique constructeur : JNS-4031kl yeS 3/8 3/8-24 1/4 1800 4 1/4 3/8 5.4 78 8 2-1/2.",
+		"overview": "JET JNS-4031KL. La JNS-4031KL est une perceuse réversible à mandrin sans clé 3/8, 1 800 tr/min et 2½ lb. La JNS-4041KL passe à 1/2, 400 tr/min et 3½ lb ; la gâchette variable ne supprime pas cette différence de rapport. Les 4 CFM ne sont pas qualifiés à un régime de mesure.",
 		"verifiedFacts": [
 			"Masse publiée : 2-1/2 lbs.",
-			"Ligne technique constructeur : JNS-4031kl yeS 3/8 3/8-24 1/4 1800 4 1/4 3/8 5.4 78 8 2-1/2."
+			"Ligne technique constructeur : JNS-4031kl yeS 3/8 3/8-24 1/4 1800 4 1/4 3/8 5.4 78 8 2-1/2.",
+			"Mandrin : Sans clé, 3/8 pouce.",
+			"Vitesse à vide : 1 800 tr/min.",
+			"Broche : 3/8-24.",
+			"Sens : Réversible."
 		],
 		"limitations": [
 			"Les caractéristiques mécaniques sont documentées ; aucune consommation n’est associée à une pression de mesure et à un régime suffisant pour le calcul.",
@@ -61,6 +65,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-jet-catalog-pdf-p67"
 			]
+		},
+		{
+			"label": "Mandrin",
+			"value": "Sans clé, 3/8 pouce",
+			"evidenceIds": [
+				"perceuse-jet-jns-4031kl-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "1 800 tr/min",
+			"evidenceIds": [
+				"perceuse-jet-jns-4031kl-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Broche",
+			"value": "3/8-24",
+			"evidenceIds": [
+				"perceuse-jet-jns-4031kl-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Sens",
+			"value": "Réversible",
+			"evidenceIds": [
+				"perceuse-jet-jns-4031kl-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -73,6 +105,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 9381736270fc03a7d3233abbb4c97f401cc4f8f453822e2b9eabc85c4e4f6ec6. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "perceuse-jet-jns-4031kl-reserved-20261103-1",
+			"sourceUrl": "https://d29c95q8mcesvj.cloudfront.net/wysiwyg/pdf/414700_Catalog.pdf#page=67",
+			"sourceLabel": "JET : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9381736270fc03a7d3233abbb4c97f401cc4f8f453822e2b9eabc85c4e4f6ec6. La JNS-4031KL est une perceuse réversible à mandrin sans clé 3/8, 1 800 tr/min et 2½ lb. La JNS-4041KL passe à 1/2, 400 tr/min et 3½ lb ; la gâchette variable ne supprime pas cette différence de rapport. Les 4 CFM ne sont pas qualifiés à un régime de mesure."
 		}
 	],
 	"fieldSources": {
@@ -84,6 +126,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-jet-catalog-pdf-p67"
+		],
+		"editorial": [
+			"perceuse-jet-jns-4031kl-reserved-20261103-1"
+		],
+		"specifications": [
+			"perceuse-jet-jns-4031kl-reserved-20261103-1"
 		]
 	},
 	"notes": [

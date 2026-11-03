@@ -9,10 +9,8 @@ const product: ToolProfileInput = {
 	"categoryId": "ponceuse-vibrante",
 	"category": "ponceuse-vibrante",
 	"label": "RUPES RS21A",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.2,
-		"typical": 6.2,
 		"max": 6.2
 	},
 	"confidence": "B",
@@ -23,61 +21,76 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "RUPES RS21A, référence RS21A. Le tableau fabricant publie 360 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Diamètre d’orbite : 3 mm. Format de plateau : Delta.",
+		"overview": "RUPES RS21A. La RS21A est la ponceuse à patin Delta, plateau 985.002 et aspiration centrale. La RE21ACM utilise un patin 80 × 130 mm et un autre plateau, avec la même orbite 3 mm et le même maximum de consommation publié. La pression de service 6,2 bar reste distincte de la pression de mesure du maximum 360 L/min ; cet appariement reste à confirmer.",
 		"verifiedFacts": [
-			"Pression de service de 6,2 bar / 90 PSIG indiquée dans le même tableau.",
-			"Consommation maximale explicitement publiée dans le tableau « Air consumption max », en L/min.",
-			"Référence fabricant : RS21A.",
-			"Diamètre d’orbite : 3 mm.",
-			"Format de plateau : Delta.",
-			"Masse publiée : 0,87 kg."
+			"Patin : Delta.",
+			"Orbite : 3 mm.",
+			"Vitesse réglable : 0–11 000 tr/min.",
+			"Masse : 0,87 kg.",
+			"Aspiration : Centrale.",
+			"Plateau livré : 985.002.",
+			"Consommation maximale publiée : 360 L/min.",
+			"Pression de service distincte : 6,2 bar / 90 PSIG."
 		],
 		"limitations": [
-			"Le débit concerne l’outil. L’aspiration externe et les autres consommateurs de l’atelier doivent être examinés séparément.",
-			"Les variantes d’orbite et de plateau ne sont pas interchangeables pour un même objectif de finition."
+			"Le maximum de consommation et la pression de service sont publiés séparément ; aucune pression exacte de mesure n’est supposée."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression de service de 6,2 bar / 90 PSIG indiquée dans le même tableau.",
-			"evidenceIds": [
-				"rupes-rs21a-20260926"
-			]
-		},
-		{
-			"label": "Condition de consommation",
-			"value": "Consommation maximale explicitement publiée dans le tableau « Air consumption max », en L/min.",
-			"evidenceIds": [
-				"rupes-rs21a-20260926"
-			]
-		},
-		{
-			"label": "Diamètre d’orbite",
-			"value": "3 mm",
-			"evidenceIds": [
-				"rupes-rs21a-20260926"
-			]
-		},
-		{
-			"label": "Format de plateau",
+			"label": "Patin",
 			"value": "Delta",
 			"evidenceIds": [
-				"rupes-rs21a-20260926"
+				"rupes-rs21a-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
+			"label": "Orbite",
+			"value": "3 mm",
+			"evidenceIds": [
+				"rupes-rs21a-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse réglable",
+			"value": "0–11 000 tr/min",
+			"evidenceIds": [
+				"rupes-rs21a-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
 			"value": "0,87 kg",
 			"evidenceIds": [
-				"rupes-rs21a-20260926"
+				"rupes-rs21a-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse publiée",
-			"value": "0 - 11000 tr/min",
+			"label": "Aspiration",
+			"value": "Centrale",
 			"evidenceIds": [
-				"rupes-rs21a-20260926"
+				"rupes-rs21a-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Plateau livré",
+			"value": "985.002",
+			"evidenceIds": [
+				"rupes-rs21a-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation maximale publiée",
+			"value": "360 L/min",
+			"evidenceIds": [
+				"rupes-rs21a-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression de service distincte",
+			"value": "6,2 bar / 90 PSIG",
+			"evidenceIds": [
+				"rupes-rs21a-reserved-20261103-1"
 			]
 		}
 	],
@@ -90,6 +103,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation maximale explicitement publiée dans le tableau « Air consumption max », en L/min."
+		},
+		{
+			"id": "rupes-rs21a-reserved-20261103-1",
+			"sourceUrl": "https://www.rupes.com/catalogue/2026/RUPES_Catalogue-2026_EN.pdf#page=55",
+			"sourceLabel": "RUPES : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 018272fb053802b4e419d3f70bb75a46a02a62aec2a0404862ded7c21b443a63. La RS21A est la ponceuse à patin Delta, plateau 985.002 et aspiration centrale. La RE21ACM utilise un patin 80 × 130 mm et un autre plateau, avec la même orbite 3 mm et le même maximum de consommation publié. La pression de service 6,2 bar reste distincte de la pression de mesure du maximum 360 L/min ; cet appariement reste à confirmer."
 		}
 	],
 	"fieldSources": {
@@ -97,20 +120,25 @@ const product: ToolProfileInput = {
 			"rupes-rs21a-20260926"
 		],
 		"workingPressureBar": [
-			"rupes-rs21a-20260926"
+			"rupes-rs21a-reserved-20261103-1"
 		],
-		"airflowLpm": [
-			"rupes-rs21a-20260926"
+		"demandModel": [
+			"rupes-rs21a-reserved-20261103-1"
+		],
+		"demandExplanation": [
+			"rupes-rs21a-reserved-20261103-1"
+		],
+		"editorial": [
+			"rupes-rs21a-reserved-20261103-1"
+		],
+		"specifications": [
+			"rupes-rs21a-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 360,
-		"typical": 360,
-		"max": 360
-	}
+	"demandExplanation": "Maximum publié, sans pression de mesure explicitement appariée. La pression de service reste une donnée distincte."
 };
 
 export default product;

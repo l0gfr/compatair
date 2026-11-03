@@ -29,58 +29,52 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZBS-382N. La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé. Vitesse à vide : 17000 tr/min. Masse : 0.88 kg.",
+		"overview": "ZIPP ZBS-382N. La ZBS-382N emploie une bande 10 × 330 mm et un galet acier ; la ZBS-382A utilise le galet caoutchouc. La ZBS-382N3 passe à une bande 13 × 457 mm et à 390 mm de longueur pour 0,94 kg. Les bandes et les galets sont des critères distincts malgré 17 000 tr/min communs.",
 		"verifiedFacts": [
-			"Vitesse à vide : 17000 tr/min.",
-			"Masse : 0.88 kg.",
-			"Référence constructeur : ZBS-382N."
+			"Bande : 10 × 330 mm.",
+			"Galet : Acier, Steel Wheel.",
+			"Vitesse à vide : 17 000 tr/min.",
+			"Longueur : 326 mm.",
+			"Masse : 0,88 kg."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé.",
-			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+			"Consommation moyenne ou de régime non précisé, sans qualification maximale/en charge ni appariement de pression de mesure suffisant : aucun verdict conclusif n’en est déduit."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Vitesse à vide",
-			"value": "17000 tr/min",
+			"label": "Bande",
+			"value": "10 × 330 mm",
 			"evidenceIds": [
-				"october-b-zipp-tools-p133"
+				"ponceuse-bande-zipp-zbs-382n-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Galet",
+			"value": "Acier, Steel Wheel",
+			"evidenceIds": [
+				"ponceuse-bande-zipp-zbs-382n-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "17 000 tr/min",
+			"evidenceIds": [
+				"ponceuse-bande-zipp-zbs-382n-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "326 mm",
+			"evidenceIds": [
+				"ponceuse-bande-zipp-zbs-382n-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Masse",
-			"value": "0.88 kg",
+			"value": "0,88 kg",
 			"evidenceIds": [
-				"october-b-zipp-tools-p133"
-			]
-		},
-		{
-			"label": "Référence constructeur",
-			"value": "ZBS-382N",
-			"evidenceIds": [
-				"october-b-zipp-tools-p133"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "Pression de consommation non établie sur cette page.",
-			"evidenceIds": [
-				"october-b-zipp-tools-p133"
-			]
-		},
-		{
-			"label": "Consommation hors calcul, pression non établie",
-			"value": "113,267 L/min",
-			"evidenceIds": [
-				"october-b-zipp-tools-p133"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "ZIPP, catalogue général pneumatique, page PDF 133",
-			"evidenceIds": [
-				"october-b-zipp-tools-p133"
+				"ponceuse-bande-zipp-zbs-382n-reserved-20261103-1"
 			]
 		}
 	],
@@ -94,6 +88,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-bande-zipp-zbs-382n-reserved-20261103-1",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=133",
+			"sourceLabel": "ZIPP : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. La ZBS-382N emploie une bande 10 × 330 mm et un galet acier ; la ZBS-382A utilise le galet caoutchouc. La ZBS-382N3 passe à une bande 13 × 457 mm et à 390 mm de longueur pour 0,94 kg. Les bandes et les galets sont des critères distincts malgré 17 000 tr/min communs."
 		}
 	],
 	"fieldSources": {
@@ -105,6 +109,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october-b-zipp-tools-p133"
+		],
+		"editorial": [
+			"ponceuse-bande-zipp-zbs-382n-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-bande-zipp-zbs-382n-reserved-20261103-1"
 		]
 	},
 	"notes": [

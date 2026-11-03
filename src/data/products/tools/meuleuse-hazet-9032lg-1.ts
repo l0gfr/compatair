@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "HAZET 9032LG-1. La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi. Champ fabricant : Revolutions per minute : 2000 – 22000. Champ fabricant : Net weight : 0.6 kg.",
+		"overview": "HAZET 9032LG-1. La 9032LG-1 est la version droite longue de 285 mm et 0,6 kg, pince 6 mm à quatre mors. La 9032N-1 pèse 0,4 kg et annonce une autre plage de vitesse. La page donne 2 000–22 000 tr/min mais aussi Idle speed 2 000 ; ces champs restent visibles sans inventer un protocole. Les 99 L/min ne sont pas qualifiés en charge.",
 		"verifiedFacts": [
 			"Champ fabricant : Revolutions per minute : 2000 – 22000.",
 			"Champ fabricant : Net weight : 0.6 kg.",
@@ -42,7 +42,10 @@ const product: ToolProfileInput = {
 			"Champ fabricant : Sound power level : 78 db(A) Lp W.",
 			"Champ fabricant : Power in watts : 360 Watt.",
 			"Champ fabricant : Idle speed : 2000 upm.",
-			"Champ fabricant : Power in HP : 0.489 PS."
+			"Champ fabricant : Power in HP : 0.489 PS.",
+			"Pince : 6 mm, quatre mors.",
+			"Longueur : 285 mm.",
+			"Réglage de vitesse : Continu, molette au-dessus du corps."
 		],
 		"limitations": [
 			"La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi.",
@@ -143,6 +146,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-hazet-4000896209675-html-p1"
 			]
+		},
+		{
+			"label": "Pince",
+			"value": "6 mm, quatre mors",
+			"evidenceIds": [
+				"meuleuse-hazet-9032lg-1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "285 mm",
+			"evidenceIds": [
+				"meuleuse-hazet-9032lg-1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Réglage de vitesse",
+			"value": "Continu, molette au-dessus du corps",
+			"evidenceIds": [
+				"meuleuse-hazet-9032lg-1-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -155,6 +179,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 2775725bcf884bd4954c20817b5af95a6d9186a82d9b509689ab58cfed6a9cde. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "meuleuse-hazet-9032lg-1-reserved-20261103-1",
+			"sourceUrl": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/drilling-machine-sander-chisel-sabre-saw-shears/product/ean-4000896209675",
+			"sourceLabel": "HAZET : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 23bcaf24aa469029e47473345cd48b939433dad507d4b744ecdd224c897ee632. La 9032LG-1 est la version droite longue de 285 mm et 0,6 kg, pince 6 mm à quatre mors. La 9032N-1 pèse 0,4 kg et annonce une autre plage de vitesse. La page donne 2 000–22 000 tr/min mais aussi Idle speed 2 000 ; ces champs restent visibles sans inventer un protocole. Les 99 L/min ne sont pas qualifiés en charge."
 		}
 	],
 	"fieldSources": {
@@ -166,6 +200,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-hazet-4000896209675-html-p1"
+		],
+		"editorial": [
+			"meuleuse-hazet-9032lg-1-reserved-20261103-1"
+		],
+		"specifications": [
+			"meuleuse-hazet-9032lg-1-reserved-20261103-1"
 		]
 	},
 	"notes": [

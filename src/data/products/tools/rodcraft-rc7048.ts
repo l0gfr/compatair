@@ -9,10 +9,8 @@ const product: ToolProfileInput = {
 	"categoryId": "meuleuse",
 	"category": "meuleuse",
 	"label": "Rodcraft RC7048",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
 		"max": 6.3
 	},
 	"confidence": "B",
@@ -23,68 +21,68 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Rodcraft RC7048, référence 8951000276. Le dimensionnement utilise 228 L/min à 6,3 bar, selon les régimes publiés par le fabricant. Vitesse à vide : 27000 rpm. Masse : 0.8 kg. Longueur : 250 mm.",
+		"overview": "Rodcraft RC7048. La RC7048 est la meuleuse droite de 250 mm, 400 W et 27 000 tr/min ; la même famille comprend aussi des versions à tête 90 degrés, à ne pas fusionner. Le débit 3,8 L/s est annoncé en charge. Le maximum dynamique d’entrée de 6,3 bar n’établit pas à lui seul sa pression de mesure.",
 		"verifiedFacts": [
-			"Pression dynamique de travail maximale publiée : 6.3 bar, retenue comme point de fonctionnement. Respecter cette limite à l’entrée de l’outil.",
-			"Consommation en charge publiée : 3.8 L/s. Valeur retenue : 228 L/min (maximum des régimes documentés, L/s × 60).",
-			"Référence fabricant : 8951000276.",
-			"Vitesse à vide : 27000 rpm.",
-			"Masse : 0.8 kg.",
-			"Longueur : 250 mm."
+			"Type : Meuleuse droite, sortie arrière.",
+			"Pince maximale : 6 mm, libellé constructeur 15/64 pouce.",
+			"Vitesse : 27 000 tr/min.",
+			"Puissance maximale : 400 W.",
+			"Longueur : 250 mm.",
+			"Masse : 0,8 kg.",
+			"Débit en charge publié : 3,8 L/s (228 L/min)."
 		],
 		"limitations": [
-			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
-			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes."
+			"Pression de mesure de consommation non explicitement appariée au débit en charge. Le calcul demeure indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression dynamique de travail maximale publiée : 6.3 bar, retenue comme point de fonctionnement. Respecter cette limite à l’entrée de l’outil.",
+			"label": "Type",
+			"value": "Meuleuse droite, sortie arrière",
 			"evidenceIds": [
-				"rodcraft-8951000276-20260927"
+				"rodcraft-rc7048-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation en charge publiée : 3.8 L/s. Valeur retenue : 228 L/min (maximum des régimes documentés, L/s × 60).",
+			"label": "Pince maximale",
+			"value": "6 mm, libellé constructeur 15/64 pouce",
 			"evidenceIds": [
-				"rodcraft-8951000276-20260927"
+				"rodcraft-rc7048-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse à vide",
-			"value": "27000 rpm",
+			"label": "Vitesse",
+			"value": "27 000 tr/min",
 			"evidenceIds": [
-				"rodcraft-8951000276-20260927"
+				"rodcraft-rc7048-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse",
-			"value": "0.8 kg",
+			"label": "Puissance maximale",
+			"value": "400 W",
 			"evidenceIds": [
-				"rodcraft-8951000276-20260927"
+				"rodcraft-rc7048-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Longueur",
 			"value": "250 mm",
 			"evidenceIds": [
-				"rodcraft-8951000276-20260927"
+				"rodcraft-rc7048-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre intérieur du tuyau (longueur 5 m)",
-			"value": "8 mm",
+			"label": "Masse",
+			"value": "0,8 kg",
 			"evidenceIds": [
-				"rodcraft-8951000276-20260927"
+				"rodcraft-rc7048-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Filetage d’entrée d’air",
-			"value": "1/4",
+			"label": "Débit en charge publié",
+			"value": "3,8 L/s (228 L/min)",
 			"evidenceIds": [
-				"rodcraft-8951000276-20260927"
+				"rodcraft-rc7048-reserved-20261103-1"
 			]
 		}
 	],
@@ -97,6 +95,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation en charge publiée : 3.8 L/s. Valeur retenue : 228 L/min (maximum des régimes documentés, L/s × 60)."
+		},
+		{
+			"id": "rodcraft-rc7048-reserved-20261103-1",
+			"sourceUrl": "https://www.rodcraft.com/en/products/8951000276",
+			"sourceLabel": "Rodcraft : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 cb870300cec5e34b591cf43a7835961d7fec3a88598cf4dfbaff8d63117377f6. La RC7048 est la meuleuse droite de 250 mm, 400 W et 27 000 tr/min ; la même famille comprend aussi des versions à tête 90 degrés, à ne pas fusionner. Le débit 3,8 L/s est annoncé en charge. Le maximum dynamique d’entrée de 6,3 bar n’établit pas à lui seul sa pression de mesure."
 		}
 	],
 	"fieldSources": {
@@ -104,20 +112,25 @@ const product: ToolProfileInput = {
 			"rodcraft-8951000276-20260927"
 		],
 		"workingPressureBar": [
-			"rodcraft-8951000276-20260927"
+			"rodcraft-rc7048-reserved-20261103-1"
 		],
-		"airflowLpm": [
-			"rodcraft-8951000276-20260927"
+		"demandModel": [
+			"rodcraft-rc7048-reserved-20261103-1"
+		],
+		"demandExplanation": [
+			"rodcraft-rc7048-reserved-20261103-1"
+		],
+		"editorial": [
+			"rodcraft-rc7048-reserved-20261103-1"
+		],
+		"specifications": [
+			"rodcraft-rc7048-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 228,
-		"typical": 228,
-		"max": 228
-	}
+	"demandExplanation": "Le débit en charge est conservé dans les spécifications ; la fiche indique séparément le plafond de pression, sans appariement explicite de la mesure."
 };
 
 export default product;

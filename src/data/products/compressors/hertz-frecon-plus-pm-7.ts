@@ -20,7 +20,7 @@ const product: CompressorInput = {
 	"fadCurve": [
 		{
 			"pressureBar": 13,
-			"litersPerMinute": 420
+			"litersPerMinute": 740
 		}
 	],
 	"powerKw": 7.5,
@@ -35,55 +35,52 @@ const product: CompressorInput = {
 	},
 	"specifications": [
 		{
-			"label": "Configuration constructeur",
-			"value": "Base Mounted, stockage d’air externe",
+			"label": "Montage",
+			"value": "Base Mounted, sans cuve intégrée",
 			"evidenceIds": [
-				"october4-hertz-catalog-p20"
+				"hertz-frecon-plus-pm-7-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Pression de la configuration retenue",
-			"value": "13 bar",
+			"label": "FAD min–max à 13 bar",
+			"value": "0,42–0,74 m³/min",
 			"evidenceIds": [
-				"october4-hertz-catalog-p20"
+				"hertz-frecon-plus-pm-7-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Cuve de stockage",
-			"value": "Stockage intégré absent, montage constructeur documenté",
-			"evidenceIds": [
-				"october4-hertz-catalog-p20"
-			]
-		},
-		{
-			"label": "Air livré à 13 bar",
-			"value": "420 L/min",
-			"evidenceIds": [
-				"october4-hertz-catalog-p20"
-			]
-		},
-		{
-			"label": "Puissance publiée",
+			"label": "Puissance",
 			"value": "7,5 kW",
 			"evidenceIds": [
-				"october4-hertz-catalog-p20"
+				"hertz-frecon-plus-pm-7-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse sur socle",
+			"value": "153 kg",
+			"evidenceIds": [
+				"hertz-frecon-plus-pm-7-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Mesure",
+			"value": "ISO 1217:2009 annexe E ; entrée 1 bar absolu, 20 °C, humidité 0 %",
+			"evidenceIds": [
+				"hertz-frecon-plus-pm-7-reserved-20261103-1"
 			]
 		}
 	],
 	"editorial": {
-		"overview": "Hertz FRECON PLUS PM 7. 420 L/min déclarés à 13 bar. Base Mounted, stockage d’air externe.",
+		"overview": "Hertz FRECON PLUS PM 7. La PM 7 publie 0,42–0,74 m³/min à 13 bar ; PM 5 : 0,25–0,53 m³/min à 13 bar. Le moteur utilise désormais le maximum documenté de ce régime et conserve le minimum de modulation dans les spécifications. La masse retenue appartient au montage sur socle, distinct du montage cuve et sécheur.",
 		"verifiedFacts": [
-			"Configuration de pression documentée : 13 bar.",
-			"Montage sans réservoir de stockage intégré explicitement documenté.",
-			"FAD sous pression identifié séparément des valeurs d’aspiration : 420 L/min déclarés à 13 bar."
+			"Montage : Base Mounted, sans cuve intégrée.",
+			"FAD min–max à 13 bar : 0,42–0,74 m³/min.",
+			"Puissance : 7,5 kW.",
+			"Masse sur socle : 153 kg.",
+			"Mesure : ISO 1217:2009 annexe E ; entrée 1 bar absolu, 20 °C, humidité 0 %."
 		],
 		"limitations": [
-			"Une seule configuration de pression est retenue par modèle. Les autres lignes de pression ne sont pas assemblées en une courbe mesurée.",
-			"La cuve optionnelle Tank + Dryer est distincte du montage Base Mounted retenu.",
-			"Le FAD retenu est le minimum de la plage VSD à cette pression. Le maximum de la plage n’est pas utilisé comme débit garanti.",
-			"Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
-			"Le plafond CompatAir correspond à la pression de travail de la version retenue. Il ne décrit ni la soupape ni le maximum de toutes les versions de la famille."
+			"Le FAD maximal est une borne publiée du variateur, pas une moyenne d’atelier. Aucun taux de marche du groupe n’est déduit de cette plage."
 		]
 	},
 	"evidence": [
@@ -106,6 +103,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-04",
 			"confidence": "B",
 			"notes": "SHA-256 e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339 de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "hertz-frecon-plus-pm-7-reserved-20261103-1",
+			"sourceUrl": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf#page=20",
+			"sourceLabel": "Hertz : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339. La PM 7 publie 0,42–0,74 m³/min à 13 bar ; PM 5 : 0,25–0,53 m³/min à 13 bar. Le moteur utilise désormais le maximum documenté de ce régime et conserve le minimum de modulation dans les spécifications. La masse retenue appartient au montage sur socle, distinct du montage cuve et sécheur."
 		}
 	],
 	"fieldSources": {
@@ -122,19 +129,29 @@ const product: CompressorInput = {
 			"october4-hertz-catalog-p20"
 		],
 		"fadCurve": [
-			"october4-hertz-catalog-p20"
+			"hertz-frecon-plus-pm-7-reserved-20261103-1"
 		],
 		"powerKw": [
 			"october4-hertz-catalog-p20"
 		],
 		"oilType": [
 			"october4-hertz-catalog-p17"
+		],
+		"weightKg": [
+			"hertz-frecon-plus-pm-7-reserved-20261103-1"
+		],
+		"editorial": [
+			"hertz-frecon-plus-pm-7-reserved-20261103-1"
+		],
+		"specifications": [
+			"hertz-frecon-plus-pm-7-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Portée de la source : FAD-pressure-qualified.",
 		"Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées."
-	]
+	],
+	"weightKg": 153
 };
 
 export default product;

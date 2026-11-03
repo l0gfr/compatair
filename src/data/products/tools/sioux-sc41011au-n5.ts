@@ -23,14 +23,20 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Sioux SC41011AU-N5, référence SC41011AU-N5. Le dimensionnement utilise 360 L/min à 6,2 bar, selon les régimes publiés par le fabricant. Cadence de frappe : 4600 coups/min. Course : 28 mm. Masse : 2.9 kg.",
+		"overview": "Sioux SC41011AU-N5. La SC41011AU-N5 est la configuration à aiguilles et commande Push/Pull, de 420 mm. La AL-N5 à levier mesure 383 mm ; la AU-C est la configuration à burin, de 300 mm. Le débit commun de 360 L/min ne rend pas ces montages identiques.",
 		"verifiedFacts": [
 			"Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur.",
 			"Consommation publiée : 6.0 L/s (12.0 scfm). Le guide du catalogue (page PDF 10) définit ces débits comme de l’air détendu à pression atmosphérique et des consommations maximales, sauf indication contraire. La plus grande valeur publiée est retenue : 360 L/min (L/s × 60).",
 			"Référence fabricant : SC41011AU-N5.",
 			"Cadence de frappe : 4600 coups/min.",
 			"Course : 28 mm.",
-			"Masse : 2.9 kg."
+			"Masse : 2.9 kg.",
+			"Configuration : Needle Scaler, aiguilles.",
+			"Commande : Push/Pull.",
+			"Cadence : 4 600 coups/min.",
+			"Course : 28 mm.",
+			"Longueur : 420 mm.",
+			"Masse publiée : 2,9 kg."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
@@ -79,6 +85,48 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"sioux-sc41011au-n5-20260927"
 			]
+		},
+		{
+			"label": "Configuration",
+			"value": "Needle Scaler, aiguilles",
+			"evidenceIds": [
+				"sioux-sc41011au-n5-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Commande",
+			"value": "Push/Pull",
+			"evidenceIds": [
+				"sioux-sc41011au-n5-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cadence",
+			"value": "4 600 coups/min",
+			"evidenceIds": [
+				"sioux-sc41011au-n5-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Course",
+			"value": "28 mm",
+			"evidenceIds": [
+				"sioux-sc41011au-n5-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "420 mm",
+			"evidenceIds": [
+				"sioux-sc41011au-n5-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse publiée",
+			"value": "2,9 kg",
+			"evidenceIds": [
+				"sioux-sc41011au-n5-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -99,6 +147,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur."
+		},
+		{
+			"id": "sioux-sc41011au-n5-reserved-20261103-1",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=75",
+			"sourceLabel": "Sioux : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8. La SC41011AU-N5 est la configuration à aiguilles et commande Push/Pull, de 420 mm. La AL-N5 à levier mesure 383 mm ; la AU-C est la configuration à burin, de 300 mm. Le débit commun de 360 L/min ne rend pas ces montages identiques."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +168,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"sioux-sc41011au-n5-20260927"
+		],
+		"editorial": [
+			"sioux-sc41011au-n5-reserved-20261103-1"
+		],
+		"specifications": [
+			"sioux-sc41011au-n5-reserved-20261103-1"
 		]
 	},
 	"notes": [

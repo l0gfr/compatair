@@ -32,10 +32,17 @@ const product: ToolProfileInput = {
     }
   },
   "editorial": {
-    "overview": "ProWin K-528M-20. Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
+    "overview": "ProWin K-528M-20. La K-528M-20 associe buse 2,0 mm, jet 310 mm et Fluid Output 200 ml sans cadence précisée. La K-528M-28 annonce 2,8 mm, 330 mm et 290 ml, pour la même consommation publiée 250 L/min. La plage de service 20–28 psi ne devient pas un point de mesure de cette consommation ; le calcul reste indéterminé.",
     "verifiedFacts": [
       "Buse : 2.0 mm.",
-      "Largeur de jet : 310 mm."
+      "Largeur de jet : 310 mm.",
+      "Buse : 2,0 mm.",
+      "Fluid Output, libellé constructeur : 200 ml, cadence non indiquée.",
+      "Jet : 310 mm.",
+      "Consommation publiée : 250 L/min, pression précise de mesure non indiquée.",
+      "Godet : 600 cc nylon, gravité.",
+      "Masse pistolet : 476 g.",
+      "Pression de service : 20–28 psi."
     ],
     "limitations": [
       "Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
@@ -73,6 +80,55 @@ const product: ToolProfileInput = {
       "evidenceIds": [
         "october4-tools-prowin-painting-p15"
       ]
+    },
+    {
+      "label": "Buse",
+      "value": "2,0 mm",
+      "evidenceIds": [
+        "pistolet-peinture-hvlp-prowin-k-528m-20-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Fluid Output, libellé constructeur",
+      "value": "200 ml, cadence non indiquée",
+      "evidenceIds": [
+        "pistolet-peinture-hvlp-prowin-k-528m-20-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Jet",
+      "value": "310 mm",
+      "evidenceIds": [
+        "pistolet-peinture-hvlp-prowin-k-528m-20-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Consommation publiée",
+      "value": "250 L/min, pression précise de mesure non indiquée",
+      "evidenceIds": [
+        "pistolet-peinture-hvlp-prowin-k-528m-20-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Godet",
+      "value": "600 cc nylon, gravité",
+      "evidenceIds": [
+        "pistolet-peinture-hvlp-prowin-k-528m-20-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Masse pistolet",
+      "value": "476 g",
+      "evidenceIds": [
+        "pistolet-peinture-hvlp-prowin-k-528m-20-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Pression de service",
+      "value": "20–28 psi",
+      "evidenceIds": [
+        "pistolet-peinture-hvlp-prowin-k-528m-20-reserved-20261103-1"
+      ]
     }
   ],
   "evidence": [
@@ -85,6 +141,16 @@ const product: ToolProfileInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "Déclaration fabricant, réponse primaire SHA-256 2cd45573cff8decba50b2fbbfe2127d8e4bc1c3f1fdb6550e2f2467703941213. Aucun essai physique CompatAir."
+    },
+    {
+      "id": "pistolet-peinture-hvlp-prowin-k-528m-20-reserved-20261103-1",
+      "sourceUrl": "https://www.prowin-tools.com/wp-content/uploads/2023/05/Air-Painting-ToolsNew.pdf#page=15",
+      "sourceLabel": "ProWin : revue factuelle du 3 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-03",
+      "confidence": "B",
+      "notes": "GET complet HTTP200 SHA-256 2cd45573cff8decba50b2fbbfe2127d8e4bc1c3f1fdb6550e2f2467703941213. La K-528M-20 associe buse 2,0 mm, jet 310 mm et Fluid Output 200 ml sans cadence précisée. La K-528M-28 annonce 2,8 mm, 330 mm et 290 ml, pour la même consommation publiée 250 L/min. La plage de service 20–28 psi ne devient pas un point de mesure de cette consommation ; le calcul reste indéterminé."
     }
   ],
   "fieldSources": {
@@ -96,6 +162,12 @@ const product: ToolProfileInput = {
     ],
     "demandExplanation": [
       "october4-tools-prowin-painting-p15"
+    ],
+    "editorial": [
+      "pistolet-peinture-hvlp-prowin-k-528m-20-reserved-20261103-1"
+    ],
+    "specifications": [
+      "pistolet-peinture-hvlp-prowin-k-528m-20-reserved-20261103-1"
     ]
   },
   "notes": [

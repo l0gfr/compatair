@@ -31,19 +31,22 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sealey GSA722. La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué. Champ fabricant : Air Consumption : 4cfm. Champ fabricant : Free Speed : 2500rpm.",
+		"overview": "Sealey GSA722. La GSA722 est une polisseuse de 0,7 kg, plateau fourni 75 mm, filetage M6 × 1 mm et régime à vide 2 500 tr/min. La SA722 annonce une autre plage 2 000–6 000 tr/min. Les 4 CFM n’ont pas de régime de mesure précisé ; le diamètre des mousses 79 mm ne remplace pas celui du plateau.",
 		"verifiedFacts": [
-			"Champ fabricant : Air Consumption : 4cfm.",
+			"Champ fabricant : Air Consumption : 4 cfm.",
 			"Champ fabricant : Free Speed : 2500rpm.",
 			"Champ fabricant : Inlet Size : 1/4\"BSP.",
 			"Champ fabricant : No-Load Speed : 2500rpm.",
-			"Champ fabricant : Noise Power/Pressure : 94/83dB(A).",
-			"Champ fabricant : Operating Pressure : 90psi.",
-			"Champ fabricant : Pad Size : Ø75mm.",
-			"Champ fabricant : Thread Size : M6 x 1mm.",
+			"Champ fabricant : Noise Power/Pressure : 94/83 dB(A).",
+			"Champ fabricant : Operating Pressure : 90 psi.",
+			"Champ fabricant : Pad Size : Ø75 mm.",
+			"Champ fabricant : Thread Size : M6 x 1 mm.",
 			"Champ fabricant : Vacuum Outlet : n/a.",
 			"Champ fabricant : Vibration/Uncertainty : 4.13/0.90m/s².",
-			"Champ fabricant : Nett Weight : 0.7kg."
+			"Champ fabricant : Nett Weight : 0.7 kg.",
+			"Plateau fourni : 75 mm auto-agrippant.",
+			"Accessoires conseillés : Têtes de polissage 79 mm.",
+			"Filetage : M6 × 1 mm."
 		],
 		"limitations": [
 			"La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué.",
@@ -55,7 +58,7 @@ const product: ToolProfileInput = {
 	"specifications": [
 		{
 			"label": "Champ fabricant : Air Consumption",
-			"value": "4cfm",
+			"value": "4 cfm",
 			"evidenceIds": [
 				"october2b-tools-oct2b-sealey-gsa722-html-p1"
 			]
@@ -83,28 +86,28 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Noise Power/Pressure",
-			"value": "94/83dB(A)",
+			"value": "94/83 dB(A)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-sealey-gsa722-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Operating Pressure",
-			"value": "90psi",
+			"value": "90 psi",
 			"evidenceIds": [
 				"october2b-tools-oct2b-sealey-gsa722-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Pad Size",
-			"value": "Ø75mm",
+			"value": "Ø75 mm",
 			"evidenceIds": [
 				"october2b-tools-oct2b-sealey-gsa722-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Thread Size",
-			"value": "M6 x 1mm",
+			"value": "M6 x 1 mm",
 			"evidenceIds": [
 				"october2b-tools-oct2b-sealey-gsa722-html-p1"
 			]
@@ -125,16 +128,37 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Nett Weight",
-			"value": "0.7kg",
+			"value": "0.7 kg",
 			"evidenceIds": [
 				"october2b-tools-oct2b-sealey-gsa722-html-p1"
 			]
 		},
 		{
 			"label": "Portée de la pression dans la source",
-			"value": "Operating Pressure: 90psi",
+			"value": "Operating Pressure: 90 psi",
 			"evidenceIds": [
 				"october2b-tools-oct2b-sealey-gsa722-html-p1"
+			]
+		},
+		{
+			"label": "Plateau fourni",
+			"value": "75 mm auto-agrippant",
+			"evidenceIds": [
+				"polisseuse-sealey-gsa722-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Accessoires conseillés",
+			"value": "Têtes de polissage 79 mm",
+			"evidenceIds": [
+				"polisseuse-sealey-gsa722-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Filetage",
+			"value": "M6 × 1 mm",
+			"evidenceIds": [
+				"polisseuse-sealey-gsa722-reserved-20261103-1"
 			]
 		}
 	],
@@ -148,6 +172,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 99e9b79772fddf7aeb3687b63556ac09a0628509aec09e4b5fd9bc66c7f3e2a3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "polisseuse-sealey-gsa722-reserved-20261103-1",
+			"sourceUrl": "https://www.sealey.co.uk/generation-air-polisher-75mm-gsa722/",
+			"sourceLabel": "Sealey : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 681bc36ee8922f11cb08ce24120c98ed7d99c91a0be1c406c2150c59cb6cccc1. La GSA722 est une polisseuse de 0,7 kg, plateau fourni 75 mm, filetage M6 × 1 mm et régime à vide 2 500 tr/min. La SA722 annonce une autre plage 2 000–6 000 tr/min. Les 4 CFM n’ont pas de régime de mesure précisé ; le diamètre des mousses 79 mm ne remplace pas celui du plateau."
 		}
 	],
 	"fieldSources": {
@@ -159,6 +193,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-sealey-gsa722-html-p1"
+		],
+		"editorial": [
+			"polisseuse-sealey-gsa722-reserved-20261103-1"
+		],
+		"specifications": [
+			"polisseuse-sealey-gsa722-reserved-20261103-1"
 		]
 	},
 	"notes": [

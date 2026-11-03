@@ -30,65 +30,60 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Aircat 6700-3-336. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 1.8 lb. Vitesse à vide : 11000 tr/min.",
+		"overview": "Aircat 6700-3-336. La 6700-3-336 est la ponceuse sans aspiration, plateau 3 pouces et orbite 3/32 pouce. La version CV possède une autre configuration d’aspiration ; la 6700-5-336 reçoit un plateau 5 pouces. Le diamètre et le circuit d’aspiration restent liés au code exact. Le débit 1,6 CFM ne reçoit aucune qualification de régime ou de pression absente de la fiche.",
 		"verifiedFacts": [
-			"Masse publiée : 1.8 lb.",
-			"Vitesse à vide : 11000 tr/min.",
-			"Échappement : Rear."
+			"Plateau : 3 pouces, autoagrippant.",
+			"Orbite : 3/32 pouce.",
+			"Aspiration : Sans aspiration.",
+			"Filetage de plateau : 5/16 × 24.",
+			"Vitesse à vide : 11 000 tr/min.",
+			"Consommation, régime non précisé : 1,6 CFM."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"La fiche ne documente pas suffisamment le régime de consommation et son appariement à une pression ; le calcul reste indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "1.8 lb",
+			"label": "Plateau",
+			"value": "3 pouces, autoagrippant",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-167-p1"
+				"ponceuse-orbitale-aircat-6700-3-336-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Orbite",
+			"value": "3/32 pouce",
+			"evidenceIds": [
+				"ponceuse-orbitale-aircat-6700-3-336-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Aspiration",
+			"value": "Sans aspiration",
+			"evidenceIds": [
+				"ponceuse-orbitale-aircat-6700-3-336-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Filetage de plateau",
+			"value": "5/16 × 24",
+			"evidenceIds": [
+				"ponceuse-orbitale-aircat-6700-3-336-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Vitesse à vide",
-			"value": "11000 tr/min",
+			"value": "11 000 tr/min",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-167-p1"
+				"ponceuse-orbitale-aircat-6700-3-336-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Échappement",
-			"value": "Rear",
+			"label": "Consommation, régime non précisé",
+			"value": "1,6 CFM",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-167-p1"
-			]
-		},
-		{
-			"label": "Champ fabricant : Air Inlet (NPT/BSP)",
-			"value": "1/4-in.",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-167-p1"
-			]
-		},
-		{
-			"label": "Champ fabricant : Rec. Hose Size (in.)",
-			"value": "3/8-in.",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-167-p1"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "Pression de mesure de la consommation non établie dans la fiche.",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-167-p1"
-			]
-		},
-		{
-			"label": "Consommation de régime non précisé, hors calcul",
-			"value": "1.6 cfm",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-167-p1"
+				"ponceuse-orbitale-aircat-6700-3-336-reserved-20261103-1"
 			]
 		}
 	],
@@ -102,6 +97,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : c784bb49639aa66f566cd017d78acfe01920b715a3c67bbf073c314886faa8d6. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-orbitale-aircat-6700-3-336-reserved-20261103-1",
+			"sourceUrl": "https://continentaltoolgroup.com/product/non-vac-orbital-palm-sander-polisher/",
+			"sourceLabel": "Aircat : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 fd199c2007b6e3653ee675c340aede4eeb495d0f12640101afff8a47b11bf62e. La 6700-3-336 est la ponceuse sans aspiration, plateau 3 pouces et orbite 3/32 pouce. La version CV possède une autre configuration d’aspiration ; la 6700-5-336 reçoit un plateau 5 pouces. Le diamètre et le circuit d’aspiration restent liés au code exact. Le débit 1,6 CFM ne reçoit aucune qualification de régime ou de pression absente de la fiche."
 		}
 	],
 	"fieldSources": {
@@ -116,6 +121,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-ctg-pdp-167-p1"
+		],
+		"editorial": [
+			"ponceuse-orbitale-aircat-6700-3-336-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-orbitale-aircat-6700-3-336-reserved-20261103-1"
 		]
 	},
 	"notes": [

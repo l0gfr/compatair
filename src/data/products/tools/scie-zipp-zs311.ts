@@ -9,13 +9,12 @@ const product: ToolProfileInput = {
 	"brand": "ZIPP",
 	"model": "ZS311",
 	"mpn": "ZS311",
-	"demandModel": "variable-volume",
+	"demandModel": "fixed-flow",
 	"workingPressureBar": {
 		"min": 6.2,
 		"typical": 6.2,
 		"max": 6.2
 	},
-	"demandExplanation": "La consommation par minute ou par cycle n’est pas établie dans ce tableau ; aucune demande n’est déduite de la vitesse ou de la puissance.",
 	"confidence": "B",
 	"image": {
 		"src": "/images/products/scie-zipp-zs311.webp",
@@ -33,43 +32,52 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZS311. La consommation par minute ou par cycle n’est pas établie dans ce tableau ; aucune demande n’est déduite de la vitesse ou de la puissance. Référence constructeur : ZS311. Configuration publiée : 24T X 5 ZS317 24T X 5.",
+		"overview": "ZIPP ZS311. La ZS311 est la scie à course 10 mm, 9 500 coups/min et 0,7 kg ; la ZS317 passe à 25 mm, 5 000 coups/min et 0,96 kg. La ZS311M est une autre variante à 10 000 coups/min et 0,45 kg. La table complète publie 100 L/min moyens, absents de la transcription antérieure ; aucun maximum en charge n’en est déduit.",
 		"verifiedFacts": [
-			"Référence constructeur : ZS311.",
-			"Configuration publiée : 24T X 5 ZS317 24T X 5."
+			"Cadence : 9 500 coups/min.",
+			"Course : 10 mm.",
+			"Masse : 0,7 kg.",
+			"Consommation moyenne documentaire : 3,5 cfm (100 L/min).",
+			"Pression de service publiée : 90 psi / 6,2 bar, distincte d’une pression de mesure démontrée."
 		],
 		"limitations": [
-			"La consommation par minute ou par cycle n’est pas établie dans ce tableau ; aucune demande n’est déduite de la vitesse ou de la puissance.",
-			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+			"Consommation moyenne ou de régime non précisé, sans qualification maximale/en charge ni appariement de pression de mesure suffisant : aucun verdict conclusif n’en est déduit."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Référence constructeur",
-			"value": "ZS311",
+			"label": "Cadence",
+			"value": "9 500 coups/min",
 			"evidenceIds": [
-				"october-b-zipp-tools-p97"
+				"scie-zipp-zs311-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Configuration publiée",
-			"value": "24T X 5 ZS317 24T X 5",
+			"label": "Course",
+			"value": "10 mm",
 			"evidenceIds": [
-				"october-b-zipp-tools-p97"
+				"scie-zipp-zs311-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de pression originale",
-			"value": "Operating Air Pressure: 90psi/6.2",
+			"label": "Masse",
+			"value": "0,7 kg",
 			"evidenceIds": [
-				"october-b-zipp-tools-p97"
+				"scie-zipp-zs311-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Localisation documentaire",
-			"value": "ZIPP, catalogue général pneumatique, page PDF 97",
+			"label": "Consommation moyenne documentaire",
+			"value": "3,5 cfm (100 L/min)",
 			"evidenceIds": [
-				"october-b-zipp-tools-p97"
+				"scie-zipp-zs311-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression de service publiée",
+			"value": "90 psi / 6,2 bar, distincte d’une pression de mesure démontrée",
+			"evidenceIds": [
+				"scie-zipp-zs311-reserved-20261103-1"
 			]
 		}
 	],
@@ -83,6 +91,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "scie-zipp-zs311-reserved-20261103-1",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=97",
+			"sourceLabel": "ZIPP : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. La ZS311 est la scie à course 10 mm, 9 500 coups/min et 0,7 kg ; la ZS317 passe à 25 mm, 5 000 coups/min et 0,96 kg. La ZS311M est une autre variante à 10 000 coups/min et 0,45 kg. La table complète publie 100 L/min moyens, absents de la transcription antérieure ; aucun maximum en charge n’en est déduit."
 		}
 	],
 	"fieldSources": {
@@ -92,13 +110,31 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"october-b-zipp-tools-p97"
 		],
-		"demandExplanation": [
-			"october-b-zipp-tools-p97"
+		"demandModel": [
+			"scie-zipp-zs311-reserved-20261103-1"
+		],
+		"airflowLpm": [
+			"scie-zipp-zs311-reserved-20261103-1"
+		],
+		"airflowBasis": [
+			"scie-zipp-zs311-reserved-20261103-1"
+		],
+		"editorial": [
+			"scie-zipp-zs311-reserved-20261103-1"
+		],
+		"specifications": [
+			"scie-zipp-zs311-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"La consommation par minute ou par cycle n’est pas établie dans ce tableau ; aucune demande n’est déduite de la vitesse ou de la puissance."
-	]
+	],
+	"airflowLpm": {
+		"min": 100,
+		"typical": 100,
+		"max": 100
+	},
+	"airflowBasis": "average"
 };
 
 export default product;

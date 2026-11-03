@@ -17,7 +17,7 @@ const product: CompressorInput = {
       "fréquence": "60 Hz"
     }
   },
-  "maxPressureBar": 10.342,
+  "maxPressureBar": 8.618,
   "maxPressureBasis": "selected-working-pressure-ceiling",
   "fadCurve": [
     {
@@ -36,76 +36,61 @@ const product: CompressorInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
   },
   "editorial": {
-    "overview": "firstAir FAS30. 4 777,052 L/min déclarés à 8,618 bar. Configuration constructeur : FAS30.",
+    "overview": "firstAir FAS30. La FAS30 annonce 168,70 cfm à 125 psi et 850 kg. Les FAS30 et FAS37 partagent l’encombrement mais ont des moteurs 30 et 37 kW et des débits différents. La ligne 150 psi décrit une autre condition ; elle ne devient plus le plafond du profil retenu à 125 psi.",
     "verifiedFacts": [
-      "Pression de la configuration documentée : 10,342 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 4 777,052 L/min déclarés à 8,618 bar."
+      "Version : FAS au sol, marché 60 Hz.",
+      "FAD à 125 psi : 168,70 cfm.",
+      "Puissance : 30 kW.",
+      "Masse du groupe : 850 kg.",
+      "Dimensions L×W×H : 1 000 × 1 250 × 1 310 mm.",
+      "Alimentation publiée : 3 phases / 60 Hz / 208–230 V ou 460 V."
     ],
     "limitations": [
-      "Fiche nord-américaine 60 Hz ; débit libre publié à 125 psi et autre version à 150 psi. Pas d’équivalence française supposée. Cuve absente de la configuration générique FAS ; options T/U non comptées comme de nouveaux modèles.",
-      "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-      "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
-      "Cuve non documentée : l’autonomie et le volume de stockage ne peuvent pas être conclus à partir de ce profil.",
-      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions."
+      "Profil 60 Hz limité au point de travail 125 psi ; aucun maximum mécanique ni équivalent européen déduit.",
+      "FAD déclaré selon ISO 1217 annexe C ; cycle de service non établi."
     ]
   },
   "specifications": [
     {
-      "label": "Configuration constructeur",
-      "value": "FAS30",
+      "label": "Version",
+      "value": "FAS au sol, marché 60 Hz",
       "evidenceIds": [
-        "october5-firstair-fas-p3"
+        "firstair-fas30-reserved-20261103-1"
       ]
     },
     {
-      "label": "Pression de la configuration retenue",
-      "value": "10,342 bar (150 psig publiés)",
+      "label": "FAD à 125 psi",
+      "value": "168,70 cfm",
       "evidenceIds": [
-        "october5-firstair-fas-p3",
-        "october5-nist-conversions-p1"
+        "firstair-fas30-reserved-20261103-1"
       ]
     },
     {
-      "label": "Cuve de stockage",
-      "value": "Non documentée en litres",
-      "evidenceIds": [
-        "october5-firstair-fas-p3"
-      ]
-    },
-    {
-      "label": "Air livré à 8,618 bar",
-      "value": "4 777,052 L/min (168,7 cfm publiés)",
-      "evidenceIds": [
-        "october5-firstair-fas-p3",
-        "october5-nist-conversions-p1"
-      ]
-    },
-    {
-      "label": "working pressure / FAD at 150psi",
-      "value": "161.30",
-      "evidenceIds": [
-        "october5-firstair-fas-p3"
-      ]
-    },
-    {
-      "label": "Qualitative manufacturer operating-use statement, no numeric duty inferred",
-      "value": "The compressors are designed for industrial applications and prove their strength when running continuously.",
-      "evidenceIds": [
-        "october5-firstair-fas-p2"
-      ]
-    },
-    {
-      "label": "Puissance publiée",
+      "label": "Puissance",
       "value": "30 kW",
       "evidenceIds": [
-        "october5-firstair-fas-p3"
+        "firstair-fas30-reserved-20261103-1"
       ]
     },
     {
-      "label": "Fréquence de la configuration retenue",
-      "value": "60 Hz",
+      "label": "Masse du groupe",
+      "value": "850 kg",
       "evidenceIds": [
-        "october5-firstair-fas-p3"
+        "firstair-fas30-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Dimensions L×W×H",
+      "value": "1 000 × 1 250 × 1 310 mm",
+      "evidenceIds": [
+        "firstair-fas30-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Alimentation publiée",
+      "value": "3 phases / 60 Hz / 208–230 V ou 460 V",
+      "evidenceIds": [
+        "firstair-fas30-reserved-20261103-1"
       ]
     }
   ],
@@ -139,18 +124,27 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-05",
       "confidence": "B",
       "notes": "SHA-256 ff6409925e188d42aa3847a84ce478e3a7a6bf6957f8d954a8bd40fac0d64fbd de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "firstair-fas30-reserved-20261103-1",
+      "sourceUrl": "https://www.firstaircompressor.com/wp-content/uploads/page/19/firstair_prospektflyer_en_500l-v3-web.pdf#page=3",
+      "sourceLabel": "firstAir : revue factuelle du 3 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-03",
+      "confidence": "B",
+      "notes": "GET complet HTTP200 SHA-256 ff6409925e188d42aa3847a84ce478e3a7a6bf6957f8d954a8bd40fac0d64fbd. La FAS30 annonce 168,70 cfm à 125 psi et 850 kg. Les FAS30 et FAS37 partagent l’encombrement mais ont des moteurs 30 et 37 kW et des débits différents. La ligne 150 psi décrit une autre condition ; elle ne devient plus le plafond du profil retenu à 125 psi."
     }
   ],
   "fieldSources": {
     "maxPressureBasis": [
-      "october5-firstair-fas-p3"
+      "firstair-fas30-reserved-20261103-1"
     ],
     "model": [
       "october5-firstair-fas-p3"
     ],
     "maxPressureBar": [
-      "october5-firstair-fas-p3",
-      "october5-nist-conversions-p1"
+      "firstair-fas30-reserved-20261103-1"
     ],
     "fadCurve": [
       "october5-firstair-fas-p3",
@@ -158,13 +152,31 @@ const product: CompressorInput = {
     ],
     "powerKw": [
       "october5-firstair-fas-p3"
+    ],
+    "weightKg": [
+      "firstair-fas30-reserved-20261103-1"
+    ],
+    "phase": [
+      "firstair-fas30-reserved-20261103-1"
+    ],
+    "voltage": [
+      "firstair-fas30-reserved-20261103-1"
+    ],
+    "editorial": [
+      "firstair-fas30-reserved-20261103-1"
+    ],
+    "specifications": [
+      "firstair-fas30-reserved-20261103-1"
     ]
   },
   "notes": [
     "Portée de la source : FAD-pressure-qualified.",
     "Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées.",
     "Les caractéristiques décrivent la configuration constructeur indiquée dans cette fiche ; les autres équipements ou alimentations doivent être vérifiés séparément."
-  ]
+  ],
+  "weightKg": 850,
+  "phase": "three-phase",
+  "voltage": "208–230 V ou 460 V / 60 Hz"
 };
 
 export default product;

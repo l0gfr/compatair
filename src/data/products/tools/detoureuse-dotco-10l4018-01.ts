@@ -34,51 +34,53 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Dotco 10L4018-01. La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner. Vitesse à vide : 18,000 tr/min. Masse publiée : 1.91 kg.",
+		"overview": "Dotco 10L4018-01. La 10L4018-01 est la détoureuse à corps aluminium et capacité de queue 1/4 pouce. La 12L4018-01 est en composite aux mêmes masse et longueur ; la 12L4018-03 passe à 3/8 pouce. Le choix de pince et de corps distingue les références. La table ne documente aucun débit ; aucune demande n’est déduite du régime 18 000 tr/min.",
 		"verifiedFacts": [
-			"Vitesse à vide : 18,000 tr/min.",
-			"Masse publiée : 1.91 kg.",
-			"Dimension publiée : 287 mm."
+			"Queue d’outil : 1/4 pouce.",
+			"Vitesse à vide : 18 000 tr/min.",
+			"Corps : Aluminium.",
+			"Longueur : 287 mm.",
+			"Masse : 1,91 kg."
 		],
 		"limitations": [
-			"La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"Aucune consommation qualifiée n’est publiée dans le tableau de cette référence ; vitesse et puissance ne fournissent pas un débit.",
+			"Catalogue constructeur identifié ; vérifier l’équipement de la révision livrée."
 		]
 	},
 	"specifications": [
 		{
+			"label": "Queue d’outil",
+			"value": "1/4 pouce",
+			"evidenceIds": [
+				"detoureuse-dotco-10l4018-01-reserved-20261103-1"
+			]
+		},
+		{
 			"label": "Vitesse à vide",
-			"value": "18,000 tr/min",
+			"value": "18 000 tr/min",
 			"evidenceIds": [
-				"october-dotco-p94"
+				"detoureuse-dotco-10l4018-01-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
-			"value": "1.91 kg",
+			"label": "Corps",
+			"value": "Aluminium",
 			"evidenceIds": [
-				"october-dotco-p94"
+				"detoureuse-dotco-10l4018-01-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Dimension publiée",
+			"label": "Longueur",
 			"value": "287 mm",
 			"evidenceIds": [
-				"october-dotco-p94"
+				"detoureuse-dotco-10l4018-01-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Localisation documentaire",
-			"value": "Cleco/Dotco, Material Removal SP-102EN, page 94",
+			"label": "Masse",
+			"value": "1,91 kg",
 			"evidenceIds": [
-				"october-dotco-p94"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "All tools performance rated @ 90 psi / 620 kPa air pressure.",
-			"evidenceIds": [
-				"october-dotco-p94"
+				"detoureuse-dotco-10l4018-01-reserved-20261103-1"
 			]
 		}
 	],
@@ -92,6 +94,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 93b7d3cdb96a91eecf95baaf172ed0953f2021cb336460e5f9a202ce7e687c10. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "detoureuse-dotco-10l4018-01-reserved-20261103-1",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/DOTCO%20Material%20Removal_SP-102EN_en.pdf#page=94",
+			"sourceLabel": "Dotco : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 93b7d3cdb96a91eecf95baaf172ed0953f2021cb336460e5f9a202ce7e687c10. La 10L4018-01 est la détoureuse à corps aluminium et capacité de queue 1/4 pouce. La 12L4018-01 est en composite aux mêmes masse et longueur ; la 12L4018-03 passe à 3/8 pouce. Le choix de pince et de corps distingue les références. La table ne documente aucun débit ; aucune demande n’est déduite du régime 18 000 tr/min."
 		}
 	],
 	"fieldSources": {
@@ -103,6 +115,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october-dotco-p94"
+		],
+		"editorial": [
+			"detoureuse-dotco-10l4018-01-reserved-20261103-1"
+		],
+		"specifications": [
+			"detoureuse-dotco-10l4018-01-reserved-20261103-1"
 		]
 	},
 	"notes": [

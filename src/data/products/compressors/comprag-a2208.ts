@@ -19,12 +19,7 @@ const product: CompressorInput = {
     }
   },
   "maxPressureBar": 8,
-  "fadCurve": [
-    {
-      "pressureBar": 8,
-      "litersPerMinute": 3600
-    }
-  ],
+  "fadCurve": [],
   "oilType": "unknown",
   "powerKw": 22,
   "confidence": "B",
@@ -36,61 +31,70 @@ const product: CompressorInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
   },
   "editorial": {
-    "overview": "Comprag A2208. 3 600 L/min déclarés à 8 bar. Configuration constructeur : Version constructeur A2208 ; alimentation triphasée 380–420 V / 50 Hz publiée.",
+    "overview": "Comprag A2208. La A2208 est le groupe A de 22 kW ; la AR2208-500 ajoute une cuve de 500 L et la ARD2208-500 un sécheur. Les variantesF2208 etD-2208 ne sont pas la référence 11100051. La table relie une capacité à une variante de pression maximale ; la pression de mesure de capacité reste à confirmer avant calcul.",
     "verifiedFacts": [
-      "Pression de la configuration documentée : 8 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 3 600 L/min déclarés à 8 bar."
+      "Référence article : 11100051.",
+      "Puissance entraînement : 22 kW.",
+      "Pression maximale de travail : 8 bar.",
+      "Capacité de la ligne, pression de mesure à confirmer : 3,6 m³/min.",
+      "Alimentation : 3phases,380–420V,50 Hz.",
+      "Masse du groupe A : 435 kg.",
+      "Dimensions H×W×D : 1 270 × 1 000 × 800 mm."
     ],
     "limitations": [
-      "Seule la version 8 bar et son code constructeur sont retenus. Les versions 10/13 bar ne sont pas comptées comme de nouveaux modèles dans ce lot.",
-      "Les tirets de la colonne réservoir ne sont pas transformés en volume nul. Les dimensions et poids des variantes ne sont pas reportés automatiquement.",
-      "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-      "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
-      "Cuve non documentée : l’autonomie et le volume de stockage ne peuvent pas être conclus à partir de ce profil."
+      "Le tiret de la colonne cuve du groupe A reste une absence de volume chiffré, jamais une cuve 0 L inventée.",
+      "Capacité selon ISO 1217 conservée dans les spécifications ; la note ne précise pas ici son appariement à une pression de mesure.",
+      "Taux de marche du groupe non publié."
     ]
   },
   "specifications": [
     {
-      "label": "Configuration constructeur",
-      "value": "Version constructeur A2208 ; alimentation triphasée 380–420 V / 50 Hz publiée",
+      "label": "Référence article",
+      "value": "11100051",
       "evidenceIds": [
-        "october7-comprag-a-p11"
+        "comprag-a2208-reserved-20261103-1"
       ]
     },
     {
-      "label": "Pression maximale publiée",
-      "value": "8 bar",
-      "evidenceIds": [
-        "october7-comprag-a-p11"
-      ]
-    },
-    {
-      "label": "Cuve de stockage",
-      "value": "Non documentée en litres",
-      "evidenceIds": [
-        "october7-comprag-a-p11"
-      ]
-    },
-    {
-      "label": "Air livré à 8 bar",
-      "value": "3 600 L/min",
-      "evidenceIds": [
-        "october7-comprag-a-p11",
-        "october7-comprag-a-p6"
-      ]
-    },
-    {
-      "label": "Puissance publiée",
+      "label": "Puissance entraînement",
       "value": "22 kW",
       "evidenceIds": [
-        "october7-comprag-a-p11"
+        "comprag-a2208-reserved-20261103-1"
       ]
     },
     {
-      "label": "Fréquence de la configuration retenue",
-      "value": "50 Hz",
+      "label": "Pression maximale de travail",
+      "value": "8 bar",
       "evidenceIds": [
-        "october7-comprag-a-p11"
+        "comprag-a2208-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Capacité de la ligne, pression de mesure à confirmer",
+      "value": "3,6 m³/min",
+      "evidenceIds": [
+        "comprag-a2208-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Alimentation",
+      "value": "3phases,380–420V,50 Hz",
+      "evidenceIds": [
+        "comprag-a2208-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Masse du groupe A",
+      "value": "435 kg",
+      "evidenceIds": [
+        "comprag-a2208-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Dimensions H×W×D",
+      "value": "1 270 × 1 000 × 800 mm",
+      "evidenceIds": [
+        "comprag-a2208-reserved-20261103-1"
       ]
     }
   ],
@@ -114,6 +118,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-07",
       "confidence": "B",
       "notes": "SHA-256 4482a7221b44be52f910b29f0e968da8e91012da4cf2e95476d10523d91aede9 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "comprag-a2208-reserved-20261103-1",
+      "sourceUrl": "https://www.comprag.com/en/comprag/docs/pdf_manual/Catalog_Stationary_Screw_Compressors_A_EN_v_1_2_web.pdf#page=11",
+      "sourceLabel": "Comprag : revue factuelle du 3 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-03",
+      "confidence": "B",
+      "notes": "GET complet HTTP200 SHA-256 4482a7221b44be52f910b29f0e968da8e91012da4cf2e95476d10523d91aede9. La A2208 est le groupe A de 22 kW ; la AR2208-500 ajoute une cuve de 500 L et la ARD2208-500 un sécheur. Les variantesF2208 etD-2208 ne sont pas la référence 11100051. La table relie une capacité à une variante de pression maximale ; la pression de mesure de capacité reste à confirmer avant calcul."
     }
   ],
   "fieldSources": {
@@ -127,14 +141,22 @@ const product: CompressorInput = {
       "october7-comprag-a-p11"
     ],
     "fadCurve": [
-      "october7-comprag-a-p11",
-      "october7-comprag-a-p6"
+      "comprag-a2208-reserved-20261103-1"
     ],
     "powerKw": [
-      "october7-comprag-a-p11"
+      "comprag-a2208-reserved-20261103-1"
     ],
     "mpn": [
       "october7-comprag-a-p11"
+    ],
+    "weightKg": [
+      "comprag-a2208-reserved-20261103-1"
+    ],
+    "editorial": [
+      "comprag-a2208-reserved-20261103-1"
+    ],
+    "specifications": [
+      "comprag-a2208-reserved-20261103-1"
     ]
   },
   "notes": [
@@ -142,7 +164,8 @@ const product: CompressorInput = {
     "Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées.",
     "Les caractéristiques décrivent la configuration constructeur indiquée dans cette fiche ; les autres équipements ou alimentations doivent être vérifiés séparément."
   ],
-  "maxPressureBasis": "explicit-maximum-working-pressure"
+  "maxPressureBasis": "explicit-maximum-working-pressure",
+  "weightKg": 435
 };
 
 export default product;

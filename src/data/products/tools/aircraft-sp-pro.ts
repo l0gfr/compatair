@@ -23,63 +23,53 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
 	},
 	"editorial": {
-		"overview": "Aircraft SP PRO, référence 2102290. Consommation moyenne publiée : 100 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 8 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Capacité maximale de cartouche : 600 ml. Masse approximative : 1.32 kg.",
+		"overview": "Aircraft SP PRO. Le SP PRO est le pistolet pour poches de mastic jusqu’à 600 ml, avec décompression rapide et réglage progressif. Le KP PRO reçoit les cartouches 310 ml, avec le même chiffre de débit 100 L/min dans cette édition. Le contenant distingue les usages. La source ne précise ni moyenne ni débit par extrusion ; ces régimes ne sont pas inventés.",
 		"verifiedFacts": [
-			"Pression de travail publiée : 8 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
-			"Consommation moyenne publiée : 100 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
-			"Référence fabricant : 2102290.",
-			"Capacité maximale de cartouche : 600 ml.",
-			"Masse approximative : 1.32 kg.",
-			"Type indiqué par le fabricant : Silicone dolls gun."
+			"Contenant : Poches de mastic jusqu’à 600 ml.",
+			"Réglage : Progressif, avec décompression rapide.",
+			"Masse approximative du catalogue : 1,3 kg.",
+			"Consommation, régime non précisé : 100 L/min.",
+			"Pression de service : 8 bar."
 		],
 		"limitations": [
-			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
-			"Une consommation moyenne ne constitue pas un débit maximal en usage continu. Vérifier le régime réel auprès du fabricant avant dimensionnement.",
-			"Écarts entre documents fabricant : Masse approximative : relevé de fiche du 27/09/2026 = 1.32 kg ; AIRCRAFT Hauptkatalog 2026/27 = 1.3kg."
+			"Aucune moyenne, aucun maximum ni aucune pression de mesure supplémentaires ne sont déduits d’un simple débit approximatif ou d’une consigne de service.",
+			"Source fabricant et édition identifiées ; équipement actuel à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression de travail publiée : 8 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
+			"label": "Contenant",
+			"value": "Poches de mastic jusqu’à 600 ml",
 			"evidenceIds": [
-				"aircraft-2102290-20260927"
+				"aircraft-sp-pro-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation moyenne publiée : 100 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
+			"label": "Réglage",
+			"value": "Progressif, avec décompression rapide",
 			"evidenceIds": [
-				"aircraft-2102290-20260927"
+				"aircraft-sp-pro-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Capacité maximale de cartouche",
-			"value": "600 ml",
+			"label": "Masse approximative du catalogue",
+			"value": "1,3 kg",
 			"evidenceIds": [
-				"aircraft-2102290-20260927"
+				"aircraft-sp-pro-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse approximative",
-			"value": "1.32 kg",
+			"label": "Consommation, régime non précisé",
+			"value": "100 L/min",
 			"evidenceIds": [
-				"aircraft-2102290-20260927"
+				"aircraft-sp-pro-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Type indiqué par le fabricant",
-			"value": "Silicone dolls gun",
+			"label": "Pression de service",
+			"value": "8 bar",
 			"evidenceIds": [
-				"aircraft-2102290-20260927"
-			]
-		},
-		{
-			"label": "Écart documentaire fabricant",
-			"value": "Masse approximative : relevé de fiche du 27/09/2026 = 1.32 kg ; AIRCRAFT Hauptkatalog 2026/27 = 1.3kg.",
-			"evidenceIds": [
-				"aircraft-2102290-20260927",
-				"aircraft-2102290-documentation-20261023"
+				"aircraft-sp-pro-reserved-20261103-1"
 			]
 		}
 	],
@@ -103,6 +93,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer 702076. Empreinte PDF SHA-256 : 09fc54df17fbb94185f0f908c05f730839632d33ab4ece61184455e12ea2469d. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
+		},
+		{
+			"id": "aircraft-sp-pro-reserved-20261103-1",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=282#page=1",
+			"sourceLabel": "Aircraft : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 09fc54df17fbb94185f0f908c05f730839632d33ab4ece61184455e12ea2469d. Le SP PRO est le pistolet pour poches de mastic jusqu’à 600 ml, avec décompression rapide et réglage progressif. Le KP PRO reçoit les cartouches 310 ml, avec le même chiffre de débit 100 L/min dans cette édition. Le contenant distingue les usages. La source ne précise ni moyenne ni débit par extrusion ; ces régimes ne sont pas inventés."
 		}
 	],
 	"fieldSources": {
@@ -116,7 +116,13 @@ const product: ToolProfileInput = {
 			"aircraft-2102290-20260927"
 		],
 		"airflowBasis": [
-			"aircraft-2102290-20260927"
+			"aircraft-sp-pro-reserved-20261103-1"
+		],
+		"editorial": [
+			"aircraft-sp-pro-reserved-20261103-1"
+		],
+		"specifications": [
+			"aircraft-sp-pro-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -127,7 +133,7 @@ const product: ToolProfileInput = {
 		"typical": 100,
 		"max": 100
 	},
-	"airflowBasis": "average"
+	"airflowBasis": "unqualified"
 };
 
 export default product;

@@ -34,62 +34,62 @@ const product: CompressorInput = {
 	},
 	"specifications": [
 		{
-			"label": "Configuration constructeur",
-			"value": "Groupe sur socle sans réservoir de stockage intégré",
+			"label": "Configuration",
+			"value": "Allegretto 8 sur socle",
 			"evidenceIds": [
-				"october3d-alup-pdf-extra-03-p8"
+				"alup-allegretto-8-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Pression maximale de fonctionnement",
-			"value": "10 bar relatifs",
+			"label": "FAD maximal à 9,5 bar",
+			"value": "63,4 m³/h ; colonne arrondie 17,6 L/s",
 			"evidenceIds": [
-				"october3d-alup-extra-21"
+				"alup-allegretto-8-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Air livré à 9,5 bar",
-			"value": "1 056,667 L/min",
+			"label": "Puissance",
+			"value": "7,5 kW",
 			"evidenceIds": [
-				"october3d-alup-pdf-extra-03-p8"
+				"alup-allegretto-8-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Cuve de stockage",
-			"value": "0 L",
+			"label": "Masse au sol",
+			"value": "193 kg",
 			"evidenceIds": [
-				"october3d-alup-pdf-extra-03-p8"
+				"alup-allegretto-8-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Alimentation publiée",
-			"value": "Alimentation non précisée dans les extraits retenus",
+			"label": "Dimensions L×W×H",
+			"value": "1 000 × 655 × 1 062 mm",
 			"evidenceIds": [
-				"october3d-alup-extra-21"
+				"alup-allegretto-8-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Fréquence retenue",
-			"value": "non précisée",
+			"label": "Mesure",
+			"value": "ISO 1217 annexe C",
 			"evidenceIds": [
-				"october3d-alup-extra-21"
+				"alup-allegretto-8-reserved-20261103-1"
 			]
 		}
 	],
 	"editorial": {
-		"overview": "ALUP Allegretto 8. 1 056,667 L/min à 9,5 bar. Groupe sur socle sans réservoir de stockage intégré.",
+		"overview": "ALUP Allegretto 8. La Allegretto 8 sur socle pèse 193 kg, contre 332 kg avec cuve 270 L et sécheur. Le maximum publié est 63,4 m³/h à 9,5 bar ; la Allegretto 11 donne 88,2 m³/h au même point. La colonne minimale à 7 bar contient des unités incohérentes (21,2 m³/h et 5,2 L/s) : aucune plage de modulation n’en est calculée.",
 		"verifiedFacts": [
-			"Air livré rattaché à une pression et aux unités originales du constructeur.",
-			"Cuve de stockage documentée : 0 L.",
-			"Pression maximale de fonctionnement publiée : 10 bar."
+			"Configuration : Allegretto 8 sur socle.",
+			"FAD maximal à 9,5 bar : 63,4 m³/h ; colonne arrondie 17,6 L/s.",
+			"Puissance : 7,5 kW.",
+			"Masse au sol : 193 kg.",
+			"Dimensions L×W×H : 1 000 × 655 × 1 062 mm.",
+			"Mesure : ISO 1217 annexe C."
 		],
 		"limitations": [
-			"Points FAD supérieurs au plafond de fonctionnement excluants, y compris lorsque le tableau présente une colonne 12,5 bar pour une famille limitée à 10 bar.",
-			"Version sur socle retenue ; réservoir externe exclu.",
-			"Cycle de service non établi ; la tenue permanente reste indéterminée.",
-			"Fréquence non publiée dans la fiche retenue ; aucune transposition des performances à 50 Hz.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"La fiche HTML reste inaccessible ; la brochure complète accessible documente cette ligne exacte.",
+			"Le minimum à 7 bar contient une incohérence de conversion ; il reste exclu du moteur.",
+			"10 bar est la pression de référence de la configuration, distincte de la mesure FAD à 9,5 bar."
 		]
 	},
 	"evidence": [
@@ -122,6 +122,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 8efff91c3dd0111e59a712f8064be251e0efd37d5e42d137a7167d2f2a69cc43 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "alup-allegretto-8-reserved-20261103-1",
+			"sourceUrl": "https://www.alup.com/content/dam/brands/Alup/products-bp-structure/oil-injected-screw-compressor/ivr/allegretto-8-14/leaflets/Alup_Sonetto8-20_Allegretto8-14_leaflet_6999640670_EN_LR.pdf#page=8",
+			"sourceLabel": "ALUP : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 8efff91c3dd0111e59a712f8064be251e0efd37d5e42d137a7167d2f2a69cc43. La Allegretto 8 sur socle pèse 193 kg, contre 332 kg avec cuve 270 L et sécheur. Le maximum publié est 63,4 m³/h à 9,5 bar ; la Allegretto 11 donne 88,2 m³/h au même point. La colonne minimale à 7 bar contient des unités incohérentes (21,2 m³/h et 5,2 L/s) : aucune plage de modulation n’en est calculée."
 		}
 	],
 	"fieldSources": {
@@ -132,19 +142,32 @@ const product: CompressorInput = {
 			"october3d-alup-pdf-extra-03-p2"
 		],
 		"maxPressureBar": [
-			"october3d-alup-extra-21",
-			"october3d-alup-extra-21"
+			"alup-allegretto-8-reserved-20261103-1"
 		],
 		"fadCurve": [
 			"october3d-alup-pdf-extra-03-p8"
 		],
 		"powerKw": [
 			"october3d-alup-pdf-extra-03-p8"
+		],
+		"weightKg": [
+			"alup-allegretto-8-reserved-20261103-1"
+		],
+		"maxPressureBasis": [
+			"alup-allegretto-8-reserved-20261103-1"
+		],
+		"editorial": [
+			"alup-allegretto-8-reserved-20261103-1"
+		],
+		"specifications": [
+			"alup-allegretto-8-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Pression FAD, plage de fonctionnement et pression de soupape restent distinctes. ISO 1217 n’est pas ajoutée à une source qui ne la revendique pas."
-	]
+	],
+	"weightKg": 193,
+	"maxPressureBasis": "selected-working-pressure-ceiling"
 };
 
 export default product;

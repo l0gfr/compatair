@@ -1,4 +1,5 @@
 import { createHash } from 'node:crypto';
+import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { agentFidelityBenchmark } from '../data/agent-fidelity';
 import { evaluateAgentFidelity } from '../../scripts/lib/evaluate-agent-fidelity.mjs';
@@ -15,6 +16,21 @@ function expectedResponse(scenario: (typeof agentFidelityBenchmark.scenarios)[nu
 }
 
 describe('public agent fidelity benchmark', () => {
+ it('preserves99 pinned pairs and documents the sole retired-demand replacement without a positive verdict', () => {
+  const panel = JSON.parse(readFileSync(new URL('../../config/agent-benchmark-panel.json', import.meta.url), 'utf8'));
+  const correction = panel.reviewedCorrections.at(-1);
+  expect(correction.before.tool_id).toBe('shinano-si-1288');
+  expect(correction.after.tool_id).toBe('red-rooster-rrw-2403');
+  const historical = structuredClone(panel);
+  historical.pairs[0] = correction.before;
+  delete historical.reviewedCorrections;
+  expect(createHash('sha256').update(JSON.stringify(historical, null, 2) + '\n').digest('hex')).toBe(correction.previousPanelSha256);
+  expect(panel.pairs).toHaveLength(100);
+  expect(panel.pairs.slice(1)).toEqual(historical.pairs.slice(1));
+  expect(agentFidelityBenchmark.scenarios[0].input).toEqual(correction.after);
+  expect(agentFidelityBenchmark.scenarios[0].expected.air_supply_verdict.engine_verdict).toBe('insufficient_data');
+ });
+
 	it('publishes exactly 100 deterministic, scoped and attributable scenarios', () => {
 		expect(agentFidelityBenchmark.scenarioCount).toBe(100);
 		expect(new Set(agentFidelityBenchmark.scenarios.map((item) => item.scenario_id)).size).toBe(100);

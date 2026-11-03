@@ -29,10 +29,13 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Michigan Pneumatic MP-1241P-ST. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 2.6 lbs. Ligne technique constructeur : MP-1241P-ST 3/8\" Friction Ring 430 ft-lbs 6\" 2.6 lbs 1/4\" 3/8\" 4 cfm.",
+		"overview": "Michigan Pneumatic MP-1241P-ST. La MP-1241P-ST est la version 3/8 pouce à bague de friction ; la MP-1243P-ST passe à 1/2 pouce avec le même maximum 430 ft-lb, longueur 6 pouces et masse 2,6 lb. Le carré distingue donc le montage, pas une puissance inventée. Les 4 CFM sont moyens.",
 		"verifiedFacts": [
 			"Masse publiée : 2.6 lbs.",
-			"Ligne technique constructeur : MP-1241P-ST 3/8\" Friction Ring 430 ft-lbs 6\" 2.6 lbs 1/4\" 3/8\" 4 cfm."
+			"Ligne technique constructeur : MP-1241P-ST 3/8\" Friction Ring 430 ft-lbs 6\" 2.6 lbs 1/4\" 3/8\" 4 cfm.",
+			"Carré : 3/8 pouce, bague de friction.",
+			"Couple maximal : 430 ft-lb.",
+			"Mécanisme : Twin hammer."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -68,6 +71,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-michigan-7-pdf-p4"
 			]
+		},
+		{
+			"label": "Carré",
+			"value": "3/8 pouce, bague de friction",
+			"evidenceIds": [
+				"cle-a-chocs-michigan-pneumatic-mp-1241p-st-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Couple maximal",
+			"value": "430 ft-lb",
+			"evidenceIds": [
+				"cle-a-chocs-michigan-pneumatic-mp-1241p-st-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Mécanisme",
+			"value": "Twin hammer",
+			"evidenceIds": [
+				"cle-a-chocs-michigan-pneumatic-mp-1241p-st-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -80,6 +104,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : a1687b8bb3cba9d23a149afc4b20cc7e6ef0de7bd0ef325710c0b6de8d82e49d. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-chocs-michigan-pneumatic-mp-1241p-st-reserved-20261103-1",
+			"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/7-Impact%20Wrenches_V2.pdf#page=4",
+			"sourceLabel": "Michigan Pneumatic : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 a1687b8bb3cba9d23a149afc4b20cc7e6ef0de7bd0ef325710c0b6de8d82e49d. La MP-1241P-ST est la version 3/8 pouce à bague de friction ; la MP-1243P-ST passe à 1/2 pouce avec le même maximum 430 ft-lb, longueur 6 pouces et masse 2,6 lb. Le carré distingue donc le montage, pas une puissance inventée. Les 4 CFM sont moyens."
 		}
 	],
 	"fieldSources": {
@@ -91,6 +125,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-michigan-7-pdf-p4"
+		],
+		"editorial": [
+			"cle-a-chocs-michigan-pneumatic-mp-1241p-st-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-chocs-michigan-pneumatic-mp-1241p-st-reserved-20261103-1"
 		]
 	},
 	"notes": [

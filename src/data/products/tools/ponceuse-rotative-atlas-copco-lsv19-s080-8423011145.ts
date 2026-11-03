@@ -38,46 +38,76 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Atlas Copco LSV19 S080 (réf. 8423011145). Consommation maximale : 678 L/min à 6,3 bar. Consommations originales : 11.3 L/s ; 23.9 cfm ; 6.5 L/s ; 13.8 cfm. Vitesse à vide : 8000 tr/min.",
+		"overview": "Atlas Copco LSV19 S080. La LSV19 S080 donne 8 000 tr/min ; la S120 donne 12 000 tr/min et 0,46 kW. Leurs consommations à vide diffèrent, tandis que la colonne à puissance maximale conserve 11,3 L/s. Les 678 L/min retenus appartiennent à cette dernière colonne, avec les 390 L/min à vide visibles séparément.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 221.",
-			"Consommations originales : 11.3 L/s ; 23.9 cfm ; 6.5 L/s ; 13.8 cfm.",
-			"Vitesse à vide : 8000 tr/min.",
-			"Masse : 0.6 kg."
+			"Code : 8423 0111 45.",
+			"Plateau conseillé : 75 mm.",
+			"Vitesse maximale à vide : 8 000 tr/min.",
+			"Puissance maximale : 0,37 kW.",
+			"Longueur : 185 mm.",
+			"Masse : 0,6 kg.",
+			"Consommation à puissance maximale : 11,3 L/s à 6,3 bar.",
+			"Consommation à vide distincte : 6,5 L/s."
 		],
 		"limitations": [
-			"Le débit publié conserve son régime de mesure ; aucun cycle supposé ne réduit la consommation.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"Conditions générales constructeur : air libre, pression 6,3 bar ; les régimes explicitement inscrits dans la table restent prioritaires."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 221",
+			"label": "Code",
+			"value": "8423 0111 45",
 			"evidenceIds": [
-				"documented-d-atlas-tools-p221"
+				"ponceuse-rotative-atlas-copco-lsv19-s080-8423011145-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommations originales",
-			"value": "11.3 L/s ; 23.9 cfm ; 6.5 L/s ; 13.8 cfm",
+			"label": "Plateau conseillé",
+			"value": "75 mm",
 			"evidenceIds": [
-				"documented-d-atlas-tools-p221"
+				"ponceuse-rotative-atlas-copco-lsv19-s080-8423011145-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse à vide",
-			"value": "8000 tr/min",
+			"label": "Vitesse maximale à vide",
+			"value": "8 000 tr/min",
 			"evidenceIds": [
-				"documented-d-atlas-tools-p221"
+				"ponceuse-rotative-atlas-copco-lsv19-s080-8423011145-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Puissance maximale",
+			"value": "0,37 kW",
+			"evidenceIds": [
+				"ponceuse-rotative-atlas-copco-lsv19-s080-8423011145-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "185 mm",
+			"evidenceIds": [
+				"ponceuse-rotative-atlas-copco-lsv19-s080-8423011145-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Masse",
-			"value": "0.6 kg",
+			"value": "0,6 kg",
 			"evidenceIds": [
-				"documented-d-atlas-tools-p221"
+				"ponceuse-rotative-atlas-copco-lsv19-s080-8423011145-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation à puissance maximale",
+			"value": "11,3 L/s à 6,3 bar",
+			"evidenceIds": [
+				"ponceuse-rotative-atlas-copco-lsv19-s080-8423011145-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation à vide distincte",
+			"value": "6,5 L/s",
+			"evidenceIds": [
+				"ponceuse-rotative-atlas-copco-lsv19-s080-8423011145-reserved-20261103-1"
 			]
 		}
 	],
@@ -101,6 +131,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "ponceuse-rotative-atlas-copco-lsv19-s080-8423011145-reserved-20261103-1",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf#page=221",
+			"sourceLabel": "Atlas Copco : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. La LSV19 S080 donne 8 000 tr/min ; la S120 donne 12 000 tr/min et 0,46 kW. Leurs consommations à vide diffèrent, tandis que la colonne à puissance maximale conserve 11,3 L/s. Les 678 L/min retenus appartiennent à cette dernière colonne, avec les 390 L/min à vide visibles séparément."
+		},
+		{
+			"id": "ponceuse-rotative-atlas-copco-lsv19-s080-8423011145-reserved-20261103-1-3",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf#page=3",
+			"sourceLabel": "Atlas Copco : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. La LSV19 S080 donne 8 000 tr/min ; la S120 donne 12 000 tr/min et 0,46 kW. Leurs consommations à vide diffèrent, tandis que la colonne à puissance maximale conserve 11,3 L/s. Les 678 L/min retenus appartiennent à cette dernière colonne, avec les 390 L/min à vide visibles séparément."
 		}
 	],
 	"fieldSources": {
@@ -113,6 +163,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"documented-d-atlas-tools-p221"
+		],
+		"editorial": [
+			"ponceuse-rotative-atlas-copco-lsv19-s080-8423011145-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-rotative-atlas-copco-lsv19-s080-8423011145-reserved-20261103-1"
 		]
 	},
 	"notes": [

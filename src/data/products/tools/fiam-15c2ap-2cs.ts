@@ -23,75 +23,60 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Fiam 15C2AP-2CS, référence 112509895. Le tableau fabricant publie 360 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple de serrage indicatif : 0.6÷2.2 Nm. Vitesse à vide : 2200 tr/min.",
+		"overview": "Fiam 15C2AP-2CS. La 15C2AP-2CS est la version pistolet à double signal pneumatique, code 112509895, dimensions 37 × 209 × 157 mm. La 15C2APA-2CS partage couple et débit mais mesure 31 × 178 × 156 mm. Les six litres par seconde restent une consommation de régime non précisé ; le signal pneumatique ne qualifie pas le débit à lui seul.",
 		"verifiedFacts": [
-			"La brochure associée à cette fiche indique une pression de mesure et d’utilisation recommandée de 6,3 bar (ISO 2787).",
-			"La fiche fabricant publie 6 L/s, soit 360 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML.",
-			"Référence fabricant : 112509895.",
-			"Couple de serrage indicatif : 0.6÷2.2 Nm.",
-			"Vitesse à vide : 2200 tr/min.",
-			"Masse publiée : 0.7 kg."
+			"Fonction : Visseuse pistolet à double signal pneumatique.",
+			"Couple indicatif : 0,6–2,2 Nm.",
+			"Vitesse à vide : 2 200 tr/min.",
+			"Masse : 0,70 kg.",
+			"Dimensions : 37 × 209 × 157 mm.",
+			"Consommation, régime non précisé : 6 L/s."
 		],
 		"limitations": [
-			"Le couple éventuel est indicatif : l’assemblage, l’accessoire et la pression dynamique influencent le résultat.",
-			"Consommation déclarée par le fabricant, sans essai indépendant ni garantie d’un maximum à tous les régimes."
+			"Le régime de consommation n’est pas précisé ; la valeur reste non dimensionnante et le verdict demeure insufficient_data."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "La brochure associée à cette fiche indique une pression de mesure et d’utilisation recommandée de 6,3 bar (ISO 2787).",
+			"label": "Fonction",
+			"value": "Visseuse pistolet à double signal pneumatique",
 			"evidenceIds": [
-				"fiam-112509895-20260926-workingpressurebar-1"
+				"fiam-15c2ap-2cs-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "La fiche fabricant publie 6 L/s, soit 360 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML.",
+			"label": "Couple indicatif",
+			"value": "0,6–2,2 Nm",
 			"evidenceIds": [
-				"fiam-112509895-20260926"
-			]
-		},
-		{
-			"label": "Couple de serrage indicatif",
-			"value": "0.6÷2.2 Nm",
-			"evidenceIds": [
-				"fiam-112509895-20260926"
+				"fiam-15c2ap-2cs-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Vitesse à vide",
-			"value": "2200 tr/min",
+			"value": "2 200 tr/min",
 			"evidenceIds": [
-				"fiam-112509895-20260926"
+				"fiam-15c2ap-2cs-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
-			"value": "0.7 kg",
+			"label": "Masse",
+			"value": "0,70 kg",
 			"evidenceIds": [
-				"fiam-112509895-20260926"
+				"fiam-15c2ap-2cs-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Dimensions publiées",
-			"value": "Ø 37 x L 209 x H 157 mm",
+			"label": "Dimensions",
+			"value": "37 × 209 × 157 mm",
 			"evidenceIds": [
-				"fiam-112509895-20260926"
+				"fiam-15c2ap-2cs-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Entraînement",
-			"value": "FEMALE HEXAGONAL DRIVE 1/4\"",
+			"label": "Consommation, régime non précisé",
+			"value": "6 L/s",
 			"evidenceIds": [
-				"fiam-112509895-20260926"
-			]
-		},
-		{
-			"label": "Démarrage",
-			"value": "Push button",
-			"evidenceIds": [
-				"fiam-112509895-20260926"
+				"fiam-15c2ap-2cs-reserved-20261103-1"
 			]
 		}
 	],
@@ -113,6 +98,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+		},
+		{
+			"id": "fiam-15c2ap-2cs-reserved-20261103-1",
+			"sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-85.pdf#page=15",
+			"sourceLabel": "Fiam : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 e1c8db38588668ff2347c0005a43ac3067609b0b280d80dc3548f0d8043dccce. La 15C2AP-2CS est la version pistolet à double signal pneumatique, code 112509895, dimensions 37 × 209 × 157 mm. La 15C2APA-2CS partage couple et débit mais mesure 31 × 178 × 156 mm. Les six litres par seconde restent une consommation de régime non précisé ; le signal pneumatique ne qualifie pas le débit à lui seul."
 		}
 	],
 	"fieldSources": {
@@ -124,6 +119,15 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"fiam-112509895-20260926"
+		],
+		"airflowBasis": [
+			"fiam-15c2ap-2cs-reserved-20261103-1"
+		],
+		"editorial": [
+			"fiam-15c2ap-2cs-reserved-20261103-1"
+		],
+		"specifications": [
+			"fiam-15c2ap-2cs-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -133,7 +137,8 @@ const product: ToolProfileInput = {
 		"min": 360,
 		"typical": 360,
 		"max": 360
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

@@ -38,51 +38,68 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZNRS-71-6346. Consommation moyenne : 28,3 L/min ; pression publiée : 6,2 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Vitesse à vide : 12000 tr/min. Masse : 0.5 kg.",
+		"overview": "ZIPP ZNRS-71-6346. La ZNRS-71-6346 est une petite ponceuse de correction localisée, plateau 32 mm et orbite 3 mm, distincte des ZP347-6/ZP349-6 de 6 pouces. La table publie 28,3 L/min moyens : ce chiffre ne devient pas une consommation maximale, même pour un petit plateau.",
 		"verifiedFacts": [
-			"Vitesse à vide : 12000 tr/min.",
-			"Masse : 0.5 kg.",
-			"Référence constructeur : ZNRS-71-6346."
+			"Usage déclaré : Nib Removal Sander, correction localisée de défauts.",
+			"Plateau : 32 mm.",
+			"Orbite : 3 mm.",
+			"Vitesse à vide : 12 000 tr/min.",
+			"Longueur : 197 mm.",
+			"Masse : 0,5 kg.",
+			"Consommation moyenne : 1 cfm (28,3 L/min)."
 		],
 		"limitations": [
-			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
-			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+			"Consommation moyenne ou de régime non précisé, sans qualification maximale/en charge ni appariement de pression de mesure suffisant : aucun verdict conclusif n’en est déduit."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Vitesse à vide",
-			"value": "12000 tr/min",
+			"label": "Usage déclaré",
+			"value": "Nib Removal Sander, correction localisée de défauts",
 			"evidenceIds": [
-				"october-b-zipp-tools-p131"
+				"ponceuse-orbitale-zipp-znrs-71-6346-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Plateau",
+			"value": "32 mm",
+			"evidenceIds": [
+				"ponceuse-orbitale-zipp-znrs-71-6346-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Orbite",
+			"value": "3 mm",
+			"evidenceIds": [
+				"ponceuse-orbitale-zipp-znrs-71-6346-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "12 000 tr/min",
+			"evidenceIds": [
+				"ponceuse-orbitale-zipp-znrs-71-6346-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "197 mm",
+			"evidenceIds": [
+				"ponceuse-orbitale-zipp-znrs-71-6346-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Masse",
-			"value": "0.5 kg",
+			"value": "0,5 kg",
 			"evidenceIds": [
-				"october-b-zipp-tools-p131"
+				"ponceuse-orbitale-zipp-znrs-71-6346-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Référence constructeur",
-			"value": "ZNRS-71-6346",
+			"label": "Consommation moyenne",
+			"value": "1 cfm (28,3 L/min)",
 			"evidenceIds": [
-				"october-b-zipp-tools-p131"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "Operating Air Pressure: 90psi/6.2",
-			"evidenceIds": [
-				"october-b-zipp-tools-p131"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "ZIPP, catalogue général pneumatique, page PDF 131",
-			"evidenceIds": [
-				"october-b-zipp-tools-p131"
+				"ponceuse-orbitale-zipp-znrs-71-6346-reserved-20261103-1"
 			]
 		}
 	],
@@ -96,6 +113,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-orbitale-zipp-znrs-71-6346-reserved-20261103-1",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=131",
+			"sourceLabel": "ZIPP : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. La ZNRS-71-6346 est une petite ponceuse de correction localisée, plateau 32 mm et orbite 3 mm, distincte des ZP347-6/ZP349-6 de 6 pouces. La table publie 28,3 L/min moyens : ce chiffre ne devient pas une consommation maximale, même pour un petit plateau."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +137,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-b-zipp-tools-p131"
+		],
+		"editorial": [
+			"ponceuse-orbitale-zipp-znrs-71-6346-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-orbitale-zipp-znrs-71-6346-reserved-20261103-1"
 		]
 	},
 	"notes": [

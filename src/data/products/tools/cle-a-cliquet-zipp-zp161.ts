@@ -38,51 +38,60 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZP161. Consommation moyenne : 85 L/min ; pression publiée : 6,2 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Vitesse à vide : 175 tr/min. Masse : 1.18 kg.",
+		"overview": "ZIPP ZP161. La ZP161 utilise un carré 1/2 pouce ; la ZP163 utilise 3/8 pouce. Les deux publient 68 Nm maximum, 175 tr/min et 265 mm. Les ZP168/169 sont d’autres cliquets plus compacts et plus rapides ; changer de carré dans la paire 161/163 ne change pas le couple publié.",
 		"verifiedFacts": [
+			"Carré : 1/2 pouce.",
+			"Couple maximal : 68 Nm.",
 			"Vitesse à vide : 175 tr/min.",
-			"Masse : 1.18 kg.",
-			"Référence constructeur : ZP161."
+			"Longueur : 265 mm.",
+			"Masse : 1,18 kg.",
+			"Consommation moyenne : 85 L/min."
 		],
 		"limitations": [
-			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
-			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+			"Consommation moyenne ou de régime non précisé, sans qualification maximale/en charge ni appariement de pression de mesure suffisant : aucun verdict conclusif n’en est déduit."
 		]
 	},
 	"specifications": [
 		{
+			"label": "Carré",
+			"value": "1/2 pouce",
+			"evidenceIds": [
+				"cle-a-cliquet-zipp-zp161-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Couple maximal",
+			"value": "68 Nm",
+			"evidenceIds": [
+				"cle-a-cliquet-zipp-zp161-reserved-20261103-1"
+			]
+		},
+		{
 			"label": "Vitesse à vide",
 			"value": "175 tr/min",
 			"evidenceIds": [
-				"october-b-zipp-tools-p19"
+				"cle-a-cliquet-zipp-zp161-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "265 mm",
+			"evidenceIds": [
+				"cle-a-cliquet-zipp-zp161-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Masse",
-			"value": "1.18 kg",
+			"value": "1,18 kg",
 			"evidenceIds": [
-				"october-b-zipp-tools-p19"
+				"cle-a-cliquet-zipp-zp161-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Référence constructeur",
-			"value": "ZP161",
+			"label": "Consommation moyenne",
+			"value": "85 L/min",
 			"evidenceIds": [
-				"october-b-zipp-tools-p19"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "Operating Air Pressure: 90(6.2",
-			"evidenceIds": [
-				"october-b-zipp-tools-p19"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "ZIPP, catalogue général pneumatique, page PDF 19",
-			"evidenceIds": [
-				"october-b-zipp-tools-p19"
+				"cle-a-cliquet-zipp-zp161-reserved-20261103-1"
 			]
 		}
 	],
@@ -96,6 +105,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-cliquet-zipp-zp161-reserved-20261103-1",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=19",
+			"sourceLabel": "ZIPP : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. La ZP161 utilise un carré 1/2 pouce ; la ZP163 utilise 3/8 pouce. Les deux publient 68 Nm maximum, 175 tr/min et 265 mm. Les ZP168/169 sont d’autres cliquets plus compacts et plus rapides ; changer de carré dans la paire 161/163 ne change pas le couple publié."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +129,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-b-zipp-tools-p19"
+		],
+		"editorial": [
+			"cle-a-cliquet-zipp-zp161-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-cliquet-zipp-zp161-reserved-20261103-1"
 		]
 	},
 	"notes": [

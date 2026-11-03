@@ -23,96 +23,61 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
 	},
 	"editorial": {
-		"overview": "Aircraft RS 1/2\" VT PRO, référence 2401565. Consommation moyenne publiée : 124 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Diamètre intérieur du flexible : 13 mm. Vitesse de rotation : 150 min¯¹.",
+		"overview": "Aircraft RS 1/2\" VT PRO. Le RS 1/2 VT PRO est le cliquet carré 1/2 pouce, 150 tr/min et 68 Nm en serrage comme en desserrage. Le RS 1/4 VT PRO possède un autre carré et une autre moyenne publiée, 122 contre 124 L/min. Une consommation moyenne ne confirme pas le débit maximal pendant le serrage.",
 		"verifiedFacts": [
-			"Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
-			"Consommation moyenne publiée : 124 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
-			"Référence fabricant : 2401565.",
-			"Diamètre intérieur du flexible : 13 mm.",
-			"Vitesse de rotation : 150 min¯¹.",
-			"Mandrin ou entraînement publié : ½ \"."
+			"Carré : 1/2 pouce.",
+			"Couples maximal de serrage et desserrage : 68 Nm.",
+			"Vitesse : 150 tr/min.",
+			"Dimensions approximatives : 256 × 47,8 × 56,3 mm.",
+			"Masse approximative : 1,2 kg.",
+			"Consommation moyenne explicite : 124 L/min."
 		],
 		"limitations": [
-			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
-			"Une consommation moyenne ne constitue pas un débit maximal en usage continu. Vérifier le régime réel auprès du fabricant avant dimensionnement."
+			"Aucune moyenne, aucun maximum ni aucune pression de mesure supplémentaires ne sont déduits d’un simple débit approximatif ou d’une consigne de service.",
+			"Source fabricant et édition identifiées ; équipement actuel à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
+			"label": "Carré",
+			"value": "1/2 pouce",
 			"evidenceIds": [
-				"aircraft-2401565-20260927"
+				"aircraft-rs-1-2-vt-pro-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation moyenne publiée : 124 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
-			"evidenceIds": [
-				"aircraft-2401565-20260927"
-			]
-		},
-		{
-			"label": "Diamètre intérieur du flexible",
-			"value": "13 mm",
-			"evidenceIds": [
-				"aircraft-2401565-20260927"
-			]
-		},
-		{
-			"label": "Vitesse de rotation",
-			"value": "150 min¯¹",
-			"evidenceIds": [
-				"aircraft-2401565-20260927"
-			]
-		},
-		{
-			"label": "Mandrin ou entraînement publié",
-			"value": "½ \"",
-			"evidenceIds": [
-				"aircraft-2401565-20260927"
-			]
-		},
-		{
-			"label": "Couple maximal de serrage",
+			"label": "Couples maximal de serrage et desserrage",
 			"value": "68 Nm",
 			"evidenceIds": [
-				"aircraft-2401565-20260927"
+				"aircraft-rs-1-2-vt-pro-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Couple maximal de desserrage",
-			"value": "68 Nm",
+			"label": "Vitesse",
+			"value": "150 tr/min",
 			"evidenceIds": [
-				"aircraft-2401565-20260927"
+				"aircraft-rs-1-2-vt-pro-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur approximative",
-			"value": "256 mm",
+			"label": "Dimensions approximatives",
+			"value": "256 × 47,8 × 56,3 mm",
 			"evidenceIds": [
-				"aircraft-2401565-20260927"
+				"aircraft-rs-1-2-vt-pro-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Largeur approximative",
-			"value": "47,8 mm",
+			"label": "Masse approximative",
+			"value": "1,2 kg",
 			"evidenceIds": [
-				"aircraft-2401565-20260927"
+				"aircraft-rs-1-2-vt-pro-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Hauteur approximative",
-			"value": "56.3 mm",
+			"label": "Consommation moyenne explicite",
+			"value": "124 L/min",
 			"evidenceIds": [
-				"aircraft-2401565-20260927"
-			]
-		},
-		{
-			"label": "Type indiqué par le fabricant",
-			"value": "Ratchet screwdriver",
-			"evidenceIds": [
-				"aircraft-2401565-20260927"
+				"aircraft-rs-1-2-vt-pro-reserved-20261103-1"
 			]
 		}
 	],
@@ -136,6 +101,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer 702076. Empreinte PDF SHA-256 : d3ff1227dfeec8ba33219f229723e8cbd9f1ae309a7d5950cdadd05cecc9eee3. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
+		},
+		{
+			"id": "aircraft-rs-1-2-vt-pro-reserved-20261103-1",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=254#page=1",
+			"sourceLabel": "Aircraft : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 d3ff1227dfeec8ba33219f229723e8cbd9f1ae309a7d5950cdadd05cecc9eee3. Le RS 1/2 VT PRO est le cliquet carré 1/2 pouce, 150 tr/min et 68 Nm en serrage comme en desserrage. Le RS 1/4 VT PRO possède un autre carré et une autre moyenne publiée, 122 contre 124 L/min. Une consommation moyenne ne confirme pas le débit maximal pendant le serrage."
 		}
 	],
 	"fieldSources": {
@@ -150,6 +125,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"aircraft-2401565-20260927"
+		],
+		"editorial": [
+			"aircraft-rs-1-2-vt-pro-reserved-20261103-1"
+		],
+		"specifications": [
+			"aircraft-rs-1-2-vt-pro-reserved-20261103-1"
 		]
 	},
 	"notes": [

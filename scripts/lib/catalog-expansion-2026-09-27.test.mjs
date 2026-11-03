@@ -1,3 +1,4 @@
+import { applyReservedNovember3Followup } from './reviewed-catalog-amendments-2026-11-03-reserved.mjs';
 import { applyReservedOctober31Followup } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { applyReviewedOctober25Amendment } from './reviewed-catalog-amendments-2026-10-25.mjs';
 import { applyReviewedAircraftSourceRepair } from './reviewed-aircraft-sources-2026-10-23.mjs';
@@ -39,7 +40,7 @@ const withEarlierReviewedSources = product => {
  return updated;
 };
 const withReviewedSourcesBeforeReserved = product => product.id === 'aircraft-airboy-kitt-90' ? applyReviewedOctober25Amendment(applyReviewedAircraftSourceRepair(withEarlierReviewedSources(product))) : applyReviewedAircraftSourceRepair(withEarlierReviewedSources(product));
-const withReviewedSources = product => applyReservedOctober31Followup(withReviewedSourcesBeforeReserved(product));
+const withReviewedSources = product => applyReservedNovember3Followup(applyReservedOctober31Followup(withReviewedSourcesBeforeReserved(product)));
 const mutate = (kind, brand, patch) => {
  const data = structuredClone(snapshots);
  const row = data[kind].rows.find(r => r.brand === brand);

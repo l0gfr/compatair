@@ -77,19 +77,76 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4c-sullair-senergy-p8"
       ]
+    },
+    {
+      "label": "Configuration",
+      "value": "50 Hz, vitesse fixe",
+      "evidenceIds": [
+        "sullair-2200-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Point retenu, unités originales",
+      "value": "102 cfm à175 psi (environ2 888,318 L/min à12,066 bar)",
+      "evidenceIds": [
+        "sullair-2200-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Puissance publiée",
+      "value": "22 kW /30 hp",
+      "evidenceIds": [
+        "sullair-2200-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Masse publiée",
+      "value": "658 kg",
+      "evidenceIds": [
+        "sullair-2200-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Dimensions L×W×H",
+      "value": "1 351 × 800 × 1 351 mm",
+      "evidenceIds": [
+        "sullair-2200-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Raccord de sortie",
+      "value": "1½\" NPT",
+      "evidenceIds": [
+        "sullair-2200-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Méthode de capacité",
+      "value": "CAGI/PNEUROP PN2CPTC2, annexe C ISO 1217",
+      "evidenceIds": [
+        "sullair-2200-reserved-20261103-1"
+      ]
     }
   ],
   "editorial": {
-    "overview": "Sullair 2200. 2 888,318 L/min déclarés à 12,066 bar. Configuration constructeur : Compresseur S-energy à vitesse fixe, configuration 50 Hz.",
+    "overview": "Sullair 2200. À50 Hz et 175 psi, les 2200 et 2200V publient tous deux102 cfm àpleine charge. Le suffixeV identifie la vitesse variable ; les masses diffèrent,658 et 676 kg. Le choix de régulation ne se résume donc pas à ce seul point de débit, et le taux de marche reste à confirmer.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 12,066 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 2 888,318 L/min déclarés à 12,066 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 2 888,318 L/min déclarés à 12,066 bar.",
+      "Configuration : 50 Hz, vitesse fixe.",
+      "Point retenu, unités originales : 102 cfm à175 psi (environ2 888,318 L/min à12,066 bar).",
+      "Puissance publiée : 22 kW /30 hp.",
+      "Masse publiée : 658 kg.",
+      "Dimensions L×W×H : 1 351 × 800 × 1 351 mm.",
+      "Raccord de sortie : 1½\" NPT.",
+      "Méthode de capacité : CAGI/PNEUROP PN2CPTC2, annexe C ISO 1217."
     ],
     "limitations": [
       "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
       "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
       "Cuve non documentée : l’autonomie et le volume de stockage ne peuvent pas être conclus à partir de ce profil.",
-      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions."
+      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions.",
+      "La ligne 2200 à125 psi affiche121 cfm et 3,03 m³/min, valeurs non équivalentes ; ce point est écarté du moteur."
     ]
   },
   "evidence": [
@@ -112,6 +169,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 057d9641caab13e6632aa7f70eeb1b76d676ae3e131b3e6ed73b8bf6ca0c28c3 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "sullair-2200-reserved-20261103-1",
+      "sourceUrl": "https://europe.sullair.com/sites/default/files/2024-09/LIT_S-energy%2025-40%20hp%20Brochure_en.pdf#page=8",
+      "sourceLabel": "Sullair : revue factuelle du 3 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-03",
+      "confidence": "B",
+      "notes": "GET complet HTTP200 SHA-256 0bfcedbf70fc8d6c6c7cb4255d260d7d029e3372c9459abec79267e5893786cd. À50 Hz et 175 psi, les 2200 et 2200V publient tous deux102 cfm àpleine charge. Le suffixeV identifie la vitesse variable ; les masses diffèrent,658 et 676 kg. Le choix de régulation ne se résume donc pas à ce seul point de débit, et le taux de marche reste à confirmer."
     }
   ],
   "fieldSources": {
@@ -131,6 +198,12 @@ const product: CompressorInput = {
     ],
     "powerKw": [
       "october4c-sullair-senergy-p8"
+    ],
+    "editorial": [
+      "sullair-2200-reserved-20261103-1"
+    ],
+    "specifications": [
+      "sullair-2200-reserved-20261103-1"
     ]
   },
   "notes": [

@@ -34,51 +34,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Dotco 10L2751-80. La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner. Vitesse à vide : 9,000 tr/min. Masse publiée : 1.41 kg.",
+		"overview": "Dotco 10L2751-80. La 10L2751-80 est le modèle aluminium à disque 127 mm, filetage 5/8-11 et 9 000 tr/min. La 12L2751-80 est en composite, longueur 249 mm et masse 1,54 kg contre 216 mm et 1,41 kg. Le matériau de corps change avec l’encombrement, sans fournir de donnée de consommation ; le calcul reste indéterminé.",
 		"verifiedFacts": [
-			"Vitesse à vide : 9,000 tr/min.",
-			"Masse publiée : 1.41 kg.",
-			"Dimension publiée : 216 mm."
+			"Disque de ponçage/polissage : 5 pouces (127 mm).",
+			"Filetage extérieur : 5/8-11.",
+			"Vitesse à vide : 9 000 tr/min.",
+			"Corps : Aluminium.",
+			"Longueur : 216 mm.",
+			"Masse : 1,41 kg."
 		],
 		"limitations": [
-			"La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"Aucune consommation qualifiée n’est publiée dans le tableau de cette référence ; vitesse et puissance ne fournissent pas un débit.",
+			"Catalogue constructeur identifié ; vérifier l’équipement de la révision livrée."
 		]
 	},
 	"specifications": [
 		{
+			"label": "Disque de ponçage/polissage",
+			"value": "5 pouces (127 mm)",
+			"evidenceIds": [
+				"ponceuse-rotative-dotco-10l2751-80-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Filetage extérieur",
+			"value": "5/8-11",
+			"evidenceIds": [
+				"ponceuse-rotative-dotco-10l2751-80-reserved-20261103-1"
+			]
+		},
+		{
 			"label": "Vitesse à vide",
-			"value": "9,000 tr/min",
+			"value": "9 000 tr/min",
 			"evidenceIds": [
-				"october-dotco-p52"
+				"ponceuse-rotative-dotco-10l2751-80-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
-			"value": "1.41 kg",
+			"label": "Corps",
+			"value": "Aluminium",
 			"evidenceIds": [
-				"october-dotco-p52"
+				"ponceuse-rotative-dotco-10l2751-80-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Dimension publiée",
+			"label": "Longueur",
 			"value": "216 mm",
 			"evidenceIds": [
-				"october-dotco-p52"
+				"ponceuse-rotative-dotco-10l2751-80-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Localisation documentaire",
-			"value": "Cleco/Dotco, Material Removal SP-102EN, page 52",
+			"label": "Masse",
+			"value": "1,41 kg",
 			"evidenceIds": [
-				"october-dotco-p52"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "All tools performance rated @ 90 psi / 620 kPa air pressure.",
-			"evidenceIds": [
-				"october-dotco-p52"
+				"ponceuse-rotative-dotco-10l2751-80-reserved-20261103-1"
 			]
 		}
 	],
@@ -92,6 +102,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 93b7d3cdb96a91eecf95baaf172ed0953f2021cb336460e5f9a202ce7e687c10. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-rotative-dotco-10l2751-80-reserved-20261103-1",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/DOTCO%20Material%20Removal_SP-102EN_en.pdf#page=52",
+			"sourceLabel": "Dotco : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 93b7d3cdb96a91eecf95baaf172ed0953f2021cb336460e5f9a202ce7e687c10. La 10L2751-80 est le modèle aluminium à disque 127 mm, filetage 5/8-11 et 9 000 tr/min. La 12L2751-80 est en composite, longueur 249 mm et masse 1,54 kg contre 216 mm et 1,41 kg. Le matériau de corps change avec l’encombrement, sans fournir de donnée de consommation ; le calcul reste indéterminé."
 		}
 	],
 	"fieldSources": {
@@ -103,6 +123,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october-dotco-p52"
+		],
+		"editorial": [
+			"ponceuse-rotative-dotco-10l2751-80-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-rotative-dotco-10l2751-80-reserved-20261103-1"
 		]
 	},
 	"notes": [

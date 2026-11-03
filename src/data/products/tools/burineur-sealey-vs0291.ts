@@ -29,11 +29,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sealey VS0291. La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué. Champ fabricant : Shank Size : .401\" Parker Taper. Champ fabricant : Bit Size : 5/16\"(8mm), Bits not included.",
+		"overview": "Sealey VS0291. Le VS0291 est un tournevis à frapper accessoire : le marteau porteur fournit les vibrations et la poignée sert à appliquer la rotation. Il ne possède pas de moteur pneumatique autonome. Le SA120 est un marteau complet, pas une variante de cet accessoire. Aucun besoin d’air propre n’est attribué au VS0291.",
 		"verifiedFacts": [
 			"Champ fabricant : Shank Size : .401\" Parker Taper.",
-			"Champ fabricant : Bit Size : 5/16\"(8mm), Bits not included.",
-			"Champ fabricant : Nett Weight : 0.20kg."
+			"Champ fabricant : Bit Size : 5/16\"(8 mm), Bits not included.",
+			"Champ fabricant : Nett Weight : 0.20 kg.",
+			"Nature du produit : Accessoire entraîné par un marteau pneumatique séparé.",
+			"Queue : 0,401 pouce Parker Taper.",
+			"Embouts : Hexagonaux 5/16 pouce (8 mm), non fournis."
 		],
 		"limitations": [
 			"La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué.",
@@ -53,14 +56,14 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Bit Size",
-			"value": "5/16\"(8mm), Bits not included",
+			"value": "5/16\"(8 mm), Bits not included",
 			"evidenceIds": [
 				"october2b-tools-oct2b-sealey-vs0291-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Nett Weight",
-			"value": "0.20kg",
+			"value": "0.20 kg",
 			"evidenceIds": [
 				"october2b-tools-oct2b-sealey-vs0291-html-p1"
 			]
@@ -70,6 +73,27 @@ const product: ToolProfileInput = {
 			"value": "Aucun point de mesure associé à la consommation n’est établi par la fiche individuelle.",
 			"evidenceIds": [
 				"october2b-tools-oct2b-sealey-vs0291-html-p1"
+			]
+		},
+		{
+			"label": "Nature du produit",
+			"value": "Accessoire entraîné par un marteau pneumatique séparé",
+			"evidenceIds": [
+				"burineur-sealey-vs0291-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Queue",
+			"value": "0,401 pouce Parker Taper",
+			"evidenceIds": [
+				"burineur-sealey-vs0291-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Embouts",
+			"value": "Hexagonaux 5/16 pouce (8 mm), non fournis",
+			"evidenceIds": [
+				"burineur-sealey-vs0291-reserved-20261103-1"
 			]
 		}
 	],
@@ -83,6 +107,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 62b15075e111b64c3afcd4d3c29168164ce334874865c1211e0e2d41e6e21bdc. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "burineur-sealey-vs0291-reserved-20261103-1",
+			"sourceUrl": "https://www.sealey.co.uk/air-hammer-impact-driver-vs0291/",
+			"sourceLabel": "Sealey : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 ba4d5f2b2f0ea005d9eee5bb01e888109fb5815bb3de7bf13e9a1dc6679f454a. Le VS0291 est un tournevis à frapper accessoire : le marteau porteur fournit les vibrations et la poignée sert à appliquer la rotation. Il ne possède pas de moteur pneumatique autonome. Le SA120 est un marteau complet, pas une variante de cet accessoire. Aucun besoin d’air propre n’est attribué au VS0291."
 		}
 	],
 	"fieldSources": {
@@ -94,6 +128,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-sealey-vs0291-html-p1"
+		],
+		"editorial": [
+			"burineur-sealey-vs0291-reserved-20261103-1"
+		],
+		"specifications": [
+			"burineur-sealey-vs0291-reserved-20261103-1"
 		]
 	},
 	"notes": [

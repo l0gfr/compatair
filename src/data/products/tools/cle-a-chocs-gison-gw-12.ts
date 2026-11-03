@@ -38,59 +38,52 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GW-12. Consommation de régime non précisé : 560 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 0.95 kg. Longueur : 135 mm.",
+		"overview": "GISON GW-12. La GW-12 3/8 pouce à deux marteaux publie 183 Nm et 135 mm. La GW-13T2 est une Twin Hammer de 103 mm, 1,40 kg et 542 Nm maximum. La taille du carré seule ne permet donc ni de comparer les couples, ni de remplacer la consommation publiée par un maximum en charge.",
 		"verifiedFacts": [
-			"Masse : 0.95 kg.",
+			"Carré : 3/8 pouce.",
+			"Mécanisme : Two Hammer.",
+			"Couple maximal déclaré : 183 Nm (135 ft-lb).",
 			"Longueur : 135 mm.",
-			"Diamètre de flexible publié : 6.5 mm.",
-			"Référence constructeur : GW-12."
+			"Masse : 0,95 kg."
 		],
 		"limitations": [
-			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
-			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+			"Recommandation de service 90 psi (6,3 kg/cm² dans le catalogue), distincte d’un point de mesure de consommation démontré. Régime non qualifié ; pas de conclusion de dimensionnement."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse",
-			"value": "0.95 kg",
+			"label": "Carré",
+			"value": "3/8 pouce",
 			"evidenceIds": [
-				"october-b-gison-tools-p19"
+				"cle-a-chocs-gison-gw-12-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Mécanisme",
+			"value": "Two Hammer",
+			"evidenceIds": [
+				"cle-a-chocs-gison-gw-12-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Couple maximal déclaré",
+			"value": "183 Nm (135 ft-lb)",
+			"evidenceIds": [
+				"cle-a-chocs-gison-gw-12-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Longueur",
 			"value": "135 mm",
 			"evidenceIds": [
-				"october-b-gison-tools-p19"
+				"cle-a-chocs-gison-gw-12-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre de flexible publié",
-			"value": "6.5 mm",
+			"label": "Masse",
+			"value": "0,95 kg",
 			"evidenceIds": [
-				"october-b-gison-tools-p19"
-			]
-		},
-		{
-			"label": "Référence constructeur",
-			"value": "GW-12",
-			"evidenceIds": [
-				"october-b-gison-tools-p19"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "Recommended Air Pressure 90 psi (6.3 kg/cm2)",
-			"evidenceIds": [
-				"october-b-gison-tools-p19"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "GISON, catalogue pneumatique 2018–2019, page PDF 19",
-			"evidenceIds": [
-				"october-b-gison-tools-p19"
+				"cle-a-chocs-gison-gw-12-reserved-20261103-1"
 			]
 		}
 	],
@@ -104,6 +97,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-chocs-gison-gw-12-reserved-20261103-1",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=19",
+			"sourceLabel": "GISON : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. La GW-12 3/8 pouce à deux marteaux publie 183 Nm et 135 mm. La GW-13T2 est une Twin Hammer de 103 mm, 1,40 kg et 542 Nm maximum. La taille du carré seule ne permet donc ni de comparer les couples, ni de remplacer la consommation publiée par un maximum en charge."
 		}
 	],
 	"fieldSources": {
@@ -118,6 +121,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-b-gison-tools-p19"
+		],
+		"editorial": [
+			"cle-a-chocs-gison-gw-12-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-chocs-gison-gw-12-reserved-20261103-1"
 		]
 	},
 	"notes": [

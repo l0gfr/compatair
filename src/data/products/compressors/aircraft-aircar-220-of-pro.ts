@@ -19,7 +19,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
 	},
 	"editorial": {
-		"overview": "Aircraft Aircar 220 OF PRO, référence 2015520 : cuve de 22 L, pression maximale publiée de 10 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Capacité de remplissage approximative : 134 l/min. Condition de remplissage publiée : à 6 bar de pression de travail.",
+		"overview": "Aircraft Aircar 220 OF PRO. La Aircar 220 OF PRO est alimentée en 230 V et pèse 67 kg ; 440 OF PRO : 400 V, 85 kg, quatre cylindres et remplissage approximatif 270 L/min à 6 bar. La cuve est commune à 2 × 11 L. Le remplissage et le débit aspiré ne deviennent pas des points FAD ; le besoin d’une mesure de débit restitué reste visible.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons. Puissance moteur publiée : 1,1 kW.",
@@ -27,7 +27,12 @@ const product: CompressorInput = {
 			"Alimentation publiée : 230 V.",
 			"Capacité de remplissage approximative : 134 l/min.",
 			"Condition de remplissage publiée : à 6 bar de pression de travail.",
-			"Nombre de cylindres : 2."
+			"Nombre de cylindres : 2.",
+			"Notice exacte : Aircar 220 OF PRO.",
+			"Cuve : 2 × 11 L.",
+			"Masse : 67 kg.",
+			"Alimentation : 230 V.",
+			"Service mentionné dans la table : 70 % pour le moteur d’entraînement, distinct du groupe complet."
 		],
 		"limitations": [
 			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
@@ -91,6 +96,41 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"aircraft-2015520-20260927"
 			]
+		},
+		{
+			"label": "Notice exacte",
+			"value": "Aircar 220 OF PRO",
+			"evidenceIds": [
+				"aircraft-aircar-220-of-pro-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cuve",
+			"value": "2 × 11 L",
+			"evidenceIds": [
+				"aircraft-aircar-220-of-pro-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "67 kg",
+			"evidenceIds": [
+				"aircraft-aircar-220-of-pro-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Alimentation",
+			"value": "230 V",
+			"evidenceIds": [
+				"aircraft-aircar-220-of-pro-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Service mentionné dans la table",
+			"value": "70 % pour le moteur d’entraînement, distinct du groupe complet",
+			"evidenceIds": [
+				"aircraft-aircar-220-of-pro-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -113,6 +153,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : manufacturer-mystuermer. Empreinte PDF SHA-256 : 1cdf6caf1dbdefcf0a4b176b7bd324bf42e18ceacae9d4c12ff8063840140d8d. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
+		},
+		{
+			"id": "aircraft-aircar-220-of-pro-reserved-20261103-1",
+			"sourceUrl": "https://www.mystuermer.com/MeDaPro/Rohdaten/Dokumente/Betriebsanleitung_de/AC_BA_AIRCAR_220_440_OF-PRO_DE.pdf#page=7",
+			"sourceLabel": "Aircraft : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 1cdf6caf1dbdefcf0a4b176b7bd324bf42e18ceacae9d4c12ff8063840140d8d. La Aircar 220 OF PRO est alimentée en 230 V et pèse 67 kg ; 440 OF PRO : 400 V, 85 kg, quatre cylindres et remplissage approximatif 270 L/min à 6 bar. La cuve est commune à 2 × 11 L. Le remplissage et le débit aspiré ne deviennent pas des points FAD ; le besoin d’une mesure de débit restitué reste visible."
 		}
 	],
 	"fieldSources": {
@@ -139,6 +189,15 @@ const product: CompressorInput = {
 		],
 		"voltage": [
 			"aircraft-2015520-20260927"
+		],
+		"weightKg": [
+			"aircraft-aircar-220-of-pro-reserved-20261103-1"
+		],
+		"editorial": [
+			"aircraft-aircar-220-of-pro-reserved-20261103-1"
+		],
+		"specifications": [
+			"aircraft-aircar-220-of-pro-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -146,7 +205,8 @@ const product: CompressorInput = {
 	],
 	"intakeFlowLpm": 220,
 	"powerKw": 1.1,
-	"voltage": "230 V"
+	"voltage": "230 V",
+	"weightKg": 67
 };
 
 export default product;

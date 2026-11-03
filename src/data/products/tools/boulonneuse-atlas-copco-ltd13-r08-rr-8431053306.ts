@@ -38,46 +38,68 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Atlas Copco LTD13 R08-RR (réf. 8431053306). Consommation maximale : 420 L/min à 6,3 bar. Consommations originales : 7 L/s ; 15 cfm. Vitesse à vide : 500 tr/min.",
+		"overview": "Atlas Copco LTD13 R08-RR. La LTD13 R08-RR est la version 1,5–8 Nm à 500 tr/min ; la R05-RR donne 1,5–5 Nm à 850 tr/min. La colonne de consommation indique explicitement at free speed. Cette exception prime sur la règle générale de maximum du catalogue : les 420 L/min restent à vide et cessent de produire un verdict en charge.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 50.",
-			"Consommations originales : 7 L/s ; 15 cfm.",
+			"Code : 8431 0533 06.",
+			"Couple sur joint élastique : 1,5–8 Nm.",
+			"Commande : RR, tête arrière pour commande déportée.",
 			"Vitesse à vide : 500 tr/min.",
-			"Masse : 0.8 kg."
+			"Longueur : 197 mm.",
+			"Masse : 0,8 kg.",
+			"Consommation explicitement à vide : 7 L/s à 6,3 bar."
 		],
 		"limitations": [
-			"Le débit publié conserve son régime de mesure ; aucun cycle supposé ne réduit la consommation.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"La valeur est explicitement publiée à vide. Une mesure maximale/en charge avec pression associée reste nécessaire pour un dimensionnement conclusif."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 50",
+			"label": "Code",
+			"value": "8431 0533 06",
 			"evidenceIds": [
-				"documented-d-atlas-tools-p50"
+				"boulonneuse-atlas-copco-ltd13-r08-rr-8431053306-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommations originales",
-			"value": "7 L/s ; 15 cfm",
+			"label": "Couple sur joint élastique",
+			"value": "1,5–8 Nm",
 			"evidenceIds": [
-				"documented-d-atlas-tools-p50"
+				"boulonneuse-atlas-copco-ltd13-r08-rr-8431053306-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Commande",
+			"value": "RR, tête arrière pour commande déportée",
+			"evidenceIds": [
+				"boulonneuse-atlas-copco-ltd13-r08-rr-8431053306-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Vitesse à vide",
 			"value": "500 tr/min",
 			"evidenceIds": [
-				"documented-d-atlas-tools-p50"
+				"boulonneuse-atlas-copco-ltd13-r08-rr-8431053306-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "197 mm",
+			"evidenceIds": [
+				"boulonneuse-atlas-copco-ltd13-r08-rr-8431053306-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Masse",
-			"value": "0.8 kg",
+			"value": "0,8 kg",
 			"evidenceIds": [
-				"documented-d-atlas-tools-p50"
+				"boulonneuse-atlas-copco-ltd13-r08-rr-8431053306-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation explicitement à vide",
+			"value": "7 L/s à 6,3 bar",
+			"evidenceIds": [
+				"boulonneuse-atlas-copco-ltd13-r08-rr-8431053306-reserved-20261103-1"
 			]
 		}
 	],
@@ -101,6 +123,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "boulonneuse-atlas-copco-ltd13-r08-rr-8431053306-reserved-20261103-1",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf#page=50",
+			"sourceLabel": "Atlas Copco : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. La LTD13 R08-RR est la version 1,5–8 Nm à 500 tr/min ; la R05-RR donne 1,5–5 Nm à 850 tr/min. La colonne de consommation indique explicitement at free speed. Cette exception prime sur la règle générale de maximum du catalogue : les 420 L/min restent à vide et cessent de produire un verdict en charge."
+		},
+		{
+			"id": "boulonneuse-atlas-copco-ltd13-r08-rr-8431053306-reserved-20261103-1-3",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf#page=3",
+			"sourceLabel": "Atlas Copco : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. La LTD13 R08-RR est la version 1,5–8 Nm à 500 tr/min ; la R05-RR donne 1,5–5 Nm à 850 tr/min. La colonne de consommation indique explicitement at free speed. Cette exception prime sur la règle générale de maximum du catalogue : les 420 L/min restent à vide et cessent de produire un verdict en charge."
 		}
 	],
 	"fieldSources": {
@@ -113,11 +155,21 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"documented-d-atlas-tools-p50"
+		],
+		"airflowBasis": [
+			"boulonneuse-atlas-copco-ltd13-r08-rr-8431053306-reserved-20261103-1"
+		],
+		"editorial": [
+			"boulonneuse-atlas-copco-ltd13-r08-rr-8431053306-reserved-20261103-1"
+		],
+		"specifications": [
+			"boulonneuse-atlas-copco-ltd13-r08-rr-8431053306-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Consommation maximale : 420 L/min à 6,3 bar."
-	]
+	],
+	"airflowBasis": "free-speed"
 };
 
 export default product;

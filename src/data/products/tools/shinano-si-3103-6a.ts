@@ -9,7 +9,7 @@ const product: ToolProfileInput = {
 	"categoryId": "ponceuse-orbitale",
 	"category": "ponceuse-orbitale",
 	"label": "Shinano SI-3103-6A",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 6.3,
 		"typical": 6.3,
@@ -23,19 +23,27 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Shinano SI-3103-6A, référence SI-3103-6A. Le tableau fabricant publie 474 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Version et équipement : Plateau 150 mm, revêtement Leather selon Shinano ; orbite 5 mm ; sans aspiration intégrée. Vitesse à vide publiée : 9000 tr/min.",
+		"overview": "Shinano SI-3103-6A. La SI-3103-6A est en plateau Leather de 150 mm ; la -6AM utilise le Velcro et la SI-3103A le format 125 mm. La SI-3113-6A ajoute une aspiration autonome, contrairement à cette configuration. La consigne de pression de service ne documente pas la pression de mesure de la colonne Max Air Consumption.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Consommation maximale, colonne Max Air Consumption : 16.8 CFM / 7.9 L/s, soit 474 L/min. Tableau partagé uniquement entre les références nommées par Shinano.",
 			"Référence fabricant : SI-3103-6A.",
 			"Version et équipement : Plateau 150 mm, revêtement Leather selon Shinano ; orbite 5 mm ; sans aspiration intégrée.",
 			"Vitesse à vide publiée : 9000 tr/min.",
-			"Masse publiée : 1.2 kg."
+			"Masse publiée : 1.2 kg.",
+			"Plateau : 150 mm, Leather.",
+			"Orbite : 5 mm.",
+			"Vitesse à vide : 9 000 tr/min.",
+			"Puissance publiée : 134 W.",
+			"Masse : 1,20 kg.",
+			"Consommation maximale publiée, pression de mesure non appariée : 7,9 L/s.",
+			"Consigne d’alimentation en fonctionnement : 0,63 MPa (6,3 bar), gâchette entièrement actionnée."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"Débit conservé dans les spécifications ; compatibilité indéterminée jusqu’à confirmation du point de mesure par Shinano."
 		]
 	},
 	"specifications": [
@@ -73,6 +81,55 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"shinano-si-3103-6a-20260926"
 			]
+		},
+		{
+			"label": "Plateau",
+			"value": "150 mm, Leather",
+			"evidenceIds": [
+				"shinano-si-3103-6a-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Orbite",
+			"value": "5 mm",
+			"evidenceIds": [
+				"shinano-si-3103-6a-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "9 000 tr/min",
+			"evidenceIds": [
+				"shinano-si-3103-6a-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Puissance publiée",
+			"value": "134 W",
+			"evidenceIds": [
+				"shinano-si-3103-6a-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "1,20 kg",
+			"evidenceIds": [
+				"shinano-si-3103-6a-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation maximale publiée, pression de mesure non appariée",
+			"value": "7,9 L/s",
+			"evidenceIds": [
+				"shinano-si-3103-6a-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consigne d’alimentation en fonctionnement",
+			"value": "0,63 MPa (6,3 bar), gâchette entièrement actionnée",
+			"evidenceIds": [
+				"shinano-si-3103-6a-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -93,6 +150,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+		},
+		{
+			"id": "shinano-si-3103-6a-reserved-20261103-1",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=12",
+			"sourceLabel": "Shinano : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b. La SI-3103-6A est en plateau Leather de 150 mm ; la -6AM utilise le Velcro et la SI-3103A le format 125 mm. La SI-3113-6A ajoute une aspiration autonome, contrairement à cette configuration. La consigne de pression de service ne documente pas la pression de mesure de la colonne Max Air Consumption."
+		},
+		{
+			"id": "shinano-si-3103-6a-reserved-20261103-1-3",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+			"sourceLabel": "Shinano : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b. La SI-3103-6A est en plateau Leather de 150 mm ; la -6AM utilise le Velcro et la SI-3103A le format 125 mm. La SI-3113-6A ajoute une aspiration autonome, contrairement à cette configuration. La consigne de pression de service ne documente pas la pression de mesure de la colonne Max Air Consumption."
 		}
 	],
 	"fieldSources": {
@@ -102,18 +179,23 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"shinano-si-3103-6a-20260926-workingpressurebar-1"
 		],
-		"airflowLpm": [
-			"shinano-si-3103-6a-20260926"
+		"demandModel": [
+			"shinano-si-3103-6a-reserved-20261103-1"
+		],
+		"demandExplanation": [
+			"shinano-si-3103-6a-reserved-20261103-1"
+		],
+		"editorial": [
+			"shinano-si-3103-6a-reserved-20261103-1"
+		],
+		"specifications": [
+			"shinano-si-3103-6a-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 474,
-		"typical": 474,
-		"max": 474
-	}
+	"demandExplanation": "Le catalogue donne une consommation maximale et une consigne d’alimentation de 0,63 MPa en fonctionnement, sans apparier explicitement la pression de mesure au débit. Ce point manque pour dimensionner."
 };
 
 export default product;

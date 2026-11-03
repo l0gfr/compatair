@@ -30,57 +30,60 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Aircat 1056-XL. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 2.5 lb. Vitesse à vide : 9000 tr/min.",
+		"overview": "Aircat 1056-XL. La 1056-XL est la clé compacte 1/2 pouce de 4,25 pouces, avec 550 ft-lb maximum et 750 ft-lb au desserrage. Ces deux couples restent distincts ; ils ne sont pas recopiés en Nm. Les 1076-XL et 1058-VXL restent des configurations propres. La fiche ne qualifie pas le régime ni la pression de mesure des 8 CFM.",
 		"verifiedFacts": [
-			"Masse publiée : 2.5 lb.",
-			"Vitesse à vide : 9000 tr/min."
+			"Carré : 1/2 pouce.",
+			"Couple maximal : 550 ft-lb.",
+			"Couple de desserrage distinct : 750 ft-lb.",
+			"Vitesse à vide : 9 000 tr/min.",
+			"Longueur : 4,25 pouces.",
+			"Consommation, régime non précisé : 8 CFM."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"La fiche ne documente pas suffisamment le régime de consommation et son appariement à une pression ; le calcul reste indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "2.5 lb",
+			"label": "Carré",
+			"value": "1/2 pouce",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-304-p1"
+				"cle-a-chocs-aircat-1056-xl-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Couple maximal",
+			"value": "550 ft-lb",
+			"evidenceIds": [
+				"cle-a-chocs-aircat-1056-xl-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Couple de desserrage distinct",
+			"value": "750 ft-lb",
+			"evidenceIds": [
+				"cle-a-chocs-aircat-1056-xl-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Vitesse à vide",
-			"value": "9000 tr/min",
+			"value": "9 000 tr/min",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-304-p1"
+				"cle-a-chocs-aircat-1056-xl-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Champ fabricant : Air Inlet (NPT/BSP)",
-			"value": "1/4-in.",
+			"label": "Longueur",
+			"value": "4,25 pouces",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-304-p1"
+				"cle-a-chocs-aircat-1056-xl-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Champ fabricant : Rec. Hose Size (in.)",
-			"value": "3/8-in.",
+			"label": "Consommation, régime non précisé",
+			"value": "8 CFM",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-304-p1"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "Pression de mesure de la consommation non établie dans la fiche.",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-304-p1"
-			]
-		},
-		{
-			"label": "Consommation de régime non précisé, hors calcul",
-			"value": "8 cfm",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-304-p1"
+				"cle-a-chocs-aircat-1056-xl-reserved-20261103-1"
 			]
 		}
 	],
@@ -94,6 +97,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : d2b125f0a1a8f71131420b2a22ac9f596fb37810e8a2f1c81484201c6053434c. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-chocs-aircat-1056-xl-reserved-20261103-1",
+			"sourceUrl": "https://continentaltoolgroup.com/product/1-2-nitrocat-composite-compact-impact-wrench-1056-xl/",
+			"sourceLabel": "Aircat : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 a7a834fba8a37aae460fa5319322a9befea86db704c99606a9c296bcfa94c9b2. La 1056-XL est la clé compacte 1/2 pouce de 4,25 pouces, avec 550 ft-lb maximum et 750 ft-lb au desserrage. Ces deux couples restent distincts ; ils ne sont pas recopiés en Nm. Les 1076-XL et 1058-VXL restent des configurations propres. La fiche ne qualifie pas le régime ni la pression de mesure des 8 CFM."
 		}
 	],
 	"fieldSources": {
@@ -108,6 +121,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-ctg-pdp-304-p1"
+		],
+		"editorial": [
+			"cle-a-chocs-aircat-1056-xl-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-chocs-aircat-1056-xl-reserved-20261103-1"
 		]
 	},
 	"notes": [

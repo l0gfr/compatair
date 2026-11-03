@@ -29,10 +29,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Tranmax TPT-414. Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse. Masse publiée : 0.7 kg (1.5 lb). Longueur hors tout publiée : 160 mm (6.3 inch).",
+		"overview": "Tranmax TPT-414. La TPT-414 est une mini-meuleuse à disque 3 pouces, 15 000 tr/min et 0,7 kg. La TPT-413 est une polisseuse à 2 500 tr/min ; leurs abrasifs et régimes ne sont pas interchangeables. Le tableau imprime 3,5 mm dans une colonne Orbital Diameter sans expliquer le mouvement de cette meuleuse ; aucune nouvelle cinématique n’est inventée.",
 		"verifiedFacts": [
 			"Masse publiée : 0.7 kg (1.5 lb).",
-			"Longueur hors tout publiée : 160 mm (6.3 inch)."
+			"Longueur hors tout publiée : 160 mm (6.3 inch).",
+			"Disque : 3 pouces.",
+			"Vitesse à vide : 15 000 tr/min.",
+			"Colonne diamètre orbital : 3,5 mm, libellé du tableau.",
+			"Consommation moyenne en charge : 600 L/min."
 		],
 		"limitations": [
 			"Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse.",
@@ -62,6 +66,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-tranmax-tp-pdf-p26"
 			]
+		},
+		{
+			"label": "Disque",
+			"value": "3 pouces",
+			"evidenceIds": [
+				"meuleuse-tranmax-tpt-414-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "15 000 tr/min",
+			"evidenceIds": [
+				"meuleuse-tranmax-tpt-414-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Colonne diamètre orbital",
+			"value": "3,5 mm, libellé du tableau",
+			"evidenceIds": [
+				"meuleuse-tranmax-tpt-414-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation moyenne en charge",
+			"value": "600 L/min",
+			"evidenceIds": [
+				"meuleuse-tranmax-tpt-414-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -74,6 +106,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : c2e29dbb1f9d433e1d65568bc327d3ea21eadd7d39f8edbb0d98145850f7c7d2. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "meuleuse-tranmax-tpt-414-reserved-20261103-1",
+			"sourceUrl": "https://ss-client-website.s3-ap-northeast-1.amazonaws.com/tranmax/2023_01_09_113224_2212-Professional-Power-Tools-TP.pdf#page=26",
+			"sourceLabel": "Tranmax : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 c2e29dbb1f9d433e1d65568bc327d3ea21eadd7d39f8edbb0d98145850f7c7d2. La TPT-414 est une mini-meuleuse à disque 3 pouces, 15 000 tr/min et 0,7 kg. La TPT-413 est une polisseuse à 2 500 tr/min ; leurs abrasifs et régimes ne sont pas interchangeables. Le tableau imprime 3,5 mm dans une colonne Orbital Diameter sans expliquer le mouvement de cette meuleuse ; aucune nouvelle cinématique n’est inventée."
 		}
 	],
 	"fieldSources": {
@@ -85,6 +127,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-tranmax-tp-pdf-p26"
+		],
+		"editorial": [
+			"meuleuse-tranmax-tpt-414-reserved-20261103-1"
+		],
+		"specifications": [
+			"meuleuse-tranmax-tpt-414-reserved-20261103-1"
 		]
 	},
 	"notes": [

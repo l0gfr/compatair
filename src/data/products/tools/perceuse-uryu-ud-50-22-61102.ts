@@ -37,11 +37,17 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU UD-50-22, code 61102. Le tableau publie une consommation moyenne de 0,4 m³/min, soit 400 L/min. Pression de référence retenue : 6 bar.",
+		"overview": "URYU UD-50-22. La UD-50-22 mesure 140 mm ; la UD-50S-22 à même capacité, même vitesse et même moyenne de 400 L/min mesure 205 mm. La UD-50-45 monte à 5 000 tr/min avec une capacité de 6 mm : sélectionner encombrement et vitesse plutôt que le seul débit.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 61102, page PDF 1.",
 			"Consommation moyenne publiée : 400 L/min après conversion de l’unité originale.",
-			"SPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85psi)\nSPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85psi)"
+			"SPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85 psi)\nSPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85 psi)",
+			"Capacité de perçage : 8 mm.",
+			"Vitesse à vide approximative : 2 200 tr/min.",
+			"Longueur totale : 140 mm.",
+			"Masse avec mandrin : 0,90 kg.",
+			"Mandrin nominal : 8 mm.",
+			"Broche : 3/8\"-24 UNF."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
@@ -76,6 +82,48 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-uryu-p66-68"
 			]
+		},
+		{
+			"label": "Capacité de perçage",
+			"value": "8 mm",
+			"evidenceIds": [
+				"perceuse-uryu-ud-50-22-61102-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide approximative",
+			"value": "2 200 tr/min",
+			"evidenceIds": [
+				"perceuse-uryu-ud-50-22-61102-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "140 mm",
+			"evidenceIds": [
+				"perceuse-uryu-ud-50-22-61102-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse avec mandrin",
+			"value": "0,90 kg",
+			"evidenceIds": [
+				"perceuse-uryu-ud-50-22-61102-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Mandrin nominal",
+			"value": "8 mm",
+			"evidenceIds": [
+				"perceuse-uryu-ud-50-22-61102-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Broche",
+			"value": "3/8\"-24 UNF",
+			"evidenceIds": [
+				"perceuse-uryu-ud-50-22-61102-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -88,6 +136,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 36cfc8fdae9f6c8df69d64bdd9f1a6047a1ad848e1c1ea528c04c0c20b07963d. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		},
+		{
+			"id": "perceuse-uryu-ud-50-22-61102-reserved-20261103-1",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P66_68.pdf",
+			"sourceLabel": "URYU : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 36cfc8fdae9f6c8df69d64bdd9f1a6047a1ad848e1c1ea528c04c0c20b07963d. La UD-50-22 mesure 140 mm ; la UD-50S-22 à même capacité, même vitesse et même moyenne de 400 L/min mesure 205 mm. La UD-50-45 monte à 5 000 tr/min avec une capacité de 6 mm : sélectionner encombrement et vitesse plutôt que le seul débit."
 		}
 	],
 	"fieldSources": {
@@ -102,6 +160,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-20260930-uryu-p66-68"
+		],
+		"editorial": [
+			"perceuse-uryu-ud-50-22-61102-reserved-20261103-1"
+		],
+		"specifications": [
+			"perceuse-uryu-ud-50-22-61102-reserved-20261103-1"
 		]
 	},
 	"notes": [

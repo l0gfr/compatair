@@ -39,53 +39,68 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-66103S. Consommation publiée, régime non précisé : 170 L/min à 6,2 bar. Consommation dans les unités du tableau : 170 L/min ; 6 cfm. Configuration complète publiée : ST-66103S.",
+		"overview": "Sumake ST-66103S. La ST-66103S est la version oscillante swing de course 0,3 mm à 55 000 coups/min ; la ST-66103 est linéaire à 50 000. La 66107S passe à 0,7 mm et 20 000 coups/min. La course et le mouvement changent même si les consommations de gamme sont identiques.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 36.",
-			"Consommation dans les unités du tableau : 170 L/min ; 6 cfm.",
-			"Configuration complète publiée : ST-66103S.",
-			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé."
+			"Mouvement : Turbolap swing, oscillant.",
+			"Course : 0,3 mm.",
+			"Cadence du tableau : 55 000 coups/min.",
+			"Longueur : 185 mm.",
+			"Masse : 0,2 kg.",
+			"Consommation documentaire : 170 L/min, régime non précisé.",
+			"Pression de service recommandée : 6,2 bar ; pression de mesure de la consommation non démontrée."
 		],
 		"limitations": [
-			"Le régime de consommation n’est pas indiqué. Aucun débit maximal ou en charge n’est inventé ; le verdict reste insufficient_data.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"La recommandation de service 6,2 bar ne prouve pas la pression de mesure de la consommation. Le régime reste non qualifié et le calcul indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 36",
+			"label": "Mouvement",
+			"value": "Turbolap swing, oscillant",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p36"
+				"lime-alternative-sumake-st-66103s-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation dans les unités du tableau",
-			"value": "170 L/min ; 6 cfm",
+			"label": "Course",
+			"value": "0,3 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p36"
+				"lime-alternative-sumake-st-66103s-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Configuration complète publiée",
-			"value": "ST-66103S",
+			"label": "Cadence du tableau",
+			"value": "55 000 coups/min",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p36"
+				"lime-alternative-sumake-st-66103s-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Régime de consommation",
-			"value": "Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé",
+			"label": "Longueur",
+			"value": "185 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p36"
+				"lime-alternative-sumake-st-66103s-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Ligne technique originale du modèle",
-			"value": "ST-66103S 55,000 0.3 185 7-2/7 1/4\" 3/16\" 170 6 0.2 0.44 25Pcs/Ctn/12.4/1.58’",
+			"label": "Masse",
+			"value": "0,2 kg",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p36"
+				"lime-alternative-sumake-st-66103s-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "170 L/min, régime non précisé",
+			"evidenceIds": [
+				"lime-alternative-sumake-st-66103s-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression de service recommandée",
+			"value": "6,2 bar ; pression de mesure de la consommation non démontrée",
+			"evidenceIds": [
+				"lime-alternative-sumake-st-66103s-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +114,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "lime-alternative-sumake-st-66103s-reserved-20261103-1",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf#page=36",
+			"sourceLabel": "Sumake : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. La ST-66103S est la version oscillante swing de course 0,3 mm à 55 000 coups/min ; la ST-66103 est linéaire à 50 000. La 66107S passe à 0,7 mm et 20 000 coups/min. La course et le mouvement changent même si les consommations de gamme sont identiques."
 		}
 	],
 	"fieldSources": {
@@ -113,6 +138,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-d-sumake-na-2024-p36"
+		],
+		"editorial": [
+			"lime-alternative-sumake-st-66103s-reserved-20261103-1"
+		],
+		"specifications": [
+			"lime-alternative-sumake-st-66103s-reserved-20261103-1"
 		]
 	},
 	"notes": [

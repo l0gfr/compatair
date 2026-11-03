@@ -74,13 +74,69 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4b-shamal-bora-p20"
       ]
+    },
+    {
+      "label": "Code",
+      "value": "V60PU92SHAA72",
+      "evidenceIds": [
+        "shamal-bora-11-08-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Régulation",
+      "value": "Vitesse fixe IE3",
+      "evidenceIds": [
+        "shamal-bora-11-08-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Débit mesuré à8 bar",
+      "value": "1 700 L/min",
+      "evidenceIds": [
+        "shamal-bora-11-08-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Puissance",
+      "value": "11 kW",
+      "evidenceIds": [
+        "shamal-bora-11-08-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Masse nette",
+      "value": "238 kg",
+      "evidenceIds": [
+        "shamal-bora-11-08-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Dimensions nettes",
+      "value": "1 030 × 730 × 1 000 mm",
+      "evidenceIds": [
+        "shamal-bora-11-08-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Sécheur",
+      "value": "Version de base, distincte du code ES",
+      "evidenceIds": [
+        "shamal-bora-11-08-reserved-20261103-1"
+      ]
     }
   ],
   "editorial": {
-    "overview": "Shamal BORA 11-08. 1 700 L/min déclarés à 8 bar. Configuration constructeur : BORA 11-08.",
+    "overview": "Shamal BORA 11-08. La BORA11-08 sansES annonce238 kg ; la 11-08ES ajoute le sécheur et annonce un autre encombrement. La version 11-10 de même puissance annonce1 600 L/min à10 bar. La note de la table confirme explicitement les pressions de mesure8/10/13 bar selon le suffixe.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 8 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 1 700 L/min déclarés à 8 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 1 700 L/min déclarés à 8 bar.",
+      "Code : V60PU92SHAA72.",
+      "Régulation : Vitesse fixe IE3.",
+      "Débit mesuré à8 bar : 1 700 L/min.",
+      "Puissance : 11 kW.",
+      "Masse nette : 238 kg.",
+      "Dimensions nettes : 1 030 × 730 × 1 000 mm.",
+      "Sécheur : Version de base, distincte du code ES."
     ],
     "limitations": [
       "La fréquence électrique du compresseur n’est pas explicitement publiée dans le catalogue capturé.",
@@ -110,6 +166,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 10939b0bee12283ce3b990ddccbe5fdb13030a13993cabd6be79d26d276f6a04 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "shamal-bora-11-08-reserved-20261103-1",
+      "sourceUrl": "https://www.shamalcompressors.com/en/screw-compressors/download/139_7c4312e2be9d86b4e8f229e8083c3e9e.html#page=20",
+      "sourceLabel": "Shamal : revue factuelle du 3 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-03",
+      "confidence": "B",
+      "notes": "GET complet HTTP200 SHA-256 10939b0bee12283ce3b990ddccbe5fdb13030a13993cabd6be79d26d276f6a04. La BORA11-08 sansES annonce238 kg ; la 11-08ES ajoute le sécheur et annonce un autre encombrement. La version 11-10 de même puissance annonce1 600 L/min à10 bar. La note de la table confirme explicitement les pressions de mesure8/10/13 bar selon le suffixe."
     }
   ],
   "fieldSources": {
@@ -123,20 +189,30 @@ const product: CompressorInput = {
       "october4b-shamal-bora-p20"
     ],
     "powerKw": [
-      "october4b-shamal-bora-p20"
+      "shamal-bora-11-08-reserved-20261103-1"
     ],
     "oilType": [
       "october4b-shamal-bora-p1"
     ],
     "mpn": [
       "october4b-shamal-bora-p20"
+    ],
+    "weightKg": [
+      "shamal-bora-11-08-reserved-20261103-1"
+    ],
+    "editorial": [
+      "shamal-bora-11-08-reserved-20261103-1"
+    ],
+    "specifications": [
+      "shamal-bora-11-08-reserved-20261103-1"
     ]
   },
   "notes": [
     "Portée de la source : FAD-pressure-qualified.",
     "Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées.",
     "Identités de pression, tension, contrôleur et démarreur consolidées avant le décompte du lot."
-  ]
+  ],
+  "weightKg": 238
 };
 
 export default product;

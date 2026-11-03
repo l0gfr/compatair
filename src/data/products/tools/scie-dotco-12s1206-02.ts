@@ -34,51 +34,69 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Dotco 12S1206-02. La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner. Vitesse à vide : 12,000 tr/min. Masse publiée : 0.59 kg.",
+		"overview": "Dotco 12S1206-02. La 12S1206-02 est la scie circulaire à échappement avant, lame 2 pouces et arbre 7/16 pouce. La 12S1282-02 utilise un échappement arrière avec les mêmes dimensions ; la 12S1207-02 passe à 20 000 tr/min. Aucun régime de scie alternative n’est attribué à cette lame rotative. Le tableau ne documente pas la consommation.",
 		"verifiedFacts": [
-			"Vitesse à vide : 12,000 tr/min.",
-			"Masse publiée : 0.59 kg.",
-			"Dimension publiée : 180 mm."
+			"Type : Scie circulaire, échappement avant.",
+			"Lame : 2 pouces.",
+			"Arbre : 7/16 pouce.",
+			"Vitesse à vide : 12 000 tr/min.",
+			"Corps : Composite.",
+			"Longueur : 180 mm.",
+			"Masse : 0,59 kg."
 		],
 		"limitations": [
-			"La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"Aucune consommation qualifiée n’est publiée dans le tableau de cette référence ; vitesse et puissance ne fournissent pas un débit.",
+			"Catalogue constructeur identifié ; vérifier l’équipement de la révision livrée."
 		]
 	},
 	"specifications": [
 		{
+			"label": "Type",
+			"value": "Scie circulaire, échappement avant",
+			"evidenceIds": [
+				"scie-dotco-12s1206-02-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Lame",
+			"value": "2 pouces",
+			"evidenceIds": [
+				"scie-dotco-12s1206-02-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Arbre",
+			"value": "7/16 pouce",
+			"evidenceIds": [
+				"scie-dotco-12s1206-02-reserved-20261103-1"
+			]
+		},
+		{
 			"label": "Vitesse à vide",
-			"value": "12,000 tr/min",
+			"value": "12 000 tr/min",
 			"evidenceIds": [
-				"october-dotco-p98"
+				"scie-dotco-12s1206-02-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
-			"value": "0.59 kg",
+			"label": "Corps",
+			"value": "Composite",
 			"evidenceIds": [
-				"october-dotco-p98"
+				"scie-dotco-12s1206-02-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Dimension publiée",
+			"label": "Longueur",
 			"value": "180 mm",
 			"evidenceIds": [
-				"october-dotco-p98"
+				"scie-dotco-12s1206-02-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Localisation documentaire",
-			"value": "Cleco/Dotco, Material Removal SP-102EN, page 98",
+			"label": "Masse",
+			"value": "0,59 kg",
 			"evidenceIds": [
-				"october-dotco-p98"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "All tools performance rated @ 90 psi / 620 kPa air pressure.",
-			"evidenceIds": [
-				"october-dotco-p98"
+				"scie-dotco-12s1206-02-reserved-20261103-1"
 			]
 		}
 	],
@@ -92,6 +110,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 93b7d3cdb96a91eecf95baaf172ed0953f2021cb336460e5f9a202ce7e687c10. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "scie-dotco-12s1206-02-reserved-20261103-1",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/DOTCO%20Material%20Removal_SP-102EN_en.pdf#page=98",
+			"sourceLabel": "Dotco : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 93b7d3cdb96a91eecf95baaf172ed0953f2021cb336460e5f9a202ce7e687c10. La 12S1206-02 est la scie circulaire à échappement avant, lame 2 pouces et arbre 7/16 pouce. La 12S1282-02 utilise un échappement arrière avec les mêmes dimensions ; la 12S1207-02 passe à 20 000 tr/min. Aucun régime de scie alternative n’est attribué à cette lame rotative. Le tableau ne documente pas la consommation."
 		}
 	],
 	"fieldSources": {
@@ -103,6 +131,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october-dotco-p98"
+		],
+		"editorial": [
+			"scie-dotco-12s1206-02-reserved-20261103-1"
+		],
+		"specifications": [
+			"scie-dotco-12s1206-02-reserved-20261103-1"
 		]
 	},
 	"notes": [

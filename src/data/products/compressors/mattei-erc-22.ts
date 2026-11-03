@@ -77,14 +77,62 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october3d-mattei-pdf-03-p7"
 			]
+		},
+		{
+			"label": "Configuration",
+			"value": "ERC 22 au sol, 50 Hz",
+			"evidenceIds": [
+				"mattei-erc-22-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "FAD à 12,5 bar",
+			"value": "2,57 m³/min",
+			"evidenceIds": [
+				"mattei-erc-22-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Puissance",
+			"value": "22 kW",
+			"evidenceIds": [
+				"mattei-erc-22-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "390 kg",
+			"evidenceIds": [
+				"mattei-erc-22-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Alimentation",
+			"value": "400 V / 3 phases / 50 Hz",
+			"evidenceIds": [
+				"mattei-erc-22-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Mesure",
+			"value": "ISO 1217 annexe C",
+			"evidenceIds": [
+				"mattei-erc-22-reserved-20261103-1"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "Mattei ERC 22. 2 570 L/min à 12,5 bar. Groupe Classic sur socle sans réservoir.",
+		"overview": "Mattei ERC 22. La ERC 22 au sol pèse 390 kg. ERC 18 : 2,26 m³/min à 12,5 bar. Le tableau distingue les versions 8/10/13 bar et précise les mesures respectives à 7,5/9,5/12,5 bar ; la table 60 Hz est une autre configuration.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 0 L.",
-			"Pression maximale de fonctionnement publiée : 13 bar."
+			"Pression maximale de fonctionnement publiée : 13 bar.",
+			"Configuration : ERC 22 au sol, 50 Hz.",
+			"FAD à 12,5 bar : 2,57 m³/min.",
+			"Puissance : 22 kW.",
+			"Masse : 390 kg.",
+			"Alimentation : 400 V / 3 phases / 50 Hz.",
+			"Mesure : ISO 1217 annexe C."
 		],
 		"limitations": [
 			"La pression FAD est inférieure de 0,5 bar au maximum de la version ; ces deux valeurs restent distinctes.",
@@ -135,6 +183,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "mattei-erc-22-reserved-20261103-1",
+			"sourceUrl": "https://4609801.fs1.hubspotusercontent-na1.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20CLASSIC/Classic_Range_EN.pdf#page=14",
+			"sourceLabel": "Mattei : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2. La ERC 22 au sol pèse 390 kg. ERC 18 : 2,26 m³/min à 12,5 bar. Le tableau distingue les versions 8/10/13 bar et précise les mesures respectives à 7,5/9,5/12,5 bar ; la table 60 Hz est une autre configuration."
 		}
 	],
 	"fieldSources": {
@@ -153,11 +211,29 @@ const product: CompressorInput = {
 		],
 		"oilType": [
 			"october3d-mattei-pdf-03-p3"
+		],
+		"weightKg": [
+			"mattei-erc-22-reserved-20261103-1"
+		],
+		"phase": [
+			"mattei-erc-22-reserved-20261103-1"
+		],
+		"voltage": [
+			"mattei-erc-22-reserved-20261103-1"
+		],
+		"editorial": [
+			"mattei-erc-22-reserved-20261103-1"
+		],
+		"specifications": [
+			"mattei-erc-22-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Pression FAD, plage de fonctionnement et pression de soupape restent distinctes. ISO 1217 n’est pas ajoutée à une source qui ne la revendique pas."
-	]
+	],
+	"weightKg": 390,
+	"phase": "three-phase",
+	"voltage": "400 V / 50 Hz"
 };
 
 export default product;

@@ -18,12 +18,7 @@ const product: CompressorInput = {
 	},
 	"tankLiters": 90,
 	"maxPressureBar": 10,
-	"fadCurve": [
-		{
-			"pressureBar": 10,
-			"litersPerMinute": 380
-		}
-	],
+	"fadCurve": [],
 	"powerKw": 4,
 	"oilType": "unknown",
 	"confidence": "B",
@@ -36,58 +31,69 @@ const product: CompressorInput = {
 	},
 	"specifications": [
 		{
-			"label": "Configuration constructeur",
-			"value": "COMPACK sur réservoir 90 L et sécheur",
+			"label": "Code",
+			"value": "1860323509",
 			"evidenceIds": [
-				"october4-ktc-download-0-p3"
+				"ktc-compack-3-90l-e-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Pression maximale de fonctionnement publiée",
-			"value": "10 bar",
+			"label": "Configuration",
+			"value": "Cuve 90 L, avec sécheur E",
 			"evidenceIds": [
-				"october4-ktc-download-0-p3"
+				"ktc-compack-3-90l-e-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Cuve de stockage",
-			"value": "90 L",
+			"label": "Débit publié",
+			"value": "380 L/min selon ISO 1217 annexe C ; pression de mesure non explicitée",
 			"evidenceIds": [
-				"october4-ktc-download-0-p3"
+				"ktc-compack-3-90l-e-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Air livré à 10 bar",
-			"value": "380 L/min",
-			"evidenceIds": [
-				"october4-ktc-download-0-p3"
-			]
-		},
-		{
-			"label": "Puissance publiée",
+			"label": "Puissance",
 			"value": "4 kW",
 			"evidenceIds": [
-				"october4-ktc-download-0-p3"
+				"ktc-compack-3-90l-e-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Fréquence de la configuration retenue",
-			"value": "50 Hz",
+			"label": "Alimentation",
+			"value": "400 V / 50 Hz / 3 phases",
 			"evidenceIds": [
-				"october4-ktc-download-0-p3"
+				"ktc-compack-3-90l-e-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse de la colonne kg",
+			"value": "107 kg",
+			"evidenceIds": [
+				"ktc-compack-3-90l-e-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Dimensions L×W×H",
+			"value": "123 × 58 × 100 cm",
+			"evidenceIds": [
+				"ktc-compack-3-90l-e-reserved-20261103-1"
 			]
 		}
 	],
 	"editorial": {
-		"overview": "KTC COMPACK 3 90L + E. 380 L/min déclarés à 10 bar. COMPACK sur réservoir 90 L et sécheur.",
+		"overview": "KTC COMPACK 3 90 L + E. Le code 1860323509 correspond à la COMPACK 3 sur 90 L avec sécheur E. Les codes 1860323508 et 1860323509 conservent le même débit publié mais annoncent 75 et 107 kg et des encombrements distincts. La colonne Pressure max 10 bar ne prouve pas la pression de mesure des 380 L/min ; le point est retiré du calcul.",
 		"verifiedFacts": [
-			"Configuration de pression documentée : 10 bar.",
-			"Cuve de stockage documentée : 90 L.",
-			"FAD sous pression identifié séparément des valeurs d’aspiration : 380 L/min déclarés à 10 bar."
+			"Code : 1860323509.",
+			"Configuration : Cuve 90 L, avec sécheur E.",
+			"Débit publié : 380 L/min selon ISO 1217 annexe C ; pression de mesure non explicitée.",
+			"Puissance : 4 kW.",
+			"Alimentation : 400 V / 50 Hz / 3 phases.",
+			"Masse de la colonne kg : 107 kg.",
+			"Dimensions L×W×H : 123 × 58 × 100 cm."
 		],
 		"limitations": [
-			"Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil."
+			"Pression maximale 10 bar séparée de la pression de mesure FAD non explicitée.",
+			"Les colonnes kg et lbs contiennent des écarts de conversion ; les valeurs kg sont reproduites comme déclarations, sans les convertir depuis lbs."
 		]
 	},
 	"evidence": [
@@ -100,6 +106,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-04",
 			"confidence": "B",
 			"notes": "SHA-256 fb8e9e3d886333a85e6b0fd720cf06c451a2fc0826c8f816c536109d9bcb06ea de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "ktc-compack-3-90l-e-reserved-20261103-1",
+			"sourceUrl": "https://www.ktc-air.com/uploaded_files/attachments/202511171763374769/ktc_compack_2_3_smart_en.pdf#page=3",
+			"sourceLabel": "KTC : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 fb8e9e3d886333a85e6b0fd720cf06c451a2fc0826c8f816c536109d9bcb06ea. Le code 1860323509 correspond à la COMPACK 3 sur 90 L avec sécheur E. Les codes 1860323508 et 1860323509 conservent le même débit publié mais annoncent 75 et 107 kg et des encombrements distincts. La colonne Pressure max 10 bar ne prouve pas la pression de mesure des 380 L/min ; le point est retiré du calcul."
 		}
 	],
 	"fieldSources": {
@@ -113,19 +129,37 @@ const product: CompressorInput = {
 			"october4-ktc-download-0-p3"
 		],
 		"fadCurve": [
-			"october4-ktc-download-0-p3"
+			"ktc-compack-3-90l-e-reserved-20261103-1"
 		],
 		"powerKw": [
 			"october4-ktc-download-0-p3"
 		],
 		"mpn": [
 			"october4-ktc-download-0-p3"
+		],
+		"weightKg": [
+			"ktc-compack-3-90l-e-reserved-20261103-1"
+		],
+		"phase": [
+			"ktc-compack-3-90l-e-reserved-20261103-1"
+		],
+		"voltage": [
+			"ktc-compack-3-90l-e-reserved-20261103-1"
+		],
+		"editorial": [
+			"ktc-compack-3-90l-e-reserved-20261103-1"
+		],
+		"specifications": [
+			"ktc-compack-3-90l-e-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Portée de la source : FAD-pressure-qualified.",
 		"Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées."
-	]
+	],
+	"weightKg": 107,
+	"phase": "three-phase",
+	"voltage": "400 V / 50 Hz"
 };
 
 export default product;

@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "FACOM NM.1000F2PB. La fiche établit les dimensions ou caractéristiques mécaniques du modèle. Aucun débit d’air n’est déduit du couple, de la vitesse ni de la puissance. Champ fabricant : Handle Material : Aluminium. Champ fabricant : Impact Rate per Min. : 720.",
+		"overview": "FACOM NM.1000F2PB. La NM.1000F2PB est la clé 1 pouce de 10,3 kg, maximum 4 068 Nm et 4 500 tr/min. La NM.3000FPB annonce 3 390 Nm et 5 000 tr/min ; ces maxima ne sont pas des couples de serrage contrôlés. Débit et pression de mesure absents de la fiche consultée.",
 		"verifiedFacts": [
 			"Champ fabricant : Handle Material : Aluminium.",
 			"Champ fabricant : Impact Rate per Min. : 720.",
@@ -39,7 +39,11 @@ const product: ToolProfileInput = {
 			"Champ fabricant : Product Height [mm] : 290.",
 			"Champ fabricant : Product Length [mm] : 300.",
 			"Champ fabricant : Product Weight [Kg] : 10.3.",
-			"Champ fabricant : Product Width [mm] : 205."
+			"Champ fabricant : Product Width [mm] : 205.",
+			"Carré : 1 pouce.",
+			"Mécanisme : Twin hammer.",
+			"Retenue de douille : Bague et trou traversant.",
+			"Réglage : Trois positions, marche avant et arrière."
 		],
 		"limitations": [
 			"La fiche établit les dimensions ou caractéristiques mécaniques du modèle. Aucun débit d’air n’est déduit du couple, de la vitesse ni de la puissance.",
@@ -118,6 +122,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-facom-nm1000f2pb-html-p1"
 			]
+		},
+		{
+			"label": "Carré",
+			"value": "1 pouce",
+			"evidenceIds": [
+				"cle-a-chocs-facom-nm-1000f2pb-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Mécanisme",
+			"value": "Twin hammer",
+			"evidenceIds": [
+				"cle-a-chocs-facom-nm-1000f2pb-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Retenue de douille",
+			"value": "Bague et trou traversant",
+			"evidenceIds": [
+				"cle-a-chocs-facom-nm-1000f2pb-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Réglage",
+			"value": "Trois positions, marche avant et arrière",
+			"evidenceIds": [
+				"cle-a-chocs-facom-nm-1000f2pb-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -130,6 +162,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 5e025563bb99e5e1811ad540d2f3be75469eb4cbcd352fea026e5d2f45cc8da5. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-chocs-facom-nm-1000f2pb-reserved-20261103-1",
+			"sourceUrl": "https://www.facom.com/product/nm1000f2pb/1-impact-wrench?tid=610786",
+			"sourceLabel": "FACOM : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 50b6de6ef6156ea5a2bb88d486757d6e2a34b6e447f59a6a3479c4f7b2532471. La NM.1000F2PB est la clé 1 pouce de 10,3 kg, maximum 4 068 Nm et 4 500 tr/min. La NM.3000FPB annonce 3 390 Nm et 5 000 tr/min ; ces maxima ne sont pas des couples de serrage contrôlés. Débit et pression de mesure absents de la fiche consultée."
 		}
 	],
 	"fieldSources": {
@@ -141,6 +183,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-facom-nm1000f2pb-html-p1"
+		],
+		"editorial": [
+			"cle-a-chocs-facom-nm-1000f2pb-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-chocs-facom-nm-1000f2pb-reserved-20261103-1"
 		]
 	},
 	"notes": [

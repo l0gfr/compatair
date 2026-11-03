@@ -29,13 +29,17 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "FACOM V.402F. La fiche établit les dimensions ou caractéristiques mécaniques du modèle. Aucun débit d’air n’est déduit du couple, de la vitesse ni de la puissance. Champ fabricant : Power Source : Pneumatic. Champ fabricant : Product Height [mm] : 83.",
+		"overview": "FACOM V.402F. La V.402F utilise une bande 10 × 330 mm avec bras étroit et poignée orientable, 283 mm et 0,8 kg. La V.403F mesure 350 mm et garde sa propre configuration. Le format d’abrasif et la géométrie sont documentés ; le besoin d’air reste indéterminé faute de débit publié.",
 		"verifiedFacts": [
 			"Champ fabricant : Power Source : Pneumatic.",
 			"Champ fabricant : Product Height [mm] : 83.",
 			"Champ fabricant : Product Length [mm] : 283.",
 			"Champ fabricant : Product Weight [Kg] : 0.8.",
-			"Champ fabricant : Product Width [mm] : 10."
+			"Champ fabricant : Product Width [mm] : 10.",
+			"Bande : 10 × 330 mm.",
+			"Poignée : Orientable.",
+			"Bras : Changement rapide de bande.",
+			"Abrasifs livrés : Deux P120 et un P80."
 		],
 		"limitations": [
 			"La fiche établit les dimensions ou caractéristiques mécaniques du modèle. Aucun débit d’air n’est déduit du couple, de la vitesse ni de la puissance.",
@@ -86,6 +90,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-facom-v402f-html-p1"
 			]
+		},
+		{
+			"label": "Bande",
+			"value": "10 × 330 mm",
+			"evidenceIds": [
+				"ponceuse-bande-facom-v-402f-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Poignée",
+			"value": "Orientable",
+			"evidenceIds": [
+				"ponceuse-bande-facom-v-402f-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Bras",
+			"value": "Changement rapide de bande",
+			"evidenceIds": [
+				"ponceuse-bande-facom-v-402f-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Abrasifs livrés",
+			"value": "Deux P120 et un P80",
+			"evidenceIds": [
+				"ponceuse-bande-facom-v-402f-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -98,6 +130,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : e15817349f422279a381fbca7d9b111141a5a8f02a377aa69f8240774ac745e0. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-bande-facom-v-402f-reserved-20261103-1",
+			"sourceUrl": "https://www.facom.com/product/v402f/10-x-330-mm-belt-sander?tid=610786",
+			"sourceLabel": "FACOM : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 d575a7bdc70ec6479696f53ebf0783f373ddb20916a2e666cf22f8c321bdc30e. La V.402F utilise une bande 10 × 330 mm avec bras étroit et poignée orientable, 283 mm et 0,8 kg. La V.403F mesure 350 mm et garde sa propre configuration. Le format d’abrasif et la géométrie sont documentés ; le besoin d’air reste indéterminé faute de débit publié."
 		}
 	],
 	"fieldSources": {
@@ -109,6 +151,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-facom-v402f-html-p1"
+		],
+		"editorial": [
+			"ponceuse-bande-facom-v-402f-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-bande-facom-v-402f-reserved-20261103-1"
 		]
 	},
 	"notes": [

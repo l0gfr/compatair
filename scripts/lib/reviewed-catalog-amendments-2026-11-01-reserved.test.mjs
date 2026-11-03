@@ -12,7 +12,18 @@ import { technicalCardSvg } from './technical-card.mjs';
 import { createCatalogScope } from '../../src/domain/data-governance';
 import { evidenceHistory } from '../../src/data/evidence-history';
 const snapshot = JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-11-01-reserved.json', import.meta.url)));
-const native = row => parseCatalogProductSource(row.kind, readFileSync(new URL('../../' + row.file, import.meta.url), 'utf8'));
+import { beforeReservedNovember3Followup } from './reviewed-catalog-amendments-2026-11-03-reserved.mjs';
+const laterSnapshot = JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-11-03-reserved.json', import.meta.url)));
+const native = row => beforeReservedNovember3Followup(parseCatalogProductSource(row.kind, readFileSync(new URL('../../' + row.file, import.meta.url), 'utf8')));
+const datedBytes = row => {
+ const later = laterSnapshot.rows.find(later => later.id === row.id);
+ if (!later) return readFileSync(new URL('../../' + row.file, import.meta.url));
+ const record = native(row);
+ let bytes = buildCatalogProductSource(row.kind, Object.fromEntries(later.sourcePropertyOrder.map(key => [key, record[key]])), later.sourceIndentation);
+ if (later.sourceCompactExport) bytes = bytes.replace(';\n\nexport', ';\nexport');
+ expect(digest(bytes), row.id + '/dated-Nov3-boundary').toBe(later.beforeFileSha256);
+ return bytes;
+};
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
 const ledgerBytesAtReview = (bytes, file, reviewedAt) => {
  const key = file === 'config/indexation-editorial-reviews.json' ? 'reviews'
@@ -59,7 +70,7 @@ describe('November1 factual corrections of reserved references', () => {
   const retired = snapshot.rows.filter(row => row.before.demandModel === 'fixed-flow' && row.after.demandModel === 'variable-volume');
   expect(retired).toHaveLength(7);
   const previous = createCatalogScope(compressors.map(beforeReservedNovember1Followup), tools.map(beforeReservedNovember1Followup));
-  const current = createCatalogScope(compressors, tools);
+  const current = createCatalogScope(compressors.map(beforeReservedNovember3Followup), tools.map(beforeReservedNovember3Followup));
   expect(previous.fixed_flow_tool_count).toBe(8876);
   expect(previous.fixed_verdict_count).toBe(45791284);
   expect(previous.parametric_combination_count).toBe(57837549);
@@ -70,7 +81,7 @@ describe('November1 factual corrections of reserved references', () => {
  it('replays every exact record without changing historical evidence, identity or unrelated fields', () => {
   const proof = snapshot.evidenceHistoryAppend;
   expect(digest(JSON.stringify(evidenceHistory.events.slice(0, proof.previousEventCount)))).toBe(proof.previousEventsSha256);
-  expect(evidenceHistory.events).toHaveLength(proof.previousEventCount + proof.addedEvents);
+  expect(evidenceHistory.events.slice(0, laterSnapshot.evidenceHistoryAppend.previousEventCount)).toHaveLength(proof.previousEventCount + proof.addedEvents);
   expect(proof.addedEvents).toBe(72);
   expect(snapshot.rows).toHaveLength(72);
   expect(new Set(snapshot.rows.map(r => r.id)).size).toBe(72);
@@ -82,14 +93,14 @@ describe('November1 factual corrections of reserved references', () => {
    let source = buildCatalogProductSource(row.kind, Object.fromEntries(row.sourcePropertyOrder.map(k => [k, before[k]])), row.sourceIndentation);
    if (row.sourceCompactExport) source = source.replace(';\n\nexport', ';\nexport');
    expect(digest(source), row.id).toBe(row.beforeFileSha256);
-   expect(digest(readFileSync(new URL('../../' + row.file, import.meta.url))), row.id).toBe(row.afterFileSha256);
+   expect(digest(datedBytes(row)), row.id).toBe(row.afterFileSha256);
    for (const k of Object.keys(before).filter(k => !row.fields.includes(k))) expect(after[k], row.id + '/' + k).toEqual(before[k]);
    for (const k of ['brand', 'model', 'mpn']) expect(() => applyReservedNovember1Followup({ ...before, [k]: 'unreviewed' }), row.id).toThrow('identity');
    const drift = structuredClone(before); drift[row.fields[0]] = 'unreviewed';
    expect(() => applyReservedNovember1Followup(drift), row.id).toThrow('base');
    expect(() => beforeReservedNovember1Followup(drift), row.id).toThrow('historical');
    const parsed = (row.kind === 'tools' ? toolProfileSchema : compressorSchema).parse(after);
-   const current = (row.kind === 'tools' ? tools : compressors).find(p => p.id === row.id);
+   const current = beforeReservedNovember3Followup((row.kind === 'tools' ? tools : compressors).find(p => p.id === row.id));
    expect(current, row.id).toEqual(row.kind === 'tools' ? { ...parsed, category: toolCategoryLabel(parsed.categoryId) } : parsed);
    const ids = new Set(after.evidence.map(e => e.id));
    for (const references of Object.values(after.fieldSources)) for (const id of references) expect(ids.has(id), row.id).toBe(true);
@@ -121,7 +132,11 @@ describe('November1 factual corrections of reserved references', () => {
   for (const card of snapshot.replacementTechnicalCards) {
    const row = snapshot.rows.find(row => row.id === card.id), product = native(row);
    expect(product.image.src).toBe(card.path);
-   const bytes = readFileSync(new URL('../../public' + card.path, import.meta.url));
+   const currentBytes = readFileSync(new URL('../../public' + card.path, import.meta.url));
+   const later = laterSnapshot.technicalCards.find(proof => proof.path === card.path);
+   if (later) { expect(later.beforeSha256, card.path).toBe(card.afterSha256); expect(digest(currentBytes), card.path).toBe(later.afterSha256); }
+   const datedProduct = native(snapshot.rows.find(row => row.id === (card.id ?? snapshot.rows.find(row => native(row).image.src === card.path)?.id)));
+   const bytes = later ? Buffer.from(technicalCardSvg(datedProduct, snapshot.rows.find(row => row.id === datedProduct.id).kind)) : currentBytes;
    expect(bytes.toString('utf8')).toBe(technicalCardSvg(product, row.kind));
    expect(digest(bytes)).toBe(card.afterSha256);
    expect(bytes.toString('utf8')).toContain('Non établi');
@@ -130,7 +145,11 @@ describe('November1 factual corrections of reserved references', () => {
   expect(snapshot.technicalCards).toHaveLength(4);
   for (const card of snapshot.technicalCards) {
    const row = snapshot.rows.find(row => native(row).image.src === card.path), after = native(row), before = beforeReservedNovember1Followup(after);
-   const bytes = readFileSync(new URL('../../public' + card.path, import.meta.url));
+   const currentBytes = readFileSync(new URL('../../public' + card.path, import.meta.url));
+   const later = laterSnapshot.technicalCards.find(proof => proof.path === card.path);
+   if (later) { expect(later.beforeSha256, card.path).toBe(card.afterSha256); expect(digest(currentBytes), card.path).toBe(later.afterSha256); }
+   const datedProduct = native(snapshot.rows.find(row => row.id === (card.id ?? snapshot.rows.find(row => native(row).image.src === card.path)?.id)));
+   const bytes = later ? Buffer.from(technicalCardSvg(datedProduct, snapshot.rows.find(row => row.id === datedProduct.id).kind)) : currentBytes;
    expect(digest(technicalCardSvg(before, row.kind)), card.path).toBe(card.beforeSha256);
    expect(digest(bytes), card.path).toBe(card.afterSha256); expect(bytes.length).toBe(card.afterBytes); expect(bytes.length).toBeLessThanOrEqual(250 * 1024);
    expect(bytes.toString('utf8'), card.path).toBe(technicalCardSvg(after, row.kind));

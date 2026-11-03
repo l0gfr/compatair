@@ -37,44 +37,53 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Bosch 0 607 252 103 (réf. 0607252103). Consommation en charge : 750 L/min à 6,3 bar. Vitesse à vide : 21000 tr/min. Masse : 1.1 kg.",
+		"overview": "Bosch 0 607 252 103. La 0 607 252 103 est la meuleuse droite 550 W pour abrasif jusqu’à 40 mm. Les 0 607 260 100/101 sont des machines 320 W au même diamètre et à la même vitesse ; une vitesse identique ne signifie pas la même puissance ni le même débit. La colonne en charge est rattachée aux conditions générales 6,3 bar et flexible 4 m.",
 		"verifiedFacts": [
-			"Vitesse à vide : 21000 tr/min.",
-			"Masse : 1.1 kg."
+			"Type : Meuleuse droite S-LINE.",
+			"Puissance : 550 W.",
+			"Diamètre abrasif admissible : 40 mm.",
+			"Vitesse à vide : 21 000 tr/min.",
+			"Débit en charge : 12,5 L/s (750 L/min)."
 		],
 		"limitations": [
-			"Dimensionnement à la consommation publiée, sans réduction par un cycle d’utilisation supposé.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"Performances déclarées sous le protocole du catalogue : pression dynamique 6,3 bar, flexible de 4 m. Les régimes à vide/en charge restent distincts.",
+			"Catalogue historique ; équipement et disponibilité actuels à confirmer."
 		]
 	},
 	"specifications": [
 		{
+			"label": "Type",
+			"value": "Meuleuse droite S-LINE",
+			"evidenceIds": [
+				"meuleuse-bosch-0-607-252-103-0607252103-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Puissance",
+			"value": "550 W",
+			"evidenceIds": [
+				"meuleuse-bosch-0-607-252-103-0607252103-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Diamètre abrasif admissible",
+			"value": "40 mm",
+			"evidenceIds": [
+				"meuleuse-bosch-0-607-252-103-0607252103-reserved-20261103-1"
+			]
+		},
+		{
 			"label": "Vitesse à vide",
-			"value": "21000 tr/min",
+			"value": "21 000 tr/min",
 			"evidenceIds": [
-				"october-bosch-industry-p30"
+				"meuleuse-bosch-0-607-252-103-0607252103-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse",
-			"value": "1.1 kg",
+			"label": "Débit en charge",
+			"value": "12,5 L/s (750 L/min)",
 			"evidenceIds": [
-				"october-bosch-industry-p30"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "Bosch, Industrial air tools catalogue, page 30 ; tableau réparti sur les pages 30–31",
-			"evidenceIds": [
-				"october-bosch-industry-p30"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "All of the performance data / specifications in this catalogue refer to 6.3 bar (91 PSI) flow pressure with 4 m hose length.",
-			"evidenceIds": [
-				"october-bosch-industry-p30",
-				"october-bosch-industry-p4"
+				"meuleuse-bosch-0-607-252-103-0607252103-reserved-20261103-1"
 			]
 		}
 	],
@@ -98,6 +107,36 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "meuleuse-bosch-0-607-252-103-0607252103-reserved-20261103-1",
+			"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf#page=30",
+			"sourceLabel": "Bosch : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. La 0 607 252 103 est la meuleuse droite 550 W pour abrasif jusqu’à 40 mm. Les 0 607 260 100/101 sont des machines 320 W au même diamètre et à la même vitesse ; une vitesse identique ne signifie pas la même puissance ni le même débit. La colonne en charge est rattachée aux conditions générales 6,3 bar et flexible 4 m."
+		},
+		{
+			"id": "meuleuse-bosch-0-607-252-103-0607252103-reserved-20261103-1-3",
+			"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf#page=31",
+			"sourceLabel": "Bosch : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. La 0 607 252 103 est la meuleuse droite 550 W pour abrasif jusqu’à 40 mm. Les 0 607 260 100/101 sont des machines 320 W au même diamètre et à la même vitesse ; une vitesse identique ne signifie pas la même puissance ni le même débit. La colonne en charge est rattachée aux conditions générales 6,3 bar et flexible 4 m."
+		},
+		{
+			"id": "meuleuse-bosch-0-607-252-103-0607252103-reserved-20261103-1-4",
+			"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf#page=4",
+			"sourceLabel": "Bosch : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. La 0 607 252 103 est la meuleuse droite 550 W pour abrasif jusqu’à 40 mm. Les 0 607 260 100/101 sont des machines 320 W au même diamètre et à la même vitesse ; une vitesse identique ne signifie pas la même puissance ni le même débit. La colonne en charge est rattachée aux conditions générales 6,3 bar et flexible 4 m."
 		}
 	],
 	"fieldSources": {
@@ -109,6 +148,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"october-bosch-industry-p30"
+		],
+		"editorial": [
+			"meuleuse-bosch-0-607-252-103-0607252103-reserved-20261103-1"
+		],
+		"specifications": [
+			"meuleuse-bosch-0-607-252-103-0607252103-reserved-20261103-1"
 		]
 	},
 	"notes": [

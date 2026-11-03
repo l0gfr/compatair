@@ -31,7 +31,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "HAZET 9020ECO-1. La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi. Champ fabricant : Manual/impact operation : For impact operation. Champ fabricant : Tightening torque maximum : 35 Nm.",
+		"overview": "HAZET 9020ECO-1. La 9020ECO-1 associe carré 1/4 pouce, maximum 35 Nm, 300 tr/min et 0,58 kg. Les 9021ECO-1 et 9022ECO-1 passent à 3/8 et 1/2 pouce avec d’autres couples. Les 86 L/min ne prouvent pas un débit continu en charge.",
 		"verifiedFacts": [
 			"Champ fabricant : Manual/impact operation : For impact operation.",
 			"Champ fabricant : Tightening torque maximum : 35 Nm.",
@@ -49,7 +49,10 @@ const product: ToolProfileInput = {
 			"Champ fabricant : Coupler plug : Nominal size 7.2 (included).",
 			"Champ fabricant : Sound power level : 96.43 db(A) Lp W.",
 			"Champ fabricant : Air requirement [l/sec] : 1.4 l/sec.",
-			"Champ fabricant : Working pressure ( bar ) : 6.3 bar."
+			"Champ fabricant : Working pressure ( bar ) : 6.3 bar.",
+			"Carré : 1/4 pouce.",
+			"Raccord : Orientable 360°.",
+			"Longueur : 177 mm."
 		],
 		"limitations": [
 			"La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi.",
@@ -192,6 +195,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-hazet-4000896279241-html-p1"
 			]
+		},
+		{
+			"label": "Carré",
+			"value": "1/4 pouce",
+			"evidenceIds": [
+				"cle-a-cliquet-hazet-9020eco-1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Raccord",
+			"value": "Orientable 360°",
+			"evidenceIds": [
+				"cle-a-cliquet-hazet-9020eco-1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "177 mm",
+			"evidenceIds": [
+				"cle-a-cliquet-hazet-9020eco-1-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -204,6 +228,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : be139c090998af0922888d73581d6c50ecf3bdada42a825e38ffe5765a24a953. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-cliquet-hazet-9020eco-1-reserved-20261103-1",
+			"sourceUrl": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/air-ratchet/product/ean-4000896279241",
+			"sourceLabel": "HAZET : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 0d2738e376f890b59a2769ae1191f106cbb7df0e790b13b4d831a46886cd2197. La 9020ECO-1 associe carré 1/4 pouce, maximum 35 Nm, 300 tr/min et 0,58 kg. Les 9021ECO-1 et 9022ECO-1 passent à 3/8 et 1/2 pouce avec d’autres couples. Les 86 L/min ne prouvent pas un débit continu en charge."
 		}
 	],
 	"fieldSources": {
@@ -215,6 +249,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-hazet-4000896279241-html-p1"
+		],
+		"editorial": [
+			"cle-a-cliquet-hazet-9020eco-1-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-cliquet-hazet-9020eco-1-reserved-20261103-1"
 		]
 	},
 	"notes": [

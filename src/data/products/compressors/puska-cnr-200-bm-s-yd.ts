@@ -76,13 +76,61 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4b-puska-catalog-2025-p18"
       ]
+    },
+    {
+      "label": "Code",
+      "value": "4116 0023 21",
+      "evidenceIds": [
+        "puska-cnr-200-bm-s-yd-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Configuration",
+      "value": "CNR 200/BM S YD sur socle",
+      "evidenceIds": [
+        "puska-cnr-200-bm-s-yd-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Débit de la ligne 10 bar",
+      "value": "1860 L/min, caudal real ISO 1217 annexe C",
+      "evidenceIds": [
+        "puska-cnr-200-bm-s-yd-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Puissance",
+      "value": "15 kW",
+      "evidenceIds": [
+        "puska-cnr-200-bm-s-yd-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Masse",
+      "value": "544 kg",
+      "evidenceIds": [
+        "puska-cnr-200-bm-s-yd-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Alimentation",
+      "value": "400 V / 3 phases / 50 Hz",
+      "evidenceIds": [
+        "puska-cnr-200-bm-s-yd-reserved-20261103-1"
+      ]
     }
   ],
   "editorial": {
-    "overview": "Puska CNR 200/BM S YD. 1 860 L/min déclarés à 10 bar. Configuration constructeur : CNR 200/BM S YD.",
+    "overview": "Puska CNR 200/BM S YD. La CNR 200/BM S YD sur socle pèse 544 kg. La CNR 55 sur cuve et la CNR 55/BM partagent 492 L/min, mais annoncent 303 et 228 kg. La CNR 200/BM donne 1 860 L/min contre 1 332 pour la CNR 155/BM. Ces valeurs sont celles de Puska ; les valeurs d’une autre marque CNR ne sont pas transférées.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 10 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 1 860 L/min déclarés à 10 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 1 860 L/min déclarés à 10 bar.",
+      "Code : 4116 0023 21.",
+      "Configuration : CNR 200/BM S YD sur socle.",
+      "Débit de la ligne 10 bar : 1860 L/min, caudal real ISO 1217 annexe C.",
+      "Puissance : 15 kW.",
+      "Masse : 544 kg.",
+      "Alimentation : 400 V / 3 phases / 50 Hz."
     ],
     "limitations": [
       "La cuve n’est pas qualifiée : le tiret dans la colonne L ne démontre pas à lui seul un stockage nul.",
@@ -102,6 +150,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 62ce74f8e02f84d3c021f7162c9e8fd8cd9fc17fa41131797a1d7b3465e92454 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "puska-cnr-200-bm-s-yd-reserved-20261103-1",
+      "sourceUrl": "https://www.puska.com/content/dam/brands/Puska/catalogos/Cat%C3%A1logo%20Puska%202025.pdf#page=18",
+      "sourceLabel": "Puska : revue factuelle du 3 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-03",
+      "confidence": "B",
+      "notes": "GET complet HTTP200 SHA-256 62ce74f8e02f84d3c021f7162c9e8fd8cd9fc17fa41131797a1d7b3465e92454. La CNR 200/BM S YD sur socle pèse 544 kg. La CNR 55 sur cuve et la CNR 55/BM partagent 492 L/min, mais annoncent 303 et 228 kg. La CNR 200/BM donne 1 860 L/min contre 1 332 pour la CNR 155/BM. Ces valeurs sont celles de Puska ; les valeurs d’une autre marque CNR ne sont pas transférées."
     }
   ],
   "fieldSources": {
@@ -125,13 +183,31 @@ const product: CompressorInput = {
     ],
     "mpn": [
       "october4b-puska-catalog-2025-p18"
+    ],
+    "weightKg": [
+      "puska-cnr-200-bm-s-yd-reserved-20261103-1"
+    ],
+    "phase": [
+      "puska-cnr-200-bm-s-yd-reserved-20261103-1"
+    ],
+    "voltage": [
+      "puska-cnr-200-bm-s-yd-reserved-20261103-1"
+    ],
+    "editorial": [
+      "puska-cnr-200-bm-s-yd-reserved-20261103-1"
+    ],
+    "specifications": [
+      "puska-cnr-200-bm-s-yd-reserved-20261103-1"
     ]
   },
   "notes": [
     "Portée de la source : FAD-pressure-qualified.",
     "Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées.",
     "Identités de pression, tension, contrôleur et démarreur consolidées avant le décompte du lot."
-  ]
+  ],
+  "weightKg": 544,
+  "phase": "three-phase",
+  "voltage": "400 V / 50 Hz"
 };
 
 export default product;

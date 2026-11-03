@@ -34,51 +34,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Dotco 12L2593-01. La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner. Vitesse à vide : 4,700 tr/min. Masse publiée : 0.95 kg.",
+		"overview": "Dotco 12L2593-01. La 12L2593-01 accepte la brosse métallique 100 mm ou la roue de polissage 150 mm, au montage 1/4 pouce et à 4 700 tr/min. La 12L2592-01 tourne à 3 200 tr/min et la 12L2594-01 à 6 200 tr/min. La vitesse admissible de l’accessoire doit correspondre à la version exacte. Le catalogue ne chiffre pas la consommation.",
 		"verifiedFacts": [
-			"Vitesse à vide : 4,700 tr/min.",
-			"Masse publiée : 0.95 kg.",
-			"Dimension publiée : 236 mm."
+			"Montage : 1/4 pouce.",
+			"Capacité brosse métallique : 4 pouces (100 mm).",
+			"Capacité roue de polissage : 6 pouces (150 mm).",
+			"Vitesse à vide : 4 700 tr/min.",
+			"Corps : Composite.",
+			"Masse : 0,95 kg."
 		],
 		"limitations": [
-			"La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"Aucune consommation qualifiée n’est publiée dans le tableau de cette référence ; vitesse et puissance ne fournissent pas un débit.",
+			"Catalogue constructeur identifié ; vérifier l’équipement de la révision livrée."
 		]
 	},
 	"specifications": [
 		{
+			"label": "Montage",
+			"value": "1/4 pouce",
+			"evidenceIds": [
+				"polisseuse-dotco-12l2593-01-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Capacité brosse métallique",
+			"value": "4 pouces (100 mm)",
+			"evidenceIds": [
+				"polisseuse-dotco-12l2593-01-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Capacité roue de polissage",
+			"value": "6 pouces (150 mm)",
+			"evidenceIds": [
+				"polisseuse-dotco-12l2593-01-reserved-20261103-1"
+			]
+		},
+		{
 			"label": "Vitesse à vide",
-			"value": "4,700 tr/min",
+			"value": "4 700 tr/min",
 			"evidenceIds": [
-				"october-dotco-p54"
+				"polisseuse-dotco-12l2593-01-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
-			"value": "0.95 kg",
+			"label": "Corps",
+			"value": "Composite",
 			"evidenceIds": [
-				"october-dotco-p54"
+				"polisseuse-dotco-12l2593-01-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Dimension publiée",
-			"value": "236 mm",
+			"label": "Masse",
+			"value": "0,95 kg",
 			"evidenceIds": [
-				"october-dotco-p54"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "Cleco/Dotco, Material Removal SP-102EN, page 54",
-			"evidenceIds": [
-				"october-dotco-p54"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "All tools performance rated @ 90 psi / 620 kPa air pressure.",
-			"evidenceIds": [
-				"october-dotco-p54"
+				"polisseuse-dotco-12l2593-01-reserved-20261103-1"
 			]
 		}
 	],
@@ -92,6 +102,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 93b7d3cdb96a91eecf95baaf172ed0953f2021cb336460e5f9a202ce7e687c10. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "polisseuse-dotco-12l2593-01-reserved-20261103-1",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/DOTCO%20Material%20Removal_SP-102EN_en.pdf#page=54",
+			"sourceLabel": "Dotco : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 93b7d3cdb96a91eecf95baaf172ed0953f2021cb336460e5f9a202ce7e687c10. La 12L2593-01 accepte la brosse métallique 100 mm ou la roue de polissage 150 mm, au montage 1/4 pouce et à 4 700 tr/min. La 12L2592-01 tourne à 3 200 tr/min et la 12L2594-01 à 6 200 tr/min. La vitesse admissible de l’accessoire doit correspondre à la version exacte. Le catalogue ne chiffre pas la consommation."
 		}
 	],
 	"fieldSources": {
@@ -103,6 +123,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october-dotco-p54"
+		],
+		"editorial": [
+			"polisseuse-dotco-12l2593-01-reserved-20261103-1"
+		],
+		"specifications": [
+			"polisseuse-dotco-12l2593-01-reserved-20261103-1"
 		]
 	},
 	"notes": [

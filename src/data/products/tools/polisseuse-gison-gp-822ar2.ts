@@ -38,67 +38,60 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-822AR2. Consommation de régime non précisé : 480 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 0.70 kg. Longueur : 178 mm.",
+		"overview": "GISON GP-822AR2. La GP-822AR2 utilise un plateau 2 pouces ; la GP-822AR3 passe à 3 pouces avec le même filetage 5/16 pouce–24 et 3 500 tr/min. La GP-821P est une polisseuse verticale de 7 pouces à 2 000 tr/min et 2,60 kg. Le format de plateau reste un critère indépendant du besoin d’air.",
 		"verifiedFacts": [
-			"Masse : 0.70 kg.",
+			"Plateau : 2 pouces.",
+			"Filetage : 5/16 pouce–24.",
+			"Vitesse à vide : 3 500 tr/min.",
+			"Tête : 100 degrés, sans engrenage selon légende.",
 			"Longueur : 178 mm.",
-			"Vitesse à vide : 3500 tr/min.",
-			"Diamètre de flexible publié : 6.5 mm.",
-			"Référence constructeur : GP-822AR2."
+			"Masse : 0,70 kg."
 		],
 		"limitations": [
-			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
-			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+			"Recommandation de service 90 psi (6,3 kg/cm² dans le catalogue), distincte d’un point de mesure de consommation démontré. Régime non qualifié ; pas de conclusion de dimensionnement."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse",
-			"value": "0.70 kg",
+			"label": "Plateau",
+			"value": "2 pouces",
 			"evidenceIds": [
-				"october-b-gison-tools-p46"
+				"polisseuse-gison-gp-822ar2-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Filetage",
+			"value": "5/16 pouce–24",
+			"evidenceIds": [
+				"polisseuse-gison-gp-822ar2-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "3 500 tr/min",
+			"evidenceIds": [
+				"polisseuse-gison-gp-822ar2-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Tête",
+			"value": "100 degrés, sans engrenage selon légende",
+			"evidenceIds": [
+				"polisseuse-gison-gp-822ar2-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Longueur",
 			"value": "178 mm",
 			"evidenceIds": [
-				"october-b-gison-tools-p46"
+				"polisseuse-gison-gp-822ar2-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse à vide",
-			"value": "3500 tr/min",
+			"label": "Masse",
+			"value": "0,70 kg",
 			"evidenceIds": [
-				"october-b-gison-tools-p46"
-			]
-		},
-		{
-			"label": "Diamètre de flexible publié",
-			"value": "6.5 mm",
-			"evidenceIds": [
-				"october-b-gison-tools-p46"
-			]
-		},
-		{
-			"label": "Référence constructeur",
-			"value": "GP-822AR2",
-			"evidenceIds": [
-				"october-b-gison-tools-p46"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "Recommended Air Pressure 90 psi (6.3 kg/cm2)",
-			"evidenceIds": [
-				"october-b-gison-tools-p46"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "GISON, catalogue pneumatique 2018–2019, page PDF 46",
-			"evidenceIds": [
-				"october-b-gison-tools-p46"
+				"polisseuse-gison-gp-822ar2-reserved-20261103-1"
 			]
 		}
 	],
@@ -112,6 +105,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "polisseuse-gison-gp-822ar2-reserved-20261103-1",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=46",
+			"sourceLabel": "GISON : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. La GP-822AR2 utilise un plateau 2 pouces ; la GP-822AR3 passe à 3 pouces avec le même filetage 5/16 pouce–24 et 3 500 tr/min. La GP-821P est une polisseuse verticale de 7 pouces à 2 000 tr/min et 2,60 kg. Le format de plateau reste un critère indépendant du besoin d’air."
 		}
 	],
 	"fieldSources": {
@@ -126,6 +129,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-b-gison-tools-p46"
+		],
+		"editorial": [
+			"polisseuse-gison-gp-822ar2-reserved-20261103-1"
+		],
+		"specifications": [
+			"polisseuse-gison-gp-822ar2-reserved-20261103-1"
 		]
 	},
 	"notes": [

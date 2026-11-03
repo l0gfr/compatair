@@ -23,61 +23,61 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Yokota YD-40PZ, référence YD-40PZ. Le tableau fabricant publie 96 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 14000 tr/min. Masse publiée : 0,5 kg.",
+		"overview": "Yokota YD-40PZ. La YD-40PZ est la visseuse pistolet 0,5 kg à 14 000 tr/min et 15 Nm. La YD-600SZ est droite, 1 kg, 7 500 tr/min et 37 Nm. Vitesse, forme et couple différencient les applications ; les 1,6 L/s restent sans régime explicite, sans extrapolation à un maximum.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation publiée : 1.6 L/s, convertis en 96 L/min par multiplication par 60.",
-			"Référence fabricant : YD-40PZ.",
-			"Vitesse à vide publiée : 14000 tr/min.",
-			"Masse publiée : 0,5 kg.",
-			"Diamètre intérieur de flexible conseillé : 6,5 mm."
+			"Entraînement : Hexagonal 1/4 pouce.",
+			"Modèle : Pistolet.",
+			"Couple indicatif : 15 Nm.",
+			"Vitesse à vide : 14 000 tr/min.",
+			"Masse : 0,5 kg.",
+			"Consommation publiée : 1,6 L/s."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"Régime et pression de mesure ne sont pas complétés par hypothèse. Les données non dimensionnantes restent dans les spécifications.",
+			"Catalogue constructeur historique ; configuration livrée et disponibilité actuelles à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+			"label": "Entraînement",
+			"value": "Hexagonal 1/4 pouce",
 			"evidenceIds": [
-				"yokota-yd-40pz-20260926-workingpressurebar-1"
+				"yokota-yd-40pz-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation publiée : 1.6 L/s, convertis en 96 L/min par multiplication par 60.",
+			"label": "Modèle",
+			"value": "Pistolet",
 			"evidenceIds": [
-				"yokota-yd-40pz-20260926"
+				"yokota-yd-40pz-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse à vide publiée",
-			"value": "14000 tr/min",
+			"label": "Couple indicatif",
+			"value": "15 Nm",
 			"evidenceIds": [
-				"yokota-yd-40pz-20260926"
+				"yokota-yd-40pz-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
+			"label": "Vitesse à vide",
+			"value": "14 000 tr/min",
+			"evidenceIds": [
+				"yokota-yd-40pz-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
 			"value": "0,5 kg",
 			"evidenceIds": [
-				"yokota-yd-40pz-20260926"
+				"yokota-yd-40pz-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre intérieur de flexible conseillé",
-			"value": "6,5 mm",
+			"label": "Consommation publiée",
+			"value": "1,6 L/s",
 			"evidenceIds": [
-				"yokota-yd-40pz-20260926"
-			]
-		},
-		{
-			"label": "Raccord pneumatique",
-			"value": "PT 1/4\"",
-			"evidenceIds": [
-				"yokota-yd-40pz-20260926"
+				"yokota-yd-40pz-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "yokota-yd-40pz-reserved-20261103-1",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=41",
+			"sourceLabel": "Yokota : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. La YD-40PZ est la visseuse pistolet 0,5 kg à 14 000 tr/min et 15 Nm. La YD-600SZ est droite, 1 kg, 7 500 tr/min et 37 Nm. Vitesse, forme et couple différencient les applications ; les 1,6 L/s restent sans régime explicite, sans extrapolation à un maximum."
 		}
 	],
 	"fieldSources": {
@@ -116,6 +126,15 @@ const product: ToolProfileInput = {
 		],
 		"connectorSize": [
 			"yokota-yd-40pz-20260926"
+		],
+		"airflowBasis": [
+			"yokota-yd-40pz-reserved-20261103-1"
+		],
+		"editorial": [
+			"yokota-yd-40pz-reserved-20261103-1"
+		],
+		"specifications": [
+			"yokota-yd-40pz-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -129,7 +148,8 @@ const product: ToolProfileInput = {
 	"recommendedHose": {
 		"innerDiameterMm": 6.5
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"airflowBasis": "unqualified"
 };
 
 export default product;

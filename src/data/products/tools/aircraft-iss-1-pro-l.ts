@@ -23,96 +23,53 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
 	},
 	"editorial": {
-		"overview": "Aircraft ISS 1\" PRO L, référence 2401495. Consommation moyenne publiée : 405 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Diamètre intérieur du flexible : 13 mm. Vitesse de rotation : 6000 min¯¹.",
+		"overview": "Aircraft ISS 1\" PRO L. La ISS 1 pouce PRO L est la clé à broche longue, avec réglage du couple en trois positions dans les deux sens. La ISS 1 pouce PRO standard conserve le maximum 2 441 Nm mais annonce 411 L/min moyens, contre 405 ici. L’extension facilite un autre accès, sans justifier une estimation de débit de pointe à partir de la moyenne.",
 		"verifiedFacts": [
-			"Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
-			"Consommation moyenne publiée : 405 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
-			"Référence fabricant : 2401495.",
-			"Diamètre intérieur du flexible : 13 mm.",
-			"Vitesse de rotation : 6000 min¯¹.",
-			"Mandrin ou entraînement publié : 1 \"."
+			"Carré : 1 pouce.",
+			"Version : Broche longue, suffixe L.",
+			"Couple de serrage maximal : 2 441 Nm.",
+			"Vitesse : 6 000 tr/min.",
+			"Consommation moyenne approximative : 405 L/min."
 		],
 		"limitations": [
-			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
-			"Une consommation moyenne ne constitue pas un débit maximal en usage continu. Vérifier le régime réel auprès du fabricant avant dimensionnement."
+			"Aucune moyenne, aucun maximum ni aucune pression de mesure supplémentaires ne sont déduits d’un simple débit approximatif ou d’une consigne de service.",
+			"Source fabricant et édition identifiées ; équipement actuel à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
+			"label": "Carré",
+			"value": "1 pouce",
 			"evidenceIds": [
-				"aircraft-2401495-20260927"
+				"aircraft-iss-1-pro-l-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation moyenne publiée : 405 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
+			"label": "Version",
+			"value": "Broche longue, suffixe L",
 			"evidenceIds": [
-				"aircraft-2401495-20260927"
+				"aircraft-iss-1-pro-l-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre intérieur du flexible",
-			"value": "13 mm",
+			"label": "Couple de serrage maximal",
+			"value": "2 441 Nm",
 			"evidenceIds": [
-				"aircraft-2401495-20260927"
+				"aircraft-iss-1-pro-l-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse de rotation",
-			"value": "6000 min¯¹",
+			"label": "Vitesse",
+			"value": "6 000 tr/min",
 			"evidenceIds": [
-				"aircraft-2401495-20260927"
+				"aircraft-iss-1-pro-l-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Mandrin ou entraînement publié",
-			"value": "1 \"",
+			"label": "Consommation moyenne approximative",
+			"value": "405 L/min",
 			"evidenceIds": [
-				"aircraft-2401495-20260927"
-			]
-		},
-		{
-			"label": "Couple maximal de serrage",
-			"value": "2441 Nm",
-			"evidenceIds": [
-				"aircraft-2401495-20260927"
-			]
-		},
-		{
-			"label": "Couple maximal de desserrage",
-			"value": "3389 Nm",
-			"evidenceIds": [
-				"aircraft-2401495-20260927"
-			]
-		},
-		{
-			"label": "Longueur approximative",
-			"value": "492 mm",
-			"evidenceIds": [
-				"aircraft-2401495-20260927"
-			]
-		},
-		{
-			"label": "Largeur approximative",
-			"value": "116 mm",
-			"evidenceIds": [
-				"aircraft-2401495-20260927"
-			]
-		},
-		{
-			"label": "Hauteur approximative",
-			"value": "175 mm",
-			"evidenceIds": [
-				"aircraft-2401495-20260927"
-			]
-		},
-		{
-			"label": "Type indiqué par le fabricant",
-			"value": "Impact wrench",
-			"evidenceIds": [
-				"aircraft-2401495-20260927"
+				"aircraft-iss-1-pro-l-reserved-20261103-1"
 			]
 		}
 	],
@@ -136,6 +93,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer 702076. Empreinte PDF SHA-256 : ce01fe8e9602f08edb86c6bc98f59d7dca1cbb3e622f24218a434a4e2af51070. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
+		},
+		{
+			"id": "aircraft-iss-1-pro-l-reserved-20261103-1",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=239#page=1",
+			"sourceLabel": "Aircraft : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 ce01fe8e9602f08edb86c6bc98f59d7dca1cbb3e622f24218a434a4e2af51070. La ISS 1 pouce PRO L est la clé à broche longue, avec réglage du couple en trois positions dans les deux sens. La ISS 1 pouce PRO standard conserve le maximum 2 441 Nm mais annonce 411 L/min moyens, contre 405 ici. L’extension facilite un autre accès, sans justifier une estimation de débit de pointe à partir de la moyenne."
 		}
 	],
 	"fieldSources": {
@@ -150,6 +117,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"aircraft-2401495-20260927"
+		],
+		"editorial": [
+			"aircraft-iss-1-pro-l-reserved-20261103-1"
+		],
+		"specifications": [
+			"aircraft-iss-1-pro-l-reserved-20261103-1"
 		]
 	},
 	"notes": [

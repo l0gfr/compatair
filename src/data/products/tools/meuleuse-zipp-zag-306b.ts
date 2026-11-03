@@ -29,58 +29,60 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZAG-306B. La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé. Vitesse à vide : 11000 tr/min. Masse : 1 kg.",
+		"overview": "ZIPP ZAG-306B. La ZAG-306B utilise un disque 4 pouces avec arbre 5/8 pouce–11 ; la ZAG-306BM utilise M14 × 2. La ZAG-30656B passe au disque 4,5 pouces tout en conservant 11 000 tr/min et 220 mm. Le suffixe métrique change le montage de l’abrasif, pas la consommation de gamme.",
 		"verifiedFacts": [
-			"Vitesse à vide : 11000 tr/min.",
-			"Masse : 1 kg.",
-			"Référence constructeur : ZAG-306B."
+			"Disque : 4 pouces.",
+			"Filetage : 5/8 pouce–11.",
+			"Puissance publiée : 1,0 hp.",
+			"Vitesse à vide : 11 000 tr/min.",
+			"Longueur : 220 mm.",
+			"Masse : 1,0 kg."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé.",
-			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+			"Consommation moyenne ou de régime non précisé, sans qualification maximale/en charge ni appariement de pression de mesure suffisant : aucun verdict conclusif n’en est déduit."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Vitesse à vide",
-			"value": "11000 tr/min",
+			"label": "Disque",
+			"value": "4 pouces",
 			"evidenceIds": [
-				"october-b-zipp-tools-p121"
+				"meuleuse-zipp-zag-306b-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Filetage",
+			"value": "5/8 pouce–11",
+			"evidenceIds": [
+				"meuleuse-zipp-zag-306b-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Puissance publiée",
+			"value": "1,0 hp",
+			"evidenceIds": [
+				"meuleuse-zipp-zag-306b-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "11 000 tr/min",
+			"evidenceIds": [
+				"meuleuse-zipp-zag-306b-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "220 mm",
+			"evidenceIds": [
+				"meuleuse-zipp-zag-306b-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Masse",
-			"value": "1 kg",
+			"value": "1,0 kg",
 			"evidenceIds": [
-				"october-b-zipp-tools-p121"
-			]
-		},
-		{
-			"label": "Référence constructeur",
-			"value": "ZAG-306B",
-			"evidenceIds": [
-				"october-b-zipp-tools-p121"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "Pression de consommation non établie sur cette page.",
-			"evidenceIds": [
-				"october-b-zipp-tools-p121"
-			]
-		},
-		{
-			"label": "Consommation hors calcul, pression non établie",
-			"value": "116,099 L/min",
-			"evidenceIds": [
-				"october-b-zipp-tools-p121"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "ZIPP, catalogue général pneumatique, page PDF 121",
-			"evidenceIds": [
-				"october-b-zipp-tools-p121"
+				"meuleuse-zipp-zag-306b-reserved-20261103-1"
 			]
 		}
 	],
@@ -94,6 +96,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "meuleuse-zipp-zag-306b-reserved-20261103-1",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=121",
+			"sourceLabel": "ZIPP : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. La ZAG-306B utilise un disque 4 pouces avec arbre 5/8 pouce–11 ; la ZAG-306BM utilise M14 × 2. La ZAG-30656B passe au disque 4,5 pouces tout en conservant 11 000 tr/min et 220 mm. Le suffixe métrique change le montage de l’abrasif, pas la consommation de gamme."
 		}
 	],
 	"fieldSources": {
@@ -105,6 +117,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october-b-zipp-tools-p121"
+		],
+		"editorial": [
+			"meuleuse-zipp-zag-306b-reserved-20261103-1"
+		],
+		"specifications": [
+			"meuleuse-zipp-zag-306b-reserved-20261103-1"
 		]
 	},
 	"notes": [

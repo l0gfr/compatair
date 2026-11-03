@@ -23,61 +23,77 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Red Rooster RRI-5125-2SV, référence RRI-5125-2SV. Le tableau fabricant publie 294 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 12000 tr/min. Masse publiée : 0,7 kg.",
+		"overview": "Red Rooster RRI-5125-2SV. La RRI-5125-2SV est la version 125 mm à orbite 2,5 mm, masse 0,7 kg ; la 2NV est donnée pour 0,6 kg et la 5SV a une orbite 5 mm. Le suffixe et l’aspiration se vérifient sur la configuration livrée. La table ne précise pas le régime des 4,9 L/s : le débit reste hors dimensionnement conclusif.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation publiée : 4.9 L/s, convertis en 294 L/min par multiplication par 60.",
-			"Référence fabricant : RRI-5125-2SV.",
-			"Vitesse à vide publiée : 12000 tr/min.",
-			"Masse publiée : 0,7 kg.",
-			"Diamètre intérieur de flexible conseillé : 6,5 mm."
+			"Plateau : 125 mm.",
+			"Orbite : 2,5 mm.",
+			"Vitesse à vide : 12 000 tr/min.",
+			"Puissance : 0,3 kW.",
+			"Filetage : 5/16 pouce UNF.",
+			"Masse : 0,7 kg.",
+			"Consommation publiée, régime non précisé : 4,9 L/s.",
+			"Aspiration : Locale avec sac à poussière, SV."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"Consommation conservée avec son unité et son régime non précisé ; aucune mesure maximale/en charge appariée à la pression n’est déduite de la consigne de service.",
+			"Catalogue historique identifié ; référence et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+			"label": "Plateau",
+			"value": "125 mm",
 			"evidenceIds": [
-				"red-rooster-rri-5125-2sv-20260926-workingpressurebar-1"
+				"red-rooster-rri-5125-2sv-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation publiée : 4.9 L/s, convertis en 294 L/min par multiplication par 60.",
+			"label": "Orbite",
+			"value": "2,5 mm",
 			"evidenceIds": [
-				"red-rooster-rri-5125-2sv-20260926"
+				"red-rooster-rri-5125-2sv-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse à vide publiée",
-			"value": "12000 tr/min",
+			"label": "Vitesse à vide",
+			"value": "12 000 tr/min",
 			"evidenceIds": [
-				"red-rooster-rri-5125-2sv-20260926"
+				"red-rooster-rri-5125-2sv-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
+			"label": "Puissance",
+			"value": "0,3 kW",
+			"evidenceIds": [
+				"red-rooster-rri-5125-2sv-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Filetage",
+			"value": "5/16 pouce UNF",
+			"evidenceIds": [
+				"red-rooster-rri-5125-2sv-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
 			"value": "0,7 kg",
 			"evidenceIds": [
-				"red-rooster-rri-5125-2sv-20260926"
+				"red-rooster-rri-5125-2sv-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre intérieur de flexible conseillé",
-			"value": "6,5 mm",
+			"label": "Consommation publiée, régime non précisé",
+			"value": "4,9 L/s",
 			"evidenceIds": [
-				"red-rooster-rri-5125-2sv-20260926"
+				"red-rooster-rri-5125-2sv-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Raccord pneumatique",
-			"value": "PT 1/4\"",
+			"label": "Aspiration",
+			"value": "Locale avec sac à poussière, SV",
 			"evidenceIds": [
-				"red-rooster-rri-5125-2sv-20260926"
+				"red-rooster-rri-5125-2sv-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +115,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "red-rooster-rri-5125-2sv-reserved-20261103-1",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=47",
+			"sourceLabel": "Red Rooster : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. La RRI-5125-2SV est la version 125 mm à orbite 2,5 mm, masse 0,7 kg ; la 2NV est donnée pour 0,6 kg et la 5SV a une orbite 5 mm. Le suffixe et l’aspiration se vérifient sur la configuration livrée. La table ne précise pas le régime des 4,9 L/s : le débit reste hors dimensionnement conclusif."
 		}
 	],
 	"fieldSources": {
@@ -116,6 +142,15 @@ const product: ToolProfileInput = {
 		],
 		"connectorSize": [
 			"red-rooster-rri-5125-2sv-20260926"
+		],
+		"airflowBasis": [
+			"red-rooster-rri-5125-2sv-reserved-20261103-1"
+		],
+		"editorial": [
+			"red-rooster-rri-5125-2sv-reserved-20261103-1"
+		],
+		"specifications": [
+			"red-rooster-rri-5125-2sv-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -129,7 +164,8 @@ const product: ToolProfileInput = {
 	"recommendedHose": {
 		"innerDiameterMm": 6.5
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"airflowBasis": "unqualified"
 };
 
 export default product;

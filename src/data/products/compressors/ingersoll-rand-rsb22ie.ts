@@ -15,12 +15,7 @@ const product: CompressorInput = {
     }
   },
   "maxPressureBar": 13.5,
-  "fadCurve": [
-    {
-      "pressureBar": 13.5,
-      "litersPerMinute": 2690.1
-    }
-  ],
+  "fadCurve": [],
   "powerKw": 22,
   "oilType": "unknown",
   "confidence": "B",
@@ -33,61 +28,54 @@ const product: CompressorInput = {
   },
   "specifications": [
     {
-      "label": "Configuration constructeur",
-      "value": "Compresseur RSb à vitesse fixe, fiche du fabricant pour le marché indien",
+      "label": "Modèle et marché",
+      "value": "RSb22ie, vitesse fixe, fiche Inde02/2025",
       "evidenceIds": [
-        "october4c-ir-rsb15-22-p2"
+        "ingersoll-rand-rsb22ie-reserved-20261103-1"
       ]
     },
     {
-      "label": "Pression maximale publiée",
-      "value": "13,5 bar",
-      "evidenceIds": [
-        "october4c-ir-rsb15-22-p2"
-      ]
-    },
-    {
-      "label": "Cuve de stockage",
-      "value": "Non documentée en litres",
-      "evidenceIds": [
-        "october4c-ir-rsb15-22-p2"
-      ]
-    },
-    {
-      "label": "Air livré à 13,5 bar",
-      "value": "2 690,1 L/min (95 cfm publiés)",
-      "evidenceIds": [
-        "october4c-ir-rsb15-22-p2",
-        "october4c-nist-conversions-p1"
-      ]
-    },
-    {
-      "label": "Puissance publiée",
+      "label": "Puissance nominale",
       "value": "22 kW",
       "evidenceIds": [
-        "october4c-ir-rsb15-22-p2"
+        "ingersoll-rand-rsb22ie-reserved-20261103-1"
       ]
     },
     {
-      "label": "Fréquence de la configuration retenue",
-      "value": "Non documentée",
+      "label": "Ligne de pression maximale13,5 bar",
+      "value": "95 cfm publiés, pression de mesure FAD non explicitée",
       "evidenceIds": [
-        "october4c-ir-rsb15-22-p2"
+        "ingersoll-rand-rsb22ie-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Masse publiée",
+      "value": "642 kg",
+      "evidenceIds": [
+        "ingersoll-rand-rsb22ie-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Dimensions L×W×H",
+      "value": "1 400 × 826 × 1 275 mm",
+      "evidenceIds": [
+        "ingersoll-rand-rsb22ie-reserved-20261103-1"
       ]
     }
   ],
   "editorial": {
-    "overview": "Ingersoll Rand RSb22ie. 2 690,1 L/min déclarés à 13,5 bar. Configuration constructeur : Compresseur RSb à vitesse fixe, fiche du fabricant pour le marché indien.",
+    "overview": "Ingersoll Rand RSb22ie. La RSb22ie fixe de 22 kW est distincte de la RSb22ne à vitesse variable. La table affiche95 cfm face au plafond 13,5 bar, mais son pied de page ISO 1217 n’explicite pas la pression de mesure ; les RSb18ie et 15ie affichent78 et 60 cfm dans cette colonne. Le débit reste documentaire.",
     "verifiedFacts": [
-      "Pression de la configuration documentée : 13,5 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 2 690,1 L/min déclarés à 13,5 bar."
+      "Modèle et marché : RSb22ie, vitesse fixe, fiche Inde02/2025.",
+      "Puissance nominale : 22 kW.",
+      "Ligne de pression maximale13,5 bar : 95 cfm publiés, pression de mesure FAD non explicitée.",
+      "Masse publiée : 642 kg.",
+      "Dimensions L×W×H : 1 400 × 826 × 1 275 mm."
     ],
     "limitations": [
-      "Fiche commerciale Ingersoll Rand India de février 2025 ; disponibilité, certification et raccordement sur le marché français à confirmer.",
-      "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-      "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
-      "La fréquence électrique de cette configuration n’est pas documentée.",
-      "Cuve non documentée : l’autonomie et le volume de stockage ne peuvent pas être conclus à partir de ce profil."
+      "Aucun point FAD n’est créé à partir de la seule colonne MaxPressure.",
+      "Fiche du marché indien ; raccordement, révision livrée et disponibilité française à confirmer.",
+      "Cuve, fréquence et taux de marche du groupe non établis."
     ]
   },
   "evidence": [
@@ -110,6 +98,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 057d9641caab13e6632aa7f70eeb1b76d676ae3e131b3e6ed73b8bf6ca0c28c3 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "ingersoll-rand-rsb22ie-reserved-20261103-1",
+      "sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/blta3c1d56420975795/blt018ce183b6dac062/6a882c594d1fbd2b5ae5a9e8/IR_RSb15-22ie-ne_Flyer_2_Page_2025-02.pdf#page=2",
+      "sourceLabel": "Ingersoll Rand : revue factuelle du 3 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-03",
+      "confidence": "B",
+      "notes": "GET complet HTTP200 SHA-256 18e0d3f6818b7b0656c8406b227e19fdd2ce5390486cd6c3b867c6eb71dbaabc. La RSb22ie fixe de 22 kW est distincte de la RSb22ne à vitesse variable. La table affiche95 cfm face au plafond 13,5 bar, mais son pied de page ISO 1217 n’explicite pas la pression de mesure ; les RSb18ie et 15ie affichent78 et 60 cfm dans cette colonne. Le débit reste documentaire."
     }
   ],
   "fieldSources": {
@@ -120,17 +118,26 @@ const product: CompressorInput = {
       "october4c-ir-rsb15-22-p2"
     ],
     "fadCurve": [
-      "october4c-ir-rsb15-22-p2",
-      "october4c-nist-conversions-p1"
+      "ingersoll-rand-rsb22ie-reserved-20261103-1"
     ],
     "powerKw": [
-      "october4c-ir-rsb15-22-p2"
+      "ingersoll-rand-rsb22ie-reserved-20261103-1"
+    ],
+    "weightKg": [
+      "ingersoll-rand-rsb22ie-reserved-20261103-1"
+    ],
+    "editorial": [
+      "ingersoll-rand-rsb22ie-reserved-20261103-1"
+    ],
+    "specifications": [
+      "ingersoll-rand-rsb22ie-reserved-20261103-1"
     ]
   },
   "notes": [
     "Portée de la source : FAD-pressure-qualified.",
     "Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées.",
     "Les caractéristiques décrivent la configuration constructeur indiquée dans cette fiche ; les autres équipements ou alimentations doivent être vérifiés séparément."
-  ]
+  ],
+  "weightKg": 642
 };
 export default product;

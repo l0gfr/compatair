@@ -33,13 +33,17 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Paoli DP 2400 (réf. 002400.00001). Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse. Vitesse à vide : 14 000 tr/min. Masse publiée : 0,73 kg.",
+		"overview": "Paoli DP 2400. La DP2400 code 002400.00001 reçoit la pince6 mm ; le code 002400.00002 correspond à1/4 pouce. La DP2250 tourne à20 000 tr/min contre 14 000 ici et pèse0,62 contre 0,73 kg. La promesse de durée2,5 fois supérieure n’est pas reprise comme résultat d’essai ; aucun besoin d’air n’est calculé depuis372 W.",
 		"verifiedFacts": [
 			"Vitesse à vide : 14 000 tr/min.",
 			"Masse publiée : 0,73 kg.",
 			"Longueur publiée : 185 mm.",
 			"Puissance publiée : 372 W.",
-			"Pince livrée : 6 mm."
+			"Pince livrée : 6 mm.",
+			"Pince de ce code : 6 mm.",
+			"Pince du code 002400.00002 : 1/4 pouce.",
+			"Échappement : Latéral orientable.",
+			"Vitesse : 14 000 tr/min."
 		],
 		"limitations": [
 			"Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse.",
@@ -88,6 +92,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-paoli-general-p95"
 			]
+		},
+		{
+			"label": "Pince de ce code",
+			"value": "6 mm",
+			"evidenceIds": [
+				"meuleuse-paoli-dp-2400-002400-00001-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pince du code 002400.00002",
+			"value": "1/4 pouce",
+			"evidenceIds": [
+				"meuleuse-paoli-dp-2400-002400-00001-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Échappement",
+			"value": "Latéral orientable",
+			"evidenceIds": [
+				"meuleuse-paoli-dp-2400-002400-00001-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse",
+			"value": "14 000 tr/min",
+			"evidenceIds": [
+				"meuleuse-paoli-dp-2400-002400-00001-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -100,6 +132,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 4a60f1e1ab29d27422ad6cd8605948f5e32d197f27b3c300700631554a6d1352. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "meuleuse-paoli-dp-2400-002400-00001-reserved-20261103-1",
+			"sourceUrl": "https://www.dinopaoli.com/wp-content/uploads/PAOLI_GENERAL-CATALOGUE_2024.pdf#page=95",
+			"sourceLabel": "Paoli : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 4a60f1e1ab29d27422ad6cd8605948f5e32d197f27b3c300700631554a6d1352. La DP2400 code 002400.00001 reçoit la pince6 mm ; le code 002400.00002 correspond à1/4 pouce. La DP2250 tourne à20 000 tr/min contre 14 000 ici et pèse0,62 contre 0,73 kg. La promesse de durée2,5 fois supérieure n’est pas reprise comme résultat d’essai ; aucun besoin d’air n’est calculé depuis372 W."
 		}
 	],
 	"fieldSources": {
@@ -111,6 +153,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-paoli-general-p95"
+		],
+		"editorial": [
+			"meuleuse-paoli-dp-2400-002400-00001-reserved-20261103-1"
+		],
+		"specifications": [
+			"meuleuse-paoli-dp-2400-002400-00001-reserved-20261103-1"
 		]
 	},
 	"notes": [

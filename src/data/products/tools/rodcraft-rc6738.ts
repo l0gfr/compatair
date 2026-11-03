@@ -9,10 +9,8 @@ const product: ToolProfileInput = {
 	"categoryId": "riveteuse",
 	"category": "riveteuse",
 	"label": "Rodcraft RC6738",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
 		"max": 6.3
 	},
 	"confidence": "B",
@@ -23,61 +21,60 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Rodcraft RC6738, référence 8951000408. Le dimensionnement utilise 240 L/min à 6,3 bar, selon les régimes publiés par le fabricant. Masse : 1.7 kg. Longueur : 277 mm. Diamètre intérieur du tuyau (longueur 5 m) : 10 mm.",
+		"overview": "Rodcraft RC6738. La RC6738 est la riveteuse pour rivets aveugles 3,2–5 mm, course 19 mm et trois embouts livrés. La gamme distingue aussi les riveteuses pour écrous à sertir ; une capacité M12 de la gamme ne s’applique pas à ce modèle. Les 4 L/s sont annoncés en charge, sans pression de mesure explicitement appariée : le plafond dynamique 6,3 bar reste une limite de service.",
 		"verifiedFacts": [
-			"Pression dynamique de travail maximale publiée : 6.3 bar, retenue comme point de fonctionnement. Respecter cette limite à l’entrée de l’outil.",
-			"Consommation en charge publiée : 4 L/s. Valeur retenue : 240 L/min (maximum des régimes documentés, L/s × 60).",
-			"Référence fabricant : 8951000408.",
-			"Masse : 1.7 kg.",
-			"Longueur : 277 mm.",
-			"Diamètre intérieur du tuyau (longueur 5 m) : 10 mm."
+			"Usage : Rivets aveugles 3,2–5 mm.",
+			"Course maximale : 19 mm.",
+			"Embouts livrés : 3.",
+			"Masse : 1,7 kg.",
+			"Débit en charge publié : 4 L/s (240 L/min).",
+			"Flexible minimal pour 5 m : 10 mm."
 		],
 		"limitations": [
-			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
-			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes."
+			"Pression de mesure de consommation non explicitement appariée au débit en charge. Le calcul demeure indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression dynamique de travail maximale publiée : 6.3 bar, retenue comme point de fonctionnement. Respecter cette limite à l’entrée de l’outil.",
+			"label": "Usage",
+			"value": "Rivets aveugles 3,2–5 mm",
 			"evidenceIds": [
-				"rodcraft-8951000408-20260927"
+				"rodcraft-rc6738-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation en charge publiée : 4 L/s. Valeur retenue : 240 L/min (maximum des régimes documentés, L/s × 60).",
+			"label": "Course maximale",
+			"value": "19 mm",
 			"evidenceIds": [
-				"rodcraft-8951000408-20260927"
+				"rodcraft-rc6738-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Embouts livrés",
+			"value": "3",
+			"evidenceIds": [
+				"rodcraft-rc6738-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Masse",
-			"value": "1.7 kg",
+			"value": "1,7 kg",
 			"evidenceIds": [
-				"rodcraft-8951000408-20260927"
+				"rodcraft-rc6738-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur",
-			"value": "277 mm",
+			"label": "Débit en charge publié",
+			"value": "4 L/s (240 L/min)",
 			"evidenceIds": [
-				"rodcraft-8951000408-20260927"
+				"rodcraft-rc6738-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre intérieur du tuyau (longueur 5 m)",
+			"label": "Flexible minimal pour 5 m",
 			"value": "10 mm",
 			"evidenceIds": [
-				"rodcraft-8951000408-20260927"
-			]
-		},
-		{
-			"label": "Filetage d’entrée d’air",
-			"value": "1/4",
-			"evidenceIds": [
-				"rodcraft-8951000408-20260927"
+				"rodcraft-rc6738-reserved-20261103-1"
 			]
 		}
 	],
@@ -90,6 +87,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation en charge publiée : 4 L/s. Valeur retenue : 240 L/min (maximum des régimes documentés, L/s × 60)."
+		},
+		{
+			"id": "rodcraft-rc6738-reserved-20261103-1",
+			"sourceUrl": "https://www.rodcraft.com/en/products/8951000408",
+			"sourceLabel": "Rodcraft : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 c5fb4ff72f682861fe015b6eb5f0d7f8d28b0c40c63cb516f6f380e143199f64. La RC6738 est la riveteuse pour rivets aveugles 3,2–5 mm, course 19 mm et trois embouts livrés. La gamme distingue aussi les riveteuses pour écrous à sertir ; une capacité M12 de la gamme ne s’applique pas à ce modèle. Les 4 L/s sont annoncés en charge, sans pression de mesure explicitement appariée : le plafond dynamique 6,3 bar reste une limite de service."
 		}
 	],
 	"fieldSources": {
@@ -97,20 +104,25 @@ const product: ToolProfileInput = {
 			"rodcraft-8951000408-20260927"
 		],
 		"workingPressureBar": [
-			"rodcraft-8951000408-20260927"
+			"rodcraft-rc6738-reserved-20261103-1"
 		],
-		"airflowLpm": [
-			"rodcraft-8951000408-20260927"
+		"demandModel": [
+			"rodcraft-rc6738-reserved-20261103-1"
+		],
+		"demandExplanation": [
+			"rodcraft-rc6738-reserved-20261103-1"
+		],
+		"editorial": [
+			"rodcraft-rc6738-reserved-20261103-1"
+		],
+		"specifications": [
+			"rodcraft-rc6738-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 240,
-		"typical": 240,
-		"max": 240
-	}
+	"demandExplanation": "Le débit en charge est conservé dans les spécifications ; la fiche indique séparément le plafond de pression, sans appariement explicite de la mesure."
 };
 
 export default product;

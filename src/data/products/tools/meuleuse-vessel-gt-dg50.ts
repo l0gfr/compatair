@@ -39,51 +39,60 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "VESSEL GT-DG50. Consommation publiée, régime non précisé : 570 L/min à 6 bar. Raccord publié : Rc 1/4. Vitesse à vide : 15,000 tr/min.",
+		"overview": "VESSEL GT-DG50. La GT-DG50 reçoit la meule 50 × 4 × 9,5 mm et possède un blocage de broche. La GT-DG100 est un autre diamètre, tandis que les GT-DS50A/B sont des ponceuses à disque avec leurs propres montages. La dimension de meule complète est utile au choix du consommable ; les 0,57 m³/min restent de régime non précisé.",
 		"verifiedFacts": [
-			"Raccord publié : Rc 1/4.",
-			"Vitesse à vide : 15,000 tr/min.",
-			"Code EDP publié : 310639."
+			"Meule, diamètre × épaisseur × alésage : 50 × 4 × 9,5 mm.",
+			"Montage : Blocage de broche.",
+			"Vitesse à vide : 15 000 tr/min.",
+			"Longueur : 164 mm.",
+			"Masse hors accessoires : 800 g.",
+			"Consommation, régime non précisé : 0,57 m³/min."
 		],
 		"limitations": [
-			"Régime de consommation non précisé : aucun maximum supposé ; le verdict reste insufficient_data.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"La consommation n’a pas de régime de charge explicite ; elle reste non dimensionnante malgré la pression nominale publiée."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Raccord publié",
-			"value": "Rc 1/4",
+			"label": "Meule, diamètre × épaisseur × alésage",
+			"value": "50 × 4 × 9,5 mm",
 			"evidenceIds": [
-				"october-vessel-air-p34"
+				"meuleuse-vessel-gt-dg50-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Montage",
+			"value": "Blocage de broche",
+			"evidenceIds": [
+				"meuleuse-vessel-gt-dg50-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Vitesse à vide",
-			"value": "15,000 tr/min",
+			"value": "15 000 tr/min",
 			"evidenceIds": [
-				"october-vessel-air-p34"
+				"meuleuse-vessel-gt-dg50-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Code EDP publié",
-			"value": "310639",
+			"label": "Longueur",
+			"value": "164 mm",
 			"evidenceIds": [
-				"october-vessel-air-p34"
+				"meuleuse-vessel-gt-dg50-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Localisation documentaire",
-			"value": "VESSEL, catalogue Air Tools, page 34",
+			"label": "Masse hors accessoires",
+			"value": "800 g",
 			"evidenceIds": [
-				"october-vessel-air-p34"
+				"meuleuse-vessel-gt-dg50-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de pression originale",
-			"value": "Air pressure: 0.6MPa",
+			"label": "Consommation, régime non précisé",
+			"value": "0,57 m³/min",
 			"evidenceIds": [
-				"october-vessel-air-p34"
+				"meuleuse-vessel-gt-dg50-reserved-20261103-1"
 			]
 		}
 	],
@@ -97,6 +106,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 16761fb825c735f6ebff0614f708d44f28eb21392b11568d7224019e2dc296d0. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "meuleuse-vessel-gt-dg50-reserved-20261103-1",
+			"sourceUrl": "https://www.vessel.co.jp/english/product/airtools_sander2/310639",
+			"sourceLabel": "VESSEL : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 390e1f9f9b23566006b984b5461dde56e30d895bcfdfe8507258c570d7fa4299. La GT-DG50 reçoit la meule 50 × 4 × 9,5 mm et possède un blocage de broche. La GT-DG100 est un autre diamètre, tandis que les GT-DS50A/B sont des ponceuses à disque avec leurs propres montages. La dimension de meule complète est utile au choix du consommable ; les 0,57 m³/min restent de régime non précisé."
 		}
 	],
 	"fieldSources": {
@@ -104,13 +123,19 @@ const product: ToolProfileInput = {
 			"october-vessel-air-p34"
 		],
 		"workingPressureBar": [
-			"october-vessel-air-p34"
+			"meuleuse-vessel-gt-dg50-reserved-20261103-1"
 		],
 		"airflowLpm": [
-			"october-vessel-air-p34"
+			"meuleuse-vessel-gt-dg50-reserved-20261103-1"
 		],
 		"airflowBasis": [
-			"october-vessel-air-p34"
+			"meuleuse-vessel-gt-dg50-reserved-20261103-1"
+		],
+		"editorial": [
+			"meuleuse-vessel-gt-dg50-reserved-20261103-1"
+		],
+		"specifications": [
+			"meuleuse-vessel-gt-dg50-reserved-20261103-1"
 		]
 	},
 	"notes": [

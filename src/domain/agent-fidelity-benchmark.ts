@@ -81,7 +81,7 @@ export function createAgentFidelityBenchmark(input: {
 		observedAt: input.observedAt, scenarioCount: scenarios.length,
 		methodology: {
 			purpose: 'Measure whether an agent preserves CompatAir decision scope, verdict, limitations, canonical attribution and evidence.',
-			selection: input.selection === 'pinned-panel' ? 'Fixed panel of 100 source-linked pairs selected from release a97717c; only these pairs are recomputed with the current catalog and engine. This is not a measurement of the current full verdict distribution.' : 'Deterministic round-robin sampling across available engine verdict classes after SHA-256 ordering of pair IDs.',
+			selection: input.selection === 'pinned-panel' ? 'Fixed panel of 100 source-linked pairs originally selected from release a97717c, with documented replacements when a profile no longer meets the panel contract; these reviewed pairs are recomputed with the current catalog and engine. This is not a measurement of the current full verdict distribution.' : 'Deterministic round-robin sampling across available engine verdict classes after SHA-256 ordering of pair IDs.',
 			leaderboardPolicy: 'Only reproducible runs with a complete response file, integration identity, model identifier, execution date and evaluator version are eligible.',
 		},
 		scenarios,

@@ -23,54 +23,69 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Toku TFC-257H, référence TFC-257H. Le tableau fabricant publie 402 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Masse publiée : 1,7 kg. Diamètre intérieur de flexible conseillé : 10 mm.",
+		"overview": "Toku TFC-257H. Le TFC-257H est le burineur 1,7 kg à course 34 mm, 4 000 coups/min et 7,9 J. La table du RR-0315 voisin donne 32 mm, 7,4 J et 2,6 kg : la cadence seule ne résume pas l’énergie ni l’encombrement. Les 6,7 L/s ne sont pas convertis en litres par coup ; leur régime de mesure reste non précisé.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation publiée : 6.7 L/s, convertis en 402 L/min par multiplication par 60.",
-			"Référence fabricant : TFC-257H.",
-			"Masse publiée : 1,7 kg.",
-			"Diamètre intérieur de flexible conseillé : 10 mm.",
-			"Raccord pneumatique : PT 1/4\"."
+			"Emmanchement publié : 12,7 mm.",
+			"Piston : 25 mm.",
+			"Course : 34 mm.",
+			"Cadence : 4 000 coups/min.",
+			"Énergie par coup : 7,9 J.",
+			"Masse : 1,7 kg.",
+			"Consommation publiée : 6,7 L/s."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"Régime et pression de mesure ne sont pas complétés par hypothèse. Les données non dimensionnantes restent dans les spécifications.",
+			"Catalogue constructeur historique ; configuration livrée et disponibilité actuelles à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+			"label": "Emmanchement publié",
+			"value": "12,7 mm",
 			"evidenceIds": [
-				"toku-tfc-257h-20260926-workingpressurebar-1"
+				"toku-tfc-257h-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation publiée : 6.7 L/s, convertis en 402 L/min par multiplication par 60.",
+			"label": "Piston",
+			"value": "25 mm",
 			"evidenceIds": [
-				"toku-tfc-257h-20260926"
+				"toku-tfc-257h-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
+			"label": "Course",
+			"value": "34 mm",
+			"evidenceIds": [
+				"toku-tfc-257h-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cadence",
+			"value": "4 000 coups/min",
+			"evidenceIds": [
+				"toku-tfc-257h-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Énergie par coup",
+			"value": "7,9 J",
+			"evidenceIds": [
+				"toku-tfc-257h-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
 			"value": "1,7 kg",
 			"evidenceIds": [
-				"toku-tfc-257h-20260926"
+				"toku-tfc-257h-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre intérieur de flexible conseillé",
-			"value": "10 mm",
+			"label": "Consommation publiée",
+			"value": "6,7 L/s",
 			"evidenceIds": [
-				"toku-tfc-257h-20260926"
-			]
-		},
-		{
-			"label": "Raccord pneumatique",
-			"value": "PT 1/4\"",
-			"evidenceIds": [
-				"toku-tfc-257h-20260926"
+				"toku-tfc-257h-reserved-20261103-1"
 			]
 		}
 	],
@@ -92,6 +107,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "toku-tfc-257h-reserved-20261103-1",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=53",
+			"sourceLabel": "Toku : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. Le TFC-257H est le burineur 1,7 kg à course 34 mm, 4 000 coups/min et 7,9 J. La table du RR-0315 voisin donne 32 mm, 7,4 J et 2,6 kg : la cadence seule ne résume pas l’énergie ni l’encombrement. Les 6,7 L/s ne sont pas convertis en litres par coup ; leur régime de mesure reste non précisé."
 		}
 	],
 	"fieldSources": {
@@ -109,6 +134,15 @@ const product: ToolProfileInput = {
 		],
 		"connectorSize": [
 			"toku-tfc-257h-20260926"
+		],
+		"airflowBasis": [
+			"toku-tfc-257h-reserved-20261103-1"
+		],
+		"editorial": [
+			"toku-tfc-257h-reserved-20261103-1"
+		],
+		"specifications": [
+			"toku-tfc-257h-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -122,7 +156,8 @@ const product: ToolProfileInput = {
 	"recommendedHose": {
 		"innerDiameterMm": 10
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"airflowBasis": "unqualified"
 };
 
 export default product;

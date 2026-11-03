@@ -37,11 +37,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "NPK NAW-1600HA(S), code 25395. Le tableau publie une consommation moyenne de 0,15 m³/min, soit 150 L/min. Pression de référence retenue : 6 bar.",
+		"overview": "NPK NAW-1600HA(S). La NAW-1600HA(S), code 25395, est une clé d’angle de 282 mm et 3,6 kg, contre la NW-1600HA(2R) droite de 224 mm et 2,1 kg. Le S désigne la retenue par goupille et le R une bague. La moyenne 0,15 m³/min ne permet pas le dimensionnement continu ; 0,6 MPa est la pression de service générique.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 25395, page PDF 6.",
 			"Consommation moyenne publiée : 150 L/min après conversion de l’unité originale.",
-			"Use appropriate air pressure (0.6 MPa at the tool), impact-wrench instructions, PDF page 4."
+			"Use appropriate air pressure (0.6 MPa at the tool), impact-wrench instructions, PDF page 4.",
+			"Carré : 1/2 pouce, retenue S.",
+			"Forme : Tête d’angle.",
+			"Longueur : 282 mm.",
+			"Masse : 3,6 kg."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
@@ -76,6 +80,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-npk-2026"
 			]
+		},
+		{
+			"label": "Carré",
+			"value": "1/2 pouce, retenue S",
+			"evidenceIds": [
+				"cle-a-chocs-npk-naw-1600ha-s-25395-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Forme",
+			"value": "Tête d’angle",
+			"evidenceIds": [
+				"cle-a-chocs-npk-naw-1600ha-s-25395-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "282 mm",
+			"evidenceIds": [
+				"cle-a-chocs-npk-naw-1600ha-s-25395-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "3,6 kg",
+			"evidenceIds": [
+				"cle-a-chocs-npk-naw-1600ha-s-25395-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -88,6 +120,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 bd5e6718ea1d625e053449706fd6e72b801cd772ef6c74826614889dfb8ca90c. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		},
+		{
+			"id": "cle-a-chocs-npk-naw-1600ha-s-25395-reserved-20261103-1",
+			"sourceUrl": "https://www.npk-en.com/app/download/10804376570/NPK_air_tool_catologue_apr2026.pdf?t=1777353985#page=6",
+			"sourceLabel": "NPK : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 bd5e6718ea1d625e053449706fd6e72b801cd772ef6c74826614889dfb8ca90c. La NAW-1600HA(S), code 25395, est une clé d’angle de 282 mm et 3,6 kg, contre la NW-1600HA(2R) droite de 224 mm et 2,1 kg. Le S désigne la retenue par goupille et le R une bague. La moyenne 0,15 m³/min ne permet pas le dimensionnement continu ; 0,6 MPa est la pression de service générique."
 		}
 	],
 	"fieldSources": {
@@ -102,6 +144,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-20260930-npk-2026"
+		],
+		"editorial": [
+			"cle-a-chocs-npk-naw-1600ha-s-25395-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-chocs-npk-naw-1600ha-s-25395-reserved-20261103-1"
 		]
 	},
 	"notes": [

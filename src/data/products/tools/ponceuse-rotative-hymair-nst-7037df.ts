@@ -33,51 +33,53 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Hymair NST-7037DF. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Vitesse à vide : 15,000 rpm. Masse publiée (kg/lb) : 0.70/1.54.",
+		"overview": "Hymair NST-7037DF. La NST-7037DF est la ponceuse à plateau caoutchouc 2 pouces. La version NST-7037BF est décrite avec plateau autoagrippant ; une même vitesse et une même moyenne de consommation ne rendent pas leurs fixations interchangeables. La consommation moyenne 4 CFM reste hors du calcul de demande maximale.",
 		"verifiedFacts": [
-			"Vitesse à vide : 15,000 rpm.",
-			"Masse publiée (kg/lb) : 0.70/1.54.",
-			"Longueur × hauteur : 185x95 mm."
+			"Plateau : 2 pouces (50 mm), caoutchouc.",
+			"Vitesse à vide : 15 000 tr/min.",
+			"Dimensions : 185 × 95 mm.",
+			"Masse : 0,70 kg.",
+			"Consommation moyenne publiée : 4 CFM."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Consommation moyenne publiée conservée dans les spécifications ; aucun débit maximal ni volume par action déduit.",
+			"Catalogue constructeur identifié ; configuration et disponibilité actuelles à confirmer."
 		]
 	},
 	"specifications": [
 		{
+			"label": "Plateau",
+			"value": "2 pouces (50 mm), caoutchouc",
+			"evidenceIds": [
+				"ponceuse-rotative-hymair-nst-7037df-reserved-20261103-1"
+			]
+		},
+		{
 			"label": "Vitesse à vide",
-			"value": "15,000 rpm",
+			"value": "15 000 tr/min",
 			"evidenceIds": [
-				"october2-tools-steed-2-p10"
+				"ponceuse-rotative-hymair-nst-7037df-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée (kg/lb)",
-			"value": "0.70/1.54",
+			"label": "Dimensions",
+			"value": "185 × 95 mm",
 			"evidenceIds": [
-				"october2-tools-steed-2-p10"
+				"ponceuse-rotative-hymair-nst-7037df-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur × hauteur",
-			"value": "185x95 mm",
+			"label": "Masse",
+			"value": "0,70 kg",
 			"evidenceIds": [
-				"october2-tools-steed-2-p10"
+				"ponceuse-rotative-hymair-nst-7037df-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "WORKING PRESSURE : 6.2 Bar",
+			"label": "Consommation moyenne publiée",
+			"value": "4 CFM",
 			"evidenceIds": [
-				"october2-tools-steed-2-p10"
-			]
-		},
-		{
-			"label": "Consommation moyenne, hors calcul",
-			"value": "4 cfm",
-			"evidenceIds": [
-				"october2-tools-steed-2-p10"
+				"ponceuse-rotative-hymair-nst-7037df-reserved-20261103-1"
 			]
 		}
 	],
@@ -91,6 +93,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : b9c6143d5502d453b5b2e0846bcfec263fb763d42a478fbc52089a41725e7d8d. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-rotative-hymair-nst-7037df-reserved-20261103-1",
+			"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SAUfKpBkCgyL&dp=GvUApKfKKUAU#page=10",
+			"sourceLabel": "Hymair : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 b9c6143d5502d453b5b2e0846bcfec263fb763d42a478fbc52089a41725e7d8d. La NST-7037DF est la ponceuse à plateau caoutchouc 2 pouces. La version NST-7037BF est décrite avec plateau autoagrippant ; une même vitesse et une même moyenne de consommation ne rendent pas leurs fixations interchangeables. La consommation moyenne 4 CFM reste hors du calcul de demande maximale."
 		}
 	],
 	"fieldSources": {
@@ -102,6 +114,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-steed-2-p10"
+		],
+		"editorial": [
+			"ponceuse-rotative-hymair-nst-7037df-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-rotative-hymair-nst-7037df-reserved-20261103-1"
 		]
 	},
 	"notes": [

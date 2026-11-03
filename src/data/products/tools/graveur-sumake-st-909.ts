@@ -39,53 +39,60 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-909. Consommation publiée, régime non précisé : 170 L/min à 6,2 bar. Consommation dans les unités du tableau : 170 L/min ; 6 cfm. Configuration complète publiée : ST-909.",
+		"overview": "Sumake ST-909. La ST-909 annonce 10 000 coups/min et 170 mm. La ST-909A annonce 30 000–34 000 coups/min, 160 mm et 0,2 kg ; la ST-6501 est à 3 300–3 400 coups/min et 0,11 kg. Les trois partagent 170 L/min publiés, ce qui ne les rend pas équivalentes pour le geste de gravure.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 35.",
-			"Consommation dans les unités du tableau : 170 L/min ; 6 cfm.",
-			"Configuration complète publiée : ST-909.",
-			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé."
+			"Cadence publiée : 10 000 coups/min.",
+			"Longueur : 170 mm.",
+			"Masse de la table : 0,9 kg.",
+			"Raccord : 1/4 pouce.",
+			"Consommation documentaire : 170 L/min, régime non précisé.",
+			"Pression de service recommandée : 6,2 bar ; pression de mesure de la consommation non démontrée."
 		],
 		"limitations": [
-			"Le régime de consommation n’est pas indiqué. Aucun débit maximal ou en charge n’est inventé ; le verdict reste insufficient_data.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"La recommandation de service 6,2 bar ne prouve pas la pression de mesure de la consommation. Le régime reste non qualifié et le calcul indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 35",
+			"label": "Cadence publiée",
+			"value": "10 000 coups/min",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p35"
+				"graveur-sumake-st-909-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation dans les unités du tableau",
-			"value": "170 L/min ; 6 cfm",
+			"label": "Longueur",
+			"value": "170 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p35"
+				"graveur-sumake-st-909-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Configuration complète publiée",
-			"value": "ST-909",
+			"label": "Masse de la table",
+			"value": "0,9 kg",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p35"
+				"graveur-sumake-st-909-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Régime de consommation",
-			"value": "Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé",
+			"label": "Raccord",
+			"value": "1/4 pouce",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p35"
+				"graveur-sumake-st-909-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Ligne technique originale du modèle",
-			"value": "ST-909 - - 10,000 170 6-3/4 1/4\" 3/8\" 170 6 0.9 1.98 30Pcs/Ctn/9.3/1.7’",
+			"label": "Consommation documentaire",
+			"value": "170 L/min, régime non précisé",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p35"
+				"graveur-sumake-st-909-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression de service recommandée",
+			"value": "6,2 bar ; pression de mesure de la consommation non démontrée",
+			"evidenceIds": [
+				"graveur-sumake-st-909-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +106,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "graveur-sumake-st-909-reserved-20261103-1",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf#page=35",
+			"sourceLabel": "Sumake : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. La ST-909 annonce 10 000 coups/min et 170 mm. La ST-909A annonce 30 000–34 000 coups/min, 160 mm et 0,2 kg ; la ST-6501 est à 3 300–3 400 coups/min et 0,11 kg. Les trois partagent 170 L/min publiés, ce qui ne les rend pas équivalentes pour le geste de gravure."
 		}
 	],
 	"fieldSources": {
@@ -113,6 +130,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-d-sumake-na-2024-p35"
+		],
+		"editorial": [
+			"graveur-sumake-st-909-reserved-20261103-1"
+		],
+		"specifications": [
+			"graveur-sumake-st-909-reserved-20261103-1"
 		]
 	},
 	"notes": [

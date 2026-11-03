@@ -9,25 +9,17 @@ const product: ToolProfileInput = {
 	"brand": "SATA",
 	"model": "SATAjet 1000 B HVLP 1.4",
 	"mpn": "149377",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 2,
 		"typical": 2,
 		"max": 2
 	},
-	"airflowLpm": {
-		"min": 350,
-		"typical": 350,
-		"max": 350
-	},
-	"recommendedHose": {
-		"innerDiameterMm": 9
-	},
 	"confidence": "B",
 	"image": {
 		"src": "/images/products/pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-4-149377.svg",
 		"alt": "Repères techniques : SATA SATAjet 1000 B HVLP 1.4 (réf. 149377)",
-		"sourceUrl": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806",
+		"sourceUrl": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806#page=38",
 		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
 	},
 	"variant": {
@@ -40,111 +32,69 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SATA SATAjet 1000 B HVLP 1.4 (réf. 149377). Consommation de référence en fonctionnement : 350 L/min à 2 bar.",
+		"overview": "SATA SATAjet 1000 B HVLP 1.4. Le code 149377 correspond à la buse 1,4 mm avec godet plastique QCC0,6 L et sans raccord articulé. Le code 149385 est en1,7 mm et 149401 en2,1 mm dans la même table. Les 350 Nl/min restent dans leur unité originale ; les conditions de référence nécessaires au rapprochement avec le FAD manquent.",
 		"verifiedFacts": [
-			"Technologie de pulvérisation : HVLP.",
+			"Technologie : HVLP.",
 			"Buse : 1,4 mm.",
-			"Godet livré : QCC, plastique réutilisable, 0,6 l.",
+			"Godet livré : QCC plastique réutilisable de 0,6 L.",
 			"Raccord articulé : Sans raccord articulé.",
-			"Consommation déclarée à 2 bar : 350 Nl/min.",
-			"Masse avec godet 0,6 l réutilisable : 604 g.",
-			"Distance de pulvérisation recommandée : 13–17 cm.",
-			"Raccord d’air : G 1/4 mâle.",
-			"Diamètre intérieur minimal du flexible : 9 mm.",
-			"Réglage de la pression : Gâchette tirée complètement ; micromètre d’air ouvert."
+			"Pression recommandée : 2,0 bar.",
+			"Consommation dans son unité publiée : 350 Nl/min.",
+			"Distance de pulvérisation recommandée : 13–17 cm."
 		],
 		"limitations": [
-			"La demande au point documenté n’est réduite par aucun facteur de marche implicite.",
-			"Consommation constructeur de référence à 2 bar ; ce chiffre n’est pas présenté comme un maximum pour toute position du jet ou du micromètre.",
-			"La notice exige le volume d’air indiqué en utilisation et décrit le réglage en dynamique, gâchette complètement tirée.",
-			"La notice emploie Nl/min sans préciser ici la température ni l’humidité de référence. La valeur publiée est conservée sans conversion thermodynamique.",
-			"Un exemplaire physique par buse et technologie est retenu ; les seuls changements de godet, couleur ou affichage ne créent pas de nouvelles références dans ce groupe.",
-			"Données déclarées dans les documents identifiés ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"Valeur normalisée350 Nl/min conservée sans conversion silencieuse vers les litres d’air libre du compresseur.",
+			"La notice historique liée est actuellement en404 ; les assertions courantes proviennent de la table fabricant2025 accessible, page 38."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Technologie de pulvérisation",
+			"label": "Technologie",
 			"value": "HVLP",
 			"evidenceIds": [
-				"october3d-tools-sata-current-catalog-2025-p38"
+				"pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-4-149377-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Buse",
 			"value": "1,4 mm",
 			"evidenceIds": [
-				"october3d-tools-sata-current-catalog-2025-p38"
+				"pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-4-149377-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Godet livré",
-			"value": "QCC, plastique réutilisable, 0,6 l",
+			"value": "QCC plastique réutilisable de 0,6 L",
 			"evidenceIds": [
-				"october3d-tools-sata-current-catalog-2025-p38"
+				"pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-4-149377-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Raccord articulé",
 			"value": "Sans raccord articulé",
 			"evidenceIds": [
-				"october3d-tools-sata-current-catalog-2025-p38"
+				"pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-4-149377-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation déclarée à 2 bar",
+			"label": "Pression recommandée",
+			"value": "2,0 bar",
+			"evidenceIds": [
+				"pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-4-149377-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation dans son unité publiée",
 			"value": "350 Nl/min",
 			"evidenceIds": [
-				"october3d-tools-sata-1000b-actual-manual-p114"
-			]
-		},
-		{
-			"label": "Masse avec godet 0,6 l réutilisable",
-			"value": "604 g",
-			"evidenceIds": [
-				"october3d-tools-sata-1000b-actual-manual-p114"
+				"pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-4-149377-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Distance de pulvérisation recommandée",
 			"value": "13–17 cm",
 			"evidenceIds": [
-				"october3d-tools-sata-1000b-actual-manual-p114"
-			]
-		},
-		{
-			"label": "Raccord d’air",
-			"value": "G 1/4 mâle",
-			"evidenceIds": [
-				"october3d-tools-sata-1000b-actual-manual-p115"
-			]
-		},
-		{
-			"label": "Diamètre intérieur minimal du flexible",
-			"value": "9 mm",
-			"evidenceIds": [
-				"october3d-tools-sata-1000b-actual-manual-p118"
-			]
-		},
-		{
-			"label": "Réglage de la pression",
-			"value": "Gâchette tirée complètement ; micromètre d’air ouvert",
-			"evidenceIds": [
-				"october3d-tools-sata-1000b-actual-manual-p119"
-			]
-		},
-		{
-			"label": "Consommation dans son unité originale",
-			"value": "350 Nl/min",
-			"evidenceIds": [
-				"october3d-tools-sata-1000b-actual-manual-p114"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "Air consumption at 2,0 bar / 29 psi spray gun inlet pressure",
-			"evidenceIds": [
-				"october3d-tools-sata-1000b-actual-manual-p114"
+				"pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-4-149377-reserved-20261103-1"
 			]
 		}
 	],
@@ -198,6 +148,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-13",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 fcb179890de6fb84bab9465d6c4a3dd5f60da7f75fdd591b1ac219a02e558f45. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-4-149377-reserved-20261103-1",
+			"sourceUrl": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806#page=38",
+			"sourceLabel": "SATA : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3. Le code 149377 correspond à la buse 1,4 mm avec godet plastique QCC0,6 L et sans raccord articulé. Le code 149385 est en1,7 mm et 149401 en2,1 mm dans la même table. Les 350 Nl/min restent dans leur unité originale ; les conditions de référence nécessaires au rapprochement avec le FAD manquent."
 		}
 	],
 	"fieldSources": {
@@ -205,18 +165,28 @@ const product: ToolProfileInput = {
 			"october3d-tools-sata-current-catalog-2025-p38"
 		],
 		"workingPressureBar": [
-			"october3d-tools-sata-1000b-actual-manual-p114"
+			"pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-4-149377-reserved-20261103-1"
 		],
-		"recommendedHose": [
-			"october3d-tools-sata-1000b-actual-manual-p118"
+		"image": [
+			"pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-4-149377-reserved-20261103-1"
 		],
-		"airflowLpm": [
-			"october3d-tools-sata-1000b-actual-manual-p114"
+		"demandModel": [
+			"pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-4-149377-reserved-20261103-1"
+		],
+		"demandExplanation": [
+			"pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-4-149377-reserved-20261103-1"
+		],
+		"editorial": [
+			"pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-4-149377-reserved-20261103-1"
+		],
+		"specifications": [
+			"pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-4-149377-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Consommation de référence en fonctionnement : 350 L/min à 2 bar."
-	]
+	],
+	"demandExplanation": "Le catalogue publie350 Nl/min et recommande2 bar. Les conditions thermodynamiques de référence du volume normalisé restent à confirmer avant rapprochement avec le FAD du compresseur."
 };
 
 export default product;

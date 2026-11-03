@@ -33,51 +33,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Hymair AT-5058A. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Vitesse à vide : 180 rpm. Masse publiée (kg/lb) : 1.21/2.67.",
+		"overview": "Hymair AT-5058A. La AT-5058A reçoit le carré 3/8 pouce ; la AT-5059A reçoit 1/2 pouce pour la même vitesse 180 tr/min et la même longueur 275 mm. Le tableau publie 60 ft-lb et 85 Nm, valeurs qui ne sont pas une conversion exacte ; elles restent attribuées à leurs colonnes. Aucun débit maximal n’est dérivé des 4 CFM moyens.",
 		"verifiedFacts": [
-			"Vitesse à vide : 180 rpm.",
-			"Masse publiée (kg/lb) : 1.21/2.67.",
-			"Longueur × hauteur : 275x57 mm."
+			"Carré : 3/8 pouce.",
+			"Couple maximal, colonne Nm : 85 Nm.",
+			"Couple maximal, colonne ft-lb : 60 ft-lb.",
+			"Vitesse : 180 tr/min.",
+			"Longueur : 275 mm.",
+			"Consommation moyenne publiée : 4 CFM."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Consommation moyenne publiée conservée dans les spécifications ; aucun débit maximal ni volume par action déduit.",
+			"Catalogue constructeur identifié ; configuration et disponibilité actuelles à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Vitesse à vide",
-			"value": "180 rpm",
+			"label": "Carré",
+			"value": "3/8 pouce",
 			"evidenceIds": [
-				"october2-tools-steed-2-p16"
+				"cle-a-cliquet-hymair-at-5058a-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée (kg/lb)",
-			"value": "1.21/2.67",
+			"label": "Couple maximal, colonne Nm",
+			"value": "85 Nm",
 			"evidenceIds": [
-				"october2-tools-steed-2-p16"
+				"cle-a-cliquet-hymair-at-5058a-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur × hauteur",
-			"value": "275x57 mm",
+			"label": "Couple maximal, colonne ft-lb",
+			"value": "60 ft-lb",
 			"evidenceIds": [
-				"october2-tools-steed-2-p16"
+				"cle-a-cliquet-hymair-at-5058a-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "WORKING PRESSURE : 6.2 Bar",
+			"label": "Vitesse",
+			"value": "180 tr/min",
 			"evidenceIds": [
-				"october2-tools-steed-2-p16"
+				"cle-a-cliquet-hymair-at-5058a-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation moyenne, hors calcul",
-			"value": "4 cfm",
+			"label": "Longueur",
+			"value": "275 mm",
 			"evidenceIds": [
-				"october2-tools-steed-2-p16"
+				"cle-a-cliquet-hymair-at-5058a-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation moyenne publiée",
+			"value": "4 CFM",
+			"evidenceIds": [
+				"cle-a-cliquet-hymair-at-5058a-reserved-20261103-1"
 			]
 		}
 	],
@@ -91,6 +101,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : b9c6143d5502d453b5b2e0846bcfec263fb763d42a478fbc52089a41725e7d8d. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-cliquet-hymair-at-5058a-reserved-20261103-1",
+			"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SAUfKpBkCgyL&dp=GvUApKfKKUAU#page=16",
+			"sourceLabel": "Hymair : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 b9c6143d5502d453b5b2e0846bcfec263fb763d42a478fbc52089a41725e7d8d. La AT-5058A reçoit le carré 3/8 pouce ; la AT-5059A reçoit 1/2 pouce pour la même vitesse 180 tr/min et la même longueur 275 mm. Le tableau publie 60 ft-lb et 85 Nm, valeurs qui ne sont pas une conversion exacte ; elles restent attribuées à leurs colonnes. Aucun débit maximal n’est dérivé des 4 CFM moyens."
 		}
 	],
 	"fieldSources": {
@@ -102,6 +122,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-steed-2-p16"
+		],
+		"editorial": [
+			"cle-a-cliquet-hymair-at-5058a-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-cliquet-hymair-at-5058a-reserved-20261103-1"
 		]
 	},
 	"notes": [

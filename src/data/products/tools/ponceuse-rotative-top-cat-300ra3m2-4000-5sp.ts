@@ -9,16 +9,9 @@ const product: ToolProfileInput = {
 	"brand": "Top Cat",
 	"model": "300RA3m2;4000;5SP",
 	"mpn": "300RA3m2;4000;5SP",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.2,
-		"typical": 6.2,
 		"max": 6.2
-	},
-	"airflowLpm": {
-		"min": 708,
-		"typical": 708,
-		"max": 708
 	},
 	"confidence": "B",
 	"image": {
@@ -35,44 +28,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Top Cat 300RA3m2;4000;5SP. Le tableau publie une consommation maximale de 11,8 L/s, soit 708 L/min. Pression de référence retenue : 6,2 bar.",
+		"overview": "Top Cat 300RA3m2; 4000; 5SP. La 300RA3M2; 4000; 5SP est le modèle de finition à renvoi d’angle, plateau 5 pouces et 4 000 tr/min. La version K ajoute le levier de sécurité ; la 310RA3M2 à tête courte est donnée pour 5 200 tr/min. La consommation maximale 11,8 L/s reste documentaire, sans assimilation du plafond d’alimentation 6,2 bar à une mesure appariée.",
 		"verifiedFacts": [
-			"Référence complète imprimée : 300RA3m2;4000;5SP, page PDF 40.",
-			"Consommation maximale publiée : 708 L/min après conversion de l’unité originale.",
-			"All tools are designed to operate at an air line pressure of 90 PSI (6.2 Bar) maximum. Catalogue PDF page 7."
+			"Code imprimé dans le catalogue : 300RA3M2; 4000; 5SP.",
+			"Plateau : 5 pouces, classe 125 mm.",
+			"Vitesse maximale nominale : 4 000 tr/min.",
+			"Commande : Levier standard.",
+			"Échappement : Arrière.",
+			"Consommation maximale déclarée : 11,8 L/s (708 L/min)."
 		],
 		"limitations": [
-			"Le débit maximal est un besoin conservateur ; la cadence réelle de travail n’est pas déduite du catalogue.",
-			"La disponibilité actuelle, les accessoires inclus et les conditions de sécurité doivent être confirmés sur la notice de cette référence."
+			"Les maxima de pression d’alimentation et de consommation ne prouvent pas un couple de mesure débit/pression.",
+			"Catalogue historique ; code, commande et équipement à confirmer sur la révision livrée."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 40",
+			"label": "Code imprimé dans le catalogue",
+			"value": "300RA3M2; 4000; 5SP",
 			"evidenceIds": [
-				"documented-20260930-topcat-issued"
+				"ponceuse-rotative-top-cat-300ra3m2-4000-5sp-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Code complet de configuration",
-			"value": "300RA3m2;4000;5SP",
+			"label": "Plateau",
+			"value": "5 pouces, classe 125 mm",
 			"evidenceIds": [
-				"documented-20260930-topcat-issued"
+				"ponceuse-rotative-top-cat-300ra3m2-4000-5sp-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse comprise dans la désignation",
-			"value": "4000 min⁻¹",
+			"label": "Vitesse maximale nominale",
+			"value": "4 000 tr/min",
 			"evidenceIds": [
-				"documented-20260930-topcat-issued"
+				"ponceuse-rotative-top-cat-300ra3m2-4000-5sp-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation maximale publiée",
-			"value": "11.8 L/s ; 25 cfm",
+			"label": "Commande",
+			"value": "Levier standard",
 			"evidenceIds": [
-				"documented-20260930-topcat-issued"
+				"ponceuse-rotative-top-cat-300ra3m2-4000-5sp-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Échappement",
+			"value": "Arrière",
+			"evidenceIds": [
+				"ponceuse-rotative-top-cat-300ra3m2-4000-5sp-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation maximale déclarée",
+			"value": "11,8 L/s (708 L/min)",
+			"evidenceIds": [
+				"ponceuse-rotative-top-cat-300ra3m2-4000-5sp-reserved-20261103-1"
 			]
 		}
 	],
@@ -86,23 +96,53 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 4b4cea2c0cb0cfea87b1e287908e271388254005eda2136bb116549893decf7a. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		},
+		{
+			"id": "ponceuse-rotative-top-cat-300ra3m2-4000-5sp-reserved-20261103-1",
+			"sourceUrl": "https://www.intlairtool.com/content/catalogs-page-pdfs/Top-Cat-Air-Tools.pdf#page=40",
+			"sourceLabel": "Top Cat : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 4b4cea2c0cb0cfea87b1e287908e271388254005eda2136bb116549893decf7a. La 300RA3M2; 4000; 5SP est le modèle de finition à renvoi d’angle, plateau 5 pouces et 4 000 tr/min. La version K ajoute le levier de sécurité ; la 310RA3M2 à tête courte est donnée pour 5 200 tr/min. La consommation maximale 11,8 L/s reste documentaire, sans assimilation du plafond d’alimentation 6,2 bar à une mesure appariée."
+		},
+		{
+			"id": "ponceuse-rotative-top-cat-300ra3m2-4000-5sp-reserved-20261103-1-2",
+			"sourceUrl": "https://www.intlairtool.com/content/catalogs-page-pdfs/Top-Cat-Air-Tools.pdf#page=7",
+			"sourceLabel": "Top Cat : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 4b4cea2c0cb0cfea87b1e287908e271388254005eda2136bb116549893decf7a. La 300RA3M2; 4000; 5SP est le modèle de finition à renvoi d’angle, plateau 5 pouces et 4 000 tr/min. La version K ajoute le levier de sécurité ; la 310RA3M2 à tête courte est donnée pour 5 200 tr/min. La consommation maximale 11,8 L/s reste documentaire, sans assimilation du plafond d’alimentation 6,2 bar à une mesure appariée."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
 			"documented-20260930-topcat-issued"
 		],
-		"airflowLpm": [
-			"documented-20260930-topcat-issued"
-		],
 		"workingPressureBar": [
-			"documented-20260930-topcat-issued"
+			"ponceuse-rotative-top-cat-300ra3m2-4000-5sp-reserved-20261103-1"
+		],
+		"demandModel": [
+			"ponceuse-rotative-top-cat-300ra3m2-4000-5sp-reserved-20261103-1"
+		],
+		"demandExplanation": [
+			"ponceuse-rotative-top-cat-300ra3m2-4000-5sp-reserved-20261103-1"
+		],
+		"editorial": [
+			"ponceuse-rotative-top-cat-300ra3m2-4000-5sp-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-rotative-top-cat-300ra3m2-4000-5sp-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"consommation maximale ; aucune conversion en consommation en charge n’est effectuée.",
 		"Pression publiée en bar : 6.2."
-	]
+	],
+	"demandExplanation": "Maximum de débit déclaré, pression de mesure non explicitement appariée. Le maximum de pression d’alimentation reste une limite distincte."
 };
 
 export default product;

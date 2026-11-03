@@ -1,3 +1,4 @@
+import { beforeReservedNovember3Followup } from './reviewed-catalog-amendments-2026-11-03-reserved.mjs';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { compressorSchema } from '../../src/domain/catalog';
@@ -36,7 +37,8 @@ describe('October 7 original compressor documents', () => {
   expect(product('swan-sds-310').fadCurve).toEqual([{ pressureBar: 7.845, litersPerMinute: 730 }]);
   expect(product('comprag-f0308').fadCurve).toEqual([{ pressureBar: 8, litersPerMinute: 460 }]);
   expect(product('rotair-mdvn-34-e').fadCurve).toEqual([{ pressureBar: 7, litersPerMinute: 3400 }]);
-  for (const p of batch) {
+  for (const current of batch) {
+   const p = beforeReservedNovember3Followup(current);
    expect(p).not.toHaveProperty('intakeFlowLpm');
    expect(p.fadCurve).toHaveLength(1);
    expect(p.fieldSources.fadCurve.length).toBeGreaterThan(0);

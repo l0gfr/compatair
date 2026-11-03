@@ -16,21 +16,7 @@ const product: CompressorInput = {
 	},
 	"tankLiters": 0,
 	"maxPressureBar": 13,
-	"fadCurve": [
-		{
-			"pressureBar": 8,
-			"litersPerMinute": 590
-		},
-		{
-			"pressureBar": 10,
-			"litersPerMinute": 530
-		},
-		{
-			"pressureBar": 13,
-			"litersPerMinute": 410
-		}
-	],
-	"dutyCycle": 1,
+	"fadCurve": [],
 	"oilType": "unknown",
 	"powerKw": 4,
 	"weightKg": 240,
@@ -45,46 +31,45 @@ const product: CompressorInput = {
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 9",
-			"evidenceIds": [
-				"documented-d-almig-2026-p9"
-			]
-		},
-		{
 			"label": "Configuration",
-			"value": "Standalone, sans cuve ni sécheur",
+			"value": "COMBI XP 4 standalone",
 			"evidenceIds": [
-				"documented-d-almig-2026-p9"
+				"almig-combi-xp-4-standalone-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Dimensions (L × l × h)",
+			"label": "Dimensions",
 			"value": "643 × 790 × 961 mm",
 			"evidenceIds": [
-				"documented-d-almig-2026-p9"
+				"almig-combi-xp-4-standalone-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Conditions du débit",
-			"value": "COMBI XP standalone model; flow table page 8, dimensions page 9, no receiver and dryer.",
+			"label": "Masse standalone",
+			"value": "240 kg",
 			"evidenceIds": [
-				"documented-d-almig-2026-p9"
+				"almig-combi-xp-4-standalone-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Stockage et sécheur",
+			"value": "Sans cuve, sans sécheur frigorifique",
+			"evidenceIds": [
+				"almig-combi-xp-4-standalone-reserved-20261103-1"
 			]
 		}
 	],
 	"editorial": {
-		"overview": "ALMiG COMBI XP 4 standalone. Standalone, sans cuve ni sécheur. Débit restitué : 590 L/min à 8 bar ; 530 L/min à 10 bar ; 410 L/min à 13 bar.",
+		"overview": "ALMiG COMBI XP 4 standalone. La COMBI XP 4 standalone pèse 240 kg ; les standalone 4 et 6 partagent les dimensions mais pèsent 240 et 250 kg. Le tableau de débit 50 Hz appartient aux versions 4-en-1 sur cuve 270 D, de masses 465 et 470 kg : ces débits ne sont plus attribués au standalone sans confirmation explicite.",
 		"verifiedFacts": [
-			"Dimensions publiées : 643 × 790 × 961 mm.",
-			"Puissance moteur publiée : 4 kW.",
-			"La documentation constructeur de cette série prévoit le service continu, sous ses conditions d’installation et d’entretien."
+			"Configuration : COMBI XP 4 standalone.",
+			"Dimensions : 643 × 790 × 961 mm.",
+			"Masse standalone : 240 kg.",
+			"Stockage et sécheur : Sans cuve, sans sécheur frigorifique."
 		],
 		"limitations": [
-			"La disponibilité actuelle et le contenu de la configuration livrée restent à confirmer.",
-			"Aucun débit n’est extrapolé au-delà des pressions publiées ; les minima de modulation ne sont pas des débits moyens d’atelier.",
-			"Le mode de lubrification n’est pas établi ici. Aucun niveau de qualité d’air n’en est déduit.",
-			"La classe de qualité d’air du réseau, les pertes de pression et le refroidissement nécessitent une vérification sur l’installation."
+			"La table standalone ne publie que dimensions et masse. Débits des versions 4-en-1 conservés comme contexte documentaire, exclus du calcul de cette configuration.",
+			"Taux de marche du groupe complet standalone non quantifié."
 		]
 	},
 	"evidence": [
@@ -107,6 +92,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 a42ca92be39e4a81a11cf3e4ec6bb3ce237552363c3b0a7d16a43761d852266f. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "almig-combi-xp-4-standalone-reserved-20261103-1",
+			"sourceUrl": "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf#page=9",
+			"sourceLabel": "ALMiG : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 f5ca167dedaab25352808dc5001ba9badc7acffb2c37168c6d9f89182b752a0e. La COMBI XP 4 standalone pèse 240 kg ; les standalone 4 et 6 partagent les dimensions mais pèsent 240 et 250 kg. Le tableau de débit 50 Hz appartient aux versions 4-en-1 sur cuve 270 D, de masses 465 et 470 kg : ces débits ne sont plus attribués au standalone sans confirmation explicite."
 		}
 	],
 	"fieldSources": {
@@ -120,13 +115,16 @@ const product: CompressorInput = {
 			"documented-d-almig-2026-p9"
 		],
 		"fadCurve": [
-			"documented-d-almig-2026-p9"
+			"almig-combi-xp-4-standalone-reserved-20261103-1"
 		],
 		"weightKg": [
-			"documented-d-almig-2026-p9"
+			"almig-combi-xp-4-standalone-reserved-20261103-1"
 		],
-		"dutyCycle": [
-			"documented-d-almig-screw-duty"
+		"editorial": [
+			"almig-combi-xp-4-standalone-reserved-20261103-1"
+		],
+		"specifications": [
+			"almig-combi-xp-4-standalone-reserved-20261103-1"
 		]
 	},
 	"notes": [

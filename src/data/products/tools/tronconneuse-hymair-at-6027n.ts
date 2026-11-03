@@ -33,51 +33,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Hymair AT-6027N. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Vitesse à vide : 20,000 rpm. Masse publiée (kg/lb) : 0.84/1.84.",
+		"overview": "Hymair AT-6027N. La AT-6027N est la tronçonneuse à protecteur pivotant de 208 mm ; la AT-6027BN mesure 185 mm et pèse 0,78 kg, contre 0,84 kg. La version NXL atteint 310 mm et 18 000 tr/min. Le disque 76 mm est documenté, mais la moyenne 5 CFM ne remplace pas un débit maximal mesuré.",
 		"verifiedFacts": [
-			"Vitesse à vide : 20,000 rpm.",
-			"Masse publiée (kg/lb) : 0.84/1.84.",
-			"Longueur × hauteur : 208x95 mm."
+			"Disque de coupe : 3 pouces (76 mm).",
+			"Protecteur : Métallique pivotant.",
+			"Vitesse à vide : 20 000 tr/min.",
+			"Longueur : 208 mm.",
+			"Masse : 0,84 kg.",
+			"Consommation moyenne publiée : 5 CFM."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Consommation moyenne publiée conservée dans les spécifications ; aucun débit maximal ni volume par action déduit.",
+			"Catalogue constructeur identifié ; configuration et disponibilité actuelles à confirmer."
 		]
 	},
 	"specifications": [
 		{
+			"label": "Disque de coupe",
+			"value": "3 pouces (76 mm)",
+			"evidenceIds": [
+				"tronconneuse-hymair-at-6027n-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Protecteur",
+			"value": "Métallique pivotant",
+			"evidenceIds": [
+				"tronconneuse-hymair-at-6027n-reserved-20261103-1"
+			]
+		},
+		{
 			"label": "Vitesse à vide",
-			"value": "20,000 rpm",
+			"value": "20 000 tr/min",
 			"evidenceIds": [
-				"october2-tools-steed-2-p18"
+				"tronconneuse-hymair-at-6027n-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée (kg/lb)",
-			"value": "0.84/1.84",
+			"label": "Longueur",
+			"value": "208 mm",
 			"evidenceIds": [
-				"october2-tools-steed-2-p18"
+				"tronconneuse-hymair-at-6027n-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur × hauteur",
-			"value": "208x95 mm",
+			"label": "Masse",
+			"value": "0,84 kg",
 			"evidenceIds": [
-				"october2-tools-steed-2-p18"
+				"tronconneuse-hymair-at-6027n-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "WORKING PRESSURE : 6.2 Bar",
+			"label": "Consommation moyenne publiée",
+			"value": "5 CFM",
 			"evidenceIds": [
-				"october2-tools-steed-2-p18"
-			]
-		},
-		{
-			"label": "Consommation moyenne, hors calcul",
-			"value": "5 cfm",
-			"evidenceIds": [
-				"october2-tools-steed-2-p18"
+				"tronconneuse-hymair-at-6027n-reserved-20261103-1"
 			]
 		}
 	],
@@ -91,6 +101,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : b9c6143d5502d453b5b2e0846bcfec263fb763d42a478fbc52089a41725e7d8d. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "tronconneuse-hymair-at-6027n-reserved-20261103-1",
+			"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SAUfKpBkCgyL&dp=GvUApKfKKUAU#page=18",
+			"sourceLabel": "Hymair : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 b9c6143d5502d453b5b2e0846bcfec263fb763d42a478fbc52089a41725e7d8d. La AT-6027N est la tronçonneuse à protecteur pivotant de 208 mm ; la AT-6027BN mesure 185 mm et pèse 0,78 kg, contre 0,84 kg. La version NXL atteint 310 mm et 18 000 tr/min. Le disque 76 mm est documenté, mais la moyenne 5 CFM ne remplace pas un débit maximal mesuré."
 		}
 	],
 	"fieldSources": {
@@ -102,6 +122,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-steed-2-p18"
+		],
+		"editorial": [
+			"tronconneuse-hymair-at-6027n-reserved-20261103-1"
+		],
+		"specifications": [
+			"tronconneuse-hymair-at-6027n-reserved-20261103-1"
 		]
 	},
 	"notes": [

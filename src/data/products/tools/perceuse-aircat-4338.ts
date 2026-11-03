@@ -30,57 +30,68 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Aircat 4338. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 2.5 lb. Puissance publiée : 0.6 HP.",
+		"overview": "Aircat 4338. La 4338 est la perceuse réversible composite à mandrin 3/8 pouce, 0,6 HP et longueur 7 pouces. La 4337 est une perceuse d’angle et la 4450 est une version 1/2 pouce, d’après les descriptions liées. Le champ de vitesse est libellé BPM malgré une machine rotative : aucune unité corrigée n’est inventée. Les 6 CFM restent sans régime et pression de mesure établis.",
 		"verifiedFacts": [
-			"Masse publiée : 2.5 lb.",
-			"Puissance publiée : 0.6 HP."
+			"Mandrin : 3/8 pouce.",
+			"Sens : Réversible.",
+			"Puissance : 0,6 HP.",
+			"Longueur : 7 pouces.",
+			"Filetage de broche publié : 3/8 × 24.",
+			"Vitesse, champ constructeur : 1 800 sous le libellé Free Speed (BPM).",
+			"Consommation, régime non précisé : 6 CFM."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"La fiche ne documente pas suffisamment le régime de consommation et son appariement à une pression ; le calcul reste indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "2.5 lb",
+			"label": "Mandrin",
+			"value": "3/8 pouce",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-125-p1"
+				"perceuse-aircat-4338-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Puissance publiée",
-			"value": "0.6 HP",
+			"label": "Sens",
+			"value": "Réversible",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-125-p1"
+				"perceuse-aircat-4338-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Champ fabricant : Air Inlet (NPT/BSP)",
-			"value": "1/4-in.",
+			"label": "Puissance",
+			"value": "0,6 HP",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-125-p1"
+				"perceuse-aircat-4338-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Champ fabricant : Rec. Hose Size (in.)",
-			"value": "3/8-in.",
+			"label": "Longueur",
+			"value": "7 pouces",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-125-p1"
+				"perceuse-aircat-4338-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "Pression de mesure de la consommation non établie dans la fiche.",
+			"label": "Filetage de broche publié",
+			"value": "3/8 × 24",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-125-p1"
+				"perceuse-aircat-4338-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation de régime non précisé, hors calcul",
-			"value": "6 cfm",
+			"label": "Vitesse, champ constructeur",
+			"value": "1 800 sous le libellé Free Speed (BPM)",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-125-p1"
+				"perceuse-aircat-4338-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation, régime non précisé",
+			"value": "6 CFM",
+			"evidenceIds": [
+				"perceuse-aircat-4338-reserved-20261103-1"
 			]
 		}
 	],
@@ -94,6 +105,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 1556c3a5cba2b0daafd3de9135480f3c86c45f712ccd714a9e8fe96ff0f5f1ce. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "perceuse-aircat-4338-reserved-20261103-1",
+			"sourceUrl": "https://continentaltoolgroup.com/product/aircat-6-hp-3-8-composite-reversible-drill/",
+			"sourceLabel": "Aircat : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 2f65a7a250617adef23b83a41202fa8eb40a14f2e25a1602cab756e97c7b5ed7. La 4338 est la perceuse réversible composite à mandrin 3/8 pouce, 0,6 HP et longueur 7 pouces. La 4337 est une perceuse d’angle et la 4450 est une version 1/2 pouce, d’après les descriptions liées. Le champ de vitesse est libellé BPM malgré une machine rotative : aucune unité corrigée n’est inventée. Les 6 CFM restent sans régime et pression de mesure établis."
 		}
 	],
 	"fieldSources": {
@@ -108,6 +129,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-ctg-pdp-125-p1"
+		],
+		"editorial": [
+			"perceuse-aircat-4338-reserved-20261103-1"
+		],
+		"specifications": [
+			"perceuse-aircat-4338-reserved-20261103-1"
 		]
 	},
 	"notes": [

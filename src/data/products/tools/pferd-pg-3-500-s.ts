@@ -9,10 +9,8 @@ const product: ToolProfileInput = {
 	"categoryId": "meuleuse",
 	"category": "meuleuse",
 	"label": "PFERD PG 3/500 S",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
 		"max": 6.3
 	},
 	"confidence": "B",
@@ -23,83 +21,60 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "PFERD PG 3/500 S, référence 80107050. Le dimensionnement utilise 450 L/min à 6,3 bar, selon les régimes publiés par le fabricant. Longueur : 162 mm. Pince de serrage Ø comprise [mm] : 6 mm. Poids net de la machine : 0.37 kg.",
+		"overview": "PFERD PG 3/500 S. La PG 3/500 S est la meuleuse à pince 6 mm et 50 000 tr/min, distincte de la PG 3/250 S de la même famille. L’ancienne demande 450 L/min utilisait le débit à vide ; le fabricant publie 240 L/min en charge. Aucune extrapolation de pression ni consommation maximale n’est ajoutée à partir de la seule consigne de service 6,3 bar.",
 		"verifiedFacts": [
-			"Pression de service publiée sur cette fiche : 6.3 bar. Aucune autre pression de fonctionnement n’est déduite.",
-			"Consommation sous charge : 0.24 m³/min ; à vide : 0.45 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 450 L/min (m³/min × 1 000).",
-			"Référence fabricant : 80107050.",
+			"Pince fournie : 6 mm.",
+			"Vitesse : 50 000 tr/min.",
 			"Longueur : 162 mm.",
-			"Pince de serrage Ø comprise [mm] : 6 mm.",
-			"Poids net de la machine : 0.37 kg."
+			"Masse : 0,37 kg.",
+			"Consommation en charge : 0,24 m³/min (240 L/min).",
+			"Consommation à vide distincte : 0,45 m³/min (450 L/min)."
 		],
 		"limitations": [
-			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
-			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
-			"La valeur la plus élevée à vide ou en charge couvre les deux régimes documentés ; aucune moyenne de cycle n’est substituée à ces valeurs."
+			"Le débit en charge et le débit à vide sont séparés ; la pression de service ne suffit pas à établir leur pression de mesure."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression de service publiée sur cette fiche : 6.3 bar. Aucune autre pression de fonctionnement n’est déduite.",
+			"label": "Pince fournie",
+			"value": "6 mm",
 			"evidenceIds": [
-				"pferd-80107050-20260927"
+				"pferd-pg-3-500-s-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation sous charge : 0.24 m³/min ; à vide : 0.45 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 450 L/min (m³/min × 1 000).",
+			"label": "Vitesse",
+			"value": "50 000 tr/min",
 			"evidenceIds": [
-				"pferd-80107050-20260927"
+				"pferd-pg-3-500-s-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Longueur",
 			"value": "162 mm",
 			"evidenceIds": [
-				"pferd-80107050-20260927"
+				"pferd-pg-3-500-s-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Pince de serrage Ø comprise [mm]",
-			"value": "6 mm",
+			"label": "Masse",
+			"value": "0,37 kg",
 			"evidenceIds": [
-				"pferd-80107050-20260927"
+				"pferd-pg-3-500-s-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Poids net de la machine",
-			"value": "0.37 kg",
+			"label": "Consommation en charge",
+			"value": "0,24 m³/min (240 L/min)",
 			"evidenceIds": [
-				"pferd-80107050-20260927"
+				"pferd-pg-3-500-s-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Puissance",
-			"value": "200 Watt",
+			"label": "Consommation à vide distincte",
+			"value": "0,45 m³/min (450 L/min)",
 			"evidenceIds": [
-				"pferd-80107050-20260927"
-			]
-		},
-		{
-			"label": "Vitesse de rotation",
-			"value": "50000 t/min",
-			"evidenceIds": [
-				"pferd-80107050-20260927"
-			]
-		},
-		{
-			"label": "Échappement d'air",
-			"value": "Avant",
-			"evidenceIds": [
-				"pferd-80107050-20260927"
-			]
-		},
-		{
-			"label": "ø intérieur flexible d'alimentation",
-			"value": "8.5 mm",
-			"evidenceIds": [
-				"pferd-80107050-20260927"
+				"pferd-pg-3-500-s-reserved-20261103-1"
 			]
 		}
 	],
@@ -112,6 +87,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation sous charge : 0.24 m³/min ; à vide : 0.45 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 450 L/min (m³/min × 1 000)."
+		},
+		{
+			"id": "pferd-pg-3-500-s-reserved-20261103-1",
+			"sourceUrl": "https://fr.pferd.com/fr/meuleuse-droite-pneumatique-pg-3500",
+			"sourceLabel": "PFERD : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 073c560be48db88b2cfa267f36d05752d3029a12123b117a255e77525bde866d. La PG 3/500 S est la meuleuse à pince 6 mm et 50 000 tr/min, distincte de la PG 3/250 S de la même famille. L’ancienne demande 450 L/min utilisait le débit à vide ; le fabricant publie 240 L/min en charge. Aucune extrapolation de pression ni consommation maximale n’est ajoutée à partir de la seule consigne de service 6,3 bar."
 		}
 	],
 	"fieldSources": {
@@ -119,20 +104,25 @@ const product: ToolProfileInput = {
 			"pferd-80107050-20260927"
 		],
 		"workingPressureBar": [
-			"pferd-80107050-20260927"
+			"pferd-pg-3-500-s-reserved-20261103-1"
 		],
-		"airflowLpm": [
-			"pferd-80107050-20260927"
+		"demandModel": [
+			"pferd-pg-3-500-s-reserved-20261103-1"
+		],
+		"demandExplanation": [
+			"pferd-pg-3-500-s-reserved-20261103-1"
+		],
+		"editorial": [
+			"pferd-pg-3-500-s-reserved-20261103-1"
+		],
+		"specifications": [
+			"pferd-pg-3-500-s-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 450,
-		"typical": 450,
-		"max": 450
-	}
+	"demandExplanation": "Débits documentés selon leur régime, sans pression de mesure explicitement appariée par la fiche."
 };
 
 export default product;

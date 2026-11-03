@@ -29,13 +29,17 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "HAZET 9041-1. La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi. Champ fabricant : Design ∙ Special feature : Standard. Champ fabricant : Operating temperature range : -10°C – 40°C.",
+		"overview": "HAZET 9041-1. Le 9041-1 possède un manomètre 63 mm gradué tous les 0,1 bar, tolérance déclarée ±0,3 bar et flexible 400 mm. Sa plage thermique est −10 à 40 °C, distincte du 9041G-1 −20 à 60 °C. La plage du manomètre 0–12 bar ne représente ni un débit ni le volume du pneu.",
 		"verifiedFacts": [
 			"Champ fabricant : Design ∙ Special feature : Standard.",
-			"Champ fabricant : Operating temperature range : -10°C – 40°C.",
+			"Champ fabricant : Operating temperature range : -10 °C – 40 °C.",
 			"Champ fabricant : Thread type air inlet : BSPT.",
 			"Champ fabricant : Air connection inlet : Inside thread 12.91 mm (1/4″).",
-			"Champ fabricant : Coupler plug : Nominal size 7.2 (included)."
+			"Champ fabricant : Coupler plug : Nominal size 7.2 (included).",
+			"Manomètre : 63 mm, plage 0–12 bar.",
+			"Graduation : 0,1 bar.",
+			"Tolérance déclarée : ± 0,3 bar.",
+			"Flexible : 400 mm."
 		],
 		"limitations": [
 			"La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi.",
@@ -55,7 +59,7 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Operating temperature range",
-			"value": "-10°C – 40°C",
+			"value": "-10 °C – 40 °C",
 			"evidenceIds": [
 				"october2b-tools-oct2b-hazet-4000896147076-html-p1"
 			]
@@ -87,6 +91,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-hazet-4000896147076-html-p1"
 			]
+		},
+		{
+			"label": "Manomètre",
+			"value": "63 mm, plage 0–12 bar",
+			"evidenceIds": [
+				"gonflage-hazet-9041-1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Graduation",
+			"value": "0,1 bar",
+			"evidenceIds": [
+				"gonflage-hazet-9041-1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Tolérance déclarée",
+			"value": "± 0,3 bar",
+			"evidenceIds": [
+				"gonflage-hazet-9041-1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Flexible",
+			"value": "400 mm",
+			"evidenceIds": [
+				"gonflage-hazet-9041-1-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -99,6 +131,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 4f5582feaa522598ff6659302ac5c1ff0c9e8f475fb0a65e69a28d4ba1d9b658. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "gonflage-hazet-9041-1-reserved-20261103-1",
+			"sourceUrl": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/air-inflator-air-measuring-device/product/ean-4000896147076",
+			"sourceLabel": "HAZET : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 075242e03bd6e4561594c54e257ae0729e989bb915bd03a3b90875dbdb2d94f7. Le 9041-1 possède un manomètre 63 mm gradué tous les 0,1 bar, tolérance déclarée ±0,3 bar et flexible 400 mm. Sa plage thermique est −10 à 40 °C, distincte du 9041G-1 −20 à 60 °C. La plage du manomètre 0–12 bar ne représente ni un débit ni le volume du pneu."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +152,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-hazet-4000896147076-html-p1"
+		],
+		"editorial": [
+			"gonflage-hazet-9041-1-reserved-20261103-1"
+		],
+		"specifications": [
+			"gonflage-hazet-9041-1-reserved-20261103-1"
 		]
 	},
 	"notes": [

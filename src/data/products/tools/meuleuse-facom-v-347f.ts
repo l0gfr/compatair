@@ -29,12 +29,16 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "FACOM V.347F. La fiche établit les dimensions ou caractéristiques mécaniques du modèle. Aucun débit d’air n’est déduit du couple, de la vitesse ni de la puissance. Champ fabricant : Power Source : Pneumatic. Champ fabricant : Product Height [mm] : 347.",
+		"overview": "FACOM V.347F. La V.347F est une meuleuse coudée à pince 6 mm, régulateur intégré et flexible d’échappement arrière. Les V.472F et V.445F ont d’autres encombrements et ne fournissent pas son débit. Le tableau actuel donne 347 mm sous Height, sans correction arbitraire de ce libellé ; aucune consommation n’y est documentée.",
 		"verifiedFacts": [
 			"Champ fabricant : Power Source : Pneumatic.",
 			"Champ fabricant : Product Height [mm] : 347.",
 			"Champ fabricant : Product Length [mm] : 160.",
-			"Champ fabricant : Product Width [mm] : 27."
+			"Champ fabricant : Product Width [mm] : 27.",
+			"Pince livrée : 6 mm.",
+			"Géométrie : Tête coudée.",
+			"Régulation : Réglage par tournevis, gâchette progressive.",
+			"Échappement : Flexible arrière."
 		],
 		"limitations": [
 			"La fiche établit les dimensions ou caractéristiques mécaniques du modèle. Aucun débit d’air n’est déduit du couple, de la vitesse ni de la puissance.",
@@ -78,6 +82,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-facom-v347f-html-p1"
 			]
+		},
+		{
+			"label": "Pince livrée",
+			"value": "6 mm",
+			"evidenceIds": [
+				"meuleuse-facom-v-347f-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Géométrie",
+			"value": "Tête coudée",
+			"evidenceIds": [
+				"meuleuse-facom-v-347f-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Régulation",
+			"value": "Réglage par tournevis, gâchette progressive",
+			"evidenceIds": [
+				"meuleuse-facom-v-347f-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Échappement",
+			"value": "Flexible arrière",
+			"evidenceIds": [
+				"meuleuse-facom-v-347f-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -90,6 +122,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : ede037b5763bff84b88d5f0f188469cd002dc0f569fcacd108b0baa9b93d4df8. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "meuleuse-facom-v-347f-reserved-20261103-1",
+			"sourceUrl": "https://www.facom.com/product/v347f/6mm-angle-die-grinder?tid=610786",
+			"sourceLabel": "FACOM : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 3f14132f3b8fa3f8a011f049d882f898254a9f3b0259671c05861cbf035c1d75. La V.347F est une meuleuse coudée à pince 6 mm, régulateur intégré et flexible d’échappement arrière. Les V.472F et V.445F ont d’autres encombrements et ne fournissent pas son débit. Le tableau actuel donne 347 mm sous Height, sans correction arbitraire de ce libellé ; aucune consommation n’y est documentée."
 		}
 	],
 	"fieldSources": {
@@ -101,6 +143,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-facom-v347f-html-p1"
+		],
+		"editorial": [
+			"meuleuse-facom-v-347f-reserved-20261103-1"
+		],
+		"specifications": [
+			"meuleuse-facom-v-347f-reserved-20261103-1"
 		]
 	},
 	"notes": [

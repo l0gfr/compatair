@@ -22,7 +22,6 @@ const product: CompressorInput = {
       "litersPerMinute": 350
     }
   ],
-  "dutyCycle": 1,
   "powerKw": 3,
   "oilType": "unknown",
   "confidence": "B",
@@ -82,18 +81,67 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4c-gd-esm2-6-p5"
       ]
+    },
+    {
+      "label": "Configuration",
+      "value": "Cuve 270 L, sans sécheur intégré",
+      "evidenceIds": [
+        "gardner-denver-esm03-270-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "FAD à10 bar /145 psi",
+      "value": "0,35 m³/min",
+      "evidenceIds": [
+        "gardner-denver-esm03-270-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Puissance moteur",
+      "value": "3 kW",
+      "evidenceIds": [
+        "gardner-denver-esm03-270-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Masse publiée",
+      "value": "242 kg",
+      "evidenceIds": [
+        "gardner-denver-esm03-270-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Démarrage",
+      "value": "DOL",
+      "evidenceIds": [
+        "gardner-denver-esm03-270-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Dimensions L×W×H",
+      "value": "1 539 × 720 × 1 604 mm",
+      "evidenceIds": [
+        "gardner-denver-esm03-270-reserved-20261103-1"
+      ]
     }
   ],
   "editorial": {
-    "overview": "Gardner Denver ESM03-270. 350 L/min déclarés à 10 bar. Configuration constructeur : Compresseur sur cuve.",
+    "overview": "Gardner Denver ESM03-270. La ESM03-270 est la version sur cuve 270 L sans le sécheur intégré de la ESM03FS-270. Elles partagent0,35 m³/min à10 bar, mais pèsent242 et 261 kg. La ESM04-270 donne0,45 m³/min et utilise un démarrage étoile-triangle. La formule générale de gamme «capable de fonctionner en continu» ne quantifie pas un cycle de service du groupe.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 10 bar.",
       "Cuve de stockage documentée : 270 L.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 350 L/min déclarés à 10 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 350 L/min déclarés à 10 bar.",
+      "Configuration : Cuve 270 L, sans sécheur intégré.",
+      "FAD à10 bar /145 psi : 0,35 m³/min.",
+      "Puissance moteur : 3 kW.",
+      "Masse publiée : 242 kg.",
+      "Démarrage : DOL.",
+      "Dimensions L×W×H : 1 539 × 720 × 1 604 mm."
     ],
     "limitations": [
       "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-      "La fréquence électrique de cette configuration n’est pas documentée."
+      "La fréquence électrique de cette configuration n’est pas documentée.",
+      "Taux de marche numérique retiré : le texte général de gamme ne documente ni durée, ni cycle, ni conditions thermiques d’une tenue100%."
     ]
   },
   "evidence": [
@@ -116,6 +164,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 5a6d2333e7f9f5e04cdc65936f40212a31b7c5fb6d428edfeb9a9896073a85f1 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "gardner-denver-esm03-270-reserved-20261103-1",
+      "sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/blt87a221679f131e8d/blt14083a1eebc91a7c/67f910c40a3bd686326692f5/21874_New_Frame_0_6pp_Brochure_work.pdf#page=5",
+      "sourceLabel": "Gardner Denver : revue factuelle du 3 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-03",
+      "confidence": "B",
+      "notes": "GET complet HTTP200 SHA-256 5a6d2333e7f9f5e04cdc65936f40212a31b7c5fb6d428edfeb9a9896073a85f1. La ESM03-270 est la version sur cuve 270 L sans le sécheur intégré de la ESM03FS-270. Elles partagent0,35 m³/min à10 bar, mais pèsent242 et 261 kg. La ESM04-270 donne0,45 m³/min et utilise un démarrage étoile-triangle. La formule générale de gamme «capable de fonctionner en continu» ne quantifie pas un cycle de service du groupe."
     }
   ],
   "fieldSources": {
@@ -132,16 +190,23 @@ const product: CompressorInput = {
       "october4c-gd-esm2-6-p5"
     ],
     "powerKw": [
-      "october4c-gd-esm2-6-p5"
+      "gardner-denver-esm03-270-reserved-20261103-1"
     ],
-    "dutyCycle": [
-      "october4c-gd-esm2-6-p2"
+    "weightKg": [
+      "gardner-denver-esm03-270-reserved-20261103-1"
+    ],
+    "editorial": [
+      "gardner-denver-esm03-270-reserved-20261103-1"
+    ],
+    "specifications": [
+      "gardner-denver-esm03-270-reserved-20261103-1"
     ]
   },
   "notes": [
     "Portée de la source : FAD-pressure-qualified.",
     "Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées.",
     "Les caractéristiques décrivent la configuration constructeur indiquée dans cette fiche ; les autres équipements ou alimentations doivent être vérifiés séparément."
-  ]
+  ],
+  "weightKg": 242
 };
 export default product;

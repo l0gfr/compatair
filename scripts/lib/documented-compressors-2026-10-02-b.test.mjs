@@ -1,3 +1,4 @@
+import { applyReservedNovember3Followup } from './reviewed-catalog-amendments-2026-11-03-reserved.mjs';
 import { parseCatalogProductSource } from './catalog-tooling.mjs';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
@@ -15,7 +16,7 @@ describe('documented compressor configurations, October 2 B', () => {
  it('keeps 400 genuine configurations and canonical records reproducible', () => {
   expect(batch).toHaveLength(400); expect(new Set(batch.map(value => value.id)).size).toBe(400);
   expect(Object.fromEntries(['BOGE', 'ELGi', 'Chicago Pneumatic', 'Ingersoll Rand'].map(brand => [brand, batch.filter(value => value.brand === brand).length]))).toEqual({ BOGE: 220, ELGi: 128, 'Chicago Pneumatic': 50, 'Ingersoll Rand': 2 });
- for (const value of batch) expect(compressorSchema.parse(record(value.slug))).toEqual(compressorSchema.parse(value));
+ for (const value of batch) expect(compressorSchema.parse(record(value.slug))).toEqual(compressorSchema.parse(applyReservedNovember3Followup(structuredClone(value))));
  });
  it('normalizes proof ids for all added history events without changing raw source identities', () => {
   const rawSourceId = '017_e_series_data_en_130526';

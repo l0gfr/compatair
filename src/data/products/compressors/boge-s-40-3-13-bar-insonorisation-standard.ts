@@ -17,7 +17,6 @@ const product: CompressorInput = {
 	"tankLiters": 0,
 	"maxPressureBar": 13,
 	"fadCurve": [],
-	"dutyCycle": 1,
 	"oilType": "oil",
 	"powerKw": 30,
 	"mobility": "fixed",
@@ -31,52 +30,52 @@ const product: CompressorInput = {
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 1",
-			"evidenceIds": [
-				"documented-d-boge-s3-current-p1"
-			]
-		},
-		{
 			"label": "Configuration",
-			"value": "S-3, insonorisation standard",
+			"value": "S 40-3 standard, version 13 bar",
 			"evidenceIds": [
-				"documented-d-boge-s3-current-p1"
+				"boge-s-40-3-13-bar-insonorisation-standard-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Dimensions (L × l × h)",
-			"value": "1620 × 990 × 1450 mm",
+			"label": "Livraison effective publiée",
+			"value": "3,86 m³/min ; pression effective de mesure à confirmer",
 			"evidenceIds": [
-				"documented-d-boge-s3-current-p1"
+				"boge-s-40-3-13-bar-insonorisation-standard-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Conditions du débit",
-			"value": "Effective delivery is associated with maximum pressure in the table; measurement pressure not separately established.",
+			"label": "Puissance moteur",
+			"value": "30 kW",
 			"evidenceIds": [
-				"documented-d-boge-s3-current-p1"
+				"boge-s-40-3-13-bar-insonorisation-standard-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Débit effectif publié, pression de mesure à confirmer",
-			"value": "3 860 L/min ; aucun point FAD attribué à la pression maximale",
+			"label": "Dimensions",
+			"value": "1 620 × 990 × 1 450 mm",
 			"evidenceIds": [
-				"documented-d-boge-s3-current-p1"
+				"boge-s-40-3-13-bar-insonorisation-standard-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse standard",
+			"value": "842 kg",
+			"evidenceIds": [
+				"boge-s-40-3-13-bar-insonorisation-standard-reserved-20261103-1"
 			]
 		}
 	],
 	"editorial": {
-		"overview": "BOGE S 40-3, 13 bar, insonorisation standard. S-3, insonorisation standard. La livraison effective est publiée, mais sa pression de mesure n’est pas séparément établie : aucun FAD calculable n’est ajouté.",
+		"overview": "BOGE S 40-3. La S 40-3 standard à 13 bar publie 3,86 m³/min et 842 kg. Les versions SD avec sécheur et bluekat ont des équipements et masses différents ; les 970 kg du SD ne sont pas ceux du S standard. La table de pression maximale ne documente pas séparément le point FAD ; le moteur reste indéterminé.",
 		"verifiedFacts": [
-			"Dimensions publiées : 1620 × 990 × 1450 mm.",
-			"Puissance moteur publiée : 30 kW.",
-			"La documentation constructeur de cette série prévoit le service continu, sous ses conditions d’installation et d’entretien."
+			"Configuration : S 40-3 standard, version 13 bar.",
+			"Livraison effective publiée : 3,86 m³/min ; pression effective de mesure à confirmer.",
+			"Puissance moteur : 30 kW.",
+			"Dimensions : 1 620 × 990 × 1 450 mm.",
+			"Masse standard : 842 kg."
 		],
 		"limitations": [
-			"La disponibilité actuelle et le contenu de la configuration livrée restent à confirmer.",
-			"Le maximum de pression n’est pas assimilé à une pression de mesure du FAD. Le verdict reste insufficient_data.",
-			"La classe de qualité d’air du réseau, les pertes de pression et le refroidissement nécessitent une vérification sur l’installation."
+			"La valeur de livraison reste documentaire ; pression de mesure et taux de marche du groupe non établis."
 		]
 	},
 	"evidence": [
@@ -99,6 +98,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 721b071d19957929d82543cb2851fa494476c228f6440fe41e5ee21bcc5e038c. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "boge-s-40-3-13-bar-insonorisation-standard-reserved-20261103-1",
+			"sourceUrl": "https://www.boge.com/f/287325279136465/x/55679246a0/boge-datenblatt-schraubenkompressor-s-3.pdf#page=1",
+			"sourceLabel": "BOGE : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 516b7e8e9ad6af00cbdea1444d9394ba099b039f5d01c72db9c295211d69ef27. La S 40-3 standard à 13 bar publie 3,86 m³/min et 842 kg. Les versions SD avec sécheur et bluekat ont des équipements et masses différents ; les 970 kg du SD ne sont pas ceux du S standard. La table de pression maximale ne documente pas séparément le point FAD ; le moteur reste indéterminé."
 		}
 	],
 	"fieldSources": {
@@ -117,13 +126,20 @@ const product: CompressorInput = {
 		"oilType": [
 			"documented-d-boge-s3-current-p1"
 		],
-		"dutyCycle": [
-			"documented-d-boge-s3-duty"
+		"weightKg": [
+			"boge-s-40-3-13-bar-insonorisation-standard-reserved-20261103-1"
+		],
+		"editorial": [
+			"boge-s-40-3-13-bar-insonorisation-standard-reserved-20261103-1"
+		],
+		"specifications": [
+			"boge-s-40-3-13-bar-insonorisation-standard-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Configuration et unités vérifiées dans la ligne de la page 1."
-	]
+	],
+	"weightKg": 842
 };
 
 export default product;

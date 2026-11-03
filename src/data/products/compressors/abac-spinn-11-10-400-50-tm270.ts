@@ -8,64 +8,80 @@ const product: CompressorInput = {
 	"mpn": "4152022629",
 	"tankLiters": 270,
 	"maxPressureBar": 10,
-	"fadCurve": [
-		{
-			"pressureBar": 10,
-			"litersPerMinute": 1416
-		}
-	],
-	"oilType": "oil",
+	"fadCurve": [],
+	"oilType": "unknown",
 	"confidence": "A",
 	"status": "unknown",
 	"image": {
 		"src": "/images/products/abac-spinn-11-10-400-50-tm270.webp",
 		"alt": "Repères techniques ABAC SPINN 11 10 400/50 TM270, référence 4152022629",
-		"sourceUrl": "https://shop.abacaircompressors.com/en-INT/products/4152054944/spinn22-8-40050k-e-ce",
+		"sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/es/ABAC-Gu%C3%ADa%20Distribuidores%202026%20ES%20v4%20WEB-comp.pdf.coredownload.pdf#page=43",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "ABAC SPINN 11 10 400/50 TM270, référence 4152022629 : cuve de 270 L, pression maximale publiée de 10 bar. Le point documenté le plus élevé en pression fournit 1 416 L/min à 10 bar. Version sur cuve.",
+		"overview": "ABAC SPINN 11 10 400/50 TM270. Le catalogue 2026 identifie le code 4152022629 avec moteur 11 kW, cuve 270 L et masse 255 kg. Le code 4152022648 est la version 11E avec sécheur, à 296 kg et au même débit publié. L’ancienne source concernait une SPINN 2,2 kW : elle ne justifiait ni ce code, ni 11,2 kW, ni le point FAD à 10 bar. Le débit reste documentaire faute de pression de mesure explicite.",
 		"verifiedFacts": [
-			"Débit restitué publié : 1 416 L/min à 10 bar.",
-			"Compresseur rotatif à vis lubrifié, famille SPINN. Puissance moteur publiée : 11,2 kW.",
-			"Masse nette publiée : 255 kg.",
-			"Alimentation publiée : 400 V, 50 Hz, triphasée.",
-			"Fonctionnement continu déclaré par le constructeur pour cette gamme ; taux de marche normalisé à 100 %."
+			"Code exact : 4152022629.",
+			"Version du catalogue : SPINN 11 10 270, sur cuve 270 L.",
+			"Débit publié : 1 416 L/min ; pression effective de mesure non explicitée.",
+			"Puissance du catalogue : 11 kW.",
+			"Masse : 255 kg.",
+			"Dimensions : 1 543 × 720 × 1 337 mm.",
+			"Alimentation : 400 V / 3 phases / 50 Hz."
 		],
 		"limitations": [
-			"Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
-			"Le fonctionnement continu est une déclaration de gamme ; respecter les conditions de la notice. La disponibilité commerciale reste à confirmer.",
-			"Version électrique exacte à vérifier à la commande ; une alimentation 230 V peut être triphasée.",
-			"Le débit publié appartient à cette référence et à sa version de pression. Il ne définit pas une courbe complète."
+			"La pression 10 bar du tableau n’est pas présentée comme un point de mesure FAD explicite.",
+			"Une déclaration sur le service continu du moteur IE3 ne quantifie pas le taux de marche du groupe."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Conditions du débit",
-			"value": "FAD capacity (l/min) : 1416 ; Max Working Pressure (bar) : 10, dans le tableau fabricant de la variante 4152022629. Valeur restituée, pas aspirée.",
+			"label": "Code exact",
+			"value": "4152022629",
 			"evidenceIds": [
-				"abac-4152022629-20260926"
+				"abac-spinn-11-10-400-50-tm270-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Équipement",
-			"value": "Version sur cuve.",
+			"label": "Version du catalogue",
+			"value": "SPINN 11 10 270, sur cuve 270 L",
 			"evidenceIds": [
-				"abac-4152022629-20260926"
+				"abac-spinn-11-10-400-50-tm270-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Dimensions publiées",
-			"value": "1543 × 720 × 1337 mm (L × l × H)",
+			"label": "Débit publié",
+			"value": "1 416 L/min ; pression effective de mesure non explicitée",
 			"evidenceIds": [
-				"abac-4152022629-20260926"
+				"abac-spinn-11-10-400-50-tm270-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Taux de marche constructeur",
-			"value": "100 %, fonctionnement continu déclaré pour la gamme. Respecter les conditions de la notice de la référence.",
+			"label": "Puissance du catalogue",
+			"value": "11 kW",
 			"evidenceIds": [
-				"abac-spinn-11-10-400-50-tm270-continuous-duty-20260927"
+				"abac-spinn-11-10-400-50-tm270-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "255 kg",
+			"evidenceIds": [
+				"abac-spinn-11-10-400-50-tm270-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Dimensions",
+			"value": "1 543 × 720 × 1 337 mm",
+			"evidenceIds": [
+				"abac-spinn-11-10-400-50-tm270-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Alimentation",
+			"value": "400 V / 3 phases / 50 Hz",
+			"evidenceIds": [
+				"abac-spinn-11-10-400-50-tm270-reserved-20261103-1"
 			]
 		}
 	],
@@ -87,6 +103,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Déclaration de la gamme ABAC à vis ; uniquement les références SPINN, FORMULA et GENESIS revues individuellement dans ce lot."
+		},
+		{
+			"id": "abac-spinn-11-10-400-50-tm270-reserved-20261103-1",
+			"sourceUrl": "https://www.abacaircompressors.com/content/dam/brands/ABAC/products/leaflet/es/ABAC-Gu%C3%ADa%20Distribuidores%202026%20ES%20v4%20WEB-comp.pdf.coredownload.pdf#page=43",
+			"sourceLabel": "ABAC : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 a843a42e6615709ef68389accdb528ff9605f152d286b42321846b972614af5a. Le catalogue 2026 identifie le code 4152022629 avec moteur 11 kW, cuve 270 L et masse 255 kg. Le code 4152022648 est la version 11E avec sécheur, à 296 kg et au même débit publié. L’ancienne source concernait une SPINN 2,2 kW : elle ne justifiait ni ce code, ni 11,2 kW, ni le point FAD à 10 bar. Le débit reste documentaire faute de pression de mesure explicite."
 		}
 	],
 	"fieldSources": {
@@ -94,41 +120,50 @@ const product: CompressorInput = {
 			"abac-4152022629-20260926"
 		],
 		"tankLiters": [
-			"abac-4152022629-20260926"
+			"abac-spinn-11-10-400-50-tm270-reserved-20261103-1"
 		],
 		"maxPressureBar": [
-			"abac-4152022629-20260926"
+			"abac-spinn-11-10-400-50-tm270-reserved-20261103-1"
 		],
 		"fadCurve": [
-			"abac-4152022629-20260926"
+			"abac-spinn-11-10-400-50-tm270-reserved-20261103-1"
 		],
 		"oilType": [
-			"abac-4152022629-20260926"
+			"abac-spinn-11-10-400-50-tm270-reserved-20261103-1"
 		],
 		"powerKw": [
-			"abac-4152022629-20260926"
+			"abac-spinn-11-10-400-50-tm270-reserved-20261103-1"
 		],
 		"weightKg": [
-			"abac-4152022629-20260926"
+			"abac-spinn-11-10-400-50-tm270-reserved-20261103-1"
 		],
 		"voltage": [
-			"abac-4152022629-20260926"
+			"abac-spinn-11-10-400-50-tm270-reserved-20261103-1"
 		],
 		"phase": [
-			"abac-4152022629-20260926"
+			"abac-spinn-11-10-400-50-tm270-reserved-20261103-1"
 		],
-		"dutyCycle": [
-			"abac-spinn-11-10-400-50-tm270-continuous-duty-20260927"
+		"image": [
+			"abac-spinn-11-10-400-50-tm270-reserved-20261103-1"
+		],
+		"editorial": [
+			"abac-spinn-11-10-400-50-tm270-reserved-20261103-1"
+		],
+		"specifications": [
+			"abac-spinn-11-10-400-50-tm270-reserved-20261103-1"
+		],
+		"maxPressureBasis": [
+			"abac-spinn-11-10-400-50-tm270-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Caractéristiques déclarées par le fabricant. Les comparaisons dépendent des conditions de débit et de pression documentées."
 	],
-	"powerKw": 11.2,
+	"powerKw": 11,
 	"weightKg": 255,
-	"voltage": "400 V, 50 Hz",
+	"voltage": "400 V / 50 Hz",
 	"phase": "three-phase",
-	"dutyCycle": 1
+	"maxPressureBasis": "selected-working-pressure-ceiling"
 };
 
 export default product;

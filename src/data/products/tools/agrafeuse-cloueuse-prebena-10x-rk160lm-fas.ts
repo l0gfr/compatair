@@ -33,47 +33,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "PREBENA 10X-RK160LM-FAS. Environ 5 L par fixation à 8 bar. La cadence réelle reste nécessaire. Quantité approximative d’air à la pression publiée : 5,0 litre par fixation à 8 bar. Masse : 14,25 kg.",
+		"overview": "PREBENA 10X-RK160LM-FAS. La 10X-RK160LM-FAS est le cloueur industriel pour fabrication automatisée, clous RK/RKP 100–160 mm à 20 degrés. Son magasin contient 150 ou 120 clous selon le diamètre de fil ; ce n’est pas la même configuration que le 10X-RK160 portable de 6,9 kg. Les 5 L par fixation sont explicitement rattachés à 8 bar. La cadence saisie détermine la moyenne, sans prétendre décrire la pointe de déclenchement.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 83.",
-			"Quantité approximative d’air à la pression publiée : 5,0 litre par fixation à 8 bar.",
-			"Masse : 14,25 kg.",
-			"Dimensions (L × l × h) : 1027 x 157 x 536 mm."
+			"Fixations : Clous tête ronde types RK/RKP, longueur 100–160 mm.",
+			"Diamètre du fil : 3,8–4,6 mm.",
+			"Inclinaison : 20 degrés.",
+			"Magasin : 150 clous pour Ø3,8/4,2 mm ; 120 clous pour Ø4,6 mm.",
+			"Consommation par fixation à 8 bar : Environ 5,0 L.",
+			"Masse : 14,25 kg."
 		],
 		"limitations": [
-			"La moyenne par minute exige une cadence saisie ; elle ne décrit pas la pointe instantanée du déclenchement.",
-			"La plage de pression utilisable reste distincte de la pression de mesure de la consommation.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"Cadence réelle nécessaire au calcul ; pas de cadence supposée ni assimilation à un débit instantané.",
+			"Configuration industrielle FAS et fixations exactes à confirmer sur l’installation."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 83",
+			"label": "Fixations",
+			"value": "Clous tête ronde types RK/RKP, longueur 100–160 mm",
 			"evidenceIds": [
-				"documented-d-prebena-2024-p83"
+				"agrafeuse-cloueuse-prebena-10x-rk160lm-fas-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Quantité approximative d’air à la pression publiée",
-			"value": "5,0 litre par fixation à 8 bar",
+			"label": "Diamètre du fil",
+			"value": "3,8–4,6 mm",
 			"evidenceIds": [
-				"documented-d-prebena-2024-p83"
+				"agrafeuse-cloueuse-prebena-10x-rk160lm-fas-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Inclinaison",
+			"value": "20 degrés",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-prebena-10x-rk160lm-fas-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Magasin",
+			"value": "150 clous pour Ø3,8/4,2 mm ; 120 clous pour Ø4,6 mm",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-prebena-10x-rk160lm-fas-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation par fixation à 8 bar",
+			"value": "Environ 5,0 L",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-prebena-10x-rk160lm-fas-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Masse",
 			"value": "14,25 kg",
 			"evidenceIds": [
-				"documented-d-prebena-2024-p83"
-			]
-		},
-		{
-			"label": "Dimensions (L × l × h)",
-			"value": "1027 x 157 x 536 mm",
-			"evidenceIds": [
-				"documented-d-prebena-2024-p83"
+				"agrafeuse-cloueuse-prebena-10x-rk160lm-fas-reserved-20261103-1"
 			]
 		}
 	],
@@ -87,6 +101,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 80e839ee7c69b786c470baff4ff85214f2776c400ebd64dda03145a061a88028. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "agrafeuse-cloueuse-prebena-10x-rk160lm-fas-reserved-20261103-1",
+			"sourceUrl": "https://prebena.de/fileadmin/user_upload/Downloads/Prospekte/PREBENA-Hauptkatalog_2024_Seitenverlinkung_DE.pdf#page=83",
+			"sourceLabel": "PREBENA : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 80e839ee7c69b786c470baff4ff85214f2776c400ebd64dda03145a061a88028. La 10X-RK160LM-FAS est le cloueur industriel pour fabrication automatisée, clous RK/RKP 100–160 mm à 20 degrés. Son magasin contient 150 ou 120 clous selon le diamètre de fil ; ce n’est pas la même configuration que le 10X-RK160 portable de 6,9 kg. Les 5 L par fixation sont explicitement rattachés à 8 bar. La cadence saisie détermine la moyenne, sans prétendre décrire la pointe de déclenchement."
 		}
 	],
 	"fieldSources": {
@@ -95,6 +119,12 @@ const product: ToolProfileInput = {
 		],
 		"airPerActionLiters": [
 			"documented-d-prebena-2024-p83"
+		],
+		"editorial": [
+			"agrafeuse-cloueuse-prebena-10x-rk160lm-fas-reserved-20261103-1"
+		],
+		"specifications": [
+			"agrafeuse-cloueuse-prebena-10x-rk160lm-fas-reserved-20261103-1"
 		]
 	},
 	"notes": [

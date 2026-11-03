@@ -11,7 +11,7 @@ const product: ToolProfileInput = {
 	"mpn": "UT2005-1",
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
-	"demandExplanation": "Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse.",
+	"demandExplanation": "Consommation documentaire présente dans la fiche, mais régime/unité ou pression de mesure insuffisamment qualifiés pour le calcul.",
 	"connectorSize": "1/4-in. (Air Inlet  (NPT / BSP))",
 	"confidence": "B",
 	"image": {
@@ -30,59 +30,53 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Universal Tool UT2005-1. Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse. Masse publiée : 1.1 kg. Longueur publiée : 254 mm.",
+		"overview": "Universal Tool UT2005-1. La UT2005-1 est le cliquet 3/8 pouce de 254 mm à 70 Nm, destiné à des usages intermittents d’entretien. Les UT2003-1 et UT2000-1 sont plus courts, 184 mm. La fiche comporte bien 4 CFM : l’ancienne mention de consommation absente était inexacte. Le régime et la pression de mesure restent toutefois non établis, donc aucun débit n’entre dans le calcul.",
 		"verifiedFacts": [
-			"Masse publiée : 1.1 kg.",
-			"Longueur publiée : 254 mm.",
-			"Puissance publiée : 0.4 HP.",
-			"Couple maximal déclaré : 70 Nm."
+			"Carré : 3/8 pouce.",
+			"Couple maximal : 70 Nm.",
+			"Vitesse à vide : 160 tr/min.",
+			"Longueur : 254 mm.",
+			"Consommation publiée, régime non précisé : 4 CFM."
 		],
 		"limitations": [
-			"Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Régime et pression de mesure non suffisamment documentés ; les valeurs restent hors calcul conclusif.",
+			"Les colonnes contradictoires éventuelles restent attribuées à la source, sans correction devinée."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "1.1 kg",
+			"label": "Carré",
+			"value": "3/8 pouce",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-208-p1"
+				"cle-a-cliquet-universal-tool-ut2005-1-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur publiée",
-			"value": "254 mm",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-208-p1"
-			]
-		},
-		{
-			"label": "Puissance publiée",
-			"value": "0.4 HP",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-208-p1"
-			]
-		},
-		{
-			"label": "Couple maximal déclaré",
+			"label": "Couple maximal",
 			"value": "70 Nm",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-208-p1"
+				"cle-a-cliquet-universal-tool-ut2005-1-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Champ fabricant : Air Inlet  (NPT / BSP)",
-			"value": "1/4-in.",
+			"label": "Vitesse à vide",
+			"value": "160 tr/min",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-208-p1"
+				"cle-a-cliquet-universal-tool-ut2005-1-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "Pression de mesure de la consommation non établie dans la fiche.",
+			"label": "Longueur",
+			"value": "254 mm",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-208-p1"
+				"cle-a-cliquet-universal-tool-ut2005-1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation publiée, régime non précisé",
+			"value": "4 CFM",
+			"evidenceIds": [
+				"cle-a-cliquet-universal-tool-ut2005-1-reserved-20261103-1"
 			]
 		}
 	],
@@ -96,6 +90,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : d9536d382d6fd72422b66c4767b041b707ffa64d8474a815650fb32baea7a1f4. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-cliquet-universal-tool-ut2005-1-reserved-20261103-1",
+			"sourceUrl": "https://continentaltoolgroup.com/product/3-8-mini-ratchet-2/",
+			"sourceLabel": "Universal Tool : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 8842e3104b08ba28642a98a6ac9035e1da3813b7363e11626c6fff4f583f0150. La UT2005-1 est le cliquet 3/8 pouce de 254 mm à 70 Nm, destiné à des usages intermittents d’entretien. Les UT2003-1 et UT2000-1 sont plus courts, 184 mm. La fiche comporte bien 4 CFM : l’ancienne mention de consommation absente était inexacte. Le régime et la pression de mesure restent toutefois non établis, donc aucun débit n’entre dans le calcul."
 		}
 	],
 	"fieldSources": {
@@ -109,7 +113,13 @@ const product: ToolProfileInput = {
 			"october2-tools-ctg-pdp-208-p1"
 		],
 		"demandExplanation": [
-			"october2-tools-ctg-pdp-208-p1"
+			"cle-a-cliquet-universal-tool-ut2005-1-reserved-20261103-1"
+		],
+		"editorial": [
+			"cle-a-cliquet-universal-tool-ut2005-1-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-cliquet-universal-tool-ut2005-1-reserved-20261103-1"
 		]
 	},
 	"notes": [

@@ -23,46 +23,61 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Nitto Kohki MYG-40L, référence MYG-40L. Le tableau fabricant publie 690 L/min et une plage d’utilisation de 6 à 6 bar. Vitesse de rotation publiée : 13000 tr/min. Masse publiée : 1.55 kg.",
+		"overview": "Nitto Kohki MYG-40 L. La MYG-40 L reçoit un disque 100 mm et pèse 1,55 kg. La MYG-25 L est donnée pour 58 mm, 19 000 tr/min et 0,60 kg ; la MG-40 est un autre modèle 100 mm avec débit uniquement à vide. La MYG-40 L distingue explicitement 0,54 m³/min à vide et 0,69 en charge sous le point nominal du tableau 0,6 MPa ; seule la valeur en charge est retenue.",
 		"verifiedFacts": [
-			"Pression de 0,6 MPa publiée dans le tableau, soit 6 bar. La valeur en kgf/cm² entre parenthèses n’est pas utilisée pour la conversion.",
-			"Consommation en charge, la plus élevée des régimes publiés : 0.69 m³/min. Conversion × 1 000 en L/min.",
-			"Référence fabricant : MYG-40L.",
-			"Vitesse de rotation publiée : 13000 tr/min.",
-			"Masse publiée : 1.55 kg."
+			"Disque à moyeu déporté : 100 mm.",
+			"Vitesse à vide : 13 000 tr/min.",
+			"Masse : 1,55 kg.",
+			"Consommation en charge : 0,69 m³/min (690 L/min).",
+			"Consommation à vide distincte : 0,54 m³/min.",
+			"Pression nominale du tableau : 0,6 MPa."
 		],
 		"limitations": [
-			"Le débit à vide n’établit pas à lui seul la consommation sous toutes les charges. Respecter les conditions d’emploi de la notice.",
-			"La conformité et la disponibilité de la version exacte doivent être confirmées avant achat."
+			"Point nominal de spécification apparié dans le même tableau : 0,6 MPa. Aucun protocole métrologique supplémentaire ni essai indépendant n’est revendiqué.",
+			"Disque et accessoires à choisir selon la notice du modèle exact."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression de 0,6 MPa publiée dans le tableau, soit 6 bar. La valeur en kgf/cm² entre parenthèses n’est pas utilisée pour la conversion.",
+			"label": "Disque à moyeu déporté",
+			"value": "100 mm",
 			"evidenceIds": [
-				"nitto-kohki-myg-40l-20260926"
+				"nitto-kohki-myg-40l-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation en charge, la plus élevée des régimes publiés : 0.69 m³/min. Conversion × 1 000 en L/min.",
+			"label": "Vitesse à vide",
+			"value": "13 000 tr/min",
 			"evidenceIds": [
-				"nitto-kohki-myg-40l-20260926"
+				"nitto-kohki-myg-40l-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse de rotation publiée",
-			"value": "13000 tr/min",
+			"label": "Masse",
+			"value": "1,55 kg",
 			"evidenceIds": [
-				"nitto-kohki-myg-40l-20260926"
+				"nitto-kohki-myg-40l-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
-			"value": "1.55 kg",
+			"label": "Consommation en charge",
+			"value": "0,69 m³/min (690 L/min)",
 			"evidenceIds": [
-				"nitto-kohki-myg-40l-20260926"
+				"nitto-kohki-myg-40l-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation à vide distincte",
+			"value": "0,54 m³/min",
+			"evidenceIds": [
+				"nitto-kohki-myg-40l-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression nominale du tableau",
+			"value": "0,6 MPa",
+			"evidenceIds": [
+				"nitto-kohki-myg-40l-reserved-20261103-1"
 			]
 		}
 	],
@@ -75,6 +90,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation en charge, la plus élevée des régimes publiés : 0.69 m³/min. Conversion × 1 000 en L/min."
+		},
+		{
+			"id": "nitto-kohki-myg-40l-reserved-20261103-1",
+			"sourceUrl": "https://www.nitto-kohki.eu/images/stories/products/pdf_catalogs/Tools_Catalog.pdf#page=36",
+			"sourceLabel": "Nitto Kohki : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 96df5508b9819bc71611f875b35af9e282e5bb0bf62e324aab2ab87698867bac. La MYG-40 L reçoit un disque 100 mm et pèse 1,55 kg. La MYG-25 L est donnée pour 58 mm, 19 000 tr/min et 0,60 kg ; la MG-40 est un autre modèle 100 mm avec débit uniquement à vide. La MYG-40 L distingue explicitement 0,54 m³/min à vide et 0,69 en charge sous le point nominal du tableau 0,6 MPa ; seule la valeur en charge est retenue."
 		}
 	],
 	"fieldSources": {
@@ -86,6 +111,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"nitto-kohki-myg-40l-20260926"
+		],
+		"editorial": [
+			"nitto-kohki-myg-40l-reserved-20261103-1"
+		],
+		"specifications": [
+			"nitto-kohki-myg-40l-reserved-20261103-1"
 		]
 	},
 	"notes": [

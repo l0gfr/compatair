@@ -34,98 +34,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Desoutter H410-N-500 (réf. 1302374). Le débit de la fiche individuelle contredit la ligne du catalogue constructeur. Une confirmation fabricant est requise avant de dimensionner. Entrée d’air (pouces) : 3/8. Longueur : 319 mm.",
+		"overview": "Desoutter H410-N-500. La H410-N-500 est la clé d’angle 500 tr/min et 3–30 Nm ; la H410-N-350 donne 350 tr/min et 4,5–45 Nm. Le catalogue publie 17,9 L/s, tandis que la fiche actuelle affiche 500 L/s à vide et 1 000 CFM, un conflit non résolu. Aucun de ces chiffres contradictoires n’est utilisé pour dimensionner. La page de couple décrit le réglage par régulateur et recommande un dispositif de réaction pour le calage.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 157.",
-			"Entrée d’air (pouces) : 3/8.",
-			"Longueur : 319 mm.",
-			"Vitesse à vide : 500 rpm."
+			"Commande : Clé d’angle à entraînement direct, calage.",
+			"Vitesse à vide : 500 tr/min.",
+			"Plage de couple, catalogue : 3–30 Nm.",
+			"Sortie hexagonale, catalogue : 0,525 pouce.",
+			"Débit, catalogue : 17,9 L/s, régime non précisé.",
+			"Débit à vide, fiche actuelle : 500 L/s ; seconde colonne 1 000 CFM."
 		],
 		"limitations": [
-			"Le débit de la fiche individuelle contredit la ligne du catalogue constructeur. Une confirmation fabricant est requise avant de dimensionner.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"Conflit documentaire de révision conservé, sans arbitrage ni performance supposée.",
+			"Valeur à vide ou régime non précisé : consommation maximale/en charge non qualifiée."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 157",
+			"label": "Commande",
+			"value": "Clé d’angle à entraînement direct, calage",
 			"evidenceIds": [
-				"documented-d-desoutter-2026-p157",
-				"documented-d-desoutter-1302374"
-			]
-		},
-		{
-			"label": "Entrée d’air (pouces)",
-			"value": "3/8",
-			"evidenceIds": [
-				"documented-d-desoutter-2026-p157",
-				"documented-d-desoutter-1302374"
-			]
-		},
-		{
-			"label": "Longueur",
-			"value": "319 mm",
-			"evidenceIds": [
-				"documented-d-desoutter-2026-p157",
-				"documented-d-desoutter-1302374"
+				"visseuse-desoutter-h410-n-500-1302374-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Vitesse à vide",
-			"value": "500 rpm",
+			"value": "500 tr/min",
 			"evidenceIds": [
-				"documented-d-desoutter-2026-p157",
-				"documented-d-desoutter-1302374"
+				"visseuse-desoutter-h410-n-500-1302374-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Flexible intérieur minimal pour 5 m",
-			"value": "12 mm",
+			"label": "Plage de couple, catalogue",
+			"value": "3–30 Nm",
 			"evidenceIds": [
-				"documented-d-desoutter-2026-p157",
-				"documented-d-desoutter-1302374"
+				"visseuse-desoutter-h410-n-500-1302374-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Déclenchement",
-			"value": "Lever",
+			"label": "Sortie hexagonale, catalogue",
+			"value": "0,525 pouce",
 			"evidenceIds": [
-				"documented-d-desoutter-2026-p157",
-				"documented-d-desoutter-1302374"
+				"visseuse-desoutter-h410-n-500-1302374-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse",
-			"value": "1.7 kg",
+			"label": "Débit, catalogue",
+			"value": "17,9 L/s, régime non précisé",
 			"evidenceIds": [
-				"documented-d-desoutter-2026-p157",
-				"documented-d-desoutter-1302374"
+				"visseuse-desoutter-h410-n-500-1302374-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation déclarée, exclue du calcul",
-			"value": "30 000 L/min ; fiche individuelle : 500 L/s et 1 000 cfm, unités non concordantes",
+			"label": "Débit à vide, fiche actuelle",
+			"value": "500 L/s ; seconde colonne 1 000 CFM",
 			"evidenceIds": [
-				"documented-d-desoutter-2026-p157",
-				"documented-d-desoutter-1302374"
-			]
-		},
-		{
-			"label": "Consommation à vide du catalogue, conservée séparément",
-			"value": "17.9 l/s ; 37.9 cfm ; différente de la fiche individuelle",
-			"evidenceIds": [
-				"documented-d-desoutter-2026-p157",
-				"documented-d-desoutter-1302374"
-			]
-		},
-		{
-			"label": "Désignation de la fiche individuelle, différente du catalogue",
-			"value": "H410-N-500 WRENCH",
-			"evidenceIds": [
-				"documented-d-desoutter-2026-p157",
-				"documented-d-desoutter-1302374"
+				"visseuse-desoutter-h410-n-500-1302374-reserved-20261103-1"
 			]
 		}
 	],
@@ -159,6 +122,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-13",
 			"confidence": "B",
 			"notes": "SHA-256 7d2121c4aeb36c31bde784ba6ddcebee83686fb4883c6b63005d0e569613304c. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé. Édition 09.2026 : ligne de référence, consommation publiée et pression page 345 recoupées le 13 octobre ; caractéristiques et incertitudes conservées."
+		},
+		{
+			"id": "visseuse-desoutter-h410-n-500-1302374-reserved-20261103-1",
+			"sourceUrl": "https://www.datocms-assets.com/104564/1789974097-desoutter_general_catalog_fr_2026-09.pdf#page=157",
+			"sourceLabel": "Desoutter : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 7d2121c4aeb36c31bde784ba6ddcebee83686fb4883c6b63005d0e569613304c. La H410-N-500 est la clé d’angle 500 tr/min et 3–30 Nm ; la H410-N-350 donne 350 tr/min et 4,5–45 Nm. Le catalogue publie 17,9 L/s, tandis que la fiche actuelle affiche 500 L/s à vide et 1 000 CFM, un conflit non résolu. Aucun de ces chiffres contradictoires n’est utilisé pour dimensionner. La page de couple décrit le réglage par régulateur et recommande un dispositif de réaction pour le calage."
+		},
+		{
+			"id": "visseuse-desoutter-h410-n-500-1302374-reserved-20261103-1-4",
+			"sourceUrl": "https://www.desouttertools.com/en-us/products/1302374",
+			"sourceLabel": "Desoutter : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 7d2121c4aeb36c31bde784ba6ddcebee83686fb4883c6b63005d0e569613304c. La H410-N-500 est la clé d’angle 500 tr/min et 3–30 Nm ; la H410-N-350 donne 350 tr/min et 4,5–45 Nm. Le catalogue publie 17,9 L/s, tandis que la fiche actuelle affiche 500 L/s à vide et 1 000 CFM, un conflit non résolu. Aucun de ces chiffres contradictoires n’est utilisé pour dimensionner. La page de couple décrit le réglage par régulateur et recommande un dispositif de réaction pour le calage."
 		}
 	],
 	"fieldSources": {
@@ -172,6 +155,12 @@ const product: ToolProfileInput = {
 		"demandExplanation": [
 			"documented-d-desoutter-2026-p157",
 			"documented-d-desoutter-1302374"
+		],
+		"editorial": [
+			"visseuse-desoutter-h410-n-500-1302374-reserved-20261103-1"
+		],
+		"specifications": [
+			"visseuse-desoutter-h410-n-500-1302374-reserved-20261103-1"
 		]
 	},
 	"notes": [

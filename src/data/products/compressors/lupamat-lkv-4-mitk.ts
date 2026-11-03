@@ -16,12 +16,7 @@ const product: CompressorInput = {
 	},
 	"tankLiters": 548,
 	"maxPressureBar": 13,
-	"fadCurve": [
-		{
-			"pressureBar": 13,
-			"litersPerMinute": 400
-		}
-	],
+	"fadCurve": [],
 	"powerKw": 4,
 	"oilType": "unknown",
 	"confidence": "B",
@@ -34,52 +29,45 @@ const product: CompressorInput = {
 	},
 	"specifications": [
 		{
-			"label": "Configuration constructeur",
-			"value": "Groupe sur cuve 548 L avec sécheur",
+			"label": "Montage",
+			"value": "MITK avec sécheur",
 			"evidenceIds": [
-				"october4-lupamat-current-catalog-p13"
+				"lupamat-lkv-4-mitk-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Pression maximale de fonctionnement publiée",
-			"value": "13 bar",
-			"evidenceIds": [
-				"october4-lupamat-current-catalog-p13"
-			]
-		},
-		{
-			"label": "Cuve de stockage",
+			"label": "Cuve",
 			"value": "548 L",
 			"evidenceIds": [
-				"october4-lupamat-current-catalog-p13"
+				"lupamat-lkv-4-mitk-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Air livré à 13 bar",
-			"value": "400 L/min",
+			"label": "FAD publié face au maximum 13 bar",
+			"value": "0,40 m³/min, pression de mesure à confirmer",
 			"evidenceIds": [
-				"october4-lupamat-current-catalog-p13"
+				"lupamat-lkv-4-mitk-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Puissance publiée",
+			"label": "Puissance",
 			"value": "4 kW",
 			"evidenceIds": [
-				"october4-lupamat-current-catalog-p13"
+				"lupamat-lkv-4-mitk-reserved-20261103-1"
 			]
 		}
 	],
 	"editorial": {
-		"overview": "Lupamat LKV 4 MITK. 400 L/min déclarés à 13 bar. Groupe sur cuve 548 L avec sécheur.",
+		"overview": "Lupamat LKV 4 MITK. La LKV 4 MITK avec sécheur conserve une cuve 548 L. Les variantes MIT et MITK partagent les débits de la ligne ; MITK ajoute le sécheur, dont la capacité ne remplace pas le débit compresseur. Le tableau indique Max. Working Pressure : ISO 1217 annexe C ne prouve pas à lui seul que la mesure est faite exactement à 13 bar.",
 		"verifiedFacts": [
-			"Configuration de pression documentée : 13 bar.",
-			"Cuve de stockage documentée : 548 L.",
-			"FAD sous pression identifié séparément des valeurs d’aspiration : 400 L/min déclarés à 13 bar."
+			"Montage : MITK avec sécheur.",
+			"Cuve : 548 L.",
+			"FAD publié face au maximum 13 bar : 0,40 m³/min, pression de mesure à confirmer.",
+			"Puissance : 4 kW."
 		],
 		"limitations": [
-			"Configuration de pression 13 bar retenue dans le triplet 7 / 10 / 13. La version 15 bar sur demande ne fournit pas de FAD dans ce tableau.",
-			"Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil."
+			"Triplets 7/10/13 bar et capacités conservés comme déclarations documentaires ; pression effective de mesure à confirmer.",
+			"Cycle de service du groupe complet non établi."
 		]
 	},
 	"evidence": [
@@ -92,6 +80,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-04",
 			"confidence": "B",
 			"notes": "SHA-256 3330cc258da3e7cf4f293c5af0da2ae3ced11d881237b550687f50e1f01fd978 de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "lupamat-lkv-4-mitk-reserved-20261103-1",
+			"sourceUrl": "https://lupamat.com/pdf/Lupamat-EN-Katalog.pdf#page=13",
+			"sourceLabel": "Lupamat : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 3330cc258da3e7cf4f293c5af0da2ae3ced11d881237b550687f50e1f01fd978. La LKV 4 MITK avec sécheur conserve une cuve 548 L. Les variantes MIT et MITK partagent les débits de la ligne ; MITK ajoute le sécheur, dont la capacité ne remplace pas le débit compresseur. Le tableau indique Max. Working Pressure : ISO 1217 annexe C ne prouve pas à lui seul que la mesure est faite exactement à 13 bar."
 		}
 	],
 	"fieldSources": {
@@ -105,10 +103,16 @@ const product: CompressorInput = {
 			"october4-lupamat-current-catalog-p13"
 		],
 		"fadCurve": [
-			"october4-lupamat-current-catalog-p13"
+			"lupamat-lkv-4-mitk-reserved-20261103-1"
 		],
 		"powerKw": [
 			"october4-lupamat-current-catalog-p13"
+		],
+		"editorial": [
+			"lupamat-lkv-4-mitk-reserved-20261103-1"
+		],
+		"specifications": [
+			"lupamat-lkv-4-mitk-reserved-20261103-1"
 		]
 	},
 	"notes": [

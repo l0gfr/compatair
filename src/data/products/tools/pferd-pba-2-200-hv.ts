@@ -9,10 +9,8 @@ const product: ToolProfileInput = {
 	"categoryId": "ponceuse-bande",
 	"category": "ponceuse-bande",
 	"label": "PFERD PBA 2/200 HV",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
 		"max": 6.3
 	},
 	"confidence": "B",
@@ -23,69 +21,60 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "PFERD PBA 2/200 HV, référence 80705051. Le dimensionnement utilise 550 L/min à 6,3 bar, selon les régimes publiés par le fabricant. Longueur : 290 mm. Poids net de la machine : 0.687 kg. Puissance délivrée : 230 Watt.",
+		"overview": "PFERD PBA 2/200 HV. La PBA 2/200 HV est fournie avec le bras BSVAK 9/9 × 305, pour une famille de bandes 305 mm et largeurs 3–16 mm selon bras. La version oVA est sans le bras fourni. Les 550 L/min précédemment retenus sont à vide ; les 450 L/min sont en charge. La pression de service 6,3 bar n’est pas présentée comme une preuve de pression de mesure.",
 		"verifiedFacts": [
-			"Pression de service publiée sur cette fiche : 6.3 bar. Aucune autre pression de fonctionnement n’est déduite.",
-			"Consommation sous charge : 0.45 m³/min ; à vide : 0.55 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 550 L/min (m³/min × 1 000).",
-			"Référence fabricant : 80705051.",
-			"Longueur : 290 mm.",
-			"Poids net de la machine : 0.687 kg.",
-			"Puissance délivrée : 230 Watt."
+			"Bande : Longueur 305 mm, largeur 3–16 mm selon bras.",
+			"Bras fourni : BSVAK 9/9 × 305.",
+			"Vitesse de bande : 22 m/s.",
+			"Puissance : 230 W.",
+			"Consommation en charge : 0,45 m³/min (450 L/min).",
+			"Consommation à vide distincte : 0,55 m³/min (550 L/min)."
 		],
 		"limitations": [
-			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
-			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
-			"La valeur la plus élevée à vide ou en charge couvre les deux régimes documentés ; aucune moyenne de cycle n’est substituée à ces valeurs."
+			"Le débit en charge et le débit à vide sont séparés ; la pression de service ne suffit pas à établir leur pression de mesure."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression de service publiée sur cette fiche : 6.3 bar. Aucune autre pression de fonctionnement n’est déduite.",
+			"label": "Bande",
+			"value": "Longueur 305 mm, largeur 3–16 mm selon bras",
 			"evidenceIds": [
-				"pferd-80705051-20260927"
+				"pferd-pba-2-200-hv-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation sous charge : 0.45 m³/min ; à vide : 0.55 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 550 L/min (m³/min × 1 000).",
+			"label": "Bras fourni",
+			"value": "BSVAK 9/9 × 305",
 			"evidenceIds": [
-				"pferd-80705051-20260927"
+				"pferd-pba-2-200-hv-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur",
-			"value": "290 mm",
+			"label": "Vitesse de bande",
+			"value": "22 m/s",
 			"evidenceIds": [
-				"pferd-80705051-20260927"
+				"pferd-pba-2-200-hv-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Poids net de la machine",
-			"value": "0.687 kg",
+			"label": "Puissance",
+			"value": "230 W",
 			"evidenceIds": [
-				"pferd-80705051-20260927"
+				"pferd-pba-2-200-hv-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Puissance délivrée",
-			"value": "230 Watt",
+			"label": "Consommation en charge",
+			"value": "0,45 m³/min (450 L/min)",
 			"evidenceIds": [
-				"pferd-80705051-20260927"
+				"pferd-pba-2-200-hv-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Échappement d'air",
-			"value": "Arrière",
+			"label": "Consommation à vide distincte",
+			"value": "0,55 m³/min (550 L/min)",
 			"evidenceIds": [
-				"pferd-80705051-20260927"
-			]
-		},
-		{
-			"label": "ø intérieur flexible d'alimentation",
-			"value": "6 mm",
-			"evidenceIds": [
-				"pferd-80705051-20260927"
+				"pferd-pba-2-200-hv-reserved-20261103-1"
 			]
 		}
 	],
@@ -98,6 +87,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation sous charge : 0.45 m³/min ; à vide : 0.55 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 550 L/min (m³/min × 1 000)."
+		},
+		{
+			"id": "pferd-pba-2-200-hv-reserved-20261103-1",
+			"sourceUrl": "https://fr.pferd.com/fr/ponceuse-a-bande-pneumatique-pba-2200-hv",
+			"sourceLabel": "PFERD : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 cc3b31cbe9721903a3b82e2800a0f8c725f38f9f2d8f7f473dff3e36e33dbc6a. La PBA 2/200 HV est fournie avec le bras BSVAK 9/9 × 305, pour une famille de bandes 305 mm et largeurs 3–16 mm selon bras. La version oVA est sans le bras fourni. Les 550 L/min précédemment retenus sont à vide ; les 450 L/min sont en charge. La pression de service 6,3 bar n’est pas présentée comme une preuve de pression de mesure."
 		}
 	],
 	"fieldSources": {
@@ -105,20 +104,25 @@ const product: ToolProfileInput = {
 			"pferd-80705051-20260927"
 		],
 		"workingPressureBar": [
-			"pferd-80705051-20260927"
+			"pferd-pba-2-200-hv-reserved-20261103-1"
 		],
-		"airflowLpm": [
-			"pferd-80705051-20260927"
+		"demandModel": [
+			"pferd-pba-2-200-hv-reserved-20261103-1"
+		],
+		"demandExplanation": [
+			"pferd-pba-2-200-hv-reserved-20261103-1"
+		],
+		"editorial": [
+			"pferd-pba-2-200-hv-reserved-20261103-1"
+		],
+		"specifications": [
+			"pferd-pba-2-200-hv-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 550,
-		"typical": 550,
-		"max": 550
-	}
+	"demandExplanation": "Débits documentés selon leur régime, sans pression de mesure explicitement appariée par la fiche."
 };
 
 export default product;

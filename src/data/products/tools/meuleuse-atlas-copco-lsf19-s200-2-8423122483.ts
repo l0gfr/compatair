@@ -38,46 +38,76 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Atlas Copco LSF19 S200-2 (réf. 8423122483). Consommation maximale : 576 L/min à 6,3 bar. Consommations originales : 9.6 L/s ; 20.1 cfm ; 3.5 L/s ; 7.4 cfm. Vitesse à vide : 20000 tr/min.",
+		"overview": "Atlas Copco LSF19 S200-2. La LSF19 S200-2 reçoit la pince 1/4 pouce ; la S200-1 reçoit 6 mm. La S200E-1 est la version longue de 293 mm contre 193 mm. Les 9,6 L/s correspondent à la puissance maximale et les 3,5 L/s au fonctionnement à vide ; les 576 L/min du moteur utilisent la première colonne.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 210.",
-			"Consommations originales : 9.6 L/s ; 20.1 cfm ; 3.5 L/s ; 7.4 cfm.",
-			"Vitesse à vide : 20000 tr/min.",
-			"Masse : 0.5 kg."
+			"Code : 8423 1224 83.",
+			"Pince de cette version : 1/4 pouce.",
+			"Vitesse maximale à vide : 20 000 tr/min.",
+			"Puissance maximale : 0,50 kW.",
+			"Longueur : 193 mm.",
+			"Masse : 0,5 kg.",
+			"Consommation à puissance maximale : 9,6 L/s à 6,3 bar.",
+			"Consommation à vide distincte : 3,5 L/s."
 		],
 		"limitations": [
-			"Le débit publié conserve son régime de mesure ; aucun cycle supposé ne réduit la consommation.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"Conditions générales constructeur : air libre, pression 6,3 bar ; les régimes explicitement inscrits dans la table restent prioritaires."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 210",
+			"label": "Code",
+			"value": "8423 1224 83",
 			"evidenceIds": [
-				"documented-d-atlas-tools-p210"
+				"meuleuse-atlas-copco-lsf19-s200-2-8423122483-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommations originales",
-			"value": "9.6 L/s ; 20.1 cfm ; 3.5 L/s ; 7.4 cfm",
+			"label": "Pince de cette version",
+			"value": "1/4 pouce",
 			"evidenceIds": [
-				"documented-d-atlas-tools-p210"
+				"meuleuse-atlas-copco-lsf19-s200-2-8423122483-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse à vide",
-			"value": "20000 tr/min",
+			"label": "Vitesse maximale à vide",
+			"value": "20 000 tr/min",
 			"evidenceIds": [
-				"documented-d-atlas-tools-p210"
+				"meuleuse-atlas-copco-lsf19-s200-2-8423122483-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Puissance maximale",
+			"value": "0,50 kW",
+			"evidenceIds": [
+				"meuleuse-atlas-copco-lsf19-s200-2-8423122483-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "193 mm",
+			"evidenceIds": [
+				"meuleuse-atlas-copco-lsf19-s200-2-8423122483-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Masse",
-			"value": "0.5 kg",
+			"value": "0,5 kg",
 			"evidenceIds": [
-				"documented-d-atlas-tools-p210"
+				"meuleuse-atlas-copco-lsf19-s200-2-8423122483-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation à puissance maximale",
+			"value": "9,6 L/s à 6,3 bar",
+			"evidenceIds": [
+				"meuleuse-atlas-copco-lsf19-s200-2-8423122483-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation à vide distincte",
+			"value": "3,5 L/s",
+			"evidenceIds": [
+				"meuleuse-atlas-copco-lsf19-s200-2-8423122483-reserved-20261103-1"
 			]
 		}
 	],
@@ -101,6 +131,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "meuleuse-atlas-copco-lsf19-s200-2-8423122483-reserved-20261103-1",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf#page=210",
+			"sourceLabel": "Atlas Copco : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. La LSF19 S200-2 reçoit la pince 1/4 pouce ; la S200-1 reçoit 6 mm. La S200E-1 est la version longue de 293 mm contre 193 mm. Les 9,6 L/s correspondent à la puissance maximale et les 3,5 L/s au fonctionnement à vide ; les 576 L/min du moteur utilisent la première colonne."
+		},
+		{
+			"id": "meuleuse-atlas-copco-lsf19-s200-2-8423122483-reserved-20261103-1-3",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf#page=3",
+			"sourceLabel": "Atlas Copco : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. La LSF19 S200-2 reçoit la pince 1/4 pouce ; la S200-1 reçoit 6 mm. La S200E-1 est la version longue de 293 mm contre 193 mm. Les 9,6 L/s correspondent à la puissance maximale et les 3,5 L/s au fonctionnement à vide ; les 576 L/min du moteur utilisent la première colonne."
 		}
 	],
 	"fieldSources": {
@@ -113,6 +163,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"documented-d-atlas-tools-p210"
+		],
+		"editorial": [
+			"meuleuse-atlas-copco-lsf19-s200-2-8423122483-reserved-20261103-1"
+		],
+		"specifications": [
+			"meuleuse-atlas-copco-lsf19-s200-2-8423122483-reserved-20261103-1"
 		]
 	},
 	"notes": [

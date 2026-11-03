@@ -23,54 +23,53 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Toku MR-2310B, référence MR-2310B. Le tableau fabricant publie 360 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Masse publiée : 1,2 kg. Diamètre intérieur de flexible conseillé : 6,5 mm.",
+		"overview": "Toku MR-2310B. La MR-2310B est le cliquet 3/8 pouce à 78 Nm et 175 tr/min. La MR-2410B reçoit le carré 1/2 pouce avec la même vitesse et consommation ; la MR-2209C est plus légère, 0,5 kg, pour 28 Nm et 250 tr/min. Le régime des 6 L/s n’est pas précisé dans la table.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation publiée : 6 L/s, convertis en 360 L/min par multiplication par 60.",
-			"Référence fabricant : MR-2310B.",
-			"Masse publiée : 1,2 kg.",
-			"Diamètre intérieur de flexible conseillé : 6,5 mm.",
-			"Raccord pneumatique : PT 1/4\"."
+			"Carré : 3/8 pouce.",
+			"Couple indicatif : 78 Nm.",
+			"Vitesse : 175 tr/min.",
+			"Masse : 1,2 kg.",
+			"Consommation publiée : 6 L/s."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"Régime et pression de mesure ne sont pas complétés par hypothèse. Les données non dimensionnantes restent dans les spécifications.",
+			"Catalogue constructeur historique ; configuration livrée et disponibilité actuelles à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+			"label": "Carré",
+			"value": "3/8 pouce",
 			"evidenceIds": [
-				"toku-mr-2310b-20260926-workingpressurebar-1"
+				"toku-mr-2310b-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation publiée : 6 L/s, convertis en 360 L/min par multiplication par 60.",
+			"label": "Couple indicatif",
+			"value": "78 Nm",
 			"evidenceIds": [
-				"toku-mr-2310b-20260926"
+				"toku-mr-2310b-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
+			"label": "Vitesse",
+			"value": "175 tr/min",
+			"evidenceIds": [
+				"toku-mr-2310b-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
 			"value": "1,2 kg",
 			"evidenceIds": [
-				"toku-mr-2310b-20260926"
+				"toku-mr-2310b-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre intérieur de flexible conseillé",
-			"value": "6,5 mm",
+			"label": "Consommation publiée",
+			"value": "6 L/s",
 			"evidenceIds": [
-				"toku-mr-2310b-20260926"
-			]
-		},
-		{
-			"label": "Raccord pneumatique",
-			"value": "PT 1/4\"",
-			"evidenceIds": [
-				"toku-mr-2310b-20260926"
+				"toku-mr-2310b-reserved-20261103-1"
 			]
 		}
 	],
@@ -92,6 +91,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "toku-mr-2310b-reserved-20261103-1",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=40",
+			"sourceLabel": "Toku : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. La MR-2310B est le cliquet 3/8 pouce à 78 Nm et 175 tr/min. La MR-2410B reçoit le carré 1/2 pouce avec la même vitesse et consommation ; la MR-2209C est plus légère, 0,5 kg, pour 28 Nm et 250 tr/min. Le régime des 6 L/s n’est pas précisé dans la table."
 		}
 	],
 	"fieldSources": {
@@ -109,6 +118,15 @@ const product: ToolProfileInput = {
 		],
 		"connectorSize": [
 			"toku-mr-2310b-20260926"
+		],
+		"airflowBasis": [
+			"toku-mr-2310b-reserved-20261103-1"
+		],
+		"editorial": [
+			"toku-mr-2310b-reserved-20261103-1"
+		],
+		"specifications": [
+			"toku-mr-2310b-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -122,7 +140,8 @@ const product: ToolProfileInput = {
 	"recommendedHose": {
 		"innerDiameterMm": 6.5
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"airflowBasis": "unqualified"
 };
 
 export default product;

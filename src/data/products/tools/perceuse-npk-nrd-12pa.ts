@@ -29,10 +29,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "NPK NRD-12PA. La consommation moyenne déclarée ne fournit pas la demande maximale à un point de pression de mesure identifié. Aucun débit en charge n’est reconstitué. Masse publiée : 5.7 lbs. Consommation documentaire, hors calcul : 23 cfm.",
+		"overview": "NPK NRD-12PA. La NRD-12PA possède une broche 6JT et un mandrin Jacobs34-06. La NRD-12PAT utilise un filetage 1/2-20 et un Jacobs33BA-1/2, malgré vitesse et masse communes. Cette distinction conditionne le remplacement du mandrin. Les 23 CFM moyens restent exclus du calcul continu.",
 		"verifiedFacts": [
 			"Masse publiée : 5.7 lbs.",
-			"Consommation documentaire, hors calcul : 23 cfm."
+			"Consommation documentaire, hors calcul : 23 cfm.",
+			"Mandrin : Jacobs 34-06, capacité 1/2 pouce.",
+			"Broche : Cône 6JT.",
+			"Vitesse à vide : 1 500 tr/min.",
+			"Sens : Non réversible."
 		],
 		"limitations": [
 			"La consommation moyenne déclarée ne fournit pas la demande maximale à un point de pression de mesure identifié. Aucun débit en charge n’est reconstitué.",
@@ -62,6 +66,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-michigan-15-npk-pdf-p11"
 			]
+		},
+		{
+			"label": "Mandrin",
+			"value": "Jacobs 34-06, capacité 1/2 pouce",
+			"evidenceIds": [
+				"perceuse-npk-nrd-12pa-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Broche",
+			"value": "Cône 6JT",
+			"evidenceIds": [
+				"perceuse-npk-nrd-12pa-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "1 500 tr/min",
+			"evidenceIds": [
+				"perceuse-npk-nrd-12pa-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Sens",
+			"value": "Non réversible",
+			"evidenceIds": [
+				"perceuse-npk-nrd-12pa-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -74,6 +106,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 8991587b6147dedde29a8ca888682d24a45127a873a1fb3a753e048fd2696462. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "perceuse-npk-nrd-12pa-reserved-20261103-1",
+			"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/15-NPK.pdf#page=11",
+			"sourceLabel": "NPK : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 8991587b6147dedde29a8ca888682d24a45127a873a1fb3a753e048fd2696462. La NRD-12PA possède une broche 6JT et un mandrin Jacobs34-06. La NRD-12PAT utilise un filetage 1/2-20 et un Jacobs33BA-1/2, malgré vitesse et masse communes. Cette distinction conditionne le remplacement du mandrin. Les 23 CFM moyens restent exclus du calcul continu."
 		}
 	],
 	"fieldSources": {
@@ -85,6 +127,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-michigan-15-npk-pdf-p11"
+		],
+		"editorial": [
+			"perceuse-npk-nrd-12pa-reserved-20261103-1"
+		],
+		"specifications": [
+			"perceuse-npk-nrd-12pa-reserved-20261103-1"
 		]
 	},
 	"notes": [

@@ -29,10 +29,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Ingersoll Rand 100PQ1. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 0.7 kg. Caractéristiques du tableau constructeur : 100PQ1 M4 – M5 3 – 8 (4 – 11) 9,300 1.6 (0.7) 5.6” (142) 0.7” (18) 1/4” 12 (340).",
+		"overview": "Ingersoll Rand 100PQ1. La 100PQ1 est la clé à impulsions à gâchette pour M4–M5, 4–11 Nm, longueur142 mm et 0,7 kg. La 100SQ1 est droite à levier, 226 mm et 10 000 tr/min, plage4–12 Nm. Les 340 L/min ne sont pas associés à un régime et une pression de mesure suffisants.",
 		"verifiedFacts": [
 			"Masse publiée : 0.7 kg.",
-			"Caractéristiques du tableau constructeur : 100PQ1 M4 – M5 3 – 8 (4 – 11) 9,300 1.6 (0.7) 5.6” (142) 0.7” (18) 1/4” 12 (340)."
+			"Caractéristiques du tableau constructeur : 100PQ1 M4 – M5 3 – 8 (4 – 11) 9,300 1.6 (0.7) 5.6” (142) 0.7” (18) 1/4” 12 (340).",
+			"Commande : Pistolet, démarrage par gâchette.",
+			"Capacité de boulon : M4–M5.",
+			"Plage de couple : 4–11 Nm.",
+			"Vitesse : 9 300 tr/min.",
+			"Consommation publiée : 340 L/min."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -68,6 +73,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-ir-production-fastening-pdf-p71"
 			]
+		},
+		{
+			"label": "Commande",
+			"value": "Pistolet, démarrage par gâchette",
+			"evidenceIds": [
+				"cle-a-impulsions-ingersoll-rand-100pq1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Capacité de boulon",
+			"value": "M4–M5",
+			"evidenceIds": [
+				"cle-a-impulsions-ingersoll-rand-100pq1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Plage de couple",
+			"value": "4–11 Nm",
+			"evidenceIds": [
+				"cle-a-impulsions-ingersoll-rand-100pq1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse",
+			"value": "9 300 tr/min",
+			"evidenceIds": [
+				"cle-a-impulsions-ingersoll-rand-100pq1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation publiée",
+			"value": "340 L/min",
+			"evidenceIds": [
+				"cle-a-impulsions-ingersoll-rand-100pq1-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -80,6 +120,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 58f6dd413f360beb3c24048bfe40e3e325ba005dc2b3b1d3e02a21110a0be9c1. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-impulsions-ingersoll-rand-100pq1-reserved-20261103-1",
+			"sourceUrl": "https://irtoolhelp.ingersollrand.com/hc/en-us/article_attachments/4410723358739#page=71",
+			"sourceLabel": "Ingersoll Rand : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 58f6dd413f360beb3c24048bfe40e3e325ba005dc2b3b1d3e02a21110a0be9c1. La 100PQ1 est la clé à impulsions à gâchette pour M4–M5, 4–11 Nm, longueur142 mm et 0,7 kg. La 100SQ1 est droite à levier, 226 mm et 10 000 tr/min, plage4–12 Nm. Les 340 L/min ne sont pas associés à un régime et une pression de mesure suffisants."
 		}
 	],
 	"fieldSources": {
@@ -91,6 +141,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-ir-production-fastening-pdf-p71"
+		],
+		"editorial": [
+			"cle-a-impulsions-ingersoll-rand-100pq1-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-impulsions-ingersoll-rand-100pq1-reserved-20261103-1"
 		]
 	},
 	"notes": [

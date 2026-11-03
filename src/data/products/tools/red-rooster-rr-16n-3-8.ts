@@ -9,75 +9,64 @@ const product: ToolProfileInput = {
 	"categoryId": "cle-a-chocs",
 	"category": "cle-a-chocs",
 	"label": "Red Rooster RR-16N 3/8",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
 		"max": 6.3
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/red-rooster-rr-16n-3-8.webp",
+		"src": "/images/products/red-rooster-rr-16n-3-8.svg",
 		"alt": "Repères techniques Red Rooster RR-16N 3/8, référence RR-16N 3/8",
 		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=38",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Red Rooster RR-16N 3/8, référence RR-16N 3/8. Le tableau fabricant publie 522 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 11000 tr/min. Masse publiée : 1,3 kg.",
+		"overview": "Red Rooster RR-16N 3/8. La RR-16N 3/8 donne 340 Nm et 1,3 kg ; la RR-16N 1/2 donne 480 Nm et 1,2 kg, avec le même débit. Le renvoi 6 du catalogue indique explicitement une consommation mesurée en charge. La consigne de pression dynamique 6,3 bar reste distincte de la pression de mesure du débit ; cet appariement précis reste à confirmer.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation en charge publiée : 8.7 L/s, convertis en 522 L/min par multiplication par 60.",
-			"Référence fabricant : RR-16N 3/8.",
-			"Vitesse à vide publiée : 11000 tr/min.",
-			"Masse publiée : 1,3 kg.",
-			"Diamètre intérieur de flexible conseillé : 6,5 mm."
+			"Carré : 3/8 pouce.",
+			"Mécanisme : Twinhammer.",
+			"Couple indicatif : 340 Nm.",
+			"Vitesse à vide : 11 000 tr/min.",
+			"Consommation mesurée en charge : 8,7 L/s (522 L/min), renvoi 6 p.38."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"Consommation en charge explicitement documentée ; pression exacte de cette mesure non établie. La consigne de service seule ne la prouve pas."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+			"label": "Carré",
+			"value": "3/8 pouce",
 			"evidenceIds": [
-				"red-rooster-rr-16n-3-8-20260926-workingpressurebar-1"
+				"red-rooster-rr-16n-3-8-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation en charge publiée : 8.7 L/s, convertis en 522 L/min par multiplication par 60.",
+			"label": "Mécanisme",
+			"value": "Twinhammer",
 			"evidenceIds": [
-				"red-rooster-rr-16n-3-8-20260926"
+				"red-rooster-rr-16n-3-8-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse à vide publiée",
-			"value": "11000 tr/min",
+			"label": "Couple indicatif",
+			"value": "340 Nm",
 			"evidenceIds": [
-				"red-rooster-rr-16n-3-8-20260926"
+				"red-rooster-rr-16n-3-8-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
-			"value": "1,3 kg",
+			"label": "Vitesse à vide",
+			"value": "11 000 tr/min",
 			"evidenceIds": [
-				"red-rooster-rr-16n-3-8-20260926"
+				"red-rooster-rr-16n-3-8-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre intérieur de flexible conseillé",
-			"value": "6,5 mm",
+			"label": "Consommation mesurée en charge",
+			"value": "8,7 L/s (522 L/min), renvoi 6 p.38",
 			"evidenceIds": [
-				"red-rooster-rr-16n-3-8-20260926"
-			]
-		},
-		{
-			"label": "Raccord pneumatique",
-			"value": "PT 1/4\"",
-			"evidenceIds": [
-				"red-rooster-rr-16n-3-8-20260926"
+				"red-rooster-rr-16n-3-8-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +88,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "red-rooster-rr-16n-3-8-reserved-20261103-1",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=38",
+			"sourceLabel": "Red Rooster : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP 200 SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. La RR-16N 3/8 donne 340 Nm et 1,3 kg ; la RR-16N 1/2 donne 480 Nm et 1,2 kg, avec le même débit. Le renvoi 6 du catalogue indique explicitement une consommation mesurée en charge. La consigne de pression dynamique 6,3 bar reste distincte de la pression de mesure du débit ; cet appariement précis reste à confirmer."
 		}
 	],
 	"fieldSources": {
@@ -106,30 +105,38 @@ const product: ToolProfileInput = {
 			"red-rooster-rr-16n-3-8-20260926"
 		],
 		"workingPressureBar": [
-			"red-rooster-rr-16n-3-8-20260926-workingpressurebar-1"
-		],
-		"airflowLpm": [
-			"red-rooster-rr-16n-3-8-20260926"
+			"red-rooster-rr-16n-3-8-reserved-20261103-1"
 		],
 		"recommendedHose": [
 			"red-rooster-rr-16n-3-8-20260926"
 		],
 		"connectorSize": [
 			"red-rooster-rr-16n-3-8-20260926"
+		],
+		"editorial": [
+			"red-rooster-rr-16n-3-8-reserved-20261103-1"
+		],
+		"specifications": [
+			"red-rooster-rr-16n-3-8-reserved-20261103-1"
+		],
+		"demandModel": [
+			"red-rooster-rr-16n-3-8-reserved-20261103-1"
+		],
+		"demandExplanation": [
+			"red-rooster-rr-16n-3-8-reserved-20261103-1"
+		],
+		"image": [
+			"red-rooster-rr-16n-3-8-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 522,
-		"typical": 522,
-		"max": 522
-	},
 	"recommendedHose": {
 		"innerDiameterMm": 6.5
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"demandExplanation": "Consommation en charge connue, pression de mesure non explicitement appariée dans la source."
 };
 
 export default product;

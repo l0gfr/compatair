@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "HAZET 9033M-9. La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi. Champ fabricant : Revolutions per minute : 4500. Champ fabricant : Net weight : 0.6 kg.",
+		"overview": "HAZET 9033M-9. La 9033M-9 est une mini-polisseuse à plateau 50 mm, fixation 5/16 pouce UNF et 4 500 tr/min, longueur 151 mm et 0,6 kg. Ce format sert les reprises localisées ; aucun plateau 75 ou 150 mm n’est substitué. Les 84 L/min ne deviennent pas un besoin continu faute de régime de mesure.",
 		"verifiedFacts": [
 			"Champ fabricant : Revolutions per minute : 4500.",
 			"Champ fabricant : Net weight : 0.6 kg.",
@@ -40,7 +40,10 @@ const product: ToolProfileInput = {
 			"Champ fabricant : Sound pressure level : 83.6 dB(A) Lp A.",
 			"Champ fabricant : Sound power level : 94.4 db(A) Lp W.",
 			"Champ fabricant : Power in watts : 224 Watt.",
-			"Champ fabricant : Power in HP : 0.305 PS."
+			"Champ fabricant : Power in HP : 0.305 PS.",
+			"Plateau : 50 mm.",
+			"Filetage : 5/16 pouce UNF.",
+			"Vitesse : 4 500 tr/min."
 		],
 		"limitations": [
 			"La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi.",
@@ -127,6 +130,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-hazet-4000896227235-html-p1"
 			]
+		},
+		{
+			"label": "Plateau",
+			"value": "50 mm",
+			"evidenceIds": [
+				"polisseuse-hazet-9033m-9-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Filetage",
+			"value": "5/16 pouce UNF",
+			"evidenceIds": [
+				"polisseuse-hazet-9033m-9-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse",
+			"value": "4 500 tr/min",
+			"evidenceIds": [
+				"polisseuse-hazet-9033m-9-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -139,6 +163,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 2fdbc952912bf2aec54e4821778e265eac9306c46e310f40a3188233d0c52455. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "polisseuse-hazet-9033m-9-reserved-20261103-1",
+			"sourceUrl": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/drilling-machine-sander-chisel-sabre-saw-shears/product/ean-4000896227235",
+			"sourceLabel": "HAZET : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 84721c3fc85f2096e269ecdac659a58fff44c739d448304c64a97f5391eab690. La 9033M-9 est une mini-polisseuse à plateau 50 mm, fixation 5/16 pouce UNF et 4 500 tr/min, longueur 151 mm et 0,6 kg. Ce format sert les reprises localisées ; aucun plateau 75 ou 150 mm n’est substitué. Les 84 L/min ne deviennent pas un besoin continu faute de régime de mesure."
 		}
 	],
 	"fieldSources": {
@@ -150,6 +184,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-hazet-4000896227235-html-p1"
+		],
+		"editorial": [
+			"polisseuse-hazet-9033m-9-reserved-20261103-1"
+		],
+		"specifications": [
+			"polisseuse-hazet-9033m-9-reserved-20261103-1"
 		]
 	},
 	"notes": [

@@ -39,53 +39,68 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-4450A. Consommation publiée, régime non précisé : 270 L/min à 6,2 bar. Consommation dans les unités du tableau : 270 L/min ; 9.5 cfm. Configuration complète publiée : ST-4450A.",
+		"overview": "Sumake ST-4450A. La ST-4450A possède le changement rapide d’embout ; la ST-4450 utilise le même hexagonal 6,35 mm sans cette mention. La ST-4460A est une visseuse à chocs distincte à 12 000 tr/min et 35 Nm, contre 1 700 tr/min et 3 Nm ici. Les codes proches ne justifient pas un échange de couples.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 12.",
-			"Consommation dans les unités du tableau : 270 L/min ; 9.5 cfm.",
-			"Configuration complète publiée : ST-4450A.",
-			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé."
+			"Porte-embout : Hexagonal 6,35 mm à changement rapide.",
+			"Vitesse à vide : 1 700 tr/min.",
+			"Couple maximal publié : 3 Nm.",
+			"Longueur : 235 mm.",
+			"Masse : 0,66 kg.",
+			"Consommation documentaire : 270 L/min, régime non précisé.",
+			"Pression de service recommandée : 6,2 bar ; pression de mesure de la consommation non démontrée."
 		],
 		"limitations": [
-			"Le régime de consommation n’est pas indiqué. Aucun débit maximal ou en charge n’est inventé ; le verdict reste insufficient_data.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"La recommandation de service 6,2 bar ne prouve pas la pression de mesure de la consommation. Le régime reste non qualifié et le calcul indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 12",
+			"label": "Porte-embout",
+			"value": "Hexagonal 6,35 mm à changement rapide",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p12"
+				"visseuse-sumake-st-4450a-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation dans les unités du tableau",
-			"value": "270 L/min ; 9.5 cfm",
+			"label": "Vitesse à vide",
+			"value": "1 700 tr/min",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p12"
+				"visseuse-sumake-st-4450a-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Configuration complète publiée",
-			"value": "ST-4450A",
+			"label": "Couple maximal publié",
+			"value": "3 Nm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p12"
+				"visseuse-sumake-st-4450a-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Régime de consommation",
-			"value": "Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé",
+			"label": "Longueur",
+			"value": "235 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p12"
+				"visseuse-sumake-st-4450a-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Ligne technique originale du modèle",
-			"value": "ST-4450A 6.35 1/4 1,700 3 2.2 235 9-1/4 1/4” 3/8” 270 9.5 0.66 1.4 20/Ctn/17/1.1’",
+			"label": "Masse",
+			"value": "0,66 kg",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p12"
+				"visseuse-sumake-st-4450a-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "270 L/min, régime non précisé",
+			"evidenceIds": [
+				"visseuse-sumake-st-4450a-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression de service recommandée",
+			"value": "6,2 bar ; pression de mesure de la consommation non démontrée",
+			"evidenceIds": [
+				"visseuse-sumake-st-4450a-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +114,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "visseuse-sumake-st-4450a-reserved-20261103-1",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf#page=12",
+			"sourceLabel": "Sumake : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. La ST-4450A possède le changement rapide d’embout ; la ST-4450 utilise le même hexagonal 6,35 mm sans cette mention. La ST-4460A est une visseuse à chocs distincte à 12 000 tr/min et 35 Nm, contre 1 700 tr/min et 3 Nm ici. Les codes proches ne justifient pas un échange de couples."
 		}
 	],
 	"fieldSources": {
@@ -113,6 +138,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-d-sumake-na-2024-p12"
+		],
+		"editorial": [
+			"visseuse-sumake-st-4450a-reserved-20261103-1"
+		],
+		"specifications": [
+			"visseuse-sumake-st-4450a-reserved-20261103-1"
 		]
 	},
 	"notes": [

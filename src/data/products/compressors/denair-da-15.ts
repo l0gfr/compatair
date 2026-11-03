@@ -19,12 +19,7 @@ const product: CompressorInput = {
   },
   "maxPressureBar": 7,
   "maxPressureBasis": "selected-working-pressure-ceiling",
-  "fadCurve": [
-    {
-      "pressureBar": 7,
-      "litersPerMinute": 2400
-    }
-  ],
+  "fadCurve": [],
   "oilType": "oil",
   "powerKw": 15,
   "confidence": "B",
@@ -36,60 +31,62 @@ const product: CompressorInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
   },
   "editorial": {
-    "overview": "DENAIR DA-15. 2 400 L/min déclarés à 7 bar. Configuration constructeur : DA-15.",
+    "overview": "DENAIR DA-15. La DA-15 annonce2,40 m³/min dans la ligne 50 Hz de plafond 7 bar ; la colonne60 Hz indique2,52 m³/min. La note décrit les conditions d’entrée ISO, sans confirmer que la colonne de pression maximale est celle du point de mesure : la capacité reste documentaire.",
     "verifiedFacts": [
-      "Pression de la configuration documentée : 7 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 2 400 L/min déclarés à 7 bar."
+      "Configuration : 50 Hz, ligne de pression maximale de travail7 bar.",
+      "Capacité publiée, pression de mesure à confirmer : 2,40 m³/min.",
+      "Puissance installée : 15 kW.",
+      "Masse publiée : 390 kg.",
+      "Dimensions L×W×H : 1 100 × 650 × 920 mm.",
+      "Méthode de capacité : ISO 1217:2009 annexe C ; entrée1 bar absolu, température20 °C."
     ],
     "limitations": [
-      "Point documenté pour la variante 50 Hz et cette pression ; aucune disponibilité française déduite. Cuve et cycle de marche non chiffrés.",
-      "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-      "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
-      "Cuve non documentée : l’autonomie et le volume de stockage ne peuvent pas être conclus à partir de ce profil.",
-      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions."
+      "La capacité publiée n’est pas transformée en point FAD faute de pression de mesure explicite.",
+      "Le plafond 7 bar décrit la configuration retenue ; les autres lignes ne sont pas fusionnées.",
+      "Cuve et taux de marche du groupe non documentés."
     ]
   },
   "specifications": [
     {
-      "label": "Configuration constructeur",
-      "value": "DA-15",
+      "label": "Configuration",
+      "value": "50 Hz, ligne de pression maximale de travail7 bar",
       "evidenceIds": [
-        "october5-denair-screw-p5"
+        "denair-da-15-reserved-20261103-1"
       ]
     },
     {
-      "label": "Pression de la configuration retenue",
-      "value": "7 bar",
+      "label": "Capacité publiée, pression de mesure à confirmer",
+      "value": "2,40 m³/min",
       "evidenceIds": [
-        "october5-denair-screw-p5"
+        "denair-da-15-reserved-20261103-1"
       ]
     },
     {
-      "label": "Cuve de stockage",
-      "value": "Non documentée en litres",
-      "evidenceIds": [
-        "october5-denair-screw-p5"
-      ]
-    },
-    {
-      "label": "Air livré à 7 bar",
-      "value": "2 400 L/min",
-      "evidenceIds": [
-        "october5-denair-screw-p5"
-      ]
-    },
-    {
-      "label": "Puissance publiée",
+      "label": "Puissance installée",
       "value": "15 kW",
       "evidenceIds": [
-        "october5-denair-screw-p5"
+        "denair-da-15-reserved-20261103-1"
       ]
     },
     {
-      "label": "Fréquence de la configuration retenue",
-      "value": "50 Hz",
+      "label": "Masse publiée",
+      "value": "390 kg",
       "evidenceIds": [
-        "october5-denair-screw-p5"
+        "denair-da-15-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Dimensions L×W×H",
+      "value": "1 100 × 650 × 920 mm",
+      "evidenceIds": [
+        "denair-da-15-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Méthode de capacité",
+      "value": "ISO 1217:2009 annexe C ; entrée1 bar absolu, température20 °C",
+      "evidenceIds": [
+        "denair-da-15-reserved-20261103-1"
       ]
     }
   ],
@@ -113,6 +110,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-05",
       "confidence": "B",
       "notes": "SHA-256 855ce551cd3fa5294b576c1865d99fbb9c2ae58ee346ac5459d24fd79899b9ad de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "denair-da-15-reserved-20261103-1",
+      "sourceUrl": "https://www.denair.net/uploads/DENAIR_Screw_Air_Compressor.pdf#page=5",
+      "sourceLabel": "DENAIR : revue factuelle du 3 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-03",
+      "confidence": "B",
+      "notes": "GET complet HTTP200 SHA-256 855ce551cd3fa5294b576c1865d99fbb9c2ae58ee346ac5459d24fd79899b9ad. La DA-15 annonce2,40 m³/min dans la ligne 50 Hz de plafond 7 bar ; la colonne60 Hz indique2,52 m³/min. La note décrit les conditions d’entrée ISO, sans confirmer que la colonne de pression maximale est celle du point de mesure : la capacité reste documentaire."
     }
   ],
   "fieldSources": {
@@ -126,20 +133,30 @@ const product: CompressorInput = {
       "october5-denair-screw-p5"
     ],
     "fadCurve": [
-      "october5-denair-screw-p5"
+      "denair-da-15-reserved-20261103-1"
     ],
     "powerKw": [
-      "october5-denair-screw-p5"
+      "denair-da-15-reserved-20261103-1"
     ],
     "oilType": [
       "october5-denair-screw-p1"
+    ],
+    "weightKg": [
+      "denair-da-15-reserved-20261103-1"
+    ],
+    "editorial": [
+      "denair-da-15-reserved-20261103-1"
+    ],
+    "specifications": [
+      "denair-da-15-reserved-20261103-1"
     ]
   },
   "notes": [
     "Portée de la source : FAD-pressure-qualified.",
     "Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées.",
     "Les caractéristiques décrivent la configuration constructeur indiquée dans cette fiche ; les autres équipements ou alimentations doivent être vérifiés séparément."
-  ]
+  ],
+  "weightKg": 390
 };
 
 export default product;

@@ -38,43 +38,53 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SP AIR SP-7201G. Consommation publiée, régime non précisé : 300 L/min à 6,2 bar. Raccord publié : 1/4\"NPT. Masse publiée : 0.53 kg.",
+		"overview": "SP AIR SP-7201G. La SP-7201G est la petite ponceuse rotative de 50 mm, 13 000 tr/min et 0,53 kg. La SP-7201DA est à double action avec orbite 3 mm et masse 0,60 kg. Le chiffre d’orbite du modèle DA n’est pas transféré à la G. La consommation 0,3 m³/min reste de régime non précisé.",
 		"verifiedFacts": [
-			"Raccord publié : 1/4\"NPT.",
-			"Masse publiée : 0.53 kg."
+			"Plateau : 50 mm, autoagrippant.",
+			"Vitesse à vide : 13 000 tr/min.",
+			"Orbite : Tiret dans la table, aucune orbite chiffrée attribuée.",
+			"Longueur : 158 mm.",
+			"Masse : 0,53 kg."
 		],
 		"limitations": [
-			"Régime de consommation non précisé : aucun maximum supposé ; le verdict reste insufficient_data.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"Le catalogue ne précise pas le régime du débit ; la valeur reste non dimensionnante, sans maximum supposé.",
+			"Source constructeur historique ; disponibilité actuelle et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Raccord publié",
-			"value": "1/4\"NPT",
+			"label": "Plateau",
+			"value": "50 mm, autoagrippant",
 			"evidenceIds": [
-				"october-sp-air-p16"
+				"ponceuse-rotative-sp-air-sp-7201g-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
-			"value": "0.53 kg",
+			"label": "Vitesse à vide",
+			"value": "13 000 tr/min",
 			"evidenceIds": [
-				"october-sp-air-p16"
+				"ponceuse-rotative-sp-air-sp-7201g-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Localisation documentaire",
-			"value": "SP AIR, catalogue Air Tools, page 16",
+			"label": "Orbite",
+			"value": "Tiret dans la table, aucune orbite chiffrée attribuée",
 			"evidenceIds": [
-				"october-sp-air-p16"
+				"ponceuse-rotative-sp-air-sp-7201g-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de pression originale",
-			"value": "Air pressure: 0.62 MPa",
+			"label": "Longueur",
+			"value": "158 mm",
 			"evidenceIds": [
-				"october-sp-air-p16"
+				"ponceuse-rotative-sp-air-sp-7201g-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "0,53 kg",
+			"evidenceIds": [
+				"ponceuse-rotative-sp-air-sp-7201g-reserved-20261103-1"
 			]
 		}
 	],
@@ -88,6 +98,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-rotative-sp-air-sp-7201g-reserved-20261103-1",
+			"sourceUrl": "https://spair.vessel.co.jp/download/SP_catalog_all_E.pdf#page=16",
+			"sourceLabel": "SP AIR : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. La SP-7201G est la petite ponceuse rotative de 50 mm, 13 000 tr/min et 0,53 kg. La SP-7201DA est à double action avec orbite 3 mm et masse 0,60 kg. Le chiffre d’orbite du modèle DA n’est pas transféré à la G. La consommation 0,3 m³/min reste de régime non précisé."
 		}
 	],
 	"fieldSources": {
@@ -102,6 +122,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-sp-air-p16"
+		],
+		"editorial": [
+			"ponceuse-rotative-sp-air-sp-7201g-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-rotative-sp-air-sp-7201g-reserved-20261103-1"
 		]
 	},
 	"notes": [

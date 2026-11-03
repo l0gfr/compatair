@@ -38,51 +38,60 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZAT22AKH. Consommation moyenne : 184 L/min ; pression publiée : 6,2 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Vitesse à vide : 150 tr/min. Masse : 1.72 kg.",
+		"overview": "ZIPP ZAT22AKH. La ZAT22AKH couvre 3–12 mm en aluminium et 3–8 mm en fer à 150 tr/min. La ZAT415B2 couvre 1–3 mm à 1 000 tr/min. Le diamètre admissible dépend de la matière et n’est pas une capacité universelle de mandrin.",
 		"verifiedFacts": [
+			"Capacité de taraudage aluminium : 3–12 mm.",
+			"Capacité de taraudage fer : 3–8 mm.",
 			"Vitesse à vide : 150 tr/min.",
-			"Masse : 1.72 kg.",
-			"Référence constructeur : ZAT22AKH."
+			"Longueur : 200 mm.",
+			"Masse : 1,72 kg.",
+			"Consommation moyenne : 184 L/min."
 		],
 		"limitations": [
-			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
-			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+			"Consommation moyenne ou de régime non précisé, sans qualification maximale/en charge ni appariement de pression de mesure suffisant : aucun verdict conclusif n’en est déduit."
 		]
 	},
 	"specifications": [
 		{
+			"label": "Capacité de taraudage aluminium",
+			"value": "3–12 mm",
+			"evidenceIds": [
+				"taraudeuse-zipp-zat22akh-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Capacité de taraudage fer",
+			"value": "3–8 mm",
+			"evidenceIds": [
+				"taraudeuse-zipp-zat22akh-reserved-20261103-1"
+			]
+		},
+		{
 			"label": "Vitesse à vide",
 			"value": "150 tr/min",
 			"evidenceIds": [
-				"october-b-zipp-tools-p157"
+				"taraudeuse-zipp-zat22akh-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "200 mm",
+			"evidenceIds": [
+				"taraudeuse-zipp-zat22akh-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Masse",
-			"value": "1.72 kg",
+			"value": "1,72 kg",
 			"evidenceIds": [
-				"october-b-zipp-tools-p157"
+				"taraudeuse-zipp-zat22akh-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Référence constructeur",
-			"value": "ZAT22AKH",
+			"label": "Consommation moyenne",
+			"value": "184 L/min",
 			"evidenceIds": [
-				"october-b-zipp-tools-p157"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "Specification(air pressure at 90psi, 6.2",
-			"evidenceIds": [
-				"october-b-zipp-tools-p157"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "ZIPP, catalogue général pneumatique, page PDF 157",
-			"evidenceIds": [
-				"october-b-zipp-tools-p157"
+				"taraudeuse-zipp-zat22akh-reserved-20261103-1"
 			]
 		}
 	],
@@ -96,6 +105,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "taraudeuse-zipp-zat22akh-reserved-20261103-1",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=157",
+			"sourceLabel": "ZIPP : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. La ZAT22AKH couvre 3–12 mm en aluminium et 3–8 mm en fer à 150 tr/min. La ZAT415B2 couvre 1–3 mm à 1 000 tr/min. Le diamètre admissible dépend de la matière et n’est pas une capacité universelle de mandrin."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +129,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-b-zipp-tools-p157"
+		],
+		"editorial": [
+			"taraudeuse-zipp-zat22akh-reserved-20261103-1"
+		],
+		"specifications": [
+			"taraudeuse-zipp-zat22akh-reserved-20261103-1"
 		]
 	},
 	"notes": [

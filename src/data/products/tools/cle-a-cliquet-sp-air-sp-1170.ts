@@ -39,59 +39,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SP AIR SP-1170. Consommation publiée, régime non précisé : 720 L/min à 6,2 bar. Raccord publié : 1/4\"NPT. Masse publiée : 4.15 kg.",
+		"overview": "SP AIR SP-1170. La SP-1170 est le grand cliquet 580 mm et 4,15 kg, carré 1/2 pouce et plage 50–300 Nm. Le SP-1765 voisin est un 3/8 pouce de 176 mm à 10–41 Nm et 500 tr/min. La longueur et la capacité changent fortement ; les 0,72 m³/min restent sans régime explicite.",
 		"verifiedFacts": [
-			"Raccord publié : 1/4\"NPT.",
-			"Masse publiée : 4.15 kg.",
-			"Longueur hors tout : 580 mm.",
-			"Vitesse à vide : 210 tr/min."
+			"Carré : 1/2 pouce.",
+			"Mécanisme : Pin clutch.",
+			"Plage de couple : 50–300 Nm.",
+			"Vitesse à vide : 210 tr/min.",
+			"Longueur : 580 mm.",
+			"Masse : 4,15 kg."
 		],
 		"limitations": [
-			"Régime de consommation non précisé : aucun maximum supposé ; le verdict reste insufficient_data.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"Le catalogue ne précise pas le régime du débit ; la valeur reste non dimensionnante, sans maximum supposé.",
+			"Source constructeur historique ; disponibilité actuelle et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Raccord publié",
-			"value": "1/4\"NPT",
+			"label": "Carré",
+			"value": "1/2 pouce",
 			"evidenceIds": [
-				"october-sp-air-p3"
+				"cle-a-cliquet-sp-air-sp-1170-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
-			"value": "4.15 kg",
+			"label": "Mécanisme",
+			"value": "Pin clutch",
 			"evidenceIds": [
-				"october-sp-air-p3"
+				"cle-a-cliquet-sp-air-sp-1170-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur hors tout",
-			"value": "580 mm",
+			"label": "Plage de couple",
+			"value": "50–300 Nm",
 			"evidenceIds": [
-				"october-sp-air-p3"
+				"cle-a-cliquet-sp-air-sp-1170-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Vitesse à vide",
 			"value": "210 tr/min",
 			"evidenceIds": [
-				"october-sp-air-p3"
+				"cle-a-cliquet-sp-air-sp-1170-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Localisation documentaire",
-			"value": "SP AIR, catalogue Air Tools, page 3",
+			"label": "Longueur",
+			"value": "580 mm",
 			"evidenceIds": [
-				"october-sp-air-p3"
+				"cle-a-cliquet-sp-air-sp-1170-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de pression originale",
-			"value": "Air pressure: 0.62 MPa",
+			"label": "Masse",
+			"value": "4,15 kg",
 			"evidenceIds": [
-				"october-sp-air-p3"
+				"cle-a-cliquet-sp-air-sp-1170-reserved-20261103-1"
 			]
 		}
 	],
@@ -105,6 +107,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-cliquet-sp-air-sp-1170-reserved-20261103-1",
+			"sourceUrl": "https://spair.vessel.co.jp/download/SP_catalog_all_E.pdf#page=3",
+			"sourceLabel": "SP AIR : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. La SP-1170 est le grand cliquet 580 mm et 4,15 kg, carré 1/2 pouce et plage 50–300 Nm. Le SP-1765 voisin est un 3/8 pouce de 176 mm à 10–41 Nm et 500 tr/min. La longueur et la capacité changent fortement ; les 0,72 m³/min restent sans régime explicite."
 		}
 	],
 	"fieldSources": {
@@ -119,6 +131,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-sp-air-p3"
+		],
+		"editorial": [
+			"cle-a-cliquet-sp-air-sp-1170-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-cliquet-sp-air-sp-1170-reserved-20261103-1"
 		]
 	},
 	"notes": [

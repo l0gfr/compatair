@@ -39,53 +39,68 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-6240V. Consommation publiée, régime non précisé : 255 L/min à 6,2 bar. Consommation dans les unités du tableau : 255 L/min ; 9 cfm. Configuration complète publiée : ST-6240V.",
+		"overview": "Sumake ST-6240V. La ST-6240V Vacuum couvre les diamètres 4,8/5,6/6,4 mm de sa ligne, course 26 mm et masse 1,94 kg. La ST-6250V ajoute 7,8 mm et pèse 2,18 kg pour la même longueur 325 mm. La consommation publiée en L/min ne permet pas de déduire un volume par rivet.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 63.",
-			"Consommation dans les unités du tableau : 255 L/min ; 9 cfm.",
-			"Configuration complète publiée : ST-6240V.",
-			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé."
+			"Version : Vacuum.",
+			"Diamètres de rivets de la ligne : 4,8 / 5,6 / 6,4 mm.",
+			"Course : 26 mm.",
+			"Longueur : 325 mm.",
+			"Masse : 1,94 kg.",
+			"Consommation documentaire : 255 L/min, régime non précisé.",
+			"Pression de service recommandée : 6,2 bar ; pression de mesure de la consommation non démontrée."
 		],
 		"limitations": [
-			"Le régime de consommation n’est pas indiqué. Aucun débit maximal ou en charge n’est inventé ; le verdict reste insufficient_data.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"La recommandation de service 6,2 bar ne prouve pas la pression de mesure de la consommation. Le régime reste non qualifié et le calcul indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 63",
+			"label": "Version",
+			"value": "Vacuum",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p63"
+				"riveteuse-sumake-st-6240v-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation dans les unités du tableau",
-			"value": "255 L/min ; 9 cfm",
+			"label": "Diamètres de rivets de la ligne",
+			"value": "4,8 / 5,6 / 6,4 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p63"
+				"riveteuse-sumake-st-6240v-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Configuration complète publiée",
-			"value": "ST-6240V",
+			"label": "Course",
+			"value": "26 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p63"
+				"riveteuse-sumake-st-6240v-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Régime de consommation",
-			"value": "Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé",
+			"label": "Longueur",
+			"value": "325 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p63"
+				"riveteuse-sumake-st-6240v-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Ligne technique originale du modèle",
-			"value": "ST-6240V ■: 3/16\"(4.8), 7/32\"(5.6), 1/4\"(6.4) 1,816 4,000 26 1.02 325 12-4/5 255 9 3 1.94 4.28 6Pcs/Ctn/20.5/3.4'",
+			"label": "Masse",
+			"value": "1,94 kg",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p63"
+				"riveteuse-sumake-st-6240v-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "255 L/min, régime non précisé",
+			"evidenceIds": [
+				"riveteuse-sumake-st-6240v-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression de service recommandée",
+			"value": "6,2 bar ; pression de mesure de la consommation non démontrée",
+			"evidenceIds": [
+				"riveteuse-sumake-st-6240v-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +114,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "riveteuse-sumake-st-6240v-reserved-20261103-1",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf#page=63",
+			"sourceLabel": "Sumake : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. La ST-6240V Vacuum couvre les diamètres 4,8/5,6/6,4 mm de sa ligne, course 26 mm et masse 1,94 kg. La ST-6250V ajoute 7,8 mm et pèse 2,18 kg pour la même longueur 325 mm. La consommation publiée en L/min ne permet pas de déduire un volume par rivet."
 		}
 	],
 	"fieldSources": {
@@ -113,6 +138,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-d-sumake-na-2024-p63"
+		],
+		"editorial": [
+			"riveteuse-sumake-st-6240v-reserved-20261103-1"
+		],
+		"specifications": [
+			"riveteuse-sumake-st-6240v-reserved-20261103-1"
 		]
 	},
 	"notes": [

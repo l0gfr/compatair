@@ -23,75 +23,60 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Cleco 19PTA05Q, référence 19PTA05Q. Le tableau fabricant publie 310 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Plage de couple publiée : 1.1 à 5.1 Nm. Vitesse à vide publiée : 660 tr/min.",
+		"overview": "Cleco 19PTA05Q. La 19PTA05Q est la visseuse pistolet à gâchette, 1,1–5,1 Nm et 660 tr/min. La 19PTA06Q garde la même plage de couple à 260 tr/min ; la 19PTA04Q donne 1,1–4,5 Nm à 1 100 tr/min. Les 310 L/min sont publiés pour la série sans régime défini, malgré les conditions de pression 6,2 bar : ils cessent de fournir une demande maximale.",
 		"verifiedFacts": [
-			"Performances publiées à 6,2 bar à l’entrée de l’outil, note de la page 69.",
-			"Consommation générale publiée de 310 L/min pour la série 19 ; le catalogue ne la qualifie pas de maximum ou de moyenne.",
-			"Référence fabricant : 19PTA05Q.",
-			"Plage de couple publiée : 1.1 à 5.1 Nm.",
-			"Vitesse à vide publiée : 660 tr/min.",
-			"Série et commande : 19P ; gâchette."
+			"Commande : Pistolet à gâchette, série 19P.",
+			"Plage de couple : 1,1–5,1 Nm.",
+			"Vitesse à vide : 660 tr/min.",
+			"Longueur : 214 mm.",
+			"Masse : 0,7 kg.",
+			"Consommation de série, régime non précisé : 310 L/min."
 		],
 		"limitations": [
-			"Données de catalogue industriel, sans essai physique CompatAir. Disponibilité et révision livrée à confirmer avec le fournisseur.",
-			"Source : catalogue GI-1250-EU, édition archivée du fabricant. Vérifier la référence et la notice de la révision effectivement livrée."
+			"La vitesse, la puissance et la cadence ne remplacent pas une consommation maximale/en charge documentée avec ses conditions. Les données insuffisantes restent hors calcul conclusif."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Performances publiées à 6,2 bar à l’entrée de l’outil, note de la page 69.",
+			"label": "Commande",
+			"value": "Pistolet à gâchette, série 19P",
 			"evidenceIds": [
-				"cleco-19pta05q-20260926"
+				"cleco-19pta05q-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation générale publiée de 310 L/min pour la série 19 ; le catalogue ne la qualifie pas de maximum ou de moyenne.",
+			"label": "Plage de couple",
+			"value": "1,1–5,1 Nm",
 			"evidenceIds": [
-				"cleco-19pta05q-20260926"
+				"cleco-19pta05q-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Plage de couple publiée",
-			"value": "1.1 à 5.1 Nm",
-			"evidenceIds": [
-				"cleco-19pta05q-20260926"
-			]
-		},
-		{
-			"label": "Vitesse à vide publiée",
+			"label": "Vitesse à vide",
 			"value": "660 tr/min",
 			"evidenceIds": [
-				"cleco-19pta05q-20260926"
+				"cleco-19pta05q-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Série et commande",
-			"value": "19P ; gâchette",
-			"evidenceIds": [
-				"cleco-19pta05q-20260926"
-			]
-		},
-		{
-			"label": "Longueur publiée",
+			"label": "Longueur",
 			"value": "214 mm",
 			"evidenceIds": [
-				"cleco-19pta05q-20260926"
+				"cleco-19pta05q-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
-			"value": "0.7 kg",
+			"label": "Masse",
+			"value": "0,7 kg",
 			"evidenceIds": [
-				"cleco-19pta05q-20260926"
+				"cleco-19pta05q-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Sortie",
-			"value": "Porte-embout rapide 1/4 pouce",
+			"label": "Consommation de série, régime non précisé",
+			"value": "310 L/min",
 			"evidenceIds": [
-				"cleco-19pta05q-20260926"
+				"cleco-19pta05q-reserved-20261103-1"
 			]
 		}
 	],
@@ -104,6 +89,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation générale publiée de 310 L/min pour la série 19 ; le catalogue ne la qualifie pas de maximum ou de moyenne."
+		},
+		{
+			"id": "cleco-19pta05q-reserved-20261103-1",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=69",
+			"sourceLabel": "Cleco : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 8668d5e77a6b2469dc9b9012841e65bbfb947234a8087faa6fdd90384b3babac. La 19PTA05Q est la visseuse pistolet à gâchette, 1,1–5,1 Nm et 660 tr/min. La 19PTA06Q garde la même plage de couple à 260 tr/min ; la 19PTA04Q donne 1,1–4,5 Nm à 1 100 tr/min. Les 310 L/min sont publiés pour la série sans régime défini, malgré les conditions de pression 6,2 bar : ils cessent de fournir une demande maximale."
 		}
 	],
 	"fieldSources": {
@@ -115,6 +110,15 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"cleco-19pta05q-20260926"
+		],
+		"airflowBasis": [
+			"cleco-19pta05q-reserved-20261103-1"
+		],
+		"editorial": [
+			"cleco-19pta05q-reserved-20261103-1"
+		],
+		"specifications": [
+			"cleco-19pta05q-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -124,7 +128,8 @@ const product: ToolProfileInput = {
 		"min": 310,
 		"typical": 310,
 		"max": 310
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

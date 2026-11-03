@@ -33,66 +33,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Dotco 10L1000-36LH. La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner. Terminaison publiée : 1/4 in. Échappement : Avant.",
+		"overview": "Dotco 10L1000-36LH. La 10L1000-36LH est la version à rotation gauche, explicitement définie par le suffixe LH, avec pince 1/4 pouce et 30 000 tr/min. La 10L1000-36 standard partage les chiffres mais pas ce sens de rotation ; la 10L1001-36 donne 34 000 tr/min. Les terminaisons répétées de l’ancienne fiche sont remplacées par ces caractéristiques exactes. Aucune consommation n’est donnée dans cette table.",
 		"verifiedFacts": [
-			"Terminaison publiée : 1/4 in.",
+			"Sens : Rotation à gauche, suffixe LH.",
+			"Pince : 1/4 pouce.",
+			"Vitesse à vide : 30 000 tr/min.",
 			"Échappement : Avant.",
-			"Terminaison publiée : 1/4 in.",
-			"Terminaison publiée : 1/4 in."
+			"Longueur publiée : 4,6 pouces.",
+			"Masse publiée : 0,66 lb."
 		],
 		"limitations": [
-			"La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"Aucune consommation qualifiée n’est publiée dans le tableau de cette référence ; vitesse et puissance ne fournissent pas un débit.",
+			"Catalogue constructeur identifié ; vérifier l’équipement de la révision livrée."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Terminaison publiée",
-			"value": "1/4 in",
+			"label": "Sens",
+			"value": "Rotation à gauche, suffixe LH",
 			"evidenceIds": [
-				"october-cleco-p216-p216"
+				"meuleuse-dotco-10l1000-36lh-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pince",
+			"value": "1/4 pouce",
+			"evidenceIds": [
+				"meuleuse-dotco-10l1000-36lh-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "30 000 tr/min",
+			"evidenceIds": [
+				"meuleuse-dotco-10l1000-36lh-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Échappement",
 			"value": "Avant",
 			"evidenceIds": [
-				"october-cleco-p216-p216"
+				"meuleuse-dotco-10l1000-36lh-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Terminaison publiée",
-			"value": "1/4 in",
+			"label": "Longueur publiée",
+			"value": "4,6 pouces",
 			"evidenceIds": [
-				"october-cleco-p216-p216"
+				"meuleuse-dotco-10l1000-36lh-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Terminaison publiée",
-			"value": "1/4 in",
+			"label": "Masse publiée",
+			"value": "0,66 lb",
 			"evidenceIds": [
-				"october-cleco-p216-p216"
-			]
-		},
-		{
-			"label": "Vitesse à vide",
-			"value": "30000 tr/min",
-			"evidenceIds": [
-				"october-cleco-p216-p216"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "Cleco, catalogue SP-1081, page 216",
-			"evidenceIds": [
-				"october-cleco-p216-p216"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "All tools performance rated @ 90 psi / 620 kPa air pressure.",
-			"evidenceIds": [
-				"october-cleco-p216-p216"
+				"meuleuse-dotco-10l1000-36lh-reserved-20261103-1"
 			]
 		}
 	],
@@ -106,6 +101,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 dd695b3d5449614c24c96b193e71d25636915f9979aee32ab89dfb843f20f5d6. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "meuleuse-dotco-10l1000-36lh-reserved-20261103-1",
+			"sourceUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=216",
+			"sourceLabel": "Dotco : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 f041c4498f2f1c5ffa7e977ddebb36dc17cc66871576caa48005a3c61b7e897c. La 10L1000-36LH est la version à rotation gauche, explicitement définie par le suffixe LH, avec pince 1/4 pouce et 30 000 tr/min. La 10L1000-36 standard partage les chiffres mais pas ce sens de rotation ; la 10L1001-36 donne 34 000 tr/min. Les terminaisons répétées de l’ancienne fiche sont remplacées par ces caractéristiques exactes. Aucune consommation n’est donnée dans cette table."
 		}
 	],
 	"fieldSources": {
@@ -117,6 +122,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october-cleco-p216-p216"
+		],
+		"editorial": [
+			"meuleuse-dotco-10l1000-36lh-reserved-20261103-1"
+		],
+		"specifications": [
+			"meuleuse-dotco-10l1000-36lh-reserved-20261103-1"
 		]
 	},
 	"notes": [

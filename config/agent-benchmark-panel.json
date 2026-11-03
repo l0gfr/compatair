@@ -6,7 +6,7 @@
   "pairs": [
     {
       "compressor_id": "abac-atf-5-5-10-bm",
-      "tool_id": "shinano-si-1288"
+      "tool_id": "red-rooster-rrw-2403"
     },
     {
       "compressor_id": "gentilin-esk480-100-811610006",
@@ -403,6 +403,22 @@
     {
       "compressor_id": "abac-atf-5-5-270d",
       "tool_id": "red-rooster-rri-sa11103"
+    }
+  ],
+  "reviewedCorrections": [
+    {
+      "reviewedAt": "2026-11-03",
+      "sourceReleaseSha": "c582d5d3a14cc9bb51789f6ddd0fd22ad1b90d93",
+      "previousPanelSha256": "e1986ce5fb2b5ddd2b1441ba9aac4eba1c987d47222092c3837b08912677e534",
+      "before": {
+        "compressor_id": "abac-atf-5-5-10-bm",
+        "tool_id": "shinano-si-1288"
+      },
+      "after": {
+        "compressor_id": "abac-atf-5-5-10-bm",
+        "tool_id": "red-rooster-rrw-2403"
+      },
+      "reason": "SI-1288 conserve sa consommation documentaire mais devient variable-volume faute de pression de mesure appariée. Le panel de100 scénarios exige des profils fixed-flow. RRW-2403 reste une clé à cliquet fixed-flow à régime non qualifié, donc non conclusive ; aucun verdict positif ni score n’est imposé."
     }
   ]
 }

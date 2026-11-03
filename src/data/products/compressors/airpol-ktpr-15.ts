@@ -17,12 +17,7 @@ const product: CompressorInput = {
 	},
 	"tankLiters": 500,
 	"maxPressureBar": 10,
-	"fadCurve": [
-		{
-			"pressureBar": 10,
-			"litersPerMinute": 866.667
-		}
-	],
+	"fadCurve": [],
 	"oilType": "oil",
 	"powerKw": 15,
 	"confidence": "B",
@@ -35,63 +30,61 @@ const product: CompressorInput = {
 	},
 	"specifications": [
 		{
-			"label": "Configuration constructeur",
-			"value": "Groupe Airpol sur réservoir 500 L avec sécheur et filtres",
+			"label": "Configuration",
+			"value": "Variateur Ultra Speed, cuve 500 L, sécheur et filtres",
 			"evidenceIds": [
-				"october3d-airpol-pdf-027-p6"
+				"airpol-ktpr-15-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Pression maximale de fonctionnement",
-			"value": "10 bar relatifs",
+			"label": "Capacité min–max à 1,0 MPa",
+			"value": "52–120 m³/h",
 			"evidenceIds": [
-				"october3d-airpol-pdf-027-p6"
+				"airpol-ktpr-15-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Air livré à 10 bar",
-			"value": "866,667 L/min",
+			"label": "Puissance",
+			"value": "15 kW",
 			"evidenceIds": [
-				"october3d-airpol-pdf-027-p6",
-				"october3d-airpol-screw-p13"
+				"airpol-ktpr-15-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Cuve de stockage",
-			"value": "500 L",
+			"label": "Masse",
+			"value": "535 kg",
 			"evidenceIds": [
-				"october3d-airpol-pdf-027-p6"
+				"airpol-ktpr-15-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Alimentation publiée",
-			"value": "400/3/50",
+			"label": "Dimensions L×W×H",
+			"value": "1 912 × 660 × 1640 mm",
 			"evidenceIds": [
-				"october3d-airpol-pdf-027-p6"
+				"airpol-ktpr-15-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Fréquence retenue",
-			"value": "50 Hz",
+			"label": "Alimentation",
+			"value": "400 V / 3 phases / 50 Hz",
 			"evidenceIds": [
-				"october3d-airpol-pdf-027-p6"
+				"airpol-ktpr-15-reserved-20261103-1"
 			]
 		}
 	],
 	"editorial": {
-		"overview": "Airpol KTPR 15. 866,667 L/min à 10 bar. Groupe Airpol sur réservoir 500 L avec sécheur et filtres.",
+		"overview": "Airpol KTPR 15. La KTPR 15 annonce 52–120 m³/h à 1,0 MPa. Le précédent point unique reprenait le minimum de modulation, pas le maximum. La KTPR 11 donne 17–90 m³/h et la KTPR 15 donne 52–120 m³/h à cette pression. Sans conditions de référence FAD explicites, la plage reste documentaire et le calcul est indéterminé.",
 		"verifiedFacts": [
-			"Air livré rattaché à une pression et aux unités originales du constructeur.",
-			"Cuve de stockage documentée : 500 L.",
-			"Pression maximale de fonctionnement publiée : 10 bar."
+			"Configuration : Variateur Ultra Speed, cuve 500 L, sécheur et filtres.",
+			"Capacité min–max à 1,0 MPa : 52–120 m³/h.",
+			"Puissance : 15 kW.",
+			"Masse : 535 kg.",
+			"Dimensions L×W×H : 1 912 × 660 × 1640 mm.",
+			"Alimentation : 400 V / 3 phases / 50 Hz."
 		],
 		"limitations": [
-			"Conditions de référence FAD non précisées dans la fiche ; aucun AnnexC ni température/humidité ajouté.",
-			"Une seule configuration par modèle est retenue ; aucune fusion de pressions de fabrication différentes.",
-			"Débit minimal déclaré à 10 bar retenu : 866,667 L/min. La plage min-max publiée 52 - 120 m³/h ne constitue pas un débit garanti en permanence au maximum.",
-			"Cycle de service non établi ; la tenue permanente reste indéterminée.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"Capacité variable conservée en m³/h avec pression explicite ; conditions de référence FAD non précisées. Aucun point unique de régime permanent inventé.",
+			"Anciennes valeurs minimales conservées dans l’historique, retirées du calcul."
 		]
 	},
 	"evidence": [
@@ -124,6 +117,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 0f1b8b561932c75ca40dfcf5840760ebcceda6e597e8e4dfbe561111583fb6ec de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "airpol-ktpr-15-reserved-20261103-1",
+			"sourceUrl": "https://airpol.com.pl/wp-content/uploads/2022/05/Airpol-KTPR-from-55-kW-up-to-15-kW-up-to-10-bar.pdf#page=6",
+			"sourceLabel": "Airpol : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 0f1b8b561932c75ca40dfcf5840760ebcceda6e597e8e4dfbe561111583fb6ec. La KTPR 15 annonce 52–120 m³/h à 1,0 MPa. Le précédent point unique reprenait le minimum de modulation, pas le maximum. La KTPR 11 donne 17–90 m³/h et la KTPR 15 donne 52–120 m³/h à cette pression. Sans conditions de référence FAD explicites, la plage reste documentaire et le calcul est indéterminé."
 		}
 	],
 	"fieldSources": {
@@ -131,8 +134,7 @@ const product: CompressorInput = {
 			"october3d-airpol-pdf-027-p6"
 		],
 		"fadCurve": [
-			"october3d-airpol-pdf-027-p6",
-			"october3d-airpol-screw-p13"
+			"airpol-ktpr-15-reserved-20261103-1"
 		],
 		"tankLiters": [
 			"october3d-airpol-pdf-027-p6"
@@ -141,12 +143,30 @@ const product: CompressorInput = {
 			"october3d-airpol-pdf-027-p11"
 		],
 		"powerKw": [
-			"october3d-airpol-pdf-027-p6"
+			"airpol-ktpr-15-reserved-20261103-1"
+		],
+		"weightKg": [
+			"airpol-ktpr-15-reserved-20261103-1"
+		],
+		"phase": [
+			"airpol-ktpr-15-reserved-20261103-1"
+		],
+		"voltage": [
+			"airpol-ktpr-15-reserved-20261103-1"
+		],
+		"editorial": [
+			"airpol-ktpr-15-reserved-20261103-1"
+		],
+		"specifications": [
+			"airpol-ktpr-15-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Pression FAD, plage de fonctionnement et pression de soupape restent distinctes. ISO 1217 n’est pas ajoutée à une source qui ne la revendique pas."
-	]
+	],
+	"weightKg": 535,
+	"phase": "three-phase",
+	"voltage": "400 V / 50 Hz"
 };
 
 export default product;

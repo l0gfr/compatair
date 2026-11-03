@@ -23,96 +23,61 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
 	},
 	"editorial": {
-		"overview": "Aircraft BM-C 13 PRO, référence 2404115. Consommation moyenne publiée : 238 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Capacité de perçage dans l’acier : 13 mm. Capacité de perçage dans le bois : 25 mm.",
+		"overview": "Aircraft BM-C 13 PRO. La BM-C 13 PRO est la perceuse à basse vitesse, 800 tr/min et 12,5 Nm, mandrin 2–13 mm et poignée latérale. La BM-C 10 PRO donne 2 000 tr/min, 5 Nm et mandrin 1–10 mm, avec le même débit publié 238 L/min. Le document allemand dit Luftbedarf ca., pas consommation moyenne ; la qualification de régime devient non précisée.",
 		"verifiedFacts": [
-			"Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
-			"Consommation moyenne publiée : 238 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
-			"Référence fabricant : 2404115.",
-			"Capacité de perçage dans l’acier : 13 mm.",
-			"Capacité de perçage dans le bois : 25 mm.",
-			"Vitesse de rotation : 800 min¯¹."
+			"Mandrin sans clé : 2–13 mm.",
+			"Capacité acier / bois : 13 / 25 mm.",
+			"Vitesse : 800 tr/min.",
+			"Couple : 12,5 Nm.",
+			"Masse approximative : 1,3 kg.",
+			"Consommation approximative, régime non précisé : 238 L/min."
 		],
 		"limitations": [
-			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
-			"Une consommation moyenne ne constitue pas un débit maximal en usage continu. Vérifier le régime réel auprès du fabricant avant dimensionnement."
+			"Aucune moyenne, aucun maximum ni aucune pression de mesure supplémentaires ne sont déduits d’un simple débit approximatif ou d’une consigne de service.",
+			"Source fabricant et édition identifiées ; équipement actuel à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
+			"label": "Mandrin sans clé",
+			"value": "2–13 mm",
 			"evidenceIds": [
-				"aircraft-2404115-20260927"
+				"aircraft-bm-c-13-pro-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation moyenne publiée : 238 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
+			"label": "Capacité acier / bois",
+			"value": "13 / 25 mm",
 			"evidenceIds": [
-				"aircraft-2404115-20260927"
+				"aircraft-bm-c-13-pro-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Capacité de perçage dans l’acier",
-			"value": "13 mm",
+			"label": "Vitesse",
+			"value": "800 tr/min",
 			"evidenceIds": [
-				"aircraft-2404115-20260927"
+				"aircraft-bm-c-13-pro-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Capacité de perçage dans le bois",
-			"value": "25 mm",
+			"label": "Couple",
+			"value": "12,5 Nm",
 			"evidenceIds": [
-				"aircraft-2404115-20260927"
-			]
-		},
-		{
-			"label": "Vitesse de rotation",
-			"value": "800 min¯¹",
-			"evidenceIds": [
-				"aircraft-2404115-20260927"
-			]
-		},
-		{
-			"label": "Couple publié",
-			"value": "12.5 Nm",
-			"evidenceIds": [
-				"aircraft-2404115-20260927"
-			]
-		},
-		{
-			"label": "Longueur approximative",
-			"value": "219 mm",
-			"evidenceIds": [
-				"aircraft-2404115-20260927"
-			]
-		},
-		{
-			"label": "Largeur approximative",
-			"value": "43 mm",
-			"evidenceIds": [
-				"aircraft-2404115-20260927"
-			]
-		},
-		{
-			"label": "Hauteur approximative",
-			"value": "157 mm",
-			"evidenceIds": [
-				"aircraft-2404115-20260927"
+				"aircraft-bm-c-13-pro-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Masse approximative",
-			"value": "1.3 kg",
+			"value": "1,3 kg",
 			"evidenceIds": [
-				"aircraft-2404115-20260927"
+				"aircraft-bm-c-13-pro-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Type indiqué par le fabricant",
-			"value": "Pistol drilling machine",
+			"label": "Consommation approximative, régime non précisé",
+			"value": "238 L/min",
 			"evidenceIds": [
-				"aircraft-2404115-20260927"
+				"aircraft-bm-c-13-pro-reserved-20261103-1"
 			]
 		}
 	],
@@ -136,6 +101,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer 702076. Empreinte PDF SHA-256 : 74986b13a5fe1d6a43ebba75e5673e8acd1a9dc3e6fd9998b11bd2c982039485. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
+		},
+		{
+			"id": "aircraft-bm-c-13-pro-reserved-20261103-1",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=246#page=1",
+			"sourceLabel": "Aircraft : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 74986b13a5fe1d6a43ebba75e5673e8acd1a9dc3e6fd9998b11bd2c982039485. La BM-C 13 PRO est la perceuse à basse vitesse, 800 tr/min et 12,5 Nm, mandrin 2–13 mm et poignée latérale. La BM-C 10 PRO donne 2 000 tr/min, 5 Nm et mandrin 1–10 mm, avec le même débit publié 238 L/min. Le document allemand dit Luftbedarf ca., pas consommation moyenne ; la qualification de régime devient non précisée."
 		}
 	],
 	"fieldSources": {
@@ -149,7 +124,13 @@ const product: ToolProfileInput = {
 			"aircraft-2404115-20260927"
 		],
 		"airflowBasis": [
-			"aircraft-2404115-20260927"
+			"aircraft-bm-c-13-pro-reserved-20261103-1"
+		],
+		"editorial": [
+			"aircraft-bm-c-13-pro-reserved-20261103-1"
+		],
+		"specifications": [
+			"aircraft-bm-c-13-pro-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -160,7 +141,7 @@ const product: ToolProfileInput = {
 		"typical": 238,
 		"max": 238
 	},
-	"airflowBasis": "average"
+	"airflowBasis": "unqualified"
 };
 
 export default product;

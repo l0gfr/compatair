@@ -37,73 +37,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Universal Tool UT8756-1. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 2.2 kg. Longueur publiée : 305 mm.",
+		"overview": "Universal Tool UT8756-1. La UT8756-1 est la ponceuse d’angle 7 pouces à 4 500 tr/min, avec gâchette de sécurité et régulateur de vitesse. La UT8766S est un autre modèle plus puissant et plus lourd ; ses valeurs ne sont pas transplantées. La fiche nomme les 7 CFM comme une moyenne, distincte du champ 28 CFM ; la pression recommandée ne suffit pas à les apparier à une mesure.",
 		"verifiedFacts": [
-			"Masse publiée : 2.2 kg.",
-			"Longueur publiée : 305 mm.",
-			"Puissance publiée : 1 HP.",
-			"Échappement : Front."
+			"Plateau : 7 pouces.",
+			"Vitesse : 4 500 tr/min.",
+			"Puissance : 1 HP.",
+			"Broche publiée : 5/8 pouce.",
+			"Longueur : 305 mm.",
+			"Consommation de régime non précisé / moyenne : 28 / 7 CFM."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Régime et pression de mesure non suffisamment documentés ; les valeurs restent hors calcul conclusif.",
+			"Les colonnes contradictoires éventuelles restent attribuées à la source, sans correction devinée."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "2.2 kg",
+			"label": "Plateau",
+			"value": "7 pouces",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-413-p1"
+				"ponceuse-rotative-universal-tool-ut8756-1-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur publiée",
-			"value": "305 mm",
+			"label": "Vitesse",
+			"value": "4 500 tr/min",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-413-p1"
+				"ponceuse-rotative-universal-tool-ut8756-1-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Puissance publiée",
+			"label": "Puissance",
 			"value": "1 HP",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-413-p1"
+				"ponceuse-rotative-universal-tool-ut8756-1-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Échappement",
-			"value": "Front",
+			"label": "Broche publiée",
+			"value": "5/8 pouce",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-413-p1"
+				"ponceuse-rotative-universal-tool-ut8756-1-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Champ fabricant : Air Inlet  (NPT / BSP)",
-			"value": "1/4-in.",
+			"label": "Longueur",
+			"value": "305 mm",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-413-p1"
+				"ponceuse-rotative-universal-tool-ut8756-1-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Champ fabricant : Recommended hose i d in",
-			"value": "3/8-in.",
+			"label": "Consommation de régime non précisé / moyenne",
+			"value": "28 / 7 CFM",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-413-p1"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "Rec. Air Pressure: 90 psi-6.2 bar",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-413-p1"
-			]
-		},
-		{
-			"label": "Consommation de régime non précisé, hors calcul",
-			"value": "28 cfm",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-413-p1"
+				"ponceuse-rotative-universal-tool-ut8756-1-reserved-20261103-1"
 			]
 		}
 	],
@@ -117,6 +105,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : f5eff379380da33051c399232ddf8374defd52e9a88dce9366d353a90fe56224. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-rotative-universal-tool-ut8756-1-reserved-20261103-1",
+			"sourceUrl": "https://continentaltoolgroup.com/product/7-angle-sander-3/",
+			"sourceLabel": "Universal Tool : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 90256ccf54d7f52eaa584ffef6114c18a39a9cd8acfed58f1d44aca651809db3. La UT8756-1 est la ponceuse d’angle 7 pouces à 4 500 tr/min, avec gâchette de sécurité et régulateur de vitesse. La UT8766S est un autre modèle plus puissant et plus lourd ; ses valeurs ne sont pas transplantées. La fiche nomme les 7 CFM comme une moyenne, distincte du champ 28 CFM ; la pression recommandée ne suffit pas à les apparier à une mesure."
 		}
 	],
 	"fieldSources": {
@@ -134,6 +132,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-ctg-pdp-413-p1"
+		],
+		"editorial": [
+			"ponceuse-rotative-universal-tool-ut8756-1-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-rotative-universal-tool-ut8756-1-reserved-20261103-1"
 		]
 	},
 	"notes": [

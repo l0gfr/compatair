@@ -39,53 +39,68 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-TT110. Consommation publiée, régime non précisé : 396 L/min à 6,2 bar. Consommation dans les unités du tableau : 396 L/min ; 14 cfm. Configuration complète publiée : ST-TT110.",
+		"overview": "Sumake ST-TT110. La ST-TT110 est la M3–M8 à 150 tr/min, montage B12. La ST-TT100 couvre aussi M3–M8 mais tourne à 400 tr/min et mesure 340 mm ; la ST-TT111 couvre M3–M12 à 150 tr/min. La plage de taraudage ne se déduit pas de la seule vitesse.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 27.",
-			"Consommation dans les unités du tableau : 396 L/min ; 14 cfm.",
-			"Configuration complète publiée : ST-TT110.",
-			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé."
+			"Capacité : M3–M8.",
+			"Vitesse à vide : 150 tr/min.",
+			"Montage : B12.",
+			"Longueur : 300 mm.",
+			"Masse : 2,38 kg.",
+			"Consommation documentaire : 396 L/min, régime non précisé.",
+			"Pression de service recommandée : 6,2 bar ; pression de mesure de la consommation non démontrée."
 		],
 		"limitations": [
-			"Le régime de consommation n’est pas indiqué. Aucun débit maximal ou en charge n’est inventé ; le verdict reste insufficient_data.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"La recommandation de service 6,2 bar ne prouve pas la pression de mesure de la consommation. Le régime reste non qualifié et le calcul indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 27",
+			"label": "Capacité",
+			"value": "M3–M8",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p27"
+				"taraudeuse-sumake-st-tt110-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation dans les unités du tableau",
-			"value": "396 L/min ; 14 cfm",
+			"label": "Vitesse à vide",
+			"value": "150 tr/min",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p27"
+				"taraudeuse-sumake-st-tt110-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Configuration complète publiée",
-			"value": "ST-TT110",
+			"label": "Montage",
+			"value": "B12",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p27"
+				"taraudeuse-sumake-st-tt110-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Régime de consommation",
-			"value": "Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé",
+			"label": "Longueur",
+			"value": "300 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p27"
+				"taraudeuse-sumake-st-tt110-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Ligne technique originale du modèle",
-			"value": "ST-TT110 M3-M8 150 B12 396 14 300 11-4/5 1/4\" 2.38 5.24 10Pcs/Ctn/26.2/1.1'",
+			"label": "Masse",
+			"value": "2,38 kg",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p27"
+				"taraudeuse-sumake-st-tt110-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "396 L/min, régime non précisé",
+			"evidenceIds": [
+				"taraudeuse-sumake-st-tt110-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression de service recommandée",
+			"value": "6,2 bar ; pression de mesure de la consommation non démontrée",
+			"evidenceIds": [
+				"taraudeuse-sumake-st-tt110-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +114,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "taraudeuse-sumake-st-tt110-reserved-20261103-1",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf#page=27",
+			"sourceLabel": "Sumake : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. La ST-TT110 est la M3–M8 à 150 tr/min, montage B12. La ST-TT100 couvre aussi M3–M8 mais tourne à 400 tr/min et mesure 340 mm ; la ST-TT111 couvre M3–M12 à 150 tr/min. La plage de taraudage ne se déduit pas de la seule vitesse."
 		}
 	],
 	"fieldSources": {
@@ -113,6 +138,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-d-sumake-na-2024-p27"
+		],
+		"editorial": [
+			"taraudeuse-sumake-st-tt110-reserved-20261103-1"
+		],
+		"specifications": [
+			"taraudeuse-sumake-st-tt110-reserved-20261103-1"
 		]
 	},
 	"notes": [

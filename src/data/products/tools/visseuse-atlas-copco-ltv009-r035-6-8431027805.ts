@@ -38,46 +38,68 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Atlas Copco LTV009 R035-6 (réf. 8431027805). Consommation maximale : 360 L/min à 6,3 bar. Consommations originales : 6 L/s ; 13 cfm. Vitesse à vide : 1100 tr/min.",
+		"overview": "Atlas Copco LTV009 R035-6. La LTV009 R035-6 est la ligne 0,4–3,5 Nm à 1 100 tr/min ; la R05-6 donne 0,4–5 Nm à 850 tr/min. La R035-Q utilise une autre configuration d’entraînement. La colonne at free speed impose de conserver les 360 L/min à vide hors du calcul de demande en charge.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 15.",
-			"Consommations originales : 6 L/s ; 13 cfm.",
-			"Vitesse à vide : 1100 tr/min.",
-			"Masse : 0.7 kg."
+			"Code : 8431 0278 05.",
+			"Plage de couple sur joint élastique : 0,4–3,5 Nm.",
+			"Entraînement : Entraînement 1/4 pouce, configuration R035-6 du tableau.",
+			"Vitesse à vide : 1 100 tr/min.",
+			"Longueur : 266 mm.",
+			"Masse : 0,7 kg.",
+			"Consommation explicitement à vide : 6 L/s à 6,3 bar."
 		],
 		"limitations": [
-			"Le débit publié conserve son régime de mesure ; aucun cycle supposé ne réduit la consommation.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"La valeur est explicitement publiée à vide. Une mesure maximale/en charge avec pression associée reste nécessaire pour un dimensionnement conclusif."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 15",
+			"label": "Code",
+			"value": "8431 0278 05",
 			"evidenceIds": [
-				"documented-d-atlas-tools-p15"
+				"visseuse-atlas-copco-ltv009-r035-6-8431027805-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommations originales",
-			"value": "6 L/s ; 13 cfm",
+			"label": "Plage de couple sur joint élastique",
+			"value": "0,4–3,5 Nm",
 			"evidenceIds": [
-				"documented-d-atlas-tools-p15"
+				"visseuse-atlas-copco-ltv009-r035-6-8431027805-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Entraînement",
+			"value": "Entraînement 1/4 pouce, configuration R035-6 du tableau",
+			"evidenceIds": [
+				"visseuse-atlas-copco-ltv009-r035-6-8431027805-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Vitesse à vide",
-			"value": "1100 tr/min",
+			"value": "1 100 tr/min",
 			"evidenceIds": [
-				"documented-d-atlas-tools-p15"
+				"visseuse-atlas-copco-ltv009-r035-6-8431027805-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "266 mm",
+			"evidenceIds": [
+				"visseuse-atlas-copco-ltv009-r035-6-8431027805-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Masse",
-			"value": "0.7 kg",
+			"value": "0,7 kg",
 			"evidenceIds": [
-				"documented-d-atlas-tools-p15"
+				"visseuse-atlas-copco-ltv009-r035-6-8431027805-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation explicitement à vide",
+			"value": "6 L/s à 6,3 bar",
+			"evidenceIds": [
+				"visseuse-atlas-copco-ltv009-r035-6-8431027805-reserved-20261103-1"
 			]
 		}
 	],
@@ -101,6 +123,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "visseuse-atlas-copco-ltv009-r035-6-8431027805-reserved-20261103-1",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf#page=15",
+			"sourceLabel": "Atlas Copco : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. La LTV009 R035-6 est la ligne 0,4–3,5 Nm à 1 100 tr/min ; la R05-6 donne 0,4–5 Nm à 850 tr/min. La R035-Q utilise une autre configuration d’entraînement. La colonne at free speed impose de conserver les 360 L/min à vide hors du calcul de demande en charge."
+		},
+		{
+			"id": "visseuse-atlas-copco-ltv009-r035-6-8431027805-reserved-20261103-1-3",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf#page=3",
+			"sourceLabel": "Atlas Copco : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. La LTV009 R035-6 est la ligne 0,4–3,5 Nm à 1 100 tr/min ; la R05-6 donne 0,4–5 Nm à 850 tr/min. La R035-Q utilise une autre configuration d’entraînement. La colonne at free speed impose de conserver les 360 L/min à vide hors du calcul de demande en charge."
 		}
 	],
 	"fieldSources": {
@@ -113,11 +155,21 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"documented-d-atlas-tools-p15"
+		],
+		"airflowBasis": [
+			"visseuse-atlas-copco-ltv009-r035-6-8431027805-reserved-20261103-1"
+		],
+		"editorial": [
+			"visseuse-atlas-copco-ltv009-r035-6-8431027805-reserved-20261103-1"
+		],
+		"specifications": [
+			"visseuse-atlas-copco-ltv009-r035-6-8431027805-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Consommation maximale : 360 L/min à 6,3 bar."
-	]
+	],
+	"airflowBasis": "free-speed"
 };
 
 export default product;

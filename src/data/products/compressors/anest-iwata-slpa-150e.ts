@@ -28,7 +28,7 @@ const product: CompressorInput = {
   "weightKg": 435,
   "noiseDb": 61,
   "phase": "three-phase",
-  "voltage": "415 V",
+  "voltage": "415 V / 50 Hz",
   "oilType": "oil-free",
   "confidence": "B",
   "status": "unknown",
@@ -97,7 +97,7 @@ const product: CompressorInput = {
     },
     {
       "label": "Conditions de mesure du bruit",
-      "value": "Noise level measured at a distance of 1M according to ISO11201; tolerance±3dB",
+      "value": "Noise level measured at a distance of 1M according to ISO 11201; tolerance±3 dB",
       "evidenceIds": [
         "october8-iwata-energy-p6"
       ]
@@ -122,14 +122,62 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october8-iwata-energy-p6"
       ]
+    },
+    {
+      "label": "Version",
+      "value": "SLPA-150E 8 bar, marché australien",
+      "evidenceIds": [
+        "anest-iwata-slpa-150e-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "FAD à la pression maximale de travail",
+      "value": "1 615 L/min à 8 bar, note *1 explicite",
+      "evidenceIds": [
+        "anest-iwata-slpa-150e-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Motorisation",
+      "value": "15 kW déclarés (4 × 3,7 kW)",
+      "evidenceIds": [
+        "anest-iwata-slpa-150e-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Dimensions W×D×H",
+      "value": "655 × 960 × 1 555 mm",
+      "evidenceIds": [
+        "anest-iwata-slpa-150e-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Masse nette",
+      "value": "435 kg",
+      "evidenceIds": [
+        "anest-iwata-slpa-150e-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Alimentation",
+      "value": "415 V / 50 Hz / 3 phases",
+      "evidenceIds": [
+        "anest-iwata-slpa-150e-reserved-20261103-1"
+      ]
     }
   ],
   "editorial": {
-    "overview": "Anest Iwata SLPA-150E. 1 615 L/min déclarés à 8 bar. Configuration publiée : Scroll oil-free ; Multiplex.",
+    "overview": "Anest Iwata SLPA-150E. La SLPA-150E à quatre blocs publie 1 615 L/min à 8 bar ; la SLPA-110E à trois blocs donne 1 211 L/min. La SLPA-1501E est la version 10 bar et donne 1 346 L/min : elle ne remplace pas la 150E. La note *1 rattache explicitement le FAD au maximum de travail.",
     "verifiedFacts": [
       "Débit réellement livré identifié séparément du déplacement : 1 615 L/min déclarés à 8 bar.",
       "Maximum de travail publié : 8 bar.",
-      "Phase électrique documentée : triphasée."
+      "Phase électrique documentée : triphasée.",
+      "Version : SLPA-150E 8 bar, marché australien.",
+      "FAD à la pression maximale de travail : 1 615 L/min à 8 bar, note *1 explicite.",
+      "Motorisation : 15 kW déclarés (4 × 3,7 kW).",
+      "Dimensions W×D×H : 655 × 960 × 1 555 mm.",
+      "Masse nette : 435 kg.",
+      "Alimentation : 415 V / 50 Hz / 3 phases."
     ],
     "limitations": [
       "Données du catalogue australien : alimentation et configuration propres à ce marché, sans assimilation à une version européenne.",
@@ -151,6 +199,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-08",
       "confidence": "B",
       "notes": "SHA-256 aff4c508ab6c389b0b3a5d370302d098cab772d9a532b44ba767031ae36371b8 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "anest-iwata-slpa-150e-reserved-20261103-1",
+      "sourceUrl": "https://anest-iwata.com.au/product-guides/100-oil-free-scroll/air-energy-catalogue.pdf#page=6",
+      "sourceLabel": "Anest Iwata : revue factuelle du 3 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-03",
+      "confidence": "B",
+      "notes": "GET complet HTTP200 SHA-256 aff4c508ab6c389b0b3a5d370302d098cab772d9a532b44ba767031ae36371b8. La SLPA-150E à quatre blocs publie 1 615 L/min à 8 bar ; la SLPA-110E à trois blocs donne 1 211 L/min. La SLPA-1501E est la version 10 bar et donne 1 346 L/min : elle ne remplace pas la 150E. La note *1 rattache explicitement le FAD au maximum de travail."
     }
   ],
   "fieldSources": {
@@ -167,10 +225,10 @@ const product: CompressorInput = {
       "october8-iwata-energy-p6"
     ],
     "powerKw": [
-      "october8-iwata-energy-p6"
+      "anest-iwata-slpa-150e-reserved-20261103-1"
     ],
     "weightKg": [
-      "october8-iwata-energy-p6"
+      "anest-iwata-slpa-150e-reserved-20261103-1"
     ],
     "noiseDb": [
       "october8-iwata-energy-p6"
@@ -179,10 +237,16 @@ const product: CompressorInput = {
       "october8-iwata-energy-p6"
     ],
     "voltage": [
-      "october8-iwata-energy-p6"
+      "anest-iwata-slpa-150e-reserved-20261103-1"
     ],
     "phase": [
       "october8-iwata-energy-p6"
+    ],
+    "editorial": [
+      "anest-iwata-slpa-150e-reserved-20261103-1"
+    ],
+    "specifications": [
+      "anest-iwata-slpa-150e-reserved-20261103-1"
     ]
   },
   "notes": [

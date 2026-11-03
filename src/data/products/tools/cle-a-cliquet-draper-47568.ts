@@ -31,17 +31,21 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Draper 47568. La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué. Champ fabricant : Air Inlet : 1/4\" BSP. Champ fabricant : Average Air Consumption : 4cfm (113L/min).",
+		"overview": "Draper 47568. La 47568 est le cliquet 3/8 pouce de 1,2 kg, à échappement arrière orientable et protection caoutchouc de tête. La 65018 pèse 0,51 kg et ne remplace pas cette géométrie. Les 113 L/min sont moyens, sans besoin continu déduit.",
 		"verifiedFacts": [
 			"Champ fabricant : Air Inlet : 1/4\" BSP.",
-			"Champ fabricant : Average Air Consumption : 4cfm (113L/min).",
+			"Champ fabricant : Average Air Consumption : 4 cfm (113 L/min).",
 			"Champ fabricant : Free Speed : 200 rpm.",
-			"Champ fabricant : Min Hose Size : 3/8\" (10mm).",
-			"Champ fabricant : Operating Air Pressure : 90psi (6.2bar).",
+			"Champ fabricant : Min Hose Size : 3/8\" (10 mm).",
+			"Champ fabricant : Operating Air Pressure : 90 psi (6.2 bar).",
 			"Champ fabricant : Square Drive : 3/8\".",
 			"Champ fabricant : Ultimate Torque : 68Nm (50ft/lb).",
 			"Champ fabricant : Vibration Level : 2.6m/s2.",
-			"Champ fabricant : Weight : 1.2kg."
+			"Champ fabricant : Weight : 1.2 kg.",
+			"Échappement : Arrière orientable.",
+			"Entrée d’air : Rotative.",
+			"Carré : 3/8 pouce.",
+			"Couple ultime : 68 Nm."
 		],
 		"limitations": [
 			"La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué.",
@@ -61,7 +65,7 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Average Air Consumption",
-			"value": "4cfm (113L/min)",
+			"value": "4 cfm (113 L/min)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-47568-html-p1"
 			]
@@ -75,14 +79,14 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Min Hose Size",
-			"value": "3/8\" (10mm)",
+			"value": "3/8\" (10 mm)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-47568-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Operating Air Pressure",
-			"value": "90psi (6.2bar)",
+			"value": "90 psi (6.2 bar)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-47568-html-p1"
 			]
@@ -110,7 +114,7 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Weight",
-			"value": "1.2kg",
+			"value": "1.2 kg",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-47568-html-p1"
 			]
@@ -124,16 +128,44 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Min Hose Size",
-			"value": "3/8\" (10mm)",
+			"value": "3/8\" (10 mm)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-47568-html-p1"
 			]
 		},
 		{
 			"label": "Portée de la pression dans la source",
-			"value": "Operating Air Pressure: 90psi (6.2bar)",
+			"value": "Operating Air Pressure: 90 psi (6.2 bar)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-47568-html-p1"
+			]
+		},
+		{
+			"label": "Échappement",
+			"value": "Arrière orientable",
+			"evidenceIds": [
+				"cle-a-cliquet-draper-47568-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Entrée d’air",
+			"value": "Rotative",
+			"evidenceIds": [
+				"cle-a-cliquet-draper-47568-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Carré",
+			"value": "3/8 pouce",
+			"evidenceIds": [
+				"cle-a-cliquet-draper-47568-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Couple ultime",
+			"value": "68 Nm",
+			"evidenceIds": [
+				"cle-a-cliquet-draper-47568-reserved-20261103-1"
 			]
 		}
 	],
@@ -147,6 +179,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 5d6dee66cff3f8f0c183c638dc26c40d92529b633189de6d631584710b442be9. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-cliquet-draper-47568-reserved-20261103-1",
+			"sourceUrl": "https://www.drapertools.com/product/47568/draper-expert-soft-grip-reversible-air-ratchet-3-8-sq-dr/",
+			"sourceLabel": "Draper : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 2b767be13082ea43a321d7ec46f1548980d6e9acd1e5ab8ca372bc94c0066635. La 47568 est le cliquet 3/8 pouce de 1,2 kg, à échappement arrière orientable et protection caoutchouc de tête. La 65018 pèse 0,51 kg et ne remplace pas cette géométrie. Les 113 L/min sont moyens, sans besoin continu déduit."
 		}
 	],
 	"fieldSources": {
@@ -158,6 +200,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-draper-47568-html-p1"
+		],
+		"editorial": [
+			"cle-a-cliquet-draper-47568-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-cliquet-draper-47568-reserved-20261103-1"
 		]
 	},
 	"notes": [

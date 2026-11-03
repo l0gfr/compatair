@@ -38,59 +38,60 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-848R2. Consommation de régime non précisé : 370 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 0.50 kg. Longueur : 180 mm.",
+		"overview": "GISON GP-848R2. La GP-848R2 annonce une course 10 mm, 10 000 coups/min et une cellule de capacité 4 mm. La GP-848R3 passe à 20 mm, 5 500 coups/min et une cellule 8 mm. Le tableau ne nomme pas la matière de cette capacité ; aucune capacité acier ou inox n’est ajoutée.",
 		"verifiedFacts": [
-			"Masse : 0.50 kg.",
+			"Type : Scie de carrosserie.",
+			"Capacité publiée, matière non précisée dans la cellule : 4 mm.",
+			"Course : 10 mm.",
+			"Cadence : 10 000 coups/min.",
 			"Longueur : 180 mm.",
-			"Diamètre de flexible publié : 6.5 mm.",
-			"Référence constructeur : GP-848R2."
+			"Masse : 0,50 kg."
 		],
 		"limitations": [
-			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
-			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+			"Recommandation de service 90 psi (6,3 kg/cm² dans le catalogue), distincte d’un point de mesure de consommation démontré. Régime non qualifié ; pas de conclusion de dimensionnement."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse",
-			"value": "0.50 kg",
+			"label": "Type",
+			"value": "Scie de carrosserie",
 			"evidenceIds": [
-				"october-b-gison-tools-p76"
+				"scie-gison-gp-848r2-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Capacité publiée, matière non précisée dans la cellule",
+			"value": "4 mm",
+			"evidenceIds": [
+				"scie-gison-gp-848r2-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Course",
+			"value": "10 mm",
+			"evidenceIds": [
+				"scie-gison-gp-848r2-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cadence",
+			"value": "10 000 coups/min",
+			"evidenceIds": [
+				"scie-gison-gp-848r2-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Longueur",
 			"value": "180 mm",
 			"evidenceIds": [
-				"october-b-gison-tools-p76"
+				"scie-gison-gp-848r2-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre de flexible publié",
-			"value": "6.5 mm",
+			"label": "Masse",
+			"value": "0,50 kg",
 			"evidenceIds": [
-				"october-b-gison-tools-p76"
-			]
-		},
-		{
-			"label": "Référence constructeur",
-			"value": "GP-848R2",
-			"evidenceIds": [
-				"october-b-gison-tools-p76"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "Recommended Air Pressure 90 psi (6.3 kg/cm2)",
-			"evidenceIds": [
-				"october-b-gison-tools-p76"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "GISON, catalogue pneumatique 2018–2019, page PDF 76",
-			"evidenceIds": [
-				"october-b-gison-tools-p76"
+				"scie-gison-gp-848r2-reserved-20261103-1"
 			]
 		}
 	],
@@ -104,6 +105,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "scie-gison-gp-848r2-reserved-20261103-1",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=76",
+			"sourceLabel": "GISON : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. La GP-848R2 annonce une course 10 mm, 10 000 coups/min et une cellule de capacité 4 mm. La GP-848R3 passe à 20 mm, 5 500 coups/min et une cellule 8 mm. Le tableau ne nomme pas la matière de cette capacité ; aucune capacité acier ou inox n’est ajoutée."
 		}
 	],
 	"fieldSources": {
@@ -118,6 +129,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-b-gison-tools-p76"
+		],
+		"editorial": [
+			"scie-gison-gp-848r2-reserved-20261103-1"
+		],
+		"specifications": [
+			"scie-gison-gp-848r2-reserved-20261103-1"
 		]
 	},
 	"notes": [

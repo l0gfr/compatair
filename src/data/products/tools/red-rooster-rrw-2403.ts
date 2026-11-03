@@ -23,54 +23,53 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Red Rooster RRW-2403, référence RRW-2403. Le tableau fabricant publie 360 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Masse publiée : 1,2 kg. Diamètre intérieur de flexible conseillé : 6,5 mm.",
+		"overview": "Red Rooster RRW-2403. La RRW-2403 donne 68 Nm à 150 tr/min et pèse 1,2 kg ; la RRW-2203 donne 32 Nm à 200 tr/min et 0,5 kg. Le couple et l’encombrement orientent le choix du cliquet. Les 6 L/s restent une consommation de régime non précisé, sans conversion en demande maximale par défaut.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation publiée : 6 L/s, convertis en 360 L/min par multiplication par 60.",
-			"Référence fabricant : RRW-2403.",
-			"Masse publiée : 1,2 kg.",
-			"Diamètre intérieur de flexible conseillé : 6,5 mm.",
-			"Raccord pneumatique : PT 1/4\"."
+			"Carré : 3/8 pouce.",
+			"Couple indicatif : 68 Nm.",
+			"Vitesse : 150 tr/min.",
+			"Masse : 1,2 kg.",
+			"Consommation publiée, régime non précisé : 6 L/s."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"Consommation conservée avec son unité et son régime non précisé ; aucune mesure maximale/en charge appariée à la pression n’est déduite de la consigne de service.",
+			"Catalogue historique identifié ; référence et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+			"label": "Carré",
+			"value": "3/8 pouce",
 			"evidenceIds": [
-				"red-rooster-rrw-2403-20260926-workingpressurebar-1"
+				"red-rooster-rrw-2403-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation publiée : 6 L/s, convertis en 360 L/min par multiplication par 60.",
+			"label": "Couple indicatif",
+			"value": "68 Nm",
 			"evidenceIds": [
-				"red-rooster-rrw-2403-20260926"
+				"red-rooster-rrw-2403-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
+			"label": "Vitesse",
+			"value": "150 tr/min",
+			"evidenceIds": [
+				"red-rooster-rrw-2403-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
 			"value": "1,2 kg",
 			"evidenceIds": [
-				"red-rooster-rrw-2403-20260926"
+				"red-rooster-rrw-2403-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre intérieur de flexible conseillé",
-			"value": "6,5 mm",
+			"label": "Consommation publiée, régime non précisé",
+			"value": "6 L/s",
 			"evidenceIds": [
-				"red-rooster-rrw-2403-20260926"
-			]
-		},
-		{
-			"label": "Raccord pneumatique",
-			"value": "PT 1/4\"",
-			"evidenceIds": [
-				"red-rooster-rrw-2403-20260926"
+				"red-rooster-rrw-2403-reserved-20261103-1"
 			]
 		}
 	],
@@ -92,6 +91,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "red-rooster-rrw-2403-reserved-20261103-1",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=40",
+			"sourceLabel": "Red Rooster : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. La RRW-2403 donne 68 Nm à 150 tr/min et pèse 1,2 kg ; la RRW-2203 donne 32 Nm à 200 tr/min et 0,5 kg. Le couple et l’encombrement orientent le choix du cliquet. Les 6 L/s restent une consommation de régime non précisé, sans conversion en demande maximale par défaut."
 		}
 	],
 	"fieldSources": {
@@ -109,6 +118,15 @@ const product: ToolProfileInput = {
 		],
 		"connectorSize": [
 			"red-rooster-rrw-2403-20260926"
+		],
+		"airflowBasis": [
+			"red-rooster-rrw-2403-reserved-20261103-1"
+		],
+		"editorial": [
+			"red-rooster-rrw-2403-reserved-20261103-1"
+		],
+		"specifications": [
+			"red-rooster-rrw-2403-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -122,7 +140,8 @@ const product: ToolProfileInput = {
 	"recommendedHose": {
 		"innerDiameterMm": 6.5
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"airflowBasis": "unqualified"
 };
 
 export default product;

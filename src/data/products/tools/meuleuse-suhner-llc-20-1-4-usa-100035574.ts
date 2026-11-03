@@ -29,10 +29,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Suhner LLC 20 (1/4\" USA) (réf. 100035574). La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Vitesse à vide : 20 000 tr/min. Puissance publiée : 350 W.",
+		"overview": "Suhner LLC 20 (1/4\" USA). La LLC20 USA, article 100035574, est livrée en pince1/4 pouce, distincte de la LLC20 métrique100035573 en6 mm. La LLC35 tourne à35 000 tr/min contre 20 000, malgré350 W communs. Les 0,800 m³/min de cette table sont explicitement à vide ; la régulation de vitesse ne les transforme pas en demande d’usinage.",
 		"verifiedFacts": [
 			"Vitesse à vide : 20 000 tr/min.",
-			"Puissance publiée : 350 W."
+			"Puissance publiée : 350 W.",
+			"Pince de ce code : 1/4 pouce USA.",
+			"Pince du code 100035573 : 6 mm.",
+			"Consommation à vide : 0,800 m³/min.",
+			"Vitesse à vide : 20 000 tr/min."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -67,6 +71,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-suhner-pneumatic-p17"
 			]
+		},
+		{
+			"label": "Pince de ce code",
+			"value": "1/4 pouce USA",
+			"evidenceIds": [
+				"meuleuse-suhner-llc-20-1-4-usa-100035574-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pince du code 100035573",
+			"value": "6 mm",
+			"evidenceIds": [
+				"meuleuse-suhner-llc-20-1-4-usa-100035574-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation à vide",
+			"value": "0,800 m³/min",
+			"evidenceIds": [
+				"meuleuse-suhner-llc-20-1-4-usa-100035574-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "20 000 tr/min",
+			"evidenceIds": [
+				"meuleuse-suhner-llc-20-1-4-usa-100035574-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -79,6 +111,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 355401bdbabe6cb5a7bfa85064961b89eabb84f7ebad27a03b193f57bc12f7dd. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "meuleuse-suhner-llc-20-1-4-usa-100035574-reserved-20261103-1",
+			"sourceUrl": "https://www.suhner-abrasive.com/fileadmin/user_upload/Abrasive/04_Einzelkatalog_Druckluftwerkzeuge_EN.pdf#page=17",
+			"sourceLabel": "Suhner : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 355401bdbabe6cb5a7bfa85064961b89eabb84f7ebad27a03b193f57bc12f7dd. La LLC20 USA, article 100035574, est livrée en pince1/4 pouce, distincte de la LLC20 métrique100035573 en6 mm. La LLC35 tourne à35 000 tr/min contre 20 000, malgré350 W communs. Les 0,800 m³/min de cette table sont explicitement à vide ; la régulation de vitesse ne les transforme pas en demande d’usinage."
 		}
 	],
 	"fieldSources": {
@@ -90,6 +132,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-suhner-pneumatic-p17"
+		],
+		"editorial": [
+			"meuleuse-suhner-llc-20-1-4-usa-100035574-reserved-20261103-1"
+		],
+		"specifications": [
+			"meuleuse-suhner-llc-20-1-4-usa-100035574-reserved-20261103-1"
 		]
 	},
 	"notes": [

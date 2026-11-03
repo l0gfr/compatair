@@ -29,58 +29,52 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZRH-08. La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé. Cadence : 1440 coups/min. Masse : 1.33 kg.",
+		"overview": "ZIPP ZRH-08. La ZRH-08 possède course 137 mm et cadence 1 440 coups/min, contre 102 mm et 2 160 coups/min pour la ZRH-06. Les deux acceptent la queue 0,401 pouce et annoncent 1,33 kg. La capacité de rivetage du tableau dépend de la matière ; elle ne se déduit pas de la seule cadence.",
 		"verifiedFacts": [
-			"Cadence : 1440 coups/min.",
-			"Masse : 1.33 kg.",
-			"Référence constructeur : ZRH-08."
+			"Queue de burin : 0,401 pouce (10,2 mm).",
+			"Course : 137 mm.",
+			"Cadence : 1 440 coups/min.",
+			"Longueur : 280 mm.",
+			"Masse : 1,33 kg."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé.",
-			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+			"Consommation moyenne ou de régime non précisé, sans qualification maximale/en charge ni appariement de pression de mesure suffisant : aucun verdict conclusif n’en est déduit."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Cadence",
-			"value": "1440 coups/min",
+			"label": "Queue de burin",
+			"value": "0,401 pouce (10,2 mm)",
 			"evidenceIds": [
-				"october-b-zipp-tools-p91"
+				"marteau-a-river-zipp-zrh-08-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Course",
+			"value": "137 mm",
+			"evidenceIds": [
+				"marteau-a-river-zipp-zrh-08-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cadence",
+			"value": "1 440 coups/min",
+			"evidenceIds": [
+				"marteau-a-river-zipp-zrh-08-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "280 mm",
+			"evidenceIds": [
+				"marteau-a-river-zipp-zrh-08-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Masse",
-			"value": "1.33 kg",
+			"value": "1,33 kg",
 			"evidenceIds": [
-				"october-b-zipp-tools-p91"
-			]
-		},
-		{
-			"label": "Référence constructeur",
-			"value": "ZRH-08",
-			"evidenceIds": [
-				"october-b-zipp-tools-p91"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "Pression de consommation non établie sur cette page.",
-			"evidenceIds": [
-				"october-b-zipp-tools-p91"
-			]
-		},
-		{
-			"label": "Consommation hors calcul, pression non établie",
-			"value": "594,654 L/min",
-			"evidenceIds": [
-				"october-b-zipp-tools-p91"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "ZIPP, catalogue général pneumatique, page PDF 91",
-			"evidenceIds": [
-				"october-b-zipp-tools-p91"
+				"marteau-a-river-zipp-zrh-08-reserved-20261103-1"
 			]
 		}
 	],
@@ -94,6 +88,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "marteau-a-river-zipp-zrh-08-reserved-20261103-1",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=91",
+			"sourceLabel": "ZIPP : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. La ZRH-08 possède course 137 mm et cadence 1 440 coups/min, contre 102 mm et 2 160 coups/min pour la ZRH-06. Les deux acceptent la queue 0,401 pouce et annoncent 1,33 kg. La capacité de rivetage du tableau dépend de la matière ; elle ne se déduit pas de la seule cadence."
 		}
 	],
 	"fieldSources": {
@@ -105,6 +109,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october-b-zipp-tools-p91"
+		],
+		"editorial": [
+			"marteau-a-river-zipp-zrh-08-reserved-20261103-1"
+		],
+		"specifications": [
+			"marteau-a-river-zipp-zrh-08-reserved-20261103-1"
 		]
 	},
 	"notes": [

@@ -82,14 +82,62 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october3d-mark-family-12"
 			]
+		},
+		{
+			"label": "Configuration",
+			"value": "MSM 5.5 IVR, sur socle",
+			"evidenceIds": [
+				"mark-msm-5-5-ivr-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "FAD à 9,5 bar",
+			"value": "45,4 m³/h (756 L/min arrondis)",
+			"evidenceIds": [
+				"mark-msm-5-5-ivr-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Puissance",
+			"value": "5,5 kW",
+			"evidenceIds": [
+				"mark-msm-5-5-ivr-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse sur socle",
+			"value": "130 kg",
+			"evidenceIds": [
+				"mark-msm-5-5-ivr-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cycle de service",
+			"value": "100 %, tableau comparatif des groupes fixes et IVR",
+			"evidenceIds": [
+				"mark-msm-5-5-ivr-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Mesure",
+			"value": "ISO 1217 annexe E",
+			"evidenceIds": [
+				"mark-msm-5-5-ivr-reserved-20261103-1"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "MARK MSM 5.5 IVR. 756,667 L/min à 9,5 bar. Groupe sur socle sans réservoir de stockage intégré.",
+		"overview": "MARK MSM 5.5 IVR. La MSM 4 fixe donne 30,1 m³/h à 9,5 bar ; la MSM 4 IVR donne 30,2 à ce point. La MSM 5.5 IVR donne 45,4 m³/h, soit le même chiffre arrondi que la 5.5 fixe à 9,5 bar, avec un niveau sonore mesuré selon un autre régime. Le tableau compare explicitement les groupes fixes et IVR avec un cycle de 100 %.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 0 L.",
-			"Pression maximale de fonctionnement publiée : 10 bar."
+			"Pression maximale de fonctionnement publiée : 10 bar.",
+			"Configuration : MSM 5.5 IVR, sur socle.",
+			"FAD à 9,5 bar : 45,4 m³/h (756 L/min arrondis).",
+			"Puissance : 5,5 kW.",
+			"Masse sur socle : 130 kg.",
+			"Cycle de service : 100 %, tableau comparatif des groupes fixes et IVR.",
+			"Mesure : ISO 1217 annexe E."
 		],
 		"limitations": [
 			"La pression FAD et le maximum de la version sont conservés séparément.",
@@ -140,6 +188,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 010b38abbe3ac7682d7bae30e9ee2b5c40a5bf0064696d487c7198c83867123e de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "mark-msm-5-5-ivr-reserved-20261103-1",
+			"sourceUrl": "https://www.mark-compressors.com/content/dam/brands/Mark/products-bp-structure/oil-injected-screw-compressor/fixed-speed/msm-2-2-7/leaflets/Mark_MSM_2.2-7_MSM%202.2-7%20IVR_Sales_Leaflet_EN_Brendola_6999200582.pdf#page=7",
+			"sourceLabel": "MARK : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 64d6ab7907e7a65c5c76e427626d86890e4361dbe459f470c317a15b25e3b530. La MSM 4 fixe donne 30,1 m³/h à 9,5 bar ; la MSM 4 IVR donne 30,2 à ce point. La MSM 5.5 IVR donne 45,4 m³/h, soit le même chiffre arrondi que la 5.5 fixe à 9,5 bar, avec un niveau sonore mesuré selon un autre régime. Le tableau compare explicitement les groupes fixes et IVR avec un cycle de 100 %."
 		}
 	],
 	"fieldSources": {
@@ -160,11 +218,21 @@ const product: CompressorInput = {
 		],
 		"powerKw": [
 			"october3d-mark-family-12"
+		],
+		"weightKg": [
+			"mark-msm-5-5-ivr-reserved-20261103-1"
+		],
+		"editorial": [
+			"mark-msm-5-5-ivr-reserved-20261103-1"
+		],
+		"specifications": [
+			"mark-msm-5-5-ivr-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Pression FAD, plage de fonctionnement et pression de soupape restent distinctes. ISO 1217 n’est pas ajoutée à une source qui ne la revendique pas."
-	]
+	],
+	"weightKg": 130
 };
 
 export default product;

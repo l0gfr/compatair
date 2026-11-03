@@ -29,51 +29,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Yokota HSA-6A. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Vitesse à vide : 8400 tr/min. Longueur : 204 mm.",
+		"overview": "Yokota HSA-6A. La HSA-6A est la ponceuse pour papier disque 150 × 22 mm et mesure 204 mm. La HSA-L accepte le même diamètre mais mesure 222 mm ; la HSA-6AK est une version pour brosse métallique 70–95 × 16 mm à 5 000 tr/min. La table japonaise identifie les 1 100 L/min en charge et donne séparément une pression d’utilisation 0,6 MPa ; cette consigne ne devient pas une pression de mesure appariée.",
 		"verifiedFacts": [
-			"Vitesse à vide : 8400 tr/min.",
+			"Papier, diamètre × alésage : 150 × 22 mm.",
+			"Vitesse à vide : 8 400 tr/min.",
+			"Consommation en charge publiée : 1 100 L/min.",
 			"Longueur : 204 mm.",
-			"Masse : 1.8 kg."
+			"Masse : 1,8 kg.",
+			"Flexible publié : 12,7 mm × 5 m."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Régime et pression de mesure ne sont pas complétés par hypothèse. Les données non dimensionnantes restent dans les spécifications.",
+			"Catalogue constructeur historique ; configuration livrée et disponibilité actuelles à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Vitesse à vide",
-			"value": "8400 tr/min",
+			"label": "Papier, diamètre × alésage",
+			"value": "150 × 22 mm",
 			"evidenceIds": [
-				"october2-tools-yokota-jp-p57"
+				"ponceuse-rotative-yokota-hsa-6a-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "8 400 tr/min",
+			"evidenceIds": [
+				"ponceuse-rotative-yokota-hsa-6a-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation en charge publiée",
+			"value": "1 100 L/min",
+			"evidenceIds": [
+				"ponceuse-rotative-yokota-hsa-6a-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Longueur",
 			"value": "204 mm",
 			"evidenceIds": [
-				"october2-tools-yokota-jp-p57"
+				"ponceuse-rotative-yokota-hsa-6a-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Masse",
-			"value": "1.8 kg",
+			"value": "1,8 kg",
 			"evidenceIds": [
-				"october2-tools-yokota-jp-p57"
+				"ponceuse-rotative-yokota-hsa-6a-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "La pression précisée pour le couple ou le fonctionnement ne constitue pas un point de mesure de consommation documenté.",
+			"label": "Flexible publié",
+			"value": "12,7 mm × 5 m",
 			"evidenceIds": [
-				"october2-tools-yokota-jp-p57"
-			]
-		},
-		{
-			"label": "Consommation en charge, hors calcul",
-			"value": "1100 L/min",
-			"evidenceIds": [
-				"october2-tools-yokota-jp-p57"
+				"ponceuse-rotative-yokota-hsa-6a-reserved-20261103-1"
 			]
 		}
 	],
@@ -87,6 +97,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : b60e8188ea17df768d52a2b1381382bc9b0e158a03fcd4416d4c4e3ebd0a866c. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-rotative-yokota-hsa-6a-reserved-20261103-1",
+			"sourceUrl": "https://www.yokota-kogyo.co.jp/link/generalcatalog-j.pdf#page=57",
+			"sourceLabel": "Yokota : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 b60e8188ea17df768d52a2b1381382bc9b0e158a03fcd4416d4c4e3ebd0a866c. La HSA-6A est la ponceuse pour papier disque 150 × 22 mm et mesure 204 mm. La HSA-L accepte le même diamètre mais mesure 222 mm ; la HSA-6AK est une version pour brosse métallique 70–95 × 16 mm à 5 000 tr/min. La table japonaise identifie les 1 100 L/min en charge et donne séparément une pression d’utilisation 0,6 MPa ; cette consigne ne devient pas une pression de mesure appariée."
 		}
 	],
 	"fieldSources": {
@@ -98,6 +118,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-yokota-jp-p57"
+		],
+		"editorial": [
+			"ponceuse-rotative-yokota-hsa-6a-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-rotative-yokota-hsa-6a-reserved-20261103-1"
 		]
 	},
 	"notes": [

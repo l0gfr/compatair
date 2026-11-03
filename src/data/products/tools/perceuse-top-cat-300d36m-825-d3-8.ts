@@ -9,16 +9,9 @@ const product: ToolProfileInput = {
 	"brand": "Top Cat",
 	"model": "300D36m;825;D3/8",
 	"mpn": "300D36m;825;D3/8",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.2,
-		"typical": 6.2,
 		"max": 6.2
-	},
-	"airflowLpm": {
-		"min": 708,
-		"typical": 708,
-		"max": 708
 	},
 	"confidence": "B",
 	"image": {
@@ -35,44 +28,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Top Cat 300D36m;825;D3/8. Le tableau publie une consommation maximale de 11,8 L/s, soit 708 L/min. Pression de référence retenue : 6,2 bar.",
+		"overview": "Top Cat 300D36m; 825; D3/8. La 300D36M; 825; D3/8 est la perceuse droite à réduction 36:1, 825 tr/min et mandrin 3/8 pouce. La version MK ajoute le levier de sécurité ; la 300D3M est à réduction 3:1 et 8 250 tr/min. Les codes restent associés aux lignes réellement imprimées. Le plafond d’alimentation 6,2 bar ne qualifie pas la pression de mesure du débit maximal.",
 		"verifiedFacts": [
-			"Référence complète imprimée : 300D36m;825;D3/8, page PDF 70.",
-			"Consommation maximale publiée : 708 L/min après conversion de l’unité originale.",
-			"All tools are designed to operate at an air line pressure of 90 PSI (6.2 Bar) maximum. Catalogue PDF page 7."
+			"Code imprimé dans le catalogue : 300D36M; 825; D3/8.",
+			"Mandrin : 3/8 pouce, classe 10 mm.",
+			"Rapport de réduction : 36:1.",
+			"Vitesse nominale : 825 tr/min.",
+			"Commande : Levier standard.",
+			"Consommation maximale déclarée : 11,8 L/s (708 L/min)."
 		],
 		"limitations": [
-			"Le débit maximal est un besoin conservateur ; la cadence réelle de travail n’est pas déduite du catalogue.",
-			"La disponibilité actuelle, les accessoires inclus et les conditions de sécurité doivent être confirmés sur la notice de cette référence."
+			"Les maxima de pression d’alimentation et de consommation ne prouvent pas un couple de mesure débit/pression.",
+			"Catalogue historique ; code, commande et équipement à confirmer sur la révision livrée."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 70",
+			"label": "Code imprimé dans le catalogue",
+			"value": "300D36M; 825; D3/8",
 			"evidenceIds": [
-				"documented-20260930-topcat-issued"
+				"perceuse-top-cat-300d36m-825-d3-8-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Code complet de configuration",
-			"value": "300D36m;825;D3/8",
+			"label": "Mandrin",
+			"value": "3/8 pouce, classe 10 mm",
 			"evidenceIds": [
-				"documented-20260930-topcat-issued"
+				"perceuse-top-cat-300d36m-825-d3-8-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse comprise dans la désignation",
-			"value": "825 min⁻¹",
+			"label": "Rapport de réduction",
+			"value": "36:1",
 			"evidenceIds": [
-				"documented-20260930-topcat-issued"
+				"perceuse-top-cat-300d36m-825-d3-8-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation maximale publiée",
-			"value": "11.8 L/s ; 25 cfm",
+			"label": "Vitesse nominale",
+			"value": "825 tr/min",
 			"evidenceIds": [
-				"documented-20260930-topcat-issued"
+				"perceuse-top-cat-300d36m-825-d3-8-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Commande",
+			"value": "Levier standard",
+			"evidenceIds": [
+				"perceuse-top-cat-300d36m-825-d3-8-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation maximale déclarée",
+			"value": "11,8 L/s (708 L/min)",
+			"evidenceIds": [
+				"perceuse-top-cat-300d36m-825-d3-8-reserved-20261103-1"
 			]
 		}
 	],
@@ -86,23 +96,53 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 4b4cea2c0cb0cfea87b1e287908e271388254005eda2136bb116549893decf7a. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		},
+		{
+			"id": "perceuse-top-cat-300d36m-825-d3-8-reserved-20261103-1",
+			"sourceUrl": "https://www.intlairtool.com/content/catalogs-page-pdfs/Top-Cat-Air-Tools.pdf#page=70",
+			"sourceLabel": "Top Cat : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 4b4cea2c0cb0cfea87b1e287908e271388254005eda2136bb116549893decf7a. La 300D36M; 825; D3/8 est la perceuse droite à réduction 36:1, 825 tr/min et mandrin 3/8 pouce. La version MK ajoute le levier de sécurité ; la 300D3M est à réduction 3:1 et 8 250 tr/min. Les codes restent associés aux lignes réellement imprimées. Le plafond d’alimentation 6,2 bar ne qualifie pas la pression de mesure du débit maximal."
+		},
+		{
+			"id": "perceuse-top-cat-300d36m-825-d3-8-reserved-20261103-1-2",
+			"sourceUrl": "https://www.intlairtool.com/content/catalogs-page-pdfs/Top-Cat-Air-Tools.pdf#page=7",
+			"sourceLabel": "Top Cat : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 4b4cea2c0cb0cfea87b1e287908e271388254005eda2136bb116549893decf7a. La 300D36M; 825; D3/8 est la perceuse droite à réduction 36:1, 825 tr/min et mandrin 3/8 pouce. La version MK ajoute le levier de sécurité ; la 300D3M est à réduction 3:1 et 8 250 tr/min. Les codes restent associés aux lignes réellement imprimées. Le plafond d’alimentation 6,2 bar ne qualifie pas la pression de mesure du débit maximal."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
 			"documented-20260930-topcat-issued"
 		],
-		"airflowLpm": [
-			"documented-20260930-topcat-issued"
-		],
 		"workingPressureBar": [
-			"documented-20260930-topcat-issued"
+			"perceuse-top-cat-300d36m-825-d3-8-reserved-20261103-1"
+		],
+		"demandModel": [
+			"perceuse-top-cat-300d36m-825-d3-8-reserved-20261103-1"
+		],
+		"demandExplanation": [
+			"perceuse-top-cat-300d36m-825-d3-8-reserved-20261103-1"
+		],
+		"editorial": [
+			"perceuse-top-cat-300d36m-825-d3-8-reserved-20261103-1"
+		],
+		"specifications": [
+			"perceuse-top-cat-300d36m-825-d3-8-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"consommation maximale ; aucune conversion en consommation en charge n’est effectuée.",
 		"Pression publiée en bar : 6.2."
-	]
+	],
+	"demandExplanation": "Maximum de débit déclaré, pression de mesure non explicitement appariée. Le maximum de pression d’alimentation reste une limite distincte."
 };
 
 export default product;

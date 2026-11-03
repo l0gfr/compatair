@@ -22,7 +22,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 966.667
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "oil",
 	"powerKw": 7.5,
 	"confidence": "B",
@@ -35,68 +34,52 @@ const product: CompressorInput = {
 	},
 	"specifications": [
 		{
-			"label": "Configuration constructeur",
-			"value": "Groupe sur socle sans réservoir de stockage intégré",
+			"label": "Régulation",
+			"value": "Allegretto 7, vitesse variable",
 			"evidenceIds": [
-				"october3d-alup-pdf-02-p7"
+				"alup-allegretto-7-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Pression maximale de fonctionnement",
-			"value": "10 bar relatifs",
+			"label": "FAD à 9,5 bar",
+			"value": "58 m³/h ; colonne arrondie 966 L/min",
 			"evidenceIds": [
-				"october3d-alup-pdf-02-p7"
+				"alup-allegretto-7-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Air livré à 9,5 bar",
-			"value": "966,667 L/min",
+			"label": "Puissance",
+			"value": "7,5 kW",
 			"evidenceIds": [
-				"october3d-alup-pdf-02-p7"
+				"alup-allegretto-7-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Cuve de stockage",
-			"value": "0 L",
+			"label": "Masse au sol",
+			"value": "140 kg",
 			"evidenceIds": [
-				"october3d-alup-pdf-02-p7"
+				"alup-allegretto-7-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Cycle de service déclaré",
-			"value": "Service continu déclaré sous les conditions constructeur",
+			"label": "Mesure",
+			"value": "ISO 1217 annexe E",
 			"evidenceIds": [
-				"october3d-alup-pdf-02-p2"
-			]
-		},
-		{
-			"label": "Alimentation publiée",
-			"value": "Alimentation non précisée dans les extraits retenus",
-			"evidenceIds": [
-				"october3d-alup-pdf-02-p7"
-			]
-		},
-		{
-			"label": "Fréquence retenue",
-			"value": "non précisée",
-			"evidenceIds": [
-				"october3d-alup-pdf-02-p7"
+				"alup-allegretto-7-reserved-20261103-1"
 			]
 		}
 	],
 	"editorial": {
-		"overview": "ALUP Allegretto 7. 966,667 L/min à 9,5 bar. Groupe sur socle sans réservoir de stockage intégré.",
+		"overview": "ALUP Allegretto 7. La Allegretto 7 sur socle pèse 140 kg ; les versions 200 L et 200 L avec sécheur pèsent 195 et 225 kg. La Allegretto 5 donne 45,4 m³/h à 9,5 bar contre 58 ici. Le service continu de l’élément de compression ne documente pas un cycle numérique du groupe complet.",
 		"verifiedFacts": [
-			"Air livré rattaché à une pression et aux unités originales du constructeur.",
-			"Cuve de stockage documentée : 0 L.",
-			"Pression maximale de fonctionnement publiée : 10 bar."
+			"Régulation : Allegretto 7, vitesse variable.",
+			"FAD à 9,5 bar : 58 m³/h ; colonne arrondie 966 L/min.",
+			"Puissance : 7,5 kW.",
+			"Masse au sol : 140 kg.",
+			"Mesure : ISO 1217 annexe E."
 		],
 		"limitations": [
-			"La pression FAD et le maximum de la version sont conservés séparément.",
-			"Version sur socle retenue ; réservoir externe exclu.",
-			"Fréquence non publiée dans la fiche retenue ; aucune transposition des performances à 50 Hz.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"Taux de marche du groupe complet non établi ; la déclaration relative à l’élément de compression ne devient pas un taux de 100 %."
 		]
 	},
 	"evidence": [
@@ -129,6 +112,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 f1bacd0d7a6c5e66d6a8137febef22fe654b4ed1679b2c90f1492999931a453b de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "alup-allegretto-7-reserved-20261103-1",
+			"sourceUrl": "https://www.alup.com/content/dam/brands/Alup/Product%20Portfolio/Screw%20Compressors/allegretto-2023/leaflet/Alup-Allegretto%202-7%20Sonetto%203-9-Sales%20leaflet-6999640532-EN.pdf#page=7",
+			"sourceLabel": "ALUP : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 f1bacd0d7a6c5e66d6a8137febef22fe654b4ed1679b2c90f1492999931a453b. La Allegretto 7 sur socle pèse 140 kg ; les versions 200 L et 200 L avec sécheur pèsent 195 et 225 kg. La Allegretto 5 donne 45,4 m³/h à 9,5 bar contre 58 ici. Le service continu de l’élément de compression ne documente pas un cycle numérique du groupe complet."
 		}
 	],
 	"fieldSources": {
@@ -138,9 +131,6 @@ const product: CompressorInput = {
 		"oilType": [
 			"october3d-alup-pdf-02-p1"
 		],
-		"dutyCycle": [
-			"october3d-alup-pdf-02-p2"
-		],
 		"maxPressureBar": [
 			"october3d-alup-pdf-02-p7"
 		],
@@ -149,11 +139,21 @@ const product: CompressorInput = {
 		],
 		"powerKw": [
 			"october3d-alup-pdf-02-p7"
+		],
+		"weightKg": [
+			"alup-allegretto-7-reserved-20261103-1"
+		],
+		"editorial": [
+			"alup-allegretto-7-reserved-20261103-1"
+		],
+		"specifications": [
+			"alup-allegretto-7-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Pression FAD, plage de fonctionnement et pression de soupape restent distinctes. ISO 1217 n’est pas ajoutée à une source qui ne la revendique pas."
-	]
+	],
+	"weightKg": 140
 };
 
 export default product;

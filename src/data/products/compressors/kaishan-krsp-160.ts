@@ -35,10 +35,18 @@ const product: CompressorInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
   },
   "editorial": {
-    "overview": "Kaishan KRSP-160. 29 350 L/min déclarés à 8 bar. Configuration constructeur : KRSP-160-8.",
+    "overview": "Kaishan KRSP-160. La ligne KRSP-110-8 donne21 m³/min et 3 380 kg, contre 29,35 m³/min et 6 000 kg pourKRSP-160-8. La note indique que la version VSD est plus lourde : la masse de cette ligne à vitesse fixe ne lui est pas attribuée. La tenue continue demeure indéterminée sans taux de marche.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 8,5 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 29 350 L/min déclarés à 8 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 29 350 L/min déclarés à 8 bar.",
+      "Configuration complète : KRSP-160-8.",
+      "Fréquence : 50 Hz.",
+      "Capacité à pleine charge à8 bar : 29,35 m³/min.",
+      "Pression maximale publiée séparément : 8,5 bar.",
+      "Puissance publiée : 160 kW.",
+      "Masse, version à vitesse fixe : 6000 kg.",
+      "Dimensions L×W×H : 3 565 × 1 915 × 2 320 mm.",
+      "Conditions de référence : ISO 1217 édition3 annexe C:1996 ; entrée1 bar absolu, air ambiant et refroidissement20 °C."
     ],
     "limitations": [
       "Brochure officielle Kaishan Australie, 50 Hz. Une seule identité par modèle KRSP : les variantes de pression 8/10/13 ne sont pas additionnées. Point de capacité à pleine charge 8 bar, distinct du maximum 8,5 bar. Cuve et cycle de service non publiés.",
@@ -89,6 +97,62 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october5-kaishan-krsp-p5"
       ]
+    },
+    {
+      "label": "Configuration complète",
+      "value": "KRSP-160-8",
+      "evidenceIds": [
+        "kaishan-krsp-160-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Fréquence",
+      "value": "50 Hz",
+      "evidenceIds": [
+        "kaishan-krsp-160-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Capacité à pleine charge à8 bar",
+      "value": "29,35 m³/min",
+      "evidenceIds": [
+        "kaishan-krsp-160-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Pression maximale publiée séparément",
+      "value": "8,5 bar",
+      "evidenceIds": [
+        "kaishan-krsp-160-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Puissance publiée",
+      "value": "160 kW",
+      "evidenceIds": [
+        "kaishan-krsp-160-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Masse, version à vitesse fixe",
+      "value": "6000 kg",
+      "evidenceIds": [
+        "kaishan-krsp-160-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Dimensions L×W×H",
+      "value": "3 565 × 1 915 × 2 320 mm",
+      "evidenceIds": [
+        "kaishan-krsp-160-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Conditions de référence",
+      "value": "ISO 1217 édition3 annexe C:1996 ; entrée1 bar absolu, air ambiant et refroidissement20 °C",
+      "evidenceIds": [
+        "kaishan-krsp-160-reserved-20261103-1"
+      ]
     }
   ],
   "evidence": [
@@ -101,6 +165,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-05",
       "confidence": "B",
       "notes": "SHA-256 e6c541d4660dda7212e2455f09b4368e93fedc81fa6b701264b32db0f86dac60 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "kaishan-krsp-160-reserved-20261103-1",
+      "sourceUrl": "https://www.kaishan.com.au/wp-content/uploads/2024/07/KRSP-2023-Digital.pdf#page=5",
+      "sourceLabel": "Kaishan : revue factuelle du 3 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-03",
+      "confidence": "B",
+      "notes": "GET complet HTTP200 SHA-256 e6c541d4660dda7212e2455f09b4368e93fedc81fa6b701264b32db0f86dac60. La ligne KRSP-110-8 donne21 m³/min et 3 380 kg, contre 29,35 m³/min et 6 000 kg pourKRSP-160-8. La note indique que la version VSD est plus lourde : la masse de cette ligne à vitesse fixe ne lui est pas attribuée. La tenue continue demeure indéterminée sans taux de marche."
     }
   ],
   "fieldSources": {
@@ -114,14 +188,24 @@ const product: CompressorInput = {
       "october5-kaishan-krsp-p5"
     ],
     "powerKw": [
-      "october5-kaishan-krsp-p5"
+      "kaishan-krsp-160-reserved-20261103-1"
+    ],
+    "weightKg": [
+      "kaishan-krsp-160-reserved-20261103-1"
+    ],
+    "editorial": [
+      "kaishan-krsp-160-reserved-20261103-1"
+    ],
+    "specifications": [
+      "kaishan-krsp-160-reserved-20261103-1"
     ]
   },
   "notes": [
     "Portée de la source : FAD-pressure-qualified.",
     "Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées.",
     "Les caractéristiques décrivent la configuration constructeur indiquée dans cette fiche ; les autres équipements ou alimentations doivent être vérifiés séparément."
-  ]
+  ],
+  "weightKg": 6000
 };
 
 export default product;

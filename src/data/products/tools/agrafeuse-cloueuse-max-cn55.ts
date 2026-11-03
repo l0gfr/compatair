@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "MAX CN55. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. AIR INLET SIZE : 1/4\". MAGAZINE CAPACITY : 300-350.",
+		"overview": "MAX CN55. Le CN55 est un cloueur à bobine assemblée par fil soudé de 300–350 pointes ; le CN550S accepte aussi un assemblage plastique et annonce d’autres capacités. La fiche donne0,032 ft³/cycle mais sans pression de mesure ; cette valeur n’est pas convertie silencieusement en débit continu. Le réglage de profondeur est indiqué absent.",
 		"verifiedFacts": [
 			"AIR INLET SIZE : 1/4\".",
 			"MAGAZINE CAPACITY : 300-350.",
@@ -39,7 +39,11 @@ const product: ToolProfileInput = {
 			"MINIMUM FASTENER SIZE : 1\".",
 			"MAXIMUM FASTENER SIZE : 2-1/4\".",
 			"MINIMUM NAIL DIAMETER : .083\".",
-			"MAXIMUM NAIL DIAMETER : .092\"."
+			"MAXIMUM NAIL DIAMETER : .092\".",
+			"Pointes : Bobine15°, assemblage fil soudé, 1–2¼ pouces.",
+			"Magasin : 300–350 pointes.",
+			"Consommation par cycle publiée : 0,032 ft³/cycle.",
+			"Pression de service : 70–120 psi."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -123,6 +127,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-max-pdp-34-p1"
 			]
+		},
+		{
+			"label": "Pointes",
+			"value": "Bobine15°, assemblage fil soudé, 1–2¼ pouces",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-max-cn55-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Magasin",
+			"value": "300–350 pointes",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-max-cn55-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation par cycle publiée",
+			"value": "0,032 ft³/cycle",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-max-cn55-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression de service",
+			"value": "70–120 psi",
+			"evidenceIds": [
+				"agrafeuse-cloueuse-max-cn55-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -135,6 +167,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : c09fc020c711f4154ea7e3666ff06caa0eb0bfb7dee240626288920dca29bd99. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "agrafeuse-cloueuse-max-cn55-reserved-20261103-1",
+			"sourceUrl": "https://www.maxusacorp.com/nailers_compressors/products/cn55/",
+			"sourceLabel": "MAX : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 87482e785eb68eaae0aa2dae2aee44ae539b06bc9d36bd68558ddb5dfea38567. Le CN55 est un cloueur à bobine assemblée par fil soudé de 300–350 pointes ; le CN550S accepte aussi un assemblage plastique et annonce d’autres capacités. La fiche donne0,032 ft³/cycle mais sans pression de mesure ; cette valeur n’est pas convertie silencieusement en débit continu. Le réglage de profondeur est indiqué absent."
 		}
 	],
 	"fieldSources": {
@@ -146,6 +188,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-max-pdp-34-p1"
+		],
+		"editorial": [
+			"agrafeuse-cloueuse-max-cn55-reserved-20261103-1"
+		],
+		"specifications": [
+			"agrafeuse-cloueuse-max-cn55-reserved-20261103-1"
 		]
 	},
 	"notes": [

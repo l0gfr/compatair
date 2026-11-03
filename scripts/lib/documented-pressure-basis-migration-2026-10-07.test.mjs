@@ -1,3 +1,4 @@
+const cardsNovember3 = new Map(JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-11-03-reserved.json', import.meta.url))).technicalCards.map(card => [card.path, card]));
 import { beforeOctober25Review } from './reviewed-catalog-test-projection.mjs';
 import { parseCatalogProductSource } from './catalog-tooling.mjs';
 import { readFileSync } from 'node:fs';
@@ -118,7 +119,9 @@ describe('documented pressure basis migration October 7', () => {
     const product = loadProduct(expected.id);
     expect(product, expected.id).toEqual(expected);
     canonical.push([product.id, withoutBasis(beforeOctober17(beforeOctober18(beforeOctober19(beforeOctober20(beforeOctober21(beforeOctober24(beforeOctober25Review(product))))))))]);
-    const liveCardHash=digest(readFileSync(new URL(`../../public${product.image.src}`, import.meta.url))), cardNovember1=cardsNovember1.get(product.image.src);
+    const currentCardHashNovember3=digest(readFileSync(new URL(`../../public${product.image.src}`, import.meta.url))), cardNovember3=cardsNovember3.get(product.image.src);
+    if(cardNovember3)expect(currentCardHashNovember3,product.id).toBe(cardNovember3.afterSha256);
+    const liveCardHash=cardNovember3?.beforeSha256??currentCardHashNovember3, cardNovember1=cardsNovember1.get(product.image.src);
     if(cardNovember1)expect(liveCardHash,product.id).toBe(cardNovember1.afterSha256);
     const servedCardHash=cardNovember1?.beforeSha256??liveCardHash, card31=cards31.get(product.image.src);
     if(card31)expect(servedCardHash,product.id).toBe(card31.afterSha256);

@@ -31,17 +31,21 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Draper 65017. La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué. Champ fabricant : Weight : 1.8kg. Champ fabricant : Air inlet : 1/4” BSP.",
+		"overview": "Draper 65017. La 65017 est une clé à chocs 1/2 pouce à mécanisme rocking dog, 340 Nm ultimes et 1,8 kg. Les 84128 et 83964 sont des références distinctes ; leur couple et leur débit ne sont pas transposés. Les 114 L/min moyens ne décrivent pas la consommation continue en charge.",
 		"verifiedFacts": [
-			"Champ fabricant : Weight : 1.8kg.",
+			"Champ fabricant : Weight : 1.8 kg.",
 			"Champ fabricant : Air inlet : 1/4” BSP.",
-			"Champ fabricant : Average air consumption : 4.0cfm (114L/min).",
+			"Champ fabricant : Average air consumption : 4.0 cfm (114 L/min).",
 			"Champ fabricant : Free speed : 7,500 rpm.",
 			"Champ fabricant : Min hose size : 3/8” I/D.",
-			"Champ fabricant : Operating air pressure : 90psi (6.2bar).",
+			"Champ fabricant : Operating air pressure : 90 psi (6.2 bar).",
 			"Champ fabricant : Square drive : 1/2\".",
 			"Champ fabricant : Ultimate torque : 340Nm (250ft/lb).",
-			"Champ fabricant : Vibration level : 3.3m/s2."
+			"Champ fabricant : Vibration level : 3.3m/s2.",
+			"Mécanisme : Rocking dog.",
+			"Carré : 1/2 pouce.",
+			"Couple ultime : 340 Nm.",
+			"Sélecteur : Trois vitesses, réversible."
 		],
 		"limitations": [
 			"La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué.",
@@ -55,7 +59,7 @@ const product: ToolProfileInput = {
 	"specifications": [
 		{
 			"label": "Champ fabricant : Weight",
-			"value": "1.8kg",
+			"value": "1.8 kg",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-65017-html-p1"
 			]
@@ -69,7 +73,7 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Average air consumption",
-			"value": "4.0cfm (114L/min)",
+			"value": "4.0 cfm (114 L/min)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-65017-html-p1"
 			]
@@ -90,7 +94,7 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Operating air pressure",
-			"value": "90psi (6.2bar)",
+			"value": "90 psi (6.2 bar)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-65017-html-p1"
 			]
@@ -132,9 +136,37 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Portée de la pression dans la source",
-			"value": "Operating air pressure: 90psi (6.2bar)",
+			"value": "Operating air pressure: 90 psi (6.2 bar)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-65017-html-p1"
+			]
+		},
+		{
+			"label": "Mécanisme",
+			"value": "Rocking dog",
+			"evidenceIds": [
+				"cle-a-chocs-draper-65017-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Carré",
+			"value": "1/2 pouce",
+			"evidenceIds": [
+				"cle-a-chocs-draper-65017-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Couple ultime",
+			"value": "340 Nm",
+			"evidenceIds": [
+				"cle-a-chocs-draper-65017-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Sélecteur",
+			"value": "Trois vitesses, réversible",
+			"evidenceIds": [
+				"cle-a-chocs-draper-65017-reserved-20261103-1"
 			]
 		}
 	],
@@ -148,6 +180,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : ded5834bf90a19835c559c9185e36b7ae028cc690f0172c0ae23f3c4d2ac2cbf. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-chocs-draper-65017-reserved-20261103-1",
+			"sourceUrl": "https://www.drapertools.com/product/65017/air-impact-wrench-1-2-sq-dr/",
+			"sourceLabel": "Draper : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 526afeadf8a69293c1b4be02263c1a18a69cad39348ba0b2de54ff3aa902d871. La 65017 est une clé à chocs 1/2 pouce à mécanisme rocking dog, 340 Nm ultimes et 1,8 kg. Les 84128 et 83964 sont des références distinctes ; leur couple et leur débit ne sont pas transposés. Les 114 L/min moyens ne décrivent pas la consommation continue en charge."
 		}
 	],
 	"fieldSources": {
@@ -159,6 +201,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-draper-65017-html-p1"
+		],
+		"editorial": [
+			"cle-a-chocs-draper-65017-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-chocs-draper-65017-reserved-20261103-1"
 		]
 	},
 	"notes": [

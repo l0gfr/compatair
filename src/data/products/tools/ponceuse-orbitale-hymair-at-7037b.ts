@@ -33,51 +33,53 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Hymair AT-7037B. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Vitesse à vide : 15,000 rpm. Masse publiée (kg/lb) : 0.58/1.28.",
+		"overview": "Hymair AT-7037B. La AT-7037B reçoit le plateau autoagrippant 2 pouces. La AT-7037F est présentée comme meuleuse avec protecteur métallique pivotant, pas comme le même plateau de ponçage. Le texte du modèle B décrit une action orbitale sans en chiffrer l’orbite : aucun diamètre d’orbite n’est inventé. Les 5,25 CFM restent moyens.",
 		"verifiedFacts": [
-			"Vitesse à vide : 15,000 rpm.",
-			"Masse publiée (kg/lb) : 0.58/1.28.",
-			"Longueur × hauteur : 185x80 mm."
+			"Plateau : 2 pouces, fixation autoagrippante.",
+			"Vitesse à vide : 15 000 tr/min.",
+			"Longueur : 185 mm.",
+			"Masse : 0,58 kg.",
+			"Consommation moyenne publiée : 5,25 CFM."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Consommation moyenne publiée conservée dans les spécifications ; aucun débit maximal ni volume par action déduit.",
+			"Catalogue constructeur identifié ; configuration et disponibilité actuelles à confirmer."
 		]
 	},
 	"specifications": [
 		{
+			"label": "Plateau",
+			"value": "2 pouces, fixation autoagrippante",
+			"evidenceIds": [
+				"ponceuse-orbitale-hymair-at-7037b-reserved-20261103-1"
+			]
+		},
+		{
 			"label": "Vitesse à vide",
-			"value": "15,000 rpm",
+			"value": "15 000 tr/min",
 			"evidenceIds": [
-				"october2-tools-steed-3-p8"
+				"ponceuse-orbitale-hymair-at-7037b-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée (kg/lb)",
-			"value": "0.58/1.28",
+			"label": "Longueur",
+			"value": "185 mm",
 			"evidenceIds": [
-				"october2-tools-steed-3-p8"
+				"ponceuse-orbitale-hymair-at-7037b-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur × hauteur",
-			"value": "185x80 mm",
+			"label": "Masse",
+			"value": "0,58 kg",
 			"evidenceIds": [
-				"october2-tools-steed-3-p8"
+				"ponceuse-orbitale-hymair-at-7037b-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "WORKING PRESSURE : 6.2 Bar",
+			"label": "Consommation moyenne publiée",
+			"value": "5,25 CFM",
 			"evidenceIds": [
-				"october2-tools-steed-3-p8"
-			]
-		},
-		{
-			"label": "Consommation moyenne, hors calcul",
-			"value": "5.25 cfm",
-			"evidenceIds": [
-				"october2-tools-steed-3-p8"
+				"ponceuse-orbitale-hymair-at-7037b-reserved-20261103-1"
 			]
 		}
 	],
@@ -91,6 +93,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 074602b959f2f30ac405df0c8ab2c02739cb7ec400ee95c071217a43d1f7ab36. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-orbitale-hymair-at-7037b-reserved-20261103-1",
+			"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=aGAfKUBkhgoV&dp=GvUApKfKKUAU#page=8",
+			"sourceLabel": "Hymair : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 074602b959f2f30ac405df0c8ab2c02739cb7ec400ee95c071217a43d1f7ab36. La AT-7037B reçoit le plateau autoagrippant 2 pouces. La AT-7037F est présentée comme meuleuse avec protecteur métallique pivotant, pas comme le même plateau de ponçage. Le texte du modèle B décrit une action orbitale sans en chiffrer l’orbite : aucun diamètre d’orbite n’est inventé. Les 5,25 CFM restent moyens."
 		}
 	],
 	"fieldSources": {
@@ -102,6 +114,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-steed-3-p8"
+		],
+		"editorial": [
+			"ponceuse-orbitale-hymair-at-7037b-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-orbitale-hymair-at-7037b-reserved-20261103-1"
 		]
 	},
 	"notes": [

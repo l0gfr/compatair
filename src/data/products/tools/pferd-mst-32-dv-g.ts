@@ -9,10 +9,8 @@ const product: ToolProfileInput = {
 	"categoryId": "graveur",
 	"category": "graveur",
 	"label": "PFERD MST 32 DV G",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
 		"max": 6.3
 	},
 	"confidence": "B",
@@ -23,62 +21,60 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "PFERD MST 32 DV G, référence 80600150. Le dimensionnement utilise 30 L/min à 6,3 bar, selon les régimes publiés par le fabricant. Longueur : 162 mm. Poids net de la machine : 0.152 kg. Échappement d'air : Avant.",
+		"overview": "PFERD MST 32 DV G. La MST 32 DV G est le crayon de marquage à pointe grossière ; les versions F et M sont d’autres pointes de la même famille. Le travail sur métal, verre et plastique est décrit par le fabricant. L’ancienne demande de 30 L/min sélectionnait le débit à vide plutôt que les 20 L/min en charge. Les deux valeurs sont maintenant distinctes et restent hors calcul faute de pression de mesure explicitement appariée.",
 		"verifiedFacts": [
-			"Pression de service publiée sur cette fiche : 6.3 bar. Aucune autre pression de fonctionnement n’est déduite.",
-			"Consommation sous charge : 0.02 m³/min ; à vide : 0.03 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 30 L/min (m³/min × 1 000).",
-			"Référence fabricant : 80600150.",
+			"Pointe : Gravure grossière, version G.",
+			"Cadence : 32 000 courses/min.",
 			"Longueur : 162 mm.",
-			"Poids net de la machine : 0.152 kg.",
-			"Échappement d'air : Avant."
+			"Masse : 0,152 kg.",
+			"Consommation en charge : 0,02 m³/min (20 L/min).",
+			"Consommation à vide distincte : 0,03 m³/min (30 L/min)."
 		],
 		"limitations": [
-			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
-			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
-			"La valeur la plus élevée à vide ou en charge couvre les deux régimes documentés ; aucune moyenne de cycle n’est substituée à ces valeurs."
+			"Le débit en charge et le débit à vide sont séparés ; la pression de service ne suffit pas à établir leur pression de mesure."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression de service publiée sur cette fiche : 6.3 bar. Aucune autre pression de fonctionnement n’est déduite.",
+			"label": "Pointe",
+			"value": "Gravure grossière, version G",
 			"evidenceIds": [
-				"pferd-80600150-20260927"
+				"pferd-mst-32-dv-g-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation sous charge : 0.02 m³/min ; à vide : 0.03 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 30 L/min (m³/min × 1 000).",
+			"label": "Cadence",
+			"value": "32 000 courses/min",
 			"evidenceIds": [
-				"pferd-80600150-20260927"
+				"pferd-mst-32-dv-g-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Longueur",
 			"value": "162 mm",
 			"evidenceIds": [
-				"pferd-80600150-20260927"
+				"pferd-mst-32-dv-g-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Poids net de la machine",
-			"value": "0.152 kg",
+			"label": "Masse",
+			"value": "0,152 kg",
 			"evidenceIds": [
-				"pferd-80600150-20260927"
+				"pferd-mst-32-dv-g-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Échappement d'air",
-			"value": "Avant",
+			"label": "Consommation en charge",
+			"value": "0,02 m³/min (20 L/min)",
 			"evidenceIds": [
-				"pferd-80600150-20260927"
+				"pferd-mst-32-dv-g-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "ø intérieur flexible d'alimentation",
-			"value": "4 mm",
+			"label": "Consommation à vide distincte",
+			"value": "0,03 m³/min (30 L/min)",
 			"evidenceIds": [
-				"pferd-80600150-20260927"
+				"pferd-mst-32-dv-g-reserved-20261103-1"
 			]
 		}
 	],
@@ -91,6 +87,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation sous charge : 0.02 m³/min ; à vide : 0.03 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 30 L/min (m³/min × 1 000)."
+		},
+		{
+			"id": "pferd-mst-32-dv-g-reserved-20261103-1",
+			"sourceUrl": "https://fr.pferd.com/fr/crayon-de-marquage-pneumatique-mst-32-dv?a%5Bwidth-needle-tds%5D=G+%28grossi%C3%A8re%29",
+			"sourceLabel": "PFERD : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 34459108dc913f38e554fb1f41576be4ae25f06192c876c0d6850825d3f868f9. La MST 32 DV G est le crayon de marquage à pointe grossière ; les versions F et M sont d’autres pointes de la même famille. Le travail sur métal, verre et plastique est décrit par le fabricant. L’ancienne demande de 30 L/min sélectionnait le débit à vide plutôt que les 20 L/min en charge. Les deux valeurs sont maintenant distinctes et restent hors calcul faute de pression de mesure explicitement appariée."
 		}
 	],
 	"fieldSources": {
@@ -98,20 +104,25 @@ const product: ToolProfileInput = {
 			"pferd-80600150-20260927"
 		],
 		"workingPressureBar": [
-			"pferd-80600150-20260927"
+			"pferd-mst-32-dv-g-reserved-20261103-1"
 		],
-		"airflowLpm": [
-			"pferd-80600150-20260927"
+		"demandModel": [
+			"pferd-mst-32-dv-g-reserved-20261103-1"
+		],
+		"demandExplanation": [
+			"pferd-mst-32-dv-g-reserved-20261103-1"
+		],
+		"editorial": [
+			"pferd-mst-32-dv-g-reserved-20261103-1"
+		],
+		"specifications": [
+			"pferd-mst-32-dv-g-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 30,
-		"typical": 30,
-		"max": 30
-	}
+	"demandExplanation": "Débits documentés selon leur régime, sans pression de mesure explicitement appariée par la fiche."
 };
 
 export default product;

@@ -23,61 +23,61 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Yokota G-40EF, référence G-40EF. Le tableau fabricant publie 648 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 13000 tr/min. Masse publiée : 1,4 kg.",
+		"overview": "Yokota G-40EF. La G-40EF est le modèle 115 mm à 13 000 tr/min, 0,60 kW et 1,4 kg. La G-50EF passe à 125 mm, 12 000 tr/min et 1,5 kg, avec la même consommation. Le diamètre admissible change malgré un débit identique ; le régime des 10,8 L/s n’est pas précisé.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation publiée : 10.8 L/s, convertis en 648 L/min par multiplication par 60.",
-			"Référence fabricant : G-40EF.",
-			"Vitesse à vide publiée : 13000 tr/min.",
-			"Masse publiée : 1,4 kg.",
-			"Diamètre intérieur de flexible conseillé : 13 mm."
+			"Disque : 115 × (0,8–7) × 22,2 mm.",
+			"Broche publiée : 7/16 pouce.",
+			"Puissance : 0,60 kW.",
+			"Vitesse à vide : 13 000 tr/min.",
+			"Masse : 1,4 kg.",
+			"Consommation publiée : 10,8 L/s."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"Régime et pression de mesure ne sont pas complétés par hypothèse. Les données non dimensionnantes restent dans les spécifications.",
+			"Catalogue constructeur historique ; configuration livrée et disponibilité actuelles à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+			"label": "Disque",
+			"value": "115 × (0,8–7) × 22,2 mm",
 			"evidenceIds": [
-				"yokota-g-40ef-20260926-workingpressurebar-1"
+				"yokota-g-40ef-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation publiée : 10.8 L/s, convertis en 648 L/min par multiplication par 60.",
+			"label": "Broche publiée",
+			"value": "7/16 pouce",
 			"evidenceIds": [
-				"yokota-g-40ef-20260926"
+				"yokota-g-40ef-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse à vide publiée",
-			"value": "13000 tr/min",
+			"label": "Puissance",
+			"value": "0,60 kW",
 			"evidenceIds": [
-				"yokota-g-40ef-20260926"
+				"yokota-g-40ef-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
+			"label": "Vitesse à vide",
+			"value": "13 000 tr/min",
+			"evidenceIds": [
+				"yokota-g-40ef-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
 			"value": "1,4 kg",
 			"evidenceIds": [
-				"yokota-g-40ef-20260926"
+				"yokota-g-40ef-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre intérieur de flexible conseillé",
-			"value": "13 mm",
+			"label": "Consommation publiée",
+			"value": "10,8 L/s",
 			"evidenceIds": [
-				"yokota-g-40ef-20260926"
-			]
-		},
-		{
-			"label": "Raccord pneumatique",
-			"value": "PT 1/4\"",
-			"evidenceIds": [
-				"yokota-g-40ef-20260926"
+				"yokota-g-40ef-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "yokota-g-40ef-reserved-20261103-1",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=45",
+			"sourceLabel": "Yokota : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. La G-40EF est le modèle 115 mm à 13 000 tr/min, 0,60 kW et 1,4 kg. La G-50EF passe à 125 mm, 12 000 tr/min et 1,5 kg, avec la même consommation. Le diamètre admissible change malgré un débit identique ; le régime des 10,8 L/s n’est pas précisé."
 		}
 	],
 	"fieldSources": {
@@ -116,6 +126,15 @@ const product: ToolProfileInput = {
 		],
 		"connectorSize": [
 			"yokota-g-40ef-20260926"
+		],
+		"airflowBasis": [
+			"yokota-g-40ef-reserved-20261103-1"
+		],
+		"editorial": [
+			"yokota-g-40ef-reserved-20261103-1"
+		],
+		"specifications": [
+			"yokota-g-40ef-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -129,7 +148,8 @@ const product: ToolProfileInput = {
 	"recommendedHose": {
 		"innerDiameterMm": 13
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"airflowBasis": "unqualified"
 };
 
 export default product;

@@ -31,7 +31,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "HAZET 9012ECO. La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi. Champ fabricant : Loosening torque maximum : 1700 Nm. Champ fabricant : Manual/impact operation : For impact operation.",
+		"overview": "HAZET 9012ECO. La 9012ECO sépare couple recommandé 850 Nm, serrage maximal 1 150 Nm et desserrage maximal 1 700 Nm. La 9012EL-1 annonce 1 890 Nm au desserrage et la 9012M 1 100 Nm ; ces valeurs ne deviennent pas une même plage de travail. Les 198 L/min restent sans régime de mesure explicite.",
 		"verifiedFacts": [
 			"Champ fabricant : Loosening torque maximum : 1700 Nm.",
 			"Champ fabricant : Manual/impact operation : For impact operation.",
@@ -53,7 +53,10 @@ const product: ToolProfileInput = {
 			"Champ fabricant : Coupler plug : Nominal size 7.2 (included).",
 			"Champ fabricant : Sound power level : 102.33 db(A) Lp W.",
 			"Champ fabricant : Air requirement [l/sec] : 3.3 l/sec.",
-			"Champ fabricant : Working pressure ( bar ) : 6.3 bar."
+			"Champ fabricant : Working pressure ( bar ) : 6.3 bar.",
+			"Couple recommandé : 850 Nm.",
+			"Maximum serrage : 1 150 Nm.",
+			"Maximum desserrage : 1 700 Nm."
 		],
 		"limitations": [
 			"La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi.",
@@ -224,6 +227,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-hazet-4000896273188-html-p1"
 			]
+		},
+		{
+			"label": "Couple recommandé",
+			"value": "850 Nm",
+			"evidenceIds": [
+				"cle-a-chocs-hazet-9012eco-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Maximum serrage",
+			"value": "1 150 Nm",
+			"evidenceIds": [
+				"cle-a-chocs-hazet-9012eco-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Maximum desserrage",
+			"value": "1 700 Nm",
+			"evidenceIds": [
+				"cle-a-chocs-hazet-9012eco-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -236,6 +260,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 971f991be8a6e6d9f17f9a5bde12bb5662ef5da38c9c539c637dd78bcc4b220a. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-chocs-hazet-9012eco-reserved-20261103-1",
+			"sourceUrl": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/impact-driver/product/ean-4000896273188",
+			"sourceLabel": "HAZET : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 84de247ede0fcfb5b0102ec3ac827a8736021214cc58a63b3e95c2c86f0057e0. La 9012ECO sépare couple recommandé 850 Nm, serrage maximal 1 150 Nm et desserrage maximal 1 700 Nm. La 9012EL-1 annonce 1 890 Nm au desserrage et la 9012M 1 100 Nm ; ces valeurs ne deviennent pas une même plage de travail. Les 198 L/min restent sans régime de mesure explicite."
 		}
 	],
 	"fieldSources": {
@@ -247,6 +281,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-hazet-4000896273188-html-p1"
+		],
+		"editorial": [
+			"cle-a-chocs-hazet-9012eco-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-chocs-hazet-9012eco-reserved-20261103-1"
 		]
 	},
 	"notes": [

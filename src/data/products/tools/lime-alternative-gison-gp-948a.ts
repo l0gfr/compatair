@@ -38,59 +38,52 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-948A. Consommation de régime non précisé : 210 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 0.57 kg. Longueur : 202 mm.",
+		"overview": "GISON GP-948A. La GP-948A est la lime de course 1 mm à 21 000 coups/min ; la GP-948B donne 5 mm et 12 000 coups/min pour 0,70 kg. La GP-948 sans suffixe donne 10 mm et 3 700 coups/min. La course et la cadence orientent le choix, sans déduire une capacité matière absente de la table.",
 		"verifiedFacts": [
-			"Masse : 0.57 kg.",
+			"Type : Lime alternative.",
+			"Course : 1 mm.",
+			"Cadence : 21 000 coups/min.",
 			"Longueur : 202 mm.",
-			"Diamètre de flexible publié : 6.5 mm.",
-			"Référence constructeur : GP-948A."
+			"Masse : 0,57 kg."
 		],
 		"limitations": [
-			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
-			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+			"Recommandation de service 90 psi (6,3 kg/cm² dans le catalogue), distincte d’un point de mesure de consommation démontré. Régime non qualifié ; pas de conclusion de dimensionnement."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse",
-			"value": "0.57 kg",
+			"label": "Type",
+			"value": "Lime alternative",
 			"evidenceIds": [
-				"october-b-gison-tools-p76"
+				"lime-alternative-gison-gp-948a-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Course",
+			"value": "1 mm",
+			"evidenceIds": [
+				"lime-alternative-gison-gp-948a-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cadence",
+			"value": "21 000 coups/min",
+			"evidenceIds": [
+				"lime-alternative-gison-gp-948a-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Longueur",
 			"value": "202 mm",
 			"evidenceIds": [
-				"october-b-gison-tools-p76"
+				"lime-alternative-gison-gp-948a-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre de flexible publié",
-			"value": "6.5 mm",
+			"label": "Masse",
+			"value": "0,57 kg",
 			"evidenceIds": [
-				"october-b-gison-tools-p76"
-			]
-		},
-		{
-			"label": "Référence constructeur",
-			"value": "GP-948A",
-			"evidenceIds": [
-				"october-b-gison-tools-p76"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "Recommended Air Pressure 90 psi (6.3 kg/cm2)",
-			"evidenceIds": [
-				"october-b-gison-tools-p76"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "GISON, catalogue pneumatique 2018–2019, page PDF 76",
-			"evidenceIds": [
-				"october-b-gison-tools-p76"
+				"lime-alternative-gison-gp-948a-reserved-20261103-1"
 			]
 		}
 	],
@@ -104,6 +97,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "lime-alternative-gison-gp-948a-reserved-20261103-1",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=76",
+			"sourceLabel": "GISON : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. La GP-948A est la lime de course 1 mm à 21 000 coups/min ; la GP-948B donne 5 mm et 12 000 coups/min pour 0,70 kg. La GP-948 sans suffixe donne 10 mm et 3 700 coups/min. La course et la cadence orientent le choix, sans déduire une capacité matière absente de la table."
 		}
 	],
 	"fieldSources": {
@@ -118,6 +121,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-b-gison-tools-p76"
+		],
+		"editorial": [
+			"lime-alternative-gison-gp-948a-reserved-20261103-1"
+		],
+		"specifications": [
+			"lime-alternative-gison-gp-948a-reserved-20261103-1"
 		]
 	},
 	"notes": [

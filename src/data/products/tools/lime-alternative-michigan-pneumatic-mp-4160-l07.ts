@@ -29,10 +29,13 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Michigan Pneumatic MP-4160-L07. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 0.44 lbs. Ligne technique constructeur : MP-4160-L07 0.7\" 19,000 spm 7.3\" 0.44 lbs 1/4\" 3/8\" 1.6 cfm.",
+		"overview": "Michigan Pneumatic MP-4160-L07. Le MP-4160-L07 est l’outil de rodage à mouvement linéaire pour rainures, distinct du MP-4160-S07 à mouvement oscillant. La table donne respectivement 19 000 et 18 000 courses/min, course imprimée 0,7 pouce conservée sans correction supposée. La moyenne 1,6 CFM n’est pas une consommation de pointe.",
 		"verifiedFacts": [
 			"Masse publiée : 0.44 lbs.",
-			"Ligne technique constructeur : MP-4160-L07 0.7\" 19,000 spm 7.3\" 0.44 lbs 1/4\" 3/8\" 1.6 cfm."
+			"Ligne technique constructeur : MP-4160-L07 0.7\" 19,000 spm 7.3\" 0.44 lbs 1/4\" 3/8\" 1.6 cfm.",
+			"Mouvement : Linéaire.",
+			"Course publiée : 0,7 pouce.",
+			"Cadence à vide : 19 000 courses/min."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -68,6 +71,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-michigan-14-pdf-p3"
 			]
+		},
+		{
+			"label": "Mouvement",
+			"value": "Linéaire",
+			"evidenceIds": [
+				"lime-alternative-michigan-pneumatic-mp-4160-l07-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Course publiée",
+			"value": "0,7 pouce",
+			"evidenceIds": [
+				"lime-alternative-michigan-pneumatic-mp-4160-l07-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cadence à vide",
+			"value": "19 000 courses/min",
+			"evidenceIds": [
+				"lime-alternative-michigan-pneumatic-mp-4160-l07-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -80,6 +104,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 79cb397c5a27dbf6fdb30b158a554e1e6e03c232011a7fe84cfdec1610e55bb2. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "lime-alternative-michigan-pneumatic-mp-4160-l07-reserved-20261103-1",
+			"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/14-Specialty%20Tools_v2.pdf#page=3",
+			"sourceLabel": "Michigan Pneumatic : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 79cb397c5a27dbf6fdb30b158a554e1e6e03c232011a7fe84cfdec1610e55bb2. Le MP-4160-L07 est l’outil de rodage à mouvement linéaire pour rainures, distinct du MP-4160-S07 à mouvement oscillant. La table donne respectivement 19 000 et 18 000 courses/min, course imprimée 0,7 pouce conservée sans correction supposée. La moyenne 1,6 CFM n’est pas une consommation de pointe."
 		}
 	],
 	"fieldSources": {
@@ -91,6 +125,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-michigan-14-pdf-p3"
+		],
+		"editorial": [
+			"lime-alternative-michigan-pneumatic-mp-4160-l07-reserved-20261103-1"
+		],
+		"specifications": [
+			"lime-alternative-michigan-pneumatic-mp-4160-l07-reserved-20261103-1"
 		]
 	},
 	"notes": [

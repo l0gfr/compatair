@@ -23,61 +23,61 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Toku TAG-40FLH, référence TAG-40FLH. Le tableau fabricant publie 648 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 13000 tr/min. Masse publiée : 1,7 kg.",
+		"overview": "Toku TAG-40FLH. La TAG-40FLH est la version 100 mm à broche M8 et puissance 0,55 kW. Les TAG-45MLH et TAG-50MLH utilisent M14 × 2, pour 115 et 125 mm, et 0,67 kW. Le même débit publié ne rend pas leurs disques interchangeables. Le régime de consommation reste non précisé.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation publiée : 10.8 L/s, convertis en 648 L/min par multiplication par 60.",
-			"Référence fabricant : TAG-40FLH.",
-			"Vitesse à vide publiée : 13000 tr/min.",
-			"Masse publiée : 1,7 kg.",
-			"Diamètre intérieur de flexible conseillé : 10 mm."
+			"Disque : 100 × (0,8–6) × 16 mm.",
+			"Broche : M8.",
+			"Puissance : 0,55 kW.",
+			"Vitesse à vide : 13 000 tr/min.",
+			"Masse : 1,7 kg.",
+			"Consommation publiée : 10,8 L/s."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"Régime et pression de mesure ne sont pas complétés par hypothèse. Les données non dimensionnantes restent dans les spécifications.",
+			"Catalogue constructeur historique ; configuration livrée et disponibilité actuelles à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+			"label": "Disque",
+			"value": "100 × (0,8–6) × 16 mm",
 			"evidenceIds": [
-				"toku-tag-40flh-20260926-workingpressurebar-1"
+				"toku-tag-40flh-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation publiée : 10.8 L/s, convertis en 648 L/min par multiplication par 60.",
+			"label": "Broche",
+			"value": "M8",
 			"evidenceIds": [
-				"toku-tag-40flh-20260926"
+				"toku-tag-40flh-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse à vide publiée",
-			"value": "13000 tr/min",
+			"label": "Puissance",
+			"value": "0,55 kW",
 			"evidenceIds": [
-				"toku-tag-40flh-20260926"
+				"toku-tag-40flh-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
+			"label": "Vitesse à vide",
+			"value": "13 000 tr/min",
+			"evidenceIds": [
+				"toku-tag-40flh-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
 			"value": "1,7 kg",
 			"evidenceIds": [
-				"toku-tag-40flh-20260926"
+				"toku-tag-40flh-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre intérieur de flexible conseillé",
-			"value": "10 mm",
+			"label": "Consommation publiée",
+			"value": "10,8 L/s",
 			"evidenceIds": [
-				"toku-tag-40flh-20260926"
-			]
-		},
-		{
-			"label": "Raccord pneumatique",
-			"value": "PT 3/8\"",
-			"evidenceIds": [
-				"toku-tag-40flh-20260926"
+				"toku-tag-40flh-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "toku-tag-40flh-reserved-20261103-1",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=45",
+			"sourceLabel": "Toku : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. La TAG-40FLH est la version 100 mm à broche M8 et puissance 0,55 kW. Les TAG-45MLH et TAG-50MLH utilisent M14 × 2, pour 115 et 125 mm, et 0,67 kW. Le même débit publié ne rend pas leurs disques interchangeables. Le régime de consommation reste non précisé."
 		}
 	],
 	"fieldSources": {
@@ -116,6 +126,15 @@ const product: ToolProfileInput = {
 		],
 		"connectorSize": [
 			"toku-tag-40flh-20260926"
+		],
+		"airflowBasis": [
+			"toku-tag-40flh-reserved-20261103-1"
+		],
+		"editorial": [
+			"toku-tag-40flh-reserved-20261103-1"
+		],
+		"specifications": [
+			"toku-tag-40flh-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -129,7 +148,8 @@ const product: ToolProfileInput = {
 	"recommendedHose": {
 		"innerDiameterMm": 10
 	},
-	"connectorSize": "PT 3/8\""
+	"connectorSize": "PT 3/8\"",
+	"airflowBasis": "unqualified"
 };
 
 export default product;

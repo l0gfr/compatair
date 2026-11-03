@@ -34,10 +34,15 @@ const product: CompressorInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
   },
   "editorial": {
-    "overview": "SWAN SDS-310. 730 L/min déclarés à 7,845 bar. Configuration constructeur : Groupe complet SDS-310 ; configuration de la table constructeur.",
+    "overview": "SWAN SDS-310. La SDS-310 simple donne 730 L/min à 8 kgf/cm² et pèse 305 kg. La SDT-310 double donne 1 460 L/min, pèse 615 kg et mesure 1 910 × 710 × 1 330 mm. La ligne SDS-310 n’indique pas de cuve ; aucun volume de la GP-510 ou d’une version double ne lui est attribué.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 7,845 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 730 L/min déclarés à 7,845 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 730 L/min déclarés à 7,845 bar.",
+      "Modèle : SDS-310.",
+      "FAD à 8 kgf/cm² : 730 L/min.",
+      "Puissance : 7,5 kW / 10 HP.",
+      "Dimensions L×W×H : 880 × 710 × 1 305 mm.",
+      "Masse : 305 kg."
     ],
     "limitations": [
       "L’unité historique « kg/cm² » de la pression est transcrite comme kgf/cm² et convertie avec NIST. La pression de soupape et les réglages du pressostat ne sont pas documentés par cette table.",
@@ -92,6 +97,41 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october7-swan-oil-less-p9"
       ]
+    },
+    {
+      "label": "Modèle",
+      "value": "SDS-310",
+      "evidenceIds": [
+        "swan-sds-310-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "FAD à 8 kgf/cm²",
+      "value": "730 L/min",
+      "evidenceIds": [
+        "swan-sds-310-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Puissance",
+      "value": "7,5 kW / 10 HP",
+      "evidenceIds": [
+        "swan-sds-310-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Dimensions L×W×H",
+      "value": "880 × 710 × 1 305 mm",
+      "evidenceIds": [
+        "swan-sds-310-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Masse",
+      "value": "305 kg",
+      "evidenceIds": [
+        "swan-sds-310-reserved-20261103-1"
+      ]
     }
   ],
   "evidence": [
@@ -114,6 +154,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-07",
       "confidence": "B",
       "notes": "SHA-256 99092c3ae6a5030fdb6901f601cb87d99c07d62f31a164a4a0b6786847c5cc6c de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "swan-sds-310-reserved-20261103-1",
+      "sourceUrl": "https://www.swan-aircompressor.com/en/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZzBQIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f21f3a426d479c9a27849c7f499ea9b940b557b7/Oil-less%20Compressor%20Series.pdf?disposition=preview#page=9",
+      "sourceLabel": "SWAN : revue factuelle du 3 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-03",
+      "confidence": "B",
+      "notes": "GET complet HTTP200 SHA-256 ba27dceb7bc711898ad3b2f485fdb7734a1487fb2494d253ac319020abe9821b. La SDS-310 simple donne 730 L/min à 8 kgf/cm² et pèse 305 kg. La SDT-310 double donne 1 460 L/min, pèse 615 kg et mesure 1 910 × 710 × 1 330 mm. La ligne SDS-310 n’indique pas de cuve ; aucun volume de la GP-510 ou d’une version double ne lui est attribué."
     }
   ],
   "fieldSources": {
@@ -132,7 +182,16 @@ const product: CompressorInput = {
       "october7-nist-conversions-p1"
     ],
     "powerKw": [
-      "october7-swan-oil-less-p9"
+      "swan-sds-310-reserved-20261103-1"
+    ],
+    "weightKg": [
+      "swan-sds-310-reserved-20261103-1"
+    ],
+    "editorial": [
+      "swan-sds-310-reserved-20261103-1"
+    ],
+    "specifications": [
+      "swan-sds-310-reserved-20261103-1"
     ]
   },
   "notes": [
@@ -140,7 +199,8 @@ const product: CompressorInput = {
     "Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées.",
     "Les caractéristiques décrivent la configuration constructeur indiquée dans cette fiche ; les autres équipements ou alimentations doivent être vérifiés séparément."
   ],
-  "maxPressureBasis": "selected-working-pressure-ceiling"
+  "maxPressureBasis": "selected-working-pressure-ceiling",
+  "weightKg": 305
 };
 
 export default product;

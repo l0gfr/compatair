@@ -39,53 +39,68 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-BS110B. Consommation publiée, régime non précisé : 480 L/min à 6,2 bar. Consommation dans les unités du tableau : 480 L/min ; 17 cfm. Configuration complète publiée : ST-BS110B.",
+		"overview": "Sumake ST-BS110B. La ST-BS110B utilise une bande 10 × 330 mm. La ST-BS110A utilise 6 × 330 mm, la 110C utilise 13 × 610 mm avec un corps de 455 mm et une masse 0,97 kg. Les bandes ne sont pas interchangeables malgré la même consommation publiée 480 L/min.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 49.",
-			"Consommation dans les unités du tableau : 480 L/min ; 17 cfm.",
-			"Configuration complète publiée : ST-BS110B.",
-			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé."
+			"Bande : 10 × 330 mm.",
+			"Vitesse à vide : 17 000 tr/min.",
+			"Longueur : 320 mm.",
+			"Masse : 0,8 kg.",
+			"Équipement annoncé : 3 bandes grains 80/100/120.",
+			"Consommation documentaire : 480 L/min, régime non précisé.",
+			"Pression de service recommandée : 6,2 bar ; pression de mesure de la consommation non démontrée."
 		],
 		"limitations": [
-			"Le régime de consommation n’est pas indiqué. Aucun débit maximal ou en charge n’est inventé ; le verdict reste insufficient_data.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"La recommandation de service 6,2 bar ne prouve pas la pression de mesure de la consommation. Le régime reste non qualifié et le calcul indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 49",
+			"label": "Bande",
+			"value": "10 × 330 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p49"
+				"ponceuse-bande-sumake-st-bs110b-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation dans les unités du tableau",
-			"value": "480 L/min ; 17 cfm",
+			"label": "Vitesse à vide",
+			"value": "17 000 tr/min",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p49"
+				"ponceuse-bande-sumake-st-bs110b-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Configuration complète publiée",
-			"value": "ST-BS110B",
+			"label": "Longueur",
+			"value": "320 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p49"
+				"ponceuse-bande-sumake-st-bs110b-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Régime de consommation",
-			"value": "Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé",
+			"label": "Masse",
+			"value": "0,8 kg",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p49"
+				"ponceuse-bande-sumake-st-bs110b-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Ligne technique originale du modèle",
-			"value": "ST-BS110B 10x330 3/8x13 17,000 320 12-3/5 1/4’’ 3/8’’ 480 17 0.8 1.8 10PCS/Ctn/11/1.8'",
+			"label": "Équipement annoncé",
+			"value": "3 bandes grains 80/100/120",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p49"
+				"ponceuse-bande-sumake-st-bs110b-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "480 L/min, régime non précisé",
+			"evidenceIds": [
+				"ponceuse-bande-sumake-st-bs110b-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression de service recommandée",
+			"value": "6,2 bar ; pression de mesure de la consommation non démontrée",
+			"evidenceIds": [
+				"ponceuse-bande-sumake-st-bs110b-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +114,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "ponceuse-bande-sumake-st-bs110b-reserved-20261103-1",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf#page=49",
+			"sourceLabel": "Sumake : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. La ST-BS110B utilise une bande 10 × 330 mm. La ST-BS110A utilise 6 × 330 mm, la 110C utilise 13 × 610 mm avec un corps de 455 mm et une masse 0,97 kg. Les bandes ne sont pas interchangeables malgré la même consommation publiée 480 L/min."
 		}
 	],
 	"fieldSources": {
@@ -113,6 +138,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-d-sumake-na-2024-p49"
+		],
+		"editorial": [
+			"ponceuse-bande-sumake-st-bs110b-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-bande-sumake-st-bs110b-reserved-20261103-1"
 		]
 	},
 	"notes": [

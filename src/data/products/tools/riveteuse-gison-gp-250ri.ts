@@ -9,14 +9,12 @@ const product: ToolProfileInput = {
 	"brand": "GISON",
 	"model": "GP-250RI",
 	"mpn": "GP-250RI",
-	"demandModel": "per-action",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 6.205,
 		"typical": 6.205,
 		"max": 6.205
 	},
-	"airPerActionLiters": 2,
-	"actionLabel": "cycle de pose",
 	"confidence": "B",
 	"image": {
 		"src": "/images/products/riveteuse-gison-gp-250ri.webp",
@@ -34,51 +32,68 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-250RI. Volume déclaré : 2 L par cycle, pression recommandée 6,205 bar. La cadence doit être renseignée pour dimensionner. Masse : 2.4 kg. Longueur : 278 mm.",
+		"overview": "GISON GP-250RI. La GP-250RI est la sertisseuse d’écrous à filetages impériaux ; la GP-250RM est la version métrique M3 à M12. La GP-101RN est semi-automatique, 1,55 kg et 1,5 L/cycle, contre automatique, 2,4 kg et 2 L/cycle pour cette paire. La pression 90 psi est recommandée, pas explicitement appariée à la mesure du volume par cycle.",
 		"verifiedFacts": [
-			"Masse : 2.4 kg.",
+			"Type : Sertisseuse hydraulique d’écrous impériaux, automatique.",
+			"Filetages optionnels : 6/32, 8/32, 10/24, 10/32, 1/4-20, 5/16-18, 3/8-16, 1/2-13.",
+			"Matières de l’écrou : Aluminium et acier.",
+			"Traction publiée : 2 179 kgf.",
 			"Longueur : 278 mm.",
-			"Référence constructeur : GP-250RI."
+			"Masse : 2,4 kg.",
+			"Consommation documentaire : 2,0 L/cycle, pression de mesure non explicitée."
 		],
 		"limitations": [
-			"Le volume par cycle permet un calcul à cadence déclarée ; aucun nombre de cycles par minute supposé.",
-			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+			"Recommandation de service 90 psi (6,3 kg/cm² dans le catalogue), distincte d’un point de mesure de consommation démontré. Régime non qualifié ; pas de conclusion de dimensionnement."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse",
-			"value": "2.4 kg",
+			"label": "Type",
+			"value": "Sertisseuse hydraulique d’écrous impériaux, automatique",
 			"evidenceIds": [
-				"october-b-gison-tools-p70"
+				"riveteuse-gison-gp-250ri-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Filetages optionnels",
+			"value": "6/32, 8/32, 10/24, 10/32, 1/4-20, 5/16-18, 3/8-16, 1/2-13",
+			"evidenceIds": [
+				"riveteuse-gison-gp-250ri-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Matières de l’écrou",
+			"value": "Aluminium et acier",
+			"evidenceIds": [
+				"riveteuse-gison-gp-250ri-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Traction publiée",
+			"value": "2 179 kgf",
+			"evidenceIds": [
+				"riveteuse-gison-gp-250ri-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Longueur",
 			"value": "278 mm",
 			"evidenceIds": [
-				"october-b-gison-tools-p70"
+				"riveteuse-gison-gp-250ri-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Référence constructeur",
-			"value": "GP-250RI",
+			"label": "Masse",
+			"value": "2,4 kg",
 			"evidenceIds": [
-				"october-b-gison-tools-p70"
+				"riveteuse-gison-gp-250ri-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de pression originale",
-			"value": "Recommended Air Pressure 90 psi (6.3 kg/cm2)",
+			"label": "Consommation documentaire",
+			"value": "2,0 L/cycle, pression de mesure non explicitée",
 			"evidenceIds": [
-				"october-b-gison-tools-p70"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "GISON, catalogue pneumatique 2018–2019, page PDF 70",
-			"evidenceIds": [
-				"october-b-gison-tools-p70"
+				"riveteuse-gison-gp-250ri-reserved-20261103-1"
 			]
 		}
 	],
@@ -92,6 +107,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "riveteuse-gison-gp-250ri-reserved-20261103-1",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=70",
+			"sourceLabel": "GISON : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. La GP-250RI est la sertisseuse d’écrous à filetages impériaux ; la GP-250RM est la version métrique M3 à M12. La GP-101RN est semi-automatique, 1,55 kg et 1,5 L/cycle, contre automatique, 2,4 kg et 2 L/cycle pour cette paire. La pression 90 psi est recommandée, pas explicitement appariée à la mesure du volume par cycle."
 		}
 	],
 	"fieldSources": {
@@ -101,16 +126,23 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"october-b-gison-tools-p70"
 		],
-		"airPerActionLiters": [
-			"october-b-gison-tools-p70"
+		"demandModel": [
+			"riveteuse-gison-gp-250ri-reserved-20261103-1"
 		],
-		"actionLabel": [
-			"october-b-gison-tools-p70"
+		"demandExplanation": [
+			"riveteuse-gison-gp-250ri-reserved-20261103-1"
+		],
+		"editorial": [
+			"riveteuse-gison-gp-250ri-reserved-20261103-1"
+		],
+		"specifications": [
+			"riveteuse-gison-gp-250ri-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Volume déclaré : 2 L par cycle, pression recommandée 6,205 bar. La cadence doit être renseignée pour dimensionner."
-	]
+	],
+	"demandExplanation": "Le constructeur publie 2 L/cycle avec une pression de service recommandée, sans pression de mesure explicitement appariée au volume ; demande non conclusive."
 };
 
 export default product;

@@ -29,10 +29,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "JET JNS-2060. Les caractéristiques mécaniques sont documentées ; aucune consommation n’est associée à une pression de mesure et à un régime suffisant pour le calcul. Masse publiée : 3 lbs. Ligne technique constructeur : JNS-2060 2-5/8 3/4 3000 .401 parker 5 1/4 3/8 8.4 111 5-1/4 3.",
+		"overview": "JET JNS-2060. Le JNS-2060 est un marteau à river à course moyenne 2⅝ pouces et queue 0,401 Parker, retenue à changement rapide. Le jeu de burins de remplacement présenté ensuite n’est pas ajouté au contenu livré. Les 5 CFM ne deviennent ni un volume par rivet ni une demande de pointe.",
 		"verifiedFacts": [
 			"Masse publiée : 3 lbs.",
-			"Ligne technique constructeur : JNS-2060 2-5/8 3/4 3000 .401 parker 5 1/4 3/8 8.4 111 5-1/4 3."
+			"Ligne technique constructeur : JNS-2060 2-5/8 3/4 3000 .401 parker 5 1/4 3/8 8.4 111 5-1/4 3.",
+			"Queue : 0,401 pouce Parker.",
+			"Course : 2⅝ pouces.",
+			"Alésage : 3/4 pouce.",
+			"Cadence : 3 000 coups/min."
 		],
 		"limitations": [
 			"Les caractéristiques mécaniques sont documentées ; aucune consommation n’est associée à une pression de mesure et à un régime suffisant pour le calcul.",
@@ -61,6 +65,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-jet-catalog-pdf-p73"
 			]
+		},
+		{
+			"label": "Queue",
+			"value": "0,401 pouce Parker",
+			"evidenceIds": [
+				"marteau-a-river-jet-jns-2060-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Course",
+			"value": "2⅝ pouces",
+			"evidenceIds": [
+				"marteau-a-river-jet-jns-2060-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Alésage",
+			"value": "3/4 pouce",
+			"evidenceIds": [
+				"marteau-a-river-jet-jns-2060-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cadence",
+			"value": "3 000 coups/min",
+			"evidenceIds": [
+				"marteau-a-river-jet-jns-2060-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -73,6 +105,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 9381736270fc03a7d3233abbb4c97f401cc4f8f453822e2b9eabc85c4e4f6ec6. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "marteau-a-river-jet-jns-2060-reserved-20261103-1",
+			"sourceUrl": "https://d29c95q8mcesvj.cloudfront.net/wysiwyg/pdf/414700_Catalog.pdf#page=73",
+			"sourceLabel": "JET : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9381736270fc03a7d3233abbb4c97f401cc4f8f453822e2b9eabc85c4e4f6ec6. Le JNS-2060 est un marteau à river à course moyenne 2⅝ pouces et queue 0,401 Parker, retenue à changement rapide. Le jeu de burins de remplacement présenté ensuite n’est pas ajouté au contenu livré. Les 5 CFM ne deviennent ni un volume par rivet ni une demande de pointe."
 		}
 	],
 	"fieldSources": {
@@ -84,6 +126,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-jet-catalog-pdf-p73"
+		],
+		"editorial": [
+			"marteau-a-river-jet-jns-2060-reserved-20261103-1"
+		],
+		"specifications": [
+			"marteau-a-river-jet-jns-2060-reserved-20261103-1"
 		]
 	},
 	"notes": [

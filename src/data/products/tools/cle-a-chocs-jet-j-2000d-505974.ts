@@ -29,10 +29,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "JET J-2000D (réf. 505974). Les caractéristiques mécaniques sont documentées ; aucune consommation n’est associée à une pression de mesure et à un régime suffisant pour le calcul. Masse publiée : 13 lbs. Ligne technique constructeur : 505974 J-2000d 3/4 7/8 ring/Hole 510 102-408 5500 39 3/8 3/8 4 12-3/16 13.",
+		"overview": "JET J-2000D. La J-2000D, code 505974, est la version à poignée en D et gâchette intérieure, 12 3/16 pouces et 13 lb. La J-2000P à poignée pistolet publie 8⅞ pouces, 11 lb et une autre plage de couple. Les 39 CFM restent sans régime de mesure ; aucun Nm reconstruit n’est substitué aux ft-lb.",
 		"verifiedFacts": [
 			"Masse publiée : 13 lbs.",
-			"Ligne technique constructeur : 505974 J-2000d 3/4 7/8 ring/Hole 510 102-408 5500 39 3/8 3/8 4 12-3/16 13."
+			"Ligne technique constructeur : 505974 J-2000d 3/4 7/8 ring/Hole 510 102-408 5500 39 3/8 3/8 4 12-3/16 13.",
+			"Poignée : En D, gâchette intérieure et poignée auxiliaire gauche.",
+			"Carré : 3/4 pouce.",
+			"Plage de travail : 102–408 ft-lb.",
+			"Maximum : 510 ft-lb."
 		],
 		"limitations": [
 			"Les caractéristiques mécaniques sont documentées ; aucune consommation n’est associée à une pression de mesure et à un régime suffisant pour le calcul.",
@@ -61,6 +65,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-jet-catalog-pdf-p55"
 			]
+		},
+		{
+			"label": "Poignée",
+			"value": "En D, gâchette intérieure et poignée auxiliaire gauche",
+			"evidenceIds": [
+				"cle-a-chocs-jet-j-2000d-505974-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Carré",
+			"value": "3/4 pouce",
+			"evidenceIds": [
+				"cle-a-chocs-jet-j-2000d-505974-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Plage de travail",
+			"value": "102–408 ft-lb",
+			"evidenceIds": [
+				"cle-a-chocs-jet-j-2000d-505974-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Maximum",
+			"value": "510 ft-lb",
+			"evidenceIds": [
+				"cle-a-chocs-jet-j-2000d-505974-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -73,6 +105,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 9381736270fc03a7d3233abbb4c97f401cc4f8f453822e2b9eabc85c4e4f6ec6. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-chocs-jet-j-2000d-505974-reserved-20261103-1",
+			"sourceUrl": "https://d29c95q8mcesvj.cloudfront.net/wysiwyg/pdf/414700_Catalog.pdf#page=55",
+			"sourceLabel": "JET : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9381736270fc03a7d3233abbb4c97f401cc4f8f453822e2b9eabc85c4e4f6ec6. La J-2000D, code 505974, est la version à poignée en D et gâchette intérieure, 12 3/16 pouces et 13 lb. La J-2000P à poignée pistolet publie 8⅞ pouces, 11 lb et une autre plage de couple. Les 39 CFM restent sans régime de mesure ; aucun Nm reconstruit n’est substitué aux ft-lb."
 		}
 	],
 	"fieldSources": {
@@ -84,6 +126,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-jet-catalog-pdf-p55"
+		],
+		"editorial": [
+			"cle-a-chocs-jet-j-2000d-505974-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-chocs-jet-j-2000d-505974-reserved-20261103-1"
 		]
 	},
 	"notes": [

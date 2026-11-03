@@ -9,16 +9,9 @@ const product: ToolProfileInput = {
 	"brand": "Top Cat",
 	"model": "300EHK;25000;1/4",
 	"mpn": "300EHK;25000;1/4",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.2,
-		"typical": 6.2,
 		"max": 6.2
-	},
-	"airflowLpm": {
-		"min": 708,
-		"typical": 708,
-		"max": 708
 	},
 	"confidence": "B",
 	"image": {
@@ -35,44 +28,53 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Top Cat 300EHK;25000;1/4. Le tableau publie une consommation maximale de 11,8 L/s, soit 708 L/min. Pression de référence retenue : 6,2 bar.",
+		"overview": "Top Cat 300EHK; 25000; 1/4. La 300EHK; 25000; 1/4 est la meuleuse horizontale à levier de sécurité ; la 300EH; 25000; 1/4 utilise le levier standard. La famille 300GH présente un échappement latéral selon version, distinct de l’arrière de la 300EH. Le maximum de débit 11,8 L/s est explicite, mais le maximum de pression d’alimentation 6,2 bar n’est pas une pression de mesure documentée.",
 		"verifiedFacts": [
-			"Référence complète imprimée : 300EHK;25000;1/4, page PDF 48.",
-			"Consommation maximale publiée : 708 L/min après conversion de l’unité originale.",
-			"All tools are designed to operate at an air line pressure of 90 PSI (6.2 Bar) maximum. Catalogue PDF page 7."
+			"Commande : Levier de sécurité, suffixe K.",
+			"Vitesse maximale nominale : 25 000 tr/min.",
+			"Pince : 1/4 pouce, type ER.",
+			"Échappement : Arrière.",
+			"Consommation maximale déclarée : 11,8 L/s (708 L/min)."
 		],
 		"limitations": [
-			"Le débit maximal est un besoin conservateur ; la cadence réelle de travail n’est pas déduite du catalogue.",
-			"La disponibilité actuelle, les accessoires inclus et les conditions de sécurité doivent être confirmés sur la notice de cette référence."
+			"Les maxima de pression d’alimentation et de consommation ne prouvent pas un couple de mesure débit/pression.",
+			"Catalogue historique ; code, commande et équipement à confirmer sur la révision livrée."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 48",
+			"label": "Commande",
+			"value": "Levier de sécurité, suffixe K",
 			"evidenceIds": [
-				"documented-20260930-topcat-issued"
+				"meuleuse-top-cat-300ehk-25000-1-4-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Code complet de configuration",
-			"value": "300EHK;25000;1/4",
+			"label": "Vitesse maximale nominale",
+			"value": "25 000 tr/min",
 			"evidenceIds": [
-				"documented-20260930-topcat-issued"
+				"meuleuse-top-cat-300ehk-25000-1-4-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse comprise dans la désignation",
-			"value": "25000 min⁻¹",
+			"label": "Pince",
+			"value": "1/4 pouce, type ER",
 			"evidenceIds": [
-				"documented-20260930-topcat-issued"
+				"meuleuse-top-cat-300ehk-25000-1-4-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation maximale publiée",
-			"value": "11.8 L/s ; 25 cfm",
+			"label": "Échappement",
+			"value": "Arrière",
 			"evidenceIds": [
-				"documented-20260930-topcat-issued"
+				"meuleuse-top-cat-300ehk-25000-1-4-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation maximale déclarée",
+			"value": "11,8 L/s (708 L/min)",
+			"evidenceIds": [
+				"meuleuse-top-cat-300ehk-25000-1-4-reserved-20261103-1"
 			]
 		}
 	],
@@ -86,23 +88,53 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 4b4cea2c0cb0cfea87b1e287908e271388254005eda2136bb116549893decf7a. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		},
+		{
+			"id": "meuleuse-top-cat-300ehk-25000-1-4-reserved-20261103-1",
+			"sourceUrl": "https://www.intlairtool.com/content/catalogs-page-pdfs/Top-Cat-Air-Tools.pdf#page=48",
+			"sourceLabel": "Top Cat : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 4b4cea2c0cb0cfea87b1e287908e271388254005eda2136bb116549893decf7a. La 300EHK; 25000; 1/4 est la meuleuse horizontale à levier de sécurité ; la 300EH; 25000; 1/4 utilise le levier standard. La famille 300GH présente un échappement latéral selon version, distinct de l’arrière de la 300EH. Le maximum de débit 11,8 L/s est explicite, mais le maximum de pression d’alimentation 6,2 bar n’est pas une pression de mesure documentée."
+		},
+		{
+			"id": "meuleuse-top-cat-300ehk-25000-1-4-reserved-20261103-1-2",
+			"sourceUrl": "https://www.intlairtool.com/content/catalogs-page-pdfs/Top-Cat-Air-Tools.pdf#page=7",
+			"sourceLabel": "Top Cat : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 4b4cea2c0cb0cfea87b1e287908e271388254005eda2136bb116549893decf7a. La 300EHK; 25000; 1/4 est la meuleuse horizontale à levier de sécurité ; la 300EH; 25000; 1/4 utilise le levier standard. La famille 300GH présente un échappement latéral selon version, distinct de l’arrière de la 300EH. Le maximum de débit 11,8 L/s est explicite, mais le maximum de pression d’alimentation 6,2 bar n’est pas une pression de mesure documentée."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
 			"documented-20260930-topcat-issued"
 		],
-		"airflowLpm": [
-			"documented-20260930-topcat-issued"
-		],
 		"workingPressureBar": [
-			"documented-20260930-topcat-issued"
+			"meuleuse-top-cat-300ehk-25000-1-4-reserved-20261103-1"
+		],
+		"demandModel": [
+			"meuleuse-top-cat-300ehk-25000-1-4-reserved-20261103-1"
+		],
+		"demandExplanation": [
+			"meuleuse-top-cat-300ehk-25000-1-4-reserved-20261103-1"
+		],
+		"editorial": [
+			"meuleuse-top-cat-300ehk-25000-1-4-reserved-20261103-1"
+		],
+		"specifications": [
+			"meuleuse-top-cat-300ehk-25000-1-4-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"consommation maximale ; aucune conversion en consommation en charge n’est effectuée.",
 		"Pression publiée en bar : 6.2."
-	]
+	],
+	"demandExplanation": "Maximum de débit déclaré, pression de mesure non explicitement appariée. Le maximum de pression d’alimentation reste une limite distincte."
 };
 
 export default product;

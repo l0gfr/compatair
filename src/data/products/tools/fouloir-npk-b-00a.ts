@@ -29,10 +29,13 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "NPK B-00A. La consommation moyenne déclarée ne fournit pas la demande maximale à un point de pression de mesure identifié. Aucun débit en charge n’est reconstitué. Masse publiée : 4.5 lbs. Consommation documentaire, hors calcul : 7.1 cfm.",
+		"overview": "NPK B-00A. Le B-00A est un fouloir de fonderie pour petits et moyens châssis sur établi, semelle caoutchouc 1 9/16 pouce et 4,5 lb selon cette édition. Le B-0A utilise une semelle 2 pouces, 750 coups/min et 7 lb. Le B-00A(R) du catalogue actuel est un libellé distinct ; ses valeurs ne sont pas fusionnées. Les 7,1 CFM moyens restent documentaires.",
 		"verifiedFacts": [
 			"Masse publiée : 4.5 lbs.",
-			"Consommation documentaire, hors calcul : 7.1 cfm."
+			"Consommation documentaire, hors calcul : 7.1 cfm.",
+			"Semelle : Caoutchouc, diamètre 1 9/16 pouce.",
+			"Course : 2⅜ pouces.",
+			"Cadence : 1 600 coups/min."
 		],
 		"limitations": [
 			"La consommation moyenne déclarée ne fournit pas la demande maximale à un point de pression de mesure identifié. Aucun débit en charge n’est reconstitué.",
@@ -62,6 +65,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-michigan-15-npk-pdf-p5"
 			]
+		},
+		{
+			"label": "Semelle",
+			"value": "Caoutchouc, diamètre 1 9/16 pouce",
+			"evidenceIds": [
+				"fouloir-npk-b-00a-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Course",
+			"value": "2⅜ pouces",
+			"evidenceIds": [
+				"fouloir-npk-b-00a-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cadence",
+			"value": "1 600 coups/min",
+			"evidenceIds": [
+				"fouloir-npk-b-00a-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -74,6 +98,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 8991587b6147dedde29a8ca888682d24a45127a873a1fb3a753e048fd2696462. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "fouloir-npk-b-00a-reserved-20261103-1",
+			"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/15-NPK.pdf#page=5",
+			"sourceLabel": "NPK : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 8991587b6147dedde29a8ca888682d24a45127a873a1fb3a753e048fd2696462. Le B-00A est un fouloir de fonderie pour petits et moyens châssis sur établi, semelle caoutchouc 1 9/16 pouce et 4,5 lb selon cette édition. Le B-0A utilise une semelle 2 pouces, 750 coups/min et 7 lb. Le B-00A(R) du catalogue actuel est un libellé distinct ; ses valeurs ne sont pas fusionnées. Les 7,1 CFM moyens restent documentaires."
 		}
 	],
 	"fieldSources": {
@@ -85,6 +119,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-michigan-15-npk-pdf-p5"
+		],
+		"editorial": [
+			"fouloir-npk-b-00a-reserved-20261103-1"
+		],
+		"specifications": [
+			"fouloir-npk-b-00a-reserved-20261103-1"
 		]
 	},
 	"notes": [

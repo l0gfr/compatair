@@ -70,14 +70,62 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october3c-worthington-rollair750-2000-p6"
 			]
+		},
+		{
+			"label": "Configuration",
+			"value": "Full Feature sur cuve 500 L",
+			"evidenceIds": [
+				"worthington-creyssensac-rlr-1500-50-hz-13-bar-full-feature-sur-reservoir-500-l-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "FAD à 12,5 bar",
+			"value": "69 m³/h (1 150 L/min)",
+			"evidenceIds": [
+				"worthington-creyssensac-rlr-1500-50-hz-13-bar-full-feature-sur-reservoir-500-l-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Puissance",
+			"value": "11 kW",
+			"evidenceIds": [
+				"worthington-creyssensac-rlr-1500-50-hz-13-bar-full-feature-sur-reservoir-500-l-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse de cette configuration",
+			"value": "460 kg",
+			"evidenceIds": [
+				"worthington-creyssensac-rlr-1500-50-hz-13-bar-full-feature-sur-reservoir-500-l-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Mesure",
+			"value": "ISO 1217 annexe C, version 50 Hz",
+			"evidenceIds": [
+				"worthington-creyssensac-rlr-1500-50-hz-13-bar-full-feature-sur-reservoir-500-l-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Dimensions L×W×H",
+			"value": "1 940 × 665 × 1 665 mm",
+			"evidenceIds": [
+				"worthington-creyssensac-rlr-1500-50-hz-13-bar-full-feature-sur-reservoir-500-l-reserved-20261103-1"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "Worthington Creyssensac RLR 1500, Full Feature sur réservoir 500 L, 13 bar. 1 150 L/min à 12,5 bar.",
+		"overview": "Worthington Creyssensac RLR 1500. La RLR 1500 Full Feature sur cuve 500 L publie 460 kg. La Full Feature sur 500 L pèse 460 kg contre 265 kg pour le Pack au sol ; le sécheur et le stockage changent, mais les 69 m³/h à 12,5 bar restent ceux du groupe 11 kW en version 13 bar. La version 10 bar donne 94 m³/h à 9,5 bar.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Configuration de stockage documentée : 500 L.",
-			"Pression maximale de fonctionnement publiée : 13 bar."
+			"Pression maximale de fonctionnement publiée : 13 bar.",
+			"Configuration : Full Feature sur cuve 500 L.",
+			"FAD à 12,5 bar : 69 m³/h (1 150 L/min).",
+			"Puissance : 11 kW.",
+			"Masse de cette configuration : 460 kg.",
+			"Mesure : ISO 1217 annexe C, version 50 Hz.",
+			"Dimensions L×W×H : 1 940 × 665 × 1 665 mm."
 		],
 		"limitations": [
 			"Cycle de service du groupe complet non établi ; la tenue permanente reste indéterminée.",
@@ -105,6 +153,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 453e287507815373993e3d0c796c82836a43fbc822fe0f2117a56f7b9635ba9d de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "worthington-creyssensac-rlr-1500-50-hz-13-bar-full-feature-sur-reservoir-500-l-reserved-20261103-1",
+			"sourceUrl": "https://www.worthington-creyssensac.com/content/dam/brands/Worthington%20Creyssensac/products-bp-structure/oil-injected-screw-compressor/fixed-speed/rlr-750-2000-%282022%29/leaflets/wco-rollair-750-2000-leaflet-en.pdf.coredownload.pdf#page=6",
+			"sourceLabel": "Worthington Creyssensac : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 453e287507815373993e3d0c796c82836a43fbc822fe0f2117a56f7b9635ba9d. La RLR 1500 Full Feature sur cuve 500 L publie 460 kg. La Full Feature sur 500 L pèse 460 kg contre 265 kg pour le Pack au sol ; le sécheur et le stockage changent, mais les 69 m³/h à 12,5 bar restent ceux du groupe 11 kW en version 13 bar. La version 10 bar donne 94 m³/h à 9,5 bar."
 		}
 	],
 	"fieldSources": {
@@ -118,15 +176,25 @@ const product: CompressorInput = {
 			"october3c-worthington-rollair750-2000-p6"
 		],
 		"powerKw": [
-			"october3c-worthington-rollair750-2000-p6"
+			"worthington-creyssensac-rlr-1500-50-hz-13-bar-full-feature-sur-reservoir-500-l-reserved-20261103-1"
 		],
 		"oilType": [
 			"october3c-worthington-rollair750-2000-p1"
+		],
+		"weightKg": [
+			"worthington-creyssensac-rlr-1500-50-hz-13-bar-full-feature-sur-reservoir-500-l-reserved-20261103-1"
+		],
+		"editorial": [
+			"worthington-creyssensac-rlr-1500-50-hz-13-bar-full-feature-sur-reservoir-500-l-reserved-20261103-1"
+		],
+		"specifications": [
+			"worthington-creyssensac-rlr-1500-50-hz-13-bar-full-feature-sur-reservoir-500-l-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Pression de mesure, pression maximale relative et pression absolue à l’entrée restent distinctes. ISO 1217 n’est revendiquée que pour les sources qui le citent."
-	]
+	],
+	"weightKg": 460
 };
 
 export default product;

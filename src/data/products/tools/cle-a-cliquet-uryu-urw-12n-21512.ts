@@ -37,15 +37,21 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU URW-12N, code 21512. Le tableau publie une consommation moyenne de 0,7 m³/min, soit 700 L/min. Pression de référence retenue : 4 bar.",
+		"overview": "URYU URW-12N. La URW-12N annonce 59 Nm indicatifs à 0,6 MPa et environ 145 tr/min ; les URW-12NA et 12NB donnent 78/93 Nm et 105/90 tr/min. La pression recommandée de 0,4 MPa appartient à une autre ligne documentaire que la condition du couple.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 21512, page PDF 1.",
 			"Consommation moyenne publiée : 700 L/min après conversion de l’unité originale.",
-			"SPECIFICATIONS                                        Recommended Air Pressure : 0.4MPa (57psi)"
+			"SPECIFICATIONS                                        Recommended Air Pressure : 0.4MPa (57 psi)",
+			"Couple maximal indicatif à 0,6 MPa : 59 Nm.",
+			"Vitesse à vide approximative : 145 tr/min.",
+			"Longueur totale : 397 mm.",
+			"Masse publiée : 2,70 kg.",
+			"Pression recommandée publiée séparément : 0,4 MPa (4 bar)."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
-			"La disponibilité actuelle, les accessoires inclus et les conditions de sécurité doivent être confirmés sur la notice de cette référence."
+			"La disponibilité actuelle, les accessoires inclus et les conditions de sécurité doivent être confirmés sur la notice de cette référence.",
+			"La note de couple est à 0,6 MPa ; les 59 Nm ne sont pas attribués à la pression recommandée de 0,4 MPa."
 		]
 	},
 	"specifications": [
@@ -76,6 +82,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-uryu-p35"
 			]
+		},
+		{
+			"label": "Couple maximal indicatif à 0,6 MPa",
+			"value": "59 Nm",
+			"evidenceIds": [
+				"cle-a-cliquet-uryu-urw-12n-21512-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide approximative",
+			"value": "145 tr/min",
+			"evidenceIds": [
+				"cle-a-cliquet-uryu-urw-12n-21512-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "397 mm",
+			"evidenceIds": [
+				"cle-a-cliquet-uryu-urw-12n-21512-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse publiée",
+			"value": "2,70 kg",
+			"evidenceIds": [
+				"cle-a-cliquet-uryu-urw-12n-21512-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression recommandée publiée séparément",
+			"value": "0,4 MPa (4 bar)",
+			"evidenceIds": [
+				"cle-a-cliquet-uryu-urw-12n-21512-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -88,6 +129,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 4ef07a7843585c8812e74e00d36b3d928ce3793e180ffa30a9ea530ffaa7ab17. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		},
+		{
+			"id": "cle-a-cliquet-uryu-urw-12n-21512-reserved-20261103-1",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P35.pdf",
+			"sourceLabel": "URYU : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 4ef07a7843585c8812e74e00d36b3d928ce3793e180ffa30a9ea530ffaa7ab17. La URW-12N annonce 59 Nm indicatifs à 0,6 MPa et environ 145 tr/min ; les URW-12NA et 12NB donnent 78/93 Nm et 105/90 tr/min. La pression recommandée de 0,4 MPa appartient à une autre ligne documentaire que la condition du couple."
 		}
 	],
 	"fieldSources": {
@@ -102,6 +153,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-20260930-uryu-p35"
+		],
+		"editorial": [
+			"cle-a-cliquet-uryu-urw-12n-21512-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-cliquet-uryu-urw-12n-21512-reserved-20261103-1"
 		]
 	},
 	"notes": [

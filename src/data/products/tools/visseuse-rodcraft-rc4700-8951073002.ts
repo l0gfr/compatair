@@ -31,53 +31,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Rodcraft RC4700 (réf. 8951073002). La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 1,15 kg. Dimensions publiées : 210x150x42 mm.",
+		"overview": "Rodcraft RC4700. La RC4700 est la visseuse pistolet à réglage interne 1–7 Nm, 2 100 tr/min. La RC4760 est droite et donne 2 000 tr/min ; la RC4784 propose un réglage externe 1–6 Nm. Le montage et le réglage distinguent ces références. Le glossaire ne permet pas de transformer la moyenne 430 L/min en un maximum mesuré à 6,3 bar.",
 		"verifiedFacts": [
-			"Masse publiée : 1,15 kg.",
-			"Dimensions publiées : 210x150x42 mm.",
-			"Diamètre de tuyau : 8 mm."
+			"Emmanchement : Hexagonal femelle 1/4 pouce, changement rapide.",
+			"Couple : 1–7 Nm.",
+			"Réglage : Interne.",
+			"Vitesse : 2 100 tr/min.",
+			"Dimensions : 210 × 150 × 42 mm.",
+			"Consommations moyenne / à vide : 430 / 585 L/min."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Glossaire constructeur p.4 : average = moyenne en charge ; cont. = consommation à vide. Le maximum d’entrée 6,3 bar n’est pas une pression exacte de mesure.",
+			"Catalogue historique identifié ; équipement et disponibilité actuels à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "1,15 kg",
+			"label": "Emmanchement",
+			"value": "Hexagonal femelle 1/4 pouce, changement rapide",
 			"evidenceIds": [
-				"october2-tools-rodcraft-catalog-p26"
+				"visseuse-rodcraft-rc4700-8951073002-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Dimensions publiées",
-			"value": "210x150x42 mm",
+			"label": "Couple",
+			"value": "1–7 Nm",
 			"evidenceIds": [
-				"october2-tools-rodcraft-catalog-p26"
+				"visseuse-rodcraft-rc4700-8951073002-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre de tuyau",
-			"value": "8 mm",
+			"label": "Réglage",
+			"value": "Interne",
 			"evidenceIds": [
-				"october2-tools-rodcraft-catalog-p26"
+				"visseuse-rodcraft-rc4700-8951073002-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
+			"label": "Vitesse",
+			"value": "2 100 tr/min",
 			"evidenceIds": [
-				"october2-tools-rodcraft-catalog-p26",
-				"october2-tools-rodcraft-catalog-p4"
+				"visseuse-rodcraft-rc4700-8951073002-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation à vide, hors calcul",
-			"value": "585 L/min",
+			"label": "Dimensions",
+			"value": "210 × 150 × 42 mm",
 			"evidenceIds": [
-				"october2-tools-rodcraft-catalog-p26",
-				"october2-tools-rodcraft-catalog-p4"
+				"visseuse-rodcraft-rc4700-8951073002-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommations moyenne / à vide",
+			"value": "430 / 585 L/min",
+			"evidenceIds": [
+				"visseuse-rodcraft-rc4700-8951073002-reserved-20261103-1"
 			]
 		}
 	],
@@ -101,6 +109,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Document complémentaire de la référence exacte, sans essai CompatAir."
+		},
+		{
+			"id": "visseuse-rodcraft-rc4700-8951073002-reserved-20261103-1",
+			"sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=26",
+			"sourceLabel": "Rodcraft : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. La RC4700 est la visseuse pistolet à réglage interne 1–7 Nm, 2 100 tr/min. La RC4760 est droite et donne 2 000 tr/min ; la RC4784 propose un réglage externe 1–6 Nm. Le montage et le réglage distinguent ces références. Le glossaire ne permet pas de transformer la moyenne 430 L/min en un maximum mesuré à 6,3 bar."
+		},
+		{
+			"id": "visseuse-rodcraft-rc4700-8951073002-reserved-20261103-1-3",
+			"sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=4",
+			"sourceLabel": "Rodcraft : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. La RC4700 est la visseuse pistolet à réglage interne 1–7 Nm, 2 100 tr/min. La RC4760 est droite et donne 2 000 tr/min ; la RC4784 propose un réglage externe 1–6 Nm. Le montage et le réglage distinguent ces références. Le glossaire ne permet pas de transformer la moyenne 430 L/min en un maximum mesuré à 6,3 bar."
 		}
 	],
 	"fieldSources": {
@@ -113,6 +141,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-rodcraft-catalog-p26"
+		],
+		"editorial": [
+			"visseuse-rodcraft-rc4700-8951073002-reserved-20261103-1"
+		],
+		"specifications": [
+			"visseuse-rodcraft-rc4700-8951073002-reserved-20261103-1"
 		]
 	},
 	"notes": [

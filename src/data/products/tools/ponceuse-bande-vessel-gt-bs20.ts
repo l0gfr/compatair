@@ -39,59 +39,60 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "VESSEL GT-BS20. Consommation publiée, régime non précisé : 600 L/min à 6 bar. Raccord publié : Rc 1/4. Longueur hors tout : 398 mm.",
+		"overview": "VESSEL GT-BS20. La GT-BS20 utilise la bande 20 × 520 mm, vitesse de bande 2 600 m/min et longueur 398 mm. La GT-BS12 est une autre largeur de bande, avec son propre bras et son encombrement. Le fabricant décrit l’échappement arrière et fournit des bandes grain 60/80. Le régime des 0,6 m³/min n’est pas précisé.",
 		"verifiedFacts": [
-			"Raccord publié : Rc 1/4.",
-			"Longueur hors tout : 398 mm.",
-			"Masse hors accessoires : 1,300 g.",
-			"Vitesse à vide : 16,500 tr/min."
+			"Bande : 20 × 520 mm.",
+			"Vitesse de bande : 2 600 m/min.",
+			"Vitesse à vide : 16 500 tr/min.",
+			"Longueur : 398 mm.",
+			"Masse hors accessoires : 1 300 g.",
+			"Consommation, régime non précisé : 0,6 m³/min."
 		],
 		"limitations": [
-			"Régime de consommation non précisé : aucun maximum supposé ; le verdict reste insufficient_data.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"La consommation n’a pas de régime de charge explicite ; elle reste non dimensionnante malgré la pression nominale publiée."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Raccord publié",
-			"value": "Rc 1/4",
+			"label": "Bande",
+			"value": "20 × 520 mm",
 			"evidenceIds": [
-				"october-vessel-air-p31"
+				"ponceuse-bande-vessel-gt-bs20-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur hors tout",
-			"value": "398 mm",
+			"label": "Vitesse de bande",
+			"value": "2 600 m/min",
 			"evidenceIds": [
-				"october-vessel-air-p31"
-			]
-		},
-		{
-			"label": "Masse hors accessoires",
-			"value": "1,300 g",
-			"evidenceIds": [
-				"october-vessel-air-p31"
+				"ponceuse-bande-vessel-gt-bs20-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Vitesse à vide",
-			"value": "16,500 tr/min",
+			"value": "16 500 tr/min",
 			"evidenceIds": [
-				"october-vessel-air-p31"
+				"ponceuse-bande-vessel-gt-bs20-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Localisation documentaire",
-			"value": "VESSEL, catalogue Air Tools, page 31",
+			"label": "Longueur",
+			"value": "398 mm",
 			"evidenceIds": [
-				"october-vessel-air-p31"
+				"ponceuse-bande-vessel-gt-bs20-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de pression originale",
-			"value": "Air pressure: 0.6MPa",
+			"label": "Masse hors accessoires",
+			"value": "1 300 g",
 			"evidenceIds": [
-				"october-vessel-air-p31"
+				"ponceuse-bande-vessel-gt-bs20-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation, régime non précisé",
+			"value": "0,6 m³/min",
+			"evidenceIds": [
+				"ponceuse-bande-vessel-gt-bs20-reserved-20261103-1"
 			]
 		}
 	],
@@ -105,6 +106,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 16761fb825c735f6ebff0614f708d44f28eb21392b11568d7224019e2dc296d0. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-bande-vessel-gt-bs20-reserved-20261103-1",
+			"sourceUrl": "https://www.vessel.co.jp/english/product/airtools_sander/310622",
+			"sourceLabel": "VESSEL : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 be0cb252a1d33b5b85b57e0ee0ed91b0efad872fd9cb31a06fc65cbd979a23da. La GT-BS20 utilise la bande 20 × 520 mm, vitesse de bande 2 600 m/min et longueur 398 mm. La GT-BS12 est une autre largeur de bande, avec son propre bras et son encombrement. Le fabricant décrit l’échappement arrière et fournit des bandes grain 60/80. Le régime des 0,6 m³/min n’est pas précisé."
 		}
 	],
 	"fieldSources": {
@@ -112,13 +123,19 @@ const product: ToolProfileInput = {
 			"october-vessel-air-p31"
 		],
 		"workingPressureBar": [
-			"october-vessel-air-p31"
+			"ponceuse-bande-vessel-gt-bs20-reserved-20261103-1"
 		],
 		"airflowLpm": [
-			"october-vessel-air-p31"
+			"ponceuse-bande-vessel-gt-bs20-reserved-20261103-1"
 		],
 		"airflowBasis": [
-			"october-vessel-air-p31"
+			"ponceuse-bande-vessel-gt-bs20-reserved-20261103-1"
+		],
+		"editorial": [
+			"ponceuse-bande-vessel-gt-bs20-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-bande-vessel-gt-bs20-reserved-20261103-1"
 		]
 	},
 	"notes": [

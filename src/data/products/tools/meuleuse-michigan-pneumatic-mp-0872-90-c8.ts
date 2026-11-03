@@ -29,10 +29,13 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Michigan Pneumatic MP-0872-90-C8. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 0.8 lbs. Ligne technique constructeur : MP-0872-90-C8 Angle 1/8\" Collet 72,000 rpm 6-1/16\" 0.8 lbs 1/4\" 1/4\" 1.8 cfm.",
+		"overview": "Michigan Pneumatic MP-0872-90-C8. La MP-0872-90-C8 est une micromeuleuse coudée à pince 1/8 pouce et 72 000 tr/min. La MP-1260-C8 est droite à 60 000 tr/min ; même longueur 6 1/16 pouces et masse 0,8 lb n’impliquent pas la même accessibilité ni vitesse admissible d’accessoire. Les 1,8 CFM sont moyens.",
 		"verifiedFacts": [
 			"Masse publiée : 0.8 lbs.",
-			"Ligne technique constructeur : MP-0872-90-C8 Angle 1/8\" Collet 72,000 rpm 6-1/16\" 0.8 lbs 1/4\" 1/4\" 1.8 cfm."
+			"Ligne technique constructeur : MP-0872-90-C8 Angle 1/8\" Collet 72,000 rpm 6-1/16\" 0.8 lbs 1/4\" 1/4\" 1.8 cfm.",
+			"Géométrie : Coudée.",
+			"Pince : 1/8 pouce.",
+			"Vitesse à vide : 72 000 tr/min."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -68,6 +71,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-michigan-10-pdf-p28"
 			]
+		},
+		{
+			"label": "Géométrie",
+			"value": "Coudée",
+			"evidenceIds": [
+				"meuleuse-michigan-pneumatic-mp-0872-90-c8-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pince",
+			"value": "1/8 pouce",
+			"evidenceIds": [
+				"meuleuse-michigan-pneumatic-mp-0872-90-c8-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "72 000 tr/min",
+			"evidenceIds": [
+				"meuleuse-michigan-pneumatic-mp-0872-90-c8-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -80,6 +104,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 68a07091e12cedba8fd2c428b652540aa3e7b34b0fa2da703b0f9115ca7e8705. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "meuleuse-michigan-pneumatic-mp-0872-90-c8-reserved-20261103-1",
+			"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/10-Grinders_V3.pdf#page=28",
+			"sourceLabel": "Michigan Pneumatic : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 68a07091e12cedba8fd2c428b652540aa3e7b34b0fa2da703b0f9115ca7e8705. La MP-0872-90-C8 est une micromeuleuse coudée à pince 1/8 pouce et 72 000 tr/min. La MP-1260-C8 est droite à 60 000 tr/min ; même longueur 6 1/16 pouces et masse 0,8 lb n’impliquent pas la même accessibilité ni vitesse admissible d’accessoire. Les 1,8 CFM sont moyens."
 		}
 	],
 	"fieldSources": {
@@ -91,6 +125,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-michigan-10-pdf-p28"
+		],
+		"editorial": [
+			"meuleuse-michigan-pneumatic-mp-0872-90-c8-reserved-20261103-1"
+		],
+		"specifications": [
+			"meuleuse-michigan-pneumatic-mp-0872-90-c8-reserved-20261103-1"
 		]
 	},
 	"notes": [

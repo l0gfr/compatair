@@ -71,13 +71,53 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october4-dalgakiran-catalog-p50"
 			]
+		},
+		{
+			"label": "Cuve",
+			"value": "500 L",
+			"evidenceIds": [
+				"dalgakiran-d-7-5-500-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression de travail",
+			"value": "7 bar",
+			"evidenceIds": [
+				"dalgakiran-d-7-5-500-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Déplacement de piston",
+			"value": "971 L/min, distinct du FAD",
+			"evidenceIds": [
+				"dalgakiran-d-7-5-500-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Puissance",
+			"value": "5,5 kW / 7,5 HP",
+			"evidenceIds": [
+				"dalgakiran-d-7-5-500-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "283 kg",
+			"evidenceIds": [
+				"dalgakiran-d-7-5-500-reserved-20261103-1"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "Dalgakiran D 7.5-500. Le débit restitué sous pression reste non qualifié. Groupe sur cuve 500 L.",
+		"overview": "Dalgakiran D 7.5-500. La D 7.5-500 T travaille à 12,5 bar et annonce 647 L/min de déplacement de piston, contre 7 bar et 971 L/min pour la D 7.5-500 sans T. Elles ont la même cuve 500 L et la même puissance, mais pèsent 350 et 283 kg. Aucun de ces déplacements ne permet de conclure sur le débit restitué.",
 		"verifiedFacts": [
 			"Configuration de pression documentée : 7 bar.",
-			"Cuve de stockage documentée : 500 L."
+			"Cuve de stockage documentée : 500 L.",
+			"Cuve : 500 L.",
+			"Pression de travail : 7 bar.",
+			"Déplacement de piston : 971 L/min, distinct du FAD.",
+			"Puissance : 5,5 kW / 7,5 HP.",
+			"Masse : 283 kg."
 		],
 		"limitations": [
 			"La colonne Piston Displacement décrit le déplacement du piston. Aucun débit restitué sous pression n’est qualifié dans ce tableau.",
@@ -97,6 +137,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-04",
 			"confidence": "B",
 			"notes": "SHA-256 aabb3138e3f934f46cf268df131ac7aa179a19ac716715bf2661475fef36438b de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "dalgakiran-d-7-5-500-reserved-20261103-1",
+			"sourceUrl": "https://www.dalgakiran.com/Files/compressor-catalogue.pdf#page=50",
+			"sourceLabel": "Dalgakiran : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 aabb3138e3f934f46cf268df131ac7aa179a19ac716715bf2661475fef36438b. La D 7.5-500 T travaille à 12,5 bar et annonce 647 L/min de déplacement de piston, contre 7 bar et 971 L/min pour la D 7.5-500 sans T. Elles ont la même cuve 500 L et la même puissance, mais pèsent 350 et 283 kg. Aucun de ces déplacements ne permet de conclure sur le débit restitué."
 		}
 	],
 	"fieldSources": {
@@ -120,12 +170,22 @@ const product: CompressorInput = {
 		],
 		"powerKw": [
 			"october4-dalgakiran-catalog-p50"
+		],
+		"weightKg": [
+			"dalgakiran-d-7-5-500-reserved-20261103-1"
+		],
+		"editorial": [
+			"dalgakiran-d-7-5-500-reserved-20261103-1"
+		],
+		"specifications": [
+			"dalgakiran-d-7-5-500-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Portée de la source : piston-displacement-only.",
 		"Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées."
-	]
+	],
+	"weightKg": 283
 };
 
 export default product;

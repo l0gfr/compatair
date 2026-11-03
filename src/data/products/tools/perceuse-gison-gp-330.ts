@@ -38,67 +38,52 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-330. Consommation de régime non précisé : 620 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 1.00 kg. Longueur : 225 mm.",
+		"overview": "GISON GP-330. La GP-330 est la perceuse droite à mandrin 3/8 pouce et 2 500 tr/min. La GP-330A est en 1/4 pouce à 6 500 tr/min et 175 mm ; la GP-330ST revient au mandrin 3/8 pouce à 2 600 tr/min dans un corps de 218 mm. Le suffixe correspond à une configuration réelle, pas à un simple changement de nom.",
 		"verifiedFacts": [
-			"Masse : 1.00 kg.",
+			"Type : Perceuse droite.",
+			"Mandrin : 3/8 pouce.",
+			"Vitesse maximale publiée : 2 500 tr/min.",
 			"Longueur : 225 mm.",
-			"Vitesse maximale publiée : 2500 tr/min.",
-			"Diamètre de flexible publié : 6.5 mm.",
-			"Référence constructeur : GP-330."
+			"Masse : 1,00 kg."
 		],
 		"limitations": [
-			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
-			"Catalogue daté et données déclarées, sans essai physique. Vérifier la disponibilité actuelle, les accessoires et la notice de sécurité de la version livrée."
+			"Recommandation de service 90 psi (6,3 kg/cm² dans le catalogue), distincte d’un point de mesure de consommation démontré. Régime non qualifié ; pas de conclusion de dimensionnement."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse",
-			"value": "1.00 kg",
+			"label": "Type",
+			"value": "Perceuse droite",
 			"evidenceIds": [
-				"october-b-gison-tools-p59"
+				"perceuse-gison-gp-330-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Mandrin",
+			"value": "3/8 pouce",
+			"evidenceIds": [
+				"perceuse-gison-gp-330-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse maximale publiée",
+			"value": "2 500 tr/min",
+			"evidenceIds": [
+				"perceuse-gison-gp-330-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Longueur",
 			"value": "225 mm",
 			"evidenceIds": [
-				"october-b-gison-tools-p59"
+				"perceuse-gison-gp-330-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse maximale publiée",
-			"value": "2500 tr/min",
+			"label": "Masse",
+			"value": "1,00 kg",
 			"evidenceIds": [
-				"october-b-gison-tools-p59"
-			]
-		},
-		{
-			"label": "Diamètre de flexible publié",
-			"value": "6.5 mm",
-			"evidenceIds": [
-				"october-b-gison-tools-p59"
-			]
-		},
-		{
-			"label": "Référence constructeur",
-			"value": "GP-330",
-			"evidenceIds": [
-				"october-b-gison-tools-p59"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "Recommended Air Pressure 90 psi (6.3 kg/cm2)",
-			"evidenceIds": [
-				"october-b-gison-tools-p59"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "GISON, catalogue pneumatique 2018–2019, page PDF 59",
-			"evidenceIds": [
-				"october-b-gison-tools-p59"
+				"perceuse-gison-gp-330-reserved-20261103-1"
 			]
 		}
 	],
@@ -112,6 +97,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "perceuse-gison-gp-330-reserved-20261103-1",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=59",
+			"sourceLabel": "GISON : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. La GP-330 est la perceuse droite à mandrin 3/8 pouce et 2 500 tr/min. La GP-330A est en 1/4 pouce à 6 500 tr/min et 175 mm ; la GP-330ST revient au mandrin 3/8 pouce à 2 600 tr/min dans un corps de 218 mm. Le suffixe correspond à une configuration réelle, pas à un simple changement de nom."
 		}
 	],
 	"fieldSources": {
@@ -126,6 +121,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-b-gison-tools-p59"
+		],
+		"editorial": [
+			"perceuse-gison-gp-330-reserved-20261103-1"
+		],
+		"specifications": [
+			"perceuse-gison-gp-330-reserved-20261103-1"
 		]
 	},
 	"notes": [

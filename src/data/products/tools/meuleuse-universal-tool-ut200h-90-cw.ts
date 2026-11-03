@@ -34,81 +34,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Universal Tool UT200H-90-CW. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 4.1 kg. Longueur publiée : 445 mm.",
+		"overview": "Universal Tool UT200H-90-CW. La UT200H-90-CW est la meuleuse horizontale pour meule conique 3 pouces, à 9 000 tr/min. La version CWE allonge le corps à 660 mm contre 445 mm ; le modèle UT200H-60-6 utilise une autre configuration et vitesse. Les 40 CFM et 10 CFM moyens sont conservés séparément ; la consigne 90 psi ne prouve pas la pression de mesure.",
 		"verifiedFacts": [
-			"Masse publiée : 4.1 kg.",
-			"Longueur publiée : 445 mm.",
-			"Vitesse publiée : 9000 tr/min.",
-			"Puissance publiée : 2 HP.",
-			"Échappement : Side."
+			"Meule : Conique, diamètre maximal 3 pouces.",
+			"Broche publiée : 5/8 pouce.",
+			"Puissance, colonnes source : 2 HP / 1,47 kW.",
+			"Vitesse : 9 000 tr/min.",
+			"Longueur : 445 mm.",
+			"Consommation de régime non précisé / moyenne : 40 / 10 CFM."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Régime et pression de mesure non suffisamment documentés ; les valeurs restent hors calcul conclusif.",
+			"Les colonnes contradictoires éventuelles restent attribuées à la source, sans correction devinée."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "4.1 kg",
+			"label": "Meule",
+			"value": "Conique, diamètre maximal 3 pouces",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-61-p1"
+				"meuleuse-universal-tool-ut200h-90-cw-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur publiée",
+			"label": "Broche publiée",
+			"value": "5/8 pouce",
+			"evidenceIds": [
+				"meuleuse-universal-tool-ut200h-90-cw-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Puissance, colonnes source",
+			"value": "2 HP / 1,47 kW",
+			"evidenceIds": [
+				"meuleuse-universal-tool-ut200h-90-cw-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse",
+			"value": "9 000 tr/min",
+			"evidenceIds": [
+				"meuleuse-universal-tool-ut200h-90-cw-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
 			"value": "445 mm",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-61-p1"
+				"meuleuse-universal-tool-ut200h-90-cw-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse publiée",
-			"value": "9000 tr/min",
+			"label": "Consommation de régime non précisé / moyenne",
+			"value": "40 / 10 CFM",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-61-p1"
-			]
-		},
-		{
-			"label": "Puissance publiée",
-			"value": "2 HP",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-61-p1"
-			]
-		},
-		{
-			"label": "Échappement",
-			"value": "Side",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-61-p1"
-			]
-		},
-		{
-			"label": "Champ fabricant : Air Inlet (NPT / BSP)",
-			"value": "1/2-in.",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-61-p1"
-			]
-		},
-		{
-			"label": "Champ fabricant : Rec. Hose Size (in)",
-			"value": "1/2-in.",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-61-p1"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "Rec. Air Pressure: 90 psi-6.2 bar",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-61-p1"
-			]
-		},
-		{
-			"label": "Consommation de régime non précisé, hors calcul",
-			"value": "40 cfm",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-61-p1"
+				"meuleuse-universal-tool-ut200h-90-cw-reserved-20261103-1"
 			]
 		}
 	],
@@ -122,6 +102,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : b7606953dd789c9c9d7f6a4bafd3bd271adc8e674bdc699813cb42284d71baf8. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "meuleuse-universal-tool-ut200h-90-cw-reserved-20261103-1",
+			"sourceUrl": "https://continentaltoolgroup.com/product/horizontal-grinder/",
+			"sourceLabel": "Universal Tool : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 b95a94d873fc1d5d5b0dd7b63c867cf91fafb8947aca0f9916abf83e6222f7f0. La UT200H-90-CW est la meuleuse horizontale pour meule conique 3 pouces, à 9 000 tr/min. La version CWE allonge le corps à 660 mm contre 445 mm ; le modèle UT200H-60-6 utilise une autre configuration et vitesse. Les 40 CFM et 10 CFM moyens sont conservés séparément ; la consigne 90 psi ne prouve pas la pression de mesure."
 		}
 	],
 	"fieldSources": {
@@ -136,6 +126,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-ctg-pdp-61-p1"
+		],
+		"editorial": [
+			"meuleuse-universal-tool-ut200h-90-cw-reserved-20261103-1"
+		],
+		"specifications": [
+			"meuleuse-universal-tool-ut200h-90-cw-reserved-20261103-1"
 		]
 	},
 	"notes": [

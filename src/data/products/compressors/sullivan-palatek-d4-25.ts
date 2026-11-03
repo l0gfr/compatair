@@ -68,13 +68,45 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october8-sullivan-legacy-p1"
       ]
+    },
+    {
+      "label": "Modèle",
+      "value": "D4-25, vitesse fixe",
+      "evidenceIds": [
+        "sullivan-palatek-d4-25-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Capacité à 125 psi",
+      "value": "84,8 cfm",
+      "evidenceIds": [
+        "sullivan-palatek-d4-25-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Moteur",
+      "value": "25 hp, 1 750 tr/min",
+      "evidenceIds": [
+        "sullivan-palatek-d4-25-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Mesure déclarée",
+      "value": "CAGI / ISO 1217 annexes C/E",
+      "evidenceIds": [
+        "sullivan-palatek-d4-25-reserved-20261103-1"
+      ]
     }
   ],
   "editorial": {
-    "overview": "Sullivan-Palatek D4-25. 2 401,268 L/min déclarés à 8,618 bar. Configuration publiée : Compresseur à vis électrique, vitesse fixe, D4-25.",
+    "overview": "Sullivan-Palatek D4-25. La D4-25 donne 84,8 cfm à 125 psi. La D4-H25 est une version distincte à 150 psi et 81,9 cfm ; le D-20 donne 80,2 cfm à 125 psi avec 20 hp. Les cuves 80/120/200 gallons sont des options et ne deviennent pas le volume d’un D4-25 générique.",
     "verifiedFacts": [
       "Débit réellement livré identifié séparément du déplacement : 2 401,268 L/min déclarés à 8,618 bar.",
-      "Plafond documentaire du point retenu : 8,618 bar."
+      "Plafond documentaire du point retenu : 8,618 bar.",
+      "Modèle : D4-25, vitesse fixe.",
+      "Capacité à 125 psi : 84,8 cfm.",
+      "Moteur : 25 hp, 1 750 tr/min.",
+      "Mesure déclarée : CAGI / ISO 1217 annexes C/E."
     ],
     "limitations": [
       "Un seul point constructeur est retenu. Les autres pressions de la famille ne deviennent pas une courbe mesurée sur cette configuration.",
@@ -106,6 +138,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-08",
       "confidence": "B",
       "notes": "SHA-256 d27889a3ac6ba50e0bfacaf4e011378054cfc515d050082f4c8d0760f2c75e59 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "sullivan-palatek-d4-25-reserved-20261103-1",
+      "sourceUrl": "https://www.sullivan-palatek.com/product-detail/legacy-series-15-40-hp/",
+      "sourceLabel": "Sullivan-Palatek : revue factuelle du 3 novembre 2026",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-03",
+      "confidence": "B",
+      "notes": "GET complet HTTP200 SHA-256 50c661cb3e7e9d2d07cf32f4ce5a2458ebba135786ad5bcf2596faa5684c3519. La D4-25 donne 84,8 cfm à 125 psi. La D4-H25 est une version distincte à 150 psi et 81,9 cfm ; le D-20 donne 80,2 cfm à 125 psi avec 20 hp. Les cuves 80/120/200 gallons sont des options et ne deviennent pas le volume d’un D4-25 générique."
     }
   ],
   "fieldSources": {
@@ -122,6 +164,12 @@ const product: CompressorInput = {
     "fadCurve": [
       "october8-sullivan-legacy-p1",
       "october8-nist-conversions-p1"
+    ],
+    "editorial": [
+      "sullivan-palatek-d4-25-reserved-20261103-1"
+    ],
+    "specifications": [
+      "sullivan-palatek-d4-25-reserved-20261103-1"
     ]
   },
   "notes": [

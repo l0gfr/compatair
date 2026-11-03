@@ -34,73 +34,53 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Universal Tool UT8703-1. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 1.3 kg. Longueur publiée : 390 mm.",
+		"overview": "Universal Tool UT8703-1. La UT8703-1 utilise la bande 3/4 × 20,5 pouces et un corps de 390 mm. Les UT8701 et UT8702-1 sont des machines plus courtes de 279 mm ; leur équipement de bande ne se déduit pas de ce modèle. La fiche indique 4 CFM dans les deux champs général et moyen, sans régime maximal ni pression exacte de mesure ; aucun maximum n’en est déduit.",
 		"verifiedFacts": [
-			"Masse publiée : 1.3 kg.",
-			"Longueur publiée : 390 mm.",
-			"Puissance publiée : 0.3 HP.",
-			"Échappement : Handle."
+			"Bande : 3/4 pouce × 20,5 pouces.",
+			"Vitesse : 18 000 tr/min.",
+			"Puissance : 0,3 HP.",
+			"Longueur : 390 mm.",
+			"Consommation publiée et moyenne : 4 CFM dans les deux champs."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Régime et pression de mesure non suffisamment documentés ; les valeurs restent hors calcul conclusif.",
+			"Les colonnes contradictoires éventuelles restent attribuées à la source, sans correction devinée."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "1.3 kg",
+			"label": "Bande",
+			"value": "3/4 pouce × 20,5 pouces",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-272-p1"
+				"ponceuse-bande-universal-tool-ut8703-1-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur publiée",
+			"label": "Vitesse",
+			"value": "18 000 tr/min",
+			"evidenceIds": [
+				"ponceuse-bande-universal-tool-ut8703-1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Puissance",
+			"value": "0,3 HP",
+			"evidenceIds": [
+				"ponceuse-bande-universal-tool-ut8703-1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
 			"value": "390 mm",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-272-p1"
+				"ponceuse-bande-universal-tool-ut8703-1-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Puissance publiée",
-			"value": "0.3 HP",
+			"label": "Consommation publiée et moyenne",
+			"value": "4 CFM dans les deux champs",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-272-p1"
-			]
-		},
-		{
-			"label": "Échappement",
-			"value": "Handle",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-272-p1"
-			]
-		},
-		{
-			"label": "Champ fabricant : Air Inlet  (NPT / BSP)",
-			"value": "1/4-in.",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-272-p1"
-			]
-		},
-		{
-			"label": "Champ fabricant : Rec. Hose Size",
-			"value": "3/8-in.",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-272-p1"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "Rec. Air Pressure: 90 psi-6.2 bar",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-272-p1"
-			]
-		},
-		{
-			"label": "Consommation de régime non précisé, hors calcul",
-			"value": "4 cfm",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-272-p1"
+				"ponceuse-bande-universal-tool-ut8703-1-reserved-20261103-1"
 			]
 		}
 	],
@@ -114,6 +94,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : b08cd3c3126d7c1c6fe2bf8104e88e60433647780b4e4231ec37c4f7600740c1. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-bande-universal-tool-ut8703-1-reserved-20261103-1",
+			"sourceUrl": "https://continentaltoolgroup.com/product/belt-sander-7/",
+			"sourceLabel": "Universal Tool : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 b17580ac4c602e2d37103fe32f678f3ed449a407ad093f00da6932d20272208d. La UT8703-1 utilise la bande 3/4 × 20,5 pouces et un corps de 390 mm. Les UT8701 et UT8702-1 sont des machines plus courtes de 279 mm ; leur équipement de bande ne se déduit pas de ce modèle. La fiche indique 4 CFM dans les deux champs général et moyen, sans régime maximal ni pression exacte de mesure ; aucun maximum n’en est déduit."
 		}
 	],
 	"fieldSources": {
@@ -128,6 +118,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-ctg-pdp-272-p1"
+		],
+		"editorial": [
+			"ponceuse-bande-universal-tool-ut8703-1-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-bande-universal-tool-ut8703-1-reserved-20261103-1"
 		]
 	},
 	"notes": [

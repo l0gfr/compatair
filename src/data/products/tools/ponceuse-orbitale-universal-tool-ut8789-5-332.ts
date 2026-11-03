@@ -34,57 +34,53 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Universal Tool UT8789-5-332. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Vitesse à vide : 12000 tr/min. Dimension du plateau : 5 in.",
+		"overview": "Universal Tool UT8789-5-332. La UT8789-5-332 est identifiée par son code complet et son plateau 5 pouces. Le champ Orbit de la fiche actuelle indique 3/16 pouce : le code 332 n’est pas décodé pour le remplacer par une valeur supposée. Les variantes CV et SV restent d’autres configurations. Les 6,2 CFM et 1,6 CFM moyens ne permettent pas un dimensionnement conclusif à pression de mesure non établie.",
 		"verifiedFacts": [
-			"Vitesse à vide : 12000 tr/min.",
-			"Dimension du plateau : 5 in."
+			"Plateau : 5 pouces.",
+			"Orbite littéralement publiée : 3/16 pouce.",
+			"Vitesse à vide : 12 000 tr/min.",
+			"Masse publiée : 2 lb.",
+			"Consommation de régime non précisé / moyenne : 6,2 / 1,6 CFM."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Régime et pression de mesure non suffisamment documentés ; les valeurs restent hors calcul conclusif.",
+			"Les colonnes contradictoires éventuelles restent attribuées à la source, sans correction devinée."
 		]
 	},
 	"specifications": [
 		{
+			"label": "Plateau",
+			"value": "5 pouces",
+			"evidenceIds": [
+				"ponceuse-orbitale-universal-tool-ut8789-5-332-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Orbite littéralement publiée",
+			"value": "3/16 pouce",
+			"evidenceIds": [
+				"ponceuse-orbitale-universal-tool-ut8789-5-332-reserved-20261103-1"
+			]
+		},
+		{
 			"label": "Vitesse à vide",
-			"value": "12000 tr/min",
+			"value": "12 000 tr/min",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-244-p1"
+				"ponceuse-orbitale-universal-tool-ut8789-5-332-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Dimension du plateau",
-			"value": "5 in",
+			"label": "Masse publiée",
+			"value": "2 lb",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-244-p1"
+				"ponceuse-orbitale-universal-tool-ut8789-5-332-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Champ fabricant : Air Inlet  (NPT / BSP)",
-			"value": "1/4-in.",
+			"label": "Consommation de régime non précisé / moyenne",
+			"value": "6,2 / 1,6 CFM",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-244-p1"
-			]
-		},
-		{
-			"label": "Champ fabricant : Recommended hose size in",
-			"value": "3/8-in.",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-244-p1"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "Rec. Air Pressure: 90 psi-6.2 bar",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-244-p1"
-			]
-		},
-		{
-			"label": "Consommation de régime non précisé, hors calcul",
-			"value": "6.2 cfm",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-244-p1"
+				"ponceuse-orbitale-universal-tool-ut8789-5-332-reserved-20261103-1"
 			]
 		}
 	],
@@ -98,6 +94,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : f4844c5ab9990f44173c627af957b631afafb4053322f1881bf4af5a09bc0f72. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-orbitale-universal-tool-ut8789-5-332-reserved-20261103-1",
+			"sourceUrl": "https://continentaltoolgroup.com/product/5-orbital-palm-sander-2/",
+			"sourceLabel": "Universal Tool : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 491d2c1a1b07c85dc556eaac5fae88547b0437b5cc40a0292d1b60893e734a6d. La UT8789-5-332 est identifiée par son code complet et son plateau 5 pouces. Le champ Orbit de la fiche actuelle indique 3/16 pouce : le code 332 n’est pas décodé pour le remplacer par une valeur supposée. Les variantes CV et SV restent d’autres configurations. Les 6,2 CFM et 1,6 CFM moyens ne permettent pas un dimensionnement conclusif à pression de mesure non établie."
 		}
 	],
 	"fieldSources": {
@@ -112,6 +118,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-ctg-pdp-244-p1"
+		],
+		"editorial": [
+			"ponceuse-orbitale-universal-tool-ut8789-5-332-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-orbitale-universal-tool-ut8789-5-332-reserved-20261103-1"
 		]
 	},
 	"notes": [

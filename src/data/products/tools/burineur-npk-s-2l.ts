@@ -29,10 +29,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "NPK S-2L. La consommation moyenne déclarée ne fournit pas la demande maximale à un point de pression de mesure identifié. Aucun débit en charge n’est reconstitué. Masse publiée : 5.9 lbs. Consommation documentaire, hors calcul : 14.1 cfm.",
+		"overview": "NPK S-2 L. Le S-2 L est un marteau de décalaminage à piston unique servant directement de burin, commande à levier. Le S-2 utilise une commande rotative et pèse 4,6 lb contre 5,9 lb ici. Les 14,1 CFM sont moyens et ne documentent pas la pointe d’air.",
 		"verifiedFacts": [
 			"Masse publiée : 5.9 lbs.",
-			"Consommation documentaire, hors calcul : 14.1 cfm."
+			"Consommation documentaire, hors calcul : 14.1 cfm.",
+			"Commande : Levier.",
+			"Course : 9/16 pouce.",
+			"Cadence : 3 500 coups/min.",
+			"Longueur : 19½ pouces."
 		],
 		"limitations": [
 			"La consommation moyenne déclarée ne fournit pas la demande maximale à un point de pression de mesure identifié. Aucun débit en charge n’est reconstitué.",
@@ -62,6 +66,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-michigan-15-npk-pdf-p4"
 			]
+		},
+		{
+			"label": "Commande",
+			"value": "Levier",
+			"evidenceIds": [
+				"burineur-npk-s-2l-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Course",
+			"value": "9/16 pouce",
+			"evidenceIds": [
+				"burineur-npk-s-2l-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cadence",
+			"value": "3 500 coups/min",
+			"evidenceIds": [
+				"burineur-npk-s-2l-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "19½ pouces",
+			"evidenceIds": [
+				"burineur-npk-s-2l-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -74,6 +106,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 8991587b6147dedde29a8ca888682d24a45127a873a1fb3a753e048fd2696462. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "burineur-npk-s-2l-reserved-20261103-1",
+			"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/15-NPK.pdf#page=4",
+			"sourceLabel": "NPK : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 8991587b6147dedde29a8ca888682d24a45127a873a1fb3a753e048fd2696462. Le S-2 L est un marteau de décalaminage à piston unique servant directement de burin, commande à levier. Le S-2 utilise une commande rotative et pèse 4,6 lb contre 5,9 lb ici. Les 14,1 CFM sont moyens et ne documentent pas la pointe d’air."
 		}
 	],
 	"fieldSources": {
@@ -85,6 +127,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-michigan-15-npk-pdf-p4"
+		],
+		"editorial": [
+			"burineur-npk-s-2l-reserved-20261103-1"
+		],
+		"specifications": [
+			"burineur-npk-s-2l-reserved-20261103-1"
 		]
 	},
 	"notes": [

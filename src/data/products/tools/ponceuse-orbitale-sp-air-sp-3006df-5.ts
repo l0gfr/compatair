@@ -38,43 +38,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SP AIR SP-3006DF-5. Consommation publiée, régime non précisé : 470 L/min à 6,2 bar. Raccord publié : 1/4\"NPT. Masse publiée : 0.65 kg.",
+		"overview": "SP AIR SP-3006DF-5. La SP-3006DF-5 est la ponceuse 125 mm à orbite 5 mm, fournie dans la table avec tuyau et sac de poussière. La SP-3606DF-A5M reçoit 150 mm et pèse 1,3 kg contre 0,65 kg ; la SP-3605DF-A5M conserve 125 mm mais pèse 1,23 kg. Les 0,47 m³/min restent non qualifiés en charge.",
 		"verifiedFacts": [
-			"Raccord publié : 1/4\"NPT.",
-			"Masse publiée : 0.65 kg."
+			"Plateau : 125 mm, autoagrippant.",
+			"Orbite : 5 mm.",
+			"Filetage : 5/16-24 UNF.",
+			"Vitesse à vide : 10 000 tr/min.",
+			"Longueur : 210 mm.",
+			"Masse : 0,65 kg."
 		],
 		"limitations": [
-			"Régime de consommation non précisé : aucun maximum supposé ; le verdict reste insufficient_data.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"Le catalogue ne précise pas le régime du débit ; la valeur reste non dimensionnante, sans maximum supposé.",
+			"Source constructeur historique ; disponibilité actuelle et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Raccord publié",
-			"value": "1/4\"NPT",
+			"label": "Plateau",
+			"value": "125 mm, autoagrippant",
 			"evidenceIds": [
-				"october-sp-air-p14"
+				"ponceuse-orbitale-sp-air-sp-3006df-5-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
-			"value": "0.65 kg",
+			"label": "Orbite",
+			"value": "5 mm",
 			"evidenceIds": [
-				"october-sp-air-p14"
+				"ponceuse-orbitale-sp-air-sp-3006df-5-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Localisation documentaire",
-			"value": "SP AIR, catalogue Air Tools, page 14",
+			"label": "Filetage",
+			"value": "5/16-24 UNF",
 			"evidenceIds": [
-				"october-sp-air-p14"
+				"ponceuse-orbitale-sp-air-sp-3006df-5-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de pression originale",
-			"value": "Air pressure: 0.62 MPa",
+			"label": "Vitesse à vide",
+			"value": "10 000 tr/min",
 			"evidenceIds": [
-				"october-sp-air-p14"
+				"ponceuse-orbitale-sp-air-sp-3006df-5-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "210 mm",
+			"evidenceIds": [
+				"ponceuse-orbitale-sp-air-sp-3006df-5-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "0,65 kg",
+			"evidenceIds": [
+				"ponceuse-orbitale-sp-air-sp-3006df-5-reserved-20261103-1"
 			]
 		}
 	],
@@ -88,6 +106,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "ponceuse-orbitale-sp-air-sp-3006df-5-reserved-20261103-1",
+			"sourceUrl": "https://spair.vessel.co.jp/download/SP_catalog_all_E.pdf#page=14",
+			"sourceLabel": "SP AIR : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. La SP-3006DF-5 est la ponceuse 125 mm à orbite 5 mm, fournie dans la table avec tuyau et sac de poussière. La SP-3606DF-A5M reçoit 150 mm et pèse 1,3 kg contre 0,65 kg ; la SP-3605DF-A5M conserve 125 mm mais pèse 1,23 kg. Les 0,47 m³/min restent non qualifiés en charge."
 		}
 	],
 	"fieldSources": {
@@ -102,6 +130,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-sp-air-p14"
+		],
+		"editorial": [
+			"ponceuse-orbitale-sp-air-sp-3006df-5-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-orbitale-sp-air-sp-3006df-5-reserved-20261103-1"
 		]
 	},
 	"notes": [

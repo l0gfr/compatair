@@ -37,11 +37,18 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU BRH-1UD, code 70892. Le tableau publie une consommation moyenne de 0,34 m³/min, soit 340 L/min. Pression de référence retenue : 6 bar.",
+		"overview": "URYU BRH-1UD. Le code 70892 est la version H du BRH-1UD. La table des accessoires précise que les bouterolles ne sont pas livrées avec H, alors que R associe les repères d et i. La BRH-1USD mesure 272 mm : vérifier code et équipement fourni, au-delà des 340 L/min moyens communs.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 70892, page PDF 1.",
 			"Consommation moyenne publiée : 340 L/min après conversion de l’unité originale.",
-			"SPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85psi)\nSPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85psi)"
+			"SPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85 psi)\nSPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85 psi)",
+			"Code de la colonne H : 70892.",
+			"Cadence approximative : 2 800 coups/min.",
+			"Longueur totale : 143 mm.",
+			"Masse sans bouterolle : 1,40 kg.",
+			"Course du piston : 38 mm.",
+			"Bouterolle fournie : Aucune sur la version H, selon le tableau des accessoires.",
+			"Ressorts de retenue repérés : 2 et 5."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
@@ -76,6 +83,55 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-uryu-p70-71"
 			]
+		},
+		{
+			"label": "Code de la colonne H",
+			"value": "70892",
+			"evidenceIds": [
+				"marteau-a-river-uryu-brh-1ud-70892-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cadence approximative",
+			"value": "2 800 coups/min",
+			"evidenceIds": [
+				"marteau-a-river-uryu-brh-1ud-70892-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur totale",
+			"value": "143 mm",
+			"evidenceIds": [
+				"marteau-a-river-uryu-brh-1ud-70892-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse sans bouterolle",
+			"value": "1,40 kg",
+			"evidenceIds": [
+				"marteau-a-river-uryu-brh-1ud-70892-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Course du piston",
+			"value": "38 mm",
+			"evidenceIds": [
+				"marteau-a-river-uryu-brh-1ud-70892-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Bouterolle fournie",
+			"value": "Aucune sur la version H, selon le tableau des accessoires",
+			"evidenceIds": [
+				"marteau-a-river-uryu-brh-1ud-70892-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Ressorts de retenue repérés",
+			"value": "2 et 5",
+			"evidenceIds": [
+				"marteau-a-river-uryu-brh-1ud-70892-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -88,6 +144,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 51a1fe7622e1fe09d10ce44fc0fdbe4bc87c11f14d72836a26e18c2a733d7884. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		},
+		{
+			"id": "marteau-a-river-uryu-brh-1ud-70892-reserved-20261103-1",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P70_71.pdf",
+			"sourceLabel": "URYU : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 51a1fe7622e1fe09d10ce44fc0fdbe4bc87c11f14d72836a26e18c2a733d7884. Le code 70892 est la version H du BRH-1UD. La table des accessoires précise que les bouterolles ne sont pas livrées avec H, alors que R associe les repères d et i. La BRH-1USD mesure 272 mm : vérifier code et équipement fourni, au-delà des 340 L/min moyens communs."
+		},
+		{
+			"id": "marteau-a-river-uryu-brh-1ud-70892-reserved-20261103-1-2",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P70_71.pdf#page=2",
+			"sourceLabel": "URYU : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 51a1fe7622e1fe09d10ce44fc0fdbe4bc87c11f14d72836a26e18c2a733d7884. Le code 70892 est la version H du BRH-1UD. La table des accessoires précise que les bouterolles ne sont pas livrées avec H, alors que R associe les repères d et i. La BRH-1USD mesure 272 mm : vérifier code et équipement fourni, au-delà des 340 L/min moyens communs."
 		}
 	],
 	"fieldSources": {
@@ -102,6 +178,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-20260930-uryu-p70-71"
+		],
+		"editorial": [
+			"marteau-a-river-uryu-brh-1ud-70892-reserved-20261103-1"
+		],
+		"specifications": [
+			"marteau-a-river-uryu-brh-1ud-70892-reserved-20261103-1"
 		]
 	},
 	"notes": [

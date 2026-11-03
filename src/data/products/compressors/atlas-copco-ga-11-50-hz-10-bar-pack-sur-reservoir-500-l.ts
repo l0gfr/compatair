@@ -24,7 +24,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 1566
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "oil",
 	"powerKw": 11,
 	"mobility": "fixed",
@@ -38,59 +37,45 @@ const product: CompressorInput = {
 	},
 	"specifications": [
 		{
-			"label": "Configuration constructeur",
-			"value": "Pack sur réservoir 500 L",
+			"label": "Configuration",
+			"value": "Pack sur cuve 500 L, version 50 Hz 10 bar",
 			"evidenceIds": [
-				"october3c-atlas-ga5-11-p3"
+				"atlas-copco-ga-11-50-hz-10-bar-pack-sur-reservoir-500-l-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Pression maximale de fonctionnement",
-			"value": "10 bar relatifs",
+			"label": "Débit FAD mesuré à 9,5 bar",
+			"value": "26,1 L/s (1 566 L/min)",
 			"evidenceIds": [
-				"october3c-atlas-ga5-11-p6"
+				"atlas-copco-ga-11-50-hz-10-bar-pack-sur-reservoir-500-l-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Air livré à 9,5 bar",
-			"value": "26,1 L/s",
+			"label": "Puissance moteur",
+			"value": "11 kW",
 			"evidenceIds": [
-				"october3c-atlas-ga5-11-p6"
+				"atlas-copco-ga-11-50-hz-10-bar-pack-sur-reservoir-500-l-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Cuve de stockage",
-			"value": "500 L intégrés à cette configuration",
+			"label": "Mesure",
+			"value": "ISO 1217 édition 4 annexe C-2009 ; entrée 1 bar absolu, 20 °C",
 			"evidenceIds": [
-				"october3c-atlas-ga5-11-p3"
-			]
-		},
-		{
-			"label": "Cycle de service déclaré",
-			"value": "100%, famille constructeur citée",
-			"evidenceIds": [
-				"october3c-atlas-ga-duty"
-			]
-		},
-		{
-			"label": "Périmètre documentaire",
-			"value": "Documentation constructeur européenne ; commercialisation actuelle à confirmer",
-			"evidenceIds": [
-				"october3c-atlas-ga5-11-p6"
+				"atlas-copco-ga-11-50-hz-10-bar-pack-sur-reservoir-500-l-reserved-20261103-1"
 			]
 		}
 	],
 	"editorial": {
-		"overview": "Atlas Copco GA 11, Pack sur réservoir 500 L, 10 bar. 1 566 L/min à 9,5 bar.",
+		"overview": "Atlas Copco GA 11. La version Pack 500 L est distincte de la Full Feature avec sécheur. Passer de 270 à 500 L augmente le stockage, sans modifier les 26,1 L/s à 9,5 bar de cette version 50 Hz. Le blog de gamme GA ne documente pas le cycle de service de cette révision précise.",
 		"verifiedFacts": [
-			"Air livré rattaché à une pression et aux unités originales du constructeur.",
-			"Configuration de stockage documentée : 500 L.",
-			"Pression maximale de fonctionnement publiée : 10 bar."
+			"Configuration : Pack sur cuve 500 L, version 50 Hz 10 bar.",
+			"Débit FAD mesuré à 9,5 bar : 26,1 L/s (1 566 L/min).",
+			"Puissance moteur : 11 kW.",
+			"Mesure : ISO 1217 édition 4 annexe C-2009 ; entrée 1 bar absolu, 20 °C."
 		],
 		"limitations": [
-			"Service continu déclaré pour cette famille ; installation, refroidissement et entretien conformes au constructeur restent nécessaires.",
-			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Configuration publiée dans la documentation citée ; disponibilité commerciale actuelle à confirmer."
+			"La déclaration générale du blog GA ne suffit pas à attribuer un taux de marche numérique à cette révision.",
+			"Masse de la table non ventilée entre les deux volumes de cuve : aucune masse spécifique au volume retenue."
 		]
 	},
 	"evidence": [
@@ -133,6 +118,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 1061fe3edf7c5afd1ede36fd30a1ffd9deb9951ee795cd66a55ceddfc3561a30 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "atlas-copco-ga-11-50-hz-10-bar-pack-sur-reservoir-500-l-reserved-20261103-1",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/kazakhstan/documents/aii-materials-for-exhibition-2024/compressors/GA5-11_antwerp_leaflet_EN_2935087547.pdf#page=6",
+			"sourceLabel": "Atlas Copco : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 83df92251704597bda4b770f01badd351183571a3adf687e70cc3b50e9ef1de4. La version Pack 500 L est distincte de la Full Feature avec sécheur. Passer de 270 à 500 L augmente le stockage, sans modifier les 26,1 L/s à 9,5 bar de cette version 50 Hz. Le blog de gamme GA ne documente pas le cycle de service de cette révision précise."
 		}
 	],
 	"fieldSources": {
@@ -151,8 +146,11 @@ const product: CompressorInput = {
 		"oilType": [
 			"october3c-atlas-ga5-11-p1"
 		],
-		"dutyCycle": [
-			"october3c-atlas-ga-duty"
+		"editorial": [
+			"atlas-copco-ga-11-50-hz-10-bar-pack-sur-reservoir-500-l-reserved-20261103-1"
+		],
+		"specifications": [
+			"atlas-copco-ga-11-50-hz-10-bar-pack-sur-reservoir-500-l-reserved-20261103-1"
 		]
 	},
 	"notes": [

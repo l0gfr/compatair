@@ -38,46 +38,68 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Atlas Copco EP11PTX110 HR13-AT (réf. 8431037652). Consommation maximale : 720 L/min à 6,3 bar. Consommations originales : 12 L/s ; 25 cfm. Vitesse à vide : 5100 tr/min.",
+		"overview": "Atlas Copco EP11PTX110 HR13-AT. La EP11PTX110 HR13-AT est la ligne 70–110 Nm, 1,7 kg et 12 L/s en charge. La EP13PTX150 HR13-AT passe à 85–150 Nm, 2,3 kg et 15 L/s. La HR13-RE est un autre code de commande ; les données du AT restent rattachées au code 8431 0376 52.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 25.",
-			"Consommations originales : 12 L/s ; 25 cfm.",
-			"Vitesse à vide : 5100 tr/min.",
-			"Masse : 1.7 kg."
+			"Code : 8431 0376 52.",
+			"Plage de couple : 70–110 Nm.",
+			"Carré : 1/2 pouce.",
+			"Vitesse à vide : 5 100 tr/min.",
+			"Longueur : 196 mm.",
+			"Masse : 1,7 kg.",
+			"Consommation en charge : 12 L/s à 6,3 bar."
 		],
 		"limitations": [
-			"Le débit publié conserve son régime de mesure ; aucun cycle supposé ne réduit la consommation.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"Conditions générales constructeur : air libre, pression 6,3 bar ; les régimes explicitement inscrits dans la table restent prioritaires."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 25",
+			"label": "Code",
+			"value": "8431 0376 52",
 			"evidenceIds": [
-				"documented-d-atlas-tools-p25"
+				"cle-a-impulsions-atlas-copco-ep11ptx110-hr13-at-8431037652-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommations originales",
-			"value": "12 L/s ; 25 cfm",
+			"label": "Plage de couple",
+			"value": "70–110 Nm",
 			"evidenceIds": [
-				"documented-d-atlas-tools-p25"
+				"cle-a-impulsions-atlas-copco-ep11ptx110-hr13-at-8431037652-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Carré",
+			"value": "1/2 pouce",
+			"evidenceIds": [
+				"cle-a-impulsions-atlas-copco-ep11ptx110-hr13-at-8431037652-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Vitesse à vide",
-			"value": "5100 tr/min",
+			"value": "5 100 tr/min",
 			"evidenceIds": [
-				"documented-d-atlas-tools-p25"
+				"cle-a-impulsions-atlas-copco-ep11ptx110-hr13-at-8431037652-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "196 mm",
+			"evidenceIds": [
+				"cle-a-impulsions-atlas-copco-ep11ptx110-hr13-at-8431037652-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Masse",
-			"value": "1.7 kg",
+			"value": "1,7 kg",
 			"evidenceIds": [
-				"documented-d-atlas-tools-p25"
+				"cle-a-impulsions-atlas-copco-ep11ptx110-hr13-at-8431037652-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation en charge",
+			"value": "12 L/s à 6,3 bar",
+			"evidenceIds": [
+				"cle-a-impulsions-atlas-copco-ep11ptx110-hr13-at-8431037652-reserved-20261103-1"
 			]
 		}
 	],
@@ -101,6 +123,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "cle-a-impulsions-atlas-copco-ep11ptx110-hr13-at-8431037652-reserved-20261103-1",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf#page=25",
+			"sourceLabel": "Atlas Copco : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. La EP11PTX110 HR13-AT est la ligne 70–110 Nm, 1,7 kg et 12 L/s en charge. La EP13PTX150 HR13-AT passe à 85–150 Nm, 2,3 kg et 15 L/s. La HR13-RE est un autre code de commande ; les données du AT restent rattachées au code 8431 0376 52."
+		},
+		{
+			"id": "cle-a-impulsions-atlas-copco-ep11ptx110-hr13-at-8431037652-reserved-20261103-1-3",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf#page=3",
+			"sourceLabel": "Atlas Copco : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. La EP11PTX110 HR13-AT est la ligne 70–110 Nm, 1,7 kg et 12 L/s en charge. La EP13PTX150 HR13-AT passe à 85–150 Nm, 2,3 kg et 15 L/s. La HR13-RE est un autre code de commande ; les données du AT restent rattachées au code 8431 0376 52."
 		}
 	],
 	"fieldSources": {
@@ -113,6 +155,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"documented-d-atlas-tools-p25"
+		],
+		"editorial": [
+			"cle-a-impulsions-atlas-copco-ep11ptx110-hr13-at-8431037652-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-impulsions-atlas-copco-ep11ptx110-hr13-at-8431037652-reserved-20261103-1"
 		]
 	},
 	"notes": [

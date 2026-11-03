@@ -3,17 +3,18 @@ title: "Débit contradictoire entre deux catalogues : le cas CFM et m³/min"
 seoTitle: "Débit d’outil : repérer une contradiction CFM et m³/min"
 description: "Le Cleco 34RAA08AL3 porte 0,96 dans deux éditions avec des unités différentes. Pourquoi suspendre le verdict et demander une confirmation fabricant."
 pubDate: 2026-09-26
+updatedDate: 2026-11-03
 category: "Comprendre"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
 readingTime: 3
 relatedGuides: ["compresseur-reference-erp-nom-commercial", "cle-impulsions-consommation-vide-charge"]
-sources: ["https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf", "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063"]
+sources: ["https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf", "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=41"]
 ---
 
-Un chiffre identique peut masquer un changement majeur quand l’unité de sa colonne change. Dans une base de compatibilité, la bonne réaction n’est pas de choisir l’unité qui donne le résultat le plus commode : il faut conserver la contradiction et suspendre la valeur tant qu’elle n’est pas résolue.
+**Vérifiez l’unité avant de dimensionner le compresseur.** Deux catalogues Cleco affichent le même nombre, 0,96, pour la même référence, avec deux unités différentes. L’écart demande une clarification fabricant ; les deux publications doivent rester dans le dossier.
 
-La référence **Cleco 34RAA08AL3** fournit un exemple documentaire précis. Dans le [catalogue GI-1250-EU, page PDF 75](https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=75), sa consommation est **0,96** sous une colonne en **m³/min**. Dans le [catalogue SP-1081 en ligne, page 41](https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063), la ligne correspondante porte également **0,96**, mais sous une colonne intitulée **SCFM**.
+La référence **Cleco 34RAA08AL3** fournit un exemple documentaire précis, vérifié à nouveau le 3 novembre 2026. Dans le [catalogue GI-1250-EU, page PDF 75](https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=75), sa consommation est **0,96** sous une colonne en **m³/min**. Dans le [catalogue SP-1081 en ligne, page 41](https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=41), la ligne correspondante porte également **0,96**, sous une colonne intitulée **Scfm**.
 
 | Document | Valeur affichée | Unité de la colonne |
 | --- | --- | --- |
@@ -40,7 +41,7 @@ Conservez la réponse datée dans le dossier. Si une correction est obtenue, ell
 
 ## La conséquence dans CompatAir
 
-Les références concernées par cette contradiction ont été écartées du présent lot d’import. Aucune conversion silencieuse n’a été utilisée pour leur attribuer un compresseur compatible. Cette absence est plus utile qu’un verdict construit sur une unité incertaine.
+La référence possède une [fiche documentaire 34RAA08AL3](/outils-pneumatiques/boulonneuse-cleco-34raa08al3/). La présence d’une fiche et la possibilité de dimensionner son alimentation sont deux décisions distinctes : la contradiction d’unité doit être résolue avant d’utiliser la consommation dans un calcul conclusif.
 
 Le [guide consommation à vide et en charge](/guides/cle-impulsions-consommation-vide-charge/) traite un autre cas : plusieurs débits peuvent être cohérents quand leurs régimes sont distincts. Il faut donc qualifier la différence avant de la présenter comme une erreur.
 

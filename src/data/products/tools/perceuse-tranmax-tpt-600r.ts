@@ -29,10 +29,12 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Tranmax TPT-600R. Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse. Masse publiée : 13 kg (29 lb). Longueur hors tout publiée : 177 mm (7.0 inch).",
+		"overview": "Tranmax TPT-600R. La TPT-600R est une perceuse réversible 3/8 pouce de 177 mm et 1,3 kg : le précédent 13 kg venait d’une transcription erronée. La TPT-610R passe à 1/2 pouce, 750 tr/min et 1,8 kg. Les 240 L/min moyens en charge ne sont pas appariés à une pression de mesure exacte.",
 		"verifiedFacts": [
-			"Masse publiée : 13 kg (29 lb).",
-			"Longueur hors tout publiée : 177 mm (7.0 inch)."
+			"Mandrin : 3/8 pouce.",
+			"Vitesse à vide : 1 800 tr/min.",
+			"Masse publiée : 1,3 kg (2,9 lb).",
+			"Consommation moyenne en charge : 240 L/min."
 		],
 		"limitations": [
 			"Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse.",
@@ -43,24 +45,31 @@ const product: ToolProfileInput = {
 	},
 	"specifications": [
 		{
+			"label": "Mandrin",
+			"value": "3/8 pouce",
+			"evidenceIds": [
+				"perceuse-tranmax-tpt-600r-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "1 800 tr/min",
+			"evidenceIds": [
+				"perceuse-tranmax-tpt-600r-reserved-20261103-1"
+			]
+		},
+		{
 			"label": "Masse publiée",
-			"value": "13 kg (29 lb)",
+			"value": "1,3 kg (2,9 lb)",
 			"evidenceIds": [
-				"october2b-tools-oct2b-tranmax-tp-pdf-p28"
+				"perceuse-tranmax-tpt-600r-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur hors tout publiée",
-			"value": "177 mm (7.0 inch)",
+			"label": "Consommation moyenne en charge",
+			"value": "240 L/min",
 			"evidenceIds": [
-				"october2b-tools-oct2b-tranmax-tp-pdf-p28"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "Aucun point de pression de consommation n’est établi pour cette ligne.",
-			"evidenceIds": [
-				"october2b-tools-oct2b-tranmax-tp-pdf-p28"
+				"perceuse-tranmax-tpt-600r-reserved-20261103-1"
 			]
 		}
 	],
@@ -74,6 +83,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : c2e29dbb1f9d433e1d65568bc327d3ea21eadd7d39f8edbb0d98145850f7c7d2. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "perceuse-tranmax-tpt-600r-reserved-20261103-1",
+			"sourceUrl": "https://ss-client-website.s3-ap-northeast-1.amazonaws.com/tranmax/2023_01_09_113224_2212-Professional-Power-Tools-TP.pdf#page=28",
+			"sourceLabel": "Tranmax : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 c2e29dbb1f9d433e1d65568bc327d3ea21eadd7d39f8edbb0d98145850f7c7d2. La TPT-600R est une perceuse réversible 3/8 pouce de 177 mm et 1,3 kg : le précédent 13 kg venait d’une transcription erronée. La TPT-610R passe à 1/2 pouce, 750 tr/min et 1,8 kg. Les 240 L/min moyens en charge ne sont pas appariés à une pression de mesure exacte."
 		}
 	],
 	"fieldSources": {
@@ -85,6 +104,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-tranmax-tp-pdf-p28"
+		],
+		"editorial": [
+			"perceuse-tranmax-tpt-600r-reserved-20261103-1"
+		],
+		"specifications": [
+			"perceuse-tranmax-tpt-600r-reserved-20261103-1"
 		]
 	},
 	"notes": [

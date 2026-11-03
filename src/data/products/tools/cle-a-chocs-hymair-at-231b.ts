@@ -33,51 +33,53 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Hymair AT-231B. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Vitesse à vide : 7,000 rpm. Masse publiée (kg/lb) : 2.46/5.42.",
+		"overview": "Hymair AT-231B. La AT-231B est la clé 1/2 pouce de 185 mm, 2,46 kg et 576 Nm dans la colonne métrique. La AT-239 annonce 680 Nm et 2,79 kg à la même vitesse ; la AT-238 L allonge l’enclume et atteint 242 mm. Les 8 CFM sont une moyenne, exclue d’un verdict maximal en charge.",
 		"verifiedFacts": [
-			"Vitesse à vide : 7,000 rpm.",
-			"Masse publiée (kg/lb) : 2.46/5.42.",
-			"Longueur × hauteur : 185x184 mm."
+			"Carré : 1/2 pouce.",
+			"Couple maximal, colonne Nm : 576 Nm.",
+			"Vitesse à vide : 7 000 tr/min.",
+			"Masse : 2,46 kg.",
+			"Consommation moyenne publiée : 8 CFM."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Consommation moyenne publiée conservée dans les spécifications ; aucun débit maximal ni volume par action déduit.",
+			"Catalogue constructeur identifié ; configuration et disponibilité actuelles à confirmer."
 		]
 	},
 	"specifications": [
 		{
+			"label": "Carré",
+			"value": "1/2 pouce",
+			"evidenceIds": [
+				"cle-a-chocs-hymair-at-231b-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Couple maximal, colonne Nm",
+			"value": "576 Nm",
+			"evidenceIds": [
+				"cle-a-chocs-hymair-at-231b-reserved-20261103-1"
+			]
+		},
+		{
 			"label": "Vitesse à vide",
-			"value": "7,000 rpm",
+			"value": "7 000 tr/min",
 			"evidenceIds": [
-				"october2-tools-steed-2-p27"
+				"cle-a-chocs-hymair-at-231b-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée (kg/lb)",
-			"value": "2.46/5.42",
+			"label": "Masse",
+			"value": "2,46 kg",
 			"evidenceIds": [
-				"october2-tools-steed-2-p27"
+				"cle-a-chocs-hymair-at-231b-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur × hauteur",
-			"value": "185x184 mm",
+			"label": "Consommation moyenne publiée",
+			"value": "8 CFM",
 			"evidenceIds": [
-				"october2-tools-steed-2-p27"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "WORKING PRESSURE : 6.2 Bar",
-			"evidenceIds": [
-				"october2-tools-steed-2-p27"
-			]
-		},
-		{
-			"label": "Consommation moyenne, hors calcul",
-			"value": "8 cfm",
-			"evidenceIds": [
-				"october2-tools-steed-2-p27"
+				"cle-a-chocs-hymair-at-231b-reserved-20261103-1"
 			]
 		}
 	],
@@ -91,6 +93,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : b9c6143d5502d453b5b2e0846bcfec263fb763d42a478fbc52089a41725e7d8d. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-chocs-hymair-at-231b-reserved-20261103-1",
+			"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SAUfKpBkCgyL&dp=GvUApKfKKUAU#page=27",
+			"sourceLabel": "Hymair : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 b9c6143d5502d453b5b2e0846bcfec263fb763d42a478fbc52089a41725e7d8d. La AT-231B est la clé 1/2 pouce de 185 mm, 2,46 kg et 576 Nm dans la colonne métrique. La AT-239 annonce 680 Nm et 2,79 kg à la même vitesse ; la AT-238 L allonge l’enclume et atteint 242 mm. Les 8 CFM sont une moyenne, exclue d’un verdict maximal en charge."
 		}
 	],
 	"fieldSources": {
@@ -102,6 +114,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-steed-2-p27"
+		],
+		"editorial": [
+			"cle-a-chocs-hymair-at-231b-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-chocs-hymair-at-231b-reserved-20261103-1"
 		]
 	},
 	"notes": [

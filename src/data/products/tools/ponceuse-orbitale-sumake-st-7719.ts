@@ -3,7 +3,7 @@ import type { ToolProfileInput } from '../../../domain/catalog';
 const product: ToolProfileInput = {
 	"id": "ponceuse-orbitale-sumake-st-7719",
 	"slug": "ponceuse-orbitale-sumake-st-7719",
-	"categoryId": "ponceuse-orbitale",
+	"categoryId": "ponceuse-vibrante",
 	"category": "ponceuse-orbitale",
 	"label": "Sumake ST-7719",
 	"brand": "Sumake",
@@ -39,53 +39,68 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-7719. Consommation publiée, régime non précisé : 430 L/min à 6,2 bar. Consommation dans les unités du tableau : 430 L/min ; 15 cfm. Configuration complète publiée : ST-7719.",
+		"overview": "Sumake ST-7719. La ST-7719 est une ponceuse linéaire à deux pistons et patin 70 × 444 mm, pas la ST-7718 orbitale de patin 90 × 197 mm. La catégorie est corrigée en ponceuse vibrante ; la ligne ne documente aucun diamètre d’orbite et aucun n’est inventé.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 46.",
-			"Consommation dans les unités du tableau : 430 L/min ; 15 cfm.",
-			"Configuration complète publiée : ST-7719.",
-			"Régime de consommation : Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé."
+			"Mouvement : Straight line, linéaire à deux pistons.",
+			"Patin : 70 × 444 mm.",
+			"Cadence publiée : 2 500, libellé r.p.m. du tableau.",
+			"Longueur du corps : 410 mm.",
+			"Masse : 3,1 kg.",
+			"Consommation documentaire : 430 L/min, régime non précisé.",
+			"Pression de service recommandée : 6,2 bar ; pression de mesure de la consommation non démontrée."
 		],
 		"limitations": [
-			"Le régime de consommation n’est pas indiqué. Aucun débit maximal ou en charge n’est inventé ; le verdict reste insufficient_data.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier."
+			"La recommandation de service 6,2 bar ne prouve pas la pression de mesure de la consommation. Le régime reste non qualifié et le calcul indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 46",
+			"label": "Mouvement",
+			"value": "Straight line, linéaire à deux pistons",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p46"
+				"ponceuse-orbitale-sumake-st-7719-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Consommation dans les unités du tableau",
-			"value": "430 L/min ; 15 cfm",
+			"label": "Patin",
+			"value": "70 × 444 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p46"
+				"ponceuse-orbitale-sumake-st-7719-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Configuration complète publiée",
-			"value": "ST-7719",
+			"label": "Cadence publiée",
+			"value": "2 500, libellé r.p.m. du tableau",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p46"
+				"ponceuse-orbitale-sumake-st-7719-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Régime de consommation",
-			"value": "Non précisé par le tableau ; aucun équivalent en charge ou maximal calculé",
+			"label": "Longueur du corps",
+			"value": "410 mm",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p46"
+				"ponceuse-orbitale-sumake-st-7719-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Ligne technique originale du modèle",
-			"value": "ST-7719 70 x 444 2-3/4 x 17 - 2,500 410 16 1/4” 3/8” 430 15 3.1 6.82 6Pcs/Ctn/21/1.24'",
+			"label": "Masse",
+			"value": "3,1 kg",
 			"evidenceIds": [
-				"documented-d-sumake-na-2024-p46"
+				"ponceuse-orbitale-sumake-st-7719-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "430 L/min, régime non précisé",
+			"evidenceIds": [
+				"ponceuse-orbitale-sumake-st-7719-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression de service recommandée",
+			"value": "6,2 bar ; pression de mesure de la consommation non démontrée",
+			"evidenceIds": [
+				"ponceuse-orbitale-sumake-st-7719-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +114,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "ponceuse-orbitale-sumake-st-7719-reserved-20261103-1",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf#page=46",
+			"sourceLabel": "Sumake : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. La ST-7719 est une ponceuse linéaire à deux pistons et patin 70 × 444 mm, pas la ST-7718 orbitale de patin 90 × 197 mm. La catégorie est corrigée en ponceuse vibrante ; la ligne ne documente aucun diamètre d’orbite et aucun n’est inventé."
 		}
 	],
 	"fieldSources": {
@@ -113,6 +138,15 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"documented-d-sumake-na-2024-p46"
+		],
+		"categoryId": [
+			"ponceuse-orbitale-sumake-st-7719-reserved-20261103-1"
+		],
+		"editorial": [
+			"ponceuse-orbitale-sumake-st-7719-reserved-20261103-1"
+		],
+		"specifications": [
+			"ponceuse-orbitale-sumake-st-7719-reserved-20261103-1"
 		]
 	},
 	"notes": [

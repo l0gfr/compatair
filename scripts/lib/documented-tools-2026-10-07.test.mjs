@@ -1,3 +1,4 @@
+import { applyReservedNovember3Followup } from './reviewed-catalog-amendments-2026-11-03-reserved.mjs';
 import { beforeOctober25Followup } from './reviewed-catalog-amendments-2026-10-25-b.mjs';
 import { readFileSync, statSync } from 'node:fs';
 import { createRequire } from 'node:module';
@@ -29,10 +30,11 @@ describe('October 7 primary tool documents', () => {
   expect(prior).toHaveLength(19087);
   expect(() => assertNew(snapshot.tools, prior)).not.toThrow();
   for (const p of batch) {
-   const parsed = toolProfileSchema.parse(p);
+   const current = applyReservedNovember3Followup(structuredClone(p));
+   const parsed = toolProfileSchema.parse(current);
    expect(toolProfileSchema.parse(productsById.get(p.id)), p.id).toEqual(parsed);
    const saved = parseCatalogProductSource('tools', readFileSync(new URL(`../../src/data/products/tools/${p.id}.ts`, import.meta.url), 'utf8'));
-   expect(saved, p.id).toEqual(p);
+   expect(saved, p.id).toEqual(current);
   }
  });
  it('keeps qualified minute points, qualified action volumes and documentary gaps separate', () => {
@@ -140,7 +142,7 @@ describe('October 7 primary tool documents', () => {
    bytes += size;
    expect(size, p.id).toBeLessThanOrEqual(250 * 1024);
    const svg = readFileSync(path, 'utf8');
-   expect(productTechnicalSvgError(p, 'tools', svg), p.id).toBeNull();
+   expect(productTechnicalSvgError(applyReservedNovember3Followup(structuredClone(p)), 'tools', svg), p.id).toBeNull();
    expect(generatedTechnicalCardDimensions(svg), p.id).toEqual({ width: 1200, height: 800 });
   }
   const metadata = await sharp(readFileSync(new URL(`../../public${batch[0].image.src}`, import.meta.url))).metadata();

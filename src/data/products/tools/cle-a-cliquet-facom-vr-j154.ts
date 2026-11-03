@@ -29,13 +29,17 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "FACOM VR.J154. La fiche établit les dimensions ou caractéristiques mécaniques du modèle. Aucun débit d’air n’est déduit du couple, de la vitesse ni de la puissance. Champ fabricant : Power Source : Pneumatic. Champ fabricant : Product Height [mm] : 36.",
+		"overview": "FACOM VR.J154. La VR.J154 est un cliquet compact de 136 mm et 0,5 kg, avec tête de profil 29 mm et commande par la paume. La VR.SJ3500PB mesure 318 mm et n’offre pas la même accessibilité. Débit, pression et couple exact ne sont pas déduits de ce format.",
 		"verifiedFacts": [
 			"Champ fabricant : Power Source : Pneumatic.",
 			"Champ fabricant : Product Height [mm] : 36.",
 			"Champ fabricant : Product Length [mm] : 136.",
 			"Champ fabricant : Product Weight [Kg] : 0.5.",
-			"Champ fabricant : Product Width [mm] : 56."
+			"Champ fabricant : Product Width [mm] : 56.",
+			"Carré : 3/8 pouce.",
+			"Profil de tête : 29 mm.",
+			"Commande : Par la paume, réversible.",
+			"Entretien : Graisseur de tête accessible."
 		],
 		"limitations": [
 			"La fiche établit les dimensions ou caractéristiques mécaniques du modèle. Aucun débit d’air n’est déduit du couple, de la vitesse ni de la puissance.",
@@ -86,6 +90,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-facom-vrj154-html-p1"
 			]
+		},
+		{
+			"label": "Carré",
+			"value": "3/8 pouce",
+			"evidenceIds": [
+				"cle-a-cliquet-facom-vr-j154-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Profil de tête",
+			"value": "29 mm",
+			"evidenceIds": [
+				"cle-a-cliquet-facom-vr-j154-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Commande",
+			"value": "Par la paume, réversible",
+			"evidenceIds": [
+				"cle-a-cliquet-facom-vr-j154-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Entretien",
+			"value": "Graisseur de tête accessible",
+			"evidenceIds": [
+				"cle-a-cliquet-facom-vr-j154-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -98,6 +130,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 25a44bbd413133425033d9af92b202de007a18fa925d0b49ff95726755ab46e8. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-cliquet-facom-vr-j154-reserved-20261103-1",
+			"sourceUrl": "https://www.facom.com/product/vrj154/38-palm-control-ratchet?tid=610786",
+			"sourceLabel": "FACOM : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 d2bb7a5563a4d8c07fe03ef07e10a200af9affd87176fd570862d0c16186d2b9. La VR.J154 est un cliquet compact de 136 mm et 0,5 kg, avec tête de profil 29 mm et commande par la paume. La VR.SJ3500PB mesure 318 mm et n’offre pas la même accessibilité. Débit, pression et couple exact ne sont pas déduits de ce format."
 		}
 	],
 	"fieldSources": {
@@ -109,6 +151,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-facom-vrj154-html-p1"
+		],
+		"editorial": [
+			"cle-a-cliquet-facom-vr-j154-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-cliquet-facom-vr-j154-reserved-20261103-1"
 		]
 	},
 	"notes": [

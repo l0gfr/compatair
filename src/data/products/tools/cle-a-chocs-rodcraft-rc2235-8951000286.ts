@@ -31,69 +31,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Rodcraft RC2235 (réf. 8951000286). La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Vitesse publiée : 7400 min-1. Masse publiée : 1.85 kg.",
+		"overview": "Rodcraft RC2235. La RC2235 est la clé longue de 341 mm à 220 Nm de travail, distincts du maximum 300 Nm. La RC2257 donne 680 Nm de travail et 950 Nm maximum. Le glossaire définit average comme une moyenne en charge et cont. comme le fonctionnement à vide ; le plafond d’entrée 6,3 bar ne fournit pas une mesure à pression exacte.",
 		"verifiedFacts": [
-			"Vitesse publiée : 7400 min-1.",
-			"Masse publiée : 1.85 kg.",
-			"Dimensions publiées : 341x80x58 mm.",
-			"Diamètre de tuyau : 8 mm.",
-			"Carré de sortie : 1/2\"."
+			"Carré : 1/2 pouce.",
+			"Couple de travail : 220 Nm.",
+			"Couple maximal : 300 Nm.",
+			"Vitesse : 7 400 tr/min.",
+			"Consommation moyenne en charge publiée : 81 L/min.",
+			"Consommation à vide publiée : 408 L/min."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Glossaire constructeur p.4 : average = moyenne en charge ; cont. = consommation à vide. Le maximum d’entrée 6,3 bar n’est pas une pression exacte de mesure.",
+			"Catalogue historique identifié ; équipement et disponibilité actuels à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Vitesse publiée",
-			"value": "7400 min-1",
+			"label": "Carré",
+			"value": "1/2 pouce",
 			"evidenceIds": [
-				"october2-tools-rodcraft-catalog-p12"
+				"cle-a-chocs-rodcraft-rc2235-8951000286-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
-			"value": "1.85 kg",
+			"label": "Couple de travail",
+			"value": "220 Nm",
 			"evidenceIds": [
-				"october2-tools-rodcraft-catalog-p12"
+				"cle-a-chocs-rodcraft-rc2235-8951000286-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Dimensions publiées",
-			"value": "341x80x58 mm",
+			"label": "Couple maximal",
+			"value": "300 Nm",
 			"evidenceIds": [
-				"october2-tools-rodcraft-catalog-p12"
+				"cle-a-chocs-rodcraft-rc2235-8951000286-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre de tuyau",
-			"value": "8 mm",
+			"label": "Vitesse",
+			"value": "7 400 tr/min",
 			"evidenceIds": [
-				"october2-tools-rodcraft-catalog-p12"
+				"cle-a-chocs-rodcraft-rc2235-8951000286-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Carré de sortie",
-			"value": "1/2\"",
-			"evidenceIds": [
-				"october2-tools-rodcraft-catalog-p12"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "All technical data is based on a tool incoming pressure of max. 6.3 bar (90 psi), glossary PDF 4.",
-			"evidenceIds": [
-				"october2-tools-rodcraft-catalog-p12",
-				"october2-tools-rodcraft-catalog-p4"
-			]
-		},
-		{
-			"label": "Consommation moyenne, hors calcul",
+			"label": "Consommation moyenne en charge publiée",
 			"value": "81 L/min",
 			"evidenceIds": [
-				"october2-tools-rodcraft-catalog-p12",
-				"october2-tools-rodcraft-catalog-p4"
+				"cle-a-chocs-rodcraft-rc2235-8951000286-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation à vide publiée",
+			"value": "408 L/min",
+			"evidenceIds": [
+				"cle-a-chocs-rodcraft-rc2235-8951000286-reserved-20261103-1"
 			]
 		}
 	],
@@ -117,6 +109,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Document complémentaire de la référence exacte, sans essai CompatAir."
+		},
+		{
+			"id": "cle-a-chocs-rodcraft-rc2235-8951000286-reserved-20261103-1",
+			"sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=12",
+			"sourceLabel": "Rodcraft : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. La RC2235 est la clé longue de 341 mm à 220 Nm de travail, distincts du maximum 300 Nm. La RC2257 donne 680 Nm de travail et 950 Nm maximum. Le glossaire définit average comme une moyenne en charge et cont. comme le fonctionnement à vide ; le plafond d’entrée 6,3 bar ne fournit pas une mesure à pression exacte."
+		},
+		{
+			"id": "cle-a-chocs-rodcraft-rc2235-8951000286-reserved-20261103-1-3",
+			"sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf#page=4",
+			"sourceLabel": "Rodcraft : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. La RC2235 est la clé longue de 341 mm à 220 Nm de travail, distincts du maximum 300 Nm. La RC2257 donne 680 Nm de travail et 950 Nm maximum. Le glossaire définit average comme une moyenne en charge et cont. comme le fonctionnement à vide ; le plafond d’entrée 6,3 bar ne fournit pas une mesure à pression exacte."
 		}
 	],
 	"fieldSources": {
@@ -129,6 +141,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-rodcraft-catalog-p12"
+		],
+		"editorial": [
+			"cle-a-chocs-rodcraft-rc2235-8951000286-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-chocs-rodcraft-rc2235-8951000286-reserved-20261103-1"
 		]
 	},
 	"notes": [

@@ -23,46 +23,60 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "BIAX GAF 305, référence 150619510. Le tableau fabricant publie 210 L/min et une plage d’utilisation de 6 à 6 bar. Vitesse à vide publiée : 500 tr/min. Masse publiée : 510 g.",
+		"overview": "BIAX GAF 305. La GAF 305 donne 500 tr/min, 0,1–2,1 Nm sur assemblage dur et 0,1–2,0 Nm sur assemblage tendre. La GAF 309 atteint 900 tr/min avec d’autres plages, 0,1–1,4 et 0,1–1,5 Nm. Les ressorts de couple et la nature de l’assemblage comptent autant que le débit 210 L/min, dont le régime reste non précisé.",
 		"verifiedFacts": [
-			"Le catalogue prescrit un fonctionnement à 6 bar dans la page de cette famille.",
-			"Consommation publiée dans la ligne Luftverbrauch en L/min ; le régime de charge n’est pas détaillé.",
-			"Référence fabricant : 150619510.",
-			"Vitesse à vide publiée : 500 tr/min.",
-			"Masse publiée : 510 g."
+			"Entraînement : E6,3, hexagonal 1/4 pouce.",
+			"Couple, assemblage dur : 0,1–2,1 Nm.",
+			"Couple, assemblage tendre : 0,1–2,0 Nm.",
+			"Vitesse : 500 tr/min.",
+			"Masse : 510 g.",
+			"Consommation, régime non précisé : 210 L/min."
 		],
 		"limitations": [
-			"Le réglage du couple dépend de l’assemblage et des ressorts prévus par le fabricant.",
-			"L’aspiration des vis et les équipements auxiliaires peuvent demander un dimensionnement séparé."
+			"Le régime de consommation n’est pas précisé ; la valeur reste non dimensionnante et le verdict demeure insufficient_data."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Le catalogue prescrit un fonctionnement à 6 bar dans la page de cette famille.",
+			"label": "Entraînement",
+			"value": "E6,3, hexagonal 1/4 pouce",
 			"evidenceIds": [
-				"biax-150619510-20260926"
+				"biax-gaf-305-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation publiée dans la ligne Luftverbrauch en L/min ; le régime de charge n’est pas détaillé.",
+			"label": "Couple, assemblage dur",
+			"value": "0,1–2,1 Nm",
 			"evidenceIds": [
-				"biax-150619510-20260926"
+				"biax-gaf-305-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse à vide publiée",
+			"label": "Couple, assemblage tendre",
+			"value": "0,1–2,0 Nm",
+			"evidenceIds": [
+				"biax-gaf-305-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse",
 			"value": "500 tr/min",
 			"evidenceIds": [
-				"biax-150619510-20260926"
+				"biax-gaf-305-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
+			"label": "Masse",
 			"value": "510 g",
 			"evidenceIds": [
-				"biax-150619510-20260926"
+				"biax-gaf-305-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation, régime non précisé",
+			"value": "210 L/min",
+			"evidenceIds": [
+				"biax-gaf-305-reserved-20261103-1"
 			]
 		}
 	],
@@ -75,6 +89,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation publiée dans la ligne Luftverbrauch en L/min ; le régime de charge n’est pas détaillé."
+		},
+		{
+			"id": "biax-gaf-305-reserved-20261103-1",
+			"sourceUrl": "https://biax.de/wp-content/uploads/2025/02/BIAX_Schrauber_DE.pdf#page=8",
+			"sourceLabel": "BIAX : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 234541dfd789768204963f04e6df723f00c634bb38ced6d544e88ac762382718. La GAF 305 donne 500 tr/min, 0,1–2,1 Nm sur assemblage dur et 0,1–2,0 Nm sur assemblage tendre. La GAF 309 atteint 900 tr/min avec d’autres plages, 0,1–1,4 et 0,1–1,5 Nm. Les ressorts de couple et la nature de l’assemblage comptent autant que le débit 210 L/min, dont le régime reste non précisé."
 		}
 	],
 	"fieldSources": {
@@ -86,6 +110,15 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"biax-150619510-20260926"
+		],
+		"airflowBasis": [
+			"biax-gaf-305-reserved-20261103-1"
+		],
+		"editorial": [
+			"biax-gaf-305-reserved-20261103-1"
+		],
+		"specifications": [
+			"biax-gaf-305-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -95,7 +128,8 @@ const product: ToolProfileInput = {
 		"min": 210,
 		"typical": 210,
 		"max": 210
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

@@ -23,14 +23,18 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Cleco 35PHH65Q, référence 35PHH65Q. Le tableau fabricant publie 550 L/min et une plage d’utilisation de 6 à 6 bar. Plage de couple publiée : 20 à 35 Nm. Vitesse à vide publiée : 6500 tr/min.",
+		"overview": "Cleco 35PHH65Q. La 35PHH65Q est en sortie rapide 1/4\", tandis que la 35PHH653 utilise un carré 3/8\". Le point en charge est 400 L/min à 6 bar ; les 550 L/min à vide restent séparés. La 11PHH65Q couvre une plage de couple inférieure de 6–11 Nm.",
 		"verifiedFacts": [
 			"Performances publiées à 6 bar à l’entrée de l’outil, note de la page 86.",
-			"Le tableau distingue 550 L/min à vide et 400 L/min en charge à 6 bar. Le calcul conserve la plus élevée des deux valeurs publiées (550 L/min), sans cycle de travail supposé.",
 			"Référence fabricant : 35PHH65Q.",
 			"Plage de couple publiée : 20 à 35 Nm.",
 			"Vitesse à vide publiée : 6500 tr/min.",
-			"Consommation à vide publiée : 550.0 L/min."
+			"Consommation à vide publiée : 550.0 L/min.",
+			"Sortie : 1/4\" QC, changement rapide.",
+			"Fonctionnement : H-SERIES, sans coupure automatique.",
+			"Couple publié : 20–35 Nm.",
+			"Consommation en charge à 6 bar : 0,40 m³/min (400 L/min).",
+			"Consommation à vide à 6 bar : 0,55 m³/min (550 L/min)."
 		],
 		"limitations": [
 			"Données de catalogue industriel, sans essai physique CompatAir. Disponibilité et révision livrée à confirmer avec le fournisseur.",
@@ -100,6 +104,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"cleco-35phh65q-20260926"
 			]
+		},
+		{
+			"label": "Sortie",
+			"value": "1/4\" QC, changement rapide",
+			"evidenceIds": [
+				"cleco-35phh65q-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Fonctionnement",
+			"value": "H-SERIES, sans coupure automatique",
+			"evidenceIds": [
+				"cleco-35phh65q-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Couple publié",
+			"value": "20–35 Nm",
+			"evidenceIds": [
+				"cleco-35phh65q-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation en charge à 6 bar",
+			"value": "0,40 m³/min (400 L/min)",
+			"evidenceIds": [
+				"cleco-35phh65q-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation à vide à 6 bar",
+			"value": "0,55 m³/min (550 L/min)",
+			"evidenceIds": [
+				"cleco-35phh65q-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -111,6 +150,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Le tableau distingue 550 L/min à vide et 400 L/min en charge à 6 bar. Le calcul conserve la plus élevée des deux valeurs publiées (550 L/min), sans cycle de travail supposé."
+		},
+		{
+			"id": "cleco-35phh65q-reserved-20261103-1",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=86",
+			"sourceLabel": "Cleco : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 8668d5e77a6b2469dc9b9012841e65bbfb947234a8087faa6fdd90384b3babac. La 35PHH65Q est en sortie rapide 1/4\", tandis que la 35PHH653 utilise un carré 3/8\". Le point en charge est 400 L/min à 6 bar ; les 550 L/min à vide restent séparés. La 11PHH65Q couvre une plage de couple inférieure de 6–11 Nm."
 		}
 	],
 	"fieldSources": {
@@ -121,16 +170,22 @@ const product: ToolProfileInput = {
 			"cleco-35phh65q-20260926"
 		],
 		"airflowLpm": [
-			"cleco-35phh65q-20260926"
+			"cleco-35phh65q-reserved-20261103-1"
+		],
+		"editorial": [
+			"cleco-35phh65q-reserved-20261103-1"
+		],
+		"specifications": [
+			"cleco-35phh65q-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
 	"airflowLpm": {
-		"min": 550,
-		"typical": 550,
-		"max": 550
+		"min": 400,
+		"typical": 400,
+		"max": 400
 	}
 };
 

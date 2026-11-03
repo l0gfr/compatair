@@ -33,60 +33,68 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Mannesmann DEMAG GE 8-900 P (réf. 47060-08-5). La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse sans tuyau : 1.2 kg. Référence fabricant : 47060-08-5.",
+		"overview": "Mannesmann DEMAG GE 8-900 P. La GE 8-900 P est la taraudeuse à mandrin pendulaire B12, M6 acier ou M8 aluminium, à 900 tr/min. La GE 8-500 P partage ces capacités à 500 tr/min ; la G 14-6 P monte à M14/M16 avec une autre puissance. Les capacités selon matière restent distinctes. La note de pression concerne puissance et vitesse, pas explicitement la consommation.",
 		"verifiedFacts": [
-			"Masse sans tuyau : 1.2 kg.",
-			"Référence fabricant : 47060-08-5.",
+			"Taraudage acier / aluminium : M6 / M8.",
+			"Mandrin pendulaire : Oui.",
+			"Plage de serrage carré : 3–9 mm.",
+			"Cône : B12 DIN238.",
 			"Vitesse à vide : 900 tr/min.",
-			"Longueur publiée : 251 mm."
+			"Puissance : 200 W.",
+			"Consommation, régime non précisé : 4,5 L/s."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"La pression de 6 bar est donnée pour la puissance et la vitesse ; son application à la consommation n’est pas supposée.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"La note constructeur à 6 bar concerne explicitement puissance et vitesse/cadence ; elle n’est pas étendue à la consommation sans preuve."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse sans tuyau",
-			"value": "1.2 kg",
+			"label": "Taraudage acier / aluminium",
+			"value": "M6 / M8",
 			"evidenceIds": [
-				"october2-tools-mannesmann-0-p63"
+				"taraudeuse-mannesmann-demag-ge-8-900-p-47060-08-5-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Référence fabricant",
-			"value": "47060-08-5",
+			"label": "Mandrin pendulaire",
+			"value": "Oui",
 			"evidenceIds": [
-				"october2-tools-mannesmann-0-p63"
+				"taraudeuse-mannesmann-demag-ge-8-900-p-47060-08-5-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Plage de serrage carré",
+			"value": "3–9 mm",
+			"evidenceIds": [
+				"taraudeuse-mannesmann-demag-ge-8-900-p-47060-08-5-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cône",
+			"value": "B12 DIN238",
+			"evidenceIds": [
+				"taraudeuse-mannesmann-demag-ge-8-900-p-47060-08-5-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Vitesse à vide",
 			"value": "900 tr/min",
 			"evidenceIds": [
-				"october2-tools-mannesmann-0-p63"
+				"taraudeuse-mannesmann-demag-ge-8-900-p-47060-08-5-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur publiée",
-			"value": "251 mm",
+			"label": "Puissance",
+			"value": "200 W",
 			"evidenceIds": [
-				"october2-tools-mannesmann-0-p63"
+				"taraudeuse-mannesmann-demag-ge-8-900-p-47060-08-5-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "Power and free speed at 6 bar operating pressure. Compressed air quality: lubricated.",
+			"label": "Consommation, régime non précisé",
+			"value": "4,5 L/s",
 			"evidenceIds": [
-				"october2-tools-mannesmann-0-p63"
-			]
-		},
-		{
-			"label": "Consommation de régime non précisé, hors calcul",
-			"value": "4.5 L/s",
-			"evidenceIds": [
-				"october2-tools-mannesmann-0-p63"
+				"taraudeuse-mannesmann-demag-ge-8-900-p-47060-08-5-reserved-20261103-1"
 			]
 		}
 	],
@@ -100,6 +108,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 9de8eb77aad6c7412b390db54a16646c71c0a4f9925ddf3ddfba1048b1779f3b. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "taraudeuse-mannesmann-demag-ge-8-900-p-47060-08-5-reserved-20261103-1",
+			"sourceUrl": "https://www.mannesmann-demag.com/bilder-und-dateien/downloads/kataloge/md_airtools_05_2017_e.pdf?type=download#page=63",
+			"sourceLabel": "Mannesmann DEMAG : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9de8eb77aad6c7412b390db54a16646c71c0a4f9925ddf3ddfba1048b1779f3b. La GE 8-900 P est la taraudeuse à mandrin pendulaire B12, M6 acier ou M8 aluminium, à 900 tr/min. La GE 8-500 P partage ces capacités à 500 tr/min ; la G 14-6 P monte à M14/M16 avec une autre puissance. Les capacités selon matière restent distinctes. La note de pression concerne puissance et vitesse, pas explicitement la consommation."
 		}
 	],
 	"fieldSources": {
@@ -111,6 +129,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-mannesmann-0-p63"
+		],
+		"editorial": [
+			"taraudeuse-mannesmann-demag-ge-8-900-p-47060-08-5-reserved-20261103-1"
+		],
+		"specifications": [
+			"taraudeuse-mannesmann-demag-ge-8-900-p-47060-08-5-reserved-20261103-1"
 		]
 	},
 	"notes": [

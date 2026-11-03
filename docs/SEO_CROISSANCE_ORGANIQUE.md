@@ -19,12 +19,12 @@ Depuis le 31 octobre 2026, les plafonds demandés sont de 10 guides, 100 compres
 | Famille | Nouvelles pages par jour au maximum |
 | --- | ---: |
 | Guides | 10 |
-| Compresseurs | 30 |
-| Outils pneumatiques | 60 |
+| Compresseurs | 100 |
+| Outils pneumatiques | 400 |
 
 Un seul lot peut s’ouvrir par jour civil dans le fuseau `Europe/Paris`, y compris aux changements d’heure. Le délai historique de huit jours est remplacé par ce calendrier quotidien. Les anciennes admissions restent conservées. Un quota inutilisé n’est transféré ni à une autre famille ni au lendemain. Si les contrôles ne laissent pas assez de candidats, le lot est plus petit.
 
-Un même groupe ne peut occuper plus de 25 % de son quota, arrondi à l’entier supérieur : marque et catégorie pour les fiches, catégorie éditoriale et premier métier déclaré pour les guides. Cela limite chaque groupe à trois guides, huit compresseurs ou quinze outils dans le lot quotidien. Le rapprochement avec le panel éditorial figé de 100 requêtes donne une priorité explicite, puis l’ancienneté départage les candidats. Ce rapprochement est une hypothèse éditoriale ; aucune demande, position ni audience mesurée n’est inventée.
+Un même groupe ne peut occuper plus de 25 % de son quota, arrondi à l’entier supérieur : marque et catégorie pour les fiches, catégorie éditoriale et premier métier déclaré pour les guides. Cela limite chaque groupe à trois guides, vingt-cinq compresseurs ou cent outils dans le lot quotidien. Le rapprochement avec le panel éditorial figé de 100 requêtes donne une priorité explicite, puis l’ancienneté départage les candidats. Ce rapprochement est une hypothèse éditoriale ; aucune demande, position ni audience mesurée n’est inventée.
 
 Le build lit `/data/indexation.json` et `/data/release.json` sur le site public. Il part du dernier lot réellement déployé. Plusieurs builds locaux n’épuisent pas des quotas et ne débloquent pas plusieurs lots. Après plusieurs semaines d’arrêt, un seul lot peut s’ouvrir au build suivant : aucun rattrapage cumulatif.
 

@@ -29,82 +29,53 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Universal Tool UT2964. Les deux paires d’unités publiées sont incompatibles. Aucune conversion ne sert à choisir une valeur corrigée ; la consommation reste hors calcul et ces cotes demandent confirmation du fabricant. Puissance publiée, discordance : 0,05 hp et 0,37 kW dans la même fiche. Longueur publiée, discordance : 8,5 pouces et 190 mm dans la même fiche.",
+		"overview": "Universal Tool UT2964. La UT2964 est la visseuse à embrayage réglable et mandrin hexagonal rapide 1/4 pouce. La fiche publie bien 16 CFM et une moyenne distincte 4 CFM, mais seulement une pression recommandée. Les incohérences de puissance et longueur restent visibles ; aucune hypothèse 0,5 HP ni longueur convertie ne les remplace. Les UT8964-1 et UT8966 gardent leurs propres équipements.",
 		"verifiedFacts": [
-			"Masse publiée : 1.1 kg.",
-			"Longueur publiée : 190 mm.",
-			"Puissance publiée : 0.05 HP.",
-			"Échappement : Handle.",
-			"Puissance publiée, discordance : 0,05 hp et 0,37 kW dans la même fiche.",
-			"Longueur publiée, discordance : 8,5 pouces et 190 mm dans la même fiche."
+			"Mandrin : Hexagonal 1/4 pouce à changement rapide.",
+			"Consommation de régime non précisé : 16 CFM.",
+			"Consommation moyenne distincte : 4 CFM.",
+			"Puissance, colonnes discordantes : 0,05 HP / 0,37 kW.",
+			"Longueur, colonnes discordantes : 8,5 pouces / 190 mm."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Régime et pression de mesure non suffisamment documentés ; les valeurs restent hors calcul conclusif.",
+			"Les colonnes contradictoires éventuelles restent attribuées à la source, sans correction devinée."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "1.1 kg",
+			"label": "Mandrin",
+			"value": "Hexagonal 1/4 pouce à changement rapide",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-379-p1"
+				"visseuse-universal-tool-ut2964-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur publiée",
-			"value": "190 mm",
+			"label": "Consommation de régime non précisé",
+			"value": "16 CFM",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-379-p1"
+				"visseuse-universal-tool-ut2964-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Puissance publiée",
-			"value": "0.05 HP",
+			"label": "Consommation moyenne distincte",
+			"value": "4 CFM",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-379-p1"
+				"visseuse-universal-tool-ut2964-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Échappement",
-			"value": "Handle",
+			"label": "Puissance, colonnes discordantes",
+			"value": "0,05 HP / 0,37 kW",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-379-p1"
+				"visseuse-universal-tool-ut2964-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Champ fabricant : Rec. Hose Size (in)",
-			"value": "3/8-in.",
+			"label": "Longueur, colonnes discordantes",
+			"value": "8,5 pouces / 190 mm",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-379-p1"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "Pression de mesure de la consommation non établie dans la fiche.",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-379-p1"
-			]
-		},
-		{
-			"label": "Consommation de régime non précisé, hors calcul",
-			"value": "16 cfm",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-379-p1"
-			]
-		},
-		{
-			"label": "Puissance publiée, discordance",
-			"value": "0,05 hp et 0,37 kW dans la même fiche",
-			"evidenceIds": [
-				"visseuse-universal-tool-ut2964-reserved-20261101-1"
-			]
-		},
-		{
-			"label": "Longueur publiée, discordance",
-			"value": "8,5 pouces et 190 mm dans la même fiche",
-			"evidenceIds": [
-				"visseuse-universal-tool-ut2964-reserved-20261101-1"
+				"visseuse-universal-tool-ut2964-reserved-20261103-1"
 			]
 		}
 	],
@@ -128,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-11-01",
 			"confidence": "B",
 			"notes": "Corps complet GET HTTP200 SHA-256 c978a1dd076dab73afdffe2da8bc27b8f96084dd7a29e28a6fecbeca22de3445. Lecture de la référence et des configurations voisines, sans essai physique CompatAir."
+		},
+		{
+			"id": "visseuse-universal-tool-ut2964-reserved-20261103-1",
+			"sourceUrl": "https://continentaltoolgroup.com/product/adjustable-clutch-screwdriver-3/",
+			"sourceLabel": "Universal Tool : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 342eca62e23ecf79df006cad1034a3c11279702608f43d57d4181d80ed0372da. La UT2964 est la visseuse à embrayage réglable et mandrin hexagonal rapide 1/4 pouce. La fiche publie bien 16 CFM et une moyenne distincte 4 CFM, mais seulement une pression recommandée. Les incohérences de puissance et longueur restent visibles ; aucune hypothèse 0,5 HP ni longueur convertie ne les remplace. Les UT8964-1 et UT8966 gardent leurs propres équipements."
 		}
 	],
 	"fieldSources": {
@@ -141,10 +122,10 @@ const product: ToolProfileInput = {
 			"october2-tools-ctg-pdp-379-p1"
 		],
 		"editorial": [
-			"visseuse-universal-tool-ut2964-reserved-20261101-1"
+			"visseuse-universal-tool-ut2964-reserved-20261103-1"
 		],
 		"specifications": [
-			"visseuse-universal-tool-ut2964-reserved-20261101-1"
+			"visseuse-universal-tool-ut2964-reserved-20261103-1"
 		]
 	},
 	"notes": [

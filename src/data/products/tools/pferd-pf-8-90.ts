@@ -9,10 +9,8 @@ const product: ToolProfileInput = {
 	"categoryId": "lime-alternative",
 	"category": "lime-alternative",
 	"label": "PFERD PF 8/90",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
 		"max": 6.3
 	},
 	"confidence": "B",
@@ -23,62 +21,60 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "PFERD PF 8/90, référence 80600205. Le dimensionnement utilise 78 L/min à 6,3 bar, selon les régimes publiés par le fabricant. Longueur : 180 mm. Poids net de la machine : 1.038 kg. Échappement d'air : Avant.",
+		"overview": "PFERD PF 8/90. La PF 8/90 est décrite comme PF 8/90 HV sur la fiche actuelle de l’article 80600205, à 9 000 courses/min. La PF 4/84 et la PFGA 07/220 sont d’autres références, dont les réglages ne sont pas transférés. Les consommations à vide et en charge valent toutes deux 78 L/min, mais l’égalité ne prouve pas leur pression de mesure ; la consigne 6,3 bar reste distincte.",
 		"verifiedFacts": [
-			"Pression de service publiée sur cette fiche : 6.3 bar. Aucune autre pression de fonctionnement n’est déduite.",
-			"Consommation sous charge : 0.078 m³/min ; à vide : 0.078 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 78 L/min (m³/min × 1 000).",
-			"Référence fabricant : 80600205.",
+			"Désignation de la fiche actuelle : PF 8/90 HV, article 80600205.",
+			"Cadence : 9 000 courses/min.",
 			"Longueur : 180 mm.",
-			"Poids net de la machine : 1.038 kg.",
-			"Échappement d'air : Avant."
+			"Masse : 1,038 kg.",
+			"Consommation en charge : 0,078 m³/min (78 L/min).",
+			"Consommation à vide distincte : 0,078 m³/min (78 L/min)."
 		],
 		"limitations": [
-			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
-			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
-			"La valeur la plus élevée à vide ou en charge couvre les deux régimes documentés ; aucune moyenne de cycle n’est substituée à ces valeurs."
+			"Le débit en charge et le débit à vide sont séparés ; la pression de service ne suffit pas à établir leur pression de mesure."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression de service publiée sur cette fiche : 6.3 bar. Aucune autre pression de fonctionnement n’est déduite.",
+			"label": "Désignation de la fiche actuelle",
+			"value": "PF 8/90 HV, article 80600205",
 			"evidenceIds": [
-				"pferd-80600205-20260927"
+				"pferd-pf-8-90-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation sous charge : 0.078 m³/min ; à vide : 0.078 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 78 L/min (m³/min × 1 000).",
+			"label": "Cadence",
+			"value": "9 000 courses/min",
 			"evidenceIds": [
-				"pferd-80600205-20260927"
+				"pferd-pf-8-90-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Longueur",
 			"value": "180 mm",
 			"evidenceIds": [
-				"pferd-80600205-20260927"
+				"pferd-pf-8-90-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Poids net de la machine",
-			"value": "1.038 kg",
+			"label": "Masse",
+			"value": "1,038 kg",
 			"evidenceIds": [
-				"pferd-80600205-20260927"
+				"pferd-pf-8-90-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Échappement d'air",
-			"value": "Avant",
+			"label": "Consommation en charge",
+			"value": "0,078 m³/min (78 L/min)",
 			"evidenceIds": [
-				"pferd-80600205-20260927"
+				"pferd-pf-8-90-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "ø intérieur flexible d'alimentation",
-			"value": "4.8 mm",
+			"label": "Consommation à vide distincte",
+			"value": "0,078 m³/min (78 L/min)",
 			"evidenceIds": [
-				"pferd-80600205-20260927"
+				"pferd-pf-8-90-reserved-20261103-1"
 			]
 		}
 	],
@@ -91,6 +87,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation sous charge : 0.078 m³/min ; à vide : 0.078 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 78 L/min (m³/min × 1 000)."
+		},
+		{
+			"id": "pferd-pf-8-90-reserved-20261103-1",
+			"sourceUrl": "https://fr.pferd.com/fr/appareil-a-limer-pneumatique-pf-890",
+			"sourceLabel": "PFERD : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 d5cb5c440562581d832b437c4823d198698fffed2e0557dbe21a1764b53875b3. La PF 8/90 est décrite comme PF 8/90 HV sur la fiche actuelle de l’article 80600205, à 9 000 courses/min. La PF 4/84 et la PFGA 07/220 sont d’autres références, dont les réglages ne sont pas transférés. Les consommations à vide et en charge valent toutes deux 78 L/min, mais l’égalité ne prouve pas leur pression de mesure ; la consigne 6,3 bar reste distincte."
 		}
 	],
 	"fieldSources": {
@@ -98,20 +104,25 @@ const product: ToolProfileInput = {
 			"pferd-80600205-20260927"
 		],
 		"workingPressureBar": [
-			"pferd-80600205-20260927"
+			"pferd-pf-8-90-reserved-20261103-1"
 		],
-		"airflowLpm": [
-			"pferd-80600205-20260927"
+		"demandModel": [
+			"pferd-pf-8-90-reserved-20261103-1"
+		],
+		"demandExplanation": [
+			"pferd-pf-8-90-reserved-20261103-1"
+		],
+		"editorial": [
+			"pferd-pf-8-90-reserved-20261103-1"
+		],
+		"specifications": [
+			"pferd-pf-8-90-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 78,
-		"typical": 78,
-		"max": 78
-	}
+	"demandExplanation": "Débits documentés selon leur régime, sans pression de mesure explicitement appariée par la fiche."
 };
 
 export default product;

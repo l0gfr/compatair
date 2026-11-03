@@ -20,22 +20,6 @@ const product: CompressorInput = {
 	"maxPressureBar": 13.5,
 	"fadCurve": [
 		{
-			"pressureBar": 4.5,
-			"litersPerMinute": 26800
-		},
-		{
-			"pressureBar": 7,
-			"litersPerMinute": 26500
-		},
-		{
-			"pressureBar": 8,
-			"litersPerMinute": 24400
-		},
-		{
-			"pressureBar": 10,
-			"litersPerMinute": 21500
-		},
-		{
 			"pressureBar": 12.5,
 			"litersPerMinute": 17500
 		}
@@ -68,41 +52,6 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "FAD à 4,5 bar",
-			"value": "10,7 à 26,8 m³/min",
-			"evidenceIds": [
-				"october2b-elgi-eg-premium-p8"
-			]
-		},
-		{
-			"label": "FAD à 7 bar",
-			"value": "10,6 à 26,5 m³/min",
-			"evidenceIds": [
-				"october2b-elgi-eg-premium-p8"
-			]
-		},
-		{
-			"label": "FAD à 8 bar",
-			"value": "10,4 à 24,4 m³/min",
-			"evidenceIds": [
-				"october2b-elgi-eg-premium-p8"
-			]
-		},
-		{
-			"label": "FAD à 10 bar",
-			"value": "10,4 à 21,5 m³/min",
-			"evidenceIds": [
-				"october2b-elgi-eg-premium-p8"
-			]
-		},
-		{
-			"label": "FAD à 12,5 bar",
-			"value": "8,4 à 17,5 m³/min",
-			"evidenceIds": [
-				"october2b-elgi-eg-premium-p8"
-			]
-		},
-		{
 			"label": "Fréquence de la documentation",
 			"value": "50 Hz",
 			"evidenceIds": [
@@ -122,20 +71,60 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october2b-elgi-eg-premium-p8"
 			]
+		},
+		{
+			"label": "Configuration du tableau",
+			"value": "EG 132-P, VFD, 50 Hz, pression maximale de configuration 13,5 bar",
+			"evidenceIds": [
+				"elgi-eg-132-p-50-hz-vitesse-variable-groupe-fixe-au-sol-sans-secheur-vitesse-variable-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Plage FAD à la pression de travail 12,5 bar",
+			"value": "8,4–17,5 m³/min (8 400–17 500 L/min)",
+			"evidenceIds": [
+				"elgi-eg-132-p-50-hz-vitesse-variable-groupe-fixe-au-sol-sans-secheur-vitesse-variable-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Puissance du moteur",
+			"value": "132 kW",
+			"evidenceIds": [
+				"elgi-eg-132-p-50-hz-vitesse-variable-groupe-fixe-au-sol-sans-secheur-vitesse-variable-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse publiée de la version VFD",
+			"value": "3 345 kg",
+			"evidenceIds": [
+				"elgi-eg-132-p-50-hz-vitesse-variable-groupe-fixe-au-sol-sans-secheur-vitesse-variable-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Méthode du débit",
+			"value": "ISO 1217:2009 annexe C ; groupe complet, sortie après séparateur d’humidité",
+			"evidenceIds": [
+				"elgi-eg-132-p-50-hz-vitesse-variable-groupe-fixe-au-sol-sans-secheur-vitesse-variable-reserved-20261103-1"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "ELGi EG 132-P, 50 Hz, vitesse variable. 26 800 L/min à 4,5 bar ; 26 500 L/min à 7 bar ; 24 400 L/min à 8 bar ; 21 500 L/min à 10 bar ; 17 500 L/min à 12,5 bar. Moteur 132 kW ; groupe fixe au sol, sans sécheur ; vitesse variable.",
+		"overview": "ELGi EG 132-P. La configuration VFD de plafond 13,5 bar possède une plage de FAD publiée à 12,5 bar. Les lignes de plafond 5,5/8/9/11 bar sont d’autres configurations et ne forment pas sa courbe. Le moteur conserve uniquement 17 500 L/min à 12,5 bar ; le taux de marche du groupe reste inconnu.",
 		"verifiedFacts": [
 			"Débit restitué relié à une pression et aux unités originales de la fiche fabricant.",
 			"Périmètre retenu : groupe seul ; réservoir de stockage externe exclu.",
-			"Limite de pression documentée : 13,5 bar ; le point FAD conserve sa pression publiée."
+			"Limite de pression documentée : 13,5 bar ; le point FAD conserve sa pression publiée.",
+			"Configuration du tableau : EG 132-P, VFD, 50 Hz, pression maximale de configuration 13,5 bar.",
+			"Plage FAD à la pression de travail 12,5 bar : 8,4–17,5 m³/min (8 400–17 500 L/min).",
+			"Puissance du moteur : 132 kW.",
+			"Masse publiée de la version VFD : 3 345 kg.",
+			"Méthode du débit : ISO 1217:2009 annexe C ; groupe complet, sortie après séparateur d’humidité."
 		],
 		"limitations": [
-			"Les points de vitesse variable sont regroupés dans une seule courbe. Le maximum de chaque plage publié est retenu ; la stabilité à faible charge n’est pas simulée.",
 			"Cycle de service non établi par les sources retenues ; la tenue permanente reste indéterminée.",
 			"Les seules pressions FAD retenues sont celles du document. Aucun débit aspiré, extrapolation ou essai d’utilisation CompatAir.",
-			"Documentation et disponibilité de la configuration à confirmer avec le constructeur."
+			"Documentation et disponibilité de la configuration à confirmer avec le constructeur.",
+			"La borne basse de modulation de 8 400 L/min est conservée dans les spécifications ; la courbe moteur contient le seul maximum de cette configuration, sans interpolation entre variantes."
 		]
 	},
 	"evidence": [
@@ -158,6 +147,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 2b9f43ec8dff222a8f93b9217c688172836c6c783a2c5af2c5e44ebf448f8b9d de la réponse originale. Données fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "elgi-eg-132-p-50-hz-vitesse-variable-groupe-fixe-au-sol-sans-secheur-vitesse-variable-reserved-20261103-1",
+			"sourceUrl": "https://www.elgi.com/in/wp-content/uploads/2019/06/EG-Premium-90-160-catalogue_India.pdf#page=8",
+			"sourceLabel": "ELGi : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 2b9f43ec8dff222a8f93b9217c688172836c6c783a2c5af2c5e44ebf448f8b9d. La configuration VFD de plafond 13,5 bar possède une plage de FAD publiée à 12,5 bar. Les lignes de plafond 5,5/8/9/11 bar sont d’autres configurations et ne forment pas sa courbe. Le moteur conserve uniquement 17 500 L/min à 12,5 bar ; le taux de marche du groupe reste inconnu."
 		}
 	],
 	"fieldSources": {
@@ -168,7 +167,7 @@ const product: CompressorInput = {
 			"october2b-elgi-eg-premium-p8"
 		],
 		"fadCurve": [
-			"october2b-elgi-eg-premium-p8"
+			"elgi-eg-132-p-50-hz-vitesse-variable-groupe-fixe-au-sol-sans-secheur-vitesse-variable-reserved-20261103-1"
 		],
 		"powerKw": [
 			"october2b-elgi-eg-premium-p8"
@@ -178,6 +177,12 @@ const product: CompressorInput = {
 		],
 		"weightKg": [
 			"october2b-elgi-eg-premium-p8"
+		],
+		"editorial": [
+			"elgi-eg-132-p-50-hz-vitesse-variable-groupe-fixe-au-sol-sans-secheur-vitesse-variable-reserved-20261103-1"
+		],
+		"specifications": [
+			"elgi-eg-132-p-50-hz-vitesse-variable-groupe-fixe-au-sol-sans-secheur-vitesse-variable-reserved-20261103-1"
 		]
 	},
 	"notes": [

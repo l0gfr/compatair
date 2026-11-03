@@ -74,13 +74,61 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4c-compair-d37-75-p11"
       ]
+    },
+    {
+      "label": "Configuration retenue",
+      "value": "Vitesse fixe, refroidissement par air",
+      "evidenceIds": [
+        "compair-d45-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "FAD àpression nominale8,5 bar",
+      "value": "6,5 m³/min",
+      "evidenceIds": [
+        "compair-d45-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Puissance moteur",
+      "value": "45 kW",
+      "evidenceIds": [
+        "compair-d45-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Masse versionair",
+      "value": "2 497 kg",
+      "evidenceIds": [
+        "compair-d45-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Dimensions L×W×H",
+      "value": "2 248 × 1 372 × 1 917 mm",
+      "evidenceIds": [
+        "compair-d45-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Conditions de mesure",
+      "value": "ISO 1217 édition4 annexesC/E ; entrée1 bar absolu,20 °C, humidité0%",
+      "evidenceIds": [
+        "compair-d45-reserved-20261103-1"
+      ]
     }
   ],
   "editorial": {
-    "overview": "CompAir D45. 6 500 L/min déclarés à 8,5 bar. Configuration constructeur : D45.",
+    "overview": "CompAir D45. La D45 fixe refroidie par air publie6,5 m³/min à8,5 bar et 2 497 kg ; la D45RS régulée donne6,3 m³/min au même point nominal. La version fixe refroidie par eau pèse2 520 kg ; sa masse ne remplace pas celle de la versionair retenue.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 8,5 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 6 500 L/min déclarés à 8,5 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 6 500 L/min déclarés à 8,5 bar.",
+      "Configuration retenue : Vitesse fixe, refroidissement par air.",
+      "FAD àpression nominale8,5 bar : 6,5 m³/min.",
+      "Puissance moteur : 45 kW.",
+      "Masse versionair : 2 497 kg.",
+      "Dimensions L×W×H : 2 248 × 1 372 × 1 917 mm.",
+      "Conditions de mesure : ISO 1217 édition4 annexesC/E ; entrée1 bar absolu,20 °C, humidité0%."
     ],
     "limitations": [
       "Refroidissement par air, conforme à la ligne constructeur retenue.",
@@ -111,6 +159,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 ccc615617535035c2b712685ba0cc0c6965acb052fe352f07efe51b7cd19931f de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "compair-d45-reserved-20261103-1",
+      "sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/blta76611689adb5848/blte7fea97cc5d50fc3/67ef980e3c659585a8e56a5b/D_SERIES_37_75_12PP_EN.pdf#page=11",
+      "sourceLabel": "CompAir : revue factuelle du 3 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-03",
+      "confidence": "B",
+      "notes": "GET complet HTTP200 SHA-256 ccc615617535035c2b712685ba0cc0c6965acb052fe352f07efe51b7cd19931f. La D45 fixe refroidie par air publie6,5 m³/min à8,5 bar et 2 497 kg ; la D45RS régulée donne6,3 m³/min au même point nominal. La version fixe refroidie par eau pèse2 520 kg ; sa masse ne remplace pas celle de la versionair retenue."
     }
   ],
   "fieldSources": {
@@ -127,16 +185,26 @@ const product: CompressorInput = {
       "october4c-compair-d37-75-p11"
     ],
     "powerKw": [
-      "october4c-compair-d37-75-p11"
+      "compair-d45-reserved-20261103-1"
     ],
     "oilType": [
       "october4c-compair-d37-75-p1"
+    ],
+    "weightKg": [
+      "compair-d45-reserved-20261103-1"
+    ],
+    "editorial": [
+      "compair-d45-reserved-20261103-1"
+    ],
+    "specifications": [
+      "compair-d45-reserved-20261103-1"
     ]
   },
   "notes": [
     "Portée de la source : FAD-pressure-qualified.",
     "Originaux archivés en privé avec date, HTTP, URL finale, octets et SHA-256 ; seules les pages et cellules nécessaires sont versionnées.",
     "Les caractéristiques décrivent la configuration constructeur indiquée dans cette fiche ; les autres équipements ou alimentations doivent être vérifiés séparément."
-  ]
+  ],
+  "weightKg": 2497
 };
 export default product;

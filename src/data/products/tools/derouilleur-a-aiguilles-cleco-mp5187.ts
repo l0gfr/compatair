@@ -34,51 +34,60 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Cleco MP5187. La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner. Masse publiée : 1.1 kg. Longueur publiée : 225 mm.",
+		"overview": "Cleco MP5187. Le MP5187 est le petit dérouilleur à levier livré avec douze aiguilles et une course 15 mm. Le B1-CNB-LT-RD est un autre ensemble de 381 mm et 2,86 kg ; ses dimensions ne s’appliquent pas au MP5187 de 225 mm et 1,1 kg. Le tableau donne piston et course, mais aucune consommation ; le calcul reste indéterminé.",
 		"verifiedFacts": [
-			"Masse publiée : 1.1 kg.",
-			"Longueur publiée : 225 mm.",
-			"Cadence publiée : 4,200 coups/min."
+			"Aiguilles fournies : 12, diamètre publié 1/8 pouce (3 mm), longueur 5 pouces (125 mm).",
+			"Piston : 20 mm.",
+			"Course : 15 mm.",
+			"Cadence : 4 200 coups/min.",
+			"Longueur : 225 mm.",
+			"Masse : 1,1 kg."
 		],
 		"limitations": [
-			"La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"La vitesse, la puissance et la cadence ne remplacent pas une consommation maximale/en charge documentée avec ses conditions. Les données insuffisantes restent hors calcul conclusif."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "1.1 kg",
+			"label": "Aiguilles fournies",
+			"value": "12, diamètre publié 1/8 pouce (3 mm), longueur 5 pouces (125 mm)",
 			"evidenceIds": [
-				"october-dotco-p102"
+				"derouilleur-a-aiguilles-cleco-mp5187-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Longueur publiée",
+			"label": "Piston",
+			"value": "20 mm",
+			"evidenceIds": [
+				"derouilleur-a-aiguilles-cleco-mp5187-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Course",
+			"value": "15 mm",
+			"evidenceIds": [
+				"derouilleur-a-aiguilles-cleco-mp5187-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cadence",
+			"value": "4 200 coups/min",
+			"evidenceIds": [
+				"derouilleur-a-aiguilles-cleco-mp5187-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
 			"value": "225 mm",
 			"evidenceIds": [
-				"october-dotco-p102"
+				"derouilleur-a-aiguilles-cleco-mp5187-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Cadence publiée",
-			"value": "4,200 coups/min",
+			"label": "Masse",
+			"value": "1,1 kg",
 			"evidenceIds": [
-				"october-dotco-p102"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "Cleco/Dotco, Material Removal SP-102EN, page 102",
-			"evidenceIds": [
-				"october-dotco-p102"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "All tools performance rated @ 90 psi / 620 kPa air pressure.",
-			"evidenceIds": [
-				"october-dotco-p102"
+				"derouilleur-a-aiguilles-cleco-mp5187-reserved-20261103-1"
 			]
 		}
 	],
@@ -92,6 +101,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 93b7d3cdb96a91eecf95baaf172ed0953f2021cb336460e5f9a202ce7e687c10. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "derouilleur-a-aiguilles-cleco-mp5187-reserved-20261103-1",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/DOTCO%20Material%20Removal_SP-102EN_en.pdf#page=102",
+			"sourceLabel": "Cleco : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 93b7d3cdb96a91eecf95baaf172ed0953f2021cb336460e5f9a202ce7e687c10. Le MP5187 est le petit dérouilleur à levier livré avec douze aiguilles et une course 15 mm. Le B1-CNB-LT-RD est un autre ensemble de 381 mm et 2,86 kg ; ses dimensions ne s’appliquent pas au MP5187 de 225 mm et 1,1 kg. Le tableau donne piston et course, mais aucune consommation ; le calcul reste indéterminé."
 		}
 	],
 	"fieldSources": {
@@ -103,6 +122,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october-dotco-p102"
+		],
+		"editorial": [
+			"derouilleur-a-aiguilles-cleco-mp5187-reserved-20261103-1"
+		],
+		"specifications": [
+			"derouilleur-a-aiguilles-cleco-mp5187-reserved-20261103-1"
 		]
 	},
 	"notes": [

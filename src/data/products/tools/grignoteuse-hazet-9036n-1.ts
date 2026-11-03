@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "HAZET 9036N-1. La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi. Champ fabricant : Revolutions per minute : 2600. Champ fabricant : Net weight : 1 kg.",
+		"overview": "HAZET 9036N-1. La 9036N-1 distingue acier 1,2 mm, aluminium 1,6 mm et inox 1 mm. Elle annonce un rayon minimal 4,5 mm et une largeur de coupe 4,5 mm ; ces deux cotes ont des rôles différents. Les 104 L/min documentaires ne qualifient pas le débit en charge.",
 		"verifiedFacts": [
 			"Champ fabricant : Revolutions per minute : 2600.",
 			"Champ fabricant : Net weight : 1 kg.",
@@ -40,7 +40,11 @@ const product: ToolProfileInput = {
 			"Champ fabricant : Sound pressure level : 80 dB(A) Lp A.",
 			"Champ fabricant : Sound power level : 87 db(A) Lp W.",
 			"Champ fabricant : Power in watts : 370 Watt.",
-			"Champ fabricant : Power in HP : 0.503 PS."
+			"Champ fabricant : Power in HP : 0.503 PS.",
+			"Capacité acier : 1,2 mm.",
+			"Capacité aluminium : 1,6 mm.",
+			"Capacité inox : 1 mm.",
+			"Largeur de coupe : 4,5 mm."
 		],
 		"limitations": [
 			"La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi.",
@@ -127,6 +131,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-hazet-4000896209668-html-p1"
 			]
+		},
+		{
+			"label": "Capacité acier",
+			"value": "1,2 mm",
+			"evidenceIds": [
+				"grignoteuse-hazet-9036n-1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Capacité aluminium",
+			"value": "1,6 mm",
+			"evidenceIds": [
+				"grignoteuse-hazet-9036n-1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Capacité inox",
+			"value": "1 mm",
+			"evidenceIds": [
+				"grignoteuse-hazet-9036n-1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Largeur de coupe",
+			"value": "4,5 mm",
+			"evidenceIds": [
+				"grignoteuse-hazet-9036n-1-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -139,6 +171,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : cc7694d7f3bc81235cb0ab51095a8042f06d882f01cf78ae82f7f3878d90522d. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "grignoteuse-hazet-9036n-1-reserved-20261103-1",
+			"sourceUrl": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/drilling-machine-sander-chisel-sabre-saw-shears/product/ean-4000896209668",
+			"sourceLabel": "HAZET : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 55043347627ef01b29f350665d3d62f951aab5351cc4c512e2719d5459a1baca. La 9036N-1 distingue acier 1,2 mm, aluminium 1,6 mm et inox 1 mm. Elle annonce un rayon minimal 4,5 mm et une largeur de coupe 4,5 mm ; ces deux cotes ont des rôles différents. Les 104 L/min documentaires ne qualifient pas le débit en charge."
 		}
 	],
 	"fieldSources": {
@@ -150,6 +192,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-hazet-4000896209668-html-p1"
+		],
+		"editorial": [
+			"grignoteuse-hazet-9036n-1-reserved-20261103-1"
+		],
+		"specifications": [
+			"grignoteuse-hazet-9036n-1-reserved-20261103-1"
 		]
 	},
 	"notes": [

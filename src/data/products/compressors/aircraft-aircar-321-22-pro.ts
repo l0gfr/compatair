@@ -19,7 +19,7 @@ const product: CompressorInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
 	},
 	"editorial": {
-		"overview": "Aircraft Aircar 321/22 PRO, référence 2005531 : cuve de 22 L, pression maximale publiée de 10 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Capacité de remplissage approximative : 240 l/min. Condition de remplissage publiée : à 6 bar de pression de travail.",
+		"overview": "Aircraft Aircar 321/22 PRO. La Aircar 321/22 PRO est alimentée en 230 V et pèse 53 kg ; 553/22 PRO : 400 V, 77 kg et remplissage publié 410 L/min. La cuve est commune à 2 × 11 L. Le remplissage et le débit aspiré ne deviennent pas des points FAD ; le besoin d’une mesure de débit restitué reste visible.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons. Puissance moteur publiée : 2,2 kW.",
@@ -27,7 +27,12 @@ const product: CompressorInput = {
 			"Alimentation publiée : 230 V.",
 			"Capacité de remplissage approximative : 240 l/min.",
 			"Condition de remplissage publiée : à 6 bar de pression de travail.",
-			"Nombre de cylindres : 2."
+			"Nombre de cylindres : 2.",
+			"Notice exacte : Aircar 321/22 PRO.",
+			"Cuve : 2 × 11 L.",
+			"Masse : 53 kg.",
+			"Alimentation : 230 V.",
+			"Service mentionné dans la table : S3-60 %, durée de cycle non précisée dans cette ligne."
 		],
 		"limitations": [
 			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
@@ -91,6 +96,41 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"aircraft-2005531-20260927"
 			]
+		},
+		{
+			"label": "Notice exacte",
+			"value": "Aircar 321/22 PRO",
+			"evidenceIds": [
+				"aircraft-aircar-321-22-pro-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cuve",
+			"value": "2 × 11 L",
+			"evidenceIds": [
+				"aircraft-aircar-321-22-pro-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "53 kg",
+			"evidenceIds": [
+				"aircraft-aircar-321-22-pro-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Alimentation",
+			"value": "230 V",
+			"evidenceIds": [
+				"aircraft-aircar-321-22-pro-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Service mentionné dans la table",
+			"value": "S3-60 %, durée de cycle non précisée dans cette ligne",
+			"evidenceIds": [
+				"aircraft-aircar-321-22-pro-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -113,6 +153,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : manufacturer-mystuermer. Empreinte PDF SHA-256 : d1d0b12e9a87be33001334da6b96c4398a068f493db635c5d6453c666b96ebfa. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
+		},
+		{
+			"id": "aircraft-aircar-321-22-pro-reserved-20261103-1",
+			"sourceUrl": "https://www.mystuermer.com/MeDaPro/Rohdaten/Dokumente/Betriebsanleitung_de/AC_BA_AIRCAR_321-22_553-22_PRO_DE.pdf#page=7",
+			"sourceLabel": "Aircraft : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 d1d0b12e9a87be33001334da6b96c4398a068f493db635c5d6453c666b96ebfa. La Aircar 321/22 PRO est alimentée en 230 V et pèse 53 kg ; 553/22 PRO : 400 V, 77 kg et remplissage publié 410 L/min. La cuve est commune à 2 × 11 L. Le remplissage et le débit aspiré ne deviennent pas des points FAD ; le besoin d’une mesure de débit restitué reste visible."
 		}
 	],
 	"fieldSources": {
@@ -139,6 +189,15 @@ const product: CompressorInput = {
 		],
 		"voltage": [
 			"aircraft-2005531-20260927"
+		],
+		"weightKg": [
+			"aircraft-aircar-321-22-pro-reserved-20261103-1"
+		],
+		"editorial": [
+			"aircraft-aircar-321-22-pro-reserved-20261103-1"
+		],
+		"specifications": [
+			"aircraft-aircar-321-22-pro-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -146,7 +205,8 @@ const product: CompressorInput = {
 	],
 	"intakeFlowLpm": 310,
 	"powerKw": 2.2,
-	"voltage": "230 V"
+	"voltage": "230 V",
+	"weightKg": 53
 };
 
 export default product;

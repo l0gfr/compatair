@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "HAZET 9030N-1. La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi. Champ fabricant : Forward and reverse : single-stage (right/left). Champ fabricant : Revolutions per minute : 2000.",
+		"overview": "HAZET 9030N-1. La 9030N-1 utilise un mandrin rapide 1–10 mm et tourne à 2 000 tr/min, contre 1 400 pour 9030N-5 et 800 pour 9030P-1. L’aptitude annoncée au service continu concerne la perceuse et ne prouve pas un cycle de service du compresseur. Les 113 L/min restent sans régime de mesure apparié.",
 		"verifiedFacts": [
 			"Champ fabricant : Forward and reverse : single-stage (right/left).",
 			"Champ fabricant : Revolutions per minute : 2000.",
@@ -44,7 +44,10 @@ const product: ToolProfileInput = {
 			"Champ fabricant : Collet chuck min : 1 mm.",
 			"Champ fabricant : Sound power level : 99.7 db(A) Lp W.",
 			"Champ fabricant : Power in watts : 373 Watt.",
-			"Champ fabricant : Power in HP : 0.507 PS."
+			"Champ fabricant : Power in HP : 0.507 PS.",
+			"Mandrin rapide : 1–10 mm.",
+			"Vitesse : 2 000 tr/min.",
+			"Géométrie L×W×H : 195 × 42 × 157 mm."
 		],
 		"limitations": [
 			"La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi.",
@@ -159,6 +162,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-hazet-4000896206377-html-p1"
 			]
+		},
+		{
+			"label": "Mandrin rapide",
+			"value": "1–10 mm",
+			"evidenceIds": [
+				"perceuse-hazet-9030n-1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse",
+			"value": "2 000 tr/min",
+			"evidenceIds": [
+				"perceuse-hazet-9030n-1-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Géométrie L×W×H",
+			"value": "195 × 42 × 157 mm",
+			"evidenceIds": [
+				"perceuse-hazet-9030n-1-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -171,6 +195,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 99bdb3989efb481bfcc6777ac987ae548e3afa086eb5ca5ee885019a728cdab3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "perceuse-hazet-9030n-1-reserved-20261103-1",
+			"sourceUrl": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/drilling-machine-sander-chisel-sabre-saw-shears/product/ean-4000896206377",
+			"sourceLabel": "HAZET : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 539968d3e4034e22ead194cdc9c13111aad7c032d516683638f4a10a05c2f42f. La 9030N-1 utilise un mandrin rapide 1–10 mm et tourne à 2 000 tr/min, contre 1 400 pour 9030N-5 et 800 pour 9030P-1. L’aptitude annoncée au service continu concerne la perceuse et ne prouve pas un cycle de service du compresseur. Les 113 L/min restent sans régime de mesure apparié."
 		}
 	],
 	"fieldSources": {
@@ -182,6 +216,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-hazet-4000896206377-html-p1"
+		],
+		"editorial": [
+			"perceuse-hazet-9030n-1-reserved-20261103-1"
+		],
+		"specifications": [
+			"perceuse-hazet-9030n-1-reserved-20261103-1"
 		]
 	},
 	"notes": [

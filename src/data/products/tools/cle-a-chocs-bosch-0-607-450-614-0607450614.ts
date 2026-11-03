@@ -38,44 +38,53 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Bosch 0 607 450 614 (réf. 0607450614). Consommation à vide : 540 L/min à 6,3 bar. Vitesse à vide : 10000 tr/min. Masse : 1.3 kg.",
+		"overview": "Bosch 0 607 450 614. La 0 607 450 614 est la clé à chocs 3/8 pouce à trois positions de couple, 50–150 Nm conseillés et 200 Nm maximum. La 615 passe au carré 1/2 pouce et 550 Nm maximum. Le catalogue nomme explicitement le débit à vide : les 540 L/min ne sont pas utilisés comme consommation en charge.",
 		"verifiedFacts": [
-			"Vitesse à vide : 10000 tr/min.",
-			"Masse : 1.3 kg."
+			"Carré : 3/8 pouce.",
+			"Couple de serrage conseillé : 50–150 Nm.",
+			"Couple maximal distinct : 200 Nm.",
+			"Vitesse à vide : 10 000 tr/min.",
+			"Débit explicitement à vide : 9 L/s (540 L/min)."
 		],
 		"limitations": [
-			"Consommation à vide seule : aucun maximum ou débit en charge supposé ; le verdict reste insufficient_data.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"Performances déclarées sous le protocole du catalogue : pression dynamique 6,3 bar, flexible de 4 m. Les régimes à vide/en charge restent distincts.",
+			"Catalogue historique ; équipement et disponibilité actuels à confirmer."
 		]
 	},
 	"specifications": [
 		{
+			"label": "Carré",
+			"value": "3/8 pouce",
+			"evidenceIds": [
+				"cle-a-chocs-bosch-0-607-450-614-0607450614-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Couple de serrage conseillé",
+			"value": "50–150 Nm",
+			"evidenceIds": [
+				"cle-a-chocs-bosch-0-607-450-614-0607450614-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Couple maximal distinct",
+			"value": "200 Nm",
+			"evidenceIds": [
+				"cle-a-chocs-bosch-0-607-450-614-0607450614-reserved-20261103-1"
+			]
+		},
+		{
 			"label": "Vitesse à vide",
-			"value": "10000 tr/min",
+			"value": "10 000 tr/min",
 			"evidenceIds": [
-				"october-bosch-industry-p68"
+				"cle-a-chocs-bosch-0-607-450-614-0607450614-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse",
-			"value": "1.3 kg",
+			"label": "Débit explicitement à vide",
+			"value": "9 L/s (540 L/min)",
 			"evidenceIds": [
-				"october-bosch-industry-p68"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "Bosch, Industrial air tools catalogue, page 68 ; tableau réparti sur les pages 68–69",
-			"evidenceIds": [
-				"october-bosch-industry-p68"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "All of the performance data / specifications in this catalogue refer to 6.3 bar (91 PSI) flow pressure with 4 m hose length.",
-			"evidenceIds": [
-				"october-bosch-industry-p68",
-				"october-bosch-industry-p4"
+				"cle-a-chocs-bosch-0-607-450-614-0607450614-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +108,36 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-chocs-bosch-0-607-450-614-0607450614-reserved-20261103-1",
+			"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf#page=68",
+			"sourceLabel": "Bosch : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. La 0 607 450 614 est la clé à chocs 3/8 pouce à trois positions de couple, 50–150 Nm conseillés et 200 Nm maximum. La 615 passe au carré 1/2 pouce et 550 Nm maximum. Le catalogue nomme explicitement le débit à vide : les 540 L/min ne sont pas utilisés comme consommation en charge."
+		},
+		{
+			"id": "cle-a-chocs-bosch-0-607-450-614-0607450614-reserved-20261103-1-3",
+			"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf#page=69",
+			"sourceLabel": "Bosch : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. La 0 607 450 614 est la clé à chocs 3/8 pouce à trois positions de couple, 50–150 Nm conseillés et 200 Nm maximum. La 615 passe au carré 1/2 pouce et 550 Nm maximum. Le catalogue nomme explicitement le débit à vide : les 540 L/min ne sont pas utilisés comme consommation en charge."
+		},
+		{
+			"id": "cle-a-chocs-bosch-0-607-450-614-0607450614-reserved-20261103-1-4",
+			"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf#page=4",
+			"sourceLabel": "Bosch : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. La 0 607 450 614 est la clé à chocs 3/8 pouce à trois positions de couple, 50–150 Nm conseillés et 200 Nm maximum. La 615 passe au carré 1/2 pouce et 550 Nm maximum. Le catalogue nomme explicitement le débit à vide : les 540 L/min ne sont pas utilisés comme consommation en charge."
 		}
 	],
 	"fieldSources": {
@@ -113,6 +152,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-bosch-industry-p68"
+		],
+		"editorial": [
+			"cle-a-chocs-bosch-0-607-450-614-0607450614-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-chocs-bosch-0-607-450-614-0607450614-reserved-20261103-1"
 		]
 	},
 	"notes": [

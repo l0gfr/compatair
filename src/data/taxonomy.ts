@@ -27,6 +27,7 @@ export const toolTaxonomy = [
 	{ id: 'polisseuse', label: 'Polisseuse', aliases: [] },
 	{ id: 'burineur', label: 'Burineur', aliases: ['Marteau burineur', 'Marteau burineur pneumatique'] },
 	{ id: 'cisaille', label: 'Cisaille pneumatique', aliases: [] },
+	{ id: 'poinconneuse-bordeuse', label: 'Poinçonneuse-bordeuse pneumatique', aliases: [] },
 	{ id: 'pince-coupante-pneumatique', label: 'Pince coupante pneumatique', aliases: ['Pince coupante à air comprimé'] },
 	{ id: 'grignoteuse', label: 'Grignoteuse pneumatique', aliases: [] },
 	{ id: 'derouilleur-a-aiguilles', label: 'Dérouilleur à aiguilles', aliases: [] },
@@ -142,7 +143,7 @@ export const toolUsageTaxonomy = [
 		label: 'Découper les matériaux',
 		seoTitle: 'Outils pneumatiques de découpe',
 		description: 'Cisailles, pinces coupantes, grignoteuses, scies et tronçonneuses regroupées par référence. Le volume par course reste distinct d’un débit par minute.',
-		categoryIds: ['cisaille', 'pince-coupante-pneumatique', 'grignoteuse', 'scie', 'tronconneuse'],
+		categoryIds: ['cisaille', 'poinconneuse-bordeuse', 'pince-coupante-pneumatique', 'grignoteuse', 'scie', 'tronconneuse'],
 	},
 	{
 		id: 'peinture',

@@ -30,73 +30,68 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Aircat 6205. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 0.75 lb. Vitesse à vide : 25000 tr/min.",
+		"overview": "Aircat 6205. La 6205 est la micromeuleuse droite à entraînement direct, pince 1/4 pouce et longueur 4,8 pouces. La 6290 est donnée pour 7 pouces et 20 000 tr/min ; la 6280 est une autre puissance. Le format et le régime admissible de fraise orientent le choix. Le débit 4 CFM reste documentaire.",
 		"verifiedFacts": [
-			"Masse publiée : 0.75 lb.",
-			"Vitesse à vide : 25000 tr/min.",
-			"Puissance publiée : 0.3 HP.",
-			"Échappement : Rear."
+			"Pince : 1/4 pouce.",
+			"Vitesse à vide : 25 000 tr/min.",
+			"Puissance : 0,3 HP.",
+			"Entraînement : Direct.",
+			"Échappement : Arrière.",
+			"Longueur : 4,8 pouces.",
+			"Consommation, régime non précisé : 4 CFM."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"La fiche ne documente pas suffisamment le régime de consommation et son appariement à une pression ; le calcul reste indéterminé."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "0.75 lb",
+			"label": "Pince",
+			"value": "1/4 pouce",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-28-p1"
+				"meuleuse-aircat-6205-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Vitesse à vide",
-			"value": "25000 tr/min",
+			"value": "25 000 tr/min",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-28-p1"
+				"meuleuse-aircat-6205-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Puissance publiée",
-			"value": "0.3 HP",
+			"label": "Puissance",
+			"value": "0,3 HP",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-28-p1"
+				"meuleuse-aircat-6205-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Entraînement",
+			"value": "Direct",
+			"evidenceIds": [
+				"meuleuse-aircat-6205-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Échappement",
-			"value": "Rear",
+			"value": "Arrière",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-28-p1"
+				"meuleuse-aircat-6205-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Champ fabricant : Air Inlet (NPT/BSP)",
-			"value": "1/4-in.",
+			"label": "Longueur",
+			"value": "4,8 pouces",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-28-p1"
+				"meuleuse-aircat-6205-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Champ fabricant : Rec. Hose Size (in.)",
-			"value": "3/8-in.",
+			"label": "Consommation, régime non précisé",
+			"value": "4 CFM",
 			"evidenceIds": [
-				"october2-tools-ctg-pdp-28-p1"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "Pression de mesure de la consommation non établie dans la fiche.",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-28-p1"
-			]
-		},
-		{
-			"label": "Consommation de régime non précisé, hors calcul",
-			"value": "4 cfm",
-			"evidenceIds": [
-				"october2-tools-ctg-pdp-28-p1"
+				"meuleuse-aircat-6205-reserved-20261103-1"
 			]
 		}
 	],
@@ -110,6 +105,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 6b6e795ffbcbfe9769e7b8385545942e6ec8560bcb63bd87761ef8af1761a563. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "meuleuse-aircat-6205-reserved-20261103-1",
+			"sourceUrl": "https://continentaltoolgroup.com/product/6205/",
+			"sourceLabel": "Aircat : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 5aeb7341c92496e67470617f41110675ba13bc2e8e54e857da05402e2e958e20. La 6205 est la micromeuleuse droite à entraînement direct, pince 1/4 pouce et longueur 4,8 pouces. La 6290 est donnée pour 7 pouces et 20 000 tr/min ; la 6280 est une autre puissance. Le format et le régime admissible de fraise orientent le choix. Le débit 4 CFM reste documentaire."
 		}
 	],
 	"fieldSources": {
@@ -124,6 +129,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2-tools-ctg-pdp-28-p1"
+		],
+		"editorial": [
+			"meuleuse-aircat-6205-reserved-20261103-1"
+		],
+		"specifications": [
+			"meuleuse-aircat-6205-reserved-20261103-1"
 		]
 	},
 	"notes": [

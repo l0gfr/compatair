@@ -23,54 +23,53 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
 	},
 	"editorial": {
-		"overview": "Aircraft TWS Super, référence 2403491. Consommation moyenne publiée : 480 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Diamètre de disque : 100 mm. Masse approximative : 1,4 kg.",
+		"overview": "Aircraft TWS Super. La TWS Super est l’outil de tronçonnage 100 mm, associé au disque 2403495 de 100 × 1,2 × 9,6 mm. La TTS PRO est le modèle profond/allongé de 371 mm avec réglage de protecteur. La ligne 14 000 porte une unité min⁻¹, malgré le libellé allemand Drehmoment : ce n’est pas un couple en Nm. Les 480 L/min restent approximatifs et de régime non précisé.",
 		"verifiedFacts": [
-			"Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
-			"Consommation moyenne publiée : 480 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
-			"Référence fabricant : 2403491.",
-			"Diamètre de disque : 100 mm.",
+			"Disque de tronçonnage : 100 mm.",
+			"Accessoire indiqué : 100 × 1,2 × 9,6 mm, code 2403495.",
+			"Vitesse, unité min⁻¹ du tableau : 14 000 tr/min.",
 			"Masse approximative : 1,4 kg.",
-			"Type indiqué par le fabricant : Extended corner grinder."
+			"Consommation approximative, régime non précisé : 480 L/min."
 		],
 		"limitations": [
-			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
-			"Une consommation moyenne ne constitue pas un débit maximal en usage continu. Vérifier le régime réel auprès du fabricant avant dimensionnement."
+			"Aucune moyenne, aucun maximum ni aucune pression de mesure supplémentaires ne sont déduits d’un simple débit approximatif ou d’une consigne de service.",
+			"Source fabricant et édition identifiées ; équipement actuel à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
-			"evidenceIds": [
-				"aircraft-2403491-20260927"
-			]
-		},
-		{
-			"label": "Condition de consommation",
-			"value": "Consommation moyenne publiée : 480 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
-			"evidenceIds": [
-				"aircraft-2403491-20260927"
-			]
-		},
-		{
-			"label": "Diamètre de disque",
+			"label": "Disque de tronçonnage",
 			"value": "100 mm",
 			"evidenceIds": [
-				"aircraft-2403491-20260927"
+				"aircraft-tws-super-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Accessoire indiqué",
+			"value": "100 × 1,2 × 9,6 mm, code 2403495",
+			"evidenceIds": [
+				"aircraft-tws-super-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse, unité min⁻¹ du tableau",
+			"value": "14 000 tr/min",
+			"evidenceIds": [
+				"aircraft-tws-super-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Masse approximative",
 			"value": "1,4 kg",
 			"evidenceIds": [
-				"aircraft-2403491-20260927"
+				"aircraft-tws-super-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Type indiqué par le fabricant",
-			"value": "Extended corner grinder",
+			"label": "Consommation approximative, régime non précisé",
+			"value": "480 L/min",
 			"evidenceIds": [
-				"aircraft-2403491-20260927"
+				"aircraft-tws-super-reserved-20261103-1"
 			]
 		}
 	],
@@ -94,6 +93,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer 702076. Empreinte PDF SHA-256 : e7f584596b5d6968e6b4ae4c86e6455b548001fe4fd5ff37b9c5262bc6659134. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
+		},
+		{
+			"id": "aircraft-tws-super-reserved-20261103-1",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=259#page=1",
+			"sourceLabel": "Aircraft : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 e7f584596b5d6968e6b4ae4c86e6455b548001fe4fd5ff37b9c5262bc6659134. La TWS Super est l’outil de tronçonnage 100 mm, associé au disque 2403495 de 100 × 1,2 × 9,6 mm. La TTS PRO est le modèle profond/allongé de 371 mm avec réglage de protecteur. La ligne 14 000 porte une unité min⁻¹, malgré le libellé allemand Drehmoment : ce n’est pas un couple en Nm. Les 480 L/min restent approximatifs et de régime non précisé."
 		}
 	],
 	"fieldSources": {
@@ -107,7 +116,13 @@ const product: ToolProfileInput = {
 			"aircraft-2403491-20260927"
 		],
 		"airflowBasis": [
-			"aircraft-2403491-20260927"
+			"aircraft-tws-super-reserved-20261103-1"
+		],
+		"editorial": [
+			"aircraft-tws-super-reserved-20261103-1"
+		],
+		"specifications": [
+			"aircraft-tws-super-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -118,7 +133,7 @@ const product: ToolProfileInput = {
 		"typical": 480,
 		"max": 480
 	},
-	"airflowBasis": "average"
+	"airflowBasis": "unqualified"
 };
 
 export default product;

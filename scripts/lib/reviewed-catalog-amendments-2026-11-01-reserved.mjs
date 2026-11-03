@@ -1,3 +1,4 @@
+import { applyReservedNovember3Batch, beforeReservedNovember3IfApplied } from './reviewed-catalog-amendments-2026-11-03-reserved.mjs';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { isDeepStrictEqual } from 'node:util';
@@ -34,6 +35,7 @@ export function applyReservedNovember1Followup(product) {
 }
 /** @template {{ id: string }} T @param {T} product @returns {T} */
 export function beforeReservedNovember1Followup(product) {
+ product = beforeReservedNovember3IfApplied(product);
  const row = rows.get(product.id);
  if (!row) return product;
  if (matches(product, row, 'before')) return product;
@@ -44,10 +46,12 @@ export function beforeReservedNovember1Followup(product) {
 // replayed one. Only an exact current state is projected; both amendment
 // applicators still reject all unknown states through their normal guards.
 export function beforeReservedNovember1IfApplied(product) {
+ product = beforeReservedNovember3IfApplied(product);
  const row = rows.get(product.id);
  return row && matches(product, row, 'after') ? project(structuredClone(product), row, 'before') : product;
 }
 export function applyReservedNovember1Batch(batch) {
- if (Array.isArray(batch)) return batch.map(applyReservedNovember1Followup);
- return { ...batch, compressors: batch.compressors.map(applyReservedNovember1Followup), tools: batch.tools.map(applyReservedNovember1Followup) };
+ const dated = product => applyReservedNovember1Followup(beforeReservedNovember3IfApplied(product));
+ if (Array.isArray(batch)) return applyReservedNovember3Batch(batch.map(dated));
+ return applyReservedNovember3Batch({ ...batch, compressors: batch.compressors.map(dated), tools: batch.tools.map(dated) });
 }

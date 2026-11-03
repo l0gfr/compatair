@@ -22,7 +22,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 1310
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "unknown",
 	"powerKw": 11,
 	"weightKg": 579,
@@ -38,44 +37,59 @@ const product: CompressorInput = {
 	"specifications": [
 		{
 			"label": "Configuration",
-			"value": "sécheur et cuve intégrés",
+			"value": "AIRCENTER 22 fixe, maximum 15 bar",
 			"evidenceIds": [
-				"october-b-kaeser-sk-p8"
+				"kaeser-aircenter-22-secheur-et-cuve-integres-15-bar-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Pression de mesure du FAD",
-			"value": "13 bar ; maximum de cette configuration : 15 bar",
+			"label": "Cuve et sécheur",
+			"value": "350 L, ABT 25",
 			"evidenceIds": [
-				"october-b-kaeser-sk-p8"
+				"kaeser-aircenter-22-secheur-et-cuve-integres-15-bar-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "FAD publié dans son unité originale",
-			"value": "1,31 m3/min",
+			"label": "FAD à 13 bar",
+			"value": "1,31 m³/min",
 			"evidenceIds": [
-				"october-b-kaeser-sk-p8"
+				"kaeser-aircenter-22-secheur-et-cuve-integres-15-bar-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Dimensions (largeur × profondeur × hauteur)",
-			"value": "750 × 1335 × 1880 mm",
+			"label": "Puissance moteur",
+			"value": "11 kW",
 			"evidenceIds": [
-				"october-b-kaeser-sk-p8"
+				"kaeser-aircenter-22-secheur-et-cuve-integres-15-bar-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "579 kg",
+			"evidenceIds": [
+				"kaeser-aircenter-22-secheur-et-cuve-integres-15-bar-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Dimensions B×D×H",
+			"value": "750 × 1 335 × 1 880 mm",
+			"evidenceIds": [
+				"kaeser-aircenter-22-secheur-et-cuve-integres-15-bar-reserved-20261103-1"
 			]
 		}
 	],
 	"editorial": {
-		"overview": "KAESER AIRCENTER 22, sécheur et cuve intégrés, 15 bar. Débit restitué déclaré : 1 310 L/min à 13 bar. Puissance moteur : 11 kW ; masse : 579 kg.",
+		"overview": "KAESER AIRCENTER 22. La AIRCENTER 22 fixe associe cuve 350 L et sécheur ABT 25 pour 579 kg. Elle donne 1,68 m³/min à 10 bar en version 11 bar et 1,31 m³/min à 13 bar en version 15 bar. La AIRCENTER 22 SFC régulée pèse 596 kg et possède une plage de débit distincte ; le taux de marche ne provient pas d’une page automobile générale.",
 		"verifiedFacts": [
-			"FAD et pression de référence associés à la configuration exacte du tableau fabricant.",
-			"Cuve intégrée : 350 L ; le volume d’un réservoir externe n’est pas supposé.",
-			"Fonctionnement continu prévu dans la documentation de la série, sous les conditions d’installation et d’entretien du fabricant."
+			"Configuration : AIRCENTER 22 fixe, maximum 15 bar.",
+			"Cuve et sécheur : 350 L, ABT 25.",
+			"FAD à 13 bar : 1,31 m³/min.",
+			"Puissance moteur : 11 kW.",
+			"Masse : 579 kg.",
+			"Dimensions B×D×H : 750 × 1 335 × 1 880 mm."
 		],
 		"limitations": [
-			"Un seul point FAD publié pour cette configuration de pression ; aucune extrapolation vers une pression supérieure.",
-			"Version du catalogue identifiée, sans numéro d’article artificiel. La disponibilité, la tension électrique et les options livrées doivent être confirmées sur le devis.",
-			"Le fluide de refroidissement ne suffit pas à établir le type de lubrification ; aucune qualité d’air garantie."
+			"Mesure du groupe selon ISO 1217:2009 annexes C/E ; entrée 1 bar absolu et 20 °C. Taux de marche numérique de cette révision non établi."
 		]
 	},
 	"evidence": [
@@ -98,6 +112,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 3f5687777a06c60ed4f3918036cfb4edab945e750016d89b42305f3a2bc6b9fe. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "kaeser-aircenter-22-secheur-et-cuve-integres-15-bar-reserved-20261103-1",
+			"sourceUrl": "https://nl.kaeser.com/download.ashx?id=tcm:32-5921#page=8",
+			"sourceLabel": "KAESER : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 e7f1e0bfdf990a0abe341a0750f48a851c4245bca66e72802e90d35c3fe4b75e. La AIRCENTER 22 fixe associe cuve 350 L et sécheur ABT 25 pour 579 kg. Elle donne 1,68 m³/min à 10 bar en version 11 bar et 1,31 m³/min à 13 bar en version 15 bar. La AIRCENTER 22 SFC régulée pèse 596 kg et possède une plage de débit distincte ; le taux de marche ne provient pas d’une page automobile générale."
 		}
 	],
 	"fieldSources": {
@@ -116,8 +140,11 @@ const product: CompressorInput = {
 		"weightKg": [
 			"october-b-kaeser-sk-p8"
 		],
-		"dutyCycle": [
-			"october-b-kaeser-duty"
+		"editorial": [
+			"kaeser-aircenter-22-secheur-et-cuve-integres-15-bar-reserved-20261103-1"
+		],
+		"specifications": [
+			"kaeser-aircenter-22-secheur-et-cuve-integres-15-bar-reserved-20261103-1"
 		]
 	},
 	"notes": [

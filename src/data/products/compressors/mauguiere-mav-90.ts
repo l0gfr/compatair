@@ -34,10 +34,14 @@ const product: CompressorInput = {
     "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
   },
   "editorial": {
-    "overview": "Mauguière MAV 90. 1 062 L/min déclarés à 7,5 bar. Configuration constructeur : MAV 90.",
+    "overview": "Mauguière MAV 90. La MAV 70 donne 888 L/min à 7,5 bar pour 5,5 kW ; la MAV 90 donne 1 062 L/min pour 7,5 kW. À 9,5 bar les versions 10 bar donnent 780 et 984 L/min : elles restent des configurations distinctes. Plusieurs montages existent, donc le modèle générique ne reçoit pas la masse ou la cuve d’une option.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 8 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 1 062 L/min déclarés à 7,5 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 1 062 L/min déclarés à 7,5 bar.",
+      "Version : MAV 90, groupe générique.",
+      "FAD à 7,5 bar : 1062 L/min.",
+      "Puissance : 7,5 kW.",
+      "Plafond de cette version : 8 bar."
     ],
     "limitations": [
       "Débit du modèle à la pression de référence de cette ligne, distincte du plafond de service lorsque le constructeur fournit les deux colonnes. Plusieurs montages existent ; aucune cuve de configuration optionnelle attribuée au modèle générique.",
@@ -96,6 +100,34 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october5-mauguiere-pdf-0-p7"
       ]
+    },
+    {
+      "label": "Version",
+      "value": "MAV 90, groupe générique",
+      "evidenceIds": [
+        "mauguiere-mav-90-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "FAD à 7,5 bar",
+      "value": "1062 L/min",
+      "evidenceIds": [
+        "mauguiere-mav-90-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Puissance",
+      "value": "7,5 kW",
+      "evidenceIds": [
+        "mauguiere-mav-90-reserved-20261103-1"
+      ]
+    },
+    {
+      "label": "Plafond de cette version",
+      "value": "8 bar",
+      "evidenceIds": [
+        "mauguiere-mav-90-reserved-20261103-1"
+      ]
     }
   ],
   "evidence": [
@@ -118,6 +150,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-05",
       "confidence": "B",
       "notes": "SHA-256 bec42e5260123354eadeb49f6efe5219f3f916b2ff9182db4e98b3b3fa4abeac de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "mauguiere-mav-90-reserved-20261103-1",
+      "sourceUrl": "https://www.compresseurs-mauguiere.com/content/dam/brands/ceccatocluster/maugui%C3%A8re/screw-compressors/fixed-speed/mav-30--90-/mav-30---90---leaflet/Mauguiere_MAV%2030-90_Sales_Leaflet_FR_Brendola_6999460581.pdf#page=7",
+      "sourceLabel": "Mauguière : revue factuelle du 3 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-03",
+      "confidence": "B",
+      "notes": "GET complet HTTP200 SHA-256 bec42e5260123354eadeb49f6efe5219f3f916b2ff9182db4e98b3b3fa4abeac. La MAV 70 donne 888 L/min à 7,5 bar pour 5,5 kW ; la MAV 90 donne 1 062 L/min pour 7,5 kW. À 9,5 bar les versions 10 bar donnent 780 et 984 L/min : elles restent des configurations distinctes. Plusieurs montages existent, donc le modèle générique ne reçoit pas la masse ou la cuve d’une option."
     }
   ],
   "fieldSources": {
@@ -132,6 +174,12 @@ const product: CompressorInput = {
     ],
     "powerKw": [
       "october5-mauguiere-pdf-0-p7"
+    ],
+    "editorial": [
+      "mauguiere-mav-90-reserved-20261103-1"
+    ],
+    "specifications": [
+      "mauguiere-mav-90-reserved-20261103-1"
     ]
   },
   "notes": [

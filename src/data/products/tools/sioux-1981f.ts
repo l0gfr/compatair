@@ -23,14 +23,20 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Sioux 1981F, référence 1981F. Le dimensionnement utilise 1 080 L/min à 6,2 bar, selon les régimes publiés par le fabricant. Vitesse à vide : 20000 tr/min. Pince : 1/2\". Masse : 2.7 kg.",
+		"overview": "Sioux 1981F. La 1981F utilise une commande au doigt et mesure 248 mm de haut. La RT1981 à commande rotative conserve la pince 1/2\" et 20 000 tr/min, avec 193 mm et 2,0 kg : même demande d’air publiée, autre prise en main.",
 		"verifiedFacts": [
 			"Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur.",
 			"Consommation publiée : 18.0 L/s (38.0 scfm). Le guide du catalogue (page PDF 10) définit ces débits comme de l’air détendu à pression atmosphérique et des consommations maximales, sauf indication contraire. La plus grande valeur publiée est retenue : 1080 L/min (L/s × 60).",
 			"Référence fabricant : 1981F.",
 			"Vitesse à vide : 20000 tr/min.",
 			"Pince : 1/2\".",
-			"Masse : 2.7 kg."
+			"Masse : 2.7 kg.",
+			"Commande : Finger Throttle.",
+			"Pince : 1/2\".",
+			"Vitesse à vide : 20 000 tr/min.",
+			"Hauteur : 248 mm.",
+			"Diamètre de base : 102 mm.",
+			"Masse publiée : 2,7 kg."
 		],
 		"limitations": [
 			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
@@ -79,6 +85,48 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"sioux-1981f-20260927"
 			]
+		},
+		{
+			"label": "Commande",
+			"value": "Finger Throttle",
+			"evidenceIds": [
+				"sioux-1981f-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pince",
+			"value": "1/2\"",
+			"evidenceIds": [
+				"sioux-1981f-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "20 000 tr/min",
+			"evidenceIds": [
+				"sioux-1981f-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Hauteur",
+			"value": "248 mm",
+			"evidenceIds": [
+				"sioux-1981f-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Diamètre de base",
+			"value": "102 mm",
+			"evidenceIds": [
+				"sioux-1981f-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse publiée",
+			"value": "2,7 kg",
+			"evidenceIds": [
+				"sioux-1981f-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -99,6 +147,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur."
+		},
+		{
+			"id": "sioux-1981f-reserved-20261103-1",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=81",
+			"sourceLabel": "Sioux : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8. La 1981F utilise une commande au doigt et mesure 248 mm de haut. La RT1981 à commande rotative conserve la pince 1/2\" et 20 000 tr/min, avec 193 mm et 2,0 kg : même demande d’air publiée, autre prise en main."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +168,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"sioux-1981f-20260927"
+		],
+		"editorial": [
+			"sioux-1981f-reserved-20261103-1"
+		],
+		"specifications": [
+			"sioux-1981f-reserved-20261103-1"
 		]
 	},
 	"notes": [

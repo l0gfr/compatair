@@ -23,8 +23,7 @@ const product: CompressorInput = {
       "litersPerMinute": 532.357
     }
   ],
-  "dutyCycle": 1,
-  "voltage": "230 V",
+  "voltage": "230 V / 60 Hz",
   "oilType": "oil",
   "confidence": "B",
   "status": "unknown",
@@ -36,107 +35,61 @@ const product: CompressorInput = {
   },
   "specifications": [
     {
-      "label": "Configuration constructeur",
-      "value": "5230K30CS Wheeled Electric Air Compressors",
+      "label": "Modèle",
+      "value": "5230K30CS, portable électrique",
       "evidenceIds": [
-        "october8-rolair-portable-5230k30cs-p1"
+        "rolair-5230k30cs-reserved-20261103-1"
       ]
     },
     {
-      "label": "Pression du point documentaire",
-      "value": "6,205 bar",
+      "label": "CFM Delivered",
+      "value": "18,8 cfm à 90 psi",
       "evidenceIds": [
-        "october8-rolair-portable-5230k30cs-p1",
-        "october8-nist-conversions-p1"
+        "rolair-5230k30cs-reserved-20261103-1"
       ]
     },
     {
-      "label": "Débit restitué déclaré à 6,205 bar",
-      "value": "532,357 L/min (18,8 cfm publiés)",
+      "label": "CFM Displaced distinct",
+      "value": "23,1 cfm",
       "evidenceIds": [
-        "october8-rolair-portable-5230k30cs-p1",
-        "october8-rolair-faq-p1",
-        "october8-nist-conversions-p1"
+        "rolair-5230k30cs-reserved-20261103-1"
       ]
     },
     {
-      "label": "Cuve de stockage",
-      "value": "Non qualifiée en litres",
+      "label": "Moteur",
+      "value": "5 HP, 230 V / 60 Hz, 1 740 tr/min",
       "evidenceIds": [
-        "october8-rolair-portable-5230k30cs-p1"
+        "rolair-5230k30cs-reserved-20261103-1"
       ]
     },
     {
-      "label": "Cuve publiée, unité native",
-      "value": "9 Gallons",
+      "label": "Stockage publié",
+      "value": "9 gallons, définition non précisée",
       "evidenceIds": [
-        "october8-rolair-portable-5230k30cs-p1"
+        "rolair-5230k30cs-reserved-20261103-1"
       ]
     },
     {
-      "label": "Puissance moteur publiée, hp natifs",
-      "value": "5 HP",
+      "label": "Fonctionnement déclaré",
+      "value": "Constant-run / constant speed avec déchargeur pilote",
       "evidenceIds": [
-        "october8-rolair-portable-5230k30cs-p1"
-      ]
-    },
-    {
-      "label": "Régime moteur publié, tr/min",
-      "value": "1740 RPM",
-      "evidenceIds": [
-        "october8-rolair-portable-5230k30cs-p1"
-      ]
-    },
-    {
-      "label": "Déplacement publié, distinct du débit livré",
-      "value": "23.1 CFM",
-      "evidenceIds": [
-        "october8-rolair-portable-5230k30cs-p1"
-      ]
-    },
-    {
-      "label": "Poids d’expédition publié, distinct de la masse en service",
-      "value": "315 lb.",
-      "evidenceIds": [
-        "october8-rolair-portable-5230k30cs-p1"
-      ]
-    },
-    {
-      "label": "Niveau sonore publié, conditions à confirmer",
-      "value": "Unavailable",
-      "evidenceIds": [
-        "october8-rolair-portable-5230k30cs-p1"
-      ]
-    },
-    {
-      "label": "Cycle de service déclaré pour ce modèle",
-      "value": "100 %",
-      "evidenceIds": [
-        "october8-rolair-portable-5230k30cs-spec-p1"
-      ]
-    },
-    {
-      "label": "Fréquence de la configuration publiée",
-      "value": "60 Hz",
-      "evidenceIds": [
-        "october8-rolair-portable-5230k30cs-p1"
+        "rolair-5230k30cs-reserved-20261103-1"
       ]
     }
   ],
   "editorial": {
-    "overview": "Rolair 5230K30CS. 532,357 L/min déclarés à 6,205 bar. Configuration publiée : 5230K30CS Wheeled Electric Air Compressors.",
+    "overview": "Rolair 5230K30CS. La 5230K30CS fournit 18,8 cfm à 90 psi ; le déplacement de 23,1 cfm reste séparé. Son fonctionnement à vitesse constante et son déchargeur permettent la régulation sans arrêter le moteur. La FAQ générale décrit des moteurs S1, pas un taux de marche chiffré du groupe ; le 100 % est retiré.",
     "verifiedFacts": [
-      "Débit réellement livré identifié séparément du déplacement : 532,357 L/min déclarés à 6,205 bar.",
-      "Plafond documentaire du point retenu : 6,205 bar."
+      "Modèle : 5230K30CS, portable électrique.",
+      "CFM Delivered : 18,8 cfm à 90 psi.",
+      "CFM Displaced distinct : 23,1 cfm.",
+      "Moteur : 5 HP, 230 V / 60 Hz, 1 740 tr/min.",
+      "Stockage publié : 9 gallons, définition non précisée.",
+      "Fonctionnement déclaré : Constant-run / constant speed avec déchargeur pilote."
     ],
     "limitations": [
-      "La cuve est publiée en gallons sans identification US ou impériale ; aucun volume en litres n’est calculé.",
-      "CFM Delivered désigne un débit effectivement livré à la pression indiquée ; les conditions atmosphériques et ISO1217 ne sont pas déclarées pour cette fiche.",
-      "La pression du point de débit ne qualifie pas toute la plage de régulation ; une pression de coupure plus élevée ne donne aucun FAD supplémentaire.",
-      "Le cycle 100 % provient de la fiche du modèle exact encore liée par le fabricant ; il ne documente ni les conditions thermiques du site ni un autre réglage de pression.",
-      "Aucune interpolation de débit, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-      "Cuve non qualifiée en litres : l’autonomie ne peut pas être conclue à partir de ce profil.",
-      "Le point de pression ne prouve pas le maximum matériel ; au-delà, le verdict doit rester données insuffisantes."
+      "Le débit livré à 90 psi est conservé, sans extrapolation au maximum du manomètre ou de la pompe.",
+      "Constant-run et service S1 du moteur ne quantifient pas le taux de marche en charge du groupe."
     ]
   },
   "evidence": [
@@ -179,6 +132,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-08",
       "confidence": "B",
       "notes": "SHA-256 5f223a682bec218a0063ecaf63a631449fb1a14d1f0eac2b3fe141849926f56d de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "rolair-5230k30cs-reserved-20261103-1",
+      "sourceUrl": "https://www.rolair.com/air-compressors/wheeled-electric-air-compressors/5230k30cs",
+      "sourceLabel": "Rolair : revue factuelle du 3 novembre 2026",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-03",
+      "confidence": "B",
+      "notes": "GET complet HTTP200 SHA-256 0cff1212bd530efe9f863f90d767d229bfd439c4bba8ffd2960248f6e9bc949f. La 5230K30CS fournit 18,8 cfm à 90 psi ; le déplacement de 23,1 cfm reste séparé. Son fonctionnement à vitesse constante et son déchargeur permettent la régulation sans arrêter le moteur. La FAQ générale décrit des moteurs S1, pas un taux de marche chiffré du groupe ; le 100 % est retiré."
     }
   ],
   "fieldSources": {
@@ -200,11 +163,14 @@ const product: CompressorInput = {
     "oilType": [
       "october8-rolair-portable-5230k30cs-p1"
     ],
-    "dutyCycle": [
-      "october8-rolair-portable-5230k30cs-spec-p1"
-    ],
     "voltage": [
-      "october8-rolair-portable-5230k30cs-p1"
+      "rolair-5230k30cs-reserved-20261103-1"
+    ],
+    "editorial": [
+      "rolair-5230k30cs-reserved-20261103-1"
+    ],
+    "specifications": [
+      "rolair-5230k30cs-reserved-20261103-1"
     ]
   },
   "notes": [

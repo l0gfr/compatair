@@ -31,18 +31,21 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sealey GSA20. La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué. Champ fabricant : Air Consumption : 5cfm. Champ fabricant : Drive : 3/8\"Sq.",
+		"overview": "Sealey GSA20. La GSA20 est un cliquet 3/8 pouce, 280 mm et 150 tr/min, maximum 61 Nm. La GSA21 utilise un carré 1/2 pouce ; la SA230 un carré 1/4 et 300 tr/min. Les 5 CFM restent une consommation documentaire sans régime de mesure.",
 		"verifiedFacts": [
-			"Champ fabricant : Air Consumption : 5cfm.",
+			"Champ fabricant : Air Consumption : 5 cfm.",
 			"Champ fabricant : Drive : 3/8\"Sq.",
 			"Champ fabricant : Free Speed : 150rpm.",
 			"Champ fabricant : Inlet Size : 1/4\"BSP.",
-			"Champ fabricant : Length : 280mm.",
-			"Champ fabricant : Maximum Torque : 45lb.ft(61Nm).",
-			"Champ fabricant : Noise Power/Pressure : 99/88dB(A).",
-			"Champ fabricant : Operating Pressure : 90psi.",
+			"Champ fabricant : Length : 280 mm.",
+			"Champ fabricant : Maximum Torque : 45 lb.ft(61Nm).",
+			"Champ fabricant : Noise Power/Pressure : 99/88 dB(A).",
+			"Champ fabricant : Operating Pressure : 90 psi.",
 			"Champ fabricant : Vibration/Uncertainty : 1.7/0.85m/s².",
-			"Champ fabricant : Nett Weight : 1.2kg."
+			"Champ fabricant : Nett Weight : 1.2 kg.",
+			"Carré : 3/8 pouce.",
+			"Longueur : 280 mm.",
+			"Échappement : Orientable sur 360°."
 		],
 		"limitations": [
 			"La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué.",
@@ -54,7 +57,7 @@ const product: ToolProfileInput = {
 	"specifications": [
 		{
 			"label": "Champ fabricant : Air Consumption",
-			"value": "5cfm",
+			"value": "5 cfm",
 			"evidenceIds": [
 				"october2b-tools-oct2b-sealey-gsa20-html-p1"
 			]
@@ -82,28 +85,28 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Length",
-			"value": "280mm",
+			"value": "280 mm",
 			"evidenceIds": [
 				"october2b-tools-oct2b-sealey-gsa20-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Maximum Torque",
-			"value": "45lb.ft(61Nm)",
+			"value": "45 lb.ft(61Nm)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-sealey-gsa20-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Noise Power/Pressure",
-			"value": "99/88dB(A)",
+			"value": "99/88 dB(A)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-sealey-gsa20-html-p1"
 			]
 		},
 		{
 			"label": "Champ fabricant : Operating Pressure",
-			"value": "90psi",
+			"value": "90 psi",
 			"evidenceIds": [
 				"october2b-tools-oct2b-sealey-gsa20-html-p1"
 			]
@@ -117,16 +120,37 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Champ fabricant : Nett Weight",
-			"value": "1.2kg",
+			"value": "1.2 kg",
 			"evidenceIds": [
 				"october2b-tools-oct2b-sealey-gsa20-html-p1"
 			]
 		},
 		{
 			"label": "Portée de la pression dans la source",
-			"value": "Operating Pressure: 90psi",
+			"value": "Operating Pressure: 90 psi",
 			"evidenceIds": [
 				"october2b-tools-oct2b-sealey-gsa20-html-p1"
+			]
+		},
+		{
+			"label": "Carré",
+			"value": "3/8 pouce",
+			"evidenceIds": [
+				"cle-a-cliquet-sealey-gsa20-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "280 mm",
+			"evidenceIds": [
+				"cle-a-cliquet-sealey-gsa20-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Échappement",
+			"value": "Orientable sur 360°",
+			"evidenceIds": [
+				"cle-a-cliquet-sealey-gsa20-reserved-20261103-1"
 			]
 		}
 	],
@@ -140,6 +164,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 49349f9d28cfea241fbf63444f42af8cc4ae7a4c0b63e8e707c96feb9f4fc138. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "cle-a-cliquet-sealey-gsa20-reserved-20261103-1",
+			"sourceUrl": "https://www.sealey.co.uk/generation-air-ratchet-wrench-3-8-sq-drive-gsa20/",
+			"sourceLabel": "Sealey : revue factuelle du 3 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 9d75cc9e9d06feca9663c6e9ec7a1d28d2f4fa1e309a17b039d0d7a4bcf5601a. La GSA20 est un cliquet 3/8 pouce, 280 mm et 150 tr/min, maximum 61 Nm. La GSA21 utilise un carré 1/2 pouce ; la SA230 un carré 1/4 et 300 tr/min. Les 5 CFM restent une consommation documentaire sans régime de mesure."
 		}
 	],
 	"fieldSources": {
@@ -151,6 +185,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-sealey-gsa20-html-p1"
+		],
+		"editorial": [
+			"cle-a-cliquet-sealey-gsa20-reserved-20261103-1"
+		],
+		"specifications": [
+			"cle-a-cliquet-sealey-gsa20-reserved-20261103-1"
 		]
 	},
 	"notes": [

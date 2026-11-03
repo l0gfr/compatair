@@ -23,46 +23,53 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Nitto Kohki JT-16, référence JT-16. Le tableau fabricant publie 160 L/min et une plage d’utilisation de 6 à 6 bar. Cadence de frappe publiée : 6000 coups/min. Masse publiée : 0.8 kg.",
+		"overview": "Nitto Kohki JT-16. Le JT-16 est le petit dérouilleur de 0,80 kg livré avec six aiguilles 3 × 180 mm. Le JT-10 pèse 0,50 kg et utilise sept aiguilles 1,6 × 120 mm, à 5 500 coups/min contre 6 000. La table nomme explicitement la consommation à vide ; les 160 L/min cessent de produire une demande en charge.",
 		"verifiedFacts": [
-			"Pression de 0,6 MPa publiée dans le tableau, soit 6 bar. La valeur en kgf/cm² entre parenthèses n’est pas utilisée pour la conversion.",
-			"Consommation à vide explicitement publiée (No-load) : 0.16 m³/min. Conversion × 1 000 en L/min.",
-			"Référence fabricant : JT-16.",
-			"Cadence de frappe publiée : 6000 coups/min.",
-			"Masse publiée : 0.8 kg."
+			"Aiguilles installées : 6 de diamètre 3 mm × 180 mm.",
+			"Cadence : 6 000 coups/min.",
+			"Masse : 0,80 kg.",
+			"Consommation explicitement à vide : 0,16 m³/min (160 L/min).",
+			"Pression nominale du tableau : 0,6 MPa."
 		],
 		"limitations": [
-			"Le débit à vide n’établit pas à lui seul la consommation sous toutes les charges. Respecter les conditions d’emploi de la notice.",
-			"La conformité et la disponibilité de la version exacte doivent être confirmées avant achat."
+			"Le tableau donne une pression nominale appariée de 0,6 MPa, sans protocole métrologique supplémentaire revendiqué.",
+			"La consommation est à vide ; aucun débit maximal/en charge n’est documenté pour le dimensionnement."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression de 0,6 MPa publiée dans le tableau, soit 6 bar. La valeur en kgf/cm² entre parenthèses n’est pas utilisée pour la conversion.",
+			"label": "Aiguilles installées",
+			"value": "6 de diamètre 3 mm × 180 mm",
 			"evidenceIds": [
-				"nitto-kohki-jt-16-20260926"
+				"nitto-kohki-jt-16-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation à vide explicitement publiée (No-load) : 0.16 m³/min. Conversion × 1 000 en L/min.",
+			"label": "Cadence",
+			"value": "6 000 coups/min",
 			"evidenceIds": [
-				"nitto-kohki-jt-16-20260926"
+				"nitto-kohki-jt-16-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Cadence de frappe publiée",
-			"value": "6000 coups/min",
+			"label": "Masse",
+			"value": "0,80 kg",
 			"evidenceIds": [
-				"nitto-kohki-jt-16-20260926"
+				"nitto-kohki-jt-16-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
-			"value": "0.8 kg",
+			"label": "Consommation explicitement à vide",
+			"value": "0,16 m³/min (160 L/min)",
 			"evidenceIds": [
-				"nitto-kohki-jt-16-20260926"
+				"nitto-kohki-jt-16-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Pression nominale du tableau",
+			"value": "0,6 MPa",
+			"evidenceIds": [
+				"nitto-kohki-jt-16-reserved-20261103-1"
 			]
 		}
 	],
@@ -75,6 +82,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation à vide explicitement publiée (No-load) : 0.16 m³/min. Conversion × 1 000 en L/min."
+		},
+		{
+			"id": "nitto-kohki-jt-16-reserved-20261103-1",
+			"sourceUrl": "https://www.nitto-kohki.eu/images/stories/products/pdf_catalogs/Tools_Catalog.pdf#page=34",
+			"sourceLabel": "Nitto Kohki : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 96df5508b9819bc71611f875b35af9e282e5bb0bf62e324aab2ab87698867bac. Le JT-16 est le petit dérouilleur de 0,80 kg livré avec six aiguilles 3 × 180 mm. Le JT-10 pèse 0,50 kg et utilise sept aiguilles 1,6 × 120 mm, à 5 500 coups/min contre 6 000. La table nomme explicitement la consommation à vide ; les 160 L/min cessent de produire une demande en charge."
 		}
 	],
 	"fieldSources": {
@@ -86,6 +103,15 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"nitto-kohki-jt-16-20260926"
+		],
+		"airflowBasis": [
+			"nitto-kohki-jt-16-reserved-20261103-1"
+		],
+		"editorial": [
+			"nitto-kohki-jt-16-reserved-20261103-1"
+		],
+		"specifications": [
+			"nitto-kohki-jt-16-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -95,7 +121,8 @@ const product: ToolProfileInput = {
 		"min": 160,
 		"typical": 160,
 		"max": 160
-	}
+	},
+	"airflowBasis": "free-speed"
 };
 
 export default product;

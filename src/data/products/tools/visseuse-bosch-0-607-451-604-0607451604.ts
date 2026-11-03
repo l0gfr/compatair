@@ -38,44 +38,53 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Bosch 0 607 451 604 (réf. 0607451604). Consommation à vide : 840 L/min à 6,3 bar. Vitesse à vide : 280 tr/min. Masse : 1.7 kg.",
+		"overview": "Bosch 0 607 451 604. La 0 607 451 604 est la visseuse d’angle à coupure 370 W, 7–30 Nm sur assemblage dur. La 606 donne 7–27 Nm et 360 tr/min contre 280 ici. Le couple du tableau dur n’est pas transféré à un assemblage tendre. Les 840 L/min sont explicitement à vide et restent non dimensionnants en charge.",
 		"verifiedFacts": [
+			"Type : Visseuse d’angle à coupure, réglage externe.",
+			"Couple, assemblage dur à 30 degrés : 7–30 Nm.",
+			"Puissance : 370 W.",
 			"Vitesse à vide : 280 tr/min.",
-			"Masse : 1.7 kg."
+			"Débit explicitement à vide : 14 L/s (840 L/min)."
 		],
 		"limitations": [
-			"Consommation à vide seule : aucun maximum ou débit en charge supposé ; le verdict reste insufficient_data.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"Performances déclarées sous le protocole du catalogue : pression dynamique 6,3 bar, flexible de 4 m. Les régimes à vide/en charge restent distincts.",
+			"Catalogue historique ; équipement et disponibilité actuels à confirmer."
 		]
 	},
 	"specifications": [
 		{
+			"label": "Type",
+			"value": "Visseuse d’angle à coupure, réglage externe",
+			"evidenceIds": [
+				"visseuse-bosch-0-607-451-604-0607451604-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Couple, assemblage dur à 30 degrés",
+			"value": "7–30 Nm",
+			"evidenceIds": [
+				"visseuse-bosch-0-607-451-604-0607451604-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Puissance",
+			"value": "370 W",
+			"evidenceIds": [
+				"visseuse-bosch-0-607-451-604-0607451604-reserved-20261103-1"
+			]
+		},
+		{
 			"label": "Vitesse à vide",
 			"value": "280 tr/min",
 			"evidenceIds": [
-				"october-bosch-industry-p62"
+				"visseuse-bosch-0-607-451-604-0607451604-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse",
-			"value": "1.7 kg",
+			"label": "Débit explicitement à vide",
+			"value": "14 L/s (840 L/min)",
 			"evidenceIds": [
-				"october-bosch-industry-p62"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "Bosch, Industrial air tools catalogue, page 62 ; tableau réparti sur les pages 62–63",
-			"evidenceIds": [
-				"october-bosch-industry-p62"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "All of the performance data / specifications in this catalogue refer to 6.3 bar (91 PSI) flow pressure with 4 m hose length.",
-			"evidenceIds": [
-				"october-bosch-industry-p62",
-				"october-bosch-industry-p4"
+				"visseuse-bosch-0-607-451-604-0607451604-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +108,36 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "visseuse-bosch-0-607-451-604-0607451604-reserved-20261103-1",
+			"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf#page=62",
+			"sourceLabel": "Bosch : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. La 0 607 451 604 est la visseuse d’angle à coupure 370 W, 7–30 Nm sur assemblage dur. La 606 donne 7–27 Nm et 360 tr/min contre 280 ici. Le couple du tableau dur n’est pas transféré à un assemblage tendre. Les 840 L/min sont explicitement à vide et restent non dimensionnants en charge."
+		},
+		{
+			"id": "visseuse-bosch-0-607-451-604-0607451604-reserved-20261103-1-3",
+			"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf#page=63",
+			"sourceLabel": "Bosch : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. La 0 607 451 604 est la visseuse d’angle à coupure 370 W, 7–30 Nm sur assemblage dur. La 606 donne 7–27 Nm et 360 tr/min contre 280 ici. Le couple du tableau dur n’est pas transféré à un assemblage tendre. Les 840 L/min sont explicitement à vide et restent non dimensionnants en charge."
+		},
+		{
+			"id": "visseuse-bosch-0-607-451-604-0607451604-reserved-20261103-1-4",
+			"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf#page=4",
+			"sourceLabel": "Bosch : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. La 0 607 451 604 est la visseuse d’angle à coupure 370 W, 7–30 Nm sur assemblage dur. La 606 donne 7–27 Nm et 360 tr/min contre 280 ici. Le couple du tableau dur n’est pas transféré à un assemblage tendre. Les 840 L/min sont explicitement à vide et restent non dimensionnants en charge."
 		}
 	],
 	"fieldSources": {
@@ -113,6 +152,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-bosch-industry-p62"
+		],
+		"editorial": [
+			"visseuse-bosch-0-607-451-604-0607451604-reserved-20261103-1"
+		],
+		"specifications": [
+			"visseuse-bosch-0-607-451-604-0607451604-reserved-20261103-1"
 		]
 	},
 	"notes": [

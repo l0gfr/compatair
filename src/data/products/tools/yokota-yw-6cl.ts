@@ -9,10 +9,8 @@ const product: ToolProfileInput = {
 	"categoryId": "cle-a-chocs",
 	"category": "cle-a-chocs",
 	"label": "Yokota YW-6CL",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
 		"max": 6.3
 	},
 	"confidence": "B",
@@ -23,61 +21,61 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Yokota YW-6CL, référence YW-6CL. Le tableau fabricant publie 252 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 6500 tr/min. Masse publiée : 1,6 kg.",
+		"overview": "Yokota YW-6CL. La YW-6CL est la clé à chocs d’angle au carré 3/8 pouce, 145 Nm et 1,6 kg. La table distingue les clés pistolet Twinhammer, notamment MI-16M3/8 à 270 Nm et 1,5 kg. Le renvoi 6 qualifie les 4,2 L/s en charge ; l’appariement à une pression exacte reste à confirmer, sans reprendre automatiquement la consigne 6,3 bar.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation en charge publiée : 4.2 L/s, convertis en 252 L/min par multiplication par 60.",
-			"Référence fabricant : YW-6CL.",
-			"Vitesse à vide publiée : 6500 tr/min.",
-			"Masse publiée : 1,6 kg.",
-			"Diamètre intérieur de flexible conseillé : 6,5 mm."
+			"Carré : 3/8 pouce.",
+			"Mécanisme : Un marteau.",
+			"Couple indicatif : 145 Nm.",
+			"Vitesse à vide : 6 500 tr/min.",
+			"Masse : 1,6 kg.",
+			"Consommation explicitement en charge : 4,2 L/s (252 L/min)."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"Régime et pression de mesure ne sont pas complétés par hypothèse. Les données non dimensionnantes restent dans les spécifications.",
+			"Catalogue constructeur historique ; configuration livrée et disponibilité actuelles à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+			"label": "Carré",
+			"value": "3/8 pouce",
 			"evidenceIds": [
-				"yokota-yw-6cl-20260926-workingpressurebar-1"
+				"yokota-yw-6cl-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation en charge publiée : 4.2 L/s, convertis en 252 L/min par multiplication par 60.",
+			"label": "Mécanisme",
+			"value": "Un marteau",
 			"evidenceIds": [
-				"yokota-yw-6cl-20260926"
+				"yokota-yw-6cl-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Vitesse à vide publiée",
-			"value": "6500 tr/min",
+			"label": "Couple indicatif",
+			"value": "145 Nm",
 			"evidenceIds": [
-				"yokota-yw-6cl-20260926"
+				"yokota-yw-6cl-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
+			"label": "Vitesse à vide",
+			"value": "6 500 tr/min",
+			"evidenceIds": [
+				"yokota-yw-6cl-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
 			"value": "1,6 kg",
 			"evidenceIds": [
-				"yokota-yw-6cl-20260926"
+				"yokota-yw-6cl-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Diamètre intérieur de flexible conseillé",
-			"value": "6,5 mm",
+			"label": "Consommation explicitement en charge",
+			"value": "4,2 L/s (252 L/min)",
 			"evidenceIds": [
-				"yokota-yw-6cl-20260926"
-			]
-		},
-		{
-			"label": "Raccord pneumatique",
-			"value": "PT 1/4\"",
-			"evidenceIds": [
-				"yokota-yw-6cl-20260926"
+				"yokota-yw-6cl-reserved-20261103-1"
 			]
 		}
 	],
@@ -99,6 +97,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "yokota-yw-6cl-reserved-20261103-1",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=38",
+			"sourceLabel": "Yokota : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. La YW-6CL est la clé à chocs d’angle au carré 3/8 pouce, 145 Nm et 1,6 kg. La table distingue les clés pistolet Twinhammer, notamment MI-16M3/8 à 270 Nm et 1,5 kg. Le renvoi 6 qualifie les 4,2 L/s en charge ; l’appariement à une pression exacte reste à confirmer, sans reprendre automatiquement la consigne 6,3 bar."
 		}
 	],
 	"fieldSources": {
@@ -106,30 +114,35 @@ const product: ToolProfileInput = {
 			"yokota-yw-6cl-20260926"
 		],
 		"workingPressureBar": [
-			"yokota-yw-6cl-20260926-workingpressurebar-1"
-		],
-		"airflowLpm": [
-			"yokota-yw-6cl-20260926"
+			"yokota-yw-6cl-reserved-20261103-1"
 		],
 		"recommendedHose": [
 			"yokota-yw-6cl-20260926"
 		],
 		"connectorSize": [
 			"yokota-yw-6cl-20260926"
+		],
+		"demandModel": [
+			"yokota-yw-6cl-reserved-20261103-1"
+		],
+		"demandExplanation": [
+			"yokota-yw-6cl-reserved-20261103-1"
+		],
+		"editorial": [
+			"yokota-yw-6cl-reserved-20261103-1"
+		],
+		"specifications": [
+			"yokota-yw-6cl-reserved-20261103-1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 252,
-		"typical": 252,
-		"max": 252
-	},
 	"recommendedHose": {
 		"innerDiameterMm": 6.5
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"demandExplanation": "Consommations et régimes conservés dans les spécifications ; pression de mesure exacte non appariée par le document."
 };
 
 export default product;

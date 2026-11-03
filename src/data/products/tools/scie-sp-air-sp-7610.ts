@@ -38,43 +38,53 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SP AIR SP-7610. Consommation publiée, régime non précisé : 500 L/min à 6,2 bar. Raccord publié : 1/4\"NPT. Masse publiée : 0.6 kg.",
+		"overview": "SP AIR SP-7610. La SP-7610 est la scie de capacité acier 4 mm, course 12 mm et 5 300 courses/min. La SP-7620 donne 2 mm, course 6 mm et 11 000 courses/min, pour la même masse 0,6 kg. La SP-1720 est limitée à 1,5 mm d’acier. Les 0,5 m³/min ne définissent pas un volume par course.",
 		"verifiedFacts": [
-			"Raccord publié : 1/4\"NPT.",
-			"Masse publiée : 0.6 kg."
+			"Capacité acier publiée : 4 mm.",
+			"Course : 12 mm.",
+			"Cadence : 5 300 courses/min.",
+			"Longueur : 207 mm.",
+			"Masse : 0,6 kg."
 		],
 		"limitations": [
-			"Régime de consommation non précisé : aucun maximum supposé ; le verdict reste insufficient_data.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"Le catalogue ne précise pas le régime du débit ; la valeur reste non dimensionnante, sans maximum supposé.",
+			"Source constructeur historique ; disponibilité actuelle et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Raccord publié",
-			"value": "1/4\"NPT",
+			"label": "Capacité acier publiée",
+			"value": "4 mm",
 			"evidenceIds": [
-				"october-sp-air-p21"
+				"scie-sp-air-sp-7610-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Masse publiée",
-			"value": "0.6 kg",
+			"label": "Course",
+			"value": "12 mm",
 			"evidenceIds": [
-				"october-sp-air-p21"
+				"scie-sp-air-sp-7610-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Localisation documentaire",
-			"value": "SP AIR, catalogue Air Tools, page 21",
+			"label": "Cadence",
+			"value": "5 300 courses/min",
 			"evidenceIds": [
-				"october-sp-air-p21"
+				"scie-sp-air-sp-7610-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Condition de pression originale",
-			"value": "Air pressure: 0.62 MPa",
+			"label": "Longueur",
+			"value": "207 mm",
 			"evidenceIds": [
-				"october-sp-air-p21"
+				"scie-sp-air-sp-7610-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "0,6 kg",
+			"evidenceIds": [
+				"scie-sp-air-sp-7610-reserved-20261103-1"
 			]
 		}
 	],
@@ -88,6 +98,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "scie-sp-air-sp-7610-reserved-20261103-1",
+			"sourceUrl": "https://spair.vessel.co.jp/download/SP_catalog_all_E.pdf#page=21",
+			"sourceLabel": "SP AIR : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. La SP-7610 est la scie de capacité acier 4 mm, course 12 mm et 5 300 courses/min. La SP-7620 donne 2 mm, course 6 mm et 11 000 courses/min, pour la même masse 0,6 kg. La SP-1720 est limitée à 1,5 mm d’acier. Les 0,5 m³/min ne définissent pas un volume par course."
 		}
 	],
 	"fieldSources": {
@@ -102,6 +122,12 @@ const product: ToolProfileInput = {
 		],
 		"airflowBasis": [
 			"october-sp-air-p21"
+		],
+		"editorial": [
+			"scie-sp-air-sp-7610-reserved-20261103-1"
+		],
+		"specifications": [
+			"scie-sp-air-sp-7610-reserved-20261103-1"
 		]
 	},
 	"notes": [

@@ -23,68 +23,61 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Mirka ROP2 312NV, référence 8994210311. Consommation publiée : 538 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Puissance publiée : 276 W. Vitesse de rotation : 10000 tr/min.",
+		"overview": "Mirka ROP2 312NV. La ROP2 312NV est la polisseuse orbitale sans aspiration à plateau 77 mm et orbite 12 mm. La ROP2 512NV reçoit 125 mm et publie 594 L/min contre 538 ici. Le diamètre change, tandis que l’orbite reste 12 mm. Le catalogue ne précise pas le régime de consommation : la valeur est conservée sans demande maximale par défaut.",
 		"verifiedFacts": [
-			"Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
-			"Consommation publiée : 538 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
-			"Référence fabricant : 8994210311.",
-			"Puissance publiée : 276 W.",
-			"Vitesse de rotation : 10000 tr/min.",
-			"Diamètre de plateau publié : 77 mm."
+			"Plateau : 77 mm.",
+			"Orbite : 12 mm.",
+			"Aspiration : Sans aspiration, NV.",
+			"Puissance : 276 W.",
+			"Vitesse : 10 000 tr/min.",
+			"Consommation, régime non précisé : 538 L/min."
 		],
 		"limitations": [
-			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
-			"Catalogue 2022/2023 : vérifier la disponibilité actuelle et la référence de plateau avant commande."
+			"Régime du débit non précisé dans ce catalogue ; la pression de travail ne suffit pas à définir une mesure maximale/en charge.",
+			"Catalogue 2022/2023 identifié ; équipement et disponibilité actuels à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
-			"evidenceIds": [
-				"mirka-8994210311-20260927"
-			]
-		},
-		{
-			"label": "Condition de consommation",
-			"value": "Consommation publiée : 538 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
-			"evidenceIds": [
-				"mirka-8994210311-20260927"
-			]
-		},
-		{
-			"label": "Puissance publiée",
-			"value": "276 W",
-			"evidenceIds": [
-				"mirka-8994210311-20260927"
-			]
-		},
-		{
-			"label": "Vitesse de rotation",
-			"value": "10000 tr/min",
-			"evidenceIds": [
-				"mirka-8994210311-20260927"
-			]
-		},
-		{
-			"label": "Diamètre de plateau publié",
+			"label": "Plateau",
 			"value": "77 mm",
 			"evidenceIds": [
-				"mirka-8994210311-20260927"
+				"mirka-rop2-312nv-reserved-20261103-1"
 			]
 		},
 		{
 			"label": "Orbite",
 			"value": "12 mm",
 			"evidenceIds": [
-				"mirka-8994210311-20260927"
+				"mirka-rop2-312nv-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Collecte des poussières",
-			"value": "Sans aspiration",
+			"label": "Aspiration",
+			"value": "Sans aspiration, NV",
 			"evidenceIds": [
-				"mirka-8994210311-20260927"
+				"mirka-rop2-312nv-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Puissance",
+			"value": "276 W",
+			"evidenceIds": [
+				"mirka-rop2-312nv-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Vitesse",
+			"value": "10 000 tr/min",
+			"evidenceIds": [
+				"mirka-rop2-312nv-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Consommation, régime non précisé",
+			"value": "538 L/min",
+			"evidenceIds": [
+				"mirka-rop2-312nv-reserved-20261103-1"
 			]
 		}
 	],
@@ -97,6 +90,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation publiée : 538 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+		},
+		{
+			"id": "mirka-rop2-312nv-reserved-20261103-1",
+			"sourceUrl": "https://cms.mirka.com/globalassets/msc/pdf/mirka-product-catalog-2022-low-res.pdf#page=118",
+			"sourceLabel": "Mirka : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 2ced0651411b4d8c2cd50ec1e250c15d9fda73d452ffd72b2a9cbe8910647fc2. La ROP2 312NV est la polisseuse orbitale sans aspiration à plateau 77 mm et orbite 12 mm. La ROP2 512NV reçoit 125 mm et publie 594 L/min contre 538 ici. Le diamètre change, tandis que l’orbite reste 12 mm. Le catalogue ne précise pas le régime de consommation : la valeur est conservée sans demande maximale par défaut."
 		}
 	],
 	"fieldSources": {
@@ -108,6 +111,15 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"mirka-8994210311-20260927"
+		],
+		"airflowBasis": [
+			"mirka-rop2-312nv-reserved-20261103-1"
+		],
+		"editorial": [
+			"mirka-rop2-312nv-reserved-20261103-1"
+		],
+		"specifications": [
+			"mirka-rop2-312nv-reserved-20261103-1"
 		]
 	},
 	"notes": [
@@ -117,7 +129,8 @@ const product: ToolProfileInput = {
 		"min": 538,
 		"typical": 538,
 		"max": 538
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

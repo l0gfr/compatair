@@ -24,7 +24,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 1590
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "oil",
 	"powerKw": 11,
 	"weightKg": 219,
@@ -39,38 +38,60 @@ const product: CompressorInput = {
 	},
 	"specifications": [
 		{
-			"label": "Équipement",
-			"value": "sans sécheur ; cuve intégrée 0 L",
+			"label": "Code",
+			"value": "CC1184133",
 			"evidenceIds": [
-				"october2-broomwade-full-p17"
+				"broomwade-fm11-cc1184133-7-bar-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Débit restitué à 7 bar",
+			"label": "Version",
+			"value": "FM11 fixe, 7 bar",
+			"evidenceIds": [
+				"broomwade-fm11-cc1184133-7-bar-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Capacity at maximum pressure",
 			"value": "1,59 m³/min",
 			"evidenceIds": [
-				"october2-broomwade-full-p17"
+				"broomwade-fm11-cc1184133-7-bar-reserved-20261103-1"
 			]
 		},
 		{
-			"label": "Dimensions (longueur × largeur × hauteur)",
-			"value": "667 × 630 × 1050 mm",
+			"label": "Puissance",
+			"value": "11 kW",
 			"evidenceIds": [
-				"october2-broomwade-full-p17"
+				"broomwade-fm11-cc1184133-7-bar-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Alimentation",
+			"value": "400 V / 50 Hz",
+			"evidenceIds": [
+				"broomwade-fm11-cc1184133-7-bar-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Masse au sol",
+			"value": "219 kg",
+			"evidenceIds": [
+				"broomwade-fm11-cc1184133-7-bar-reserved-20261103-1"
 			]
 		}
 	],
 	"editorial": {
-		"overview": "BroomWade FM11, réf. CC1184133, 7 bar. 1 590 L/min à 7 bar. Moteur 11 kW ; sans sécheur.",
+		"overview": "BroomWade FM11. Le code CC1184133 est la FM11 au sol en version 7 bar, à 1,59 m³/min. La brochure lie explicitement le débit à la pression maximale ; la variante 270 L pèse 314 kg et la 500 L pèse 379 kg, contre 219 kg au sol. La page de gamme reste en HTTP 429 et ne sert plus de preuve au taux de marche.",
 		"verifiedFacts": [
-			"Débits restitués associés aux pressions du tableau de cette configuration.",
-			"Cuve intégrée : 0 L ; aucun volume de réservoir externe ajouté.",
-			"Numéro d’article fabricant : CC1184133."
+			"Code : CC1184133.",
+			"Version : FM11 fixe, 7 bar.",
+			"Capacity at maximum pressure : 1,59 m³/min.",
+			"Puissance : 11 kW.",
+			"Alimentation : 400 V / 50 Hz.",
+			"Masse au sol : 219 kg."
 		],
 		"limitations": [
-			"Les points FAD publiés ne constituent pas une mesure de toute la courbe ; aucune extrapolation au-dessus de la dernière pression documentée.",
-			"Service continu déclaré pour la série ; les conditions d’installation, de refroidissement et d’entretien restent applicables.",
-			"Documentation datée, disponibilité et équipement livré à confirmer sur le devis. Aucun avis d’utilisation ni essai CompatAir."
+			"Le taux de marche du groupe complet n’est pas quantifié dans la brochure ; la page HTML 429 reste non rétablie."
 		]
 	},
 	"evidence": [
@@ -93,6 +114,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5093dd4e4662bd2c2e4e7b08d1c36cab9fd49243104cc6007fea6d8244ad4f36 de l’extrait textuel versionné, et non du HTML original. Données fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "broomwade-fm11-cc1184133-7-bar-reserved-20261103-1",
+			"sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/blt167c47dc7f7db219/blte4df36746553755b/6a82b94b0c5540172c281ba0/25317_BroomWade_No_Price_Book_EURO_EN_Work.pdf#page=17",
+			"sourceLabel": "BroomWade : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 11f1e7d5dfb0667503a81873214705d3b732290f6c8d46b7e300dd92b7badb3b. Le code CC1184133 est la FM11 au sol en version 7 bar, à 1,59 m³/min. La brochure lie explicitement le débit à la pression maximale ; la variante 270 L pèse 314 kg et la 500 L pèse 379 kg, contre 219 kg au sol. La page de gamme reste en HTTP 429 et ne sert plus de preuve au taux de marche."
 		}
 	],
 	"fieldSources": {
@@ -112,13 +143,16 @@ const product: CompressorInput = {
 			"october2-broomwade-full-p17"
 		],
 		"weightKg": [
-			"october2-broomwade-full-p17"
+			"broomwade-fm11-cc1184133-7-bar-reserved-20261103-1"
 		],
 		"oilType": [
 			"october2-broomwade-full-p17"
 		],
-		"dutyCycle": [
-			"october2-broomwade-duty-web"
+		"editorial": [
+			"broomwade-fm11-cc1184133-7-bar-reserved-20261103-1"
+		],
+		"specifications": [
+			"broomwade-fm11-cc1184133-7-bar-reserved-20261103-1"
 		]
 	},
 	"notes": [

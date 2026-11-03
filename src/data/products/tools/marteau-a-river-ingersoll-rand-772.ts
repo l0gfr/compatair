@@ -29,10 +29,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Ingersoll Rand 772. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 1.6 kg. Caractéristiques du tableau constructeur : 772 - - 7.38” (187) 3.6 (1.6) 2.3” (57) 0.75” (19) 3,000 0.401” 15 (425).",
+		"overview": "Ingersoll Rand 772. Le 772 est présenté pour découpe et martelage légers, avec deux retenues fournies, longueur187 mm et 1,6 kg. Aucune capacité de rivet n’est renseignée dans sa ligne, contrairement aux AVC26A1/B1. Les 425 L/min restent documentaires ; ils ne deviennent pas un volume par coup.",
 		"verifiedFacts": [
 			"Masse publiée : 1.6 kg.",
-			"Caractéristiques du tableau constructeur : 772 - - 7.38” (187) 3.6 (1.6) 2.3” (57) 0.75” (19) 3,000 0.401” 15 (425)."
+			"Caractéristiques du tableau constructeur : 772 - - 7.38” (187) 3.6 (1.6) 2.3” (57) 0.75” (19) 3,000 0.401” 15 (425).",
+			"Queue : 0,401 pouce.",
+			"Course publiée : 57 mm.",
+			"Cadence : 3 000 coups/min.",
+			"Usage annoncé : Découpe et martelage légers."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -68,6 +72,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-ir-production-fastening-pdf-p73"
 			]
+		},
+		{
+			"label": "Queue",
+			"value": "0,401 pouce",
+			"evidenceIds": [
+				"marteau-a-river-ingersoll-rand-772-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Course publiée",
+			"value": "57 mm",
+			"evidenceIds": [
+				"marteau-a-river-ingersoll-rand-772-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Cadence",
+			"value": "3 000 coups/min",
+			"evidenceIds": [
+				"marteau-a-river-ingersoll-rand-772-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Usage annoncé",
+			"value": "Découpe et martelage légers",
+			"evidenceIds": [
+				"marteau-a-river-ingersoll-rand-772-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -80,6 +112,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 58f6dd413f360beb3c24048bfe40e3e325ba005dc2b3b1d3e02a21110a0be9c1. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "marteau-a-river-ingersoll-rand-772-reserved-20261103-1",
+			"sourceUrl": "https://irtoolhelp.ingersollrand.com/hc/en-us/article_attachments/4410723358739#page=73",
+			"sourceLabel": "Ingersoll Rand : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 58f6dd413f360beb3c24048bfe40e3e325ba005dc2b3b1d3e02a21110a0be9c1. Le 772 est présenté pour découpe et martelage légers, avec deux retenues fournies, longueur187 mm et 1,6 kg. Aucune capacité de rivet n’est renseignée dans sa ligne, contrairement aux AVC26A1/B1. Les 425 L/min restent documentaires ; ils ne deviennent pas un volume par coup."
 		}
 	],
 	"fieldSources": {
@@ -91,6 +133,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-ir-production-fastening-pdf-p73"
+		],
+		"editorial": [
+			"marteau-a-river-ingersoll-rand-772-reserved-20261103-1"
+		],
+		"specifications": [
+			"marteau-a-river-ingersoll-rand-772-reserved-20261103-1"
 		]
 	},
 	"notes": [

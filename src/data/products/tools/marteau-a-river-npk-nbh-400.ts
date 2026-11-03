@@ -29,10 +29,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "NPK NBH-400. La consommation moyenne déclarée ne fournit pas la demande maximale à un point de pression de mesure identifié. Aucun débit en charge n’est reconstitué. Masse publiée : 3.1 lbs. Consommation documentaire, hors calcul : 4 cfm.",
+		"overview": "NPK NBH-400. Le NBH-400 reçoit une queue 0,401 pouce et rive jusqu’à 1/4 pouce en duralumin ou 3/16 en acier selon cette table. Le NBH-600A passe à 0,498 pouce et d’autres capacités. Les 1 600 coups/min et les 4 CFM moyens ne fournissent pas un volume par rivet.",
 		"verifiedFacts": [
 			"Masse publiée : 3.1 lbs.",
-			"Consommation documentaire, hors calcul : 4 cfm."
+			"Consommation documentaire, hors calcul : 4 cfm.",
+			"Queue : 0,401 pouce.",
+			"Capacité duralumin : 1/4 pouce.",
+			"Capacité acier : 3/16 pouce.",
+			"Course : 3¾ pouces."
 		],
 		"limitations": [
 			"La consommation moyenne déclarée ne fournit pas la demande maximale à un point de pression de mesure identifié. Aucun débit en charge n’est reconstitué.",
@@ -62,6 +66,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-michigan-15-npk-pdf-p3"
 			]
+		},
+		{
+			"label": "Queue",
+			"value": "0,401 pouce",
+			"evidenceIds": [
+				"marteau-a-river-npk-nbh-400-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Capacité duralumin",
+			"value": "1/4 pouce",
+			"evidenceIds": [
+				"marteau-a-river-npk-nbh-400-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Capacité acier",
+			"value": "3/16 pouce",
+			"evidenceIds": [
+				"marteau-a-river-npk-nbh-400-reserved-20261103-1"
+			]
+		},
+		{
+			"label": "Course",
+			"value": "3¾ pouces",
+			"evidenceIds": [
+				"marteau-a-river-npk-nbh-400-reserved-20261103-1"
+			]
 		}
 	],
 	"evidence": [
@@ -74,6 +106,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 8991587b6147dedde29a8ca888682d24a45127a873a1fb3a753e048fd2696462. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "marteau-a-river-npk-nbh-400-reserved-20261103-1",
+			"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/15-NPK.pdf#page=3",
+			"sourceLabel": "NPK : revue factuelle du 3 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-03",
+			"confidence": "B",
+			"notes": "GET complet HTTP200 SHA-256 8991587b6147dedde29a8ca888682d24a45127a873a1fb3a753e048fd2696462. Le NBH-400 reçoit une queue 0,401 pouce et rive jusqu’à 1/4 pouce en duralumin ou 3/16 en acier selon cette table. Le NBH-600A passe à 0,498 pouce et d’autres capacités. Les 1 600 coups/min et les 4 CFM moyens ne fournissent pas un volume par rivet."
 		}
 	],
 	"fieldSources": {
@@ -85,6 +127,12 @@ const product: ToolProfileInput = {
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-michigan-15-npk-pdf-p3"
+		],
+		"editorial": [
+			"marteau-a-river-npk-nbh-400-reserved-20261103-1"
+		],
+		"specifications": [
+			"marteau-a-river-npk-nbh-400-reserved-20261103-1"
 		]
 	},
 	"notes": [

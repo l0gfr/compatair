@@ -12,7 +12,7 @@ import { technicalCardSvg } from './technical-card.mjs';
 import { beforeReservedNovember1Followup } from './reviewed-catalog-amendments-2026-11-01-reserved.mjs';
 const snapshot = JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-10-31-reserved.json', import.meta.url)));
 const native = row => beforeReservedNovember1Followup(parseCatalogProductSource(row.kind, readFileSync(new URL('../../' + row.file, import.meta.url), 'utf8')));
-const laterCards = JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-11-01-reserved.json', import.meta.url))).technicalCards;
+const laterCards = ['2026-11-01', '2026-11-03'].flatMap(day => JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-' + day + '-reserved.json', import.meta.url))).technicalCards);
 describe('October31 reserved candidate factual followup', () => {
  it('binds every changed technical card to its current record and exact dated byte proof', () => {
   const products = new Map(snapshot.rows.map(row => { const p = native(row); return [p.image.src, { kind: row.kind, product: p }]; }));
@@ -21,11 +21,14 @@ describe('October31 reserved candidate factual followup', () => {
    const current = products.get(card.path);
    expect(current, card.path).toBeDefined();
    const bytes = readFileSync(new URL('../../public' + card.path, import.meta.url));
-   const later = laterCards.find(proof => proof.path === card.path);
-   if (later) {
-    expect(later.beforeSha256, card.path).toBe(card.afterSha256);
-    expect(later.beforeBytes, card.path).toBe(card.afterBytes);
+   const successors = laterCards.filter(proof => proof.path === card.path);
+   let previous = card;
+   for (const proof of successors) {
+    expect(proof.beforeSha256, card.path).toBe(previous.afterSha256);
+    expect(proof.beforeBytes, card.path).toBe(previous.afterBytes);
+    previous = proof;
    }
+   const later = successors.at(-1);
    expect(createHash('sha256').update(bytes).digest('hex'), card.path).toBe(later?.afterSha256 ?? card.afterSha256);
    expect(bytes.length, card.path).toBe(later?.afterBytes ?? card.afterBytes);
    expect(bytes.length, card.path).toBeLessThanOrEqual(250 * 1024);

@@ -96,7 +96,7 @@ const toolBaseSchema = z.object({
 	slug: z.string().regex(/^[a-z0-9-]+$/),
 	categoryId: z.enum([
 		'detoureuse', 'araseuse-de-rivets', 'lime-alternative', 'pistolet-nettoyage',
-		'agrafeuse-cloueuse', 'burineur', 'cisaille', 'cle-a-chocs', 'cle-a-cliquet', 'derouilleur-a-aiguilles',
+		'agrafeuse-cloueuse', 'burineur', 'cisaille', 'poinconneuse-bordeuse', 'cle-a-chocs', 'cle-a-cliquet', 'derouilleur-a-aiguilles',
 		'gonflage', 'lime-bande', 'meuleuse', 'perceuse', 'ebavureuse', 'pistolet-cartouche',
 		'pistolet-peinture-hvlp', 'pistolet-peinture-lvlp', 'pistolet-peinture', 'pistolet-peinture-automatique', 'pince-coupante-pneumatique', 'polisseuse', 'ponceuse-bande',
 		'ponceuse-orbitale', 'ponceuse-pneumatique', 'riveteuse', 'sableuse', 'scie', 'soufflette', 'tronconneuse',
