@@ -41,7 +41,7 @@ construire un type implicite pour chaque valeur de l’historique. Elle ne
 modifie ni son chargement, ni les données publiées. Les tests vérifient le refus
 d’un accès au contenu brut et des fichiers absents ou malformés.
 
-Le mode incrémental d’Astro 7.2 vérifie le code des gabarits et les clés des routes.
+Le mode incrémental d’Astro 7.3.3 vérifie le code des gabarits et les clés des routes.
 Les produits bruts, titres et historiques sont lus comme des entrées de données
 lors du build, hors du graphe global des modules. Les schémas de validation restent
 appliqués ; le développement conserve les imports habituels et le rechargement.
@@ -49,10 +49,39 @@ appliqués ; le développement conserve les imports habituels et le rechargement
 Les clés couvrent la fiche complète, sources incluses, les titres propres au
 produit, son lien vers l’historique, la version du catalogue opposé utilisé pour
 les résultats, les alternatives effectivement affichées, les liens de lecture,
-la navigation éditoriale, l’indexabilité, le groupe canonique, le jour UTC et Node.
+la navigation éditoriale utile à la page, l’indexabilité, le groupe canonique,
+l’année du footer, les offres et liens marchands effectivement affichés et Node.
 Le code des offres, du moteur et des autres dépendances reste suivi par Astro.
 Une modification d’une source invalide donc les pages dont les preuves ou les
 résultats peuvent changer, même si aucune valeur numérique n’a changé.
+
+
+### Correction du cache HTML du 4 novembre 2026
+
+Le graphe complet reproduisait une invalidation des fiches inchangées : Astro
+hachait le CSS compilé avec des identifiants temporaires Vite. Le correctif local
+de la version 7.3.3 résout ces identifiants vers les noms des actifs, comme pour
+le JavaScript. Une modification réelle de CSS, d’actif ou de code reste invalidante.
+Le patch pnpm, le verrou, le fichier installé et la résolution consommée sont
+attestés par l’audit de dépendances. Aucune version n’est mise à niveau.
+
+Le simple changement de jour n’invalide plus toutes les pages. Les clés suivent
+l’année du footer, les offres actives et les liens directs encore valides. Les
+fiches de produits hachent leurs quatre cartes de guides réellement affichées,
+y compris les liens découverts dans le corps des guides. Une autre fiche ou une
+cinquième carte inchangée à l’écran n’impose pas de rendu. Les guides conservent
+leur empreinte de navigation partagée. Les outils non dimensionnables ne suivent
+plus le catalogue des compresseurs dont leur HTML ne dépend pas.
+
+La migration est vérifiée par une comparaison exacte des 46 576 HTML des quatre
+familles avec l’archive de production `11a9ad43e9fdf5584806be198f6a3e9e2b18e935`.
+Le manifeste versionné contient les empreintes de l’archive et de chaque famille.
+Cette preuve spécifique s’applique à la transition depuis cette release ; elle
+ne fige pas les futurs changements éditoriaux. Les autres contrôles restent
+obligatoires pour toutes les releases. Le premier build après le changement de
+patch et de verrou reste à froid. Le réemploi est vérifié sur deux fiches dans
+le graphe complet ; aucun gain de durée à chaud sur le site entier n’est annoncé
+avant une mesure réelle.
 
 Les calculs des fiches disposent aussi d’un cache distinct de 64 Mio. Il lie
 chaque résultat aux fiches complètes des deux produits et à une empreinte du code

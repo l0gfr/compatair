@@ -41,6 +41,16 @@ const gates = [
 ];
 
 describe('production workflow blocking DAG', () => {
+	it('compares the cache migration HTML after building and before signing or activation', () => {
+		const steps = production.jobs.validate.steps;
+		const check = commandStep(production, 'validate', 'node scripts/verify-html-cache-equivalence.mjs');
+		expect(check).toBeDefined();
+		expect(check.if).toBeUndefined();
+		expect(check['continue-on-error']).toBeUndefined();
+		expect(check.env.PUSH_BASE_SHA).toBe('${{ github.event.before }}');
+		expect(steps.indexOf(check)).toBeGreaterThan(steps.findIndex(item => item.name === 'Build once and validate generated snapshots'));
+		expect(steps.indexOf(check)).toBeLessThan(steps.findIndex(item => item.name === 'Sign published data snapshots'));
+	});
 	it('accepts the actual workflow without changing its input', () => {
 		const config = structuredClone(production);
 		expect(productionWorkflowErrors(config)).toEqual([]);

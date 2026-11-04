@@ -1,7 +1,7 @@
 import { mkdtemp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { createRequire } from 'node:module';
 import { tmpdir } from 'node:os';
-import { join } from 'node:path';
+import { dirname, join } from 'node:path';
 import { parse } from 'yaml';
 import { describe, expect, it } from 'vitest';
 import { validateDependencyPatches, isVerifiedCacheAdvisory, attestInstalledDependencyPatches, collectInstalledDependencyPatchCopies } from './verified-dependency-patches.mjs';
@@ -11,6 +11,8 @@ const root = new URL('../../', import.meta.url);
 const require = createRequire(new URL('package.json', root));
 const astroConsumer = createRequire(require.resolve('astro'));
 const lhciConsumer = createRequire(require.resolve('@lhci/cli/package.json'));
+const astroReference = 'astro@7.3.3';
+const astroPath = join(dirname(require.resolve('astro/package.json')), 'dist/core/build/plugins/plugin-incremental.js');
 const cacheReference = 'http-cache-semantics@4.3.0';
 const lhciReference = '@lhci/utils@0.15.1';
 const cachePath = astroConsumer.resolve('http-cache-semantics');
@@ -21,14 +23,17 @@ const fixture = {
 	workspace: parse(workspaceText),
 	lockfile: parse(lockText),
 	patches: {
+		[astroReference]: await readFile(new URL('patches/astro@7.3.3.patch', root)),
 		[cacheReference]: await readFile(new URL('patches/http-cache-semantics@4.3.0.patch', root)),
 		[lhciReference]: await readFile(new URL('patches/@lhci__utils@0.15.1.patch', root)),
 	},
 	installedCopies: [
 		{ name: 'http-cache-semantics', version: '4.3.0', source: await readFile(cachePath), path: cachePath },
 		{ name: '@lhci/utils', version: '0.15.1', source: await readFile(lhciPath), path: lhciPath },
+		{ name: 'astro', version: '7.3.3', source: await readFile(astroPath), path: astroPath },
 	],
 	consumerPaths: {
+		[astroReference]: astroPath,
 		[cacheReference]: cachePath,
 		[lhciReference]: lhciPath,
 	},
@@ -40,7 +45,7 @@ const dependencyEdge = (lockfile, name) => Object.values(lockfile.snapshots).fin
 );
 
 describe('attested installed dependency corrections', () => {
-	it('attests both actual locked patches and all installed copies used by their consumers', async () => {
+	it('attests all actual locked patches and all installed copies used by their consumers', async () => {
 		const attestation = validateDependencyPatches(fixture);
 		expect(await attestInstalledDependencyPatches({ root: root.pathname, workspace: workspaceText, lockfile: lockText })).toBe(attestation);
 		expect(isVerifiedCacheAdvisory(advisory, attestation)).toBe(true);
@@ -51,13 +56,15 @@ describe('attested installed dependency corrections', () => {
 		try {
 			for (const [index, copy] of [...fixture.installedCopies, { ...fixture.installedCopies[0], source: Buffer.from('unpatched-copy') }].entries()) {
 				const packageRoot = join(temporaryRoot, 'node_modules', '.pnpm', `copy-${index}`, 'node_modules', ...copy.name.split('/'));
-				await mkdir(join(packageRoot, copy.name === '@lhci/utils' ? 'src' : ''), { recursive: true });
+				const source = copy.name === 'astro' ? 'dist/core/build/plugins/plugin-incremental.js' : copy.name === '@lhci/utils' ? 'src/lighthouserc.js' : 'index.js';
+				await mkdir(dirname(join(packageRoot, source)), { recursive: true });
 				await writeFile(join(packageRoot, 'package.json'), JSON.stringify({ name: copy.name, version: copy.version }));
-				await writeFile(join(packageRoot, copy.name === '@lhci/utils' ? 'src/lighthouserc.js' : 'index.js'), copy.source);
+				await writeFile(join(packageRoot, source), copy.source);
 			}
 			const installedCopies = await collectInstalledDependencyPatchCopies(temporaryRoot);
-			expect(installedCopies).toHaveLength(3);
+			expect(installedCopies).toHaveLength(4);
 			const consumerPaths = Object.fromEntries([
+				[astroReference, installedCopies.find((copy) => copy.name === 'astro').path],
 				[cacheReference, installedCopies.find((copy) => copy.name === 'http-cache-semantics' && copy.source.equals(fixture.installedCopies[0].source)).path],
 				[lhciReference, installedCopies.find((copy) => copy.name === '@lhci/utils').path],
 			]);
@@ -68,6 +75,13 @@ describe('attested installed dependency corrections', () => {
 	});
 
 	it.each([
+		['removed Astro patch declaration', (f) => { delete f.workspace.patchedDependencies[astroReference]; }],
+		['changed Astro patch bytes', (f) => { f.patches[astroReference][0] ^= 1; }],
+		['changed Astro lock digest', (f) => { f.lockfile.patchedDependencies[astroReference].hash = '0'.repeat(64); }],
+		['unpatched root Astro resolution', (f) => { f.lockfile.importers['.'].dependencies.astro.version = '7.3.3'; }],
+		['missing installed Astro copy', (f) => { f.installedCopies = f.installedCopies.filter(({ name }) => name !== 'astro'); }],
+		['unpatched extra Astro copy', (f) => { f.installedCopies.push({ ...f.installedCopies.find(copy => copy.name === 'astro'), source: Buffer.from('unpatched') }); }],
+		['other Astro consumer resolution', (f) => { f.consumerPaths[astroReference] = '/other-copy/plugin-incremental.js'; }],
 		['removed patch declaration', (f) => { delete f.workspace.patchedDependencies[lhciReference]; }],
 		['other patch declaration', (f) => { f.workspace.patchedDependencies.other = 'patches/other.patch'; }],
 		['changed cache patch bytes', (f) => { f.patches[cacheReference][0] ^= 1; }],

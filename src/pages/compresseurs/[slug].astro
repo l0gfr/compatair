@@ -1,7 +1,8 @@
 ---
 import SourceAvailabilityNotice from '../../components/SourceAvailabilityNotice.astro';
 import ProductGuideLinks from '../../components/ProductGuideLinks.astro';
-import { pageBuildKey, guideNavigationVersion } from '../../domain/page-build-key';
+import { pageBuildKey } from '../../domain/page-build-key';
+import { productGuideVersions } from '../../data/product-guides';
 import { productBuildData, compressorAlternatives } from '../../data/product-build-key';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductDecisionHero from '../../components/ProductDecisionHero.astro';
@@ -26,8 +27,8 @@ import { normalizeMpn, sourceRoleForEvidence } from '../../domain/catalog-normal
 import { sourceRoleLabel } from '../../data/source-directory';
 
 export async function getStaticPaths() {
- const navigationVersion = await guideNavigationVersion();
-	return compressors.map((compressor) => { assertDecisionPageValue(compressor); return { params: { slug: compressor.slug }, props: { compressor }, cacheKey: pageBuildKey(`/compresseurs/${compressor.slug}/`, productBuildData(compressor, 'compressor'), navigationVersion) }; });
+ const navigationVersions = await productGuideVersions();
+	return compressors.map((compressor) => { assertDecisionPageValue(compressor); return { params: { slug: compressor.slug }, props: { compressor }, cacheKey: pageBuildKey(`/compresseurs/${compressor.slug}/`, productBuildData(compressor, 'compressor'), navigationVersions.get(`/compresseurs/${compressor.slug}/`) ?? '') }; });
 }
 
 const { compressor } = Astro.props;

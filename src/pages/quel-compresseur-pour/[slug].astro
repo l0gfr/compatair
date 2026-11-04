@@ -1,5 +1,5 @@
 ---
-import { pageBuildKey, guideNavigationVersion } from '../../domain/page-build-key';
+import { pageBuildKey } from '../../domain/page-build-key';
 import { productBuildData, relatedToolsFor } from '../../data/product-build-key';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductImage from '../../components/ProductImage.astro';
@@ -16,7 +16,7 @@ import { isFixedFlowTool, toolDemandLabel, toolPressureLabel } from '../../domai
 import { sourceQualityLabel } from '../../domain/source-quality';
 
 export async function getStaticPaths() {
- const navigationVersion = await guideNavigationVersion(); return tools.map((tool) => { assertDecisionPageValue(tool); return { params: { slug: tool.slug }, props: { tool }, cacheKey: pageBuildKey(`/quel-compresseur-pour/${tool.slug}/`, productBuildData(tool, 'use'), navigationVersion) }; }); }
+ return tools.map((tool) => { assertDecisionPageValue(tool); return { params: { slug: tool.slug }, props: { tool }, cacheKey: pageBuildKey(`/quel-compresseur-pour/${tool.slug}/`, productBuildData(tool, 'use'), '') }; }); }
 const { tool } = Astro.props;
 const fixedFlow = isFixedFlowTool(tool);
 const availableProductIds = new Set(activeOffers.map((offer) => offer.productId));

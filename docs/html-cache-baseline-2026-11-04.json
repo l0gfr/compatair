@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "referenceReleaseSha": "11a9ad43e9fdf5584806be198f6a3e9e2b18e935",
+  "artifactId": 13278089529,
+  "artifactZipSha256": "b52756ebba5681fc5b136f085c8b250427c0bb91d45bd2bc7feaa7954d8c85e9",
+  "archiveSha256": "c5bda9e675f16da3f0045ec6e6029abdd8bd6e2fbd8350e399bede49f9666882",
+  "capturedAt": "2026-11-04T00:48:47.538582+00:00",
+  "groups": {
+    "compresseurs": {
+      "count": 5160,
+      "sha256": "ca555fcff5380585f7c21b1bd1682bb522ca5848969fb0d8e6ecffe0fc949629"
+    },
+    "outils-pneumatiques": {
+      "count": 20513,
+      "sha256": "01781157fd0070deecdb5496dd5b84b1e98e57f53ab9fb84e25b29f76851a406"
+    },
+    "quel-compresseur-pour": {
+      "count": 20087,
+      "sha256": "ea550529d0778335f107ef5e6858ff71639b088b79a2d3fff459e46342721bd4"
+    },
+    "guides": {
+      "count": 816,
+      "sha256": "bba3c16811f1a44565c4b582ac04ad0552a7dafd74fce4956b413b218da1dedf"
+    }
+  }
+}

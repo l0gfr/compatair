@@ -1,13 +1,14 @@
 import { createHash } from 'node:crypto';
+import { renderPageCacheKey } from '../data/page-cache-key';
 import { getCollection } from 'astro:content';
 import { isIndexablePath, canonicalPathFor, answerGroupViewFor } from '../../scripts/lib/indexation-build.mjs';
 
-// Content bodies are tracked per rendered entry by Astro. Card metadata is shared
-// across navigation and related reading, so it participates in every page key.
+// Guides share card metadata for related reading. Product pages instead hash
+// their exact four rendered backlinks, including links discovered in guide bodies.
 export async function guideNavigationVersion() {
  const guides = await getCollection('guides');
  return createHash('sha256').update(JSON.stringify(guides.map(guide => [guide.id, guide.data]).sort((a, b) => String(a[0]).localeCompare(String(b[0]), 'en')))).digest('hex');
 }
 export function pageBuildKey(path: string, data: unknown, navigationVersion: string) {
- return createHash('sha256').update(JSON.stringify({ runtime: process.versions.node, data, navigationVersion, indexable: isIndexablePath(path), canonical: canonicalPathFor(path), answerGroup: answerGroupViewFor(path), date: new Date().toISOString().slice(0, 10) })).digest('hex');
+ return renderPageCacheKey(path, data, navigationVersion, { indexable: isIndexablePath(path), canonical: canonicalPathFor(path), answerGroup: answerGroupViewFor(path) });
 }

@@ -19,7 +19,7 @@ export function productBuildData(product: Compressor | ToolProfile, kind: 'compr
  return {
   product, historyHref: evidenceHistoryProductHref(product.id),
   title: productSeoTitles[product.id], description: productSeoDescriptions[product.id], useTitle: toolUseSeoTitles[product.id],
-  oppositeCatalog: kind === 'compressor' ? toolBuildVersion : compressorBuildVersion,
+  oppositeCatalog: kind === 'compressor' ? toolBuildVersion : 'demandModel' in product && product.demandModel === 'fixed-flow' && product.airflowBasis === undefined ? compressorBuildVersion : undefined,
   related: kind === 'compressor' ? compressorAlternatives(product as Compressor) : kind === 'use' ? relatedToolsFor(product as ToolProfile) : undefined,
  };
 }

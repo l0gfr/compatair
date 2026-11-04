@@ -1,0 +1,13 @@
+diff --git a/dist/core/build/plugins/plugin-incremental.js b/dist/core/build/plugins/plugin-incremental.js
+index 7d388525c0b3109bf98d9b4e8775c22976cfeec3..51d22bf74b9d674479bcbecf4ef5f4d25ecf9635 100644
+--- a/dist/core/build/plugins/plugin-incremental.js
++++ b/dist/core/build/plugins/plugin-incremental.js
+@@ -44,7 +44,7 @@ function hashModules(graph, sortedIds, compiledCss) {
+     } else if (CSS_LANGS_RE.test(id)) {
+       const compiled = compiledCss.get(id);
+       if (compiled != null) {
+-        hasher.update(compiled);
++        hasher.update(resolveAssetPlaceholders(graph, compiled));
+       } else {
+         try {
+           hasher.update(nodeFs.readFileSync(removeQueryString(id), "utf-8"));

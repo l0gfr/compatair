@@ -176,6 +176,11 @@ jobs:
           COMPATAIR_RELEASE_SHA: ${{ github.sha }}
         run: pnpm build && pnpm data:validate && pnpm benchmark:mcp-startup && pnpm benchmark:publication-signatures
 
+      - name: Verify cache-only HTML equivalence against production
+        env:
+          PUSH_BASE_SHA: ${{ github.event.before }}
+        run: node scripts/verify-html-cache-equivalence.mjs
+
       - name: Enforce repository append-only baseline
         env:
           PUSH_BASE_SHA: ${{ github.event.before }}

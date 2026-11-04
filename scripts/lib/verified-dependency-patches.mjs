@@ -1,7 +1,7 @@
 import { createHash } from 'node:crypto';
 import { createRequire } from 'node:module';
 import { readFile, readdir, realpath } from 'node:fs/promises';
-import { join } from 'node:path';
+import { dirname, join } from 'node:path';
 import { parseDocument } from 'yaml';
 import { ZOD_COLLECTION_PATCH, ZOD4_COLLECTION_PATCH } from './verified-zod-collection-patch.mjs';
 
@@ -14,6 +14,15 @@ const PATCHES = [
 		installedSha256: '3f3bbc4e2b2f1b7b22ff2b8ed013322f3b7b5bfb7cf296fbb7605a6570b6e493',
 		sourcePath: 'src/lighthouserc.js',
 		consumer: '@lhci/cli',
+	},
+	{
+		packageName: 'astro',
+		version: '7.3.3',
+		patchPath: 'patches/astro@7.3.3.patch',
+		patchSha256: '09b0ced86cbf28f64265bae64470bd4550cc0c127a1ece9adeb267b2d195bfa5',
+		installedSha256: '4d57a1ef34c56dcf9b2f944aaf9b78f803ea9670efd3df434f284bd7fbcc0a79',
+		sourcePath: 'dist/core/build/plugins/plugin-incremental.js',
+		consumer: 'root',
 	},
 	{
 		packageName: 'http-cache-semantics',
@@ -78,6 +87,11 @@ export function validateDependencyPatches({ workspace, lockfile, patches, instal
 				references += 1;
 			}
 		}
+		if (definition.consumer === 'root') {
+			const resolved = lockfile.importers?.['.']?.dependencies?.[packageName]?.version;
+			if (typeof resolved !== 'string' || (resolved !== patchedVersion && !resolved.startsWith(`${patchedVersion}(`))) fail(`résolution racine non corrigée ${reference}`);
+			references += 1;
+		}
 		const copies = installedCopies.filter((copy) => copy.name === packageName);
 		if (!references || !copies.length) fail(`dépendance absente ${reference}`);
 		for (const copy of copies) {
@@ -123,7 +137,9 @@ export async function attestInstalledDependencyPatches({ root, workspace, lockfi
 	const rootRequire = createRequire(join(root, 'package.json'));
 	const astroConsumer = createRequire(rootRequire.resolve('astro'));
 	const lhciConsumer = createRequire(rootRequire.resolve('@lhci/cli/package.json'));
+	const astroRoot = dirname(rootRequire.resolve('astro/package.json'));
 	const consumerPaths = {
+		['astro@7.3.3']: await realpath(join(astroRoot, 'dist/core/build/plugins/plugin-incremental.js')),
 		['http-cache-semantics@4.3.0']: await realpath(astroConsumer.resolve('http-cache-semantics')),
 		['@lhci/utils@0.15.1']: await realpath(lhciConsumer.resolve('@lhci/utils/src/lighthouserc.js')),
 	};

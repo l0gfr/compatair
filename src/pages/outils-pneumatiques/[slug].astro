@@ -2,7 +2,8 @@
 import SourceAvailabilityNotice from '../../components/SourceAvailabilityNotice.astro';
 import EquivalentAnswerGroup from '../../components/EquivalentAnswerGroup.astro';
 import ProductGuideLinks from '../../components/ProductGuideLinks.astro';
-import { pageBuildKey, guideNavigationVersion } from '../../domain/page-build-key';
+import { pageBuildKey } from '../../domain/page-build-key';
+import { productGuideVersions } from '../../data/product-guides';
 import { productBuildData } from '../../data/product-build-key';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ProductDecisionHero from '../../components/ProductDecisionHero.astro';
@@ -22,7 +23,7 @@ import { normalizeMpn, sourceRoleForEvidence } from '../../domain/catalog-normal
 import { sourceRoleLabel } from '../../data/source-directory';
 
 export async function getStaticPaths() {
- const navigationVersion = await guideNavigationVersion(); return tools.map((tool) => ({ params: { slug: tool.slug }, props: { tool }, cacheKey: pageBuildKey(`/outils-pneumatiques/${tool.slug}/`, productBuildData(tool, 'tool'), navigationVersion) })); }
+ const navigationVersions = await productGuideVersions(); return tools.map((tool) => ({ params: { slug: tool.slug }, props: { tool }, cacheKey: pageBuildKey(`/outils-pneumatiques/${tool.slug}/`, productBuildData(tool, 'tool'), navigationVersions.get(`/outils-pneumatiques/${tool.slug}/`) ?? '') })); }
 const { tool } = Astro.props;
 const historyHref = evidenceHistoryProductHref(tool.id);
 const verifiedAt = latestEvidenceDate(tool);

@@ -32,6 +32,9 @@ patchedDependencies:
   '@lhci/utils@0.15.1':
     hash: de0c5363154f275a017d5dd146858444f59044fcb06b89c5e760b39295221f69
     path: patches/@lhci__utils@0.15.1.patch
+  astro@7.3.3:
+    hash: 09b0ced86cbf28f64265bae64470bd4550cc0c127a1ece9adeb267b2d195bfa5
+    path: patches/astro@7.3.3.patch
   http-cache-semantics@4.3.0:
     hash: 40659b87d16fa2cbc322f9d95b15e7bb648555c91217261d80a12f22f46022fe
     path: patches/http-cache-semantics@4.3.0.patch
@@ -57,7 +60,7 @@ importers:
         version: 5.3.0
       astro:
         specifier: 7.3.3
-        version: 7.3.3(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@24.13.3)(yaml@2.9.0)
+        version: 7.3.3(patch_hash=09b0ced86cbf28f64265bae64470bd4550cc0c127a1ece9adeb267b2d195bfa5)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@24.13.3)(yaml@2.9.0)
       sharp:
         specifier: 0.35.5
         version: 0.35.5(@types/node@24.13.3)
@@ -3728,7 +3731,7 @@ snapshots:
     dependencies:
       tslib: 2.8.1
 
-  astro@7.3.3(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@24.13.3)(yaml@2.9.0):
+  astro@7.3.3(patch_hash=09b0ced86cbf28f64265bae64470bd4550cc0c127a1ece9adeb267b2d195bfa5)(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@24.13.3)(yaml@2.9.0):
     dependencies:
       '@astrojs/compiler-rs': 0.4.0(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)
       '@astrojs/internal-helpers': 0.11.0
