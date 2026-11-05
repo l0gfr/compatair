@@ -3,6 +3,7 @@ title: "Compresseur à vis 8, 10 ou 13 bar : comparer les versions exactes"
 seoTitle: "Compresseur à vis : versions 8, 10 et 13 bar"
 description: "Les Airblok 103 BD ont trois codes et trois FAD publiés. Comparer des versions de pression sans fabriquer une courbe ni promettre un débit à 6,3 bar."
 pubDate: 2026-09-26
+updatedDate: 2026-11-05
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle"]
@@ -31,7 +32,7 @@ La version 13 bar n’est donc pas « meilleure » au sens général : elle docu
 
 Ces valeurs appartiennent à trois références. Les réunir en une courbe pour un seul compresseur supposerait une équivalence de configuration que le tableau ne prouve pas. Il ne faut donc pas annoncer que le code 4152026074 fournira automatiquement 1 240 L/min si l’utilisateur abaisse sa pression à 8 bar.
 
-De même, aucune de ces lignes ne mesure un débit à 6,3 bar. Le moteur CompatAir peut exploiter le point documenté dans son domaine, mais il ne doit pas inventer une mesure ou une extrapolation hors de ce domaine. Le [guide du FAD](/guides/debit-restitue-fad-vs-debit-aspire/) aide à formuler la demande au fabricant.
+De même, aucune de ces lignes ne mesure un débit à 6,3 bar. La colonne de pression est intitulée « Max. working pressure » : elle ne précise pas la pression de mesure du FAD. Faites confirmer cet appariement avant un calcul de compatibilité. Le [guide du FAD](/guides/debit-restitue-fad-vs-debit-aspire/) aide à formuler la demande au fabricant.
 
 ## Définir la pression utile avant le devis
 
