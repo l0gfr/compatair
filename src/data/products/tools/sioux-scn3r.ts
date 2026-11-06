@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/sioux-scn3r.webp",
+		"src": "/images/products/sioux-scn3r-20261106.svg",
 		"alt": "Repères techniques Sioux SCN3R, référence SCN3R",
 		"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=83",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -35,7 +35,8 @@ const product: ToolProfileInput = {
 		"limitations": [
 			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
 			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
-			"Le tableau décrit le bloc moteur de pose d’inserts. Le nez et le mandrin adaptés à l’insert doivent être sélectionnés séparément ; la cote A est celle du bloc moteur."
+			"Le tableau décrit le bloc moteur de pose d’inserts. Le nez et le mandrin adaptés à l’insert doivent être sélectionnés séparément ; la cote A est celle du bloc moteur.",
+			"Le régime de consommation publié est non précisé. Cette valeur reste documentaire et le moteur renvoie insufficient_data."
 		]
 	},
 	"specifications": [
@@ -100,6 +101,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur."
+		},
+		{
+			"id": "review:2026-11-06-followup:sioux-scn3r:1",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=83",
+			"sourceLabel": "Sioux, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "P83 :SCN3R blocmoteurseul300rpm/45,2Nm/1,5kg/coteA279mm;SCN5R500rpm/36,7Nm.14Ls sansrégime:840Lmin documentaires. Ne pas attribuer une capacité d’outil complet à ce bloc seul. SHA-256 du document complet : 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
 		}
 	],
 	"fieldSources": {
@@ -111,6 +122,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"sioux-scn3r-20260927"
+		],
+		"airflowBasis": [
+			"review:2026-11-06-followup:sioux-scn3r:1"
 		]
 	},
 	"notes": [
@@ -120,7 +134,8 @@ const product: ToolProfileInput = {
 		"min": 840,
 		"typical": 840,
 		"max": 840
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

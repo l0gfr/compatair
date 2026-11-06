@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/fiam-fde60pa.webp",
+		"src": "/images/products/fiam-fde60pa-20261106.svg",
 		"alt": "Repères techniques Fiam FDE60PA, référence 124611550",
 		"sourceUrl": "https://www.fiamgroup.com/en/products/air-drills/fde60pa/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Le couple éventuel est indicatif : l’assemblage, l’accessoire et la pression dynamique influencent le résultat.",
-			"Consommation déclarée par le fabricant, sans essai indépendant ni garantie d’un maximum à tous les régimes."
+			"Consommation déclarée par le fabricant, sans essai indépendant ni garantie d’un maximum à tous les régimes.",
+			"Le régime de consommation publié est non précisé. Cette valeur reste documentaire et le moteur renvoie insufficient_data."
 		]
 	},
 	"specifications": [
@@ -99,6 +100,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+		},
+		{
+			"id": "review:2026-11-06-followup:fiam-fde60pa:1",
+			"sourceUrl": "https://www.fiamgroup.com/en/products/air-drills/fde60pa/",
+			"sourceLabel": "Fiam, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Fiche124611550 etbrochure13 :FDE60PA,mandrinautoserrant1–10,6000rpm,1,080kg/10Ls. FDE26P estsansmandrin2600rpm. Le régime10Ls n’est pas attesté encharge; préserver600Lmin documentaire sans conclusion débit. SHA-256 du document complet : c79cd6f8e5352f1619e4b185171d0cfd862d66379df0c734c3df97ecaada199a."
+		},
+		{
+			"id": "review:2026-11-06-followup:fiam-fde60pa:2",
+			"sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf#page=13",
+			"sourceLabel": "Fiam, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Fiche124611550 etbrochure13 :FDE60PA,mandrinautoserrant1–10,6000rpm,1,080kg/10Ls. FDE26P estsansmandrin2600rpm. Le régime10Ls n’est pas attesté encharge; préserver600Lmin documentaire sans conclusion débit. SHA-256 du document complet : 4bc7b8a199880ed886511848f97c3d61ae9b8a50dbb5f0f0318dddc819dcbf62."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +131,10 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"fiam-124611550-20260926"
+		],
+		"airflowBasis": [
+			"review:2026-11-06-followup:fiam-fde60pa:1",
+			"review:2026-11-06-followup:fiam-fde60pa:2"
 		]
 	},
 	"notes": [
@@ -119,7 +144,8 @@ const product: ToolProfileInput = {
 		"min": 600,
 		"typical": 600,
 		"max": 600
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

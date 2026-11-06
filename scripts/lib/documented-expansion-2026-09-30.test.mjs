@@ -1,3 +1,4 @@
+import { beforeReservedNovember6Followup } from './reviewed-catalog-amendments-2026-11-06-followup.mjs';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
 import { buildDocumentedExpansion } from './documented-expansion-2026-09-30.mjs';
@@ -19,7 +20,8 @@ describe('documented expansion, September 30', () => {
 		}
 		expect(new Set(batch.tools.map(p => p.brand))).toEqual(new Set(['Top Cat', 'URYU', 'NPK']));
 		expect(new Set(batch.tools.map(p => p.label)).size).toBe(1000);
-		for (const p of [...batch.compressors, ...batch.tools]) {
+		for (const current of [...batch.compressors, ...batch.tools]) {
+   const p = beforeReservedNovember6Followup(current);
 			if (p.mpn) expect(p.fieldSources.mpn?.length).toBeGreaterThan(0);
 			for (const e of p.evidence) expect(e.id).toMatch(/^[a-z0-9-]+$/);
 		}

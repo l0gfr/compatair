@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/mirka-ros-325db.webp",
+		"src": "/images/products/mirka-ros-325db-20261106.svg",
 		"alt": "Repères techniques Mirka ROS 325DB, référence 8993425111",
 		"sourceUrl": "https://cms.mirka.com/globalassets/msc/pdf/mirka-product-catalog-2022-low-res.pdf#page=110",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
-			"Catalogue 2022/2023 : vérifier la disponibilité actuelle et la référence de plateau avant commande."
+			"Catalogue 2022/2023 : vérifier la disponibilité actuelle et la référence de plateau avant commande.",
+			"Le régime de consommation publié est non précisé. Cette valeur reste documentaire et le moteur renvoie insufficient_data."
 		]
 	},
 	"specifications": [
@@ -97,6 +98,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation publiée : 481 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+		},
+		{
+			"id": "review:2026-11-06-followup:mirka-ros-325db:1",
+			"sourceUrl": "https://cms.mirka.com/globalassets/msc/pdf/mirka-product-catalog-2022-low-res.pdf#page=110",
+			"sourceLabel": "Mirka, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Catalogue p110 : code 8993425111, plateau 77 mm, orbite 2,5 mm, sac à poussière, 481 L/min et 209 W ; ROS325CV est à aspiration centralisée. La consommation n'a pas de régime documenté. SHA-256 du document complet : 2ced0651411b4d8c2cd50ec1e250c15d9fda73d452ffd72b2a9cbe8910647fc2."
 		}
 	],
 	"fieldSources": {
@@ -108,6 +119,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"mirka-8993425111-20260927"
+		],
+		"airflowBasis": [
+			"review:2026-11-06-followup:mirka-ros-325db:1"
 		]
 	},
 	"notes": [
@@ -117,7 +131,8 @@ const product: ToolProfileInput = {
 		"min": 481,
 		"typical": 481,
 		"max": 481
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

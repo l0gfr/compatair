@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/biax-bwh-6-25-2-k45.webp",
+		"src": "/images/products/biax-bwh-6-25-2-k45-20261106.svg",
 		"alt": "Repères techniques BIAX BWH 6-25/2 K45, référence 150222320",
 		"sourceUrl": "https://biax.de/en/product/bwh-6-25-2-k45/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Le choix de la fraise, du disque ou de l’accessoire doit respecter la vitesse et les dimensions prescrites par BIAX.",
-			"Débit déclaré par le fabricant, sans mesure physique CompatAir."
+			"Débit déclaré par le fabricant, sans mesure physique CompatAir.",
+			"Le régime de consommation publié est non précisé. Cette valeur reste documentaire et le moteur renvoie insufficient_data."
 		]
 	},
 	"specifications": [
@@ -92,6 +93,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+		},
+		{
+			"id": "review:2026-11-06-followup:biax-bwh-6-25-2-k45:1",
+			"sourceUrl": "https://biax.de/en/product/bwh-6-25-2-k45/",
+			"sourceLabel": "BIAX, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Fiche150222320 etcatalogue55 confirment300W/2500rpm/500Lmin, renvoiK90 avec tête45°. Le6bar appartient à une consigne d’huilage, et le régime500Lmin n’est pas décrit. Désactiver l’usage de cette valeur comme débit en charge. SHA-256 du document complet : 4da7437a909eebfe10abb6090070e78b649b35193b37137d2d8194b95264d2b2."
+		},
+		{
+			"id": "review:2026-11-06-followup:biax-bwh-6-25-2-k45:2",
+			"sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=55",
+			"sourceLabel": "BIAX, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Fiche150222320 etcatalogue55 confirment300W/2500rpm/500Lmin, renvoiK90 avec tête45°. Le6bar appartient à une consigne d’huilage, et le régime500Lmin n’est pas décrit. Désactiver l’usage de cette valeur comme débit en charge. SHA-256 du document complet : 318971fb9ba951f395b81cbca3d1e57938ce23b74db3aef25ff98bb8f0edc6c8."
 		}
 	],
 	"fieldSources": {
@@ -103,6 +124,10 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"biax-150222320-20260926"
+		],
+		"airflowBasis": [
+			"review:2026-11-06-followup:biax-bwh-6-25-2-k45:1",
+			"review:2026-11-06-followup:biax-bwh-6-25-2-k45:2"
 		]
 	},
 	"notes": [
@@ -112,7 +137,8 @@ const product: ToolProfileInput = {
 		"min": 500,
 		"typical": 500,
 		"max": 500
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

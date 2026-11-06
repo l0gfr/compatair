@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cleco-19pta06q.webp",
+		"src": "/images/products/cleco-19pta06q-20261106.svg",
 		"alt": "Repères techniques Cleco 19PTA06Q, référence 19PTA06Q",
 		"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=69",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Données de catalogue industriel, sans essai physique CompatAir. Disponibilité et révision livrée à confirmer avec le fournisseur.",
-			"Source : catalogue GI-1250-EU, édition archivée du fabricant. Vérifier la référence et la notice de la révision effectivement livrée."
+			"Source : catalogue GI-1250-EU, édition archivée du fabricant. Vérifier la référence et la notice de la révision effectivement livrée.",
+			"Le régime de consommation publié est non précisé. Cette valeur reste documentaire et le moteur renvoie insufficient_data."
 		]
 	},
 	"specifications": [
@@ -104,6 +105,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation générale publiée de 310 L/min pour la série 19 ; le catalogue ne la qualifie pas de maximum ou de moyenne."
+		},
+		{
+			"id": "review:2026-11-06-followup:cleco-19pta06q:1",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=69",
+			"sourceLabel": "Cleco, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "GI1250 p69 confirme260rpm,1,1–5,1Nm,214mm et0,7kg; 19BPA02Q/03Q ont d’autres commandes. Le310Lmin de série ne qualifie ni maximum ni charge; fixed-flow sans airflowBasis reste conclusif. Conserver la consommation documentaire et désactiver sa portée de dimensionnement. SHA-256 du document complet : 8668d5e77a6b2469dc9b9012841e65bbfb947234a8087faa6fdd90384b3babac."
 		}
 	],
 	"fieldSources": {
@@ -115,6 +126,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"cleco-19pta06q-20260926"
+		],
+		"airflowBasis": [
+			"review:2026-11-06-followup:cleco-19pta06q:1"
 		]
 	},
 	"notes": [
@@ -124,7 +138,8 @@ const product: ToolProfileInput = {
 		"min": 310,
 		"typical": 310,
 		"max": 310
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

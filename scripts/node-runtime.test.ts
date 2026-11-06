@@ -1,4 +1,4 @@
-import { chmodSync, copyFileSync, existsSync, mkdtempSync, mkdirSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
+import { chmodSync, copyFileSync, existsSync, mkdtempSync, mkdirSync, readFileSync, rmSync, symlinkSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { execFileSync, spawnSync } from 'node:child_process';
@@ -48,6 +48,12 @@ afterEach(() => {
 });
 
 describe('résolution du runtime Node du hook pre-push', () => {
+	it('épingle aussi le patch Node pour stabiliser les empreintes du cache CI', () => {
+		const version = readFileSync(resolve('.nvmrc'), 'utf8').trim();
+		expect(version).toMatch(/^24\.\d+\.\d+$/);
+		const major = execFileSync('/bin/sh', ['-c', "cut -d. -f1 < .nvmrc | tr -dc '0-9'"], { encoding: 'utf8' });
+		expect(major).toBe('24');
+	});
 	it('isole le dépôt temporaire des variables Git exportées par un worktree', () => {
 		const foreign = mkdtempSync(join(tmpdir(), 'compatair-foreign-git-'));
 		temporaryDirectories.push(foreign);

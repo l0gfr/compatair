@@ -330,3 +330,19 @@ l’archive source utilise un processus Node avec au plus quatre copies simultan
 refus des liens symboliques et des chemins non conformes.
 
 Documentation : https://docs.astro.build/en/reference/experimental-flags/incremental-build/
+
+### Version du runtime du cache de calcul, 6 novembre 2026
+
+Le run `41990552119` utilisait Node 24.22.1 ; `42188634111` a résolu
+24.22.2 depuis la version majeure flottante. L’empreinte Node/V8/ICU a donc
+correctement invalidé le cache. Ce dernier run a calculé 33 770 814 couples,
+avec 1 131 secondes pour la phase build et snapshots.
+
+`.nvmrc` épingle désormais 24.22.2. Tous les workflows conservent ce fichier
+comme référence, et le hook extrait séparément son numéro majeur. Un changement
+explicite de runtime continue d’invalider le cache. Les empreintes du moteur,
+du domaine, du lockfile, les preuves d’intégrité et le plafond de 64 Mio sont
+conservés. À runtime et moteur inchangés, seules les lignes et colonnes dont
+les produits ont changé doivent être recalculées. Le gain réel doit être lu
+dans les statistiques du prochain build CI ; aucun pourcentage n’est déduit
+du seul correctif de configuration.

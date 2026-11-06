@@ -16,8 +16,14 @@ function expectedResponse(scenario: (typeof agentFidelityBenchmark.scenarios)[nu
 }
 
 describe('public agent fidelity benchmark', () => {
- it('preserves99 pinned pairs and documents the sole retired-demand replacement without a positive verdict', () => {
+ it('preserves the dated November3 panel correction without imposing a positive verdict', () => {
   const panel = JSON.parse(readFileSync(new URL('../../config/agent-benchmark-panel.json', import.meta.url), 'utf8'));
+  // Verify the immutable November3 boundary before the two later replacements.
+  for (const later of panel.reviewedCorrections.slice(1).reverse()) {
+   expect(panel.pairs[later.pairIndex]).toEqual(later.after);
+   panel.pairs[later.pairIndex] = later.before;
+   panel.reviewedCorrections.pop();
+  }
   const correction = panel.reviewedCorrections.at(-1);
   expect(correction.before.tool_id).toBe('shinano-si-1288');
   expect(correction.after.tool_id).toBe('red-rooster-rrw-2403');
@@ -29,6 +35,24 @@ describe('public agent fidelity benchmark', () => {
   expect(panel.pairs.slice(1)).toEqual(historical.pairs.slice(1));
   expect(agentFidelityBenchmark.scenarios[0].input).toEqual(correction.after);
   expect(agentFidelityBenchmark.scenarios[0].expected.air_supply_verdict.engine_verdict).toBe('insufficient_data');
+ });
+
+
+ it('preserves98 pairs and both prior panel digests when replacing the two newly non-fixed demands', () => {
+  const panel = JSON.parse(readFileSync(new URL('../../config/agent-benchmark-panel.json', import.meta.url), 'utf8'));
+  const original = structuredClone(panel), changes = panel.reviewedCorrections.slice(1);
+  expect(changes.map((entry: any) => entry.pairIndex)).toEqual([76,87]);
+  expect(changes.map((entry: any) => entry.before.tool_id)).toEqual(['shinano-si-2012ex-6','rupes-ra150a']);
+  expect(changes.map((entry: any) => entry.after.tool_id)).toEqual(['biax-sbrh-830','mirka-ros-325db']);
+  for(const entry of [...changes].reverse()) {
+   expect(panel.pairs[entry.pairIndex]).toEqual(entry.after);
+   expect(agentFidelityBenchmark.scenarios[entry.pairIndex].expected.air_supply_verdict.engine_verdict).toBe('insufficient_data');
+   panel.pairs[entry.pairIndex] = entry.before;
+   panel.reviewedCorrections.pop();
+   expect(createHash('sha256').update(JSON.stringify(panel,null,2)+'\n').digest('hex')).toBe(entry.previousPanelSha256);
+  }
+  expect(panel.pairs).toHaveLength(100);
+  expect(original.pairs.filter((_: any,index: number)=>![76,87].includes(index))).toEqual(panel.pairs.filter((_: any,index: number)=>![76,87].includes(index)));
  });
 
 	it('publishes exactly 100 deterministic, scoped and attributable scenarios', () => {

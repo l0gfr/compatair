@@ -3,9 +3,9 @@ import type { ToolProfileInput } from '../../../domain/catalog';
 const product: ToolProfileInput = {
 	"id": "ponceuse-orbitale-hymair-at-7037bn",
 	"slug": "ponceuse-orbitale-hymair-at-7037bn",
-	"categoryId": "ponceuse-orbitale",
-	"category": "ponceuse-orbitale",
-	"label": "Hymair AT-7037BN",
+	"categoryId": "ponceuse-rotative",
+	"category": "Ponceuse rotative",
+	"label": "Ponceuse rotative Hymair AT-7037BN",
 	"brand": "Hymair",
 	"model": "AT-7037BN",
 	"mpn": "AT-7037BN",
@@ -33,8 +33,9 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Hymair AT-7037BN. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Vitesse à vide : 15,000 rpm. Masse publiée (kg/lb) : 0.63/1.40.",
+		"overview": "Hymair AT-7037BN : ponceuse rotative. Plateau velcro 2 pouces, 15000 tr/min, 163 × 92 mm et 0,63 kg. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 		"verifiedFacts": [
+			"Ponceuse rotative. Plateau velcro 2 pouces, 15000 tr/min, 163 × 92 mm et 0,63 kg.",
 			"Vitesse à vide : 15,000 rpm.",
 			"Masse publiée (kg/lb) : 0.63/1.40.",
 			"Longueur × hauteur : 163x92 mm."
@@ -79,6 +80,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-steed-2-p19"
 			]
+		},
+		{
+			"label": "Fonction et configuration",
+			"value": "Plateau velcro 2 pouces, 15000 tr/min, 163 × 92 mm et 0,63 kg.",
+			"evidenceIds": [
+				"review:2026-11-06-followup:ponceuse-orbitale-hymair-at-7037bn:1"
+			]
 		}
 	],
 	"evidence": [
@@ -91,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : b9c6143d5502d453b5b2e0846bcfec263fb763d42a478fbc52089a41725e7d8d. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-06-followup:ponceuse-orbitale-hymair-at-7037bn:1",
+			"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SAUfKpBkCgyL&dp=GvUApKfKKUAU#page=19",
+			"sourceLabel": "Hymair, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Catalogue complet p19 : ponceuse d'angle rotative à plateau velcro2 pouces,15000 tr/min,163 ×92 mm et0,63 kg. Aucune orbite indiquée : retirer catégorie orbitale et conserver les4 cfm moyens hors moteur. SHA-256 du document complet : b9c6143d5502d453b5b2e0846bcfec263fb763d42a478fbc52089a41725e7d8d."
 		}
 	],
 	"fieldSources": {

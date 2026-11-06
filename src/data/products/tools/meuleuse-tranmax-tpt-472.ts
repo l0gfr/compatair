@@ -3,9 +3,9 @@ import type { ToolProfileInput } from '../../../domain/catalog';
 const product: ToolProfileInput = {
 	"id": "meuleuse-tranmax-tpt-472",
 	"slug": "meuleuse-tranmax-tpt-472",
-	"categoryId": "meuleuse",
-	"category": "meuleuse",
-	"label": "Tranmax TPT-472",
+	"categoryId": "lime-alternative",
+	"category": "Lime alternative pneumatique",
+	"label": "Lime alternative Tranmax TPT-472",
 	"brand": "Tranmax",
 	"model": "TPT-472",
 	"mpn": "TPT-472",
@@ -29,8 +29,9 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Tranmax TPT-472. Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse. Masse publiée : 1.0 kg (2.2 lb). Longueur hors tout publiée : 234 mm (9.2 inch).",
+		"overview": "Tranmax TPT-472 : lime alternative. 3700 courses/min, course 10 mm, longueur 234 mm et masse 1 kg. Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse.",
 		"verifiedFacts": [
+			"Lime alternative. 3700 courses/min, course 10 mm, longueur 234 mm et masse 1 kg.",
 			"Masse publiée : 1.0 kg (2.2 lb).",
 			"Longueur hors tout publiée : 234 mm (9.2 inch)."
 		],
@@ -62,6 +63,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-tranmax-tp-pdf-p23"
 			]
+		},
+		{
+			"label": "Fonction et configuration",
+			"value": "3700 courses/min, course 10 mm, longueur 234 mm et masse 1 kg.",
+			"evidenceIds": [
+				"review:2026-11-06-followup:meuleuse-tranmax-tpt-472:1"
+			]
 		}
 	],
 	"evidence": [
@@ -74,6 +82,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : c2e29dbb1f9d433e1d65568bc327d3ea21eadd7d39f8edbb0d98145850f7c7d2. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-06-followup:meuleuse-tranmax-tpt-472:1",
+			"sourceUrl": "https://ss-client-website.s3-ap-northeast-1.amazonaws.com/tranmax/2023_01_09_113224_2212-Professional-Power-Tools-TP.pdf#page=23",
+			"sourceLabel": "Tranmax, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "PDF23 : Air File,3700 courses/min,course10 mm,234 mm et1 kg,contreTPT473course5/3400/min. Ce n'est pas une meuleuse : corriger catégorie et désignation vers lime alternative. Moyenne48 L/min hors calcul. SHA-256 du document complet : c2e29dbb1f9d433e1d65568bc327d3ea21eadd7d39f8edbb0d98145850f7c7d2."
 		}
 	],
 	"fieldSources": {

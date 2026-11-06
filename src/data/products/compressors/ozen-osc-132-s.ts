@@ -16,18 +16,13 @@ const product: CompressorInput = {
   },
   "maxPressureBar": 13,
   "maxPressureBasis": "selected-working-pressure-ceiling",
-  "fadCurve": [
-    {
-      "pressureBar": 12.5,
-      "litersPerMinute": 18300
-    }
-  ],
+  "fadCurve": [],
   "powerKw": 132,
   "oilType": "unknown",
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/ozen-osc-132-s.svg",
+    "src": "/images/products/ozen-osc-132-s-20261106.svg",
     "alt": "Repères techniques : Ozen OSC 132 S",
     "sourceUrl": "https://ozenkompresor.com.tr/wp-content/uploads/2026/01/katalog-2025.pdf",
     "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
@@ -74,20 +69,28 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4c-ozen-catalog-2025-p38"
       ]
+    },
+    {
+      "label": "Débit historiquement apparié, mesure à confirmer",
+      "value": "18300 L/min ; pression associée antérieurement 12.5 bar",
+      "evidenceIds": [
+        "review:2026-11-06-followup:ozen-osc-132-s:1"
+      ]
     }
   ],
   "editorial": {
-    "overview": "Ozen OSC 132 S. 18 300 L/min déclarés à 12,5 bar. Configuration constructeur : OSC 132 S.",
+    "overview": "Ozen OSC 132 S. Le débit déclaré reste conservé dans les spécifications. La pression maximale ne prouve pas la pression de mesure du FAD ; compatibilité indéterminée.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 13 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 18 300 L/min déclarés à 12,5 bar."
+      "Pression maximale publiée : 13 bar ; la pression de mesure du FAD reste à confirmer."
     ],
     "limitations": [
       "Marque officielle Özen ; alias Ozen utilisé pour la recherche. Cuve, fréquence électrique et cycle de service non documentés.",
       "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
       "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
       "Cuve non documentée : l’autonomie et le volume de stockage ne peuvent pas être conclus à partir de ce profil.",
-      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions."
+      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions.",
+      "Table p38 : OSC132S18,3 m³/min pourversion13 bar,132 kW,4585 kg. La note donnant mesure12,5 bar désigneSHD et nonOSC-S : portée ambiguë, ne pas transposer cette pression au moteur sans confirmation fabricant."
     ]
   },
   "evidence": [
@@ -100,6 +103,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 cfcfbd23c05cfe5db69ec1bb59c552a6543cf1597869b67811a985d1b7458b60 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-06-followup:ozen-osc-132-s:1",
+      "sourceUrl": "https://ozenkompresor.com.tr/wp-content/uploads/2026/01/katalog-2025.pdf#page=38",
+      "sourceLabel": "Ozen, revue documentaire du 6 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-06",
+      "confidence": "B",
+      "notes": "Table p38 : OSC132S18,3 m³/min pourversion13 bar,132 kW,4585 kg. La note donnant mesure12,5 bar désigneSHD et nonOSC-S : portée ambiguë, ne pas transposer cette pression au moteur sans confirmation fabricant. SHA-256 du document complet : cfcfbd23c05cfe5db69ec1bb59c552a6543cf1597869b67811a985d1b7458b60."
     }
   ],
   "fieldSources": {
@@ -113,7 +126,7 @@ const product: CompressorInput = {
       "october4c-ozen-catalog-2025-p38"
     ],
     "fadCurve": [
-      "october4c-ozen-catalog-2025-p38"
+      "review:2026-11-06-followup:ozen-osc-132-s:1"
     ],
     "powerKw": [
       "october4c-ozen-catalog-2025-p38"

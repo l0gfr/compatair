@@ -68,6 +68,14 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october4-hertz-catalog-p20"
 			]
+		},
+		{
+			"label": "Plage FAD de variation à 10 bar",
+			"value": "Minimum 3,25 m³/min (3250 L/min) ; maximum 12,76 m³/min (12760 L/min). Le moteur conserve le minimum documenté.",
+			"evidenceIds": [
+				"review:2026-11-06-followup:hertz-frecon-plus-pm-75:1",
+				"review:2026-11-06-followup:hertz-frecon-plus-pm-75:2"
+			]
 		}
 	],
 	"editorial": {
@@ -83,7 +91,8 @@ const product: CompressorInput = {
 			"Le FAD retenu est le minimum de la plage VSD à cette pression. Le maximum de la plage n’est pas utilisé comme débit garanti.",
 			"Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
 			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
-			"Le plafond CompatAir correspond à la pression de travail de la version retenue. Il ne décrit ni la soupape ni le maximum de toutes les versions de la famille."
+			"Le plafond CompatAir correspond à la pression de travail de la version retenue. Il ne décrit ni la soupape ni le maximum de toutes les versions de la famille.",
+			"Le maximum de variation 12760 L/min à 10 bar est conservé séparément du point minimal 3250 L/min. Le cycle de service du groupe reste non documenté."
 		]
 	},
 	"evidence": [
@@ -106,6 +115,26 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-04",
 			"confidence": "B",
 			"notes": "SHA-256 e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339 de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-06-followup:hertz-frecon-plus-pm-75:1",
+			"sourceUrl": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf#page=20",
+			"sourceLabel": "Hertz, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Table PDF20 relue : FRECON PLUS PM75, plage FAD 3,25–12,76 m³/min à10bar,75kW et1130kg. Le point3250L/min est volontairement le minimum VSD et reste conservé ; expliciter le maximum12760 séparément sans le garantir à toute vitesse. Cycle de service non documenté. SHA-256 du document complet : e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339."
+		},
+		{
+			"id": "review:2026-11-06-followup:hertz-frecon-plus-pm-75:2",
+			"sourceUrl": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf#page=17",
+			"sourceLabel": "Hertz, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Table PDF20 relue : FRECON PLUS PM75, plage FAD 3,25–12,76 m³/min à10bar,75kW et1130kg. Le point3250L/min est volontairement le minimum VSD et reste conservé ; expliciter le maximum12760 séparément sans le garantir à toute vitesse. Cycle de service non documenté. SHA-256 du document complet : e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339."
 		}
 	],
 	"fieldSources": {

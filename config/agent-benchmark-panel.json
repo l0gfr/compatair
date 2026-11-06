@@ -310,7 +310,7 @@
     },
     {
       "compressor_id": "gentilin-clinic-dry-4-40-hs",
-      "tool_id": "shinano-si-2012ex-6"
+      "tool_id": "biax-sbrh-830"
     },
     {
       "compressor_id": "lacair-twinair-28-150-t",
@@ -354,7 +354,7 @@
     },
     {
       "compressor_id": "abac-atf-5-5-10-pp",
-      "tool_id": "rupes-ra150a"
+      "tool_id": "mirka-ros-325db"
     },
     {
       "compressor_id": "gentilin-esk480-100-811610007",
@@ -419,6 +419,36 @@
         "tool_id": "red-rooster-rrw-2403"
       },
       "reason": "SI-1288 conserve sa consommation documentaire mais devient variable-volume faute de pression de mesure appariée. Le panel de100 scénarios exige des profils fixed-flow. RRW-2403 reste une clé à cliquet fixed-flow à régime non qualifié, donc non conclusive ; aucun verdict positif ni score n’est imposé."
+    },
+    {
+      "reviewedAt": "2026-11-06",
+      "sourceReleaseSha": "ba07a15a4efdc4f764d824b2e983b9cf3a4ed6de",
+      "previousPanelSha256": "edb5569778739664a5942202bfb7ccd3d4c971b9b147b5190d3e0ed895f36264",
+      "pairIndex": 76,
+      "before": {
+        "compressor_id": "gentilin-clinic-dry-4-40-hs",
+        "tool_id": "shinano-si-2012ex-6"
+      },
+      "after": {
+        "compressor_id": "gentilin-clinic-dry-4-40-hs",
+        "tool_id": "biax-sbrh-830"
+      },
+      "reason": "SI-2012EX-6 devient variable-volume faute de pression de mesure appariée. SBRH830 reste une meuleuse fixed-flow à régime unqualified explicitement revu, donc insufficient_data. Aucun besoin en charge n’est reconstruit ni verdict positif imposé."
+    },
+    {
+      "reviewedAt": "2026-11-06",
+      "sourceReleaseSha": "ba07a15a4efdc4f764d824b2e983b9cf3a4ed6de",
+      "previousPanelSha256": "186ec8ce3964a692405a8b84453f9bfe1667672498962942e09e01bc9be2303e",
+      "pairIndex": 87,
+      "before": {
+        "compressor_id": "abac-atf-5-5-10-pp",
+        "tool_id": "rupes-ra150a"
+      },
+      "after": {
+        "compressor_id": "abac-atf-5-5-10-pp",
+        "tool_id": "mirka-ros-325db"
+      },
+      "reason": "RA150A devient variable-volume faute de pression de mesure appariée. ROS325DB reste une ponceuse orbitale fixed-flow à régime unqualified documenté, donc insufficient_data. Plateaux et orbites différents : ce remplacement de scénario ne revendique aucune équivalence matérielle."
     }
   ]
 }

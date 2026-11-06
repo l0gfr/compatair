@@ -36,7 +36,8 @@ const product: CompressorInput = {
 			"Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
 			"Le fonctionnement continu est une déclaration de gamme ; respecter les conditions de la notice. La disponibilité commerciale reste à confirmer.",
 			"Version électrique exacte à vérifier à la commande ; une alimentation 230 V peut être triphasée.",
-			"Le débit publié appartient à cette référence et à sa version de pression. Il ne définit pas une courbe complète."
+			"Le débit publié appartient à cette référence et à sa version de pression. Il ne définit pas une courbe complète.",
+			"Le taux de marche du groupe complet n’est pas établi. La classe de service du moteur et les promesses générales de gamme restent distinctes ; compatibilité continue indéterminée."
 		]
 	},
 	"specifications": [
@@ -87,6 +88,26 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Déclaration de la gamme ABAC à vis ; uniquement les références SPINN, FORMULA et GENESIS revues individuellement dans ce lot."
+		},
+		{
+			"id": "review:2026-11-06-followup:abac-spinn-11-10-400-50-tm500-sa:1",
+			"sourceUrl": "https://shop.abacaircompressors.com/en-INT/products/4152054944/spinn22-8-40050k-e-ce",
+			"sourceLabel": "ABAC, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Variante 4152022668 retrouvée dans le JSON fabricant commun : SPINN11 TM500 SA, 500 L et 1416 L/min. La page parle de moteurs IE3 à 100 %, mais décrit SPINN pour usage intermittent et non continu ; enlever le taux de marche du groupe non prouvé. SHA-256 du document complet : a803624bbd7f7ab4cf9bbee14206ea9f1173d3aa0ae716c35659dd9ccb9b69a1."
+		},
+		{
+			"id": "review:2026-11-06-followup:abac-spinn-11-10-400-50-tm500-sa:2",
+			"sourceUrl": "https://www.abacaircompressors.com/en-international/products/screw-compressors",
+			"sourceLabel": "ABAC, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Variante 4152022668 retrouvée dans le JSON fabricant commun : SPINN11 TM500 SA, 500 L et 1416 L/min. La page parle de moteurs IE3 à 100 %, mais décrit SPINN pour usage intermittent et non continu ; enlever le taux de marche du groupe non prouvé. SHA-256 du document complet : 8cdcba4f84ac43e7b6a404f4379626de162b8a3207d42ffa31d8f40434d336ca."
 		}
 	],
 	"fieldSources": {
@@ -116,9 +137,6 @@ const product: CompressorInput = {
 		],
 		"phase": [
 			"abac-4152022668-20260926"
-		],
-		"dutyCycle": [
-			"abac-spinn-11-10-400-50-tm500-sa-continuous-duty-20260927"
 		]
 	},
 	"notes": [
@@ -127,8 +145,7 @@ const product: CompressorInput = {
 	"powerKw": 11.2,
 	"weightKg": 312,
 	"voltage": "400 V, 50 Hz",
-	"phase": "three-phase",
-	"dutyCycle": 1
+	"phase": "three-phase"
 };
 
 export default product;

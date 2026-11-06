@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/sioux-stp10s3b12.webp",
+		"src": "/images/products/sioux-stp10s3b12-20261106.svg",
 		"alt": "Repères techniques Sioux STP10S3B12, référence STP10S3B12",
 		"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=84",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
-			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes."
+			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
+			"Le régime de consommation publié est non précisé. Cette valeur reste documentaire et le moteur renvoie insufficient_data."
 		]
 	},
 	"specifications": [
@@ -99,6 +100,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur."
+		},
+		{
+			"id": "review:2026-11-06-followup:sioux-stp10s3b12:1",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=84",
+			"sourceLabel": "Sioux, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "P84 :STP10S3B12taraudeuse300rpm/45Nm/1,2kg/240mm,vsS5B12500rpm/37Nm.14Ls sousAirConsumption sans régime;840Lmin restent documentaires, pas encharge par défaut. SHA-256 du document complet : 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +121,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"sioux-stp10s3b12-20260927"
+		],
+		"airflowBasis": [
+			"review:2026-11-06-followup:sioux-stp10s3b12:1"
 		]
 	},
 	"notes": [
@@ -119,7 +133,8 @@ const product: ToolProfileInput = {
 		"min": 840,
 		"typical": 840,
 		"max": 840
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

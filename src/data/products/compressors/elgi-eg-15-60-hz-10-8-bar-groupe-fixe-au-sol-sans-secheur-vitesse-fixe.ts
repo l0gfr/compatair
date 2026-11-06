@@ -24,7 +24,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 2210
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "oil",
 	"powerKw": 15,
 	"weightKg": 610,
@@ -93,7 +92,8 @@ const product: CompressorInput = {
 			"Fonctionnement continu déclaré pour la série ; refroidissement, installation et entretien conditionnent ce service.",
 			"Documentation à 60 Hz ; elle ne démontre pas les performances de la version 50 Hz. Alimentation et marché local à confirmer avant achat.",
 			"Les seules pressions FAD retenues sont celles du document. Aucun débit aspiré, extrapolation ou essai d’utilisation CompatAir.",
-			"Documentation et disponibilité de la configuration à confirmer avec le constructeur."
+			"Documentation et disponibilité de la configuration à confirmer avec le constructeur.",
+			"Le taux de marche du groupe complet n’est pas établi. La classe de service du moteur et les promesses générales de gamme restent distinctes ; compatibilité continue indéterminée."
 		]
 	},
 	"evidence": [
@@ -126,6 +126,26 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 f95dd586e25e8dc2b4a11721c3af24735d08261bb95588268dbd8e4b3bc8f97c de la réponse originale. Données fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-06-followup:elgi-eg-15-60-hz-10-8-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe:1",
+			"sourceUrl": "https://www.elgi.com/eu/wp-content/uploads/2019/10/eg-series-11-75-60hz.pdf#page=10",
+			"sourceLabel": "ELGi, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Table p10 : EG15 60Hz,2210 L/min à10,3 bar etmax10,8,15 kW,610 kg. ISO1217C documenté ; l'usage continu général EG n'établit pas un taux exact du groupe sous ces conditions60Hz. SHA-256 du document complet : 8bc82033cb7674d7a38e6b598e3a87555db6aab7601604f39a955080e166aa66."
+		},
+		{
+			"id": "review:2026-11-06-followup:elgi-eg-15-60-hz-10-8-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe:2",
+			"sourceUrl": "https://www.elgi.com/eu/11-250-kw-eg-series-screw-compressors/",
+			"sourceLabel": "ELGi, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Table p10 : EG15 60Hz,2210 L/min à10,3 bar etmax10,8,15 kW,610 kg. ISO1217C documenté ; l'usage continu général EG n'établit pas un taux exact du groupe sous ces conditions60Hz. SHA-256 du document complet : 62416cba65917be904fe8544a86ce6fd5c50b7951591db58e5bf3a28e9559346."
 		}
 	],
 	"fieldSources": {
@@ -146,9 +166,6 @@ const product: CompressorInput = {
 		],
 		"weightKg": [
 			"october2b-elgi-eg11-75-eu-p10"
-		],
-		"dutyCycle": [
-			"october2b-elgi-eg-duty"
 		]
 	},
 	"notes": [

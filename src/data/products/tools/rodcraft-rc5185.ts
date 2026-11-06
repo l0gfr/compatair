@@ -9,7 +9,7 @@ const product: ToolProfileInput = {
 	"categoryId": "burineur",
 	"category": "burineur",
 	"label": "Rodcraft RC5185",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 6.3,
 		"typical": 6.3,
@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/rodcraft-rc5185.webp",
+		"src": "/images/products/rodcraft-rc5185-20261106.svg",
 		"alt": "Repères techniques Rodcraft RC5185, référence 8951000152",
 		"sourceUrl": "https://www.rodcraft.com/en/products/8951000152",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
-			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes."
+			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
+			"La pression de mesure de la consommation publiée reste à documenter. Les valeurs et leur régime sont conservés dans les spécifications, hors calcul de compatibilité."
 		]
 	},
 	"specifications": [
@@ -79,6 +80,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"rodcraft-8951000152-20260927"
 			]
+		},
+		{
+			"label": "Consommation publiée, hors dimensionnement",
+			"value": "372 L/min ; La pression de mesure de la consommation publiée reste à documenter. Les valeurs et leur régime sont conservés dans les spécifications, hors calcul de compatibilité.",
+			"evidenceIds": [
+				"review:2026-11-06-followup:rodcraft-rc5185:1"
+			]
 		}
 	],
 	"evidence": [
@@ -90,6 +98,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation en charge publiée : 6.2 L/s. Consommation à vide publiée : 3 L/s. Valeur retenue : 372 L/min (maximum des régimes documentés, L/s × 60)."
+		},
+		{
+			"id": "review:2026-11-06-followup:rodcraft-rc5185:1",
+			"sourceUrl": "https://www.rodcraft.com/en/products/8951000152",
+			"sourceLabel": "Rodcraft, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Fiche actuelle 8951000152 : marteau hexagonal 11 mm ; la pression dynamique maximale utilisée comme pression de mesure n'est pas justifiée. Conserver 6,2 L/s en charge et 3 L/s à vide documentaires, hors calcul tant que le point de mesure n'est pas établi. SHA-256 du document complet : 31e17e4c10553ef9e9bbdfea7d269a2f3b69ae2595b19e6eda6f36d79f9ae2ec."
 		}
 	],
 	"fieldSources": {
@@ -99,18 +117,14 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"rodcraft-8951000152-20260927"
 		],
-		"airflowLpm": [
-			"rodcraft-8951000152-20260927"
+		"demandExplanation": [
+			"review:2026-11-06-followup:rodcraft-rc5185:1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 372,
-		"typical": 372,
-		"max": 372
-	}
+	"demandExplanation": "La pression de mesure de la consommation publiée reste à documenter. Les valeurs et leur régime sont conservés dans les spécifications, hors calcul de compatibilité."
 };
 
 export default product;

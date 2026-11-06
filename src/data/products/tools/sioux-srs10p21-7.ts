@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/sioux-srs10p21-7.webp",
+		"src": "/images/products/sioux-srs10p21-7-20261106.svg",
 		"alt": "Repères techniques Sioux SRS10P21-7, référence SRS10P21-7",
 		"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=85",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -35,7 +35,8 @@ const product: ToolProfileInput = {
 		"limitations": [
 			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
 			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
-			"Le diamètre publié concerne la capacité de fraise ; le catalogue précise que les fraises ne sont pas fournies."
+			"Le diamètre publié concerne la capacité de fraise ; le catalogue précise que les fraises ne sont pas fournies.",
+			"Le régime de consommation publié est non précisé. Cette valeur reste documentaire et le moteur renvoie insufficient_data."
 		]
 	},
 	"specifications": [
@@ -100,6 +101,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur."
+		},
+		{
+			"id": "review:2026-11-06-followup:sioux-srs10p21-7:1",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=85",
+			"sourceLabel": "Sioux, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "P85 :SRS10P217fraise7/16/11mm/21000rpm/1,2kg/205mm,contre-6Ø10/-8Ø13.12Ls deAirConsumption nonqualifiés, la mentionMaximum appartient au tableauKitdistinctSRS6P21K.720Lmin hors conclusion. SHA-256 du document complet : 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
 		}
 	],
 	"fieldSources": {
@@ -111,6 +122,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"sioux-srs10p21-7-20260927"
+		],
+		"airflowBasis": [
+			"review:2026-11-06-followup:sioux-srs10p21-7:1"
 		]
 	},
 	"notes": [
@@ -120,7 +134,8 @@ const product: ToolProfileInput = {
 		"min": 720,
 		"typical": 720,
 		"max": 720
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

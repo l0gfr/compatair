@@ -1,3 +1,4 @@
+import { beforeReservedNovember6Followup } from './reviewed-catalog-amendments-2026-11-06-followup.mjs';
 import { beforeReservedOctober31Followup } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { parseCatalogProductSource } from './catalog-tooling.mjs';
 import { readFileSync } from 'node:fs';
@@ -69,7 +70,7 @@ describe('reviewed manufacturer tables, October 1 batch B', () => {
   const p = beforeReservedOctober31Followup(byMpn('GP-101RN'));
   expect(p.demandModel).toBe('per-action'); expect(p.airPerActionLiters).toBe(1.5);
   expect(p.airflowLpm).toBeUndefined();
-  expect(byMpn('GP-250RM').airPerActionLiters).toBe(2);
+  expect(beforeReservedNovember6Followup(byMpn('GP-250RM')).airPerActionLiters).toBe(2);
  });
  it('withholds ambiguous units and absent pressure rather than inventing a conversion', () => {
   expect(byMpn('8301052').demandModel).toBe('variable-volume');

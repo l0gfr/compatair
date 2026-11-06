@@ -9,7 +9,7 @@ const product: ToolProfileInput = {
 	"categoryId": "meuleuse",
 	"category": "meuleuse",
 	"label": "PFERD PG 8/100 HV",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 6.3,
 		"typical": 6.3,
@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/pferd-pg-8-100-hv.webp",
+		"src": "/images/products/pferd-pg-8-100-hv-20261106.svg",
 		"alt": "Repères techniques PFERD PG 8/100 HV, référence 80107011",
 		"sourceUrl": "https://fr.pferd.com/fr/meuleuse-droite-pneumatique-pg-8100?a%5Btype-tds%5D=sans+prolongateur&a%5Bthrottle-type-tds%5D=Levier&a%5Bpferd-type-tds%5D=PG+8%2F100+HV",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -35,7 +35,8 @@ const product: ToolProfileInput = {
 		"limitations": [
 			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
 			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
-			"La valeur la plus élevée à vide ou en charge couvre les deux régimes documentés ; aucune moyenne de cycle n’est substituée à ces valeurs."
+			"La valeur la plus élevée à vide ou en charge couvre les deux régimes documentés ; aucune moyenne de cycle n’est substituée à ces valeurs.",
+			"La pression de mesure de la consommation publiée reste à documenter. Les valeurs et leur régime sont conservés dans les spécifications, hors calcul de compatibilité."
 		]
 	},
 	"specifications": [
@@ -101,6 +102,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"pferd-80107011-20260927"
 			]
+		},
+		{
+			"label": "Consommation publiée, hors dimensionnement",
+			"value": "850 L/min ; La pression de mesure de la consommation publiée reste à documenter. Les valeurs et leur régime sont conservés dans les spécifications, hors calcul de compatibilité.",
+			"evidenceIds": [
+				"review:2026-11-06-followup:pferd-pg-8-100-hv:1"
+			]
 		}
 	],
 	"evidence": [
@@ -112,6 +120,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation sous charge : 0.85 m³/min ; à vide : 0.17 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 850 L/min (m³/min × 1 000)."
+		},
+		{
+			"id": "review:2026-11-06-followup:pferd-pg-8-100-hv:1",
+			"sourceUrl": "https://fr.pferd.com/fr/meuleuse-droite-pneumatique-pg-8100?a%5Btype-tds%5D=sans+prolongateur&a%5Bthrottle-type-tds%5D=Levier&a%5Bpferd-type-tds%5D=PG+8%2F100+HV",
+			"sourceLabel": "PFERD, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Fiche 80107011 : pince 6 mm, 10000 tr/min, 600 W, 0,95 kg ; charge 0,85 m³/min et vide 0,17. Débits à conserver dans les spécifications, sans pression de mesure démontrée par le seul champ service 6,3 bar. SHA-256 du document complet : 9be88e7262cff0c6846f6633d0ecb67992a67c4de12de41c4b1e90900dc3ac70."
 		}
 	],
 	"fieldSources": {
@@ -121,18 +139,14 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"pferd-80107011-20260927"
 		],
-		"airflowLpm": [
-			"pferd-80107011-20260927"
+		"demandExplanation": [
+			"review:2026-11-06-followup:pferd-pg-8-100-hv:1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 850,
-		"typical": 850,
-		"max": 850
-	}
+	"demandExplanation": "La pression de mesure de la consommation publiée reste à documenter. Les valeurs et leur régime sont conservés dans les spécifications, hors calcul de compatibilité."
 };
 
 export default product;

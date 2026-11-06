@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/biax-sbrh-830.webp",
+		"src": "/images/products/biax-sbrh-830-20261106.svg",
 		"alt": "Repères techniques BIAX SBRH 830, référence 150012032",
 		"sourceUrl": "https://biax.de/en/product/sbrh-830-30-000-1-min-zweihandschleifer/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Le choix de la fraise, du disque ou de l’accessoire doit respecter la vitesse et les dimensions prescrites par BIAX.",
-			"Débit déclaré par le fabricant, sans mesure physique CompatAir."
+			"Débit déclaré par le fabricant, sans mesure physique CompatAir.",
+			"Le régime de consommation publié est non précisé. Cette valeur reste documentaire et le moteur renvoie insufficient_data."
 		]
 	},
 	"specifications": [
@@ -99,6 +100,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consigne de fonctionnement à 6 bar dans la page mentionnant cette référence commande."
+		},
+		{
+			"id": "review:2026-11-06-followup:biax-sbrh-830:1",
+			"sourceUrl": "https://biax.de/en/product/sbrh-830-30-000-1-min-zweihandschleifer/",
+			"sourceLabel": "BIAX, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Fiche150012032 etcatalogue19 :SBRH830 deuxmains260W/30000rpm/400Lmin, différent SARD/SARH. Le6bar est une consigne d’exploitation; régime de400Lmin indéterminé. airflowBasis doit empêcher la conclusion en charge. SHA-256 du document complet : 8cf185498befd97cf36d46b1905608d0c0351611abf2c3d161a6e818c6be7934."
+		},
+		{
+			"id": "review:2026-11-06-followup:biax-sbrh-830:2",
+			"sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=19",
+			"sourceLabel": "BIAX, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Fiche150012032 etcatalogue19 :SBRH830 deuxmains260W/30000rpm/400Lmin, différent SARD/SARH. Le6bar est une consigne d’exploitation; régime de400Lmin indéterminé. airflowBasis doit empêcher la conclusion en charge. SHA-256 du document complet : 318971fb9ba951f395b81cbca3d1e57938ce23b74db3aef25ff98bb8f0edc6c8."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +131,10 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"biax-150012032-20260926"
+		],
+		"airflowBasis": [
+			"review:2026-11-06-followup:biax-sbrh-830:1",
+			"review:2026-11-06-followup:biax-sbrh-830:2"
 		]
 	},
 	"notes": [
@@ -119,7 +144,8 @@ const product: ToolProfileInput = {
 		"min": 400,
 		"typical": 400,
 		"max": 400
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

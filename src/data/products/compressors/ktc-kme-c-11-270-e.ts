@@ -19,18 +19,13 @@ const product: CompressorInput = {
 	"tankLiters": 270,
 	"maxPressureBar": 10,
 	"maxPressureBasis": "selected-working-pressure-ceiling",
-	"fadCurve": [
-		{
-			"pressureBar": 10,
-			"litersPerMinute": 1462
-		}
-	],
+	"fadCurve": [],
 	"powerKw": 11,
 	"oilType": "oil",
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/ktc-kme-c-11-270-e.svg",
+		"src": "/images/products/ktc-kme-c-11-270-e-20261106.svg",
 		"alt": "Repères techniques : KTC KME C 11 270 E",
 		"sourceUrl": "https://www.ktc-air.com/uploaded_files/attachments/202511171763376673/ktc_kme_c_plus_4_55_en.pdf?track_download=true",
 		"sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
@@ -77,20 +72,28 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october4-ktc-download-4-p4"
 			]
+		},
+		{
+			"label": "Débit historiquement apparié, mesure à confirmer",
+			"value": "1462 L/min ; pression associée antérieurement 10 bar",
+			"evidenceIds": [
+				"review:2026-11-06-followup:ktc-kme-c-11-270-e:1",
+				"review:2026-11-06-followup:ktc-kme-c-11-270-e:2"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "KTC KME C 11 270 E. 1 462 L/min déclarés à 10 bar. on tank with dryer ; cuve 270 L.",
+		"overview": "KTC KME C 11 270 E. Le débit déclaré reste conservé dans les spécifications. La pression maximale ne prouve pas la pression de mesure du FAD ; compatibilité indéterminée.",
 		"verifiedFacts": [
 			"Configuration de pression documentée : 10 bar.",
-			"Cuve de stockage documentée : 270 L.",
-			"FAD sous pression identifié séparément des valeurs d’aspiration : 1 462 L/min déclarés à 10 bar."
+			"Cuve de stockage documentée : 270 L."
 		],
 		"limitations": [
 			"La version constructeur 10 bar est conservée avec son code. Les variantes 8 et 13 bar ne constituent pas de nouveaux modèles CompatAir.",
 			"Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
 			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
-			"Le plafond CompatAir correspond à la pression de travail de la version retenue. Il ne décrit ni la soupape ni le maximum de toutes les versions de la famille."
+			"Le plafond CompatAir correspond à la pression de travail de la version retenue. Il ne décrit ni la soupape ni le maximum de toutes les versions de la famille.",
+			"Table p4 : code161062304,11 kW,270 L avec sécheur,V75,1462 L/min etpressionmax10. La pression maximale ne suffit pas à prouver le point de mesureFAD ; garder cette valeur dans les specs et courbe vide jusqu'à preuve exacte."
 		]
 	},
 	"evidence": [
@@ -113,6 +116,26 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-04",
 			"confidence": "B",
 			"notes": "SHA-256 90262fa5be288a704088e70f800049ab76cec4331e237b1b7d65d338ea95d4ac de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-06-followup:ktc-kme-c-11-270-e:1",
+			"sourceUrl": "https://www.ktc-air.com/uploaded_files/attachments/202511171763376673/ktc_kme_c_plus_4_55_en.pdf?track_download=true#page=4",
+			"sourceLabel": "KTC, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Table p4 : code161062304,11 kW,270 L avec sécheur,V75,1462 L/min etpressionmax10. La pression maximale ne suffit pas à prouver le point de mesureFAD ; garder cette valeur dans les specs et courbe vide jusqu'à preuve exacte. SHA-256 du document complet : 90262fa5be288a704088e70f800049ab76cec4331e237b1b7d65d338ea95d4ac."
+		},
+		{
+			"id": "review:2026-11-06-followup:ktc-kme-c-11-270-e:2",
+			"sourceUrl": "https://www.ktc-air.com/uploaded_files/attachments/202511171763376673/ktc_kme_c_plus_4_55_en.pdf?track_download=true#page=2",
+			"sourceLabel": "KTC, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Table p4 : code161062304,11 kW,270 L avec sécheur,V75,1462 L/min etpressionmax10. La pression maximale ne suffit pas à prouver le point de mesureFAD ; garder cette valeur dans les specs et courbe vide jusqu'à preuve exacte. SHA-256 du document complet : 90262fa5be288a704088e70f800049ab76cec4331e237b1b7d65d338ea95d4ac."
 		}
 	],
 	"fieldSources": {
@@ -129,7 +152,8 @@ const product: CompressorInput = {
 			"october4-ktc-download-4-p4"
 		],
 		"fadCurve": [
-			"october4-ktc-download-4-p4"
+			"review:2026-11-06-followup:ktc-kme-c-11-270-e:1",
+			"review:2026-11-06-followup:ktc-kme-c-11-270-e:2"
 		],
 		"powerKw": [
 			"october4-ktc-download-4-p4"

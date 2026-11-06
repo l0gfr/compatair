@@ -9,7 +9,7 @@ const product: ToolProfileInput = {
 	"categoryId": "cle-a-chocs",
 	"category": "cle-a-chocs",
 	"label": "Red Rooster RR-18N T",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 6.3,
 		"typical": 6.3,
@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/red-rooster-rr-18n-t.webp",
+		"src": "/images/products/red-rooster-rr-18n-t-20261106.svg",
 		"alt": "Repères techniques Red Rooster RR-18N T, référence RR-18N T",
 		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=38",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas.",
+			"Le régime de consommation publié reste documentaire : la pression de service ne prouve pas sa pression de mesure. Compatibilité indéterminée."
 		]
 	},
 	"specifications": [
@@ -79,6 +80,14 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"red-rooster-rr-18n-t-20260926"
 			]
+		},
+		{
+			"label": "Consommation publiée, hors dimensionnement",
+			"value": "726 L/min ; Le régime de consommation publié reste documentaire : la pression de service ne prouve pas sa pression de mesure. Compatibilité indéterminée.",
+			"evidenceIds": [
+				"review:2026-11-06-followup:red-rooster-rr-18n-t:1",
+				"review:2026-11-06-followup:red-rooster-rr-18n-t:2"
+			]
 		}
 	],
 	"evidence": [
@@ -99,6 +108,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "review:2026-11-06-followup:red-rooster-rr-18n-t:1",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=38",
+			"sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "RR18NT p38 :carré1/2,7000rpm,12,1Ls encharge,2kg; leT limite le serrageà90Nm. La consigne générale6,3bar n’établit pas la pression de mesure de12,1Ls; conserver726Lmin documentaire sans conclusion. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+		},
+		{
+			"id": "review:2026-11-06-followup:red-rooster-rr-18n-t:2",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+			"sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "RR18NT p38 :carré1/2,7000rpm,12,1Ls encharge,2kg; leT limite le serrageà90Nm. La consigne générale6,3bar n’établit pas la pression de mesure de12,1Ls; conserver726Lmin documentaire sans conclusion. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
 		}
 	],
 	"fieldSources": {
@@ -108,28 +137,25 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"red-rooster-rr-18n-t-20260926-workingpressurebar-1"
 		],
-		"airflowLpm": [
-			"red-rooster-rr-18n-t-20260926"
-		],
 		"recommendedHose": [
 			"red-rooster-rr-18n-t-20260926"
 		],
 		"connectorSize": [
 			"red-rooster-rr-18n-t-20260926"
+		],
+		"demandExplanation": [
+			"review:2026-11-06-followup:red-rooster-rr-18n-t:1",
+			"review:2026-11-06-followup:red-rooster-rr-18n-t:2"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 726,
-		"typical": 726,
-		"max": 726
-	},
 	"recommendedHose": {
 		"innerDiameterMm": 10
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"demandExplanation": "Le régime de consommation publié reste documentaire : la pression de service ne prouve pas sa pression de mesure. Compatibilité indéterminée."
 };
 
 export default product;

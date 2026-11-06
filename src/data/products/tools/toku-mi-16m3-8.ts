@@ -9,7 +9,7 @@ const product: ToolProfileInput = {
 	"categoryId": "cle-a-chocs",
 	"category": "cle-a-chocs",
 	"label": "Toku MI-16M3/8",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 6.3,
 		"typical": 6.3,
@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/toku-mi-16m3-8.webp",
+		"src": "/images/products/toku-mi-16m3-8-20261106.svg",
 		"alt": "Repères techniques Toku MI-16M3/8, référence MI-16M3/8",
 		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=38",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas.",
+			"Le régime de consommation publié reste documentaire : la pression de service ne prouve pas sa pression de mesure. Compatibilité indéterminée."
 		]
 	},
 	"specifications": [
@@ -79,6 +80,14 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"toku-mi-16m3-8-20260926"
 			]
+		},
+		{
+			"label": "Consommation publiée, hors dimensionnement",
+			"value": "558 L/min ; Le régime de consommation publié reste documentaire : la pression de service ne prouve pas sa pression de mesure. Compatibilité indéterminée.",
+			"evidenceIds": [
+				"review:2026-11-06-followup:toku-mi-16m3-8:1",
+				"review:2026-11-06-followup:toku-mi-16m3-8:2"
+			]
 		}
 	],
 	"evidence": [
@@ -99,6 +108,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "review:2026-11-06-followup:toku-mi-16m3-8:1",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=38",
+			"sourceLabel": "Toku, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "P38 :MI16M3/8,carré3/8,6200rpm/270Nm/9,3Ls/1,5kg,distinctMI12à9500rpm. Mesure encharge annoncée pour leschocs mais pression6,3bar uniquement prescrite globalement;558Lmin non dimensionnants avant confirmation. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+		},
+		{
+			"id": "review:2026-11-06-followup:toku-mi-16m3-8:2",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+			"sourceLabel": "Toku, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "P38 :MI16M3/8,carré3/8,6200rpm/270Nm/9,3Ls/1,5kg,distinctMI12à9500rpm. Mesure encharge annoncée pour leschocs mais pression6,3bar uniquement prescrite globalement;558Lmin non dimensionnants avant confirmation. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
 		}
 	],
 	"fieldSources": {
@@ -108,28 +137,25 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"toku-mi-16m3-8-20260926-workingpressurebar-1"
 		],
-		"airflowLpm": [
-			"toku-mi-16m3-8-20260926"
-		],
 		"recommendedHose": [
 			"toku-mi-16m3-8-20260926"
 		],
 		"connectorSize": [
 			"toku-mi-16m3-8-20260926"
+		],
+		"demandExplanation": [
+			"review:2026-11-06-followup:toku-mi-16m3-8:1",
+			"review:2026-11-06-followup:toku-mi-16m3-8:2"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 558,
-		"typical": 558,
-		"max": 558
-	},
 	"recommendedHose": {
 		"innerDiameterMm": 6.5
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"demandExplanation": "Le régime de consommation publié reste documentaire : la pression de service ne prouve pas sa pression de mesure. Compatibilité indéterminée."
 };
 
 export default product;

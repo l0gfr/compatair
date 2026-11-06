@@ -49,7 +49,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée.",
+			"L’en-tête par cycle et l’unité par minute sont contradictoires ; aucune cadence ni conversion en L/action n’est déduite."
 		]
 	},
 	"specifications": [
@@ -138,10 +139,10 @@ const product: ToolProfileInput = {
 			]
 		},
 		{
-			"label": "Consommation moyenne, hors calcul",
-			"value": "1.05 L/min",
+			"label": "Consommation : unité fabricant ambiguë",
+			"value": "Valeur 1.05 sous en-tête Avg Air Consumption Per Rivet Cycle, unité imprimée L/min ; le volume par cycle n’est pas établi.",
 			"evidenceIds": [
-				"october2-tools-puma-cat-48-pdp-263-p1"
+				"review:2026-11-06-followup:riveteuse-puma-at-6017:1"
 			]
 		}
 	],
@@ -155,6 +156,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 9f17a09a737a59b7aa18143d377640146018b846b1db68fd8efb2f4c238ca2b1. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-06-followup:riveteuse-puma-at-6017:1",
+			"sourceUrl": "https://www.pumaair.com/product-Air-Hydraulic-Riveter-AirHydraulicRiveter.html",
+			"sourceLabel": "PUMA, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "TableAT6017 :capacité9/32,traction3124lb/1420kgf,course18mm/2,4kg. L’en-têteAvgAirConsumptionPerRivetCycle imprimeSCFM/Lmin, alors que la fiche affirme1,05Lmin comme débitmoyen. Exposer cette ambiguïté volumeparcycle/unitéminute et garder variable-volume; ne pas inventer2interprétations. SHA-256 du document complet : 9f17a09a737a59b7aa18143d377640146018b846b1db68fd8efb2f4c238ca2b1."
 		}
 	],
 	"fieldSources": {

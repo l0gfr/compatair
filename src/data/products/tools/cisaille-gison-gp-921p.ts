@@ -3,9 +3,9 @@ import type { ToolProfileInput } from '../../../domain/catalog';
 const product: ToolProfileInput = {
 	"id": "cisaille-gison-gp-921p",
 	"slug": "cisaille-gison-gp-921p",
-	"categoryId": "cisaille",
-	"category": "cisaille",
-	"label": "GISON GP-921P",
+	"categoryId": "perceuse",
+	"category": "Perceuse pneumatique",
+	"label": "Perceuse à dépointer GISON GP-921P",
 	"brand": "GISON",
 	"model": "GP-921P",
 	"mpn": "GP-921P",
@@ -38,8 +38,9 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-921P. Consommation de régime non précisé : 560 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 1.20 kg. Longueur : 250 mm.",
+		"overview": "GISON GP-921P : perceuse à dépointer. Capacité 8 mm, 1800 tr/min, longueur 250 mm et masse 1,20 kg. Consommation en charge à documenter.",
 		"verifiedFacts": [
+			"Perceuse à dépointer. Capacité 8 mm, 1800 tr/min, longueur 250 mm et masse 1,20 kg.",
 			"Masse : 1.20 kg.",
 			"Longueur : 250 mm.",
 			"Vitesse à vide : 1800 tr/min.",
@@ -92,6 +93,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october-b-gison-tools-p80"
 			]
+		},
+		{
+			"label": "Fonction et configuration",
+			"value": "Capacité 8 mm, 1800 tr/min, longueur 250 mm et masse 1,20 kg.",
+			"evidenceIds": [
+				"review:2026-11-06-followup:cisaille-gison-gp-921p:1"
+			]
 		}
 	],
 	"evidence": [
@@ -104,6 +112,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-06-followup:cisaille-gison-gp-921p:1",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=80",
+			"sourceLabel": "GISON, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Lecture visuelle page PDF 80 : Air Spot Drill, capacité 8 mm, 1800 tr/min, 250 mm et 1,20 kg, contre GP-921A 1400 tr/min et 310 mm. La catégorie cisaille est erronée ; conserver identité et URL historique, corriger l'usage vers perceuse à dépointer. SHA-256 du document complet : a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077."
 		}
 	],
 	"fieldSources": {

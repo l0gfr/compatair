@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/red-rooster-rri-150.webp",
+		"src": "/images/products/red-rooster-rri-150-20261106.svg",
 		"alt": "Repères techniques Red Rooster RRI-150, référence RRI-150",
 		"sourceUrl": "https://www.rami-yokota.com/media/godd0tdm/2026_fr_outils_d-assemblage_spreads.pdf#page=23",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas.",
+			"Le régime de consommation publié est non précisé. Cette valeur reste documentaire et le moteur renvoie insufficient_data."
 		]
 	},
 	"specifications": [
@@ -106,6 +107,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "review:2026-11-06-followup:red-rooster-rri-150:1",
+			"sourceUrl": "https://www.rami-yokota.com/media/godd0tdm/2026_fr_outils_d-assemblage_spreads.pdf#page=23",
+			"sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Assemblagep23 :carré3/4,3700rpm,165–210Nm,11,6Ls,3kg; RRI130 est1/2 et123–148Nm. Aucun régime ni point de mesure6,3bar prouvé par la note de maintenance;696Lmin non dimensionnants. SHA-256 du document complet : 6b7dca4923bfef1dbe2c7f6691e91e07f92fec5c1fa3b8d56f211ecbdb5e4845."
+		},
+		{
+			"id": "review:2026-11-06-followup:red-rooster-rri-150:2",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+			"sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Assemblagep23 :carré3/4,3700rpm,165–210Nm,11,6Ls,3kg; RRI130 est1/2 et123–148Nm. Aucun régime ni point de mesure6,3bar prouvé par la note de maintenance;696Lmin non dimensionnants. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
 		}
 	],
 	"fieldSources": {
@@ -120,6 +141,10 @@ const product: ToolProfileInput = {
 		],
 		"recommendedHose": [
 			"red-rooster-rri-150-20260926"
+		],
+		"airflowBasis": [
+			"review:2026-11-06-followup:red-rooster-rri-150:1",
+			"review:2026-11-06-followup:red-rooster-rri-150:2"
 		]
 	},
 	"notes": [
@@ -132,7 +157,8 @@ const product: ToolProfileInput = {
 	},
 	"recommendedHose": {
 		"innerDiameterMm": 11
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

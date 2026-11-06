@@ -29,7 +29,10 @@ fs.appendFileSync(process.env.TEST_ROOT + '/attempts', 'ssh\\n');
 fs.writeFileSync(process.env.TEST_ROOT + '/ssh-args.json', JSON.stringify(process.argv.slice(2)));
 if (process.env.TEST_TRANSPORT_FAILURE === '1') process.exit(255);
 const command = process.argv.at(-1).replaceAll('/home/deploy-test/compatair-deploy', process.env.TEST_ROOT + '/received');
-const result = spawnSync('/bin/bash', ['-c', command], { stdio: 'inherit', env: process.env });
+// Real SSH consumes the complete transport stream. Drain the synthetic
+// archive too: BSD tar can still be writing padding after extraction exits.
+const payload = fs.readFileSync(0);
+const result = spawnSync('/bin/bash', ['-c', command], { input: payload, stdio: ['pipe', 'inherit', 'inherit'], env: process.env });
 process.exit(result.status ?? 1);
 `);
 	executable('sha256sum', `#!${process.execPath}

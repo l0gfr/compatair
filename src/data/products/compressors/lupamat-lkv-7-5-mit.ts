@@ -16,18 +16,13 @@ const product: CompressorInput = {
 	},
 	"tankLiters": 548,
 	"maxPressureBar": 13,
-	"fadCurve": [
-		{
-			"pressureBar": 13,
-			"litersPerMinute": 820
-		}
-	],
+	"fadCurve": [],
 	"powerKw": 7.5,
 	"oilType": "unknown",
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/lupamat-lkv-7-5-mit.svg",
+		"src": "/images/products/lupamat-lkv-7-5-mit-20261106.svg",
 		"alt": "Repères techniques : Lupamat LKV 7.5 MIT",
 		"sourceUrl": "https://lupamat.com/pdf/Lupamat-EN-Katalog.pdf",
 		"sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
@@ -67,19 +62,26 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october4-lupamat-current-catalog-p13"
 			]
+		},
+		{
+			"label": "Débit historiquement apparié, mesure à confirmer",
+			"value": "820 L/min ; pression associée antérieurement 13 bar",
+			"evidenceIds": [
+				"review:2026-11-06-followup:lupamat-lkv-7-5-mit:1"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "Lupamat LKV 7.5 MIT. 820 L/min déclarés à 13 bar. Groupe sur cuve 548 L.",
+		"overview": "Lupamat LKV 7.5 MIT. Le débit déclaré reste conservé dans les spécifications. La pression maximale ne prouve pas la pression de mesure du FAD ; compatibilité indéterminée.",
 		"verifiedFacts": [
 			"Configuration de pression documentée : 13 bar.",
-			"Cuve de stockage documentée : 548 L.",
-			"FAD sous pression identifié séparément des valeurs d’aspiration : 820 L/min déclarés à 13 bar."
+			"Cuve de stockage documentée : 548 L."
 		],
 		"limitations": [
 			"Configuration de pression 13 bar retenue dans le triplet 7 / 10 / 13. La version 15 bar sur demande ne fournit pas de FAD dans ce tableau.",
 			"Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil."
+			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
+			"Catalogue p13 : LKV7,5MITsur548 L sans sécheur,7,5 kW,0,82 m³/min pourversion13. Différent duMITK ; mesureFADà13 non explicitée indépendamment de la pressionmax, suspendre le point moteur."
 		]
 	},
 	"evidence": [
@@ -92,6 +94,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-04",
 			"confidence": "B",
 			"notes": "SHA-256 3330cc258da3e7cf4f293c5af0da2ae3ced11d881237b550687f50e1f01fd978 de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-06-followup:lupamat-lkv-7-5-mit:1",
+			"sourceUrl": "https://lupamat.com/pdf/Lupamat-EN-Katalog.pdf#page=13",
+			"sourceLabel": "Lupamat, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Catalogue p13 : LKV7,5MITsur548 L sans sécheur,7,5 kW,0,82 m³/min pourversion13. Différent duMITK ; mesureFADà13 non explicitée indépendamment de la pressionmax, suspendre le point moteur. SHA-256 du document complet : 3330cc258da3e7cf4f293c5af0da2ae3ced11d881237b550687f50e1f01fd978."
 		}
 	],
 	"fieldSources": {
@@ -105,7 +117,7 @@ const product: CompressorInput = {
 			"october4-lupamat-current-catalog-p13"
 		],
 		"fadCurve": [
-			"october4-lupamat-current-catalog-p13"
+			"review:2026-11-06-followup:lupamat-lkv-7-5-mit:1"
 		],
 		"powerKw": [
 			"october4-lupamat-current-catalog-p13"

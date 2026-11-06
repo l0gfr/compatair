@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cleco-19raa12ah2.webp",
+		"src": "/images/products/cleco-19raa12ah2-20261106.svg",
 		"alt": "Repères techniques Cleco 19RAA12AH2, référence 19RAA12AH2",
 		"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=75",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -35,7 +35,8 @@ const product: ToolProfileInput = {
 		"limitations": [
 			"Données de catalogue industriel, sans essai physique CompatAir. Disponibilité et révision livrée à confirmer avec le fournisseur.",
 			"Le fabricant avertit qu’au-delà de 5,7 Nm, la durée de vie de la broche ou du carré peut se dégrader sur cette variante.",
-			"Source : catalogue GI-1250-EU, édition archivée du fabricant. Vérifier la référence et la notice de la révision effectivement livrée."
+			"Source : catalogue GI-1250-EU, édition archivée du fabricant. Vérifier la référence et la notice de la révision effectivement livrée.",
+			"Le régime de consommation publié est non précisé. Cette valeur reste documentaire et le moteur renvoie insufficient_data."
 		]
 	},
 	"specifications": [
@@ -105,6 +106,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation publiée dans la colonne Air Cons. m³/min, multipliée par 1 000. Le régime de mesure n’est pas précisé dans ce tableau."
+		},
+		{
+			"id": "review:2026-11-06-followup:cleco-19raa12ah2:1",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=75",
+			"sourceLabel": "Cleco, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "P75 :19RAA12AH2,200rpm,2,0–11,3Nm avec ressortstandard,326mm/0,9kg et0,31m³min. La branche avec ressortfort est3,4–11,3Nm, les19RAS sont distincts. Le régime n’est pas qualifié, donc310Lmin ne doit pas produire une conclusion en charge. SHA-256 du document complet : 8668d5e77a6b2469dc9b9012841e65bbfb947234a8087faa6fdd90384b3babac."
 		}
 	],
 	"fieldSources": {
@@ -116,6 +127,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"cleco-19raa12ah2-20260926"
+		],
+		"airflowBasis": [
+			"review:2026-11-06-followup:cleco-19raa12ah2:1"
 		]
 	},
 	"notes": [
@@ -125,7 +139,8 @@ const product: ToolProfileInput = {
 		"min": 310,
 		"typical": 310,
 		"max": 310
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

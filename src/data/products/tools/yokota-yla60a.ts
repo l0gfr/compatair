@@ -9,7 +9,7 @@ const product: ToolProfileInput = {
 	"categoryId": "cle-a-impulsions",
 	"category": "cle-a-impulsions",
 	"label": "Yokota YLA60A",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 5,
 		"typical": 6,
@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/yokota-yla60a.webp",
+		"src": "/images/products/yokota-yla60a-20261106.svg",
 		"alt": "Repères techniques Yokota YLA60A, référence YLA60A",
 		"sourceUrl": "https://www.rami-yokota.com/media/godd0tdm/2026_fr_outils_d-assemblage_spreads.pdf#page=17",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas.",
+			"Le régime de consommation publié reste documentaire : la pression de service ne prouve pas sa pression de mesure. Compatibilité indéterminée."
 		]
 	},
 	"specifications": [
@@ -93,6 +94,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"yokota-yla60a-20260926"
 			]
+		},
+		{
+			"label": "Consommation publiée, hors dimensionnement",
+			"value": "330 L/min ; Le régime de consommation publié reste documentaire : la pression de service ne prouve pas sa pression de mesure. Compatibilité indéterminée.",
+			"evidenceIds": [
+				"review:2026-11-06-followup:yokota-yla60a:1"
+			]
 		}
 	],
 	"evidence": [
@@ -113,6 +121,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Condition de pression spécifique du tableau Yokota à impulsions."
+		},
+		{
+			"id": "review:2026-11-06-followup:yokota-yla60a:1",
+			"sourceUrl": "https://www.rami-yokota.com/media/godd0tdm/2026_fr_outils_d-assemblage_spreads.pdf#page=17",
+			"sourceLabel": "Yokota, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Assemblagep17 :hex1/4,4000rpm/9–20Nm,0,78kg; encharge5Ls/àvide5,5Ls. Une plage5–6bar ne fixe pas la pression de ces mesures.330Lmin reste documentaire; aucune sélection arbitraire de6bar. SHA-256 du document complet : 6b7dca4923bfef1dbe2c7f6691e91e07f92fec5c1fa3b8d56f211ecbdb5e4845."
 		}
 	],
 	"fieldSources": {
@@ -122,24 +140,20 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"yokota-yla60a-20260926-workingpressurebar-1"
 		],
-		"airflowLpm": [
-			"yokota-yla60a-20260926"
-		],
 		"recommendedHose": [
 			"yokota-yla60a-20260926"
+		],
+		"demandExplanation": [
+			"review:2026-11-06-followup:yokota-yla60a:1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 330,
-		"typical": 330,
-		"max": 330
-	},
 	"recommendedHose": {
 		"innerDiameterMm": 6.5
-	}
+	},
+	"demandExplanation": "Le régime de consommation publié reste documentaire : la pression de service ne prouve pas sa pression de mesure. Compatibilité indéterminée."
 };
 
 export default product;

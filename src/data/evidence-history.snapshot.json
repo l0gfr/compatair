@@ -756975,7 +756975,3067 @@
         "confidence": "B",
         "notes": "GET complet HTTP200 SHA-256 ba4456e01efcdafc61a3ff5a2a07a1dafb81ca64e42082f19f7e2bf40f20b2d8. La notice3917GHLS décrit une meuleuse longue17 pouces (431 mm), corps acier et échappement latéral. La vitesse standard est18 000 tr/min dans une famille15 000–22 000 ; vérifier la plaque avant de choisir une fraise. Les 3927-GHLS et 4117-GLS gardent leurs notices propres. Les 25 CFM sont un débit de famille sans régime et pression de mesure établis."
       }
+    },
+    {
+      "id": "added:abac-spinn-11-10-400-50-tm500:review:2026-11-06-followup:abac-spinn-11-10-400-50-tm500:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:abac-spinn-11-10-400-50-tm500:1",
+      "productId": "abac-spinn-11-10-400-50-tm500",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "cfbc7c3ec2de262c3b901737c9e1e7da9af4bdf78bc1ae846de459668bd33075",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:abac-spinn-11-10-400-50-tm500:1",
+        "sourceUrl": "https://shop.abacaircompressors.com/en-INT/products/4152054944/spinn22-8-40050k-e-ce",
+        "sourceLabel": "ABAC, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Variante 4152022631 distincte de SA retrouvée dans les données fabricant communes, sur cuve 500 L. La promesse générale des compresseurs à vis ne neutralise pas la description intermittente propre à SPINN ; retirer dutyCycle=1. SHA-256 du document complet : a803624bbd7f7ab4cf9bbee14206ea9f1173d3aa0ae716c35659dd9ccb9b69a1."
+      }
+    },
+    {
+      "id": "added:abac-spinn-11-10-400-50-tm500:review:2026-11-06-followup:abac-spinn-11-10-400-50-tm500:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:abac-spinn-11-10-400-50-tm500:2",
+      "productId": "abac-spinn-11-10-400-50-tm500",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "4a666eb60b76582516ca3a9144cd6c4a30ec77b6619bca54ce0fc927df2e343c",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:abac-spinn-11-10-400-50-tm500:2",
+        "sourceUrl": "https://www.abacaircompressors.com/en-international/products/screw-compressors",
+        "sourceLabel": "ABAC, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Variante 4152022631 distincte de SA retrouvée dans les données fabricant communes, sur cuve 500 L. La promesse générale des compresseurs à vis ne neutralise pas la description intermittente propre à SPINN ; retirer dutyCycle=1. SHA-256 du document complet : 8cdcba4f84ac43e7b6a404f4379626de162b8a3207d42ffa31d8f40434d336ca."
+      }
+    },
+    {
+      "id": "added:abac-spinn-11-10-400-50-tm500-sa:review:2026-11-06-followup:abac-spinn-11-10-400-50-tm500-sa:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:abac-spinn-11-10-400-50-tm500-sa:1",
+      "productId": "abac-spinn-11-10-400-50-tm500-sa",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b35b361df273989aa76ce29ce42c7e3fcdf7bc3fc063c7938c8e69bff6000821",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:abac-spinn-11-10-400-50-tm500-sa:1",
+        "sourceUrl": "https://shop.abacaircompressors.com/en-INT/products/4152054944/spinn22-8-40050k-e-ce",
+        "sourceLabel": "ABAC, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Variante 4152022668 retrouvée dans le JSON fabricant commun : SPINN11 TM500 SA, 500 L et 1416 L/min. La page parle de moteurs IE3 à 100 %, mais décrit SPINN pour usage intermittent et non continu ; enlever le taux de marche du groupe non prouvé. SHA-256 du document complet : a803624bbd7f7ab4cf9bbee14206ea9f1173d3aa0ae716c35659dd9ccb9b69a1."
+      }
+    },
+    {
+      "id": "added:abac-spinn-11-10-400-50-tm500-sa:review:2026-11-06-followup:abac-spinn-11-10-400-50-tm500-sa:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:abac-spinn-11-10-400-50-tm500-sa:2",
+      "productId": "abac-spinn-11-10-400-50-tm500-sa",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "7490bb81518452dd444dd44b78f9795971854a49c301bb441ccbffb023938ade",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:abac-spinn-11-10-400-50-tm500-sa:2",
+        "sourceUrl": "https://www.abacaircompressors.com/en-international/products/screw-compressors",
+        "sourceLabel": "ABAC, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Variante 4152022668 retrouvée dans le JSON fabricant commun : SPINN11 TM500 SA, 500 L et 1416 L/min. La page parle de moteurs IE3 à 100 %, mais décrit SPINN pour usage intermittent et non continu ; enlever le taux de marche du groupe non prouvé. SHA-256 du document complet : 8cdcba4f84ac43e7b6a404f4379626de162b8a3207d42ffa31d8f40434d336ca."
+      }
+    },
+    {
+      "id": "added:aircraft-aircar-440-of-pro:review:2026-11-06-followup:aircraft-aircar-440-of-pro:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:aircraft-aircar-440-of-pro:1",
+      "productId": "aircraft-aircar-440-of-pro",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a412993512c44f603b0b1ee4dc7eb5a884b263f1c5611ac83ca6c3fbcf5d2ae3",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:aircraft-aircar-440-of-pro:1",
+        "sourceUrl": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-compressors-2026-09-27.json",
+        "sourceLabel": "Aircraft, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Catalogue2026/27 p24 : 440 L/min aspirés,270 de remplissage à6 bar,22 L et85 kg. FAD vide conservé. Puissance2,2 kW400V contre1,7 du relevé historique : ne pas laisser la valeur contestée dans powerKw ; conserver les deux observations séparées. SHA-256 du document complet : af866f2323db4015b11fba728e6b8c50093e8998705ae6d1920deac66f83cc62."
+      }
+    },
+    {
+      "id": "added:aircraft-aircar-440-of-pro:review:2026-11-06-followup:aircraft-aircar-440-of-pro:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:aircraft-aircar-440-of-pro:2",
+      "productId": "aircraft-aircar-440-of-pro",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "2e7c55facaabc4d8a763eff39e7b7ce58f3dab92aa64d21753d895b857aefc01",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:aircraft-aircar-440-of-pro:2",
+        "sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=24",
+        "sourceLabel": "Aircraft, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Catalogue2026/27 p24 : 440 L/min aspirés,270 de remplissage à6 bar,22 L et85 kg. FAD vide conservé. Puissance2,2 kW400V contre1,7 du relevé historique : ne pas laisser la valeur contestée dans powerKw ; conserver les deux observations séparées. SHA-256 du document complet : 1afd7b88f9ad847cd6d6c149a97fd771844391d3a4d2bc8d8da40e50c445fe70."
+      }
+    },
+    {
+      "id": "added:airpress-aps-120-ivr-x-g2:review:2026-11-06-followup:airpress-aps-120-ivr-x-g2:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:airpress-aps-120-ivr-x-g2:1",
+      "productId": "airpress-aps-120-ivr-x-g2",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "ed4c9a967106ed88cd0c527f6bb2c30e9f02de72ea0714772a3daf80648dbfc2",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:airpress-aps-120-ivr-x-g2:1",
+        "sourceUrl": "https://airpress.fr/compresseur-a-vis-aps-120-ivr-x-g2-4520-14910-l-min-10-bar-120-ch-90-kw-3694120-ivr-g2",
+        "sourceLabel": "Airpress, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "La table actuelle appaire explicitement débit restitué À7 bar=14910, À8=14170 et À9,5=12880 L/min, ISO1217 déclaré, cycle100/0 et max10 bar. Le texte actuel affirmant une absence de pression est faux : restaurer ces trois points, sans en faire un débit minimal garanti à toute vitesse IVR. SHA-256 du document complet : 0ecae92bc3e4e7bfdab1d1b0b8a804854039197443c3a6e71f4a7ef3b677a4a1."
+      }
+    },
+    {
+      "id": "added:almig-combi-xp-8-standalone:review:2026-11-06-followup:almig-combi-xp-8-standalone:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:almig-combi-xp-8-standalone:1",
+      "productId": "almig-combi-xp-8-standalone",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "d09feed4f3eace0d1bd1804648b1f88dfec6a71b263ac55f65632b027ec50748",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:almig-combi-xp-8-standalone:1",
+        "sourceUrl": "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf#page=9",
+        "sourceLabel": "ALMiG, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "COMBIXP8 : débits ISO1217C 1160/980/750 L/min à8/10/13 bar, dimensions standalone691 ×1051 ×1088 et350 kg. La mention générale de continuité de la gamme ne documente pas un taux de marche exact du groupe ; conserver les débits, enlever dutyCycle=1 non établi. SHA-256 du document complet : f5ca167dedaab25352808dc5001ba9badc7acffb2c37168c6d9f89182b752a0e."
+      }
+    },
+    {
+      "id": "added:almig-combi-xp-8-standalone:review:2026-11-06-followup:almig-combi-xp-8-standalone:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:almig-combi-xp-8-standalone:2",
+      "productId": "almig-combi-xp-8-standalone",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "000dec661898c88ebeaf79d1d63884811a0c3dd4f4a3117f4f42375bceda9683",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:almig-combi-xp-8-standalone:2",
+        "sourceUrl": "https://www.almig.de/en/products/compressed-air-generation/screw-compressors",
+        "sourceLabel": "ALMiG, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "COMBIXP8 : débits ISO1217C 1160/980/750 L/min à8/10/13 bar, dimensions standalone691 ×1051 ×1088 et350 kg. La mention générale de continuité de la gamme ne documente pas un taux de marche exact du groupe ; conserver les débits, enlever dutyCycle=1 non établi. SHA-256 du document complet : 89768dc9e10560d0ae92781ed4af69fd397c324e6def04e834f28da3de6ae906."
+      }
+    },
+    {
+      "id": "added:almig-f-drive-11:review:2026-11-06-followup:almig-f-drive-11:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:almig-f-drive-11:1",
+      "productId": "almig-f-drive-11",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "d43b540272a4af870c6b01af61d9271e60b9b55bb56835f3a2d55cac6ff35425",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:almig-f-drive-11:1",
+        "sourceUrl": "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf#page=16",
+        "sourceLabel": "ALMiG, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Table p16 : F-DRIVE11, débit maximum1840 etminimum230 L/min à7 bar50Hz, plage jusqu'à13. Ne pas utiliser1840 à13 bar. Promesse générale de continuité non convertie en cycle exact du groupe. SHA-256 du document complet : f5ca167dedaab25352808dc5001ba9badc7acffb2c37168c6d9f89182b752a0e."
+      }
+    },
+    {
+      "id": "added:almig-f-drive-11:review:2026-11-06-followup:almig-f-drive-11:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:almig-f-drive-11:2",
+      "productId": "almig-f-drive-11",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "f7f59c91e774baaccbd2c6b1b0418f67fe7035d66826404be972651e22a540e0",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:almig-f-drive-11:2",
+        "sourceUrl": "https://www.almig.de/en/products/compressed-air-generation/screw-compressors",
+        "sourceLabel": "ALMiG, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Table p16 : F-DRIVE11, débit maximum1840 etminimum230 L/min à7 bar50Hz, plage jusqu'à13. Ne pas utiliser1840 à13 bar. Promesse générale de continuité non convertie en cycle exact du groupe. SHA-256 du document complet : 89768dc9e10560d0ae92781ed4af69fd397c324e6def04e834f28da3de6ae906."
+      }
+    },
+    {
+      "id": "added:alup-evoluto-11:review:2026-11-06-followup:alup-evoluto-11:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:alup-evoluto-11:1",
+      "productId": "alup-evoluto-11",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "3000a6084dd229117d261ab9e3159693742d8e06288c5f06ceeba43f268a7e03",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:alup-evoluto-11:1",
+        "sourceUrl": "https://www.alup.com/en-international/products/screw-compressors/variable-speed/evoluto-8-22",
+        "sourceLabel": "ALUP, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Le tableau utile est PDF7 et non4 : EVOLUTO11,95,8 m³/h à9,5 bar,11 kW,base212 kg. Minimum22,7 à7 bar distinct du maximum. Corriger le repère de source ; pas de taux de marche déduit. SHA-256 du document complet : 40a44d98f5fff13d612812f4e6b5bead465e1606a9bc7fb749b07d2556e1f5c8."
+      }
+    },
+    {
+      "id": "added:alup-evoluto-11:review:2026-11-06-followup:alup-evoluto-11:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:alup-evoluto-11:2",
+      "productId": "alup-evoluto-11",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "4d412fa3fdb454f78a0dea8af344d1b9e95af439dd07f06a24abacac8ccc0b20",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:alup-evoluto-11:2",
+        "sourceUrl": "https://www.alup.com/content/dam/brands/Alup/products-bp-structure/oil-injected-screw-compressor/fixed-speed/largo-15-25/leaflets/Alup_Largo_15-25_Evoluto_8-22_EN.pdf#page=7",
+        "sourceLabel": "ALUP, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Le tableau utile est PDF7 et non4 : EVOLUTO11,95,8 m³/h à9,5 bar,11 kW,base212 kg. Minimum22,7 à7 bar distinct du maximum. Corriger le repère de source ; pas de taux de marche déduit. SHA-256 du document complet : 88850343508a5a38e98557b7e0229f393825f76cfdf4daa350b9ef9f9f6359a3."
+      }
+    },
+    {
+      "id": "added:alup-evoluto-11:review:2026-11-06-followup:alup-evoluto-11:3:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:alup-evoluto-11:3",
+      "productId": "alup-evoluto-11",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "47d87972e908dc804e15a13b4ca3fcd7821e45058c43980658b91c2849685d5c",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:alup-evoluto-11:3",
+        "sourceUrl": "https://www.alup.com/content/dam/brands/Alup/products-bp-structure/oil-injected-screw-compressor/fixed-speed/largo-15-25/leaflets/Alup_Largo_15-25_Evoluto_8-22_EN.pdf#page=1",
+        "sourceLabel": "ALUP, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Le tableau utile est PDF7 et non4 : EVOLUTO11,95,8 m³/h à9,5 bar,11 kW,base212 kg. Minimum22,7 à7 bar distinct du maximum. Corriger le repère de source ; pas de taux de marche déduit. SHA-256 du document complet : 88850343508a5a38e98557b7e0229f393825f76cfdf4daa350b9ef9f9f6359a3."
+      }
+    },
+    {
+      "id": "added:alup-evoluto-14:review:2026-11-06-followup:alup-evoluto-14:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:alup-evoluto-14:1",
+      "productId": "alup-evoluto-14",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "5a9f07a34f17df3c2a9d31c3c4036178d07e11d16a467869af72cff309cd10df",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:alup-evoluto-14:1",
+        "sourceUrl": "https://www.alup.com/en-international/products/screw-compressors/variable-speed/evoluto-8-22",
+        "sourceLabel": "ALUP, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Tableau PDF7 : EVOLUTO14,119,5 m³/h à9,5 bar,15 kW,base223 kg. Contrairement au11,réserve de débit supérieure surmêmegabarit1165 ×655 ×1045. Corriger le repère page4 vers7. SHA-256 du document complet : 40a44d98f5fff13d612812f4e6b5bead465e1606a9bc7fb749b07d2556e1f5c8."
+      }
+    },
+    {
+      "id": "added:alup-evoluto-14:review:2026-11-06-followup:alup-evoluto-14:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:alup-evoluto-14:2",
+      "productId": "alup-evoluto-14",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "50c173f486b62987e4e6bfd80fd3eab315e8593c470989c8dfdf27774b2fa3ea",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:alup-evoluto-14:2",
+        "sourceUrl": "https://www.alup.com/content/dam/brands/Alup/products-bp-structure/oil-injected-screw-compressor/fixed-speed/largo-15-25/leaflets/Alup_Largo_15-25_Evoluto_8-22_EN.pdf#page=7",
+        "sourceLabel": "ALUP, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Tableau PDF7 : EVOLUTO14,119,5 m³/h à9,5 bar,15 kW,base223 kg. Contrairement au11,réserve de débit supérieure surmêmegabarit1165 ×655 ×1045. Corriger le repère page4 vers7. SHA-256 du document complet : 88850343508a5a38e98557b7e0229f393825f76cfdf4daa350b9ef9f9f6359a3."
+      }
+    },
+    {
+      "id": "added:alup-evoluto-14:review:2026-11-06-followup:alup-evoluto-14:3:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:alup-evoluto-14:3",
+      "productId": "alup-evoluto-14",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "ad8a02c9cbd11d4b4978603bcb8fb6a27494197bc5877361b8cb3a29c88bee80",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:alup-evoluto-14:3",
+        "sourceUrl": "https://www.alup.com/content/dam/brands/Alup/products-bp-structure/oil-injected-screw-compressor/fixed-speed/largo-15-25/leaflets/Alup_Largo_15-25_Evoluto_8-22_EN.pdf#page=1",
+        "sourceLabel": "ALUP, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Tableau PDF7 : EVOLUTO14,119,5 m³/h à9,5 bar,15 kW,base223 kg. Contrairement au11,réserve de débit supérieure surmêmegabarit1165 ×655 ×1045. Corriger le repère page4 vers7. SHA-256 du document complet : 88850343508a5a38e98557b7e0229f393825f76cfdf4daa350b9ef9f9f6359a3."
+      }
+    },
+    {
+      "id": "added:biax-bwh-6-25-2-k45:review:2026-11-06-followup:biax-bwh-6-25-2-k45:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:biax-bwh-6-25-2-k45:1",
+      "productId": "biax-bwh-6-25-2-k45",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "6f4599bbfe18e9ea528e24b55def1c6536bdb4563b392f166319a53281b4944d",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:biax-bwh-6-25-2-k45:1",
+        "sourceUrl": "https://biax.de/en/product/bwh-6-25-2-k45/",
+        "sourceLabel": "BIAX, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Fiche150222320 etcatalogue55 confirment300W/2500rpm/500Lmin, renvoiK90 avec tête45°. Le6bar appartient à une consigne d’huilage, et le régime500Lmin n’est pas décrit. Désactiver l’usage de cette valeur comme débit en charge. SHA-256 du document complet : 4da7437a909eebfe10abb6090070e78b649b35193b37137d2d8194b95264d2b2."
+      }
+    },
+    {
+      "id": "added:biax-bwh-6-25-2-k45:review:2026-11-06-followup:biax-bwh-6-25-2-k45:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:biax-bwh-6-25-2-k45:2",
+      "productId": "biax-bwh-6-25-2-k45",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "135de21d59c8e6d0b5113cc15a247ad740e14c0e951c17871826d23b5fc219f5",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:biax-bwh-6-25-2-k45:2",
+        "sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=55",
+        "sourceLabel": "BIAX, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Fiche150222320 etcatalogue55 confirment300W/2500rpm/500Lmin, renvoiK90 avec tête45°. Le6bar appartient à une consigne d’huilage, et le régime500Lmin n’est pas décrit. Désactiver l’usage de cette valeur comme débit en charge. SHA-256 du document complet : 318971fb9ba951f395b81cbca3d1e57938ce23b74db3aef25ff98bb8f0edc6c8."
+      }
+    },
+    {
+      "id": "added:biax-gaf-309:review:2026-11-06-followup:biax-gaf-309:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:biax-gaf-309:1",
+      "productId": "biax-gaf-309",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8d255d594472c3c857f776ff2cd6085939324184db40b3d046b7a768153cdea9",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:biax-gaf-309:1",
+        "sourceUrl": "https://biax.de/wp-content/uploads/2025/02/BIAX_Schrauber_DE.pdf#page=8",
+        "sourceLabel": "BIAX, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "BIAXSchrauber p8 :GAF309 code150619525, consigne2–3gouttesminà6bar; voisineGAA309 etGAF205 distinctes. Le210Lmin ne porte ni régime ni pression de mesure explicite. Aucun calcul conclusif de débit avant confirmation. SHA-256 du document complet : 234541dfd789768204963f04e6df723f00c634bb38ced6d544e88ac762382718."
+      }
+    },
+    {
+      "id": "added:biax-sbrh-830:review:2026-11-06-followup:biax-sbrh-830:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:biax-sbrh-830:1",
+      "productId": "biax-sbrh-830",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "0db952454c1856e2585fc743c356679ae22db6e32c1dbdd6ddaac49013950a7d",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:biax-sbrh-830:1",
+        "sourceUrl": "https://biax.de/en/product/sbrh-830-30-000-1-min-zweihandschleifer/",
+        "sourceLabel": "BIAX, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Fiche150012032 etcatalogue19 :SBRH830 deuxmains260W/30000rpm/400Lmin, différent SARD/SARH. Le6bar est une consigne d’exploitation; régime de400Lmin indéterminé. airflowBasis doit empêcher la conclusion en charge. SHA-256 du document complet : 8cf185498befd97cf36d46b1905608d0c0351611abf2c3d161a6e818c6be7934."
+      }
+    },
+    {
+      "id": "added:biax-sbrh-830:review:2026-11-06-followup:biax-sbrh-830:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:biax-sbrh-830:2",
+      "productId": "biax-sbrh-830",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "afad2985f56c3eb7b7972945522bfe241284b74da62cdc64efca14410652a4ba",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:biax-sbrh-830:2",
+        "sourceUrl": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf#page=19",
+        "sourceLabel": "BIAX, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Fiche150012032 etcatalogue19 :SBRH830 deuxmains260W/30000rpm/400Lmin, différent SARD/SARH. Le6bar est une consigne d’exploitation; régime de400Lmin indéterminé. airflowBasis doit empêcher la conclusion en charge. SHA-256 du document complet : 318971fb9ba951f395b81cbca3d1e57938ce23b74db3aef25ff98bb8f0edc6c8."
+      }
+    },
+    {
+      "id": "added:burineur-tranmax-tpt-928:review:2026-11-06-followup:burineur-tranmax-tpt-928:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:burineur-tranmax-tpt-928:1",
+      "productId": "burineur-tranmax-tpt-928",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a54291dab1b9b064b2fb5c1162ebeb4f49f3acc19eb939d4fbfedf606eaa95cd",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:burineur-tranmax-tpt-928:1",
+        "sourceUrl": "https://ss-client-website.s3-ap-northeast-1.amazonaws.com/tranmax/2023_01_09_113224_2212-Professional-Power-Tools-TP.pdf#page=32",
+        "sourceLabel": "Tranmax, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Lecture visuelle PDF32 : TPT928marteau de décalaminage,7000 coups/min,course38 mm,561 mm,masse2,3 kg/5,1 lb. La transcription23 kg/51 lb a perdu les décimales : corriger les deux unités. Consommation moyenne93 L/min hors calcul. SHA-256 du document complet : c2e29dbb1f9d433e1d65568bc327d3ea21eadd7d39f8edbb0d98145850f7c7d2."
+      }
+    },
+    {
+      "id": "added:ceccato-csa-15-ff-sur-cuve-500-l-8-bar:review:2026-11-06-followup:ceccato-csa-15-ff-sur-cuve-500-l-8-bar:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:ceccato-csa-15-ff-sur-cuve-500-l-8-bar:1",
+      "productId": "ceccato-csa-15-ff-sur-cuve-500-l-8-bar",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "0fd84592fbe84a88d8ce68f9ec1db5ce027531481c0c4517475509c822a5bb75",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:ceccato-csa-15-ff-sur-cuve-500-l-8-bar:1",
+        "sourceUrl": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csa-7-5-20-hp/leaflets/Ceccato_CSA_7.5-20_Leaflet_EN.pdf#page=6",
+        "sourceLabel": "Ceccato, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Table p6 : FAD1700 L/min à7,5 bar, maximum8,11 kW, FF avec sécheur sur500 L ; la variante270 L ne donne pas la même réserve. La source citée ne prouve pas le taux de marche exact1 du groupe. SHA-256 du document complet : b36c0fbb8a63a69867b66a6e663923588ccfd8e2def16303b3be948aa706c23c."
+      }
+    },
+    {
+      "id": "added:ceccato-csa-15-ff-sur-cuve-500-l-8-bar:review:2026-11-06-followup:ceccato-csa-15-ff-sur-cuve-500-l-8-bar:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:ceccato-csa-15-ff-sur-cuve-500-l-8-bar:2",
+      "productId": "ceccato-csa-15-ff-sur-cuve-500-l-8-bar",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "71dd0def7b808abb86ab26f16eec7dfab0b13a486b5f9c0c79bf41b0c6de7891",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:ceccato-csa-15-ff-sur-cuve-500-l-8-bar:2",
+        "sourceUrl": "https://www.ceccato.com/fr-international/air-compressor-products/rotary-screw-compressor/fixed-speed/csa-7-5-20-hp",
+        "sourceLabel": "Ceccato, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Table p6 : FAD1700 L/min à7,5 bar, maximum8,11 kW, FF avec sécheur sur500 L ; la variante270 L ne donne pas la même réserve. La source citée ne prouve pas le taux de marche exact1 du groupe. SHA-256 du document complet : 951bf54e3ca0ed7ff7d6605feb59127e97354a7fba2e8cbf3c6eadb301061298."
+      }
+    },
+    {
+      "id": "added:ceccato-csa-15-pack-au-sol-10-bar:review:2026-11-06-followup:ceccato-csa-15-pack-au-sol-10-bar:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:ceccato-csa-15-pack-au-sol-10-bar:1",
+      "productId": "ceccato-csa-15-pack-au-sol-10-bar",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "f8e50cba8402ebef2cb2c9ad04180484dde128bce1daac1b7fe3b9a445f2aeda",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:ceccato-csa-15-pack-au-sol-10-bar:1",
+        "sourceUrl": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csa-7-5-20-hp/leaflets/Ceccato_CSA_7.5-20_Leaflet_EN.pdf#page=6",
+        "sourceLabel": "Ceccato, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Table p6 : FAD1550 L/min à9,5 bar etmax10, PACKau sol sans cuve,1000 ×665 ×1045 mm. Conserver les pressions distinctes, retirer le cycle complet non prouvé par les documents actuels. SHA-256 du document complet : b36c0fbb8a63a69867b66a6e663923588ccfd8e2def16303b3be948aa706c23c."
+      }
+    },
+    {
+      "id": "added:ceccato-csa-15-pack-au-sol-10-bar:review:2026-11-06-followup:ceccato-csa-15-pack-au-sol-10-bar:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:ceccato-csa-15-pack-au-sol-10-bar:2",
+      "productId": "ceccato-csa-15-pack-au-sol-10-bar",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "d8cff97de5fdc6df69072c541ccf87665e8cf4dd2d925684b6aa7ef158e3d9a8",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:ceccato-csa-15-pack-au-sol-10-bar:2",
+        "sourceUrl": "https://www.ceccato.com/fr-international/air-compressor-products/rotary-screw-compressor/fixed-speed/csa-7-5-20-hp",
+        "sourceLabel": "Ceccato, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Table p6 : FAD1550 L/min à9,5 bar etmax10, PACKau sol sans cuve,1000 ×665 ×1045 mm. Conserver les pressions distinctes, retirer le cycle complet non prouvé par les documents actuels. SHA-256 du document complet : 951bf54e3ca0ed7ff7d6605feb59127e97354a7fba2e8cbf3c6eadb301061298."
+      }
+    },
+    {
+      "id": "added:cisaille-gison-gp-921p:review:2026-11-06-followup:cisaille-gison-gp-921p:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:cisaille-gison-gp-921p:1",
+      "productId": "cisaille-gison-gp-921p",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "51c551299a49234f43a67d8027de99e816f20dea2763948b3ba38e8a03993fc9",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:cisaille-gison-gp-921p:1",
+        "sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=80",
+        "sourceLabel": "GISON, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Lecture visuelle page PDF 80 : Air Spot Drill, capacité 8 mm, 1800 tr/min, 250 mm et 1,20 kg, contre GP-921A 1400 tr/min et 310 mm. La catégorie cisaille est erronée ; conserver identité et URL historique, corriger l'usage vers perceuse à dépointer. SHA-256 du document complet : a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077."
+      }
+    },
+    {
+      "id": "added:cleco-19pta06q:review:2026-11-06-followup:cleco-19pta06q:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:cleco-19pta06q:1",
+      "productId": "cleco-19pta06q",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "3adcbc1af5f4001cd217ca2448eba46a109bf1b2f16eb9becdf7c4fb86d74b21",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:cleco-19pta06q:1",
+        "sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=69",
+        "sourceLabel": "Cleco, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "GI1250 p69 confirme260rpm,1,1–5,1Nm,214mm et0,7kg; 19BPA02Q/03Q ont d’autres commandes. Le310Lmin de série ne qualifie ni maximum ni charge; fixed-flow sans airflowBasis reste conclusif. Conserver la consommation documentaire et désactiver sa portée de dimensionnement. SHA-256 du document complet : 8668d5e77a6b2469dc9b9012841e65bbfb947234a8087faa6fdd90384b3babac."
+      }
+    },
+    {
+      "id": "added:cleco-19raa12ah2:review:2026-11-06-followup:cleco-19raa12ah2:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:cleco-19raa12ah2:1",
+      "productId": "cleco-19raa12ah2",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b98f6120e5f7450d5e28311f49bab069980ab68e0afcc581064aee07f3026923",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:cleco-19raa12ah2:1",
+        "sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=75",
+        "sourceLabel": "Cleco, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P75 :19RAA12AH2,200rpm,2,0–11,3Nm avec ressortstandard,326mm/0,9kg et0,31m³min. La branche avec ressortfort est3,4–11,3Nm, les19RAS sont distincts. Le régime n’est pas qualifié, donc310Lmin ne doit pas produire une conclusion en charge. SHA-256 du document complet : 8668d5e77a6b2469dc9b9012841e65bbfb947234a8087faa6fdd90384b3babac."
+      }
+    },
+    {
+      "id": "added:denair-da-18:review:2026-11-06-followup:denair-da-18:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:denair-da-18:1",
+      "productId": "denair-da-18",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "90ee3830a51232ef6960ab9f7c65623fb383d31a8e046137898b9d8629acdbe8",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:denair-da-18:1",
+        "sourceUrl": "https://www.denair.net/uploads/DENAIR_Screw_Air_Compressor.pdf#page=5",
+        "sourceLabel": "DENAIR, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Table p5 : DA18,3,21 m³/mincolonne50Hz pourpression7,18,5 kW450 kg. 3,70 est60Hz et reste séparé. La colonne pressionmax ne démontre pas à elle seule la pression de mesure, garder leFAD documentaire hors moteur. SHA-256 du document complet : 855ce551cd3fa5294b576c1865d99fbb9c2ae58ee346ac5459d24fd79899b9ad."
+      }
+    },
+    {
+      "id": "added:denair-da-18:review:2026-11-06-followup:denair-da-18:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:denair-da-18:2",
+      "productId": "denair-da-18",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b083a9fdb0c0ee4b006f7564559a6a2311c862164f938d8b40dbeec88afbef8d",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:denair-da-18:2",
+        "sourceUrl": "https://www.denair.net/uploads/DENAIR_Screw_Air_Compressor.pdf#page=1",
+        "sourceLabel": "DENAIR, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Table p5 : DA18,3,21 m³/mincolonne50Hz pourpression7,18,5 kW450 kg. 3,70 est60Hz et reste séparé. La colonne pressionmax ne démontre pas à elle seule la pression de mesure, garder leFAD documentaire hors moteur. SHA-256 du document complet : 855ce551cd3fa5294b576c1865d99fbb9c2ae58ee346ac5459d24fd79899b9ad."
+      }
+    },
+    {
+      "id": "added:denair-da-185-w:review:2026-11-06-followup:denair-da-185-w:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:denair-da-185-w:1",
+      "productId": "denair-da-185-w",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b25537c3ba96990e57e19ff742673ac89f48efc3a170292e9d9682fb7ea91c88",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:denair-da-185-w:1",
+        "sourceUrl": "https://www.denair.net/uploads/DENAIR_Screw_Air_Compressor.pdf#page=6",
+        "sourceLabel": "DENAIR, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Table p6 : DA185(W),33,63 m³/mincolonne50Hz pourpression7,185 kW et3550 kg. Les29,79 de60Hzà8 bar ne sont pas transférés ; point de mesureFAD distinct du maximum à confirmer. SHA-256 du document complet : 855ce551cd3fa5294b576c1865d99fbb9c2ae58ee346ac5459d24fd79899b9ad."
+      }
+    },
+    {
+      "id": "added:denair-da-185-w:review:2026-11-06-followup:denair-da-185-w:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:denair-da-185-w:2",
+      "productId": "denair-da-185-w",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8df97e6182f9ec9029ac09066438c2270ffd415b087d7b4c4017290a7cfff6e4",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:denair-da-185-w:2",
+        "sourceUrl": "https://www.denair.net/uploads/DENAIR_Screw_Air_Compressor.pdf#page=1",
+        "sourceLabel": "DENAIR, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Table p6 : DA185(W),33,63 m³/mincolonne50Hz pourpression7,185 kW et3550 kg. Les29,79 de60Hzà8 bar ne sont pas transférés ; point de mesureFAD distinct du maximum à confirmer. SHA-256 du document complet : 855ce551cd3fa5294b576c1865d99fbb9c2ae58ee346ac5459d24fd79899b9ad."
+      }
+    },
+    {
+      "id": "added:deprag-344-340-31u:review:2026-11-06-followup:deprag-344-340-31u:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:deprag-344-340-31u:1",
+      "productId": "deprag-344-340-31u",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "d209439cc7aa2849ee1e280adc0e625f76036428b9bdc29b29ec674f7f418457",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:deprag-344-340-31u:1",
+        "sourceUrl": "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3130/D3130en.pdf#page=12",
+        "sourceLabel": "DEPRAG, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "D3130 p12 identifie34434031U réversible3,5–6,5Nm/2400rpm, consommation1,1m³min; la variante sansU est4–8Nm/2800rpm. Pression de fonctionnement6,3bar et consommation sans régime ne prouvent pas un maximum de dimensionnement. Ne pas confondre les deux exécutions. SHA-256 du document complet : 9d445214624acd388e222274452a61e9bc2026c82f3d78fae74d146516a75dbd."
+      }
+    },
+    {
+      "id": "added:dynabrade-58506:review:2026-11-06-followup:dynabrade-58506:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:dynabrade-58506:1",
+      "productId": "dynabrade-58506",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "dbecea6a0f92a3c20c59f62bfc34d4a9e51e8da9273e2cdea81db7eeb0239fd8",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:dynabrade-58506:1",
+        "sourceUrl": "https://eu.dynabrade.com/assets/4c1ff1a3-4ab6-4a54-8fd2-9035a12b87e7/4074402509-pd19-01.pdf",
+        "sourceLabel": "Dynabrade, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Deuxnoticesfabricantcomplètesretrouvées : PD11.21donne112W/368Lmin/222mm/0,8kg ; PD19.01pourserialII10000Cetsuivantsdonne82W/340Lmin/218mm/0,82kg. L'anciencataloguerenvoieHTML. Exposerlesrévisionsetsuspendrelepointmoteuruniversel,sanschoisirunserialnonfourni. SHA-256 du document complet : f51710c924da6c06fc5bc2c4bb42cace40892715d6d695baf7eacb4ad88b310e."
+      }
+    },
+    {
+      "id": "added:dynabrade-58506:review:2026-11-06-followup:dynabrade-58506:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:dynabrade-58506:2",
+      "productId": "dynabrade-58506",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "d5d681980c835cedac28cc206c55c6b400783bb70b8eb2968aeec9207b11413c",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:dynabrade-58506:2",
+        "sourceUrl": "https://apac.dynabrade.com/assets/fb9fe882-959a-4faf-92ac-3b856635f3f1/4074397358-pd1121.pdf",
+        "sourceLabel": "Dynabrade, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Deuxnoticesfabricantcomplètesretrouvées : PD11.21donne112W/368Lmin/222mm/0,8kg ; PD19.01pourserialII10000Cetsuivantsdonne82W/340Lmin/218mm/0,82kg. L'anciencataloguerenvoieHTML. Exposerlesrévisionsetsuspendrelepointmoteuruniversel,sanschoisirunserialnonfourni. SHA-256 du document complet : 487fb5006430ce56a273f6c6713adc42b32c2fdae9969d6e42e106322a265b3e."
+      }
+    },
+    {
+      "id": "added:dynabrade-59024:review:2026-11-06-followup:dynabrade-59024:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:dynabrade-59024:1",
+      "productId": "dynabrade-59024",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "aa92c8f20a4725b919947b10062581bfb99d616a5e43fa0ba0c77443411ae52c",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:dynabrade-59024:1",
+        "sourceUrl": "https://us.dynabrade.com/assets/e858df50-da51-48b2-a733-91edf98776d6/4074400985-pd1422.pdf",
+        "sourceLabel": "Dynabrade, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Anciencataloguewww17redirigeversHTML, pasunPDF. NoticePD14.22actuelleexacte59024 : centrale5pouces/orbite5mm/184mm,applicableàpartirduserial14H1000H. Le débit396L/min doit rester documentaire tant que le tableau courant ne confirme pas son régime et son point ; ajouter la notice réelle. SHA-256 du document complet : f55d608f1bbce85a18a30c7b652b95650680acf063204df694811fa05c2a9895."
+      }
+    },
+    {
+      "id": "added:elgi-eg-15-60-hz-10-8-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe:review:2026-11-06-followup:elgi-eg-15-60-hz-10-8-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:elgi-eg-15-60-hz-10-8-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe:1",
+      "productId": "elgi-eg-15-60-hz-10-8-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "30f339f0924d52072a578d171188ef13d1bb176020570ca14713b299d21f1d92",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:elgi-eg-15-60-hz-10-8-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe:1",
+        "sourceUrl": "https://www.elgi.com/eu/wp-content/uploads/2019/10/eg-series-11-75-60hz.pdf#page=10",
+        "sourceLabel": "ELGi, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Table p10 : EG15 60Hz,2210 L/min à10,3 bar etmax10,8,15 kW,610 kg. ISO1217C documenté ; l'usage continu général EG n'établit pas un taux exact du groupe sous ces conditions60Hz. SHA-256 du document complet : 8bc82033cb7674d7a38e6b598e3a87555db6aab7601604f39a955080e166aa66."
+      }
+    },
+    {
+      "id": "added:elgi-eg-15-60-hz-10-8-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe:review:2026-11-06-followup:elgi-eg-15-60-hz-10-8-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:elgi-eg-15-60-hz-10-8-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe:2",
+      "productId": "elgi-eg-15-60-hz-10-8-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "13647b99403dbb2bc1554fe5fd917df4f6679feb1706f0376d40ad795f07e747",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:elgi-eg-15-60-hz-10-8-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe:2",
+        "sourceUrl": "https://www.elgi.com/eu/11-250-kw-eg-series-screw-compressors/",
+        "sourceLabel": "ELGi, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Table p10 : EG15 60Hz,2210 L/min à10,3 bar etmax10,8,15 kW,610 kg. ISO1217C documenté ; l'usage continu général EG n'établit pas un taux exact du groupe sous ces conditions60Hz. SHA-256 du document complet : 62416cba65917be904fe8544a86ce6fd5c50b7951591db58e5bf3a28e9559346."
+      }
+    },
+    {
+      "id": "added:elgi-eg-15-60-hz-12-6-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe:review:2026-11-06-followup:elgi-eg-15-60-hz-12-6-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:elgi-eg-15-60-hz-12-6-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe:1",
+      "productId": "elgi-eg-15-60-hz-12-6-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "16c544316d89bfe5efe0266b700eafe930e65e5ff7a8194086b3f68be2953983",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:elgi-eg-15-60-hz-12-6-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe:1",
+        "sourceUrl": "https://www.elgi.com/eu/wp-content/uploads/2019/10/eg-series-11-75-60hz.pdf#page=10",
+        "sourceLabel": "ELGi, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Table p10 : EG15 60Hz,1950 L/min à12,1 bar etmax12,6,15 kW. Conserver60Hz et pression de mesure distincte, ne pas en déduire une version européenne50Hz ou un cycle exact1. SHA-256 du document complet : 8bc82033cb7674d7a38e6b598e3a87555db6aab7601604f39a955080e166aa66."
+      }
+    },
+    {
+      "id": "added:elgi-eg-15-60-hz-12-6-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe:review:2026-11-06-followup:elgi-eg-15-60-hz-12-6-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:elgi-eg-15-60-hz-12-6-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe:2",
+      "productId": "elgi-eg-15-60-hz-12-6-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "589abc4e29f0bc7b73ece366d6a134e744e6691c355668d68f991ff9b3952387",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:elgi-eg-15-60-hz-12-6-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe:2",
+        "sourceUrl": "https://www.elgi.com/eu/11-250-kw-eg-series-screw-compressors/",
+        "sourceLabel": "ELGi, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Table p10 : EG15 60Hz,1950 L/min à12,1 bar etmax12,6,15 kW. Conserver60Hz et pression de mesure distincte, ne pas en déduire une version européenne50Hz ou un cycle exact1. SHA-256 du document complet : 62416cba65917be904fe8544a86ce6fd5c50b7951591db58e5bf3a28e9559346."
+      }
+    },
+    {
+      "id": "added:fiac-ax-253bd-dry-13-400-50-ce:review:2026-11-06-followup:fiac-ax-253bd-dry-13-400-50-ce:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:fiac-ax-253bd-dry-13-400-50-ce:1",
+      "productId": "fiac-ax-253bd-dry-13-400-50-ce",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "df1eebcd728b42927b052a38e5303c2eddab0e40082366c8bd6867ac530b2f4f",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:fiac-ax-253bd-dry-13-400-50-ce:1",
+        "sourceUrl": "https://shop.fiac.it/en-IT/products/4152026246/ax-253bd-dry-13-40050-ce",
+        "sourceLabel": "FIAC, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Réf. 4152026246 confirmée catalogue p35 : 2300 L/min, max13 bar, 18,5 kW et 434 kg pour 253BD DRY. La fiche web donne 18,6 kW. Les colonnes pression maximale/FAD ne prouvent pas seules la pression de mesure ; préserver le conflit et demander confirmation avant calcul. SHA-256 du document complet : faf1d3ce152aff8ac997c4238f5b038611b6bef40a50c9e0b51ac1aecbfdeb66."
+      }
+    },
+    {
+      "id": "added:fiac-ax-253bd-dry-13-400-50-ce:review:2026-11-06-followup:fiac-ax-253bd-dry-13-400-50-ce:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:fiac-ax-253bd-dry-13-400-50-ce:2",
+      "productId": "fiac-ax-253bd-dry-13-400-50-ce",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "2972ebef6ac3cab708b632e658cdeb6ccd20682be030620057cbf674a521051a",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:fiac-ax-253bd-dry-13-400-50-ce:2",
+        "sourceUrl": "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf#page=35",
+        "sourceLabel": "FIAC, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Réf. 4152026246 confirmée catalogue p35 : 2300 L/min, max13 bar, 18,5 kW et 434 kg pour 253BD DRY. La fiche web donne 18,6 kW. Les colonnes pression maximale/FAD ne prouvent pas seules la pression de mesure ; préserver le conflit et demander confirmation avant calcul. SHA-256 du document complet : 55421a11ceb9c201bd873f1d0e4596ea6682b7fd68fc5e03e0c380ddf879ac85."
+      }
+    },
+    {
+      "id": "added:fiac-ax-253bd-dry-8-400-50-ce:review:2026-11-06-followup:fiac-ax-253bd-dry-8-400-50-ce:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:fiac-ax-253bd-dry-8-400-50-ce:1",
+      "productId": "fiac-ax-253bd-dry-8-400-50-ce",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "12bc543aabff5ee2bf2d8c9457ffe5cd204e9a92b7f0a5cd803c6551025dfc9a",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:fiac-ax-253bd-dry-8-400-50-ce:1",
+        "sourceUrl": "https://shop.fiac.it/en-IT/products/4152026244/ax-253bd-dry-8-40050-ce",
+        "sourceLabel": "FIAC, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Réf. 4152026244 catalogue p35 : 3110 L/min, max8 bar, 18,5 kW, 1585 × 780 × 1220 mm et 434 kg. Web 18,6 kW : conflit à conserver. Ne pas transformer le maximum8 bar en point FAD sans note de mesure applicable. SHA-256 du document complet : 82e563a9e5a458804652d0e249fda4e5fb64685f8f86259b16c982c768934c24."
+      }
+    },
+    {
+      "id": "added:fiac-ax-253bd-dry-8-400-50-ce:review:2026-11-06-followup:fiac-ax-253bd-dry-8-400-50-ce:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:fiac-ax-253bd-dry-8-400-50-ce:2",
+      "productId": "fiac-ax-253bd-dry-8-400-50-ce",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a0d6a5cdf78d2554d09fb946ad000412acf78084554ea73283ed35c40c05daeb",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:fiac-ax-253bd-dry-8-400-50-ce:2",
+        "sourceUrl": "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf#page=35",
+        "sourceLabel": "FIAC, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Réf. 4152026244 catalogue p35 : 3110 L/min, max8 bar, 18,5 kW, 1585 × 780 × 1220 mm et 434 kg. Web 18,6 kW : conflit à conserver. Ne pas transformer le maximum8 bar en point FAD sans note de mesure applicable. SHA-256 du document complet : 55421a11ceb9c201bd873f1d0e4596ea6682b7fd68fc5e03e0c380ddf879ac85."
+      }
+    },
+    {
+      "id": "added:fiam-15c2ap:review:2026-11-06-followup:fiam-15c2ap:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:fiam-15c2ap:1",
+      "productId": "fiam-15c2ap",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b4baf3008d4dfd175a4d5bf41156fd50e25a81be4908675227edf0960358a8b7",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:fiam-15c2ap:1",
+        "sourceUrl": "https://www.fiamgroup.com/en/products/handheld-air-screwdrivers/15c2ap/",
+        "sourceLabel": "Fiam, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Fiche112514532 :15C2AP2200rpm,0,6–2,2Nm,0,70kg et6Ls;15C2A sansP publie4Ls. Le régime n’est pas précisé et la brochure9 présente aussiAPA/APA3I. Conserver360Lmin hors usage conclusif; vérifier exécution exacte plutôt que transférer la commande. SHA-256 du document complet : 41521cbcc420482b1aa687d90306757011eb241d513bacf587aee23b406394b0."
+      }
+    },
+    {
+      "id": "added:fiam-15c2ap:review:2026-11-06-followup:fiam-15c2ap:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:fiam-15c2ap:2",
+      "productId": "fiam-15c2ap",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c8d1e325e03df5a8bb8e6ab175ef2815e90d5b2cdb9ddb1fc62d92a35cdee974",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:fiam-15c2ap:2",
+        "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-85.pdf#page=9",
+        "sourceLabel": "Fiam, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Fiche112514532 :15C2AP2200rpm,0,6–2,2Nm,0,70kg et6Ls;15C2A sansP publie4Ls. Le régime n’est pas précisé et la brochure9 présente aussiAPA/APA3I. Conserver360Lmin hors usage conclusif; vérifier exécution exacte plutôt que transférer la commande. SHA-256 du document complet : e1c8db38588668ff2347c0005a43ac3067609b0b280d80dc3548f0d8043dccce."
+      }
+    },
+    {
+      "id": "added:fiam-fde60pa:review:2026-11-06-followup:fiam-fde60pa:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:fiam-fde60pa:1",
+      "productId": "fiam-fde60pa",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "9a9e5571c1cc5e13fe25f4dad6d16452d6b87b54f124b0f6aa416d0c44f82139",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:fiam-fde60pa:1",
+        "sourceUrl": "https://www.fiamgroup.com/en/products/air-drills/fde60pa/",
+        "sourceLabel": "Fiam, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Fiche124611550 etbrochure13 :FDE60PA,mandrinautoserrant1–10,6000rpm,1,080kg/10Ls. FDE26P estsansmandrin2600rpm. Le régime10Ls n’est pas attesté encharge; préserver600Lmin documentaire sans conclusion débit. SHA-256 du document complet : c79cd6f8e5352f1619e4b185171d0cfd862d66379df0c734c3df97ecaada199a."
+      }
+    },
+    {
+      "id": "added:fiam-fde60pa:review:2026-11-06-followup:fiam-fde60pa:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:fiam-fde60pa:2",
+      "productId": "fiam-fde60pa",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a4f48f9dab7910546f09a98e35db98e1012f71b8d579e59b721c3d26b2bd9d7d",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:fiam-fde60pa:2",
+        "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf#page=13",
+        "sourceLabel": "Fiam, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Fiche124611550 etbrochure13 :FDE60PA,mandrinautoserrant1–10,6000rpm,1,080kg/10Ls. FDE26P estsansmandrin2600rpm. Le régime10Ls n’est pas attesté encharge; préserver600Lmin documentaire sans conclusion débit. SHA-256 du document complet : 4bc7b8a199880ed886511848f97c3d61ae9b8a50dbb5f0f0318dddc819dcbf62."
+      }
+    },
+    {
+      "id": "added:fiam-smy50d2:review:2026-11-06-followup:fiam-smy50d2:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:fiam-smy50d2:1",
+      "productId": "fiam-smy50d2",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8a940529f9da984ccd7197043cc70db15aa23ae2b605f0192dad312fe5b6e472",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:fiam-smy50d2:1",
+        "sourceUrl": "https://www.fiamgroup.com/en/products/grinders-and-sanders/smy50d2/",
+        "sourceLabel": "Fiam, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Fiche146313007 etbrochure7 :SMY50D2,400W/15000rpm,pince6mm,meule50mm,1,30kg/10Ls;11SM10D/9SM03DT sont d’autres tailles. Régime non précisé:600Lmin ne doit pas devenir débit maximal de calcul. SHA-256 du document complet : 2d9867227e3c82d507ca2998a1a7bcd9d14f021a608010ef9bc79b1c243495cb."
+      }
+    },
+    {
+      "id": "added:fiam-smy50d2:review:2026-11-06-followup:fiam-smy50d2:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:fiam-smy50d2:2",
+      "productId": "fiam-smy50d2",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "08331e81193a76f7eccb4550ec13020ccb7b904c1b4ac63174543d180e682645",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:fiam-smy50d2:2",
+        "sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-44.pdf#page=7",
+        "sourceLabel": "Fiam, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Fiche146313007 etbrochure7 :SMY50D2,400W/15000rpm,pince6mm,meule50mm,1,30kg/10Ls;11SM10D/9SM03DT sont d’autres tailles. Régime non précisé:600Lmin ne doit pas devenir débit maximal de calcul. SHA-256 du document complet : 01b152f269aeae367daa8a9524f083a1679707b0a3eff4daa59bcec83635f6de."
+      }
+    },
+    {
+      "id": "added:hertz-frecon-plus-pm-75:review:2026-11-06-followup:hertz-frecon-plus-pm-75:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:hertz-frecon-plus-pm-75:1",
+      "productId": "hertz-frecon-plus-pm-75",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8c1b7257d74d02f09d05976e0c2dac65adc75411b333d612b99daf0afac4674c",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:hertz-frecon-plus-pm-75:1",
+        "sourceUrl": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf#page=20",
+        "sourceLabel": "Hertz, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Table PDF20 relue : FRECON PLUS PM75, plage FAD 3,25–12,76 m³/min à10bar,75kW et1130kg. Le point3250L/min est volontairement le minimum VSD et reste conservé ; expliciter le maximum12760 séparément sans le garantir à toute vitesse. Cycle de service non documenté. SHA-256 du document complet : e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339."
+      }
+    },
+    {
+      "id": "added:hertz-frecon-plus-pm-75:review:2026-11-06-followup:hertz-frecon-plus-pm-75:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:hertz-frecon-plus-pm-75:2",
+      "productId": "hertz-frecon-plus-pm-75",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "048ba1fec4b21fe0f1a6ddc6dd39510864c51708efaf83be508fcc0a889f348a",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:hertz-frecon-plus-pm-75:2",
+        "sourceUrl": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf#page=17",
+        "sourceLabel": "Hertz, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Table PDF20 relue : FRECON PLUS PM75, plage FAD 3,25–12,76 m³/min à10bar,75kW et1130kg. Le point3250L/min est volontairement le minimum VSD et reste conservé ; expliciter le maximum12760 séparément sans le garantir à toute vitesse. Cycle de service non documenté. SHA-256 du document complet : e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339."
+      }
+    },
+    {
+      "id": "added:ktc-compack-3:review:2026-11-06-followup:ktc-compack-3:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:ktc-compack-3:1",
+      "productId": "ktc-compack-3",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "97d09378034ab75ce2df256db2d58abb350ef43b5dbb6a7340130c53e1dfc117",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:ktc-compack-3:1",
+        "sourceUrl": "https://www.ktc-air.com/uploaded_files/attachments/202511171763374769/ktc_compack_2_3_smart_en.pdf#page=3",
+        "sourceLabel": "KTC, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Table p3 : code1860323507,4 kW400V50Hz,2,5 L,48 kg,67 ×40 ×50 cm. Airflow380 L/min et pressionmax10 bar sont publiés côteàcôte sans note de mesure explicite ; garder380 documentaire et suspendre le point moteur. SHA-256 du document complet : fb8e9e3d886333a85e6b0fd720cf06c451a2fc0826c8f816c536109d9bcb06ea."
+      }
+    },
+    {
+      "id": "added:ktc-kme-c-11-270-e:review:2026-11-06-followup:ktc-kme-c-11-270-e:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:ktc-kme-c-11-270-e:1",
+      "productId": "ktc-kme-c-11-270-e",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "d45f4b09560929b0fa812e51f14a210a058fa37a8efbda4269cc429a89073ba5",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:ktc-kme-c-11-270-e:1",
+        "sourceUrl": "https://www.ktc-air.com/uploaded_files/attachments/202511171763376673/ktc_kme_c_plus_4_55_en.pdf?track_download=true#page=4",
+        "sourceLabel": "KTC, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Table p4 : code161062304,11 kW,270 L avec sécheur,V75,1462 L/min etpressionmax10. La pression maximale ne suffit pas à prouver le point de mesureFAD ; garder cette valeur dans les specs et courbe vide jusqu'à preuve exacte. SHA-256 du document complet : 90262fa5be288a704088e70f800049ab76cec4331e237b1b7d65d338ea95d4ac."
+      }
+    },
+    {
+      "id": "added:ktc-kme-c-11-270-e:review:2026-11-06-followup:ktc-kme-c-11-270-e:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:ktc-kme-c-11-270-e:2",
+      "productId": "ktc-kme-c-11-270-e",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "abc5b9a4757ff22d246f8ec90d8c1e9d938fb285d4c128ffd0a2aed1eb731f95",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:ktc-kme-c-11-270-e:2",
+        "sourceUrl": "https://www.ktc-air.com/uploaded_files/attachments/202511171763376673/ktc_kme_c_plus_4_55_en.pdf?track_download=true#page=2",
+        "sourceLabel": "KTC, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Table p4 : code161062304,11 kW,270 L avec sécheur,V75,1462 L/min etpressionmax10. La pression maximale ne suffit pas à prouver le point de mesureFAD ; garder cette valeur dans les specs et courbe vide jusqu'à preuve exacte. SHA-256 du document complet : 90262fa5be288a704088e70f800049ab76cec4331e237b1b7d65d338ea95d4ac."
+      }
+    },
+    {
+      "id": "added:lupamat-lkv-5-5-mitk:review:2026-11-06-followup:lupamat-lkv-5-5-mitk:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:lupamat-lkv-5-5-mitk:1",
+      "productId": "lupamat-lkv-5-5-mitk",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "3682c3b9ffb8f23494e3258a787314027accd9dba77e2a39ba0c64051871f3ee",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:lupamat-lkv-5-5-mitk:1",
+        "sourceUrl": "https://lupamat.com/pdf/Lupamat-EN-Katalog.pdf#page=13",
+        "sourceLabel": "Lupamat, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Catalogue p13 : LKV5,5MITK,cuve548 L avec sécheur,5,5 kW,0,59 m³/min pourversion13. ColonneMaxWorkingPressure etnormeISO1217C ne donnent pas ici une note de pression de mesure ; conserver la déclaration sans calcul à13 présumé. SHA-256 du document complet : 3330cc258da3e7cf4f293c5af0da2ae3ced11d881237b550687f50e1f01fd978."
+      }
+    },
+    {
+      "id": "added:lupamat-lkv-7-5-mit:review:2026-11-06-followup:lupamat-lkv-7-5-mit:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:lupamat-lkv-7-5-mit:1",
+      "productId": "lupamat-lkv-7-5-mit",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a31f4833f01fe39fff2f8abd941d7a1c9601c2f89a462999ca8164f646a9cdac",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:lupamat-lkv-7-5-mit:1",
+        "sourceUrl": "https://lupamat.com/pdf/Lupamat-EN-Katalog.pdf#page=13",
+        "sourceLabel": "Lupamat, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Catalogue p13 : LKV7,5MITsur548 L sans sécheur,7,5 kW,0,82 m³/min pourversion13. Différent duMITK ; mesureFADà13 non explicitée indépendamment de la pressionmax, suspendre le point moteur. SHA-256 du document complet : 3330cc258da3e7cf4f293c5af0da2ae3ced11d881237b550687f50e1f01fd978."
+      }
+    },
+    {
+      "id": "added:meuleuse-desoutter-c27-lx300-t6-90-6151761280:review:2026-11-06-followup:meuleuse-desoutter-c27-lx300-t6-90-6151761280:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:meuleuse-desoutter-c27-lx300-t6-90-6151761280:1",
+      "productId": "meuleuse-desoutter-c27-lx300-t6-90-6151761280",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "afc6b66a03a5154d8a27947eaa7137c1ca66c09e0109e08fd7ada028c6bf3862",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:meuleuse-desoutter-c27-lx300-t6-90-6151761280:1",
+        "sourceUrl": "https://www.datocms-assets.com/104564/1789974097-desoutter_general_catalog_fr_2026-09.pdf#page=307",
+        "sourceLabel": "Desoutter, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Catalogue complet p307 : code6151761280,C27-LX300-T6-90BRB,300 tr/min,291,5 mm et0,82 kg,8 L/s à vide. La page actuelle porte désormais la même désignation LX ; la mention BX de fiche individuelle doit être datée comme ancienne observation. Débit variable conservé. SHA-256 du document complet : 7d2121c4aeb36c31bde784ba6ddcebee83686fb4883c6b63005d0e569613304c."
+      }
+    },
+    {
+      "id": "added:meuleuse-desoutter-c27-lx300-t6-90-6151761280:review:2026-11-06-followup:meuleuse-desoutter-c27-lx300-t6-90-6151761280:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:meuleuse-desoutter-c27-lx300-t6-90-6151761280:2",
+      "productId": "meuleuse-desoutter-c27-lx300-t6-90-6151761280",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a27806503b8c734b3c87d1b9c7924f60554f064d0bd747fb6095cfc0d3b41737",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:meuleuse-desoutter-c27-lx300-t6-90-6151761280:2",
+        "sourceUrl": "https://www.desouttertools.com/en-us/products/6151761280",
+        "sourceLabel": "Desoutter, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Catalogue complet p307 : code6151761280,C27-LX300-T6-90BRB,300 tr/min,291,5 mm et0,82 kg,8 L/s à vide. La page actuelle porte désormais la même désignation LX ; la mention BX de fiche individuelle doit être datée comme ancienne observation. Débit variable conservé. SHA-256 du document complet : 778f782f3ed8646ba0a1e971fd3b9b1b5eddd572e3c3610547230b88a08d6287."
+      }
+    },
+    {
+      "id": "added:meuleuse-desoutter-c27-lx300-t6-90-6151761280:review:2026-11-06-followup:meuleuse-desoutter-c27-lx300-t6-90-6151761280:3:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:meuleuse-desoutter-c27-lx300-t6-90-6151761280:3",
+      "productId": "meuleuse-desoutter-c27-lx300-t6-90-6151761280",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "1955ee2601cc35e97b0ad9030978176e76034206b45859011c1eb15ab40a5c2a",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:meuleuse-desoutter-c27-lx300-t6-90-6151761280:3",
+        "sourceUrl": "https://www.datocms-assets.com/104564/1789974097-desoutter_general_catalog_fr_2026-09.pdf#page=345",
+        "sourceLabel": "Desoutter, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Catalogue complet p307 : code6151761280,C27-LX300-T6-90BRB,300 tr/min,291,5 mm et0,82 kg,8 L/s à vide. La page actuelle porte désormais la même désignation LX ; la mention BX de fiche individuelle doit être datée comme ancienne observation. Débit variable conservé. SHA-256 du document complet : 7d2121c4aeb36c31bde784ba6ddcebee83686fb4883c6b63005d0e569613304c."
+      }
+    },
+    {
+      "id": "added:meuleuse-puma-at-7437:review:2026-11-06-followup:meuleuse-puma-at-7437:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:meuleuse-puma-at-7437:1",
+      "productId": "meuleuse-puma-at-7437",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "0bd4b6c6bada3e73014daabdb0081ad768c4f5a6a8c3e2d4d94224891884c61d",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:meuleuse-puma-at-7437:1",
+        "sourceUrl": "https://www.pumaair.com/product-Air-Die-Grinder-AirDieGrinder-.html",
+        "sourceLabel": "PUMA, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "La table fabricantAT7437 elle-même est décalée :FreeSpeedRPM=1/4pouce,Colletinch=25000,AirInlet=160,masse283lb. Ne pas conserver ces cellules comme caractéristiques interprétées ni réordonner àl’intuition. Remplacer les affirmations absurdes par la lignebrute et la demande de confirmation, moteur nonconclusif. SHA-256 du document complet : 08b9f9c7d1898261da064b9521bc097278817d20a1ebb50c4f75c23188e0a7c7."
+      }
+    },
+    {
+      "id": "added:meuleuse-top-cat-300ehk-30000-1-4:review:2026-11-06-followup:meuleuse-top-cat-300ehk-30000-1-4:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:meuleuse-top-cat-300ehk-30000-1-4:1",
+      "productId": "meuleuse-top-cat-300ehk-30000-1-4",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "1cecec5b66688abdc2099bf64240c98f070fe076e3086fa62114e5e8fd815c7f",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:meuleuse-top-cat-300ehk-30000-1-4:1",
+        "sourceUrl": "https://www.intlairtool.com/content/catalogs-page-pdfs/Top-Cat-Air-Tools.pdf",
+        "sourceLabel": "Top Cat, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Catalogue configuration300EHK;30000;1/4p48 : levier sécurité,pince1/4,30000tr/min. Les11,8L/s maximum sont documentaires ; la consigne90psi maximum ne prouve pas la pression de mesure de consommation. Garder le débit hors moteur. SHA-256 du document complet : 4b4cea2c0cb0cfea87b1e287908e271388254005eda2136bb116549893decf7a."
+      }
+    },
+    {
+      "id": "added:meuleuse-tranmax-tpt-472:review:2026-11-06-followup:meuleuse-tranmax-tpt-472:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:meuleuse-tranmax-tpt-472:1",
+      "productId": "meuleuse-tranmax-tpt-472",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b0db7acbdb2d81d011691e5163b059ca0d47343bbf45700d94df9b6d09e21d6e",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:meuleuse-tranmax-tpt-472:1",
+        "sourceUrl": "https://ss-client-website.s3-ap-northeast-1.amazonaws.com/tranmax/2023_01_09_113224_2212-Professional-Power-Tools-TP.pdf#page=23",
+        "sourceLabel": "Tranmax, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "PDF23 : Air File,3700 courses/min,course10 mm,234 mm et1 kg,contreTPT473course5/3400/min. Ce n'est pas une meuleuse : corriger catégorie et désignation vers lime alternative. Moyenne48 L/min hors calcul. SHA-256 du document complet : c2e29dbb1f9d433e1d65568bc327d3ea21eadd7d39f8edbb0d98145850f7c7d2."
+      }
+    },
+    {
+      "id": "added:mirka-rop2-512nv:review:2026-11-06-followup:mirka-rop2-512nv:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:mirka-rop2-512nv:1",
+      "productId": "mirka-rop2-512nv",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "ce99e0ac479503c8931b7253e08d4d65526407440be330f9f75be8eda4f76589",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:mirka-rop2-512nv:1",
+        "sourceUrl": "https://cms.mirka.com/globalassets/msc/pdf/mirka-product-catalog-2022-low-res.pdf#page=118",
+        "sourceLabel": "Mirka, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Catalogue p118 : 594 L/min, 343 W, 125 mm, orbite 12 mm et code 8994220311 confirmés ; ROP2 312NV est en 77 mm. La colonne Air consumption ne précise pas son régime, donc la pression de service seule ne justifie pas le dimensionnement. SHA-256 du document complet : 2ced0651411b4d8c2cd50ec1e250c15d9fda73d452ffd72b2a9cbe8910647fc2."
+      }
+    },
+    {
+      "id": "added:mirka-ros-325db:review:2026-11-06-followup:mirka-ros-325db:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:mirka-ros-325db:1",
+      "productId": "mirka-ros-325db",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "3b0836b627e7e48f627f4b968f54af3b19d9e0a3dd6934fea8fdf96675461bf2",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:mirka-ros-325db:1",
+        "sourceUrl": "https://cms.mirka.com/globalassets/msc/pdf/mirka-product-catalog-2022-low-res.pdf#page=110",
+        "sourceLabel": "Mirka, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Catalogue p110 : code 8993425111, plateau 77 mm, orbite 2,5 mm, sac à poussière, 481 L/min et 209 W ; ROS325CV est à aspiration centralisée. La consommation n'a pas de régime documenté. SHA-256 du document complet : 2ced0651411b4d8c2cd50ec1e250c15d9fda73d452ffd72b2a9cbe8910647fc2."
+      }
+    },
+    {
+      "id": "added:nitto-kohki-jt-20:review:2026-11-06-followup:nitto-kohki-jt-20:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:nitto-kohki-jt-20:1",
+      "productId": "nitto-kohki-jt-20",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "0e67925b6f83055781f45350b5e96f3a1f3c18e25979667e88fce429842a8902",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:nitto-kohki-jt-20:1",
+        "sourceUrl": "https://www.nitto-kohki.eu/images/stories/products/pdf_catalogs/Tools_Catalog.pdf#page=34",
+        "sourceLabel": "Nitto Kohki, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "ToolsCatalog p34 confirmeJT20,0,20m³min explicitementNo-loadà0,6MPa,12aiguilles3×180mm,contreJT16 sixaiguilleset0,16. Valeuràvide200Lmin utilisée sans airflowBasis actuellement; conserver le régime free-speed pour éviter une conclusion encharge. SHA-256 du document complet : 96df5508b9819bc71611f875b35af9e282e5bb0bf62e324aab2ab87698867bac."
+      }
+    },
+    {
+      "id": "added:ozen-osc-132-s:review:2026-11-06-followup:ozen-osc-132-s:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:ozen-osc-132-s:1",
+      "productId": "ozen-osc-132-s",
+      "productType": "compressor",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "f5ccd0d820fefcf437218346e7eb517ca6049e656f66f0f62b906b0421cf3f78",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:ozen-osc-132-s:1",
+        "sourceUrl": "https://ozenkompresor.com.tr/wp-content/uploads/2026/01/katalog-2025.pdf#page=38",
+        "sourceLabel": "Ozen, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Table p38 : OSC132S18,3 m³/min pourversion13 bar,132 kW,4585 kg. La note donnant mesure12,5 bar désigneSHD et nonOSC-S : portée ambiguë, ne pas transposer cette pression au moteur sans confirmation fabricant. SHA-256 du document complet : cfcfbd23c05cfe5db69ec1bb59c552a6543cf1597869b67811a985d1b7458b60."
+      }
+    },
+    {
+      "id": "added:perceuse-desoutter-dr300-t2000-s6-360-6151761540:review:2026-11-06-followup:perceuse-desoutter-dr300-t2000-s6-360-6151761540:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:perceuse-desoutter-dr300-t2000-s6-360-6151761540:1",
+      "productId": "perceuse-desoutter-dr300-t2000-s6-360-6151761540",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "db2a5ea42c0dc8b1ee8b3f35ee96008730f7a8f36efee1f4ae21bc8b4090713c",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:perceuse-desoutter-dr300-t2000-s6-360-6151761540:1",
+        "sourceUrl": "https://www.datocms-assets.com/104564/1789974097-desoutter_general_catalog_fr_2026-09.pdf#page=297",
+        "sourceLabel": "Desoutter, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Catalogue p297 et fiche actuelle : DR300-T2000-S6-360,300 W/2000 tr/min/tête360°. La sortie est une broche1/4 ×28, pas une pince1/4. Corriger l'interface ;570 L/min à vide restent exclus, sans revendiquer un recoupement numérique absent. SHA-256 du document complet : 7d2121c4aeb36c31bde784ba6ddcebee83686fb4883c6b63005d0e569613304c."
+      }
+    },
+    {
+      "id": "added:perceuse-desoutter-dr300-t2000-s6-360-6151761540:review:2026-11-06-followup:perceuse-desoutter-dr300-t2000-s6-360-6151761540:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:perceuse-desoutter-dr300-t2000-s6-360-6151761540:2",
+      "productId": "perceuse-desoutter-dr300-t2000-s6-360-6151761540",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "1c90be6c9e5056266125df9a6048461df1afa7d181ff517a5e9ce3e0c2e18f58",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:perceuse-desoutter-dr300-t2000-s6-360-6151761540:2",
+        "sourceUrl": "https://www.desouttertools.com/en-us/products/6151761540",
+        "sourceLabel": "Desoutter, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Catalogue p297 et fiche actuelle : DR300-T2000-S6-360,300 W/2000 tr/min/tête360°. La sortie est une broche1/4 ×28, pas une pince1/4. Corriger l'interface ;570 L/min à vide restent exclus, sans revendiquer un recoupement numérique absent. SHA-256 du document complet : 44225886b7250fc630e26a7db65c8a36b73cd3ea4041fec7084b340623e49c5c."
+      }
+    },
+    {
+      "id": "added:perceuse-desoutter-dr300-t2000-s6-360-6151761540:review:2026-11-06-followup:perceuse-desoutter-dr300-t2000-s6-360-6151761540:3:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:perceuse-desoutter-dr300-t2000-s6-360-6151761540:3",
+      "productId": "perceuse-desoutter-dr300-t2000-s6-360-6151761540",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "ce3a992e764ea4b4c3df75981ce985fe9d66416f4236c4179d3329330413631c",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:perceuse-desoutter-dr300-t2000-s6-360-6151761540:3",
+        "sourceUrl": "https://www.datocms-assets.com/104564/1789974097-desoutter_general_catalog_fr_2026-09.pdf#page=345",
+        "sourceLabel": "Desoutter, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Catalogue p297 et fiche actuelle : DR300-T2000-S6-360,300 W/2000 tr/min/tête360°. La sortie est une broche1/4 ×28, pas une pince1/4. Corriger l'interface ;570 L/min à vide restent exclus, sans revendiquer un recoupement numérique absent. SHA-256 du document complet : 7d2121c4aeb36c31bde784ba6ddcebee83686fb4883c6b63005d0e569613304c."
+      }
+    },
+    {
+      "id": "added:perceuse-top-cat-300d36mk-825-d3-8:review:2026-11-06-followup:perceuse-top-cat-300d36mk-825-d3-8:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:perceuse-top-cat-300d36mk-825-d3-8:1",
+      "productId": "perceuse-top-cat-300d36mk-825-d3-8",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b2fc6ce3944afe043f16f59f2cdcd141c004278eda4e5c920fd3953d8edefaf0",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:perceuse-top-cat-300d36mk-825-d3-8:1",
+        "sourceUrl": "https://www.intlairtool.com/content/catalogs-page-pdfs/Top-Cat-Air-Tools.pdf",
+        "sourceLabel": "Top Cat, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Catalogue p70 : réducteur36:1,levier sécurité,825tr/min,mandrin3/8. Consommation11,8L/s publiée maximale mais sans point de mesure démontré par la seule pression maximale90psi. Ne pas dimensionner une charge à6,2bar présumée. SHA-256 du document complet : 4b4cea2c0cb0cfea87b1e287908e271388254005eda2136bb116549893decf7a."
+      }
+    },
+    {
+      "id": "added:pferd-mst-32-dv-m:review:2026-11-06-followup:pferd-mst-32-dv-m:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:pferd-mst-32-dv-m:1",
+      "productId": "pferd-mst-32-dv-m",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "90e6f7f529e74cccdd3c2923d92c3b6837ae01fc70557433b821efe38213d866",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:pferd-mst-32-dv-m:1",
+        "sourceUrl": "https://fr.pferd.com/fr/crayon-de-marquage-pneumatique-mst-32-dv?a%5Bwidth-needle-tds%5D=M+%28moyenne%29",
+        "sourceLabel": "PFERD, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Fiche 80600140 : charge 0,02 m³/min et vide 0,03, pointe M et 32000 courses/min. Le moteur utilise le débit à vide de 30 L/min comme besoin en charge. Conserver les deux valeurs, exclure le débit à vide du calcul ; la pression de service 6,3 bar ne prouve pas leur point de mesure. SHA-256 du document complet : 8e423d6100e7ed0f6ffdbe362be63a510f23149cd2d28120568be728ec2ee25d."
+      }
+    },
+    {
+      "id": "added:pferd-pba-4-160-hv-ova:review:2026-11-06-followup:pferd-pba-4-160-hv-ova:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:pferd-pba-4-160-hv-ova:1",
+      "productId": "pferd-pba-4-160-hv-ova",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "caa42b125af680cb8f2c7a786f492ed7dd2d0badb791632ad4cf30123c0093e9",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:pferd-pba-4-160-hv-ova:1",
+        "sourceUrl": "https://fr.pferd.com/fr/ponceuse-a-bande-pneumatique-pba-4160-hv-ova",
+        "sourceLabel": "PFERD, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Fiche 80705012 : charge 0,6 m³/min et vide 0,55, bande 520 × 3–20 mm, 370 W, 19,3 m/s. oVA signifie sans bras adaptateur, différence avec 80705011 ; pression de mesure du débit non établie par le seul champ pression de service. SHA-256 du document complet : 0048448f729fdaab34702e94c3374fd3d56ad41e2a3cb7804dcd41f7af5bdfc5."
+      }
+    },
+    {
+      "id": "added:pferd-pfga-07-220:review:2026-11-06-followup:pferd-pfga-07-220:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:pferd-pfga-07-220:1",
+      "productId": "pferd-pfga-07-220",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "4b8e6bf4feba32af0de4202edad525787bd6d5e2c9698d538c8e2b1dc75ff75d",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:pferd-pfga-07-220:1",
+        "sourceUrl": "https://fr.pferd.com/fr/appareil-a-limer-pneumatique-pfga-07220",
+        "sourceLabel": "PFERD, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Fiche 80600200 : course 0,7 mm, 22000 courses/min, 0,18 kg, charge 0,03 m³/min et vide 0,05. Les 50 L/min à vide ne dimensionnent pas la charge ; service 4 bar conservé sans en faire le point de mesure du débit. SHA-256 du document complet : 2c1833b535a8a082dd6dce117504329b1c242098a30dd3af0dbf1bc530656dce."
+      }
+    },
+    {
+      "id": "added:pferd-pg-8-100-hv:review:2026-11-06-followup:pferd-pg-8-100-hv:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:pferd-pg-8-100-hv:1",
+      "productId": "pferd-pg-8-100-hv",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c8bf71411263486c4dd74099c7354921d78030b4f1907bb01f0fd5d0140f575f",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:pferd-pg-8-100-hv:1",
+        "sourceUrl": "https://fr.pferd.com/fr/meuleuse-droite-pneumatique-pg-8100?a%5Btype-tds%5D=sans+prolongateur&a%5Bthrottle-type-tds%5D=Levier&a%5Bpferd-type-tds%5D=PG+8%2F100+HV",
+        "sourceLabel": "PFERD, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Fiche 80107011 : pince 6 mm, 10000 tr/min, 600 W, 0,95 kg ; charge 0,85 m³/min et vide 0,17. Débits à conserver dans les spécifications, sans pression de mesure démontrée par le seul champ service 6,3 bar. SHA-256 du document complet : 9be88e7262cff0c6846f6633d0ecb67992a67c4de12de41c4b1e90900dc3ac70."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:1",
+      "productId": "pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "1769aef43bb6ebffaa9f25fb15791683e42d69a4551f227b4dc4ce11368fb06d",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:1",
+        "sourceUrl": "https://www.sata.com/media/8d/95/61/1793362235/BAL-SATAJET-1000-B.PDF.PDF?ts=1793362235",
+        "sourceLabel": "SATA, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Noticeactuelle retrouvée surfiche149385 : cheminmedia8d/95/61/1793362235,GET200PDFcomplet6,17Mo. p114 confirme350Nl/minà2barHVLP,604gavecgodet0,6L et13–17cm ; p115/118/119règlentl'usage dynamique. Ancienne notice404 à remplacer dans les références courantes en conservant sa preuve historique. SHA-256 du document complet : fcb179890de6fb84bab9465d6c4a3dd5f60da7f75fdd591b1ac219a02e558f45."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:2",
+      "productId": "pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "4c1d4be63f8067aa2bc3499ad2a171b655ec15a619aa72ec34b0d508257f0ad5",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:2",
+        "sourceUrl": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806#page=38",
+        "sourceLabel": "SATA, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Noticeactuelle retrouvée surfiche149385 : cheminmedia8d/95/61/1793362235,GET200PDFcomplet6,17Mo. p114 confirme350Nl/minà2barHVLP,604gavecgodet0,6L et13–17cm ; p115/118/119règlentl'usage dynamique. Ancienne notice404 à remplacer dans les références courantes en conservant sa preuve historique. SHA-256 du document complet : 36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual114:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual114",
+      "productId": "pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "eb40dda7d2bea1fb899b855f512296924c161beb6519e2f5b28f241083392ba8",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual114",
+        "sourceUrl": "https://www.sata.com/media/8d/95/61/1793362235/BAL-SATAJET-1000-B.PDF.PDF?ts=1793362235#page=114",
+        "sourceLabel": "SATA, document technique officiel, page PDF 114",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Notice actuelle complète lue pages 114,115,118,119 ; SHA-256 fcb179890de6fb84bab9465d6c4a3dd5f60da7f75fdd591b1ac219a02e558f45."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual115:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual115",
+      "productId": "pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "fcc74776b03b7669ffe6aeb2803ffabe2478430a7f82816bd721313e3ab79a29",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual115",
+        "sourceUrl": "https://www.sata.com/media/8d/95/61/1793362235/BAL-SATAJET-1000-B.PDF.PDF?ts=1793362235#page=115",
+        "sourceLabel": "SATA, document technique officiel, page PDF 115",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Notice actuelle complète lue pages 114,115,118,119 ; SHA-256 fcb179890de6fb84bab9465d6c4a3dd5f60da7f75fdd591b1ac219a02e558f45."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual118:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual118",
+      "productId": "pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "76f5514c9350f6c12e6dfb3533f66e846209dc53e8bb6d9c8dac51141677cb79",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual118",
+        "sourceUrl": "https://www.sata.com/media/8d/95/61/1793362235/BAL-SATAJET-1000-B.PDF.PDF?ts=1793362235#page=118",
+        "sourceLabel": "SATA, document technique officiel, page PDF 118",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Notice actuelle complète lue pages 114,115,118,119 ; SHA-256 fcb179890de6fb84bab9465d6c4a3dd5f60da7f75fdd591b1ac219a02e558f45."
+      }
+    },
+    {
+      "id": "added:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual119:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual119",
+      "productId": "pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "836a6d62b071c4fba3bc5eeaea1249c35733c73c758b888eadaa74f5848f72ff",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual119",
+        "sourceUrl": "https://www.sata.com/media/8d/95/61/1793362235/BAL-SATAJET-1000-B.PDF.PDF?ts=1793362235#page=119",
+        "sourceLabel": "SATA, document technique officiel, page PDF 119",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Notice actuelle complète lue pages 114,115,118,119 ; SHA-256 fcb179890de6fb84bab9465d6c4a3dd5f60da7f75fdd591b1ac219a02e558f45."
+      }
+    },
+    {
+      "id": "added:ponceuse-bande-sp-air-sp-1900:review:2026-11-06-followup:ponceuse-bande-sp-air-sp-1900:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:ponceuse-bande-sp-air-sp-1900:1",
+      "productId": "ponceuse-bande-sp-air-sp-1900",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "fe9897ed3168ecdd54c9f521916c5f4b620b44a4c6962cf5e233c030499304f5",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:ponceuse-bande-sp-air-sp-1900:1",
+        "sourceUrl": "https://spair.vessel.co.jp/download/SP_catalog_all_E.pdf#page=17",
+        "sourceLabel": "SP AIR, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "SPp17 :SP1900pince3mm/70000rpm/156mm/0,35kg,écroude pince; c’est une micro-meuleuse, pasuneponceuseàbande. Catégorie et intention de la fiche doivent être corrigées avant qualification, sans multiplier lesURL. SHA-256 du document complet : 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5."
+      }
+    },
+    {
+      "id": "added:ponceuse-orbitale-hymair-at-7037bn:review:2026-11-06-followup:ponceuse-orbitale-hymair-at-7037bn:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:ponceuse-orbitale-hymair-at-7037bn:1",
+      "productId": "ponceuse-orbitale-hymair-at-7037bn",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "40bfdbd3c0740a9ed667fc4c1a8b8fda4ba749ca80595f1b664332b132854321",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:ponceuse-orbitale-hymair-at-7037bn:1",
+        "sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SAUfKpBkCgyL&dp=GvUApKfKKUAU#page=19",
+        "sourceLabel": "Hymair, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Catalogue complet p19 : ponceuse d'angle rotative à plateau velcro2 pouces,15000 tr/min,163 ×92 mm et0,63 kg. Aucune orbite indiquée : retirer catégorie orbitale et conserver les4 cfm moyens hors moteur. SHA-256 du document complet : b9c6143d5502d453b5b2e0846bcfec263fb763d42a478fbc52089a41725e7d8d."
+      }
+    },
+    {
+      "id": "added:ponceuse-orbitale-michigan-pneumatic-mp-3765-st:review:2026-11-06-followup:ponceuse-orbitale-michigan-pneumatic-mp-3765-st:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:ponceuse-orbitale-michigan-pneumatic-mp-3765-st:1",
+      "productId": "ponceuse-orbitale-michigan-pneumatic-mp-3765-st",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "eaa5eb8f8fcadf6d91e0d029b5cd3108f9be1ce6d2850d4f47458307ca2c78e5",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:ponceuse-orbitale-michigan-pneumatic-mp-3765-st:1",
+        "sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/11-Sanders_V2.pdf#page=4",
+        "sourceLabel": "Michigan Pneumatic, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Catalogue ponceuses p4 : disque rotatif7 pouces,broche5/8-11,4500 tr/min,1 hp et4,75 lb. Catégorie orbitale erronée ; corriger vers rotative sans inventer une orbite. Les9 cfm restent hors moteur. SHA-256 du document complet : c7f8feaec707022985699c2229fe0d3eb9221d4f486b03528ec4ef2fcb25a46e."
+      }
+    },
+    {
+      "id": "added:ponceuse-rotative-top-cat-300ra3m2k-4000-5sp:review:2026-11-06-followup:ponceuse-rotative-top-cat-300ra3m2k-4000-5sp:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:ponceuse-rotative-top-cat-300ra3m2k-4000-5sp:1",
+      "productId": "ponceuse-rotative-top-cat-300ra3m2k-4000-5sp",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "d77fe69255267b5d55206b1b5ec46cd96fe223b18863295ff40498f4953457c8",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:ponceuse-rotative-top-cat-300ra3m2k-4000-5sp:1",
+        "sourceUrl": "https://www.intlairtool.com/content/catalogs-page-pdfs/Top-Cat-Air-Tools.pdf",
+        "sourceLabel": "Top Cat, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Catalogue p40 : ponceuse rotative5pouces,4000tr/min,levier sécurité. Les11,8L/s/25cfm maxima restent distincts d'une mesure encharge à6,2bar non établie. Garder la configuration exacte sans transfert du300RA2à15000. SHA-256 du document complet : 4b4cea2c0cb0cfea87b1e287908e271388254005eda2136bb116549893decf7a."
+      }
+    },
+    {
+      "id": "added:red-rooster-rr-18n-t:review:2026-11-06-followup:red-rooster-rr-18n-t:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:red-rooster-rr-18n-t:1",
+      "productId": "red-rooster-rr-18n-t",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "292795f9bc06ad6fa6002fc67b59ceb393b677ea895dd6bcb4319ff83d0023ef",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:red-rooster-rr-18n-t:1",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=38",
+        "sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "RR18NT p38 :carré1/2,7000rpm,12,1Ls encharge,2kg; leT limite le serrageà90Nm. La consigne générale6,3bar n’établit pas la pression de mesure de12,1Ls; conserver726Lmin documentaire sans conclusion. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:red-rooster-rr-18n-t:review:2026-11-06-followup:red-rooster-rr-18n-t:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:red-rooster-rr-18n-t:2",
+      "productId": "red-rooster-rr-18n-t",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a57471ef4b22d019d7d2c50c776ccbceb9adac1194d032da4dde9825048ae460",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:red-rooster-rr-18n-t:2",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+        "sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "RR18NT p38 :carré1/2,7000rpm,12,1Ls encharge,2kg; leT limite le serrageà90Nm. La consigne générale6,3bar n’établit pas la pression de mesure de12,1Ls; conserver726Lmin documentaire sans conclusion. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:red-rooster-rrg-2134:review:2026-11-06-followup:red-rooster-rrg-2134:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:red-rooster-rrg-2134:1",
+      "productId": "red-rooster-rrg-2134",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "79779703bd4c8c26a2fff3a5ecb42ea47dff14081fc06948cb93f39fe9a63d77",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:red-rooster-rrg-2134:1",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=45",
+        "sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P45 :disque100×16mm,brocheM10×1,5,12000rpm,17,4Ls; RRG2144 a115×22,2mm/M14. Ni régime ni pression de mesure1044Lmin identifiés par la consigne d’exploitation. Désactiver leur portée dimensionnante. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:red-rooster-rrg-2134:review:2026-11-06-followup:red-rooster-rrg-2134:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:red-rooster-rrg-2134:2",
+      "productId": "red-rooster-rrg-2134",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "eff623388c870a0164c92c11f32f169bf140c0eaff0c87bfe67544f0dd6b4ccf",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:red-rooster-rrg-2134:2",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+        "sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P45 :disque100×16mm,brocheM10×1,5,12000rpm,17,4Ls; RRG2144 a115×22,2mm/M14. Ni régime ni pression de mesure1044Lmin identifiés par la consigne d’exploitation. Désactiver leur portée dimensionnante. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:red-rooster-rrg-3621:review:2026-11-06-followup:red-rooster-rrg-3621:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:red-rooster-rrg-3621:1",
+      "productId": "red-rooster-rrg-3621",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "31bc1c24e186e9b878df9afe991d21cd9dff7b0e35be5bbb5186d5928b856088",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:red-rooster-rrg-3621:1",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=48",
+        "sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P48 :bande20×520mm/18000rpm/8,7Ls/1,4kg; RRG3630 est30×540mm/12000rpm. La pression6,3bar est une consigne générale distincte. Conserver522Lmin comme consommation non qualifiée. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:red-rooster-rrg-3621:review:2026-11-06-followup:red-rooster-rrg-3621:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:red-rooster-rrg-3621:2",
+      "productId": "red-rooster-rrg-3621",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "56e78497cb0f7b3ba53cb25200b23184bc0b3fd0e2add65cea6ed1acdf098727",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:red-rooster-rrg-3621:2",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+        "sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P48 :bande20×520mm/18000rpm/8,7Ls/1,4kg; RRG3630 est30×540mm/12000rpm. La pression6,3bar est une consigne générale distincte. Conserver522Lmin comme consommation non qualifiée. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:red-rooster-rri-150:review:2026-11-06-followup:red-rooster-rri-150:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:red-rooster-rri-150:1",
+      "productId": "red-rooster-rri-150",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "853d5d52c33b802a7f8a6321b46f4f46a33839b055d0c1935416e4d46df26893",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:red-rooster-rri-150:1",
+        "sourceUrl": "https://www.rami-yokota.com/media/godd0tdm/2026_fr_outils_d-assemblage_spreads.pdf#page=23",
+        "sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Assemblagep23 :carré3/4,3700rpm,165–210Nm,11,6Ls,3kg; RRI130 est1/2 et123–148Nm. Aucun régime ni point de mesure6,3bar prouvé par la note de maintenance;696Lmin non dimensionnants. SHA-256 du document complet : 6b7dca4923bfef1dbe2c7f6691e91e07f92fec5c1fa3b8d56f211ecbdb5e4845."
+      }
+    },
+    {
+      "id": "added:red-rooster-rri-150:review:2026-11-06-followup:red-rooster-rri-150:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:red-rooster-rri-150:2",
+      "productId": "red-rooster-rri-150",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "0fb9923a5cc47b2a841da26f4e4d8c889a0f582d228c2f6a30ee0fa1e30d6129",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:red-rooster-rri-150:2",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+        "sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Assemblagep23 :carré3/4,3700rpm,165–210Nm,11,6Ls,3kg; RRI130 est1/2 et123–148Nm. Aucun régime ni point de mesure6,3bar prouvé par la note de maintenance;696Lmin non dimensionnants. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:red-rooster-rri-2206-28:review:2026-11-06-followup:red-rooster-rri-2206-28:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:red-rooster-rri-2206-28:1",
+      "productId": "red-rooster-rri-2206-28",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "439360fe27cd71205a5611e321c21fdaac9976a5bb596980266baa757a729ad3",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:red-rooster-rri-2206-28:1",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=42",
+        "sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P42 :RRI2206/28 droit6,5mm,2800rpm,7,6Ls/0,6kg; /40 a4000rpm au même débit. Le6,3bar prescrit ne qualifie pas la mesure456Lmin ni le régime. airflowBasis unqualified requis. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:red-rooster-rri-2206-28:review:2026-11-06-followup:red-rooster-rri-2206-28:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:red-rooster-rri-2206-28:2",
+      "productId": "red-rooster-rri-2206-28",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "22faac3a37bb089227388ead9ec4970a0327bb30b8f8c56cd8f0072a21526d18",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:red-rooster-rri-2206-28:2",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+        "sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P42 :RRI2206/28 droit6,5mm,2800rpm,7,6Ls/0,6kg; /40 a4000rpm au même débit. Le6,3bar prescrit ne qualifie pas la mesure456Lmin ni le régime. airflowBasis unqualified requis. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:red-rooster-rri-4007lr5:review:2026-11-06-followup:red-rooster-rri-4007lr5:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:red-rooster-rri-4007lr5:1",
+      "productId": "red-rooster-rri-4007lr5",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "2277a6129cefe3b75bc9cc074955ba0d41ee37646b5a185c0fef51448590c920",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:red-rooster-rri-4007lr5:1",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=56",
+        "sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P56 :scie coupe-tubesLR5,2200coursesmin/2,1Ls/6,3kg,étau etchaîne prescrits; LR4LITE3,7kg/LR66,9kg. La consigne6,3bar n’est pas un appariement de mesure126Lmin. Aucun verdict conclusif depuis ce point. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:red-rooster-rri-4007lr5:review:2026-11-06-followup:red-rooster-rri-4007lr5:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:red-rooster-rri-4007lr5:2",
+      "productId": "red-rooster-rri-4007lr5",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "9a6a439f52428d1fe310d84f9ad91024b1e2a022241c3e37c1cc204ef6edc916",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:red-rooster-rri-4007lr5:2",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+        "sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P56 :scie coupe-tubesLR5,2200coursesmin/2,1Ls/6,3kg,étau etchaîne prescrits; LR4LITE3,7kg/LR66,9kg. La consigne6,3bar n’est pas un appariement de mesure126Lmin. Aucun verdict conclusif depuis ce point. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:red-rooster-rri-5125-5cv:review:2026-11-06-followup:red-rooster-rri-5125-5cv:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:red-rooster-rri-5125-5cv:1",
+      "productId": "red-rooster-rri-5125-5cv",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "46073d88836158a2081648fed369c64fd8c01f4b43f82f3477c4296e8f271304",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:red-rooster-rri-5125-5cv:1",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=47",
+        "sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P47 :plateau125mm/orbite5mm/12000rpm/0,7kg/4,9Ls etfilet5/16UNF; 5NV estsansaspiration,2CV autreorbite. Régime294Lmin et pression de mesure non qualifiés; conserver hors conclusion. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:red-rooster-rri-5125-5cv:review:2026-11-06-followup:red-rooster-rri-5125-5cv:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:red-rooster-rri-5125-5cv:2",
+      "productId": "red-rooster-rri-5125-5cv",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "64da456c98876494816ddfafe6ec2e575c5e032fe4c679a3276d6d882b9e3274",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:red-rooster-rri-5125-5cv:2",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+        "sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P47 :plateau125mm/orbite5mm/12000rpm/0,7kg/4,9Ls etfilet5/16UNF; 5NV estsansaspiration,2CV autreorbite. Régime294Lmin et pression de mesure non qualifiés; conserver hors conclusion. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:red-rooster-rri-sa10505:review:2026-11-06-followup:red-rooster-rri-sa10505:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:red-rooster-rri-sa10505:1",
+      "productId": "red-rooster-rri-sa10505",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "32478ffdb84118dd3667efa831728522c6a20c5a1f347373bbbc07c22a5ce31f",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:red-rooster-rri-sa10505:1",
+        "sourceUrl": "https://www.rami-yokota.com/media/godd0tdm/2026_fr_outils_d-assemblage_spreads.pdf#page=29",
+        "sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Assemblagep29 :hex1/4,550rpm,0,8–5Nm/7,5Ls/1,02kg; suffixeW désignecarré3/8. Ni régime ni mesureà6,3bar explicités par la consigne générale:450Lmin non dimensionnants. SHA-256 du document complet : 6b7dca4923bfef1dbe2c7f6691e91e07f92fec5c1fa3b8d56f211ecbdb5e4845."
+      }
+    },
+    {
+      "id": "added:red-rooster-rri-sa10505:review:2026-11-06-followup:red-rooster-rri-sa10505:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:red-rooster-rri-sa10505:2",
+      "productId": "red-rooster-rri-sa10505",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "6ccf0e8a881a1d90d79cbc152d5d9a1052bd0b498e658e8f8f3ae0e933330147",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:red-rooster-rri-sa10505:2",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+        "sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Assemblagep29 :hex1/4,550rpm,0,8–5Nm/7,5Ls/1,02kg; suffixeW désignecarré3/8. Ni régime ni mesureà6,3bar explicités par la consigne générale:450Lmin non dimensionnants. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:red-rooster-rrw-2404:review:2026-11-06-followup:red-rooster-rrw-2404:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:red-rooster-rrw-2404:1",
+      "productId": "red-rooster-rrw-2404",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "ff12b7a2e8a3291e461dab96d7a5efd454d7a69212b051e0b2ba7053159c7e2d",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:red-rooster-rrw-2404:1",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=40",
+        "sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P40 :cliquet1/2,150rpm/68Nm/6Ls/1,2kg; MR2410B donne175rpm/78Nm au même débit. Aucun régime de mesure360Lmin apparié à6,3bar. Conserver la différence mécanique, neutraliser la conclusion d’air. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:red-rooster-rrw-2404:review:2026-11-06-followup:red-rooster-rrw-2404:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:red-rooster-rrw-2404:2",
+      "productId": "red-rooster-rrw-2404",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e3ee17ba23b21f202fcd639593519e84108d6c63e4b12cbaa142fcf8ee85272f",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:red-rooster-rrw-2404:2",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+        "sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P40 :cliquet1/2,150rpm/68Nm/6Ls/1,2kg; MR2410B donne175rpm/78Nm au même débit. Aucun régime de mesure360Lmin apparié à6,3bar. Conserver la différence mécanique, neutraliser la conclusion d’air. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:riveteuse-gison-gp-250rm:review:2026-11-06-followup:riveteuse-gison-gp-250rm:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:riveteuse-gison-gp-250rm:1",
+      "productId": "riveteuse-gison-gp-250rm",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "5bbca5dbea25f4f584558644100894b3be0976326487d883618298eaa1add12d",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:riveteuse-gison-gp-250rm:1",
+        "sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=70",
+        "sourceLabel": "GISON, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "PDF70 : écrous M3àM12 aluminium/acier,traction2179 kgf,278 mm et2,4 kg,volume2 litres/cycle. La pression recommandée90 psi ne prouve pas la pression de mesure du volume. Conserver2 litres/cycle en spécification, retirer le calcul paramétrique non qualifié. SHA-256 du document complet : a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077."
+      }
+    },
+    {
+      "id": "added:riveteuse-michigan-pneumatic-mp-2144a-214:review:2026-11-06-followup:riveteuse-michigan-pneumatic-mp-2144a-214:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:riveteuse-michigan-pneumatic-mp-2144a-214:1",
+      "productId": "riveteuse-michigan-pneumatic-mp-2144a-214",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "2275430fa7fe4102bb4886933ff553de46a13ca7c2d188b28f24ae52fabe6634",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:riveteuse-michigan-pneumatic-mp-2144a-214:1",
+        "sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/13-Riveters_v2.pdf#page=5",
+        "sourceLabel": "Michigan Pneumatic, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Catalogue riveteuses p5 :2200 lb est la traction,masse4,25 lb,course7/8 pouce. Corriger la masse étiquetée2200 lb et conserver la traction séparément. Les1,12 cf/stroke sans pression de mesure restent non dimensionnants. SHA-256 du document complet : 10b8be5bab69a1115007085fbd0305b474d3b8349820d435bc73d3d3869389c6."
+      }
+    },
+    {
+      "id": "added:riveteuse-puma-at-6017:review:2026-11-06-followup:riveteuse-puma-at-6017:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:riveteuse-puma-at-6017:1",
+      "productId": "riveteuse-puma-at-6017",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "54ae8c56616b547f2cda60fba305faeb936de2dc01434fbfdc2bf42f0586218a",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:riveteuse-puma-at-6017:1",
+        "sourceUrl": "https://www.pumaair.com/product-Air-Hydraulic-Riveter-AirHydraulicRiveter.html",
+        "sourceLabel": "PUMA, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "TableAT6017 :capacité9/32,traction3124lb/1420kgf,course18mm/2,4kg. L’en-têteAvgAirConsumptionPerRivetCycle imprimeSCFM/Lmin, alors que la fiche affirme1,05Lmin comme débitmoyen. Exposer cette ambiguïté volumeparcycle/unitéminute et garder variable-volume; ne pas inventer2interprétations. SHA-256 du document complet : 9f17a09a737a59b7aa18143d377640146018b846b1db68fd8efb2f4c238ca2b1."
+      }
+    },
+    {
+      "id": "added:rodcraft-rc5185:review:2026-11-06-followup:rodcraft-rc5185:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:rodcraft-rc5185:1",
+      "productId": "rodcraft-rc5185",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a85c1a9295ec6e46d5c9f798deed709845acd3ccfccb0df133f1dc27708f0159",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:rodcraft-rc5185:1",
+        "sourceUrl": "https://www.rodcraft.com/en/products/8951000152",
+        "sourceLabel": "Rodcraft, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Fiche actuelle 8951000152 : marteau hexagonal 11 mm ; la pression dynamique maximale utilisée comme pression de mesure n'est pas justifiée. Conserver 6,2 L/s en charge et 3 L/s à vide documentaires, hors calcul tant que le point de mesure n'est pas établi. SHA-256 du document complet : 31e17e4c10553ef9e9bbdfea7d269a2f3b69ae2595b19e6eda6f36d79f9ae2ec."
+      }
+    },
+    {
+      "id": "added:rodcraft-rc6748:review:2026-11-06-followup:rodcraft-rc6748:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:rodcraft-rc6748:1",
+      "productId": "rodcraft-rc6748",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "1d41003eb9d527910e6c2bb7c13f4011f209cf4a42118f10c176796a7e577a5d",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:rodcraft-rc6748:1",
+        "sourceUrl": "https://www.rodcraft.com/en/products/8951000409",
+        "sourceLabel": "Rodcraft, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Riveteuse 8951000409 : pression dynamique maximale confondue avec pression de mesure. Les 4,1 L/s en charge ne deviennent pas un volume par rivet ; conserver la valeur documentaire et demander la condition de mesure. SHA-256 du document complet : 2723f98d6e9488ef4d53ac136cbaaf4830c04ea8e9f84589b9fefa4274327de6."
+      }
+    },
+    {
+      "id": "added:rodcraft-rc7173:review:2026-11-06-followup:rodcraft-rc7173:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:rodcraft-rc7173:1",
+      "productId": "rodcraft-rc7173",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c6fcbe0189c35f45fdf056e5e2e6bb8d3dc58ac94378d9db71dfade4a0491f3d",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:rodcraft-rc7173:1",
+        "sourceUrl": "https://www.rodcraft.com/en/products/8951000212",
+        "sourceLabel": "Rodcraft, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Meuleuse 125 mm, M14, article 8951000212 ; les 9 L/s en charge restent distincts du plafond dynamique 6,3 bar. Le moteur ne doit pas appairer ces champs sans preuve de mesure. SHA-256 du document complet : b77ef6bca9d2dd4f32eb8d1f20ddeef844cb08f0d738b485cf92929dd7c7781a."
+      }
+    },
+    {
+      "id": "added:rupes-ra150a:review:2026-11-06-followup:rupes-ra150a:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:rupes-ra150a:1",
+      "productId": "rupes-ra150a",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "cd3e8ef628b0c2295abbe1da2b534895d9033d4f06390efaeddb4131cfbf15b9",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:rupes-ra150a:1",
+        "sourceUrl": "https://www.rupes.com/catalogue/2026/RUPES_Catalogue-2026_EN.pdf#page=62",
+        "sourceLabel": "RUPES, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Catalogue62 RA150A,orbite5/plateau150,0,95kg etAirconsumptionmax380Lmin; service6,2bar donné séparément. Le tableau n’atteste pas la pression de mesure380Lmin; traiter la donnée comme non dimensionnante, distinct AK150A à400. SHA-256 du document complet : 018272fb053802b4e419d3f70bb75a46a02a62aec2a0404862ded7c21b443a63."
+      }
+    },
+    {
+      "id": "added:rupes-slp41a:review:2026-11-06-followup:rupes-slp41a:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:rupes-slp41a:1",
+      "productId": "rupes-slp41a",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "28fef3e08dc1c23412b78fed3b1a9486bea44fab88ea0594496869424ae89347",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:rupes-slp41a:1",
+        "sourceUrl": "https://www.rupes.com/catalogue/2026/RUPES_Catalogue-2026_EN.pdf#page=56",
+        "sourceLabel": "RUPES, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Catalogue56 SLP41A plateau400×70/orbite4,8mm/2,4kg/400Lminmax etservice6,2bar séparé;RE21ALN plateau70×198/360Lmin. Aucun appariement explicite de mesure, donc pas de verdict conclusif depuis ces deux cellules. SHA-256 du document complet : 018272fb053802b4e419d3f70bb75a46a02a62aec2a0404862ded7c21b443a63."
+      }
+    },
+    {
+      "id": "added:shinano-si-1320a:review:2026-11-06-followup:shinano-si-1320a:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:shinano-si-1320a:1",
+      "productId": "shinano-si-1320a",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "aeb0ab09ac2ff982ace2ac4e97971cb5312433930fa314bcd7a521bd468b6921",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:shinano-si-1320a:1",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=9",
+        "sourceLabel": "Shinano, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P9/43 :cliquet80Nm/160rpm/1,16kg/7,6Lsmax. La consigne6,3bar outilactionné n’est pas explicitement pression de mesure456Lmin. Conserver maximum documentaire et neutraliser son appariement au moteur. SHA-256 du document complet : 03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b."
+      }
+    },
+    {
+      "id": "added:shinano-si-1320a:review:2026-11-06-followup:shinano-si-1320a:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:shinano-si-1320a:2",
+      "productId": "shinano-si-1320a",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "2b4f9458119319bf0d19b9afffc999a55c5e5792e24957f05b4a415a6f99c42d",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:shinano-si-1320a:2",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+        "sourceLabel": "Shinano, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P9/43 :cliquet80Nm/160rpm/1,16kg/7,6Lsmax. La consigne6,3bar outilactionné n’est pas explicitement pression de mesure456Lmin. Conserver maximum documentaire et neutraliser son appariement au moteur. SHA-256 du document complet : 03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b."
+      }
+    },
+    {
+      "id": "added:shinano-si-1490b:review:2026-11-06-followup:shinano-si-1490b:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:shinano-si-1490b:1",
+      "productId": "shinano-si-1490b",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "2db8111e180622299cd66ceb63833228a11c561a6c93cbb23cb9758b00f311c8",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:shinano-si-1490b:1",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=5",
+        "sourceLabel": "Shinano, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P5/43 :clé850Nm/1,9kg/14,4Lsmax,distincteSI1490BSR àaxeallongé.6,3bar est une consigne d’utilisation séparée;864Lmin ne prouve pas une consommationmesuréeàcettepression. SHA-256 du document complet : 03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b."
+      }
+    },
+    {
+      "id": "added:shinano-si-1490b:review:2026-11-06-followup:shinano-si-1490b:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:shinano-si-1490b:2",
+      "productId": "shinano-si-1490b",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "8109757bc164f9f074f68b9c88316ae5ec2fcdba709c41595d8b16184bc6be2a",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:shinano-si-1490b:2",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+        "sourceLabel": "Shinano, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P5/43 :clé850Nm/1,9kg/14,4Lsmax,distincteSI1490BSR àaxeallongé.6,3bar est une consigne d’utilisation séparée;864Lmin ne prouve pas une consommationmesuréeàcettepression. SHA-256 du document complet : 03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b."
+      }
+    },
+    {
+      "id": "added:shinano-si-2012ex-6:review:2026-11-06-followup:shinano-si-2012ex-6:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:shinano-si-2012ex-6:1",
+      "productId": "shinano-si-2012ex-6",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c8f938d1b8666ea355327b0e69f62c09f98c94ebe5b701362a259a234d659345",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:shinano-si-2012ex-6:1",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=19",
+        "sourceLabel": "Shinano, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P19/43 :meuleusepince6mm/388W/25000rpm/11,3Lsmax/0,6kg,distincteSI2001S. La page43 prescrit6,3bar sans apparier la mesure678Lmin. Donnée documentaire non dimensionnante. SHA-256 du document complet : 03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b."
+      }
+    },
+    {
+      "id": "added:shinano-si-2012ex-6:review:2026-11-06-followup:shinano-si-2012ex-6:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:shinano-si-2012ex-6:2",
+      "productId": "shinano-si-2012ex-6",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "1654d746e400b65cc098ff00b94a9f9f1dbb99f83099d9746dfc8b8643460da2",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:shinano-si-2012ex-6:2",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+        "sourceLabel": "Shinano, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P19/43 :meuleusepince6mm/388W/25000rpm/11,3Lsmax/0,6kg,distincteSI2001S. La page43 prescrit6,3bar sans apparier la mesure678Lmin. Donnée documentaire non dimensionnante. SHA-256 du document complet : 03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b."
+      }
+    },
+    {
+      "id": "added:shinano-si-3018am:review:2026-11-06-followup:shinano-si-3018am:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:shinano-si-3018am:1",
+      "productId": "shinano-si-3018am",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "eda83e69c8c6c2fc12e49874c226186c39c6b8848007a9f494ae199f80c4cc13",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:shinano-si-3018am:1",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=13",
+        "sourceLabel": "Shinano, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "CatalogueShinano etp43 lus :la référence possède son propre équipement mais la même justification de pression de service6,3bar. Cette consigne ne prouve pas la pression de consommation; neutraliser l’appariement moteur, conserver les valeurs et unités publiées. SHA-256 du document complet : 03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b."
+      }
+    },
+    {
+      "id": "added:shinano-si-3018am:review:2026-11-06-followup:shinano-si-3018am:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:shinano-si-3018am:2",
+      "productId": "shinano-si-3018am",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e7aae210cd63537ee3bbbcbe1dfbdf1f24c1a3886ec4b9cce0cedf05ba515a1c",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:shinano-si-3018am:2",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+        "sourceLabel": "Shinano, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "CatalogueShinano etp43 lus :la référence possède son propre équipement mais la même justification de pression de service6,3bar. Cette consigne ne prouve pas la pression de consommation; neutraliser l’appariement moteur, conserver les valeurs et unités publiées. SHA-256 du document complet : 03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b."
+      }
+    },
+    {
+      "id": "added:shinano-si-3103-6am:review:2026-11-06-followup:shinano-si-3103-6am:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:shinano-si-3103-6am:1",
+      "productId": "shinano-si-3103-6am",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "5207dd28c8dda9d095883961876f96778735c99d77b49f1a0df62d69a5d54166",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:shinano-si-3103-6am:1",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=12",
+        "sourceLabel": "Shinano, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "CatalogueShinano etp43 :version6AM distincte des autresplateaux. La consigne d’alimentation6,3bar est indépendante de la tableMaxAirConsumption; aucun point de mesure de cette référence n’en découle. Conserver hors conclusion. SHA-256 du document complet : 03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b."
+      }
+    },
+    {
+      "id": "added:shinano-si-3103-6am:review:2026-11-06-followup:shinano-si-3103-6am:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:shinano-si-3103-6am:2",
+      "productId": "shinano-si-3103-6am",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "9728e596b2be84ea95cab6115fbc4ddac23f4e4ac5a4422cde4752140a0fb9d1",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:shinano-si-3103-6am:2",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+        "sourceLabel": "Shinano, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "CatalogueShinano etp43 :version6AM distincte des autresplateaux. La consigne d’alimentation6,3bar est indépendante de la tableMaxAirConsumption; aucun point de mesure de cette référence n’en découle. Conserver hors conclusion. SHA-256 du document complet : 03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b."
+      }
+    },
+    {
+      "id": "added:shinano-si-5506:review:2026-11-06-followup:shinano-si-5506:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:shinano-si-5506:1",
+      "productId": "shinano-si-5506",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "87d62dc18e0b8578362c04b569520c84354a7dbed4c7ceaab86b9fc15a918f49",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:shinano-si-5506:1",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=23",
+        "sourceLabel": "Shinano, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "CatalogueShinano etp43 :référenceSI5506 distincte de la gammeSI5500. La note6,3bar est un mode d’utilisation, pas une condition explicite de mesure de consommation. Conserver maximum et performances documentaires, neutraliser le calculair. SHA-256 du document complet : 03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b."
+      }
+    },
+    {
+      "id": "added:shinano-si-5506:review:2026-11-06-followup:shinano-si-5506:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:shinano-si-5506:2",
+      "productId": "shinano-si-5506",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "15b8d911c1f9e964c2a093989caaab99c35275e9b970fc18cf437fa779915c6e",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:shinano-si-5506:2",
+        "sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+        "sourceLabel": "Shinano, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "CatalogueShinano etp43 :référenceSI5506 distincte de la gammeSI5500. La note6,3bar est un mode d’utilisation, pas une condition explicite de mesure de consommation. Conserver maximum et performances documentaires, neutraliser le calculair. SHA-256 du document complet : 03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b."
+      }
+    },
+    {
+      "id": "added:sioux-1982a:review:2026-11-06-followup:sioux-1982a:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:sioux-1982a:1",
+      "productId": "sioux-1982a",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "9ddcc7daa9e22e55f0fd9c2b12bc8cfd23f9d44c231946501142780d9045808b",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:sioux-1982a:1",
+        "sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=81",
+        "sourceLabel": "Sioux, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P81 :1982Apince1/4,20000rpm/3,4kg/211mm,18Ls sous colonneAirConsumption sans régime.6,2bar est un pointperformance explicite mais ne transforme pas le régime inconnu enmaximum. Neutraliser1080Lmin. SHA-256 du document complet : 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
+      }
+    },
+    {
+      "id": "added:sioux-3t1630:review:2026-11-06-followup:sioux-3t1630:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:sioux-3t1630:1",
+      "productId": "sioux-3t1630",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "5effbf3e2365b6198f4235d6294b6397090402f0cabb71b60e8f125f7066f487",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:sioux-3t1630:1",
+        "sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=22",
+        "sourceLabel": "Sioux, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P22 :3T1630mandrin10mm/2650rpm/889mm/3,3kg,contre3T15302150rpm.17Ls sousAirConsumption sans régime; conserver1020Lmin documentaire et noteperformances6,2bar sans conclusion encharge. SHA-256 du document complet : 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
+      }
+    },
+    {
+      "id": "added:sioux-go459-60srp:review:2026-11-06-followup:sioux-go459-60srp:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:sioux-go459-60srp:1",
+      "productId": "sioux-go459-60srp",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "d06d1702cf50655ca716f111449b8a491f85681bc2a630af9cfca7bc402951c3",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:sioux-go459-60srp:1",
+        "sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=64",
+        "sourceLabel": "Sioux, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P64 :GO45960SRPplateauPSA150mm/900rpm/aspirationdistante/2kg,voisineSNH autreaspiration/fixation.7Ls sans régime de consommation:420Lmin nonmaximaux même avec performance6,2bar. SHA-256 du document complet : 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
+      }
+    },
+    {
+      "id": "added:sioux-iw1000mh-12h:review:2026-11-06-followup:sioux-iw1000mh-12h:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:sioux-iw1000mh-12h:1",
+      "productId": "sioux-iw1000mh-12h",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a798407336047f5088f9c58e36ef1d99b0ae3dc8cbbbb5274077da4d07039521",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:sioux-iw1000mh-12h:1",
+        "sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=42",
+        "sourceLabel": "Sioux, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P42 :IW1000MH12H,carré1,5pouce/trougoupille,3380Nm/4000rpm/15,4kg/440mm;8H6àaxeallongé16,9kg.24Ls nonqualifiés dansAirConsumption:1440Lmin pas maximum attesté. SHA-256 du document complet : 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
+      }
+    },
+    {
+      "id": "added:sioux-sap10a327:review:2026-11-06-followup:sioux-sap10a327:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:sioux-sap10a327:1",
+      "productId": "sioux-sap10a327",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "a0d16725ea9bd1ab93ddc5a34cd16c498b16c00876000285ae1ed644c0652b89",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:sioux-sap10a327:1",
+        "sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=69",
+        "sourceLabel": "Sioux, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P69 :SAP10A3273200rpm/1,3kg/234mm/broche5/8-11,autres327/457 vitessesdifférentes. Les colonnesUnderLoad sontN/A,17Ls sousFreeSpeed. Utiliser le régimeàvide explicite et empêcher la conclusion depuis1020Lmin. SHA-256 du document complet : 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
+      }
+    },
+    {
+      "id": "added:sioux-sbs05s18:review:2026-11-06-followup:sioux-sbs05s18:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:sioux-sbs05s18:1",
+      "productId": "sioux-sbs05s18",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "2fb5f17ed878d4101916837c8f680834ad2d42b02f9adf6d3626cb948d800b35",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:sioux-sbs05s18:1",
+        "sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=65",
+        "sourceLabel": "Sioux, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P65 :SBS05S18bande3/4×18pouces/18000rpm/1,3kg/360mm;S18-4bande1/2.11Ls de régime non précisé:660Lmin documentaires, pas maximum malgré noteperformance6,2bar. SHA-256 du document complet : 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
+      }
+    },
+    {
+      "id": "added:sioux-sc80910al-c:review:2026-11-06-followup:sioux-sc80910al-c:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:sioux-sc80910al-c:1",
+      "productId": "sioux-sc80910al-c",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b1bc3ce28ce8a54c7aaa1cfabe9a482341fdf5543544f43653f90199c79fc192",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:sioux-sc80910al-c:1",
+        "sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=75",
+        "sourceLabel": "Sioux, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P75 :suffixeCburinhexoctogonal,4300coupsmin/course25mm/1,7kg/375mm. N5 estdesrouilleuraiguillespluslourd, même6Ls nonqualifiés.360Lmin ne doivent pas dimensionner sans régime. SHA-256 du document complet : 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
+      }
+    },
+    {
+      "id": "added:sioux-sc80910al-n5:review:2026-11-06-followup:sioux-sc80910al-n5:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:sioux-sc80910al-n5:1",
+      "productId": "sioux-sc80910al-n5",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "36414f76acd5426a2f74d968cdf7bd289e709a11161cbaaeda1e391b1462cef6",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:sioux-sc80910al-n5:1",
+        "sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=75",
+        "sourceLabel": "Sioux, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P75 :suffixeN5aiguilles,4300coupsmin/course25mm/2,7kg/425mm;Cburin375mm/1,7kg.6Ls sansrégime:360Lmin conservés hors conclusion, pas assimilation entre accessoires. SHA-256 du document complet : 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
+      }
+    },
+    {
+      "id": "added:sioux-scn3r:review:2026-11-06-followup:sioux-scn3r:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:sioux-scn3r:1",
+      "productId": "sioux-scn3r",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "55e60afa714d4510d7abf173ab4aabcc9b5c084030bf1f90df9c5da406a6c76b",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:sioux-scn3r:1",
+        "sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=83",
+        "sourceLabel": "Sioux, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P83 :SCN3R blocmoteurseul300rpm/45,2Nm/1,5kg/coteA279mm;SCN5R500rpm/36,7Nm.14Ls sansrégime:840Lmin documentaires. Ne pas attribuer une capacité d’outil complet à ce bloc seul. SHA-256 du document complet : 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
+      }
+    },
+    {
+      "id": "added:sioux-sco10axl124:review:2026-11-06-followup:sioux-sco10axl124:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:sioux-sco10axl124:1",
+      "productId": "sioux-sco10axl124",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "f78e2ef9cc5a4adf923aae04505cd664f064f9511bd51fb855061541c072cc9e",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:sioux-sco10axl124:1",
+        "sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=59",
+        "sourceLabel": "Sioux, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P59 :SCO10AXL124disque100mm/profondeur25mm/12000rpm/1,6kg/285mm,broche3/8-24 etéchappementarrière.17Ls sansrégime:1020Lmin nonmaximaux. Versionsaluminiumetavant distinctes. SHA-256 du document complet : 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
+      }
+    },
+    {
+      "id": "added:sioux-srs10p21-7:review:2026-11-06-followup:sioux-srs10p21-7:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:sioux-srs10p21-7:1",
+      "productId": "sioux-srs10p21-7",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "67c4e8df4b79694709fc91397d1f3ff409632500792150e8621b027fecec40d2",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:sioux-srs10p21-7:1",
+        "sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=85",
+        "sourceLabel": "Sioux, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P85 :SRS10P217fraise7/16/11mm/21000rpm/1,2kg/205mm,contre-6Ø10/-8Ø13.12Ls deAirConsumption nonqualifiés, la mentionMaximum appartient au tableauKitdistinctSRS6P21K.720Lmin hors conclusion. SHA-256 du document complet : 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
+      }
+    },
+    {
+      "id": "added:sioux-srw07-38:review:2026-11-06-followup:sioux-srw07-38:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:sioux-srw07-38:1",
+      "productId": "sioux-srw07-38",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "caf55ddb9f37085745dc1cfce9bef25cce87c3617103bfb960bbe4f50961db33",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:sioux-srw07-38:1",
+        "sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=37",
+        "sourceLabel": "Sioux, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P37 :SRW0738carré3/8/88Nm/260rpm/1,3kg,version50carré1/2.14Ls de régime non précisé:840Lmin ne constituent pas un maximum encharge. Préserver la distinction de carré. SHA-256 du document complet : 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
+      }
+    },
+    {
+      "id": "added:sioux-stp10s3b12:review:2026-11-06-followup:sioux-stp10s3b12:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:sioux-stp10s3b12:1",
+      "productId": "sioux-stp10s3b12",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "7b3c622f84f91e824c5493460ff1f5ca1af2857d2cc01297a79796a14a8ad25d",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:sioux-stp10s3b12:1",
+        "sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=84",
+        "sourceLabel": "Sioux, revue documentaire du 6 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P84 :STP10S3B12taraudeuse300rpm/45Nm/1,2kg/240mm,vsS5B12500rpm/37Nm.14Ls sousAirConsumption sans régime;840Lmin restent documentaires, pas encharge par défaut. SHA-256 du document complet : 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
+      }
+    },
+    {
+      "id": "added:toku-mi-16m3-8:review:2026-11-06-followup:toku-mi-16m3-8:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:toku-mi-16m3-8:1",
+      "productId": "toku-mi-16m3-8",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "5206fd3119056d4b0600ecee3290796f9a7aa0b9109f52d9cb7d2e7d9d43d6d6",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:toku-mi-16m3-8:1",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=38",
+        "sourceLabel": "Toku, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P38 :MI16M3/8,carré3/8,6200rpm/270Nm/9,3Ls/1,5kg,distinctMI12à9500rpm. Mesure encharge annoncée pour leschocs mais pression6,3bar uniquement prescrite globalement;558Lmin non dimensionnants avant confirmation. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:toku-mi-16m3-8:review:2026-11-06-followup:toku-mi-16m3-8:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:toku-mi-16m3-8:2",
+      "productId": "toku-mi-16m3-8",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "5f0b82f07feb023ea87b51b5c885543f3148c97d309c1c77c172ad3a692dd311",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:toku-mi-16m3-8:2",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+        "sourceLabel": "Toku, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P38 :MI16M3/8,carré3/8,6200rpm/270Nm/9,3Ls/1,5kg,distinctMI12à9500rpm. Mesure encharge annoncée pour leschocs mais pression6,3bar uniquement prescrite globalement;558Lmin non dimensionnants avant confirmation. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:toku-mr-2410b:review:2026-11-06-followup:toku-mr-2410b:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:toku-mr-2410b:1",
+      "productId": "toku-mr-2410b",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "91873683b647c5dfeafc464d231fc198a95abebd32f7a67c470e565dba4019d2",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:toku-mr-2410b:1",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=40",
+        "sourceLabel": "Toku, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P40 :cliquet1/2,175rpm/78Nm/6Ls/1,2kg; MR2207C pluspetit etRRW2404 moinsrapide.6,3bar de service ne prouve pas la mesure360Lmin; retirer la portée conclusive. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:toku-mr-2410b:review:2026-11-06-followup:toku-mr-2410b:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:toku-mr-2410b:2",
+      "productId": "toku-mr-2410b",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "0e97f9b7f55bb36e872b36b27dc305d07950cc3b13766d16230d5c74069580ad",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:toku-mr-2410b:2",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+        "sourceLabel": "Toku, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P40 :cliquet1/2,175rpm/78Nm/6Ls/1,2kg; MR2207C pluspetit etRRW2404 moinsrapide.6,3bar de service ne prouve pas la mesure360Lmin; retirer la portée conclusive. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:toku-tag-45mlh:review:2026-11-06-followup:toku-tag-45mlh:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:toku-tag-45mlh:1",
+      "productId": "toku-tag-45mlh",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "dd91c02975f9217dd8ffdb5df1086de5b48450a9146dc417d0968cad91f020bb",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:toku-tag-45mlh:1",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=45",
+        "sourceLabel": "Toku, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P45 :115×22,2mm,M14×2,13000rpm/0,67kW/10,8Ls/1,8kg; TAG50MLH125mm/12000rpm. Régime et pression de mesure648Lmin non prouvés; consigne6,3bar conservée comme service. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:toku-tag-45mlh:review:2026-11-06-followup:toku-tag-45mlh:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:toku-tag-45mlh:2",
+      "productId": "toku-tag-45mlh",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "e593daf4f285b5d9e5e09122aad1c4de1d2c044ced3e864ff5298e4b42100e2e",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:toku-tag-45mlh:2",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+        "sourceLabel": "Toku, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P45 :115×22,2mm,M14×2,13000rpm/0,67kW/10,8Ls/1,8kg; TAG50MLH125mm/12000rpm. Régime et pression de mesure648Lmin non prouvés; consigne6,3bar conservée comme service. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:toku-th-5s:review:2026-11-06-followup:toku-th-5s:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:toku-th-5s:1",
+      "productId": "toku-th-5s",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "84d3c65a2f50c653a6cd4205abec0f4c0bc08058543fb8f6a1a81784ee4447cf",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:toku-th-5s:1",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=50",
+        "sourceLabel": "Toku, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P50 :burineur19×14,8×89,3400coupsmin,14Ls/5,8kg/entrée3/8,distinctTCD20 etTJ15. Le point840Lmin ne reçoit pas de pression de mesure ni de régime par la note générale; calcul àneutraliser. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:toku-th-5s:review:2026-11-06-followup:toku-th-5s:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:toku-th-5s:2",
+      "productId": "toku-th-5s",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "756d7f05792dde328773265382eb407eeb87554d5d90d8b7a0f7f5ca47c208b2",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:toku-th-5s:2",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+        "sourceLabel": "Toku, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P50 :burineur19×14,8×89,3400coupsmin,14Ls/5,8kg/entrée3/8,distinctTCD20 etTJ15. Le point840Lmin ne reçoit pas de pression de mesure ni de régime par la note générale; calcul àneutraliser. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:yokota-g-50ef:review:2026-11-06-followup:yokota-g-50ef:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:yokota-g-50ef:1",
+      "productId": "yokota-g-50ef",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "c98f396224e274ec3c13eecb970870450cd7e4338d35ab5c059b145fc7d45931",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:yokota-g-50ef:1",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=45",
+        "sourceLabel": "Yokota, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P45 :disque125×22,2mm,broche7/16,12000rpm/10,8Ls/1,5kg; G40EF115mm/13000rpm. Ni régime ni mesureà6,3bar confirmés pour648Lmin, donc usage documentaire uniquement. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:yokota-g-50ef:review:2026-11-06-followup:yokota-g-50ef:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:yokota-g-50ef:2",
+      "productId": "yokota-g-50ef",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "7d5af3c35a54928619456479a2f564ff8e73b4d1328a1ac7ac5f23d30dbf24f4",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:yokota-g-50ef:2",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+        "sourceLabel": "Yokota, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P45 :disque125×22,2mm,broche7/16,12000rpm/10,8Ls/1,5kg; G40EF115mm/13000rpm. Ni régime ni mesureà6,3bar confirmés pour648Lmin, donc usage documentaire uniquement. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:yokota-yd-4a:review:2026-11-06-followup:yokota-yd-4a:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:yokota-yd-4a:1",
+      "productId": "yokota-yd-4a",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "0f8fb8702ab02301237ddd057de23600748ad30ec8bbdd7c5800f600a0a82f64",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:yokota-yd-4a:1",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=41",
+        "sourceLabel": "Yokota, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P41 :visseusedroitehex1/4,11000rpm/12Nm/2,3Ls/0,6kg; YD3A12000rpm/7,5Nm/1,6Ls. Consigne générale6,3bar sans régime de138Lmin: pas de dimensionnement conclusif. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:yokota-yd-4a:review:2026-11-06-followup:yokota-yd-4a:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:yokota-yd-4a:2",
+      "productId": "yokota-yd-4a",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b5edc82bfa65f4b9273ff97fbb6ef058db6117f5a7a67d2011251fe9f763a642",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:yokota-yd-4a:2",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+        "sourceLabel": "Yokota, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P41 :visseusedroitehex1/4,11000rpm/12Nm/2,3Ls/0,6kg; YD3A12000rpm/7,5Nm/1,6Ls. Consigne générale6,3bar sans régime de138Lmin: pas de dimensionnement conclusif. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:yokota-yla60a:review:2026-11-06-followup:yokota-yla60a:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:yokota-yla60a:1",
+      "productId": "yokota-yla60a",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "b4172e2674812797fab998ee07524326cdaf716bb5a9d1df52071cd5d74e781c",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:yokota-yla60a:1",
+        "sourceUrl": "https://www.rami-yokota.com/media/godd0tdm/2026_fr_outils_d-assemblage_spreads.pdf#page=17",
+        "sourceLabel": "Yokota, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "Assemblagep17 :hex1/4,4000rpm/9–20Nm,0,78kg; encharge5Ls/àvide5,5Ls. Une plage5–6bar ne fixe pas la pression de ces mesures.330Lmin reste documentaire; aucune sélection arbitraire de6bar. SHA-256 du document complet : 6b7dca4923bfef1dbe2c7f6691e91e07f92fec5c1fa3b8d56f211ecbdb5e4845."
+      }
+    },
+    {
+      "id": "added:yokota-yrd-8nbk:review:2026-11-06-followup:yokota-yrd-8nbk:1:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:yokota-yrd-8nbk:1",
+      "productId": "yokota-yrd-8nbk",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "232b7aa558a01523613216102887ee636b83a9e66e77c44f859442173b9b5c4b",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:yokota-yrd-8nbk:1",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=42",
+        "sourceLabel": "Yokota, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P42 :mandrin3/8-24UNF,8–10mm,1900rpm/0,38kW/10Ls/1,3kg; YRD6NBK2800rpm etRR10DP1800rpm. Consigne6,3bar distincte de la mesure600Lmin, régime non documenté. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
+    },
+    {
+      "id": "added:yokota-yrd-8nbk:review:2026-11-06-followup:yokota-yrd-8nbk:2:2026-11-06",
+      "evidenceId": "review:2026-11-06-followup:yokota-yrd-8nbk:2",
+      "productId": "yokota-yrd-8nbk",
+      "productType": "tool",
+      "occurredAt": "2026-11-06",
+      "kind": "added",
+      "summary": "Source officielle ajoutée lors de l’extension du catalogue technique.",
+      "fingerprint": "dd2d65c34dc171bfaaa748fc5b058b173bfa66e591df233da584b070ab77fdd0",
+      "snapshot": {
+        "id": "review:2026-11-06-followup:yokota-yrd-8nbk:2",
+        "sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+        "sourceLabel": "Yokota, revue documentaire du 6 novembre 2026",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-06",
+        "confidence": "B",
+        "notes": "P42 :mandrin3/8-24UNF,8–10mm,1900rpm/0,38kW/10Ls/1,3kg; YRD6NBK2800rpm etRR10DP1800rpm. Consigne6,3bar distincte de la mesure600Lmin, régime non documenté. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+      }
     }
   ],
-  "historyVersion": "fe841b9728e1444a5bd452534585c2dcf294ca2d51fb710a7bac4dc693b14849"
+  "historyVersion": "1bf5e99bb26de802d4ffc69cb3c51912ed4df2fbc195f6c1ba67c87c29f74281"
 }

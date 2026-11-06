@@ -9,7 +9,7 @@ const product: ToolProfileInput = {
 	"categoryId": "ponceuse-orbitale",
 	"category": "ponceuse-orbitale",
 	"label": "RUPES RA150A",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 6.2,
 		"typical": 6.2,
@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/rupes-ra150a.webp",
+		"src": "/images/products/rupes-ra150a-20261106.svg",
 		"alt": "Repères techniques RUPES RA150A, référence RA150A",
 		"sourceUrl": "https://www.rupes.com/catalogue/2026/RUPES_Catalogue-2026_EN.pdf#page=62",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Le débit concerne l’outil. L’aspiration externe et les autres consommateurs de l’atelier doivent être examinés séparément.",
-			"Les variantes d’orbite et de plateau ne sont pas interchangeables pour un même objectif de finition."
+			"Les variantes d’orbite et de plateau ne sont pas interchangeables pour un même objectif de finition.",
+			"Le régime de consommation publié reste documentaire : la pression de service ne prouve pas sa pression de mesure. Compatibilité indéterminée."
 		]
 	},
 	"specifications": [
@@ -79,6 +80,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"rupes-ra150a-20260926"
 			]
+		},
+		{
+			"label": "Consommation publiée, hors dimensionnement",
+			"value": "380 L/min ; Le régime de consommation publié reste documentaire : la pression de service ne prouve pas sa pression de mesure. Compatibilité indéterminée.",
+			"evidenceIds": [
+				"review:2026-11-06-followup:rupes-ra150a:1"
+			]
 		}
 	],
 	"evidence": [
@@ -90,6 +98,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation maximale explicitement publiée dans le tableau « Air consumption max », en L/min."
+		},
+		{
+			"id": "review:2026-11-06-followup:rupes-ra150a:1",
+			"sourceUrl": "https://www.rupes.com/catalogue/2026/RUPES_Catalogue-2026_EN.pdf#page=62",
+			"sourceLabel": "RUPES, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Catalogue62 RA150A,orbite5/plateau150,0,95kg etAirconsumptionmax380Lmin; service6,2bar donné séparément. Le tableau n’atteste pas la pression de mesure380Lmin; traiter la donnée comme non dimensionnante, distinct AK150A à400. SHA-256 du document complet : 018272fb053802b4e419d3f70bb75a46a02a62aec2a0404862ded7c21b443a63."
 		}
 	],
 	"fieldSources": {
@@ -99,18 +117,14 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"rupes-ra150a-20260926"
 		],
-		"airflowLpm": [
-			"rupes-ra150a-20260926"
+		"demandExplanation": [
+			"review:2026-11-06-followup:rupes-ra150a:1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 380,
-		"typical": 380,
-		"max": 380
-	}
+	"demandExplanation": "Le régime de consommation publié reste documentaire : la pression de service ne prouve pas sa pression de mesure. Compatibilité indéterminée."
 };
 
 export default product;

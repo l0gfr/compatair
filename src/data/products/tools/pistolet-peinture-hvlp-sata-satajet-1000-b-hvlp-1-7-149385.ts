@@ -95,56 +95,56 @@ const product: ToolProfileInput = {
 			"label": "Consommation déclarée à 2 bar",
 			"value": "350 Nl/min",
 			"evidenceIds": [
-				"october3d-tools-sata-1000b-actual-manual-p114"
+				"review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual114"
 			]
 		},
 		{
 			"label": "Masse avec godet 0,6 l réutilisable",
 			"value": "604 g",
 			"evidenceIds": [
-				"october3d-tools-sata-1000b-actual-manual-p114"
+				"review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual114"
 			]
 		},
 		{
 			"label": "Distance de pulvérisation recommandée",
 			"value": "13–17 cm",
 			"evidenceIds": [
-				"october3d-tools-sata-1000b-actual-manual-p114"
+				"review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual114"
 			]
 		},
 		{
 			"label": "Raccord d’air",
 			"value": "G 1/4 mâle",
 			"evidenceIds": [
-				"october3d-tools-sata-1000b-actual-manual-p115"
+				"review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual115"
 			]
 		},
 		{
 			"label": "Diamètre intérieur minimal du flexible",
 			"value": "9 mm",
 			"evidenceIds": [
-				"october3d-tools-sata-1000b-actual-manual-p118"
+				"review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual118"
 			]
 		},
 		{
 			"label": "Réglage de la pression",
 			"value": "Gâchette tirée complètement ; micromètre d’air ouvert",
 			"evidenceIds": [
-				"october3d-tools-sata-1000b-actual-manual-p119"
+				"review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual119"
 			]
 		},
 		{
 			"label": "Consommation dans son unité originale",
 			"value": "350 Nl/min",
 			"evidenceIds": [
-				"october3d-tools-sata-1000b-actual-manual-p114"
+				"review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual114"
 			]
 		},
 		{
 			"label": "Portée de la pression dans la source",
 			"value": "Air consumption at 2,0 bar / 29 psi spray gun inlet pressure",
 			"evidenceIds": [
-				"october3d-tools-sata-1000b-actual-manual-p114"
+				"review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual114"
 			]
 		}
 	],
@@ -198,6 +198,66 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-13",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 fcb179890de6fb84bab9465d6c4a3dd5f60da7f75fdd591b1ac219a02e558f45. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:1",
+			"sourceUrl": "https://www.sata.com/media/8d/95/61/1793362235/BAL-SATAJET-1000-B.PDF.PDF?ts=1793362235",
+			"sourceLabel": "SATA, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Noticeactuelle retrouvée surfiche149385 : cheminmedia8d/95/61/1793362235,GET200PDFcomplet6,17Mo. p114 confirme350Nl/minà2barHVLP,604gavecgodet0,6L et13–17cm ; p115/118/119règlentl'usage dynamique. Ancienne notice404 à remplacer dans les références courantes en conservant sa preuve historique. SHA-256 du document complet : fcb179890de6fb84bab9465d6c4a3dd5f60da7f75fdd591b1ac219a02e558f45."
+		},
+		{
+			"id": "review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:2",
+			"sourceUrl": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806#page=38",
+			"sourceLabel": "SATA, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Noticeactuelle retrouvée surfiche149385 : cheminmedia8d/95/61/1793362235,GET200PDFcomplet6,17Mo. p114 confirme350Nl/minà2barHVLP,604gavecgodet0,6L et13–17cm ; p115/118/119règlentl'usage dynamique. Ancienne notice404 à remplacer dans les références courantes en conservant sa preuve historique. SHA-256 du document complet : 36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3."
+		},
+		{
+			"id": "review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual114",
+			"sourceUrl": "https://www.sata.com/media/8d/95/61/1793362235/BAL-SATAJET-1000-B.PDF.PDF?ts=1793362235#page=114",
+			"sourceLabel": "SATA, document technique officiel, page PDF 114",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Notice actuelle complète lue pages 114,115,118,119 ; SHA-256 fcb179890de6fb84bab9465d6c4a3dd5f60da7f75fdd591b1ac219a02e558f45."
+		},
+		{
+			"id": "review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual115",
+			"sourceUrl": "https://www.sata.com/media/8d/95/61/1793362235/BAL-SATAJET-1000-B.PDF.PDF?ts=1793362235#page=115",
+			"sourceLabel": "SATA, document technique officiel, page PDF 115",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Notice actuelle complète lue pages 114,115,118,119 ; SHA-256 fcb179890de6fb84bab9465d6c4a3dd5f60da7f75fdd591b1ac219a02e558f45."
+		},
+		{
+			"id": "review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual118",
+			"sourceUrl": "https://www.sata.com/media/8d/95/61/1793362235/BAL-SATAJET-1000-B.PDF.PDF?ts=1793362235#page=118",
+			"sourceLabel": "SATA, document technique officiel, page PDF 118",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Notice actuelle complète lue pages 114,115,118,119 ; SHA-256 fcb179890de6fb84bab9465d6c4a3dd5f60da7f75fdd591b1ac219a02e558f45."
+		},
+		{
+			"id": "review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual119",
+			"sourceUrl": "https://www.sata.com/media/8d/95/61/1793362235/BAL-SATAJET-1000-B.PDF.PDF?ts=1793362235#page=119",
+			"sourceLabel": "SATA, document technique officiel, page PDF 119",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Notice actuelle complète lue pages 114,115,118,119 ; SHA-256 fcb179890de6fb84bab9465d6c4a3dd5f60da7f75fdd591b1ac219a02e558f45."
 		}
 	],
 	"fieldSources": {
@@ -205,13 +265,13 @@ const product: ToolProfileInput = {
 			"october3d-tools-sata-current-catalog-2025-p38"
 		],
 		"workingPressureBar": [
-			"october3d-tools-sata-1000b-actual-manual-p114"
+			"review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual114"
 		],
 		"recommendedHose": [
-			"october3d-tools-sata-1000b-actual-manual-p118"
+			"review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual118"
 		],
 		"airflowLpm": [
-			"october3d-tools-sata-1000b-actual-manual-p114"
+			"review:2026-11-06-followup:pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-1-7-149385:manual114"
 		]
 	},
 	"notes": [

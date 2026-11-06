@@ -1,3 +1,4 @@
+import { beforeReservedNovember6Followup } from './reviewed-catalog-amendments-2026-11-06-followup.mjs';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { describe, expect, it } from 'vitest';
@@ -15,7 +16,8 @@ import { toolCategoryLabel } from '../../src/data/taxonomy';
 const read = file => readFileSync(new URL('../../' + file, import.meta.url));
 const snapshot = JSON.parse(read('src/data/imports/catalog-amendments-reviewed-2026-11-03-reserved.json'));
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
-const native = row => parseCatalogProductSource(row.kind, read(row.file).toString());
+const native = row => beforeReservedNovember6Followup(parseCatalogProductSource(row.kind, read(row.file).toString()));
+const datedHistory = evidenceHistory.events.slice(0, 38383);
 const ample = compressorSchema.parse({ ...compressors[0], id: 'synthetic-nov3-probe', slug: 'synthetic-nov3-probe', confidence: 'A', maxPressureBar: 50, dutyCycle: 1, fadCurve: [{ pressureBar: 1, litersPerMinute: 100000 }, { pressureBar: 50, litersPerMinute: 100000 }] });
 describe('November3 reserved candidate factual followup', () => {
  it('replays399 exact records, historical bytes and identity with no unknown drift', () => {
@@ -23,16 +25,18 @@ describe('November3 reserved candidate factual followup', () => {
   expect(new Set(snapshot.rows.map(row => row.id)).size).toBe(399);
   for (const row of snapshot.rows) {
    const after = native(row), before = beforeReservedNovember3Followup(after);
-   expect(applyReservedNovember3Followup(structuredClone(before)), row.id).toEqual(after);
-   expect(applyReservedNovember3Followup(structuredClone(after)), row.id).toEqual(after);
+   expect(beforeReservedNovember6Followup(applyReservedNovember3Followup(structuredClone(before))), row.id).toEqual(after);
+   expect(beforeReservedNovember6Followup(applyReservedNovember3Followup(structuredClone(after))), row.id).toEqual(after);
    expect(after.evidence.slice(0, before.evidence.length), row.id).toEqual(before.evidence);
    let bytes = buildCatalogProductSource(row.kind, Object.fromEntries(row.sourcePropertyOrder.map(key => [key, before[key]])), row.sourceIndentation);
    if (row.sourceCompactExport) bytes = bytes.replace(';\n\nexport', ';\nexport');
    expect(digest(bytes), row.id).toBe(row.beforeFileSha256);
-   expect(digest(read(row.file)), row.id).toBe(row.afterFileSha256);
+   let datedBytes = buildCatalogProductSource(row.kind, Object.fromEntries([...row.sourcePropertyOrder, ...Object.keys(after).filter(k => !row.sourcePropertyOrder.includes(k))].map(k => [k, after[k]])), row.sourceIndentation);
+   if (row.sourceCompactExport) datedBytes = datedBytes.replace(';\n\nexport', ';\nexport');
+   expect(digest(datedBytes), row.id).toBe(row.afterFileSha256);
    const parsed = (row.kind === 'tools' ? toolProfileSchema : compressorSchema).parse(after);
    for (const key of Object.keys(after)) expect(Object.hasOwn(parsed, key), row.id + '/ignored-field/' + key).toBe(true);
-   const current = (row.kind === 'tools' ? tools : compressors).find(product => product.id === row.id);
+   const current = beforeReservedNovember6Followup((row.kind === 'tools' ? tools : compressors).find(product => product.id === row.id));
    expect(current, row.id).toEqual(row.kind === 'tools' ? { ...parsed, category: toolCategoryLabel(parsed.categoryId) } : parsed);
    for (const key of Object.keys(before).filter(key => !row.fields.includes(key))) expect(after[key], row.id + '/' + key).toEqual(before[key]);
    for (const key of ['brand', 'model', 'mpn']) expect(() => applyReservedNovember3Followup({ ...before, [key]: 'unreviewed' }), row.id).toThrow('identity');
@@ -48,10 +52,10 @@ describe('November3 reserved candidate factual followup', () => {
  it('preserves the complete37925-event prefix and appends exactly458 new proofs', () => {
   const proof = snapshot.evidenceHistoryAppend;
   expect(proof.previousEventCount).toBe(37925); expect(proof.addedEvents).toBe(458);
-  const before = evidenceHistory.events.slice(0, proof.previousEventCount);
+  const before = datedHistory.slice(0, proof.previousEventCount);
   expect(digest(JSON.stringify(before))).toBe(proof.previousEventsSha256);
-  expect(evidenceHistory.events).toHaveLength(proof.previousEventCount + proof.addedEvents);
-  const additions = evidenceHistory.events.slice(proof.previousEventCount);
+  expect(datedHistory).toHaveLength(proof.previousEventCount + proof.addedEvents);
+  const additions = datedHistory.slice(proof.previousEventCount);
   expect(additions.every(event => event.id.startsWith('review:2026-11-03-reserved:'))).toBe(true);
   expect(new Set(additions.map(event => event.id)).size).toBe(458);
   const changed = structuredClone(before); changed[0].summary += 'unreviewed';
@@ -83,7 +87,7 @@ describe('November3 reserved candidate factual followup', () => {
  });
  it('explains the exact current scope delta without rewriting historical totals', () => {
   const previous = createCatalogScope(compressors.map(beforeReservedNovember3Followup), tools.map(beforeReservedNovember3Followup));
-  const current = createCatalogScope(compressors, tools);
+  const current = createCatalogScope(compressors.map(beforeReservedNovember6Followup), tools.map(beforeReservedNovember6Followup));
   expect(previous.fixed_flow_tool_count).toBe(8869); expect(previous.fixed_verdict_count).toBe(45755171); expect(previous.parametric_combination_count).toBe(57873662);
   expect(current.fixed_flow_tool_count).toBe(8846); expect(current.fixed_verdict_count).toBe(45636514); expect(current.parametric_combination_count).toBe(57992319);
   expect(previous.fixed_flow_tool_count - current.fixed_flow_tool_count).toBe(23);

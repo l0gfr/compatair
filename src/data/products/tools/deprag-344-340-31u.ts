@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/deprag-344-340-31u.webp",
+		"src": "/images/products/deprag-344-340-31u-20261106.svg",
 		"alt": "Repères techniques DEPRAG 344-340-31U, référence 384210A",
 		"sourceUrl": "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3130/D3130en.pdf#page=12",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Le couple et la vitesse correspondent à la colonne de cette référence commande, pas à l’ensemble de la famille.",
-			"Les broches intégrées nécessitent aussi le dimensionnement des auxiliaires de l’installation, qui ne sont pas inclus dans la consommation du moteur de vissage."
+			"Les broches intégrées nécessitent aussi le dimensionnement des auxiliaires de l’installation, qui ne sont pas inclus dans la consommation du moteur de vissage.",
+			"Le régime de consommation publié est non précisé. Cette valeur reste documentaire et le moteur renvoie insufficient_data."
 		]
 	},
 	"specifications": [
@@ -97,6 +98,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine."
+		},
+		{
+			"id": "review:2026-11-06-followup:deprag-344-340-31u:1",
+			"sourceUrl": "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3130/D3130en.pdf#page=12",
+			"sourceLabel": "DEPRAG, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "D3130 p12 identifie34434031U réversible3,5–6,5Nm/2400rpm, consommation1,1m³min; la variante sansU est4–8Nm/2800rpm. Pression de fonctionnement6,3bar et consommation sans régime ne prouvent pas un maximum de dimensionnement. Ne pas confondre les deux exécutions. SHA-256 du document complet : 9d445214624acd388e222274452a61e9bc2026c82f3d78fae74d146516a75dbd."
 		}
 	],
 	"fieldSources": {
@@ -108,6 +119,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"deprag-384210a-20260926"
+		],
+		"airflowBasis": [
+			"review:2026-11-06-followup:deprag-344-340-31u:1"
 		]
 	},
 	"notes": [
@@ -117,7 +131,8 @@ const product: ToolProfileInput = {
 		"min": 1100,
 		"typical": 1100,
 		"max": 1100
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

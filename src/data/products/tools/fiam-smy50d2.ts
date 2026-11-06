@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/fiam-smy50d2.webp",
+		"src": "/images/products/fiam-smy50d2-20261106.svg",
 		"alt": "Repères techniques Fiam SMY50D2, référence 146313007",
 		"sourceUrl": "https://www.fiamgroup.com/en/products/grinders-and-sanders/smy50d2/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Le couple éventuel est indicatif : l’assemblage, l’accessoire et la pression dynamique influencent le résultat.",
-			"Consommation déclarée par le fabricant, sans essai indépendant ni garantie d’un maximum à tous les régimes."
+			"Consommation déclarée par le fabricant, sans essai indépendant ni garantie d’un maximum à tous les régimes.",
+			"Le régime de consommation publié est non précisé. Cette valeur reste documentaire et le moteur renvoie insufficient_data."
 		]
 	},
 	"specifications": [
@@ -106,6 +107,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+		},
+		{
+			"id": "review:2026-11-06-followup:fiam-smy50d2:1",
+			"sourceUrl": "https://www.fiamgroup.com/en/products/grinders-and-sanders/smy50d2/",
+			"sourceLabel": "Fiam, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Fiche146313007 etbrochure7 :SMY50D2,400W/15000rpm,pince6mm,meule50mm,1,30kg/10Ls;11SM10D/9SM03DT sont d’autres tailles. Régime non précisé:600Lmin ne doit pas devenir débit maximal de calcul. SHA-256 du document complet : 2d9867227e3c82d507ca2998a1a7bcd9d14f021a608010ef9bc79b1c243495cb."
+		},
+		{
+			"id": "review:2026-11-06-followup:fiam-smy50d2:2",
+			"sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-44.pdf#page=7",
+			"sourceLabel": "Fiam, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Fiche146313007 etbrochure7 :SMY50D2,400W/15000rpm,pince6mm,meule50mm,1,30kg/10Ls;11SM10D/9SM03DT sont d’autres tailles. Régime non précisé:600Lmin ne doit pas devenir débit maximal de calcul. SHA-256 du document complet : 01b152f269aeae367daa8a9524f083a1679707b0a3eff4daa59bcec83635f6de."
 		}
 	],
 	"fieldSources": {
@@ -117,6 +138,10 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"fiam-146313007-20260926"
+		],
+		"airflowBasis": [
+			"review:2026-11-06-followup:fiam-smy50d2:1",
+			"review:2026-11-06-followup:fiam-smy50d2:2"
 		]
 	},
 	"notes": [
@@ -126,7 +151,8 @@ const product: ToolProfileInput = {
 		"min": 600,
 		"typical": 600,
 		"max": 600
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

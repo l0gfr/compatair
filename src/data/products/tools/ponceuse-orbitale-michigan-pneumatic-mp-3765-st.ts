@@ -3,9 +3,9 @@ import type { ToolProfileInput } from '../../../domain/catalog';
 const product: ToolProfileInput = {
 	"id": "ponceuse-orbitale-michigan-pneumatic-mp-3765-st",
 	"slug": "ponceuse-orbitale-michigan-pneumatic-mp-3765-st",
-	"categoryId": "ponceuse-orbitale",
-	"category": "ponceuse-orbitale",
-	"label": "Michigan Pneumatic MP-3765-ST",
+	"categoryId": "ponceuse-rotative",
+	"category": "Ponceuse rotative",
+	"label": "Ponceuse rotative Michigan Pneumatic MP-3765-ST",
 	"brand": "Michigan Pneumatic",
 	"model": "MP-3765-ST",
 	"mpn": "MP-3765-ST",
@@ -29,8 +29,9 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Michigan Pneumatic MP-3765-ST. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 4.75 lbs. Ligne technique constructeur : MP-3765-ST 7\" 5/8\"-11 4500 rpm 1 4\" 12-3/4\" 4.75 lbs 1/4\" 3/8\" 9 cfm.",
+		"overview": "Michigan Pneumatic MP-3765-ST : ponceuse rotative. Plateau 7 pouces, broche 5/8-11, 4500 tr/min, puissance 1 hp et masse 4,75 lb. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 		"verifiedFacts": [
+			"Ponceuse rotative. Plateau 7 pouces, broche 5/8-11, 4500 tr/min, puissance 1 hp et masse 4,75 lb.",
 			"Masse publiée : 4.75 lbs.",
 			"Ligne technique constructeur : MP-3765-ST 7\" 5/8\"-11 4500 rpm 1 4\" 12-3/4\" 4.75 lbs 1/4\" 3/8\" 9 cfm."
 		],
@@ -68,6 +69,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-michigan-11-pdf-p4"
 			]
+		},
+		{
+			"label": "Fonction et configuration",
+			"value": "Plateau 7 pouces, broche 5/8-11, 4500 tr/min, puissance 1 hp et masse 4,75 lb.",
+			"evidenceIds": [
+				"review:2026-11-06-followup:ponceuse-orbitale-michigan-pneumatic-mp-3765-st:1"
+			]
 		}
 	],
 	"evidence": [
@@ -80,6 +88,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : c7f8feaec707022985699c2229fe0d3eb9221d4f486b03528ec4ef2fcb25a46e. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-06-followup:ponceuse-orbitale-michigan-pneumatic-mp-3765-st:1",
+			"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/11-Sanders_V2.pdf#page=4",
+			"sourceLabel": "Michigan Pneumatic, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Catalogue ponceuses p4 : disque rotatif7 pouces,broche5/8-11,4500 tr/min,1 hp et4,75 lb. Catégorie orbitale erronée ; corriger vers rotative sans inventer une orbite. Les9 cfm restent hors moteur. SHA-256 du document complet : c7f8feaec707022985699c2229fe0d3eb9221d4f486b03528ec4ef2fcb25a46e."
 		}
 	],
 	"fieldSources": {

@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/red-rooster-rri-4007lr5.webp",
+		"src": "/images/products/red-rooster-rri-4007lr5-20261106.svg",
 		"alt": "Repères techniques Red Rooster RRI-4007LR5, référence RRI-4007LR5",
 		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=56",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas.",
+			"Le régime de consommation publié est non précisé. Cette valeur reste documentaire et le moteur renvoie insufficient_data."
 		]
 	},
 	"specifications": [
@@ -92,6 +93,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "review:2026-11-06-followup:red-rooster-rri-4007lr5:1",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=56",
+			"sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "P56 :scie coupe-tubesLR5,2200coursesmin/2,1Ls/6,3kg,étau etchaîne prescrits; LR4LITE3,7kg/LR66,9kg. La consigne6,3bar n’est pas un appariement de mesure126Lmin. Aucun verdict conclusif depuis ce point. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+		},
+		{
+			"id": "review:2026-11-06-followup:red-rooster-rri-4007lr5:2",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+			"sourceLabel": "Red Rooster, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "P56 :scie coupe-tubesLR5,2200coursesmin/2,1Ls/6,3kg,étau etchaîne prescrits; LR4LITE3,7kg/LR66,9kg. La consigne6,3bar n’est pas un appariement de mesure126Lmin. Aucun verdict conclusif depuis ce point. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
 		}
 	],
 	"fieldSources": {
@@ -109,6 +130,10 @@ const product: ToolProfileInput = {
 		],
 		"connectorSize": [
 			"red-rooster-rri-4007lr5-20260926"
+		],
+		"airflowBasis": [
+			"review:2026-11-06-followup:red-rooster-rri-4007lr5:1",
+			"review:2026-11-06-followup:red-rooster-rri-4007lr5:2"
 		]
 	},
 	"notes": [
@@ -122,7 +147,8 @@ const product: ToolProfileInput = {
 	"recommendedHose": {
 		"innerDiameterMm": 10
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"airflowBasis": "unqualified"
 };
 
 export default product;

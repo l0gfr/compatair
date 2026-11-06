@@ -24,14 +24,14 @@ const product: ToolProfileInput = {
 		"label": "Référence TPT-928",
 		"distinguishingAttributes": {
 			"reference": "TPT-928",
-			"Masse publiée": "23 kg (51 lb)",
+			"Masse publiée": "2,3 kg (5,1 lb)",
 			"Longueur hors tout publiée": "561 mm (22.1 inch)"
 		}
 	},
 	"editorial": {
-		"overview": "Tranmax TPT-928. Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse. Masse publiée : 23 kg (51 lb). Longueur hors tout publiée : 561 mm (22.1 inch).",
+		"overview": "Tranmax TPT-928. Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse. Masse publiée : 2,3 kg (5,1 lb). Longueur hors tout publiée : 561 mm (22.1 inch).",
 		"verifiedFacts": [
-			"Masse publiée : 23 kg (51 lb).",
+			"Masse publiée : 2,3 kg (5,1 lb).",
 			"Longueur hors tout publiée : 561 mm (22.1 inch)."
 		],
 		"limitations": [
@@ -44,7 +44,7 @@ const product: ToolProfileInput = {
 	"specifications": [
 		{
 			"label": "Masse publiée",
-			"value": "23 kg (51 lb)",
+			"value": "2,3 kg (5,1 lb)",
 			"evidenceIds": [
 				"october2b-tools-oct2b-tranmax-tp-pdf-p32"
 			]
@@ -74,6 +74,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : c2e29dbb1f9d433e1d65568bc327d3ea21eadd7d39f8edbb0d98145850f7c7d2. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-06-followup:burineur-tranmax-tpt-928:1",
+			"sourceUrl": "https://ss-client-website.s3-ap-northeast-1.amazonaws.com/tranmax/2023_01_09_113224_2212-Professional-Power-Tools-TP.pdf#page=32",
+			"sourceLabel": "Tranmax, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Lecture visuelle PDF32 : TPT928marteau de décalaminage,7000 coups/min,course38 mm,561 mm,masse2,3 kg/5,1 lb. La transcription23 kg/51 lb a perdu les décimales : corriger les deux unités. Consommation moyenne93 L/min hors calcul. SHA-256 du document complet : c2e29dbb1f9d433e1d65568bc327d3ea21eadd7d39f8edbb0d98145850f7c7d2."
 		}
 	],
 	"fieldSources": {

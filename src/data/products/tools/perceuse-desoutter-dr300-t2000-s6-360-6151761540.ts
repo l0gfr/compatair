@@ -34,16 +34,16 @@ const product: ToolProfileInput = {
 		"distinguishingAttributes": {
 			"reference": "6151761540",
 			"Entrée d’air (pouces)": "1/4",
-			"Pince": "1/4 (6.4mm)",
-			"Longueur": "287 mm"
+			"Longueur": "287 mm",
+			"Broche de sortie": "1/4 × 28"
 		}
 	},
 	"editorial": {
-		"overview": "Desoutter DR300-T2000-S6-360 (réf. 6151761540). Consommation à vide : 570 L/min à 6,3 bar. Entrée d’air (pouces) : 1/4. Pince : 1/4 (6.4mm).",
+		"overview": "Desoutter DR300-T2000-S6-360 (réf. 6151761540). Consommation à vide : 570 L/min à 6,3 bar. Entrée d’air (pouces) : 1/4. Broche de sortie : 1/4 × 28.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 297.",
 			"Entrée d’air (pouces) : 1/4.",
-			"Pince : 1/4 (6.4mm).",
+			"Broche de sortie : 1/4 × 28.",
 			"Longueur : 287 mm."
 		],
 		"limitations": [
@@ -70,11 +70,12 @@ const product: ToolProfileInput = {
 			]
 		},
 		{
-			"label": "Pince",
-			"value": "1/4 (6.4mm)",
+			"label": "Broche de sortie",
+			"value": "1/4 × 28",
 			"evidenceIds": [
-				"documented-d-desoutter-2026-p297",
-				"documented-d-desoutter-6151761540"
+				"review:2026-11-06-followup:perceuse-desoutter-dr300-t2000-s6-360-6151761540:1",
+				"review:2026-11-06-followup:perceuse-desoutter-dr300-t2000-s6-360-6151761540:2",
+				"review:2026-11-06-followup:perceuse-desoutter-dr300-t2000-s6-360-6151761540:3"
 			]
 		},
 		{
@@ -172,6 +173,36 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-13",
 			"confidence": "B",
 			"notes": "SHA-256 7d2121c4aeb36c31bde784ba6ddcebee83686fb4883c6b63005d0e569613304c. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé. Édition 09.2026 : ligne de référence, consommation publiée et pression page 345 recoupées le 13 octobre ; caractéristiques et incertitudes conservées."
+		},
+		{
+			"id": "review:2026-11-06-followup:perceuse-desoutter-dr300-t2000-s6-360-6151761540:1",
+			"sourceUrl": "https://www.datocms-assets.com/104564/1789974097-desoutter_general_catalog_fr_2026-09.pdf#page=297",
+			"sourceLabel": "Desoutter, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Catalogue p297 et fiche actuelle : DR300-T2000-S6-360,300 W/2000 tr/min/tête360°. La sortie est une broche1/4 ×28, pas une pince1/4. Corriger l'interface ;570 L/min à vide restent exclus, sans revendiquer un recoupement numérique absent. SHA-256 du document complet : 7d2121c4aeb36c31bde784ba6ddcebee83686fb4883c6b63005d0e569613304c."
+		},
+		{
+			"id": "review:2026-11-06-followup:perceuse-desoutter-dr300-t2000-s6-360-6151761540:2",
+			"sourceUrl": "https://www.desouttertools.com/en-us/products/6151761540",
+			"sourceLabel": "Desoutter, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Catalogue p297 et fiche actuelle : DR300-T2000-S6-360,300 W/2000 tr/min/tête360°. La sortie est une broche1/4 ×28, pas une pince1/4. Corriger l'interface ;570 L/min à vide restent exclus, sans revendiquer un recoupement numérique absent. SHA-256 du document complet : 44225886b7250fc630e26a7db65c8a36b73cd3ea4041fec7084b340623e49c5c."
+		},
+		{
+			"id": "review:2026-11-06-followup:perceuse-desoutter-dr300-t2000-s6-360-6151761540:3",
+			"sourceUrl": "https://www.datocms-assets.com/104564/1789974097-desoutter_general_catalog_fr_2026-09.pdf#page=345",
+			"sourceLabel": "Desoutter, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Catalogue p297 et fiche actuelle : DR300-T2000-S6-360,300 W/2000 tr/min/tête360°. La sortie est une broche1/4 ×28, pas une pince1/4. Corriger l'interface ;570 L/min à vide restent exclus, sans revendiquer un recoupement numérique absent. SHA-256 du document complet : 7d2121c4aeb36c31bde784ba6ddcebee83686fb4883c6b63005d0e569613304c."
 		}
 	],
 	"fieldSources": {

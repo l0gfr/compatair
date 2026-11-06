@@ -37,7 +37,7 @@ const product: CompressorInput = {
 			"label": "Configuration constructeur",
 			"value": "Groupe sur socle sans réservoir de stockage intégré",
 			"evidenceIds": [
-				"october3d-alup-pdf-extra-04-p4"
+				"review:2026-11-06-followup:alup-evoluto-11:2"
 			]
 		},
 		{
@@ -51,14 +51,14 @@ const product: CompressorInput = {
 			"label": "Air livré à 9,5 bar",
 			"value": "1 596,667 L/min",
 			"evidenceIds": [
-				"october3d-alup-pdf-extra-04-p4"
+				"review:2026-11-06-followup:alup-evoluto-11:2"
 			]
 		},
 		{
 			"label": "Cuve de stockage",
 			"value": "0 L",
 			"evidenceIds": [
-				"october3d-alup-pdf-extra-04-p4"
+				"review:2026-11-06-followup:alup-evoluto-11:2"
 			]
 		},
 		{
@@ -122,11 +122,41 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 540244da3736cbd33c8e75661aef4d490cc81e0cec51bf7d62ce02237a7261dd de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-06-followup:alup-evoluto-11:1",
+			"sourceUrl": "https://www.alup.com/en-international/products/screw-compressors/variable-speed/evoluto-8-22",
+			"sourceLabel": "ALUP, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Le tableau utile est PDF7 et non4 : EVOLUTO11,95,8 m³/h à9,5 bar,11 kW,base212 kg. Minimum22,7 à7 bar distinct du maximum. Corriger le repère de source ; pas de taux de marche déduit. SHA-256 du document complet : 40a44d98f5fff13d612812f4e6b5bead465e1606a9bc7fb749b07d2556e1f5c8."
+		},
+		{
+			"id": "review:2026-11-06-followup:alup-evoluto-11:2",
+			"sourceUrl": "https://www.alup.com/content/dam/brands/Alup/products-bp-structure/oil-injected-screw-compressor/fixed-speed/largo-15-25/leaflets/Alup_Largo_15-25_Evoluto_8-22_EN.pdf#page=7",
+			"sourceLabel": "ALUP, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Le tableau utile est PDF7 et non4 : EVOLUTO11,95,8 m³/h à9,5 bar,11 kW,base212 kg. Minimum22,7 à7 bar distinct du maximum. Corriger le repère de source ; pas de taux de marche déduit. SHA-256 du document complet : 88850343508a5a38e98557b7e0229f393825f76cfdf4daa350b9ef9f9f6359a3."
+		},
+		{
+			"id": "review:2026-11-06-followup:alup-evoluto-11:3",
+			"sourceUrl": "https://www.alup.com/content/dam/brands/Alup/products-bp-structure/oil-injected-screw-compressor/fixed-speed/largo-15-25/leaflets/Alup_Largo_15-25_Evoluto_8-22_EN.pdf#page=1",
+			"sourceLabel": "ALUP, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Le tableau utile est PDF7 et non4 : EVOLUTO11,95,8 m³/h à9,5 bar,11 kW,base212 kg. Minimum22,7 à7 bar distinct du maximum. Corriger le repère de source ; pas de taux de marche déduit. SHA-256 du document complet : 88850343508a5a38e98557b7e0229f393825f76cfdf4daa350b9ef9f9f6359a3."
 		}
 	],
 	"fieldSources": {
 		"tankLiters": [
-			"october3d-alup-pdf-extra-04-p4"
+			"review:2026-11-06-followup:alup-evoluto-11:2"
 		],
 		"oilType": [
 			"october3d-alup-pdf-extra-04-p1"
@@ -136,10 +166,10 @@ const product: CompressorInput = {
 			"october3d-alup-extra-98"
 		],
 		"fadCurve": [
-			"october3d-alup-pdf-extra-04-p4"
+			"review:2026-11-06-followup:alup-evoluto-11:2"
 		],
 		"powerKw": [
-			"october3d-alup-pdf-extra-04-p4"
+			"review:2026-11-06-followup:alup-evoluto-11:2"
 		]
 	},
 	"notes": [

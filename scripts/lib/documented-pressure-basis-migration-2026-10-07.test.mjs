@@ -1,3 +1,4 @@
+import { beforeReservedNovember6Followup } from './reviewed-catalog-amendments-2026-11-06-followup.mjs';
 const cardsNovember3 = new Map(JSON.parse(readFileSync(new URL('../../src/data/imports/catalog-amendments-reviewed-2026-11-03-reserved.json', import.meta.url))).technicalCards.map(card => [card.path, card]));
 import { beforeOctober25Review } from './reviewed-catalog-test-projection.mjs';
 import { parseCatalogProductSource } from './catalog-tooling.mjs';
@@ -119,19 +120,20 @@ describe('documented pressure basis migration October 7', () => {
     const product = loadProduct(expected.id);
     expect(product, expected.id).toEqual(expected);
     canonical.push([product.id, withoutBasis(beforeOctober17(beforeOctober18(beforeOctober19(beforeOctober20(beforeOctober21(beforeOctober24(beforeOctober25Review(product))))))))]);
-    const currentCardHashNovember3=digest(readFileSync(new URL(`../../public${product.image.src}`, import.meta.url))), cardNovember3=cardsNovember3.get(product.image.src);
+    const datedImage = beforeReservedNovember6Followup(product).image.src;
+    const currentCardHashNovember3=digest(readFileSync(new URL(`../../public${datedImage}`, import.meta.url))), cardNovember3=cardsNovember3.get(datedImage);
     if(cardNovember3)expect(currentCardHashNovember3,product.id).toBe(cardNovember3.afterSha256);
-    const liveCardHash=cardNovember3?.beforeSha256??currentCardHashNovember3, cardNovember1=cardsNovember1.get(product.image.src);
+    const liveCardHash=cardNovember3?.beforeSha256??currentCardHashNovember3, cardNovember1=cardsNovember1.get(datedImage);
     if(cardNovember1)expect(liveCardHash,product.id).toBe(cardNovember1.afterSha256);
-    const servedCardHash=cardNovember1?.beforeSha256??liveCardHash, card31=cards31.get(product.image.src);
+    const servedCardHash=cardNovember1?.beforeSha256??liveCardHash, card31=cards31.get(datedImage);
     if(card31)expect(servedCardHash,product.id).toBe(card31.afterSha256);
-    const actualCardHash=card31?.beforeSha256??servedCardHash, card25=cards25.get(product.image.src);
+    const actualCardHash=card31?.beforeSha256??servedCardHash, card25=cards25.get(datedImage);
     if(card25)expect(actualCardHash,product.id).toBe(card25.afterSha256);
-    const beforeOctober25CardHash=card25?.beforeSha256??actualCardHash, card21=cards21.get(product.image.src);
+    const beforeOctober25CardHash=card25?.beforeSha256??actualCardHash, card21=cards21.get(datedImage);
     if(card21) expect(beforeOctober25CardHash).toBe(card21.afterSha256);
-    const currentCardHash=card21?.beforeSha256??beforeOctober25CardHash, card20=cards20.get(product.image.src);
+    const currentCardHash=card21?.beforeSha256??beforeOctober25CardHash, card20=cards20.get(datedImage);
     if(card20) expect(currentCardHash).toBe(card20.afterSha256);
-    const cardHash=card20?.beforeSha256??currentCardHash, card=cards19.get(product.image.src);
+    const cardHash=card20?.beforeSha256??currentCardHash, card=cards19.get(datedImage);
     if(card)expect(cardHash,product.id).toBe(card.afterSha256);
     images.push([product.id,card?.beforeSha256??cardHash]);
     if (selected.has(product.id)) {

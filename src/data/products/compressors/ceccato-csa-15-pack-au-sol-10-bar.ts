@@ -22,7 +22,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 1550
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "unknown",
 	"powerKw": 11,
 	"weightKg": 255,
@@ -76,7 +75,8 @@ const product: CompressorInput = {
 			"Le point FAD appartient à cette configuration et à sa pression de référence ; aucune courbe de fonctionnement supplémentaire n’est inventée.",
 			"Mode de lubrification non établi dans cette fiche ; aucune qualité d’air déduite.",
 			"Configuration et pression explicites du catalogue, sans numéro d’article attribué artificiellement ; faire confirmer la version commandée.",
-			"Disponibilité locale, alimentation électrique, dégagements d’entretien et qualité d’air au point d’usage à vérifier avant installation."
+			"Disponibilité locale, alimentation électrique, dégagements d’entretien et qualité d’air au point d’usage à vérifier avant installation.",
+			"Le taux de marche du groupe complet n’est pas établi. La classe de service du moteur et les promesses générales de gamme restent distinctes ; compatibilité continue indéterminée."
 		]
 	},
 	"evidence": [
@@ -99,6 +99,26 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 a396f7642312e7bc1e0f7624ec55b4836b176f0deb7ba6e0ae70e4ce9cbe4df6. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-06-followup:ceccato-csa-15-pack-au-sol-10-bar:1",
+			"sourceUrl": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csa-7-5-20-hp/leaflets/Ceccato_CSA_7.5-20_Leaflet_EN.pdf#page=6",
+			"sourceLabel": "Ceccato, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Table p6 : FAD1550 L/min à9,5 bar etmax10, PACKau sol sans cuve,1000 ×665 ×1045 mm. Conserver les pressions distinctes, retirer le cycle complet non prouvé par les documents actuels. SHA-256 du document complet : b36c0fbb8a63a69867b66a6e663923588ccfd8e2def16303b3be948aa706c23c."
+		},
+		{
+			"id": "review:2026-11-06-followup:ceccato-csa-15-pack-au-sol-10-bar:2",
+			"sourceUrl": "https://www.ceccato.com/fr-international/air-compressor-products/rotary-screw-compressor/fixed-speed/csa-7-5-20-hp",
+			"sourceLabel": "Ceccato, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Table p6 : FAD1550 L/min à9,5 bar etmax10, PACKau sol sans cuve,1000 ×665 ×1045 mm. Conserver les pressions distinctes, retirer le cycle complet non prouvé par les documents actuels. SHA-256 du document complet : 951bf54e3ca0ed7ff7d6605feb59127e97354a7fba2e8cbf3c6eadb301061298."
 		}
 	],
 	"fieldSources": {
@@ -116,9 +136,6 @@ const product: CompressorInput = {
 		],
 		"weightKg": [
 			"october-ceccato-csa-7-5-20-hp-pdf-p6"
-		],
-		"dutyCycle": [
-			"october-ceccato-csa-7-5-20-hp"
 		]
 	},
 	"notes": [

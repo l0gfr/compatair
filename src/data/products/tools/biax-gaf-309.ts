@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/biax-gaf-309.webp",
+		"src": "/images/products/biax-gaf-309-20261106.svg",
 		"alt": "Repères techniques BIAX GAF 309, référence 150619525",
 		"sourceUrl": "https://biax.de/wp-content/uploads/2025/02/BIAX_Schrauber_DE.pdf#page=8",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -33,7 +33,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Le réglage du couple dépend de l’assemblage et des ressorts prévus par le fabricant.",
-			"L’aspiration des vis et les équipements auxiliaires peuvent demander un dimensionnement séparé."
+			"L’aspiration des vis et les équipements auxiliaires peuvent demander un dimensionnement séparé.",
+			"Le régime de consommation publié est non précisé. Cette valeur reste documentaire et le moteur renvoie insufficient_data."
 		]
 	},
 	"specifications": [
@@ -75,6 +76,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation publiée dans la ligne Luftverbrauch en L/min ; le régime de charge n’est pas détaillé."
+		},
+		{
+			"id": "review:2026-11-06-followup:biax-gaf-309:1",
+			"sourceUrl": "https://biax.de/wp-content/uploads/2025/02/BIAX_Schrauber_DE.pdf#page=8",
+			"sourceLabel": "BIAX, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "BIAXSchrauber p8 :GAF309 code150619525, consigne2–3gouttesminà6bar; voisineGAA309 etGAF205 distinctes. Le210Lmin ne porte ni régime ni pression de mesure explicite. Aucun calcul conclusif de débit avant confirmation. SHA-256 du document complet : 234541dfd789768204963f04e6df723f00c634bb38ced6d544e88ac762382718."
 		}
 	],
 	"fieldSources": {
@@ -86,6 +97,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"biax-150619525-20260926"
+		],
+		"airflowBasis": [
+			"review:2026-11-06-followup:biax-gaf-309:1"
 		]
 	},
 	"notes": [
@@ -95,7 +109,8 @@ const product: ToolProfileInput = {
 		"min": 210,
 		"typical": 210,
 		"max": 210
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

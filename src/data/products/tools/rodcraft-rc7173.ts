@@ -9,7 +9,7 @@ const product: ToolProfileInput = {
 	"categoryId": "meuleuse",
 	"category": "meuleuse",
 	"label": "Rodcraft RC7173",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 6.3,
 		"typical": 6.3,
@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/rodcraft-rc7173.webp",
+		"src": "/images/products/rodcraft-rc7173-20261106.svg",
 		"alt": "Repères techniques Rodcraft RC7173, référence 8951000212",
 		"sourceUrl": "https://www.rodcraft.com/en/products/8951000212",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
-			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes."
+			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
+			"La pression de mesure de la consommation publiée reste à documenter. Les valeurs et leur régime sont conservés dans les spécifications, hors calcul de compatibilité."
 		]
 	},
 	"specifications": [
@@ -86,6 +87,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"rodcraft-8951000212-20260927"
 			]
+		},
+		{
+			"label": "Consommation publiée, hors dimensionnement",
+			"value": "540 L/min ; La pression de mesure de la consommation publiée reste à documenter. Les valeurs et leur régime sont conservés dans les spécifications, hors calcul de compatibilité.",
+			"evidenceIds": [
+				"review:2026-11-06-followup:rodcraft-rc7173:1"
+			]
 		}
 	],
 	"evidence": [
@@ -97,6 +105,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation en charge publiée : 9 L/s. Valeur retenue : 540 L/min (maximum des régimes documentés, L/s × 60)."
+		},
+		{
+			"id": "review:2026-11-06-followup:rodcraft-rc7173:1",
+			"sourceUrl": "https://www.rodcraft.com/en/products/8951000212",
+			"sourceLabel": "Rodcraft, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Meuleuse 125 mm, M14, article 8951000212 ; les 9 L/s en charge restent distincts du plafond dynamique 6,3 bar. Le moteur ne doit pas appairer ces champs sans preuve de mesure. SHA-256 du document complet : b77ef6bca9d2dd4f32eb8d1f20ddeef844cb08f0d738b485cf92929dd7c7781a."
 		}
 	],
 	"fieldSources": {
@@ -106,18 +124,14 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"rodcraft-8951000212-20260927"
 		],
-		"airflowLpm": [
-			"rodcraft-8951000212-20260927"
+		"demandExplanation": [
+			"review:2026-11-06-followup:rodcraft-rc7173:1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 540,
-		"typical": 540,
-		"max": 540
-	}
+	"demandExplanation": "La pression de mesure de la consommation publiée reste à documenter. Les valeurs et leur régime sont conservés dans les spécifications, hors calcul de compatibilité."
 };
 
 export default product;

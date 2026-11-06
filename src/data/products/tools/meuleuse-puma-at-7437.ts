@@ -23,93 +23,22 @@ const product: ToolProfileInput = {
 		"familyId": "puma-at-7437",
 		"label": "Référence AT-7437",
 		"distinguishingAttributes": {
-			"reference": "AT-7437",
-			"Free SpeedRPM": "1/4”",
-			"Collet Size / inch": "25000"
+			"reference": "AT-7437"
 		}
 	},
 	"editorial": {
-		"overview": "PUMA AT-7437. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Free SpeedRPM : 1/4”. Collet Size / inch : 25000.",
+		"overview": "PUMA AT-7437. La table fabricant présente des cellules décalées et des unités incompatibles. Les valeurs sont conservées comme transcription brute ; dimensions, vitesse, pince et masse restent à confirmer.",
 		"verifiedFacts": [
-			"Free SpeedRPM : 1/4”.",
-			"Collet Size / inch : 25000.",
-			"Collet Size / mm : 0.4.",
-			"Overall Length / inch : 300.",
-			"Overall Length / mm : 6.3.",
-			"AirInlet (PT) : 160.",
-			"Air Hose (ID) : 1/4”.",
-			"Net Weight / lb : 283.",
-			"Net Weight / kg : 0.9."
+			"Référence fabricant AT-7437 identifiée ; tableau technique incohérent.",
+			"La table AT-7437 imprime Free SpeedRPM = 1/4”, Collet Size/inch = 25000 et Net Weight/lb = 283 ; ces cellules restent non interprétées."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée.",
+			"Les cellules ne sont pas réordonnées par supposition. Confirmation de la fiche fabricant nécessaire avant sélection de la pince ou dimensionnement."
 		]
 	},
 	"specifications": [
-		{
-			"label": "Free SpeedRPM",
-			"value": "1/4”",
-			"evidenceIds": [
-				"october2-tools-puma-cat-41-pdp-263-p1"
-			]
-		},
-		{
-			"label": "Collet Size / inch",
-			"value": "25000",
-			"evidenceIds": [
-				"october2-tools-puma-cat-41-pdp-263-p1"
-			]
-		},
-		{
-			"label": "Collet Size / mm",
-			"value": "0.4",
-			"evidenceIds": [
-				"october2-tools-puma-cat-41-pdp-263-p1"
-			]
-		},
-		{
-			"label": "Overall Length / inch",
-			"value": "300",
-			"evidenceIds": [
-				"october2-tools-puma-cat-41-pdp-263-p1"
-			]
-		},
-		{
-			"label": "Overall Length / mm",
-			"value": "6.3",
-			"evidenceIds": [
-				"october2-tools-puma-cat-41-pdp-263-p1"
-			]
-		},
-		{
-			"label": "AirInlet (PT)",
-			"value": "160",
-			"evidenceIds": [
-				"october2-tools-puma-cat-41-pdp-263-p1"
-			]
-		},
-		{
-			"label": "Air Hose (ID)",
-			"value": "1/4”",
-			"evidenceIds": [
-				"october2-tools-puma-cat-41-pdp-263-p1"
-			]
-		},
-		{
-			"label": "Net Weight / lb",
-			"value": "283",
-			"evidenceIds": [
-				"october2-tools-puma-cat-41-pdp-263-p1"
-			]
-		},
-		{
-			"label": "Net Weight / kg",
-			"value": "0.9",
-			"evidenceIds": [
-				"october2-tools-puma-cat-41-pdp-263-p1"
-			]
-		},
 		{
 			"label": "Portée de la pression dans la source",
 			"value": "La pression de mesure du débit n’est pas explicitée dans cette fiche.",
@@ -123,6 +52,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-puma-cat-41-pdp-263-p1"
 			]
+		},
+		{
+			"label": "Cellules fabricant non interprétables",
+			"value": "Free SpeedRPM = 1/4” ; Collet Size / inch = 25000 ; Collet Size / mm = 0.4 ; Overall Length / inch = 300 ; Overall Length / mm = 6.3 ; AirInlet (PT) = 160 ; Air Hose (ID) = 1/4” ; Net Weight / lb = 283 ; Net Weight / kg = 0.9",
+			"evidenceIds": [
+				"review:2026-11-06-followup:meuleuse-puma-at-7437:1"
+			]
 		}
 	],
 	"evidence": [
@@ -135,6 +71,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 08b9f9c7d1898261da064b9521bc097278817d20a1ebb50c4f75c23188e0a7c7. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-06-followup:meuleuse-puma-at-7437:1",
+			"sourceUrl": "https://www.pumaair.com/product-Air-Die-Grinder-AirDieGrinder-.html",
+			"sourceLabel": "PUMA, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "La table fabricantAT7437 elle-même est décalée :FreeSpeedRPM=1/4pouce,Colletinch=25000,AirInlet=160,masse283lb. Ne pas conserver ces cellules comme caractéristiques interprétées ni réordonner àl’intuition. Remplacer les affirmations absurdes par la lignebrute et la demande de confirmation, moteur nonconclusif. SHA-256 du document complet : 08b9f9c7d1898261da064b9521bc097278817d20a1ebb50c4f75c23188e0a7c7."
 		}
 	],
 	"fieldSources": {

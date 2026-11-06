@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/fiam-15c2ap.webp",
+		"src": "/images/products/fiam-15c2ap-20261106.svg",
 		"alt": "Repères techniques Fiam 15C2AP, référence 112514532",
 		"sourceUrl": "https://www.fiamgroup.com/en/products/handheld-air-screwdrivers/15c2ap/",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Le couple éventuel est indicatif : l’assemblage, l’accessoire et la pression dynamique influencent le résultat.",
-			"Consommation déclarée par le fabricant, sans essai indépendant ni garantie d’un maximum à tous les régimes."
+			"Consommation déclarée par le fabricant, sans essai indépendant ni garantie d’un maximum à tous les régimes.",
+			"Le régime de consommation publié est non précisé. Cette valeur reste documentaire et le moteur renvoie insufficient_data."
 		]
 	},
 	"specifications": [
@@ -113,6 +114,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+		},
+		{
+			"id": "review:2026-11-06-followup:fiam-15c2ap:1",
+			"sourceUrl": "https://www.fiamgroup.com/en/products/handheld-air-screwdrivers/15c2ap/",
+			"sourceLabel": "Fiam, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Fiche112514532 :15C2AP2200rpm,0,6–2,2Nm,0,70kg et6Ls;15C2A sansP publie4Ls. Le régime n’est pas précisé et la brochure9 présente aussiAPA/APA3I. Conserver360Lmin hors usage conclusif; vérifier exécution exacte plutôt que transférer la commande. SHA-256 du document complet : 41521cbcc420482b1aa687d90306757011eb241d513bacf587aee23b406394b0."
+		},
+		{
+			"id": "review:2026-11-06-followup:fiam-15c2ap:2",
+			"sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-85.pdf#page=9",
+			"sourceLabel": "Fiam, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Fiche112514532 :15C2AP2200rpm,0,6–2,2Nm,0,70kg et6Ls;15C2A sansP publie4Ls. Le régime n’est pas précisé et la brochure9 présente aussiAPA/APA3I. Conserver360Lmin hors usage conclusif; vérifier exécution exacte plutôt que transférer la commande. SHA-256 du document complet : e1c8db38588668ff2347c0005a43ac3067609b0b280d80dc3548f0d8043dccce."
 		}
 	],
 	"fieldSources": {
@@ -124,6 +145,10 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"fiam-112514532-20260926"
+		],
+		"airflowBasis": [
+			"review:2026-11-06-followup:fiam-15c2ap:1",
+			"review:2026-11-06-followup:fiam-15c2ap:2"
 		]
 	},
 	"notes": [
@@ -133,7 +158,8 @@ const product: ToolProfileInput = {
 		"min": 360,
 		"typical": 360,
 		"max": 360
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

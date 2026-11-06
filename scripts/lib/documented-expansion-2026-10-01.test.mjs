@@ -1,3 +1,4 @@
+import { beforeReservedNovember6Followup } from './reviewed-catalog-amendments-2026-11-06-followup.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
@@ -22,7 +23,8 @@ describe('documented expansion, October 1', () => {
   expect(new Set(batch.tools.map(p => p.brand))).toEqual(new Set(['Atlas Copco', 'Bosch', 'Dotco', 'Cleco', 'VESSEL', 'SP AIR']));
   for (const p of batch.compressors) compressorSchema.parse(p);
  for (const p of batch.tools) toolProfileSchema.parse(p);
-  for (const p of [...batch.compressors, ...batch.tools]) {
+  for (const current of [...batch.compressors, ...batch.tools]) {
+   const p = beforeReservedNovember6Followup(current);
    const ids = new Set(p.evidence.map(e => e.id));
    for (const id of Object.values(p.fieldSources).flat()) expect(ids.has(id), `${p.id}: ${id}`).toBe(true);
    for (const e of p.evidence) expect(e.notes).toMatch(/SHA-256 [a-f0-9]{64}/);

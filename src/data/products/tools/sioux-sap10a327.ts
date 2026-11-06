@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/sioux-sap10a327.webp",
+		"src": "/images/products/sioux-sap10a327-20261106.svg",
 		"alt": "Repères techniques Sioux SAP10A327, référence SAP10A327",
 		"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=69",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
-			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes."
+			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
+			"La consommation publiée est mesurée à vide ; le besoin en charge reste à documenter."
 		]
 	},
 	"specifications": [
@@ -99,6 +100,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur."
+		},
+		{
+			"id": "review:2026-11-06-followup:sioux-sap10a327:1",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=69",
+			"sourceLabel": "Sioux, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "P69 :SAP10A3273200rpm/1,3kg/234mm/broche5/8-11,autres327/457 vitessesdifférentes. Les colonnesUnderLoad sontN/A,17Ls sousFreeSpeed. Utiliser le régimeàvide explicite et empêcher la conclusion depuis1020Lmin. SHA-256 du document complet : 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +121,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"sioux-sap10a327-20260927"
+		],
+		"airflowBasis": [
+			"review:2026-11-06-followup:sioux-sap10a327:1"
 		]
 	},
 	"notes": [
@@ -119,7 +133,8 @@ const product: ToolProfileInput = {
 		"min": 1020,
 		"typical": 1020,
 		"max": 1020
-	}
+	},
+	"airflowBasis": "free-speed"
 };
 
 export default product;

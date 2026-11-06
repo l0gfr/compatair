@@ -22,7 +22,7 @@ const product: CompressorInput = {
 		"overview": "Aircraft Aircar 440 OF PRO, référence 2015530 : cuve de 22 L, pression maximale publiée de 10 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Capacité de remplissage approximative : 270 l/min. Condition de remplissage publiée : à 6 bar de pression de travail.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
-			"Compresseur à pistons. Puissance moteur publiée : 1,7 kW.",
+			"Compresseur à pistons. Puissance documentaire en conflit : 1,7 kW dans le relevé historique et 2,2 kW dans le catalogue 2026/27.",
 			"Débit aspiré : 440 L/min, distinct du débit restitué.",
 			"Alimentation publiée : 400 V.",
 			"Capacité de remplissage approximative : 270 l/min.",
@@ -33,7 +33,8 @@ const product: CompressorInput = {
 			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
 			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
 			"La capacité de remplissage et sa pression éventuelle ne sont pas assimilées à un débit FAD certifié. Demander les conditions d’essai et le débit utile à la pression de l’outil.",
-			"Écarts entre documents fabricant : Puissance (kW, qualification à confirmer) : relevé de fiche du 27/09/2026 = 1,7 ; AIRCRAFT Hauptkatalog 2026/27 = 2,2."
+			"Écarts entre documents fabricant : Puissance (kW, qualification à confirmer) : relevé de fiche du 27/09/2026 = 1,7 ; AIRCRAFT Hauptkatalog 2026/27 = 2,2.",
+			"La puissance moteur contestée est exclue du champ technique normalisé en attendant confirmation de l’exécution exacte."
 		]
 	},
 	"specifications": [
@@ -122,6 +123,26 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer 702076. Empreinte PDF SHA-256 : 1afd7b88f9ad847cd6d6c149a97fd771844391d3a4d2bc8d8da40e50c445fe70. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
+		},
+		{
+			"id": "review:2026-11-06-followup:aircraft-aircar-440-of-pro:1",
+			"sourceUrl": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-compressors-2026-09-27.json",
+			"sourceLabel": "Aircraft, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Catalogue2026/27 p24 : 440 L/min aspirés,270 de remplissage à6 bar,22 L et85 kg. FAD vide conservé. Puissance2,2 kW400V contre1,7 du relevé historique : ne pas laisser la valeur contestée dans powerKw ; conserver les deux observations séparées. SHA-256 du document complet : af866f2323db4015b11fba728e6b8c50093e8998705ae6d1920deac66f83cc62."
+		},
+		{
+			"id": "review:2026-11-06-followup:aircraft-aircar-440-of-pro:2",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=24",
+			"sourceLabel": "Aircraft, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Catalogue2026/27 p24 : 440 L/min aspirés,270 de remplissage à6 bar,22 L et85 kg. FAD vide conservé. Puissance2,2 kW400V contre1,7 du relevé historique : ne pas laisser la valeur contestée dans powerKw ; conserver les deux observations séparées. SHA-256 du document complet : 1afd7b88f9ad847cd6d6c149a97fd771844391d3a4d2bc8d8da40e50c445fe70."
 		}
 	],
 	"fieldSources": {
@@ -143,9 +164,6 @@ const product: CompressorInput = {
 		"intakeFlowLpm": [
 			"aircraft-2015530-20260927"
 		],
-		"powerKw": [
-			"aircraft-2015530-20260927"
-		],
 		"voltage": [
 			"aircraft-2015530-20260927"
 		]
@@ -154,7 +172,6 @@ const product: CompressorInput = {
 		"Caractéristiques déclarées par le fabricant. Les comparaisons dépendent des conditions de débit et de pression documentées."
 	],
 	"intakeFlowLpm": 440,
-	"powerKw": 1.7,
 	"voltage": "400 V"
 };
 

@@ -13,7 +13,7 @@ while read -r _local_ref _local_sha remote_ref _remote_sha; do
 done
 
 if [[ "$pushes_main" == "true" ]]; then
-	required_node_major="$(tr -dc '0-9' < .nvmrc)"
+	required_node_major="$(cut -d. -f1 < .nvmrc | tr -dc '0-9')"
 	original_node="$(type -P node 2>/dev/null || true)"
 	compatible_node="$(resolve_node_for_major "$required_node_major" || true)"
 	if [[ -z "$compatible_node" ]]; then

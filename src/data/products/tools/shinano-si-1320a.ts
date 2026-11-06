@@ -9,7 +9,7 @@ const product: ToolProfileInput = {
 	"categoryId": "cle-a-cliquet",
 	"category": "cle-a-cliquet",
 	"label": "Shinano SI-1320A",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 6.3,
 		"typical": 6.3,
@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/shinano-si-1320a.webp",
+		"src": "/images/products/shinano-si-1320a-20261106.svg",
 		"alt": "Repères techniques Shinano SI-1320A, référence SI-1320A",
 		"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=9",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -35,7 +35,8 @@ const product: ToolProfileInput = {
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"Le régime de consommation publié reste documentaire : la pression de service ne prouve pas sa pression de mesure. Compatibilité indéterminée."
 		]
 	},
 	"specifications": [
@@ -73,6 +74,14 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"shinano-si-1320a-20260926"
 			]
+		},
+		{
+			"label": "Consommation publiée, hors dimensionnement",
+			"value": "456 L/min ; Le régime de consommation publié reste documentaire : la pression de service ne prouve pas sa pression de mesure. Compatibilité indéterminée.",
+			"evidenceIds": [
+				"review:2026-11-06-followup:shinano-si-1320a:1",
+				"review:2026-11-06-followup:shinano-si-1320a:2"
+			]
 		}
 	],
 	"evidence": [
@@ -93,6 +102,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+		},
+		{
+			"id": "review:2026-11-06-followup:shinano-si-1320a:1",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=9",
+			"sourceLabel": "Shinano, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "P9/43 :cliquet80Nm/160rpm/1,16kg/7,6Lsmax. La consigne6,3bar outilactionné n’est pas explicitement pression de mesure456Lmin. Conserver maximum documentaire et neutraliser son appariement au moteur. SHA-256 du document complet : 03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b."
+		},
+		{
+			"id": "review:2026-11-06-followup:shinano-si-1320a:2",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43",
+			"sourceLabel": "Shinano, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "P9/43 :cliquet80Nm/160rpm/1,16kg/7,6Lsmax. La consigne6,3bar outilactionné n’est pas explicitement pression de mesure456Lmin. Conserver maximum documentaire et neutraliser son appariement au moteur. SHA-256 du document complet : 03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b."
 		}
 	],
 	"fieldSources": {
@@ -102,18 +131,15 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"shinano-si-1320a-20260926-workingpressurebar-1"
 		],
-		"airflowLpm": [
-			"shinano-si-1320a-20260926"
+		"demandExplanation": [
+			"review:2026-11-06-followup:shinano-si-1320a:1",
+			"review:2026-11-06-followup:shinano-si-1320a:2"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 456,
-		"typical": 456,
-		"max": 456
-	}
+	"demandExplanation": "Le régime de consommation publié reste documentaire : la pression de service ne prouve pas sa pression de mesure. Compatibilité indéterminée."
 };
 
 export default product;

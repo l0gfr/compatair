@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/yokota-yd-4a.webp",
+		"src": "/images/products/yokota-yd-4a-20261106.svg",
 		"alt": "Repères techniques Yokota YD-4A, référence YD-4A",
 		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=41",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas.",
+			"Le régime de consommation publié est non précisé. Cette valeur reste documentaire et le moteur renvoie insufficient_data."
 		]
 	},
 	"specifications": [
@@ -99,6 +100,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "review:2026-11-06-followup:yokota-yd-4a:1",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=41",
+			"sourceLabel": "Yokota, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "P41 :visseusedroitehex1/4,11000rpm/12Nm/2,3Ls/0,6kg; YD3A12000rpm/7,5Nm/1,6Ls. Consigne générale6,3bar sans régime de138Lmin: pas de dimensionnement conclusif. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+		},
+		{
+			"id": "review:2026-11-06-followup:yokota-yd-4a:2",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+			"sourceLabel": "Yokota, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "P41 :visseusedroitehex1/4,11000rpm/12Nm/2,3Ls/0,6kg; YD3A12000rpm/7,5Nm/1,6Ls. Consigne générale6,3bar sans régime de138Lmin: pas de dimensionnement conclusif. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
 		}
 	],
 	"fieldSources": {
@@ -116,6 +137,10 @@ const product: ToolProfileInput = {
 		],
 		"connectorSize": [
 			"yokota-yd-4a-20260926"
+		],
+		"airflowBasis": [
+			"review:2026-11-06-followup:yokota-yd-4a:1",
+			"review:2026-11-06-followup:yokota-yd-4a:2"
 		]
 	},
 	"notes": [
@@ -129,7 +154,8 @@ const product: ToolProfileInput = {
 	"recommendedHose": {
 		"innerDiameterMm": 6.5
 	},
-	"connectorSize": "PT 1/8\""
+	"connectorSize": "PT 1/8\"",
+	"airflowBasis": "unqualified"
 };
 
 export default product;

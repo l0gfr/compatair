@@ -9,7 +9,7 @@ const product: ToolProfileInput = {
 	"categoryId": "riveteuse",
 	"category": "riveteuse",
 	"label": "Rodcraft RC6748",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 6.3,
 		"typical": 6.3,
@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/rodcraft-rc6748.webp",
+		"src": "/images/products/rodcraft-rc6748-20261106.svg",
 		"alt": "Repères techniques Rodcraft RC6748, référence 8951000409",
 		"sourceUrl": "https://www.rodcraft.com/en/products/8951000409",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
-			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes."
+			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
+			"La pression de mesure de la consommation publiée reste à documenter. Les valeurs et leur régime sont conservés dans les spécifications, hors calcul de compatibilité."
 		]
 	},
 	"specifications": [
@@ -79,6 +80,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"rodcraft-8951000409-20260927"
 			]
+		},
+		{
+			"label": "Consommation publiée, hors dimensionnement",
+			"value": "246 L/min ; La pression de mesure de la consommation publiée reste à documenter. Les valeurs et leur régime sont conservés dans les spécifications, hors calcul de compatibilité.",
+			"evidenceIds": [
+				"review:2026-11-06-followup:rodcraft-rc6748:1"
+			]
 		}
 	],
 	"evidence": [
@@ -90,6 +98,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation en charge publiée : 4.1 L/s. Valeur retenue : 246 L/min (maximum des régimes documentés, L/s × 60)."
+		},
+		{
+			"id": "review:2026-11-06-followup:rodcraft-rc6748:1",
+			"sourceUrl": "https://www.rodcraft.com/en/products/8951000409",
+			"sourceLabel": "Rodcraft, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Riveteuse 8951000409 : pression dynamique maximale confondue avec pression de mesure. Les 4,1 L/s en charge ne deviennent pas un volume par rivet ; conserver la valeur documentaire et demander la condition de mesure. SHA-256 du document complet : 2723f98d6e9488ef4d53ac136cbaaf4830c04ea8e9f84589b9fefa4274327de6."
 		}
 	],
 	"fieldSources": {
@@ -99,18 +117,14 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"rodcraft-8951000409-20260927"
 		],
-		"airflowLpm": [
-			"rodcraft-8951000409-20260927"
+		"demandExplanation": [
+			"review:2026-11-06-followup:rodcraft-rc6748:1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 246,
-		"typical": 246,
-		"max": 246
-	}
+	"demandExplanation": "La pression de mesure de la consommation publiée reste à documenter. Les valeurs et leur régime sont conservés dans les spécifications, hors calcul de compatibilité."
 };
 
 export default product;

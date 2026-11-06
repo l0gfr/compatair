@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/toku-tag-45mlh.webp",
+		"src": "/images/products/toku-tag-45mlh-20261106.svg",
 		"alt": "Repères techniques Toku TAG-45MLH, référence TAG-45MLH",
 		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=45",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas.",
+			"Le régime de consommation publié est non précisé. Cette valeur reste documentaire et le moteur renvoie insufficient_data."
 		]
 	},
 	"specifications": [
@@ -99,6 +100,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "review:2026-11-06-followup:toku-tag-45mlh:1",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=45",
+			"sourceLabel": "Toku, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "P45 :115×22,2mm,M14×2,13000rpm/0,67kW/10,8Ls/1,8kg; TAG50MLH125mm/12000rpm. Régime et pression de mesure648Lmin non prouvés; consigne6,3bar conservée comme service. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
+		},
+		{
+			"id": "review:2026-11-06-followup:toku-tag-45mlh:2",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=106",
+			"sourceLabel": "Toku, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "P45 :115×22,2mm,M14×2,13000rpm/0,67kW/10,8Ls/1,8kg; TAG50MLH125mm/12000rpm. Régime et pression de mesure648Lmin non prouvés; consigne6,3bar conservée comme service. SHA-256 du document complet : f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e."
 		}
 	],
 	"fieldSources": {
@@ -116,6 +137,10 @@ const product: ToolProfileInput = {
 		],
 		"connectorSize": [
 			"toku-tag-45mlh-20260926"
+		],
+		"airflowBasis": [
+			"review:2026-11-06-followup:toku-tag-45mlh:1",
+			"review:2026-11-06-followup:toku-tag-45mlh:2"
 		]
 	},
 	"notes": [
@@ -129,7 +154,8 @@ const product: ToolProfileInput = {
 	"recommendedHose": {
 		"innerDiameterMm": 10
 	},
-	"connectorSize": "PT 3/8\""
+	"connectorSize": "PT 3/8\"",
+	"airflowBasis": "unqualified"
 };
 
 export default product;

@@ -22,7 +22,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 1840
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "unknown",
 	"powerKw": 11,
 	"weightKg": 356,
@@ -83,7 +82,8 @@ const product: CompressorInput = {
 			"La disponibilité actuelle et le contenu de la configuration livrée restent à confirmer.",
 			"Aucun débit n’est extrapolé au-delà des pressions publiées ; les minima de modulation ne sont pas des débits moyens d’atelier.",
 			"Le mode de lubrification n’est pas établi ici. Aucun niveau de qualité d’air n’en est déduit.",
-			"La classe de qualité d’air du réseau, les pertes de pression et le refroidissement nécessitent une vérification sur l’installation."
+			"La classe de qualité d’air du réseau, les pertes de pression et le refroidissement nécessitent une vérification sur l’installation.",
+			"Le taux de marche du groupe complet n’est pas établi. La classe de service du moteur et les promesses générales de gamme restent distinctes ; compatibilité continue indéterminée."
 		]
 	},
 	"evidence": [
@@ -106,6 +106,26 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 a42ca92be39e4a81a11cf3e4ec6bb3ce237552363c3b0a7d16a43761d852266f. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "review:2026-11-06-followup:almig-f-drive-11:1",
+			"sourceUrl": "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf#page=16",
+			"sourceLabel": "ALMiG, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Table p16 : F-DRIVE11, débit maximum1840 etminimum230 L/min à7 bar50Hz, plage jusqu'à13. Ne pas utiliser1840 à13 bar. Promesse générale de continuité non convertie en cycle exact du groupe. SHA-256 du document complet : f5ca167dedaab25352808dc5001ba9badc7acffb2c37168c6d9f89182b752a0e."
+		},
+		{
+			"id": "review:2026-11-06-followup:almig-f-drive-11:2",
+			"sourceUrl": "https://www.almig.de/en/products/compressed-air-generation/screw-compressors",
+			"sourceLabel": "ALMiG, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Table p16 : F-DRIVE11, débit maximum1840 etminimum230 L/min à7 bar50Hz, plage jusqu'à13. Ne pas utiliser1840 à13 bar. Promesse générale de continuité non convertie en cycle exact du groupe. SHA-256 du document complet : 89768dc9e10560d0ae92781ed4af69fd397c324e6def04e834f28da3de6ae906."
 		}
 	],
 	"fieldSources": {
@@ -123,9 +143,6 @@ const product: CompressorInput = {
 		],
 		"weightKg": [
 			"documented-d-almig-2026-p16"
-		],
-		"dutyCycle": [
-			"documented-d-almig-screw-duty"
 		]
 	},
 	"notes": [

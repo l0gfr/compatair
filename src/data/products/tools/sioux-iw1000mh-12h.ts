@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/sioux-iw1000mh-12h.webp",
+		"src": "/images/products/sioux-iw1000mh-12h-20261106.svg",
 		"alt": "Repères techniques Sioux IW1000MH-12H, référence IW1000MH-12H",
 		"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=42",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
-			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes."
+			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
+			"Le régime de consommation publié est non précisé. Cette valeur reste documentaire et le moteur renvoie insufficient_data."
 		]
 	},
 	"specifications": [
@@ -99,6 +100,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur."
+		},
+		{
+			"id": "review:2026-11-06-followup:sioux-iw1000mh-12h:1",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=42",
+			"sourceLabel": "Sioux, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "P42 :IW1000MH12H,carré1,5pouce/trougoupille,3380Nm/4000rpm/15,4kg/440mm;8H6àaxeallongé16,9kg.24Ls nonqualifiés dansAirConsumption:1440Lmin pas maximum attesté. SHA-256 du document complet : 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +121,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"sioux-iw1000mh-12h-20260927"
+		],
+		"airflowBasis": [
+			"review:2026-11-06-followup:sioux-iw1000mh-12h:1"
 		]
 	},
 	"notes": [
@@ -119,7 +133,8 @@ const product: ToolProfileInput = {
 		"min": 1440,
 		"typical": 1440,
 		"max": 1440
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

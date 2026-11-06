@@ -9,7 +9,7 @@ const product: ToolProfileInput = {
 	"categoryId": "graveur",
 	"category": "graveur",
 	"label": "PFERD MST 32 DV M",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 6.3,
 		"typical": 6.3,
@@ -17,7 +17,7 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/pferd-mst-32-dv-m.webp",
+		"src": "/images/products/pferd-mst-32-dv-m-20261106.svg",
 		"alt": "Repères techniques PFERD MST 32 DV M, référence 80600140",
 		"sourceUrl": "https://fr.pferd.com/fr/crayon-de-marquage-pneumatique-mst-32-dv?a%5Bwidth-needle-tds%5D=M+%28moyenne%29",
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
@@ -35,7 +35,8 @@ const product: ToolProfileInput = {
 		"limitations": [
 			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
 			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
-			"La valeur la plus élevée à vide ou en charge couvre les deux régimes documentés ; aucune moyenne de cycle n’est substituée à ces valeurs."
+			"La valeur la plus élevée à vide ou en charge couvre les deux régimes documentés ; aucune moyenne de cycle n’est substituée à ces valeurs.",
+			"La pression de mesure de la consommation publiée reste à documenter. Les valeurs et leur régime sont conservés dans les spécifications, hors calcul de compatibilité."
 		]
 	},
 	"specifications": [
@@ -80,6 +81,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"pferd-80600140-20260927"
 			]
+		},
+		{
+			"label": "Consommation publiée, hors dimensionnement",
+			"value": "30 L/min ; La pression de mesure de la consommation publiée reste à documenter. Les valeurs et leur régime sont conservés dans les spécifications, hors calcul de compatibilité.",
+			"evidenceIds": [
+				"review:2026-11-06-followup:pferd-mst-32-dv-m:1"
+			]
 		}
 	],
 	"evidence": [
@@ -91,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation sous charge : 0.02 m³/min ; à vide : 0.03 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 30 L/min (m³/min × 1 000)."
+		},
+		{
+			"id": "review:2026-11-06-followup:pferd-mst-32-dv-m:1",
+			"sourceUrl": "https://fr.pferd.com/fr/crayon-de-marquage-pneumatique-mst-32-dv?a%5Bwidth-needle-tds%5D=M+%28moyenne%29",
+			"sourceLabel": "PFERD, revue documentaire du 6 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Fiche 80600140 : charge 0,02 m³/min et vide 0,03, pointe M et 32000 courses/min. Le moteur utilise le débit à vide de 30 L/min comme besoin en charge. Conserver les deux valeurs, exclure le débit à vide du calcul ; la pression de service 6,3 bar ne prouve pas leur point de mesure. SHA-256 du document complet : 8e423d6100e7ed0f6ffdbe362be63a510f23149cd2d28120568be728ec2ee25d."
 		}
 	],
 	"fieldSources": {
@@ -100,18 +118,14 @@ const product: ToolProfileInput = {
 		"workingPressureBar": [
 			"pferd-80600140-20260927"
 		],
-		"airflowLpm": [
-			"pferd-80600140-20260927"
+		"demandExplanation": [
+			"review:2026-11-06-followup:pferd-mst-32-dv-m:1"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
-	"airflowLpm": {
-		"min": 30,
-		"typical": 30,
-		"max": 30
-	}
+	"demandExplanation": "La pression de mesure de la consommation publiée reste à documenter. Les valeurs et leur régime sont conservés dans les spécifications, hors calcul de compatibilité."
 };
 
 export default product;

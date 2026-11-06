@@ -9,20 +9,15 @@ const product: ToolProfileInput = {
 	"brand": "Top Cat",
 	"model": "300RA3m2K;4000;5SP",
 	"mpn": "300RA3m2K;4000;5SP",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 6.2,
 		"typical": 6.2,
 		"max": 6.2
 	},
-	"airflowLpm": {
-		"min": 708,
-		"typical": 708,
-		"max": 708
-	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-rotative-top-cat-300ra3m2k-4000-5sp.webp",
+		"src": "/images/products/ponceuse-rotative-top-cat-300ra3m2k-4000-5sp-20261106.svg",
 		"alt": "Repères techniques : Top Cat 300RA3m2K;4000;5SP",
 		"sourceUrl": "https://www.intlairtool.com/content/catalogs-page-pdfs/Top-Cat-Air-Tools.pdf",
 		"sourceLabel": "Carte technique CompatAir, établie à partir du document constructeur"
@@ -43,7 +38,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Le débit maximal est un besoin conservateur ; la cadence réelle de travail n’est pas déduite du catalogue.",
-			"La disponibilité actuelle, les accessoires inclus et les conditions de sécurité doivent être confirmés sur la notice de cette référence."
+			"La disponibilité actuelle, les accessoires inclus et les conditions de sécurité doivent être confirmés sur la notice de cette référence.",
+			"La pression de mesure de la consommation publiée reste à documenter. Les valeurs et leur régime sont conservés dans les spécifications, hors calcul de compatibilité."
 		]
 	},
 	"specifications": [
@@ -74,6 +70,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-topcat-issued"
 			]
+		},
+		{
+			"label": "Consommation publiée, hors dimensionnement",
+			"value": "708 L/min ; La pression de mesure de la consommation publiée reste à documenter. Les valeurs et leur régime sont conservés dans les spécifications, hors calcul de compatibilité.",
+			"evidenceIds": [
+				"review:2026-11-06-followup:ponceuse-rotative-top-cat-300ra3m2k-4000-5sp:1"
+			]
 		}
 	],
 	"evidence": [
@@ -86,23 +89,34 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 4b4cea2c0cb0cfea87b1e287908e271388254005eda2136bb116549893decf7a. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		},
+		{
+			"id": "review:2026-11-06-followup:ponceuse-rotative-top-cat-300ra3m2k-4000-5sp:1",
+			"sourceUrl": "https://www.intlairtool.com/content/catalogs-page-pdfs/Top-Cat-Air-Tools.pdf",
+			"sourceLabel": "Top Cat, revue documentaire du 6 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Catalogue p40 : ponceuse rotative5pouces,4000tr/min,levier sécurité. Les11,8L/s/25cfm maxima restent distincts d'une mesure encharge à6,2bar non établie. Garder la configuration exacte sans transfert du300RA2à15000. SHA-256 du document complet : 4b4cea2c0cb0cfea87b1e287908e271388254005eda2136bb116549893decf7a."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
 			"documented-20260930-topcat-issued"
 		],
-		"airflowLpm": [
-			"documented-20260930-topcat-issued"
-		],
 		"workingPressureBar": [
 			"documented-20260930-topcat-issued"
+		],
+		"demandExplanation": [
+			"review:2026-11-06-followup:ponceuse-rotative-top-cat-300ra3m2k-4000-5sp:1"
 		]
 	},
 	"notes": [
 		"consommation maximale ; aucune conversion en consommation en charge n’est effectuée.",
 		"Pression publiée en bar : 6.2."
-	]
+	],
+	"demandExplanation": "La pression de mesure de la consommation publiée reste à documenter. Les valeurs et leur régime sont conservés dans les spécifications, hors calcul de compatibilité."
 };
 
 export default product;
