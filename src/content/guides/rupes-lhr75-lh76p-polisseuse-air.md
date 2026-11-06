@@ -3,6 +3,7 @@ title: "RUPES LHR75 et LH76P : deux besoins d’air différents"
 seoTitle: "RUPES LHR75 et LH76P : deux besoins d’air différents"
 description: "Deux polisseuses à plateau de 75 mm peuvent demander des débits très différents. Comparaison documentée des LHR75 et LH76P, sans classement de finition."
 pubDate: 2026-09-26
+updatedDate: 2026-11-06
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture"]
@@ -11,7 +12,7 @@ relatedGuides: ["polisseuse-pneumatique-vitesse-2600-5000", "mini-ponceuse-pneum
 sources: ["https://www.rupes.com/catalogue/2026/RUPES_Catalogue-2026_EN.pdf"]
 ---
 
-Un plateau de 75 mm ne définit pas la consommation d’une polisseuse. RUPES publie 320 L/min au maximum pour LHR75 et 644 L/min pour LH76P, à 6,2 bar. Les deux machines doivent être comparées comme des outils distincts, et non comme deux versions équivalentes d’un même diamètre.
+Un plateau de 75 mm ne définit pas la consommation d’une polisseuse. RUPES publie 320 L/min au maximum pour LHR75 et 644 L/min pour LH76P. La pression de service indiquée est de 6,2 bar pour les deux machines. Les deux machines doivent être comparées comme des outils distincts, et non comme deux versions équivalentes d’un même diamètre.
 
 | Référence exacte | Données pneumatiques publiées | Autres repères |
 | --- | --- | --- |
@@ -32,7 +33,7 @@ Pour le dimensionnement d’air, la différence calculée est de 324 L/min. La d
 
 ## Une substitution à vérifier avant l’essai
 
-Une installation capable d’alimenter LHR75 n’est pas automatiquement validée pour LH76P. Vérifiez le débit restitué à la pression utile, puis le flexible et les raccords du poste. La pression au régulateur lorsque l’outil est arrêté ne suffit pas à caractériser l’alimentation pendant l’action.
+Une installation capable d’alimenter LHR75 n’est pas automatiquement validée pour LH76P. Faites confirmer la pression de mesure associée à ces consommations maximales : le tableau donne séparément la pression de service, sans détailler le protocole. Vérifiez ensuite le débit restitué à la pression confirmée, puis le flexible et les raccords du poste. La pression au régulateur lorsque l’outil est arrêté ne suffit pas à caractériser l’alimentation pendant l’action.
 
 Côté procédé, retenez les consommables, la plage de vitesse et les prescriptions adaptés à chaque outil. Le [guide des vitesses de polisseuse](/guides/polisseuse-pneumatique-vitesse-2600-5000/) explique pourquoi le chiffre de vitesse ne doit pas être utilisé seul.
 

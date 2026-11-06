@@ -3,6 +3,7 @@ title: "RUPES AK150A et AK200A : plateau, vitesse et air"
 seoTitle: "RUPES AK150A et AK200A : plateau, vitesse et air"
 description: "Les AK150A et AK200A annoncent le même débit maximal, malgré des plateaux et des plages de vitesse différents. Les critères à comparer avant achat."
 pubDate: 2026-09-26
+updatedDate: 2026-11-06
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture"]
@@ -11,7 +12,7 @@ relatedGuides: ["ponceuse-rotation-forcee-double-action", "ponceuse-pneumatique-
 sources: ["https://www.rupes.com/catalogue/2026/RUPES_Catalogue-2026_EN.pdf"]
 ---
 
-La plus grande AK200A n’annonce pas plus d’air consommé que l’AK150A : le catalogue donne 400 L/min au maximum à 6,2 bar pour chacune. Les différences portent notamment sur le plateau, la masse et la plage de vitesse publiée.
+La plus grande AK200A n’annonce pas plus d’air consommé que l’AK150A : le catalogue donne pour chacune 400 L/min au maximum et une pression de service de 6,2 bar. Les différences portent notamment sur le plateau, la masse et la plage de vitesse publiée.
 
 | Référence exacte | Données pneumatiques publiées | Autres repères |
 | --- | --- | --- |
@@ -32,7 +33,7 @@ Les plateaux font respectivement 150 et 200 mm. Un diamètre plus grand ne prouv
 
 ## Ce que l’installation d’air peut reprendre
 
-À partir de ces seules valeurs, passer de l’une à l’autre ne change pas le maximum de consommation annoncé. La disponibilité réelle de 400 L/min au poste demande toutefois de confronter le compresseur à la pression et aux pertes du circuit.
+À partir de ces seules valeurs, passer de l’une à l’autre ne change pas le maximum de consommation annoncé. Pour dimensionner le poste, faites confirmer la pression de mesure de cette consommation maximale, puis confrontez le point obtenu au débit restitué et aux pertes du circuit. Le tableau distingue les champs « Working pressure » et « Air consumption max » sans décrire ici le protocole de mesure.
 
 Les masses publiées, 1,7 et 2,3 kg, constituent aussi un écart à examiner lors d’un essai représentatif. Elles ne suffisent pas à qualifier le confort d’usage : l’orientation de travail, le flexible et l’équilibrage du poste comptent dans l’évaluation pratique.
 

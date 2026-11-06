@@ -3,6 +3,7 @@ title: "Lime à bande pneumatique : largeur et longueur de l’abrasif"
 seoTitle: "Lime à bande : choisir la bonne dimension d’abrasif"
 description: "10 × 330, 10 × 460 ou 13 × 460 mm : vérifier la bande, le bras et la référence de la lime pneumatique avant de commander les consommables."
 pubDate: 2026-09-26
+updatedDate: 2026-11-06
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["maintenance-industrielle", "carrosserie-peinture"]
@@ -42,6 +43,6 @@ Si un bras a été remplacé, relevez sa référence plutôt que de vous fier au
 
 ## Un débit commun à ces quatre exemples
 
-Shinano publie pour chacun **9,3 L/s au maximum**, soit **558 L/min**. La [condition de pression](https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43) est de 6,3 bar en fonctionnement. Les différences de géométrie de bande ne se traduisent donc pas ici par quatre débits différents.
+Shinano publie pour chacun **9,3 L/s au maximum**, soit **558 L/min**. La [page de raccordement](https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=43) prescrit 6,3 bar pendant le fonctionnement, commande entièrement actionnée. Cette consigne ne précise pas la pression de mesure des 9,3 L/s ; faites confirmer cet appariement avant de dimensionner le compresseur. Les différences de géométrie de bande ne se traduisent donc pas ici par quatre débits différents.
 
 Retrouvez les fiches [SI-2740](/outils-pneumatiques/shinano-si-2740/) et [SI-2700LS](/outils-pneumatiques/shinano-si-2700ls/), puis le [guide d’alimentation des limes et ponceuses à bande](/guides/compresseur-ponceuse-bande-lime-polisseuse-pneumatique/). Le premier choix porte sur l’accès et l’abrasif ; le compresseur doit ensuite satisfaire le besoin réel de la référence retenue.
