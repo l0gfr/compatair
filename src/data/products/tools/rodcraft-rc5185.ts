@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Rodcraft RC5185, référence 8951000152. Le dimensionnement utilise 372 L/min à 6,3 bar, selon les régimes publiés par le fabricant. Masse : 1.7 kg. Longueur : 169 mm. Diamètre intérieur du tuyau (longueur 5 m) : 9.5 mm.",
+		"overview": "Rodcraft RC5185, référence 8951000152. Consommations documentaires conservées séparément ; pression de mesure à confirmer avant dimensionnement. Masse : 1.7 kg. Longueur : 169 mm. Diamètre intérieur du tuyau (longueur 5 m) : 9.5 mm.",
 		"verifiedFacts": [
-			"Pression dynamique de travail maximale publiée : 6.3 bar, retenue comme point de fonctionnement. Respecter cette limite à l’entrée de l’outil.",
-			"Consommation en charge publiée : 6.2 L/s. Consommation à vide publiée : 3 L/s. Valeur retenue : 372 L/min (maximum des régimes documentés, L/s × 60).",
+			"Pression dynamique de travail maximale publiée : 6.3 bar. La pression de mesure de consommation reste à confirmer. Respecter cette limite à l’entrée de l’outil.",
+			"Consommation en charge publiée : 6.2 L/s. Consommation à vide publiée : 3 L/s. Conversion documentaire : 372 L/min (maximum des régimes documentés, L/s × 60) ; hors dimensionnement.",
 			"Référence fabricant : 8951000152.",
 			"Masse : 1.7 kg.",
 			"Longueur : 169 mm.",
@@ -41,14 +41,14 @@ const product: ToolProfileInput = {
 	"specifications": [
 		{
 			"label": "Condition de pression",
-			"value": "Pression dynamique de travail maximale publiée : 6.3 bar, retenue comme point de fonctionnement. Respecter cette limite à l’entrée de l’outil.",
+			"value": "Pression dynamique de travail maximale publiée : 6.3 bar. La pression de mesure de consommation reste à confirmer. Respecter cette limite à l’entrée de l’outil.",
 			"evidenceIds": [
 				"rodcraft-8951000152-20260927"
 			]
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation en charge publiée : 6.2 L/s. Consommation à vide publiée : 3 L/s. Valeur retenue : 372 L/min (maximum des régimes documentés, L/s × 60).",
+			"value": "Consommation en charge publiée : 6.2 L/s. Consommation à vide publiée : 3 L/s. Conversion documentaire : 372 L/min (maximum des régimes documentés, L/s × 60) ; hors dimensionnement.",
 			"evidenceIds": [
 				"rodcraft-8951000152-20260927"
 			]
@@ -108,6 +108,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-11-06",
 			"confidence": "B",
 			"notes": "Fiche actuelle 8951000152 : marteau hexagonal 11 mm ; la pression dynamique maximale utilisée comme pression de mesure n'est pas justifiée. Conserver 6,2 L/s en charge et 3 L/s à vide documentaires, hors calcul tant que le point de mesure n'est pas établi. SHA-256 du document complet : 31e17e4c10553ef9e9bbdfea7d269a2f3b69ae2595b19e6eda6f36d79f9ae2ec."
+		},
+		{
+			"id": "review:2026-11-06-copy:rodcraft-rc5185",
+			"sourceUrl": "https://www.rodcraft.com/en/products/8951000152",
+			"sourceLabel": "Rodcraft, clarification des conditions de dimensionnement",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Alignement des textes sur le régime non dimensionnant déjà utilisé par le moteur. Valeurs documentaires et conditions de service conservées ; SHA-256 31e17e4c10553ef9e9bbdfea7d269a2f3b69ae2595b19e6eda6f36d79f9ae2ec."
 		}
 	],
 	"fieldSources": {

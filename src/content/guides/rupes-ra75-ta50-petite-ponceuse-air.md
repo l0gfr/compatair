@@ -3,6 +3,7 @@ title: "RUPES RA75 et TA50 : petit plateau, vrai besoin d’air"
 seoTitle: "RUPES RA75 et TA50 : petit plateau, vrai besoin d’air"
 description: "RA75 et TA50 restent des consommateurs de plusieurs centaines de litres par minute. Vérifier leur débit maximal plutôt que déduire le besoin du diamètre."
 pubDate: 2026-09-26
+updatedDate: 2026-11-08
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture"]
@@ -11,7 +12,7 @@ relatedGuides: ["mini-ponceuse-pneumatique-50-75-mm-compresseur", "choisir-volum
 sources: ["https://www.rupes.com/catalogue/2026/RUPES_Catalogue-2026_EN.pdf"]
 ---
 
-Une ponceuse compacte ne correspond pas nécessairement à un petit besoin pneumatique. RUPES annonce au maximum 380 L/min pour RA75 et 330 L/min pour TA50, à 6,2 bar. Les plateaux de 75 et 50 mm ne permettent pas, à eux seuls, de choisir le compresseur.
+Une ponceuse compacte ne correspond pas nécessairement à un petit besoin pneumatique. RUPES annonce au maximum 380 L/min pour RA75 et 330 L/min pour TA50. Le catalogue indique séparément une pression de travail de 6,2 bar ; il ne précise pas la pression de mesure de ces consommations. Les plateaux de 75 et 50 mm ne permettent pas, à eux seuls, de choisir le compresseur.
 
 | Référence exacte | Données pneumatiques publiées | Autres repères |
 | --- | --- | --- |

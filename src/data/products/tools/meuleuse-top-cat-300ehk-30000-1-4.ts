@@ -30,7 +30,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Top Cat 300EHK;30000;1/4. Le tableau publie une consommation maximale de 11,8 L/s, soit 708 L/min. Pression de référence retenue : 6,2 bar.",
+		"overview": "Top Cat 300EHK;30000;1/4. Le tableau publie une consommation maximale de 11,8 L/s, soit 708 L/min. Pression maximale de service : 6,2 bar ; pression de mesure de consommation à confirmer.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 300EHK;30000;1/4, page PDF 48.",
 			"Consommation maximale publiée : 708 L/min après conversion de l’unité originale.",
@@ -99,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-11-06",
 			"confidence": "B",
 			"notes": "Catalogue configuration300EHK;30000;1/4p48 : levier sécurité,pince1/4,30000tr/min. Les11,8L/s maximum sont documentaires ; la consigne90psi maximum ne prouve pas la pression de mesure de consommation. Garder le débit hors moteur. SHA-256 du document complet : 4b4cea2c0cb0cfea87b1e287908e271388254005eda2136bb116549893decf7a."
+		},
+		{
+			"id": "review:2026-11-06-copy:meuleuse-top-cat-300ehk-30000-1-4",
+			"sourceUrl": "https://www.intlairtool.com/content/catalogs-page-pdfs/Top-Cat-Air-Tools.pdf",
+			"sourceLabel": "Top Cat, clarification des conditions de dimensionnement",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Alignement des textes sur le régime non dimensionnant déjà utilisé par le moteur. Valeurs documentaires et conditions de service conservées ; SHA-256 4b4cea2c0cb0cfea87b1e287908e271388254005eda2136bb116549893decf7a."
 		}
 	],
 	"fieldSources": {

@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Rodcraft RC7173, référence 8951000212. Le dimensionnement utilise 540 L/min à 6,3 bar, selon les régimes publiés par le fabricant. Vitesse à vide : 12000 rpm. Masse : 1.5 kg. Longueur : 245 mm.",
+		"overview": "Rodcraft RC7173, référence 8951000212. Consommations documentaires conservées séparément ; pression de mesure à confirmer avant dimensionnement. Vitesse à vide : 12000 rpm. Masse : 1.5 kg. Longueur : 245 mm.",
 		"verifiedFacts": [
-			"Pression dynamique de travail maximale publiée : 6.3 bar, retenue comme point de fonctionnement. Respecter cette limite à l’entrée de l’outil.",
-			"Consommation en charge publiée : 9 L/s. Valeur retenue : 540 L/min (maximum des régimes documentés, L/s × 60).",
+			"Pression dynamique de travail maximale publiée : 6.3 bar. La pression de mesure de consommation reste à confirmer. Respecter cette limite à l’entrée de l’outil.",
+			"Consommation en charge publiée : 9 L/s. Conversion documentaire : 540 L/min (maximum des régimes documentés, L/s × 60) ; hors dimensionnement.",
 			"Référence fabricant : 8951000212.",
 			"Vitesse à vide : 12000 rpm.",
 			"Masse : 1.5 kg.",
@@ -41,14 +41,14 @@ const product: ToolProfileInput = {
 	"specifications": [
 		{
 			"label": "Condition de pression",
-			"value": "Pression dynamique de travail maximale publiée : 6.3 bar, retenue comme point de fonctionnement. Respecter cette limite à l’entrée de l’outil.",
+			"value": "Pression dynamique de travail maximale publiée : 6.3 bar. La pression de mesure de consommation reste à confirmer. Respecter cette limite à l’entrée de l’outil.",
 			"evidenceIds": [
 				"rodcraft-8951000212-20260927"
 			]
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation en charge publiée : 9 L/s. Valeur retenue : 540 L/min (maximum des régimes documentés, L/s × 60).",
+			"value": "Consommation en charge publiée : 9 L/s. Conversion documentaire : 540 L/min (maximum des régimes documentés, L/s × 60) ; hors dimensionnement.",
 			"evidenceIds": [
 				"rodcraft-8951000212-20260927"
 			]
@@ -115,6 +115,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-11-06",
 			"confidence": "B",
 			"notes": "Meuleuse 125 mm, M14, article 8951000212 ; les 9 L/s en charge restent distincts du plafond dynamique 6,3 bar. Le moteur ne doit pas appairer ces champs sans preuve de mesure. SHA-256 du document complet : b77ef6bca9d2dd4f32eb8d1f20ddeef844cb08f0d738b485cf92929dd7c7781a."
+		},
+		{
+			"id": "review:2026-11-06-copy:rodcraft-rc7173",
+			"sourceUrl": "https://www.rodcraft.com/en/products/8951000212",
+			"sourceLabel": "Rodcraft, clarification des conditions de dimensionnement",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Alignement des textes sur le régime non dimensionnant déjà utilisé par le moteur. Valeurs documentaires et conditions de service conservées ; SHA-256 b77ef6bca9d2dd4f32eb8d1f20ddeef844cb08f0d738b485cf92929dd7c7781a."
 		}
 	],
 	"fieldSources": {

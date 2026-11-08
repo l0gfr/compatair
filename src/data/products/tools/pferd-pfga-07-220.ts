@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "PFERD PFGA 07/220, référence 80600200. Le dimensionnement utilise 50 L/min à 4 bar, selon les régimes publiés par le fabricant. Longueur : 220 mm. Poids net de la machine : 0.18 kg. Échappement d'air : Arrière.",
+		"overview": "PFERD PFGA 07/220, référence 80600200. Consommations documentaires conservées séparément ; pression de mesure à confirmer avant dimensionnement. Longueur : 220 mm. Poids net de la machine : 0.18 kg. Échappement d'air : Arrière.",
 		"verifiedFacts": [
 			"Pression de service publiée sur cette fiche : 4 bar. Aucune autre pression de fonctionnement n’est déduite.",
-			"Consommation sous charge : 0.03 m³/min ; à vide : 0.05 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 50 L/min (m³/min × 1 000).",
+			"Consommation sous charge : 0.03 m³/min ; à vide : 0.05 m³/min. La pression de mesure de ces consommations reste à confirmer ; aucune des deux valeurs ne dimensionne le besoin en charge.",
 			"Référence fabricant : 80600200.",
 			"Longueur : 220 mm.",
 			"Poids net de la machine : 0.18 kg.",
@@ -49,7 +49,7 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation sous charge : 0.03 m³/min ; à vide : 0.05 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 50 L/min (m³/min × 1 000).",
+			"value": "Consommation sous charge : 0.03 m³/min ; à vide : 0.05 m³/min. La pression de mesure de ces consommations reste à confirmer ; aucune des deux valeurs ne dimensionne le besoin en charge.",
 			"evidenceIds": [
 				"pferd-80600200-20260927"
 			]
@@ -109,6 +109,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-11-06",
 			"confidence": "B",
 			"notes": "Fiche 80600200 : course 0,7 mm, 22000 courses/min, 0,18 kg, charge 0,03 m³/min et vide 0,05. Les 50 L/min à vide ne dimensionnent pas la charge ; service 4 bar conservé sans en faire le point de mesure du débit. SHA-256 du document complet : 2c1833b535a8a082dd6dce117504329b1c242098a30dd3af0dbf1bc530656dce."
+		},
+		{
+			"id": "review:2026-11-06-copy:pferd-pfga-07-220",
+			"sourceUrl": "https://fr.pferd.com/fr/appareil-a-limer-pneumatique-pfga-07220",
+			"sourceLabel": "PFERD, clarification des conditions de dimensionnement",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Alignement des textes sur le régime non dimensionnant déjà utilisé par le moteur. Valeurs documentaires et conditions de service conservées ; SHA-256 2c1833b535a8a082dd6dce117504329b1c242098a30dd3af0dbf1bc530656dce."
 		}
 	],
 	"fieldSources": {

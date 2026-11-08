@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Sioux SAP10A327, référence SAP10A327. Le dimensionnement utilise 1 020 L/min à 6,2 bar, selon les régimes publiés par le fabricant. Vitesse à vide : 3200 tr/min. Masse : 1.3 kg. Longueur : 234 mm.",
+		"overview": "Sioux SAP10A327, référence SAP10A327. Consommation à vide conservée dans les spécifications ; le besoin en charge reste à documenter. Vitesse à vide : 3200 tr/min. Masse : 1.3 kg. Longueur : 234 mm.",
 		"verifiedFacts": [
 			"Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur.",
-			"Consommation publiée : 17.0 L/s (35.0 scfm). Le guide du catalogue (page PDF 10) définit ces débits comme de l’air détendu à pression atmosphérique et des consommations maximales, sauf indication contraire. La plus grande valeur publiée est retenue : 1020 L/min (L/s × 60).",
+			"Consommation publiée : 17.0 L/s (35.0 scfm). La colonne propre à cette référence indique une mesure à vide. Conversion documentaire : 1020 L/min (L/s × 60) ; hors dimensionnement en charge.",
 			"Référence fabricant : SAP10A327.",
 			"Vitesse à vide : 3200 tr/min.",
 			"Masse : 1.3 kg.",
@@ -48,7 +48,7 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation publiée : 17.0 L/s (35.0 scfm). Le guide du catalogue (page PDF 10) définit ces débits comme de l’air détendu à pression atmosphérique et des consommations maximales, sauf indication contraire. La plus grande valeur publiée est retenue : 1020 L/min (L/s × 60).",
+			"value": "Consommation publiée : 17.0 L/s (35.0 scfm). La colonne propre à cette référence indique une mesure à vide. Conversion documentaire : 1020 L/min (L/s × 60) ; hors dimensionnement en charge.",
 			"evidenceIds": [
 				"sioux-sap10a327-20260927"
 			]
@@ -110,6 +110,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-11-06",
 			"confidence": "B",
 			"notes": "P69 :SAP10A3273200rpm/1,3kg/234mm/broche5/8-11,autres327/457 vitessesdifférentes. Les colonnesUnderLoad sontN/A,17Ls sousFreeSpeed. Utiliser le régimeàvide explicite et empêcher la conclusion depuis1020Lmin. SHA-256 du document complet : 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
+		},
+		{
+			"id": "review:2026-11-06-copy:sioux-sap10a327",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=69",
+			"sourceLabel": "Sioux, clarification des conditions de dimensionnement",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Alignement des textes sur le régime non dimensionnant déjà utilisé par le moteur. Valeurs documentaires et conditions de service conservées ; SHA-256 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
 		}
 	],
 	"fieldSources": {

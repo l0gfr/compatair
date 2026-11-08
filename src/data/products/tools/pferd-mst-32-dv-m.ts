@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "PFERD MST 32 DV M, référence 80600140. Le dimensionnement utilise 30 L/min à 6,3 bar, selon les régimes publiés par le fabricant. Longueur : 162 mm. Poids net de la machine : 0.152 kg. Échappement d'air : Avant.",
+		"overview": "PFERD MST 32 DV M, référence 80600140. Consommations documentaires conservées séparément ; pression de mesure à confirmer avant dimensionnement. Longueur : 162 mm. Poids net de la machine : 0.152 kg. Échappement d'air : Avant.",
 		"verifiedFacts": [
 			"Pression de service publiée sur cette fiche : 6.3 bar. Aucune autre pression de fonctionnement n’est déduite.",
-			"Consommation sous charge : 0.02 m³/min ; à vide : 0.03 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 30 L/min (m³/min × 1 000).",
+			"Consommation sous charge : 0.02 m³/min ; à vide : 0.03 m³/min. La pression de mesure de ces consommations reste à confirmer ; aucune des deux valeurs ne dimensionne le besoin en charge.",
 			"Référence fabricant : 80600140.",
 			"Longueur : 162 mm.",
 			"Poids net de la machine : 0.152 kg.",
@@ -49,7 +49,7 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation sous charge : 0.02 m³/min ; à vide : 0.03 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 30 L/min (m³/min × 1 000).",
+			"value": "Consommation sous charge : 0.02 m³/min ; à vide : 0.03 m³/min. La pression de mesure de ces consommations reste à confirmer ; aucune des deux valeurs ne dimensionne le besoin en charge.",
 			"evidenceIds": [
 				"pferd-80600140-20260927"
 			]
@@ -109,6 +109,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-11-06",
 			"confidence": "B",
 			"notes": "Fiche 80600140 : charge 0,02 m³/min et vide 0,03, pointe M et 32000 courses/min. Le moteur utilise le débit à vide de 30 L/min comme besoin en charge. Conserver les deux valeurs, exclure le débit à vide du calcul ; la pression de service 6,3 bar ne prouve pas leur point de mesure. SHA-256 du document complet : 8e423d6100e7ed0f6ffdbe362be63a510f23149cd2d28120568be728ec2ee25d."
+		},
+		{
+			"id": "review:2026-11-06-copy:pferd-mst-32-dv-m",
+			"sourceUrl": "https://fr.pferd.com/fr/crayon-de-marquage-pneumatique-mst-32-dv?a%5Bwidth-needle-tds%5D=M+%28moyenne%29",
+			"sourceLabel": "PFERD, clarification des conditions de dimensionnement",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Alignement des textes sur le régime non dimensionnant déjà utilisé par le moteur. Valeurs documentaires et conditions de service conservées ; SHA-256 8e423d6100e7ed0f6ffdbe362be63a510f23149cd2d28120568be728ec2ee25d."
 		}
 	],
 	"fieldSources": {

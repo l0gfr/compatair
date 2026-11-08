@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Rodcraft RC6748, référence 8951000409. Le dimensionnement utilise 246 L/min à 6,3 bar, selon les régimes publiés par le fabricant. Masse : 2.5 kg. Longueur : 325 mm. Diamètre intérieur du tuyau (longueur 5 m) : 10 mm.",
+		"overview": "Rodcraft RC6748, référence 8951000409. Consommations documentaires conservées séparément ; pression de mesure à confirmer avant dimensionnement. Masse : 2.5 kg. Longueur : 325 mm. Diamètre intérieur du tuyau (longueur 5 m) : 10 mm.",
 		"verifiedFacts": [
-			"Pression dynamique de travail maximale publiée : 6.3 bar, retenue comme point de fonctionnement. Respecter cette limite à l’entrée de l’outil.",
-			"Consommation en charge publiée : 4.1 L/s. Valeur retenue : 246 L/min (maximum des régimes documentés, L/s × 60).",
+			"Pression dynamique de travail maximale publiée : 6.3 bar. La pression de mesure de consommation reste à confirmer. Respecter cette limite à l’entrée de l’outil.",
+			"Consommation en charge publiée : 4.1 L/s. Conversion documentaire : 246 L/min (maximum des régimes documentés, L/s × 60) ; hors dimensionnement.",
 			"Référence fabricant : 8951000409.",
 			"Masse : 2.5 kg.",
 			"Longueur : 325 mm.",
@@ -41,14 +41,14 @@ const product: ToolProfileInput = {
 	"specifications": [
 		{
 			"label": "Condition de pression",
-			"value": "Pression dynamique de travail maximale publiée : 6.3 bar, retenue comme point de fonctionnement. Respecter cette limite à l’entrée de l’outil.",
+			"value": "Pression dynamique de travail maximale publiée : 6.3 bar. La pression de mesure de consommation reste à confirmer. Respecter cette limite à l’entrée de l’outil.",
 			"evidenceIds": [
 				"rodcraft-8951000409-20260927"
 			]
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation en charge publiée : 4.1 L/s. Valeur retenue : 246 L/min (maximum des régimes documentés, L/s × 60).",
+			"value": "Consommation en charge publiée : 4.1 L/s. Conversion documentaire : 246 L/min (maximum des régimes documentés, L/s × 60) ; hors dimensionnement.",
 			"evidenceIds": [
 				"rodcraft-8951000409-20260927"
 			]
@@ -108,6 +108,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-11-06",
 			"confidence": "B",
 			"notes": "Riveteuse 8951000409 : pression dynamique maximale confondue avec pression de mesure. Les 4,1 L/s en charge ne deviennent pas un volume par rivet ; conserver la valeur documentaire et demander la condition de mesure. SHA-256 du document complet : 2723f98d6e9488ef4d53ac136cbaaf4830c04ea8e9f84589b9fefa4274327de6."
+		},
+		{
+			"id": "review:2026-11-06-copy:rodcraft-rc6748",
+			"sourceUrl": "https://www.rodcraft.com/en/products/8951000409",
+			"sourceLabel": "Rodcraft, clarification des conditions de dimensionnement",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Alignement des textes sur le régime non dimensionnant déjà utilisé par le moteur. Valeurs documentaires et conditions de service conservées ; SHA-256 2723f98d6e9488ef4d53ac136cbaaf4830c04ea8e9f84589b9fefa4274327de6."
 		}
 	],
 	"fieldSources": {

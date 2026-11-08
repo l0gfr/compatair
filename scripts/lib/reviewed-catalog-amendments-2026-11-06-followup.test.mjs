@@ -1,3 +1,4 @@
+import { beforeReservedNovember6CopyFollowup } from './reviewed-catalog-amendments-2026-11-06-copy.mjs';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { describe, expect, it } from 'vitest';
@@ -13,7 +14,10 @@ import { evaluateCompatibility } from '../../server/air-compatibility.mjs';
 const read = p => readFileSync(new URL('../../' + p, import.meta.url));
 const digest = b => createHash('sha256').update(b).digest('hex');
 const snapshot = JSON.parse(read('src/data/imports/catalog-amendments-reviewed-2026-11-06-followup.json'));
-const native = row => parseCatalogProductSource(row.kind, read(row.file).toString());
+const native = row => beforeReservedNovember6CopyFollowup(parseCatalogProductSource(row.kind, read(row.file).toString()));
+const datedHistory = evidenceHistory.events.slice(0,38536);
+const copy = JSON.parse(read('src/data/imports/catalog-amendments-reviewed-2026-11-06-copy.json'));
+const datedFileBytes = row => { const later=copy.rows.find(r=>r.id===row.id); if(!later)return read(row.file);const p=native(row);let b=buildCatalogProductSource(row.kind,Object.fromEntries(later.sourcePropertyOrder.map(k=>[k,p[k]])),later.sourceIndentation);if(later.sourceCompactExport)b=b.replace(';\n\nexport',';\nexport');return b; };
 const ample = compressorSchema.parse({ ...compressors[0], id: 'nov6-regression-probe', slug: 'nov6-regression-probe', confidence: 'A', maxPressureBar: 50, dutyCycle: 1, fadCurve: [{ pressureBar: 1, litersPerMinute: 100000 }, { pressureBar: 50, litersPerMinute: 100000 }] });
 describe('November6 factual reserve corrections', () => {
  it('replays97 exact changes and original bytes, preserving identity and every old proof', () => {
@@ -23,12 +27,12 @@ describe('November6 factual reserve corrections', () => {
    const after = native(row), before = beforeReservedNovember6Followup(after);
    expect(after, row.id).toEqual(row.after);
    expect(before, row.id).toEqual(row.before);
-   expect(applyReservedNovember6Followup(structuredClone(before)), row.id).toEqual(after);
-   expect(applyReservedNovember6Followup(structuredClone(after)), row.id).toEqual(after);
+   expect(beforeReservedNovember6CopyFollowup(applyReservedNovember6Followup(structuredClone(before))), row.id).toEqual(after);
+   expect(beforeReservedNovember6CopyFollowup(applyReservedNovember6Followup(structuredClone(after))), row.id).toEqual(after);
    let bytes = buildCatalogProductSource(row.kind, Object.fromEntries(row.sourcePropertyOrder.map(k => [k, before[k]])), row.sourceIndentation);
    if (row.sourceCompactExport) bytes = bytes.replace(';\n\nexport', ';\nexport');
    expect(digest(bytes), row.id).toBe(row.beforeFileSha256);
-   expect(digest(read(row.file)), row.id).toBe(row.afterFileSha256);
+   expect(digest(datedFileBytes(row)), row.id).toBe(row.afterFileSha256);
    expect(after.evidence.slice(0, before.evidence.length), row.id).toEqual(before.evidence);
    for (const key of ['brand', 'model', 'mpn']) expect(() => applyReservedNovember6Followup({ ...before, [key]: 'unreviewed' }), row.id).toThrow('identity');
    const drift = structuredClone(before); drift[row.fields[0]] = 'unknown';
@@ -44,9 +48,9 @@ describe('November6 factual reserve corrections', () => {
  it('preserves38383 historical events exactly and appends153 documentary proofs', () => {
   expect(snapshot.evidenceHistoryAppend.previousEventCount).toBe(38383);
   expect(snapshot.evidenceHistoryAppend.addedEvents).toBe(153);
-  expect(digest(JSON.stringify(evidenceHistory.events.slice(0,38383)))).toBe(snapshot.evidenceHistoryAppend.previousEventsSha256);
-  expect(evidenceHistory.events).toHaveLength(38536);
-  expect(new Set(evidenceHistory.events.slice(38383).map(e => e.evidenceId)).size).toBe(153);
+  expect(digest(JSON.stringify(datedHistory.slice(0,38383)))).toBe(snapshot.evidenceHistoryAppend.previousEventsSha256);
+  expect(datedHistory).toHaveLength(38536);
+  expect(new Set(datedHistory.slice(38383).map(e => e.evidenceId)).size).toBe(153);
  });
  it('keeps native/runtime results equal and rejects unqualified demands and compressor conditions', () => {
   for (const row of snapshot.rows) {

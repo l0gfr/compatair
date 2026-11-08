@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Sioux STP10S3B12, référence STP10S3B12. Le dimensionnement utilise 840 L/min à 6,2 bar, selon les régimes publiés par le fabricant. Vitesse à vide : 300 tr/min. Couple maximal : 45 Nm. Masse : 1.2 kg.",
+		"overview": "Sioux STP10S3B12, référence STP10S3B12. Consommation publiée de régime non précisé ; le dimensionnement reste indéterminé. Vitesse à vide : 300 tr/min. Couple maximal : 45 Nm. Masse : 1.2 kg.",
 		"verifiedFacts": [
 			"Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur.",
-			"Consommation publiée : 14.0 L/s (30.0 scfm). Le guide du catalogue (page PDF 10) définit ces débits comme de l’air détendu à pression atmosphérique et des consommations maximales, sauf indication contraire. La plus grande valeur publiée est retenue : 840 L/min (L/s × 60).",
+			"Consommation publiée : 14.0 L/s (30.0 scfm). Le régime de cette consommation n’est pas précisé dans la ligne propre à la référence. Conversion documentaire : 840 L/min (L/s × 60) ; hors dimensionnement en charge.",
 			"Référence fabricant : STP10S3B12.",
 			"Vitesse à vide : 300 tr/min.",
 			"Couple maximal : 45 Nm.",
@@ -48,7 +48,7 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation publiée : 14.0 L/s (30.0 scfm). Le guide du catalogue (page PDF 10) définit ces débits comme de l’air détendu à pression atmosphérique et des consommations maximales, sauf indication contraire. La plus grande valeur publiée est retenue : 840 L/min (L/s × 60).",
+			"value": "Consommation publiée : 14.0 L/s (30.0 scfm). Le régime de cette consommation n’est pas précisé dans la ligne propre à la référence. Conversion documentaire : 840 L/min (L/s × 60) ; hors dimensionnement en charge.",
 			"evidenceIds": [
 				"sioux-stp10s3b12-20260927"
 			]
@@ -110,6 +110,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-11-06",
 			"confidence": "B",
 			"notes": "P84 :STP10S3B12taraudeuse300rpm/45Nm/1,2kg/240mm,vsS5B12500rpm/37Nm.14Ls sousAirConsumption sans régime;840Lmin restent documentaires, pas encharge par défaut. SHA-256 du document complet : 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
+		},
+		{
+			"id": "review:2026-11-06-copy:sioux-stp10s3b12",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=84",
+			"sourceLabel": "Sioux, clarification des conditions de dimensionnement",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Alignement des textes sur le régime non dimensionnant déjà utilisé par le moteur. Valeurs documentaires et conditions de service conservées ; SHA-256 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
 		}
 	],
 	"fieldSources": {

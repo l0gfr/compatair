@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "PFERD PBA 4/160 HV oVA, référence 80705012. Le dimensionnement utilise 600 L/min à 6,3 bar, selon les régimes publiés par le fabricant. Longueur : 365 mm. Poids net de la machine : 1.191 kg. Puissance délivrée : 370 Watt.",
+		"overview": "PFERD PBA 4/160 HV oVA, référence 80705012. Consommations documentaires conservées séparément ; pression de mesure à confirmer avant dimensionnement. Longueur : 365 mm. Poids net de la machine : 1.191 kg. Puissance délivrée : 370 Watt.",
 		"verifiedFacts": [
 			"Pression de service publiée sur cette fiche : 6.3 bar. Aucune autre pression de fonctionnement n’est déduite.",
-			"Consommation sous charge : 0.6 m³/min ; à vide : 0.55 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 600 L/min (m³/min × 1 000).",
+			"Consommation sous charge : 0.6 m³/min ; à vide : 0.55 m³/min. La pression de mesure de ces consommations reste à confirmer ; aucune des deux valeurs ne dimensionne le besoin en charge.",
 			"Référence fabricant : 80705012.",
 			"Longueur : 365 mm.",
 			"Poids net de la machine : 1.191 kg.",
@@ -49,7 +49,7 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation sous charge : 0.6 m³/min ; à vide : 0.55 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 600 L/min (m³/min × 1 000).",
+			"value": "Consommation sous charge : 0.6 m³/min ; à vide : 0.55 m³/min. La pression de mesure de ces consommations reste à confirmer ; aucune des deux valeurs ne dimensionne le besoin en charge.",
 			"evidenceIds": [
 				"pferd-80705012-20260927"
 			]
@@ -116,6 +116,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-11-06",
 			"confidence": "B",
 			"notes": "Fiche 80705012 : charge 0,6 m³/min et vide 0,55, bande 520 × 3–20 mm, 370 W, 19,3 m/s. oVA signifie sans bras adaptateur, différence avec 80705011 ; pression de mesure du débit non établie par le seul champ pression de service. SHA-256 du document complet : 0048448f729fdaab34702e94c3374fd3d56ad41e2a3cb7804dcd41f7af5bdfc5."
+		},
+		{
+			"id": "review:2026-11-06-copy:pferd-pba-4-160-hv-ova",
+			"sourceUrl": "https://fr.pferd.com/fr/ponceuse-a-bande-pneumatique-pba-4160-hv-ova",
+			"sourceLabel": "PFERD, clarification des conditions de dimensionnement",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Alignement des textes sur le régime non dimensionnant déjà utilisé par le moteur. Valeurs documentaires et conditions de service conservées ; SHA-256 0048448f729fdaab34702e94c3374fd3d56ad41e2a3cb7804dcd41f7af5bdfc5."
 		}
 	],
 	"fieldSources": {

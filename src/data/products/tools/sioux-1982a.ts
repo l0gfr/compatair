@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
 	},
 	"editorial": {
-		"overview": "Sioux 1982A, référence 1982A. Le dimensionnement utilise 1 080 L/min à 6,2 bar, selon les régimes publiés par le fabricant. Vitesse à vide : 20000 tr/min. Pince : 1/4\". Masse : 3.4 kg.",
+		"overview": "Sioux 1982A, référence 1982A. Consommation publiée de régime non précisé ; le dimensionnement reste indéterminé. Vitesse à vide : 20000 tr/min. Pince : 1/4\". Masse : 3.4 kg.",
 		"verifiedFacts": [
 			"Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur.",
-			"Consommation publiée : 18.0 L/s (38.0 scfm). Le guide du catalogue (page PDF 10) définit ces débits comme de l’air détendu à pression atmosphérique et des consommations maximales, sauf indication contraire. La plus grande valeur publiée est retenue : 1080 L/min (L/s × 60).",
+			"Consommation publiée : 18.0 L/s (38.0 scfm). Le régime de cette consommation n’est pas précisé dans la ligne propre à la référence. Conversion documentaire : 1080 L/min (L/s × 60) ; hors dimensionnement en charge.",
 			"Référence fabricant : 1982A.",
 			"Vitesse à vide : 20000 tr/min.",
 			"Pince : 1/4\".",
@@ -48,7 +48,7 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Consommation publiée : 18.0 L/s (38.0 scfm). Le guide du catalogue (page PDF 10) définit ces débits comme de l’air détendu à pression atmosphérique et des consommations maximales, sauf indication contraire. La plus grande valeur publiée est retenue : 1080 L/min (L/s × 60).",
+			"value": "Consommation publiée : 18.0 L/s (38.0 scfm). Le régime de cette consommation n’est pas précisé dans la ligne propre à la référence. Conversion documentaire : 1080 L/min (L/s × 60) ; hors dimensionnement en charge.",
 			"evidenceIds": [
 				"sioux-1982a-20260927"
 			]
@@ -110,6 +110,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-11-06",
 			"confidence": "B",
 			"notes": "P81 :1982Apince1/4,20000rpm/3,4kg/211mm,18Ls sous colonneAirConsumption sans régime.6,2bar est un pointperformance explicite mais ne transforme pas le régime inconnu enmaximum. Neutraliser1080Lmin. SHA-256 du document complet : 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
+		},
+		{
+			"id": "review:2026-11-06-copy:sioux-1982a",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=81",
+			"sourceLabel": "Sioux, clarification des conditions de dimensionnement",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Alignement des textes sur le régime non dimensionnant déjà utilisé par le moteur. Valeurs documentaires et conditions de service conservées ; SHA-256 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8."
 		}
 	],
 	"fieldSources": {

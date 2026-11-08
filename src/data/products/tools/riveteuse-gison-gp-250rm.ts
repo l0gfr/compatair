@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-250RM. Volume déclaré : 2 L par cycle, pression recommandée 6,205 bar. La cadence doit être renseignée pour dimensionner. Masse : 2.4 kg. Longueur : 278 mm.",
+		"overview": "GISON GP-250RM. Volume déclaré : 2 L par cycle, pression recommandée 6,205 bar. La pression de mesure du volume reste à documenter avant tout calcul avec une cadence. Masse : 2.4 kg. Longueur : 278 mm.",
 		"verifiedFacts": [
 			"Masse : 2.4 kg.",
 			"Longueur : 278 mm.",
@@ -108,6 +108,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-11-06",
 			"confidence": "B",
 			"notes": "PDF70 : écrous M3àM12 aluminium/acier,traction2179 kgf,278 mm et2,4 kg,volume2 litres/cycle. La pression recommandée90 psi ne prouve pas la pression de mesure du volume. Conserver2 litres/cycle en spécification, retirer le calcul paramétrique non qualifié. SHA-256 du document complet : a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077."
+		},
+		{
+			"id": "review:2026-11-06-copy:riveteuse-gison-gp-250rm",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en#page=70",
+			"sourceLabel": "GISON, clarification des conditions de dimensionnement",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-06",
+			"confidence": "B",
+			"notes": "Alignement des textes sur le régime non dimensionnant déjà utilisé par le moteur. Valeurs documentaires et conditions de service conservées ; SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077."
 		}
 	],
 	"fieldSources": {

@@ -3,6 +3,7 @@ title: "RUPES RE21 et RS21A : trois formes, même débit"
 seoTitle: "RUPES RE21 et RS21A : trois formes, même débit"
 description: "RE21ACM, RE21ALN et RS21A publient 360 L/min au maximum. Choisir la forme du plateau sans lui attribuer une économie d’air absente du catalogue."
 pubDate: 2026-09-26
+updatedDate: 2026-11-08
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture"]
@@ -11,7 +12,7 @@ relatedGuides: ["ponceuse-vibrante-dimensions-plateau-feuille", "utiliser-plusie
 sources: ["https://www.rupes.com/catalogue/2026/RUPES_Catalogue-2026_EN.pdf"]
 ---
 
-Le choix entre un plateau court, allongé ou delta ne se résume pas au compresseur. Pour RE21ACM, RE21ALN et RS21A, RUPES annonce la même consommation maximale : 360 L/min à 6,2 bar. Le format du plateau doit donc être choisi pour le travail envisagé, sans avantage pneumatique inventé.
+Le choix entre un plateau court, allongé ou delta ne se résume pas au compresseur. Pour RE21ACM, RE21ALN et RS21A, RUPES annonce la même consommation maximale : 360 L/min. La pression de travail publiée est de 6,2 bar ; la pression de mesure de la consommation reste à confirmer. Le format du plateau doit donc être choisi pour le travail envisagé, sans avantage pneumatique inventé.
 
 | Référence exacte | Données pneumatiques publiées | Autres repères |
 | --- | --- | --- |
