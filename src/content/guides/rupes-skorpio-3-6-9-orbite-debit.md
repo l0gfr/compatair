@@ -1,8 +1,9 @@
 ---
 title: "RUPES Skorpio III : orbite 3, 6 ou 9 mm et débit"
 seoTitle: "RUPES Skorpio III : orbite 3, 6 ou 9 mm et débit"
-description: "Les RH353, RH356 et RH359 consomment jusqu’à 340 L/min à 6,2 bar selon RUPES. L’orbite change, sans économie d’air documentée entre ces versions."
+description: "RUPES publie un maximum de 340 L/min pour les RH353, RH356 et RH359 et une pression de service de 6,2 bar. Comparer leurs orbites de 3, 6 et 9 mm."
 pubDate: 2026-09-26
+updatedDate: 2026-11-09
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture"]
@@ -11,7 +12,7 @@ relatedGuides: ["ponceuse-orbitale-2-5-5-8-mm-choisir", "mesurer-pression-dynami
 sources: ["https://www.rupes.com/catalogue/2026/RUPES_Catalogue-2026_EN.pdf"]
 ---
 
-Choisir une orbite plus petite ne garantit pas une ponceuse moins gourmande. RUPES publie la même consommation maximale pour les Skorpio III RH353, RH356 et RH359 : 340 L/min à 6,2 bar. Leurs orbites de 3, 6 et 9 mm répondent à une autre dimension du choix.
+Choisir une orbite plus petite ne garantit pas une ponceuse moins gourmande. RUPES publie la même consommation maximale pour les Skorpio III RH353, RH356 et RH359 : 340 L/min. La pression de service de 6,2 bar figure sur une autre ligne ; le tableau ne précise pas la pression de mesure de ce maximum. Leurs orbites de 3, 6 et 9 mm répondent à une autre dimension du choix.
 
 | Référence exacte | Données pneumatiques publiées | Autres repères |
 | --- | --- | --- |
@@ -23,7 +24,7 @@ Sources fabricant consultées le 26 septembre 2026 : [RUPES RH353](https://www.r
 
 ## Séparer alimentation et procédé de ponçage
 
-Le compresseur voit ici la même demande maximale publiée. Une comparaison de finition exige en revanche de préciser abrasif, support, étape du travail et résultat recherché. On ne peut pas attribuer un gain de temps ou une qualité de surface chiffrée à l’orbite seule à partir de ce tableau.
+Les trois références partagent le même maximum publié. Son appariement à une pression de mesure reste à documenter avant de l’utiliser pour dimensionner le compresseur. Une comparaison de finition exige en revanche de préciser abrasif, support, étape du travail et résultat recherché. On ne peut pas attribuer un gain de temps ou une qualité de surface chiffrée à l’orbite seule à partir de ce tableau.
 
 Le [guide des orbites de ponceuse](/guides/ponceuse-orbitale-2-5-5-8-mm-choisir/) développe ces critères de procédé. Pour l’alimentation, la priorité reste un débit restitué documenté à la pression utile et une pression dynamique suffisante à l’outil.
 

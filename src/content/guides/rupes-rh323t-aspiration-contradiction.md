@@ -3,6 +3,7 @@ title: "RUPES RH323T : quelle aspiration faut-il confirmer ?"
 seoTitle: "RUPES RH323T : quelle aspiration faut-il confirmer ?"
 description: "Le catalogue RUPES 2026 associe Venturi et aspiration centralisée à la RH323T dans deux passages. Identifier l’incertitude avant d’acheter les raccords."
 pubDate: 2026-09-26
+updatedDate: 2026-11-09
 category: "Choisir"
 audiences: ["professionnel"]
 metiers: ["carrosserie-peinture"]
@@ -21,7 +22,7 @@ Sources fabricant consultées le 26 septembre 2026 : [RUPES RH323T](https://www.
 
 ## Les données qui restent distinctes de cette incertitude
 
-Le tableau donne pour RH323T une orbite de 3 mm, un plateau de 125 mm, une pression de 6,2 bar et une consommation maximale de 340 L/min. Le désaccord identifié porte sur l’aspiration. Il ne justifie pas de modifier arbitrairement les autres valeurs publiées.
+Le tableau donne pour RH323T une orbite de 3 mm, un plateau de 125 mm, une pression de service de 6,2 bar et une consommation maximale de 340 L/min. Il présente ces deux dernières valeurs sur des lignes séparées, sans préciser la pression de mesure de la consommation. Elles ne constituent donc pas ici un point de dimensionnement qualifié. Le désaccord identifié porte sur l’aspiration. Il ne justifie pas de modifier arbitrairement les autres valeurs publiées.
 
 Le passage concerné se trouve à la page PDF 61 du catalogue, numérotée 59 dans le document. Mentionner les deux repères aide le fabricant ou le distributeur à retrouver exactement le problème.
 
