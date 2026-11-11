@@ -25,6 +25,8 @@ const datedBytes = row => {
  return bytes;
 };
 const digest = bytes => createHash('sha256').update(bytes).digest('hex');
+const historicalPolicyFile = 'docs/editorial/indexation-policy-2026-11-01.snapshot.json';
+const preservedLedgerBytes = file => readFileSync(new URL('../../' + (file === 'config/indexation-policy.json' ? historicalPolicyFile : file), import.meta.url), 'utf8');
 const ledgerBytesAtReview = (bytes, file, reviewedAt) => {
  const key = file === 'config/indexation-editorial-reviews.json' ? 'reviews'
   : file === 'config/indexation-qualifications.json' ? 'entries' : undefined;
@@ -46,11 +48,24 @@ describe('November1 factual corrections of reserved references', () => {
   expect(report.candidates.map(c => c.path).sort()).toEqual(original.pages.filter(p => p.decision !== 'approved').map(p => p.path).sort());
   expect(report.summary).toEqual({ 'ready-for-review': 65, 'needs-manufacturer-clarification': 7, 'needs-source-access': 7, 'rejected-duplicate': 2, 'needs-source-or-comparison': 1 });
   for (const page of report.candidates) expect(page.admissionDecision).toBe('not-admitted-by-this-followup');
-  // The exact dated ledger remains immutable while later daily reviews append.
-  for (const ledger of report.preservedLedgers) expect(digest(ledgerBytesAtReview(readFileSync(new URL('../../' + ledger.file, import.meta.url), 'utf8'), ledger.file, report.reviewedAt))).toBe(ledger.sha256);
+  // Retain the exact reviewed policy while later authorizations and daily reviews evolve.
+  for (const ledger of report.preservedLedgers) expect(digest(ledgerBytesAtReview(preservedLedgerBytes(ledger.file), ledger.file, report.reviewedAt))).toBe(ledger.sha256);
   expect(report.completeSourceAudit.scope.kind).toBe('inventory');
   expect(report.completeSourceAudit.summary).toMatchObject({ checked: 7521, broken: 10, unverified: 472, auditUnavailable: false });
   expect(report.completeSourceAudit.anomalies).toHaveLength(482);
+ });
+ it('binds the historical policy bytes independently of later supplemental authorizations', () => {
+  const report = JSON.parse(readFileSync(new URL('../../docs/editorial/indexation-reserved-followup-2026-11-01.json', import.meta.url)));
+  const proof = report.preservedLedgers.find(ledger => ledger.file === 'config/indexation-policy.json');
+  const historicalBytes = preservedLedgerBytes(proof.file), historical = JSON.parse(historicalBytes);
+  expect(digest(historicalBytes)).toBe(proof.sha256);
+  expect(historical.supplementalPublication.publicationDay).toBe('2026-10-31');
+  const later = structuredClone(historical);
+  later.supplementalPublication = { publicationDay: '2026-11-11', sourceReleaseSha: 'a'.repeat(40), authorizedAt: '2026-11-11T14:00:00.000Z', reason: 'Synthetic later supplemental publication' };
+  expect(digest(JSON.stringify(later, null, 2) + '\n')).not.toBe(proof.sha256);
+  const mutated = structuredClone(historical); mutated.dailyLimits.guides++;
+  expect(digest(JSON.stringify(mutated, null, 2) + '\n')).not.toBe(proof.sha256);
+  expect(preservedLedgerBytes(proof.file)).toBe(historicalBytes);
  });
  it('retains the cutoff entry and detects historical mutations despite later appends', () => {
   const cutoff = '2026-11-01T13:19:56.128Z';

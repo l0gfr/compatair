@@ -17,11 +17,11 @@ describe('November6 completed review and independent reserves', () => {
   expect(report.scope).toEqual({pendingReviews:364,reservedCandidates:44,total:408,corrections:97,newQualifications:374,newAdmissions:0});
   expect(report.summary).toEqual({'qualified-for-next-review':374,'needs-manufacturer-clarification':17,'needs-source-access':16,'needs-editorial-distinction':1});
   expect(report.candidates.every(p=>p.admissionDecision==='not-admitted-by-this-followup')).toBe(true);
-  // Later daily reviews append entries; the November6 proof still binds its
-  // exact dated JSON bytes, while the normal release controls check extensions.
+  // Later daily reviews and authorizations evolve; this proof still binds its
+  // exact dated bytes, while the normal release controls check extensions.
   for(const ledger of report.preservedLedgers){
    const full=ledger.file==='config/indexation-editorial-reviews.json'?read(ledger.file):null;
-   const dated=full?JSON.stringify({...full,reviews:full.reviews.filter(e=>Date.parse(e.reviewedAt)<=Date.parse(report.reviewedAt))},null,2)+'\n':bytes(ledger.file);
+   const dated=full?JSON.stringify({...full,reviews:full.reviews.filter(e=>Date.parse(e.reviewedAt)<=Date.parse(report.reviewedAt))},null,2)+'\n':bytes(ledger.file==='config/indexation-policy.json'?'docs/editorial/indexation-policy-2026-11-01.snapshot.json':ledger.file);
    expect(hash(dated),ledger.file).toBe(ledger.sha256);
   }
  });

@@ -56,6 +56,8 @@ describe('bounded compressed production archive', () => {
 		expect(packaging.run).toContain('tar -tf "compatair-${GITHUB_SHA}.tar.xz" | node scripts/production-archive-order.mjs --verify-list production-archive-files.list');
 		expect(upload.with['if-no-files-found']).toBe('error');
 	});
+	// Allow bounded CPU time across CI hosts for the real production dictionary;
+	// this checks byte fidelity and corruption rejection, not compression speed.
 	it('preserves every input byte with the exact production compression settings and rejects corruption', () => {
 		const packaging = workflow.jobs.validate.steps.find(step => step.name === 'Package immutable release');
 		const options = /\| xz (.+) > "compatair-/.exec(packaging.run)[1].split(' ');
@@ -65,7 +67,7 @@ describe('bounded compressed production archive', () => {
 		expect(() => execFileSync('xz', ['--test'], { input: compressed })).not.toThrow();
 		const corrupted = Buffer.from(compressed); corrupted[Math.floor(corrupted.length / 2)] ^= 1;
 		expect(() => execFileSync('xz', ['--test'], { input: corrupted, stdio: ['pipe', 'pipe', 'pipe'] })).toThrow();
-	});
+	}, 30_000);
 	it('refuses an integrity-check failure before checksums or release upload', () => {
 		const root = mkdtempSync(join(tmpdir(), 'compatair-package-integrity-failure-'));
 		const packaging = workflow.jobs.validate.steps.find(step => step.name === 'Package immutable release');

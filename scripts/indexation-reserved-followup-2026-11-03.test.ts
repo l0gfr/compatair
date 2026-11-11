@@ -14,7 +14,8 @@ it('accounts for every frozen reserve, qualification and unchanged admission led
  expect(report.completedByKind).toEqual({ tool: 356, compressor: 83, guide: 2 });
  expect(report.dailyLimits).toEqual({ guides: 10, compressors: 100, tools: 400 });
  for (const ledger of report.preservedLedgers) {
-  let bytes = read(ledger.file);
+  // The dated policy proof is separate from later supplemental authorizations.
+  let bytes = read(ledger.file === 'config/indexation-policy.json' ? 'docs/editorial/indexation-policy-2026-11-01.snapshot.json' : ledger.file);
   if (ledger.file === 'config/indexation-editorial-reviews.json') {
    const dated = JSON.parse(bytes);
    dated.reviews = dated.reviews.filter((entry: { reviewedAt: string }) => {
