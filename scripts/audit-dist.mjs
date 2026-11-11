@@ -40,15 +40,18 @@ for (const kind of ['compressors', 'tools']) for (const product of auditedCatalo
 	if (error) errors.push(error);
 }
 const maximumDocumentTitleLength = 60;
-const maximumInitialPageScriptBytesGzip = 50 * 1024;
-const maximumPassportInitialScriptBytesGzip = 45 * 1024;
-const maximumOnDemandPageScriptBytesGzip = 57 * 1024;
+// Explicitly approved on 2026-11-11: the consent manager adds 2 KiB to the
+// existing page budgets. All initial and complete graph checks remain blocking.
+const analyticsConsentOverheadBytesGzip = 2 * 1024;
+const maximumInitialPageScriptBytesGzip = 50 * 1024 + analyticsConsentOverheadBytesGzip;
+const maximumPassportInitialScriptBytesGzip = 45 * 1024 + analyticsConsentOverheadBytesGzip;
+const maximumOnDemandPageScriptBytesGzip = 57 * 1024 + analyticsConsentOverheadBytesGzip;
 // Moteur partagé, provenance et version épinglée : 60 KiB mesurés pour le
 // calculateur, 58-59 pour ces trois parcours. Les données sont désormais ciblées.
-const maximumCalculatorOnDemandScriptBytesGzip = 61 * 1024;
+const maximumCalculatorOnDemandScriptBytesGzip = 61 * 1024 + analyticsConsentOverheadBytesGzip;
 const versionedDecisionPages = new Set(['passeport/index.html', 'diagnostic-intervention/index.html', 'suivi-exploitation/index.html']);
-const maximumVersionedDecisionScriptBytesGzip = 59 * 1024;
-const maximumMaintenanceInitialScriptBytesGzip = 51 * 1024;
+const maximumVersionedDecisionScriptBytesGzip = 59 * 1024 + analyticsConsentOverheadBytesGzip;
+const maximumMaintenanceInitialScriptBytesGzip = 51 * 1024 + analyticsConsentOverheadBytesGzip;
 // 5 006 références : 253 Kio de données d’exécution et 129 Kio de recherche mesurés.
 // Ces plafonds concernent les données ; les budgets JavaScript restent distincts.
 // Export historique enrichi de la provenance par champ (253 KiB mesurés).

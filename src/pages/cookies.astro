@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import InstitutionalHero from '../components/InstitutionalHero.astro';
 ---
 <BaseLayout title="Cookies et réglages de confidentialité | CompatAir" description="Choisir, refuser ou retirer Google Analytics ; connaître les cookies et mémoires locales de CompatAir." breadcrumbs={[{ name: 'Cookies', path: '/cookies/' }]}>
- <InstitutionalHero eyebrow="Cookies et stockage local" title="Vos réglages de confidentialité" lead="La mesure Google Analytics est facultative. Vous pouvez accepter, refuser ou changer d’avis à tout moment." primaryHref="#choix" primaryLabel="Gérer mon choix" items={[{ label: 'Audience', detail: 'Avec votre accord' }, { label: 'Choix', detail: 'Conservé 180 jours' }, { label: 'Publicité ciblée', detail: 'Désactivée' }]} />
+ <InstitutionalHero eyebrow="Cookies et stockage local" title="Cookies et consentement" lead="La mesure Google Analytics est facultative. Vous pouvez accepter, refuser ou changer d’avis à tout moment." primaryHref="#choix" primaryLabel="Gérer mon choix" items={[{ label: 'Audience', detail: 'Avec votre accord' }, { label: 'Choix', detail: 'Conservé 180 jours' }, { label: 'Publicité ciblée', detail: 'Désactivée' }]} />
  <article class="container content institutional-content legal-content" id="choix">
   <p class="legal-update">Dernière mise à jour : 11 novembre 2026</p>
   <p><a class="button" href="#choix" data-analytics-settings>Modifier mon choix pour Google Analytics</a></p>

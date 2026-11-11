@@ -14,6 +14,8 @@ Le script externe est ajouté seulement après un consentement explicite, valabl
 
 Le footer donne accès aux réglages, à la confidentialité, aux cookies et aux conditions d’utilisation. Le retrait positionne immédiatement le drapeau de désactivation Google, supprime les cookies `_ga` et `_ga_*` du domaine puis recharge le document pour arrêter le script et ses timers. L’expiration, l’effacement du choix dans un autre onglet et le retour depuis le cache de navigation sont contrôlés.
 
+Le gestionnaire de consentement représente environ 1,8 Kio gzip dans la compilation JavaScript isolée. L’ajout explicite de 2 Kio aux budgets des pages est autorisé le 11 novembre 2026 ; les limites initiales et à la demande restent vérifiées sur les modules réellement générés, avant activation. Cette marge ne concerne ni les budgets de données, ni les archives, ni les exigences Lighthouse.
+
 Les adresses de page proviennent de la canonical publique, sans paramètres ni fragments. Le référent est limité à son origine. Aucune recherche saisie, valeur de formulaire, photo, configuration, nom, email ou User-ID n’est fourni à GA4. La mesure reste pseudonyme : identifiant navigateur, heures, pages et contexte technique de base sont reçus par Google après consentement.
 
 Événements : `page_view` et événements de session/engagement GA4 ; `calculator_intent` pour un clic interne vers le calculateur ; `calculator_result` après affichage effectif d’une réponse ; `merchant_click` pour un clic vers `/go/`. Aucun de ces événements n’est décrit comme un achat. Les événements métier ne comportent aucune valeur du calcul ni URL de destination.
