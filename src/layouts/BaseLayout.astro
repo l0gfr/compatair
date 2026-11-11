@@ -67,6 +67,7 @@ const isCurrent = (href: string) => currentPath.startsWith(href);
 const exploreItems = [
 	{ href: '/compresseurs/', label: 'Compresseurs', detail: 'Débits et sources documentés' },
 	{ href: '/outils-pneumatiques/', label: 'Outils pneumatiques', detail: 'Besoins publiés par usage' },
+	{ href: '/pcp/', label: 'PCP et haute pression', detail: 'Fiches et documentation de remplissage' },
 	{ href: '/marques/', label: 'Marques', detail: 'Couverture des catalogues' },
 	{ href: '/glossaire/', label: 'Glossaire', detail: 'Définitions techniques sourcées' },
 ];
@@ -209,6 +210,7 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 						<header><h2>Explorer</h2></header>
 						<a href="/compresseurs/"><span>Compresseurs</span><span class="footer-arrow" aria-hidden="true">→</span></a>
 						<a href="/outils-pneumatiques/"><span>Outils pneumatiques</span><span class="footer-arrow" aria-hidden="true">→</span></a>
+						<a href="/pcp/"><span>PCP et haute pression</span><span class="footer-arrow" aria-hidden="true">→</span></a>
 						<a href="/marques/"><span>Marques documentées</span><span class="footer-arrow" aria-hidden="true">→</span></a>
 						<a href="/guides/"><span>Guides techniques</span><span class="footer-arrow" aria-hidden="true">→</span></a>
 						<a href="/professionnels/"><span>Professionnels</span><span class="footer-arrow" aria-hidden="true">→</span></a>

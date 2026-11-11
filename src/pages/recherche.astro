@@ -6,8 +6,9 @@ import UiIcon from '../components/UiIcon.astro';
 import { compressors, tools } from '../data/catalog';
 import { decisionComparisons } from '../data/decision-comparisons';
 import { glossaryTerms } from '../data/glossary';
+import { pcpReferences } from '../data/pcp';
 const guides = await getCollection('guides');
-const itemCount = compressors.length + tools.length * 2 + guides.length + glossaryTerms.length + decisionComparisons.length;
+const itemCount = compressors.length + tools.length * 2 + guides.length + glossaryTerms.length + decisionComparisons.length + pcpReferences.length + 1;
 const searchPaths = [
 	{ icon: 'tools', label: 'Numéro sur une étiquette', title: 'Identifier une référence', href: '/scanner/' },
 	{ icon: 'calculator', label: 'Outil ou configuration', title: 'Vérifier un besoin', href: '/calculateur/' },

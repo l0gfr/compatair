@@ -12,6 +12,7 @@ const guides = defineCollection({
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
 		category: z.enum(['Comprendre', 'Choisir', 'Installer', 'Utiliser']),
+		scope: z.enum(['workshop', 'pcp']).default('workshop'),
 		audiences: z.array(z.enum(guideAudienceIds)).min(1),
 		metiers: z.array(z.enum(guideMetierIds)).default([]),
 		readingTime: z.number().int().positive(),
@@ -25,6 +26,9 @@ const guides = defineCollection({
 		relatedGuides: z.array(z.string().regex(/^[a-z0-9-]+$/)).max(6).default([]),
 		sources: z.array(z.url()).min(1),
 	}).superRefine((guide, context) => {
+		if (guide.scope === 'pcp' && guide.relatedCalculatorTool) {
+			context.addIssue({ code: 'custom', message: 'Un guide PCP documentaire ne peut pas être lié au calculateur d’outillage.', path: ['relatedCalculatorTool'] });
+		}
 		if (new Set(guide.audiences).size !== guide.audiences.length) {
 			context.addIssue({ code: 'custom', message: 'Une audience ne peut apparaître qu’une fois.', path: ['audiences'] });
 		}

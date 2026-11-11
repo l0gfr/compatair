@@ -113,6 +113,9 @@ export function isNavigationPath(path) {
 }
 
 export function candidateFamily(path) {
+	// The PCP overview is a reviewed editorial dossier, charged to guide quotas.
+	// Its brief reference routes remain outside admissions until separately assessed.
+	if (path === '/pcp/') return 'guides';
 	if (/^\/guides\/(?:[a-z0-9-]+\/)+$/.test(path)) return 'guides';
 	if (/^\/(compresseurs|outils-pneumatiques)\/[^/]+\/$/.test(path)) return 'catalog';
 	if (/^\/quel-compresseur-pour\/[^/]+\/$/.test(path)) return 'usages';

@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { pcpReferences, pcpKindLabels } from '../../data/pcp';
+
+export function getStaticPaths() {
+	return pcpReferences.map((reference) => ({ params: { slug: reference.slug }, props: { reference } }));
+}
+const { reference } = Astro.props;
+const name = `${reference.brand} ${reference.model}`;
+const sourceFor = (id: string) => reference.sources.find((source) => source.id === id)!;
+const latestCheck = reference.sources.map((source) => source.checkedAt).sort().at(-1)!;
+const formatDate = (value: string) => new Date(`${value}T12:00:00Z`).toLocaleDateString('fr-FR', { timeZone: 'Europe/Paris', day: 'numeric', month: 'long', year: 'numeric' });
+---
+<BaseLayout title={`${name} : fiche PCP | CompatAir`} description={`${name} : caractéristiques publiées par le fabricant, sources identifiées et informations non documentées. Fiche documentaire PCP sans verdict de compatibilité.`} imagePath="/social/pcp.png" breadcrumbs={[{ name: 'PCP', path: '/pcp/' }, { name, path: `/pcp/${reference.slug}/` }]}>
+	<article class="container pcp-dossier">
+		<nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="/">Accueil</a><span>/</span><a href="/pcp/">PCP</a><span>/</span><span>{name}</span></nav>
+		<header><p class="eyebrow">{pcpKindLabels[reference.kind]} · Fiche documentaire</p><h1>{name}</h1><p class="lead">{reference.summary}</p><p class="pcp-date">Dernière consultation des sources le <time datetime={latestCheck}>{formatDate(latestCheck)}</time> · Relecture éditoriale interne</p></header>
+		<section aria-labelledby="pcp-facts-title"><h2 id="pcp-facts-title">Ce que publie le fabricant</h2><p>Les valeurs ci-dessous conservent les unités du document. Les pressions publiées décrivent une caractéristique du modèle, pas un réglage à appliquer.</p><dl class="pcp-facts">{reference.facts.map((fact) => <div><dt>{fact.label}</dt><dd><strong>{fact.value}</strong><a href={sourceFor(fact.sourceId).url}>Source : {sourceFor(fact.sourceId).label}</a></dd></div>)}</dl></section>
+		<section class="pcp-unavailable" aria-labelledby="pcp-unavailable-title"><h2 id="pcp-unavailable-title">Informations non documentées dans cette fiche</h2><p>Ces informations n’ont pas été relevées pour cette fiche. Leur absence ne signifie pas qu’elles n’existent dans aucun document du fabricant.</p><ul>{reference.unavailable.map((item) => <li><strong>{item}</strong> : données insuffisantes.</li>)}</ul></section>
+		<section aria-labelledby="pcp-limits-title"><h2 id="pcp-limits-title">Portée de cette fiche</h2><p>Cette fiche ne valide pas l’association d’une arme, d’une pompe, d’un compresseur ou d’un réservoir. Un raccord nommé ou une pression maximale ne décrivent pas à eux seuls un ensemble compatible. La notice du modèle exact et les exigences de chaque composant restent nécessaires.</p><p>Les données PCP sont présentées séparément du catalogue d’outillage pneumatique et de ses verdicts. Aucun temps de remplissage, autonomie ou nombre de tirs n’est calculé ici.</p><p><a href="/guides/pcp-lire-documentation-remplissage/">Lire et vérifier la documentation PCP</a></p></section>
+		<section aria-labelledby="pcp-sources-title"><h2 id="pcp-sources-title">Sources constructeur</h2><ul class="pcp-sources">{reference.sources.map((source) => <li><a href={source.url}>{source.label}</a><span>Consultée le <time datetime={source.checkedAt}>{formatDate(source.checkedAt)}</time></span></li>)}</ul><p><a href="/contact/">Signaler une erreur ou proposer une source précise</a></p></section>
+		<div class="actions"><a class="button primary" href="/pcp/">Toutes les fiches PCP</a><a class="button" href="/guides/pcp-air-precomprime-comprendre/">Comprendre le PCP</a></div>
+	</article>
+</BaseLayout>
+<style>
+	.pcp-dossier { max-width: 58rem; padding-block: 1.5rem 4rem; }
+	.pcp-dossier header { padding-block: 1.5rem; border-bottom: 1px solid var(--line); }
+	.pcp-dossier h1 { margin: 0 0 1rem; font-size: clamp(2.2rem, 6vw, 3.8rem); font-weight: 500; line-height: 1.1; overflow-wrap: anywhere; }
+	.pcp-date { color: var(--muted); font-size: .85rem; }
+	.pcp-dossier section { margin-block: 2.5rem; }
+	.pcp-dossier h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 500; line-height: 1.2; }
+	.pcp-facts { margin-top: 1.5rem; }
+	.pcp-facts > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 1rem; padding-block: 1.2rem; border-top: 1px solid var(--line); }
+	.pcp-facts dt { color: var(--muted); }
+	.pcp-facts dd { min-width: 0; margin: 0; }
+	.pcp-facts dd strong { display: block; font-size: 1.05rem; font-weight: 600; }
+	.pcp-facts dd a { display: inline-flex; align-items: center; min-height: 44px; padding-top: .3rem; color: var(--brand-dark); font-size: .8rem; overflow-wrap: anywhere; }
+	.pcp-unavailable { padding: 1rem 1.5rem; border-left: 3px solid var(--brand); background: #eef2e9; }
+	.pcp-unavailable h2 { margin-top: .5rem; }
+	.pcp-unavailable li + li { margin-top: .6rem; }
+	.pcp-sources { padding-left: 1.25rem; }
+	.pcp-sources span { display: block; margin-top: .25rem; color: var(--muted); font-size: .85rem; }
+	@media (max-width: 560px) { .pcp-facts > div { grid-template-columns: 1fr; gap: .35rem; } .pcp-dossier .actions { display: grid; } }
+</style>

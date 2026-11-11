@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import { compressors, tools } from '../../data/catalog';
 import { decisionComparisons } from '../../data/decision-comparisons';
 import { glossaryTerms } from '../../data/glossary';
+import { pcpReferences } from '../../data/pcp';
 import { compressorDisplayName } from '../../domain/product-display';
 import { toolSearchText } from '../../domain/tool-demand';
 import { guideAudiences, guideMetiers, guideSeries } from '../../domain/editorial-taxonomy';
@@ -21,6 +22,8 @@ export const GET: APIRoute = async () => {
 		...[...(item.body ?? '').matchAll(/^#{2,3}\s+(.+)$/gm)].map((match) => match[1]),
 	].join(' ');
 	const items = [
+		{ title: 'PCP : armes à air et remplissage', type: 'Guide', url: '/pcp/', keywords: 'PCP air précomprimé tir sportif haute pression remplissage carabine pompe compresseur documentation' },
+		...pcpReferences.map((item) => ({ title: `${item.brand} ${item.model} : fiche PCP`, type: 'Guide', url: `/pcp/${item.slug}/`, keywords: `PCP ${item.summary} ${item.facts.map((fact) => `${fact.label} ${fact.value}`).join(' ')}` })),
 		...decisionComparisons.map((page) => ({ title: page.question, type: 'Comparatif', url: `/comparatifs/${page.slug}/`, keywords: page.description })),
 		// Keep each tool and its selection adjacent so compression can reuse their shared text.
 		...tools.flatMap((item) => [

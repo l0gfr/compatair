@@ -1,4 +1,8 @@
 export const glossarySources = {
+	airArmsPcp: {
+		label: 'Air Arms, principe PCP et familles d’équipements de remplissage',
+		url: 'https://www.air-arms.co.uk/learning-centre/airgun-air-tank-vs-hand-pump-vs-compressor',
+	},
 	swagelokCreep: {
 		label: 'Swagelok, dépannage des régulateurs : creep, droop et SPE',
 		url: 'https://www.swagelok.com/en/blog/troubleshoot-common-regulator-problems',
@@ -180,6 +184,7 @@ export type GlossaryTerm = {
 };
 
 export const glossaryTerms: GlossaryTerm[] = [
+	{ term: 'PCP (air précomprimé)', slug: 'pcp', definition: 'Famille d’armes pneumatiques utilisant de l’air précomprimé stocké dans un réservoir. La documentation de remplissage est propre au modèle et à ses équipements.', source: 'airArmsPcp', related: { label: 'Comprendre le PCP', href: '/guides/pcp-air-precomprime-comprendre/' } },
 	{ term: 'Creep d’un régulateur', slug: 'creep-regulateur', definition: 'Montée de pression aval liée à un passage indésirable au siège fermé du régulateur. Une contamination du siège est une cause possible documentée ; le diagnostic doit distinguer ce phénomène des variations de pression amont et de débit.', source: 'swagelokCreep', related: { label: 'Examiner une pression qui monte au repos', href: '/guides/regulateur-air-pression-monte-arret-creep/' } },
 	{ term: 'Supply Pressure Effect (SPE)', slug: 'supply-pressure-effect', definition: 'Dépendance de la pression de sortie d’un régulateur à sa pression d’alimentation, liée à sa conception. Sur les conceptions décrites par Swagelok, une baisse amont peut augmenter la sortie. La caractéristique et son domaine doivent être lus pour la référence exacte.', source: 'swagelokSpe', related: { label: 'Relier variation au poste et cycle de cuve', href: '/guides/pression-regulateur-varie-cuve-compresseur-spe/' } },
 	{ term: 'Différentiel de pression d’une électrovanne', slug: 'differentiel-pression-electrovanne', definition: 'Différence entre les pressions amont et aval de la vanne dans un état donné. Certaines électrovannes servo-assistées exigent un différentiel minimal pour commuter ; la pression amont seule ne confirme pas cette condition et le seuil appartient à la référence.', source: 'burkertPilot', related: { label: 'Comprendre une vanne qui ne s’ouvre pas', href: '/guides/electrovanne-air-ne-ouvre-pas-pression-differentielle/' } },

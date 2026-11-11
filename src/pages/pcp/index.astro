@@ -1,0 +1,70 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PcpReferenceCard from '../../components/PcpReferenceCard.astro';
+import { pcpReferences, pcpGuides } from '../../data/pcp';
+import { pcpEditorial } from '../../data/pcp-editorial';
+import { serializeJsonLd } from '../../domain/structured-data';
+const airguns = pcpReferences.filter((reference) => reference.kind === 'airgun');
+const equipment = pcpReferences.filter((reference) => reference.kind !== 'airgun');
+const latestCheck = pcpReferences.flatMap((reference) => reference.sources.map((source) => source.checkedAt)).sort().at(-1)!;
+const latestCheckLabel = new Date(`${latestCheck}T12:00:00Z`).toLocaleDateString('fr-FR', { timeZone: 'Europe/Paris', day: 'numeric', month: 'long', year: 'numeric' });
+const itemList = {
+	'@context': 'https://schema.org', '@type': 'ItemList', name: 'Documentation PCP CompatAir',
+	itemListElement: pcpReferences.map((reference, index) => ({ '@type': 'ListItem', position: index + 1, name: `${reference.brand} ${reference.model}`, url: `https://compatair.fr/pcp/${reference.slug}/` })),
+};
+---
+<BaseLayout title={`${pcpEditorial.title} | CompatAir`} description={pcpEditorial.description} imagePath="/social/pcp.png" breadcrumbs={[{ name: 'PCP', path: '/pcp/' }]}>
+	<script is:inline type="application/ld+json" set:html={serializeJsonLd(itemList)} />
+	<section class="pcp-hero">
+		<div class="container pcp-hero-grid">
+			<div>
+				<p class="eyebrow">Air précomprimé · Tir sportif</p>
+				<h1>PCP : comprendre l’air,{' '}<br /><em>lire les bonnes données.</em></h1>
+				<p class="lead">{pcpEditorial.lead}</p>
+				<div class="actions"><a class="button primary" href="#fiches-pcp">Explorer les fiches</a><a class="button" href="#guides-pcp">Comprendre le PCP</a></div>
+			</div>
+			<aside class="pcp-intro" aria-label="Portée de la rubrique">
+				<span>Un dossier documentaire</span>
+				<dl><div><dt>{airguns.length}</dt><dd>références PCP</dd></div><div><dt>{equipment.length}</dt><dd>équipements de remplissage</dd></div><div><dt>{pcpGuides.length}</dt><dd>guides pour comprendre</dd></div></dl>
+				<p>Chaque caractéristique renvoie au fabricant. Les unités et les variantes restent visibles.</p>
+			</aside>
+		</div>
+	</section>
+	<div class="container pcp-content">
+		<aside class="pcp-scope" aria-labelledby="pcp-scope-title"><h2 id="pcp-scope-title">{pcpEditorial.scopeTitle}</h2><p>{pcpEditorial.scopeText}</p><a href="/guides/pcp-lire-documentation-remplissage/">Comprendre les vérifications documentaires</a></aside>
+		<section aria-labelledby="pcp-reading-title"><header class="pcp-section-head"><h2 id="pcp-reading-title">{pcpEditorial.readingTitle}</h2></header><div class="pcp-reading">{pcpEditorial.paragraphs.map((paragraph) => <p>{paragraph.text} <a href={paragraph.source.url}>{paragraph.source.label}</a>.</p>)}</div></section>
+		<section id="fiches-pcp" aria-labelledby="pcp-airguns-title"><header class="pcp-section-head"><p class="eyebrow">Les références</p><h2 id="pcp-airguns-title">Armes à air précomprimé</h2><p>Des références précises, présentées sans classement ni recommandation d’achat.</p></header><div class="pcp-cards">{airguns.map((reference) => <PcpReferenceCard reference={reference} />)}</div></section>
+		<section aria-labelledby="pcp-equipment-title"><header class="pcp-section-head"><p class="eyebrow">L’environnement de remplissage</p><h2 id="pcp-equipment-title">Pompes et compresseurs dédiés</h2><p>Les caractéristiques publiées de chaque équipement, avec ses options identifiées.</p></header><div class="pcp-cards">{equipment.map((reference) => <PcpReferenceCard reference={reference} />)}</div></section>
+		<section id="guides-pcp" aria-labelledby="pcp-guides-title"><header class="pcp-section-head"><p class="eyebrow">Comprendre</p><h2 id="pcp-guides-title">Avant de comparer les fiches</h2></header><div class="link-cards">{pcpGuides.map((guide) => <a href={`/guides/${guide.slug}/`}><strong>{guide.title}</strong><span>{guide.description}</span></a>)}</div></section>
+		<section class="pcp-method" aria-labelledby="pcp-method-title"><h2 id="pcp-method-title">{pcpEditorial.methodTitle}</h2><p>{pcpEditorial.methodText}</p><p>Dernière consultation : <time datetime={latestCheck}>{latestCheckLabel}</time> ; la date de chaque source figure dans sa fiche.</p><p>{pcpEditorial.limitsText} Vous pouvez <a href="/contact/">signaler une correction avec sa source</a>.</p></section>
+	</div>
+</BaseLayout>
+<style>
+	.pcp-hero { padding-block: clamp(2.5rem, 6vw, 5rem); background: #f7f4ec; border-bottom: 1px solid var(--line); }
+	.pcp-hero-grid { display: grid; grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); gap: clamp(2rem, 5vw, 4rem); align-items: center; }
+	.pcp-hero h1 { margin: 0 0 1.3rem; font-size: clamp(2.1rem, 4.5vw, 3.7rem); font-weight: 500; line-height: 1.08; letter-spacing: -.025em; }
+	.pcp-hero h1 em { color: var(--brand); font-weight: inherit; }
+	.pcp-hero .lead { max-width: 43rem; }
+	.pcp-intro { padding: 1.5rem; border: 1px solid var(--line); border-radius: var(--radius-panel); background: var(--panel); }
+	.pcp-intro > span { color: var(--brand-dark); font-size: .8rem; }
+	.pcp-intro dl { margin: 1rem 0; }
+	.pcp-intro dl > div { display: flex; align-items: baseline; gap: 1rem; padding-block: .55rem; border-bottom: 1px solid var(--line); }
+	.pcp-intro dt { min-width: 1.8rem; font: 500 2.2rem/1.1 'Newsreader Variable', Georgia, serif; }
+	.pcp-intro dd { margin: 0; font-size: .9rem; }
+	.pcp-intro p { margin-bottom: 0; color: var(--muted); font-size: .85rem; }
+	.pcp-content { padding-block: 2rem 4rem; }
+	.pcp-content > section { margin-top: clamp(2.5rem, 5vw, 4rem); scroll-margin-top: calc(var(--sticky-header-height) + 1.5rem); }
+	.pcp-scope { padding: 1.3rem 1.5rem; border-left: 3px solid var(--brand); background: #eef2e9; }
+	.pcp-scope h2 { margin: 0 0 .6rem; font-size: 1.35rem; font-weight: 500; }
+	.pcp-scope p { max-width: 64rem; margin: 0 0 .6rem; }
+	.pcp-scope a { display: inline-flex; align-items: center; min-height: 44px; color: var(--brand-dark); text-underline-offset: .2em; }
+	.pcp-section-head { max-width: 49rem; margin-bottom: 1.5rem; }
+	.pcp-section-head .eyebrow { margin-bottom: .65rem; }
+	.pcp-section-head h2, .pcp-method h2 { margin: 0 0 .75rem; font-size: clamp(1.8rem, 3.4vw, 2.6rem); font-weight: 500; line-height: 1.15; }
+	.pcp-section-head > p:last-child { margin-bottom: 0; color: var(--muted); }
+	.pcp-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); gap: 1rem; }
+	.pcp-method { max-width: 54rem; padding-top: 2rem; border-top: 1px solid var(--line); }
+	.pcp-reading { max-width: 54rem; }
+	.pcp-reading a { color: var(--brand-dark); text-underline-offset: .2em; }
+	@media (max-width: 760px) { .pcp-hero-grid { grid-template-columns: 1fr; } .pcp-hero br { display: none; } }
+</style>

@@ -11,9 +11,9 @@
   "similarityThreshold": 0.82,
   "containmentThreshold": 0.92,
   "supplementalPublication": {
-    "publicationDay": "2026-10-31",
-    "sourceReleaseSha": "0746dba53f23e846f1db948d7cfcab59a717fa85",
-    "authorizedAt": "2026-10-31T17:14:13.583354Z",
-    "reason": "Instruction humaine explicite du 31 octobre : lot complémentaire immédiat, plafonds cumulés 10/100/400, sans republier les admissions existantes."
+    "publicationDay": "2026-11-11",
+    "sourceReleaseSha": "ebf5a7e7a19e8becf8419cd0df533a6c62337816",
+    "authorizedAt": "2026-11-11T14:27:37.011Z",
+    "reason": "Instruction utilisateur explicite du 11 novembre : terminer la revue SEO PCP et publier en production seulement après réussite des contrôles. Complément PCP dans les quotas cumulés existants, sans admission des fiches courtes ni remplacement des pages différées."
   }
 }

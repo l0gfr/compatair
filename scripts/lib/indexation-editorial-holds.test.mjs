@@ -1,11 +1,14 @@
 import { describe, expect, it } from 'vitest';
 import { mkdtemp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
-import { join } from 'node:path';
+import { dirname, join } from 'node:path';
 import { applyEditorialHolds, EDITORIAL_HOLD_REASON, validateEditorialHolds } from './indexation-editorial-holds.mjs';
 import { collectIndexationCandidates, productCandidates } from './indexation-candidates.mjs';
 import { planIndexation } from './indexation-planner.mjs';
 import { candidateQuotaGroup, createIndexationPolicy } from './indexation-policy.mjs';
+import { pcpEditorialInputPaths } from './pcp-editorial.mjs';
+import { pcpEditorial } from '../../src/data/pcp-editorial.ts';
+import { pcpReferences, pcpGuides } from '../../src/data/pcp.ts';
 
 const now = new Date('2026-10-05T12:00:00.000Z');
 const models = ['ztg1211s', 'ztg1211sn', 'ztg1311a', 'ztg1311bs', 'ztg1311bss', 'ztg3125', 'ztg3125bs', 'ztg3125bss'];
@@ -152,6 +155,19 @@ describe('candidate collection applies the mandatory registry', () => {
 		for (const directory of ['config', 'src/data/products/tools', 'src/data/products/compressors', 'src/content/guides']) await mkdir(join(root, directory), { recursive: true });
 		await writeFile(join(root, 'config/seo-query-panel.json'), JSON.stringify({ queries: [] }));
 		await writeFile(join(root, 'src/data/products/tools/target.ts'), `export default ${JSON.stringify(products[0])};`);
+		// Synthetic historical snapshot for registry isolation. These dates do
+		// not claim that the current PCP sources were checked in October.
+		const sourceDate = '2026-10-04';
+		const editorial = { ...pcpEditorial, paragraphs: pcpEditorial.paragraphs.map(paragraph => ({ ...paragraph, source: { ...paragraph.source, checkedAt: sourceDate } })) };
+		const references = pcpReferences.map(reference => ({ ...reference, sources: reference.sources.map(source => ({ ...source, checkedAt: sourceDate })) }));
+		for (const path of pcpEditorialInputPaths) {
+			const target = join(root, path);
+			await mkdir(dirname(target), { recursive: true });
+			const contents = path === 'src/data/pcp-editorial.ts' ? `export const pcpEditorial = ${JSON.stringify(editorial)};`
+				: path === 'src/data/pcp.ts' ? `export const pcpReferences = ${JSON.stringify(references)}; export const pcpGuides = ${JSON.stringify(pcpGuides)};`
+					: await readFile(new URL(`../../${path}`, import.meta.url), 'utf8');
+			await writeFile(target, contents);
+		}
 		return root;
 	}
 	it('applies the hold after loading the exact tool and its derived usage', async () => {
@@ -159,9 +175,12 @@ describe('candidate collection applies the mandatory registry', () => {
 		try {
 			await writeFile(join(root, 'config/indexation-editorial-holds.json'), JSON.stringify(oneHold));
 			const candidates = await collectIndexationCandidates(root, { now });
-			expect(candidates.map(candidate => candidate.path)).toEqual([target.path, usage.path]);
-			expect(candidates.every(candidate => candidate.blockedReason === EDITORIAL_HOLD_REASON)).toBe(true);
-			expect(candidates.every(candidate => candidate.editorialHold === true)).toBe(true);
+			expect(candidates.map(candidate => candidate.path)).toEqual([target.path, usage.path, '/pcp/']);
+			const held = candidates.slice(0, 2);
+			expect(held.every(candidate => candidate.blockedReason === EDITORIAL_HOLD_REASON)).toBe(true);
+			expect(held.every(candidate => candidate.editorialHold === true)).toBe(true);
+			expect(candidates.at(-1).editorialHold).toBeUndefined();
+			expect(candidates.at(-1).blockedReason).toBeUndefined();
 		} finally { await rm(root, { recursive: true, force: true }); }
 	});
 	it('rejects a missing or malformed registry instead of readmitting held pages', async () => {

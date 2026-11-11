@@ -8,6 +8,7 @@ import { editorialText, productCandidate } from './indexation-planner.mjs';
 import { editorialPriority } from './editorial-priority.mjs';
 import { assessGuideValue, assessProductValue } from './page-value.mjs';
 import { applyEditorialHolds } from './indexation-editorial-holds.mjs';
+import { collectPcpEditorialCandidate } from './pcp-editorial.mjs';
 
 // A worker exits after each batch, releasing Node's non-evictable module cache.
 // The source order and all candidate fields remain identical to the direct loader.
@@ -90,6 +91,7 @@ export async function collectIndexationCandidates(root, { onProgress, now = new 
 		}
 	}
 	await readGuides(join(root, 'src/content/guides'));
+	candidates.push(await collectPcpEditorialCandidate(root, { now }));
 	const panel = JSON.parse(await readFile(join(root, 'config/seo-query-panel.json'), 'utf8'));
 	for (const candidate of candidates) candidate.priority = editorialPriority(candidate, panel);
 	return applyEditorialHolds(candidates, editorialHolds, { now });

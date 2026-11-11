@@ -59157,6 +59157,2833 @@
           "note": "Revue documentaire individuelle non achevée ce jour. L’accès courant et les extractions ne constituent pas une qualification ; aucun accord par défaut."
         }
       ]
+    },
+    {
+      "publicationDay": "2026-11-11",
+      "sourceReleaseSha": "ebf5a7e7a19e8becf8419cd0df533a6c62337816",
+      "policyHash": "02c8c9eef805ca32c18797d46de58793812117a16109e6121fc08d0bdc653691",
+      "corpusHash": "3e49f1213855b689d426b66c0447ccf24c2901b460598152f1538b7fbfd0496d",
+      "reviewedAt": "2026-11-11T14:35:11.795Z",
+      "status": "partial",
+      "note": "Complément PCP demandé explicitement par l’utilisateur. Revue des huit URL documentée dans docs/PCP_SEO_REVIEW_2026_11_11.md. Deux admissions exactes : hub et introduction. Le guide de lecture documentaire est qualifié mais non sélectionné par la diversité du quota guides restant ; les cinq fiches courtes restent noindex. Les autres propositions sont différées hors périmètre sans approbation de substitution. Dix GET primaires complets HTTP 200 vérifiés et empreintés le jour de la revue.",
+      "supplementalPublication": {
+        "publicationDay": "2026-11-11",
+        "sourceReleaseSha": "ebf5a7e7a19e8becf8419cd0df533a6c62337816",
+        "authorizedAt": "2026-11-11T14:27:37.011Z",
+        "reason": "Instruction utilisateur explicite du 11 novembre : terminer la revue SEO PCP et publier en production seulement après réussite des contrôles. Complément PCP dans les quotas cumulés existants, sans admission des fiches courtes ni remplacement des pages différées."
+      },
+      "sourceChecks": [
+        {
+          "url": "https://resources.air-arms.co.uk/help-center/air-arms-warranty-information",
+          "sha256": "70c6bcd5003a8c87c54da00b65a6ac55670d7df0ee5eeec42ffacd550b2fde42",
+          "checkedAt": "2026-11-11T14:25:36.131978Z",
+          "httpStatus": 200,
+          "complete": true
+        },
+        {
+          "url": "https://resources.air-arms.co.uk/s510core",
+          "sha256": "f4843bbc75468c5a849679f11201b070c21db151f7c49b1f22f0d2db386d5db5",
+          "checkedAt": "2026-11-11T14:25:36.061653Z",
+          "httpStatus": 200,
+          "complete": true
+        },
+        {
+          "url": "https://www.air-arms.co.uk/learning-centre/airgun-air-tank-vs-hand-pump-vs-compressor",
+          "sha256": "ef4e4713c461a6e0e5c2404075bfa41f1a65eac83b081c998ed4ee8123ad0432",
+          "checkedAt": "2026-11-11T14:25:35.993290Z",
+          "httpStatus": 200,
+          "complete": true
+        },
+        {
+          "url": "https://www.air-arms.co.uk/our-promise",
+          "sha256": "2c0edd422531da58f7bd5a89251837f4406b8dc5a7ddf463f20fc065c69fec2f",
+          "checkedAt": "2026-11-11T14:25:36.203049Z",
+          "httpStatus": 200,
+          "complete": true
+        },
+        {
+          "url": "https://www.air-arms.co.uk/rifle-manual-downloads",
+          "sha256": "0b8cb4e67354920f6c23cf452fe2043c61617443c9cf04630cadf6d1d16b4967",
+          "checkedAt": "2026-11-11T14:25:37.053928Z",
+          "httpStatus": 200,
+          "complete": true
+        },
+        {
+          "url": "https://www.airriflepump.com/blog/why-moisture-matters-pcp-air-rifle/",
+          "sha256": "a3f8b316fcf81faa43307641533c7ab807c89a322fe56691740c7561c02b9ba8",
+          "checkedAt": "2026-11-11T14:25:39.029199Z",
+          "httpStatus": 200,
+          "complete": true
+        },
+        {
+          "url": "https://www.airriflepump.com/product/ec-3000-evo-the-hill-electric-air-pcp-airgun-airsoft-hpa-compressor/",
+          "sha256": "8fb5e766a798b94a94ea2d82c00c1c05319f0293512a11d6ef9f7bfe3ee58f79",
+          "checkedAt": "2026-11-11T14:25:39.369931Z",
+          "httpStatus": 200,
+          "complete": true
+        },
+        {
+          "url": "https://www.airriflepump.com/product/hill-mk5-pump/",
+          "sha256": "119fad01ecbcd078b214f6c63b20add71206b4fdf44b06720fe624371e85c520",
+          "checkedAt": "2026-11-11T14:25:39.087792Z",
+          "httpStatus": 200,
+          "complete": true
+        },
+        {
+          "url": "https://www.umarexusa.com/2254847",
+          "sha256": "3467ac292138255d19991e3902b4c8db96eb4ce3903848e52c1d94350c5d3a85",
+          "checkedAt": "2026-11-11T14:25:38.320056Z",
+          "httpStatus": 200,
+          "complete": true
+        },
+        {
+          "url": "https://www.weihrauch-sport.de/luftgewehre/pressluft/hw-110-t",
+          "sha256": "bf000c5bbb72277da7a33700f3627609c38fc539c8dcf7e0194889d8c1320aa3",
+          "checkedAt": "2026-11-11T14:25:38.669673Z",
+          "httpStatus": 200,
+          "complete": true
+        }
+      ],
+      "pages": [
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sata-satajet-1000-b-hvlp-2-1-149401/",
+          "contentHash": "e3bcb8b229a72ed7eb5c30ab7249aec651afdd3bb4f9ca25b17c7ee8c19c8f5b",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-prowin-k-528s-12/",
+          "contentHash": "b05c41cca4e12853b291c12ffb1482cbbecd1b18528908a509763dceea72c6d7",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sagola-4600-hex-hvlp-buse-1-20-hex-10142473/",
+          "contentHash": "c163c2625c9fa5c7145600620379173e925adced1fde1e3c08520e2c8ad30b3a",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-graco-airpro-pressure-288960-288960/",
+          "contentHash": "d8a161e31fce42dc8333cb4cbefdfeb19b9af1ffa85459a705154305455aca58",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sames-kremlin-fpro-p-hvlp-18-xlvb-135-777-518/",
+          "contentHash": "636eb834f3b508906fe383d9e45219aee2ecd611319d3b9d56a1aa673351edb8",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-binks-trophy-2465-12hv-39s0/",
+          "contentHash": "f4f1bfe50ebdb6b4ebb0516c4c772ec9294bae9099bc560eb2579973fcbe6e02",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-walcom-genesi-carbonio-360-evo-geo-gravite-buse-1-2-mm/",
+          "contentHash": "bfcbd2fa9964283e1c4ed005ffee104a8d74529bba83acd1408f987689f08826",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-asturo-brp-hvlp-art-00197-buse-1-0-mm/",
+          "contentHash": "7961070c74d274d89b0020a5217d08b7641a0bb2c0709d2ba0e29fdfb507a767",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-ani-f1-n-super-s-hvlp-buse-1-8/",
+          "contentHash": "6462d9fbf1401a785b4c270c84a9b96ef242419f0cbd40eefbc517cea5ff1d98",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-prona-r-4300-hvlp-g12-buse-1-2-hvlp-gravity/",
+          "contentHash": "2593a60631bcc7e27a1d9bfbd7ecd759b3f8ad407bbbfbcc2ff06fce52b76519",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/abac-spinn-11-13-400-50-fm/",
+          "contentHash": "cddb9fb255c17226297d21c3cfaefa122bd26961076b302b8f080654a038882e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/abac-spinn-11-13-400-50-tm500/",
+          "contentHash": "4f42ad2fdfec9b8a778f7ec106a3dd6c04a055f078e23494b63a597f31cf02c2",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/fiac-ax-303bd-8-400-50-ce/",
+          "contentHash": "6ef9c632cb3ef127c1f4ed0f47fd161b4ddd46c201495f22fbec4f3595d6d051",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/fiac-ax-303bd-dry-10-400-50-ce/",
+          "contentHash": "7ba2e9d0c4306004d6b8a6e7b0839e31c274a88f11ee0eaf8694c0960c99cd98",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cleco-19pta09q/",
+          "contentHash": "261afe699694276fa410b29ebe39681d598bc72cf873c6b6099780da3da75523",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cleco-24raa06al3/",
+          "contentHash": "01708f19764257c0b7a88658fe9943e99d65438fbe121c4c53befe1628004552",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cleco-55phh603/",
+          "contentHash": "7e0400347415677e022b80d498b48141b2d436c004c8b1e00dd9511a09f28fb0",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-dynabrade-59040/",
+          "contentHash": "f553297733642d0122303a4ccff2fbda0c8ced8e9116189aff2207350d426da8",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-1340ex/",
+          "contentHash": "e5f26700336a764ef02ae9766c2bac3ef16d75e350270789a53d09649b5e76ef",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-1492b/",
+          "contentHash": "1335c04f0461b0e98c77adc730831a97f8bcee1795f253ccade9ce14e68346dc",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-2015a-6/",
+          "contentHash": "b322402f6439f6843ab132d494f37ae110d4893c6b24d5e5a2ed92bfda0c07d8",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-3103am/",
+          "contentHash": "86a43a2ac31c1bc43719c8a392289388963182ccac82efeabc85b4e3a348fec5",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/airpress-aps-15-basic-combi-364859/",
+          "contentHash": "52c54b373aefb8ba84d527bdfb7a840b994252db6f0b7bc887659c09380cdac7",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/airpress-aps-15-basic-combi-dry-364959-13/",
+          "contentHash": "a990c3a812259844d1dbe99decc4882ad602b1cf398bd2bfa8a3470ca8fd7479",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/gentilin-dc100-05/",
+          "contentHash": "3f210669ead6766af9ab9982fdfc30d9b78491559ef2eee43284fb01cee9fc8f",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/gentilin-esk1320-500/",
+          "contentHash": "8c5dd2e3e2ef2d4b71ba8974aab1446625df256f5dfc53471c2b1d5e44d1fdda",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/guides/biax-be805-ebavurage-lent-consommation/",
+          "contentHash": "b9d1beb48077b97059b3866a3db0fe020547008b2b9838a4d50b92e4fd4091a5",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/biax-gaf-505/",
+          "contentHash": "3bbb95023125f311f15c76896d36b277ae697a37460e558ef260f5670f323277",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/biax-srd-3-45-3/",
+          "contentHash": "d46a77fe5f17a37fb92dcfa92c1c917a0ee3135a584c841d40bfbf13eb13b7e0",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/deprag-344-349u/",
+          "contentHash": "9a1fec00d7dd696e3a59fa02dd30d51846e119ca395a8f64e0ef88125db55cf0",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/fiam-15c2apa-2cs/",
+          "contentHash": "2f4cf3b41ef7c13f150125ecc865180636489b15937502b752860ce1f7e7a19e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/fiam-fo12p/",
+          "contentHash": "b1219671d59bb66215c4b5999a3e925bb607562da1ccbb841e12b72a794d21e3",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/fiam-smz15d/",
+          "contentHash": "d6323a0b027a71e6b204330ec9cdf38b09cf6f622248f9883e2b9a8d3b247da5",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ingersoll-rand-182l/",
+          "contentHash": "5fc518686a67f3fd7023c2d76d0bc140e3e0d91a12424c7acb3e8711d7d530a7",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ingersoll-rand-335sc4a/",
+          "contentHash": "608cb44e09f9d2edb75c7bb20ea26f50ed792be869f5b5e253870c786204eec4",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ingersoll-rand-7s48l/",
+          "contentHash": "7b5f3d115577653133c622069c549ca674425566a749827c6c7d57d8348a2e33",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/nitto-kohki-myg-70/",
+          "contentHash": "77a7bcc476f01f66f86d4be4e23e9c60236f8a5ba45d864d04dd49e09aaa54ce",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rr-20pn/",
+          "contentHash": "91b1197323719039f3bcd7d81157d256be8635e2708c70a2f7205a47ac9ceb48",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rrg-2155/",
+          "contentHash": "3cb639f23f5c077403c3b425b3bf9eac511c3f8efa98208eac60008bddeaf4e1",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rri-180/",
+          "contentHash": "b75e82df0e2ad4bab499c7215782edd74d111fb897302bf235f50147b17e8c96",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rri-4021-4/",
+          "contentHash": "45bf55b296ba5598e4d23358c7593bebd9245917857273fce340df9f75e453a3",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rri-sa10604/",
+          "contentHash": "732bc7eb9f5f234849163bac7ada5e3f62c45d6642f7c91c92dfaed0fbbfc854",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rri-t6250-5cv/",
+          "contentHash": "0ba77ed0b4d57a65644098c22c2ddef51ae6e14f18ce487f257cfedf70112d94",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/rupes-ra75/",
+          "contentHash": "1d83e1edb490fd470e8ae37ad1404f19c7853f0f8da9c75d9a73c1977dbea38e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/toku-mi-17c/",
+          "contentHash": "1cf622552ceeda78ff34a50cae1f7081e60114d6885c4d5501fd9a3789f04e6f",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/toku-tag-50mlh/",
+          "contentHash": "028ab53141f8338234c63e55d24c404555aca9f529572ab15063af00edba35c8",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/toku-tha-2brh19x50/",
+          "contentHash": "aaf2ed3a057493a8b6c419b0e51adef662c35830cd69ed6ffe90db3e6cfe54eb",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/yokota-g-70ef/",
+          "contentHash": "ce7a051de65d6d24dcc2aa54b28d3cee13e415ba489f72ad8a1ccbb9e2a46016",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/yokota-yd-5a/",
+          "contentHash": "6352eeb775a2eb6dad0c6278f0182a1878bb568ea44d81587bcd72f4b9ea2c25",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/yokota-yla60e/",
+          "contentHash": "01956b56d1ad3d9002ba3562174e762bd085c3403fcd2e75d161f05487ed61a9",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/aircraft-airprofi-401-90-v/",
+          "contentHash": "eab4452f6a9c8ea356775da55cddfcd8e60e2b88d49e3be58e0d880d781809a4",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/aircraft-airprofi-403-50-p-incl-sar-10-15/",
+          "contentHash": "585a17840c6048f823647d3d076cab309bfb8a0cadb2f6c1e81a7a7d933061d9",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/nuair-fc2-24s/",
+          "contentHash": "112f422b008b97298a09b1486cd6e2bb2eee64faa0583d76900e1e396cdc8faf",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/nuair-fc2-50/",
+          "contentHash": "33e4d83922805a8b3cf7ea3ce6035b761328e49fae9bd8723f6fe8e8db64d52f",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/stanley-fatmax-dst-101-8-6/",
+          "contentHash": "543d5fa54a06c3cc4cd9644dcb1e4883ec0505c6cfdae4ba8434a2070401b860",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/stanley-fatmax-dv2-400-10-100/",
+          "contentHash": "9152212cd001013d133d2ce04c2fabb4933a418a0355d08fd69b5f7f9785ee5e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/aircraft-bp-pro-l/",
+          "contentHash": "0aca8257c2326ff33a38d79e69569bbf3c9dcdcf178faf9a1ab3878c9721d598",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/aircraft-bs-c-20-pro-15-vs/",
+          "contentHash": "29f67453d667b8807781b02cb7226f3c33f0f77fd06cbbff6459024205042aec",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/aircraft-iss-3-4-pro/",
+          "contentHash": "62d32c02d1b1dfb2bead321bc979840d75c5a1e0c296a13aa0aec07c2dfd2871",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/aircraft-np-pro/",
+          "contentHash": "fa220b12b29f0da9539eea159824991e75b4229bfe7d0f0776f23ac1d01677fc",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/aircraft-srs-1-2-ht-pro/",
+          "contentHash": "49ad200ca8b807d70a3d8f12bc45fdda688f7443e7aebe222044af3ed71b26a9",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/aircraft-wb-10-1-pro/",
+          "contentHash": "80b91264f1bb3357e7d9657000e18a8c55ba6ba05c4390f8b8b9b499e09d7763",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/bostitch-21684b-e/",
+          "contentHash": "ce05716616237f1ec174caa1baeb99c9952439fde81bc6a83d0ec0a46504cd1c",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/m7-nc-3812/",
+          "contentHash": "37188d8128adfe0c9e05cc7644f676a704cf3488eb0c8c6d4d025b181b84676b",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/m7-ne-2905/",
+          "contentHash": "2e183deda7da4839222a39f41fe9dd95e220e9a4a1b80b490de89c2b9b807f1c",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/m7-qa-116-a-b/",
+          "contentHash": "8b80a7ddb6f63ddd503645c782b3da68329d6b4e92ff92d572dbd9ec028caf0b",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/m7-qb-42602/",
+          "contentHash": "08522435c9e507f287fe5eb3a055a319f919e3bda51e41b16f1ee9d9243f7309",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/m7-qc-254/",
+          "contentHash": "57372b27c837638e1e198246cd5e88b832fba9d39aab3dac9704c1352f91c5e6",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/m7-qe-2143/",
+          "contentHash": "d7d5217f2fdfc6cdebebc8f2c6a5217aa39e7a814a587281d03d121b74a69c8e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/m7-qp-111/",
+          "contentHash": "59adb2f647c843acc7ec3a298edf6cd2bca228e3798c06aeccbab26ea5e62aa5",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/m7-qp-317x/",
+          "contentHash": "cd15e11f5aa1e5a46272aa03dc88da0baaf205315f6644b0a7a00a42e316a96a",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/m7-ra-1142/",
+          "contentHash": "4699fe16f7d26e690b810e89d57189165da31744d0e2251161809defc4486556",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/m7-sc-332c/",
+          "contentHash": "0ba4adcd6df24bfea0d3fc54fe64f9b5e1dcb6d45dafbe48ab269a61d749468e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/m7-sn-2110/",
+          "contentHash": "09baa5444dffa36d05a83fb2771b6a8444ea88b8c587896155eda39317302203",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/mirka-ros-325nv/",
+          "contentHash": "86d177c20337ca88632772412193c7dba950f1f20937d192daded6bbcfcdd157",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/mirka-rps-300cv/",
+          "contentHash": "6dd730c77a4136c9f957da6930133f49e237f360c5af09d4239198318971244c",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/pferd-pba-4-160-hv/",
+          "contentHash": "d7dff844641c263dbe712f872c25ace36db2cfeef028c93e9a511a8bf2a4e42e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/pferd-pg-8-100-v-hv/",
+          "contentHash": "512c090e5db76eb124f5713bd76b6676537ff2faeb9867f774b4de74f2a0046a",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/rodcraft-rc5195/",
+          "contentHash": "a737f818bb8b3762f68f1f78238f5ba6012f4a1ba05f0ae4c98189fbd70bce7c",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/rodcraft-rc6758/",
+          "contentHash": "110d38aa55cdee3f5fe6f866645e9f8b958a26b7c89888eaa6c19c0156e83e78",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/sioux-3t1640/",
+          "contentHash": "41697af0b4749c932dc08aebdcc0317f71a9ee3100e5f96b4f97bba1ae4963f3",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/sioux-ag16d125/",
+          "contentHash": "ba2ace6076400bf002c93f90d2c3639aca67482b49fc0653496b9a1884954c67",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/sioux-as16sg847/",
+          "contentHash": "3afa94ed500b9b4966f4ce5f93ad644831111c1183c7d3da8d23a07c8c84e7a8",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/sioux-go459-80snh/",
+          "contentHash": "4d5c995e0984aea5e1dead576c140e472de54f9d0de50077b9611ab310e43a95",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/sioux-iw1000mh-5s/",
+          "contentHash": "a64d16f17c43d1228e6adbde0af8c7173b1f66246c81e0c0a298008a11cef255",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/sioux-rt1981/",
+          "contentHash": "0bcac3cb09cd852cd3ac3c32fbba1f8c657b5fc984e2cfd7ca36eb79993d55ea",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/sioux-sap10a457/",
+          "contentHash": "326dd9c76a8531e812e7963a73951caf367cf8804a140698902ec7faf6fdd965",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/sioux-scn5r/",
+          "contentHash": "8304d8059400f84a2badfdd29c18d40ff3fe91e9fe2592b2e6af384fb0725816",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/sioux-sco10s184f/",
+          "contentHash": "e89c09bb801707beec871f573e3d2688d53dcf4d0d3125fc21be38415faef591",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/sioux-srs10p21-8/",
+          "contentHash": "fc0991974c810499b6e443651c5b755b616ae7860c2069ce924ac6253d42b8a9",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/sioux-srw07-50/",
+          "contentHash": "68c51801d897f5fdd868d63ae83b99245eb768612dac54b9e29a503b13e25239",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/sioux-stp10s5b12/",
+          "contentHash": "ff4bc485666b6020a83e6dbb7abc9fd21e2a8f487e3b52144289b52cd1909669",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/renner-rsd-pro-11-0-310263/",
+          "contentHash": "9b26c5c16f5c18d3f3b41a20380276e882517200c8ccd5a38002788e1fc1a6c5",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/renner-rsd-pro-11-0-310264/",
+          "contentHash": "91041d359732771bcad79f6d4777bf817c517b549da02a355d2e3a593960847e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/boulonneuse-uryu-uan-611r-60c-26892/",
+          "contentHash": "14f10d56a71a1d30376c39abcbe46c51fcd4821168299419e511501bbdade82e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-npk-naw-19a-p-20178/",
+          "contentHash": "204fa708aa61d5d205528ea5570f2836c5ecae08bf0e01b8317249de82b7a563",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-uryu-uw-13csk-06672/",
+          "contentHash": "004ddf01e37d9d1d3f6d71d4403a0ad10fbaad4f156a272c248a8744a93945cc",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-uryu-urw-12nb-21812/",
+          "contentHash": "f0663306e6f3264ec50a0701d8e7f78e1478c5831f50ce6ddb45a054c31bec25",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-impulsions-uryu-uxr-2000-17602/",
+          "contentHash": "409491462b733d3d7ee8712f452340790aa69ce90daff7d6051144ff38eb18e9",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/marteau-a-river-uryu-brh-1usd-70932/",
+          "contentHash": "5cf811cdc04be110ea025a26d15b4739aa8d25071c8e8212b041c536ef132e80",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-top-cat-300ge-25000-1-4/",
+          "contentHash": "48df5f90e0fdba0b8900d71105418fd41a4cf9697e83693586c9ed7e76e61c68",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-uryu-ag-100l-out-53972/",
+          "contentHash": "82ef5dfab055c6a5b661b3da1bb4bdab4a80e88bf67293a84db6b9d3bde711e7",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-top-cat-300d3m-8250-d3-8/",
+          "contentHash": "fb7238a182da9306643781946649f143cec3d4fa5425646fc97376c1acad1f21",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-uryu-ud-50s-200-61972/",
+          "contentHash": "8db84551e7371991147cb13d89eca3fd22afc5b5bacfa68d4654c23ba8aa175e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/polisseuse-uryu-up-25nb-54782/",
+          "contentHash": "9a305e9e4ba93328e36f120bad22859207429b7af3209677ad2cf445ca9efd7c",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-top-cat-300ra5m2-3000-5sp/",
+          "contentHash": "748450fe7fd9eef33852d05b90b58d478f819a43fcdc31e1696138530492bbcb",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-uryu-usg-5vla-55922/",
+          "contentHash": "59efe9e7a07ba3736336ecc010bf14b7c12d620be726449fd3d4b4299400314a",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/taraudeuse-uryu-ut-60s-07-68022/",
+          "contentHash": "9f075ba2f749271557ec3d04ea479035386f7e8c6e36ffc81e52dc48968dbec8",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-uryu-us-3-5pb-41712/",
+          "contentHash": "d0fd1d12ebb72cb4b1282c337db5724306d27f41532830f42c06468f49c75baf",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/almig-f-drive-22/",
+          "contentHash": "5a5fe0e5a417efd1740994f500bb85645b36c2cddfe2072866f187de105eda1d",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/almig-f-drive-30/",
+          "contentHash": "8b2a31aa1299f5e5575344c5aaca74ac56d23f4194103ab0c85f089ba60b76bb",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/boge-sl-221-3-10-bar-insonorisation-standard/",
+          "contentHash": "1b19edca340b1ca6da2080a59bde94d481b27c4e773a98116152974c04140572",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/boge-sl-31-3-7-5-bar-insonorisation-standard/",
+          "contentHash": "3d10ca8941c9fa33e67ae1505b99e4f892d69efdf9a29ef6ad2691a756ea1be8",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-prebena-1gp-a16ln50/",
+          "contentHash": "4bbd5647f651b67f9b2310597d2f6599a69840a67d8501bdabdf38e0757b35c6",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-senco-finishpro18mg/",
+          "contentHash": "f068256cda1bfec592d47c0c01c853eb089306a227e40bd7fd3fb1a36939a4d6",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/boulonneuse-atlas-copco-ltd28-n22-re-8431053418/",
+          "contentHash": "b1e90450f1de79bda2535b153887f1a169705a3414d0efb7d490970ef550ead3",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-sumake-st-ah605h-q/",
+          "contentHash": "bb4087a50944e9e8ae8c812748f1ba44cf08c13fd68c6953e2c2a8adbce7fe5a",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-atlas-copco-lms58-hr20-8434158001/",
+          "contentHash": "bf2a1aa8c6ded557b9fb4cdbe2a5bb83b20ee02d287a984b51b2daed77cb868d",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-sumake-st-5567/",
+          "contentHash": "011dd43616be15558fd1d3c7f69299cdabf69338e374b63d36d894dcc3bdf4b5",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-sumake-st-5554/",
+          "contentHash": "9e22d36313047b9381bd2d4fee2cb23aa23156ce06e51b1fd920b130f5341373",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-impulsions-atlas-copco-ep12pts150-hr13-at-8431037492/",
+          "contentHash": "c5babb555e1ccaecb686709725df2b4bc9697ee607c33fdc8b4ac5e82fd86300",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/derouilleur-a-aiguilles-sumake-st-2558/",
+          "contentHash": "c5034e29fd9732d42fbe8095e5f51bb3f96ad36e23f76809d1c045487f9aa148",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/lime-alternative-sumake-st-66112/",
+          "contentHash": "c06b4b8b3ecf09b960b564550887a7ada6e6f31a716e2f86acaf2e09fd9c05e4",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/marteau-a-river-atlas-copco-rrh14p-ts-8426111081/",
+          "contentHash": "f2a9480fd9bf8d2ae9ad6ea9bd2d8f8a70da26e7c750f7b34796d32e9ae2e906",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/marteau-a-river-sumake-st-2401s/",
+          "contentHash": "5039d8a6aa58ceca3ab97dcd25d8432b95c17549f0d2c90fd313775357edc9d9",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-atlas-copco-lsf19-s300e-1-8423122486/",
+          "contentHash": "4aca5c2bef6b80f29e09f87714dab2c1e98301983c79dd9125214f31a461d1ff",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-desoutter-c27-lx300-t6-90-6151761280/",
+          "contentHash": "ecb67dfa0c801590ac6e451b7ee320f94ac2cd6428506a51357442cd069c1d25",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-sumake-st-7436g/",
+          "contentHash": "0d16e1597303806f33860da383f98e1a88708070946b762f2260812591fb5111",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-atlas-copco-lbb16-ep-010-u-8421010811/",
+          "contentHash": "e98c2ee5c95139d86bb3b2f19fa41c2a9592b6589a85117b8dff570f695d7a42",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-desoutter-dr300-t2000-s6-90-6151761490/",
+          "contentHash": "d28929534e40d0e57aefa8931e334e86d5f30afdb571fe0345593991aaebbbf9",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-sumake-st-c112/",
+          "contentHash": "fa51e42a079af251c6e8c41789f9ca828ddd31946dbd18a5ce508394b93107c6",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/polisseuse-sumake-st-7797/",
+          "contentHash": "ea92ffd712767addc77cd40586b56e14df8e2373ec7f8db9bd458f24601ccc85",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-sumake-st-bs110g/",
+          "contentHash": "6c46bb7350bafc9b723c564625e991df9f8d518628269b069d80942d0d6c56db",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-atlas-copco-lsv19-s200-8423011142/",
+          "contentHash": "eecd6d9f80a14d7299e147d18be4fc62760bb09ceb62b591af508647e7f3f6e5",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-sumake-st-7787/",
+          "contentHash": "ab36ff71635d93e42f2722b4ff69b45fd1d40878e7ed5bbb7e95323dbcf684e2",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/riveteuse-sumake-st-6360s/",
+          "contentHash": "70efc4072567ee875030b43dbe8b29b98015e8e9b0a469158443a159dbf8405b",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/scie-sumake-st-66010/",
+          "contentHash": "7d9872e12fe460f568dc575537f39da28c9b74651c6e20e0de982cb8cb64e21a",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/taraudeuse-sumake-st-tt121/",
+          "contentHash": "2f47f0d05903d3ff1e1d63eddb42db8827c163c8b85d6169f2e99152024a2b5a",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-atlas-copco-ltv009-r07-42-8431027810/",
+          "contentHash": "2783f82873b8b066fe97135df92353e6a50029cdcaf47c34670b949740cf302f",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-desoutter-h410-n-90-1302614/",
+          "contentHash": "515eb451c856fee5408b61fae26455c053f1acf49860d090f52b9cd6a77af402",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-sumake-st-4468/",
+          "contentHash": "0fc01b63a3dd73a78b3cc122a7f3db06664301214e2819a0a25a0348e5cb6795",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/ceccato-csa-20-ff-sur-cuve-270-l-10-bar/",
+          "contentHash": "1ae7fdae426aedb075bf039701ec066266a813cd67692cea10a418a046ecd331",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/ceccato-csa-20-ff-sur-cuve-270-l-8-bar/",
+          "contentHash": "62b392c4577d6636b378505fc2449119d08bf6f0bb1687615709f4e2462040dd",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-cleco-mp5195/",
+          "contentHash": "bab8238a4db39023010d9934196a6d742acfa545040d5e2d83ac0c504b7ecf0f",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-bosch-0-607-450-616-0607450616/",
+          "contentHash": "71b7238da14725d5b4d1bd1f8b396d3b4e1ce30f734baa84b183ec96cd7f73c8",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-sp-air-sp-1143s/",
+          "contentHash": "e1466ca847426008f83d786669e7307b67e5fcf8f3e3ac1afb01c442229c8133",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-vessel-gt-1600vp/",
+          "contentHash": "000cf7a16fb58e3b40e976d0986782667ddc92329a0081e556137d6c2ef8ef88",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-sp-air-sp-1762l/",
+          "contentHash": "0362603359f6b01d75d1e843e75dd8e3ea00005377a386c9087da035967ab3c4",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-impulsions-bosch-0-607-661-509-0607661509/",
+          "contentHash": "506d85a1278925a97ac59dd0e299ba3d20e8384fe0ab268fc535772dc30a369d",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/detoureuse-dotco-10t4316-62/",
+          "contentHash": "8191bdc0386aacdb01f3a088b2f8737f4be9209cd645df26c5f0e5a61a8da1e0",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-bosch-0-607-253-101-0607253101/",
+          "contentHash": "3bcf764ab6ca8bf098ff0e36466cd8541b2a9385596749233af781dafd9d9e5b",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-cleco-216glfb-135a-w3t4/",
+          "contentHash": "680966a63efa0673f8217ffe35e9005acd721ac3fecc9ca170ead5374c712db1",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-dotco-10l1001-3608/",
+          "contentHash": "517d5900b1e3bbbbdbe23ba682971fb258d9e0bbfad2e73e6f632ecbdeed68cf",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-sp-air-sp-1261g/",
+          "contentHash": "c25997d108267996a58d7426514c79f2d98060cae4b669b4266a09fac1e1fd86",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-vessel-gt-mg35-12cc/",
+          "contentHash": "1d4610e3d959dc1be899a88e415698d9148ec7d6a68f953dcc9b96f80034a63a",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-bosch-0-607-160-501-0607160501/",
+          "contentHash": "61790ce438dbd1628e8d20c871dfd5295d6054fcc790355f231ab0041212188b",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-dotco-14cfs60-96/",
+          "contentHash": "87cafd5af11c4123a8c8ea3c9ec0412de9cf4e1fbbc5c85d9465e67656a4eea0",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-sp-air-sp-1522/",
+          "contentHash": "2894a8df15c3931bcd306175e62c92e3fd75259555f10b7938722512db05b211",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-vessel-gt-d100-15k/",
+          "contentHash": "925e5dad0b5239482ee6e4f4e22536d30e1f5bc4ea1aa3faf93824167bd604b6",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-dotco-12l1382-36b4/",
+          "contentHash": "a92ae3c2cc9379d4f932d85e731f8288543379797dbf5d99766e2dacd2e4bc37",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-sp-air-sp-3605-a5m/",
+          "contentHash": "4040ac17312ae72ed37e44494699925be9f794e2bd3d78b1a524ff1c6a077ca3",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-dotco-10l2760-80/",
+          "contentHash": "9be439db82ef0db5ad73941954e619448bfa701bc0266ee95ef01ecbc8d1cf7f",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/scie-bosch-0-607-595-100-0607595100/",
+          "contentHash": "d861cd6b6533890f3f9ba5c70c00622799cb3a6b40dd785a811f213b74cf330b",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/scie-dotco-12s1273-03/",
+          "contentHash": "96aba7dcb7c0e3457893a8886e63795a9e7c789b0358e57ee117afb8e435f5a7",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-bosch-0-607-451-606-0607451606/",
+          "contentHash": "efb9f3caaf39776d77f558dc6f7cb8439a698ac5ee1fa94e168a4c5e5f2502e6",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-vessel-gt-h5p/",
+          "contentHash": "135b7e167a8a27f79fd10824d3ad1e73c85fa7ba9705b5a2901574a0811ca07f",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/kaeser-aircenter-25-secheur-et-cuve-integres-6-bar/",
+          "contentHash": "c30a6fc5d34c4fd946c7ce43c82b6c75385d94f47fbd6d3e6661d2675975a1b0",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/kaeser-aircenter-25-secheur-et-cuve-integres-8-bar/",
+          "contentHash": "1c427e5b0d5fa67c4132b68f4f946aa4c9c25516b4bd9839f7430e8be8930681",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/boulonneuse-zipp-zat400cmplt/",
+          "contentHash": "8d62e697dd94d2dd034c9f45479701b24e8b7bc5f32e7f1057fcbd2ffdfd062f",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-zipp-zah-592hk/",
+          "contentHash": "c9297ff8fe3c6a14fd39a165c35d0e44046d7248677e2b00de9b1a11a7d0cbba",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-gison-gw-13j1/",
+          "contentHash": "a411ef80377a386c8891306f92106de7a433f9b726735e3f3f37ada3fab60a8e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-zipp-zaw-412b2/",
+          "contentHash": "58c074290cfcb8ee0c4fed8cebfd10738a32df9cf25f4d428bcffd68ce8d6ba4",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-gison-gp-854h/",
+          "contentHash": "3ed201250be9c7cc29a174fc99a6c87aa20fd34b919de92332a4988169c6d625",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-zipp-zp168/",
+          "contentHash": "354290611e089f44c174341a6b2be1e818c52bfb1e36f55980bab7cc21f819cf",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-impulsions-zipp-pn062/",
+          "contentHash": "62014d0c6e47586a9f71814c385924a0d87802f2155d82760d8dc42393c43292",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/derouilleur-a-aiguilles-gison-gp-851b/",
+          "contentHash": "64395bf2f94e0aa88d0becc208802a3476eb564af025eb70e801b3fc9661968b",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/derouilleur-a-aiguilles-zipp-zkj221-29/",
+          "contentHash": "f8c1b44aedf2955f56f65573620099fd05fef9861ba2e3956e3ee9ad3baee333",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/fouloir-zipp-zsr-303l/",
+          "contentHash": "d4f27aed16190412fee84341824a8ef9e2519f69cfcd2033faff8b5d3ad90f23",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/lime-alternative-gison-gp-948c/",
+          "contentHash": "086425474261a937df88dc81c9dde41525b5645bca1f811c8ee2277c2225220f",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/marteau-a-river-zipp-zrh-131s/",
+          "contentHash": "564631c4629c80e4e7d1d0d569e5782a58074d62ce0f0d6dc7775f3d69e045eb",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-gison-gp-8240c/",
+          "contentHash": "145c8634f781f8b7ae88d129b520047f164ccb50d0d11c11c5a71ce05f6d2bd1",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-zipp-zag-341/",
+          "contentHash": "fda83c91d1baa4df7386566b8af513b928ce4eb6fe3a14fb6a2299c2f2652c7d",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-gison-gp-330a/",
+          "contentHash": "faef4be580a0ee11d6f53929da50b76599498045c8f329ec19dc5244a20a9250",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-zipp-zae-371/",
+          "contentHash": "39744b394ad45f62bfd7af70e1cbd791816e9dda2c55ea6166cccccd8b5a0367",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/polisseuse-gison-gp-823st3/",
+          "contentHash": "0383baa93a561cd7679436c337d409309f24d2f96159d5ed545c5c09f54d6019",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/polisseuse-zipp-zap3308/",
+          "contentHash": "d987790396c376b7c1a1d92a5e0f429bdb124f54fe40c9e4ee2b98c0abd2355d",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-gison-gp-902c/",
+          "contentHash": "06e819cb163e44823422bf9f68012415d82c0a5e5b6857dd6a675663bcdc1f18",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-zipp-zbs-382n3/",
+          "contentHash": "009a23a46e86eab2e5bbcdd130e43628af383c1a03295fe65ccc206de4d011d3",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-gison-gp-937r/",
+          "contentHash": "b6da965f5839e612e4017196608b7d1ed2441bc6d273c6aba3cb95c0de255d76",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-zipp-zos-214-c6/",
+          "contentHash": "a3d06dc71d25431046355fc843de659ce5aa05b3a0c32ad9da608a770432d9b9",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-gison-gp-823ar3/",
+          "contentHash": "b15e2233c637e7ff1eaf3918dbb8443fe6b2d366db0ae8fc7e98f6fd5bb89a41",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-zipp-ztu391/",
+          "contentHash": "0bb0f6a7b023bd661135c4c8e94f6c0b25222aa2dff24551edd127ea162827b5",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-vibrante-gison-gp-934sd/",
+          "contentHash": "242b660ded4b02c1e5abdbc03d49dbafe9fad22c341535304e8b6b62238d1851",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-vibrante-zipp-zhs-nl4c/",
+          "contentHash": "6744b9864a75884bbe3e58cdea33a8e61768a6e7a4ff59e71b9b6c153f0dd4ac",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/riveteuse-gison-gp-836lc/",
+          "contentHash": "d37f4f16a4c1c982e6247c05307decd3718ec6d080ef6cf0e286ad14bb141132",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/riveteuse-zipp-zir0922/",
+          "contentHash": "014f23bfc722c5c65b44c928df7f8f7692db1b65f22f38fbcae830e433c0225f",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/scie-gison-gp-848t/",
+          "contentHash": "b8062102605ae00a572bb312b83e7179a27a3cdfa3fde4319ae7b9dd615e9320",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/scie-zipp-zs312m/",
+          "contentHash": "b5c414f5395d8bb24c063e73e5c204cfe335cca80c27388ca0dd36ebcca4e20e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/taraudeuse-zipp-zat415b2/",
+          "contentHash": "2681a1467de412e1cc981eab4f9df4b2b8afe12cffdf3caaa304daf29a5eff36",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/tronconneuse-zipp-zac-354l/",
+          "contentHash": "607d3d1db8a2d12690584ebe120ddc4649a56db38648ffbf3d93848b25957fc2",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-gison-gp-804hp/",
+          "contentHash": "4551084cb6e4f8592de4f3cc7ef3aceafd2242ca6bf89aff487f24e80bd989d9",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-ober-ami66at-8301056/",
+          "contentHash": "79bec9dee3d2992d397ce3d7ac48b7c471bb8c0d3cefdbd058f98676772e1ee6",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-zipp-zb31mc/",
+          "contentHash": "5077cb3b7d3641b986f443a1bf2d1fdbf78ef0787919b04d19cbdb8744a9378f",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/broomwade-fm11-rsccp1109-7-bar/",
+          "contentHash": "b51b60df68887343c5983771c6187dd0b19b438721ef8a83281ea7119fa81236",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/broomwade-fm11-rsccp1110-8-bar/",
+          "contentHash": "4567aaa396bae41b5b8f379a522d75085f4f8e799af50bb97e686ca955c72f0d",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-hymair-f-30c/",
+          "contentHash": "acf26854850acd6ab52d90a60ff8d8e1b1218ff6d5016cc81203499d266e8a82",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-max-cn565s3/",
+          "contentHash": "2ebc13c977f86cd7a48e62f77ae32e8f091cc783224b6e89ba1d2fd212a1f4c0",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-meite-1416b/",
+          "contentHash": "80bc848843c1f1ce673dd1787b7b4e749152867202f482bce8dd6783c671cdc4",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/boulonneuse-sumake-hawf5400/",
+          "contentHash": "1842ea5dce8c0539b53476b97c4d94eb8acd0ac8a8f9c7ebf5d9cecd499c4c6e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-atlas-copco-rvm07b-8425010525/",
+          "contentHash": "93692bbdedc4162997efdf783fbafb727caf3b54b8048563394932bb343fe6fe",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-hymair-nst-2070c/",
+          "contentHash": "7b45fe75a824a1c60324d5b24aa2b71ddd331a34c9e97881b525e68aba615b67",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-jonnesway-jah-1004/",
+          "contentHash": "ceeae15f9d56b3e7c8e7ebb85397bc053f0fc3b5a4052372a974414a60d5ce82",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-puma-at-2018/",
+          "contentHash": "da7fda55deaa39746ba59fd3bb7f082a163edc00a996b7c4f230a11595890fce",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-universal-tool-ut8652h/",
+          "contentHash": "3c1055b32e8781bf7acff79e9e36d22767ae9fe8c6499fa1d76039c02464add4",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-aircat-1058-vxl/",
+          "contentHash": "4215f139e723781f96cf45846f12ecb4dea92aa62fb035744fd96bf2dd32afcd",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-atp-atp1011pt-th/",
+          "contentHash": "f3d94c484a1ce333cc9923be355123b1f4eb5c965d326f004c267a98a25827a0",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-hymair-at-240/",
+          "contentHash": "1f687c4fd2621210635987e81fcb9a56389b64386968b6d3881aaeaf18108f40",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-jonnesway-jai-0926/",
+          "contentHash": "4dca225e099975b75c06f30223cc96652cdd5fbc92b347f779fbb9f934a4fbf9",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-mannesmann-demag-e-18-p3-29915-32-5/",
+          "contentHash": "46ce1015a50e5334e40181ab37420957ad354bb963249aa125da72de744d7a51",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-paoli-dp-176-000176-00001/",
+          "contentHash": "688d97257bb846fabd855cb2cd446177a4c2cd94434f936a9695b95f807f0cdd",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-puma-at-5041/",
+          "contentHash": "5b5ea07fb8e3de11517660632b036668b942b30d794359df05e4cca0eae5923b",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-rodcraft-rc2444-8951077210/",
+          "contentHash": "519c384f16743c88aee4958a54dab9d165b4d95cd32ef63ac05e396e8b48b028",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-rongpeng-rp7426/",
+          "contentHash": "e2705a0f852f7ec7bfcf52321702bafc8870d02cab2c036b91d8f4000f6d30e3",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-universal-tool-ut2588lt-th/",
+          "contentHash": "a9579f63b7cbb75c1447f2844e01a9046c9cd541fca6a733214edf2eee27f3d4",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-yokota-v-260/",
+          "contentHash": "ed30d922f38fa1424eadd4ad72f713d9c78df16ed64b983028a4ba6a0bab154a",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-aircat-805-ht-5/",
+          "contentHash": "50b3cf6456d089b62a992fbfe226d74c217fcf433c34174e2324086f0785eef6",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-hymair-nst-5055c/",
+          "contentHash": "d7aa0259240ec935b2ba3e357dcf33a7afd64fd4b7d83acfcc8fdebb0b16128c",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-jonnesway-jar-1064/",
+          "contentHash": "c702e62fdfb7e0bf75f234a8bc3b5dee52d60d2915b2a614129f933f2cadfcd3",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-puma-at-5110/",
+          "contentHash": "1638a31c3f4df7527f4f59eeafe14604c60360059f688af758ef88542a5dcd10",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-rodcraft-rc3100-8951078004/",
+          "contentHash": "d6a7363d1850385663d2feef6d4e141145b69bb0ed6902cf18c0f1343e5ffc9e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-yokota-ynr-8fn/",
+          "contentHash": "a201135b265cd62661c68879f1d535b49ee551483119e7cc5f28bfdc769b4864",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/lime-bande-puma-at-7124/",
+          "contentHash": "f31ca7ea6015ace050b6456a2cabaf531fa8054ac907bf564c6749544b4f0510",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/marteau-a-river-puma-at-2209/",
+          "contentHash": "2d78715e9751083b5732bcd8f85e24fbaa05385f6a843749a9a8047d26cc623e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-aircat-6245/",
+          "contentHash": "34c43f0b6a392d5ee92f2b95eace3deb6462ec4f96303e981868cb4ec9cab43a",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-hymair-at-7032la/",
+          "contentHash": "b91fcc1fff6121a0a5e526895debdc5edecc2b62e97cc6f5ebc0d989e451bf4e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-jonnesway-jag-0913f/",
+          "contentHash": "8bbf1d01e3350fb108d8b0a376b54f816fbef52e142ee798d5bb6dea468bd404",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-kinshun-kin-510a-4/",
+          "contentHash": "5771808e9b2092afb44f0c6d53d3c20f4e315d6aeeb294c1220ca50e9d283f99",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-mannesmann-demag-g-101-h-100-60009-41-5/",
+          "contentHash": "eca99de57023965fc20d65dff1d75693df4ed44bcf0a2043d4e5c5a8e2516fcc",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-paoli-dp-2450-002450-00001/",
+          "contentHash": "7a90efdf16ce72de8278a4463e03ccd635f3498d936ad5f94ae3ab507667614e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-puma-at-7438m/",
+          "contentHash": "f49efa4ad3be2ea09c9ecb731e7cecc764717bf354c6a5b057258f7656675d9f",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-rodcraft-rc7038-8951000328/",
+          "contentHash": "972d24ecd8c038c12db17571746086343e2bbb47deddd8f55826492f9817fcb3",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-suhner-llc-23-top-1-4-usa-100046898/",
+          "contentHash": "31712e52208d3005979b47cdd1a02bc6a6b78af404ffddecf425dac2bb191d5f",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-universal-tool-ut2720/",
+          "contentHash": "981455a61707f4551ce954f6b8383ce3439e3e82d2b35d6990079e35c0a0af0c",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-hymair-at-4038cn/",
+          "contentHash": "b57e36498d9a42585c714bd09e0783e4edc939de96a96406a2d99edaf4f49e36",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-jonnesway-jad-0524/",
+          "contentHash": "cf1ad79284e962992bb117c3eb3d7c36f3e09defe60d60c3e528fe3e6169f2fb",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-mannesmann-demag-d-13-380-p-46920-39-5/",
+          "contentHash": "8ed3ddf9acff66308a0ff5db58ca03d808589f62a2030cfe935e1ebc82ab874f",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-puma-at-4237/",
+          "contentHash": "e9aeeb55868a24c8a9d5779f4fe12fca2f25ab9346a43c6094a0ab76c23faf31",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-rodcraft-rc4607-8951073090/",
+          "contentHash": "463a2bd9e79677355536aab8191c7a3149ee69a348103e2547a28358cfb835b8",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-universal-tool-ut8843-12/",
+          "contentHash": "2c13126659bf977185ea47bdec9a56e12f1f7eeb2849125fc09468b73d4ff2a3",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-anest-iwata-lpa-200-122p-13187000/",
+          "contentHash": "cac73ca52b3fc7d38b4f0427382b0978910f05162654960ee4f1d7c1f34406c6",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hymair-as2003g/",
+          "contentHash": "0ffb1797c884e9f65def796ec6fdefda7adbba76d2ffbe02d868a97cbec7e21e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-aircat-6700-6-332/",
+          "contentHash": "c5c22b394dc525f9c247f13904405814bb5763f7873fd617e99aa27a70df5dfc",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-hymair-at-991/",
+          "contentHash": "a72d937d1b2b7f93d3f04d09aafd8c583ef6adf0fb3f0dea3fba1363828d84b5",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-puma-at-7027/",
+          "contentHash": "5d094ab197af86307b96ba186f6140032c5ca688449674f64cf31b9040e31d32",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-universal-tool-ut8789-5-336/",
+          "contentHash": "7bee75b8f8d2aa95ab395e36446934cc57859524b5b372c4c632e195456ee878",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-pneumatique-rongpeng-rp7335s/",
+          "contentHash": "2bcb97a095179274c7c0e218647f23f953d882794dc0be78cf7ecb6e2a11a55b",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-puma-at-7079/",
+          "contentHash": "603dd3af53cd3ec32402ecbdaf85dbd96f5927af0a020deea386e448c7763f67",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-yokota-hsa-7a/",
+          "contentHash": "1a483300d65c6a038c2517dddc5bffe64eaff81d5d189f6a381376cc30bcb305",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-vibrante-atlas-copco-lso31-h070-3-8423036303/",
+          "contentHash": "cfe3e236377bc2781cb4ee2f888ad835cd40fa62d67e6d25b4e3a058e8802314",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/riveteuse-hymair-at-6022/",
+          "contentHash": "2850e0b0b8c2919df534e3fd234a99c7ab1297085c53b90e666f1e1bb5b3d4ea",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/riveteuse-puma-at-6105m/",
+          "contentHash": "258768ce6883e05ee59f3e6ce2a123615f4d732a77b7f6e624cd6cd1f5e7aa5b",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/taraudeuse-mannesmann-demag-may-12-136-309-016/",
+          "contentHash": "84fb4feface084440bdf8fad44e40cb347972f9bbc43f1d4e4e341d8aa7b45ac",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/tronconneuse-hymair-at-6027xl/",
+          "contentHash": "227700b19ea0e35740a8de7a87c49bb7c598b89ef6f383687e02e601c1dd10d6",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/tronconneuse-sumake-st-ct160/",
+          "contentHash": "cf1333cbf0bdb84d5765c253589c3b9f1878aaa447c10d54191a6b86e77b12b7",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-hymair-at-4077/",
+          "contentHash": "42086371e8fb7df9c1a60e0b8856f23573ab8a691d29cea9eabaa448b1a7dcf2",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-jonnesway-jab-2022/",
+          "contentHash": "0d007b95fb8b3ce462706c7b30d4c807248e2673778e5b1b61d734008dc52e58",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-universal-tool-ut8080q/",
+          "contentHash": "47efc7e00211460153de4c21bd694b501b3bf60705f63c611a155c3fda37e075",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/chicago-pneumatic-cpm120-50-hz-8-5-bar-std-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/",
+          "contentHash": "c5151dee072843045151324ae8556a7a57f665862988d423c05edaeef9b2a3b6",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/chicago-pneumatic-cpm120-60-hz-10-8-bar-std-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/",
+          "contentHash": "7f6dd0cb8bb65fcd2696c1bdc2d385d926b8de60f8ec517ee73d9f174a679b88",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/elgi-eg-15-60-hz-vitesse-variable-groupe-fixe-au-sol-sans-secheur-vitesse-variable/",
+          "contentHash": "fd8a2b73609b33f1726919a4823b954171b48f3d8208be6472733ed8fd3f8741",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/elgi-eg-160-p-50-hz-11-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/",
+          "contentHash": "36781aab05d35bccbe56db44664edf6471fce40b89ca20d7f4230574d9c0b47c",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-omer-12-40-g/",
+          "contentHash": "84ebaa23c4d04b1835ebefff23ac82b2a670dfdd586e57fd2a2caec2f7acf049",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/boulonneuse-ingersoll-rand-41aa9lts6/",
+          "contentHash": "96e3dd0afcf17cb0104ff26b93defebc8351e8ebf52228a84b9c138318fc94d0",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/boulonneuse-kuken-pts-150ex/",
+          "contentHash": "0b3c54d9e8d407f3c5b0d1868520e87975290f7a3cd54f43b25344b428fd1e4a",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-michigan-pneumatic-mp-1133-orange-nep/",
+          "contentHash": "44b60b3bb63a43be24989bdf4319d6c8de0890905eda5023dd67006f5feb7bad",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-tranmax-tpt-929/",
+          "contentHash": "361a97770d42fa94f5b214c20f78893bede03347f6d37c8927ec5277767b57a6",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cisaille-vessel-gt-hwr1-360701/",
+          "contentHash": "926f16823b04e9388358c9b6a8eccf48225e34500666a9f7897ecf6e212c1ecc",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-cleco-wp-2050-6/",
+          "contentHash": "5dd60969f5fd5cd7670969e41c842172e42e18d9fc0f050084a8253b954bf859",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-hazet-9012tt/",
+          "contentHash": "a938433e7a627fe483ce8dfc04c1b4949fe4d9f474b764dbdd489d2cd32ad8bd",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-jet-j-3800d-505977/",
+          "contentHash": "9e6640f7882597ccaf1593d505a8e211e9bbe2eb9ea26457b78a651cc95a48f0",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-kuken-kw-3800p/",
+          "contentHash": "3d0e35bb05a9c809c93f20baedc1130e6b46badf56a73ba537bcc52e141cceeb",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-michigan-pneumatic-mp-1350ra/",
+          "contentHash": "03cf484b78fedfffa53706b98ea4238fe40c094ade9a1d1b49dfef114122e304",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-sealey-gsa6005/",
+          "contentHash": "5e85f815f066d46bb230cdec9afaab4a0a0f2767fa66ee68ac4e27968a6c1967",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-tranmax-tpt-278d-sr/",
+          "contentHash": "72bba917636be45f902c9a05df465aa6b7f0ab38800f2b2c9220cf097d48e771",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-draper-84122/",
+          "contentHash": "9ccb3a847747cfe1e829b7f6ba0fdc4add4d72fd0c1816ddae28e3d67c158a78",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-facom-vr-sj3500pb/",
+          "contentHash": "db937e66b5969153c571f5dcd2822b5cb74de22afc0c1a67ea6c6b87e0d7ce0a",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-hazet-9022-360/",
+          "contentHash": "c6c1e566de82761f1cfe23bb9e9ea926f8e2d47d21f037fa04fe82255aa5f2b5",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-jet-jsm-31/",
+          "contentHash": "6cfa23526c606e2f75c5c8a8f85d95cae35f0b348954ef7399c7879c148c91b5",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-kuken-kr-183/",
+          "contentHash": "a8daf234ccdc748855d65b5770a66844b9c99274046433c20505a9c73cc37fe9",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-sealey-gsa635/",
+          "contentHash": "91f57854a7485274e9ba3a36806693cfa1c4861a8070e4e96b62de6776048c5a",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-tranmax-tpt-212f-4/",
+          "contentHash": "bc5d79d2c0ecf7f2625d20ae503e0d4be178ec6ed26127f584bd52c0ae0e8002",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-impulsions-du-pas-tdi-150/",
+          "contentHash": "5965bbc3a840ef8eb0d080c2acf838c58c7e73ba5b84a55ffe916d395f3c3527",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-impulsions-ingersoll-rand-140p6/",
+          "contentHash": "7b629f004ef6eef9bb9a5920a6fbdca75c808ea45c1b627317bd1e241ea164a5",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-impulsions-npk-npw-1400apts-000/",
+          "contentHash": "dce829e5f05660849e0ea4293651773795b725973c04d76d8cc6c787f4f639f6",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/derouilleur-a-aiguilles-sealey-sa52/",
+          "contentHash": "b9d8796a6fcf0161aec2c8d2fbf1d47c1279dbdf8886a8e75974443e5f11dd58",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/fouloir-michigan-pneumatic-mp-241c1m/",
+          "contentHash": "eaf456eefe930878d8263b8dac5c8d68257f6bf7b96c3a661d3aa535c2a539e4",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/fouloir-npk-b-1a/",
+          "contentHash": "c0fa4e97b5da24d2fe030df447cf52e562b14f2d64c2b99047864f7d8d329f93",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/gonflage-hazet-9041g-1/",
+          "contentHash": "3520c03759a8c0f06e2bd6ed1fd0aabf2dcee3c501a0ddf2c8d26a2e3b2c2008",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/marteau-a-river-ingersoll-rand-avc10c1/",
+          "contentHash": "32c829a1bc94d1fc4c9dcfee220efa3410dc0aa092d1ff432b80581b4cbdf7b6",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/marteau-a-river-michigan-pneumatic-mp-2xbu-st/",
+          "contentHash": "27758c13405f32da2f083a440a51f3f28cccd676c1ebc4becec89a117ba1c1b9",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-draper-83953/",
+          "contentHash": "b0666a602947a7e13599d19dda357ecc7146afde49abd290ee773cd7d33f7420",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-facom-v-472f/",
+          "contentHash": "2e33e7bb55a29d95cd5c9e78dc915ad861fc5645306245e844a44a9e7f3e79ee",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-hazet-9032m-5/",
+          "contentHash": "c243f1ddf8a874ec5c89bb72bfe9a115e4d5d8f68c5b6144f6dfd797bc89d08a",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-henrytools-400ge/",
+          "contentHash": "c49ab98a9c95705c751501595e03a5ec5c6af39d9602182df35bc3f2fc6c4619",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-jet-jns-185/",
+          "contentHash": "ac523cb095fc2ac1834177cadbf77bbcf4f2ea20cd98c4f627b18244ef2d8df9",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-kuken-kag-40/",
+          "contentHash": "7dfd739e5340aea597eaf5c37eaef97bb96bf43b635d3bdcbcf0eb0452c67833",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-master-power-mp4430/",
+          "contentHash": "9da484b7da2e12c3d4875ca0931abb8d5e2c18a472c0b6f0966eaea5a84cd3a4",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-michigan-pneumatic-mp-11650/",
+          "contentHash": "13f984505415e8afc693ff08dbc87ab3ffe70d2df7c27ab769eff6a11095127d",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-npk-nag-1flw-05/",
+          "contentHash": "e38dd010653cc739a181a2fbc2b8485af78c0e360a3ba2f61794fcc179e21c41",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-sealey-sa1004/",
+          "contentHash": "1bef994f9f5d5c43b5fc7bcbf2fcc565b0e69b8147afec96bb3be491ced57254",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-tranmax-tpt-501/",
+          "contentHash": "77428c276eaf3d2b30c9b6c6ba05dd191ce239db33b9d04e98549f52b31f1de9",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-draper-83811/",
+          "contentHash": "7e28c5b8ce24d1b22c2baf028c42684c2a3cf1480da08ffceb8066a3409f5b30",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-jet-jsm-704/",
+          "contentHash": "68f68e8b9b3c6ed83cc5ec3e5f361a57fca8a48c8a86059d18cd88281251d798",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-master-power-mp1463-51/",
+          "contentHash": "be14948ed3057205642c682e5867e2ef49073e62db42befc491462329b38db35",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-michigan-pneumatic-mp-20m-401l-3mt/",
+          "contentHash": "32d85f57dca43396b9af3efb1a6dde66513b0de9f2bb3903a78b479b617e5a12",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-sealey-sa24/",
+          "contentHash": "cf59aa6a3e9ec735f2659341bec175d61f0f5575d05d1d60e7608d71883299af",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-tranmax-tpt-607/",
+          "contentHash": "15c7fa96d0b146e06251f07d2e23b35b39f6c560ce7ea488725f61d720bfb64e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-draper-28360/",
+          "contentHash": "9879b4bda394dd019580ac813765354a1aaef05603842f29172c2653df88d341",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-jet-jsm-6100/",
+          "contentHash": "b59c3d2951b75dc862babd550343ce72caf4b66e7652c30955c83e2d00eff137",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-kuken-kbs-12/",
+          "contentHash": "d7190f2bda20942506ce0aaab499aabe0600a76e5ef116853e369215845f7e04",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-michigan-pneumatic-mp-1509bgs-38121-21/",
+          "contentHash": "8f0630430ed44ebd4380f06f90fb9181046a180caba819d7c70771fb07974622",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-sealey-sa354/",
+          "contentHash": "921e144c5b2766ed9204fbb72a5d14d2e3fe0da2a967e4f379f3076c7e3acc58",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-tranmax-tpt-474/",
+          "contentHash": "57ebd951affe5ad5836429c11780e4bd29fc0ec3dffb609c498a76a929689fd9",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-draper-84125/",
+          "contentHash": "dd694c761c606d5ead737fff96c236a383ae61e590a88b70ac8bbc25f17c3ccb",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-kuken-dam-055s/",
+          "contentHash": "6c132aa79d5ebed3589dc2808e55acbd8533e5142ebb363edd1d7a7af363bda2",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-michigan-pneumatic-mp-6004k-st/",
+          "contentHash": "19b17a845ddbe8c0f04066edf4ae2f588d5ab6e7df3ae1455ceb12a290926d9e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-rodcraft-rc7702v6-8951000021/",
+          "contentHash": "4b839fdd32b386b6368123e10dcd68e7c11a70b2921b49bc0f3072c898baec06",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-sealey-gsa04/",
+          "contentHash": "cf08c684c05a9763903e7dd97cffaddfac5a473ec0bab248c654be0585282d29",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-pneumatique-kuken-ds-4-7/",
+          "contentHash": "b8f9d81e4cb2472aca9814faef5b2214281c90448f695adef3668f58b49cbed4",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-pneumatique-sealey-sa32/",
+          "contentHash": "ca5d850b355c961701922b668b49724c691e138a8d542497f7312317d53c25db",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-vibrante-kuken-kos-42s/",
+          "contentHash": "e8f73c235840a7cad3328f4f9b17fb1e7eb42d9f27b72af292092d31585e5ed3",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/riveteuse-michigan-pneumatic-mp-351c-218/",
+          "contentHash": "7e18237cf6a8ca5158c62fb59db5bfb81151a2314f9a9ff802eb71d3239f186e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/riveteuse-sealey-gsa314/",
+          "contentHash": "40bcdb528222a8b3886bdc3c9a1e427951036066d50ae16f28963ef71933f1af",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/scie-sealey-sa342/",
+          "contentHash": "2843de19df6ce48f6d4b7e733cd1088b02aa92586e2564fe7d0774d227a1c364",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/soufflette-hazet-9040p-1/",
+          "contentHash": "47bb5ec252c4c398a61a7453c777597389f89270b75a13df535823362d797340",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/soufflette-sealey-sa904/",
+          "contentHash": "f7e509eac0fcff54cdfdb7a53eb68e964415e98008b974b14e6ccb761e96327a",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/tronconneuse-sealey-s01005/",
+          "contentHash": "7272b785a42a0d7f5918d6f63848cf383dcb24b060b8df4f0cedde4a32df6235",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-du-pas-tdcs-d08-1500/",
+          "contentHash": "7f171929607b3cf03ac7673e571d54183dc187ad11bc41e38344ea98556d0dc1",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-ingersoll-rand-41pa10tpq4/",
+          "contentHash": "02e5f811c6fc2d72d48b75aed9dea79f472c037ff28f4f9a0d12299e596c0f59",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-jet-jsm-804/",
+          "contentHash": "64a0b7f391141885ee0faf74c267ce810ce863952d2d041b10a7ba51b5bd9379",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-kuken-kw-7pd/",
+          "contentHash": "460b9ca916830209276aeabc95722fd8ae68e1247ae6477eb41af9b3fa0c9f91",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-michigan-pneumatic-mp-200as-st/",
+          "contentHash": "98a53bcd790ea856cae62fb4cb599c22622b74d5c6083810da6ffca070ecb820",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-sealey-sa623/",
+          "contentHash": "99c0952f11a7b04e97e3e9a1e20b1b0a927d8f22998e7e65efd2e1c135fb4cc7",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/atlas-copco-ga-11-50-hz-8-5-bar-pack-au-sol/",
+          "contentHash": "30f1fe192135439b55efb2d99c0658da621622af0c58c9152ab2e686e037f580",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/atlas-copco-ga-11-50-hz-8-5-bar-pack-sur-reservoir-270-l/",
+          "contentHash": "28bc1de46d5ba6b329ae6d70614bc89bbd70b7285dc51a68488d73295888b8c9",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/worthington-creyssensac-rlr-2000-50-hz-13-bar-pack-au-sol/",
+          "contentHash": "e74ff020d8a02873969bea178407b9b7055f392548a54bc3c360a914ef90e6d6",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/worthington-creyssensac-rlr-2000-50-hz-8-bar-full-feature-sur-reservoir-270-l/",
+          "contentHash": "d87a7168609815ecee2e501a7dfa38ac9f45e3c4ed4591ba6d0a0013cd762087",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-basso-16-50-b1/",
+          "contentHash": "e262dbd5633da047fe8c80408305dad4d520f67a8ebe0f0f71a34633b62d5319",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-bea-14-32-613l-12000216/",
+          "contentHash": "5275f2939825af779e7ab9e69c00ea2a59f86e35f2a4abd68bde93400d52bbc8",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-hikoki-nt50ae2/",
+          "contentHash": "0c3c17f346b753daaf8fd52ed98cf2db74611f90f7e189da7b550f72dd6c3d93",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-metabo-hpt-n5009af/",
+          "contentHash": "3564cf4c39884c85506d016d0587c9133d7757e2c6dc0d06bf907e65208a78fb",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/boulonneuse-soartec-wx-3953/",
+          "contentHash": "95365a3b32183aa62d647a08003b6a0aab7af0c5eda30ce243c7b95b77217d50",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-kuani-ki-4711-r/",
+          "contentHash": "55efd14018137b3cf657584bbf0568b2e1680abd6f595f7b6eac2ac647c79d75",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-soartec-ws-402-190/",
+          "contentHash": "eb760ebd4800b3b29be5a2b153d65c95e7ab79d30283f30ad68ff52342d067fc",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cisaille-kuani-ki-4874/",
+          "contentHash": "d3d067130be7b07f3cf8fdadff9bdd92d21522f720eee3cf2aa28a6a95612306",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-king-tony-33411-040/",
+          "contentHash": "28b925e0ba1b6c9a26d93a9a2c003f0c8918951eb3af92edb6f343fca43369c6",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-ks-tools-512-1015/",
+          "contentHash": "ebd7e483ea30c3d1c87ca8abdcbbc38628fb77c6a9692d61dff159080e13f3c1",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-kuani-ki-1206/",
+          "contentHash": "a4637ad23c68a9621db842b270d0e6469265c5272bc94e018c19e5a9af5491be",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-soartec-ws-202/",
+          "contentHash": "d1af5559691e584470f97b157a1433e0eb67ff0ea9e22799990caac3a56e1fb2",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-tengtools-arg01/",
+          "contentHash": "adfaed3e46a472b6cad7a55650844764accff124beabbeaa1ad1d74e252e7eec",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-king-tony-37221-030/",
+          "contentHash": "cd4d0065614d6248ea36d13e40025162c720610a57d7b7b502e6715da125305a",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-ks-tools-515-3825/",
+          "contentHash": "a67d2528afc1ad42ab693c42f84b05592f4a594ee0f68b49fc598024af8bd89a",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-kuani-ki-2207/",
+          "contentHash": "7af8ed3d91b5dc5a98a3510f966bd60c3d08548eccdf472f5d18c796d074b990",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-soartec-wx-2630/",
+          "contentHash": "7566cd6a215657a884e1ffa0624a6e6f5021688e5521f8eb9aac34a37823fe10",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/derouilleur-a-aiguilles-ks-tools-515-3980/",
+          "contentHash": "d7261d7235c9e6c5fffbdfbb467edcf539274faba4cd6530919ca6f7ae6f822a",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/derouilleur-a-aiguilles-kuani-ki-4715/",
+          "contentHash": "4fccb214782a7ad4567fa8a0e3c49eb152f049088157c01f2a94cb5cc88237c9",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/derouilleur-a-aiguilles-tengtools-arn12/",
+          "contentHash": "4a7822ac9d330e319ddbfb9ccb96ae0a02ec490c0ac7a31522d6b38cbd278119",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/fouloir-kuani-ki-4794a/",
+          "contentHash": "f764fe22c59ac4aecb22b92b94cf2f2bcb1e0134c2c8e21b98bd36274e2399fe",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/gonflage-ks-tools-515-1950/",
+          "contentHash": "d2da088972e377bd326e47048ed95088fa17c94ddbebb8a67854c158b9468344",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/graveur-tengtools-arep25/",
+          "contentHash": "c1a3f84170439eb98344f991efcee4d34500369ed6d178357a8b0411687ee284",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/grignoteuse-kuani-ki-4809/",
+          "contentHash": "53363e814facaf50ceb42e8e7c638d7ad3d04f7214c19224dd0e162555870184",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/marteau-a-river-kuani-ki-4791-xp2/",
+          "contentHash": "61c545eda7372b7e6acfda26850d6c0cf37cbe901211beed2c679ae6092b8b55",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/marteau-a-river-soartec-ws-435/",
+          "contentHash": "c7450c73f1dc0b0253eb65ef6af82d74684a5d5fe1fbcaca669d7f1a36eda155",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-ata-ra12m-100/",
+          "contentHash": "d524b50a8e12b5c3e5b634db2281a7e6405fcdf829608a565ff721ce04252275",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-ks-tools-515-3198/",
+          "contentHash": "24d4fcc9524f1184aeb461eaa5353deb927d34d292ae75534b40ddb530490d22",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-kuani-ki-6206/",
+          "contentHash": "9771d78e7e251e0fc7ef46d6da0c4fbd8121fdc23b91dd9bbaccf9fd4ae8077d",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-soartec-610g/",
+          "contentHash": "025b1b45d658f5336de81c2b3ec02b9bce7815758d0c6fb5bd1d4c553bb8bae6",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-ks-tools-515-5435/",
+          "contentHash": "14e563d245610740916c21f1e1ba93fc754c5e5e71e3b970da024c1e17832faf",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-kuani-ki-5002/",
+          "contentHash": "ece113c0d538c819d3209612c0edabf56a3286d484b2ae5e93fd1ca16e248adb",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-soartec-wx-506/",
+          "contentHash": "01fbd7db66af110da160f082ada0cd43ab1d199ccb25afaf5ed09dd79754ba90",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-tengtools-ard13/",
+          "contentHash": "1b34d6d993db9f7c0bcca8fed51f0e262b1cfb6643fa551975ee0963bdbb3660",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-cartouche-ks-tools-515-1985/",
+          "contentHash": "4a34c331886f0cd664fd9d6bb74d1108e85b2ee2d5d5d28d9757b0cf79f9046c",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-ks-tools-515-5065/",
+          "contentHash": "38957e28652f777d90654f354bcc29aa5c1257717e09708ac0256fe3137d41ba",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/polisseuse-ks-tools-515-5121/",
+          "contentHash": "7d5bb33ecc20cb95d23ba9887dde1091e60e5470a6d995867f99410d2b1aa1bf",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/polisseuse-kuani-ki-6706/",
+          "contentHash": "61adbee7eb0f8fc17352a7d0c9a52aca89fb1ba2102dcd1739ceb2216fd9ffeb",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-ata-blm16l/",
+          "contentHash": "606432f47208ae260f1161c3f65ca3c83ebbbb04ed2fc5d0d63f44f18a2216d7",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-ks-tools-515-3549/",
+          "contentHash": "9fa1074f330a64120c3f2ffc2d2f131e3bfbdc0a935b6722988a5559a6dfb42e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-kuani-ki-6404/",
+          "contentHash": "6b1c6ddbe412302714182713ff349d41d318e2edfa865202ca04234a82c65bd1",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-tengtools-arbs10/",
+          "contentHash": "5d8a43780825fff2ddaedc4754b4ebc72ad450455f427b9acd1b6e0cb00c3af7",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-ks-tools-515-3066/",
+          "contentHash": "fa667cda6d00b696250e671318505816cff1a5677ceed622380076667f70424d",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-kuani-ki-6601/",
+          "contentHash": "176046f8dd6c27d3f96ae955a2983328ddf65f7784fe091282307958ec1e967e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-soartec-ws-1051c-3h/",
+          "contentHash": "dc6317f7e5728d22aeafac84028b6e78563fb4056d55043b1856daca024180fb",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-ata-ra12m-sm14/",
+          "contentHash": "84d5d586ed494239caca50db8ff46a0550197337149338c4b3e60caba644b0a7",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-soartec-wx-7921/",
+          "contentHash": "3f6fccfefa25882513d26b89843e146caf4ad8348088b49154923f19204397af",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-vibrante-kuani-ki-6636-ls2/",
+          "contentHash": "19f7ba8498c6551bc78d5b83d74d4444453848f3e176b586966a45199bd73d88",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/riveteuse-far-kj60/",
+          "contentHash": "f8ae2ae5c78214a98111f67e8d36464203b35f624403c205c14ae08688098842",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/riveteuse-gesipa-taurus-2-1457771/",
+          "contentHash": "c394d94c029c6ed8246aa4d58b40988b126f476cda10d06b9da53f8e46c413f5",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/riveteuse-ks-tools-515-3102/",
+          "contentHash": "4a90fd11a9833e6a471329cbdf437722a273ed70a9cc1246e9c20ebd3cc4dfdb",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/riveteuse-soartec-wx-5553/",
+          "contentHash": "e3cca4b8edf18bd04ac2cb6f25576c7dc9ff0808359f9fa61b75d0c95504eb61",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/riveteuse-tengtools-arrg80/",
+          "contentHash": "b4712a9fa65e2bd9ce3191725a7d832495b875d334ed65b739903c0541451d1a",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/scie-kuani-ki-4833/",
+          "contentHash": "8ef9c0d3be5ac87ef5ca46da2ee2d52aef7c6313a0ff1c96473b5138bdf59eb8",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/scie-soartec-wx-452/",
+          "contentHash": "93ff79533cab1643d42ca3571a15831b1637181a83379eeddcd434b6df1ea00e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/scie-tengtools-ars01/",
+          "contentHash": "e2d593e5a2c61122425d55d47c881d0e6694a095c949c467240d3367f265decb",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/soufflette-ks-tools-515-1216/",
+          "contentHash": "3eb755b272c7819da4c61bd5c3e77f0070684a04c86c7045538f25be401398a7",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/soufflette-tengtools-arb01/",
+          "contentHash": "729da17b2884606201853214828ab69dbc07caa168becec917f5421d59ad015e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/taraudeuse-kuani-ki-4530/",
+          "contentHash": "514aafcf72a8206f85428455db8fd675c75abbc0a3f85f439b31b71172903196",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/tronconneuse-ks-tools-515-5475/",
+          "contentHash": "12b920bb968883ff02588588caeb87c8cdfb0a7340d05b2fb2f1f8e9df36cc1b",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/tronconneuse-kuani-ki-4427/",
+          "contentHash": "2223c34023540b977a7cca511c81c2c13efd4dd4fd35f4122ca4234c31c8da6f",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/outils-pneumatiques/tronconneuse-soartec-wx-7911/",
+          "contentHash": "9839e80733d0b2f59951b6c282e271b43b29600dc6a4ab2da95e1be6c553b5ee",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/airpol-srk-4/",
+          "contentHash": "06740e630071b0f97a4010d191559acbffba865ee8f0d752c6ab724e8ab93be4",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/airpol-srk-5/",
+          "contentHash": "70f862711b22fd8e9dfba3c85c912cd4fc87ba800a7cc134dfdd14ea45a09121",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/alup-evoluto-22/",
+          "contentHash": "7809107209a9bc461427621874ccf15003c6e3a723ed6376e25023a3d30663f9",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/alup-evoluto-8/",
+          "contentHash": "f840d974cfe65078486a49a7b0b1771b3144884684dc5ed39364ab952d910b01",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/bambi-vts150d/",
+          "contentHash": "464c5cc7a859fcea32577cc688895ac711dc8bc3c508cca124394a8ac2269608",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/bambi-vts200/",
+          "contentHash": "e22cf4114ef6be90629ac958669298db94849a0e0bca69be2a4c564daab6dfc1",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/ekom-dk50-4x4vrt-m/",
+          "contentHash": "c265ed7c9e26c5feb66ff8252904587cdc6f1a16b946c61ecda1320dad415231",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/ekom-dk50-4x4vrts-m/",
+          "contentHash": "0b7f2596a838a2a86230e8f784f94563fa958dcf7d63c39fc0db3e7502a71ecf",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/mark-msm-7/",
+          "contentHash": "3f4b9c5c060a30adeb724d715849e531aac53a2815fc82ce70cc0bd6a94c9b5f",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/mark-rmb-15/",
+          "contentHash": "6e6229e8ef4af6df86adb949e87b3fbee81bf05f35f9687a72a3a1b28e149eb2",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/mattei-erc-5/",
+          "contentHash": "eb1d99e856272f00c7412a6c5f00fef967355dee121a09ed74294641d493fed0",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/mattei-erc-55/",
+          "contentHash": "20074f20a1cdbf94ab492b8a4f8733cdc40351f8d1cc601db9480512caf48fb2",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/dalgakiran-inversys-plus-pm-15/",
+          "contentHash": "458ef7ccad69780b716ac8aca2f1e88ecfc1d66d4c739a55f5c6ae99119c1395",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/dalgakiran-inversys-plus-pm-18/",
+          "contentHash": "95aada77dc9aad7218b970330b6e67b8bfbc89dedf13de16a3c24afb970399ab",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/hertz-h-5-5-300-t/",
+          "contentHash": "95c75a9c68c39077ccd9453c4ae03f96f2b20c49f0340eac39286c8b6b6f3b78",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/hertz-h-5-5-300/",
+          "contentHash": "5b7b005b62d7400b9c8e111afeb9817eac531defaae8a65785dc1089b5a723e1",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/ktc-kme-c-15-500/",
+          "contentHash": "0312f824d84c010a9fdb5276c92c22bec42b08e4d37a771d2d1f6944fad54394",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/ktc-kme-c-4-270-e/",
+          "contentHash": "6de708c329471f716d2cb5fea3164a951b51c29a5cb66eaffc95a4b5113593af",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/lupamat-lpyi-075-10-d/",
+          "contentHash": "7a8c0ebd1e1ccbb530100e50697a5e14f6fdd64ff88410468882a5ea005ab09a",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/lupamat-lpyi-075-8-5-k/",
+          "contentHash": "91f686b09d0fb7dbf711f7dc54b46cf78fe017728ea76fd709d9cf48542bc334",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/sil-air-50-24-al/",
+          "contentHash": "b8cbca8eab973d8526b627d60c2a762767fd8d0ec9d43502790e7667ec8d0ed0",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/sil-air-50-9/",
+          "contentHash": "c9165c7af15e1e3f3960c38fd3157125e8be85f7c4034ff9eb65489a212f2cad",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/fini-cube-7-5-10-270-es-z/",
+          "contentHash": "c45278638a990155db11f70552a4c9218e6fd3e48b3f56cfa7804098b968d669",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/fini-cube-7-5-10-270-es/",
+          "contentHash": "c8d895806ae372d1e7515b9e784d1a0fcab9bd1378967d54b85d41b62f1feb86",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/puska-ixo-5-5s-10-400-50-200-ce/",
+          "contentHash": "fbb30bcd4e1acf3572003b6021204f23f89beeecb67dc92ff5e9c63e0f3adfe7",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/puska-pke-3-10-k-200-c/",
+          "contentHash": "4a1c74d9fc64bfa7b8d5a490ae42f545740bef755126f48321331ce05a475871",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/quincy-qgs-40c/",
+          "contentHash": "f5686396b019b3e2db7878ef95b9ad623c03047a0a93d8c849e3d7a90b6b5a6b",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/shamal-bora-18-5-10/",
+          "contentHash": "64b2ec28a682c21153e7a410c40323ebb0f1a874d7f8c7c0566fcb8b0a218ede",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/compair-d75srs/",
+          "contentHash": "194270c0f64ada950e743c00ed896650853885cc582eb8bd0f884f9a6b1f04c4",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/ekomak-dmd-250/",
+          "contentHash": "db63be3f9ce0b47f67bf2fb298a4e98639e7b510b6a5ec545ad7f0e5e6497d81",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/gardner-denver-esm04/",
+          "contentHash": "79e19e7f98e5095b3f69a621a0f4e6a0589c3fcc6b3eeb27f1ec82790e99e572",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/ozen-osc-160-u/",
+          "contentHash": "337a46ab0216e905bb16d8bbf34778a5ef1ac674940ab3690f945804ea3cb2e3",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/scr-scr1200lhpm/",
+          "contentHash": "12d4e47300dc7e31a84875d00e889576df1aae2de80e3520f6dfe90f8dad8a5c",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/sullair-ls-25s-350/",
+          "contentHash": "af886b28eab746caf947583ddf73863c25113e21f0d9995bc83f4a663c75b47f",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/denair-da-220-w/",
+          "contentHash": "cc612b7aab79290e02110cfa28360e882fed1ca0efa28fbbb8f1b44329680353",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/kaishan-krsp-355/",
+          "contentHash": "af6d1950e77aa1ddc6153229008fd58a7ebf334b15a486fffc6f5046a058bae4",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/mauguiere-mavd-421/",
+          "contentHash": "a9b5b437458a704a5d4b664fa70bdc9a20565bc3426379391e2fad508453a044",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/comprag-a7508/",
+          "contentHash": "1e12689688da79933800e982feb354f2bf553f02442d93eb2688941296995c8e",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/fs-curtis-eco-pure-250w/",
+          "contentHash": "41d27c650dafd395bfc09f3556b8958fccfd0952b9b94ce55d47fb3e8ed7a582",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/rotair-mdvn-37-k/",
+          "contentHash": "58534d61681380ab67948528a282af9077ab24562570b5861bdb57bacb5c7420",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/swan-sdu-205c-1/",
+          "contentHash": "9dc47b833cc269b86f0b8996d1e48b2cf868ddaef04f8faab537903e5f9b5b71",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/airman-pds185s-6c2/",
+          "contentHash": "b01c2fa4822550e530063b21c6b052fe39564b9b798b3f55d5e6b5daf59b45a1",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/anest-iwata-slpa-22ed-t-90/",
+          "contentHash": "daf3a05942707085622d9ed219e1805a78b7aee430789affa9bf250a2f30b3d2",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/rolair-5715mk103/",
+          "contentHash": "f9ebe5c36398895bf26c7938147988052780e92ebba96bc965b10cc3fb45a488",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/compresseurs/sullivan-palatek-sp11-30/",
+          "contentHash": "40af5d04df6932c7811c8bacfbe2dee2f7cf7ec2bf5a340e94e11ec3bc1b6720",
+          "decision": "deferred",
+          "note": "Hors périmètre de la release PCP : relecture primaire et comparative non effectuée pour cette proposition, aucune nouvelle admission."
+        },
+        {
+          "path": "/guides/pcp-air-precomprime-comprendre/",
+          "contentHash": "4dd3a848108b871be53ed471352061950bfa8d407243533ace3b8d2ecdf11827",
+          "decision": "approved",
+          "note": "Introduction PCP relue et sourcée, comparaison avec le hub et le guide documentaire, aucun verdict d’ensemble ni procédure ; qualification documentaire complète courante.",
+          "qualificationId": "8da58d1c4f430ef4ec72165a83dc97641804c00d1545157cf5b734d0e122d21f"
+        },
+        {
+          "path": "/pcp/",
+          "contentHash": "332995d28ebcdf2d2613dc1b7c271bda37cc5c6dd6da70cb3a618530126c7e51",
+          "decision": "approved",
+          "note": "Hub PCP relu avec ses cinq références, deux guides, sources et limites ; qualification documentaire complète courante, distincte de l’introduction.",
+          "qualificationId": "243fef5df40a45e6a5a741dec2078671defe8c90418e2e4d6b180b3088b36a52"
+        }
+      ]
     }
   ]
 }

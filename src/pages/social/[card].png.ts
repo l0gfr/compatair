@@ -3,6 +3,7 @@ import sharp from 'sharp';
 import { renderSocialCardSvg, socialCardKey, type SocialCard } from '../../domain/social-card';
 
 const staticCards: SocialCard[] = [
+	{ path: '/pcp/', kicker: 'Air précomprimé', title: 'PCP et haute pression', subtitle: 'Fiches constructeur, documentation et limites explicites' },
 	{ path: '/', kicker: 'Compatibilité pneumatique', title: 'Le bon débit, à la bonne pression', subtitle: 'Résultats reproductibles fondés sur le débit restitué' },
 	{ path: '/404.html', kicker: 'Navigation', title: 'Page introuvable', subtitle: 'Retrouvez le catalogue et les guides CompatAir', accent: '#e39a5e' },
 	{ path: '/410/', kicker: 'Navigation', title: 'Contenu retiré', subtitle: 'Cette ressource ne possède pas de remplacement direct', accent: '#e39a5e' },

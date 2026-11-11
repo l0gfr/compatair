@@ -45,6 +45,11 @@ export async function collectVersionedSourceInventory(root, { now = new Date() }
   const files = (await readdir(join(root, 'src/data/products', kind))).filter(file => file.endsWith('.ts') && file !== 'index.ts').sort();
   for (let offset = 0; offset < files.length; offset += 1024) entries.push(...await batch(root, kind, files.slice(offset, offset + 1024), now));
  }
+ const { pcpReferences } = await import(pathToFileURL(join(root, 'src/data/pcp.ts')).href);
+ for (const reference of pcpReferences) for (const source of reference.sources) entries.push({
+  url: source.url,
+  reference: { pcp: reference.slug, brand: reference.brand, model: reference.model, sourceId: source.id, checkedAt: source.checkedAt },
+ });
  for (const file of (await readdir(join(root, 'src/content/guides'))).filter(file => file.endsWith('.md')).sort()) {
   const raw = await readFile(join(root, 'src/content/guides', file), 'utf8');
   const frontmatter = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);

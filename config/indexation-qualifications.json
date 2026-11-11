@@ -80445,6 +80445,123 @@
           "sha256": "158289af615aa854058fc112d3aaa31c17339e7f581c3c4929bf07403a23cd12"
         }
       ]
+    },
+    {
+      "path": "/pcp/",
+      "contentHash": "332995d28ebcdf2d2613dc1b7c271bda37cc5c6dd6da70cb3a618530126c7e51",
+      "neighbors": [
+        "/guides/pcp-air-precomprime-comprendre/",
+        "/guides/pcp-lire-documentation-remplissage/"
+      ],
+      "contextHash": "49437c3254a9d0d70d20a2206e11153af73f31e9d6ea8bccd2c29fb4fd0986f6",
+      "rulesHash": "e1ecff339324e94431acad685f0eb33e8101da3f301a921665a348a20a06ba7a",
+      "sourceReleaseSha": "ebf5a7e7a19e8becf8419cd0df533a6c62337816",
+      "reviewedAt": "2026-11-11T14:30:32.268Z",
+      "note": "Hub éditorial relu : périmètre PCP, liens vers cinq références exactes et deux guides, distinction documentaire/alimentation continue, sources Air Arms et Hill et limites explicites. Comparé aux deux guides voisins : orientation de rubrique distincte. Les cinq fiches courtes restent non admises.",
+      "sourceDocuments": [
+        {
+          "url": "https://resources.air-arms.co.uk/s510core",
+          "sha256": "f4843bbc75468c5a849679f11201b070c21db151f7c49b1f22f0d2db386d5db5"
+        },
+        {
+          "url": "https://www.air-arms.co.uk/learning-centre/airgun-air-tank-vs-hand-pump-vs-compressor",
+          "sha256": "ef4e4713c461a6e0e5c2404075bfa41f1a65eac83b081c998ed4ee8123ad0432"
+        },
+        {
+          "url": "https://www.airriflepump.com/blog/why-moisture-matters-pcp-air-rifle/",
+          "sha256": "a3f8b316fcf81faa43307641533c7ab807c89a322fe56691740c7561c02b9ba8"
+        },
+        {
+          "url": "https://www.airriflepump.com/product/ec-3000-evo-the-hill-electric-air-pcp-airgun-airsoft-hpa-compressor/",
+          "sha256": "8fb5e766a798b94a94ea2d82c00c1c05319f0293512a11d6ef9f7bfe3ee58f79"
+        },
+        {
+          "url": "https://www.airriflepump.com/product/hill-mk5-pump/",
+          "sha256": "119fad01ecbcd078b214f6c63b20add71206b4fdf44b06720fe624371e85c520"
+        },
+        {
+          "url": "https://www.umarexusa.com/2254847",
+          "sha256": "3467ac292138255d19991e3902b4c8db96eb4ce3903848e52c1d94350c5d3a85"
+        },
+        {
+          "url": "https://www.weihrauch-sport.de/luftgewehre/pressluft/hw-110-t",
+          "sha256": "bf000c5bbb72277da7a33700f3627609c38fc539c8dcf7e0194889d8c1320aa3"
+        }
+      ]
+    },
+    {
+      "path": "/guides/pcp-air-precomprime-comprendre/",
+      "contentHash": "4dd3a848108b871be53ed471352061950bfa8d407243533ace3b8d2ecdf11827",
+      "neighbors": [
+        "/guides/pcp-lire-documentation-remplissage/",
+        "/pcp/"
+      ],
+      "contextHash": "3e6d2c498f6cbf3ba05c142677ac121258a0c22d48dc33e1f6618afac79db635",
+      "rulesHash": "e1ecff339324e94431acad685f0eb33e8101da3f301a921665a348a20a06ba7a",
+      "sourceReleaseSha": "ebf5a7e7a19e8becf8419cd0df533a6c62337816",
+      "reviewedAt": "2026-11-11T14:30:32.268Z",
+      "note": "Introduction relue contre Air Arms et Hill : définition PCP, stockage en réservoir, familles de remplissage et distinction avec le FAD de l’outillage. Sources et variantes contrôlées, schéma mobile lisible, aucun verdict d’ensemble ni procédure. Comparé au hub et au guide de lecture documentaire.",
+      "sourceDocuments": [
+        {
+          "url": "https://resources.air-arms.co.uk/help-center/air-arms-warranty-information",
+          "sha256": "70c6bcd5003a8c87c54da00b65a6ac55670d7df0ee5eeec42ffacd550b2fde42"
+        },
+        {
+          "url": "https://www.air-arms.co.uk/learning-centre/airgun-air-tank-vs-hand-pump-vs-compressor",
+          "sha256": "ef4e4713c461a6e0e5c2404075bfa41f1a65eac83b081c998ed4ee8123ad0432"
+        },
+        {
+          "url": "https://www.air-arms.co.uk/our-promise",
+          "sha256": "2c0edd422531da58f7bd5a89251837f4406b8dc5a7ddf463f20fc065c69fec2f"
+        },
+        {
+          "url": "https://www.air-arms.co.uk/rifle-manual-downloads",
+          "sha256": "0b8cb4e67354920f6c23cf452fe2043c61617443c9cf04630cadf6d1d16b4967"
+        },
+        {
+          "url": "https://www.airriflepump.com/product/ec-3000-evo-the-hill-electric-air-pcp-airgun-airsoft-hpa-compressor/",
+          "sha256": "8fb5e766a798b94a94ea2d82c00c1c05319f0293512a11d6ef9f7bfe3ee58f79"
+        },
+        {
+          "url": "https://www.airriflepump.com/product/hill-mk5-pump/",
+          "sha256": "119fad01ecbcd078b214f6c63b20add71206b4fdf44b06720fe624371e85c520"
+        }
+      ]
+    },
+    {
+      "path": "/guides/pcp-lire-documentation-remplissage/",
+      "contentHash": "8f9d7ee90ad5032a4f8f26394b9a00688e8bd4309ef8744286179659d3702738",
+      "neighbors": [
+        "/guides/pcp-air-precomprime-comprendre/",
+        "/pcp/"
+      ],
+      "contextHash": "fdbb1d93b27cd305d1e82bfce55d89a302a4fc9f35570f3423bad615758e8d6c",
+      "rulesHash": "e1ecff339324e94431acad685f0eb33e8101da3f301a921665a348a20a06ba7a",
+      "sourceReleaseSha": "ebf5a7e7a19e8becf8419cd0df533a6c62337816",
+      "reviewedAt": "2026-11-11T14:30:32.268Z",
+      "note": "Méthode documentaire relue : référence et variante, portée des unités, raccord de flexible distinct d’un ensemble validé, accessoires inclus ou optionnels. Exemples Hill MK5 Pro 5128-005 et Evo-310 EU 3000-003 confirmés, exigences Air Arms non transposées à d’autres modèles. Comparé à l’introduction et au hub.",
+      "sourceDocuments": [
+        {
+          "url": "https://resources.air-arms.co.uk/help-center/air-arms-warranty-information",
+          "sha256": "70c6bcd5003a8c87c54da00b65a6ac55670d7df0ee5eeec42ffacd550b2fde42"
+        },
+        {
+          "url": "https://www.air-arms.co.uk/rifle-manual-downloads",
+          "sha256": "0b8cb4e67354920f6c23cf452fe2043c61617443c9cf04630cadf6d1d16b4967"
+        },
+        {
+          "url": "https://www.airriflepump.com/blog/why-moisture-matters-pcp-air-rifle/",
+          "sha256": "a3f8b316fcf81faa43307641533c7ab807c89a322fe56691740c7561c02b9ba8"
+        },
+        {
+          "url": "https://www.airriflepump.com/product/ec-3000-evo-the-hill-electric-air-pcp-airgun-airsoft-hpa-compressor/",
+          "sha256": "8fb5e766a798b94a94ea2d82c00c1c05319f0293512a11d6ef9f7bfe3ee58f79"
+        },
+        {
+          "url": "https://www.airriflepump.com/product/hill-mk5-pump/",
+          "sha256": "119fad01ecbcd078b214f6c63b20add71206b4fdf44b06720fe624371e85c520"
+        }
+      ]
     }
   ]
 }

@@ -22,9 +22,10 @@ export async function getStaticPaths() {
 const { guide } = Astro.props;
 const { Content, headings } = await render(guide);
 const allGuides = await getCollection('guides');
+const isPcpGuide = guide.data.scope === 'pcp';
 const series = guide.data.series ? guideSeries[guide.data.series] : undefined;
 const relatedGuides = allGuides
-	.filter((item) => item.id !== guide.id)
+	.filter((item) => item.id !== guide.id && item.data.scope === guide.data.scope)
 	.map((item) => ({
 		item,
 		score: Number(guide.data.relatedGuides.includes(item.id)) * 24
@@ -102,7 +103,12 @@ const articleJsonLd = {
 			<nav class="breadcrumb" aria-label="Fil d’Ariane"><a href="/guides/">Guides</a><span>/</span><span>{guide.data.category}</span></nav>
 			<header class="article-head"><p class="eyebrow">{guide.data.category}</p><div class="article-taxonomy" aria-label="Publics, métiers et dossier">{series && <a href={series.path} data-guide-series={guide.data.series}>{series.label}</a>}{guide.data.audiences.map((audience) => <a href={`/guides/${guideAudiences[audience].label.toLocaleLowerCase('fr-FR')}/`}>{guideAudiences[audience].label}</a>)}{guide.data.metiers.map((metier) => <a href={`/guides/metiers/${metier}/`}>{guideMetiers[metier].label}</a>)}</div><h1>{guide.data.title}</h1><p class="lead">{guide.data.description}</p><p class="article-byline" data-review-status={guide.data.reviewStatus}>Publié le {published} · Lecture {guide.data.readingTime} minutes · Rédaction <a href="/gouvernance-editoriale/">{guide.data.author}</a> · {externallyReviewed ? <>Revue technique par {guide.data.reviewer}, {guide.data.reviewerRole}</> : <>Relecture éditoriale interne, sans validation professionnelle externe</>}</p></header>
 			<div class="article-body">{guide.data.sources.map((sourceUrl: string) => <SourceAvailabilityNotice sourceUrl={sourceUrl} />)}<Content /></div>
-			<section class="guide-next-step" aria-labelledby="guide-next-step-title">
+			{isPcpGuide ? <section class="guide-next-step" aria-labelledby="guide-next-step-title">
+				<p class="eyebrow">Documentation PCP</p>
+				<h2 id="guide-next-step-title">Retrouver les références et leurs sources</h2>
+				<p>Les fiches PCP présentent les données constructeur et les informations manquantes. Elles ne valident pas un ensemble de remplissage et ne relèvent pas du calculateur d’outillage pneumatique.</p>
+				<a class="button primary" href="/pcp/">Explorer les fiches PCP</a>
+			</section> : <section class="guide-next-step" aria-labelledby="guide-next-step-title">
 				<p class="eyebrow">Vérifier sur des données réelles</p>
 				<h2 id="guide-next-step-title">Vérifier ce guide avec un outil réel</h2>
 				{relatedTool ? (
@@ -139,9 +145,9 @@ const articleJsonLd = {
 						</div>
 					</>
 				)}
-			</section>
+			</section>}
 			{relatedGuides.length > 0 && <section class="related-reading"><h2>Continuer sur ce sujet</h2><div class="link-cards">{relatedGuides.map((item) => <a href={`/guides/${item.id}/`}><strong>{item.data.title}</strong><span>{item.data.description}</span></a>)}</div></section>}
 		</div>
-		<aside class="article-aside" aria-label="Sommaire"><strong>Dans ce dossier</strong><ol>{headings.filter((heading) => heading.depth === 2).map((heading) => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol>{series && <a class="aside-secondary" href={series.path}>Voir toute la série</a>}<a class="button primary" href="/calculateur/">Ouvrir le calculateur</a><a class="aside-secondary" href="/glossaire/">Consulter le glossaire</a></aside>
+		<aside class="article-aside" aria-label="Sommaire"><strong>Dans ce dossier</strong><ol>{headings.filter((heading) => heading.depth === 2).map((heading) => <li><a href={`#${heading.slug}`}>{heading.text}</a></li>)}</ol>{series && <a class="aside-secondary" href={series.path}>Voir toute la série</a>}<a class="button primary" href={isPcpGuide ? '/pcp/' : '/calculateur/'}>{isPcpGuide ? 'Explorer les fiches PCP' : 'Ouvrir le calculateur'}</a><a class="aside-secondary" href="/glossaire/">Consulter le glossaire</a></aside>
 	</article>
 </BaseLayout>
