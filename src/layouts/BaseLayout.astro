@@ -11,6 +11,7 @@ import AcquisitionTelemetry from '../components/AcquisitionTelemetry.astro';
 import CalculatorAcquisitionTelemetry from '../components/CalculatorAcquisitionTelemetry.astro';
 import CommercialIntentTelemetry from '../components/CommercialIntentTelemetry.astro';
 import McpCanonicalTelemetry from '../components/McpCanonicalTelemetry.astro';
+import AnalyticsConsent from '../components/AnalyticsConsent.astro';
 import { resolveDocumentTitle } from '../domain/metadata';
 import { socialCardKey } from '../domain/social-card';
 import { serializeJsonLd } from '../domain/structured-data';
@@ -242,12 +243,13 @@ const breadcrumbJsonLd = breadcrumbs.length ? {
 
 				<div class="footer-bottomline">
 					<p>CompatAir © {currentYear} · sans compte · sans publicité ciblée</p>
-					<div><a href="/mentions-legales/">Mentions légales</a><a href="/cookies/">Cookies</a><a href="/sitemap-index.xml">Sitemap</a></div>
+					<div><a href="/mentions-legales/">Mentions légales</a><a href="/conditions-utilisation/">Conditions d’utilisation</a><a href="/confidentialite/">Confidentialité</a><a href="/cookies/#choix" data-analytics-settings>Réglages des cookies</a><a href="/sitemap-index.xml">Sitemap</a></div>
 				</div>
 			</div>
 		</footer>
 		{currentPath.startsWith('/calculateur/') ? <CalculatorAcquisitionTelemetry /> : <AcquisitionTelemetry />}
 		{commercialIntentTelemetryEnabled && <CommercialIntentTelemetry />}
+		<AnalyticsConsent lang={lang} />
 	</body>
 </html>
 

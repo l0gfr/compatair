@@ -1,0 +1,30 @@
+---
+import analytics from '../../config/analytics.json';
+const { lang = 'fr' } = Astro.props;
+const en = lang === 'en';
+---
+<aside hidden class="analytics-consent" data-analytics-consent data-measurement-id={analytics.measurementId} aria-labelledby="analytics-consent-title">
+	<h2 id="analytics-consent-title">{en ? 'Audience measurement' : 'Mesure d’audience'}</h2>
+	<p>{en ? 'Allow Google Analytics to measure visits and use of the site? Your searches and simulations are excluded.' : 'Autoriser Google Analytics pour mesurer les visites et l’usage du site ? Vos recherches et simulations sont exclues.'} <a href="/confidentialite/#google-analytics">{en ? 'Privacy details' : 'Détails et confidentialité'}</a></p>
+	<p class="analytics-consent-status" data-analytics-status aria-live="polite"></p>
+	<div class="analytics-consent-actions">
+		<button type="button" class="button" data-analytics-refuse>{en ? 'Reject' : 'Refuser'}</button>
+		<button type="button" class="button" data-analytics-accept>{en ? 'Accept' : 'Accepter'}</button>
+		<button type="button" class="analytics-close" data-analytics-close hidden>{en ? 'Close' : 'Fermer'}</button>
+	</div>
+</aside>
+<script>
+	import { initializeAnalyticsConsent } from '../client/analytics';
+	initializeAnalyticsConsent();
+</script>
+<style>
+	.analytics-consent { position: fixed; z-index: 1000; bottom: 1rem; right: 1rem; width: min(31rem, calc(100% - 2rem)); padding: 1rem; background: var(--surface, #fffdf7); color: #11251c; border: 1px solid #718375; border-radius: .75rem; box-shadow: 0 .3rem 1.5rem #11251c26; font-size: .9rem; }
+	.analytics-consent[hidden], .analytics-consent [hidden] { display: none; }
+	.analytics-consent h2 { font-family: inherit; font-size: 1rem; margin: 0 0 .4rem; }
+	.analytics-consent p { margin: .4rem 0 .75rem; line-height: 1.45; }
+	.analytics-consent-actions { display: flex; gap: .6rem; flex-wrap: wrap; align-items: center; }
+	.analytics-consent-actions .button { flex: 1; min-height: 44px; padding: .5rem 1rem; background: #11251c; color: #fffdf7; border: 1px solid #11251c; font-size: .9rem; }
+	.analytics-close { min-height: 44px; padding: .5rem; background: transparent; color: inherit; text-decoration: underline; border: 0; cursor: pointer; }
+	.analytics-consent-status:empty { display: none; }
+	@media (max-width: 480px) { .analytics-consent { bottom: .5rem; right: .5rem; width: calc(100% - 1rem); padding: .8rem; } }
+</style>
