@@ -1,7 +1,7 @@
 import { CALCULATION_VERSION } from '../server/air-sizing.mjs';
 import { readFile } from 'node:fs/promises';
 import { pathToFileURL } from 'node:url';
-import { internalVerificationUserAgent, readBoundedResponse, readSnapshotProbe, verifySnapshotManifest, verifySnapshotRange } from './lib/live-seo-verification.mjs';
+import { httpSmokeMarkers, verifyHttpSmokeMarker, internalVerificationUserAgent, readBoundedResponse, readSnapshotProbe, verifySnapshotManifest, verifySnapshotRange } from './lib/live-seo-verification.mjs';
 
 const origin = new URL(process.env.COMPATAIR_SITE_ORIGIN ?? 'https://compatair.fr').origin;
 const expectedSha = process.env.COMPATAIR_EXPECTED_RELEASE_SHA;
@@ -61,7 +61,7 @@ const status = (expected) => ({ response }) => {
 
 const bodyContains = (needle) => ({ body, response }) => {
 	assert(response.status === 200, `HTTP attendu 200, reçu ${response.status}`);
-	assert(body.includes(needle), `marqueur absent ${JSON.stringify(needle)}`);
+	verifyHttpSmokeMarker(body, needle);
 };
 
 await check(
@@ -105,34 +105,7 @@ for (const alias of ['/sitemap.xml', '/sitemap_index.xml']) {
 	});
 }
 
-for (const [label, pathname, marker] of [
-	['scanner', '/scanner/', 'data-compatair-surface="scanner"'],
-	['professionnels', '/professionnels/', 'id="merchant-widget-demo"'],
-	['widget immuable', '/widget/v1.0.0/compatair-widget.js', 'CompatAir widget API v1'],
-	['observatoire', '/data/document-quality-observatory.json', 'observatoryVersion'],
-	['radar JSON', '/data/contradiction-radar.json', 'radarVersion'],
-	['radar public', '/radar-contradictions/', 'Radar des contradictions'],
-	['graphe de preuve', '/graphe-preuve/', 'data-proof-graph'],
-	['clés de signature', '/data/signing-keys.json', 'Ed25519'],
-	['documentation UCP FR', '/ucp/', 'fr.compatair.air.compatibility'],
-	['documentation UCP EN', '/en/ucp/', 'fr.compatair.air.compatibility'],
-	['CompatAir pour les agents', '/agents/', 'Statistiques MCP anonymisées'],
-	['reçu de compatibilité', '/recu-compatibilite/', 'Vérifier un reçu'],
-	['compatibility receipt EN', '/en/compatibility-receipt/', 'Verify a receipt'],
-	['schéma reçu', '/schemas/compatibility-receipt-1.0.0.json', 'receipt_id'],
-	['benchmark agents', '/benchmark-agents/', '100 scénarios'],
-	['benchmark JSON', '/data/agent-fidelity-benchmark.json', '"scenarioCount":100'],
-	['benchmark de sélection MCP', '/data/mcp-agent-selection-benchmark.json', '"caseCount": 50'],
-	['matrice des versions', '/compatibilite-versions/', 'Une version, une frontière précise'],
-	['matrice des versions JSON', '/data/version-compatibility.json', '"MCP server"'],
-	['leaderboard agents', '/data/agent-fidelity-leaderboard.json', 'awaiting_reproducible_submissions'],
-	['Compatibility Impact Feed EN', '/en/compatibility-impact-feed/', 'Know which decisions require recalculation'],
-	['découverte UCP', '/.well-known/ucp', 'fr.compatair.air.compatibility'],
-	['OpenAPI UCP', '/openapi/ucp-2026-07-15.json', 'evaluateAirCompatibility'],
-	['fraîcheur machine', '/data/freshness.json', 'maximum_age_days'],
-	['intégrité machine', '/data/integrity.json', 'sha-256'],
-	['changefeed machine', '/data/changefeed.json', 'protocol:ucp:2026-07-15'],
-]) {
+for (const [label, pathname, marker] of httpSmokeMarkers) {
 	await check(label, pathname, bodyContains(marker));
 }
 

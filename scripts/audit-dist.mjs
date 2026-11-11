@@ -1,3 +1,4 @@
+import { verifyStaticSmokePages } from './lib/live-seo-verification.mjs';
 import { createHash } from 'node:crypto';
 import { lstat, readdir, readFile } from 'node:fs/promises';
 import { basename, join, relative, resolve } from 'node:path';
@@ -19,6 +20,7 @@ import legacyArchive from '../config/legacy-verdict-archive.json' with { type: '
 const archivePaths = new Set([...legacyArchive.manifest.files.map(entry => `${legacyArchive.basePath}/${entry.path.split('/').at(-1)}`), `${legacyArchive.basePath}/signatures.json`]);
 
 const root = resolve('dist');
+await verifyStaticSmokePages(pathname => readFile(join(root, pathname, 'index.html'), 'utf8'));
 const auditedCatalog = JSON.parse(await readFile(join(root, 'data/catalog.json'), 'utf8'));
 const referenceCount = auditedCatalog.compressors.length + auditedCatalog.tools.length;
 const growthRatio = Math.max(1, referenceCount / 5_006);

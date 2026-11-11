@@ -12,6 +12,9 @@ import {
 	mapVerificationConcurrent,
 	liveSeoDeadlineMs,
 	internalVerificationUserAgent,
+	httpSmokeMarkers,
+	verifyHttpSmokeMarker,
+	verifyStaticSmokePages,
 	readSnapshotProbe,
 	verifySnapshotManifest,
 	countInternalLinks,
@@ -24,6 +27,28 @@ import {
 	verifyIndexationPage,
 	verifyEditorialHoldPage,
 } from './live-seo-verification.mjs';
+
+describe('shared generated and live smoke markers', () => {
+	const pages = new Map(httpSmokeMarkers.filter(([, path]) => path.endsWith('/')).map(([, path, marker]) => [path, `<main>${marker}</main>`]));
+	it('checks every HTML smoke page before activation', async () => {
+		const readHtml = vi.fn(async path => pages.get(path));
+		await verifyStaticSmokePages(readHtml);
+		expect(readHtml.mock.calls.map(([path]) => path)).toEqual([...pages.keys()]);
+		expect(pages.get('/compatibilite-versions/')).toContain('Versions et compatibilité des interfaces');
+	});
+	it('rejects the obsolete title in both the generated and live checks', async () => {
+		const stale = '<h1>Une version, une frontière précise</h1>';
+		const [, , marker] = httpSmokeMarkers.find(([, path]) => path === '/compatibilite-versions/');
+		expect(() => verifyHttpSmokeMarker(stale, marker)).toThrow('marqueur absent');
+		await expect(verifyStaticSmokePages(async path => path === '/compatibilite-versions/' ? stale : pages.get(path))).rejects.toThrow('matrice des versions (/compatibilite-versions/): marqueur absent');
+	});
+	it.each([...pages.keys()])('blocks when the generated marker is absent from %s', async missing => {
+		await expect(verifyStaticSmokePages(async path => path === missing ? '<main>Wrong page</main>' : pages.get(path))).rejects.toThrow(`(${missing}): marqueur absent`);
+	});
+	it('propagates a missing generated file instead of skipping its check', async () => {
+		await expect(verifyStaticSmokePages(async () => { throw new Error('ENOENT'); })).rejects.toThrow('ENOENT');
+	});
+});
 
 describe('bounded exhaustive SEO verification', () => {
 	it('labels exhaustive requests and retries as declared internal checks', async () => {

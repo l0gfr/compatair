@@ -7,6 +7,48 @@ export const liveSeoDeadlineMs = 180_000;
 // Declared identity for our checks; it is a reporting hint, never authentication.
 export const internalVerificationUserAgent = 'CompatAir-Internal-Check/1.0';
 
+// Shared by the generated HTML audit and the public activation smoke.
+export const httpSmokeMarkers = [
+	['scanner', '/scanner/', 'data-compatair-surface="scanner"'],
+	['professionnels', '/professionnels/', 'id="merchant-widget-demo"'],
+	['widget immuable', '/widget/v1.0.0/compatair-widget.js', 'CompatAir widget API v1'],
+	['observatoire', '/data/document-quality-observatory.json', 'observatoryVersion'],
+	['radar JSON', '/data/contradiction-radar.json', 'radarVersion'],
+	['radar public', '/radar-contradictions/', 'Radar des contradictions'],
+	['graphe de preuve', '/graphe-preuve/', 'data-proof-graph'],
+	['clés de signature', '/data/signing-keys.json', 'Ed25519'],
+	['documentation UCP FR', '/ucp/', 'fr.compatair.air.compatibility'],
+	['documentation UCP EN', '/en/ucp/', 'fr.compatair.air.compatibility'],
+	['CompatAir pour les agents', '/agents/', 'Statistiques MCP anonymisées'],
+	['reçu de compatibilité', '/recu-compatibilite/', 'Vérifier un reçu'],
+	['compatibility receipt EN', '/en/compatibility-receipt/', 'Verify a receipt'],
+	['schéma reçu', '/schemas/compatibility-receipt-1.0.0.json', 'receipt_id'],
+	['benchmark agents', '/benchmark-agents/', '100 scénarios'],
+	['benchmark JSON', '/data/agent-fidelity-benchmark.json', '"scenarioCount":100'],
+	['benchmark de sélection MCP', '/data/mcp-agent-selection-benchmark.json', '"caseCount": 50'],
+	['matrice des versions', '/compatibilite-versions/', 'Versions et compatibilité des interfaces'],
+	['matrice des versions JSON', '/data/version-compatibility.json', '"MCP server"'],
+	['leaderboard agents', '/data/agent-fidelity-leaderboard.json', 'awaiting_reproducible_submissions'],
+	['Compatibility Impact Feed EN', '/en/compatibility-impact-feed/', 'Know which decisions require recalculation'],
+	['découverte UCP', '/.well-known/ucp', 'fr.compatair.air.compatibility'],
+	['OpenAPI UCP', '/openapi/ucp-2026-07-15.json', 'evaluateAirCompatibility'],
+	['fraîcheur machine', '/data/freshness.json', 'maximum_age_days'],
+	['intégrité machine', '/data/integrity.json', 'sha-256'],
+	['changefeed machine', '/data/changefeed.json', 'protocol:ucp:2026-07-15'],
+];
+
+export function verifyHttpSmokeMarker(body, marker) {
+	if (!body.includes(marker)) throw new Error(`marqueur absent ${JSON.stringify(marker)}`);
+}
+
+export async function verifyStaticSmokePages(readHtml) {
+	for (const [label, pathname, marker] of httpSmokeMarkers) {
+		if (!pathname.endsWith('/')) continue;
+		try { verifyHttpSmokeMarker(await readHtml(pathname), marker); }
+		catch (error) { throw new Error(`${label} (${pathname}): ${error.message}`); }
+	}
+}
+
 export function createVerificationBudget(timeoutMs = liveSeoDeadlineMs) {
 	if (!Number.isSafeInteger(timeoutMs) || timeoutMs < 1) throw new Error('Délai global SEO invalide');
 	const controller = new AbortController();

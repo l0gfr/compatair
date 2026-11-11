@@ -18,6 +18,13 @@ const releaseRoute = readFileSync(new URL('../src/pages/data/release.json.ts', i
 const liveSmoke = readFileSync(new URL('./smoke-live-http.mjs', import.meta.url), 'utf8');
 
 describe('release boundary policy', () => {
+	it('checks the same public page markers against generated HTML before activation', () => {
+		const audit = readFileSync(new URL('./audit-dist.mjs', import.meta.url), 'utf8');
+		expect(liveSmoke).toContain('for (const [label, pathname, marker] of httpSmokeMarkers)');
+		expect(liveSmoke).toContain('verifyHttpSmokeMarker(body, needle)');
+		expect(audit).toContain("import { verifyStaticSmokePages } from './lib/live-seo-verification.mjs'");
+		expect(audit).toContain("await verifyStaticSmokePages(pathname => readFile(join(root, pathname, 'index.html'), 'utf8'))");
+	});
 	it('centralizes all seven source gates and preserves the complete manual and production validations', () => {
 		const scripts = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8')).scripts;
 		const sourceGates = ['catalog:check', 'audit:editorial', 'audit:page-value', 'contracts:check', 'benchmark:mcp-manifest', 'check', 'test'];
