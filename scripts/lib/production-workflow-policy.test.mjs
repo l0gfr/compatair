@@ -41,6 +41,32 @@ const gates = [
 ];
 
 describe('production workflow blocking DAG', () => {
+	it.each([
+		['preflight', 'Probe artifact upload', 2],
+		['preflight', 'Probe artifact download', 2],
+		['validate', 'Upload compact Lighthouse summary', 2],
+		['validate', 'Upload full Lighthouse diagnostics on failure', 2],
+		['validate', 'Upload release artifact', 5],
+		['deploy', 'Download verified release artifact', 2],
+		['deploy', 'Archive signed production invariants', 2],
+	])('bounds the blocking artifact transfer %s / %s to %i minutes', (job, name, maximum) => {
+		expect(productionWorkflowErrors(production)).toEqual([]);
+		expect(step(production, job, name)['timeout-minutes']).toBe(maximum);
+		rejects(config => { delete step(config, job, name)['timeout-minutes']; });
+		for (const value of [0, -1, 1.5, `${maximum}`, maximum + 1]) rejects(config => { step(config, job, name)['timeout-minutes'] = value; });
+	});
+	it('requires a round-trip artifact probe before starting the expensive jobs', () => {
+		for (const name of ['Prepare artifact service probe', 'Probe artifact upload', 'Verify artifact probe identity', 'Probe artifact download', 'Verify artifact service probe']) {
+			rejects(config => { config.jobs.preflight.steps = config.jobs.preflight.steps.filter(item => item.name !== name); });
+			rejects(config => { step(config, 'preflight', name).if = 'false'; });
+		}
+		rejects(config => { step(config, 'preflight', 'Verify artifact service probe').run = 'true'; });
+		rejects(config => { step(config, 'preflight', 'Probe artifact upload').with.path = '.'; });
+		rejects(config => { step(config, 'preflight', 'Probe artifact upload').with['retention-days'] = 90; });
+		for (const override of [{ name: 'another-run' }, { 'artifact-ids': '123' }, { 'digest-mismatch': 'warn' }]) rejects(config => Object.assign(step(config, 'preflight', 'Probe artifact download').with, override));
+		rejects(config => { delete step(config, 'preflight', 'Verify artifact probe identity').env.PROBE_ARTIFACT_ID; });
+		rejects(config => { const index = config.jobs.preflight.steps.findIndex(item => item.name === 'Verify artifact service probe'); config.jobs.preflight.steps.unshift(config.jobs.preflight.steps.splice(index, 1)[0]); });
+	});
 	it('compares the cache migration HTML after building and before signing or activation', () => {
 		const steps = production.jobs.validate.steps;
 		const check = commandStep(production, 'validate', 'node scripts/verify-html-cache-equivalence.mjs');

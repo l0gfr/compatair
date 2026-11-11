@@ -24,6 +24,9 @@ jobs:
     if: github.ref == 'refs/heads/main' && vars.DEPLOY_ENABLED == 'true'
     runs-on: ubuntu-24.04
     timeout-minutes: 10
+    permissions:
+      contents: read
+      actions: read
     outputs:
       node_version: ${{ steps.node.outputs.node-version }}
     steps:
@@ -54,6 +57,41 @@ jobs:
 
       - name: Lint source and workflow policy
         run: pnpm lint:source
+
+      - name: Prepare artifact service probe
+        run: |
+          set -Eeuo pipefail
+          mkdir -p .astro/artifact-probe
+          printf '%s\n' "$GITHUB_SHA" > .astro/artifact-probe/source-sha.txt
+
+      - name: Probe artifact upload
+        id: artifact_probe
+        timeout-minutes: 2
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: compatair-artifact-probe-${{ github.run_id }}-${{ github.run_attempt }}
+          path: .astro/artifact-probe/source-sha.txt
+          if-no-files-found: error
+          retention-days: 1
+          compression-level: 9
+
+      - name: Verify artifact probe identity
+        shell: bash
+        env:
+          PROBE_ARTIFACT_ID: ${{ steps.artifact_probe.outputs.artifact-id }}
+        run: '[[ "$PROBE_ARTIFACT_ID" =~ ^[1-9][0-9]*$ ]]'
+
+      - name: Probe artifact download
+        timeout-minutes: 2
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          artifact-ids: ${{ steps.artifact_probe.outputs.artifact-id }}
+          path: .astro/artifact-probe/download
+          merge-multiple: true
+          digest-mismatch: error
+
+      - name: Verify artifact service probe
+        run: cmp .astro/artifact-probe/source-sha.txt .astro/artifact-probe/download/source-sha.txt
 
   source-tests:
     needs: preflight
@@ -301,6 +339,7 @@ jobs:
         run: pnpm crux:report
 
       - name: Upload compact Lighthouse summary
+        timeout-minutes: 2
         if: ${{ always() && hashFiles('.lighthouseci/reports/summary.json') != '' }}
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
@@ -313,6 +352,7 @@ jobs:
           compression-level: 9
 
       - name: Upload full Lighthouse diagnostics on failure
+        timeout-minutes: 2
         if: ${{ failure() && hashFiles('.lighthouseci/reports/**') != '' }}
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
@@ -371,6 +411,7 @@ jobs:
 
       - name: Upload release artifact
         id: release_artifact
+        timeout-minutes: 5
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: compatair-production-${{ github.sha }}
@@ -432,6 +473,7 @@ jobs:
         run: '[[ "$RELEASE_ARTIFACT_ID" =~ ^[1-9][0-9]*$ ]]'
 
       - name: Download verified release artifact
+        timeout-minutes: 2
         uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
         with:
           artifact-ids: ${{ needs.validate.outputs.release_artifact_id }}
@@ -540,6 +582,7 @@ jobs:
         run: pnpm indexnow:submit
 
       - name: Archive signed production invariants
+        timeout-minutes: 2
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: compatair-invariants-${{ github.sha }}
