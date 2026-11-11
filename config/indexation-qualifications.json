@@ -79200,6 +79200,1251 @@
           "sha256": "725abef68c80156ec6dfaaab5b4fc2f1c86868c6ff94e3cd9dc9d313c66206ec"
         }
       ]
+    },
+    {
+      "path": "/compresseurs/gentilin-csk330-24/",
+      "contentHash": "c98314bb2985841d415da44c09eb509811047fd0272fd5aa3855f49aeb1a3b11",
+      "neighbors": [
+        "/compresseurs/gentilin-csk330-03/",
+        "/compresseurs/gentilin-csk330-100/"
+      ],
+      "contextHash": "2cd391e4395eb2a3a366253fe0c024cb815c5735ef89abf259a10e5e14bac7d4",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Fiche actuelle 811006006 et notice CSK p.11 : 200 L/min à 5 bar, 170 à 8, 330 aspirés séparés, S1 100 % pour ce produit, compression sans huile, 24 L, 40 kg et 55,4×48×78 cm. Voisins CSK330/03 et /100 : même production, 3/90 L et 34/60 kg. L’apport est le stockage et l’encombrement du /24, sans gain de FAD attribué à la cuve.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.gentilinair.com/docs/csk330032450100en_1711019020.pdf#page=11",
+          "sha256": "9ef6a1b68ab9b94d9496bed176fa43986b65c66f1483518a159670df0844ac25"
+        },
+        {
+          "url": "https://www.gentilinair.com/en/products/csk330-24",
+          "sha256": "accb23fe23faa53bc6998bbad2c2d2b2b364b54916e371c16f36a33c28de76ee"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/gentilin-csk330-50/",
+      "contentHash": "92038cbc400774b1976752871cea902b120f953f4cf67746ae46b05d2f5a278c",
+      "neighbors": [
+        "/compresseurs/gentilin-csk330-03/",
+        "/compresseurs/gentilin-csk330-100/"
+      ],
+      "contextHash": "2cd391e4395eb2a3a366253fe0c024cb815c5735ef89abf259a10e5e14bac7d4",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Fiche actuelle 811009010 et notice p.11 : FAD 200 à 5 bar/170 à 8, aspiration 330 distincte, S1 100 % produit, 50 L, 46 kg, 55,6×47,6×101,8 cm. Comparaison CSK330/03 et /100 : 3 et 90 L à production identique. Ce /50 change tampon et manutention ; aucune extrapolation au-delà des deux points.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.gentilinair.com/docs/csk330032450100en_1711019020.pdf#page=11",
+          "sha256": "9ef6a1b68ab9b94d9496bed176fa43986b65c66f1483518a159670df0844ac25"
+        },
+        {
+          "url": "https://www.gentilinair.com/en/products/csk330-50",
+          "sha256": "673e4693aa5c9e378077eae955976dfdc982d5910c58337bf326a002030ccd4b"
+        }
+      ]
+    },
+    {
+      "path": "/guides/airpress-hl425-50-hl340-90-debit/",
+      "contentHash": "93b83c067b793a4a58ca67fd09dbd623297a14585cb80b501af3360c248a9df5",
+      "neighbors": [
+        "/guides/guide-complet-dimensionner-compresseur-air/"
+      ],
+      "contextHash": "ac61fab1d4386e4e2286bb9072016491649a06b084d8d5305003fa5dad160c7b",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Lecture des deux fiches Airpress actuelles : HL425-50 392 aspirés/260 restitués, 50 L, 8 bar ; HL340-90 340/272, 90 L, 10 bar. Les 12 L/min sont une différence arithmétique sans pression de mesure associée. Cycle 30/70 conservé. Le guide général de dimensionnement explique la méthode ; celui-ci résout la comparaison trompeuse des noms 425 et 340, du débit et du tampon. Aucun verdict continu inventé.",
+      "sourceDocuments": [
+        {
+          "url": "https://airpress.fr/compresseur-hl-340-90-10-bar-3-ch-2-2-kw-272-l-min-90-l-230-v-36844-e",
+          "sha256": "82b9d2415365ae0f42649c09d2f876b01cfed8fa955d10a37356718de2c467b6"
+        },
+        {
+          "url": "https://airpress.fr/compresseur-hl-425-50-8-bar-3-ch-2-2-kw-260-l-min-50-l-230-v-36843",
+          "sha256": "e7c5d44e583898be90153f30def49323c7b34e94129e17a2c81055d71ed63b08"
+        }
+      ]
+    },
+    {
+      "path": "/guides/atelier-visseuse-ponceuse-demande-moyenne/",
+      "contentHash": "6cc254be062690229f3b1f0893c5db744113d9ddca220ed586d5e4f776529c33",
+      "neighbors": [
+        "/guides/utiliser-plusieurs-outils-pneumatiques/"
+      ],
+      "contextHash": "8264eb4c0ed84f8c08bb0cba19d8c4a8b0a39c061c5b92923d33c78836e175b7",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Fiam 15C5A : notice p.8 ligne 112514375 et pied p.9, 5,5 L/s à 6,3 bar ; régime non précisé. RUPES RH356 : catalogue p.58, 340 L/min max, pression de travail 6,2 bar séparée de la mesure. Correction de cette distinction. 168,3 L/min et somme 670 sont des hypothèses explicites 10 s/20 s, jamais un dimensionnement établi. Le voisin utilise deux outils Einhell simultanés/successifs ; ici le problème distinct est une moyenne temporelle et les conditions absentes du couple atelier.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.fiamgroup.com/en/products/handheld-air-screwdrivers/15c5a/",
+          "sha256": "b0491a265568c0d854f697dce9fa0c774dcd922ed5eb7c57dd0bd46e9c58c6e5"
+        },
+        {
+          "url": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-85.pdf",
+          "sha256": "e1c8db38588668ff2347c0005a43ac3067609b0b280d80dc3548f0d8043dccce"
+        },
+        {
+          "url": "https://www.rupes.com/catalogue/2026/RUPES_Catalogue-2026_EN.pdf",
+          "sha256": "018272fb053802b4e419d3f70bb75a46a02a62aec2a0404862ded7c21b443a63"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/nuair-fc2-24/",
+      "contentHash": "9e10f89b4401643edd17ba54a786d1cae205f4c6cd9ccecf84263bc08e4fd2ff",
+      "neighbors": [
+        "/compresseurs/nuair-fc2-50/"
+      ],
+      "contextHash": "087d6001fbe27dc2c5ec8c703456d390708b77665ddb8782bf976ffaec52e6e9",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Catalogue Nuair 2022 p.9 : FC2/24 FCCC404NUB003_, cuve 24 L, 8 bar, 1,5 kW, 222 L/min Air displacement, lubrifié, 2850 tr/min, 230/50. La masse 24 kg est brute et les cotes 580×240×580 celles de boîte. Comparaison FC2/50, même pompe mais 50 L/33 kg bruts : production non établie, choix réel de stockage ; FAD vide et cycle inconnu maintenus, ancienneté commerciale explicite.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.nuair.pl/images/katalogi/Catalogo_Nuair_Professional_2022_9990284_PL.pdf#page=9",
+          "sha256": "ff66120118923fba45228dbfc35eca66f045a3ad4c98e751bec6dfd582ecb1a9"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/stanley-fatmax-dn-200-10-30v/",
+      "contentHash": "72c0a681f32f2d8b062fd52cfc7685246bc14377f05980e32e0f84e5316f912d",
+      "neighbors": [
+        "/compresseurs/stanley-fatmax-d-211-8-24s/",
+        "/compresseurs/stanley-fatmax-dn-230-10-50v/"
+      ],
+      "contextHash": "12c6d66dd95e15be04332747ac4f7c21a7d7eacc4df2c031defb2b01d4b0cd37",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Stanley Fatmax 2020 p.10, code 8117200STF501/FM XCM0001E : 30 L, 10 bar, OL195, 1,1 kW, 180 aspirés, 3400 tr/min, sans huile. 20,9 kg et 365×325×785 sont bruts/emballés. Voisin DN230/50V : 50 L, 1,5 kW, OL227/222 aspirés. La fiche évite de déduire un FAD du nom DN200 ; compatibilité non conclusive et disponibilité actuelle inconnue.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.nuair.pl/images/katalogi/Catalogo_STANLEY_FATMAX_2020_EN_9990222_LR.pdf#page=10",
+          "sha256": "b2015c46cd22990d7024097652b91193a116a7959be0886b3265d976fd49e1ad"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/stanley-fatmax-dn-230-10-50v/",
+      "contentHash": "9ed2d3f5f006c2968005de2e80e344d1a196c349e499c9303365b81c555df5bb",
+      "neighbors": [
+        "/compresseurs/stanley-fatmax-d-211-8-24s/",
+        "/compresseurs/stanley-fatmax-dn-200-10-30v/"
+      ],
+      "contextHash": "9a56d0d10a9e2a89aee5d5f187b314555269c3e5800f96671c0f79b7b9ca8e39",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Stanley 2020 p.10, 8117210STF502/FMXCM0002E : 50 L, 10 bar, OL227, 1,5 kW, aspiration 222, sans huile, 25 kg bruts/365×340×865 emballage. Voisin DN200/30V : 30 L, OL195, 1,1 kW/180 aspirés ; différence réelle de stockage et groupe. Aucun débit restitué ni cycle silencieusement créé.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.nuair.pl/images/katalogi/Catalogo_STANLEY_FATMAX_2020_EN_9990222_LR.pdf#page=10",
+          "sha256": "b2015c46cd22990d7024097652b91193a116a7959be0886b3265d976fd49e1ad"
+        }
+      ]
+    },
+    {
+      "path": "/guides/sata-dry-jet-2-compresseur-sechage-peinture/",
+      "contentHash": "e5034634ce546b023fa91e4e0cde9c981991ca77d236af6d868158e4e1af4da7",
+      "neighbors": [
+        "/guides/amplificateur-air-exair-consommation-debit/"
+      ],
+      "contextHash": "d99571f8c4be46fe0ebe58c27c1d4750798a8f872dc27647d675d8d0b6f16ab4",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Notice SATA remplacée par le lien fabricant courant, PDF français p.94 relu : 270 Nl/min à 2,5 bar, filtre à remplacer quand encrassé. La fiche confirme le principe Venturi. Deux unités donnent 540 Nl/min dans les mêmes conditions ; aucun temps de séchage déduit. Le voisin EXAIR distingue les flux d’un amplificateur général ; ce dossier traite le séchage peinture, le nombre de buses et l’entretien propre au dry jet 2. L’ancien 404 reste dans le diagnostic.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.sata.com/de-de/sata-dry-jet-2-trockenblaspistole/217489",
+          "sha256": "0b1c6ad725840e7df68c649bbbd3767a0c172799e9a74ca97a246c579ff5e712"
+        },
+        {
+          "url": "https://www.sata.com/media/b6/b9/fd/1793362241/BAL-SATA-DRY-JET-2.PDF.PDF?ts=1793362241",
+          "sha256": "3fe6dc0021e44e6fcbbd0ae114c54ea78bb58dd02e2e72ddb3b59d8930b212d0"
+        }
+      ]
+    },
+    {
+      "path": "/guides/ventouse-depose-piece-soufflage-duree-debit/",
+      "contentHash": "3da5f8be575d1bbc51b3085098a4fc2976aa777bd2791f92eecf9f192a17dd97",
+      "neighbors": [
+        "/guides/ejecteur-schmalz-scpsi-economiseur-air-cycles/"
+      ],
+      "contextHash": "6c72089ffbfd140837a5c8e56075dd65565503569170d0519bf6833d10371dbc",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Notice SCPSi-UHV-HD p.28, sections 7.6 et 7.7 relues : trois commandes de soufflage, temporisation 0,10–9,99 s, réglage débit 10–100 % et précaution de butée. Le voisin traite l’économiseur pendant maintien, H1/hystérésis ; ce guide traite uniquement la dépose et la séparation durée/débit/commande. Aucun réglage optimal ni garantie de tenue universelle.",
+      "sourceDocuments": [
+        {
+          "url": "https://media.schmalz.com/MAM_Library/Dokumente/Bedienungsanleitung/30/3030/303001/30300101484/29f2b2b77a3c_BAL_30.30.01.01484_en-EN.pdf",
+          "sha256": "7173a2a4da7241466f6943e26a8a6eb338e8b1187a99b0d8cf033d29ff0b6c84"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/renner-rs-pro-7-5-310014/",
+      "contentHash": "d394da536a27726ef7597fa0222989e7766188c324189f1739c445d6f0ca4ec9",
+      "neighbors": [
+        "/compresseurs/renner-rs-pro-7-5-310012/",
+        "/compresseurs/renner-rs-pro-7-5-310013/"
+      ],
+      "contextHash": "0646605b8ebc60d00d1fe2d978525088e98e27c652457f75fdbfa833b4de8c2b",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "RENNER 2026 p.24 : article 310014 standard au sol, 198 kg, 540×553×1014, sans cuve intégrée ; version 13 bar, 0,86 m³/min soit 860 L/min ISO1217C. Brochure RS-PRO 3–11 précise usage industriel y compris Dauerbetrieb pour le groupe. Voisins 310012/13 à 7,5/10 bar et 1250/1090 : versions distinctes, pas une courbe transposée entre configurations.",
+      "sourceDocuments": [
+        {
+          "url": "https://shop.hbg-kompressoren.de/wp-content/uploads/2018/11/Prospekt_RS-PRO_RSF-PRO_30-110_DE.pdf",
+          "sha256": "9c0fb8f947202b1d1f0a04ceef4d26ed8863e8b6cbfe9d1f1451bf603a1f0ae8"
+        },
+        {
+          "url": "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf",
+          "sha256": "35bd2421c2cc333bc6a0d6cd20c09bbf6b3c2af621021cb6cd2a254d23e74f8a"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/renner-rs-pro-7-5-310015/",
+      "contentHash": "1aa29a434820627b091d13741df294795d65e2bd5b8464fbac85da0289f53380",
+      "neighbors": [
+        "/compresseurs/renner-rs-pro-7-5-310012/",
+        "/compresseurs/renner-rs-pro-7-5-310013/"
+      ],
+      "contextHash": "0646605b8ebc60d00d1fe2d978525088e98e27c652457f75fdbfa833b4de8c2b",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "RENNER p.24 : 310015 version 15 bar, 0,79 m³/min=790 L/min, RS-PRO standard 7,5 kW/198 kg sans cuve. Brochure dédiée RS-PRO confirme service continu industriel sous conditions. Voisins 310012 et 310013 7,5/10 bar gardent leurs propres débits ; choix pression/capacité documenté, aucune extrapolation de ce seul point.",
+      "sourceDocuments": [
+        {
+          "url": "https://shop.hbg-kompressoren.de/wp-content/uploads/2018/11/Prospekt_RS-PRO_RSF-PRO_30-110_DE.pdf",
+          "sha256": "9c0fb8f947202b1d1f0a04ceef4d26ed8863e8b6cbfe9d1f1451bf603a1f0ae8"
+        },
+        {
+          "url": "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf",
+          "sha256": "35bd2421c2cc333bc6a0d6cd20c09bbf6b3c2af621021cb6cd2a254d23e74f8a"
+        }
+      ]
+    },
+    {
+      "path": "/guides/prebena-modul-11-z40-h-v-cadence-air/",
+      "contentHash": "5536dd818e23cbe9d1684152af0f5e640f946952576af7bd07adda2c45570977",
+      "neighbors": [
+        "/guides/prebena-5c-q75-z75-air-par-fixation/"
+      ],
+      "contextHash": "d8b38b7a994c97174da1723987ae8e124ef213ceb884b7547cd7b29cefecb628",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Catalogue PREBENA p.74/75 : H chargement latéral, 9 kg, 1368 agrafes/19 bandes ; V supérieur, 8,5 kg, capacité selon longueur (Z16 2088/29 bandes). Tous deux environ 0,95 L/fixation à 6 bar, service 4,5–6, maximum 8/s. Exemples 114 et 456 L/min selon cadence ; réserve 25 % explicitement pédagogique. Voisin 5C-Q75/Z75 manque la pression de mesure : ici le volume/cadence est documenté mais ne décrit pas la pointe.",
+      "sourceDocuments": [
+        {
+          "url": "https://prebena.de/fileadmin/user_upload/Downloads/Prospekte/PREBENA-Hauptkatalog_2024_Seitenverlinkung_DE.pdf",
+          "sha256": "80e839ee7c69b786c470baff4ff85214f2776c400ebd64dda03145a061a88028"
+        }
+      ]
+    },
+    {
+      "path": "/guides/aircat-6370-6320-polissage-grande-petite-surface/",
+      "contentHash": "1a04a971770e25ab3d9edb7ea5d120a7d0a63ead156e402eddddace7158bdc40",
+      "neighbors": [
+        "/guides/hutchins-3501-retouche-vernis-poncage-polissage/"
+      ],
+      "contextHash": "794148b579bcce39997c709622c3b814fcb41f8548d0c8f70ea8f046e4e4c2bb",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Fiches AIRCAT 6370 et 6320 lues : rotative 7 pouces 3500 tr/min et kit petits plateaux 13000 tr/min avec tête orbitale 1/8 pouce. Les CFM publiés restent sans régime/pression de mesure, aucun classement de FAD ou qualité du résultat. Voisin Hutchins 3501 traite un seul outil changeant de plateau entre ponçage et polissage ; ici le choix concerne deux machines, leurs actions, dimensions et accessoires distincts.",
+      "sourceDocuments": [
+        {
+          "url": "https://continentaltoolgroup.com/product/6-hp-composite-low-weight-vertical-polisher/",
+          "sha256": "4420a6f8a630dc58ecc2dcef9560d03c80a120ec29468c8eebd4108eddafc0dc"
+        },
+        {
+          "url": "https://continentaltoolgroup.com/product/spot-sander-polisher/",
+          "sha256": "f908241d920aef3d7f6044fb77e5e93e70d8afc6b8e16733f154e0411f754709"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/chicago-pneumatic-cpm120-50-hz-10-bar-std-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/",
+      "contentHash": "744a0d1f5a30e4e032b2a435b5fe8cb24cc2f3dc8cc309eec005a1be8aacc9a0",
+      "neighbors": [
+        "/compresseurs/chicago-pneumatic-cpm120-50-hz-7-5-bar-std-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/",
+        "/compresseurs/chicago-pneumatic-cpm120-50-hz-8-5-bar-std-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/"
+      ],
+      "contextHash": "bd6715cfd5ba088583e8edef37dd46942cb1bf6cd63be1e3df0e2376ec4df26d",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Table CPM75–120 50 Hz p.7 : CPM120 max10/référence9,5 bar, 852 m³/h=14200 L/min, 90 kW, 1566 kg STD. Voisins max7,5/réf7=970 et max8,5/réf8=923 m³/h. Les configurations de pression sont séparées, les valeurs 60 Hz et l’air de refroidissement sont exclus ; groupe seul sans sécheur, cycle non établi.",
+      "sourceDocuments": [
+        {
+          "url": "https://compressors.cp.com/content/dam/brands/Chicago%20Pneumatic/compressors/cpvsm-75-120-%282024%29/leaflets/CP%28WW%29%20CPI75-120%20CPM75-120%20%20CPVSM75-120%206999%206106%2082_EN.pdf#page=3",
+          "sha256": "f4f20b2a4b11c06341f00b6f37e343e791088aaf4631ecd0b188170df2ba91ca"
+        },
+        {
+          "url": "https://compressors.cp.com/content/dam/brands/Chicago%20Pneumatic/compressors/cpvsm-75-120-%282024%29/leaflets/CP%28WW%29%20CPI75-120%20CPM75-120%20%20CPVSM75-120%206999%206106%2082_EN.pdf#page=7",
+          "sha256": "f4f20b2a4b11c06341f00b6f37e343e791088aaf4631ecd0b188170df2ba91ca"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/chicago-pneumatic-cpm120-50-hz-7-5-bar-std-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/",
+      "contentHash": "685dddebf21c12130d6224ae8a565e4b350f1d7f7e6cfb30135951c6fd00ed0a",
+      "neighbors": [
+        "/compresseurs/chicago-pneumatic-cpm120-50-hz-10-bar-std-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/",
+        "/compresseurs/chicago-pneumatic-cpm120-50-hz-8-5-bar-std-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/"
+      ],
+      "contextHash": "c590303e7ce457aed1f4bbb2527362d996e250ba748632f3c07987a9bbd22be1",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Même tableau primaire p.7 50 Hz : CPM120 max7,5 bar/réf7, 970 m³/h=16166,667 L/min, 90 kW/1566 kg STD. Voisins max10/réf9,5=852 et max8,5/réf8=923 m³/h : choix de pression réel sans fusion de courbes, ni confusion 60 Hz/refroidissement. Cycle absent conservé comme limite.",
+      "sourceDocuments": [
+        {
+          "url": "https://compressors.cp.com/content/dam/brands/Chicago%20Pneumatic/compressors/cpvsm-75-120-%282024%29/leaflets/CP%28WW%29%20CPI75-120%20CPM75-120%20%20CPVSM75-120%206999%206106%2082_EN.pdf#page=3",
+          "sha256": "f4f20b2a4b11c06341f00b6f37e343e791088aaf4631ecd0b188170df2ba91ca"
+        },
+        {
+          "url": "https://compressors.cp.com/content/dam/brands/Chicago%20Pneumatic/compressors/cpvsm-75-120-%282024%29/leaflets/CP%28WW%29%20CPI75-120%20CPM75-120%20%20CPVSM75-120%206999%206106%2082_EN.pdf#page=7",
+          "sha256": "f4f20b2a4b11c06341f00b6f37e343e791088aaf4631ecd0b188170df2ba91ca"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-chocs-draper-84128/",
+      "contentHash": "f0e449386627cabc97e9d535452a25398e9c7145af8d13928de1b7812cb67cd3",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-chocs-draper-83964/",
+        "/outils-pneumatiques/cle-a-chocs-draper-84120/"
+      ],
+      "contextHash": "e01da445dc77b4ca879814140102e25e566c47fb8306524e4488d386b64215b1",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Fiche Draper84128 actuelle :carré1pouce,entrée1/2BSP,tuyau13mm,3900tr/min,2200NmUltimate/12,70kg. Voisin84120carré3/8,entrée1/4,10000tr/min/0,90kg : encombrement/interface et échelle d’emploi distincts.40CFM moyens restent hors moteur ;6,2bar service ne prouve pas le point de mesure en charge.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.drapertools.com/product/84128/air-impact-wrench-1-sq-dr/",
+          "sha256": "934d78c452bd396f4d5a8fe45904c2f915df6d0dbcb4e693df5475a4c05c00f4"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-chocs-facom-ns-3100gpb/",
+      "contentHash": "0e1da2d729d61bf6dd9f08039015746ef6dd1229c8e27b178bf5300391059628",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-chocs-facom-nk-3000fpb/",
+        "/outils-pneumatiques/cle-a-chocs-facom-nm-1000f2pb/"
+      ],
+      "contextHash": "5ae26be75c3269dcae00493fa3bf601b448e0f9d9fc8e06c4272e6b2db1ed6b5",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Fiche FACOM NS3100GPB :1300imp/min,1600Nmmax,7000àvide,162×75,3×212mm/2kg. Voisins NK3000FPB227×97×227/3,8kg et NM1000F2PB300×205×290/10,3kg : sélection mécanique et espace propres, aucun débit déduit de ces grandeurs ni couple de précision garanti. Pression et besoin d’air inconnus restent explicites.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.facom.com/product/ns3100gpb/12-impact-wrench?tid=610786",
+          "sha256": "37e45833b0e5393629b4ac695c2a5cf2e8c049bf769a575cf8595502df009b4b"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-chocs-hazet-9012m/",
+      "contentHash": "a04dd35f492a629412a4776bf53a16b7f32113c45664f762f72672b752f6913a",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-chocs-hazet-9012eco/",
+        "/outils-pneumatiques/cle-a-chocs-hazet-9012m-1/"
+      ],
+      "contextHash": "2de1a0fbc4956755472d015dc27e6a759871fcdead505b1639b04670ccaf8ff0",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Fiche HAZET9012M lue :1/2,1100Nm desserrage/678serrage/610recommandé,10000tr/min,1,24kg,mécanisme simple marteau. Voisin9012M1 1200desserrage/8800/1,27kg et9012ECO1700/2,15kg/double marteau ; couples et masse distincts, pas une équivalence d’efficacité en usage.127L/min AirRequirement sans régime/pression mesurée conservés hors calcul,6,3bar service séparés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/impact-driver/product/ean-4000896188987",
+          "sha256": "408bab4427d812c2b5072374487120b854e2eb232e4e4edcea087b383468b07c"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-chocs-sealey-gsa6004/",
+      "contentHash": "02bd558c9682cb52c9fc97a7062ee8e66fce8193815ef06b88a85c972c28ae2c",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-chocs-sealey-gsa6000/",
+        "/outils-pneumatiques/cle-a-chocs-sealey-gsa6002/"
+      ],
+      "contextHash": "4d108a83d31584cda2b71178facf315226b9531959651a4ccc97b94df9dd9123",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Fiche SealeyGSA6004 :3/4Sq,4200tr/min,3/8BSP,1760NmBreakaway/1600Fastening,4,44kg,114psi service. VoisinsGSA6000 3/8Sq/1,52kg et6002 1/2Sq/2,28kg,entrée1/4 ; vrais carrés/raccords et encombrements différents.30CFM sans régime/pression de mesure appariée ne dimensionnent pas le compresseur.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.sealey.co.uk/generation-composite-twin-hammer-air-impact-wrench-3-4-sq-drive-gsa6004/",
+          "sha256": "617416edc2231581a3486a23cb85b454179b484b33ab018a2483257ccf6d6a33"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-cliquet-draper-65034/",
+      "contentHash": "cc9c6f1d8a75da332e9a71ec7e32acd36723188860719716307f9e3066154d39",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-cliquet-draper-65018/",
+        "/outils-pneumatiques/cle-a-cliquet-draper-65019/"
+      ],
+      "contextHash": "38948869663b2d5cf5256e23aa2cec3c5afc544ffd77db17eccf792d3f726183",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Fiche Draper65034 :carré1/2,160tr/min,90NmUltimate,1,4kg ;voisins65018carré1/4 et65019 3/8,230/200tr/min,27Nm,0,51kg. Choix douilles/couple/encombrement documenté.5CFM141L/min moyens et6,2bar service séparés, pas de débit maximal en charge reconstruit.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.drapertools.com/product/65034/draper-storm-force-air-ratchet-with-composite-body-1-2-sq-dr/",
+          "sha256": "aa316c7e286e60e472ad6403bb11b613e8135776ffd7f39ab9a48d5a55b66401"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-cliquet-facom-vr-s3136pb/",
+      "contentHash": "5d1720a4ba2e00ee7c52df0f148e89a932f421293ab716a35dfa6447b53c035d",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-cliquet-facom-vr-j154/",
+        "/outils-pneumatiques/cle-a-cliquet-facom-vr-sj3500pb/"
+      ],
+      "contextHash": "2d1d83de5e2443ca51b076d2647a0cbf9f45b958e552ef9029de7de79c7fa720",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Fiche FACOM VRS3136PB :pneumatique,261×58×43mm/1,2kg ;voisinsVRSJ3500PB318×60×60/1,6kg etVRJ154136×56×36/0,5kg. Apport limité mais réel pour vérifier l’espace disponible et la manutention avant commande. Aucun débit, couple ou pression inventé depuis les dimensions ; état non conclusif conservé.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.facom.com/product/vrs3136pb/12-ratchet?tid=610786",
+          "sha256": "0a0844d416f55d94be5578cdfea1c6bc07dae13dadcd8a75ca435d4577a86c0c"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-cliquet-hazet-9021p-2/",
+      "contentHash": "5f8e0de1f3fcd563839b65a21b77e85c3339dd5e6727bffff26c6bb4e7100e05",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-cliquet-hazet-9020eco-1/",
+        "/outils-pneumatiques/cle-a-cliquet-hazet-9021eco-1/"
+      ],
+      "contextHash": "a1ed9222d34c41d5974c8d61f07232cfd4d75e3a3d1cad337f54140ecb0b87f5",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Fiche HAZET9021P2 :3/8,54Nmmax,300tr/min,150mm/0,50kg ;voisin9021ECO1 45Nm/330/177mm/0,58kg et9020ECO1carré1/4/35Nm. Différence de carré, longueur et couple, sans serrage final garanti.103L/min et6,3bar service ne prouvent pas une consommation en charge appariée ; moteur non conclusif.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/air-ratchet/product/ean-4000896184545",
+          "sha256": "98d2948c1b09ab8f178f8afe030828bc373e8c2ad2f2284c218e509078622428"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/worthington-creyssensac-rlr-2000-50-hz-13-bar-full-feature-sur-reservoir-270-l/",
+      "contentHash": "61e9f681d32aab9ac70410bdce3f436ccadb9558f7950ecd30d6535c6d4523de",
+      "neighbors": [
+        "/compresseurs/worthington-creyssensac-rlr-2000-50-hz-13-bar-full-feature-sur-reservoir-500-l/",
+        "/compresseurs/worthington-creyssensac-rlr-2000-50-hz-13-bar-pack-au-sol/"
+      ],
+      "contextHash": "3b0154b538471e87df762f661b9cfe553e64b0ab012f3fbf8de2de41de4435be",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Notice RLR p.3 configurations puis p.6 : RLR2000 15 kW max13/réf12,5, 98 m³/h=1633,333 L/min ISO1217C. Version Full Feature sur cuve270 L distincte de FF500 et pack au sol relus. Le sécheur et le volume de stockage déterminent le montage ; aucun cycle continu déduit de la technologie vis.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.worthington-creyssensac.com/content/dam/brands/Worthington%20Creyssensac/products-bp-structure/oil-injected-screw-compressor/fixed-speed/rlr-750-2000-%282022%29/leaflets/wco-rollair-750-2000-leaflet-en.pdf.coredownload.pdf#page=1",
+          "sha256": "453e287507815373993e3d0c796c82836a43fbc822fe0f2117a56f7b9635ba9d"
+        },
+        {
+          "url": "https://www.worthington-creyssensac.com/content/dam/brands/Worthington%20Creyssensac/products-bp-structure/oil-injected-screw-compressor/fixed-speed/rlr-750-2000-%282022%29/leaflets/wco-rollair-750-2000-leaflet-en.pdf.coredownload.pdf#page=6",
+          "sha256": "453e287507815373993e3d0c796c82836a43fbc822fe0f2117a56f7b9635ba9d"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/worthington-creyssensac-rlr-2000-50-hz-13-bar-full-feature-sur-reservoir-500-l/",
+      "contentHash": "ec925ca1a7195607a1e514c448bd88d7552aa69cb47d9ef21810b386eb9add86",
+      "neighbors": [
+        "/compresseurs/worthington-creyssensac-rlr-2000-50-hz-13-bar-full-feature-sur-reservoir-270-l/",
+        "/compresseurs/worthington-creyssensac-rlr-2000-50-hz-13-bar-pack-au-sol/"
+      ],
+      "contextHash": "55f3c7c0ba8d76033e0c2e411afea43a6782903101f49e8c4a01e409a4d42a88",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "RLR p.3/6 : même groupe 15 kW et FAD98 m³/h à12,5 pour max13, Full Feature500 L. Voisin FF270 et pack sol relus ; changement de stockage réel, pas augmentation du débit livré, fréquence50 Hz retenue, disponibilité et cycle restent inconnus.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.worthington-creyssensac.com/content/dam/brands/Worthington%20Creyssensac/products-bp-structure/oil-injected-screw-compressor/fixed-speed/rlr-750-2000-%282022%29/leaflets/wco-rollair-750-2000-leaflet-en.pdf.coredownload.pdf#page=1",
+          "sha256": "453e287507815373993e3d0c796c82836a43fbc822fe0f2117a56f7b9635ba9d"
+        },
+        {
+          "url": "https://www.worthington-creyssensac.com/content/dam/brands/Worthington%20Creyssensac/products-bp-structure/oil-injected-screw-compressor/fixed-speed/rlr-750-2000-%282022%29/leaflets/wco-rollair-750-2000-leaflet-en.pdf.coredownload.pdf#page=6",
+          "sha256": "453e287507815373993e3d0c796c82836a43fbc822fe0f2117a56f7b9635ba9d"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/burineur-kuani-ki-4710-r/",
+      "contentHash": "17e518d0a89086696f1bf3adac1a609e91d504c4006654e84322c7f1b7da934d",
+      "neighbors": [
+        "/outils-pneumatiques/burineur-kuani-ki-4711-r/",
+        "/outils-pneumatiques/burineur-kuani-ki-4712-r/"
+      ],
+      "contextHash": "974c8080f4b920ccd66f4cb5c3cc148647e56cd549776a00ca21a9b74a1355da",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Catalogue KUANI p.63, ligne KI4710R relue :2100coups/min,96mm,225mm,1,90kg ; voisins4711R3000/66/175 et4712R2100/96/220. Apport : sélection course/cadence et encombrement, sans déduire une énergie de frappe. 283L/min AverageAirConsumption n’est pas un débit en charge ; modèle variable-volume sans pression reste non conclusif.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf#page=63",
+          "sha256": "569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cisaille-kuani-ki-4872/",
+      "contentHash": "49cf42ae44619ff80af5da7a383b353941a73f2c082723545b5b7ed17c24c7f9",
+      "neighbors": [
+        "/outils-pneumatiques/cisaille-kuani-ki-4874/",
+        "/outils-pneumatiques/cisaille-kuani-ki-4879/"
+      ],
+      "contextHash": "5a5eabb629ce32ec683354807f58aded511f0146b3db862b9c6f4a79ea9411d7",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "KUANI p.54 :KI4872 acier1,2mm/2200coups,210mm/1,25kg ; voisins4874 même capacité254mm/1,36kg et4879acier1,6mm/200mm. Ces capacités/encombrements distinguent les choix.113L/min explicitement moyens sans régime/pression appariés : aucune alimentation calculée.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf#page=54",
+          "sha256": "569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-chocs-kuani-ki-1205/",
+      "contentHash": "9dacc321823392387eb32034a0d9a0fc69991ffbd065b5abac79779e05251be7",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-chocs-kuani-ki-1202/"
+      ],
+      "contextHash": "bdb6d77481fc992c6057a8c0ab95e545bd7c36c78e96ea87b7d658408d762e32",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "KUANI p.19 et voisin1202 p.18 :KI1205 carré1/4,13000tr/min,54Nm à5s,124mm/0,85kg ;1202 11000/68Nm/189mm et1206 149mm. Référence compacte avec couple temporisé distinct, pas un couple de précision ou une garantie de desserrage.113moyens hors moteur, pression inconnue.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf#page=19",
+          "sha256": "569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-cliquet-kuani-ki-2206/",
+      "contentHash": "c4cbf0af9533085c6d345b766c597abf77301ecb2b687bec0b713fdb896ac5ff",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-cliquet-kuani-ki-2202/"
+      ],
+      "contextHash": "a8b355945d4a496e08b7bf179f5582069a07a07f8f6a017911b4175cefe61472",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "KUANI p.28/29 :2206 carré1/4,200tr/min,27Nm,135mm/0,50kg ;2202 250tr/min,205mm/0,66kg. Apport accès court vs vitesse, sans déduire le serrage final.103L/min moyens non dimensionnants, aucune pression de mesure inventée.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf#page=28",
+          "sha256": "569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/derouilleur-a-aiguilles-kuani-ki-4714/",
+      "contentHash": "4cbc1864634bc0d3af0a2cc841a126215fe18eb9785e084531c3e4d2591e2033",
+      "neighbors": [
+        "/outils-pneumatiques/derouilleur-a-aiguilles-kuani-ki-4713/",
+        "/outils-pneumatiques/derouilleur-a-aiguilles-kuani-ki-4715/"
+      ],
+      "contextHash": "b99bd05d2a5276c3d483b953d2b333a4a4ff00208dbad62c91714aa6b9b49d43",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "KUANI p.65 :4714 12aiguilles3×125mm,5500coups,course32mm,290mm/1,30kg. Voisins4713/4715 19aiguilles3×180 et4600coups, plus longs/lourds. Montage d’aiguilles et format distincts, aucune efficacité de décapage mesurée ;85L/min moyens sans pression restent hors calcul.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf#page=65",
+          "sha256": "569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/fouloir-kuani-ki-4794a-l/",
+      "contentHash": "f3089326387b8b5b950e38affcf385f953932990fdc268214018fb57210a0d82",
+      "neighbors": [
+        "/outils-pneumatiques/fouloir-kuani-ki-4793a/",
+        "/outils-pneumatiques/fouloir-kuani-ki-4794a/"
+      ],
+      "contextHash": "e6d23b55a2cf9ea18e5b38c074df1a763e7a76f1b52c1d7a78ea2dde3d046686",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "KUANI p.68 :4794A-L 1000coups,course85mm,longueur870–980mm/3,75kg,entrée3/8 ;4794A380–470mm/2,95kg et4793A58mm/1500coups. La variante longue change l’accès physique, pas son débit moyen500L/min ni une force garantie. Pression/facteur de marche non documentés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf#page=68",
+          "sha256": "569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/grignoteuse-kuani-ki-4808/",
+      "contentHash": "70cdeb581c303eca9d31374324510768e22d009e8d898fc1c5bc0bbb835820b7",
+      "neighbors": [
+        "/outils-pneumatiques/grignoteuse-kuani-kb-213/",
+        "/outils-pneumatiques/grignoteuse-kuani-ki-4809/"
+      ],
+      "contextHash": "af436a70429d0fdd135a0684bdb5781527bdec4d5a6c492fc29dffc9a488389e",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "KUANI p.54 :4808 grignoteuse push-cut1,2mm,3500coups,195mm/0,81kg ;4809 pull-cut4300/180mm etKB213push-cut5300/155mm. Géométrie/cadence propres, pas une vitesse de coupe en matériau supposée.57L/min moyenne sans mesure appariée, moteur non conclusif.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf#page=54",
+          "sha256": "569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/lime-alternative-kuani-ki-4812/",
+      "contentHash": "cac1261c15b0299fb94eb40260dfc44868fe8b1759af379644f3349218abc854",
+      "neighbors": [
+        "/outils-pneumatiques/lime-alternative-kuani-ki-4101/"
+      ],
+      "contextHash": "59a650f2e1eb0fc97d846ba3a150422e13642a2a975bd875c7cf1c68be85207a",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "KUANI p.55 :lime4812 course5mm,3400coups,165mm/0,52kg ;4101course10mm/3700/180mm. Apport réel course et accès, pas rendement attribué.198L/min AverageAirConsumption non transformés en consommation en charge ; pression absente conservée.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf#page=55",
+          "sha256": "569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/marteau-a-river-kuani-ki-4791-xp1/",
+      "contentHash": "ddf8cd6e001c7fd5520c1cf1fbb8ad05d71a4208a48725588683065d6d8cdd95",
+      "neighbors": [
+        "/outils-pneumatiques/marteau-a-river-kuani-ki-4791-xp2/",
+        "/outils-pneumatiques/marteau-a-river-kuani-ki-4791-xp3/"
+      ],
+      "contextHash": "01c64070beffefd2c8e8013569760b26fc480ead2921456873da26388f4a3454",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "KUANI p.66 tableau vérifié aussi visuellement :XP1 2850coups,course35mm,longueur115mm,1kg ;XP2 2600/57/170 etXP3 2200/73/186. Ne pas attribuer les160mm deXS1 àXP1. Course/cadence distinctes sans force de rivetage déduite ;300L/min moyens sans pression hors moteur.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf#page=66",
+          "sha256": "569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/meuleuse-kuani-ki-6202/",
+      "contentHash": "5a8e7b4ff1656cc3bfa01c3e550df0780480579a27288dccdf65dc6052804e06",
+      "neighbors": [
+        "/outils-pneumatiques/meuleuse-kuani-ki-6208/"
+      ],
+      "contextHash": "649676c50cccec764e0610be917aa30e19513397e4204e21da291977818b3bff",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "KUANI p.84 :6202 pince6mm,25000tr/min,155mm/0,61kg ;6208 même vitesse/pince mais180mm/0,56kg. Comparaison d’accès documentée sans affirmer un enlèvement matière.108L/min moyens sans régime/pression, variable-volume et aucun débit de calcul.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf#page=84",
+          "sha256": "569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/perceuse-kuani-kd-865/",
+      "contentHash": "332747ed744bfda550caa790f7ee2918e1723c539cce131bfb10fa05a28c3bf2",
+      "neighbors": [
+        "/outils-pneumatiques/perceuse-kuani-kd-863/"
+      ],
+      "contextHash": "18aade3c37351cfb914684af4bf5b7d7616b5ea5a1f5cd8ca23268230e23d30a",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "KUANI p.72, lecture visuelle :KD865 réversible600tr/min,broche3/8-24,241mm/1,95kg ;KD8631800tr/min190mm/1,06kg. Le filetage identique ne remplace pas la plage de vitesse.113L/min moyenne sans charge/pression associées ; aucune compatibilité de compresseur inventée.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf#page=72",
+          "sha256": "569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/polisseuse-kuani-ki-6552/",
+      "contentHash": "edcbf0e7cbfa0b261fe1df440dc883ba8564e87ae06b2607824cefbd9aad1ba3",
+      "neighbors": [
+        "/outils-pneumatiques/polisseuse-kuani-ki-6517-ap/"
+      ],
+      "contextHash": "c0c65d0f3a4ff7b6419ca16ded3d52b0a03cb25fa0c46bbf671c82752519c233",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "KUANI p.52 et voisin6517AP p.77 :6552 plateau76mm,5/16-24,6000tr/min,133mm/0,61kg ;6517AP5000tr/min,220mm/1,08kg. Choix de format/régime à accessoire validé, aucun résultat de polissage garanti.59L/min moyens sans pression restent hors calcul.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf#page=52",
+          "sha256": "569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-bande-kuani-ki-6403/",
+      "contentHash": "d1667f9d05bd506839093f1402218a26991a578c458db435a070846689d2bddc",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-bande-kuani-ki-6402/",
+        "/outils-pneumatiques/ponceuse-bande-kuani-ki-6404/"
+      ],
+      "contextHash": "4d786c5ffbde05f242e23636e74ad04fa78b05e8ad217975a5329d4bbc4e5d24",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "KUANI p.80 :6403 bande20×520,18000tr/min,350mm/1,01kg ;6402 10×330/280mm et6404 30×540/13000/390mm. Le format de consommable change réellement ; aucune conversion tr/min en vitesse de bande sans géométrie.85L/min moyens sans point mesuré, moteur indéterminé.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf#page=80",
+          "sha256": "569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-pneumatique-kuani-ki-6712/",
+      "contentHash": "4ada5df15c75465ee7ce45f96e07124b15a68ee6291347a87076228cd195261e",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-pneumatique-kuani-ki-6701-he/"
+      ],
+      "contextHash": "7f4b57aacfe70a170de0d6b8073fa74a186172b6a6db9da9eb05baf39d7af700",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "KUANI p.52/78 :6712 broche1/4-20,15000tr/min,123mm/0,52kg ;6701HE7/16-20,16000tr/min,160mm. Interfaces de consommables incompatibles sans validation, pas une équivalence à partir du diamètre supposé.59L/min moyens sans pression ne dimensionnent pas le compresseur.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf#page=52",
+          "sha256": "569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-vibrante-kuani-ki-6636-js/",
+      "contentHash": "42396a691e4f20c0e1c748034bf8846482a1059a5485168b62f09d698f978f52",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-vibrante-kuani-ki-6636-ls2/",
+        "/outils-pneumatiques/ponceuse-vibrante-kuani-ki-6671/"
+      ],
+      "contextHash": "085595f3c10e808ac07fbd14c8dc7bbe9ab07edf88e74c5c25fb0c12248014b7",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "KUANI p.76/79 :6636JS plateau93×178,orbite2,5mm,10000tr/min,175mm/1,11kg ;6636LS2 plateau70×203/course10mm2600coups et6671 64×407/course25,4. Mouvement et format distincts, aucune confusion orbite/course rectiligne.57L/min moyens non dimensionnants.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf#page=76",
+          "sha256": "569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/scie-kuani-ki-4831/",
+      "contentHash": "c55936f4741f23389830e7dc83cd3fdb38a3778759cdf42602876c5d698555e5",
+      "neighbors": [
+        "/outils-pneumatiques/scie-kuani-ki-4833/",
+        "/outils-pneumatiques/scie-kuani-ki-4835/"
+      ],
+      "contextHash": "45fd0e1f5adb146a67097ad118756e01a26cc7d93416472db6e0604d187b0e8f",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "KUANI p.55 :4831 capacité acier1,6mm,course10mm,9000coups,longueur300mm/0,66kg ;4833même1,6/10 mais9500/205 et4835 3mm/course14/10000. Apport capacité et accès, pas promesse de cadence sous charge.28L/min moyens restent hors moteur sans pression de mesure.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf#page=55",
+          "sha256": "569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/taraudeuse-kuani-ki-4520/",
+      "contentHash": "2d3affe2563707f323f074b81668211de32e7b959c36e4df910bd3762dc48dfa",
+      "neighbors": [
+        "/outils-pneumatiques/taraudeuse-kuani-ki-4510/",
+        "/outils-pneumatiques/taraudeuse-kuani-ki-4530/"
+      ],
+      "contextHash": "22b5cc8c5f273b2d90c4aa19eefdbec272fdb010d311b01eddee0f0aa60b0912",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "KUANI p.73 :4520 200tr/min,360mm,entrée3/8,tuyau1/2,3,50kg ;4510 400/280/entrée1/4,tuyau3/8 et4530 300/360. Vitesse, accès et alimentation mécanique distincts, aucune force/couple supposé.174L/min moyens non dimensionnants sans pression/régime.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf#page=73",
+          "sha256": "569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/tronconneuse-kuani-ki-4410/",
+      "contentHash": "0a593f5333f8af45f8c615938bcd69af239bf299ffb79e13ac07eef9bd23af5e",
+      "neighbors": [
+        "/outils-pneumatiques/tronconneuse-kuani-ki-4402/",
+        "/outils-pneumatiques/tronconneuse-kuani-ki-4427/"
+      ],
+      "contextHash": "a4d4f7f5eab7eaae07b02dd1e895a9b6a02b93c678d924f546fb4bffe577ca5b",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "KUANI p.56 :4410 20000tr/min,220mm/0,96kg ;4402même vitesse190mm/0,77kg,4427 17000/210mm. Choix d’encombrement/vitesse documenté, disque optionnel à vérifier, pas garantie de coupe.85L/min moyens sans pression non calculables.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf#page=56",
+          "sha256": "569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/visseuse-kuani-ki-3201-ql/",
+      "contentHash": "f7c9f1fbd2af7db867578f7a8ea31f0fd3f7785d530793ecf1751407c24cfdb7",
+      "neighbors": [
+        "/outils-pneumatiques/visseuse-kuani-ki-3202-p-ql/",
+        "/outils-pneumatiques/visseuse-kuani-ki-3202-ql/"
+      ],
+      "contextHash": "dad1c271c3a1c798f7a36fb173fcbf9ba3431f1af180c1cc7be540ad0a4d656a",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "KUANI p.43 :3201QL11000tr/min,190mm/0,73kg ;3202QL8500/202mm et3202PQL8500/192. Différence de régime/encombrement ; aucun couple de réglage ni arrêt automatique déduit.71L/min moyens sans facteur de marche/pression, moteur non conclusif.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf#page=43",
+          "sha256": "569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/airpol-sr-7/",
+      "contentHash": "f1926c00cf0bb1f595c5f754d21ae98ac236e60ff6b750068a291facf795bd48",
+      "neighbors": [
+        "/compresseurs/airpol-sr-11/",
+        "/compresseurs/airpol-sr-15/"
+      ],
+      "contextHash": "20b59c0acb32cf9708dd142b1220f1ca45f79df98fdfe2dca48f2399c1b7e160",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Page Basic-design Airpol : tableau 0,8/1,0 MPa, SR7 à41,2 m³/h sous1MPa=686,667 L/min,7,5 kW, tiret cuve et famille SR sans stockage. FAQ actuelle confirme service continu industriel sous conditions et400V/3ph/50Hz. Voisins SR11/SR15 :54/82,4 m³/h à1MPa ; sélection de capacité différente, aucune condition ISO inventée.",
+      "sourceDocuments": [
+        {
+          "url": "https://airpol.com.pl/en/knowledge-base/qa-frequently-asked-questions-about-airpol-sr-scroll-compressors/",
+          "sha256": "fb5078b47095d314438f00f6aaa462671fbd2712d8653893e682f610c187915e"
+        },
+        {
+          "url": "https://airpol.com.pl/en/products/basic-design-scroll-compressors/",
+          "sha256": "e3c98079b9948c570ce3d5de6dc257eaf44a4698efe00fff81275de2ee04ff56"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/airpol-srk-2/",
+      "contentHash": "aa085b1882bc2aab66a157ad2c5a59e1995d08a93825c6226841d6cf36acb76f",
+      "neighbors": [
+        "/compresseurs/airpol-srk-4/",
+        "/compresseurs/airpol-srk-5/"
+      ],
+      "contextHash": "5b2e118680f4c73e7b18bada4e03e9ce0655c687ed1def97e05f3daa98289b6b",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Catalogue Airpol p.9 : SRK2 cuve240/500 L, capacité12,8 m³/h à10bar=213,333 L/min,2,2kW ; configuration500 explicitement retenue. FAQ distingue240 standard/500 option et service continu. Voisins SRK4/5 sur500 :21/27m³/h ; le débit ne croît pas avec la cuve. Pas de fusion8/10bar ni classe de pureté ajoutée.",
+      "sourceDocuments": [
+        {
+          "url": "https://airpol.com.pl/en/knowledge-base/qa-frequently-asked-questions-about-airpol-sr-scroll-compressors/",
+          "sha256": "fb5078b47095d314438f00f6aaa462671fbd2712d8653893e682f610c187915e"
+        },
+        {
+          "url": "https://airpol.com.pl/wp-content/uploads/2022/05/Catalogue_Scroll-compressors.pdf#page=9",
+          "sha256": "67a30acdba6ecb84d085b8a7e469c5c4803f40edb843a5045634e22fdb8ed494"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/ekom-dk50-4vr-50s/",
+      "contentHash": "28b380d6d664a10d29fb02b21340f239c147141270c52316d754084e2e7c71ba",
+      "neighbors": [
+        "/compresseurs/ekom-dk50-4vr-50-m/",
+        "/compresseurs/ekom-dk50-4vr-50s-m/"
+      ],
+      "contextHash": "59050e76c9b76ff08af3221720dfb9229afc17320fffe1c3f5b4a012226cbf8a",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Notice EKOM06/2026 p.19 : colonne DK50 4VR/50S 50Hz sans/M : FAD270 à6bar, plage6–8 séparée de soupape9, cuve50,2,2kW,S1-100 pour compresseurs,3×400V. Voisins /50S/M et /50/M livrent215 à6bar avec sécheur. L’apport distingue cabine et séchage, pas un seul S1 moteur ; prescriptions local+5 à40°C/HR70% conservées dans la preuve.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.ekom.sk/fileadmin/Ekom/navody/2021/industry_lab/NP-DK50_4VR_50__DK50_2x4VR_110-A-12_06-2026-MD.pdf#page=19",
+          "sha256": "1c3db8d323dddcdd8063b77f60f0001b7273f52f6a7278a1d6d1668fa1279dbb"
+        },
+        {
+          "url": "https://www.ekom.sk/fileadmin/Ekom/navody/2021/industry_lab/NP-DK50_4VR_50__DK50_2x4VR_110-A-12_06-2026-MD.pdf#page=23",
+          "sha256": "1c3db8d323dddcdd8063b77f60f0001b7273f52f6a7278a1d6d1668fa1279dbb"
+        },
+        {
+          "url": "https://www.ekom.sk/fileadmin/Ekom/navody/2021/industry_lab/NP-DK50_4VR_50__DK50_2x4VR_110-A-12_06-2026-MD.pdf#page=7",
+          "sha256": "1c3db8d323dddcdd8063b77f60f0001b7273f52f6a7278a1d6d1668fa1279dbb"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/hertz-h-4-300-t/",
+      "contentHash": "14e35c1f2c0f5f29327722c02901bc604051f0a5847600b43d3d686dce778539",
+      "neighbors": [
+        "/compresseurs/hertz-h-10-500/",
+        "/compresseurs/hertz-h-4-300/"
+      ],
+      "contextHash": "6629279705513db3347fda57760d4399e740b0e26aa543bff4753a0bf699fe02",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Hertz catalogue p.52 DOUBLE STAGE H4-300T :12,5bar,334L/min Piston Displacement,3kW,250L. Voisin H4-300 SINGLE STAGE7bar/501 et H10-5007bar/1222 : architectures/pressions différentes, pas une promesse de débit utile. FAD[] et cycle absent évitent tout verdict pneumatique non étayé.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf#page=52",
+          "sha256": "e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/hertz-h-4-300/",
+      "contentHash": "a54448a1870c6ee0d1c8a2994a9a5e5fba4ec54528fa78b3cf8fcf0abc53dec7",
+      "neighbors": [
+        "/compresseurs/hertz-h-10-500/",
+        "/compresseurs/hertz-h-4-300-t/"
+      ],
+      "contextHash": "0928b0b3255f483ebcb56492cf27f221094eecda8a58cfa765bd62c3b303539a",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Hertz p.52 SINGLE STAGE H4-300 :7bar,501L/min déplacement,3kW,250L ; voisin T double étage12,5bar/334. Malgré300 dans le nom, la cuve publiée est250 L ; stockage et pression renseignés, aucun déplacement promu en FAD ni service continu supposé.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf#page=52",
+          "sha256": "e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/ktc-kme-c-11/",
+      "contentHash": "57ce22074db1fe05c78f2b1b80bb884831c6ca4d2f486b15b0a88fbd93d2affd",
+      "neighbors": [
+        "/compresseurs/ktc-kme-c-11-270-e/",
+        "/compresseurs/ktc-kme-c-11-270/"
+      ],
+      "contextHash": "92c0133d2a7868a62d92df24390b183ace6a19aca67daea22732a8b6445c7f23",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "KTC tableau p.4 (imprimée6/7) : grounded code161062301,KME C11,11kW,V75,tiret cuve,10bar1462L/min ISO1217C. Le montage au sol distingue le voisin161062303 sur270L et le voisin E avec sécheur dont la réserve actuelle est conservée. Plafond pression de configuration distinct du maximum matériel ; aucun cycle documenté donc tenue continue non conclue.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.ktc-air.com/uploaded_files/attachments/202511171763376673/ktc_kme_c_plus_4_55_en.pdf?track_download=true#page=2",
+          "sha256": "90262fa5be288a704088e70f800049ab76cec4331e237b1b7d65d338ea95d4ac"
+        },
+        {
+          "url": "https://www.ktc-air.com/uploaded_files/attachments/202511171763376673/ktc_kme_c_plus_4_55_en.pdf?track_download=true#page=4",
+          "sha256": "90262fa5be288a704088e70f800049ab76cec4331e237b1b7d65d338ea95d4ac"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/ktc-kme-c-15-270/",
+      "contentHash": "69d0f014d8dcc3f61a40fbc245ad7f8eec981c87a2f10aa3b6370bb6ba3e6e70",
+      "neighbors": [
+        "/compresseurs/ktc-kme-c-11-270-e/",
+        "/compresseurs/ktc-kme-c-15-500/"
+      ],
+      "contextHash": "9ce324d5a8eb0fded5bb84c9da68b69f1dd131cc6bdaf9e0241ee84bc796a609",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "KTC p.4 : code162072303,KME C15 270,15kW,cuve270,10bar2040L/min ISO1217C,50Hz. Voisin162072305500 L conserve même débit ; autre voisin11kW270E possède sa réserve de mesure et n’est pas requalifié ici. Le choix porte sur stockage/puissance/débit, pas sur l’augmentation artificielle du débit avec la cuve ; cycle inconnu.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.ktc-air.com/uploaded_files/attachments/202511171763376673/ktc_kme_c_plus_4_55_en.pdf?track_download=true#page=2",
+          "sha256": "90262fa5be288a704088e70f800049ab76cec4331e237b1b7d65d338ea95d4ac"
+        },
+        {
+          "url": "https://www.ktc-air.com/uploaded_files/attachments/202511171763376673/ktc_kme_c_plus_4_55_en.pdf?track_download=true#page=4",
+          "sha256": "90262fa5be288a704088e70f800049ab76cec4331e237b1b7d65d338ea95d4ac"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/sil-air-50-15/",
+      "contentHash": "93506a07482775c6d90410adf3cc6ebec0ab8b59c87880b9c447fc8e33b78cf6",
+      "neighbors": [
+        "/compresseurs/sil-air-50-12/",
+        "/compresseurs/sil-air-50-24-al/"
+      ],
+      "contextHash": "33c8d355bc996b62b93693f05ced778ca4e8f8486b98f093116c49a00fda1bf9",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "SIL-AIR2025 p.5 légende et p.22 ligne230/50 :50/15 cuve15L,8bar,37L/min à5bar,340W ;50 aspirés séparés,60Hz44 exclu. Voisin50/12 cuve6L et50/24AL24L ne change pas le point retenu. Aucune extrapolation jusqu’à8bar ni cycle continu déduit.",
+      "sourceDocuments": [
+        {
+          "url": "https://cdn.prod.website-files.com/5ef4a20d28c31157474872b0/6a4fceb90145c46f2acc6262_SILAIR%202025.pdf#page=22",
+          "sha256": "d93f1024b6fa89f01eaacc77c199f3d2f5deb296b92dedf6081ab8568854468a"
+        },
+        {
+          "url": "https://cdn.prod.website-files.com/5ef4a20d28c31157474872b0/6a4fceb90145c46f2acc6262_SILAIR%202025.pdf#page=5",
+          "sha256": "d93f1024b6fa89f01eaacc77c199f3d2f5deb296b92dedf6081ab8568854468a"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/puska-ixo-5-5-10-400-50-200-ce/",
+      "contentHash": "bea8385df309dd94f57061686194ddf06482344e02a86ab8d33e6034b56ef735",
+      "neighbors": [
+        "/compresseurs/puska-ixo-5-5-10-400-50-ce/",
+        "/compresseurs/puska-ixo-5-5s-10-400-50-200-ce/"
+      ],
+      "contextHash": "bac75d0eac07af16a9f5f80b7a35af3e7ef9296966acc40f4b8b6f1038dedc18",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Puska2025 p.26 ISO1217C :1839032445 IXO5,5 10 400/50 200CE,4kW,498L/min à10bar,200L. Voisin base1839032444 et versionS1839032446 avec sécheur relus : volume et traitement distincts. 5,5 désigneCV paskW ; cycle inconnu, aucune économie commerciale reprise.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.puska.com/content/dam/brands/Puska/catalogos/Cat%C3%A1logo%20Puska%202025.pdf#page=26",
+          "sha256": "62ce74f8e02f84d3c021f7162c9e8fd8cd9fc17fa41131797a1d7b3465e92454"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/puska-ixo-5-5-10-400-50-ce/",
+      "contentHash": "7848c046eef650e01ab8dad4d12ec9be91e7632a33646dc9c23b29c54d841c77",
+      "neighbors": [
+        "/compresseurs/puska-ixo-5-5-10-400-50-200-ce/",
+        "/compresseurs/puska-ixo-5-5s-10-400-50-200-ce/"
+      ],
+      "contextHash": "4710d26c362d3b9dc1588ad2014620e5a5e6dbf9a1b172a9646418ace669d659",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Puska p.26 base1839032444 :4kW,498L/min à10bar,400/3/50, cuve tiret laissée non documentée en litres. Voisins200CE etS200CE ajoutent stockage200 et traitement. La fiche conserve l’incertitude du stockage et du cycle, sans confondre5,5CV/4kW ni dimensionner l’autonomie.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.puska.com/content/dam/brands/Puska/catalogos/Cat%C3%A1logo%20Puska%202025.pdf#page=26",
+          "sha256": "62ce74f8e02f84d3c021f7162c9e8fd8cd9fc17fa41131797a1d7b3465e92454"
+        }
+      ]
+    },
+    {
+      "path": "/guides/hutchins-7044-papier-rectangulaire-sans-trous/",
+      "contentHash": "feaeb0fba47762b2dcac0e79e938a2762379aa825739b8919d15daaacff8cdbf",
+      "neighbors": [
+        "/guides/hutchins-7544-poncage-eau-glisse-accroche/"
+      ],
+      "contextHash": "d0794f18fb9b27942349f611b09cb78db19f3b64ef0f6a09ceb41eed575ff061",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:42:41.813Z",
+      "note": "Instructions Hutchins 7044 et Water Sanders relues : feuille 9×11 divisée en trois 3⅔×9 pour clips, sans trous ajoutés ; distinguer Velcro 3⅔×7 et Clip-On 3⅔×9, modèle rond 7044-6 différent. Voisin 7544 traite le réglage d’eau quand l’abrasif glisse/accroche ; ici commande du format et montage des feuilles, sans rendement ou pression inventé.",
+      "sourceDocuments": [
+        {
+          "url": "https://hutchinsmfg.com/troubleshoot/",
+          "sha256": "6136c06ea934fcd99a2e6623bace4f267e9475e19ec1419d48771a133569bcad"
+        },
+        {
+          "url": "https://hutchinsmfg.com/water-sanders/",
+          "sha256": "158289af615aa854058fc112d3aaa31c17339e7f581c3c4929bf07403a23cd12"
+        }
+      ]
+    },
+    {
+      "path": "/guides/airpress-hl425-50-hl340-90-debit/",
+      "contentHash": "93b83c067b793a4a58ca67fd09dbd623297a14585cb80b501af3360c248a9df5",
+      "neighbors": [
+        "/guides/guide-complet-dimensionner-compresseur-air/"
+      ],
+      "contextHash": "72b4f427481e5ef48f16376f930ec28ae37c1a6e714356701266feca78182a73",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:47:53.682Z",
+      "note": "Lecture des deux fiches Airpress actuelles : HL425-50 392 aspirés/260 restitués, 50 L, 8 bar ; HL340-90 340/272, 90 L, 10 bar. Les 12 L/min sont une différence arithmétique sans pression de mesure associée. Cycle 30/70 conservé. Le guide général de dimensionnement explique la méthode ; celui-ci résout la comparaison trompeuse des noms 425 et 340, du débit et du tampon. Aucun verdict continu inventé.",
+      "sourceDocuments": [
+        {
+          "url": "https://airpress.fr/compresseur-hl-340-90-10-bar-3-ch-2-2-kw-272-l-min-90-l-230-v-36844-e",
+          "sha256": "82b9d2415365ae0f42649c09d2f876b01cfed8fa955d10a37356718de2c467b6"
+        },
+        {
+          "url": "https://airpress.fr/compresseur-hl-425-50-8-bar-3-ch-2-2-kw-260-l-min-50-l-230-v-36843",
+          "sha256": "e7c5d44e583898be90153f30def49323c7b34e94129e17a2c81055d71ed63b08"
+        }
+      ]
+    },
+    {
+      "path": "/guides/atelier-visseuse-ponceuse-demande-moyenne/",
+      "contentHash": "f466b73ef1f0251b646dd8c569fe6a1b5d847fd1cd67ae4bfb5706db768b12e8",
+      "neighbors": [
+        "/guides/utiliser-plusieurs-outils-pneumatiques/"
+      ],
+      "contextHash": "207dc845534b0ded223eb362e717b061040e41bbc9ae6193e3958dffe1d1cf6a",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:47:53.682Z",
+      "note": "Fiam 15C5A : notice p.8 ligne 112514375 et pied p.9, 5,5 L/s à 6,3 bar ; régime non précisé. RUPES RH356 : catalogue p.58, 340 L/min max, pression de travail 6,2 bar séparée de la mesure. Correction de cette distinction. 168,3 L/min et somme 670 sont des hypothèses explicites 10 s/20 s, jamais un dimensionnement établi. Le voisin utilise deux outils Einhell simultanés/successifs ; ici le problème distinct est une moyenne temporelle et les conditions absentes du couple atelier.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.fiamgroup.com/en/products/handheld-air-screwdrivers/15c5a/",
+          "sha256": "b0491a265568c0d854f697dce9fa0c774dcd922ed5eb7c57dd0bd46e9c58c6e5"
+        },
+        {
+          "url": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-85.pdf",
+          "sha256": "e1c8db38588668ff2347c0005a43ac3067609b0b280d80dc3548f0d8043dccce"
+        },
+        {
+          "url": "https://www.rupes.com/catalogue/2026/RUPES_Catalogue-2026_EN.pdf",
+          "sha256": "018272fb053802b4e419d3f70bb75a46a02a62aec2a0404862ded7c21b443a63"
+        }
+      ]
+    },
+    {
+      "path": "/guides/sata-dry-jet-2-compresseur-sechage-peinture/",
+      "contentHash": "e5034634ce546b023fa91e4e0cde9c981991ca77d236af6d868158e4e1af4da7",
+      "neighbors": [
+        "/guides/amplificateur-air-exair-consommation-debit/"
+      ],
+      "contextHash": "df3a97ce73dd947981456e2033c87cfc618047fbc5aaa19f441d40b1179e6bfa",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:47:53.682Z",
+      "note": "Notice SATA remplacée par le lien fabricant courant, PDF français p.94 relu : 270 Nl/min à 2,5 bar, filtre à remplacer quand encrassé. La fiche confirme le principe Venturi. Deux unités donnent 540 Nl/min dans les mêmes conditions ; aucun temps de séchage déduit. Le voisin EXAIR distingue les flux d’un amplificateur général ; ce dossier traite le séchage peinture, le nombre de buses et l’entretien propre au dry jet 2. L’ancien 404 reste dans le diagnostic.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.sata.com/de-de/sata-dry-jet-2-trockenblaspistole/217489",
+          "sha256": "0b1c6ad725840e7df68c649bbbd3767a0c172799e9a74ca97a246c579ff5e712"
+        },
+        {
+          "url": "https://www.sata.com/media/b6/b9/fd/1793362241/BAL-SATA-DRY-JET-2.PDF.PDF?ts=1793362241",
+          "sha256": "3fe6dc0021e44e6fcbbd0ae114c54ea78bb58dd02e2e72ddb3b59d8930b212d0"
+        }
+      ]
+    },
+    {
+      "path": "/guides/ventouse-depose-piece-soufflage-duree-debit/",
+      "contentHash": "3da5f8be575d1bbc51b3085098a4fc2976aa777bd2791f92eecf9f192a17dd97",
+      "neighbors": [
+        "/guides/ejecteur-schmalz-scpsi-economiseur-air-cycles/"
+      ],
+      "contextHash": "93ac36327bc729e4683646983c53a7082f9c431b60ceb04feb0d67180b879ca7",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:47:53.682Z",
+      "note": "Notice SCPSi-UHV-HD p.28, sections 7.6 et 7.7 relues : trois commandes de soufflage, temporisation 0,10–9,99 s, réglage débit 10–100 % et précaution de butée. Le voisin traite l’économiseur pendant maintien, H1/hystérésis ; ce guide traite uniquement la dépose et la séparation durée/débit/commande. Aucun réglage optimal ni garantie de tenue universelle.",
+      "sourceDocuments": [
+        {
+          "url": "https://media.schmalz.com/MAM_Library/Dokumente/Bedienungsanleitung/30/3030/303001/30300101484/29f2b2b77a3c_BAL_30.30.01.01484_en-EN.pdf",
+          "sha256": "7173a2a4da7241466f6943e26a8a6eb338e8b1187a99b0d8cf033d29ff0b6c84"
+        }
+      ]
+    },
+    {
+      "path": "/guides/prebena-modul-11-z40-h-v-cadence-air/",
+      "contentHash": "5536dd818e23cbe9d1684152af0f5e640f946952576af7bd07adda2c45570977",
+      "neighbors": [
+        "/guides/prebena-5c-q75-z75-air-par-fixation/"
+      ],
+      "contextHash": "2411101a0c7d8e3b103c3b3d50b746cf15bb22f979db36c9bd395af09ea29321",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:47:53.682Z",
+      "note": "Catalogue PREBENA p.74/75 : H chargement latéral, 9 kg, 1368 agrafes/19 bandes ; V supérieur, 8,5 kg, capacité selon longueur (Z16 2088/29 bandes). Tous deux environ 0,95 L/fixation à 6 bar, service 4,5–6, maximum 8/s. Exemples 114 et 456 L/min selon cadence ; réserve 25 % explicitement pédagogique. Voisin 5C-Q75/Z75 manque la pression de mesure : ici le volume/cadence est documenté mais ne décrit pas la pointe.",
+      "sourceDocuments": [
+        {
+          "url": "https://prebena.de/fileadmin/user_upload/Downloads/Prospekte/PREBENA-Hauptkatalog_2024_Seitenverlinkung_DE.pdf",
+          "sha256": "80e839ee7c69b786c470baff4ff85214f2776c400ebd64dda03145a061a88028"
+        }
+      ]
+    },
+    {
+      "path": "/guides/aircat-6370-6320-polissage-grande-petite-surface/",
+      "contentHash": "1a04a971770e25ab3d9edb7ea5d120a7d0a63ead156e402eddddace7158bdc40",
+      "neighbors": [
+        "/guides/hutchins-3501-retouche-vernis-poncage-polissage/"
+      ],
+      "contextHash": "86b2a9358d218662d1054bc1269e559de0d702d4d757a88b19fc967c704cf130",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:47:53.682Z",
+      "note": "Fiches AIRCAT 6370 et 6320 lues : rotative 7 pouces 3500 tr/min et kit petits plateaux 13000 tr/min avec tête orbitale 1/8 pouce. Les CFM publiés restent sans régime/pression de mesure, aucun classement de FAD ou qualité du résultat. Voisin Hutchins 3501 traite un seul outil changeant de plateau entre ponçage et polissage ; ici le choix concerne deux machines, leurs actions, dimensions et accessoires distincts.",
+      "sourceDocuments": [
+        {
+          "url": "https://continentaltoolgroup.com/product/6-hp-composite-low-weight-vertical-polisher/",
+          "sha256": "4420a6f8a630dc58ecc2dcef9560d03c80a120ec29468c8eebd4108eddafc0dc"
+        },
+        {
+          "url": "https://continentaltoolgroup.com/product/spot-sander-polisher/",
+          "sha256": "f908241d920aef3d7f6044fb77e5e93e70d8afc6b8e16733f154e0411f754709"
+        }
+      ]
+    },
+    {
+      "path": "/guides/hutchins-7044-papier-rectangulaire-sans-trous/",
+      "contentHash": "feaeb0fba47762b2dcac0e79e938a2762379aa825739b8919d15daaacff8cdbf",
+      "neighbors": [
+        "/guides/hutchins-7544-poncage-eau-glisse-accroche/"
+      ],
+      "contextHash": "60a51078d4ef1d0ced302a80f4e07f02dcde51bb5722bd61f05234264001dafc",
+      "rulesHash": "7de55fc6a042a0a4534d0f6da7c971edd9f5735e35d24c1dc4fc328f049634ad",
+      "sourceReleaseSha": "28e69749418e85f7a119d635e4cad37f9db22d64",
+      "reviewedAt": "2026-11-11T07:47:53.682Z",
+      "note": "Instructions Hutchins 7044 et Water Sanders relues : feuille 9×11 divisée en trois 3⅔×9 pour clips, sans trous ajoutés ; distinguer Velcro 3⅔×7 et Clip-On 3⅔×9, modèle rond 7044-6 différent. Voisin 7544 traite le réglage d’eau quand l’abrasif glisse/accroche ; ici commande du format et montage des feuilles, sans rendement ou pression inventé.",
+      "sourceDocuments": [
+        {
+          "url": "https://hutchinsmfg.com/troubleshoot/",
+          "sha256": "6136c06ea934fcd99a2e6623bace4f267e9475e19ec1419d48771a133569bcad"
+        },
+        {
+          "url": "https://hutchinsmfg.com/water-sanders/",
+          "sha256": "158289af615aa854058fc112d3aaa31c17339e7f581c3c4929bf07403a23cd12"
+        }
+      ]
     }
   ]
 }
