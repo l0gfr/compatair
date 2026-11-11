@@ -19,7 +19,7 @@ function fixture(saved: boolean | null = null) {
 	if (saved !== null) storage.set(ANALYTICS_CHOICE_KEY, JSON.stringify(makeAnalyticsChoice(saved)));
 	const local = { getItem: vi.fn((key: string) => storage.get(key) ?? null), setItem: vi.fn((key: string, value: string) => storage.set(key, value)) };
 	const win = new EventTarget() as EventTarget & { dataLayer?: IArguments[]; [key: string]: unknown };
-	const loc = { hostname: 'compatair.fr', protocol: 'https:', origin: 'https://compatair.fr', reload: vi.fn() };
+	const loc = { hostname: 'compatair.fr', protocol: 'https:', origin: 'https://compatair.fr', href: 'https://compatair.fr/calculateur/?analytics_test=discard#simulation', reload: vi.fn() };
 	const doc = new EventTarget() as EventTarget & { [key: string]: unknown };
 	const writes: string[] = [];
 	Object.defineProperty(doc, 'cookie', { get: () => '_ga=old; _ga_TEST123456=old; essential=keep', set: (value: string) => writes.push(value) });
@@ -42,7 +42,7 @@ describe('GA4 browser consent boundary', () => {
 		f.win.dispatchEvent(new Event('compatair:calculator-result')); expect(f.win.dataLayer).toBeUndefined();
 		f.controls.accept.dispatchEvent(new Event('click'));
 		f.win.dispatchEvent(new Event('compatair:calculator-result'));
-		expect(Array.from(f.win.dataLayer!.at(-1)!)).toEqual(['event', 'calculator_result']);
+		expect(Array.from(f.win.dataLayer!.at(-1)!)).toEqual(['event', 'calculator_result', { page_location: 'https://compatair.fr/calculateur/', page_referrer: 'https://www.google.fr/', page_title: 'Calculateur | CompatAir', send_to: 'G-TEST123456' }]);
 		f.controls.refuse.dispatchEvent(new Event('click'));
 		const length = f.win.dataLayer!.length;
 		f.win.dispatchEvent(new Event('compatair:calculator-result')); expect(f.win.dataLayer).toHaveLength(length);
@@ -64,9 +64,42 @@ describe('GA4 browser consent boundary', () => {
 		const commands = f.win.dataLayer!.map((item) => Array.from(item));
 		expect(commands[0]).toEqual(['consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' }]);
 		expect(commands[1]).toEqual(['consent', 'update', { analytics_storage: 'granted' }]);
-		expect(commands[3][2]).toMatchObject({ page_location: 'https://compatair.fr/calculateur/', page_referrer: 'https://www.google.fr/', cookie_update: false, cookie_expires: 15552000, allow_google_signals: false, allow_ad_personalization_signals: false });
+		const globalSettings = commands.find(([name]) => name === 'set')![1];
+		const streamSettings = commands.find(([name]) => name === 'config')![2];
+		expect(globalSettings).toEqual(streamSettings);
+		expect(streamSettings).toMatchObject({ page_location: 'https://compatair.fr/calculateur/', page_referrer: 'https://www.google.fr/', send_page_view: false, cookie_update: false, cookie_expires: 15552000, allow_google_signals: false, allow_ad_personalization_signals: false });
+		expect(commands.findIndex(([name]) => name === 'set')).toBeLessThan(commands.findIndex(([name]) => name === 'js'));
+		expect(commands.filter(([name, event]) => name === 'event' && event === 'page_view')).toEqual([
+			['event', 'page_view', { page_location: 'https://compatair.fr/calculateur/', page_referrer: 'https://www.google.fr/', page_title: 'Calculateur | CompatAir', send_to: 'G-TEST123456' }],
+		]);
 		expect(JSON.stringify(commands)).not.toContain('secret'); expect(JSON.stringify(commands)).not.toContain('simulation');
+		expect(JSON.stringify(commands)).not.toContain('analytics_test');
 		f.win.dispatchEvent(new Event('pageshow')); expect(f.append).toHaveBeenCalledTimes(1);
+		expect(f.win.dataLayer).toHaveLength(commands.length);
+		expect(f.loc.href).toBe('https://compatair.fr/calculateur/?analytics_test=discard#simulation');
+	});
+	it('keeps event-level addresses sanitized for business clicks and rejects unrelated destinations', () => {
+		const f = fixture(true); initializeAnalyticsConsent();
+		class LinkTarget extends EventTarget {
+			constructor(private readonly href: string) { super(); }
+			closest() { return new URL(this.href); }
+		}
+		vi.stubGlobal('Element', LinkTarget);
+		for (const href of ['https://compatair.fr/calculateur/?private=secret#simulation', 'https://compatair.fr/go/test-offer/?private=secret', 'https://elsewhere.test/go/test-offer/']) {
+			const event = new Event('click'); Object.defineProperty(event, 'target', { value: new LinkTarget(href) }); f.doc.dispatchEvent(event);
+		}
+		const events = f.win.dataLayer!.map((item) => Array.from(item)).filter(([name]) => name === 'event');
+		expect(events.map(([, name]) => name)).toEqual(['page_view', 'calculator_intent', 'merchant_click']);
+		for (const [, , parameters] of events) expect(parameters).toEqual({ page_location: 'https://compatair.fr/calculateur/', page_referrer: 'https://www.google.fr/', page_title: 'Calculateur | CompatAir', send_to: 'G-TEST123456' });
+		expect(JSON.stringify(events)).not.toMatch(/private|secret|simulation|test-offer|analytics_test/);
+	});
+	it('does not load Google if the canonical is missing or foreign', () => {
+		for (const canonical of [null, { href: 'https://elsewhere.test/' }]) {
+			const f = fixture(true);
+			f.doc.querySelector = vi.fn((selector: string) => selector === '[data-analytics-consent]' ? f.panel : canonical);
+			initializeAnalyticsConsent();
+			expect(f.append).not.toHaveBeenCalled(); expect(f.win.dataLayer).toBeUndefined(); expect(f.win['ga-disable-G-TEST123456']).toBe(true);
+		}
 	});
 	it('remembers consent and immediately disables collection on withdrawal without sending a denied ping', () => {
 		const f = fixture(true); initializeAnalyticsConsent(); const initial = f.win.dataLayer!.length;

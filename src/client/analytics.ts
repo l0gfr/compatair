@@ -17,6 +17,7 @@ export function initializeAnalyticsConsent() {
 	const status = panel.querySelector<HTMLElement>('[data-analytics-status]');
 	const en = document.documentElement.lang === 'en';
 	let loaded = false;
+	let pageParameters: ReturnType<typeof analyticsPage> & { page_title: string; send_to: string } | undefined;
 	let expiryTimer: ReturnType<typeof setTimeout> | undefined;
 	let returnFocus: HTMLElement | null = null;
 	const choice = () => { try { return readAnalyticsChoice(localStorage.getItem(ANALYTICS_CHOICE_KEY)); } catch { return null; } };
@@ -36,6 +37,9 @@ export function initializeAnalyticsConsent() {
 		// A fresh document also stops Google's already-loaded engagement timers.
 		if (loaded && reload) location.reload();
 	};
+	const send = (name: 'page_view' | 'calculator_result' | 'calculator_intent' | 'merchant_click') => {
+		if (choice()?.allowed && loaded && !flags[disabledKey] && pageParameters) host.gtag?.('event', name, { ...pageParameters });
+	};
 	const synchronize = () => {
 		const current = choice();
 		if (!current?.allowed) { stop(); return; }
@@ -50,18 +54,24 @@ export function initializeAnalyticsConsent() {
 		host.gtag = function (..._args: unknown[]) { host.dataLayer!.push(arguments); };
 		host.gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
 		host.gtag('consent', 'update', { analytics_storage: 'granted' });
-		host.gtag('js', new Date());
-		host.gtag('config', measurementId, {
-			...page, page_title: document.querySelector<HTMLMetaElement>('meta[property="og:title"]')?.content ?? 'CompatAir', send_page_view: true,
+		pageParameters = { ...page, page_title: document.querySelector<HTMLMetaElement>('meta[property="og:title"]')?.content ?? 'CompatAir', send_to: measurementId };
+		const configuration = {
+			...pageParameters, send_page_view: false,
 			allow_google_signals: false, allow_ad_personalization_signals: false,
 			cookie_domain: 'compatair.fr', cookie_path: '/', cookie_expires: ANALYTICS_LIFETIME_SECONDS,
 			cookie_update: false, cookie_flags: 'SameSite=Lax;Secure',
-		});
+		};
+		// Set defaults before initialization; explicit events also carry the sanitized context.
+		// Event parameters have precedence over config and global settings in gtag.js.
+		host.gtag('set', configuration);
+		host.gtag('js', new Date());
+		host.gtag('config', measurementId, { ...configuration });
 		const script = document.createElement('script');
 		script.async = true;
 		script.referrerPolicy = 'no-referrer';
 		script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
 		loaded = true;
+		send('page_view');
 		document.head.append(script);
 	};
 	const show = (trigger?: HTMLElement) => {
@@ -91,13 +101,13 @@ export function initializeAnalyticsConsent() {
 	document.querySelectorAll<HTMLElement>('[data-analytics-settings]').forEach((trigger) => trigger.addEventListener('click', (event) => { event.preventDefault(); show(trigger); }));
 	window.addEventListener('storage', (event) => { if (event.key === ANALYTICS_CHOICE_KEY || event.key === null) { synchronize(); if (!choice()) show(); } });
 	window.addEventListener('pageshow', () => { synchronize(); if (!choice()) show(); });
-	window.addEventListener('compatair:calculator-result', () => { if (choice()?.allowed && loaded && !flags[disabledKey]) host.gtag?.('event', 'calculator_result'); });
+	window.addEventListener('compatair:calculator-result', () => send('calculator_result'));
 	// Only closed event names: no form values, search terms or destination URLs.
 	document.addEventListener('click', (event) => {
 		if (!choice()?.allowed || !loaded || flags[disabledKey] || !(event.target instanceof Element)) return;
 		const link = event.target.closest<HTMLAnchorElement>('a[href]');
-		if (link?.origin === location.origin && link.pathname === '/calculateur/') host.gtag?.('event', 'calculator_intent');
-		else if (link?.origin === location.origin && link.pathname.startsWith('/go/')) host.gtag?.('event', 'merchant_click');
+		if (link?.origin === location.origin && link.pathname === '/calculateur/') send('calculator_intent');
+		else if (link?.origin === location.origin && link.pathname.startsWith('/go/')) send('merchant_click');
 	});
 	synchronize();
 	if (!choice()) show();

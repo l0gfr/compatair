@@ -18,6 +18,8 @@ Le gestionnaire de consentement représente environ 1,8 Kio gzip dans la compila
 
 Les adresses de page proviennent de la canonical publique, sans paramètres ni fragments. Le référent est limité à son origine. Aucune recherche saisie, valeur de formulaire, photo, configuration, nom, email ou User-ID n’est fourni à GA4. La mesure reste pseudonyme : identifiant navigateur, heures, pages et contexte technique de base sont reçus par Google après consentement.
 
+Le contexte nettoyé est défini avant l’initialisation avec `gtag('set', ...)`, puis dans la configuration du flux et explicitement dans chaque événement envoyé par CompatAir. Les pages vues automatiques sont désactivées avec `send_page_view: false` ; une seule `page_view` explicite est mise en file après acceptation. Un retour `pageshow` ne la répète pas. Les mesures améliorées du flux doivent rester désactivées pour éviter les pages vues automatiques lors des changements d’historique.
+
 Événements : `page_view` et événements de session/engagement GA4 ; `calculator_intent` pour un clic interne vers le calculateur ; `calculator_result` après affichage effectif d’une réponse ; `merchant_click` pour un clic vers `/go/`. Aucun de ces événements n’est décrit comme un achat. Les événements métier ne comportent aucune valeur du calcul ni URL de destination.
 
 ## Réglages de propriété
@@ -34,11 +36,15 @@ Exécuter les tests `src/domain/analytics-consent.test.ts`, `src/client/analytic
 
 Les tests locaux ne transmettent aucun événement réel à Google. Les vérifications manuelles de production peuvent apparaître dans les premiers rapports. GA4 mesure uniquement les navigateurs consentants, et ne reconstitue pas l’historique GoAccess. Les bloqueurs et refus limitent sa couverture. Search Console reste la source pour les clics et impressions Google ; les appels API/MCP et les robots restent à analyser côté serveur.
 
+Le contrôle réel du 11 novembre 2026 sur `e59028d9c` a confirmé l’activation après accord, la persistance du refus, le retrait et la réception des événements du calculateur. Il a aussi révélé `analytics_test=discard` dans `page_location`, malgré le contexte nettoyé passé à `config`. Ce marqueur de test ne contient aucune donnée personnelle. Le contrôle des commandes locales ne suffisait donc pas à valider la réception réelle. Le correctif à événements explicites doit être confirmé sur la version servie avec un nouveau marqueur inoffensif : vérifier son absence dans les valeurs reçues de `page_view` et des événements métier, ainsi que l’absence de doublon. Les tests unitaires ne constituent pas cette preuve Google.
+
 ## Sources de la configuration
 
 - [CNIL : règles applicables aux cookies](https://www.cnil.fr/fr/cookies-et-autres-traceurs/que-dit-la-loi).
 - [Google : mode de consentement de base](https://developers.google.com/tag-platform/security/concepts/consent-mode).
 - [Google : paramètres de configuration GA4](https://developers.google.com/analytics/devguides/collection/ga4/reference/config).
+- [Google : priorité des paramètres par événement, configuration et contexte global](https://developers.google.com/tag-platform/gtagjs/reference#parameter_precedence).
+- [Google : désactiver les pages vues automatiques et envoyer une page vue explicite](https://developers.google.com/analytics/devguides/collection/ga4/views).
 - [Google : conservation et rapports agrégés](https://support.google.com/analytics/answer/7667196?hl=fr).
 - [Google : données européennes et adresses IP](https://support.google.com/analytics/answer/12017362?hl=fr).
 - [Google : CSP sans fonctionnalités publicitaires](https://developers.google.com/tag-platform/security/guides/csp).
