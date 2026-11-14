@@ -12,7 +12,7 @@ overrides:
   '@lhci/cli@0.15.1>chrome-launcher': '0.15.2'
   '@lhci/utils@0.15.1>js-yaml': '4.3.2'
   '@puppeteer/browsers': '3.2.0'
-  basic-ftp: '6.2.1'
+  basic-ftp: '6.2.6'
   'body-parser@1': '1.20.9'
   compression: '1.8.2'
   devalue: '5.9.3'
@@ -33,6 +33,7 @@ overrides:
   vite: '8.1.6'
 
 patchedDependencies:
+  '@astrojs/internal-helpers@0.11.0': patches/@astrojs__internal-helpers@0.11.0.patch
   '@lhci/utils@0.15.1': patches/@lhci__utils@0.15.1.patch
   astro@7.3.3: patches/astro@7.3.3.patch
   http-cache-semantics@4.3.0: patches/http-cache-semantics@4.3.0.patch

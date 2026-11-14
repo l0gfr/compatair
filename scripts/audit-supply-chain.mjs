@@ -3,7 +3,7 @@ import { readdir, readFile } from 'node:fs/promises';
 import { classifyNpmAdvisories } from './lib/advisory-policy.mjs';
 import { fetchGitHubAdvisories } from './lib/github-advisory-client.mjs';
 import { fileURLToPath } from 'node:url';
-import { attestInstalledDependencyPatches, isVerifiedCacheAdvisory } from './lib/verified-dependency-patches.mjs';
+import { attestInstalledDependencyPatches, isVerifiedCacheAdvisory, isVerifiedAstroAdvisory } from './lib/verified-dependency-patches.mjs';
 import { attestInstalledZodCollectionPatch, isVerifiedZodCollectionAdvisory } from './lib/verified-zod-collection-patch.mjs';
 
 const REGISTRY = 'https://registry.npmjs.org';
@@ -15,7 +15,7 @@ const EXPECTED_OVERRIDES = new Map([
   ['@lhci/cli@0.15.1>chrome-launcher', '0.15.2'],
   ['@lhci/utils@0.15.1>js-yaml', '4.3.2'],
   ['@puppeteer/browsers', '3.2.0'],
-  ['basic-ftp', '6.2.1'],
+  ['basic-ftp', '6.2.6'],
   ['body-parser@1', '1.20.9'],
   ['compression', '1.8.2'],
   ['devalue', '5.9.3'],
@@ -330,11 +330,11 @@ if (advisoryMode) {
     const response = await fetchGitHubAdvisories(lockedPackages);
     const directRuntimeDependencies = new Set(Object.keys(packageJson.dependencies ?? {}));
     const { advisories, blocking: policyBlocking } = classifyNpmAdvisories(response, directRuntimeDependencies);
-    const blocking = policyBlocking.filter((advisory) => !isVerifiedCacheAdvisory(advisory, patchAttestation) && !isVerifiedZodCollectionAdvisory(advisory, zodAttestation));
+    const blocking = policyBlocking.filter((advisory) => !isVerifiedCacheAdvisory(advisory, patchAttestation) && !isVerifiedAstroAdvisory(advisory, patchAttestation) && !isVerifiedZodCollectionAdvisory(advisory, zodAttestation));
     console.log(`Avis GitHub Advisory Database: ${advisories.length} signalé(s), dont ${blocking.length} bloquant(s) selon la politique runtime.`);
     for (const advisory of advisories) {
       const message = `${advisory.packageName}: ${advisory.severity} ${advisory.title} (${advisory.url})`;
-      if (isVerifiedCacheAdvisory(advisory, patchAttestation) || isVerifiedZodCollectionAdvisory(advisory, zodAttestation)) warnings.push(`avis connu corrigé localement, toujours signalé par GitHub: ${message}`);
+      if (isVerifiedCacheAdvisory(advisory, patchAttestation) || isVerifiedAstroAdvisory(advisory, patchAttestation) || isVerifiedZodCollectionAdvisory(advisory, zodAttestation)) warnings.push(`avis connu corrigé localement, toujours signalé par GitHub: ${message}`);
       else if (blocking.includes(advisory)) failures.push(`vulnérabilité npm: ${message}`);
       else warnings.push(`vulnérabilité npm transitive sous le seuil high: ${message}`);
     }

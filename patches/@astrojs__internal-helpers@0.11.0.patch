@@ -1,0 +1,18 @@
+diff --git a/dist/path.js b/dist/path.js
+index f0a3f9262955e4a060edefbb89bbf200f9f278d2..3cfced188bfbfced3d1f3d6d860c254d1e28ef7f 100644
+--- a/dist/path.js
++++ b/dist/path.js
+@@ -149,8 +149,11 @@ function isParentDirectory(parentPath, childPath) {
+   if (parentPath.includes("\0") || childPath.includes("\0")) {
+     return false;
+   }
+-  const normalizedParent = appendForwardSlash(slash(parentPath).toLowerCase());
+-  const normalizedChild = slash(childPath).toLowerCase();
++  const windowsAbsolutePath = /^[a-zA-Z]:[\\/]/;
++  const caseInsensitive = windowsAbsolutePath.test(parentPath) && windowsAbsolutePath.test(childPath);
++  const fold = (value) => caseInsensitive ? value.toLowerCase() : value;
++  const normalizedParent = appendForwardSlash(fold(slash(parentPath)));
++  const normalizedChild = fold(slash(childPath));
+   if (normalizedParent === normalizedChild || normalizedParent === normalizedChild + "/") {
+     return false;
+   }

@@ -4,7 +4,7 @@ import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { parse } from 'yaml';
 import { describe, expect, it } from 'vitest';
-import { validateDependencyPatches, isVerifiedCacheAdvisory, attestInstalledDependencyPatches, collectInstalledDependencyPatchCopies } from './verified-dependency-patches.mjs';
+import { validateDependencyPatches, isVerifiedCacheAdvisory, isVerifiedAstroAdvisory, attestInstalledDependencyPatches, collectInstalledDependencyPatchCopies } from './verified-dependency-patches.mjs';
 import { advisoryBlocksRelease } from './advisory-policy.mjs';
 
 const root = new URL('../../', import.meta.url);
@@ -13,6 +13,12 @@ const astroConsumer = createRequire(require.resolve('astro'));
 const lhciConsumer = createRequire(require.resolve('@lhci/cli/package.json'));
 const astroReference = 'astro@7.3.3';
 const astroPath = join(dirname(require.resolve('astro/package.json')), 'dist/core/build/plugins/plugin-incremental.js');
+const helperReference = '@astrojs/internal-helpers@0.11.0';
+const helperPath = astroConsumer.resolve('@astrojs/internal-helpers/path');
+const astroAdditionalSources = {};
+for (const file of ['dist/runtime/server/jsx.js', 'dist/runtime/server/render/component.js', 'dist/runtime/server/render/streaming.js', 'dist/runtime/server/render/util.js', 'dist/runtime/server/render/util.d.ts', 'dist/assets/endpoint/node.js']) {
+	astroAdditionalSources[file] = await readFile(join(dirname(require.resolve('astro/package.json')), file));
+}
 const cacheReference = 'http-cache-semantics@4.3.0';
 const lhciReference = '@lhci/utils@0.15.1';
 const cachePath = astroConsumer.resolve('http-cache-semantics');
@@ -23,6 +29,7 @@ const fixture = {
 	workspace: parse(workspaceText),
 	lockfile: parse(lockText),
 	patches: {
+		[helperReference]: await readFile(new URL('patches/@astrojs__internal-helpers@0.11.0.patch', root)),
 		[astroReference]: await readFile(new URL('patches/astro@7.3.3.patch', root)),
 		[cacheReference]: await readFile(new URL('patches/http-cache-semantics@4.3.0.patch', root)),
 		[lhciReference]: await readFile(new URL('patches/@lhci__utils@0.15.1.patch', root)),
@@ -30,9 +37,11 @@ const fixture = {
 	installedCopies: [
 		{ name: 'http-cache-semantics', version: '4.3.0', source: await readFile(cachePath), path: cachePath },
 		{ name: '@lhci/utils', version: '0.15.1', source: await readFile(lhciPath), path: lhciPath },
-		{ name: 'astro', version: '7.3.3', source: await readFile(astroPath), path: astroPath },
+		{ name: 'astro', version: '7.3.3', source: await readFile(astroPath), path: astroPath, additionalSources: astroAdditionalSources },
+		{ name: '@astrojs/internal-helpers', version: '0.11.0', source: await readFile(helperPath), path: helperPath },
 	],
 	consumerPaths: {
+		[helperReference]: helperPath,
 		[astroReference]: astroPath,
 		[cacheReference]: cachePath,
 		[lhciReference]: lhciPath,
@@ -56,14 +65,19 @@ describe('attested installed dependency corrections', () => {
 		try {
 			for (const [index, copy] of [...fixture.installedCopies, { ...fixture.installedCopies[0], source: Buffer.from('unpatched-copy') }].entries()) {
 				const packageRoot = join(temporaryRoot, 'node_modules', '.pnpm', `copy-${index}`, 'node_modules', ...copy.name.split('/'));
-				const source = copy.name === 'astro' ? 'dist/core/build/plugins/plugin-incremental.js' : copy.name === '@lhci/utils' ? 'src/lighthouserc.js' : 'index.js';
+				const source = copy.name === 'astro' ? 'dist/core/build/plugins/plugin-incremental.js' : copy.name === '@lhci/utils' ? 'src/lighthouserc.js' : copy.name === '@astrojs/internal-helpers' ? 'dist/path.js' : 'index.js';
 				await mkdir(dirname(join(packageRoot, source)), { recursive: true });
 				await writeFile(join(packageRoot, 'package.json'), JSON.stringify({ name: copy.name, version: copy.version }));
 				await writeFile(join(packageRoot, source), copy.source);
+				for (const [file, bytes] of Object.entries(copy.additionalSources ?? {})) {
+					await mkdir(dirname(join(packageRoot, file)), { recursive: true });
+					await writeFile(join(packageRoot, file), bytes);
+				}
 			}
 			const installedCopies = await collectInstalledDependencyPatchCopies(temporaryRoot);
-			expect(installedCopies).toHaveLength(4);
+			expect(installedCopies).toHaveLength(5);
 			const consumerPaths = Object.fromEntries([
+				[helperReference, installedCopies.find((copy) => copy.name === '@astrojs/internal-helpers').path],
 				[astroReference, installedCopies.find((copy) => copy.name === 'astro').path],
 				[cacheReference, installedCopies.find((copy) => copy.name === 'http-cache-semantics' && copy.source.equals(fixture.installedCopies[0].source)).path],
 				[lhciReference, installedCopies.find((copy) => copy.name === '@lhci/utils').path],
@@ -75,6 +89,9 @@ describe('attested installed dependency corrections', () => {
 	});
 
 	it.each([
+		['missing path helper', (f) => { f.installedCopies = f.installedCopies.filter(copy => copy.name !== '@astrojs/internal-helpers'); }],
+		['unpatched path helper', (f) => { f.installedCopies.find(copy => copy.name === '@astrojs/internal-helpers').source[0] ^= 1; }],
+		...Object.keys(astroAdditionalSources).map(path => [`unpatched Astro ${path}`, f => { f.installedCopies.find(copy => copy.name === 'astro').additionalSources[path][0] ^= 1; }]),
 		['removed Astro patch declaration', (f) => { delete f.workspace.patchedDependencies[astroReference]; }],
 		['changed Astro patch bytes', (f) => { f.patches[astroReference][0] ^= 1; }],
 		['changed Astro lock digest', (f) => { f.lockfile.patchedDependencies[astroReference].hash = '0'.repeat(64); }],
@@ -128,6 +145,21 @@ describe('attested installed dependency corrections', () => {
 		]) {
 			expect(isVerifiedCacheAdvisory(changed, attestation)).toBe(false);
 			expect(advisoryBlocksRelease(changed, new Set())).toBe(true);
+		}
+	});
+
+	it('recognizes only the two exact Astro backports after every installed patch passes', () => {
+		const attestation = validateDependencyPatches(fixture);
+		for (const entry of [
+			{ packageName: 'astro', severity: 'low', title: 'Astro: XSS via attribute injection in dynamic tag names', url: 'https://github.com/advisories/GHSA-mh32-jxcr-mh9f' },
+			{ packageName: 'astro', severity: 'moderate', title: 'Astro: Image endpoint in @astrojs/node can read files from a case-variant sibling of the output directory on case-sensitive filesystems', url: 'https://github.com/advisories/GHSA-r3h5-4585-7x3w' },
+		]) {
+			expect(advisoryBlocksRelease(entry, new Set(['astro']))).toBe(true);
+			expect(isVerifiedAstroAdvisory(entry, attestation)).toBe(true);
+			expect(isVerifiedAstroAdvisory(entry, undefined)).toBe(false);
+			for (const changed of [{ ...entry, packageName: 'other' }, { ...entry, severity: 'critical' }, { ...entry, title: 'Unreviewed issue' }, { ...entry, url: 'https://github.com/advisories/GHSA-other' }]) {
+				expect(isVerifiedAstroAdvisory(changed, attestation)).toBe(false);
+			}
 		}
 	});
 });

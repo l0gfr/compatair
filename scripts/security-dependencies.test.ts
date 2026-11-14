@@ -374,6 +374,12 @@ describe('installed dependency security boundaries', () => {
 
 	it('bounds malformed FTP listing parsing and preserves Unix, DOS and MLSD entries', () => {
 		checkInstalledDependency('@lhci/cli/package.json', ['proxy-agent', 'pac-proxy-agent', 'get-uri'], 'basic-ftp', `
+			assert.equal(installedVersion('basic-ftp'), '6.2.6');
+			for (const key of ['__proto__', 'constructor', 'toString', 'hasOwnProperty']) {
+				const entry = library.parseList(key + '=fixture;type=file;size=10; fixture.txt')[0];
+				assert.equal(entry.name, 'fixture.txt');
+				assert.equal(entry.size, 10);
+			}
 			const unix = '-rw-r--r-- 1 owner group 42 Jan 1 2020 file.txt';
 			const malformed = '-rw-r--r-- 1 ' + 'a '.repeat(65_536) + '!';
 			const files = library.parseList(malformed + '\\r\\n42 ' + malformed + '\\r\\n' + unix);
@@ -384,6 +390,43 @@ describe('installed dependency security boundaries', () => {
 			const mlsd = library.parseList('modify=20260101120000;type=file;size=42; file.txt')[0];
 			assert.equal(mlsd.name, 'file.txt');
 			assert.equal(mlsd.modifiedAt.toISOString(), '2026-01-01T12:00:00.000Z');
+		`);
+	});
+
+	it('rejects FTP password control characters from the socket callback without crashing', () => {
+		checkInstalledDependency('@lhci/cli/package.json', ['proxy-agent', 'pac-proxy-agent', 'get-uri'], 'basic-ftp', `
+			const { createServer } = await import('node:net');
+			const commands = [];
+			const serverErrors = [];
+			const sockets = new Set();
+			const server = createServer(socket => {
+				socket.on('error', error => { if (error.code !== 'ECONNRESET') serverErrors.push(error); });
+				sockets.add(socket); socket.on('close', () => sockets.delete(socket)); socket.write('220 fixture\\r\\n');
+				let input = '';
+				socket.on('data', chunk => {
+					input += chunk;
+					let end;
+					while ((end = input.indexOf('\\r\\n')) !== -1) {
+						const command = input.slice(0, end); input = input.slice(end + 2); commands.push(command);
+						socket.write(command.startsWith('USER') ? '331 password\\r\\n' : command.startsWith('PASS') ? '230 ok\\r\\n' : '200 ok\\r\\n');
+					}
+				});
+			});
+			await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
+			try {
+				for (const password of ['fixture\\r\\nDELE fixture', 'fixture\\n', 'fixture\\0']) {
+					const client = new library.Client(1000);
+					try {
+						await client.connect('127.0.0.1', server.address().port);
+						await assert.rejects(client.login('synthetic-user', password), /control characters/);
+					} finally { client.close(); }
+				}
+				const client = new library.Client(1000);
+				try { await client.connect('127.0.0.1', server.address().port); assert.equal((await client.login('synthetic-user', 'synthetic-password')).code, 230); }
+				finally { client.close(); }
+				assert.equal(commands.some(command => command.startsWith('DELE')), false);
+			} finally { for (const socket of sockets) socket.destroy(); await new Promise(resolve => server.close(resolve)); }
+			assert.deepEqual(serverErrors, []);
 		`);
 	});
 

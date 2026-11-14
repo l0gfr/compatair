@@ -68898,7 +68898,7 @@
       "sourceReleaseSha": "c703f2c8f282faab8748888d1c6b3d37795d1152",
       "policyHash": "02c8c9eef805ca32c18797d46de58793812117a16109e6121fc08d0bdc653691",
       "corpusHash": "1463227064a2d23959fe32e68f31196ff8b41957664fa11d2857aaa249028575",
-      "reviewedAt": "2026-11-14T07:48:15.419293+00:00",
+      "reviewedAt": "2026-11-14T17:20:02.358639+00:00",
       "status": "partial",
       "note": "Reprise ciblée de 32 corrections préparées, relues sur les documents primaires actuels et les voisins de main ; autres candidats différés sans remplacement. Historique et contrôles conservés.",
       "sourceChecks": [
@@ -70114,7 +70114,7 @@
           "contentHash": "552a0e1d0e4cd63267f53a9f867a5c7cf3def72816fdd00c251c3f7a931a58fe",
           "decision": "approved",
           "note": "ZAT400CMPLT : multiplicateur de couple à carré 3/4 pouce, plage publiée 60–540 Nm et masse 4,6 kg. Le ZAT800CMPLT couvre 120–1 100 Nm ; les versions DR ajoutent un afficheur. La consommation d’air de cette configuration reste à documenter. Comparaison actuelle avec /outils-pneumatiques/boulonneuse-zipp-zat800cmplt/, /outils-pneumatiques/boulonneuse-zipp-zat400dr-cmplt/. Ajouter le couple60–540 Nm, carré3/4 et absence de lecture numérique, distinct800CMPLT120–1100 Nm et400DRavec afficheur. Masse4,6 kg confirmée mais seule elle n’explicite pas la fonction. Aucun débit ni point de pression publié. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "ccd7eb957cbc796a4ad87284bca9cca3d87cf6e6e24c3e12f98e84fc6879d4a4"
+          "qualificationId": "dcd7a42f718456b3049a2ffe32c0c0d74a399d83b535f94ffc14c304e606eeed"
         },
         {
           "path": "/outils-pneumatiques/burineur-zipp-zah-592k/",
@@ -70127,49 +70127,49 @@
           "contentHash": "688204ee4f0161cdaa9ba8de35184eb9da3fcff57e8c21abb452580d44cf2c7f",
           "decision": "approved",
           "note": "GW-13J1 : clé à chocs 3/8 pouce à mécanisme Jumbo Hammer, longueur 99 mm et couple maximal déclaré de 610 Nm. La GW-13J mesure 135 mm et annonce 407 Nm. Le format et le mécanisme complètent la comparaison du débit documentaire. Comparaison actuelle avec /outils-pneumatiques/cle-a-chocs-gison-gw-13j/, /outils-pneumatiques/cle-a-chocs-gison-gw-13jh/. GW-13J1 : clé à chocs 3/8 pouce à mécanisme Jumbo Hammer, longueur 99 mm et couple maximal déclaré de 610 Nm. La GW-13J mesure 135 mm et annonce 407 Nm. Le format et le mécanisme complètent la comparaison du débit documentaire. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "0777888112ffc73effa2cbf8cf2212d74df258d2f217f446c75840b2c5e0e34d"
+          "qualificationId": "424083254ef71f6345985894678f2a7a7783534dcee887b3e2c99673f409ae1f"
         },
         {
           "path": "/outils-pneumatiques/cle-a-chocs-zipp-zaw-412b2/",
           "contentHash": "0ce7461d902a3e3c6bc6cc9835b2951304164c8856ed20e85588d990ea8f5a06",
           "decision": "approved",
           "note": "ZAW412B2 : clé à chocs à carré 1/4 pouce, 11 000 tr/min, couple maximal de 35 Nm et couple de travail de 27 Nm. La 412B3 utilise un carré 3/8 pouce avec les mêmes valeurs. Le corps mesure 178 mm pour 0,68 kg. La moyenne de 127 L/min reste non dimensionnante. Comparaison actuelle avec /outils-pneumatiques/cle-a-chocs-zipp-zaw-412lb2/, /outils-pneumatiques/cle-a-chocs-zipp-zaw-412b3/. 412B2 est carré1/4 et412B3 carré3/8, même11000 tr/min35Nmmax,27Nmtravail0,68kg178 mm. Différence fonctionnelle omise.127 L/minmoyenne conserve insufficient_data ;6,2 bar est consigne générale pas pression de mesure. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "8b77246a95277380b77eae977455afc3156d4747d52dac2510345c73c247d8d9"
+          "qualificationId": "fa8afa9be7fc551462d5247925fa080c37aea256383bac195d362a8312cdf790"
         },
         {
           "path": "/outils-pneumatiques/cle-a-cliquet-gison-gp-854h/",
           "contentHash": "4e1951d0937289c5f6a1407b8297dbee995db708918f837f93ec54bdea277c48",
           "decision": "approved",
           "note": "GP-854H : cliquet court de 125 mm, carré 1/4 pouce et 30 Nm maximum déclarés. La GP-854 mesure 170 mm pour 40 Nm et la GP-854D 174 mm pour 40 Nm. Le gain de longueur s’accompagne ici d’un couple publié plus faible. Comparaison actuelle avec /outils-pneumatiques/cle-a-cliquet-gison-gp-854/, /outils-pneumatiques/cle-a-cliquet-gison-gp-854d/. GP-854H : cliquet court de 125 mm, carré 1/4 pouce et 30 Nm maximum déclarés. La GP-854 mesure 170 mm pour 40 Nm et la GP-854D 174 mm pour 40 Nm. Le gain de longueur s’accompagne ici d’un couple publié plus faible. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "93a39020629d2d7add7c0617d8dfcaedd341bd0e6c3b775decac410e645316cf"
+          "qualificationId": "5ebccda9f49beb84d7f8906a5fa609498230da05a19d1fcbea5d93e7c0559648"
         },
         {
           "path": "/outils-pneumatiques/cle-a-cliquet-zipp-zp168/",
           "contentHash": "29cc003bd3f62ff283d0d0c5b449a8ec4800a9dc9c894bde1766b2f1fc80783c",
           "decision": "approved",
           "note": "ZP168 : cliquet à carré 1/4 pouce, 27 Nm maximum, 260 tr/min et corps de 133 mm pour 0,45 kg. Les ZP161 et ZP163 sont en carrés 1/2 et 3/8 pouce, 68 Nm maximum et 265 mm. La moyenne de 70 L/min ne donne pas la demande continue en charge. Comparaison actuelle avec /outils-pneumatiques/cle-a-cliquet-zipp-zp161/, /outils-pneumatiques/cle-a-cliquet-zipp-zp163/. Ajouter carré1/4,27Nmmax133 mm contre 1611/2et1633/8à68Nm265 mm.260 tr/min0,45 kg et70 L/minmoyenne confirmés, pas dimensionnants. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "24acf5d3edd26bc5daf55c01d71e9baf22004f5034dc2997b597e5f5c6ac14af"
+          "qualificationId": "e21a340dd67bb9a1a4b58b85d25b330ed37975a15b0a09a0697e4b4d0ac84daa"
         },
         {
           "path": "/outils-pneumatiques/cle-a-impulsions-zipp-pn062/",
           "contentHash": "0b25976e87beb4865a90055ea1f1720d1e98b466b284225a279369cf90bb33be",
           "decision": "approved",
           "note": "PN062 : outil à impulsions sans arrêt automatique, hexagone 1/4 pouce, capacité M6–M8, 6 000 tr/min et 0,94 kg. La PN052 publie une moyenne de 0,40 m³/min contre 0,43 pour la PN062 ; la PN042 est à 5 600 tr/min. La plage de service 60–90 psi reste distincte des courbes de pression d’huile et du point de mesure d’air, non qualifié. Comparaison actuelle avec /outils-pneumatiques/cle-a-impulsions-zipp-pn042/, /outils-pneumatiques/cle-a-impulsions-zipp-pn052/. PN062 sans arrêt auto,hex1/4,M6–M8,0,43 m³/minmoyenne contrePN0520,4 à6000 tr/min etPN0425600 tr/min. Plage60–90psi sans point unique ; ne pas importer une courbe couple/pression d’huile comme pression d’air ou débit en charge. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "76dfc5a40ceb30c93765b808ae88531f6d9aba41dd5c7ffcd5e436c0b805f06a"
+          "qualificationId": "c6816a0605b6782145488636cda61b5c9df9b77929fa0af9258dcfbef1b75972"
         },
         {
           "path": "/outils-pneumatiques/derouilleur-a-aiguilles-gison-gp-851b/",
           "contentHash": "c9c60365a9301953d41c7d602d613a63582bf2eb4261c550b671586088149bac",
           "decision": "approved",
           "note": "GP-851B : dérouilleur à 19 aiguilles de 3 mm et 3 700 coups/min, longueur 250 mm et masse 2,60 kg. La GP-851 est la configuration de 460 mm à deux fonctions. La longueur et la configuration d’aiguilles restent des critères distincts du débit. Comparaison actuelle avec /outils-pneumatiques/derouilleur-a-aiguilles-gison-gp-851/, /outils-pneumatiques/derouilleur-a-aiguilles-gison-gp-8511/. Relecture du 14 novembre des pages PDF 53 et 54 : GP-851B, 19 aiguilles de 3 mm, 3700 coups/min, 250 mm, 2,60 kg ; GP-851 à deux fonctions, 460 mm. La comparaison publiée se limite à cette référence explicite : le suffixe imprimé I de la configuration de 290 mm ne devient pas un chiffre 1. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "b546f741b684b1b09b71676581eb1467e2fb819f6255ec58d8a65e10bfe391dc"
+          "qualificationId": "efa284ddd2942c3163b158921300d66f45cdeea2b175a798f7e7f34b783334eb"
         },
         {
           "path": "/outils-pneumatiques/derouilleur-a-aiguilles-zipp-zkj221-29/",
           "contentHash": "282bd8856d7deab38ddd1556ee088a52fd82bf8089c8eeb3e6434ed1bc0ff798",
           "decision": "approved",
           "note": "ZKJ22129 : dérouilleur à 29 aiguilles de 2 × 180 mm, 3 700 coups/min, longueur 330 mm et masse 2,7 kg. Le 22119 utilise 19 aiguilles de 3 × 180 mm ; le 322119 est à 2 700 coups/min et 3,9 kg. Les 85 L/min moyens ne sont pas transformés en consommation par coup. Comparaison actuelle avec /outils-pneumatiques/derouilleur-a-aiguilles-zipp-zkj221-19/, /outils-pneumatiques/derouilleur-a-aiguilles-zipp-zkj3221-19/. 29aiguilles2×180 mm,3700 coups/min2,7kg330 mm, contre 2211919aiguilles3×180 mm et3221192700 coups/min3,9 kg.85 L/minestmoyenne, plafondrecommandé6,2 bar. Ajouter la différence d’aiguilles, ne pas déduire per-action. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "eeadf21e54e8dbf24f10b8436f99d92d34fbe008afa22bc2286b6063e0eb32b0"
+          "qualificationId": "114d4b9d7f566ab74555d22da08295dbd524998297dd6138fbdf8c9209fef044"
         },
         {
           "path": "/outils-pneumatiques/fouloir-zipp-zsr-304l/",
@@ -70182,133 +70182,133 @@
           "contentHash": "d8adaa1c2f4e7bf253908b809f82e1e4fe3bd851840d060bfe401945b7ad2f40",
           "decision": "approved",
           "note": "GP-948C : lime alternative de course 10 mm à 9 000 coups/min, longueur 198 mm et masse 0,75 kg. La GP-948 conserve 10 mm de course mais descend à 3 700 coups/min ; la GP-948A utilise une course de 1 mm à 21 000 coups/min. Aucune capacité matière n’est déduite de ces cadences. Comparaison actuelle avec /outils-pneumatiques/lime-alternative-gison-gp-948/, /outils-pneumatiques/lime-alternative-gison-gp-948a/. GP-948C : lime alternative de course 10 mm à 9 000 coups/min, longueur 198 mm et masse 0,75 kg. La GP-948 conserve 10 mm de course mais descend à 3 700 coups/min ; la GP-948A utilise une course de 1 mm à 21 000 coups/min. Aucune capacité matière n’est déduite de ces cadences. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "f53c5df97add30985f915d29d8117e13e2351bad3243a584d8a6215ee6f695c0"
+          "qualificationId": "5e6b9570833c115ad5933bf44318b72d0f99acfcf90745ea354d1bbb2f4422b0"
         },
         {
           "path": "/outils-pneumatiques/marteau-a-river-zipp-zrh-131s/",
           "contentHash": "6bd4a892ed24e63fb1f80eb0127d330279bd201ae65274543c2482a4b8b62e3d",
           "decision": "approved",
           "note": "ZRH131S : marteau à river droit à queue 0,401 pouce, 2 850 coups/min, 160 mm et 0,86 kg. Les capacités publiées sont 3,2 mm dans l’acier et 4 mm dans l’aluminium, énergie déclarée 2,61 J. Le 131P est un pistolet de 115 mm et 1 kg ; le 195P utilise une queue 0,498 pouce. La moyenne de 180 L/min reste documentaire. Comparaison actuelle avec /outils-pneumatiques/marteau-a-river-zipp-zrh-131p/, /outils-pneumatiques/marteau-a-river-zipp-zrh-195p/. 131S droit,2850 coups/min160mm0,86 kg,queue.401, capacitéacier3,2/aluminium4 mm,2,61J.131Ppistolet115mm1 kg ;195Pqueue.4981560 coups/min2,1 kg. Ajouter forme/longueur/queue, moyenne180 L/min reste non dimensionnante. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "a580403523c88a9bfe73aa76616749e7916d95ee33aac1648e491a5ee7fea536"
+          "qualificationId": "45fde61a3e207c1eb140c9e331cd9c71f78b0bff5115f5e2bef31932897b3697"
         },
         {
           "path": "/outils-pneumatiques/meuleuse-gison-gp-8240c/",
           "contentHash": "e1d2b4f4dc56e6c6279d6be4b55fd3e00f3f0a83bbfaea286e85f68e86a22bd6",
           "decision": "approved",
           "note": "GP-8240C : micro-meuleuse à palettes composites, pince de 3 mm (1/8 pouce dans le tableau), 54 000 tr/min et 0,23 kg. La GP-8240B partage ces dimensions et cette vitesse ; la mention de palettes composites distingue la C. La GP-8240D accepte 3 et 6 mm à 35 000 tr/min. Comparaison actuelle avec /outils-pneumatiques/meuleuse-gison-gp-8240b/, /outils-pneumatiques/meuleuse-gison-gp-8240d/. GP-8240C : micro-meuleuse à palettes composites, pince de 3 mm (1/8 pouce dans le tableau), 54 000 tr/min et 0,23 kg. La GP-8240B partage ces dimensions et cette vitesse ; la mention de palettes composites distingue la C. La GP-8240D accepte 3 et 6 mm à 35 000 tr/min. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "8a6dbdc52beca37c2eba13f64acc43681850d78be7c00cfd460a2d1fbce32fed"
+          "qualificationId": "30e8699d7990166d4a0d32acf18971f97b26349f3a64625a156a18de3515c0c8"
         },
         {
           "path": "/outils-pneumatiques/meuleuse-zipp-zag-341/",
           "contentHash": "d1dddca7981a90b96bb41891db5543facc8b4c658ddf2558312eae7eeb14e2bb",
           "decision": "approved",
           "note": "ZAG341 : meuleuse d’angle pour disque de 2 pouces, 15 000 tr/min, longueur 178 mm et masse 0,7 kg. Les ZDG231 et ZDG301 sont des meuleuses droites à pince, à 25 000 et 23 000 tr/min. Le format d’abrasif et la géométrie les distinguent ; les 3,5 cfm moyens restent hors dimensionnement. Comparaison actuelle avec /outils-pneumatiques/meuleuse-zipp-zdg-231/, /outils-pneumatiques/meuleuse-zipp-zdg-301/. ZAG341 est meuleuse d’angle pour disque2pouces,15000 tr/min178mm0,7 kg. Les voisinesZDG231/301 sont meuleuses droites à pinces et vitesses25000/23000 ; ajouter disque/fonction,3,5cfmmoyenne reste documentaire sans pression. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "4126ae546b9f777d02bbaee195f1f985d941bd00cafe08fab3f68f925f507a1c"
+          "qualificationId": "04ee05716f5bf1ce4d8c55957a8bd5812c4540a0d16aa14a0dddd9771d15c7e7"
         },
         {
           "path": "/outils-pneumatiques/perceuse-gison-gp-330a/",
           "contentHash": "ffa834699c2d9205a0488cafd63c84d0197ca25ea53c678e4162402625ee17e9",
           "decision": "approved",
           "note": "GP-330A : perceuse droite à mandrin 1/4 pouce, vitesse maximale déclarée de 6 500 tr/min et longueur 175 mm. Les GP-330 et GP-330ST sont en mandrin 3/8 pouce à 2 500 et 2 600 tr/min, pour 225 et 218 mm. Le mandrin et le régime distinguent ces configurations. Comparaison actuelle avec /outils-pneumatiques/perceuse-gison-gp-330/, /outils-pneumatiques/perceuse-gison-gp-330st/. GP-330A : perceuse droite à mandrin 1/4 pouce, vitesse maximale déclarée de 6 500 tr/min et longueur 175 mm. Les GP-330 et GP-330ST sont en mandrin 3/8 pouce à 2 500 et 2 600 tr/min, pour 225 et 218 mm. Le mandrin et le régime distinguent ces configurations. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "c3730b46f11442f6049df592461149489ccf20a96baebfd04375feb8b76f9821"
+          "qualificationId": "2c2ce86f46f3ded08f56dc837a238e4a9e20779b21d9016edcdaddafddb68aba"
         },
         {
           "path": "/outils-pneumatiques/perceuse-zipp-zae-371/",
           "contentHash": "44f295133d97d9a2ccdb97230a9d242ce418c66ec5c08c46e1a183c1697a9c68",
           "decision": "approved",
           "note": "ZAE371 : gommeuse d’adhésifs à broche 5/16 pouce–24, 2 600 tr/min, longueur 225 mm et masse 0,8 kg. La ZAE3714 est à 3 600 tr/min ; les ZAD376/336 sont des perceuses à broche 3/8 pouce–24. Ces usages et montages restent séparés de la moyenne de 3,7 cfm. Comparaison actuelle avec /outils-pneumatiques/perceuse-zipp-zad-376/, /outils-pneumatiques/perceuse-zipp-zad-336/. ZAE371 est gommeuse d’adhésifs,5/16-24,2600 tr/min225mm0,8 kg ;3714est3600. VoisinesZAD376/336perceuses mandrin3/8 avec broche3/8-24, fonctions différentes. Ajouter régime et broche,3,7cfmmoyenne hors calcul. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "9d69f3c996f5b2c0a37ee622fc43431c4606770a483fb85dd9156c733ae717b1"
+          "qualificationId": "d6d550239b7a0e7b472fdd864a0a5367c7cce3d429bf7d89c6f85da8f240cf9f"
         },
         {
           "path": "/outils-pneumatiques/polisseuse-gison-gp-823st3/",
           "contentHash": "80dc46bfe38da0070f491148ff9ddbcfc2598ed522c833d117c4c0b691b50388",
           "decision": "approved",
           "note": "GP-823ST3 : polisseuse d’angle à plateau 3 pouces et broche 5/16 pouce–24, donnée pour 4 000 tr/min. La GP-823ST5 utilise un plateau 5 pouces avec la même vitesse et la même masse de 1 kg ; la GP-830 est en 7 pouces à 2 500 tr/min, pour 1,90 kg. Comparaison actuelle avec /outils-pneumatiques/polisseuse-gison-gp-823st5/, /outils-pneumatiques/polisseuse-gison-gp-830/. GP-823ST3 : polisseuse d’angle à plateau 3 pouces et broche 5/16 pouce–24, donnée pour 4 000 tr/min. La GP-823ST5 utilise un plateau 5 pouces avec la même vitesse et la même masse de 1 kg ; la GP-830 est en 7 pouces à 2 500 tr/min, pour 1,90 kg. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "0e3740f86d9f323f3ae24af8a5cc9768763b62c816ef51410e178591fd532344"
+          "qualificationId": "3b11b105c3e64680763c6b2d4d07ddc3d75fd3e081ff5734c3e0230533694190"
         },
         {
           "path": "/outils-pneumatiques/polisseuse-zipp-zap3308/",
           "contentHash": "27bf2e9e0f4758e442489f4f77b4dd14a1bc511f0d3e671df57081856694d903",
           "decision": "approved",
           "note": "ZAP3308 : polisseuse d’angle de 0,5 HP, 4 000 tr/min, broche 5/16 pouce–24, longueur 225 mm et masse 1 kg. La ZAP308 est une version 1 HP ; la 330825 est à 2 400 tr/min. Les 3,5 cfm moyens publiés ne définissent pas un besoin maximal en charge. Comparaison actuelle avec /outils-pneumatiques/polisseuse-zipp-zap308/, /outils-pneumatiques/polisseuse-zipp-zap330825/. ZAP3308polisseuseangle0,5HP4000 tr/minbroche5/16-24,225mm1 kg,3,5cfmmoyenne ;ZAP3081HP4,1cfm mêmes4000,3308252400. Ajouter puissance et montage pour distinguer les capacités sans inventer point d’air. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "14ea38fb4e13b648e5f8487b44b247999d4d4511f268ea64fa286d9d6ba6e4b3"
+          "qualificationId": "330e55ea3d2dbc4c661f79d7d5ae86bbac1ebc86432e150a8f3b369629811c49"
         },
         {
           "path": "/outils-pneumatiques/ponceuse-bande-gison-gp-902c/",
           "contentHash": "0b9a7cf761a8168de3ebbe3e891dee3531171378ce7b0a0602fc91d88ed0c224",
           "decision": "approved",
           "note": "GP-902C : ponceuse à bande 60 × 260 mm, 7 000 tr/min et 1,65 kg. La GP-902 utilise 10 × 330 mm à 18 000 tr/min ; la GP-902A, 20 × 520 mm à 18 000 tr/min. Les formats de bande et les vitesses empêchent de traiter ces variantes comme interchangeables. Comparaison actuelle avec /outils-pneumatiques/ponceuse-bande-gison-gp-902/, /outils-pneumatiques/ponceuse-bande-gison-gp-902a/. GP-902C : ponceuse à bande 60 × 260 mm, 7 000 tr/min et 1,65 kg. La GP-902 utilise 10 × 330 mm à 18 000 tr/min ; la GP-902A, 20 × 520 mm à 18 000 tr/min. Les formats de bande et les vitesses empêchent de traiter ces variantes comme interchangeables. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "83d4e6dc776ad3d8660a0285eb2e8396692e73596a278738b8683a17bcc8b436"
+          "qualificationId": "eeac754ab6c12a0eda4bf0418d2435020b1e56e62f79e7d637707fe92a3b6d0b"
         },
         {
           "path": "/outils-pneumatiques/ponceuse-bande-zipp-zbs-382n3/",
           "contentHash": "0d24cb5a35bf96787672dc2bebc25a90eec697172da378adff2431c3bbccfc16",
           "decision": "approved",
           "note": "ZBS382N3 : ponceuse à bande 13 × 457 mm avec galet en acier, 17 000 tr/min, longueur 390 mm et masse 0,94 kg. La 382N utilise 10 × 330 mm dans un corps de 326 mm ; la 382N1 utilise 6 × 457 mm pour 1,3 kg. Les 4 cfm moyens ne suffisent pas au calcul en charge. Comparaison actuelle avec /outils-pneumatiques/ponceuse-bande-zipp-zbs-382n/, /outils-pneumatiques/ponceuse-bande-zipp-zbs-382n1/. Relecture du 14 novembre : ZBS-382N3, bande 13 × 457 mm ; ZBS-382N1, bande 6 × 457 mm, 390 mm et 1,3 kg. La préparation du 12 avait fusionné le suffixe N1 et le chiffre 6. Moyenne 4 cfm conservée hors calcul en charge. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "83617af5062011d65bc81a96f0fac4d79549f539ca1c0067d5c52f196a78250d"
+          "qualificationId": "b910b15557288b3c9f63689cf66d1886d50d6f33cd5b7a607a544e7937a14846"
         },
         {
           "path": "/outils-pneumatiques/ponceuse-orbitale-gison-gp-937r/",
           "contentHash": "bd088160167b6e73952dbbda377779c42751eccef3ca9bb337c4da7b3736a1e9",
           "decision": "approved",
           "note": "GP-937R : ponceuse orbitale sans aspiration intégrée, orbite 2,5 mm et 9 000 tr/min, longueur 145 mm et masse 1,20 kg. La GP-937RD ajoute une aspiration autonome pour 122 mm et 1,10 kg. La GP-934RD est une autre configuration, en orbite 10 mm à 10 000 tr/min. Comparaison actuelle avec /outils-pneumatiques/ponceuse-orbitale-gison-gp-937rd/, /outils-pneumatiques/ponceuse-orbitale-gison-gp-934rd/. GP-937R : ponceuse orbitale sans aspiration intégrée, orbite 2,5 mm et 9 000 tr/min, longueur 145 mm et masse 1,20 kg. La GP-937RD ajoute une aspiration autonome pour 122 mm et 1,10 kg. La GP-934RD est une autre configuration, en orbite 10 mm à 10 000 tr/min. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "3c0aad4df496b31d86f0c0c96bf24648efbb796406cf3ae94623619847076299"
+          "qualificationId": "734b60efd8fb34653c764f8621a2e2e5e5ca5ea524c5e0b796c424fb1e3f2193"
         },
         {
           "path": "/outils-pneumatiques/ponceuse-orbitale-zipp-zos-214-c6/",
           "contentHash": "2dc809dd5c3ad32d2ed627ad9384270dab14d8cdd38d9ff790ff1f8623fec281",
           "decision": "approved",
           "note": "ZOS214C6 : ponceuse à plateau 150 mm, orbite 5 mm et aspiration centralisée, 11 000 tr/min et 0,9 kg. La ZOS3214C6 utilise une orbite 2,5 mm ; la 214C5 un plateau 125 mm. Les 1,6 cfm moyens sont conservés hors calcul en charge. Comparaison actuelle avec /outils-pneumatiques/ponceuse-orbitale-zipp-zos3-214-c6/, /outils-pneumatiques/ponceuse-orbitale-zipp-zos-214-c5/. 214C6plateau150mmorbite5mmaspirationcentralisée,11000 tr/min0,9 kg ;ZOS3214C6orbite2,5et214C5plateau125. Ajouter les2différences physiques ;1,6cfmmoyenne sans pression de mesure. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "a00d1648f6f2c5e5f9a2087ab7ca0ff3b8465324455791b954ab6ce26919cfaf"
+          "qualificationId": "41b58fc4c9691ec3d89bcbb7825247f5840c8db5a78528b95e79a3979e7f590c"
         },
         {
           "path": "/outils-pneumatiques/ponceuse-rotative-gison-gp-823ar3/",
           "contentHash": "8658487698326a3881623890694905ec9ca9bdbc6b4ca56a54644914f7a9c5fa",
           "decision": "approved",
           "note": "GP-823AR3 : ponceuse rotative d’angle à plateau 3 pouces, 15 000 tr/min et 180 mm de longueur. La GP-823AR est en 2 pouces à 22 000 tr/min dans un corps de 170 mm. La ligne AR3 ne décrit pas une orbite de ponçage : le mouvement publié est rotatif. Comparaison actuelle avec /outils-pneumatiques/ponceuse-rotative-gison-gp-823ar/, /outils-pneumatiques/ponceuse-rotative-gison-gp-823sa3/. GP-823AR3 : ponceuse rotative d’angle à plateau 3 pouces, 15 000 tr/min et 180 mm de longueur. La GP-823AR est en 2 pouces à 22 000 tr/min dans un corps de 170 mm. La ligne AR3 ne décrit pas une orbite de ponçage : le mouvement publié est rotatif. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "b50b50d21b1e1fa76213789cec42277ba31941009a95e87f008897338d57daa4"
+          "qualificationId": "329dce3a7839abacbd7765d0f67b5589a3327830c8c8ca9e56ccf6956f2a5b87"
         },
         {
           "path": "/outils-pneumatiques/ponceuse-rotative-zipp-ztu391/",
           "contentHash": "ec5d1252bd209de76b2e0862bf5c551ecd003da68015f5685ec6f24cbac758a2",
           "decision": "approved",
           "note": "ZTU391 : outil de ponçage de 0,5 HP sans aspiration intégrée, 4 000 tr/min, broche 9 mm, longueur 254 mm et masse 1,2 kg. Le 391C se raccorde à une aspiration centralisée ; le 391S utilise une aspiration autonome. La moyenne de 3,5 cfm reste non dimensionnante. Comparaison actuelle avec /outils-pneumatiques/ponceuse-rotative-zipp-ztu391c/, /outils-pneumatiques/ponceuse-rotative-zipp-ztu391s/. ZTU391sansaspiration,391Ccentralisée,391Sautonome, mêmes0,5HP4000 tr/min254mm1,2kgbroche9 mm. Fonction aspiration omise ; ajouter sans inférer nouvelle identité depuis seul coffret.3,5cfmmoyenne hors calcul. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "6b278b995bdd4da53bb02fe0a057c5d500943e5bf3e16a04759b1907e53dc21e"
+          "qualificationId": "a485a011b90650ba455913b4d5a6a872c61facf03a6aa941acb3a273c0de396a"
         },
         {
           "path": "/outils-pneumatiques/ponceuse-vibrante-gison-gp-934sd/",
           "contentHash": "5b8f35f1acf94d3d9ce09cc33a6d4cbd415cd4b8dc671c7c0ea708385d5b8e62",
           "decision": "approved",
           "note": "GP-934SD : ponceuse à plateau 93 × 176 mm autoagrippant avec aspiration autonome, orbite 5 mm et 9 000 tr/min. La GP-935SD passe à 112 × 220 mm et 8 000 tr/min ; la GP-937SD utilise 74 × 145 mm à 8 000 tr/min dans un corps plus court. Comparaison actuelle avec /outils-pneumatiques/ponceuse-vibrante-gison-gp-935sd/, /outils-pneumatiques/ponceuse-vibrante-gison-gp-937sd/. GP-934SD : ponceuse à plateau 93 × 176 mm autoagrippant avec aspiration autonome, orbite 5 mm et 9 000 tr/min. La GP-935SD passe à 112 × 220 mm et 8 000 tr/min ; la GP-937SD utilise 74 × 145 mm à 8 000 tr/min dans un corps plus court. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "c60801d19ca23dba44980cda6604611c75ae7e54fe9d6b17663f5faa293a895d"
+          "qualificationId": "8cc91e484dd55c48990744645633188770d72fa48769481d7323954fb7e1c2ae"
         },
         {
           "path": "/outils-pneumatiques/ponceuse-vibrante-zipp-zhs-nl4c/",
           "contentHash": "1e27f8ba59db93600b139b056b9c2b8c6f337ed76058b1aeedc493123da3985b",
           "decision": "approved",
           "note": "ZHSNL4C : ponceuse de 0,5 HP sans aspiration, fixation d’abrasif à pinces, orbite 5 mm et 8 500 tr/min pour 1,5 kg. La ZHSNL4 sans C est publiée à 7 500 tr/min dans une autre table. La fixation et le régime identifient la configuration ; la moyenne de 3 cfm reste hors calcul en charge. Comparaison actuelle avec /outils-pneumatiques/ponceuse-vibrante-zipp-zhs-nl4/, /outils-pneumatiques/ponceuse-vibrante-zipp-zhs-nl4a/. ZHSNL4C0,5HPsansaspirationfixationpinces,orbite5mm8500 tr/min1,5 kg. Ne pas confondreZHSNL4sansC7500 tr/min de la page voisine ; expliciter variante de commande/formegénération et ne pasinventer identité du suffixeA.3cfmmoyenne sans pression. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "59b19d04514af0de64659316b6be4cf0dc026748a28872d33425217a897c7abd"
+          "qualificationId": "002ef9399b213f6107fb7c2ece190c1b14c79e9551ebc149462ee3e638814fc3"
         },
         {
           "path": "/outils-pneumatiques/riveteuse-gison-gp-836lc/",
           "contentHash": "76144a9586cff6ab0c57c9a254723f8c63d67b61e35c8cb73e07bef3343efebf",
           "decision": "approved",
           "note": "GP-836LC : outil à poser les écrous à sertir de tailles publiées 3, 4, 5, 6 et 8 mm, mécanisme à embrayage et 2 500 tr/min. La GP-836LC1 utilise un mécanisme à engrenages à 700 tr/min ; la GP-836LC2 couvre 6, 8 et 10 mm à 450 tr/min. Ces vitesses ne donnent pas une force de traction hydraulique. Comparaison actuelle avec /outils-pneumatiques/riveteuse-gison-gp-836lc1/, /outils-pneumatiques/riveteuse-gison-gp-836lc2/. GP-836LC : outil à poser les écrous à sertir de tailles publiées 3, 4, 5, 6 et 8 mm, mécanisme à embrayage et 2 500 tr/min. La GP-836LC1 utilise un mécanisme à engrenages à 700 tr/min ; la GP-836LC2 couvre 6, 8 et 10 mm à 450 tr/min. Ces vitesses ne donnent pas une force de traction hydraulique. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "b7765b1279f12dc937b86409601599a1dcbaaf7c7039f49886b1bbf1b02579c7"
+          "qualificationId": "57a1636230c648186db07c7abbe32672db20f6086a6c33e76bce864bcbd8e4d8"
         },
         {
           "path": "/outils-pneumatiques/riveteuse-zipp-zir0922/",
           "contentHash": "2feaced8b8fbe80f159107528299f7181ddd695c163e1a4afd4caede1ba7f8fb",
           "decision": "approved",
           "note": "ZIR0922 : riveteuse hydropneumatique en ligne avec collecte des mandrins par aspiration, course 22 mm et masse 1,9 kg. La capacité publiée atteint 6,4 mm pour les rivets aluminium et acier. La ZAR0921 est un pistolet de course 19 mm et 1,4 kg. Le tableau présente 2 000 lbf et 920 kgf, contre-valeurs discordantes, et ne donne pas de consommation pour la ZIR0922. Comparaison actuelle avec /outils-pneumatiques/riveteuse-zipp-zt0922/, /outils-pneumatiques/riveteuse-zipp-zar0921/. ZIR0922riveteuse en lignehydropneumatique avec collecte des mandrins par aspiration,course22mm1,9 kg,capacité6,4mmalu/acier ;ZAR0921pistoletcourse19mm1,4 kg.2000lbf/920kgf n’est pas une conversion exacte ; conserver unités originales si citées. Consommation absente pourZIR, ne pas importer0,03cuft/strokeZAR. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "ca06bd4885165678686ab21964ac53bf992ef763cc83a7b7bd0dcf165e9e794f"
+          "qualificationId": "6d0e901f448539011fa83f15cde9116952454f2e581b37ae4fe946070d7c87bc"
         },
         {
           "path": "/outils-pneumatiques/scie-gison-gp-848t/",
           "contentHash": "66fa9705b1599ff19ad1c8804782b7b0f11beb4d05cb7565b5acba2367ca65d4",
           "decision": "approved",
           "note": "GP-848T : outil combiné scie et lime, course 10 mm et 9 000 coups/min, longueur 216 mm et masse 0,91 kg. La GP-848B est la scie de 276 mm et 0,60 kg ; la GP-848R2 annonce 10 000 coups/min et 180 mm. La capacité 1,6 mm de la table n’y est pas associée à une matière précise. Comparaison actuelle avec /outils-pneumatiques/scie-gison-gp-848b/, /outils-pneumatiques/scie-gison-gp-848r2/. GP-848T : outil combiné scie et lime, course 10 mm et 9 000 coups/min, longueur 216 mm et masse 0,91 kg. La GP-848B est la scie de 276 mm et 0,60 kg ; la GP-848R2 annonce 10 000 coups/min et 180 mm. La capacité 1,6 mm de la table n’y est pas associée à une matière précise. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "2128455ebb3a1ddcd7272e023bea9403ee565f286ee7ac9ae22d794a1ac5ed83"
+          "qualificationId": "4df92998c4b95a576440c49b3297c264b8df13826b3ab9559534dbad4d333d2c"
         },
         {
           "path": "/outils-pneumatiques/scie-zipp-zs317/",
@@ -70321,21 +70321,21 @@
           "contentHash": "785e6d97df36e965e9bac0d5fc346ab6476f3171d935cf253239087a59f0f739",
           "decision": "approved",
           "note": "ZAT415B2 : taraudeuse de capacité publiée 1–3 mm dans l’aluminium et le fer, 1 000 tr/min, longueur 280 mm et masse 0,74 kg. La 712AKI couvre 6–12 mm dans l’aluminium et 6–8 mm dans le fer, à 150 tr/min et 1,77 kg. La moyenne de 141 L/min demeure non dimensionnante. Comparaison actuelle avec /outils-pneumatiques/taraudeuse-zipp-zat712aki/, /outils-pneumatiques/taraudeuse-zipp-zat19ak/. TaraudeuseZAT415B2capacitéalu/fer1–3mm1000 tr/min280mm0,74kgcontre 712AKIalu6–12fer6–8à150 tr/min1,77 kg. Ajouter capacités matière,141 L/minmoyenne au6,2 bar de spécification conserve indétermination. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "47b326ed5cb74088f8a06abe62248873b79a65bfdb2aeb866aeb166c7c8d09fd"
+          "qualificationId": "5d07f34973752bf1bd6f7ddbccda1ca3d3810251f9449508eb6bb0aa90f181dd"
         },
         {
           "path": "/outils-pneumatiques/tronconneuse-zipp-zac-354l/",
           "contentHash": "b65ddfdb3e927f5bedc9676f046af032e5fa90a595f2315449d4154703c1401c",
           "decision": "approved",
           "note": "ZAC354L : tronçonneuse d’angle allongée pour disque de 3 pouces, 16 000 tr/min, longueur 290 mm et masse 1,3 kg. La 354 courte mesure 220 mm pour 1,2 kg ; la 30540 reçoit 4 pouces à 14 000 tr/min et mesure 345 mm. Les 3,5 cfm moyens restent hors calcul en charge. Comparaison actuelle avec /outils-pneumatiques/tronconneuse-zipp-zac-354/, /outils-pneumatiques/tronconneuse-zipp-zac-30540/. ZAC354Ltronçonneuseangleallongéedisque3pouces290mm1,3kgvs354courte220mm1,2 kg/30540disque4pouces345mm14000 tr/min.16000 tr/minet3,5cfmmoyenne,aucunpointpression ; ajouter allongement/disque. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "38ff5c41cd9380f8e5b1f1d09a7ffe7bbfeea4db104e62941c74a86552358776"
+          "qualificationId": "2280c46e9b046ef5c2b711f6300bfe7b8051debf193ccf4760065af67691da04"
         },
         {
           "path": "/outils-pneumatiques/visseuse-gison-gp-804hp/",
           "contentHash": "cd501f0898be641de56ceb68048f33b30d2bc26cd07834adb888509dc19afa26",
           "decision": "approved",
           "note": "GP-804HP : visseuse à embrayage glissant, porte-embout 1/4 pouce, 1 500 tr/min et couple maximal déclaré de 2 Nm. La GP-802 annonce 4 Nm à 1 800 tr/min. Les visseuses à arrêt automatique figurent dans un tableau séparé ; cet arrêt n’est pas attribué à la GP-804HP. Comparaison actuelle avec /outils-pneumatiques/visseuse-gison-gp-802/, /outils-pneumatiques/visseuse-gison-gp-804l90/. GP-804HP : visseuse à embrayage glissant, porte-embout 1/4 pouce, 1 500 tr/min et couple maximal déclaré de 2 Nm. La GP-802 annonce 4 Nm à 1 800 tr/min. Les visseuses à arrêt automatique figurent dans un tableau séparé ; cet arrêt n’est pas attribué à la GP-804HP. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "5840ca68da7c3ffd438c0913cb43bb3bc986839817e18ac40a7cc960e7a4b4a4"
+          "qualificationId": "5771dfc2e0875eaa51365bddc29d6e8455a56ebff667b6f445a383140787db4e"
         },
         {
           "path": "/outils-pneumatiques/visseuse-ober-ami66at-8301056/",
@@ -70348,7 +70348,7 @@
           "contentHash": "c5401f11ebf3d5c159ad28998b58dfee796a1701dd86c12aaff1c9b470fff762",
           "decision": "approved",
           "note": "ZB31MC : visseuse à plage de couple publiée 1–8 kgf·cm, 1 000 tr/min, longueur 210 mm et masse 0,52 kg. Le tableau indique des vis machine M1,7–M3,3 et autotaraudeuses M1,3–M2,7. Les 21MC et 41MC couvrent respectivement 0,5–2 et 3–17 kgf·cm. La consommation de 0,20 m³/min existe, mais son régime n’est pas nommé ; la pression de service imprimée de 6 kg/cm² reste dans son unité originale. Comparaison actuelle avec /outils-pneumatiques/visseuse-zipp-zb21mc/, /outils-pneumatiques/visseuse-zipp-zb41mc/. ZB31MC1000 tr/minplage1–8kgf-cm,capacitévismachineM1,7–M3,3/autotaraudM1,3–M2,7,210mm0,52 kg.21MC0,5–2et41MC3–17à1800 tr/min distincts. Table fournit 0,20 m³/minmaisrégime non nommé,6 kg/cm²différentconsignegénérale6,2 bar. Remplacer affirmation consommationabsente par point non qualifié sans conversion silencieuse. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "9804f4e892ae0896dcf436e77edce22cc6d07e68d11c8e75cdd1ce0344fd763f"
+          "qualificationId": "e866f71c2139093aece86e4bdcc399e7ee4bcb61723724ade1476b46ea65d1b8"
         },
         {
           "path": "/compresseurs/broomwade-fm11-rsccp1111-10-bar/",
@@ -71615,7 +71615,7 @@
           "contentHash": "e65cbaa8f2bbb36c9bb76f105dea74441cfbc9a8b3f4c19c796610b5f3d8a217",
           "decision": "approved",
           "note": "Mattei ERC 5. 570 L/min à 12,5 bar. Groupe Classic sur socle sans réservoir. Comparaison actuelle avec /compresseurs/mattei-erc-55/, /compresseurs/mattei-erc-1/. Puissance moteur corrigée de 5 à 5,5 kW selon la ligne ERC 5 de la page 14. Sources primaires récupérées intégralement le 14 novembre, empreintes identiques aux lectures préparées. Champs consommés et verdict insufficient_data vérifiés dans les moteurs natif et runtime, sans transformer la pression de service en pression de mesure.",
-          "qualificationId": "031ffc65a1191f5a8b3ef34a1743574aa56c131478d96928cc8bf8fd62a91eca"
+          "qualificationId": "7ec023d6b48ee805180d62857a456ed38c13636e100540010e575a8c29b3d6ca"
         },
         {
           "path": "/compresseurs/mattei-erc-7/",
