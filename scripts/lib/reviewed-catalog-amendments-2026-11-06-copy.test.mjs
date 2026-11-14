@@ -1,3 +1,4 @@
+import { beforeReservedNovember14TechnicalFollowup } from './reviewed-catalog-amendments-2026-11-14-technical.mjs';
 import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {describe,it,expect} from 'vitest';
@@ -10,14 +11,15 @@ import {evaluateCompatibility} from '../../server/air-compatibility.mjs';
 import {evidenceHistory} from '../../src/data/evidence-history';
 const read=p=>readFileSync(new URL('../../'+p,import.meta.url)),hash=b=>createHash('sha256').update(b).digest('hex');
 const snapshot=JSON.parse(read('src/data/imports/catalog-amendments-reviewed-2026-11-06-copy.json'));
+const datedHistory = evidenceHistory.events.slice(0,38560);
 const fields=['id','slug','categoryId','brand','model','mpn','confidence','demandModel','airflowBasis','airflowLpm','airPerActionLiters','workingPressureBar','demandExplanation','dutyFactor','connectorSize','recommendedHose'];
 describe('November6 text aligned with nonconclusive demand',()=>{
  it('replays24 exact current records and preserves all published bytes and evidence',()=>{
   expect(snapshot.rows).toHaveLength(24);expect(new Set(snapshot.rows.map(r=>r.id)).size).toBe(24);
   for(const row of snapshot.rows){
-   const after=parseCatalogProductSource('tools',read(row.file).toString()),before=beforeReservedNovember6CopyFollowup(after);
-   expect(after).toEqual(row.after);expect(before).toEqual(row.before);expect(applyReservedNovember6CopyFollowup(structuredClone(before))).toEqual(after);
-   expect(applyReservedNovember6CopyFollowup(structuredClone(after))).toEqual(after);
+   const after=beforeReservedNovember14TechnicalFollowup(parseCatalogProductSource('tools',read(row.file).toString())),before=beforeReservedNovember6CopyFollowup(after);
+   expect(after).toEqual(row.after);expect(before).toEqual(row.before);expect(beforeReservedNovember14TechnicalFollowup(applyReservedNovember6CopyFollowup(structuredClone(before)))).toEqual(after);
+   expect(beforeReservedNovember14TechnicalFollowup(applyReservedNovember6CopyFollowup(structuredClone(after)))).toEqual(after);
    let old=buildCatalogProductSource('tools',Object.fromEntries(row.sourcePropertyOrder.map(k=>[k,before[k]])),row.sourceIndentation);if(row.sourceCompactExport)old=old.replace(';\n\nexport',';\nexport');
    expect(hash(old)).toBe(row.beforeFileSha256);expect(hash(read(row.file))).toBe(row.afterFileSha256);
    expect(after.evidence.slice(0,before.evidence.length)).toEqual(before.evidence);
@@ -30,9 +32,9 @@ describe('November6 text aligned with nonconclusive demand',()=>{
   }
  });
  it('preserves38536 published events and appends exactly24 current clarifications',()=>{
-  expect(evidenceHistory.events).toHaveLength(38560);
-  expect(hash(JSON.stringify(evidenceHistory.events.slice(0,38536)))).toBe(snapshot.evidenceHistoryAppend.previousEventsSha256);
-  expect(evidenceHistory.events.slice(38536).every(e=>e.evidenceId.startsWith('review:2026-11-06-copy:'))).toBe(true);
+  expect(datedHistory).toHaveLength(38560);
+  expect(hash(JSON.stringify(datedHistory.slice(0,38536)))).toBe(snapshot.evidenceHistoryAppend.previousEventsSha256);
+  expect(datedHistory.slice(38536).every(e=>e.evidenceId.startsWith('review:2026-11-06-copy:'))).toBe(true);
  });
  it('keeps every native and runtime engine result identical and nonconclusive',()=>{
   const ample=compressorSchema.parse({...compressors[0],maxPressureBar:50,dutyCycle:1,fadCurve:[{pressureBar:1,litersPerMinute:100000},{pressureBar:50,litersPerMinute:100000}]});

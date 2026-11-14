@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/derouilleur-a-aiguilles-gison-gp-851b.webp",
+		"src": "/images/products/derouilleur-a-aiguilles-gison-gp-851b-technical-20261112-followup.svg",
 		"alt": "Repères techniques : GISON GP-851B",
 		"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 12 novembre 2026"
 	},
 	"variant": {
 		"familyId": "gison-gp-851b",
@@ -38,11 +38,13 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-851B. Consommation de régime non précisé : 210 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 2.60 kg. Longueur : 250 mm.",
+		"overview": "GP-851B : dérouilleur à 19 aiguilles de 3 mm et 3 700 coups/min, longueur 250 mm et masse 2,60 kg. La GP-851 est la configuration de 460 mm à deux fonctions. La longueur et la configuration d’aiguilles restent des critères distincts du débit.",
 		"verifiedFacts": [
 			"Masse : 2.60 kg.",
 			"Longueur : 250 mm.",
-			"Référence constructeur : GP-851B."
+			"Référence constructeur : GP-851B.",
+			"Aiguilles : 19 × 3 mm.",
+			"Cadence : 3 700 coups/min."
 		],
 		"limitations": [
 			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
@@ -84,6 +86,20 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october-b-gison-tools-p53"
 			]
+		},
+		{
+			"label": "Aiguilles",
+			"value": "19 × 3 mm",
+			"evidenceIds": [
+				"review:2026-11-14-technical:derouilleur-a-aiguilles-gison-gp-851b:0"
+			]
+		},
+		{
+			"label": "Cadence",
+			"value": "3 700 coups/min",
+			"evidenceIds": [
+				"review:2026-11-14-technical:derouilleur-a-aiguilles-gison-gp-851b:0"
+			]
 		}
 	],
 	"evidence": [
@@ -96,6 +112,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-14-technical:derouilleur-a-aiguilles-gison-gp-851b:0",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
+			"sourceLabel": "GISON, document fabricant, pages PDF 53",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-14",
+			"confidence": "B",
+			"notes": "Relecture du 14 novembre des pages PDF 53 et 54 : GP-851B, 19 aiguilles de 3 mm, 3700 coups/min, 250 mm, 2,60 kg ; GP-851 à deux fonctions, 460 mm. La comparaison publiée se limite à cette référence explicite : le suffixe imprimé I de la configuration de 290 mm ne devient pas un chiffre 1. GET complet : SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Historique antérieur conservé."
 		}
 	],
 	"fieldSources": {

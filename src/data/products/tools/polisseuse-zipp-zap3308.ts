@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/polisseuse-zipp-zap3308.webp",
+		"src": "/images/products/polisseuse-zipp-zap3308-technical-20261112-followup.svg",
 		"alt": "Repères techniques : ZIPP ZAP3308",
 		"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 12 novembre 2026"
 	},
 	"variant": {
 		"familyId": "zipp-zap3308",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZAP3308. La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé. Vitesse à vide : 4000 tr/min. Masse : 1 kg.",
+		"overview": "ZAP3308 : polisseuse d’angle de 0,5 HP, 4 000 tr/min, broche 5/16 pouce–24, longueur 225 mm et masse 1 kg. La ZAP308 est une version 1 HP ; la 330825 est à 2 400 tr/min. Les 3,5 cfm moyens publiés ne définissent pas un besoin maximal en charge.",
 		"verifiedFacts": [
 			"Vitesse à vide : 4000 tr/min.",
 			"Masse : 1 kg.",
@@ -94,6 +94,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:polisseuse-zipp-zap3308:0",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+			"sourceLabel": "ZIPP, document fabricant, pages PDF 135",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "ZAP3308polisseuseangle0,5HP4000tr/minbroche5/16-24,225mm1kg,3,5cfmmoyenne ;ZAP3081HP4,1cfm mêmes4000,3308252400. Ajouter puissance et montage pour distinguer les capacités sans inventer point d’air. GET complet : SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. Historique conservé."
 		}
 	],
 	"fieldSources": {
@@ -101,7 +111,7 @@ const product: ToolProfileInput = {
 			"october-b-zipp-tools-p135"
 		],
 		"workingPressureBar": [
-			"october-b-zipp-tools-p135"
+			"review:2026-11-12-technical:polisseuse-zipp-zap3308:0"
 		],
 		"demandExplanation": [
 			"october-b-zipp-tools-p135"

@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "average",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/taraudeuse-zipp-zat415b2.webp",
+		"src": "/images/products/taraudeuse-zipp-zat415b2-technical-20261112-followup.svg",
 		"alt": "Repères techniques : ZIPP ZAT415B2",
 		"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 12 novembre 2026"
 	},
 	"variant": {
 		"familyId": "zipp-zat415b2",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZAT415B2. Consommation moyenne : 141 L/min ; pression publiée : 6,2 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Vitesse à vide : 1000 tr/min. Masse : 0.74 kg.",
+		"overview": "ZAT415B2 : taraudeuse de capacité publiée 1–3 mm dans l’aluminium et le fer, 1 000 tr/min, longueur 280 mm et masse 0,74 kg. La 712AKI couvre 6–12 mm dans l’aluminium et 6–8 mm dans le fer, à 150 tr/min et 1,77 kg. La moyenne de 141 L/min demeure non dimensionnante.",
 		"verifiedFacts": [
 			"Vitesse à vide : 1000 tr/min.",
 			"Masse : 0.74 kg.",
@@ -96,6 +96,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:taraudeuse-zipp-zat415b2:0",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+			"sourceLabel": "ZIPP, document fabricant, pages PDF 157",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "TaraudeuseZAT415B2capacitéalu/fer1–3mm1000tr/min280mm0,74kgcontre712AKIalu6–12fer6–8à150tr/min1,77kg. Ajouter capacités matière,141L/minmoyenne au6,2bar de spécification conserve indétermination. GET complet : SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. Historique conservé."
 		}
 	],
 	"fieldSources": {

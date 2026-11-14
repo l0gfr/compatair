@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-orbitale-zipp-zos-214-c6.webp",
+		"src": "/images/products/ponceuse-orbitale-zipp-zos-214-c6-technical-20261112-followup.svg",
 		"alt": "Repères techniques : ZIPP ZOS-214-C6",
 		"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 12 novembre 2026"
 	},
 	"variant": {
 		"familyId": "zipp-zos-214-c6",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZOS-214-C6. La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé. Vitesse à vide : 11000 tr/min. Masse : 0.9 kg.",
+		"overview": "ZOS214C6 : ponceuse à plateau 150 mm, orbite 5 mm et aspiration centralisée, 11 000 tr/min et 0,9 kg. La ZOS3214C6 utilise une orbite 2,5 mm ; la 214C5 un plateau 125 mm. Les 1,6 cfm moyens sont conservés hors calcul en charge.",
 		"verifiedFacts": [
 			"Vitesse à vide : 11000 tr/min.",
 			"Masse : 0.9 kg.",
@@ -94,6 +94,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:ponceuse-orbitale-zipp-zos-214-c6:0",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+			"sourceLabel": "ZIPP, document fabricant, pages PDF 140",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "214C6plateau150mmorbite5mmaspirationcentralisée,11000tr/min0,9kg ;ZOS3214C6orbite2,5et214C5plateau125. Ajouter les2différences physiques ;1,6cfmmoyenne sans pression de mesure. GET complet : SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. Historique conservé."
 		}
 	],
 	"fieldSources": {
@@ -101,7 +111,7 @@ const product: ToolProfileInput = {
 			"october-b-zipp-tools-p140"
 		],
 		"workingPressureBar": [
-			"october-b-zipp-tools-p140"
+			"review:2026-11-12-technical:ponceuse-orbitale-zipp-zos-214-c6:0"
 		],
 		"demandExplanation": [
 			"october-b-zipp-tools-p140"

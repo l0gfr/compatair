@@ -1,3 +1,4 @@
+import { beforeReservedNovember14TechnicalFollowup } from './reviewed-catalog-amendments-2026-11-14-technical.mjs';
 import { beforeReservedNovember6CopyFollowup } from './reviewed-catalog-amendments-2026-11-06-copy.mjs';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
@@ -17,7 +18,8 @@ const snapshot = JSON.parse(read('src/data/imports/catalog-amendments-reviewed-2
 const native = row => beforeReservedNovember6CopyFollowup(parseCatalogProductSource(row.kind, read(row.file).toString()));
 const datedHistory = evidenceHistory.events.slice(0,38536);
 const copy = JSON.parse(read('src/data/imports/catalog-amendments-reviewed-2026-11-06-copy.json'));
-const datedFileBytes = row => { const later=copy.rows.find(r=>r.id===row.id); if(!later)return read(row.file);const p=native(row);let b=buildCatalogProductSource(row.kind,Object.fromEntries(later.sourcePropertyOrder.map(k=>[k,p[k]])),later.sourceIndentation);if(later.sourceCompactExport)b=b.replace(';\n\nexport',';\nexport');return b; };
+const technicalFollowup = JSON.parse(read('src/data/imports/catalog-amendments-reviewed-2026-11-14-technical.json'));
+const datedFileBytes = row => { const later=copy.rows.find(r=>r.id===row.id) ?? technicalFollowup.rows.find(r=>r.id===row.id); if(!later)return read(row.file);const p=native(row);let b=buildCatalogProductSource(row.kind,Object.fromEntries(later.sourcePropertyOrder.map(k=>[k,p[k]])),later.sourceIndentation);if(later.sourceCompactExport)b=b.replace(';\n\nexport',';\nexport');return b; };
 const ample = compressorSchema.parse({ ...compressors[0], id: 'nov6-regression-probe', slug: 'nov6-regression-probe', confidence: 'A', maxPressureBar: 50, dutyCycle: 1, fadCurve: [{ pressureBar: 1, litersPerMinute: 100000 }, { pressureBar: 50, litersPerMinute: 100000 }] });
 describe('November6 factual reserve corrections', () => {
  it('replays97 exact changes and original bytes, preserving identity and every old proof', () => {
@@ -67,7 +69,7 @@ describe('November6 factual reserve corrections', () => {
  });
  it('updates only the actual scope affected by demand corrections', () => {
   const before = createCatalogScope(compressors.map(beforeReservedNovember6Followup), tools.map(beforeReservedNovember6Followup));
-  const after = createCatalogScope(compressors,tools);
+  const after = createCatalogScope(compressors.map(beforeReservedNovember14TechnicalFollowup),tools.map(beforeReservedNovember14TechnicalFollowup));
   expect(before.fixed_flow_tool_count).toBe(8846); expect(after.fixed_flow_tool_count).toBe(8823);
   expect(after.fixed_verdict_count).toBe(45517857); expect(after.parametric_combination_count).toBe(58110976);
   expect(after.explorable_combination_count).toBe(before.explorable_combination_count);

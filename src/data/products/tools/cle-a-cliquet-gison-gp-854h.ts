@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-cliquet-gison-gp-854h.webp",
+		"src": "/images/products/cle-a-cliquet-gison-gp-854h-technical-20261112-followup.svg",
 		"alt": "Repères techniques : GISON GP-854H",
 		"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 12 novembre 2026"
 	},
 	"variant": {
 		"familyId": "gison-gp-854h",
@@ -38,12 +38,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-854H. Consommation de régime non précisé : 370 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 0.50 kg. Longueur : 125 mm.",
+		"overview": "GP-854H : cliquet court de 125 mm, carré 1/4 pouce et 30 Nm maximum déclarés. La GP-854 mesure 170 mm pour 40 Nm et la GP-854D 174 mm pour 40 Nm. Le gain de longueur s’accompagne ici d’un couple publié plus faible.",
 		"verifiedFacts": [
 			"Masse : 0.50 kg.",
 			"Longueur : 125 mm.",
 			"Diamètre de flexible publié : 6.5 mm.",
-			"Référence constructeur : GP-854H."
+			"Référence constructeur : GP-854H.",
+			"Carré : 1/4 pouce.",
+			"Type : Stubby, corps court.",
+			"Couple maximal déclaré : 30 Nm (22 ft-lb)."
 		],
 		"limitations": [
 			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
@@ -92,6 +95,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october-b-gison-tools-p22"
 			]
+		},
+		{
+			"label": "Carré",
+			"value": "1/4 pouce",
+			"evidenceIds": [
+				"review:2026-11-12-technical:cle-a-cliquet-gison-gp-854h:0"
+			]
+		},
+		{
+			"label": "Type",
+			"value": "Stubby, corps court",
+			"evidenceIds": [
+				"review:2026-11-12-technical:cle-a-cliquet-gison-gp-854h:0"
+			]
+		},
+		{
+			"label": "Couple maximal déclaré",
+			"value": "30 Nm (22 ft-lb)",
+			"evidenceIds": [
+				"review:2026-11-12-technical:cle-a-cliquet-gison-gp-854h:0"
+			]
 		}
 	],
 	"evidence": [
@@ -104,6 +128,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:cle-a-cliquet-gison-gp-854h:0",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
+			"sourceLabel": "GISON, document fabricant, pages PDF 22",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "GP-854H : cliquet court de 125 mm, carré 1/4 pouce et 30 Nm maximum déclarés. La GP-854 mesure 170 mm pour 40 Nm et la GP-854D 174 mm pour 40 Nm. Le gain de longueur s’accompagne ici d’un couple publié plus faible. GET complet : SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Transcriptions historiques conservées."
 		}
 	],
 	"fieldSources": {

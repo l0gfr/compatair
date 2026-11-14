@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "average",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-zipp-zaw-412b2.webp",
+		"src": "/images/products/cle-a-chocs-zipp-zaw-412b2-technical-20261112-followup.svg",
 		"alt": "Repères techniques : ZIPP ZAW-412B2",
 		"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 12 novembre 2026"
 	},
 	"variant": {
 		"familyId": "zipp-zaw-412b2",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZAW-412B2. Consommation moyenne : 127 L/min ; pression publiée : 6,2 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Vitesse à vide : 11000 tr/min. Masse : 0.68 kg.",
+		"overview": "ZAW412B2 : clé à chocs à carré 1/4 pouce, 11 000 tr/min, couple maximal de 35 Nm et couple de travail de 27 Nm. La 412B3 utilise un carré 3/8 pouce avec les mêmes valeurs. Le corps mesure 178 mm pour 0,68 kg. La moyenne de 127 L/min reste non dimensionnante.",
 		"verifiedFacts": [
 			"Vitesse à vide : 11000 tr/min.",
 			"Masse : 0.68 kg.",
@@ -96,6 +96,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:cle-a-chocs-zipp-zaw-412b2:0",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+			"sourceLabel": "ZIPP, document fabricant, pages PDF 9",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "412B2 est carré1/4 et412B3 carré3/8, même11000tr/min35Nmmax,27Nmtravail0,68kg178mm. Différence fonctionnelle omise.127L/minmoyenne conserve insufficient_data ;6,2bar est consigne générale pas pression de mesure. GET complet : SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. Historique conservé."
 		}
 	],
 	"fieldSources": {

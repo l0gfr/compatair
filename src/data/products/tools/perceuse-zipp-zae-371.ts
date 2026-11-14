@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/perceuse-zipp-zae-371.webp",
+		"src": "/images/products/perceuse-zipp-zae-371-technical-20261112-followup.svg",
 		"alt": "Repères techniques : ZIPP ZAE-371",
 		"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 12 novembre 2026"
 	},
 	"variant": {
 		"familyId": "zipp-zae-371",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZAE-371. La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé. Masse : 0.8 kg. Référence constructeur : ZAE-371.",
+		"overview": "ZAE371 : gommeuse d’adhésifs à broche 5/16 pouce–24, 2 600 tr/min, longueur 225 mm et masse 0,8 kg. La ZAE3714 est à 3 600 tr/min ; les ZAD376/336 sont des perceuses à broche 3/8 pouce–24. Ces usages et montages restent séparés de la moyenne de 3,7 cfm.",
 		"verifiedFacts": [
 			"Masse : 0.8 kg.",
 			"Référence constructeur : ZAE-371."
@@ -86,6 +86,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:perceuse-zipp-zae-371:0",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+			"sourceLabel": "ZIPP, document fabricant, pages PDF 108",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "ZAE371 est gommeuse d’adhésifs,5/16-24,2600tr/min225mm0,8kg ;3714est3600. VoisinesZAD376/336perceuses mandrin3/8 avec broche3/8-24, fonctions différentes. Ajouter régime et broche,3,7cfmmoyenne hors calcul. GET complet : SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. Historique conservé."
 		}
 	],
 	"fieldSources": {
@@ -93,7 +103,7 @@ const product: ToolProfileInput = {
 			"october-b-zipp-tools-p108"
 		],
 		"workingPressureBar": [
-			"october-b-zipp-tools-p108"
+			"review:2026-11-12-technical:perceuse-zipp-zae-371:0"
 		],
 		"demandExplanation": [
 			"october-b-zipp-tools-p108"

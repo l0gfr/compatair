@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-gison-gw-13j1.webp",
+		"src": "/images/products/cle-a-chocs-gison-gw-13j1-technical-20261112-followup.svg",
 		"alt": "Repères techniques : GISON GW-13J1",
 		"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 12 novembre 2026"
 	},
 	"variant": {
 		"familyId": "gison-gw-13j1",
@@ -38,12 +38,16 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GW-13J1. Consommation de régime non précisé : 200 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 1.40 kg. Longueur : 99 mm.",
+		"overview": "GW-13J1 : clé à chocs 3/8 pouce à mécanisme Jumbo Hammer, longueur 99 mm et couple maximal déclaré de 610 Nm. La GW-13J mesure 135 mm et annonce 407 Nm. Le format et le mécanisme complètent la comparaison du débit documentaire.",
 		"verifiedFacts": [
 			"Masse : 1.40 kg.",
 			"Longueur : 99 mm.",
 			"Diamètre de flexible publié : 6.5 mm.",
-			"Référence constructeur : GW-13J1."
+			"Référence constructeur : GW-13J1.",
+			"Carré : 3/8 pouce.",
+			"Mécanisme : Jumbo Hammer.",
+			"Couple maximal déclaré : 610 Nm (450 ft-lb).",
+			"Capacité de boulon publiée : 16 mm."
 		],
 		"limitations": [
 			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
@@ -92,6 +96,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october-b-gison-tools-p19"
 			]
+		},
+		{
+			"label": "Carré",
+			"value": "3/8 pouce",
+			"evidenceIds": [
+				"review:2026-11-12-technical:cle-a-chocs-gison-gw-13j1:0"
+			]
+		},
+		{
+			"label": "Mécanisme",
+			"value": "Jumbo Hammer",
+			"evidenceIds": [
+				"review:2026-11-12-technical:cle-a-chocs-gison-gw-13j1:0"
+			]
+		},
+		{
+			"label": "Couple maximal déclaré",
+			"value": "610 Nm (450 ft-lb)",
+			"evidenceIds": [
+				"review:2026-11-12-technical:cle-a-chocs-gison-gw-13j1:0"
+			]
+		},
+		{
+			"label": "Capacité de boulon publiée",
+			"value": "16 mm",
+			"evidenceIds": [
+				"review:2026-11-12-technical:cle-a-chocs-gison-gw-13j1:0"
+			]
 		}
 	],
 	"evidence": [
@@ -104,6 +136,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:cle-a-chocs-gison-gw-13j1:0",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
+			"sourceLabel": "GISON, document fabricant, pages PDF 19",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "GW-13J1 : clé à chocs 3/8 pouce à mécanisme Jumbo Hammer, longueur 99 mm et couple maximal déclaré de 610 Nm. La GW-13J mesure 135 mm et annonce 407 Nm. Le format et le mécanisme complètent la comparaison du débit documentaire. GET complet : SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Transcriptions historiques conservées."
 		}
 	],
 	"fieldSources": {

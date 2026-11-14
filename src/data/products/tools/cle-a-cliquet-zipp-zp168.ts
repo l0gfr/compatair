@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "average",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-cliquet-zipp-zp168.webp",
+		"src": "/images/products/cle-a-cliquet-zipp-zp168-technical-20261112-followup.svg",
 		"alt": "Repères techniques : ZIPP ZP168",
 		"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 12 novembre 2026"
 	},
 	"variant": {
 		"familyId": "zipp-zp168",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZP168. Consommation moyenne : 70 L/min ; pression publiée : 6,2 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Vitesse à vide : 260 tr/min. Masse : 0.45 kg.",
+		"overview": "ZP168 : cliquet à carré 1/4 pouce, 27 Nm maximum, 260 tr/min et corps de 133 mm pour 0,45 kg. Les ZP161 et ZP163 sont en carrés 1/2 et 3/8 pouce, 68 Nm maximum et 265 mm. La moyenne de 70 L/min ne donne pas la demande continue en charge.",
 		"verifiedFacts": [
 			"Vitesse à vide : 260 tr/min.",
 			"Masse : 0.45 kg.",
@@ -96,6 +96,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:cle-a-cliquet-zipp-zp168:0",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+			"sourceLabel": "ZIPP, document fabricant, pages PDF 19",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "Ajouter carré1/4,27Nmmax133mm contre1611/2et1633/8à68Nm265mm.260tr/min0,45kg et70L/minmoyenne confirmés, pas dimensionnants. GET complet : SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. Historique conservé."
 		}
 	],
 	"fieldSources": {

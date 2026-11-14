@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-zipp-zag-341.webp",
+		"src": "/images/products/meuleuse-zipp-zag-341-technical-20261112-followup.svg",
 		"alt": "Repères techniques : ZIPP ZAG-341",
 		"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 12 novembre 2026"
 	},
 	"variant": {
 		"familyId": "zipp-zag-341",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZAG-341. La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé. Vitesse à vide : 15000 tr/min. Masse : 0.7 kg.",
+		"overview": "ZAG341 : meuleuse d’angle pour disque de 2 pouces, 15 000 tr/min, longueur 178 mm et masse 0,7 kg. Les ZDG231 et ZDG301 sont des meuleuses droites à pince, à 25 000 et 23 000 tr/min. Le format d’abrasif et la géométrie les distinguent ; les 3,5 cfm moyens restent hors dimensionnement.",
 		"verifiedFacts": [
 			"Vitesse à vide : 15000 tr/min.",
 			"Masse : 0.7 kg.",
@@ -94,6 +94,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:meuleuse-zipp-zag-341:0",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+			"sourceLabel": "ZIPP, document fabricant, pages PDF 114",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "ZAG341 est meuleuse d’angle pour disque2pouces,15000tr/min178mm0,7kg. Les voisinesZDG231/301 sont meuleuses droites à pinces et vitesses25000/23000 ; ajouter disque/fonction,3,5cfmmoyenne reste documentaire sans pression. GET complet : SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. Historique conservé."
 		}
 	],
 	"fieldSources": {
@@ -101,7 +111,7 @@ const product: ToolProfileInput = {
 			"october-b-zipp-tools-p114"
 		],
 		"workingPressureBar": [
-			"october-b-zipp-tools-p114"
+			"review:2026-11-12-technical:meuleuse-zipp-zag-341:0"
 		],
 		"demandExplanation": [
 			"october-b-zipp-tools-p114"

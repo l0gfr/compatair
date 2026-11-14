@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/scie-gison-gp-848t.webp",
+		"src": "/images/products/scie-gison-gp-848t-technical-20261112-followup.svg",
 		"alt": "Repères techniques : GISON GP-848T",
 		"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 12 novembre 2026"
 	},
 	"variant": {
 		"familyId": "gison-gp-848t",
@@ -38,12 +38,16 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-848T. Consommation de régime non précisé : 210 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 0.91 kg. Longueur : 216 mm.",
+		"overview": "GP-848T : outil combiné scie et lime, course 10 mm et 9 000 coups/min, longueur 216 mm et masse 0,91 kg. La GP-848B est la scie de 276 mm et 0,60 kg ; la GP-848R2 annonce 10 000 coups/min et 180 mm. La capacité 1,6 mm de la table n’y est pas associée à une matière précise.",
 		"verifiedFacts": [
 			"Masse : 0.91 kg.",
 			"Longueur : 216 mm.",
 			"Diamètre de flexible publié : 6.5 mm.",
-			"Référence constructeur : GP-848T."
+			"Référence constructeur : GP-848T.",
+			"Fonctions : Scie et lime.",
+			"Course : 10 mm.",
+			"Cadence : 9 000 coups/min.",
+			"Capacité publiée, matière non précisée : 1,6 mm."
 		],
 		"limitations": [
 			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
@@ -92,6 +96,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october-b-gison-tools-p76"
 			]
+		},
+		{
+			"label": "Fonctions",
+			"value": "Scie et lime",
+			"evidenceIds": [
+				"review:2026-11-12-technical:scie-gison-gp-848t:0"
+			]
+		},
+		{
+			"label": "Course",
+			"value": "10 mm",
+			"evidenceIds": [
+				"review:2026-11-12-technical:scie-gison-gp-848t:0"
+			]
+		},
+		{
+			"label": "Cadence",
+			"value": "9 000 coups/min",
+			"evidenceIds": [
+				"review:2026-11-12-technical:scie-gison-gp-848t:0"
+			]
+		},
+		{
+			"label": "Capacité publiée, matière non précisée",
+			"value": "1,6 mm",
+			"evidenceIds": [
+				"review:2026-11-12-technical:scie-gison-gp-848t:0"
+			]
 		}
 	],
 	"evidence": [
@@ -104,6 +136,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:scie-gison-gp-848t:0",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
+			"sourceLabel": "GISON, document fabricant, pages PDF 76",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "GP-848T : outil combiné scie et lime, course 10 mm et 9 000 coups/min, longueur 216 mm et masse 0,91 kg. La GP-848B est la scie de 276 mm et 0,60 kg ; la GP-848R2 annonce 10 000 coups/min et 180 mm. La capacité 1,6 mm de la table n’y est pas associée à une matière précise. GET complet : SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Transcriptions historiques conservées."
 		}
 	],
 	"fieldSources": {

@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/visseuse-gison-gp-804hp.webp",
+		"src": "/images/products/visseuse-gison-gp-804hp-technical-20261112-followup.svg",
 		"alt": "Repères techniques : GISON GP-804HP",
 		"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 12 novembre 2026"
 	},
 	"variant": {
 		"familyId": "gison-gp-804hp",
@@ -38,12 +38,16 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-804HP. Consommation de régime non précisé : 350 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 0.78 kg. Longueur : 210 mm.",
+		"overview": "GP-804HP : visseuse à embrayage glissant, porte-embout 1/4 pouce, 1 500 tr/min et couple maximal déclaré de 2 Nm. La GP-802 annonce 4 Nm à 1 800 tr/min. Les visseuses à arrêt automatique figurent dans un tableau séparé ; cet arrêt n’est pas attribué à la GP-804HP.",
 		"verifiedFacts": [
 			"Masse : 0.78 kg.",
 			"Longueur : 210 mm.",
 			"Diamètre de flexible publié : 5.0 mm.",
-			"Référence constructeur : GP-804HP."
+			"Référence constructeur : GP-804HP.",
+			"Embrayage : Glissant, Slip-Clutch.",
+			"Porte-embout : 1/4 pouce.",
+			"Vitesse à vide : 1 500 tr/min.",
+			"Couple maximal déclaré : 2 Nm (1,5 ft-lb)."
 		],
 		"limitations": [
 			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
@@ -92,6 +96,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october-b-gison-tools-p64"
 			]
+		},
+		{
+			"label": "Embrayage",
+			"value": "Glissant, Slip-Clutch",
+			"evidenceIds": [
+				"review:2026-11-12-technical:visseuse-gison-gp-804hp:0"
+			]
+		},
+		{
+			"label": "Porte-embout",
+			"value": "1/4 pouce",
+			"evidenceIds": [
+				"review:2026-11-12-technical:visseuse-gison-gp-804hp:0"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "1 500 tr/min",
+			"evidenceIds": [
+				"review:2026-11-12-technical:visseuse-gison-gp-804hp:0"
+			]
+		},
+		{
+			"label": "Couple maximal déclaré",
+			"value": "2 Nm (1,5 ft-lb)",
+			"evidenceIds": [
+				"review:2026-11-12-technical:visseuse-gison-gp-804hp:0"
+			]
 		}
 	],
 	"evidence": [
@@ -104,6 +136,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:visseuse-gison-gp-804hp:0",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
+			"sourceLabel": "GISON, document fabricant, pages PDF 64",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "GP-804HP : visseuse à embrayage glissant, porte-embout 1/4 pouce, 1 500 tr/min et couple maximal déclaré de 2 Nm. La GP-802 annonce 4 Nm à 1 800 tr/min. Les visseuses à arrêt automatique figurent dans un tableau séparé ; cet arrêt n’est pas attribué à la GP-804HP. GET complet : SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Transcriptions historiques conservées."
 		}
 	],
 	"fieldSources": {

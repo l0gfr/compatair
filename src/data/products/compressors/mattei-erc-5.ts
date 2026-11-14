@@ -24,14 +24,14 @@ const product: CompressorInput = {
 		}
 	],
 	"oilType": "oil",
-	"powerKw": 5,
+	"powerKw": 5.5,
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/mattei-erc-5.svg",
+		"src": "/images/products/mattei-erc-5-technical-20261112-followup.svg",
 		"alt": "Repères techniques : Mattei ERC 5",
 		"sourceUrl": "https://4609801.fs1.hubspotusercontent-na1.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20CLASSIC/Classic_Range_EN.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 12 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -77,6 +77,13 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october3d-mattei-pdf-03-p6"
 			]
+		},
+		{
+			"label": "Puissance moteur publiée",
+			"value": "5,5 kW (7,5 hp)",
+			"evidenceIds": [
+				"review:2026-11-12-technical:mattei-erc-5:0"
+			]
 		}
 	],
 	"editorial": {
@@ -92,7 +99,8 @@ const product: CompressorInput = {
 			"La brochure Classic affiche 175 psig face à 13 bar ; le maximum SI explicite est conservé et cette contre-valeur impériale est exclue.",
 			"Cycle de service non établi ; la tenue permanente reste indéterminée.",
 			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés."
+			"Installation et disponibilité en France à confirmer selon l’alimentation et le raccordement publiés.",
+			"Puissance moteur corrigée de 5 à 5,5 kW selon la ligne ERC 5 de la page 14."
 		]
 	},
 	"evidence": [
@@ -135,6 +143,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:mattei-erc-5:0",
+			"sourceUrl": "https://4609801.fs1.hubspotusercontent-na1.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20CLASSIC/Classic_Range_EN.pdf",
+			"sourceLabel": "Mattei, document fabricant, pages PDF 3, 4, 6, 14",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "Puissance moteur corrigée de 5 à 5,5 kW selon la ligne ERC 5 de la page 14. GET complet : SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2. Transcriptions historiques conservées."
 		}
 	],
 	"fieldSources": {
@@ -149,7 +167,7 @@ const product: CompressorInput = {
 			"october3d-mattei-pdf-03-p14"
 		],
 		"powerKw": [
-			"october3d-mattei-pdf-03-p14"
+			"review:2026-11-12-technical:mattei-erc-5:0"
 		],
 		"oilType": [
 			"october3d-mattei-pdf-03-p3"

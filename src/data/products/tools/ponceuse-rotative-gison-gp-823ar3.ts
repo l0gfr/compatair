@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-rotative-gison-gp-823ar3.webp",
+		"src": "/images/products/ponceuse-rotative-gison-gp-823ar3-technical-20261112-followup.svg",
 		"alt": "Repères techniques : GISON GP-823AR3",
 		"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 12 novembre 2026"
 	},
 	"variant": {
 		"familyId": "gison-gp-823ar3",
@@ -38,11 +38,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-823AR3. Consommation de régime non précisé : 490 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Longueur : 180 mm. Diamètre de flexible publié : 5.0 mm.",
+		"overview": "GP-823AR3 : ponceuse rotative d’angle à plateau 3 pouces, 15 000 tr/min et 180 mm de longueur. La GP-823AR est en 2 pouces à 22 000 tr/min dans un corps de 170 mm. La ligne AR3 ne décrit pas une orbite de ponçage : le mouvement publié est rotatif.",
 		"verifiedFacts": [
 			"Longueur : 180 mm.",
 			"Diamètre de flexible publié : 5.0 mm.",
-			"Référence constructeur : GP-823AR3."
+			"Référence constructeur : GP-823AR3.",
+			"Mouvement : Rotatif, Rotate.",
+			"Plateau : 3 pouces.",
+			"Vitesse à vide : 15 000 tr/min.",
+			"Masse : 0,70 kg."
 		],
 		"limitations": [
 			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
@@ -84,6 +88,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october-b-gison-tools-p43"
 			]
+		},
+		{
+			"label": "Mouvement",
+			"value": "Rotatif, Rotate",
+			"evidenceIds": [
+				"review:2026-11-12-technical:ponceuse-rotative-gison-gp-823ar3:0"
+			]
+		},
+		{
+			"label": "Plateau",
+			"value": "3 pouces",
+			"evidenceIds": [
+				"review:2026-11-12-technical:ponceuse-rotative-gison-gp-823ar3:0"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "15 000 tr/min",
+			"evidenceIds": [
+				"review:2026-11-12-technical:ponceuse-rotative-gison-gp-823ar3:0"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "0,70 kg",
+			"evidenceIds": [
+				"review:2026-11-12-technical:ponceuse-rotative-gison-gp-823ar3:0"
+			]
 		}
 	],
 	"evidence": [
@@ -96,6 +128,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:ponceuse-rotative-gison-gp-823ar3:0",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
+			"sourceLabel": "GISON, document fabricant, pages PDF 43",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "GP-823AR3 : ponceuse rotative d’angle à plateau 3 pouces, 15 000 tr/min et 180 mm de longueur. La GP-823AR est en 2 pouces à 22 000 tr/min dans un corps de 170 mm. La ligne AR3 ne décrit pas une orbite de ponçage : le mouvement publié est rotatif. GET complet : SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Transcriptions historiques conservées."
 		}
 	],
 	"fieldSources": {

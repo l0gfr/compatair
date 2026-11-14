@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-vibrante-zipp-zhs-nl4c.webp",
+		"src": "/images/products/ponceuse-vibrante-zipp-zhs-nl4c-technical-20261112-followup.svg",
 		"alt": "Repères techniques : ZIPP ZHS-NL4C",
 		"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 12 novembre 2026"
 	},
 	"variant": {
 		"familyId": "zipp-zhs-nl4c",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZHS-NL4C. La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé. Vitesse à vide : 8500 tr/min. Masse : 1.5 kg.",
+		"overview": "ZHSNL4C : ponceuse de 0,5 HP sans aspiration, fixation d’abrasif à pinces, orbite 5 mm et 8 500 tr/min pour 1,5 kg. La ZHSNL4 sans C est publiée à 7 500 tr/min dans une autre table. La fixation et le régime identifient la configuration ; la moyenne de 3 cfm reste hors calcul en charge.",
 		"verifiedFacts": [
 			"Vitesse à vide : 8500 tr/min.",
 			"Masse : 1.5 kg.",
@@ -94,6 +94,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:ponceuse-vibrante-zipp-zhs-nl4c:0",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+			"sourceLabel": "ZIPP, document fabricant, pages PDF 146",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "ZHSNL4C0,5HPsansaspirationfixationpinces,orbite5mm8500tr/min1,5kg. Ne pas confondreZHSNL4sansC7500tr/min de la page voisine ; expliciter variante de commande/formegénération et ne pasinventer identité du suffixeA.3cfmmoyenne sans pression. GET complet : SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. Historique conservé."
 		}
 	],
 	"fieldSources": {
@@ -101,7 +111,7 @@ const product: ToolProfileInput = {
 			"october-b-zipp-tools-p146"
 		],
 		"workingPressureBar": [
-			"october-b-zipp-tools-p146"
+			"review:2026-11-12-technical:ponceuse-vibrante-zipp-zhs-nl4c:0"
 		],
 		"demandExplanation": [
 			"october-b-zipp-tools-p146"

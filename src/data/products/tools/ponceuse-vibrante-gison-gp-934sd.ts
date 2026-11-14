@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-vibrante-gison-gp-934sd.webp",
+		"src": "/images/products/ponceuse-vibrante-gison-gp-934sd-technical-20261112-followup.svg",
 		"alt": "Repères techniques : GISON GP-934SD",
 		"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 12 novembre 2026"
 	},
 	"variant": {
 		"familyId": "gison-gp-934sd",
@@ -38,13 +38,17 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-934SD. Consommation de régime non précisé : 400 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 2.10 kg. Longueur : 275 mm.",
+		"overview": "GP-934SD : ponceuse à plateau 93 × 176 mm autoagrippant avec aspiration autonome, orbite 5 mm et 9 000 tr/min. La GP-935SD passe à 112 × 220 mm et 8 000 tr/min ; la GP-937SD utilise 74 × 145 mm à 8 000 tr/min dans un corps plus court.",
 		"verifiedFacts": [
 			"Masse : 2.10 kg.",
 			"Longueur : 275 mm.",
 			"Vitesse à vide : 9000 tr/min.",
 			"Diamètre de flexible publié : 6.5 mm.",
-			"Référence constructeur : GP-934SD."
+			"Référence constructeur : GP-934SD.",
+			"Plateau : 93 × 176 mm.",
+			"Fixation de l’abrasif : Autoagrippante, Velcro.",
+			"Aspiration : Autonome.",
+			"Orbite : 5 mm."
 		],
 		"limitations": [
 			"Une consommation moyenne ou de régime inconnu reste insufficient_data pour la compatibilité ; demander un maximum ou une consommation en charge à pression explicite.",
@@ -100,6 +104,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october-b-gison-tools-p41"
 			]
+		},
+		{
+			"label": "Plateau",
+			"value": "93 × 176 mm",
+			"evidenceIds": [
+				"review:2026-11-12-technical:ponceuse-vibrante-gison-gp-934sd:0"
+			]
+		},
+		{
+			"label": "Fixation de l’abrasif",
+			"value": "Autoagrippante, Velcro",
+			"evidenceIds": [
+				"review:2026-11-12-technical:ponceuse-vibrante-gison-gp-934sd:0"
+			]
+		},
+		{
+			"label": "Aspiration",
+			"value": "Autonome",
+			"evidenceIds": [
+				"review:2026-11-12-technical:ponceuse-vibrante-gison-gp-934sd:0"
+			]
+		},
+		{
+			"label": "Orbite",
+			"value": "5 mm",
+			"evidenceIds": [
+				"review:2026-11-12-technical:ponceuse-vibrante-gison-gp-934sd:0"
+			]
 		}
 	],
 	"evidence": [
@@ -112,6 +144,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:ponceuse-vibrante-gison-gp-934sd:0",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
+			"sourceLabel": "GISON, document fabricant, pages PDF 41",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "GP-934SD : ponceuse à plateau 93 × 176 mm autoagrippant avec aspiration autonome, orbite 5 mm et 9 000 tr/min. La GP-935SD passe à 112 × 220 mm et 8 000 tr/min ; la GP-937SD utilise 74 × 145 mm à 8 000 tr/min dans un corps plus court. GET complet : SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Transcriptions historiques conservées."
 		}
 	],
 	"fieldSources": {
