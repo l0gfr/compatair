@@ -1,23 +1,11 @@
 import { createHash } from 'node:crypto';
 import { createRequire } from 'node:module';
 import { readFile, readdir, realpath } from 'node:fs/promises';
-import { dirname, join } from 'node:path';
+import { join } from 'node:path';
 import { parseDocument } from 'yaml';
 import { ZOD_COLLECTION_PATCH, ZOD4_COLLECTION_PATCH } from './verified-zod-collection-patch.mjs';
 
-// Official Astro fixes, backported without changing the locked framework APIs:
-// https://github.com/withastro/astro/commit/e023abac912d7cb6af2b9fb5107ef5dabc667096
-// https://github.com/withastro/astro/commit/7da442bb286e0c29e1c9e1add6727b7cbf434f1a
 const PATCHES = [
-	{
-		packageName: '@astrojs/internal-helpers',
-		version: '0.11.0',
-		patchPath: 'patches/@astrojs__internal-helpers@0.11.0.patch',
-		patchSha256: 'ce43fee20a1ce35d9452e7bb1580fd71cf477d7dcd424ab3e4e4ee71259af2f5',
-		installedSha256: 'efde4c462a65ae535a37ca349ffbdd54616780249ba87a467bd70508e99167ea',
-		sourcePath: 'dist/path.js',
-		consumer: 'astro',
-	},
 	{
 		packageName: '@lhci/utils',
 		version: '0.15.1',
@@ -26,23 +14,6 @@ const PATCHES = [
 		installedSha256: '3f3bbc4e2b2f1b7b22ff2b8ed013322f3b7b5bfb7cf296fbb7605a6570b6e493',
 		sourcePath: 'src/lighthouserc.js',
 		consumer: '@lhci/cli',
-	},
-	{
-		packageName: 'astro',
-		version: '7.3.3',
-		patchPath: 'patches/astro@7.3.3.patch',
-		patchSha256: 'ab7188ef958491bd9617f44fdbd71ffb96c3047ff0d7675de9732be52ff4d2c8',
-		installedSha256: '4d57a1ef34c56dcf9b2f944aaf9b78f803ea9670efd3df434f284bd7fbcc0a79',
-		sourcePath: 'dist/core/build/plugins/plugin-incremental.js',
-		consumer: 'root',
-		additionalSources: {
-			'dist/runtime/server/jsx.js': '0ef3b84be4ddbd77ea5c627d185386769c2573497763950a59686c36ce83d2f0',
-			'dist/runtime/server/render/component.js': '8bfcbce317932fb7d6b6f517c98f7466cac8543f73c144d5482be9a224fcb0ac',
-			'dist/runtime/server/render/streaming.js': '64aa411e6c5cfe86637ebbcf7dd287606c0e65770360243b91c4cc9a05632807',
-			'dist/runtime/server/render/util.js': '5479ae62de940e1bb061acaed3ba5456094dd4b1667a1152aab71e4cf1515d6a',
-			'dist/runtime/server/render/util.d.ts': '3a4ea6f1fe16ddc53df9f0f2774ef3c81055ccc8ff3deba86d1401f733c552b3',
-			'dist/assets/endpoint/node.js': 'eaa488b6ad8dfdb8c47d4498c241efd80d18ea9dec375bbacf1a3007505e35ee',
-		},
 	},
 	{
 		packageName: 'http-cache-semantics',
@@ -71,16 +42,6 @@ const lockKeyMatches = (key, reference) => key === reference || key.startsWith(`
 export function isVerifiedCacheAdvisory(advisory, attestation) {
 	return attestation === CACHE_PATCH.patchSha256 && advisory.packageName === CACHE_PATCH.packageName &&
 		advisory.url === ADVISORY_URL && advisory.title === ADVISORY_TITLE && advisory.severity === 'high';
-}
-
-// Only these upstream fixes are backported. The shared attestation verifies
-// every installed renderer, its image endpoint and the path helper it resolves.
-export function isVerifiedAstroAdvisory(advisory, attestation) {
-	if (attestation !== CACHE_PATCH.patchSha256 || advisory.packageName !== 'astro') return false;
-	return [
-		['low', 'Astro: XSS via attribute injection in dynamic tag names', 'https://github.com/advisories/GHSA-mh32-jxcr-mh9f'],
-		['moderate', 'Astro: Image endpoint in @astrojs/node can read files from a case-variant sibling of the output directory on case-sensitive filesystems', 'https://github.com/advisories/GHSA-r3h5-4585-7x3w'],
-	].some(([severity, title, url]) => advisory.severity === severity && advisory.title === title && advisory.url === url);
 }
 
 export function validateDependencyPatches({ workspace, lockfile, patches, installedCopies, consumerPaths }) {
@@ -173,10 +134,7 @@ export async function attestInstalledDependencyPatches({ root, workspace, lockfi
 	const rootRequire = createRequire(join(root, 'package.json'));
 	const astroConsumer = createRequire(rootRequire.resolve('astro'));
 	const lhciConsumer = createRequire(rootRequire.resolve('@lhci/cli/package.json'));
-	const astroRoot = dirname(rootRequire.resolve('astro/package.json'));
 	const consumerPaths = {
-		['@astrojs/internal-helpers@0.11.0']: await realpath(astroConsumer.resolve('@astrojs/internal-helpers/path')),
-		['astro@7.3.3']: await realpath(join(astroRoot, 'dist/core/build/plugins/plugin-incremental.js')),
 		['http-cache-semantics@4.3.0']: await realpath(astroConsumer.resolve('http-cache-semantics')),
 		['@lhci/utils@0.15.1']: await realpath(lhciConsumer.resolve('@lhci/utils/src/lighthouserc.js')),
 	};

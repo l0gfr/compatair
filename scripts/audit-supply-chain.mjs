@@ -3,7 +3,7 @@ import { readdir, readFile } from 'node:fs/promises';
 import { classifyNpmAdvisories } from './lib/advisory-policy.mjs';
 import { fetchGitHubAdvisories } from './lib/github-advisory-client.mjs';
 import { fileURLToPath } from 'node:url';
-import { attestInstalledDependencyPatches, isVerifiedCacheAdvisory, isVerifiedAstroAdvisory } from './lib/verified-dependency-patches.mjs';
+import { attestInstalledDependencyPatches, isVerifiedCacheAdvisory } from './lib/verified-dependency-patches.mjs';
 import { attestInstalledZodCollectionPatch, isVerifiedZodCollectionAdvisory } from './lib/verified-zod-collection-patch.mjs';
 
 const REGISTRY = 'https://registry.npmjs.org';
@@ -18,7 +18,7 @@ const EXPECTED_OVERRIDES = new Map([
   ['basic-ftp', '6.2.6'],
   ['body-parser@1', '1.20.9'],
   ['compression', '1.8.2'],
-  ['devalue', '5.9.3'],
+  ['devalue', '6.0.3'],
   ['fast-uri', '3.1.9'],
   ['http-cache-semantics', '4.3.0'],
   ['ip-address', '10.7.4'],
@@ -28,12 +28,12 @@ const EXPECTED_OVERRIDES = new Map([
   ['postcss', '8.5.23'],
   ['qs', '6.16.1'],
   ['proxy-addr', '2.0.8'],
-  ['smol-toml', '1.9.0'],
+  ['smol-toml', '1.9.1'],
   ['source-map-js', '1.2.2'],
   ['svgo', '4.1.0'],
   ['tmp', '0.2.7'],
   ['uuid', '11.1.1'],
-  ['vite', '8.1.6'],
+  ['vite', '8.3.5'],
 ]);
 const EXPECTED_TRUST_POLICY_EXCLUSIONS = new Set(['chokidar@4.0.3', 'semver@5.7.2||6.3.1']);
 const EXPECTED_RELEASE_AGE_EXCLUSIONS = new Set();
@@ -330,11 +330,11 @@ if (advisoryMode) {
     const response = await fetchGitHubAdvisories(lockedPackages);
     const directRuntimeDependencies = new Set(Object.keys(packageJson.dependencies ?? {}));
     const { advisories, blocking: policyBlocking } = classifyNpmAdvisories(response, directRuntimeDependencies);
-    const blocking = policyBlocking.filter((advisory) => !isVerifiedCacheAdvisory(advisory, patchAttestation) && !isVerifiedAstroAdvisory(advisory, patchAttestation) && !isVerifiedZodCollectionAdvisory(advisory, zodAttestation));
+    const blocking = policyBlocking.filter((advisory) => !isVerifiedCacheAdvisory(advisory, patchAttestation) && !isVerifiedZodCollectionAdvisory(advisory, zodAttestation));
     console.log(`Avis GitHub Advisory Database: ${advisories.length} signalé(s), dont ${blocking.length} bloquant(s) selon la politique runtime.`);
     for (const advisory of advisories) {
       const message = `${advisory.packageName}: ${advisory.severity} ${advisory.title} (${advisory.url})`;
-      if (isVerifiedCacheAdvisory(advisory, patchAttestation) || isVerifiedAstroAdvisory(advisory, patchAttestation) || isVerifiedZodCollectionAdvisory(advisory, zodAttestation)) warnings.push(`avis connu corrigé localement, toujours signalé par GitHub: ${message}`);
+      if (isVerifiedCacheAdvisory(advisory, patchAttestation) || isVerifiedZodCollectionAdvisory(advisory, zodAttestation)) warnings.push(`avis connu corrigé localement, toujours signalé par GitHub: ${message}`);
       else if (blocking.includes(advisory)) failures.push(`vulnérabilité npm: ${message}`);
       else warnings.push(`vulnérabilité npm transitive sous le seuil high: ${message}`);
     }

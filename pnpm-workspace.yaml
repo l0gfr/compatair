@@ -15,7 +15,7 @@ overrides:
   basic-ftp: '6.2.6'
   'body-parser@1': '1.20.9'
   compression: '1.8.2'
-  devalue: '5.9.3'
+  devalue: '6.0.3'
   fast-uri: '3.1.9'
   http-cache-semantics: '4.3.0'
   ip-address: '10.7.4'
@@ -25,17 +25,15 @@ overrides:
   postcss: '8.5.23'
   qs: '6.16.1'
   proxy-addr: '2.0.8'
-  smol-toml: '1.9.0'
+  smol-toml: '1.9.1'
   source-map-js: '1.2.2'
   svgo: '4.1.0'
   tmp: '0.2.7'
   uuid: '11.1.1'
-  vite: '8.1.6'
+  vite: '8.3.5'
 
 patchedDependencies:
-  '@astrojs/internal-helpers@0.11.0': patches/@astrojs__internal-helpers@0.11.0.patch
   '@lhci/utils@0.15.1': patches/@lhci__utils@0.15.1.patch
-  astro@7.3.3: patches/astro@7.3.3.patch
   http-cache-semantics@4.3.0: patches/http-cache-semantics@4.3.0.patch
   zod@3.25.76: patches/zod@3.25.76.patch
   zod@4.4.3: patches/zod@4.4.3.patch

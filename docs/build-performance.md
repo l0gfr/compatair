@@ -41,7 +41,7 @@ construire un type implicite pour chaque valeur de l’historique. Elle ne
 modifie ni son chargement, ni les données publiées. Les tests vérifient le refus
 d’un accès au contenu brut et des fichiers absents ou malformés.
 
-Le mode incrémental d’Astro 7.3.3 vérifie le code des gabarits et les clés des routes.
+Le mode incrémental d’Astro 7.4.7 vérifie le code des gabarits et les clés des routes.
 Les produits bruts, titres et historiques sont lus comme des entrées de données
 lors du build, hors du graphe global des modules. Les schémas de validation restent
 appliqués ; le développement conserve les imports habituels et le rechargement.
@@ -59,11 +59,11 @@ résultats peuvent changer, même si aucune valeur numérique n’a changé.
 ### Correction du cache HTML du 4 novembre 2026
 
 Le graphe complet reproduisait une invalidation des fiches inchangées : Astro
-hachait le CSS compilé avec des identifiants temporaires Vite. Le correctif local
-de la version 7.3.3 résout ces identifiants vers les noms des actifs, comme pour
-le JavaScript. Une modification réelle de CSS, d’actif ou de code reste invalidante.
-Le patch pnpm, le verrou, le fichier installé et la résolution consommée sont
-attestés par l’audit de dépendances. Aucune version n’est mise à niveau.
+hachait le CSS compilé avec des identifiants temporaires Vite. Le correctif,
+désormais intégré à Astro 7.4.7, résout ces identifiants vers les noms des actifs,
+comme pour le JavaScript. Une modification réelle de CSS, d’actif ou de code reste
+invalidante. Le verrou et la résolution consommée sont attestés par l’audit de
+dépendances.
 
 Le simple changement de jour n’invalide plus toutes les pages. Les clés suivent
 l’année du footer, les offres actives et les liens directs encore valides. Les

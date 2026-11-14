@@ -176,11 +176,11 @@ const astroVersionParts = typeof astroVersion === 'string' ? astroVersion.match(
 const astroVersionIsPatched = astroVersionParts && (
 	Number(astroVersionParts[1]) > 7
 	|| (Number(astroVersionParts[1]) === 7 && (
-		Number(astroVersionParts[2]) > 3
-		|| (Number(astroVersionParts[2]) === 3 && Number(astroVersionParts[3]) >= 3)
+		Number(astroVersionParts[2]) > 4
+		|| (Number(astroVersionParts[2]) === 4 && Number(astroVersionParts[3]) >= 7)
 	))
 );
-if (!astroVersionIsPatched) errors.push('package.json: Astro doit rester en version corrigée >= 7.3.3 contre GHSA-4g3v-8h47-v7g6, GHSA-98hj-9722-w3j8 et GHSA-mpr7-6m5w-76rw');
+if (!astroVersionIsPatched) errors.push('package.json: Astro doit rester en version corrigée >= 7.4.7 contre les avis de sécurité attestés');
 if (!packageManifest.scripts?.['archive:verify']?.includes('verify-source-archive.sh')) errors.push('package.json: contrôle de structure ZIP absent');
 if (!packageManifest.scripts?.['validate:main']?.includes('archive:verify')) errors.push('package.json: contrôle de structure ZIP absent de validate:main');
 if (packageManifest.scripts?.['lighthouse:production'] !== 'lhci autorun') errors.push('package.json: Lighthouse production doit conserver la configuration centrale sans surcharge du nombre de runs');

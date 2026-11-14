@@ -272,7 +272,11 @@ describe('installed dependency security boundaries', () => {
 		const { renderJSX } = await import(pathToFileURL(root.resolve('astro/runtime/server/jsx.js')).href);
 		const { stringifyAnimation } = await import(pathToFileURL(root.resolve('astro/runtime/server/transition.js')).href);
 
-		assert.equal(manifest.version, '7.3.3');
+		assert.equal(manifest.version, '7.4.7');
+		const maliciousTag = 'div/onmouseover="globalThis.__compatairInjected=true"';
+		const dynamicTag = String(await renderJSX({ pathname: '/security-fixture' }, jsx(maliciousTag, { children: 'safe' })));
+		assert.equal(dynamicTag, '<div>safe</div>');
+		assert.equal(dynamicTag.includes('onmouseover'), false);
 		const maliciousChild = '</script><script id="compatair-injected">bad</script>';
 		const script = String(await renderJSX({ pathname: '/security-fixture' }, jsx('script', { children: maliciousChild })));
 		const style = String(await renderJSX({ pathname: '/security-fixture' }, jsx('style', { children: maliciousChild })));
@@ -280,6 +284,11 @@ describe('installed dependency security boundaries', () => {
 		assert.equal(script.includes('<script id="compatair-injected">'), false);
 		assert.ok(style.includes('\\3C /script>'));
 		assert.equal(style.includes('<script id="compatair-injected">'), false);
+		const astroRequire = createRequire(root.resolve('astro/package.json'));
+		const { isParentDirectory } = await import(pathToFileURL(astroRequire.resolve('@astrojs/internal-helpers/path')).href);
+		assert.equal(isParentDirectory('/app/dist/client', '/app/DIST/client/secret.jpg'), false);
+		assert.equal(isParentDirectory('/app/dist/client', '/app/dist/client/image.jpg'), true);
+		assert.equal(isParentDirectory('C:\\app\\dist\\client', 'c:\\APP\\DIST\\client\\image.jpg'), true);
 
 		const injectedCss = stringifyAnimation({ name: 'fade', duration: '1ms;}#target{color:red' });
 		assert.ok(injectedCss.includes('1ms\\3B \\7D #target\\7B color:red'));
@@ -303,7 +312,7 @@ describe('installed dependency security boundaries', () => {
 			assert.equal(typeof library, 'function');
 		`);
 		checkInstalledDependency('astro', [], 'smol-toml', `
-			assert.equal(installedVersion('smol-toml'), '1.9.0');
+			assert.equal(installedVersion('smol-toml'), '1.9.1');
 			assert.equal(library.parse('fixture = 1').fixture, 1);
 		`);
 		checkInstalledDependency('astro', [], 'sharp', `
@@ -390,6 +399,9 @@ describe('installed dependency security boundaries', () => {
 			const mlsd = library.parseList('modify=20260101120000;type=file;size=42; file.txt')[0];
 			assert.equal(mlsd.name, 'file.txt');
 			assert.equal(mlsd.modifiedAt.toISOString(), '2026-01-01T12:00:00.000Z');
+			const prototypeFact = library.parseList('__proto__=ignored;modify=20260101120000;type=file;size=42; safe.txt')[0];
+			assert.equal(prototypeFact.name, 'safe.txt');
+			assert.equal(prototypeFact.size, 42);
 		`);
 	});
 
