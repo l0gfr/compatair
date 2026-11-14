@@ -41,6 +41,7 @@ describe('November 14 scoped technical and editorial followup', () => {
   const prefix = s.evidenceHistoryAppend.previousEventCount;
   expect(prefix).toBe(38560); expect(hash(JSON.stringify(evidenceHistory.events.slice(0, prefix)))).toBe(s.evidenceHistoryAppend.previousEventsSha256);
   expect(s.evidenceHistoryAppend.addedEvents).toBe(32); expect(evidenceHistory.events).toHaveLength(prefix + 32);
+  for (const event of evidenceHistory.events.slice(prefix)) expect(hash(JSON.stringify({ productId: event.productId, evidence: event.snapshot })), event.id).toBe(event.fingerprint);
   const expected = s.rows.flatMap(row => row.after.evidence.slice(row.before.evidence.length).map(e => e.id)).sort();
   expect(evidenceHistory.events.slice(prefix).map(e => e.evidenceId).sort()).toEqual(expected);
  });

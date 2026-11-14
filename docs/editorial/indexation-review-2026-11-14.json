@@ -27,7 +27,8 @@
     "Les 32 références corrigées restent sélectionnées. Après priorisation des reçus, ERCS 1 remplace mécaniquement FIAC AX 403BD : ce nouvel élément a été lu et reste needs-correction ; aucun remplacement manuel.",
     "Lectures préparées réutilisées après GET complet des trois catalogues et égalité des empreintes, avec relecture des tableaux et des pages/voisins courants.",
     "Les reçus intermédiaires locaux restent conservés. Seuls les 32 reçus actuels, renouvelés après les correctifs de sécurité et sans changement des contenus ni des moteurs, sont réutilisés ici.",
-    "19 tests ciblés réussis ; après la dernière correction factuelle, les quatre tests de reconstruction et de moteur natif/runtime ont de nouveau réussi. Aucun build local."
+    "19 tests ciblés réussis ; après la dernière correction factuelle, les quatre tests de reconstruction et de moteur natif/runtime ont de nouveau réussi. Aucun build local.",
+    "Le hook complet a détecté deux empreintes périmées dans les nouveaux événements GP-851B et ZBS-382N3 ; recalcul ciblé de ces empreintes et de la version globale, sans changement des 38 560 événements publiés ni des contenus. Assertion ciblée ajoutée sur les 32 nouvelles empreintes."
   ],
   "completeSourceAudit": {
     "runId": 43388911603,
