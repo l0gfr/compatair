@@ -22,10 +22,10 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-bosch-0-607-253-101-0607253101.webp",
+		"src": "/images/products/meuleuse-bosch-0-607-253-101-0607253101-technical-20261115-followup.svg",
 		"alt": "Repères techniques : Bosch 0 607 253 101 (réf. 0607253101)",
 		"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 15 novembre 2026"
 	},
 	"variant": {
 		"familyId": "bosch-0-607-253-101",
@@ -37,10 +37,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Bosch 0 607 253 101 (réf. 0607253101). Consommation en charge : 360 L/min à 6,3 bar. Vitesse à vide : 33000 tr/min. Masse : 0.7 kg.",
+		"overview": "Bosch 0 607 253 101 : meuleuse droite de 220 W, pince de 6 mm, abrasif autorisé de 20 mm et vitesse à vide de 33 000 tr/min. La 253 100 est régulée à 21 000 tr/min, 240 W et abrasif de 40 mm ; la 251 102 reçoit 40 mm à 21 000 tr/min et 450 W. Le diamètre admissible et la régulation distinguent ces choix malgré les 6 L/s en charge communs aux deux 253.",
 		"verifiedFacts": [
 			"Vitesse à vide : 33000 tr/min.",
-			"Masse : 0.7 kg."
+			"Masse : 0.7 kg.",
+			"Puissance : 220 W.",
+			"Diamètre d’abrasif autorisé : 20 mm.",
+			"Pince : 6 mm.",
+			"Débit en charge : 6 L/s (360 L/min)."
 		],
 		"limitations": [
 			"Dimensionnement à la consommation publiée, sans réduction par un cycle d’utilisation supposé.",
@@ -76,6 +80,34 @@ const product: ToolProfileInput = {
 				"october-bosch-industry-p28",
 				"october-bosch-industry-p4"
 			]
+		},
+		{
+			"label": "Puissance",
+			"value": "220 W",
+			"evidenceIds": [
+				"review:2026-11-12-technical:meuleuse-bosch-0-607-253-101-0607253101:0"
+			]
+		},
+		{
+			"label": "Diamètre d’abrasif autorisé",
+			"value": "20 mm",
+			"evidenceIds": [
+				"review:2026-11-12-technical:meuleuse-bosch-0-607-253-101-0607253101:0"
+			]
+		},
+		{
+			"label": "Pince",
+			"value": "6 mm",
+			"evidenceIds": [
+				"review:2026-11-12-technical:meuleuse-bosch-0-607-253-101-0607253101:0"
+			]
+		},
+		{
+			"label": "Débit en charge",
+			"value": "6 L/s (360 L/min)",
+			"evidenceIds": [
+				"review:2026-11-12-technical:meuleuse-bosch-0-607-253-101-0607253101:0"
+			]
 		}
 	],
 	"evidence": [
@@ -98,6 +130,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:meuleuse-bosch-0-607-253-101-0607253101:0",
+			"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf",
+			"sourceLabel": "Bosch, document fabricant, pages PDF 4, 28, 29",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "Bosch 0 607 253 101 : meuleuse droite de 220 W, pince de 6 mm, abrasif autorisé de 20 mm et vitesse à vide de 33 000 tr/min. La 253 100 est régulée à 21 000 tr/min, 240 W et abrasif de 40 mm ; la 251 102 reçoit 40 mm à 21 000 tr/min et 450 W. Le diamètre admissible et la régulation distinguent ces choix malgré les 6 L/s en charge communs aux deux 253. GET complet : SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. Historique conservé."
 		}
 	],
 	"fieldSources": {

@@ -11,13 +11,13 @@ const product: ToolProfileInput = {
 	"mpn": "PTS-150EX",
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
-	"demandExplanation": "Le tableau établit les caractéristiques individuelles. La consommation normale n’est pas explicitement rattachée à un régime en charge et à une pression de mesure.",
+	"demandExplanation": "La consommation est publiée en m³/min « Normal » sans régime de charge explicite ni état de référence détaillé. Elle reste documentaire et la compatibilité demeure indéterminée.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/boulonneuse-kuken-pts-150ex.webp",
+		"src": "/images/products/boulonneuse-kuken-pts-150ex-technical-20261115-followup.svg",
 		"alt": "Repères techniques : KUKEN PTS-150EX",
 		"sourceUrl": "https://www.kuken.co.jp/en/catalogue/pdf/best_selection.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 15 novembre 2026"
 	},
 	"variant": {
 		"familyId": "kuken-pts-150ex",
@@ -29,38 +29,70 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "KUKEN PTS-150EX. Le tableau établit les caractéristiques individuelles. La consommation normale n’est pas explicitement rattachée à un régime en charge et à une pression de mesure. Masse publiée : 2.5 kg (5.5 lb). Longueur publiée : 277.0 mm.",
+		"overview": "KUKEN PTS-150EX : outil à arrêt automatique, carré 1/2 pouce, plage 50–150 Nm par pas de 1 Nm. Son corps de 277 mm pèse 2,5 kg ; la version L s’allonge à 317 mm et 2,7 kg pour la même plage. La PTS-50EX couvre 20–50 Nm avec un réglage par pas de 0,1 Nm.",
 		"verifiedFacts": [
-			"Masse publiée : 2.5 kg (5.5 lb).",
-			"Longueur publiée : 277.0 mm."
+			"Carré : 1/2 pouce.",
+			"Plage de couple : 50–150 Nm, pas de 1 Nm.",
+			"Vitesse à vide : 120 tr/min.",
+			"Longueur, sans douille ni reprise de réaction : 277 mm.",
+			"Masse, sans douille ni reprise de réaction : 2,5 kg.",
+			"Consommation documentaire : 0,23 m³/min Normal ; 8,1 cfm.",
+			"Condition générale de performance : 0,62 MPa selon le pied de tableau."
 		],
 		"limitations": [
-			"Le tableau établit les caractéristiques individuelles. La consommation normale n’est pas explicitement rattachée à un régime en charge et à une pression de mesure.",
-			"Catalogue constructeur numérisé ; les conversions de masse servent à relire la ligne source.",
-			"Les contrôleurs, réaction/supports, sockets, unités FRL et accessoires sont exclus. Les suffixes retenus sont des modèles explicitement imprimés.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"La consommation est publiée en m³/min « Normal » sans régime de charge explicite ni état de référence détaillé. Elle reste documentaire et la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer.",
+			"Douille et dispositif de reprise de réaction exclus des mesures de longueur et de masse."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "2.5 kg (5.5 lb)",
+			"label": "Carré",
+			"value": "1/2 pouce",
 			"evidenceIds": [
-				"october2b-tools-oct2b-kuken-best-selection-pdf-p5"
+				"review:2026-11-12-technical:boulonneuse-kuken-pts-150ex:0"
 			]
 		},
 		{
-			"label": "Longueur publiée",
-			"value": "277.0 mm",
+			"label": "Plage de couple",
+			"value": "50–150 Nm, pas de 1 Nm",
 			"evidenceIds": [
-				"october2b-tools-oct2b-kuken-best-selection-pdf-p5"
+				"review:2026-11-12-technical:boulonneuse-kuken-pts-150ex:0"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "Les pressions des colonnes de couple et de vitesse ne sont pas transposées à la consommation.",
+			"label": "Vitesse à vide",
+			"value": "120 tr/min",
 			"evidenceIds": [
-				"october2b-tools-oct2b-kuken-best-selection-pdf-p5"
+				"review:2026-11-12-technical:boulonneuse-kuken-pts-150ex:0"
+			]
+		},
+		{
+			"label": "Longueur, sans douille ni reprise de réaction",
+			"value": "277 mm",
+			"evidenceIds": [
+				"review:2026-11-12-technical:boulonneuse-kuken-pts-150ex:0"
+			]
+		},
+		{
+			"label": "Masse, sans douille ni reprise de réaction",
+			"value": "2,5 kg",
+			"evidenceIds": [
+				"review:2026-11-12-technical:boulonneuse-kuken-pts-150ex:0"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "0,23 m³/min Normal ; 8,1 cfm",
+			"evidenceIds": [
+				"review:2026-11-12-technical:boulonneuse-kuken-pts-150ex:0"
+			]
+		},
+		{
+			"label": "Condition générale de performance",
+			"value": "0,62 MPa selon le pied de tableau",
+			"evidenceIds": [
+				"review:2026-11-12-technical:boulonneuse-kuken-pts-150ex:0"
 			]
 		}
 	],
@@ -74,21 +106,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 0da76488e568242877887f713ecd81203eaa9f2322c20eb65648d25bb7e71cc7. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:boulonneuse-kuken-pts-150ex:0",
+			"sourceUrl": "https://www.kuken.co.jp/en/catalogue/pdf/best_selection.pdf",
+			"sourceLabel": "KUKEN, document fabricant, pages PDF 5",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "KUKEN PTS-150EX : outil à arrêt automatique, carré 1/2 pouce, plage 50–150 Nm par pas de 1 Nm. Son corps de 277 mm pèse 2,5 kg ; la version L s’allonge à 317 mm et 2,7 kg pour la même plage. La PTS-50EX couvre 20–50 Nm avec un réglage par pas de 0,1 Nm. GET complet : SHA-256 0da76488e568242877887f713ecd81203eaa9f2322c20eb65648d25bb7e71cc7. Historique conservé."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october2b-tools-oct2b-kuken-best-selection-pdf-p5"
-		],
-		"workingPressureBar": [
-			"october2b-tools-oct2b-kuken-best-selection-pdf-p5"
+			"review:2026-11-12-technical:boulonneuse-kuken-pts-150ex:0"
 		],
 		"demandExplanation": [
-			"october2b-tools-oct2b-kuken-best-selection-pdf-p5"
+			"review:2026-11-12-technical:boulonneuse-kuken-pts-150ex:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-12-technical:boulonneuse-kuken-pts-150ex:0"
 		]
 	},
 	"notes": [
-		"Le tableau établit les caractéristiques individuelles. La consommation normale n’est pas explicitement rattachée à un régime en charge et à une pression de mesure."
+		"La consommation est publiée en m³/min « Normal » sans régime de charge explicite ni état de référence détaillé. Elle reste documentaire et la compatibilité demeure indéterminée."
 	]
 };
 

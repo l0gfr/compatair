@@ -1,3 +1,4 @@
+import { applyReservedNovember15TechnicalFollowup, beforeReservedNovember15TechnicalIfApplied } from './reviewed-catalog-amendments-2026-11-15-technical.mjs';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { isDeepStrictEqual } from 'node:util';
@@ -25,15 +26,17 @@ function project(product, row, state) {
  return product;
 }
 export function applyReservedNovember14TechnicalFollowup(product) {
+ product = beforeReservedNovember15TechnicalIfApplied(product);
  const row = rows.get(product.id);
- if (!row) return product;
+ if (!row) return applyReservedNovember15TechnicalFollowup(product);
  for (const key of ['brand', 'model', 'mpn']) if (Object.hasOwn(product, key) !== Object.hasOwn(row.identity, key) || product[key] !== row.identity[key]) throw new Error('Reserved followup identity changed: ' + product.id);
- if (matches(product, row, 'after')) return product;
+ if (matches(product, row, 'after')) return applyReservedNovember15TechnicalFollowup(product);
  if (!matches(product, row, 'before')) throw new Error('Reserved followup base changed: ' + product.id);
- return project(product, row, 'after');
+ return applyReservedNovember15TechnicalFollowup(project(product, row, 'after'));
 }
 /** @template {{ id: string }} T @param {T} product @returns {T} */
 export function beforeReservedNovember14TechnicalFollowup(product) {
+ product = beforeReservedNovember15TechnicalIfApplied(product);
  const row = rows.get(product.id);
  if (!row) return product;
  if (matches(product, row, 'before')) return product;
@@ -44,6 +47,7 @@ export function beforeReservedNovember14TechnicalFollowup(product) {
 // replayed one. Only an exact current state is projected; both amendment
 // applicators still reject all unknown states through their normal guards.
 export function beforeReservedNovember14TechnicalIfApplied(product) {
+ product = beforeReservedNovember15TechnicalIfApplied(product);
  const row = rows.get(product.id);
  return row && matches(product, row, 'after') ? project(structuredClone(product), row, 'before') : product;
 }

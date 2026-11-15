@@ -9,82 +9,72 @@ const product: ToolProfileInput = {
 	"categoryId": "visseuse",
 	"category": "visseuse",
 	"label": "Red Rooster RRI-SA10604",
-	"demandModel": "fixed-flow",
-	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
-		"max": 6.3
-	},
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/red-rooster-rri-sa10604.webp",
+		"src": "/images/products/red-rooster-rri-sa10604-technical-20261115-followup.svg",
 		"alt": "Repères techniques Red Rooster RRI-SA10604, référence RRI-SA10604",
-		"sourceUrl": "https://www.rami-yokota.com/media/godd0tdm/2026_fr_outils_d-assemblage_spreads.pdf#page=29",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://www.rami-yokota.com/media/godd0tdm/2026_fr_outils_d-assemblage_spreads.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 15 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Red Rooster RRI-SA10604, référence RRI-SA10604. Le tableau fabricant publie 450 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple indicatif publié : 0,8 à 6,0 Nm. Vitesse à vide : 450 tr/min.",
+		"overview": "Red Rooster RRI-SA10604 : clé d’angle à arrêt automatique, carré 1/4 pouce, plage 0,8–6 Nm et 450 tr/min. La variante W passe au carré 3/8 pouce ; la SA10505 garde le carré 1/4 avec 0,8–5 Nm et 550 tr/min. Les couples de cette table sont mesurés sur assemblage dur.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation publiée : 7.5 L/s, convertis en 450 L/min par multiplication par 60.",
-			"Référence fabricant : RRI-SA10604.",
-			"Couple indicatif publié : 0,8 à 6,0 Nm.",
+			"Carré : 1/4 pouce.",
+			"Couple, assemblage dur : 0,8–6 Nm.",
 			"Vitesse à vide : 450 tr/min.",
-			"Masse publiée : 1,02 kg."
+			"Cote A du schéma : 309 mm.",
+			"Masse : 1,02 kg.",
+			"Consommation documentaire : 7,5 L/s, régime non précisé."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"Le régime et la pression de mesure de la consommation ne sont pas établis par cette table. Les consignes de service restent séparées ; la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer.",
+			"Les couples publiés restent liés aux conditions d’assemblage ; aucune économie par cycle n’est déduite."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+			"label": "Carré",
+			"value": "1/4 pouce",
 			"evidenceIds": [
-				"red-rooster-rri-sa10604-20260926-workingpressurebar-1"
+				"review:2026-11-12-technical:red-rooster-rri-sa10604:0"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation publiée : 7.5 L/s, convertis en 450 L/min par multiplication par 60.",
+			"label": "Couple, assemblage dur",
+			"value": "0,8–6 Nm",
 			"evidenceIds": [
-				"red-rooster-rri-sa10604-20260926"
-			]
-		},
-		{
-			"label": "Couple indicatif publié",
-			"value": "0,8 à 6,0 Nm",
-			"evidenceIds": [
-				"red-rooster-rri-sa10604-20260926"
+				"review:2026-11-12-technical:red-rooster-rri-sa10604:0"
 			]
 		},
 		{
 			"label": "Vitesse à vide",
 			"value": "450 tr/min",
 			"evidenceIds": [
-				"red-rooster-rri-sa10604-20260926"
+				"review:2026-11-12-technical:red-rooster-rri-sa10604:0"
 			]
 		},
 		{
-			"label": "Masse publiée",
+			"label": "Cote A du schéma",
+			"value": "309 mm",
+			"evidenceIds": [
+				"review:2026-11-12-technical:red-rooster-rri-sa10604:0"
+			]
+		},
+		{
+			"label": "Masse",
 			"value": "1,02 kg",
 			"evidenceIds": [
-				"red-rooster-rri-sa10604-20260926"
+				"review:2026-11-12-technical:red-rooster-rri-sa10604:0"
 			]
 		},
 		{
-			"label": "Diamètre intérieur de flexible conseillé",
-			"value": "6,5 mm",
+			"label": "Consommation documentaire",
+			"value": "7,5 L/s, régime non précisé",
 			"evidenceIds": [
-				"red-rooster-rri-sa10604-20260926"
-			]
-		},
-		{
-			"label": "Raccord pneumatique",
-			"value": "1/4\"",
-			"evidenceIds": [
-				"red-rooster-rri-sa10604-20260926"
+				"review:2026-11-12-technical:red-rooster-rri-sa10604:0"
 			]
 		}
 	],
@@ -106,37 +96,37 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "review:2026-11-12-technical:red-rooster-rri-sa10604:0",
+			"sourceUrl": "https://www.rami-yokota.com/media/godd0tdm/2026_fr_outils_d-assemblage_spreads.pdf",
+			"sourceLabel": "Red Rooster, document fabricant, pages PDF 29",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "Red Rooster RRI-SA10604 : clé d’angle à arrêt automatique, carré 1/4 pouce, plage 0,8–6 Nm et 450 tr/min. La variante W passe au carré 3/8 pouce ; la SA10505 garde le carré 1/4 avec 0,8–5 Nm et 550 tr/min. Les couples de cette table sont mesurés sur assemblage dur. GET complet : SHA-256 6b7dca4923bfef1dbe2c7f6691e91e07f92fec5c1fa3b8d56f211ecbdb5e4845. Historique conservé."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"red-rooster-rri-sa10604-20260926"
+			"review:2026-11-12-technical:red-rooster-rri-sa10604:0"
+		],
+		"demandExplanation": [
+			"review:2026-11-12-technical:red-rooster-rri-sa10604:0"
 		],
 		"workingPressureBar": [
-			"red-rooster-rri-sa10604-20260926-workingpressurebar-1"
-		],
-		"airflowLpm": [
-			"red-rooster-rri-sa10604-20260926"
-		],
-		"recommendedHose": [
-			"red-rooster-rri-sa10604-20260926"
-		],
-		"connectorSize": [
-			"red-rooster-rri-sa10604-20260926"
+			"review:2026-11-12-technical:red-rooster-rri-sa10604:0"
 		]
 	},
 	"notes": [
-		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+		"Le régime et la pression de mesure de la consommation ne sont pas établis par cette table. Les consignes de service restent séparées ; la compatibilité demeure indéterminée."
 	],
-	"airflowLpm": {
-		"min": 450,
-		"typical": 450,
-		"max": 450
-	},
 	"recommendedHose": {
 		"innerDiameterMm": 6.5
 	},
-	"connectorSize": "1/4\""
+	"connectorSize": "1/4\"",
+	"demandExplanation": "Le régime et la pression de mesure de la consommation ne sont pas établis par cette table. Les consignes de service restent séparées ; la compatibilité demeure indéterminée."
 };
 
 export default product;

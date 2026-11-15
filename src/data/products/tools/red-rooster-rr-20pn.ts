@@ -9,75 +9,87 @@ const product: ToolProfileInput = {
 	"categoryId": "cle-a-chocs",
 	"category": "cle-a-chocs",
 	"label": "Red Rooster RR-20PN",
-	"demandModel": "fixed-flow",
-	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
-		"max": 6.3
-	},
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/red-rooster-rr-20pn.webp",
+		"src": "/images/products/red-rooster-rr-20pn-technical-20261115-followup.svg",
 		"alt": "Repères techniques Red Rooster RR-20PN, référence RR-20PN",
-		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=38",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 15 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Red Rooster RR-20PN, référence RR-20PN. Le tableau fabricant publie 630 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 4800 tr/min. Masse publiée : 4,6 kg.",
+		"overview": "Red Rooster RR-20PN : carré 3/4 pouce, mécanisme à un marteau, 720 Nm publiés et masse 4,6 kg. La RR-24N du même tableau est une double-marteau de 3,4 kg, à 1 625 Nm. Le raccord PT 1/4 pouce de la RR-20PN diffère du PT 3/8 de la RR-24N.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation en charge publiée : 10.5 L/s, convertis en 630 L/min par multiplication par 60.",
-			"Référence fabricant : RR-20PN.",
-			"Vitesse à vide publiée : 4800 tr/min.",
-			"Masse publiée : 4,6 kg.",
-			"Diamètre intérieur de flexible conseillé : 10 mm."
+			"Carré : 3/4 pouce.",
+			"Mécanisme : Un marteau.",
+			"Couple publié : 720 Nm.",
+			"Vitesse à vide : 4 800 tr/min.",
+			"Masse : 4,6 kg.",
+			"Consommation en charge, hors calcul : 10,5 L/s ; 630 L/min.",
+			"Raccord : PT 1/4 pouce.",
+			"Flexible intérieur conseillé : 10 mm."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"La consommation en charge est documentée, mais son appariement à une pression de mesure n’est pas établi. Les consignes de service restent séparées ; la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+			"label": "Carré",
+			"value": "3/4 pouce",
 			"evidenceIds": [
-				"red-rooster-rr-20pn-20260926-workingpressurebar-1"
+				"review:2026-11-12-technical:red-rooster-rr-20pn:0"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation en charge publiée : 10.5 L/s, convertis en 630 L/min par multiplication par 60.",
+			"label": "Mécanisme",
+			"value": "Un marteau",
 			"evidenceIds": [
-				"red-rooster-rr-20pn-20260926"
+				"review:2026-11-12-technical:red-rooster-rr-20pn:0"
 			]
 		},
 		{
-			"label": "Vitesse à vide publiée",
-			"value": "4800 tr/min",
+			"label": "Couple publié",
+			"value": "720 Nm",
 			"evidenceIds": [
-				"red-rooster-rr-20pn-20260926"
+				"review:2026-11-12-technical:red-rooster-rr-20pn:0"
 			]
 		},
 		{
-			"label": "Masse publiée",
+			"label": "Vitesse à vide",
+			"value": "4 800 tr/min",
+			"evidenceIds": [
+				"review:2026-11-12-technical:red-rooster-rr-20pn:0"
+			]
+		},
+		{
+			"label": "Masse",
 			"value": "4,6 kg",
 			"evidenceIds": [
-				"red-rooster-rr-20pn-20260926"
+				"review:2026-11-12-technical:red-rooster-rr-20pn:0"
 			]
 		},
 		{
-			"label": "Diamètre intérieur de flexible conseillé",
+			"label": "Consommation en charge, hors calcul",
+			"value": "10,5 L/s ; 630 L/min",
+			"evidenceIds": [
+				"review:2026-11-12-technical:red-rooster-rr-20pn:0"
+			]
+		},
+		{
+			"label": "Raccord",
+			"value": "PT 1/4 pouce",
+			"evidenceIds": [
+				"review:2026-11-12-technical:red-rooster-rr-20pn:0"
+			]
+		},
+		{
+			"label": "Flexible intérieur conseillé",
 			"value": "10 mm",
 			"evidenceIds": [
-				"red-rooster-rr-20pn-20260926"
-			]
-		},
-		{
-			"label": "Raccord pneumatique",
-			"value": "PT 1/4\"",
-			"evidenceIds": [
-				"red-rooster-rr-20pn-20260926"
+				"review:2026-11-12-technical:red-rooster-rr-20pn:0"
 			]
 		}
 	],
@@ -99,37 +111,37 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "review:2026-11-12-technical:red-rooster-rr-20pn:0",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf",
+			"sourceLabel": "Red Rooster, document fabricant, pages PDF 38",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "Red Rooster RR-20PN : carré 3/4 pouce, mécanisme à un marteau, 720 Nm publiés et masse 4,6 kg. La RR-24N du même tableau est une double-marteau de 3,4 kg, à 1 625 Nm. Le raccord PT 1/4 pouce de la RR-20PN diffère du PT 3/8 de la RR-24N. GET complet : SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. Historique conservé."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"red-rooster-rr-20pn-20260926"
+			"review:2026-11-12-technical:red-rooster-rr-20pn:0"
+		],
+		"demandExplanation": [
+			"review:2026-11-12-technical:red-rooster-rr-20pn:0"
 		],
 		"workingPressureBar": [
-			"red-rooster-rr-20pn-20260926-workingpressurebar-1"
-		],
-		"airflowLpm": [
-			"red-rooster-rr-20pn-20260926"
-		],
-		"recommendedHose": [
-			"red-rooster-rr-20pn-20260926"
-		],
-		"connectorSize": [
-			"red-rooster-rr-20pn-20260926"
+			"review:2026-11-12-technical:red-rooster-rr-20pn:0"
 		]
 	},
 	"notes": [
-		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+		"La consommation en charge est documentée, mais son appariement à une pression de mesure n’est pas établi. Les consignes de service restent séparées ; la compatibilité demeure indéterminée."
 	],
-	"airflowLpm": {
-		"min": 630,
-		"typical": 630,
-		"max": 630
-	},
 	"recommendedHose": {
 		"innerDiameterMm": 10
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"demandExplanation": "La consommation en charge est documentée, mais son appariement à une pression de mesure n’est pas établi. Les consignes de service restent séparées ; la compatibilité demeure indéterminée."
 };
 
 export default product;

@@ -17,21 +17,16 @@ const product: CompressorInput = {
   },
   "maxPressureBar": 4.5,
   "maxPressureBasis": "selected-working-pressure-ceiling",
-  "fadCurve": [
-    {
-      "pressureBar": 4.5,
-      "litersPerMinute": 34200
-    }
-  ],
+  "fadCurve": [],
   "powerKw": 132,
   "oilType": "oil",
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/scr-scr1200lhpm.svg",
+    "src": "/images/products/scr-scr1200lhpm-technical-20261115-followup.svg",
     "alt": "Repères techniques : SCR SCR1200LHPM",
     "sourceUrl": "https://www.scrcompressor.com/en/products/low_pressure_screw_compressor/111.html",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 15 novembre 2026"
   },
   "specifications": [
     {
@@ -56,20 +51,6 @@ const product: CompressorInput = {
       ]
     },
     {
-      "label": "FAD maximal déclaré à 4,5 bar",
-      "value": "34 200 L/min",
-      "evidenceIds": [
-        "october4c-scr-111-p1"
-      ]
-    },
-    {
-      "label": "FAD minimal déclaré à 4,5 bar",
-      "value": "10 200 L/min ; minimum de régulation, distinct de la capacité maximale",
-      "evidenceIds": [
-        "october4c-scr-111-p1"
-      ]
-    },
-    {
       "label": "Puissance publiée",
       "value": "132 kW",
       "evidenceIds": [
@@ -82,20 +63,60 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4c-scr-111-p1"
       ]
+    },
+    {
+      "label": "Capacité documentaire",
+      "value": "10,2–34,2 m³/min ; tableau4,5/5,5 bar, appariement exact à confirmer",
+      "evidenceIds": [
+        "review:2026-11-12-technical:scr-scr1200lhpm:0"
+      ]
+    },
+    {
+      "label": "Dimensions et masse",
+      "value": "3000 × 2050 × 2100 mm ;4300 kg",
+      "evidenceIds": [
+        "review:2026-11-12-technical:scr-scr1200lhpm:0"
+      ]
+    },
+    {
+      "label": "Alimentation standard publiée",
+      "value": "380 V /50 Hz /3 phases",
+      "evidenceIds": [
+        "review:2026-11-12-technical:scr-scr1200lhpm:0"
+      ]
+    },
+    {
+      "label": "Raccord de sortie",
+      "value": "DN125",
+      "evidenceIds": [
+        "review:2026-11-12-technical:scr-scr1200lhpm:0"
+      ]
+    },
+    {
+      "label": "Méthode déclarée",
+      "value": "GB3853, équivalent ISO1217 annexe C ; plage recommandée60–100 % de capacité, distincte d’un taux de marche",
+      "evidenceIds": [
+        "review:2026-11-12-technical:scr-scr1200lhpm:0"
+      ]
     }
   ],
   "editorial": {
-    "overview": "SCR SCR1200LHPM. 34 200 L/min déclarés à 4,5 bar, maximum de la plage FAD publiée, sans qualification du régime moteur. Configuration constructeur : SCR1200LHPM.",
+    "overview": "Le SCR1200LHPM est un groupe basse pression à moteur permanent132 kW,3000 × 2050 × 2100 mm et4300 kg. La table associe une plage de capacité10,2–34,2 m³/min à des lignes4,5/5,5 bar, sans point de mesure distinct établi pour chaque pression. Cette plage reste documentaire.",
     "verifiedFacts": [
-      "Pression de la configuration documentée : 4,5 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 34 200 L/min déclarés à 4,5 bar, maximum de la plage FAD publiée, sans qualification du régime moteur."
+      "Puissance moteur publiée :132 kW.",
+      "Capacité documentaire : 10,2–34,2 m³/min ; tableau4,5/5,5 bar, appariement exact à confirmer.",
+      "Dimensions et masse : 3000 × 2050 × 2100 mm ;4300 kg.",
+      "Alimentation standard publiée : 380 V /50 Hz /3 phases.",
+      "Raccord de sortie : DN125.",
+      "Méthode déclarée : GB3853, équivalent ISO1217 annexe C ; plage recommandée60–100 % de capacité, distincte d’un taux de marche."
     ],
     "limitations": [
       "Point FAD retenu : maximum de la plage constructeur à cette pression. Le minimum est publié séparément ; aucun régime de rotation ni interpolation de vitesse n’est déduit.",
       "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
       "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
       "Cuve non documentée : l’autonomie et le volume de stockage ne peuvent pas être conclus à partir de ce profil.",
-      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions."
+      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions.",
+      "Les deux pressions partagent une plage de capacité. Aucun couple débit/pression de mesure exact n’est arbitré."
     ]
   },
   "evidence": [
@@ -108,6 +129,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 e86e787c4d97a637bd79e4cf3dfa3e90d907e3e463754133dce234111e9538ea de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-12-technical:scr-scr1200lhpm:0",
+      "sourceUrl": "https://www.scrcompressor.com/en/products/low_pressure_screw_compressor/111.html",
+      "sourceLabel": "SCR, fiche fabricant relue",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-12",
+      "confidence": "B",
+      "notes": "Le SCR1200LHPM est un groupe basse pression à moteur permanent132 kW,3000 × 2050 × 2100 mm et4300 kg. La table associe une plage de capacité10,2–34,2 m³/min à des lignes4,5/5,5 bar, sans point de mesure distinct établi pour chaque pression. Cette plage reste documentaire. GET complet : SHA-256 e86e787c4d97a637bd79e4cf3dfa3e90d907e3e463754133dce234111e9538ea. Historique conservé."
     }
   ],
   "fieldSources": {
@@ -120,14 +151,14 @@ const product: CompressorInput = {
     "maxPressureBar": [
       "october4c-scr-111-p1"
     ],
-    "fadCurve": [
-      "october4c-scr-111-p1"
-    ],
     "powerKw": [
       "october4c-scr-111-p1"
     ],
     "oilType": [
       "october4c-scr-111-p1"
+    ],
+    "fadCurve": [
+      "review:2026-11-12-technical:scr-scr1200lhpm:0"
     ]
   },
   "notes": [

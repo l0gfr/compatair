@@ -9,24 +9,14 @@ const product: ToolProfileInput = {
 	"brand": "SP AIR",
 	"model": "SP-1261G",
 	"mpn": "SP-1261G",
-	"demandModel": "fixed-flow",
-	"workingPressureBar": {
-		"min": 6.2,
-		"typical": 6.2,
-		"max": 6.2
-	},
-	"airflowLpm": {
-		"min": 800,
-		"typical": 800,
-		"max": 800
-	},
-	"airflowBasis": "unqualified",
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-sp-air-sp-1261g.webp",
+		"src": "/images/products/meuleuse-sp-air-sp-1261g-technical-20261115-followup.svg",
 		"alt": "Repères techniques : SP AIR SP-1261G",
 		"sourceUrl": "https://spair.vessel.co.jp/download/SP_catalog_all_E.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 15 novembre 2026"
 	},
 	"variant": {
 		"familyId": "sp-air-sp-1261g",
@@ -38,43 +28,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SP AIR SP-1261G. Consommation publiée, régime non précisé : 800 L/min à 6,2 bar. Raccord publié : 3/8\"NPT. Masse publiée : 3.8 kg.",
+		"overview": "La SP-1261G monte un disque de 180 mm sur filetage M16 × 2 et mesure 270 mm. La SP-1261L14 utilise M14 × 2 pour 320 mm ; cette différence commande le choix des accessoires.",
 		"verifiedFacts": [
-			"Raccord publié : 3/8\"NPT.",
-			"Masse publiée : 3.8 kg."
+			"Disque : 180 mm.",
+			"Filetage : M16 × 2.",
+			"Vitesse à vide : 7 500 tr/min.",
+			"Longueur et masse : 270 mm ; 3,8 kg.",
+			"Consommation documentaire : 0,8 m³/min ; régime non précisé.",
+			"Montage : Écrou de disque ; clés H17 mm et à ergots indiquées."
 		],
 		"limitations": [
-			"Régime de consommation non précisé : aucun maximum supposé ; le verdict reste insufficient_data.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Raccord publié",
-			"value": "3/8\"NPT",
+			"label": "Disque",
+			"value": "180 mm",
 			"evidenceIds": [
-				"october-sp-air-p18"
+				"review:2026-11-12-technical:meuleuse-sp-air-sp-1261g:0"
 			]
 		},
 		{
-			"label": "Masse publiée",
-			"value": "3.8 kg",
+			"label": "Filetage",
+			"value": "M16 × 2",
 			"evidenceIds": [
-				"october-sp-air-p18"
+				"review:2026-11-12-technical:meuleuse-sp-air-sp-1261g:0"
 			]
 		},
 		{
-			"label": "Localisation documentaire",
-			"value": "SP AIR, catalogue Air Tools, page 18",
+			"label": "Vitesse à vide",
+			"value": "7 500 tr/min",
 			"evidenceIds": [
-				"october-sp-air-p18"
+				"review:2026-11-12-technical:meuleuse-sp-air-sp-1261g:0"
 			]
 		},
 		{
-			"label": "Condition de pression originale",
-			"value": "Air pressure: 0.62 MPa",
+			"label": "Longueur et masse",
+			"value": "270 mm ; 3,8 kg",
 			"evidenceIds": [
-				"october-sp-air-p18"
+				"review:2026-11-12-technical:meuleuse-sp-air-sp-1261g:0"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "0,8 m³/min ; régime non précisé",
+			"evidenceIds": [
+				"review:2026-11-12-technical:meuleuse-sp-air-sp-1261g:0"
+			]
+		},
+		{
+			"label": "Montage",
+			"value": "Écrou de disque ; clés H17 mm et à ergots indiquées",
+			"evidenceIds": [
+				"review:2026-11-12-technical:meuleuse-sp-air-sp-1261g:0"
 			]
 		}
 	],
@@ -88,25 +96,33 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:meuleuse-sp-air-sp-1261g:0",
+			"sourceUrl": "https://spair.vessel.co.jp/download/SP_catalog_all_E.pdf",
+			"sourceLabel": "SP AIR, document fabricant, pages PDF 18",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "La SP-1261G monte un disque de 180 mm sur filetage M16 × 2 et mesure 270 mm. La SP-1261L14 utilise M14 × 2 pour 320 mm ; cette différence commande le choix des accessoires. GET complet : SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. Historique conservé."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october-sp-air-p18"
+			"review:2026-11-12-technical:meuleuse-sp-air-sp-1261g:0"
+		],
+		"demandExplanation": [
+			"review:2026-11-12-technical:meuleuse-sp-air-sp-1261g:0"
 		],
 		"workingPressureBar": [
-			"october-sp-air-p18"
-		],
-		"airflowLpm": [
-			"october-sp-air-p18"
-		],
-		"airflowBasis": [
-			"october-sp-air-p18"
+			"review:2026-11-12-technical:meuleuse-sp-air-sp-1261g:0"
 		]
 	},
 	"notes": [
-		"Consommation publiée, régime non précisé : 800 L/min à 6,2 bar."
-	]
+		"La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne."
+	],
+	"demandExplanation": "La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne."
 };
 
 export default product;

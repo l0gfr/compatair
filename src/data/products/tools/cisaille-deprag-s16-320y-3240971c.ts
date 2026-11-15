@@ -17,10 +17,10 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cisaille-deprag-s16-320y-3240971c.svg",
+		"src": "/images/products/cisaille-deprag-s16-320y-3240971c-technical-20261115-followup.svg",
 		"alt": "Repères techniques : DEPRAG S16-320Y (réf. 3240971C)",
 		"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 15 novembre 2026"
 	},
 	"variant": {
 		"familyId": "deprag-s16-320y",
@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "DEPRAG S16-320Y (réf. 3240971C). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "La cisaille S16-320Y coupe l’acier jusqu’à 1,6 mm à 400 N/mm², mais seulement 1 mm à 800 N/mm². Son rayon minimal de 15 mm est plus court que les 20 mm de la S20-180Y. Le matériau et sa résistance commandent le choix, pas une épaisseur unique.",
 		"verifiedFacts": [
 			"Puissance déclarée, kW (hp) : 0,32 (.43).",
 			"Épaisseur maximale acier à 400 N/mm², mm (in) : 1,6 (.06).",
@@ -40,7 +40,9 @@ const product: ToolProfileInput = {
 			"Épaisseur maximale acier à 800 N/mm², mm (in) : 1 (.04).",
 			"Épaisseur maximale aluminium à 250 N/mm², mm (in) : 2 (.08).",
 			"Rayon minimal de coupe, mm (in) : 15 (.59).",
-			"Diamètre intérieur du flexible, mm (in) : 6 (.24)."
+			"Diamètre intérieur du flexible, mm (in) : 6 (.24).",
+			"Commande : Vanne rotative.",
+			"Masse hors raccord d’air : 1,6 kg."
 		],
 		"limitations": [
 			"Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
@@ -106,6 +108,20 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october3d-tools-deprag-industrial2024-p26"
 			]
+		},
+		{
+			"label": "Commande",
+			"value": "Vanne rotative",
+			"evidenceIds": [
+				"review:2026-11-12-technical:cisaille-deprag-s16-320y-3240971c:0"
+			]
+		},
+		{
+			"label": "Masse hors raccord d’air",
+			"value": "1,6 kg",
+			"evidenceIds": [
+				"review:2026-11-12-technical:cisaille-deprag-s16-320y-3240971c:0"
+			]
 		}
 	],
 	"evidence": [
@@ -118,6 +134,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:cisaille-deprag-s16-320y-3240971c:0",
+			"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
+			"sourceLabel": "DEPRAG, document fabricant, pages PDF 26",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "La cisaille S16-320Y coupe l’acier jusqu’à 1,6 mm à 400 N/mm², mais seulement 1 mm à 800 N/mm². Son rayon minimal de 15 mm est plus court que les 20 mm de la S20-180Y. Le matériau et sa résistance commandent le choix, pas une épaisseur unique. GET complet : SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Historique conservé."
 		}
 	],
 	"fieldSources": {
@@ -125,7 +151,7 @@ const product: ToolProfileInput = {
 			"october3d-tools-deprag-industrial2024-p26"
 		],
 		"workingPressureBar": [
-			"october3d-tools-deprag-industrial2024-p26"
+			"review:2026-11-12-technical:cisaille-deprag-s16-320y-3240971c:0"
 		],
 		"recommendedHose": [
 			"october3d-tools-deprag-industrial2024-p26"

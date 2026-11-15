@@ -17,10 +17,10 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-deprag-psr16-826319a.svg",
+		"src": "/images/products/cle-a-chocs-deprag-psr16-826319a-technical-20261115-followup.svg",
 		"alt": "Repères techniques : DEPRAG PSR16 (réf. 826319A)",
 		"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 15 novembre 2026"
 	},
 	"variant": {
 		"familyId": "deprag-psr16",
@@ -32,13 +32,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "DEPRAG PSR16 (réf. 826319A). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "La PSR16 à poignée pistolet vise les vis M10 à M16, avec 260 Nm maximum et 18 impacts/s. La PSR24 passe à M14–M24 et 680 Nm pour 4 kg, contre 2,3 kg. Le catalogue ne fournit pas la consommation nécessaire au dimensionnement du compresseur.",
 		"verifiedFacts": [
 			"Dimensions de vis visées : M10 - M16.",
 			"Couple maximal déclaré, Nm (ft.lbs) : 260 (192).",
 			"Vitesse à vide, tr/min : 10 000.",
 			"Fréquence des impacts, Hz : 18.",
-			"Diamètre intérieur du flexible, mm (in) : 10 (.39)."
+			"Diamètre intérieur du flexible, mm (in) : 10 (.39).",
+			"Masse hors raccord d’air : 2,3 kg.",
+			"Comparaison de gamme : PSR24 : 680 Nm ; 4,0 kg ; M14–M24."
 		],
 		"limitations": [
 			"Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
@@ -90,6 +92,20 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october3d-tools-deprag-industrial2024-p22"
 			]
+		},
+		{
+			"label": "Masse hors raccord d’air",
+			"value": "2,3 kg",
+			"evidenceIds": [
+				"review:2026-11-12-technical:cle-a-chocs-deprag-psr16-826319a:0"
+			]
+		},
+		{
+			"label": "Comparaison de gamme",
+			"value": "PSR24 : 680 Nm ; 4,0 kg ; M14–M24",
+			"evidenceIds": [
+				"review:2026-11-12-technical:cle-a-chocs-deprag-psr16-826319a:0"
+			]
 		}
 	],
 	"evidence": [
@@ -102,6 +118,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:cle-a-chocs-deprag-psr16-826319a:0",
+			"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
+			"sourceLabel": "DEPRAG, document fabricant, pages PDF 22",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "La PSR16 à poignée pistolet vise les vis M10 à M16, avec 260 Nm maximum et 18 impacts/s. La PSR24 passe à M14–M24 et 680 Nm pour 4 kg, contre 2,3 kg. Le catalogue ne fournit pas la consommation nécessaire au dimensionnement du compresseur. GET complet : SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Historique conservé."
 		}
 	],
 	"fieldSources": {
@@ -109,7 +135,7 @@ const product: ToolProfileInput = {
 			"october3d-tools-deprag-industrial2024-p22"
 		],
 		"workingPressureBar": [
-			"october3d-tools-deprag-industrial2024-p22"
+			"review:2026-11-12-technical:cle-a-chocs-deprag-psr16-826319a:0"
 		],
 		"recommendedHose": [
 			"october3d-tools-deprag-industrial2024-p22"

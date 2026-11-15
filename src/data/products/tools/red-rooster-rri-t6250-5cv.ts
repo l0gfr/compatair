@@ -9,75 +9,71 @@ const product: ToolProfileInput = {
 	"categoryId": "ponceuse-orbitale",
 	"category": "ponceuse-orbitale",
 	"label": "Red Rooster RRI-T6250-5CV",
-	"demandModel": "fixed-flow",
-	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
-		"max": 6.3
-	},
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/red-rooster-rri-t6250-5cv.webp",
+		"src": "/images/products/red-rooster-rri-t6250-5cv-technical-20261115-followup.svg",
 		"alt": "Repères techniques Red Rooster RRI-T6250-5CV, référence RRI-T6250-5CV",
-		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=47",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 15 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Red Rooster RRI-T6250-5CV, référence RRI-T6250-5CV. Le tableau fabricant publie 294 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 12000 tr/min. Masse publiée : 1 kg.",
+		"overview": "Red Rooster RRI-T6250-5CV : plateau 150 mm, course 5 mm et raccordement à une aspiration centrale. La T6250-5NV utilise le même plateau sans aspiration ; la 5125-2CV réduit le plateau à 125 mm et la course à 2,5 mm. La table conserve 12 000 tr/min et 4,9 L/s pour ces trois configurations.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation publiée : 4.9 L/s, convertis en 294 L/min par multiplication par 60.",
-			"Référence fabricant : RRI-T6250-5CV.",
-			"Vitesse à vide publiée : 12000 tr/min.",
-			"Masse publiée : 1 kg.",
-			"Diamètre intérieur de flexible conseillé : 6,5 mm."
+			"Plateau : 150 mm.",
+			"Course : 5 mm.",
+			"Aspiration : Centrale, suffixe CV.",
+			"Vitesse à vide : 12 000 tr/min.",
+			"Masse : 1 kg.",
+			"Consommation documentaire : 4,9 L/s, régime non précisé."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"Le régime et la pression de mesure de la consommation ne sont pas établis par cette table. Les consignes de service restent séparées ; la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+			"label": "Plateau",
+			"value": "150 mm",
 			"evidenceIds": [
-				"red-rooster-rri-t6250-5cv-20260926-workingpressurebar-1"
+				"review:2026-11-12-technical:red-rooster-rri-t6250-5cv:0"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation publiée : 4.9 L/s, convertis en 294 L/min par multiplication par 60.",
+			"label": "Course",
+			"value": "5 mm",
 			"evidenceIds": [
-				"red-rooster-rri-t6250-5cv-20260926"
+				"review:2026-11-12-technical:red-rooster-rri-t6250-5cv:0"
 			]
 		},
 		{
-			"label": "Vitesse à vide publiée",
-			"value": "12000 tr/min",
+			"label": "Aspiration",
+			"value": "Centrale, suffixe CV",
 			"evidenceIds": [
-				"red-rooster-rri-t6250-5cv-20260926"
+				"review:2026-11-12-technical:red-rooster-rri-t6250-5cv:0"
 			]
 		},
 		{
-			"label": "Masse publiée",
+			"label": "Vitesse à vide",
+			"value": "12 000 tr/min",
+			"evidenceIds": [
+				"review:2026-11-12-technical:red-rooster-rri-t6250-5cv:0"
+			]
+		},
+		{
+			"label": "Masse",
 			"value": "1 kg",
 			"evidenceIds": [
-				"red-rooster-rri-t6250-5cv-20260926"
+				"review:2026-11-12-technical:red-rooster-rri-t6250-5cv:0"
 			]
 		},
 		{
-			"label": "Diamètre intérieur de flexible conseillé",
-			"value": "6,5 mm",
+			"label": "Consommation documentaire",
+			"value": "4,9 L/s, régime non précisé",
 			"evidenceIds": [
-				"red-rooster-rri-t6250-5cv-20260926"
-			]
-		},
-		{
-			"label": "Raccord pneumatique",
-			"value": "PT 1/4\"",
-			"evidenceIds": [
-				"red-rooster-rri-t6250-5cv-20260926"
+				"review:2026-11-12-technical:red-rooster-rri-t6250-5cv:0"
 			]
 		}
 	],
@@ -99,37 +95,37 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "review:2026-11-12-technical:red-rooster-rri-t6250-5cv:0",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf",
+			"sourceLabel": "Red Rooster, document fabricant, pages PDF 47",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "Red Rooster RRI-T6250-5CV : plateau 150 mm, course 5 mm et raccordement à une aspiration centrale. La T6250-5NV utilise le même plateau sans aspiration ; la 5125-2CV réduit le plateau à 125 mm et la course à 2,5 mm. La table conserve 12 000 tr/min et 4,9 L/s pour ces trois configurations. GET complet : SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. Historique conservé."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"red-rooster-rri-t6250-5cv-20260926"
+			"review:2026-11-12-technical:red-rooster-rri-t6250-5cv:0"
+		],
+		"demandExplanation": [
+			"review:2026-11-12-technical:red-rooster-rri-t6250-5cv:0"
 		],
 		"workingPressureBar": [
-			"red-rooster-rri-t6250-5cv-20260926-workingpressurebar-1"
-		],
-		"airflowLpm": [
-			"red-rooster-rri-t6250-5cv-20260926"
-		],
-		"recommendedHose": [
-			"red-rooster-rri-t6250-5cv-20260926"
-		],
-		"connectorSize": [
-			"red-rooster-rri-t6250-5cv-20260926"
+			"review:2026-11-12-technical:red-rooster-rri-t6250-5cv:0"
 		]
 	},
 	"notes": [
-		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+		"Le régime et la pression de mesure de la consommation ne sont pas établis par cette table. Les consignes de service restent séparées ; la compatibilité demeure indéterminée."
 	],
-	"airflowLpm": {
-		"min": 294,
-		"typical": 294,
-		"max": 294
-	},
 	"recommendedHose": {
 		"innerDiameterMm": 6.5
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"demandExplanation": "Le régime et la pression de mesure de la consommation ne sont pas établis par cette table. Les consignes de service restent séparées ; la compatibilité demeure indéterminée."
 };
 
 export default product;

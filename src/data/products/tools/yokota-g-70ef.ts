@@ -9,75 +9,71 @@ const product: ToolProfileInput = {
 	"categoryId": "meuleuse",
 	"category": "meuleuse",
 	"label": "Yokota G-70EF",
-	"demandModel": "fixed-flow",
-	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
-		"max": 6.3
-	},
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/yokota-g-70ef.webp",
+		"src": "/images/products/yokota-g-70ef-technical-20261115-followup.svg",
 		"alt": "Repères techniques Yokota G-70EF, référence G-70EF",
-		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=45",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 15 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Yokota G-70EF, référence G-70EF. Le tableau fabricant publie 1 002 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 8500 tr/min. Masse publiée : 2,9 kg.",
+		"overview": "Yokota G-70EF : meuleuse pour disque 180 × (1,6–8) × 22,2 mm, broche 5/8 pouce et puissance 1,12 kW. Les G-40EF et G-50EF utilisent des disques 115 et 125 mm et une broche 7/16 pouce. La G-70EF tourne à 8 500 tr/min et pèse 2,9 kg.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation publiée : 16.7 L/s, convertis en 1002 L/min par multiplication par 60.",
-			"Référence fabricant : G-70EF.",
-			"Vitesse à vide publiée : 8500 tr/min.",
-			"Masse publiée : 2,9 kg.",
-			"Diamètre intérieur de flexible conseillé : 13 mm."
+			"Disque : 180 × (1,6–8) × 22,2 mm.",
+			"Broche : 5/8 pouce.",
+			"Puissance : 1,12 kW.",
+			"Vitesse à vide : 8 500 tr/min.",
+			"Masse : 2,9 kg.",
+			"Consommation documentaire : 16,7 L/s, régime non précisé."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"Le régime et la pression de mesure de la consommation ne sont pas établis par cette table. Les consignes de service restent séparées ; la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+			"label": "Disque",
+			"value": "180 × (1,6–8) × 22,2 mm",
 			"evidenceIds": [
-				"yokota-g-70ef-20260926-workingpressurebar-1"
+				"review:2026-11-12-technical:yokota-g-70ef:0"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation publiée : 16.7 L/s, convertis en 1002 L/min par multiplication par 60.",
+			"label": "Broche",
+			"value": "5/8 pouce",
 			"evidenceIds": [
-				"yokota-g-70ef-20260926"
+				"review:2026-11-12-technical:yokota-g-70ef:0"
 			]
 		},
 		{
-			"label": "Vitesse à vide publiée",
-			"value": "8500 tr/min",
+			"label": "Puissance",
+			"value": "1,12 kW",
 			"evidenceIds": [
-				"yokota-g-70ef-20260926"
+				"review:2026-11-12-technical:yokota-g-70ef:0"
 			]
 		},
 		{
-			"label": "Masse publiée",
+			"label": "Vitesse à vide",
+			"value": "8 500 tr/min",
+			"evidenceIds": [
+				"review:2026-11-12-technical:yokota-g-70ef:0"
+			]
+		},
+		{
+			"label": "Masse",
 			"value": "2,9 kg",
 			"evidenceIds": [
-				"yokota-g-70ef-20260926"
+				"review:2026-11-12-technical:yokota-g-70ef:0"
 			]
 		},
 		{
-			"label": "Diamètre intérieur de flexible conseillé",
-			"value": "13 mm",
+			"label": "Consommation documentaire",
+			"value": "16,7 L/s, régime non précisé",
 			"evidenceIds": [
-				"yokota-g-70ef-20260926"
-			]
-		},
-		{
-			"label": "Raccord pneumatique",
-			"value": "PT 3/8\"",
-			"evidenceIds": [
-				"yokota-g-70ef-20260926"
+				"review:2026-11-12-technical:yokota-g-70ef:0"
 			]
 		}
 	],
@@ -99,37 +95,37 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "review:2026-11-12-technical:yokota-g-70ef:0",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf",
+			"sourceLabel": "Yokota, document fabricant, pages PDF 45",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "Yokota G-70EF : meuleuse pour disque 180 × (1,6–8) × 22,2 mm, broche 5/8 pouce et puissance 1,12 kW. Les G-40EF et G-50EF utilisent des disques 115 et 125 mm et une broche 7/16 pouce. La G-70EF tourne à 8 500 tr/min et pèse 2,9 kg. GET complet : SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. Historique conservé."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"yokota-g-70ef-20260926"
+			"review:2026-11-12-technical:yokota-g-70ef:0"
+		],
+		"demandExplanation": [
+			"review:2026-11-12-technical:yokota-g-70ef:0"
 		],
 		"workingPressureBar": [
-			"yokota-g-70ef-20260926-workingpressurebar-1"
-		],
-		"airflowLpm": [
-			"yokota-g-70ef-20260926"
-		],
-		"recommendedHose": [
-			"yokota-g-70ef-20260926"
-		],
-		"connectorSize": [
-			"yokota-g-70ef-20260926"
+			"review:2026-11-12-technical:yokota-g-70ef:0"
 		]
 	},
 	"notes": [
-		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+		"Le régime et la pression de mesure de la consommation ne sont pas établis par cette table. Les consignes de service restent séparées ; la compatibilité demeure indéterminée."
 	],
-	"airflowLpm": {
-		"min": 1002,
-		"typical": 1002,
-		"max": 1002
-	},
 	"recommendedHose": {
 		"innerDiameterMm": 13
 	},
-	"connectorSize": "PT 3/8\""
+	"connectorSize": "PT 3/8\"",
+	"demandExplanation": "Le régime et la pression de mesure de la consommation ne sont pas établis par cette table. Les consignes de service restent séparées ; la compatibilité demeure indéterminée."
 };
 
 export default product;

@@ -9,75 +9,71 @@ const product: ToolProfileInput = {
 	"categoryId": "visseuse",
 	"category": "visseuse",
 	"label": "Yokota YD-5A",
-	"demandModel": "fixed-flow",
-	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
-		"max": 6.3
-	},
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/yokota-yd-5a.webp",
+		"src": "/images/products/yokota-yd-5a-technical-20261115-followup.svg",
 		"alt": "Repères techniques Yokota YD-5A, référence YD-5A",
-		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=41",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 15 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Yokota YD-5A, référence YD-5A. Le tableau fabricant publie 192 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 10000 tr/min. Masse publiée : 0,9 kg.",
+		"overview": "Yokota YD-5A : visseuse droite à un marteau, porte-outil hexagonal 1/4 pouce et couple publié 15,5 Nm. Les YD-3A et YD-4A conservent cette architecture avec 7,5 et 12 Nm. La YD-5A est donnée pour 10 000 tr/min et 0,9 kg, contre 12 000 tr/min et 0,5 kg pour la YD-3A.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation publiée : 3.2 L/s, convertis en 192 L/min par multiplication par 60.",
-			"Référence fabricant : YD-5A.",
-			"Vitesse à vide publiée : 10000 tr/min.",
-			"Masse publiée : 0,9 kg.",
-			"Diamètre intérieur de flexible conseillé : 6,5 mm."
+			"Porte-outil : Hexagonal 1/4 pouce.",
+			"Mécanisme : Un marteau.",
+			"Couple publié : 15,5 Nm.",
+			"Vitesse à vide : 10 000 tr/min.",
+			"Masse : 0,9 kg.",
+			"Consommation documentaire : 3,2 L/s, régime non précisé."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"Le régime et la pression de mesure de la consommation ne sont pas établis par cette table. Les consignes de service restent séparées ; la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+			"label": "Porte-outil",
+			"value": "Hexagonal 1/4 pouce",
 			"evidenceIds": [
-				"yokota-yd-5a-20260926-workingpressurebar-1"
+				"review:2026-11-12-technical:yokota-yd-5a:0"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation publiée : 3.2 L/s, convertis en 192 L/min par multiplication par 60.",
+			"label": "Mécanisme",
+			"value": "Un marteau",
 			"evidenceIds": [
-				"yokota-yd-5a-20260926"
+				"review:2026-11-12-technical:yokota-yd-5a:0"
 			]
 		},
 		{
-			"label": "Vitesse à vide publiée",
-			"value": "10000 tr/min",
+			"label": "Couple publié",
+			"value": "15,5 Nm",
 			"evidenceIds": [
-				"yokota-yd-5a-20260926"
+				"review:2026-11-12-technical:yokota-yd-5a:0"
 			]
 		},
 		{
-			"label": "Masse publiée",
+			"label": "Vitesse à vide",
+			"value": "10 000 tr/min",
+			"evidenceIds": [
+				"review:2026-11-12-technical:yokota-yd-5a:0"
+			]
+		},
+		{
+			"label": "Masse",
 			"value": "0,9 kg",
 			"evidenceIds": [
-				"yokota-yd-5a-20260926"
+				"review:2026-11-12-technical:yokota-yd-5a:0"
 			]
 		},
 		{
-			"label": "Diamètre intérieur de flexible conseillé",
-			"value": "6,5 mm",
+			"label": "Consommation documentaire",
+			"value": "3,2 L/s, régime non précisé",
 			"evidenceIds": [
-				"yokota-yd-5a-20260926"
-			]
-		},
-		{
-			"label": "Raccord pneumatique",
-			"value": "PT 1/8\"",
-			"evidenceIds": [
-				"yokota-yd-5a-20260926"
+				"review:2026-11-12-technical:yokota-yd-5a:0"
 			]
 		}
 	],
@@ -99,37 +95,37 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "review:2026-11-12-technical:yokota-yd-5a:0",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf",
+			"sourceLabel": "Yokota, document fabricant, pages PDF 41",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "Yokota YD-5A : visseuse droite à un marteau, porte-outil hexagonal 1/4 pouce et couple publié 15,5 Nm. Les YD-3A et YD-4A conservent cette architecture avec 7,5 et 12 Nm. La YD-5A est donnée pour 10 000 tr/min et 0,9 kg, contre 12 000 tr/min et 0,5 kg pour la YD-3A. GET complet : SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. Historique conservé."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"yokota-yd-5a-20260926"
+			"review:2026-11-12-technical:yokota-yd-5a:0"
+		],
+		"demandExplanation": [
+			"review:2026-11-12-technical:yokota-yd-5a:0"
 		],
 		"workingPressureBar": [
-			"yokota-yd-5a-20260926-workingpressurebar-1"
-		],
-		"airflowLpm": [
-			"yokota-yd-5a-20260926"
-		],
-		"recommendedHose": [
-			"yokota-yd-5a-20260926"
-		],
-		"connectorSize": [
-			"yokota-yd-5a-20260926"
+			"review:2026-11-12-technical:yokota-yd-5a:0"
 		]
 	},
 	"notes": [
-		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+		"Le régime et la pression de mesure de la consommation ne sont pas établis par cette table. Les consignes de service restent séparées ; la compatibilité demeure indéterminée."
 	],
-	"airflowLpm": {
-		"min": 192,
-		"typical": 192,
-		"max": 192
-	},
 	"recommendedHose": {
 		"innerDiameterMm": 6.5
 	},
-	"connectorSize": "PT 1/8\""
+	"connectorSize": "PT 1/8\"",
+	"demandExplanation": "Le régime et la pression de mesure de la consommation ne sont pas établis par cette table. Les consignes de service restent séparées ; la compatibilité demeure indéterminée."
 };
 
 export default product;

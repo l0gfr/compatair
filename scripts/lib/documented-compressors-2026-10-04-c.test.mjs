@@ -1,4 +1,5 @@
 import { beforeReservedNovember3Followup } from './reviewed-catalog-amendments-2026-11-03-reserved.mjs';
+import { beforeReservedNovember15TechnicalFollowup } from './reviewed-catalog-amendments-2026-11-15-technical.mjs';
 import { beforeReservedOctober31Followup } from './reviewed-catalog-amendments-2026-10-31-reserved.mjs';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
@@ -60,7 +61,7 @@ describe('documented compressor lot C, original manufacturer data', () => {
   for (const row of snapshot.compressors.filter(r => r.flow.rangeMinimum)) {
    expect(row.flow.rangeMinimum.unit).toBe(row.flow.unit);
    expect(row.flow.value).toBeGreaterThanOrEqual(row.flow.rangeMinimum.value);
-   expect(product(row.id).editorial.overview).toContain('maximum de la plage FAD publiée');
+   expect(beforeReservedNovember15TechnicalFollowup(product(row.id)).editorial.overview).toContain('maximum de la plage FAD publiée');
   }
   expect(parseSourceNumbers('1.332', 'decimal')).toEqual([1.332]);
   expect(() => parseSourceNumbers('1.332.000', 'decimal')).toThrow();

@@ -24,7 +24,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 1710
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "oil",
 	"powerKw": 11,
 	"mobility": "fixed",
@@ -78,6 +77,13 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october3c-atlas-ga5-11-p6"
 			]
+		},
+		{
+			"label": "Portée du service continu",
+			"value": "Taux de marche du groupe non quantifié dans les documents lus",
+			"evidenceIds": [
+				"review:2026-11-15-held:atlas-copco-ga-11-50-hz-8-5-bar-pack-sur-reservoir-270-l:0"
+			]
 		}
 	],
 	"editorial": {
@@ -90,7 +96,8 @@ const product: CompressorInput = {
 		"limitations": [
 			"Service continu déclaré pour cette famille ; installation, refroidissement et entretien conformes au constructeur restent nécessaires.",
 			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Configuration publiée dans la documentation citée ; disponibilité commerciale actuelle à confirmer."
+			"Configuration publiée dans la documentation citée ; disponibilité commerciale actuelle à confirmer.",
+			"La brochure décrit les usages de la gamme sans quantifier un taux de marche du groupe. Elle propose des cuves 270/500 L, mais sa table de masse tank-mounted ne distingue pas ces deux volumes. Le 100 % est retiré ; la qualification de la configuration reste inachevée."
 		]
 	},
 	"evidence": [
@@ -133,6 +140,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 1061fe3edf7c5afd1ede36fd30a1ffd9deb9951ee795cd66a55ceddfc3561a30 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-15-held:atlas-copco-ga-11-50-hz-8-5-bar-pack-sur-reservoir-270-l:0",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/kazakhstan/documents/aii-materials-for-exhibition-2024/compressors/GA5-11_antwerp_leaflet_EN_2935087547.pdf",
+			"sourceLabel": "Atlas Copco, document exact relu le 15 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-15",
+			"confidence": "B",
+			"notes": "La brochure décrit les usages de la gamme sans quantifier un taux de marche du groupe. Elle propose des cuves 270/500 L, mais sa table de masse tank-mounted ne distingue pas ces deux volumes. Le 100 % est retiré ; la qualification de la configuration reste inachevée. GET complet : SHA-256 83df92251704597bda4b770f01badd351183571a3adf687e70cc3b50e9ef1de4."
 		}
 	],
 	"fieldSources": {
@@ -150,13 +167,11 @@ const product: CompressorInput = {
 		],
 		"oilType": [
 			"october3c-atlas-ga5-11-p1"
-		],
-		"dutyCycle": [
-			"october3c-atlas-ga-duty"
 		]
 	},
 	"notes": [
-		"Pression de mesure, pression maximale relative et pression absolue à l’entrée restent distinctes. ISO 1217 n’est revendiquée que pour les sources qui le citent."
+		"Pression de mesure, pression maximale relative et pression absolue à l’entrée restent distinctes. ISO 1217 n’est revendiquée que pour les sources qui le citent.",
+		"La brochure décrit les usages de la gamme sans quantifier un taux de marche du groupe. Elle propose des cuves 270/500 L, mais sa table de masse tank-mounted ne distingue pas ces deux volumes. Le 100 % est retiré ; la qualification de la configuration reste inachevée."
 	]
 };
 

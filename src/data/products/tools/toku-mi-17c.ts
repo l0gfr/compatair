@@ -9,75 +9,79 @@ const product: ToolProfileInput = {
 	"categoryId": "cle-a-chocs",
 	"category": "cle-a-chocs",
 	"label": "Toku MI-17C",
-	"demandModel": "fixed-flow",
-	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
-		"max": 6.3
-	},
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/toku-mi-17c.webp",
+		"src": "/images/products/toku-mi-17c-technical-20261115-followup.svg",
 		"alt": "Repères techniques Toku MI-17C, référence MI-17C",
-		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=38",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 15 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Toku MI-17C, référence MI-17C. Le tableau fabricant publie 798 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 8800 tr/min. Masse publiée : 1,8 kg.",
+		"overview": "Toku MI-17C : clé à chocs à double marteau et carré 1/2 pouce, 8 800 tr/min et masse 1,8 kg. La MI-17MG conserve le carré et le mécanisme avec 5 500 tr/min et 2,4 kg. Le catalogue distingue le couple publié 815 Nm du maximum de desserrage 1 600 Nm de la MI-17C.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation en charge publiée : 13.3 L/s, convertis en 798 L/min par multiplication par 60.",
-			"Référence fabricant : MI-17C.",
-			"Vitesse à vide publiée : 8800 tr/min.",
-			"Masse publiée : 1,8 kg.",
-			"Diamètre intérieur de flexible conseillé : 10 mm."
+			"Carré : 1/2 pouce.",
+			"Mécanisme : Double marteau.",
+			"Vitesse à vide : 8 800 tr/min.",
+			"Couple publié : 815 Nm.",
+			"Maximum de desserrage : 1 600 Nm.",
+			"Masse : 1,8 kg.",
+			"Consommation en charge, hors calcul : 13,3 L/s ; 798 L/min."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"La consommation en charge est documentée, mais son appariement à une pression de mesure n’est pas établi. Les consignes de service restent séparées ; la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+			"label": "Carré",
+			"value": "1/2 pouce",
 			"evidenceIds": [
-				"toku-mi-17c-20260926-workingpressurebar-1"
+				"review:2026-11-12-technical:toku-mi-17c:0"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation en charge publiée : 13.3 L/s, convertis en 798 L/min par multiplication par 60.",
+			"label": "Mécanisme",
+			"value": "Double marteau",
 			"evidenceIds": [
-				"toku-mi-17c-20260926"
+				"review:2026-11-12-technical:toku-mi-17c:0"
 			]
 		},
 		{
-			"label": "Vitesse à vide publiée",
-			"value": "8800 tr/min",
+			"label": "Vitesse à vide",
+			"value": "8 800 tr/min",
 			"evidenceIds": [
-				"toku-mi-17c-20260926"
+				"review:2026-11-12-technical:toku-mi-17c:0"
 			]
 		},
 		{
-			"label": "Masse publiée",
+			"label": "Couple publié",
+			"value": "815 Nm",
+			"evidenceIds": [
+				"review:2026-11-12-technical:toku-mi-17c:0"
+			]
+		},
+		{
+			"label": "Maximum de desserrage",
+			"value": "1 600 Nm",
+			"evidenceIds": [
+				"review:2026-11-12-technical:toku-mi-17c:0"
+			]
+		},
+		{
+			"label": "Masse",
 			"value": "1,8 kg",
 			"evidenceIds": [
-				"toku-mi-17c-20260926"
+				"review:2026-11-12-technical:toku-mi-17c:0"
 			]
 		},
 		{
-			"label": "Diamètre intérieur de flexible conseillé",
-			"value": "10 mm",
+			"label": "Consommation en charge, hors calcul",
+			"value": "13,3 L/s ; 798 L/min",
 			"evidenceIds": [
-				"toku-mi-17c-20260926"
-			]
-		},
-		{
-			"label": "Raccord pneumatique",
-			"value": "PT 1/4\"",
-			"evidenceIds": [
-				"toku-mi-17c-20260926"
+				"review:2026-11-12-technical:toku-mi-17c:0"
 			]
 		}
 	],
@@ -99,37 +103,37 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "review:2026-11-12-technical:toku-mi-17c:0",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf",
+			"sourceLabel": "Toku, document fabricant, pages PDF 38",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "Toku MI-17C : clé à chocs à double marteau et carré 1/2 pouce, 8 800 tr/min et masse 1,8 kg. La MI-17MG conserve le carré et le mécanisme avec 5 500 tr/min et 2,4 kg. Le catalogue distingue le couple publié 815 Nm du maximum de desserrage 1 600 Nm de la MI-17C. GET complet : SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. Historique conservé."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"toku-mi-17c-20260926"
+			"review:2026-11-12-technical:toku-mi-17c:0"
+		],
+		"demandExplanation": [
+			"review:2026-11-12-technical:toku-mi-17c:0"
 		],
 		"workingPressureBar": [
-			"toku-mi-17c-20260926-workingpressurebar-1"
-		],
-		"airflowLpm": [
-			"toku-mi-17c-20260926"
-		],
-		"recommendedHose": [
-			"toku-mi-17c-20260926"
-		],
-		"connectorSize": [
-			"toku-mi-17c-20260926"
+			"review:2026-11-12-technical:toku-mi-17c:0"
 		]
 	},
 	"notes": [
-		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+		"La consommation en charge est documentée, mais son appariement à une pression de mesure n’est pas établi. Les consignes de service restent séparées ; la compatibilité demeure indéterminée."
 	],
-	"airflowLpm": {
-		"min": 798,
-		"typical": 798,
-		"max": 798
-	},
 	"recommendedHose": {
 		"innerDiameterMm": 10
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"demandExplanation": "La consommation en charge est documentée, mais son appariement à une pression de mesure n’est pas établi. Les consignes de service restent séparées ; la compatibilité demeure indéterminée."
 };
 
 export default product;

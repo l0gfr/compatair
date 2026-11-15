@@ -22,16 +22,15 @@ const product: CompressorInput = {
       "litersPerMinute": 450
     }
   ],
-  "dutyCycle": 1,
   "powerKw": 4,
   "oilType": "unknown",
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/gardner-denver-esm04fs-270.svg",
+    "src": "/images/products/gardner-denver-esm04fs-270-technical-20261115-followup.svg",
     "alt": "Repères techniques : Gardner Denver ESM04FS-270",
     "sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/blt87a221679f131e8d/blt14083a1eebc91a7c/67f910c40a3bd686326692f5/21874_New_Frame_0_6pp_Brochure_work.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 15 novembre 2026"
   },
   "specifications": [
     {
@@ -70,13 +69,6 @@ const product: CompressorInput = {
       ]
     },
     {
-      "label": "Cycle de service déclaré",
-      "value": "100 %",
-      "evidenceIds": [
-        "october4c-gd-esm2-6-p2"
-      ]
-    },
-    {
       "label": "Fréquence de la configuration retenue",
       "value": "Non documentée",
       "evidenceIds": [
@@ -85,7 +77,7 @@ const product: CompressorInput = {
     }
   ],
   "editorial": {
-    "overview": "Gardner Denver ESM04FS-270. 450 L/min déclarés à 10 bar. Configuration constructeur : Station avec sécheur intégré et cuve.",
+    "overview": "Gardner Denver ESM04FS-270 : station de 4 kW sur cuve de 270 L, avec sécheur frigorifique demandant une alimentation électrique séparée. Elle pèse 270 kg, contre 245 kg pour la ESM04-270 sans sécheur et 339 kg pour la FS-500. Le FAD reste de 450 L/min à 10 bar ; le traitement de l’air ne crée pas de débit supplémentaire. Le taux de marche du groupe reste à documenter.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 10 bar.",
       "Cuve de stockage documentée : 270 L.",
@@ -93,7 +85,8 @@ const product: CompressorInput = {
     ],
     "limitations": [
       "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-      "La fréquence électrique de cette configuration n’est pas documentée."
+      "La fréquence électrique de cette configuration n’est pas documentée.",
+      "La mention de service continu concerne une gamme ou un élément de compression ; le taux de marche du groupe complet n’est pas quantifié."
     ]
   },
   "evidence": [
@@ -116,6 +109,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 5a6d2333e7f9f5e04cdc65936f40212a31b7c5fb6d428edfeb9a9896073a85f1 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-12-technical:gardner-denver-esm04fs-270:0",
+      "sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/blt87a221679f131e8d/blt14083a1eebc91a7c/67f910c40a3bd686326692f5/21874_New_Frame_0_6pp_Brochure_work.pdf",
+      "sourceLabel": "Gardner Denver, document fabricant, pages PDF 2, 5",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-12",
+      "confidence": "B",
+      "notes": "La mention de service continu concerne une gamme ou un élément de compression ; le taux de marche du groupe complet n’est pas quantifié. GET complet : SHA-256 5a6d2333e7f9f5e04cdc65936f40212a31b7c5fb6d428edfeb9a9896073a85f1. Transcriptions historiques conservées."
     }
   ],
   "fieldSources": {
@@ -133,9 +136,6 @@ const product: CompressorInput = {
     ],
     "powerKw": [
       "october4c-gd-esm2-6-p5"
-    ],
-    "dutyCycle": [
-      "october4c-gd-esm2-6-p2"
     ]
   },
   "notes": [

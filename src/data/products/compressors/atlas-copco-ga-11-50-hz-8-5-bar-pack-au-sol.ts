@@ -24,17 +24,16 @@ const product: CompressorInput = {
 			"litersPerMinute": 1710
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "oil",
 	"powerKw": 11,
 	"mobility": "fixed",
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/atlas-copco-ga-11-50-hz-8-5-bar-pack-au-sol.webp",
+		"src": "/images/products/atlas-copco-ga-11-50-hz-8-5-bar-pack-au-sol-technical-20261115-followup.svg",
 		"alt": "Repères techniques : Atlas Copco GA 11, Pack au sol, 8,5 bar",
 		"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/kazakhstan/documents/aii-materials-for-exhibition-2024/compressors/GA5-11_antwerp_leaflet_EN_2935087547.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 15 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -66,13 +65,6 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Cycle de service déclaré",
-			"value": "100%, famille constructeur citée",
-			"evidenceIds": [
-				"october3c-atlas-ga-duty"
-			]
-		},
-		{
 			"label": "Périmètre documentaire",
 			"value": "Documentation constructeur européenne ; commercialisation actuelle à confirmer",
 			"evidenceIds": [
@@ -81,16 +73,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Atlas Copco GA 11, Pack au sol, 8,5 bar. 1 710 L/min à 8 bar.",
+		"overview": "Atlas Copco GA 11 Pack au sol, 50 Hz : groupe de 11 kW donné pour 253 kg et 965 × 655 × 1 045 mm. Le tableau distingue ce montage des versions sur cuve et Full Feature avec sécheur. La configuration maximale de 8,5 bar fournit 28,5 L/s, soit 1 710 L/min, mesurés à 8 bar effectifs. Les réservoirs de 270/500 L et le sécheur sont des configurations distinctes ; le taux de marche du groupe ne se déduit pas du moteur IE3.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Configuration de stockage documentée : groupe au sol sans réservoir de stockage intégré.",
 			"Pression maximale de fonctionnement publiée : 8,5 bar."
 		],
 		"limitations": [
-			"Service continu déclaré pour cette famille ; installation, refroidissement et entretien conformes au constructeur restent nécessaires.",
 			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
-			"Configuration publiée dans la documentation citée ; disponibilité commerciale actuelle à confirmer."
+			"Configuration publiée dans la documentation citée ; disponibilité commerciale actuelle à confirmer.",
+			"Le débit publié est conservé. La déclaration générale de service de la série ne fournit pas le taux de marche du groupe complet exact ; ce taux reste indéterminé.",
+			"Le blog G/GA décrit un entraînement par engrenages ; le GA5–11 de la notice est à courroie. Le taux de service ne lui est pas attribué par analogie."
 		]
 	},
 	"evidence": [
@@ -123,6 +116,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 1061fe3edf7c5afd1ede36fd30a1ffd9deb9951ee795cd66a55ceddfc3561a30 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:atlas-copco-ga-11-50-hz-8-5-bar-pack-au-sol:0",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/kazakhstan/documents/aii-materials-for-exhibition-2024/compressors/GA5-11_antwerp_leaflet_EN_2935087547.pdf",
+			"sourceLabel": "Atlas Copco, document fabricant, pages PDF 1, 6",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "Atlas Copco GA 11, Pack au sol, 8,5 bar. 1 710 L/min à 8 bar. GET complet : SHA-256 83df92251704597bda4b770f01badd351183571a3adf687e70cc3b50e9ef1de4. Historique conservé."
 		}
 	],
 	"fieldSources": {
@@ -140,9 +143,6 @@ const product: CompressorInput = {
 		],
 		"oilType": [
 			"october3c-atlas-ga5-11-p1"
-		],
-		"dutyCycle": [
-			"october3c-atlas-ga-duty"
 		]
 	},
 	"notes": [

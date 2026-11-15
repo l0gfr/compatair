@@ -17,10 +17,10 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/marteau-a-river-deprag-hc008-hr12p-2103682b.svg",
+		"src": "/images/products/marteau-a-river-deprag-hc008-hr12p-2103682b-technical-20261115-followup.svg",
 		"alt": "Repères techniques : DEPRAG HC008-HR12P (réf. 2103682B)",
 		"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 15 novembre 2026"
 	},
 	"variant": {
 		"familyId": "deprag-hc008-hr12p",
@@ -32,13 +32,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "DEPRAG HC008-HR12P (réf. 2103682B). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "Le marteau à river HC008-HR12P reçoit une queue Ø-hex. 11,7/10×36 et couvre les rivets aluminium de 3 mm ou acier de 2 mm. Le R10P utilise une queue ronde ; le HC010-HR14D accepte des rivets plus gros avec une poignée différente. Le choix du burin doit suivre l’emmanchement exact.",
 		"verifiedFacts": [
 			"Emmanchement du burin, mm : Ø-hex. 11,7/10x36.",
 			"Fréquence des impacts, impacts/min : 3 500.",
 			"Diamètre de rivet aluminium, mm (in) : 3 (.12).",
 			"Diamètre de rivet acier, mm (in) : 2 (.08).",
-			"Diamètre intérieur du flexible, mm (in) : 6 (.24)."
+			"Diamètre intérieur du flexible, mm (in) : 6 (.24).",
+			"Masse hors raccord d’air : 0,8 kg.",
+			"Forme : Poignée pistolet ; capuchon de protection."
 		],
 		"limitations": [
 			"Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
@@ -90,6 +92,20 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october3d-tools-deprag-industrial2024-p23"
 			]
+		},
+		{
+			"label": "Masse hors raccord d’air",
+			"value": "0,8 kg",
+			"evidenceIds": [
+				"review:2026-11-12-technical:marteau-a-river-deprag-hc008-hr12p-2103682b:0"
+			]
+		},
+		{
+			"label": "Forme",
+			"value": "Poignée pistolet ; capuchon de protection",
+			"evidenceIds": [
+				"review:2026-11-12-technical:marteau-a-river-deprag-hc008-hr12p-2103682b:0"
+			]
 		}
 	],
 	"evidence": [
@@ -102,6 +118,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:marteau-a-river-deprag-hc008-hr12p-2103682b:0",
+			"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
+			"sourceLabel": "DEPRAG, document fabricant, pages PDF 23",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "Le marteau à river HC008-HR12P reçoit une queue Ø-hex. 11,7/10×36 et couvre les rivets aluminium de 3 mm ou acier de 2 mm. Le R10P utilise une queue ronde ; le HC010-HR14D accepte des rivets plus gros avec une poignée différente. Le choix du burin doit suivre l’emmanchement exact. GET complet : SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Historique conservé."
 		}
 	],
 	"fieldSources": {
@@ -109,7 +135,7 @@ const product: ToolProfileInput = {
 			"october3d-tools-deprag-industrial2024-p23"
 		],
 		"workingPressureBar": [
-			"october3d-tools-deprag-industrial2024-p23"
+			"review:2026-11-12-technical:marteau-a-river-deprag-hc008-hr12p-2103682b:0"
 		],
 		"recommendedHose": [
 			"october3d-tools-deprag-industrial2024-p23"

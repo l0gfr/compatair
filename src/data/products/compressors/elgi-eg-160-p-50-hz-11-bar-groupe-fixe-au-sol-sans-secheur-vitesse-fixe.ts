@@ -31,10 +31,10 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/elgi-eg-160-p-50-hz-11-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe.webp",
+		"src": "/images/products/elgi-eg-160-p-50-hz-11-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe-technical-20261115-followup.svg",
 		"alt": "Repères techniques : ELGi EG 160-P, 50 Hz, 11 bar",
 		"sourceUrl": "https://www.elgi.com/in/wp-content/uploads/2019/06/EG-Premium-90-160-catalogue_India.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 15 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -78,17 +78,32 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october2b-elgi-eg-premium-p8"
 			]
+		},
+		{
+			"label": "Point de la ligne sélectionnée",
+			"value": "25,7 m³/min ; 908 cfm à10 bar ; ISO1217:2009 annexe C",
+			"evidenceIds": [
+				"review:2026-11-12-technical:elgi-eg-160-p-50-hz-11-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe:0"
+			]
+		},
+		{
+			"label": "Encombrement et masse",
+			"value": "2916 × 1885 × 1925 mm ; 3430 kg",
+			"evidenceIds": [
+				"review:2026-11-12-technical:elgi-eg-160-p-50-hz-11-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe:0"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "ELGi EG 160-P, 50 Hz, 11 bar. 25 700 L/min à 10 bar. Moteur 160 kW ; groupe fixe au sol, sans sécheur ; vitesse fixe.",
+		"overview": "L’EG160-P50 Hz de pression maximale11 bar publie25,7 m³/min à10 bar,160 kW et3430 kg. La version13,5 bar donne 21,4 m³/min à12,5 bar. Les908 cfm de la ligne sélectionnée sont compatibles avec l’arrondi de25,7 m³/min ; les anomalies d’autres lignes ne sont pas transposées à celle-ci.",
 		"verifiedFacts": [
 			"Débit restitué relié à une pression et aux unités originales de la fiche fabricant.",
 			"Périmètre retenu : groupe seul ; réservoir de stockage externe exclu.",
-			"Limite de pression documentée : 11 bar ; le point FAD conserve sa pression publiée."
+			"Limite de pression documentée : 11 bar ; le point FAD conserve sa pression publiée.",
+			"Point de la ligne sélectionnée : 25,7 m³/min ; 908 cfm à10 bar ; ISO1217:2009 annexe C.",
+			"Encombrement et masse : 2916 × 1885 × 1925 mm ; 3430 kg."
 		],
 		"limitations": [
-			"Page 8, Unités FAD m³/min et cfm incohérentes au-delà de leur arrondi imprimé.",
 			"Cette entrée correspond à une configuration constructeur de pression maximale ; aucun nouveau produit n’est créé à partir d’un simple point de test.",
 			"Cycle de service non établi par les sources retenues ; la tenue permanente reste indéterminée.",
 			"Les seules pressions FAD retenues sont celles du document. Aucun débit aspiré, extrapolation ou essai d’utilisation CompatAir.",
@@ -115,6 +130,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 2b9f43ec8dff222a8f93b9217c688172836c6c783a2c5af2c5e44ebf448f8b9d de la réponse originale. Données fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:elgi-eg-160-p-50-hz-11-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe:0",
+			"sourceUrl": "https://www.elgi.com/in/wp-content/uploads/2019/06/EG-Premium-90-160-catalogue_India.pdf",
+			"sourceLabel": "ELGi, document fabricant, pages PDF 3, 8",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "L’EG160-P50 Hz de pression maximale11 bar publie25,7 m³/min à10 bar,160 kW et3430 kg. La version13,5 bar donne21,4 m³/min à12,5 bar. Les908 cfm de la ligne sélectionnée sont compatibles avec l’arrondi de25,7 m³/min ; les anomalies d’autres lignes ne sont pas transposées à celle-ci. GET complet : SHA-256 2b9f43ec8dff222a8f93b9217c688172836c6c783a2c5af2c5e44ebf448f8b9d. Historique conservé."
 		}
 	],
 	"fieldSources": {

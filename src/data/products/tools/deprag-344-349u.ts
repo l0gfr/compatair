@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/deprag-344-349u.webp",
+		"src": "/images/products/deprag-344-349u-technical-20261115-followup.svg",
 		"alt": "Repères techniques DEPRAG 344-349U, référence 411448D",
-		"sourceUrl": "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3435/D3435en.pdf#page=3",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3435/D3435en.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 15 novembre 2026"
 	},
 	"editorial": {
-		"overview": "DEPRAG 344-349U, référence 411448D. Le tableau fabricant publie 1 000 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple minimal : 3 Nm. Couple maximal, assemblage souple : 6.5 Nm.",
+		"overview": "DEPRAG 344-349U, code 411448D : visseuse pistolet réversible à démarrage par poussée, pour vis jusqu’à M5. Le tableau distingue 6,5 Nm sur assemblage souple de 8,5 Nm sur assemblage dur, à 2 300 tr/min à vide. La 344-347U se déclenche par gâchette. La consommation de 1 m³/min n’a pas de régime de mesure nommé.",
 		"verifiedFacts": [
 			"La note du tableau indique une pression de fonctionnement de 6,3 bar.",
 			"Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine.",
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Le couple et la vitesse correspondent à la colonne de cette référence commande, pas à l’ensemble de la famille.",
-			"Les broches intégrées nécessitent aussi le dimensionnement des auxiliaires de l’installation, qui ne sont pas inclus dans la consommation du moteur de vissage."
+			"Les broches intégrées nécessitent aussi le dimensionnement des auxiliaires de l’installation, qui ne sont pas inclus dans la consommation du moteur de vissage.",
+			"Le régime de mesure de la consommation publiée reste non précisé. Cette valeur documentaire ne permet pas de conclure au débit requis en charge."
 		]
 	},
 	"specifications": [
@@ -104,6 +105,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine."
+		},
+		{
+			"id": "review:2026-11-12-technical:deprag-344-349u:0",
+			"sourceUrl": "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3435/D3435en.pdf",
+			"sourceLabel": "DEPRAG, document fabricant, pages PDF 3",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "Le régime de mesure de la consommation publiée reste non précisé. Cette valeur documentaire ne permet pas de conclure au débit requis en charge. GET complet : SHA-256 d706aaf47698877463b3afd6bd5266d9fb101447bf98306210e484e55134db5e. Transcriptions historiques conservées."
 		}
 	],
 	"fieldSources": {
@@ -115,6 +126,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"deprag-411448d-20260926"
+		],
+		"airflowBasis": [
+			"review:2026-11-12-technical:deprag-344-349u:0"
 		]
 	},
 	"notes": [
@@ -124,7 +138,8 @@ const product: ToolProfileInput = {
 		"min": 1000,
 		"typical": 1000,
 		"max": 1000
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

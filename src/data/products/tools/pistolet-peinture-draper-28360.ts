@@ -10,17 +10,15 @@ const product: ToolProfileInput = {
 	"model": "28360",
 	"mpn": "28360",
 	"demandModel": "variable-volume",
-	"workingPressureBar": {
-		"typical": 3.447
-	},
-	"demandExplanation": "La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué.",
+	"workingPressureBar": {},
+	"demandExplanation": "Le pistolet ne dispose pas de consommation publiée dans cette fiche. Le besoin en air reste indéterminé.",
 	"connectorSize": "1/4 BSP (Air inlet)",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/pistolet-peinture-draper-28360.webp",
+		"src": "/images/products/pistolet-peinture-draper-28360-technical-20261115-followup.svg",
 		"alt": "Repères techniques : Draper 28360",
 		"sourceUrl": "https://www.drapertools.com/product/28360/gravity-air-paint-spray-gun-500ml-1-5-2-2mm/",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 15 novembre 2026"
 	},
 	"variant": {
 		"familyId": "draper-28360",
@@ -32,19 +30,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Draper 28360. La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué. Champ fabricant : Capacity : 500ml. Champ fabricant : Nozzle size : 1.5, 2.2mm.",
+		"overview": "Draper 28360 : pistolet à gravité, godet de 500 ml, buse de 1,5 mm et kit de buse de 2,2 mm. Le 28358 reste à gravité avec des buses de 1,4/1,8 mm ; le 28354 utilise une alimentation par aspiration avec réservoir de 1 L et buse de 1,8 mm. Le type d’alimentation et la buse changent. La fiche de la 28360 indique 50 psi de service, sans consommation permettant de choisir un compresseur.",
 		"verifiedFacts": [
-			"Champ fabricant : Capacity : 500ml.",
-			"Champ fabricant : Nozzle size : 1.5, 2.2mm.",
-			"Champ fabricant : Operating air pressure : 50psi.",
-			"Champ fabricant : Air inlet : 1/4 BSP.",
-			"Champ fabricant : Weight : 400g."
+			"Livraison documentée : Buse 1,5 mm ; kit buse 2,2 mm ; adaptateur 1/4 BSP ; brosse de nettoyage.",
+			"Réglage : Orientation variable du jet."
 		],
 		"limitations": [
-			"La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué.",
-			"Fiche produit constructeur, caractéristiques déclaratives ; aucun essai physique CompatAir.",
-			"Les pressions recommandées ou limites d’alimentation restent distinctes des points de mesure de consommation.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Le pistolet ne dispose pas de consommation publiée dans cette fiche. Le besoin en air reste indéterminé.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
@@ -84,17 +77,52 @@ const product: ToolProfileInput = {
 			]
 		},
 		{
-			"label": "Champ fabricant : Air inlet",
-			"value": "1/4 BSP",
+			"label": "Portée de la pression dans la source",
+			"value": "Operating air pressure: 50psi",
 			"evidenceIds": [
 				"october2b-tools-oct2b-draper-28360-html-p1"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "Operating air pressure: 50psi",
+			"label": "Livraison documentée",
+			"value": "Buse 1,5 mm ; kit buse 2,2 mm ; adaptateur 1/4 BSP ; brosse de nettoyage",
 			"evidenceIds": [
-				"october2b-tools-oct2b-draper-28360-html-p1"
+				"review:2026-11-15-technical:pistolet-peinture-draper-28360:0"
+			]
+		},
+		{
+			"label": "Réglage",
+			"value": "Orientation variable du jet",
+			"evidenceIds": [
+				"review:2026-11-15-technical:pistolet-peinture-draper-28360:0"
+			]
+		},
+		{
+			"label": "Consommation",
+			"value": "Non publiée dans la fiche lue",
+			"evidenceIds": [
+				"review:2026-11-15-technical:pistolet-peinture-draper-28360:0"
+			]
+		},
+		{
+			"label": "Pression de service publiée",
+			"value": "50 psi",
+			"evidenceIds": [
+				"review:2026-11-15-technical:pistolet-peinture-draper-28360:0"
+			]
+		},
+		{
+			"label": "Godet",
+			"value": "500 ml",
+			"evidenceIds": [
+				"review:2026-11-15-technical:pistolet-peinture-draper-28360:0"
+			]
+		},
+		{
+			"label": "Buses livrées",
+			"value": "1,5 mm et kit 2,2 mm",
+			"evidenceIds": [
+				"review:2026-11-15-technical:pistolet-peinture-draper-28360:0"
 			]
 		}
 	],
@@ -108,24 +136,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 71bad09cf57adae8f1cc44ff7569895192ed5daa7cc65853d11eff6f109b30e7. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-15-technical:pistolet-peinture-draper-28360:0",
+			"sourceUrl": "https://www.drapertools.com/product/28360/gravity-air-paint-spray-gun-500ml-1-5-2-2mm/",
+			"sourceLabel": "Draper Tools, fiche fabricant exacte relue le 15 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-15",
+			"confidence": "B",
+			"notes": "Draper 28360 : pistolet à gravité, godet de 500 ml, buse de 1,5 mm et kit de buse de 2,2 mm. Le 28358 reste à gravité avec des buses de 1,4/1,8 mm ; le 28354 utilise une alimentation par aspiration avec réservoir de 1 L et buse de 1,8 mm. Le type d’alimentation et la buse changent. La fiche de la 28360 indique 50 psi de service, sans consommation permettant de choisir un compresseur. GET complet : SHA-256 86393e3aa6d36834770176f0d4021fec14c9119e5cf1256152da71ca1a91ec5c. Le rattachement Sumake du brouillon non publié est écarté."
 		}
 	],
 	"fieldSources": {
-		"connectorSize": [
-			"october2b-tools-oct2b-draper-28360-html-p1"
-		],
 		"mpn": [
-			"october2b-tools-oct2b-draper-28360-html-p1"
-		],
-		"workingPressureBar": [
-			"october2b-tools-oct2b-draper-28360-html-p1"
+			"review:2026-11-15-technical:pistolet-peinture-draper-28360:0"
 		],
 		"demandExplanation": [
-			"october2b-tools-oct2b-draper-28360-html-p1"
+			"review:2026-11-15-technical:pistolet-peinture-draper-28360:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-15-technical:pistolet-peinture-draper-28360:0"
 		]
 	},
 	"notes": [
-		"La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué."
+		"Le pistolet ne dispose pas de consommation publiée dans cette fiche. Le besoin en air reste indéterminé."
 	]
 };
 

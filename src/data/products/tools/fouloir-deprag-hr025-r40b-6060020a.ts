@@ -17,10 +17,10 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/fouloir-deprag-hr025-r40b-6060020a.svg",
+		"src": "/images/products/fouloir-deprag-hr025-r40b-6060020a-technical-20261115-followup.svg",
 		"alt": "Repères techniques : DEPRAG HR025-R40B (réf. 6060020A)",
 		"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 15 novembre 2026"
 	},
 	"variant": {
 		"familyId": "deprag-hr025-r40b",
@@ -32,12 +32,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "DEPRAG HR025-R40B (réf. 6060020A). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "Le fouloir HR025-R40B est prévu pour le travail sur table et les petites surfaces, notamment les petites boîtes à noyaux. Il associe une course de 80 mm à 1 200 coups/min pour 2,5 kg. Les HR042/069-MK2B ont un cône Morse 2 et une course de 120 mm ; ce montage n’est pas attribué au HR025.",
 		"verifiedFacts": [
 			"Fréquence des impacts, impacts/min : 1 200.",
 			"Course du piston, mm (in) : 80 (3.15).",
 			"Diamètre du piston, mm (in) : 20 (.63).",
-			"Diamètre intérieur du flexible, mm (in) : 10 (.39)."
+			"Diamètre intérieur du flexible, mm (in) : 10 (.39).",
+			"Masse hors raccord d’air : 2,5 kg.",
+			"Montage Morse : Non indiqué pour HR025-R40B ; ne pas reprendre le cône 2 des HR042/069.",
+			"Divergence d’unité dans le document : Diamètre piston imprimé : 20 mm (.63 in), conversion non concordante ; ne pas convertir automatiquement."
 		],
 		"limitations": [
 			"Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
@@ -82,6 +85,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october3d-tools-deprag-industrial2024-p24"
 			]
+		},
+		{
+			"label": "Masse hors raccord d’air",
+			"value": "2,5 kg",
+			"evidenceIds": [
+				"review:2026-11-12-technical:fouloir-deprag-hr025-r40b-6060020a:0"
+			]
+		},
+		{
+			"label": "Montage Morse",
+			"value": "Non indiqué pour HR025-R40B ; ne pas reprendre le cône 2 des HR042/069",
+			"evidenceIds": [
+				"review:2026-11-12-technical:fouloir-deprag-hr025-r40b-6060020a:0"
+			]
+		},
+		{
+			"label": "Divergence d’unité dans le document",
+			"value": "Diamètre piston imprimé : 20 mm (.63 in), conversion non concordante ; ne pas convertir automatiquement",
+			"evidenceIds": [
+				"review:2026-11-12-technical:fouloir-deprag-hr025-r40b-6060020a:0"
+			]
 		}
 	],
 	"evidence": [
@@ -94,6 +118,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-12-technical:fouloir-deprag-hr025-r40b-6060020a:0",
+			"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
+			"sourceLabel": "DEPRAG, document fabricant, pages PDF 24",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "Le fouloir HR025-R40B est prévu pour le travail sur table et les petites surfaces, notamment les petites boîtes à noyaux. Il associe une course de 80 mm à 1 200 coups/min pour 2,5 kg. Les HR042/069-MK2B ont un cône Morse 2 et une course de 120 mm ; ce montage n’est pas attribué au HR025. GET complet : SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Historique conservé."
 		}
 	],
 	"fieldSources": {
@@ -101,7 +135,7 @@ const product: ToolProfileInput = {
 			"october3d-tools-deprag-industrial2024-p24"
 		],
 		"workingPressureBar": [
-			"october3d-tools-deprag-industrial2024-p24"
+			"review:2026-11-12-technical:fouloir-deprag-hr025-r40b-6060020a:0"
 		],
 		"recommendedHose": [
 			"october3d-tools-deprag-industrial2024-p24"

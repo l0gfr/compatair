@@ -9,68 +9,71 @@ const product: ToolProfileInput = {
 	"categoryId": "burineur",
 	"category": "burineur",
 	"label": "Red Rooster RRI-4021/4",
-	"demandModel": "fixed-flow",
-	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
-		"max": 6.3
-	},
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/red-rooster-rri-4021-4.webp",
+		"src": "/images/products/red-rooster-rri-4021-4-technical-20261115-followup.svg",
 		"alt": "Repères techniques Red Rooster RRI-4021/4, référence RRI-4021/4",
-		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=49",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 15 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Red Rooster RRI-4021/4, référence RRI-4021/4. Le tableau fabricant publie 600 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Masse publiée : 2,2 kg. Diamètre intérieur de flexible conseillé : 10 mm.",
+		"overview": "Red Rooster RRI-4021/4 : marteau à emmanchement 11 × 12,7 × 40 mm, course 30 mm et cadence 4 500 coups/min. Le RRH-2000 du même tableau utilise le même emmanchement avec une course 42 mm et 5 000 coups/min. La RRI-4021/4 pèse 2,2 kg et publie 3,5 J par coup.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation publiée : 10 L/s, convertis en 600 L/min par multiplication par 60.",
-			"Référence fabricant : RRI-4021/4.",
-			"Masse publiée : 2,2 kg.",
-			"Diamètre intérieur de flexible conseillé : 10 mm.",
-			"Raccord pneumatique : PT 1/4\"."
+			"Emmanchement : 11 × 12,7 × 40 mm.",
+			"Course : 30 mm.",
+			"Cadence : 4 500 coups/min.",
+			"Énergie publiée : 3,5 J/coup.",
+			"Masse : 2,2 kg.",
+			"Consommation documentaire : 10 L/s, régime non précisé."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"Le régime et la pression de mesure de la consommation ne sont pas établis par cette table. Les consignes de service restent séparées ; la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+			"label": "Emmanchement",
+			"value": "11 × 12,7 × 40 mm",
 			"evidenceIds": [
-				"red-rooster-rri-4021-4-20260926-workingpressurebar-1"
+				"review:2026-11-12-technical:red-rooster-rri-4021-4:0"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation publiée : 10 L/s, convertis en 600 L/min par multiplication par 60.",
+			"label": "Course",
+			"value": "30 mm",
 			"evidenceIds": [
-				"red-rooster-rri-4021-4-20260926"
+				"review:2026-11-12-technical:red-rooster-rri-4021-4:0"
 			]
 		},
 		{
-			"label": "Masse publiée",
+			"label": "Cadence",
+			"value": "4 500 coups/min",
+			"evidenceIds": [
+				"review:2026-11-12-technical:red-rooster-rri-4021-4:0"
+			]
+		},
+		{
+			"label": "Énergie publiée",
+			"value": "3,5 J/coup",
+			"evidenceIds": [
+				"review:2026-11-12-technical:red-rooster-rri-4021-4:0"
+			]
+		},
+		{
+			"label": "Masse",
 			"value": "2,2 kg",
 			"evidenceIds": [
-				"red-rooster-rri-4021-4-20260926"
+				"review:2026-11-12-technical:red-rooster-rri-4021-4:0"
 			]
 		},
 		{
-			"label": "Diamètre intérieur de flexible conseillé",
-			"value": "10 mm",
+			"label": "Consommation documentaire",
+			"value": "10 L/s, régime non précisé",
 			"evidenceIds": [
-				"red-rooster-rri-4021-4-20260926"
-			]
-		},
-		{
-			"label": "Raccord pneumatique",
-			"value": "PT 1/4\"",
-			"evidenceIds": [
-				"red-rooster-rri-4021-4-20260926"
+				"review:2026-11-12-technical:red-rooster-rri-4021-4:0"
 			]
 		}
 	],
@@ -92,37 +95,37 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "review:2026-11-12-technical:red-rooster-rri-4021-4:0",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf",
+			"sourceLabel": "Red Rooster, document fabricant, pages PDF 49",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "Red Rooster RRI-4021/4 : marteau à emmanchement 11 × 12,7 × 40 mm, course 30 mm et cadence 4 500 coups/min. Le RRH-2000 du même tableau utilise le même emmanchement avec une course 42 mm et 5 000 coups/min. La RRI-4021/4 pèse 2,2 kg et publie 3,5 J par coup. GET complet : SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. Historique conservé."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"red-rooster-rri-4021-4-20260926"
+			"review:2026-11-12-technical:red-rooster-rri-4021-4:0"
+		],
+		"demandExplanation": [
+			"review:2026-11-12-technical:red-rooster-rri-4021-4:0"
 		],
 		"workingPressureBar": [
-			"red-rooster-rri-4021-4-20260926-workingpressurebar-1"
-		],
-		"airflowLpm": [
-			"red-rooster-rri-4021-4-20260926"
-		],
-		"recommendedHose": [
-			"red-rooster-rri-4021-4-20260926"
-		],
-		"connectorSize": [
-			"red-rooster-rri-4021-4-20260926"
+			"review:2026-11-12-technical:red-rooster-rri-4021-4:0"
 		]
 	},
 	"notes": [
-		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+		"Le régime et la pression de mesure de la consommation ne sont pas établis par cette table. Les consignes de service restent séparées ; la compatibilité demeure indéterminée."
 	],
-	"airflowLpm": {
-		"min": 600,
-		"typical": 600,
-		"max": 600
-	},
 	"recommendedHose": {
 		"innerDiameterMm": 10
 	},
-	"connectorSize": "PT 1/4\""
+	"connectorSize": "PT 1/4\"",
+	"demandExplanation": "Le régime et la pression de mesure de la consommation ne sont pas établis par cette table. Les consignes de service restent séparées ; la compatibilité demeure indéterminée."
 };
 
 export default product;

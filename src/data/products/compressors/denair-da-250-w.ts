@@ -19,34 +19,34 @@ const product: CompressorInput = {
   },
   "maxPressureBar": 7,
   "maxPressureBasis": "selected-working-pressure-ceiling",
-  "fadCurve": [
-    {
-      "pressureBar": 7,
-      "litersPerMinute": 45770
-    }
-  ],
+  "fadCurve": [],
   "oilType": "oil",
   "powerKw": 250,
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/denair-da-250-w.svg",
+    "src": "/images/products/denair-da-250-w-technical-20261115-followup.svg",
     "alt": "Repères techniques : DENAIR DA-250(W)",
     "sourceUrl": "https://www.denair.net/uploads/DENAIR_Screw_Air_Compressor.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 15 novembre 2026"
   },
   "editorial": {
-    "overview": "DENAIR DA-250(W). 45 770 L/min déclarés à 7 bar. Configuration constructeur : DA-250(W).",
+    "overview": "Le DA-250(W) de la table50 Hz publie45,77 m³/min FAD pour la ligne de pression maximale7 bar. Le tableau distingue50 et60 Hz. La pression de mesure à la sortie n’étant pas explicitée séparément du maximum, le débit reste documentaire.",
     "verifiedFacts": [
-      "Pression de la configuration documentée : 7 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 45 770 L/min déclarés à 7 bar."
+      "Puissance moteur publiée :250 kW.",
+      "FAD documentaire pour la ligne7 bar : 45,77 m³/min ; colonne50 Hz.",
+      "Dimensions et masse : 3310 × 2090 × 2400 mm ;4750 kg.",
+      "Puissance : 250 kW.",
+      "Raccord et refroidissement : DN100 ; W désigne le refroidissement à eau.",
+      "Référence FAD publiée : ISO1217:2009 annexe C ; pression absolue aspiration1 bar et température20°C."
     ],
     "limitations": [
       "Point documenté pour la variante 50 Hz et cette pression ; aucune disponibilité française déduite. Cuve et cycle de marche non chiffrés.",
       "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
       "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
       "Cuve non documentée : l’autonomie et le volume de stockage ne peuvent pas être conclus à partir de ce profil.",
-      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions."
+      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions.",
+      "Le tableau titre la colonne de pression Maximum Working Pressure. Ce maximum ne remplace pas une pression de mesure explicitement associée au FAD."
     ]
   },
   "specifications": [
@@ -72,13 +72,6 @@ const product: CompressorInput = {
       ]
     },
     {
-      "label": "Air livré à 7 bar",
-      "value": "45 770 L/min",
-      "evidenceIds": [
-        "october5-denair-screw-p6"
-      ]
-    },
-    {
       "label": "Puissance publiée",
       "value": "250 kW",
       "evidenceIds": [
@@ -90,6 +83,41 @@ const product: CompressorInput = {
       "value": "50 Hz",
       "evidenceIds": [
         "october5-denair-screw-p6"
+      ]
+    },
+    {
+      "label": "FAD documentaire pour la ligne7 bar",
+      "value": "45,77 m³/min ; colonne50 Hz",
+      "evidenceIds": [
+        "review:2026-11-12-technical:denair-da-250-w:0"
+      ]
+    },
+    {
+      "label": "Dimensions et masse",
+      "value": "3310 × 2090 × 2400 mm ;4750 kg",
+      "evidenceIds": [
+        "review:2026-11-12-technical:denair-da-250-w:0"
+      ]
+    },
+    {
+      "label": "Puissance",
+      "value": "250 kW",
+      "evidenceIds": [
+        "review:2026-11-12-technical:denair-da-250-w:0"
+      ]
+    },
+    {
+      "label": "Raccord et refroidissement",
+      "value": "DN100 ; W désigne le refroidissement à eau",
+      "evidenceIds": [
+        "review:2026-11-12-technical:denair-da-250-w:0"
+      ]
+    },
+    {
+      "label": "Référence FAD publiée",
+      "value": "ISO1217:2009 annexe C ; pression absolue aspiration1 bar et température20°C",
+      "evidenceIds": [
+        "review:2026-11-12-technical:denair-da-250-w:0"
       ]
     }
   ],
@@ -113,6 +141,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-05",
       "confidence": "B",
       "notes": "SHA-256 855ce551cd3fa5294b576c1865d99fbb9c2ae58ee346ac5459d24fd79899b9ad de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-12-technical:denair-da-250-w:0",
+      "sourceUrl": "https://www.denair.net/uploads/DENAIR_Screw_Air_Compressor.pdf",
+      "sourceLabel": "DENAIR, document fabricant, pages PDF 1, 6",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-12",
+      "confidence": "B",
+      "notes": "Le DA-250(W) de la table50 Hz publie45,77 m³/min FAD pour la ligne de pression maximale7 bar. Le tableau distingue50 et60 Hz. La pression de mesure à la sortie n’étant pas explicitée séparément du maximum, le débit reste documentaire. GET complet : SHA-256 855ce551cd3fa5294b576c1865d99fbb9c2ae58ee346ac5459d24fd79899b9ad. Historique conservé."
     }
   ],
   "fieldSources": {
@@ -125,14 +163,14 @@ const product: CompressorInput = {
     "maxPressureBar": [
       "october5-denair-screw-p6"
     ],
-    "fadCurve": [
-      "october5-denair-screw-p6"
-    ],
     "powerKw": [
       "october5-denair-screw-p6"
     ],
     "oilType": [
       "october5-denair-screw-p1"
+    ],
+    "fadCurve": [
+      "review:2026-11-12-technical:denair-da-250-w:0"
     ]
   },
   "notes": [

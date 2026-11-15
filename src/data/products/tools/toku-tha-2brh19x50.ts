@@ -9,68 +9,71 @@ const product: ToolProfileInput = {
 	"categoryId": "burineur",
 	"category": "burineur",
 	"label": "Toku THA-2BRH19x50",
-	"demandModel": "fixed-flow",
-	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
-		"max": 6.3
-	},
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/toku-tha-2brh19x50.webp",
+		"src": "/images/products/toku-tha-2brh19x50-technical-20261115-followup.svg",
 		"alt": "Repères techniques Toku THA-2BRH19x50, référence THA-2BRH19x50",
-		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=50",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 15 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Toku THA-2BRH19x50, référence THA-2BRH19x50. Le tableau fabricant publie 852 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Masse publiée : 6,8 kg. Diamètre intérieur de flexible conseillé : 13 mm.",
+		"overview": "Toku THA-2BRH19x50 : marteau à course 51 mm, 2 300 coups/min et 15,7 J/coup. Les THA-3 et THA-4 conservent l’emmanchement 19 × 50 mm, avec des courses 64 et 102 mm et des énergies 19,9 et 31,8 J/coup. La THA-2 reste la plus légère des trois à 6,8 kg.",
 		"verifiedFacts": [
-			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
-			"Consommation publiée : 14.2 L/s, convertis en 852 L/min par multiplication par 60.",
-			"Référence fabricant : THA-2BRH19x50.",
-			"Masse publiée : 6,8 kg.",
-			"Diamètre intérieur de flexible conseillé : 13 mm.",
-			"Raccord pneumatique : PT 3/8\"."
+			"Emmanchement : 19 × 50 mm.",
+			"Course : 51 mm.",
+			"Cadence : 2 300 coups/min.",
+			"Énergie publiée : 15,7 J/coup.",
+			"Masse : 6,8 kg.",
+			"Consommation documentaire : 14,2 L/s, régime non précisé."
 		],
 		"limitations": [
-			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"Le régime et la pression de mesure de la consommation ne sont pas établis par cette table. Les consignes de service restent séparées ; la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
+			"label": "Emmanchement",
+			"value": "19 × 50 mm",
 			"evidenceIds": [
-				"toku-tha-2brh19x50-20260926-workingpressurebar-1"
+				"review:2026-11-12-technical:toku-tha-2brh19x50:0"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation publiée : 14.2 L/s, convertis en 852 L/min par multiplication par 60.",
+			"label": "Course",
+			"value": "51 mm",
 			"evidenceIds": [
-				"toku-tha-2brh19x50-20260926"
+				"review:2026-11-12-technical:toku-tha-2brh19x50:0"
 			]
 		},
 		{
-			"label": "Masse publiée",
+			"label": "Cadence",
+			"value": "2 300 coups/min",
+			"evidenceIds": [
+				"review:2026-11-12-technical:toku-tha-2brh19x50:0"
+			]
+		},
+		{
+			"label": "Énergie publiée",
+			"value": "15,7 J/coup",
+			"evidenceIds": [
+				"review:2026-11-12-technical:toku-tha-2brh19x50:0"
+			]
+		},
+		{
+			"label": "Masse",
 			"value": "6,8 kg",
 			"evidenceIds": [
-				"toku-tha-2brh19x50-20260926"
+				"review:2026-11-12-technical:toku-tha-2brh19x50:0"
 			]
 		},
 		{
-			"label": "Diamètre intérieur de flexible conseillé",
-			"value": "13 mm",
+			"label": "Consommation documentaire",
+			"value": "14,2 L/s, régime non précisé",
 			"evidenceIds": [
-				"toku-tha-2brh19x50-20260926"
-			]
-		},
-		{
-			"label": "Raccord pneumatique",
-			"value": "PT 3/8\"",
-			"evidenceIds": [
-				"toku-tha-2brh19x50-20260926"
+				"review:2026-11-12-technical:toku-tha-2brh19x50:0"
 			]
 		}
 	],
@@ -92,37 +95,37 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "review:2026-11-12-technical:toku-tha-2brh19x50:0",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf",
+			"sourceLabel": "Toku, document fabricant, pages PDF 50",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-12",
+			"confidence": "B",
+			"notes": "Toku THA-2BRH19x50 : marteau à course 51 mm, 2 300 coups/min et 15,7 J/coup. Les THA-3 et THA-4 conservent l’emmanchement 19 × 50 mm, avec des courses 64 et 102 mm et des énergies 19,9 et 31,8 J/coup. La THA-2 reste la plus légère des trois à 6,8 kg. GET complet : SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. Historique conservé."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"toku-tha-2brh19x50-20260926"
+			"review:2026-11-12-technical:toku-tha-2brh19x50:0"
+		],
+		"demandExplanation": [
+			"review:2026-11-12-technical:toku-tha-2brh19x50:0"
 		],
 		"workingPressureBar": [
-			"toku-tha-2brh19x50-20260926-workingpressurebar-1"
-		],
-		"airflowLpm": [
-			"toku-tha-2brh19x50-20260926"
-		],
-		"recommendedHose": [
-			"toku-tha-2brh19x50-20260926"
-		],
-		"connectorSize": [
-			"toku-tha-2brh19x50-20260926"
+			"review:2026-11-12-technical:toku-tha-2brh19x50:0"
 		]
 	},
 	"notes": [
-		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+		"Le régime et la pression de mesure de la consommation ne sont pas établis par cette table. Les consignes de service restent séparées ; la compatibilité demeure indéterminée."
 	],
-	"airflowLpm": {
-		"min": 852,
-		"typical": 852,
-		"max": 852
-	},
 	"recommendedHose": {
 		"innerDiameterMm": 13
 	},
-	"connectorSize": "PT 3/8\""
+	"connectorSize": "PT 3/8\"",
+	"demandExplanation": "Le régime et la pression de mesure de la consommation ne sont pas établis par cette table. Les consignes de service restent séparées ; la compatibilité demeure indéterminée."
 };
 
 export default product;
