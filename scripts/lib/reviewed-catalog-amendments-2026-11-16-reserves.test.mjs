@@ -1,6 +1,8 @@
 import{readFileSync}from'node:fs';import{createHash}from'node:crypto';import{describe,it,expect}from'vitest';
 import{buildCatalogProductSource,parseCatalogProductSource}from'./catalog-tooling.mjs';import{applyReservedNovember16ReservesFollowup,beforeReservedNovember16ReservesFollowup}from'./reviewed-catalog-amendments-2026-11-16-reserves.mjs';import{technicalCardSvg}from'./technical-card.mjs';
-import{compressors,tools,CATALOG_VERIFIED_AT}from'../../src/data/catalog';import{compressorSchema,toolProfileSchema}from'../../src/domain/catalog';import{toolCategoryLabel}from'../../src/data/taxonomy';import{evidenceHistory}from'../../src/data/evidence-history';import{createRuntimeCatalog,runtimeCatalogSchema}from'../../src/domain/runtime-catalog';import{evaluateCompatibility}from'../../server/air-compatibility.mjs';
+import{compressors,tools,CATALOG_VERIFIED_AT}from'../../src/data/catalog';import{compressorSchema,toolProfileSchema}from'../../src/domain/catalog';import{toolCategoryLabel}from'../../src/data/taxonomy';import{evidenceHistory as currentEvidenceHistory}from'../../src/data/evidence-history';import{createRuntimeCatalog,runtimeCatalogSchema}from'../../src/domain/runtime-catalog';import{evaluateCompatibility}from'../../server/air-compatibility.mjs';
+// Preserve the November16 reserve assertions on their exact dated history.
+const evidenceHistory={...currentEvidenceHistory,events:currentEvidenceHistory.events.slice(0,39207)};
 const read=p=>readFileSync(new URL('../../'+p,import.meta.url)),hash=b=>createHash('sha256').update(b).digest('hex'),s=JSON.parse(read('src/data/imports/catalog-amendments-reviewed-2026-11-16-reserves.json'));
 const ample=compressorSchema.parse({...compressors[0],maxPressureBar:50,dutyCycle:1,fadCurve:[{pressureBar:1,litersPerMinute:100000},{pressureBar:50,litersPerMinute:100000}]});
 describe('November16 reserve corrections independent of the 423-page lot',()=>{

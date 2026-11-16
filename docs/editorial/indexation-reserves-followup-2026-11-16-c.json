@@ -1,0 +1,929 @@
+{
+  "schemaVersion": 1,
+  "reviewedAt": "2026-11-16T18:39:15.027225+00:00",
+  "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+  "scope": "Continuation des15 réserves, distincte du lot434 déjà préparé",
+  "priorityLotCommit": "daf7726c321e75dbf5836302b46457fbe07b2cf0",
+  "priorityLotModified": false,
+  "siteBuilds": 0,
+  "newAdmissions": 0,
+  "sourceChecks": [
+    {
+      "url": "https://powertools.ingersollrand.com/en-us/surface-preparation-finishing-tools/needle-and-chisel-scalers/182-needle/",
+      "checkedAt": "2026-11-16T18:28:07.797Z",
+      "httpStatus": 429,
+      "complete": false,
+      "finalUrl": "https://powertools.ingersollrand.com/en-us/surface-preparation-finishing-tools/needle-and-chisel-scalers/182-needle/"
+    },
+    {
+      "url": "https://powertools.ingersollrand.com/content/published/api/v1.1/assets/CONT0CD55CEAE1594B1FAB0AC6F82CBAA0BA/native/16576126_ed2_B.pdf?channelToken=057b573085b4487ca0ab02fcc3a3a01d",
+      "checkedAt": "2026-11-16T18:28:08.000Z",
+      "httpStatus": 429,
+      "complete": false,
+      "finalUrl": "https://powertools.ingersollrand.com/content/published/api/v1.1/assets/CONT0CD55CEAE1594B1FAB0AC6F82CBAA0BA/native/16576126_ed2_B.pdf?channelToken=057b573085b4487ca0ab02fcc3a3a01d"
+    },
+    {
+      "url": "https://us.fscurtis.com/wp-content/uploads/2026/01/ep132a-100psi-cagi-data-sheet.pdf",
+      "checkedAt": "2026-11-16T18:28:08.074Z",
+      "httpStatus": 404,
+      "complete": false,
+      "finalUrl": "https://us.fscurtis.com/wp-content/uploads/2026/01/ep132a-100psi-cagi-data-sheet.pdf"
+    },
+    {
+      "url": "https://airman-asia.com/series.php?catid=1&sub_catid=263",
+      "checkedAt": "2026-11-16T18:28:09.949Z",
+      "httpStatus": 200,
+      "sha256": "a62907fc8e7a8bb40c9e8dc4812bdf64898e20f577bf43dd6b4ffe8730865bc7",
+      "bytes": 42753,
+      "complete": true,
+      "finalUrl": "https://airman-asia.com/series.php?catid=1&sub_catid=263"
+    },
+    {
+      "url": "https://www.airman.co.jp/media/files/2503_SOGO_40P_no25.pdf",
+      "checkedAt": "2026-11-16T18:28:11.764Z",
+      "complete": false,
+      "reason": "timeout"
+    },
+    {
+      "url": "https://universaltoolusa.com/media/attachment/file/u/t/ut8652r.pdf",
+      "checkedAt": "2026-11-16T18:28:15.048Z",
+      "httpStatus": 404,
+      "complete": false,
+      "finalUrl": "https://universaltoolusa.com/media/attachment/file/u/t/ut8652r.pdf"
+    },
+    {
+      "url": "https://www.prona.com.tw/tw/products-list.php",
+      "checkedAt": "2026-11-16T18:28:15.155Z",
+      "httpStatus": 200,
+      "sha256": "4c3aa04e340c4b5147675131610c5b2d1cf9452a6959a4668b364f5ac3945b99",
+      "bytes": 185334,
+      "complete": true,
+      "finalUrl": "https://www.prona.com.tw/tw/products-list.php"
+    },
+    {
+      "url": "https://www.parker.com/content/dam/Parker-com/Literature/Hiross-Zander-Division/PDF-Files/Operating-Manuals/K3.1.105k_Membrane-Modules-User-Guide.pdf",
+      "checkedAt": "2026-11-16T18:28:17.280Z",
+      "httpStatus": 403,
+      "complete": false,
+      "finalUrl": "https://www.parker.com/content/dam/Parker-com/Literature/Hiross-Zander-Division/PDF-Files/Operating-Manuals/K3.1.105k_Membrane-Modules-User-Guide.pdf"
+    }
+  ],
+  "airmanSourceChecks": [
+    {
+      "url": "https://airman-asia.com/product.php?catid=1&id=284",
+      "checkedAt": "2026-11-16T18:32:36.395Z",
+      "httpStatus": 200,
+      "sha256": "4badec8c79924d19615b0efc2627ee4f2debed7d1b14c0559fc1101e5e3d6493",
+      "bytes": 30844,
+      "complete": true,
+      "finalUrl": "https://airman-asia.com/product.php?catid=1&id=284"
+    },
+    {
+      "url": "https://airman-asia.com/product.php?catid=1&id=285",
+      "checkedAt": "2026-11-16T18:32:37.153Z",
+      "httpStatus": 200,
+      "sha256": "80ccd3848bb00e4f3ee6cc34d05263e7ae4b490e9a53754d8dedeb7c9dd0b492",
+      "bytes": 30847,
+      "complete": true,
+      "finalUrl": "https://airman-asia.com/product.php?catid=1&id=285"
+    }
+  ],
+  "currentZippCatalogue": {
+    "url": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+    "sha256": "a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3",
+    "completeGetRetained": true,
+    "readPages": [
+      165,
+      171,
+      173,
+      174,
+      175,
+      176
+    ],
+    "visualSectionScan": [
+      150,
+      199
+    ],
+    "qualification": false
+  },
+  "pages": [
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-prona-r-4300-hvlp-g13-buse-1-3-hvlp-gravity/",
+      "previousContentHash": "a4d3c09825e545ca26ad8d3959e06e0723e5f9050b4a3120e08a607851c6ae4a",
+      "contentHash": "a4d3c09825e545ca26ad8d3959e06e0723e5f9050b4a3120e08a607851c6ae4a",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "Prona R4300 HVLP G13 : la fiche HTML est accessible mais le tableau technique est une image externe ; le GET de cette image échoue ENOTFOUND. Les valeurs historiques ne sont pas déclarées revérifiées depuis le seul HTML200.",
+      "neighbors": [
+        "/outils-pneumatiques/pistolet-peinture-prona-r-4300-hvlp-g11-buse-1-1-hvlp-gravity/",
+        "/outils-pneumatiques/pistolet-peinture-prona-r-4300-hvlp-g12-buse-1-2-hvlp-gravity/"
+      ],
+      "sourceReadings": [],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://www.prona.com.cn/Product_dt/1179777387076407296.html",
+          "checkedAt": "2026-11-16T10:45:10.734Z",
+          "httpStatus": 200,
+          "complete": true,
+          "sha256": "4fceebd9d906d50f5d4cca1be9c973372f644aba281630d4b618e4a2ff9fc2c1",
+          "bytes": 114046,
+          "finalUrl": "https://www.prona.com.cn/Product_dt/1179777387076407296.html"
+        }
+      ],
+      "priorFollowup": {
+        "status": "prior-reserve-maintained",
+        "finding": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027069+00:00",
+      "continuationNote": "La liste officielle Prona Taiwan est accessible mais distingue R4300G/R4300NG sans établir la combinaison HVLP-G13 de ce candidat. Le tableau image de la fiche Chine reste non vérifié : aucun débit ni buse transférés.",
+      "newQualificationId": null
+    },
+    {
+      "path": "/outils-pneumatiques/ingersoll-rand-182lna1/",
+      "previousContentHash": "d224e4cd1f626aa94a8719a0b4b0a37d4172b906135f9f9556411bcfb60d9ab2",
+      "contentHash": "d224e4cd1f626aa94a8719a0b4b0a37d4172b906135f9f9556411bcfb60d9ab2",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "IR182LNA1 : la source documentaire et la fiche exacte de remplacement restent HTTP429. Aucun accès complet ni empreinte de document actuel ne permet une qualification.",
+      "neighbors": [
+        "/outils-pneumatiques/ingersoll-rand-182l/",
+        "/outils-pneumatiques/ingersoll-rand-182g/"
+      ],
+      "sourceReadings": [],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://powertools.ingersollrand.com/en-gb/asset-library/",
+          "checkedAt": "2026-11-16T10:40:46.980Z",
+          "httpStatus": 429,
+          "complete": false,
+          "finalUrl": "https://powertools.ingersollrand.com/en-gb/asset-library/"
+        },
+        {
+          "url": "https://powertools.ingersollrand.com/en/surface-preparation-finishing-tools/needle-and-chisel-scalers/182-needle/",
+          "checkedAt": "2026-11-16T13:51:16.721Z",
+          "httpStatus": 429,
+          "complete": false,
+          "finalUrl": "https://powertools.ingersollrand.com/en/surface-preparation-finishing-tools/needle-and-chisel-scalers/182-needle/"
+        }
+      ],
+      "priorFollowup": {
+        "documents": [
+          "https://powertools.ingersollrand.com/en/surface-preparation-finishing-tools/needle-and-chisel-scalers/182-needle/"
+        ],
+        "finding": "La nouvelle fiche officielle exacte répond429 auGET. Le tableau visible dans le moteur de recherche n’est pas importé comme preuve actuelle.",
+        "nextCorrection": "Attendre un accès constructeur complet et vérifier la pression de mesure appariée ; conserver la réserve.",
+        "status": "exact-alternative-source-429",
+        "sourceChecks": [
+          {
+            "url": "https://powertools.ingersollrand.com/en/surface-preparation-finishing-tools/needle-and-chisel-scalers/182-needle/",
+            "checkedAt": "2026-11-16T13:51:16.721Z",
+            "httpStatus": 429,
+            "complete": false,
+            "finalUrl": "https://powertools.ingersollrand.com/en/surface-preparation-finishing-tools/needle-and-chisel-scalers/182-needle/"
+          }
+        ],
+        "checkedAt": "2026-11-16T14:00:56.344371Z",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "La nouvelle fiche officielle exacte répond429 auGET. Le tableau visible dans le moteur de recherche n’est pas importé comme preuve actuelle.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027189+00:00",
+      "continuationNote": "Nouvelle fiche officielle en-us : GET429, en dépit de son contenu indexé par le moteur de recherche. Les valeurs de ce cache ne sont pas importées.",
+      "newQualificationId": null
+    },
+    {
+      "path": "/outils-pneumatiques/ingersoll-rand-61h120g4/",
+      "previousContentHash": "bf921299a25a21d152b88b7670454d483ffc7ea60e270accb80ccb73779705b2",
+      "contentHash": "bf921299a25a21d152b88b7670454d483ffc7ea60e270accb80ccb73779705b2",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "IR61H120G4 : source et fiche produit exacte restent HTTP429. Pas de transposition depuis un autre modèle ou une copie de moteur de recherche.",
+      "neighbors": [
+        "/outils-pneumatiques/ingersoll-rand-61h120h63/",
+        "/outils-pneumatiques/ingersoll-rand-61h120l6/"
+      ],
+      "sourceReadings": [],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://powertools.ingersollrand.com/en-gb/asset-library/",
+          "checkedAt": "2026-11-16T10:40:46.980Z",
+          "httpStatus": 429,
+          "complete": false,
+          "finalUrl": "https://powertools.ingersollrand.com/en-gb/asset-library/"
+        }
+      ],
+      "priorFollowup": {
+        "status": "prior-reserve-maintained",
+        "finding": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027193+00:00",
+      "continuationNote": "La notice officielle 16576126_ed2_B découverte dans la recherche répond429 au GET complet. La version EU/US et les données de consommation ne sont pas transposées.",
+      "newQualificationId": null
+    },
+    {
+      "path": "/outils-pneumatiques/ingersoll-rand-7s60l/",
+      "previousContentHash": "9a6adc15ac6c9259bea70ae5290a3a3107636f6882d5952501b4ca0935324301",
+      "contentHash": "9a6adc15ac6c9259bea70ae5290a3a3107636f6882d5952501b4ca0935324301",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "IR7S60L : source et fiche produit exacte restent HTTP429. Une divergence antérieure de consommation reste non résolue ; une extraction non accessible par GET complet ne la lève pas.",
+      "neighbors": [
+        "/outils-pneumatiques/ingersoll-rand-7s30l/",
+        "/outils-pneumatiques/ingersoll-rand-7s48l/"
+      ],
+      "sourceReadings": [],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://powertools.ingersollrand.com/en-gb/asset-library/",
+          "checkedAt": "2026-11-16T10:40:46.980Z",
+          "httpStatus": 429,
+          "complete": false,
+          "finalUrl": "https://powertools.ingersollrand.com/en-gb/asset-library/"
+        }
+      ],
+      "priorFollowup": {
+        "status": "prior-reserve-maintained",
+        "finding": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027195+00:00",
+      "continuationNote": "Réserve d’accès et de consommation conservée. Les distributeurs consultables et un extrait de moteur de recherche ne remplacent pas une source primaire complète et applicable.",
+      "newQualificationId": null
+    },
+    {
+      "path": "/guides/generateur-azote-purete-oxygene-argon-ppm/",
+      "previousContentHash": "bfef43ec462598d93069c4920fa811f2bf9f43c479fbe7c40ace2a550c319666",
+      "contentHash": "bfef43ec462598d93069c4920fa811f2bf9f43c479fbe7c40ace2a550c319666",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "Guide oxygène/argon Parker : guide relu, source primaire IOM403 et alternative officielle403. L’unité ppm et les conditions propres à l’argon ne sont pas validées par une source effectivement accessible aujourd’hui. Réserve conservée.",
+      "neighbors": [
+        "/guides/generateur-azote-compresseur-debit-purete/",
+        "/guides/compresseur-decoupe-laser-air-azote/"
+      ],
+      "sourceReadings": [],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://www.parker.com/content/dam/Parker-com/Literature/IGFG/PDF-Files/IOM_PKR_DB1200_9000_062019.pdf",
+          "checkedAt": "2026-11-16T10:45:10.597Z",
+          "httpStatus": 403,
+          "complete": false,
+          "finalUrl": "https://www.parker.com/content/dam/Parker-com/Literature/IGFG/PDF-Files/IOM_PKR_DB1200_9000_062019.pdf"
+        }
+      ],
+      "priorFollowup": {
+        "status": "prior-reserve-maintained",
+        "finding": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027197+00:00",
+      "continuationNote": "Le guide de modules à membrane Parker découvert répond403 au GET ; il ne serait de toute façon pas une preuve de la série PSA DB. Les assertions sur argon/O2/ppm restent réservées.",
+      "newQualificationId": null
+    },
+    {
+      "path": "/outils-pneumatiques/fouloir-zipp-zsr-304l/",
+      "previousContentHash": "997df8a4779bfb4aabbbcb7860b96b7189c6fd9b1325eba836c4143bfd536b36",
+      "contentHash": "997df8a4779bfb4aabbbcb7860b96b7189c6fd9b1325eba836c4143bfd536b36",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "ZIPP ZSR304L : la page PDF176 actuelle ne contient plus la table attribuée au modèle ; la recherche dans le texte complet ne localise pas sa ligne. Cadence700, masse9,79 et consommation850 historiques non confirmées sur un passage exact. Réserve de provenance maintenue.",
+      "neighbors": [
+        "/outils-pneumatiques/fouloir-zipp-zsr-302/",
+        "/outils-pneumatiques/fouloir-zipp-zsr-302l/"
+      ],
+      "sourceReadings": [],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+          "checkedAt": "2026-11-16T10:41:31.981Z",
+          "httpStatus": 200,
+          "complete": true,
+          "sha256": "a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3",
+          "bytes": 16229866,
+          "finalUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf"
+        },
+        {
+          "url": "https://www.airtools.com.tw/zsr-304l-air-rammer/",
+          "checkedAt": "2026-11-16T13:52:36.601Z",
+          "httpStatus": 200,
+          "complete": true,
+          "sha256": "9022df4013a4b9fa7e871d403c753df33fb0ef4ff5fa0d90e5e95f9aea6bfd91",
+          "bytes": 201970,
+          "finalUrl": "https://www.airtools.com.tw/zsr-304l-air-rammer/"
+        }
+      ],
+      "priorFollowup": {
+        "documents": [
+          "https://www.airtools.com.tw/zsr-304l-air-rammer/"
+        ],
+        "finding": "La page officielle confirme la référenceZSR304L et son usage de compactage mais ne contient pas le tableau quantitatif attendu. La pagePDF176 ne correspond pas au tableau recherché ; certaines fontes du document se rendent sous forme de points. Aucun700 coups/min,9,79 kg ou850 L/min historique n’est revalidé par ces lectures.",
+        "nextCorrection": "Retrouver un tableau quantitatif complet et lisible portant cette référence ; une page marketing ou le sommaire ne suffisent pas.",
+        "status": "identity-recovered-quantities-unverified",
+        "sourceChecks": [
+          {
+            "url": "https://www.airtools.com.tw/zsr-304l-air-rammer/",
+            "checkedAt": "2026-11-16T13:52:36.601Z",
+            "httpStatus": 200,
+            "complete": true,
+            "sha256": "9022df4013a4b9fa7e871d403c753df33fb0ef4ff5fa0d90e5e95f9aea6bfd91",
+            "bytes": 201970,
+            "finalUrl": "https://www.airtools.com.tw/zsr-304l-air-rammer/"
+          }
+        ],
+        "checkedAt": "2026-11-16T14:00:56.344371Z",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "La page officielle confirme la référenceZSR304L et son usage de compactage mais ne contient pas le tableau quantitatif attendu. La pagePDF176 ne correspond pas au tableau recherché ; certaines fontes du document se rendent sous forme de points. Aucun700 coups/min,9,79 kg ou850 L/min historique n’est revalidé par ces lectures.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027202+00:00",
+      "continuationNote": "Le PDF complet actuel a été rendu avec Poppler. La pagePDF175 porte le numéro imprimé171 ; la suivante porte183 et concerne une riveteuse sans fil. Les pages150à199 ont été inspectées visuellement pour localiser le tableau attendu. L’extrait de recherche donnant une table Air Rammer172 n’est pas une preuve du corps courant : aucune valeur700/9,79/850 n’est revalidée.",
+      "newQualificationId": null
+    },
+    {
+      "path": "/outils-pneumatiques/burineur-universal-tool-ut8652h/",
+      "previousContentHash": "e99e12c42fc8cbb88e0d6f70ec95b28f971c630dedec8fc8e5588f2d5f294ca4",
+      "contentHash": "e99e12c42fc8cbb88e0d6f70ec95b28f971c630dedec8fc8e5588f2d5f294ca4",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "Course contradictoire2/3pouces dans la page constructeur, sans arbitrage exact.",
+      "neighbors": [
+        "/outils-pneumatiques/burineur-universal-tool-ut8652r/",
+        "/outils-pneumatiques/burineur-universal-tool-ut8651h/"
+      ],
+      "sourceReadings": [
+        {
+          "url": "https://continentaltoolgroup.com/product/2-stroke-chipping-hammer/",
+          "hash": "f9d3b0d9aa1416ba47ee674be8d013f3edc08787e98c6843167e67df8935adf3",
+          "checkedAt": "2026-11-16T07:35:22.899Z",
+          "httpStatus": 200,
+          "complete": true,
+          "readPages": []
+        }
+      ],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://continentaltoolgroup.com/product/2-stroke-chipping-hammer/",
+          "checkedAt": "2026-11-16T07:35:22.899Z",
+          "httpStatus": 200,
+          "sha256": "f9d3b0d9aa1416ba47ee674be8d013f3edc08787e98c6843167e67df8935adf3",
+          "bytes": 181921,
+          "complete": true,
+          "finalUrl": "https://continentaltoolgroup.com/product/universal-tool-2-stroke-chipping-hammer/"
+        },
+        {
+          "url": "https://continentaltoolgroup.com/wp-content/uploads/2024/06/ut_catalog.pdf",
+          "checkedAt": "2026-11-16T13:54:16.741Z",
+          "httpStatus": 404,
+          "complete": false,
+          "finalUrl": "https://continentaltoolgroup.com/wp-content/uploads/2024/06/ut_catalog.pdf"
+        }
+      ],
+      "priorFollowup": {
+        "documents": [
+          "https://continentaltoolgroup.com/wp-content/uploads/2024/06/ut_catalog.pdf"
+        ],
+        "finding": "Le catalogue officiel alternatif est404. La recherche expose encore le conflit titre2pouces/table3pouces, sans corps complet utilisable pour l’arbitrer.",
+        "nextCorrection": "Conserver les deux valeurs historiques, obtenir une clarification exacte constructeur.",
+        "status": "alternative-catalog-404",
+        "sourceChecks": [
+          {
+            "url": "https://continentaltoolgroup.com/wp-content/uploads/2024/06/ut_catalog.pdf",
+            "checkedAt": "2026-11-16T13:54:16.741Z",
+            "httpStatus": 404,
+            "complete": false,
+            "finalUrl": "https://continentaltoolgroup.com/wp-content/uploads/2024/06/ut_catalog.pdf"
+          }
+        ],
+        "checkedAt": "2026-11-16T14:00:56.344371Z",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "Le catalogue officiel alternatif est404. La recherche expose encore le conflit titre2pouces/table3pouces, sans corps complet utilisable pour l’arbitrer.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027204+00:00",
+      "continuationNote": "La notice officielle alternative ut8652r.pdf répond404 au GET. Les extraits indexés conservent eux-mêmes le titre2pouces et la table3pouces : aucun arbitrage inventé.",
+      "newQualificationId": null
+    },
+    {
+      "path": "/outils-pneumatiques/meuleuse-puma-at-7438m/",
+      "previousContentHash": "9109bdfae5fb05db16be07b2cec3279f5f22d503e1a37867c5a195906433f679",
+      "contentHash": "9109bdfae5fb05db16be07b2cec3279f5f22d503e1a37867c5a195906433f679",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "Vitesse PDF22000 contreHTML24000 : sécurité de l’accessoire à confirmer.",
+      "neighbors": [
+        "/outils-pneumatiques/meuleuse-puma-at-7438/",
+        "/outils-pneumatiques/meuleuse-puma-at-7437/"
+      ],
+      "sourceReadings": [
+        {
+          "url": "https://www.pumaair.com/views/proimages/pd-en/PDF/PIC-2680/P044-AIR_DIE_GRINDER-2680.pdf",
+          "hash": "997bff19440269b150fc8e7f9654a25c740959b69be2fc32aab920b6d90c98c4",
+          "checkedAt": "2026-11-16T10:55:37.230Z",
+          "httpStatus": 200,
+          "complete": true,
+          "readPages": [
+            1
+          ]
+        },
+        {
+          "url": "https://www.pumaair.com/product-Air-Die-Grinder-AirDieGrinder-.html",
+          "hash": "08b9f9c7d1898261da064b9521bc097278817d20a1ebb50c4f75c23188e0a7c7",
+          "checkedAt": "2026-11-16T07:37:49.202Z",
+          "httpStatus": 200,
+          "complete": true,
+          "readPages": []
+        }
+      ],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://www.pumaair.com/product-Air-Die-Grinder-AirDieGrinder-.html",
+          "checkedAt": "2026-11-16T07:37:49.202Z",
+          "httpStatus": 200,
+          "sha256": "08b9f9c7d1898261da064b9521bc097278817d20a1ebb50c4f75c23188e0a7c7",
+          "bytes": 83533,
+          "complete": true,
+          "finalUrl": "https://www.pumaair.com/product-Air-Die-Grinder-AirDieGrinder-.html"
+        },
+        {
+          "url": "https://www.pumaair.com/views/proimages/pd-en/PDF/PIC-2680/P044-AIR_DIE_GRINDER-2680.pdf",
+          "checkedAt": "2026-11-16T10:55:37.230Z",
+          "httpStatus": 200,
+          "sha256": "997bff19440269b150fc8e7f9654a25c740959b69be2fc32aab920b6d90c98c4",
+          "bytes": 675399,
+          "complete": true,
+          "finalUrl": "https://www.pumaair.com/views/proimages/pd-en/PDF/PIC-2680/P044-AIR_DIE_GRINDER-2680.pdf"
+        }
+      ],
+      "priorFollowup": {
+        "status": "prior-reserve-maintained",
+        "finding": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027206+00:00",
+      "continuationNote": "La recherche primaire confirme encore24 000tr/min dans le HTML face aux22 000 du PDF déjà lu ; aucune preuve d’applicabilité par révision ne lève ce conflit de vitesse.",
+      "newQualificationId": null
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hymair-as2003g/",
+      "previousContentHash": "f55e0e24d7a30264f591a8f81ea22ae26d78515c05b022bd850097eb2b60f708",
+      "contentHash": "f55e0e24d7a30264f591a8f81ea22ae26d78515c05b022bd850097eb2b60f708",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "Différence G/GA non démontrée par les chiffres et le document actuel ; ne pas créer une deuxième réponse équivalente.",
+      "neighbors": [
+        "/outils-pneumatiques/pistolet-peinture-hymair-as2003ga/",
+        "/outils-pneumatiques/pistolet-peinture-hymair-as2003s/"
+      ],
+      "sourceReadings": [
+        {
+          "url": "https://www.steedtools.com/phoenix/admin/download?fileId=SZUfKpLkrMNq&dp=GvUApKfKKUAU",
+          "hash": "971e9f3f662af10d3c638d5e9c29c8847ee04672c40e29957ad4ca4eb13d61c1",
+          "checkedAt": "2026-11-16T07:38:05.658Z",
+          "httpStatus": 200,
+          "complete": true,
+          "readPages": []
+        }
+      ],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://www.steedtools.com/phoenix/admin/download?fileId=SZUfKpLkrMNq&dp=GvUApKfKKUAU",
+          "checkedAt": "2026-11-16T07:38:05.658Z",
+          "httpStatus": 200,
+          "sha256": "971e9f3f662af10d3c638d5e9c29c8847ee04672c40e29957ad4ca4eb13d61c1",
+          "bytes": 73317529,
+          "complete": true,
+          "finalUrl": "https://rqrnrwxhlkmi5q.ldycdn.com/Air+Spary+Guns+%26+Brushes%EF%BC%88Ningbo+Steed+Tools%EF%BC%89-aidpiBqkKiiSRmlririqoio.pdf?dp=GvUApKfKKUAU"
+        }
+      ],
+      "priorFollowup": {
+        "status": "prior-reserve-maintained",
+        "finding": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027209+00:00",
+      "continuationNote": "Aucune preuve primaire nouvelle n’établit une différence utile G/GA. La réserve de variante reste maintenue, sans nouvelle page par reformulation.",
+      "newQualificationId": null
+    },
+    {
+      "path": "/outils-pneumatiques/boulonneuse-soartec-wx-3t7150ab/",
+      "previousContentHash": "9ea2a4ffc13f38e99b88145a802e96e4bbdca13ec031a3ed2c7266ca884bbec5",
+      "contentHash": "9ea2a4ffc13f38e99b88145a802e96e4bbdca13ec031a3ed2c7266ca884bbec5",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "La WX-3T7150AB est la boulonneuse à coupure automatique, 700 tr/min, 350 mm et 1,6 kg. Sa page juxtapose une plage de couple 6–18 Nm dans le tableau et 10–70 Nm dans la présentation. Cette contradiction touche le choix du serrage ; aucune plage n’est retenue par préférence. La consigne 90 psi et l’absence de consommation qualifiée maintiennent aussi le calcul d’air non conclusif.",
+      "neighbors": [
+        "/outils-pneumatiques/boulonneuse-soartec-wx-3953/"
+      ],
+      "sourceReadings": [
+        {
+          "url": "https://www.soartectools.com/products/industrial-auto-shut-off-air-nutrunner-wx-3t7150ab",
+          "hash": "457d306f6efd2e63563473d3a24e589e0706dd3222ef14b9b828d757814442c3",
+          "checkedAt": "2026-11-16T10:45:43.008Z",
+          "httpStatus": 200,
+          "complete": true,
+          "readPages": []
+        }
+      ],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://www.soartectools.com/products/industrial-auto-shut-off-air-nutrunner-wx-3t7150ab",
+          "checkedAt": "2026-11-16T10:45:43.008Z",
+          "httpStatus": 200,
+          "sha256": "457d306f6efd2e63563473d3a24e589e0706dd3222ef14b9b828d757814442c3",
+          "bytes": 323392,
+          "complete": true,
+          "finalUrl": "https://www.soartectools.com/products/1-2-air-shut-off-nutrunner-angle-head-wx-3t7150ab"
+        }
+      ],
+      "priorFollowup": {
+        "status": "prior-reserve-maintained",
+        "finding": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027211+00:00",
+      "continuationNote": "La source officielle reste contradictoire sur la plage de couple déterminante ; aucune table exacte supplémentaire obtenue ne tranche6–18contre10–70Nm.",
+      "newQualificationId": null
+    },
+    {
+      "path": "/outils-pneumatiques/riveteuse-astro-pneumatic-pr36/",
+      "previousContentHash": "5e4338ab130cb1e74511bc4cd87737526b5083855a2bdb2828304865913c3cd8",
+      "contentHash": "47cf88ca6924fc37a8f53a799cf35f0ea314d31c3392ed935857bc8ca73f1311",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": true,
+      "admission": false,
+      "note": "Fiche PR36 et notice complète relues, avec contrôle visuel de la page1. La notice donne 2.320 Liter/Stroke, sans pression de mesure appariée : valeur documentaire, pas nouveau paramètre per-action. La traction1938/380lb reste contradictoire et les dimensions270/280mm divergent ; aucune qualification ni admission pour cette page.",
+      "neighbors": [
+        "/outils-pneumatiques/riveteuse-genius-tools-501300/",
+        "/outils-pneumatiques/riveteuse-toptul-kara0205b/"
+      ],
+      "sourceReadings": [
+        {
+          "url": "https://www.astrotools.com/product/air-riveter-3-32-1-8-5-32-3-16-capacity/",
+          "hash": "eb4ee09633e9454415ce0dc4af84574ee2f60dcd9a73a198a22a18c4c29b203d",
+          "checkedAt": "2026-11-16T10:41:44.854Z",
+          "httpStatus": 200,
+          "complete": true,
+          "readPages": []
+        },
+        {
+          "url": "https://www.astrotools.com/product/air-riveter-3-32-1-8-5-32-3-16-capacity/?attachment_id=6156&download_file=efv4nxoancz5g",
+          "hash": "69d806829bbc60a6476dd991fa86281120de73b305e521febcab30ee5d5bdf3b",
+          "checkedAt": "2026-11-16T17:06:03.134Z",
+          "httpStatus": 200,
+          "complete": true,
+          "readPages": [
+            1,
+            2,
+            5
+          ]
+        }
+      ],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://www.astrotools.com/product/air-riveter-3-32-1-8-5-32-3-16-capacity/",
+          "checkedAt": "2026-11-16T10:41:44.854Z",
+          "httpStatus": 200,
+          "sha256": "eb4ee09633e9454415ce0dc4af84574ee2f60dcd9a73a198a22a18c4c29b203d",
+          "bytes": 309073,
+          "complete": true,
+          "finalUrl": "https://www.astrotools.com/product/air-riveter-3-32-1-8-5-32-3-16-capacity/"
+        },
+        {
+          "url": "https://www.astrotools.com/product/air-riveter-3-32-1-8-5-32-3-16-capacity/?attachment_id=6156&download_file=efv4nxoancz5g",
+          "checkedAt": "2026-11-16T17:06:03.134Z",
+          "httpStatus": 200,
+          "sha256": "69d806829bbc60a6476dd991fa86281120de73b305e521febcab30ee5d5bdf3b",
+          "bytes": 654409,
+          "complete": true,
+          "finalUrl": "https://www.astrotools.com/product/air-riveter-3-32-1-8-5-32-3-16-capacity/?attachment_id=6156&download_file=efv4nxoancz5g"
+        }
+      ],
+      "priorFollowup": {
+        "status": "prior-reserve-maintained",
+        "finding": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": {
+        "demandModel": "variable-volume",
+        "nonConclusive": true,
+        "qualificationEligible": false
+      },
+      "preservedReserve": "Fiche PR36 et notice complète relues, avec contrôle visuel de la page1. La notice donne 2.320 Liter/Stroke, sans pression de mesure appariée : valeur documentaire, pas nouveau paramètre per-action. La traction1938/380lb reste contradictoire et les dimensions270/280mm divergent ; aucune qualification ni admission pour cette page.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027213+00:00",
+      "continuationNote": "La notice et le volume documentaire déjà intégrés restent conservés. Aucune preuve nouvelle ne tranche la traction1938/380lb ni les conditions de mesure du volume ; page non qualifiée.",
+      "newQualificationId": null
+    },
+    {
+      "path": "/compresseurs/fs-curtis-eco-pure-vsd-110w/",
+      "previousContentHash": "6f9b1102be1912c12ff1b05c7093f6a26709a7ffded30575abc292ca2a6e3d9c",
+      "contentHash": "6f9b1102be1912c12ff1b05c7093f6a26709a7ffded30575abc292ca2a6e3d9c",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "FSCurtisECO-PureVSD110W : fiche exacte CAGI primaire404. Le document de conversion NIST accessible ne rétablit pas les performances constructeur. Réserve propre à la page.",
+      "neighbors": [
+        "/compresseurs/fs-curtis-eco-pure-vsd-110a/",
+        "/compresseurs/fs-curtis-eco-pure-vsd-132a/"
+      ],
+      "sourceReadings": [],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://us.fscurtis.com/wp-content/uploads/2026/01/ep-vsd-110w-100psi-cagi-data-sheet.pdf",
+          "checkedAt": "2026-11-16T10:41:14.048Z",
+          "httpStatus": 404,
+          "complete": false,
+          "finalUrl": "https://us.fscurtis.com/wp-content/uploads/2026/01/ep-vsd-110w-100psi-cagi-data-sheet.pdf"
+        },
+        {
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+          "checkedAt": "2026-11-16T07:41:47.560Z",
+          "httpStatus": 200,
+          "complete": true,
+          "sha256": "751228aea7ee7b2d83bb7af67071a1647374ae710e5d02c44f45cee1e59c4546",
+          "bytes": 169506,
+          "finalUrl": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8"
+        }
+      ],
+      "priorFollowup": {
+        "status": "prior-reserve-maintained",
+        "finding": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027215+00:00",
+      "continuationNote": "La fiche ep132a100psi découverte porte un modèle à vitesse fixe, pas la référence VSD exacte, et son GET répond404. Aucun851,1acfm du modèle fixe n’est transféré aux VSD110W/132A.",
+      "newQualificationId": null
+    },
+    {
+      "path": "/compresseurs/fs-curtis-eco-pure-vsd-132a/",
+      "previousContentHash": "10847f99326288a265a32cd1a674d90a33aa9dd6a625f1ea7dcb01e71595228a",
+      "contentHash": "10847f99326288a265a32cd1a674d90a33aa9dd6a625f1ea7dcb01e71595228a",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "FSCurtisECO-PureVSD132A : fiche exacte CAGI primaire404. NIST confirme seulement les conversions, pas les points du modèle. Réserve conservée.",
+      "neighbors": [
+        "/compresseurs/fs-curtis-eco-pure-vsd-132w/",
+        "/compresseurs/fs-curtis-eco-pure-vsd-110a/"
+      ],
+      "sourceReadings": [],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://us.fscurtis.com/wp-content/uploads/2026/01/ep-vsd-132a-100psi-cagi-data-sheet.pdf",
+          "checkedAt": "2026-11-16T10:41:15.874Z",
+          "httpStatus": 404,
+          "complete": false,
+          "finalUrl": "https://us.fscurtis.com/wp-content/uploads/2026/01/ep-vsd-132a-100psi-cagi-data-sheet.pdf"
+        },
+        {
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+          "checkedAt": "2026-11-16T07:41:47.560Z",
+          "httpStatus": 200,
+          "complete": true,
+          "sha256": "751228aea7ee7b2d83bb7af67071a1647374ae710e5d02c44f45cee1e59c4546",
+          "bytes": 169506,
+          "finalUrl": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8"
+        }
+      ],
+      "priorFollowup": {
+        "status": "prior-reserve-maintained",
+        "finding": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027218+00:00",
+      "continuationNote": "La fiche ep132a100psi découverte porte un modèle à vitesse fixe, pas la référence VSD exacte, et son GET répond404. Aucun851,1acfm du modèle fixe n’est transféré aux VSD110W/132A.",
+      "newQualificationId": null
+    },
+    {
+      "path": "/compresseurs/airman-pds185sc-5c5/",
+      "previousContentHash": "7ec5e903585cfdd1b9368660ce2189177ec27a61be5634b2e8cb9c78f2d24fc4",
+      "contentHash": "128b56ed9497e338da28065780884d915cccd972bfe72ed1001ed8d788f1d556",
+      "decision": "qualified",
+      "qualificationId": "303d4f86117f3f99489cf33ccd4eb380e23513430c844bdf5558a859b880a293",
+      "corrected": true,
+      "admission": false,
+      "note": "AIRMANPDS185SC-5C5 : catalogue et page de gamme primaires expirent avant réponse complète. Les caractéristiques de la variante ne sont pas revérifiées et ne sont pas transférées depuis le 7C5.",
+      "neighbors": [
+        "/compresseurs/airman-pds185sc-7c5/",
+        "/compresseurs/airman-pds185s-5c5/"
+      ],
+      "sourceReadings": [],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://www.airman.co.jp/en/product/category-1/series-2/",
+          "checkedAt": "2026-11-16T10:41:19.627Z",
+          "complete": false,
+          "reason": "timeout"
+        },
+        {
+          "url": "https://www.airman.co.jp/en/product/category-1/series-2/product-48/",
+          "checkedAt": "2026-11-16T10:41:22.955Z",
+          "complete": false,
+          "reason": "timeout"
+        },
+        {
+          "url": "https://www.airman.co.jp/media/files/_u/catalog_pr_en/pds_stage3_en.pdf",
+          "checkedAt": "2026-11-16T13:52:33.090Z",
+          "complete": false,
+          "reason": "timeout"
+        }
+      ],
+      "priorFollowup": {
+        "documents": [
+          "https://www.airman.co.jp/media/files/_u/catalog_pr_en/pds_stage3_en.pdf"
+        ],
+        "finding": "Brochure anglaise officielle couvrant5C5/7C5 découverte ; leGET expire. Aucune spécification de la recherche n’est importée.",
+        "nextCorrection": "Lire le corps complet et distinguer Box,Skid etLeak guard avant de corriger ou qualifier.",
+        "status": "alternative-catalog-timeout",
+        "sourceChecks": [
+          {
+            "url": "https://www.airman.co.jp/media/files/_u/catalog_pr_en/pds_stage3_en.pdf",
+            "checkedAt": "2026-11-16T13:52:33.090Z",
+            "complete": false,
+            "reason": "timeout"
+          }
+        ],
+        "checkedAt": "2026-11-16T14:00:56.344371Z",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "Brochure anglaise officielle couvrant5C5/7C5 découverte ; leGET expire. Aucune spécification de la recherche n’est importée.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027220+00:00",
+      "continuationNote": "Fiche exacte AIRMAN Asia 284, tableau complet et voisine airman-pds185sc-7c5 relus. FAD de 5,2 m³/min et pression de fonctionnement de 0,7 MPa sont appariés dans la même ligne, soit 5 200 L/min à 7 bar. Les masses à sec/en service restent séparées. La longueur1 970 mm de la fiche Asia diffère du1 850 mm historique japonais, conservé comme transcription datée ; aucun arbitrage silencieux entre marchés. Les5C5/7C5 diffèrent par hauteur 1 080/1 300 mm, masses 765 (860)/835 (935) kg et carburant 90/92 L, pas par le FAD. Le service continu, la cuve et le maximum mécanique restent non qualifiés.",
+      "newQualificationId": "303d4f86117f3f99489cf33ccd4eb380e23513430c844bdf5558a859b880a293",
+      "previousDecision": "qualified",
+      "previousQualificationId": null
+    },
+    {
+      "path": "/compresseurs/airman-pds185sc-7c5/",
+      "previousContentHash": "b8fbcfb004e7e45867b8a745fe221bc2569ee4b6c45a6e20579458da0308eb72",
+      "contentHash": "a8b4adef8bdc0f58dc157bd44bf7b64d0a32c06ac5d4a4dc5397cbe510fc285e",
+      "decision": "qualified",
+      "qualificationId": "875daa84764254832ffa529a8165708fe63a24147834add10fa08d638bd478c2",
+      "corrected": true,
+      "admission": false,
+      "note": "AIRMANPDS185SC-7C5 : catalogue et page de gamme expirent ; aucune preuve actuelle des équipements oilfence/aftercooler propre au suffixe. Réserve conservée sans changement historique.",
+      "neighbors": [
+        "/compresseurs/airman-pds185sc-5c5/",
+        "/compresseurs/airman-pds185s-5c5/"
+      ],
+      "sourceReadings": [],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://www.airman.co.jp/en/product/category-1/series-37/",
+          "checkedAt": "2026-11-16T10:41:25.963Z",
+          "complete": false,
+          "reason": "timeout"
+        },
+        {
+          "url": "https://www.airman.co.jp/en/product/category-1/series-37/product-477/",
+          "checkedAt": "2026-11-16T10:41:28.969Z",
+          "complete": false,
+          "reason": "timeout"
+        },
+        {
+          "url": "https://www.airman.co.jp/media/files/_u/catalog_pr_en/pds_stage3_en.pdf",
+          "checkedAt": "2026-11-16T13:52:33.090Z",
+          "complete": false,
+          "reason": "timeout"
+        }
+      ],
+      "priorFollowup": {
+        "documents": [
+          "https://www.airman.co.jp/media/files/_u/catalog_pr_en/pds_stage3_en.pdf"
+        ],
+        "finding": "Même brochure commune vérifiée une seule fois ;GET expiré, caractéristiques du suffixe7C5 non qualifiées.",
+        "nextCorrection": "Vérifier la ligne exacteLeak guard/Box et ses différences avec5C5 sur un document complet.",
+        "status": "alternative-catalog-timeout",
+        "sourceChecks": [
+          {
+            "url": "https://www.airman.co.jp/media/files/_u/catalog_pr_en/pds_stage3_en.pdf",
+            "checkedAt": "2026-11-16T13:52:33.090Z",
+            "complete": false,
+            "reason": "timeout"
+          }
+        ],
+        "checkedAt": "2026-11-16T14:00:56.344371Z",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "Même brochure commune vérifiée une seule fois ;GET expiré, caractéristiques du suffixe7C5 non qualifiées.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027223+00:00",
+      "continuationNote": "Fiche exacte AIRMAN Asia 285, tableau complet et voisine airman-pds185sc-5c5 relus. FAD de 5,2 m³/min et pression de fonctionnement de 0,7 MPa sont appariés dans la même ligne, soit 5 200 L/min à 7 bar. Les masses à sec/en service restent séparées. La longueur1 970 mm de la fiche Asia diffère du1 850 mm historique japonais, conservé comme transcription datée ; aucun arbitrage silencieux entre marchés. Les5C5/7C5 diffèrent par hauteur 1 080/1 300 mm, masses 765 (860)/835 (935) kg et carburant 90/92 L, pas par le FAD. Le service continu, la cuve et le maximum mécanique restent non qualifiés.",
+      "newQualificationId": "875daa84764254832ffa529a8165708fe63a24147834add10fa08d638bd478c2",
+      "previousDecision": "qualified",
+      "previousQualificationId": null
+    }
+  ],
+  "counts": {
+    "reviewed": 15,
+    "corrected": 2,
+    "newQualifications": 2,
+    "needsCorrection": 13,
+    "admissions": 0
+  },
+  "separation": "Les deux qualifications AIRMAN restent sur leur branche de continuation, sans retarder ni modifier le commit commun434. Les434 reçus de la branche prioritaire restent valides dans leur corpus ; ils ne sont pas automatiquement transférables à ce corpus AIRMAN.",
+  "amendment": {
+    "path": "src/data/imports/catalog-amendments-reviewed-2026-11-16-airman.json",
+    "rows": 2,
+    "addedEvidenceEvents": 4,
+    "previousEvidenceEvents": 39207,
+    "evidenceEvents": 39211
+  },
+  "status": "prepared",
+  "qualificationHistory": {
+    "previousReceipts": 5231,
+    "added": 2,
+    "currentReceipts": 5233,
+    "previousReceiptsUnchanged": true
+  },
+  "validation": {
+    "checkedAt": "2026-11-16T19:03:31.259639+00:00",
+    "node": "24.22.2",
+    "pnpm": "10.34.4",
+    "securityAudit": "passed; correctif Zod attesté, zéro avis bloquant, aucun avis globalement ignoré",
+    "lintSource": "passed",
+    "validateSource": "passed",
+    "types": {
+      "files": 25981,
+      "errors": 0,
+      "warnings": 0,
+      "hints": 10
+    },
+    "tests": {
+      "files": 241,
+      "passed": 2532,
+      "failed": 0
+    },
+    "targeted": {
+      "files": 3,
+      "passed": 20
+    },
+    "logsSha256": {
+      "security-audit.log": "5eef02c00606753f3397f3d5ce0eda258aac995e026e624a50d7e3f3103c748c",
+      "lint-source.log": "f9f1c4799227f61485f3db6e32c63f502a427ec404825dacdafa23a8944a04cb",
+      "validate-source.log": "9da2f41f34c37840cd376deee23c8c99d1a0c9ed5122e3716ee1f09cfbca4a20"
+    },
+    "siteBuilds": 0,
+    "ciRuns": 0
+  },
+  "nextSteps": "Le lot434 surdaf7726c3 garde la priorité et son unique build. Les deux corrections AIRMAN sont isolées pour un lot ultérieur : intégrer uniquement les dépendances nécessaires, recontrôler le corpus, les voisins et les sources du jour et consigner des reçus actuels si nécessaire. Les treize autres réserves restent explicites. Aucune approbation automatique ni nouvelle admission du16.",
+  "historicalSourceAuditNote": "Le dernier inventaire complet reste celui du run43901927469,109HTTP404/790non vérifiées ; rapport et inventaires antérieurs106/107/111/119 préservés. Les contrôles ciblés de cette continuation ne remplacent aucun inventaire."
+}

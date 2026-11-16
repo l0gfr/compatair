@@ -773455,7 +773455,87 @@
         "confidence": "B",
         "notes": "Fiche PR36 et notice complète relues, avec contrôle visuel de la page1. La notice donne 2.320 Liter/Stroke, sans pression de mesure appariée : valeur documentaire, pas nouveau paramètre per-action. La traction1938/380lb reste contradictoire et les dimensions270/280mm divergent ; aucune qualification ni admission pour cette page. GET complet SHA-256 69d806829bbc60a6476dd991fa86281120de73b305e521febcab30ee5d5bdf3b."
       }
+    },
+    {
+      "id": "review:2026-11-16-airman:airman-pds185sc-5c5:airman-pds185sc-5c5-reviewed-20261116-airman-0",
+      "evidenceId": "airman-pds185sc-5c5-reviewed-20261116-airman-0",
+      "productId": "airman-pds185sc-5c5",
+      "productType": "compressor",
+      "occurredAt": "2026-11-16",
+      "kind": "added",
+      "summary": "Fiche exacte AIRMAN Asia 284, tableau complet et voisine airman-pds185sc-7c5 relus. FAD de 5,2 m³/min et pression de fonctionnement de 0,7 MPa sont appariés dans la même ligne, soit 5 200 L/min à 7 bar. Les masses à sec/en service restent séparées. La longueur1 970 mm de la fiche Asia diffère du1 850 mm historique japonais, conservé comme transcription datée ; aucun arbitrage silencieux entre marchés. Les5C5/7C5 diffèrent par hauteur 1 080/1 300 mm, masses 765 (860)/835 (935) kg et carburant 90/92 L, pas par le FAD. Le service continu, la cuve et le maximum mécanique restent non qualifiés.",
+      "fingerprint": "f424f5bfa4926b8242d5cb58df093daecbdcf990b4128914b42e0307fe92fa07",
+      "snapshot": {
+        "id": "airman-pds185sc-5c5-reviewed-20261116-airman-0",
+        "sourceUrl": "https://airman-asia.com/product.php?catid=1&id=284",
+        "sourceLabel": "AIRMAN Asia, fiche exacte PDS185SC-5C5",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-16",
+        "confidence": "B",
+        "notes": "Fiche exacte AIRMAN Asia 284, tableau complet et voisine airman-pds185sc-7c5 relus. FAD de 5,2 m³/min et pression de fonctionnement de 0,7 MPa sont appariés dans la même ligne, soit 5 200 L/min à 7 bar. Les masses à sec/en service restent séparées. La longueur1 970 mm de la fiche Asia diffère du1 850 mm historique japonais, conservé comme transcription datée ; aucun arbitrage silencieux entre marchés. Les5C5/7C5 diffèrent par hauteur 1 080/1 300 mm, masses 765 (860)/835 (935) kg et carburant 90/92 L, pas par le FAD. Le service continu, la cuve et le maximum mécanique restent non qualifiés. GET complet SHA-256 4badec8c79924d19615b0efc2627ee4f2debed7d1b14c0559fc1101e5e3d6493."
+      }
+    },
+    {
+      "id": "review:2026-11-16-airman:airman-pds185sc-5c5:airman-pds185sc-5c5-reviewed-20261116-airman-1",
+      "evidenceId": "airman-pds185sc-5c5-reviewed-20261116-airman-1",
+      "productId": "airman-pds185sc-5c5",
+      "productType": "compressor",
+      "occurredAt": "2026-11-16",
+      "kind": "added",
+      "summary": "Fiche exacte AIRMAN Asia 284, tableau complet et voisine airman-pds185sc-7c5 relus. FAD de 5,2 m³/min et pression de fonctionnement de 0,7 MPa sont appariés dans la même ligne, soit 5 200 L/min à 7 bar. Les masses à sec/en service restent séparées. La longueur1 970 mm de la fiche Asia diffère du1 850 mm historique japonais, conservé comme transcription datée ; aucun arbitrage silencieux entre marchés. Les5C5/7C5 diffèrent par hauteur 1 080/1 300 mm, masses 765 (860)/835 (935) kg et carburant 90/92 L, pas par le FAD. Le service continu, la cuve et le maximum mécanique restent non qualifiés.",
+      "fingerprint": "11eacc574c63fec106be5ada8877e79fe6bda396a6e871a8d96b78786488868a",
+      "snapshot": {
+        "id": "airman-pds185sc-5c5-reviewed-20261116-airman-1",
+        "sourceUrl": "https://airman-asia.com/series.php?catid=1&sub_catid=263",
+        "sourceLabel": "AIRMAN Asia, tableau constructeur After Cooler Type",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-16",
+        "confidence": "B",
+        "notes": "Fiche exacte AIRMAN Asia 284, tableau complet et voisine airman-pds185sc-7c5 relus. FAD de 5,2 m³/min et pression de fonctionnement de 0,7 MPa sont appariés dans la même ligne, soit 5 200 L/min à 7 bar. Les masses à sec/en service restent séparées. La longueur1 970 mm de la fiche Asia diffère du1 850 mm historique japonais, conservé comme transcription datée ; aucun arbitrage silencieux entre marchés. Les5C5/7C5 diffèrent par hauteur 1 080/1 300 mm, masses 765 (860)/835 (935) kg et carburant 90/92 L, pas par le FAD. Le service continu, la cuve et le maximum mécanique restent non qualifiés. GET complet SHA-256 a62907fc8e7a8bb40c9e8dc4812bdf64898e20f577bf43dd6b4ffe8730865bc7."
+      }
+    },
+    {
+      "id": "review:2026-11-16-airman:airman-pds185sc-7c5:airman-pds185sc-7c5-reviewed-20261116-airman-0",
+      "evidenceId": "airman-pds185sc-7c5-reviewed-20261116-airman-0",
+      "productId": "airman-pds185sc-7c5",
+      "productType": "compressor",
+      "occurredAt": "2026-11-16",
+      "kind": "added",
+      "summary": "Fiche exacte AIRMAN Asia 285, tableau complet et voisine airman-pds185sc-5c5 relus. FAD de 5,2 m³/min et pression de fonctionnement de 0,7 MPa sont appariés dans la même ligne, soit 5 200 L/min à 7 bar. Les masses à sec/en service restent séparées. La longueur1 970 mm de la fiche Asia diffère du1 850 mm historique japonais, conservé comme transcription datée ; aucun arbitrage silencieux entre marchés. Les5C5/7C5 diffèrent par hauteur 1 080/1 300 mm, masses 765 (860)/835 (935) kg et carburant 90/92 L, pas par le FAD. Le service continu, la cuve et le maximum mécanique restent non qualifiés.",
+      "fingerprint": "ac24b361552f8c23589945739ce35c9f7881debdc3d78213d83909aeda8ddd68",
+      "snapshot": {
+        "id": "airman-pds185sc-7c5-reviewed-20261116-airman-0",
+        "sourceUrl": "https://airman-asia.com/product.php?catid=1&id=285",
+        "sourceLabel": "AIRMAN Asia, fiche exacte PDS185SC-7C5",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-16",
+        "confidence": "B",
+        "notes": "Fiche exacte AIRMAN Asia 285, tableau complet et voisine airman-pds185sc-5c5 relus. FAD de 5,2 m³/min et pression de fonctionnement de 0,7 MPa sont appariés dans la même ligne, soit 5 200 L/min à 7 bar. Les masses à sec/en service restent séparées. La longueur1 970 mm de la fiche Asia diffère du1 850 mm historique japonais, conservé comme transcription datée ; aucun arbitrage silencieux entre marchés. Les5C5/7C5 diffèrent par hauteur 1 080/1 300 mm, masses 765 (860)/835 (935) kg et carburant 90/92 L, pas par le FAD. Le service continu, la cuve et le maximum mécanique restent non qualifiés. GET complet SHA-256 80ccd3848bb00e4f3ee6cc34d05263e7ae4b490e9a53754d8dedeb7c9dd0b492."
+      }
+    },
+    {
+      "id": "review:2026-11-16-airman:airman-pds185sc-7c5:airman-pds185sc-7c5-reviewed-20261116-airman-1",
+      "evidenceId": "airman-pds185sc-7c5-reviewed-20261116-airman-1",
+      "productId": "airman-pds185sc-7c5",
+      "productType": "compressor",
+      "occurredAt": "2026-11-16",
+      "kind": "added",
+      "summary": "Fiche exacte AIRMAN Asia 285, tableau complet et voisine airman-pds185sc-5c5 relus. FAD de 5,2 m³/min et pression de fonctionnement de 0,7 MPa sont appariés dans la même ligne, soit 5 200 L/min à 7 bar. Les masses à sec/en service restent séparées. La longueur1 970 mm de la fiche Asia diffère du1 850 mm historique japonais, conservé comme transcription datée ; aucun arbitrage silencieux entre marchés. Les5C5/7C5 diffèrent par hauteur 1 080/1 300 mm, masses 765 (860)/835 (935) kg et carburant 90/92 L, pas par le FAD. Le service continu, la cuve et le maximum mécanique restent non qualifiés.",
+      "fingerprint": "b99a25478d16dcf24ae0403d4b4e4c232bcc36cee2555192cf5260ea342c0392",
+      "snapshot": {
+        "id": "airman-pds185sc-7c5-reviewed-20261116-airman-1",
+        "sourceUrl": "https://airman-asia.com/series.php?catid=1&sub_catid=263",
+        "sourceLabel": "AIRMAN Asia, tableau constructeur After Cooler Type",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-16",
+        "confidence": "B",
+        "notes": "Fiche exacte AIRMAN Asia 285, tableau complet et voisine airman-pds185sc-5c5 relus. FAD de 5,2 m³/min et pression de fonctionnement de 0,7 MPa sont appariés dans la même ligne, soit 5 200 L/min à 7 bar. Les masses à sec/en service restent séparées. La longueur1 970 mm de la fiche Asia diffère du1 850 mm historique japonais, conservé comme transcription datée ; aucun arbitrage silencieux entre marchés. Les5C5/7C5 diffèrent par hauteur 1 080/1 300 mm, masses 765 (860)/835 (935) kg et carburant 90/92 L, pas par le FAD. Le service continu, la cuve et le maximum mécanique restent non qualifiés. GET complet SHA-256 a62907fc8e7a8bb40c9e8dc4812bdf64898e20f577bf43dd6b4ffe8730865bc7."
+      }
     }
   ],
-  "historyVersion": "068253c0589cd7235456e835d390b4d36cc461f3f99d8d947db576669c524380"
+  "historyVersion": "5c4cbde33219c1e2cee7cf86b7af2d545144444f4b6e536e8a228b3f7713ef3b"
 }
