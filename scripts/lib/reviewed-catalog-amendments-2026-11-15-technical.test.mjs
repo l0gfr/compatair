@@ -1,3 +1,4 @@
+import { beforeReservedNovember16ReviewsIfApplied } from './reviewed-catalog-amendments-2026-11-16-reviews.mjs';
 import { createCatalogScope } from '../../src/domain/data-governance';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
@@ -77,7 +78,7 @@ describe('November 15 scoped technical and editorial followup', () => {
  });
  it('retains current scope arithmetic while projecting historical scope exactly', () => {
   const previous = createCatalogScope(compressors.map(beforeReservedNovember15TechnicalFollowup), tools.map(beforeReservedNovember15TechnicalFollowup));
-  const current = createCatalogScope(compressors, tools);
+  const current = createCatalogScope(compressors.map(beforeReservedNovember16ReviewsIfApplied), tools.map(beforeReservedNovember16ReviewsIfApplied));
   expect(previous.fixed_flow_tool_count).toBe(8823);
   expect(current.fixed_flow_tool_count).toBe(8802);
   expect(current.fixed_verdict_count).toBe(45409518);

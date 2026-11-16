@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La fiche publie une consommation et une pression d’alimentation, sans préciser le régime de consommation ni affirmer que cette valeur est mesurée à cette pression. Ces champs restent séparés et hors du calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/riveteuse-soartec-wx-5563.webp",
+		"src": "/images/products/riveteuse-soartec-wx-5563-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Soartec WX-5563",
 		"sourceUrl": "https://www.soartectools.com/products/3-16-in-industrial-air-hydraulic-riveter-3-jaws-wx-5563",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "soartec-wx-5563",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Soartec WX-5563. La fiche publie une consommation et une pression d’alimentation, sans préciser le régime de consommation ni affirmer que cette valeur est mesurée à cette pression. Ces champs restent séparés et hors du calcul de compatibilité. Fonction déclarée : 3/16\" Industrial Air Hydraulic Riveter 3 Jaws. Champ fabricant : Rivet Capacity in(mm) : 1/8”~3/16\" (3.2-4.0-4.8mm).",
+		"overview": "La WX-5563 est la riveteuse hydropneumatique à trois mors et course 17 mm. Sa capacité maximale est 4,8 mm en acier et aluminium, mais 4 mm en inox ; la WX-5553 réduit les capacités et la WX-5573 les augmente. Le matériau de fixation est donc déterminant. Les 2,1 cfm ne sont pas un volume par tir et restent hors calcul de cadence.",
 		"verifiedFacts": [
 			"Fonction déclarée : 3/16\" Industrial Air Hydraulic Riveter 3 Jaws.",
 			"Champ fabricant : Rivet Capacity in(mm) : 1/8”~3/16\" (3.2-4.0-4.8mm).",
@@ -159,6 +159,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 3b196df5e4750a500139eb1511ecad559dbc09b84ec78d5cb2324b9510c60c54. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:riveteuse-soartec-wx-5563:0",
+			"sourceUrl": "https://www.soartectools.com/products/3-16-in-industrial-air-hydraulic-riveter-3-jaws-wx-5563",
+			"sourceLabel": "Soartec, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La WX-5563 est la riveteuse hydropneumatique à trois mors et course 17 mm. Sa capacité maximale est 4,8 mm en acier et aluminium, mais 4 mm en inox ; la WX-5553 réduit les capacités et la WX-5573 les augmente. Le matériau de fixation est donc déterminant. Les 2,1 cfm ne sont pas un volume par tir et restent hors calcul de cadence. GET complet SHA-256 4113e3780af7e2173235bc6c48a794266dd060145534d35177569dafb08e7a68. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

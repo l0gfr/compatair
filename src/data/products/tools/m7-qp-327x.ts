@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/m7-qp-327x.webp",
+		"src": "/images/products/m7-qp-327x-technical-20261116-reviews.svg",
 		"alt": "Repères techniques M7 QP-327X, référence QP-327X",
 		"sourceUrl": "https://www.mighty-seven.com/product/270",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "M7 QP-327X, référence QP-327X. Consommation moyenne publiée : 169 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Diamètre de plateau : 7\" / 178 (mm). Filetage de broche : M14 x P2.0.",
+		"overview": "La QP-327X est une polisseuse d’angle de 406 mm pour plateau 178 mm et broche M14 × 2, à 2 500 tr/min. Elle se distingue de la QP-113 par le travail de polissage, le diamètre et l’interface, plutôt que par la seule consommation. La fiche donne 169 L/min moyens ; aucune consommation en charge n’est reconstruite depuis ce chiffre ou depuis le régime à vide.",
 		"verifiedFacts": [
 			"Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
 			"Consommation moyenne publiée : 169 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
@@ -126,6 +126,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation moyenne publiée : 169 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+		},
+		{
+			"id": "review:2026-11-16-reviews:m7-qp-327x:0",
+			"sourceUrl": "https://www.mighty-seven.com/product/270",
+			"sourceLabel": "M7, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La QP-327X est une polisseuse d’angle de 406 mm pour plateau 178 mm et broche M14 × 2, à 2 500 tr/min. Elle se distingue de la QP-113 par le travail de polissage, le diamètre et l’interface, plutôt que par la seule consommation. La fiche donne 169 L/min moyens ; aucune consommation en charge n’est reconstruite depuis ce chiffre ou depuis le régime à vide. GET complet SHA-256 60d74f338d2ace561539e3646587fe47f223585a813445024bbdd0c472ae0970. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

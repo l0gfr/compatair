@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-zipp-zag-9656r.webp",
+		"src": "/images/products/meuleuse-zipp-zag-9656r-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : ZIPP ZAG-9656R",
 		"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "zipp-zag-9656r",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZAG-9656R. La pression de mesure de la consommation n’est pas établie sur cette page. Aucun point de fonctionnement n’est inventé. Vitesse à vide : 11000 tr/min. Masse : 1.8 kg.",
+		"overview": "La ZAG-9656R est la meuleuse d’angle pour disque 4½ pouces, à 11 000 tr/min. La ZAG-965R reçoit un disque de 4 pouces ; la 966R passe à 5 pouces, tandis que la 966C ajoute un carter pour aspiration centrale. Le tableau conserve 1,8 kg et 230 mm dans ces variantes. Les 3,8 cfm sont moyens, avec une pression de mesure non établie pour cette ligne.",
 		"verifiedFacts": [
 			"Vitesse à vide : 11000 tr/min.",
 			"Masse : 1.8 kg.",
@@ -94,6 +94,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-zipp-zag-9656r:0",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+			"sourceLabel": "ZIPP, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La ZAG-9656R est la meuleuse d’angle pour disque 4½ pouces, à 11 000 tr/min. La ZAG-965R reçoit un disque de 4 pouces ; la 966R passe à 5 pouces, tandis que la 966C ajoute un carter pour aspiration centrale. Le tableau conserve 1,8 kg et 230 mm dans ces variantes. Les 3,8 cfm sont moyens, avec une pression de mesure non établie pour cette ligne. GET complet SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. Pages PDF lues : 123."
 		}
 	],
 	"fieldSources": {

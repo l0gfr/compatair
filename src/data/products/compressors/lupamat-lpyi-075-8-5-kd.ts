@@ -16,22 +16,17 @@ const product: CompressorInput = {
 	},
 	"tankLiters": 75,
 	"maxPressureBar": 8.5,
-	"fadCurve": [
-		{
-			"pressureBar": 8.5,
-			"litersPerMinute": 78
-		}
-	],
+	"fadCurve": [],
 	"intakeFlowLpm": 148,
 	"powerKw": 0.75,
 	"oilType": "oil-free",
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/lupamat-lpyi-075-8-5-kd.svg",
+		"src": "/images/products/lupamat-lpyi-075-8-5-kd-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Lupamat LPYI 075/8.5 KD",
 		"sourceUrl": "https://lupamat.com/pdf/Lupamat-EN-Katalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -56,10 +51,10 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Air livré à 8,5 bar",
-			"value": "78 L/min",
+			"label": "Débit documentaire, hors calcul",
+			"value": "78 L/min ; pression de mesure non qualifiée. Les anciens points sont conservés dans l’historique.",
 			"evidenceIds": [
-				"october4-lupamat-current-catalog-p22"
+				"review:2026-11-16-reviews:lupamat-lpyi-075-8-5-kd:0"
 			]
 		},
 		{
@@ -78,17 +73,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Lupamat LPYI 075/8.5 KD. 78 L/min déclarés à 8,5 bar. Receiver Mounted Cabinet Type.",
+		"overview": "Le LPYI075/8.5KD est le petit groupe en caisson sur réservoir 75 L, moteur 0,75 kW. Le LPYI075/8.5K est le caisson sans ce réservoir ; le LPYI075/10D est une autre configuration de pression et de cuve. La table distingue 148 L/min aspirés et 78 L/min FAD, mais n’associe pas explicitement ce FAD à une pression de mesure distincte du maximum 8,5 bar. Il reste documentaire, hors courbe de calcul.",
 		"verifiedFacts": [
-			"Configuration de pression documentée : 8,5 bar.",
-			"Cuve de stockage documentée : 75 L.",
-			"FAD sous pression identifié séparément des valeurs d’aspiration : 78 L/min déclarés à 8,5 bar."
+			"Le LPYI075/8.5KD est le petit groupe en caisson sur réservoir 75 L, moteur 0,75 kW.",
+			"Le LPYI075/8.5K est le caisson sans ce réservoir ; le LPYI075/10D est une autre configuration de pression et de cuve."
 		],
 		"limitations": [
 			"Le FAD est déclaré dans le tableau à côté de la pression de fonctionnement. Aucune norme ISO ni méthode d’essai supplémentaire n’est ajoutée.",
 			"Une seule version de pression par puissance et montage est retenue.",
 			"Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil."
+			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
+			"La courbe dimensionnante a été retirée après revue : la mesure FAD et son appariement à une pression ne sont pas suffisamment établis. Les valeurs documentaires restent conservées."
 		]
 	},
 	"evidence": [
@@ -101,6 +96,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-04",
 			"confidence": "B",
 			"notes": "SHA-256 3330cc258da3e7cf4f293c5af0da2ae3ced11d881237b550687f50e1f01fd978 de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:lupamat-lpyi-075-8-5-kd:0",
+			"sourceUrl": "https://lupamat.com/pdf/Lupamat-EN-Katalog.pdf",
+			"sourceLabel": "Lupamat, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le LPYI075/8.5KD est le petit groupe en caisson sur réservoir 75 L, moteur 0,75 kW. Le LPYI075/8.5K est le caisson sans ce réservoir ; le LPYI075/10D est une autre configuration de pression et de cuve. La table distingue 148 L/min aspirés et 78 L/min FAD, mais n’associe pas explicitement ce FAD à une pression de mesure distincte du maximum 8,5 bar. Il reste documentaire, hors courbe de calcul. GET complet SHA-256 3330cc258da3e7cf4f293c5af0da2ae3ced11d881237b550687f50e1f01fd978. Pages PDF lues : 22."
 		}
 	],
 	"fieldSources": {
@@ -114,7 +119,7 @@ const product: CompressorInput = {
 			"october4-lupamat-current-catalog-p22"
 		],
 		"fadCurve": [
-			"october4-lupamat-current-catalog-p22"
+			"review:2026-11-16-reviews:lupamat-lpyi-075-8-5-kd:0"
 		],
 		"intakeFlowLpm": [
 			"october4-lupamat-current-catalog-p22"

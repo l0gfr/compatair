@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/m7-nc-3831.webp",
+		"src": "/images/products/m7-nc-3831-technical-20261116-reviews.svg",
 		"alt": "Repères techniques M7 NC-3831, référence NC-3831",
 		"sourceUrl": "https://www.mighty-seven.com/product/8",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "M7 NC-3831, référence NC-3831. Consommation moyenne publiée : 283 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Carré d’entraînement : 3/8\". Plage de couple publiée : 80-120 (FT-LB) / 108-162 (Nm).",
+		"overview": "La NC-3831 est une clé à chocs 3/8 pouce Twin dog : 185 mm de long, 8 000 tr/min à vide et 108–162 Nm de plage de travail, avec un maximum déclaré de 244 Nm. La sélection porte sur le mécanisme et l’accès au boulon, sans confondre ce maximum avec une consigne de serrage. Les 283 L/min sont une moyenne publiée à côté de la pression de service ; aucun débit en charge n’est calculé à partir de cette moyenne.",
 		"verifiedFacts": [
 			"Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
 			"Consommation moyenne publiée : 283 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
@@ -147,6 +147,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation moyenne publiée : 283 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+		},
+		{
+			"id": "review:2026-11-16-reviews:m7-nc-3831:0",
+			"sourceUrl": "https://www.mighty-seven.com/product/8",
+			"sourceLabel": "M7, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La NC-3831 est une clé à chocs 3/8 pouce Twin dog : 185 mm de long, 8 000 tr/min à vide et 108–162 Nm de plage de travail, avec un maximum déclaré de 244 Nm. La sélection porte sur le mécanisme et l’accès au boulon, sans confondre ce maximum avec une consigne de serrage. Les 283 L/min sont une moyenne publiée à côté de la pression de service ; aucun débit en charge n’est calculé à partir de cette moyenne. GET complet SHA-256 9b21fe1f9ab30642a8adcd53432f439414296f08a49c7da632abb074a5e4cd12. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

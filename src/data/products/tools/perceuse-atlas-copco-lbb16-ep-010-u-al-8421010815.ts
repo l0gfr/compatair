@@ -22,10 +22,10 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/perceuse-atlas-copco-lbb16-ep-010-u-al-8421010815.webp",
+		"src": "/images/products/perceuse-atlas-copco-lbb16-ep-010-u-al-8421010815-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Atlas Copco LBB16 EP-010-U-AL (réf. 8421010815)",
 		"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "atlas-copco-lbb16-ep-010-u-al",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Atlas Copco LBB16 EP-010-U-AL (réf. 8421010815). Consommation maximale : 480 L/min à 6,3 bar. Consommations originales : 8 L/s ; 17 cfm. Vitesse à vide : 1000 tr/min.",
+		"overview": "La LBB16 EP-010-U-AL 8421010815 est la version à nez aluminium non peint de la perceuse non réversible 1 000 tr/min. Le tableau donne 10 mm de capacité et 290 W, contre 2 400 tr/min et 6,5 mm pour l’EP-024. Les 8 L/s à vide à 6,3 bar restent documentaires ; les versions U sans mandrin sont distinguées par leur référence.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 248.",
 			"Consommations originales : 8 L/s ; 17 cfm.",
@@ -101,6 +101,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "review:2026-11-16-reviews:perceuse-atlas-copco-lbb16-ep-010-u-al-8421010815:0",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf",
+			"sourceLabel": "Atlas Copco, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La LBB16 EP-010-U-AL 8421010815 est la version à nez aluminium non peint de la perceuse non réversible 1 000 tr/min. Le tableau donne 10 mm de capacité et 290 W, contre 2 400 tr/min et 6,5 mm pour l’EP-024. Les 8 L/s à vide à 6,3 bar restent documentaires ; les versions U sans mandrin sont distinguées par leur référence. GET complet SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Pages PDF lues : 3, 248."
 		}
 	],
 	"fieldSources": {
@@ -113,11 +123,15 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"documented-d-atlas-tools-p248"
+		],
+		"airflowBasis": [
+			"review:2026-11-16-reviews:perceuse-atlas-copco-lbb16-ep-010-u-al-8421010815:0"
 		]
 	},
 	"notes": [
 		"Consommation maximale : 480 L/min à 6,3 bar."
-	]
+	],
+	"airflowBasis": "free-speed"
 };
 
 export default product;

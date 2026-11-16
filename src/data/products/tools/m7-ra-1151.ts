@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/m7-ra-1151.webp",
+		"src": "/images/products/m7-ra-1151-technical-20261116-reviews.svg",
 		"alt": "Repères techniques M7 RA-1151, référence RA-1151",
 		"sourceUrl": "https://www.mighty-seven.com/product/382",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "M7 RA-1151, référence RA-1151. Consommation moyenne publiée : 127 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Taille d’embout : 1/4\" / 6.35 (mm). Plage de couple publiée : 1.4-3.7 (FT-LB) / 2-5 (Nm).",
+		"overview": "La RA-1151 est une visseuse à embrayage réglable, pour 2–5 Nm et 1 900 tr/min, avec porte-embout hexagonal 1/4 pouce. Elle se distingue des modèles à arrêt automatique de la gamme RA : un embrayage réglable ne documente pas, à lui seul, une fonction de coupure. Les 127 L/min publiés sont moyens et restent hors dimensionnement du compresseur.",
 		"verifiedFacts": [
 			"Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
 			"Consommation moyenne publiée : 127 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
@@ -119,6 +119,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation moyenne publiée : 127 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+		},
+		{
+			"id": "review:2026-11-16-reviews:m7-ra-1151:0",
+			"sourceUrl": "https://www.mighty-seven.com/product/382",
+			"sourceLabel": "M7, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La RA-1151 est une visseuse à embrayage réglable, pour 2–5 Nm et 1 900 tr/min, avec porte-embout hexagonal 1/4 pouce. Elle se distingue des modèles à arrêt automatique de la gamme RA : un embrayage réglable ne documente pas, à lui seul, une fonction de coupure. Les 127 L/min publiés sont moyens et restent hors dimensionnement du compresseur. GET complet SHA-256 f4539efc55cd1f57ee83b797f0709950229b4797a4fca4e0c94d6d8516096563. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

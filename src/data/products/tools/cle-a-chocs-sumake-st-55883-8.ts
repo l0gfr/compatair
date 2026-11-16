@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-sumake-st-55883-8.webp",
+		"src": "/images/products/cle-a-chocs-sumake-st-55883-8-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Sumake ST-55883-8",
 		"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "sumake-st-55883-8",
@@ -39,7 +39,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-55883-8. Consommation publiée, régime non précisé : 708 L/min à 6,2 bar. Consommation dans les unités du tableau : 708 L/min ; 25 cfm. Configuration complète publiée : ST-55883-8.",
+		"overview": "La ST-55883-8 est la clé à chocs Twin Hammer à carré 1 pouce et enclume allongée 8 pouces. Le modèle ST-55883 emploie l’enclume courte avec le même maximum publié de 3 388 Nm ; la ST-55886 passe au carré 1½ pouce et à 4 068 Nm. L’allonge sert l’accès, sans garantie de couple supplémentaire. Les 708 L/min ne sont pas associés à un régime de mesure établi.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 7.",
 			"Consommation dans les unités du tableau : 708 L/min ; 25 cfm.",
@@ -99,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-chocs-sumake-st-55883-8:0",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
+			"sourceLabel": "Sumake, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La ST-55883-8 est la clé à chocs Twin Hammer à carré 1 pouce et enclume allongée 8 pouces. Le modèle ST-55883 emploie l’enclume courte avec le même maximum publié de 3 388 Nm ; la ST-55886 passe au carré 1½ pouce et à 4 068 Nm. L’allonge sert l’accès, sans garantie de couple supplémentaire. Les 708 L/min ne sont pas associés à un régime de mesure établi. GET complet SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Pages PDF lues : 7."
 		}
 	],
 	"fieldSources": {

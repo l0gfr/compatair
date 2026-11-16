@@ -11,13 +11,13 @@ const product: ToolProfileInput = {
 	"mpn": "MP-1509BGS-38121-21",
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
-	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+	"demandExplanation": "Le tableau publie une consommation moyenne, sans pression de mesure associée. La valeur reste documentaire et la compatibilité demeure indéterminée.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-bande-michigan-pneumatic-mp-1509bgs-38121-21.webp",
+		"src": "/images/products/ponceuse-bande-michigan-pneumatic-mp-1509bgs-38121-21-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Michigan Pneumatic MP-1509BGS-38121-21",
 		"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/10-Grinders_V3.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "michigan-pneumatic-mp-1509bgs-38121-21",
@@ -29,44 +29,69 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Michigan Pneumatic MP-1509BGS-38121-21. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 4 lbs. Ligne technique constructeur : MP-1509BGS-38121-21* 12\" x 1\" 3/8\"-24 External Thread Side 9000 1.5 14-3/8\" 4 lbs 3/8\" 3/8\" 19 cfm.",
+		"overview": "Michigan Pneumatic MP-1509BGS-38121-21 : ponceuse à bande 12 × 1 pouces, roue motrice caoutchouc et poulie acier. Le suffixe -12 inverse les matériaux de ces deux roues ; la MP-1512BGS-38121-21 porte la vitesse à 12 000 tr/min, contre 9 000 pour la 1509. Les trois lignes conservent 1,5 hp et 4 lb.",
 		"verifiedFacts": [
-			"Masse publiée : 4 lbs.",
-			"Ligne technique constructeur : MP-1509BGS-38121-21* 12\" x 1\" 3/8\"-24 External Thread Side 9000 1.5 14-3/8\" 4 lbs 3/8\" 3/8\" 19 cfm."
+			"Bande : 12 × 1 pouces.",
+			"Roues, suffixe -21 : Roue motrice caoutchouc et poulie acier.",
+			"Vitesse maximale publiée : 9 000 tr/min.",
+			"Puissance publiée : 1,5 hp.",
+			"Longueur : 14⅜ pouces.",
+			"Masse : 4 lb.",
+			"Consommation moyenne, hors calcul : 19 cfm."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Données du catalogue constructeur archivé ; consommation moyenne ou de régime non précisé, sans certification du besoin maximal en charge.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Le tableau publie une consommation moyenne, sans pression de mesure associée. La valeur reste documentaire et la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "4 lbs",
+			"label": "Bande",
+			"value": "12 × 1 pouces",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-10-pdf-p9"
+				"review:2026-11-16-reviews:ponceuse-bande-michigan-pneumatic-mp-1509bgs-38121-21:0"
 			]
 		},
 		{
-			"label": "Ligne technique constructeur",
-			"value": "MP-1509BGS-38121-21* 12\" x 1\" 3/8\"-24 External Thread Side 9000 1.5 14-3/8\" 4 lbs 3/8\" 3/8\" 19 cfm",
+			"label": "Roues, suffixe -21",
+			"value": "Roue motrice caoutchouc et poulie acier",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-10-pdf-p9"
+				"review:2026-11-16-reviews:ponceuse-bande-michigan-pneumatic-mp-1509bgs-38121-21:0"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "Aucune pression de mesure de cette ligne de consommation n’est établie dans le tableau.",
+			"label": "Vitesse maximale publiée",
+			"value": "9 000 tr/min",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-10-pdf-p9"
+				"review:2026-11-16-reviews:ponceuse-bande-michigan-pneumatic-mp-1509bgs-38121-21:0"
+			]
+		},
+		{
+			"label": "Puissance publiée",
+			"value": "1,5 hp",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-bande-michigan-pneumatic-mp-1509bgs-38121-21:0"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "14⅜ pouces",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-bande-michigan-pneumatic-mp-1509bgs-38121-21:0"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "4 lb",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-bande-michigan-pneumatic-mp-1509bgs-38121-21:0"
 			]
 		},
 		{
 			"label": "Consommation moyenne, hors calcul",
 			"value": "19 cfm",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-10-pdf-p9"
+				"review:2026-11-16-reviews:ponceuse-bande-michigan-pneumatic-mp-1509bgs-38121-21:0"
 			]
 		}
 	],
@@ -80,21 +105,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 68a07091e12cedba8fd2c428b652540aa3e7b34b0fa2da703b0f9115ca7e8705. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-bande-michigan-pneumatic-mp-1509bgs-38121-21:0",
+			"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/10-Grinders_V3.pdf",
+			"sourceLabel": "Michigan Pneumatic, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Michigan Pneumatic MP-1509BGS-38121-21 : ponceuse à bande 12 × 1 pouces, roue motrice caoutchouc et poulie acier. Le suffixe -12 inverse les matériaux de ces deux roues ; la MP-1512BGS-38121-21 porte la vitesse à 12 000 tr/min, contre 9 000 pour la 1509. Les trois lignes conservent 1,5 hp et 4 lb. GET complet SHA-256 68a07091e12cedba8fd2c428b652540aa3e7b34b0fa2da703b0f9115ca7e8705. Pages PDF lues : 9."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october2b-tools-oct2b-michigan-10-pdf-p9"
-		],
-		"workingPressureBar": [
-			"october2b-tools-oct2b-michigan-10-pdf-p9"
+			"review:2026-11-16-reviews:ponceuse-bande-michigan-pneumatic-mp-1509bgs-38121-21:0"
 		],
 		"demandExplanation": [
-			"october2b-tools-oct2b-michigan-10-pdf-p9"
+			"review:2026-11-16-reviews:ponceuse-bande-michigan-pneumatic-mp-1509bgs-38121-21:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-reviews:ponceuse-bande-michigan-pneumatic-mp-1509bgs-38121-21:0"
 		]
 	},
 	"notes": [
-		"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité."
+		"Le tableau publie une consommation moyenne, sans pression de mesure associée. La valeur reste documentaire et la compatibilité demeure indéterminée."
 	]
 };
 

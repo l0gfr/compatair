@@ -25,13 +25,13 @@ const product: ToolProfileInput = {
     }
   },
   "image": {
-    "src": "/images/products/pistolet-peinture-hvlp-binks-trophy-2465-14hv-31p0.svg",
+    "src": "/images/products/pistolet-peinture-hvlp-binks-trophy-2465-14hv-31p0-technical-20261116-reviews.svg",
     "alt": "Repères techniques : Binks Trophy 2465-14HV-31P0",
     "sourceUrl": "https://binks.canto.com/direct/document/78mdg345tt4njcqbt148c0vi6l/iNoIBW3OrwIW4t-NXn3A7HRwFas/original?content-type=application%2Fpdf&name=77-3026+ENGLISH.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "editorial": {
-    "overview": "Binks Trophy 2465-14HV-31P0. Les conditions de référence du volume normalisé et/ou le régime de mesure manquent. Le débit publié reste hors du calcul FAD. Assemblage 2465-14HV-31P0, buse 1.4 mm, chapeau 31H, HVLP, alimentation pressure / siphon sans godet fourni.",
+    "overview": "Le Trophy 2465-14HV-31P0 utilise une buse 1,4 mm, un chapeau 31H et une pointe d’aiguille plastique. Le tableau du 31H donne 10,5 SCFM à 17 psi d’entrée, contre 18,5 à 24 psi pour le 32H ; la pression de chapeau HVLP de 10 psi constitue une autre mesure. Ces valeurs originales restent séparées et hors conversion dimensionnante. Le choix du montage dépend du produit et de sa viscosité.",
     "verifiedFacts": [
       "Code assemblage complet, publié littéralement : 2465-14HV-31P0.",
       "Buse produit publiée : 1.4 mm.",
@@ -128,6 +128,16 @@ const product: ToolProfileInput = {
       "retrievedAt": "2026-10-07",
       "confidence": "B",
       "notes": "Réponse primaire SHA-256 c1b798e1688d1342546bfd005c92624a43602345e93a6e4e23b1bc8513c55914. Déclaration fabricant, sans essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-reviews:pistolet-peinture-hvlp-binks-trophy-2465-14hv-31p0:0",
+      "sourceUrl": "https://binks.canto.com/direct/document/78mdg345tt4njcqbt148c0vi6l/iNoIBW3OrwIW4t-NXn3A7HRwFas/original?content-type=application%2Fpdf&name=77-3026+ENGLISH.pdf",
+      "sourceLabel": "Binks, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "Le Trophy 2465-14HV-31P0 utilise une buse 1,4 mm, un chapeau 31H et une pointe d’aiguille plastique. Le tableau du 31H donne 10,5 SCFM à 17 psi d’entrée, contre 18,5 à 24 psi pour le 32H ; la pression de chapeau HVLP de 10 psi constitue une autre mesure. Ces valeurs originales restent séparées et hors conversion dimensionnante. Le choix du montage dépend du produit et de sa viscosité. GET complet SHA-256 c1b798e1688d1342546bfd005c92624a43602345e93a6e4e23b1bc8513c55914. Pages PDF lues : 16, 17."
     }
   ],
   "fieldSources": {

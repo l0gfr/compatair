@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-vibrante-gison-gp-935sd.webp",
+		"src": "/images/products/ponceuse-vibrante-gison-gp-935sd-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : GISON GP-935SD",
 		"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "gison-gp-935sd",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-935SD. Consommation de régime non précisé : 400 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 2.20 kg. Longueur : 275 mm.",
+		"overview": "La GP-935SD est une ponceuse vibrante à aspiration autonome et plateau autoagrippant 112 × 220 mm, orbite de 5 mm. La GP-934SD réduit le plateau à 93 × 176 mm et passe à 9 000 tr/min, contre 8 000 pour la 935. La GP-937S est un modèle sans aspiration plus compact. Les 0,40 m³/min publiés n’ont pas de régime explicite de consommation.",
 		"verifiedFacts": [
 			"Masse : 2.20 kg.",
 			"Longueur : 275 mm.",
@@ -112,6 +112,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-vibrante-gison-gp-935sd:0",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
+			"sourceLabel": "GISON, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La GP-935SD est une ponceuse vibrante à aspiration autonome et plateau autoagrippant 112 × 220 mm, orbite de 5 mm. La GP-934SD réduit le plateau à 93 × 176 mm et passe à 9 000 tr/min, contre 8 000 pour la 935. La GP-937S est un modèle sans aspiration plus compact. Les 0,40 m³/min publiés n’ont pas de régime explicite de consommation. GET complet SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Pages PDF lues : 41."
 		}
 	],
 	"fieldSources": {

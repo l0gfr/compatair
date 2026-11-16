@@ -20,7 +20,7 @@ const product: CompressorInput = {
 	"fadCurve": [
 		{
 			"pressureBar": 13,
-			"litersPerMinute": 1200
+			"litersPerMinute": 3870
 		}
 	],
 	"powerKw": 30,
@@ -28,10 +28,10 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/dalgakiran-inversys-plus-pm-30.svg",
+		"src": "/images/products/dalgakiran-inversys-plus-pm-30-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Dalgakiran INVERSYS PLUS PM 30",
 		"sourceUrl": "https://www.dalgakiran.com/Files/compressor-catalogue.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -56,8 +56,8 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Air livré à 13 bar",
-			"value": "1 200 L/min",
+			"label": "Débit minimum de modulation, hors capacité maximale",
+			"value": "1 200 L/min ; valeur minimale, pas la capacité du groupe.",
 			"evidenceIds": [
 				"october4-dalgakiran-catalog-p20"
 			]
@@ -68,14 +68,20 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october4-dalgakiran-catalog-p20"
 			]
+		},
+		{
+			"label": "FAD maximal à 13 bar",
+			"value": "3870 L/min ; minimum et maximum distingués dans le tableau constructeur",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:dalgakiran-inversys-plus-pm-30:0"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "Dalgakiran INVERSYS PLUS PM 30. 1 200 L/min déclarés à 13 bar. Base Mounted, stockage d’air externe.",
+		"overview": "L’INVERSYS PLUS PM30 au sol module à 13 bar de 1,20 à 3,87 m³/min. L’ancien point 1 200 L/min était le minimum ; la capacité maximale est corrigée à 3 870 L/min. Le PM22 plafonne à 2,65 m³/min au même point. La puissance de 30 kW et le montage au sol distinguent la configuration ; aucun taux de marche ni volume de stockage externe n’est déduit de la modulation.",
 		"verifiedFacts": [
-			"Configuration de pression documentée : 13 bar.",
-			"Montage sans réservoir de stockage intégré explicitement documenté.",
-			"FAD sous pression identifié séparément des valeurs d’aspiration : 1 200 L/min déclarés à 13 bar."
+			"L’INVERSYS PLUS PM30 au sol module à 13 bar de 1,20 à 3,87 m³/min.",
+			"L’ancien point 1 200 L/min était le minimum ; la capacité maximale est corrigée à 3 870 L/min."
 		],
 		"limitations": [
 			"Une seule configuration de pression est retenue par modèle. Les autres lignes de pression ne sont pas assemblées en une courbe mesurée.",
@@ -106,6 +112,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-04",
 			"confidence": "B",
 			"notes": "SHA-256 aabb3138e3f934f46cf268df131ac7aa179a19ac716715bf2661475fef36438b de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:dalgakiran-inversys-plus-pm-30:0",
+			"sourceUrl": "https://www.dalgakiran.com/Files/compressor-catalogue.pdf",
+			"sourceLabel": "Dalgakiran, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’INVERSYS PLUS PM30 au sol module à 13 bar de 1,20 à 3,87 m³/min. L’ancien point 1 200 L/min était le minimum ; la capacité maximale est corrigée à 3 870 L/min. Le PM22 plafonne à 2,65 m³/min au même point. La puissance de 30 kW et le montage au sol distinguent la configuration ; aucun taux de marche ni volume de stockage externe n’est déduit de la modulation. GET complet SHA-256 aabb3138e3f934f46cf268df131ac7aa179a19ac716715bf2661475fef36438b. Pages PDF lues : 20, 17."
 		}
 	],
 	"fieldSources": {
@@ -122,7 +138,7 @@ const product: CompressorInput = {
 			"october4-dalgakiran-catalog-p20"
 		],
 		"fadCurve": [
-			"october4-dalgakiran-catalog-p20"
+			"review:2026-11-16-reviews:dalgakiran-inversys-plus-pm-30:0"
 		],
 		"powerKw": [
 			"october4-dalgakiran-catalog-p20"

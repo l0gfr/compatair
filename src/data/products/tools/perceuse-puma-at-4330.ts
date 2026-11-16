@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/perceuse-puma-at-4330.webp",
+		"src": "/images/products/perceuse-puma-at-4330-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : PUMA AT-4330",
 		"sourceUrl": "https://www.pumaair.com/product-3-8----1-4--Air-Drill-3-8-1-4AirDrill.html",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "puma-at-4330",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "PUMA AT-4330. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Chuck Size / inch : 3/8. Chuck Size / mm : 10.",
+		"overview": "L’AT-4330 est la perceuse droite non réversible à mandrin 10 mm, à 2 800 tr/min et broche 3/8-24. La 4331R ajoute l’inversion et fonctionne à 2 000 tr/min ; la 4332 atteint 5 600 tr/min. Le diamètre de foret, le sens de rotation et la vitesse orientent le choix. La consommation moyenne de 340 L/min reste hors dimensionnement.",
 		"verifiedFacts": [
 			"Chuck Size / inch : 3/8.",
 			"Chuck Size / mm : 10.",
@@ -143,6 +143,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 78df930e44470c4e289afc479656b929991d1fda5d136820c59619bc173068bc. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:perceuse-puma-at-4330:0",
+			"sourceUrl": "https://www.pumaair.com/product-3-8----1-4--Air-Drill-3-8-1-4AirDrill.html",
+			"sourceLabel": "PUMA, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’AT-4330 est la perceuse droite non réversible à mandrin 10 mm, à 2 800 tr/min et broche 3/8-24. La 4331R ajoute l’inversion et fonctionne à 2 000 tr/min ; la 4332 atteint 5 600 tr/min. Le diamètre de foret, le sens de rotation et la vitesse orientent le choix. La consommation moyenne de 340 L/min reste hors dimensionnement. GET complet SHA-256 78df930e44470c4e289afc479656b929991d1fda5d136820c59619bc173068bc. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

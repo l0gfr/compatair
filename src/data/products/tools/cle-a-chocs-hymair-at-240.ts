@@ -10,18 +10,14 @@ const product: ToolProfileInput = {
 	"model": "AT-240",
 	"mpn": "AT-240",
 	"demandModel": "variable-volume",
-	"workingPressureBar": {
-		"min": 6.2,
-		"typical": 6.2,
-		"max": 6.2
-	},
-	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+	"workingPressureBar": {},
+	"demandExplanation": "La consommation publiée est une moyenne. La consigne de pression de service ne définit pas une mesure maximale en charge ; la compatibilité demeure indéterminée.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-hymair-at-240.webp",
+		"src": "/images/products/cle-a-chocs-hymair-at-240-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Hymair AT-240",
 		"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SAUfKpBkCgyL&dp=GvUApKfKKUAU",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "hymair-at-240",
@@ -33,51 +29,93 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Hymair AT-240. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Vitesse à vide : 8,000 rpm. Masse publiée (kg/lb) : 2.60/5.73.",
+		"overview": "Hymair AT-240 : clé à chocs à double marteau et carré 1/2 pouce, 660 Nm maximum publiés, réglage cinq positions dans les deux sens et échappement avant. La AT-241 du même tableau passe à quatre positions et à un échappement dans la poignée. La AT-240 mesure 190 × 187 mm pour 2,60 kg.",
 		"verifiedFacts": [
-			"Vitesse à vide : 8,000 rpm.",
-			"Masse publiée (kg/lb) : 2.60/5.73.",
-			"Longueur × hauteur : 190x187 mm."
+			"Carré : 1/2 pouce.",
+			"Mécanisme : Double marteau.",
+			"Couple maximum publié : 660 Nm.",
+			"Réglage : Cinq positions, marche avant et arrière.",
+			"Échappement : Avant.",
+			"Vitesse à vide : 8 000 tr/min.",
+			"Dimensions longueur × hauteur : 190 × 187 mm.",
+			"Masse : 2,60 kg.",
+			"Consommation moyenne : 8 CFM.",
+			"Pression de service : 6,2 bar."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"La consommation publiée est une moyenne. La consigne de pression de service ne définit pas une mesure maximale en charge ; la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
+			"label": "Carré",
+			"value": "1/2 pouce",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-hymair-at-240:0"
+			]
+		},
+		{
+			"label": "Mécanisme",
+			"value": "Double marteau",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-hymair-at-240:0"
+			]
+		},
+		{
+			"label": "Couple maximum publié",
+			"value": "660 Nm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-hymair-at-240:0"
+			]
+		},
+		{
+			"label": "Réglage",
+			"value": "Cinq positions, marche avant et arrière",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-hymair-at-240:0"
+			]
+		},
+		{
+			"label": "Échappement",
+			"value": "Avant",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-hymair-at-240:0"
+			]
+		},
+		{
 			"label": "Vitesse à vide",
-			"value": "8,000 rpm",
+			"value": "8 000 tr/min",
 			"evidenceIds": [
-				"october2-tools-steed-2-p28"
+				"review:2026-11-16-reviews:cle-a-chocs-hymair-at-240:0"
 			]
 		},
 		{
-			"label": "Masse publiée (kg/lb)",
-			"value": "2.60/5.73",
+			"label": "Dimensions longueur × hauteur",
+			"value": "190 × 187 mm",
 			"evidenceIds": [
-				"october2-tools-steed-2-p28"
+				"review:2026-11-16-reviews:cle-a-chocs-hymair-at-240:0"
 			]
 		},
 		{
-			"label": "Longueur × hauteur",
-			"value": "190x187 mm",
+			"label": "Masse",
+			"value": "2,60 kg",
 			"evidenceIds": [
-				"october2-tools-steed-2-p28"
+				"review:2026-11-16-reviews:cle-a-chocs-hymair-at-240:0"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "WORKING PRESSURE : 6.2 Bar",
+			"label": "Consommation moyenne",
+			"value": "8 CFM",
 			"evidenceIds": [
-				"october2-tools-steed-2-p28"
+				"review:2026-11-16-reviews:cle-a-chocs-hymair-at-240:0"
 			]
 		},
 		{
-			"label": "Consommation moyenne, hors calcul",
-			"value": "8 cfm",
+			"label": "Pression de service",
+			"value": "6,2 bar",
 			"evidenceIds": [
-				"october2-tools-steed-2-p28"
+				"review:2026-11-16-reviews:cle-a-chocs-hymair-at-240:0"
 			]
 		}
 	],
@@ -91,21 +129,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : b9c6143d5502d453b5b2e0846bcfec263fb763d42a478fbc52089a41725e7d8d. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-chocs-hymair-at-240:0",
+			"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SAUfKpBkCgyL&dp=GvUApKfKKUAU",
+			"sourceLabel": "Hymair, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Hymair AT-240 : clé à chocs à double marteau et carré 1/2 pouce, 660 Nm maximum publiés, réglage cinq positions dans les deux sens et échappement avant. La AT-241 du même tableau passe à quatre positions et à un échappement dans la poignée. La AT-240 mesure 190 × 187 mm pour 2,60 kg. GET complet SHA-256 b9c6143d5502d453b5b2e0846bcfec263fb763d42a478fbc52089a41725e7d8d. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october2-tools-steed-2-p28"
-		],
-		"workingPressureBar": [
-			"october2-tools-steed-2-p28"
+			"review:2026-11-16-reviews:cle-a-chocs-hymair-at-240:0"
 		],
 		"demandExplanation": [
-			"october2-tools-steed-2-p28"
+			"review:2026-11-16-reviews:cle-a-chocs-hymair-at-240:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-reviews:cle-a-chocs-hymair-at-240:0"
 		]
 	},
 	"notes": [
-		"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité."
+		"La consommation publiée est une moyenne. La consigne de pression de service ne définit pas une mesure maximale en charge ; la compatibilité demeure indéterminée."
 	]
 };
 

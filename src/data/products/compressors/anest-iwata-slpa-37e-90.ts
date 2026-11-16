@@ -34,10 +34,10 @@ const product: CompressorInput = {
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/anest-iwata-slpa-37e-90.svg",
+    "src": "/images/products/anest-iwata-slpa-37e-90-technical-20261116-reviews.svg",
     "alt": "Repères techniques : Anest Iwata SLPA-37E-90",
     "sourceUrl": "https://anest-iwata.com.au/product-guides/100-oil-free-scroll/air-energy-catalogue.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "specifications": [
     {
@@ -126,7 +126,7 @@ const product: CompressorInput = {
     }
   ],
   "editorial": {
-    "overview": "Anest Iwata SLPA-37E-90. 404 L/min déclarés à 8 bar. Configuration publiée : Scroll oil-free ; w/Tank.",
+    "overview": "Le SLPA37E-90 est le scroll sans huile avec cuve 90 L, alimentation 415 V/50 Hz triphasée et moteur 3,7 kW. Le FAD 404 L/min est mesuré au maximum de travail 8 bar selon la note de la brochure. Le SLPA37E est le groupe standard sans cette cuve ; le SLPA37ED-90 ajoute le séchage. Le stockage et le traitement sont distincts du débit, sans cycle de service numérique supposé.",
     "verifiedFacts": [
       "Débit réellement livré identifié séparément du déplacement : 404 L/min déclarés à 8 bar.",
       "Maximum de travail publié : 8 bar.",
@@ -151,6 +151,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-08",
       "confidence": "B",
       "notes": "SHA-256 aff4c508ab6c389b0b3a5d370302d098cab772d9a532b44ba767031ae36371b8 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-reviews:anest-iwata-slpa-37e-90:0",
+      "sourceUrl": "https://anest-iwata.com.au/product-guides/100-oil-free-scroll/air-energy-catalogue.pdf",
+      "sourceLabel": "Anest Iwata, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "Le SLPA37E-90 est le scroll sans huile avec cuve 90 L, alimentation 415 V/50 Hz triphasée et moteur 3,7 kW. Le FAD 404 L/min est mesuré au maximum de travail 8 bar selon la note de la brochure. Le SLPA37E est le groupe standard sans cette cuve ; le SLPA37ED-90 ajoute le séchage. Le stockage et le traitement sont distincts du débit, sans cycle de service numérique supposé. GET complet SHA-256 aff4c508ab6c389b0b3a5d370302d098cab772d9a532b44ba767031ae36371b8. Pages PDF lues : 5."
     }
   ],
   "fieldSources": {

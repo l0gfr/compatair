@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Le tableau établit les caractéristiques individuelles. La consommation normale n’est pas explicitement rattachée à un régime en charge et à une pression de mesure.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-vibrante-kuken-kst-7s.webp",
+		"src": "/images/products/ponceuse-vibrante-kuken-kst-7s-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : KUKEN KST-7S",
 		"sourceUrl": "https://www.kuken.co.jp/en/catalogue/pdf/best_selection.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "kuken-kst-7s",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "KUKEN KST-7S. Le tableau établit les caractéristiques individuelles. La consommation normale n’est pas explicitement rattachée à un régime en charge et à une pression de mesure. Masse publiée : 1.3 kg (2.9 lb). Longueur publiée : 282.0 mm.",
+		"overview": "La KST-7S est une ponceuse à mouvement rectiligne, course de 6 mm, semelle 175 × 75 mm et 7 000 courses/min. Les KOS-42 et KOS-42S utilisent une orbite de 3 mm et une semelle 110 × 75 mm : ce sont d’autres mouvements de finition. La KST-7S mesure 282 mm et pèse 1,3 kg. Les 0,25 m³/min du tableau n’ont pas de régime de consommation établi.",
 		"verifiedFacts": [
 			"Masse publiée : 1.3 kg (2.9 lb).",
 			"Longueur publiée : 282.0 mm."
@@ -74,6 +74,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 0da76488e568242877887f713ecd81203eaa9f2322c20eb65648d25bb7e71cc7. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-vibrante-kuken-kst-7s:0",
+			"sourceUrl": "https://www.kuken.co.jp/en/catalogue/pdf/best_selection.pdf",
+			"sourceLabel": "KUKEN, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La KST-7S est une ponceuse à mouvement rectiligne, course de 6 mm, semelle 175 × 75 mm et 7 000 courses/min. Les KOS-42 et KOS-42S utilisent une orbite de 3 mm et une semelle 110 × 75 mm : ce sont d’autres mouvements de finition. La KST-7S mesure 282 mm et pèse 1,3 kg. Les 0,25 m³/min du tableau n’ont pas de régime de consommation établi. GET complet SHA-256 0da76488e568242877887f713ecd81203eaa9f2322c20eb65648d25bb7e71cc7. Pages PDF lues : 22."
 		}
 	],
 	"fieldSources": {

@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Consommation moyenne publiée sans facteur de marche ni point de pression de mesure : aucun débit en charge déterministe ne peut être retenu.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/derouilleur-a-aiguilles-kuani-ki-4716.webp",
+		"src": "/images/products/derouilleur-a-aiguilles-kuani-ki-4716-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : KUANI KI-4716",
 		"sourceUrl": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "kuani-ki-4716",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "KUANI KI-4716. Consommation moyenne publiée sans facteur de marche ni point de pression de mesure : aucun débit en charge déterministe ne peut être retenu. Cadence de frappe publiée (coups/min) : 3,700. Course du piston (mm) : 33.",
+		"overview": "Le KI-4716 porte 19 aiguilles de 3 × 180 mm, avec une option 29 aiguilles de 2 mm. Il annonce 3 700 coups/min, 33 mm de course, 375 mm et 2,8 kg. Le KI-4723 utilise 12 aiguilles et le KI-4731 un corps long de 600 mm : le faisceau et l’accès changent. Les 283 L/min moyens ne sont pas assimilés à un débit en charge.",
 		"verifiedFacts": [
 			"Cadence de frappe publiée (coups/min) : 3,700.",
 			"Course du piston (mm) : 33.",
@@ -137,6 +137,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:derouilleur-a-aiguilles-kuani-ki-4716:0",
+			"sourceUrl": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf",
+			"sourceLabel": "KUANI, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le KI-4716 porte 19 aiguilles de 3 × 180 mm, avec une option 29 aiguilles de 2 mm. Il annonce 3 700 coups/min, 33 mm de course, 375 mm et 2,8 kg. Le KI-4723 utilise 12 aiguilles et le KI-4731 un corps long de 600 mm : le faisceau et l’accès changent. Les 283 L/min moyens ne sont pas assimilés à un débit en charge. GET complet SHA-256 569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba. Pages PDF lues : 64."
 		}
 	],
 	"fieldSources": {

@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-bande-sumake-st-bs111g.webp",
+		"src": "/images/products/ponceuse-bande-sumake-st-bs111g-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Sumake ST-BS111G",
 		"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "sumake-st-bs111g",
@@ -39,7 +39,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-BS111G. Consommation publiée, régime non précisé : 480 L/min à 6,2 bar. Consommation dans les unités du tableau : 480 L/min ; 17 cfm. Configuration complète publiée : ST-BS111G.",
+		"overview": "La ST-BS111G est la ponceuse à bande 20 × 520 mm dont le bras peut se plier à 55°, avec poulie en fer. La ST-BS112G remplace cette poulie par du caoutchouc ; la ST-BS110G garde un bras différent et mesure 430 mm, contre 370 mm pour la 111G. La vitesse reste 16 000 tr/min. Les 480 L/min sont conservés hors calcul, sans régime documentaire explicite.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 49.",
 			"Consommation dans les unités du tableau : 480 L/min ; 17 cfm.",
@@ -99,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-bande-sumake-st-bs111g:0",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
+			"sourceLabel": "Sumake, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La ST-BS111G est la ponceuse à bande 20 × 520 mm dont le bras peut se plier à 55°, avec poulie en fer. La ST-BS112G remplace cette poulie par du caoutchouc ; la ST-BS110G garde un bras différent et mesure 430 mm, contre 370 mm pour la 111G. La vitesse reste 16 000 tr/min. Les 480 L/min sont conservés hors calcul, sans régime documentaire explicite. GET complet SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Pages PDF lues : 49."
 		}
 	],
 	"fieldSources": {

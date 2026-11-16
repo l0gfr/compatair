@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/m7-ne-321.webp",
+		"src": "/images/products/m7-ne-321-technical-20261116-reviews.svg",
 		"alt": "Repères techniques M7 NE-321, référence NE-321",
 		"sourceUrl": "https://www.mighty-seven.com/product/123",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "M7 NE-321, référence NE-321. Consommation moyenne publiée : 113,28 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Carré d’entraînement : 3/8\". Plage de couple publiée : 10-35 (FT-LB) / 13.5-47 (Nm).",
+		"overview": "La NE-321 est un cliquet 3/8 pouce de 265 mm, à 160 tr/min. La fiche sépare la plage de travail 13,5–47 Nm du maximum de 68 Nm ; la gamme comprend aussi des modèles courts, pour lesquels l’accès et le bras de levier changent. Les 113,28 L/min sont explicitement moyens. Le moteur garde un résultat non conclusif plutôt que de les traiter comme une consommation continue.",
 		"verifiedFacts": [
 			"Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
 			"Consommation moyenne publiée : 113,28 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
@@ -133,6 +133,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation moyenne publiée : 113,28 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+		},
+		{
+			"id": "review:2026-11-16-reviews:m7-ne-321:0",
+			"sourceUrl": "https://www.mighty-seven.com/product/123",
+			"sourceLabel": "M7, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La NE-321 est un cliquet 3/8 pouce de 265 mm, à 160 tr/min. La fiche sépare la plage de travail 13,5–47 Nm du maximum de 68 Nm ; la gamme comprend aussi des modèles courts, pour lesquels l’accès et le bras de levier changent. Les 113,28 L/min sont explicitement moyens. Le moteur garde un résultat non conclusif plutôt que de les traiter comme une consommation continue. GET complet SHA-256 1298bdac30885832dbbf485ad3759e7393c59c96d50f1266d3f5684f43b3e8d5. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

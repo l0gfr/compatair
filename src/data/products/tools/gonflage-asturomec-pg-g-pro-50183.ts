@@ -17,10 +17,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/gonflage-asturomec-pg-g-pro-50183.svg",
+		"src": "/images/products/gonflage-asturomec-pg-g-pro-50183-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Asturomec PG/G PRO (réf. 50183)",
 		"sourceUrl": "https://walmec.com/it/cataloghi/catalogo-asturomec/AD_13_24_IT.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "asturomec-pg-g-pro",
@@ -32,13 +32,17 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Asturomec PG/G PRO (réf. 50183). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "Le PG/G PRO 50183 est prévu pour roues jumelées ou à rayons, avec tête en laiton de 30 cm et flexible de 1 m. Le PG PRO 50182 n’a pas cette tête allongée ; le 50181/O possède un manomètre homologué CEE dans le catalogue, homologation non attribuée au 50183.",
 		"verifiedFacts": [
 			"Manomètre : 80 mm.",
 			"Échelle du manomètre, distincte du service : 0-10 bar/ 0-140 psi.",
 			"Flexible : 1 m.",
 			"Corps : laiton nickelé.",
-			"Tête de gonflage : laiton, 30 cm."
+			"Tête de gonflage : laiton, 30 cm.",
+			"Masse publiée : 930 g.",
+			"Fonctions : Levier de gonflage ; bouton de décharge rapide ou de réglage.",
+			"Protection : Soupape de protection du manomètre.",
+			"Équipement : Tête laiton 30 cm pour roues jumelées ou à rayons."
 		],
 		"limitations": [
 			"Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
@@ -89,6 +93,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october3d-tools-asturomec2024-p50"
 			]
+		},
+		{
+			"label": "Masse publiée",
+			"value": "930 g",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:gonflage-asturomec-pg-g-pro-50183:0"
+			]
+		},
+		{
+			"label": "Fonctions",
+			"value": "Levier de gonflage ; bouton de décharge rapide ou de réglage",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:gonflage-asturomec-pg-g-pro-50183:0"
+			]
+		},
+		{
+			"label": "Protection",
+			"value": "Soupape de protection du manomètre",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:gonflage-asturomec-pg-g-pro-50183:0"
+			]
+		},
+		{
+			"label": "Équipement",
+			"value": "Tête laiton 30 cm pour roues jumelées ou à rayons",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:gonflage-asturomec-pg-g-pro-50183:0"
+			]
 		}
 	],
 	"evidence": [
@@ -101,6 +133,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 28bc606b4d5bdb9fb84c9288e42573241454b8347b9623c38854744b09fab5e3. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:gonflage-asturomec-pg-g-pro-50183:0",
+			"sourceUrl": "https://walmec.com/it/cataloghi/catalogo-asturomec/AD_13_24_IT.pdf",
+			"sourceLabel": "Asturomec, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le PG/G PRO 50183 est prévu pour roues jumelées ou à rayons, avec tête en laiton de 30 cm et flexible de 1 m. Le PG PRO 50182 n’a pas cette tête allongée ; le 50181/O possède un manomètre homologué CEE dans le catalogue, homologation non attribuée au 50183. GET complet SHA-256 28bc606b4d5bdb9fb84c9288e42573241454b8347b9623c38854744b09fab5e3. Pages PDF lues : 50."
 		}
 	],
 	"fieldSources": {

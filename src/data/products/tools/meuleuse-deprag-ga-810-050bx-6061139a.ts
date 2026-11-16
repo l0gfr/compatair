@@ -25,10 +25,10 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-deprag-ga-810-050bx-6061139a.svg",
+		"src": "/images/products/meuleuse-deprag-ga-810-050bx-6061139a-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : DEPRAG GA 810-050BX (réf. 6061139A)",
 		"sourceUrl": "https://www.depragusa.com/files/catalogs/dcz10321.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "deprag-ga-810-050bx",
@@ -40,7 +40,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "DEPRAG GA 810-050BX (réf. 6061139A). Consommation de référence en fonctionnement : 350 L/min à 6,3 bar.",
+		"overview": "La GA810-050BX est la meuleuse d’angle 100 mm et 0,5 kW, à 15 300 tr/min. La table à 6,3 bar distingue 0,35 m³/min en charge et 0,85 à vide ; ces valeurs sont reprises littéralement, sans les inverser. Les GA811 et GA812 de 1 kW utilisent respectivement des disques 115 et 125 mm et 1,2 m³/min en charge. L’alésage, le carter et le filetage M14 doivent convenir au disque.",
 		"verifiedFacts": [
 			"Consommation en charge déclarée : 0,35 (12.4) m3/min (cfm).",
 			"Consommation à vide déclarée : 0,85 (30.0) m3/min (cfm).",
@@ -148,6 +148,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 51abc527ebd911c1d509eaebc1e94c928a8a68b2012ad3188c2b24dbc0154952. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-deprag-ga-810-050bx-6061139a:0",
+			"sourceUrl": "https://www.depragusa.com/files/catalogs/dcz10321.pdf",
+			"sourceLabel": "DEPRAG, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La GA810-050BX est la meuleuse d’angle 100 mm et 0,5 kW, à 15 300 tr/min. La table à 6,3 bar distingue 0,35 m³/min en charge et 0,85 à vide ; ces valeurs sont reprises littéralement, sans les inverser. Les GA811 et GA812 de 1 kW utilisent respectivement des disques 115 et 125 mm et 1,2 m³/min en charge. L’alésage, le carter et le filetage M14 doivent convenir au disque. GET complet SHA-256 51abc527ebd911c1d509eaebc1e94c928a8a68b2012ad3188c2b24dbc0154952. Pages PDF lues : 4."
 		}
 	],
 	"fieldSources": {

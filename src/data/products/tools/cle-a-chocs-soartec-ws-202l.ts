@@ -16,10 +16,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La fiche publie une consommation et une pression d’alimentation, sans préciser le régime de consommation ni affirmer que cette valeur est mesurée à cette pression. Ces champs restent séparés et hors du calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-soartec-ws-202l.webp",
+		"src": "/images/products/cle-a-chocs-soartec-ws-202l-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Soartec WS-202L",
 		"sourceUrl": "https://www.soartectools.com/products/air-impact-wrench-1-2-twin-hammer-ws-202l",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "soartec-ws-202l",
@@ -31,7 +31,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Soartec WS-202L. La fiche publie une consommation et une pression d’alimentation, sans préciser le régime de consommation ni affirmer que cette valeur est mesurée à cette pression. Ces champs restent séparés et hors du calcul de compatibilité. Fonction déclarée : Air Impact Wrench  1/2\" Twin Hammer 600 ft-lb. Carré d’entraînement : 1/2\".",
+		"overview": "La WS-202L est la clé à chocs Twin Hammer à carré 1/2 pouce et enclume allongée, annoncée à 660 ft-lb. Les WS-202 et WS-203 appartiennent à la même famille de couple mais avec d’autres corps ou enclumes. L’allonge sert l’accès et ne garantit pas davantage de couple. Les 17 cfm et la consigne 90 psi ne qualifient pas une consommation en charge.",
 		"verifiedFacts": [
 			"Fonction déclarée : Air Impact Wrench  1/2\" Twin Hammer 600 ft-lb.",
 			"Carré d’entraînement : 1/2\".",
@@ -184,6 +184,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 42a7a1ae3436e00e8e580a5e76015a9e900108e9a95bd918382aefe713aa1b00. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-chocs-soartec-ws-202l:0",
+			"sourceUrl": "https://www.soartectools.com/products/air-impact-wrench-1-2-twin-hammer-ws-202l",
+			"sourceLabel": "Soartec, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La WS-202L est la clé à chocs Twin Hammer à carré 1/2 pouce et enclume allongée, annoncée à 660 ft-lb. Les WS-202 et WS-203 appartiennent à la même famille de couple mais avec d’autres corps ou enclumes. L’allonge sert l’accès et ne garantit pas davantage de couple. Les 17 cfm et la consigne 90 psi ne qualifient pas une consommation en charge. GET complet SHA-256 b44915901dcb29652634a0f578211dc04ef69596bae1ec11f4f4d5948805c8f4. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

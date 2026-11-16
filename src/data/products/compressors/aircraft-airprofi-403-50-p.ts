@@ -13,16 +13,16 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/aircraft-airprofi-403-50-p.webp",
+		"src": "/images/products/aircraft-airprofi-403-50-p-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Aircraft AIRPROFI 403/50 P, référence 2018430.2",
-		"sourceUrl": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-compressors-2026-09-27.json",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
+		"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=46",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Aircraft AIRPROFI 403/50 P, référence 2018430.2 : cuve de 50 L, pression maximale publiée de 10 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Capacité de remplissage approximative : 285 l/min. Condition de remplissage publiée : à 6 bar de pression de travail.",
+		"overview": "L’AIRPROFI403/50P 2018430.2 est le groupe à pistons 400 V sur cuve 50 L. Le catalogue 2026/27 donne 2,8 kW, contre 2,2 dans le relevé historique ; ces deux révisions restent identifiées sans qualifier la version livrée. Le 401/50P est une autre alimentation et un autre groupe. Les 390 L/min aspirés et les 285 L/min de remplissage approximatif à 6 bar restent distincts d’un FAD normalisé ; le calcul demeure non conclusif.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
-			"Compresseur à pistons. Puissance moteur publiée : 2,2 kW.",
+			"Compresseur à pistons. Puissance catalogue 2026/27 : 2,8 kW ; relevé historique 2,2 kW conservé.",
 			"Débit aspiré : 390 L/min, distinct du débit restitué.",
 			"Alimentation publiée : 400 V.",
 			"Capacité de remplissage approximative : 285 l/min.",
@@ -122,39 +122,49 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer 702076. Empreinte PDF SHA-256 : 0162403973d0a2407492d73ff211eb8812261b8146dd32cb139c2342ab932ff9. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
+		},
+		{
+			"id": "review:2026-11-16-reviews:aircraft-airprofi-403-50-p:0",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=46",
+			"sourceLabel": "Aircraft, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’AIRPROFI403/50P 2018430.2 est le groupe à pistons 400 V sur cuve 50 L. Le catalogue 2026/27 donne 2,8 kW, contre 2,2 dans le relevé historique ; ces deux révisions restent identifiées sans qualifier la version livrée. Le 401/50P est une autre alimentation et un autre groupe. Les 390 L/min aspirés et les 285 L/min de remplissage approximatif à 6 bar restent distincts d’un FAD normalisé ; le calcul demeure non conclusif. GET complet SHA-256 0162403973d0a2407492d73ff211eb8812261b8146dd32cb139c2342ab932ff9. Pages PDF lues : 1 (extrait de la page 46 du catalogue)."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"aircraft-2018430-2-20260927"
+			"review:2026-11-16-reviews:aircraft-airprofi-403-50-p:0"
 		],
 		"tankLiters": [
-			"aircraft-2018430-2-20260927"
+			"review:2026-11-16-reviews:aircraft-airprofi-403-50-p:0"
 		],
 		"maxPressureBar": [
-			"aircraft-2018430-2-20260927"
+			"review:2026-11-16-reviews:aircraft-airprofi-403-50-p:0"
 		],
 		"fadCurve": [
-			"aircraft-2018430-2-20260927"
+			"review:2026-11-16-reviews:aircraft-airprofi-403-50-p:0"
 		],
 		"oilType": [
 			"aircraft-2018430-2-20260927"
 		],
 		"intakeFlowLpm": [
-			"aircraft-2018430-2-20260927"
+			"review:2026-11-16-reviews:aircraft-airprofi-403-50-p:0"
 		],
 		"powerKw": [
-			"aircraft-2018430-2-20260927"
+			"review:2026-11-16-reviews:aircraft-airprofi-403-50-p:0"
 		],
 		"voltage": [
-			"aircraft-2018430-2-20260927"
+			"review:2026-11-16-reviews:aircraft-airprofi-403-50-p:0"
 		]
 	},
 	"notes": [
 		"Caractéristiques déclarées par le fabricant. Les comparaisons dépendent des conditions de débit et de pression documentées."
 	],
 	"intakeFlowLpm": 390,
-	"powerKw": 2.2,
+	"powerKw": 2.8,
 	"voltage": "400 V"
 };
 

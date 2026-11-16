@@ -9,96 +9,80 @@ const product: ToolProfileInput = {
 	"categoryId": "ponceuse-bande",
 	"category": "ponceuse-bande",
 	"label": "Aircraft BS-C 20 PRO 15 VS",
-	"demandModel": "fixed-flow",
-	"workingPressureBar": {
-		"min": 6,
-		"typical": 6,
-		"max": 6
-	},
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/aircraft-bs-c-20-pro-15-vs.webp",
+		"src": "/images/products/aircraft-bs-c-20-pro-15-vs-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Aircraft BS-C 20 PRO 15 VS, référence 2403740",
-		"sourceUrl": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-tools-2026-09-27.json",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
+		"sourceUrl": "https://www.vaentek.de/WebRoot/Store22/Shops/93216177/61FD/808C/7F37/57EE/46D3/0A0C/6D10/7775/AC_BA_BS-C_10_20-PRO-VS_10_20-PRO-15-VS_DE.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Aircraft BS-C 20 PRO 15 VS, référence 2403740. Consommation moyenne publiée : 400 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Longueur de bande : 520 mm. Largeur de bande : 20 mm.",
+		"overview": "Aircraft BS-C 20 PRO 15 VS : bande de 520 × 20 mm, corps de 390 mm et 0,96 kg. La version 10 PRO 15 VS reçoit 330 × 10 mm et pèse 0,77 kg ; la 20 PRO VS mesure 396 mm. La notice sépare consommation moyenne et maximale ; aucun débit continu n’est déduit d’une moyenne.",
 		"verifiedFacts": [
-			"Pression de travail publiée : 6 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
-			"Consommation moyenne publiée : 400 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
-			"Référence fabricant : 2403740.",
-			"Longueur de bande : 520 mm.",
-			"Largeur de bande : 20 mm.",
-			"Longueur approximative : 390 mm."
+			"Bande : 520 × 20 mm.",
+			"Dimensions : 390 × 85 × 95 mm.",
+			"Masse : 0,96 kg.",
+			"Vitesse à vide : 18 000 tr/min.",
+			"Consommation moyenne / maximale : 400 / 520 L/min.",
+			"Pression de service / entrée maximale : 6 / 8 bar.",
+			"Lp / Lw : 80 / 91 dB(A)."
 		],
 		"limitations": [
-			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
-			"Une consommation moyenne ne constitue pas un débit maximal en usage continu. Vérifier le régime réel auprès du fabricant avant dimensionnement."
+			"La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer.",
+			"Le tableau ne démontre pas que le maximum de 520 L/min est mesuré à la pression de service indiquée."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression de travail publiée : 6 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
+			"label": "Bande",
+			"value": "520 × 20 mm",
 			"evidenceIds": [
-				"aircraft-2403740-20260927"
+				"review:2026-11-16-reviews:aircraft-bs-c-20-pro-15-vs:0"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation moyenne publiée : 400 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
+			"label": "Dimensions",
+			"value": "390 × 85 × 95 mm",
 			"evidenceIds": [
-				"aircraft-2403740-20260927"
+				"review:2026-11-16-reviews:aircraft-bs-c-20-pro-15-vs:0"
 			]
 		},
 		{
-			"label": "Longueur de bande",
-			"value": "520 mm",
-			"evidenceIds": [
-				"aircraft-2403740-20260927"
-			]
-		},
-		{
-			"label": "Largeur de bande",
-			"value": "20 mm",
-			"evidenceIds": [
-				"aircraft-2403740-20260927"
-			]
-		},
-		{
-			"label": "Longueur approximative",
-			"value": "390 mm",
-			"evidenceIds": [
-				"aircraft-2403740-20260927"
-			]
-		},
-		{
-			"label": "Largeur approximative",
-			"value": "85 mm",
-			"evidenceIds": [
-				"aircraft-2403740-20260927"
-			]
-		},
-		{
-			"label": "Hauteur approximative",
-			"value": "95 mm",
-			"evidenceIds": [
-				"aircraft-2403740-20260927"
-			]
-		},
-		{
-			"label": "Masse approximative",
+			"label": "Masse",
 			"value": "0,96 kg",
 			"evidenceIds": [
-				"aircraft-2403740-20260927"
+				"review:2026-11-16-reviews:aircraft-bs-c-20-pro-15-vs:0"
 			]
 		},
 		{
-			"label": "Type indiqué par le fabricant",
-			"value": "Belt sander",
+			"label": "Vitesse à vide",
+			"value": "18 000 tr/min",
 			"evidenceIds": [
-				"aircraft-2403740-20260927"
+				"review:2026-11-16-reviews:aircraft-bs-c-20-pro-15-vs:0"
+			]
+		},
+		{
+			"label": "Consommation moyenne / maximale",
+			"value": "400 / 520 L/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:aircraft-bs-c-20-pro-15-vs:0"
+			]
+		},
+		{
+			"label": "Pression de service / entrée maximale",
+			"value": "6 / 8 bar",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:aircraft-bs-c-20-pro-15-vs:0"
+			]
+		},
+		{
+			"label": "Lp / Lw",
+			"value": "80 / 91 dB(A)",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:aircraft-bs-c-20-pro-15-vs:0"
 			]
 		}
 	],
@@ -122,31 +106,33 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : Public retailer mirror vaentek.de; document publisher explicitly AIRCRAFT on page2. Empreinte PDF SHA-256 : 016c91679a5160feb528bfaa49ff8c37f9f7ef4d672d5884a8ca49d96250ff1d. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
+		},
+		{
+			"id": "review:2026-11-16-reviews:aircraft-bs-c-20-pro-15-vs:0",
+			"sourceUrl": "https://www.vaentek.de/WebRoot/Store22/Shops/93216177/61FD/808C/7F37/57EE/46D3/0A0C/6D10/7775/AC_BA_BS-C_10_20-PRO-VS_10_20-PRO-15-VS_DE.pdf",
+			"sourceLabel": "Aircraft, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Aircraft BS-C 20 PRO 15 VS : bande de 520 × 20 mm, corps de 390 mm et 0,96 kg. La version 10 PRO 15 VS reçoit 330 × 10 mm et pèse 0,77 kg ; la 20 PRO VS mesure 396 mm. La notice sépare consommation moyenne et maximale ; aucun débit continu n’est déduit d’une moyenne. GET complet SHA-256 016c91679a5160feb528bfaa49ff8c37f9f7ef4d672d5884a8ca49d96250ff1d. Pages PDF lues : 6."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"aircraft-2403740-20260927"
+			"review:2026-11-16-reviews:aircraft-bs-c-20-pro-15-vs:0"
+		],
+		"demandExplanation": [
+			"review:2026-11-16-reviews:aircraft-bs-c-20-pro-15-vs:0"
 		],
 		"workingPressureBar": [
-			"aircraft-2403740-20260927"
-		],
-		"airflowLpm": [
-			"aircraft-2403740-20260927"
-		],
-		"airflowBasis": [
-			"aircraft-2403740-20260927"
+			"review:2026-11-16-reviews:aircraft-bs-c-20-pro-15-vs:0"
 		]
 	},
 	"notes": [
-		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+		"La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne."
 	],
-	"airflowLpm": {
-		"min": 400,
-		"typical": 400,
-		"max": 400
-	},
-	"airflowBasis": "average"
+	"demandExplanation": "La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne."
 };
 
 export default product;

@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/pistolet-peinture-lvlp-astro-pneumatic-evo4014.svg",
+		"src": "/images/products/pistolet-peinture-lvlp-astro-pneumatic-evo4014-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Astro Pneumatic EVO4014",
 		"sourceUrl": "https://www.astrotools.com/product/lvlp-gravity-feed-spray-gun-with-1-4mm-nozzle-suitable-for-waterborne-materials/",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "astro-pneumatic-evo4014",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Astro Pneumatic EVO4014. Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "L’EVO4014 est le pistolet LVLP à buse 1,4 mm et godet 600 ml, pour une pression de fonctionnement publiée de 25 psi. L’EVO4018 remplace la buse par 1,8 mm ; la sélection doit suivre le produit et sa viscosité. Les autres buses proposées ne sont pas toutes montées simultanément. Les 9,6–9,8 cfm sont moyens ; aucun débit continu n’est tiré de la recommandation 3 hp.",
 		"verifiedFacts": [
 			"Capacité du godet : 600ml.",
 			"Buse : 1.4mm (Also available 1.2, 1.3, 1.5, 1.6, 1.8 and 2.0mm).",
@@ -115,6 +115,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 2cb580f83de7bd6423f40537423d050587bb1d2bf37ade7bbb43eb4ac04b0a68. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:pistolet-peinture-lvlp-astro-pneumatic-evo4014:0",
+			"sourceUrl": "https://www.astrotools.com/product/lvlp-gravity-feed-spray-gun-with-1-4mm-nozzle-suitable-for-waterborne-materials/",
+			"sourceLabel": "Astro Pneumatic, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’EVO4014 est le pistolet LVLP à buse 1,4 mm et godet 600 ml, pour une pression de fonctionnement publiée de 25 psi. L’EVO4018 remplace la buse par 1,8 mm ; la sélection doit suivre le produit et sa viscosité. Les autres buses proposées ne sont pas toutes montées simultanément. Les 9,6–9,8 cfm sont moyens ; aucun débit continu n’est tiré de la recommandation 3 hp. GET complet SHA-256 88d2eed9ebf928dff7600967164f558aee5bc50ff16201e1b2036c4a57651a3a. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

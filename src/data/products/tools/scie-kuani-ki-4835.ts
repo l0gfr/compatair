@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Consommation moyenne publiée sans facteur de marche ni point de pression de mesure : aucun débit en charge déterministe ne peut être retenu.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/scie-kuani-ki-4835.webp",
+		"src": "/images/products/scie-kuani-ki-4835-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : KUANI KI-4835",
 		"sourceUrl": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "kuani-ki-4835",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "KUANI KI-4835. Consommation moyenne publiée sans facteur de marche ni point de pression de mesure : aucun débit en charge déterministe ne peut être retenu. Capacité en acier, champ fabricant (mm) : 3. Longueur de course (mm) : 14.",
+		"overview": "La KI-4835 est une scie à course 14 mm, 10 000 courses/min et capacité acier 3 mm. La KI-4835B garde ces valeurs dans un corps de 245 mm, contre 227 mm ; la KI-4831 utilise 10 mm de course et une capacité acier 1,6 mm. Le 4835 pèse 0,62 kg. Les 65 L/min moyens restent hors dimensionnement continu.",
 		"verifiedFacts": [
 			"Capacité en acier, champ fabricant (mm) : 3.",
 			"Longueur de course (mm) : 14.",
@@ -129,6 +129,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:scie-kuani-ki-4835:0",
+			"sourceUrl": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf",
+			"sourceLabel": "KUANI, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La KI-4835 est une scie à course 14 mm, 10 000 courses/min et capacité acier 3 mm. La KI-4835B garde ces valeurs dans un corps de 245 mm, contre 227 mm ; la KI-4831 utilise 10 mm de course et une capacité acier 1,6 mm. Le 4835 pèse 0,62 kg. Les 65 L/min moyens restent hors dimensionnement continu. GET complet SHA-256 569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba. Pages PDF lues : 55."
 		}
 	],
 	"fieldSources": {

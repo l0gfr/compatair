@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/sioux-scn7r.webp",
+		"src": "/images/products/sioux-scn7r-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Sioux SCN7R, référence SCN7R",
-		"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=83",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Sioux SCN7R, référence SCN7R. Le dimensionnement utilise 840 L/min à 6,2 bar, selon les régimes publiés par le fabricant. Vitesse à vide : 700 tr/min. Couple maximal : 24.8 Nm. Masse : 1.5 kg.",
+		"overview": "La SCN7R est le bloc moteur seul de l’outil à écrous clinch, à 700 tr/min et 24,8 Nm maximum. La SCN12R monte à 1 200 tr/min avec 16,4 Nm ; la SCN20R privilégie 2 000 tr/min et 9 Nm. Un outil complet ajoute un nez choisi pour le filetage : SCN7R420 est l’exemple 1/4-20 à nez dentelé du catalogue. Les 14 L/s ne sont pas attribués à un cycle complet non documenté.",
 		"verifiedFacts": [
 			"Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur.",
 			"Consommation publiée : 14.0 L/s (30.0 scfm). Le guide du catalogue (page PDF 10) définit ces débits comme de l’air détendu à pression atmosphérique et des consommations maximales, sauf indication contraire. La plus grande valeur publiée est retenue : 840 L/min (L/s × 60).",
@@ -35,7 +35,8 @@ const product: ToolProfileInput = {
 		"limitations": [
 			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
 			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
-			"Le tableau décrit le bloc moteur de pose d’inserts. Le nez et le mandrin adaptés à l’insert doivent être sélectionnés séparément ; la cote A est celle du bloc moteur."
+			"Le tableau décrit le bloc moteur de pose d’inserts. Le nez et le mandrin adaptés à l’insert doivent être sélectionnés séparément ; la cote A est celle du bloc moteur.",
+			"La pression de service n’atteste pas la pression de mesure de consommation. Le régime ou l’appariement documentaire reste non qualifié ; aucune consommation dimensionnante n’est conservée."
 		]
 	},
 	"specifications": [
@@ -100,6 +101,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur."
+		},
+		{
+			"id": "review:2026-11-16-reviews:sioux-scn7r:0",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx",
+			"sourceLabel": "Sioux, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La SCN7R est le bloc moteur seul de l’outil à écrous clinch, à 700 tr/min et 24,8 Nm maximum. La SCN12R monte à 1 200 tr/min avec 16,4 Nm ; la SCN20R privilégie 2 000 tr/min et 9 Nm. Un outil complet ajoute un nez choisi pour le filetage : SCN7R420 est l’exemple 1/4-20 à nez dentelé du catalogue. Les 14 L/s ne sont pas attribués à un cycle complet non documenté. GET complet SHA-256 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8. Pages PDF lues : 83."
 		}
 	],
 	"fieldSources": {
@@ -111,6 +122,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"sioux-scn7r-20260927"
+		],
+		"airflowBasis": [
+			"review:2026-11-16-reviews:sioux-scn7r:0"
 		]
 	},
 	"notes": [
@@ -120,7 +134,8 @@ const product: ToolProfileInput = {
 		"min": 840,
 		"typical": 840,
 		"max": 840
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

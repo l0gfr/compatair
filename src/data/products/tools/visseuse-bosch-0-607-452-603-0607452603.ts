@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "free-speed",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/visseuse-bosch-0-607-452-603-0607452603.webp",
+		"src": "/images/products/visseuse-bosch-0-607-452-603-0607452603-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Bosch 0 607 452 603 (réf. 0607452603)",
 		"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "bosch-0-607-452-603",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Bosch 0 607 452 603 (réf. 0607452603). Consommation à vide : 1 320 L/min à 6,3 bar. Vitesse à vide : 570 tr/min. Masse : 1.6 kg.",
+		"overview": "La 0 607 452 603 est une visseuse d’angle à arrêt par embrayage, pour 10–38 Nm et 570 tr/min. Les versions 604 et 605 augmentent le couple à 16–56 et 20–68 Nm en réduisant la vitesse à 400 et 320 tr/min. La tête d’angle est à commander séparément. Les 22 L/s sont une consommation à vide à 6,3 bar : ils restent hors calcul du besoin en serrage.",
 		"verifiedFacts": [
 			"Vitesse à vide : 570 tr/min.",
 			"Masse : 1.6 kg."
@@ -99,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:visseuse-bosch-0-607-452-603-0607452603:0",
+			"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf",
+			"sourceLabel": "Bosch, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 0 607 452 603 est une visseuse d’angle à arrêt par embrayage, pour 10–38 Nm et 570 tr/min. Les versions 604 et 605 augmentent le couple à 16–56 et 20–68 Nm en réduisant la vitesse à 400 et 320 tr/min. La tête d’angle est à commander séparément. Les 22 L/s sont une consommation à vide à 6,3 bar : ils restent hors calcul du besoin en serrage. GET complet SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. Pages PDF lues : 64, 4."
 		}
 	],
 	"fieldSources": {

@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Cette fiche précise les fixations, le chargeur et la géométrie du modèle. Elle ne fournit ni volume d’air par tir ni point de pression de consommation ; aucun débit n’est calculé à partir de la seule capacité du chargeur.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/agrafeuse-cloueuse-basso-16-851.webp",
+		"src": "/images/products/agrafeuse-cloueuse-basso-16-851-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : BASSO 16/851",
 		"sourceUrl": "https://www.basso.com.tw/en/product-216159/Stapler-16-851.html",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "basso-16-851",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "BASSO 16/851. Cette fiche précise les fixations, le chargeur et la géométrie du modèle. Elle ne fournit ni volume d’air par tir ni point de pression de consommation ; aucun débit n’est calculé à partir de la seule capacité du chargeur. Fonction déclarée : Stapler. Masse kg (lb) : 2.5 (5.5).",
+		"overview": "La BASSO 16/851 est une agrafeuse calibre 16 à magasin de 150, de 369 × 93 × 286 mm et 2,5 kg. Les 16/50-B1 et 18/32-2 sont des cloueurs de finition, avec d’autres fixations et magasins : leur gabarit ne suffit pas à garantir l’interchangeabilité. Le profil d’agrafe prescrit doit être contrôlé. La fiche ne fournit pas de volume par tir apparié à une pression, et aucun débit n’est inventé.",
 		"verifiedFacts": [
 			"Fonction déclarée : Stapler.",
 			"Masse kg (lb) : 2.5 (5.5).",
@@ -96,6 +96,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 9ecdf5fb093a06373ac60db7804c638214b1bfc5db663f57c4333518d7e5d8e3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:agrafeuse-cloueuse-basso-16-851:0",
+			"sourceUrl": "https://www.basso.com.tw/en/product-216159/Stapler-16-851.html",
+			"sourceLabel": "BASSO, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La BASSO 16/851 est une agrafeuse calibre 16 à magasin de 150, de 369 × 93 × 286 mm et 2,5 kg. Les 16/50-B1 et 18/32-2 sont des cloueurs de finition, avec d’autres fixations et magasins : leur gabarit ne suffit pas à garantir l’interchangeabilité. Le profil d’agrafe prescrit doit être contrôlé. La fiche ne fournit pas de volume par tir apparié à une pression, et aucun débit n’est inventé. GET complet SHA-256 412ff96ead0257a87824e34efdabc7e62754bb8bedc9c9be0e09070aa9838daa. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

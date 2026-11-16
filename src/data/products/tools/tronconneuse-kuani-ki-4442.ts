@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Consommation moyenne publiée sans facteur de marche ni point de pression de mesure : aucun débit en charge déterministe ne peut être retenu.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/tronconneuse-kuani-ki-4442.webp",
+		"src": "/images/products/tronconneuse-kuani-ki-4442-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : KUANI KI-4442",
 		"sourceUrl": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "kuani-ki-4442",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "KUANI KI-4442. Consommation moyenne publiée sans facteur de marche ni point de pression de mesure : aucun débit en charge déterministe ne peut être retenu. Vitesse à vide (tr/min) : 20,000. Longueur totale (mm) : 180.",
+		"overview": "La KI-4442 est une tronçonneuse 3 pouces à 20 000 tr/min, de 180 mm et 0,84 kg. La KI-4427 tourne à 17 000 tr/min et mesure 210 mm ; la KI-4402 garde 20 000 tr/min dans un autre corps. Le disque doit supporter la vitesse et rester adapté au carter. Les 113 L/min sont moyens, sans conversion en consommation continue.",
 		"verifiedFacts": [
 			"Vitesse à vide (tr/min) : 20,000.",
 			"Longueur totale (mm) : 180.",
@@ -113,6 +113,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:tronconneuse-kuani-ki-4442:0",
+			"sourceUrl": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf",
+			"sourceLabel": "KUANI, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La KI-4442 est une tronçonneuse 3 pouces à 20 000 tr/min, de 180 mm et 0,84 kg. La KI-4427 tourne à 17 000 tr/min et mesure 210 mm ; la KI-4402 garde 20 000 tr/min dans un autre corps. Le disque doit supporter la vitesse et rester adapté au carter. Les 113 L/min sont moyens, sans conversion en consommation continue. GET complet SHA-256 569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba. Pages PDF lues : 56."
 		}
 	],
 	"fieldSources": {

@@ -22,10 +22,10 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-rotative-atlas-copco-lsv28-s021-8423012519.webp",
+		"src": "/images/products/ponceuse-rotative-atlas-copco-lsv28-s021-8423012519-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Atlas Copco LSV28 S021 (réf. 8423012519)",
 		"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "atlas-copco-lsv28-s021",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Atlas Copco LSV28 S021 (réf. 8423012519). Consommation maximale : 960 L/min à 6,3 bar. Consommations originales : 16 L/s ; 33.9 cfm ; 5.6 L/s ; 11.9 cfm. Vitesse à vide : 2100 tr/min.",
+		"overview": "La LSV28 S021 8423012519 est une ponceuse rotative à sec, avec filetage UNC 5/8 pouce × 32 et régulateur de vitesse. Elle annonce 2 100 tr/min, 0,68 kW et un plateau maximal de 180 mm ; la S021-M14 change le filetage, tandis que la ST013 LF tourne à 1 300 tr/min sans lubrification. Les 16 L/s à puissance maximale à 6,3 bar sont distincts des 5,6 L/s à vide.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 221.",
 			"Consommations originales : 16 L/s ; 33.9 cfm ; 5.6 L/s ; 11.9 cfm.",
@@ -101,6 +101,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-rotative-atlas-copco-lsv28-s021-8423012519:0",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf",
+			"sourceLabel": "Atlas Copco, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La LSV28 S021 8423012519 est une ponceuse rotative à sec, avec filetage UNC 5/8 pouce × 32 et régulateur de vitesse. Elle annonce 2 100 tr/min, 0,68 kW et un plateau maximal de 180 mm ; la S021-M14 change le filetage, tandis que la ST013 LF tourne à 1 300 tr/min sans lubrification. Les 16 L/s à puissance maximale à 6,3 bar sont distincts des 5,6 L/s à vide. GET complet SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Pages PDF lues : 3, 221."
 		}
 	],
 	"fieldSources": {

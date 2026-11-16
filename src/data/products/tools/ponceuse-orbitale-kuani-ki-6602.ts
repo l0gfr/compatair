@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Consommation moyenne publiée sans facteur de marche ni point de pression de mesure : aucun débit en charge déterministe ne peut être retenu.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-orbitale-kuani-ki-6602.webp",
+		"src": "/images/products/ponceuse-orbitale-kuani-ki-6602-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : KUANI KI-6602",
 		"sourceUrl": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "kuani-ki-6602",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "KUANI KI-6602. Consommation moyenne publiée sans facteur de marche ni point de pression de mesure : aucun débit en charge déterministe ne peut être retenu. Taille de plateau (mm) : 127. Filetage de broche (pouce) : 5/16-24.",
+		"overview": "La KI-6602 est une ponceuse 127 mm à orbite 5 mm, avec trois modes d’extraction sélectionnables. La KI-6601 réduit l’orbite à 2,5 mm ; la KI-6607 passe au plateau 152 mm et conserve 2,5 mm. Le 6602 annonce 10 000 tr/min, 184 mm et 0,77 kg. Le plateau doit respecter la masse prescrite ; les 212 L/min sont moyens.",
 		"verifiedFacts": [
 			"Taille de plateau (mm) : 127.",
 			"Filetage de broche (pouce) : 5/16-24.",
@@ -137,6 +137,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-orbitale-kuani-ki-6602:0",
+			"sourceUrl": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf",
+			"sourceLabel": "KUANI, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La KI-6602 est une ponceuse 127 mm à orbite 5 mm, avec trois modes d’extraction sélectionnables. La KI-6601 réduit l’orbite à 2,5 mm ; la KI-6607 passe au plateau 152 mm et conserve 2,5 mm. Le 6602 annonce 10 000 tr/min, 184 mm et 0,77 kg. Le plateau doit respecter la masse prescrite ; les 212 L/min sont moyens. GET complet SHA-256 569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba. Pages PDF lues : 75."
 		}
 	],
 	"fieldSources": {

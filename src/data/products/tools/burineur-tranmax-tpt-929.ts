@@ -11,13 +11,13 @@ const product: ToolProfileInput = {
 	"mpn": "TPT-929",
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
-	"demandExplanation": "Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse.",
+	"demandExplanation": "La consommation publiée est une moyenne en charge, sans pression de mesure associée dans le tableau. Elle reste documentaire et ne donne pas un maximum de dimensionnement.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/burineur-tranmax-tpt-929.webp",
+		"src": "/images/products/burineur-tranmax-tpt-929-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Tranmax TPT-929",
 		"sourceUrl": "https://ss-client-website.s3-ap-northeast-1.amazonaws.com/tranmax/2023_01_09_113224_2212-Professional-Power-Tools-TP.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "tranmax-tpt-929",
@@ -29,38 +29,45 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Tranmax TPT-929. Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse. Masse publiée : 40 kg (88 lb). Longueur hors tout publiée : 541 mm (21.3 inch).",
+		"overview": "Le TPT-929 est un décapeur à burin de 541 mm et 4,0 kg, avec course de 26 mm à 2 400 coups/min. L’ancien relevé 40 kg est corrigé depuis la cellule 4,0 kg / 8,8 lb. Le TPT-928 est plus léger et plus rapide ; le TPT-932 est un burineur court plus lourd.",
 		"verifiedFacts": [
-			"Masse publiée : 40 kg (88 lb).",
-			"Longueur hors tout publiée : 541 mm (21.3 inch)."
+			"Longueur et masse : 541 mm ; 4,0 kg (8,8 lb).",
+			"Cadence et course : 2 400 coups/min ; 26 mm.",
+			"Consommation moyenne en charge : 221 L/min (7,8 cfm) ; pression de mesure non indiquée.",
+			"Arrivée d’air et flexible : 3/8 NPTF ; flexible 3/8 pouce (10 mm)."
 		],
 		"limitations": [
-			"Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse.",
-			"Référence physique explicitement imprimée dans un tableau constructeur ; aucune référence n’est créée à partir d’une nomenclature de suffixes.",
-			"Les conversions de contrôle de masse et longueur servent à relire le tableau ; elles ne reconstituent aucune consommation d’air.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"La consommation publiée est une moyenne en charge, sans pression de mesure associée dans le tableau. Elle reste documentaire et ne donne pas un maximum de dimensionnement.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "40 kg (88 lb)",
+			"label": "Longueur et masse",
+			"value": "541 mm ; 4,0 kg (8,8 lb)",
 			"evidenceIds": [
-				"october2b-tools-oct2b-tranmax-tp-pdf-p32"
+				"review:2026-11-16-reviews:burineur-tranmax-tpt-929:0"
 			]
 		},
 		{
-			"label": "Longueur hors tout publiée",
-			"value": "541 mm (21.3 inch)",
+			"label": "Cadence et course",
+			"value": "2 400 coups/min ; 26 mm",
 			"evidenceIds": [
-				"october2b-tools-oct2b-tranmax-tp-pdf-p32"
+				"review:2026-11-16-reviews:burineur-tranmax-tpt-929:0"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "Aucun point de pression de consommation n’est établi pour cette ligne.",
+			"label": "Consommation moyenne en charge",
+			"value": "221 L/min (7,8 cfm) ; pression de mesure non indiquée",
 			"evidenceIds": [
-				"october2b-tools-oct2b-tranmax-tp-pdf-p32"
+				"review:2026-11-16-reviews:burineur-tranmax-tpt-929:0"
+			]
+		},
+		{
+			"label": "Arrivée d’air et flexible",
+			"value": "3/8 NPTF ; flexible 3/8 pouce (10 mm)",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:burineur-tranmax-tpt-929:0"
 			]
 		}
 	],
@@ -74,21 +81,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : c2e29dbb1f9d433e1d65568bc327d3ea21eadd7d39f8edbb0d98145850f7c7d2. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:burineur-tranmax-tpt-929:0",
+			"sourceUrl": "https://ss-client-website.s3-ap-northeast-1.amazonaws.com/tranmax/2023_01_09_113224_2212-Professional-Power-Tools-TP.pdf",
+			"sourceLabel": "Tranmax, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le TPT-929 est un décapeur à burin de 541 mm et 4,0 kg, avec course de 26 mm à 2 400 coups/min. L’ancien relevé 40 kg est corrigé depuis la cellule 4,0 kg / 8,8 lb. Le TPT-928 est plus léger et plus rapide ; le TPT-932 est un burineur court plus lourd. GET complet SHA-256 c2e29dbb1f9d433e1d65568bc327d3ea21eadd7d39f8edbb0d98145850f7c7d2. Pages PDF lues : 32."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october2b-tools-oct2b-tranmax-tp-pdf-p32"
-		],
-		"workingPressureBar": [
-			"october2b-tools-oct2b-tranmax-tp-pdf-p32"
+			"review:2026-11-16-reviews:burineur-tranmax-tpt-929:0"
 		],
 		"demandExplanation": [
-			"october2b-tools-oct2b-tranmax-tp-pdf-p32"
+			"review:2026-11-16-reviews:burineur-tranmax-tpt-929:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-reviews:burineur-tranmax-tpt-929:0"
 		]
 	},
 	"notes": [
-		"Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse."
+		"La consommation publiée est une moyenne en charge, sans pression de mesure associée dans le tableau. Elle reste documentaire et ne donne pas un maximum de dimensionnement."
 	]
 };
 

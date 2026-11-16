@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/riveteuse-sumake-st-6361m.webp",
+		"src": "/images/products/riveteuse-sumake-st-6361m-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Sumake ST-6361M",
 		"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "sumake-st-6361m",
@@ -39,7 +39,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-6361M. Consommation publiée, régime non précisé : 450 L/min à 6,2 bar. Consommation dans les unités du tableau : 450 L/min ; 16 cfm. Configuration complète publiée : ST-6361M.",
+		"overview": "La ST-6361M pose les écrous à riveter métriques M4 à M12, contre M3 à M8 pour la 6360M et des filetages impériaux pour la 6361S. La table donne une course de 7 mm et une traction de 2 724 kgf pour la 6361M ; le matériau et le mandrin doivent correspondre à la fixation. Les 450 L/min ne sont pas un volume par cycle et restent hors calcul.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 62.",
 			"Consommation dans les unités du tableau : 450 L/min ; 16 cfm.",
@@ -99,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "review:2026-11-16-reviews:riveteuse-sumake-st-6361m:0",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
+			"sourceLabel": "Sumake, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La ST-6361M pose les écrous à riveter métriques M4 à M12, contre M3 à M8 pour la 6360M et des filetages impériaux pour la 6361S. La table donne une course de 7 mm et une traction de 2 724 kgf pour la 6361M ; le matériau et le mandrin doivent correspondre à la fixation. Les 450 L/min ne sont pas un volume par cycle et restent hors calcul. GET complet SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Pages PDF lues : 62."
 		}
 	],
 	"fieldSources": {

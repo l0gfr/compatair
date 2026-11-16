@@ -18,10 +18,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/perceuse-mannesmann-demag-d-13-380-p-46920-39-5.webp",
+		"src": "/images/products/perceuse-mannesmann-demag-d-13-380-p-46920-39-5-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Mannesmann DEMAG D 13-380 P (réf. 46920-39-5)",
 		"sourceUrl": "https://www.mannesmann-demag.com/bilder-und-dateien/downloads/kataloge/md_airtools_05_2017_e.pdf?type=download",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "mannesmann-demag-d-13-380-p",
@@ -33,12 +33,16 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Mannesmann DEMAG D 13-380 P (réf. 46920-39-5). La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse sans tuyau : 1.3 kg. Référence fabricant : 46920-39-5.",
+		"overview": "La D13-380 P dispose d’un mandrin à clé1–13 mm sur cône B12, à380 tr/min. Sa capacité de perçage publiée est8 mm dans l’acier et12 mm dans l’aluminium, différente de l’ouverture du mandrin. La D13-45 P tourne à450 tr/min avec un mandrin à changement rapide.",
 		"verifiedFacts": [
 			"Masse sans tuyau : 1.3 kg.",
 			"Référence fabricant : 46920-39-5.",
 			"Vitesse à vide : 380 tr/min.",
-			"Longueur publiée : 240 mm."
+			"Longueur publiée : 240 mm.",
+			"Mandrin : À clé ; capacité1–13 mm ; cône B12.",
+			"Capacité de perçage : Acier8 mm ; aluminium12 mm.",
+			"Puissance publiée : 300 W.",
+			"Échappement : Silencieux dans la poignée pistolet."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -88,6 +92,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-mannesmann-0-p56"
 			]
+		},
+		{
+			"label": "Mandrin",
+			"value": "À clé ; capacité1–13 mm ; cône B12",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-mannesmann-demag-d-13-380-p-46920-39-5:0"
+			]
+		},
+		{
+			"label": "Capacité de perçage",
+			"value": "Acier8 mm ; aluminium12 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-mannesmann-demag-d-13-380-p-46920-39-5:0"
+			]
+		},
+		{
+			"label": "Puissance publiée",
+			"value": "300 W",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-mannesmann-demag-d-13-380-p-46920-39-5:0"
+			]
+		},
+		{
+			"label": "Échappement",
+			"value": "Silencieux dans la poignée pistolet",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-mannesmann-demag-d-13-380-p-46920-39-5:0"
+			]
 		}
 	],
 	"evidence": [
@@ -100,6 +132,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 9de8eb77aad6c7412b390db54a16646c71c0a4f9925ddf3ddfba1048b1779f3b. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:perceuse-mannesmann-demag-d-13-380-p-46920-39-5:0",
+			"sourceUrl": "https://www.mannesmann-demag.com/bilder-und-dateien/downloads/kataloge/md_airtools_05_2017_e.pdf?type=download",
+			"sourceLabel": "Mannesmann DEMAG, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La D13-380 P dispose d’un mandrin à clé1–13 mm sur cône B12, à380 tr/min. Sa capacité de perçage publiée est8 mm dans l’acier et12 mm dans l’aluminium, différente de l’ouverture du mandrin. La D13-45 P tourne à450 tr/min avec un mandrin à changement rapide. GET complet SHA-256 9de8eb77aad6c7412b390db54a16646c71c0a4f9925ddf3ddfba1048b1779f3b. Pages PDF lues : 56."
 		}
 	],
 	"fieldSources": {

@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Le tableau établit les caractéristiques individuelles. La consommation normale n’est pas explicitement rattachée à un régime en charge et à une pression de mesure.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-kuken-kw-385g.webp",
+		"src": "/images/products/cle-a-chocs-kuken-kw-385g-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : KUKEN KW-385G",
 		"sourceUrl": "https://www.kuken.co.jp/en/catalogue/pdf/best_selection.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "kuken-kw-385g",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "KUKEN KW-385G. Le tableau établit les caractéristiques individuelles. La consommation normale n’est pas explicitement rattachée à un régime en charge et à une pression de mesure. Masse publiée : 9.4 kg (20.2 lb). Longueur publiée : 365.0 mm.",
+		"overview": "La KW-385G utilise un carré 1 pouce et un mécanisme Swing Hammer, pour 340–1 370 Nm recommandés et 1 600 Nm maximum. La 385GL allonge le corps de 365 à 525 mm et passe de 9,4 à 10,1 kg ; elle n’augmente pas le couple publié. La brochure associe 9,4 kg à 20,2 lb, valeurs non équivalentes : les deux transcriptions restent visibles. Les 0,73 m³/min n’ont pas de régime établi.",
 		"verifiedFacts": [
 			"Masse publiée : 9.4 kg (20.2 lb).",
 			"Longueur publiée : 365.0 mm."
@@ -74,6 +74,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 0da76488e568242877887f713ecd81203eaa9f2322c20eb65648d25bb7e71cc7. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-chocs-kuken-kw-385g:0",
+			"sourceUrl": "https://www.kuken.co.jp/en/catalogue/pdf/best_selection.pdf",
+			"sourceLabel": "KUKEN, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La KW-385G utilise un carré 1 pouce et un mécanisme Swing Hammer, pour 340–1 370 Nm recommandés et 1 600 Nm maximum. La 385GL allonge le corps de 365 à 525 mm et passe de 9,4 à 10,1 kg ; elle n’augmente pas le couple publié. La brochure associe 9,4 kg à 20,2 lb, valeurs non équivalentes : les deux transcriptions restent visibles. Les 0,73 m³/min n’ont pas de régime établi. GET complet SHA-256 0da76488e568242877887f713ecd81203eaa9f2322c20eb65648d25bb7e71cc7. Pages PDF lues : 15."
 		}
 	],
 	"fieldSources": {

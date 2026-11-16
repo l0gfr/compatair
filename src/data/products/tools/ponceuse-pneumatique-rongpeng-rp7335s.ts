@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-pneumatique-rongpeng-rp7335s.webp",
+		"src": "/images/products/ponceuse-pneumatique-rongpeng-rp7335s-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Rongpeng RP7335S",
 		"sourceUrl": "https://www.rongpeng.com/Air-Sander-Self-Vacuuming-RP7335S",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "rongpeng-rp7335s",
@@ -29,10 +29,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Rongpeng RP7335S. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 0.8 kg. Diamètre du plateau publié : 5 in.",
+		"overview": "Rongpeng RP7335S : ponceuse à aspiration autonome, plateau 125 mm, 12 000 tr/min et longueur 128 mm. Les RP7312 et RP7316 ont d’autres corps et vitesses. La page ne précise pas le diamètre d’orbite ; les 4,5 CFM sont une consommation moyenne, pas le maximum en ponçage continu.",
 		"verifiedFacts": [
 			"Masse publiée : 0.8 kg.",
-			"Diamètre du plateau publié : 5 in."
+			"Diamètre du plateau publié : 5 in.",
+			"Plateau / aspiration : 125 mm / autonome.",
+			"Vitesse / longueur / masse : 12 000 tr/min / 128 mm / 0,8 kg.",
+			"Consommation moyenne : 4,5 CFM / 128,2 L/min.",
+			"Orbite : Diamètre non précisé dans cette page."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -67,6 +71,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-rongpeng-pdp-82-p1"
 			]
+		},
+		{
+			"label": "Plateau / aspiration",
+			"value": "125 mm / autonome",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-pneumatique-rongpeng-rp7335s:0"
+			]
+		},
+		{
+			"label": "Vitesse / longueur / masse",
+			"value": "12 000 tr/min / 128 mm / 0,8 kg",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-pneumatique-rongpeng-rp7335s:0"
+			]
+		},
+		{
+			"label": "Consommation moyenne",
+			"value": "4,5 CFM / 128,2 L/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-pneumatique-rongpeng-rp7335s:0"
+			]
+		},
+		{
+			"label": "Orbite",
+			"value": "Diamètre non précisé dans cette page",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-pneumatique-rongpeng-rp7335s:0"
+			]
 		}
 	],
 	"evidence": [
@@ -79,6 +111,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : c27ae6ecb1433f6b9c63032e2e14794b1c51f98e3bd5fdf8f8e15d1e0f1c961b. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-pneumatique-rongpeng-rp7335s:0",
+			"sourceUrl": "https://www.rongpeng.com/Air-Sander-Self-Vacuuming-RP7335S",
+			"sourceLabel": "Rongpeng, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Rongpeng RP7335S : ponceuse à aspiration autonome, plateau 125 mm, 12 000 tr/min et longueur 128 mm. Les RP7312 et RP7316 ont d’autres corps et vitesses. La page ne précise pas le diamètre d’orbite ; les 4,5 CFM sont une consommation moyenne, pas le maximum en ponçage continu. GET complet SHA-256 c4b5caf88edf81bed089dfd414defb6590179120f17dfabb24137d65da5446cb. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
@@ -86,7 +128,7 @@ const product: ToolProfileInput = {
 			"october2-tools-rongpeng-pdp-82-p1"
 		],
 		"workingPressureBar": [
-			"october2-tools-rongpeng-pdp-82-p1"
+			"review:2026-11-16-reviews:ponceuse-pneumatique-rongpeng-rp7335s:0"
 		],
 		"demandExplanation": [
 			"october2-tools-rongpeng-pdp-82-p1"

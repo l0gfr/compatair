@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/polisseuse-sumake-st-7798.webp",
+		"src": "/images/products/polisseuse-sumake-st-7798-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Sumake ST-7798",
 		"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "sumake-st-7798",
@@ -39,7 +39,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-7798. Consommation publiée, régime non précisé : 480 L/min à 6,2 bar. Consommation dans les unités du tableau : 480 L/min ; 17 cfm. Configuration complète publiée : ST-7798.",
+		"overview": "La ST-7798 est la polisseuse 200 mm à 2 500 tr/min et broche UNC 5/8-11. La ST-7788 emploie le même diamètre pour poncer à 4 500 tr/min ; la ST-7797 réduit le plateau à 180 mm. L’accessoire doit correspondre au diamètre et à la vitesse, pas au seul filetage. Le corps mesure 305 mm pour 2 kg ; les 480 L/min ne sont pas une consommation en charge qualifiée.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 47.",
 			"Consommation dans les unités du tableau : 480 L/min ; 17 cfm.",
@@ -99,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "review:2026-11-16-reviews:polisseuse-sumake-st-7798:0",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
+			"sourceLabel": "Sumake, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La ST-7798 est la polisseuse 200 mm à 2 500 tr/min et broche UNC 5/8-11. La ST-7788 emploie le même diamètre pour poncer à 4 500 tr/min ; la ST-7797 réduit le plateau à 180 mm. L’accessoire doit correspondre au diamètre et à la vitesse, pas au seul filetage. Le corps mesure 305 mm pour 2 kg ; les 480 L/min ne sont pas une consommation en charge qualifiée. GET complet SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Pages PDF lues : 47."
 		}
 	],
 	"fieldSources": {

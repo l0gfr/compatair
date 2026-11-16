@@ -17,10 +17,10 @@ const product: ToolProfileInput = {
 	"connectorSize": "1/4\" (Air Inlet)",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-orbitale-soartec-ws-1051c-5h.webp",
+		"src": "/images/products/ponceuse-orbitale-soartec-ws-1051c-5h-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Soartec WS-1051C-5H",
 		"sourceUrl": "https://www.soartectools.com/products/5-air-random-orbital-sander-5mm-orbit-central-vacuum-ws-1051c-5h",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "soartec-ws-1051c-5h",
@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Soartec WS-1051C-5H. La fiche publie une consommation et une pression d’alimentation, sans préciser le régime de consommation ni affirmer que cette valeur est mesurée à cette pression. Ces champs restent séparés et hors du calcul de compatibilité. Fonction déclarée : 5\" Air Random Orbital Sander 5mm Orbit Central Vacuum. Champ fabricant : Orbit Dia. : 5 mm.",
+		"overview": "La WS-1051C-5H est la ponceuse orbitale 5 pouces à orbite 5 mm et aspiration centrale, 12 000 tr/min et 0,8 kg. La 3H réduit le plateau à 3 pouces ; la 6H l’augmente à 6 pouces. Le diamètre et le raccordement à l’aspirateur doivent correspondre à l’installation. Les 425 L/min publiés restent sans régime de mesure établi, hors dimensionnement.",
 		"verifiedFacts": [
 			"Fonction déclarée : 5\" Air Random Orbital Sander 5mm Orbit Central Vacuum.",
 			"Champ fabricant : Orbit Dia. : 5 mm.",
@@ -154,6 +154,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 448af5b492424f1476a693cadcb8a6ab06140f62fea71c29b9c2b2ef4ae3ac36. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-orbitale-soartec-ws-1051c-5h:0",
+			"sourceUrl": "https://www.soartectools.com/products/5-air-random-orbital-sander-5mm-orbit-central-vacuum-ws-1051c-5h",
+			"sourceLabel": "Soartec, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La WS-1051C-5H est la ponceuse orbitale 5 pouces à orbite 5 mm et aspiration centrale, 12 000 tr/min et 0,8 kg. La 3H réduit le plateau à 3 pouces ; la 6H l’augmente à 6 pouces. Le diamètre et le raccordement à l’aspirateur doivent correspondre à l’installation. Les 425 L/min publiés restent sans régime de mesure établi, hors dimensionnement. GET complet SHA-256 b05f936f0c1a722eeca966bafad0c5ecc540339ee3a24a6ed1809e045f7ae475. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

@@ -17,10 +17,10 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/lime-alternative-deprag-fs905-630by-6061238a.svg",
+		"src": "/images/products/lime-alternative-deprag-fs905-630by-6061238a-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : DEPRAG FS905-630BY (réf. 6061238A)",
 		"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "deprag-fs905-630by",
@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "DEPRAG FS905-630BY (réf. 6061238A). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "La FS905-630BY est une lime à course 9 mm et 6 300 courses/min, pour une queue de 5 mm. La FS911-370BU utilise une queue de 6,5 mm et 3 700 courses/min ; la FS404-900BU réduit la course à 4 mm avec 9 000 courses/min. Le montage de lime et le mouvement sont donc distincts. Aucune consommation n’est déduite du seul flexible de 6 mm.",
 		"verifiedFacts": [
 			"Cadence à vide, courses/min : 6 300.",
 			"Longueur de course, mm (in) : 9 (.35).",
@@ -94,6 +94,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:lime-alternative-deprag-fs905-630by-6061238a:0",
+			"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
+			"sourceLabel": "DEPRAG, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La FS905-630BY est une lime à course 9 mm et 6 300 courses/min, pour une queue de 5 mm. La FS911-370BU utilise une queue de 6,5 mm et 3 700 courses/min ; la FS404-900BU réduit la course à 4 mm avec 9 000 courses/min. Le montage de lime et le mouvement sont donc distincts. Aucune consommation n’est déduite du seul flexible de 6 mm. GET complet SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Pages PDF lues : 32."
 		}
 	],
 	"fieldSources": {

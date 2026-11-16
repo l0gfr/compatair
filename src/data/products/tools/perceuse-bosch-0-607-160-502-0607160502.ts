@@ -22,10 +22,10 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/perceuse-bosch-0-607-160-502-0607160502.webp",
+		"src": "/images/products/perceuse-bosch-0-607-160-502-0607160502-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Bosch 0 607 160 502 (réf. 0607160502)",
 		"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "bosch-0-607-160-502",
@@ -37,7 +37,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Bosch 0 607 160 502 (réf. 0607160502). Consommation en charge : 510 L/min à 6,3 bar. Vitesse à vide : 2800 tr/min. Masse : 0.8 kg.",
+		"overview": "La 0 607 160 502 est une perceuse de 320 W à mandrin autoserrant, pour 6 mm dans l’acier et 2 800 tr/min. La 501 utilise un mandrin à clé ; la 504 privilégie 850 tr/min et 10 mm dans l’acier. Le tableau donne 8,5 L/s en charge à 6,3 bar avec quatre mètres de tuyau. Ce point de 510 L/min reste distinct de la vitesse à vide et de la capacité de perçage.",
 		"verifiedFacts": [
 			"Vitesse à vide : 2800 tr/min.",
 			"Masse : 0.8 kg."
@@ -98,6 +98,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:perceuse-bosch-0-607-160-502-0607160502:0",
+			"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf",
+			"sourceLabel": "Bosch, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 0 607 160 502 est une perceuse de 320 W à mandrin autoserrant, pour 6 mm dans l’acier et 2 800 tr/min. La 501 utilise un mandrin à clé ; la 504 privilégie 850 tr/min et 10 mm dans l’acier. Le tableau donne 8,5 L/s en charge à 6,3 bar avec quatre mètres de tuyau. Ce point de 510 L/min reste distinct de la vitesse à vide et de la capacité de perçage. GET complet SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. Pages PDF lues : 16, 4."
 		}
 	],
 	"fieldSources": {

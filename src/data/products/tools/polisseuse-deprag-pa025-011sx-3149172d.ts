@@ -17,10 +17,10 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/polisseuse-deprag-pa025-011sx-3149172d.svg",
+		"src": "/images/products/polisseuse-deprag-pa025-011sx-3149172d-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : DEPRAG PA025-011SX (réf. 3149172D)",
 		"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "deprag-pa025-011sx",
@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "DEPRAG PA025-011SX (réf. 3149172D). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "La PA025-011SX est la polisseuse 0,25 kW à 1 100 tr/min pour plateau caoutchouc de 120 mm. Les PA025-021SX et 036SX gardent ce diamètre mais tournent à 2 100 et 3 600 tr/min. La vitesse adaptée au produit de polissage et au support distingue les références. La page technique ne donne pas de point de consommation à pression connue ; aucune valeur de la perceuse voisine n’est utilisée.",
 		"verifiedFacts": [
 			"Puissance déclarée, kW (hp) : 0,25 (.34).",
 			"Vitesse à vide, tr/min : 1 100.",
@@ -102,6 +102,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:polisseuse-deprag-pa025-011sx-3149172d:0",
+			"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
+			"sourceLabel": "DEPRAG, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La PA025-011SX est la polisseuse 0,25 kW à 1 100 tr/min pour plateau caoutchouc de 120 mm. Les PA025-021SX et 036SX gardent ce diamètre mais tournent à 2 100 et 3 600 tr/min. La vitesse adaptée au produit de polissage et au support distingue les références. La page technique ne donne pas de point de consommation à pression connue ; aucune valeur de la perceuse voisine n’est utilisée. GET complet SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Pages PDF lues : 16."
 		}
 	],
 	"fieldSources": {

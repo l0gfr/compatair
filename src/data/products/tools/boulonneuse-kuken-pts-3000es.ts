@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Le tableau établit les caractéristiques individuelles. La consommation normale n’est pas explicitement rattachée à un régime en charge et à une pression de mesure.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/boulonneuse-kuken-pts-3000es.webp",
+		"src": "/images/products/boulonneuse-kuken-pts-3000es-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : KUKEN PTS-3000ES",
 		"sourceUrl": "https://www.kuken.co.jp/en/catalogue/pdf/best_selection.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "kuken-pts-3000es",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "KUKEN PTS-3000ES. Le tableau établit les caractéristiques individuelles. La consommation normale n’est pas explicitement rattachée à un régime en charge et à une pression de mesure. Masse publiée : 14.9 kg (32.8 lb). Longueur publiée : 497.0 mm.",
+		"overview": "La PTS-3000ES couvre 1 000–3 000 Nm avec un carré 1½ pouce, 497 mm et 14,9 kg. La PTS-1000ES couvre 400–1 000 Nm avec un carré 1 pouce ; la 1000E allonge le corps à 720 mm. La réaction de couple et le choix de douille font partie de l’installation. Le tableau à 0,62 MPa donne 0,57 m³/min normalisés, sans préciser le régime de consommation ; le calcul d’air reste non conclusif.",
 		"verifiedFacts": [
 			"Masse publiée : 14.9 kg (32.8 lb).",
 			"Longueur publiée : 497.0 mm."
@@ -74,6 +74,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 0da76488e568242877887f713ecd81203eaa9f2322c20eb65648d25bb7e71cc7. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:boulonneuse-kuken-pts-3000es:0",
+			"sourceUrl": "https://www.kuken.co.jp/en/catalogue/pdf/best_selection.pdf",
+			"sourceLabel": "KUKEN, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La PTS-3000ES couvre 1 000–3 000 Nm avec un carré 1½ pouce, 497 mm et 14,9 kg. La PTS-1000ES couvre 400–1 000 Nm avec un carré 1 pouce ; la 1000E allonge le corps à 720 mm. La réaction de couple et le choix de douille font partie de l’installation. Le tableau à 0,62 MPa donne 0,57 m³/min normalisés, sans préciser le régime de consommation ; le calcul d’air reste non conclusif. GET complet SHA-256 0da76488e568242877887f713ecd81203eaa9f2322c20eb65648d25bb7e71cc7. Pages PDF lues : 7."
 		}
 	],
 	"fieldSources": {

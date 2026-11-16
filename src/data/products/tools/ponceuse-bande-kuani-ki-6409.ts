@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Consommation moyenne publiée sans facteur de marche ni point de pression de mesure : aucun débit en charge déterministe ne peut être retenu.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-bande-kuani-ki-6409.webp",
+		"src": "/images/products/ponceuse-bande-kuani-ki-6409-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : KUANI KI-6409",
 		"sourceUrl": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "kuani-ki-6409",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "KUANI KI-6409. Consommation moyenne publiée sans facteur de marche ni point de pression de mesure : aucun débit en charge déterministe ne peut être retenu. Dimensions de bande (mm) : 20×520. Vitesse à vide (tr/min) : 18,000.",
+		"overview": "La KI-6409 emploie une bande de 20 × 520 mm à 18 000 tr/min, pour 375 mm et 1,26 kg. La KI-6403 garde le même format de bande mais raccourcit le corps à 350 mm ; la KI-6402 reçoit 10 × 330 mm. La largeur de travail et le dégagement priment sur la vitesse commune. Les 85 L/min moyens restent hors dimensionnement continu.",
 		"verifiedFacts": [
 			"Dimensions de bande (mm) : 20×520.",
 			"Vitesse à vide (tr/min) : 18,000.",
@@ -121,6 +121,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-bande-kuani-ki-6409:0",
+			"sourceUrl": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf",
+			"sourceLabel": "KUANI, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La KI-6409 emploie une bande de 20 × 520 mm à 18 000 tr/min, pour 375 mm et 1,26 kg. La KI-6403 garde le même format de bande mais raccourcit le corps à 350 mm ; la KI-6402 reçoit 10 × 330 mm. La largeur de travail et le dégagement priment sur la vitesse commune. Les 85 L/min moyens restent hors dimensionnement continu. GET complet SHA-256 569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba. Pages PDF lues : 80."
 		}
 	],
 	"fieldSources": {

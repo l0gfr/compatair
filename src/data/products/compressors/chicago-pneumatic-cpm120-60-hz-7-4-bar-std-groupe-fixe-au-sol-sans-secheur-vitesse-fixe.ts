@@ -31,10 +31,10 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/chicago-pneumatic-cpm120-60-hz-7-4-bar-std-groupe-fixe-au-sol-sans-secheur-vitesse-fixe.webp",
+		"src": "/images/products/chicago-pneumatic-cpm120-60-hz-7-4-bar-std-groupe-fixe-au-sol-sans-secheur-vitesse-fixe-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Chicago Pneumatic CPM120, 60 Hz, 7,4 bar",
 		"sourceUrl": "https://compressors.cp.com/content/dam/brands/Chicago%20Pneumatic/compressors/cpvsm-75-120-%282024%29/leaflets/CP%28WW%29%20CPI75-120%20CPM75-120%20%20CPVSM75-120%206999%206106%2082_EN.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -81,7 +81,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Chicago Pneumatic CPM120, 60 Hz, 7,4 bar. 16 216,667 L/min à 6,9 bar. Moteur 90 kW ; STD, groupe fixe au sol, sans sécheur ; vitesse fixe.",
+		"overview": "Le CPM120 STD 60 Hz de 90 kW est déclaré à 973 m³/h au point de référence 6,9 bar, pour un maximum de 7,4 bar. Le 60 Hz 9,1 bar descend à 899 m³/h à 8,6 bar ; la version 50 Hz 7,5 bar utilise un autre tableau. La fréquence réseau fait partie de la sélection. Le groupe STD ne comprend pas le sécheur des CPI, et aucun taux de marche numérique n’est ajouté.",
 		"verifiedFacts": [
 			"Débit restitué relié à une pression et aux unités originales de la fiche fabricant.",
 			"Périmètre retenu : groupe seul ; réservoir de stockage externe exclu.",
@@ -115,6 +115,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 f4f20b2a4b11c06341f00b6f37e343e791088aaf4631ecd0b188170df2ba91ca de la réponse originale. Données fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:chicago-pneumatic-cpm120-60-hz-7-4-bar-std-groupe-fixe-au-sol-sans-secheur-vitesse-fixe:0",
+			"sourceUrl": "https://compressors.cp.com/content/dam/brands/Chicago%20Pneumatic/compressors/cpvsm-75-120-%282024%29/leaflets/CP%28WW%29%20CPI75-120%20CPM75-120%20%20CPVSM75-120%206999%206106%2082_EN.pdf",
+			"sourceLabel": "Chicago Pneumatic, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le CPM120 STD 60 Hz de 90 kW est déclaré à 973 m³/h au point de référence 6,9 bar, pour un maximum de 7,4 bar. Le 60 Hz 9,1 bar descend à 899 m³/h à 8,6 bar ; la version 50 Hz 7,5 bar utilise un autre tableau. La fréquence réseau fait partie de la sélection. Le groupe STD ne comprend pas le sécheur des CPI, et aucun taux de marche numérique n’est ajouté. GET complet SHA-256 f4f20b2a4b11c06341f00b6f37e343e791088aaf4631ecd0b188170df2ba91ca. Pages PDF lues : 7, 3."
 		}
 	],
 	"fieldSources": {

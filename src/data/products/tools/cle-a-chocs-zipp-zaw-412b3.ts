@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "average",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-zipp-zaw-412b3.webp",
+		"src": "/images/products/cle-a-chocs-zipp-zaw-412b3-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : ZIPP ZAW-412B3",
 		"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "zipp-zaw-412b3",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZAW-412B3. Consommation moyenne : 127 L/min ; pression publiée : 6,2 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Vitesse à vide : 11000 tr/min. Masse : 0.68 kg.",
+		"overview": "La ZAW-412B3 utilise un carré 3/8 pouce, contre 1/4 pouce pour la B2, avec le même mécanisme à deux marteaux et échappement latéral. Les deux donnent 11 000 tr/min, 27 Nm de travail et 35 Nm maximum pour 178 mm. La ZAW-417B passe à l’échappement arrière et à un autre couple. Les 127 L/min publiés sont moyens, hors calcul de consommation continue.",
 		"verifiedFacts": [
 			"Vitesse à vide : 11000 tr/min.",
 			"Masse : 0.68 kg.",
@@ -96,6 +96,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-chocs-zipp-zaw-412b3:0",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+			"sourceLabel": "ZIPP, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La ZAW-412B3 utilise un carré 3/8 pouce, contre 1/4 pouce pour la B2, avec le même mécanisme à deux marteaux et échappement latéral. Les deux donnent 11 000 tr/min, 27 Nm de travail et 35 Nm maximum pour 178 mm. La ZAW-417B passe à l’échappement arrière et à un autre couple. Les 127 L/min publiés sont moyens, hors calcul de consommation continue. GET complet SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. Pages PDF lues : 9."
 		}
 	],
 	"fieldSources": {

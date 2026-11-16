@@ -9,82 +9,71 @@ const product: ToolProfileInput = {
 	"categoryId": "derouilleur-a-aiguilles",
 	"category": "derouilleur-a-aiguilles",
 	"label": "Aircraft NP PRO",
-	"demandModel": "fixed-flow",
-	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
-		"max": 6.3
-	},
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/aircraft-np-pro.webp",
+		"src": "/images/products/aircraft-np-pro-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Aircraft NP PRO, référence 2402640",
-		"sourceUrl": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-tools-2026-09-27.json",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
+		"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=251",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Aircraft NP PRO, référence 2402640. Consommation moyenne publiée : 170 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Cadence de frappe : 3200 min¯¹. Longueur des aiguilles : 180 mm.",
+		"overview": "Aircraft NP PRO : aiguilles de 3 × 180 mm et 3 200 coups/min, contre 3 × 125 mm et 3 800 coups/min pour le NE PRO. Le catalogue indique 170 L/min approximatifs pour les deux, sans les qualifier de moyens. La longueur et la cadence différencient ces décapeurs ; la consommation reste hors calcul en charge.",
 		"verifiedFacts": [
-			"Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
-			"Consommation moyenne publiée : 170 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
-			"Référence fabricant : 2402640.",
-			"Cadence de frappe : 3200 min¯¹.",
-			"Longueur des aiguilles : 180 mm.",
-			"Diamètre des aiguilles : 3 mm."
+			"Aiguilles : Diamètre 3 mm, longueur 180 mm.",
+			"Cadence : 3 200 coups/min.",
+			"Masse approximative : 2,6 kg.",
+			"Pression de service / raccord : 6,3 bar / 1/4 pouce.",
+			"Consommation approximative, régime non précisé : 170 L/min.",
+			"Vibrations déclarées : 17 m/s²."
 		],
 		"limitations": [
-			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
-			"Une consommation moyenne ne constitue pas un débit maximal en usage continu. Vérifier le régime réel auprès du fabricant avant dimensionnement."
+			"La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
+			"label": "Aiguilles",
+			"value": "Diamètre 3 mm, longueur 180 mm",
 			"evidenceIds": [
-				"aircraft-2402640-20260927"
+				"review:2026-11-16-reviews:aircraft-np-pro:0"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation moyenne publiée : 170 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
+			"label": "Cadence",
+			"value": "3 200 coups/min",
 			"evidenceIds": [
-				"aircraft-2402640-20260927"
-			]
-		},
-		{
-			"label": "Cadence de frappe",
-			"value": "3200 min¯¹",
-			"evidenceIds": [
-				"aircraft-2402640-20260927"
-			]
-		},
-		{
-			"label": "Longueur des aiguilles",
-			"value": "180 mm",
-			"evidenceIds": [
-				"aircraft-2402640-20260927"
-			]
-		},
-		{
-			"label": "Diamètre des aiguilles",
-			"value": "3 mm",
-			"evidenceIds": [
-				"aircraft-2402640-20260927"
+				"review:2026-11-16-reviews:aircraft-np-pro:0"
 			]
 		},
 		{
 			"label": "Masse approximative",
-			"value": "2.6 kg",
+			"value": "2,6 kg",
 			"evidenceIds": [
-				"aircraft-2402640-20260927"
+				"review:2026-11-16-reviews:aircraft-np-pro:0"
 			]
 		},
 		{
-			"label": "Type indiqué par le fabricant",
-			"value": "Needle scaler",
+			"label": "Pression de service / raccord",
+			"value": "6,3 bar / 1/4 pouce",
 			"evidenceIds": [
-				"aircraft-2402640-20260927"
+				"review:2026-11-16-reviews:aircraft-np-pro:0"
+			]
+		},
+		{
+			"label": "Consommation approximative, régime non précisé",
+			"value": "170 L/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:aircraft-np-pro:0"
+			]
+		},
+		{
+			"label": "Vibrations déclarées",
+			"value": "17 m/s²",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:aircraft-np-pro:0"
 			]
 		}
 	],
@@ -108,31 +97,33 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer 702076. Empreinte PDF SHA-256 : 50a8d5b48033badc32fdbd2714265b1bc8d03f5b3127a33c863150e1d9a32cd9. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
+		},
+		{
+			"id": "review:2026-11-16-reviews:aircraft-np-pro:0",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=251",
+			"sourceLabel": "Aircraft, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Aircraft NP PRO : aiguilles de 3 × 180 mm et 3 200 coups/min, contre 3 × 125 mm et 3 800 coups/min pour le NE PRO. Le catalogue indique 170 L/min approximatifs pour les deux, sans les qualifier de moyens. La longueur et la cadence différencient ces décapeurs ; la consommation reste hors calcul en charge. GET complet SHA-256 50a8d5b48033badc32fdbd2714265b1bc8d03f5b3127a33c863150e1d9a32cd9. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"aircraft-2402640-20260927"
+			"review:2026-11-16-reviews:aircraft-np-pro:0"
+		],
+		"demandExplanation": [
+			"review:2026-11-16-reviews:aircraft-np-pro:0"
 		],
 		"workingPressureBar": [
-			"aircraft-2402640-20260927"
-		],
-		"airflowLpm": [
-			"aircraft-2402640-20260927"
-		],
-		"airflowBasis": [
-			"aircraft-2402640-20260927"
+			"review:2026-11-16-reviews:aircraft-np-pro:0"
 		]
 	},
 	"notes": [
-		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+		"La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne."
 	],
-	"airflowLpm": {
-		"min": 170,
-		"typical": 170,
-		"max": 170
-	},
-	"airflowBasis": "average"
+	"demandExplanation": "La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne."
 };
 
 export default product;

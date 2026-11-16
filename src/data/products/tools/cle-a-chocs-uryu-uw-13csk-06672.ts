@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "average",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-uryu-uw-13csk-06672.webp",
+		"src": "/images/products/cle-a-chocs-uryu-uw-13csk-06672-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : URYU UW-13CSK (réf. 06672)",
 		"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P38_43.pdf",
-		"sourceLabel": "Carte technique CompatAir, établie à partir du document constructeur"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "uryu-uw-13csk",
@@ -37,11 +37,16 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU UW-13CSK, code 06672. Le tableau publie une consommation moyenne de 0,75 m³/min, soit 750 L/min. Pression de référence retenue : 6 bar.",
+		"overview": "UW-13CSK, code 06672 : clé à chocs de capacité nominale 13 mm, sortie 1/2 pouce, environ 6 500 tr/min, 374 mm et 5,17 kg hors douille. La UW-13SSK mesure 281 mm et pèse 3,17 kg ; leur moyenne publiée diffère aussi, 0,75 contre 0,55 m³/min. Aucun couple absent de cette table n’est ajouté.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 06672, page PDF 4.",
 			"Consommation moyenne publiée : 750 L/min après conversion de l’unité originale.",
-			"SPECIFICATIONS                                        Recommended Air Pressure : 0.6MPa (85psi)\nSPECIFICATIONS                                        Recommended Air Pressure : 0.6MPa (85psi)"
+			"SPECIFICATIONS                                        Recommended Air Pressure : 0.6MPa (85psi)\nSPECIFICATIONS                                        Recommended Air Pressure : 0.6MPa (85psi)",
+			"Capacité nominale de boulon : 13 mm.",
+			"Carré : 12,7 mm (1/2 pouce).",
+			"Vitesse à vide approximative : 6 500 tr/min.",
+			"Longueur sans douille : 374 mm.",
+			"Masse sans douille : 5,17 kg."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
@@ -76,6 +81,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-uryu-p38-43"
 			]
+		},
+		{
+			"label": "Capacité nominale de boulon",
+			"value": "13 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-uryu-uw-13csk-06672:0"
+			]
+		},
+		{
+			"label": "Carré",
+			"value": "12,7 mm (1/2 pouce)",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-uryu-uw-13csk-06672:0"
+			]
+		},
+		{
+			"label": "Vitesse à vide approximative",
+			"value": "6 500 tr/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-uryu-uw-13csk-06672:0"
+			]
+		},
+		{
+			"label": "Longueur sans douille",
+			"value": "374 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-uryu-uw-13csk-06672:0"
+			]
+		},
+		{
+			"label": "Masse sans douille",
+			"value": "5,17 kg",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-uryu-uw-13csk-06672:0"
+			]
 		}
 	],
 	"evidence": [
@@ -88,6 +128,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 90b725f7cea6b3034cca423bf66e2277b337b80dc68d216aa85b8105caf2b941. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-chocs-uryu-uw-13csk-06672:0",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P38_43.pdf",
+			"sourceLabel": "URYU, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "UW-13CSK, code 06672 : clé à chocs de capacité nominale 13 mm, sortie 1/2 pouce, environ 6 500 tr/min, 374 mm et 5,17 kg hors douille. La UW-13SSK mesure 281 mm et pèse 3,17 kg ; leur moyenne publiée diffère aussi, 0,75 contre 0,55 m³/min. Aucun couple absent de cette table n’est ajouté. GET complet SHA-256 90b725f7cea6b3034cca423bf66e2277b337b80dc68d216aa85b8105caf2b941. Pages PDF lues : 4."
 		}
 	],
 	"fieldSources": {

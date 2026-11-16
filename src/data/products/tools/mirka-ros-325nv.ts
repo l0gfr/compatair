@@ -9,82 +9,71 @@ const product: ToolProfileInput = {
 	"categoryId": "ponceuse-orbitale",
 	"category": "ponceuse-orbitale",
 	"label": "Mirka ROS 325NV",
-	"demandModel": "fixed-flow",
-	"workingPressureBar": {
-		"min": 6.2,
-		"typical": 6.2,
-		"max": 6.2
-	},
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/mirka-ros-325nv.webp",
+		"src": "/images/products/mirka-ros-325nv-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Mirka ROS 325NV, référence 8993320111",
-		"sourceUrl": "https://cms.mirka.com/globalassets/msc/pdf/mirka-product-catalog-2022-low-res.pdf#page=110",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://cms.mirka.com/globalassets/msc/pdf/mirka-product-catalog-2022-low-res.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Mirka ROS 325NV, référence 8993320111. Consommation publiée : 481 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Puissance publiée : 209 W. Vitesse de rotation : 12000 tr/min.",
+		"overview": "Mirka ROS 325NV 8993320111 : ponceuse 77 mm sans aspiration, orbite 2,5 mm, 209 W et 12 000 tr/min. La 325CV conserve diamètre et orbite avec aspiration centrale ; la ROS 150NV utilise un autre petit plateau et une orbite de 5 mm. Les 481 L/min publiés restent de régime non précisé.",
 		"verifiedFacts": [
-			"Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
-			"Consommation publiée : 481 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
-			"Référence fabricant : 8993320111.",
-			"Puissance publiée : 209 W.",
-			"Vitesse de rotation : 12000 tr/min.",
-			"Diamètre de plateau publié : 77 mm."
+			"Plateau / orbite : 77 / 2,5 mm.",
+			"Aspiration : Sans aspiration, NV.",
+			"Puissance / vitesse : 209 W / 12 000 tr/min.",
+			"Masse, catalogue 2022/2023 : 510 g.",
+			"Consommation, régime non précisé : 481 L/min.",
+			"Pression de travail : 6,2 bar."
 		],
 		"limitations": [
-			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
-			"Catalogue 2022/2023 : vérifier la disponibilité actuelle et la référence de plateau avant commande."
+			"La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
+			"label": "Plateau / orbite",
+			"value": "77 / 2,5 mm",
 			"evidenceIds": [
-				"mirka-8993320111-20260927"
+				"review:2026-11-16-reviews:mirka-ros-325nv:0"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation publiée : 481 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
+			"label": "Aspiration",
+			"value": "Sans aspiration, NV",
 			"evidenceIds": [
-				"mirka-8993320111-20260927"
+				"review:2026-11-16-reviews:mirka-ros-325nv:0"
 			]
 		},
 		{
-			"label": "Puissance publiée",
-			"value": "209 W",
+			"label": "Puissance / vitesse",
+			"value": "209 W / 12 000 tr/min",
 			"evidenceIds": [
-				"mirka-8993320111-20260927"
+				"review:2026-11-16-reviews:mirka-ros-325nv:0"
 			]
 		},
 		{
-			"label": "Vitesse de rotation",
-			"value": "12000 tr/min",
+			"label": "Masse, catalogue 2022/2023",
+			"value": "510 g",
 			"evidenceIds": [
-				"mirka-8993320111-20260927"
+				"review:2026-11-16-reviews:mirka-ros-325nv:0"
 			]
 		},
 		{
-			"label": "Diamètre de plateau publié",
-			"value": "77 mm",
+			"label": "Consommation, régime non précisé",
+			"value": "481 L/min",
 			"evidenceIds": [
-				"mirka-8993320111-20260927"
+				"review:2026-11-16-reviews:mirka-ros-325nv:0"
 			]
 		},
 		{
-			"label": "Orbite",
-			"value": "2.5 mm",
+			"label": "Pression de travail",
+			"value": "6,2 bar",
 			"evidenceIds": [
-				"mirka-8993320111-20260927"
-			]
-		},
-		{
-			"label": "Collecte des poussières",
-			"value": "Sans aspiration",
-			"evidenceIds": [
-				"mirka-8993320111-20260927"
+				"review:2026-11-16-reviews:mirka-ros-325nv:0"
 			]
 		}
 	],
@@ -97,27 +86,33 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation publiée : 481 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+		},
+		{
+			"id": "review:2026-11-16-reviews:mirka-ros-325nv:0",
+			"sourceUrl": "https://cms.mirka.com/globalassets/msc/pdf/mirka-product-catalog-2022-low-res.pdf",
+			"sourceLabel": "Mirka, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Mirka ROS 325NV 8993320111 : ponceuse 77 mm sans aspiration, orbite 2,5 mm, 209 W et 12 000 tr/min. La 325CV conserve diamètre et orbite avec aspiration centrale ; la ROS 150NV utilise un autre petit plateau et une orbite de 5 mm. Les 481 L/min publiés restent de régime non précisé. GET complet SHA-256 2ced0651411b4d8c2cd50ec1e250c15d9fda73d452ffd72b2a9cbe8910647fc2. Pages PDF lues : 110."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"mirka-8993320111-20260927"
+			"review:2026-11-16-reviews:mirka-ros-325nv:0"
+		],
+		"demandExplanation": [
+			"review:2026-11-16-reviews:mirka-ros-325nv:0"
 		],
 		"workingPressureBar": [
-			"mirka-8993320111-20260927"
-		],
-		"airflowLpm": [
-			"mirka-8993320111-20260927"
+			"review:2026-11-16-reviews:mirka-ros-325nv:0"
 		]
 	},
 	"notes": [
-		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+		"La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne."
 	],
-	"airflowLpm": {
-		"min": 481,
-		"typical": 481,
-		"max": 481
-	}
+	"demandExplanation": "La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne."
 };
 
 export default product;

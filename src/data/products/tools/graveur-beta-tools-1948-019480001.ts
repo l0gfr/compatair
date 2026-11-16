@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/graveur-beta-tools-1948-019480001.svg",
+		"src": "/images/products/graveur-beta-tools-1948-019480001-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Beta Tools 1948 (réf. 019480001)",
 		"sourceUrl": "https://www.beta-tools.com/files/2026/Action_EXPORT_2026.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "beta-tools-1948",
@@ -29,14 +29,16 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Beta Tools 1948 (réf. 019480001). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "Le stylo 1948 grave avec une pointe en carbure de tungstène les matériaux annoncés jusqu’à 60 HRC. Sa cadence de 3 500–3 800 courses/min est distincte des 13 000 coups/min de l’AREP25 ; elle ne permet pas de comparer les consommations en charge.",
 		"verifiedFacts": [
 			"Cadence mécanique par minute : 3.500 ÷ 3.800.",
 			"Dureté maximale du matériau : 60 HRC.",
 			"Filetage d’arrivée d’air : 1/4” GAS.",
 			"Pression de travail : 6,2 bar.",
 			"Consommation moyenne, hors calcul : 50 l/min.",
-			"Masse : 150 g."
+			"Masse : 150 g.",
+			"Pointe : Carbure de tungstène.",
+			"Longueur du corps et flexible : 170 mm ; flexible 1,5 m."
 		],
 		"limitations": [
 			"Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
@@ -100,6 +102,20 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october3d-tools-beta-action-export-2026-p95"
 			]
+		},
+		{
+			"label": "Pointe",
+			"value": "Carbure de tungstène",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:graveur-beta-tools-1948-019480001:0"
+			]
+		},
+		{
+			"label": "Longueur du corps et flexible",
+			"value": "170 mm ; flexible 1,5 m",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:graveur-beta-tools-1948-019480001:0"
+			]
 		}
 	],
 	"evidence": [
@@ -112,6 +128,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 db4a2bce6f421e1aa42ea2eeb8274541ffcd4965b052e6328696a9d61735e85b. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:graveur-beta-tools-1948-019480001:0",
+			"sourceUrl": "https://www.beta-tools.com/files/2026/Action_EXPORT_2026.pdf",
+			"sourceLabel": "Beta Tools, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le stylo 1948 grave avec une pointe en carbure de tungstène les matériaux annoncés jusqu’à 60 HRC. Sa cadence de 3 500–3 800 courses/min est distincte des 13 000 coups/min de l’AREP25 ; elle ne permet pas de comparer les consommations en charge. GET complet SHA-256 db4a2bce6f421e1aa42ea2eeb8274541ffcd4965b052e6328696a9d61735e85b. Pages PDF lues : 95."
 		}
 	],
 	"fieldSources": {
@@ -119,7 +145,7 @@ const product: ToolProfileInput = {
 			"october3d-tools-beta-action-export-2026-p95"
 		],
 		"workingPressureBar": [
-			"october3d-tools-beta-action-export-2026-p95"
+			"review:2026-11-16-reviews:graveur-beta-tools-1948-019480001:0"
 		],
 		"demandExplanation": [
 			"october3d-tools-beta-action-export-2026-p95"

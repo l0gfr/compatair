@@ -15,10 +15,10 @@ const product: ToolProfileInput = {
 	"connectorSize": "1/4\" (Air Inlet)",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/burineur-soartec-wx-420c.webp",
+		"src": "/images/products/burineur-soartec-wx-420c-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Soartec WX-420C",
 		"sourceUrl": "https://www.soartectools.com/products/air-chipping-hammer",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "soartec-wx-420c",
@@ -30,7 +30,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Soartec WX-420C. La fiche publie une consommation et une pression d’alimentation, sans préciser le régime de consommation ni affirmer que cette valeur est mesurée à cette pression. Ces champs restent séparés et hors du calcul de compatibilité. Fonction déclarée : Air Chipping Hammer WX-420C. Champ fabricant : Chisel Shank- Hex : 0.47\"(12mm).",
+		"overview": "Le WX-420C est un burineur à fût court, à distinguer des fûts longs de la gamme par leur course et leur emmanchement. La fiche constructeur décrit l’outil et ses accessoires ; sa consommation non appariée à un régime et une pression de mesure reste documentaire. La taille de burin et l’accès au travail sont contrôlés séparément de l’alimentation. Le moteur conserve une réponse non conclusive.",
 		"verifiedFacts": [
 			"Fonction déclarée : Air Chipping Hammer WX-420C.",
 			"Champ fabricant : Chisel Shank- Hex : 0.47\"(12mm).",
@@ -158,6 +158,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 8a86dc4d81308f7eff5db30d76fd19b8ca78af03c9bba9d49a0c88c086a549e3. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:burineur-soartec-wx-420c:0",
+			"sourceUrl": "https://www.soartectools.com/products/air-chipping-hammer",
+			"sourceLabel": "Soartec, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le WX-420C est un burineur à fût court, à distinguer des fûts longs de la gamme par leur course et leur emmanchement. La fiche constructeur décrit l’outil et ses accessoires ; sa consommation non appariée à un régime et une pression de mesure reste documentaire. La taille de burin et l’accès au travail sont contrôlés séparément de l’alimentation. Le moteur conserve une réponse non conclusive. GET complet SHA-256 d898129b519d391232ffae1e5ed695fef7e60f423dafce151280b405e7fdfbe8. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

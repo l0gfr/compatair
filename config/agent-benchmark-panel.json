@@ -10,7 +10,7 @@
     },
     {
       "compressor_id": "gentilin-esk480-100-811610006",
-      "tool_id": "biax-gaf-505"
+      "tool_id": "yokota-yd-5phca"
     },
     {
       "compressor_id": "fini-plus-11-13-500-es",
@@ -322,7 +322,7 @@
     },
     {
       "compressor_id": "gentilin-c330-24",
-      "tool_id": "biax-srd-3-45-3"
+      "tool_id": "red-rooster-rrg-260re"
     },
     {
       "compressor_id": "abac-spinn-15-10-230-50-fm",
@@ -449,6 +449,36 @@
         "tool_id": "mirka-ros-325db"
       },
       "reason": "RA150A devient variable-volume faute de pression de mesure appariée. ROS325DB reste une ponceuse orbitale fixed-flow à régime unqualified documenté, donc insufficient_data. Plateaux et orbites différents : ce remplacement de scénario ne revendique aucune équivalence matérielle."
+    },
+    {
+      "reviewedAt": "2026-11-16",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "previousPanelSha256": "cebcf5b0b4492b9a5e115696d5a9cc8247eb405f87615ca360590320b2cf0241",
+      "pairIndex": 1,
+      "before": {
+        "compressor_id": "gentilin-esk480-100-811610006",
+        "tool_id": "biax-gaf-505"
+      },
+      "after": {
+        "compressor_id": "gentilin-esk480-100-811610006",
+        "tool_id": "yokota-yd-5phca"
+      },
+      "reason": "GAF505 devient variable-volume : les 300 L/min ne sont pas appariés à une pression de mesure démontrée. YD-5PHCA reste une visseuse fixed-flow à régime unqualified documenté et conserve insufficient_data. Le format pistolet diffère du format droit : remplacement de scénario sans équivalence matérielle."
+    },
+    {
+      "reviewedAt": "2026-11-16",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "previousPanelSha256": "bcd0d8f7b452d04ef62e91df116500f55468dbdb483145f880f0738996e520af",
+      "pairIndex": 79,
+      "before": {
+        "compressor_id": "gentilin-c330-24",
+        "tool_id": "biax-srd-3-45-3"
+      },
+      "after": {
+        "compressor_id": "gentilin-c330-24",
+        "tool_id": "red-rooster-rrg-260re"
+      },
+      "reason": "SRD3-45/3 devient variable-volume faute de pression de mesure appariée aux 380 L/min. RRG-260RE reste une meuleuse droite fixed-flow à régime unqualified documenté et conserve insufficient_data. Pinces, vitesse et puissance diffèrent ; aucune équivalence matérielle revendiquée."
     }
   ]
 }

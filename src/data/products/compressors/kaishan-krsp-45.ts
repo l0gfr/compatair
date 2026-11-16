@@ -29,13 +29,13 @@ const product: CompressorInput = {
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/kaishan-krsp-45.svg",
+    "src": "/images/products/kaishan-krsp-45-technical-20261116-reviews.svg",
     "alt": "Repères techniques : Kaishan KRSP-45",
     "sourceUrl": "https://www.kaishan.com.au/wp-content/uploads/2024/07/KRSP-2023-Digital.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "editorial": {
-    "overview": "Kaishan KRSP-45. 8 500 L/min déclarés à 8 bar. Configuration constructeur : KRSP-45-8.",
+    "overview": "Le KRSP45-8 50 Hz fournit 8,5 m³/min à pleine charge sous 8 bar, pour 45 kW et un maximum 8,5 bar. Le KRSP400-8 est une autre classe de groupe, avec 74,3 m³/min à 8 bar ; le KRSP110 occupe une autre ligne du tableau. La pression utile est le point 8 bar, pas la limite 8,5. Le stockage et le taux de marche restent indéterminés.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 8,5 bar.",
       "FAD sous pression identifié séparément des valeurs d’aspiration : 8 500 L/min déclarés à 8 bar."
@@ -101,6 +101,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-05",
       "confidence": "B",
       "notes": "SHA-256 e6c541d4660dda7212e2455f09b4368e93fedc81fa6b701264b32db0f86dac60 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-reviews:kaishan-krsp-45:0",
+      "sourceUrl": "https://www.kaishan.com.au/wp-content/uploads/2024/07/KRSP-2023-Digital.pdf",
+      "sourceLabel": "Kaishan, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "Le KRSP45-8 50 Hz fournit 8,5 m³/min à pleine charge sous 8 bar, pour 45 kW et un maximum 8,5 bar. Le KRSP400-8 est une autre classe de groupe, avec 74,3 m³/min à 8 bar ; le KRSP110 occupe une autre ligne du tableau. La pression utile est le point 8 bar, pas la limite 8,5. Le stockage et le taux de marche restent indéterminés. GET complet SHA-256 e6c541d4660dda7212e2455f09b4368e93fedc81fa6b701264b32db0f86dac60. Pages PDF lues : 5."
     }
   ],
   "fieldSources": {

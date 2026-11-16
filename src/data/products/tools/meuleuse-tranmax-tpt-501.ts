@@ -11,13 +11,13 @@ const product: ToolProfileInput = {
 	"mpn": "TPT-501",
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
-	"demandExplanation": "Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse.",
+	"demandExplanation": "La consommation publiée est une moyenne en charge, sans pression de mesure associée dans le tableau. Elle reste documentaire et ne donne pas un maximum de dimensionnement.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-tranmax-tpt-501.webp",
+		"src": "/images/products/meuleuse-tranmax-tpt-501-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Tranmax TPT-501",
 		"sourceUrl": "https://ss-client-website.s3-ap-northeast-1.amazonaws.com/tranmax/2023_01_09_113224_2212-Professional-Power-Tools-TP.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "tranmax-tpt-501",
@@ -29,38 +29,53 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Tranmax TPT-501. Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse. Masse publiée : 0.4 kg (0.9 lb). Longueur hors tout publiée : 142 mm (5.6 inch).",
+		"overview": "La TPT-501 est une mini-meuleuse droite de 142 mm, pince de 1/4 pouce (6 mm selon la colonne alternative) et 25 000 tr/min. La TPT-501A est coudée et tourne à 22 000 tr/min ; les TPT-507/508 sont des meuleuses à disque, pas des montages en pince.",
 		"verifiedFacts": [
-			"Masse publiée : 0.4 kg (0.9 lb).",
-			"Longueur hors tout publiée : 142 mm (5.6 inch)."
+			"Pince : tailles publiées : 1/4 pouce ; 6 mm, configuration à confirmer.",
+			"Vitesse à vide : 25 000 tr/min.",
+			"Puissance publiée : 0,3 hp ; 0,2 kW.",
+			"Longueur et masse : 142 mm ; 0,4 kg.",
+			"Consommation moyenne en charge : 270 L/min (9,5 cfm) ; pression de mesure non indiquée."
 		],
 		"limitations": [
-			"Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse.",
-			"Référence physique explicitement imprimée dans un tableau constructeur ; aucune référence n’est créée à partir d’une nomenclature de suffixes.",
-			"Les conversions de contrôle de masse et longueur servent à relire le tableau ; elles ne reconstituent aucune consommation d’air.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"La consommation publiée est une moyenne en charge, sans pression de mesure associée dans le tableau. Elle reste documentaire et ne donne pas un maximum de dimensionnement.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "0.4 kg (0.9 lb)",
+			"label": "Pince : tailles publiées",
+			"value": "1/4 pouce ; 6 mm, configuration à confirmer",
 			"evidenceIds": [
-				"october2b-tools-oct2b-tranmax-tp-pdf-p19"
+				"review:2026-11-16-reviews:meuleuse-tranmax-tpt-501:0"
 			]
 		},
 		{
-			"label": "Longueur hors tout publiée",
-			"value": "142 mm (5.6 inch)",
+			"label": "Vitesse à vide",
+			"value": "25 000 tr/min",
 			"evidenceIds": [
-				"october2b-tools-oct2b-tranmax-tp-pdf-p19"
+				"review:2026-11-16-reviews:meuleuse-tranmax-tpt-501:0"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "Aucun point de pression de consommation n’est établi pour cette ligne.",
+			"label": "Puissance publiée",
+			"value": "0,3 hp ; 0,2 kW",
 			"evidenceIds": [
-				"october2b-tools-oct2b-tranmax-tp-pdf-p19"
+				"review:2026-11-16-reviews:meuleuse-tranmax-tpt-501:0"
+			]
+		},
+		{
+			"label": "Longueur et masse",
+			"value": "142 mm ; 0,4 kg",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-tranmax-tpt-501:0"
+			]
+		},
+		{
+			"label": "Consommation moyenne en charge",
+			"value": "270 L/min (9,5 cfm) ; pression de mesure non indiquée",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-tranmax-tpt-501:0"
 			]
 		}
 	],
@@ -74,21 +89,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : c2e29dbb1f9d433e1d65568bc327d3ea21eadd7d39f8edbb0d98145850f7c7d2. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-tranmax-tpt-501:0",
+			"sourceUrl": "https://ss-client-website.s3-ap-northeast-1.amazonaws.com/tranmax/2023_01_09_113224_2212-Professional-Power-Tools-TP.pdf",
+			"sourceLabel": "Tranmax, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La TPT-501 est une mini-meuleuse droite de 142 mm, pince de 1/4 pouce (6 mm selon la colonne alternative) et 25 000 tr/min. La TPT-501A est coudée et tourne à 22 000 tr/min ; les TPT-507/508 sont des meuleuses à disque, pas des montages en pince. GET complet SHA-256 c2e29dbb1f9d433e1d65568bc327d3ea21eadd7d39f8edbb0d98145850f7c7d2. Pages PDF lues : 19."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october2b-tools-oct2b-tranmax-tp-pdf-p19"
-		],
-		"workingPressureBar": [
-			"october2b-tools-oct2b-tranmax-tp-pdf-p19"
+			"review:2026-11-16-reviews:meuleuse-tranmax-tpt-501:0"
 		],
 		"demandExplanation": [
-			"october2b-tools-oct2b-tranmax-tp-pdf-p19"
+			"review:2026-11-16-reviews:meuleuse-tranmax-tpt-501:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-reviews:meuleuse-tranmax-tpt-501:0"
 		]
 	},
 	"notes": [
-		"Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse."
+		"La consommation publiée est une moyenne en charge, sans pression de mesure associée dans le tableau. Elle reste documentaire et ne donne pas un maximum de dimensionnement."
 	]
 };
 

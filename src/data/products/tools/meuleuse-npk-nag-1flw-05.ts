@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La consommation moyenne déclarée ne fournit pas la demande maximale à un point de pression de mesure identifié. Aucun débit en charge n’est reconstitué.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-npk-nag-1flw-05.webp",
+		"src": "/images/products/meuleuse-npk-nag-1flw-05-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : NPK NAG-1FLW-05",
 		"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/15-NPK.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "npk-nag-1flw-05",
@@ -29,10 +29,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "NPK NAG-1FLW-05. La consommation moyenne déclarée ne fournit pas la demande maximale à un point de pression de mesure identifié. Aucun débit en charge n’est reconstitué. Masse publiée : 3.65 lbs. Consommation documentaire, hors calcul : 24 cfm.",
+		"overview": "NPK NAG-1FLW-05 : meuleuse d’angle à échappement latéral, meule Type 27 de 5 pouces et broche 3/8-24. La NAG-1FLW reçoit 4 pouces et tourne à 12 700 tr/min ; la NAG-11A-U5 utilise une broche 5/8-11 et l’échappement arrière. Les accessoires de montage diffèrent malgré une capacité de disque parfois commune.",
 		"verifiedFacts": [
 			"Masse publiée : 3.65 lbs.",
-			"Consommation documentaire, hors calcul : 24 cfm."
+			"Consommation documentaire, hors calcul : 24 cfm.",
+			"Disque / broche : 5 pouces Type 27 / 3/8-24.",
+			"Vitesse / puissance : 12 000 tr/min / 1,2 HP maximal.",
+			"Longueur / masse : 9 1/8 pouces / 3,65 lb.",
+			"Consommation moyenne explicite : 24 CFM."
 		],
 		"limitations": [
 			"La consommation moyenne déclarée ne fournit pas la demande maximale à un point de pression de mesure identifié. Aucun débit en charge n’est reconstitué.",
@@ -62,6 +66,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-michigan-15-npk-pdf-p17"
 			]
+		},
+		{
+			"label": "Disque / broche",
+			"value": "5 pouces Type 27 / 3/8-24",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-npk-nag-1flw-05:0"
+			]
+		},
+		{
+			"label": "Vitesse / puissance",
+			"value": "12 000 tr/min / 1,2 HP maximal",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-npk-nag-1flw-05:0"
+			]
+		},
+		{
+			"label": "Longueur / masse",
+			"value": "9 1/8 pouces / 3,65 lb",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-npk-nag-1flw-05:0"
+			]
+		},
+		{
+			"label": "Consommation moyenne explicite",
+			"value": "24 CFM",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-npk-nag-1flw-05:0"
+			]
 		}
 	],
 	"evidence": [
@@ -74,6 +106,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 8991587b6147dedde29a8ca888682d24a45127a873a1fb3a753e048fd2696462. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-npk-nag-1flw-05:0",
+			"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/15-NPK.pdf",
+			"sourceLabel": "NPK, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "NPK NAG-1FLW-05 : meuleuse d’angle à échappement latéral, meule Type 27 de 5 pouces et broche 3/8-24. La NAG-1FLW reçoit 4 pouces et tourne à 12 700 tr/min ; la NAG-11A-U5 utilise une broche 5/8-11 et l’échappement arrière. Les accessoires de montage diffèrent malgré une capacité de disque parfois commune. GET complet SHA-256 8991587b6147dedde29a8ca888682d24a45127a873a1fb3a753e048fd2696462. Pages PDF lues : 17."
 		}
 	],
 	"fieldSources": {
@@ -81,7 +123,7 @@ const product: ToolProfileInput = {
 			"october2b-tools-oct2b-michigan-15-npk-pdf-p17"
 		],
 		"workingPressureBar": [
-			"october2b-tools-oct2b-michigan-15-npk-pdf-p17"
+			"review:2026-11-16-reviews:meuleuse-npk-nag-1flw-05:0"
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-michigan-15-npk-pdf-p17"

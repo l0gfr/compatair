@@ -28,10 +28,10 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/mattei-ercs-11.svg",
+		"src": "/images/products/mattei-ercs-11-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Mattei ERCS 11",
 		"sourceUrl": "https://4609801.fs1.hubspotusercontent-na1.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20CLASSIC/Classic_Range_EN.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -78,7 +78,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Mattei ERCS 11. 1 350 L/min à 12,5 bar. Groupe Classic sur réservoir 270 L.",
+		"overview": "L’ERCS11 fixe 50 Hz associe le groupe à palettes de 11 kW et un réservoir 270 L. La variante 13 bar est déclarée à 1,35 m³/min FAD à 12,5 bar ; l’ERC11 au sol reprend ce débit sans le même stockage, l’ERCS7 publie 0,96. La cuve sert les pointes de demande et ne majore pas le débit continu. Le taux de marche du groupe reste indéterminé.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 270 L.",
@@ -123,6 +123,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:mattei-ercs-11:0",
+			"sourceUrl": "https://4609801.fs1.hubspotusercontent-na1.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20CLASSIC/Classic_Range_EN.pdf",
+			"sourceLabel": "Mattei, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’ERCS11 fixe 50 Hz associe le groupe à palettes de 11 kW et un réservoir 270 L. La variante 13 bar est déclarée à 1,35 m³/min FAD à 12,5 bar ; l’ERC11 au sol reprend ce débit sans le même stockage, l’ERCS7 publie 0,96. La cuve sert les pointes de demande et ne majore pas le débit continu. Le taux de marche du groupe reste indéterminé. GET complet SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2. Pages PDF lues : 6, 14, 3."
 		}
 	],
 	"fieldSources": {

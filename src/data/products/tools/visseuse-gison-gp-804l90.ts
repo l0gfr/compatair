@@ -18,10 +18,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La consommation par minute ou par cycle n’est pas établie dans ce tableau ; aucune demande n’est déduite de la vitesse ou de la puissance.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/visseuse-gison-gp-804l90.webp",
+		"src": "/images/products/visseuse-gison-gp-804l90-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : GISON GP-804L90",
 		"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "gison-gp-804l90",
@@ -33,7 +33,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-804L90. La consommation par minute ou par cycle n’est pas établie dans ce tableau ; aucune demande n’est déduite de la vitesse ou de la puissance. Longueur : 230 mm. Diamètre de flexible publié : 5.0 mm.",
+		"overview": "La GP-804L90 est une visseuse d’angle à embrayage à friction et échappement arrière. Elle annonce 1 400 tr/min, 3 Nm maximum et 230 mm ; la GP-802L90 atteint 1 600 tr/min et 4 Nm pour une autre capacité de vissage. Les 0,28 m³/min restent documentaires : leur régime et leur point de mesure ne sont pas établis par la pression recommandée.",
 		"verifiedFacts": [
 			"Longueur : 230 mm.",
 			"Diamètre de flexible publié : 5.0 mm.",
@@ -91,6 +91,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:visseuse-gison-gp-804l90:0",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
+			"sourceLabel": "GISON, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La GP-804L90 est une visseuse d’angle à embrayage à friction et échappement arrière. Elle annonce 1 400 tr/min, 3 Nm maximum et 230 mm ; la GP-802L90 atteint 1 600 tr/min et 4 Nm pour une autre capacité de vissage. Les 0,28 m³/min restent documentaires : leur régime et leur point de mesure ne sont pas établis par la pression recommandée. GET complet SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Pages PDF lues : 65."
 		}
 	],
 	"fieldSources": {

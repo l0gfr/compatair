@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La consommation est publiée sous le libellé « 100% int. ». Ce facteur de marche ne démontre pas le régime en charge ni sa pression de mesure ; aucun débit continu calculable n’en est déduit.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/scie-tengtools-ars02.webp",
+		"src": "/images/products/scie-tengtools-ars02-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : TengTools ARS02",
 		"sourceUrl": "https://www.tengtools.com/en-gb/collections/air-tools/products/air-saw-170mm",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "tengtools-ars02",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "TengTools ARS02. La consommation est publiée sous le libellé « 100% int. ». Ce facteur de marche ne démontre pas le régime en charge ni sa pression de mesure ; aucun débit continu calculable n’en est déduit. Product Type : Air Saws. Stroke length (mm) : 10.",
+		"overview": "L’ARS02 est la scie courte de 170 mm et 399 g, course 10 mm à 9 000 courses/min. La table distingue 3 mm en acier, 3,4 mm en aluminium et 4 mm dans le bois ; la lame doit être adaptée au matériau. L’ARS01 appartient à la même famille dans un autre corps. Les 22,94 L/min à « 100% int. » ne sont pas associés à une pression de mesure.",
 		"verifiedFacts": [
 			"Product Type : Air Saws.",
 			"Stroke length (mm) : 10.",
@@ -182,6 +182,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : bf02e8de9aea3019da45881ab8fad2e757be54f14f841bfe5b0437bf66d2f1ee. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:scie-tengtools-ars02:0",
+			"sourceUrl": "https://www.tengtools.com/en-gb/collections/air-tools/products/air-saw-170mm",
+			"sourceLabel": "TengTools, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’ARS02 est la scie courte de 170 mm et 399 g, course 10 mm à 9 000 courses/min. La table distingue 3 mm en acier, 3,4 mm en aluminium et 4 mm dans le bois ; la lame doit être adaptée au matériau. L’ARS01 appartient à la même famille dans un autre corps. Les 22,94 L/min à « 100% int. » ne sont pas associés à une pression de mesure. GET complet SHA-256 5a70195d618fa2a9ca21106be287795c68082d421fba49913445c23823054e4e. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

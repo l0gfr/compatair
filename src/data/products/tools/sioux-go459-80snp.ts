@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/sioux-go459-80snp.webp",
+		"src": "/images/products/sioux-go459-80snp-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Sioux GO459-80SNP, référence GO459-80SNP",
-		"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=64",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Sioux GO459-80SNP, référence GO459-80SNP. Le dimensionnement utilise 420 L/min à 6,2 bar, selon les régimes publiés par le fabricant. Vitesse à vide : 900 tr/min. Diamètre du plateau : 200 mm. Masse : 2.0 kg.",
+		"overview": "La GO459-80SNP associe un plateau PSA adhésif de 200 mm à une orbite entraînée de 5 mm, à 900 tr/min. La 80SNH change la fixation en autoagrippant ; la 80SRP ajoute l’aspiration distante. Le modèle de 150 mm change la surface traitée tout en conservant le mécanisme. Les 7 L/s publiés à 6,2 bar restent hors dimensionnement tant que le régime de consommation propre n’est pas établi.",
 		"verifiedFacts": [
 			"Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur.",
 			"Consommation publiée : 7.0 L/s (15.0 scfm). Le guide du catalogue (page PDF 10) définit ces débits comme de l’air détendu à pression atmosphérique et des consommations maximales, sauf indication contraire. La plus grande valeur publiée est retenue : 420 L/min (L/s × 60).",
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
-			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes."
+			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
+			"La pression de service n’atteste pas la pression de mesure de consommation. Le régime ou l’appariement documentaire reste non qualifié ; aucune consommation dimensionnante n’est conservée."
 		]
 	},
 	"specifications": [
@@ -113,6 +114,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur."
+		},
+		{
+			"id": "review:2026-11-16-reviews:sioux-go459-80snp:0",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx",
+			"sourceLabel": "Sioux, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La GO459-80SNP associe un plateau PSA adhésif de 200 mm à une orbite entraînée de 5 mm, à 900 tr/min. La 80SNH change la fixation en autoagrippant ; la 80SRP ajoute l’aspiration distante. Le modèle de 150 mm change la surface traitée tout en conservant le mécanisme. Les 7 L/s publiés à 6,2 bar restent hors dimensionnement tant que le régime de consommation propre n’est pas établi. GET complet SHA-256 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8. Pages PDF lues : 64."
 		}
 	],
 	"fieldSources": {
@@ -124,6 +135,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"sioux-go459-80snp-20260927"
+		],
+		"airflowBasis": [
+			"review:2026-11-16-reviews:sioux-go459-80snp:0"
 		]
 	},
 	"notes": [
@@ -133,7 +147,8 @@ const product: ToolProfileInput = {
 		"min": 420,
 		"typical": 420,
 		"max": 420
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

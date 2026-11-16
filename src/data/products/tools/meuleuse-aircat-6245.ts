@@ -15,10 +15,10 @@ const product: ToolProfileInput = {
 	"connectorSize": "1/4-in. (Air Inlet (NPT/BSP))",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-aircat-6245.webp",
+		"src": "/images/products/meuleuse-aircat-6245-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Aircat 6245",
 		"sourceUrl": "https://continentaltoolgroup.com/product/aircat-5-hp-angle-die-grinder/",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "aircat-6245",
@@ -30,12 +30,16 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Aircat 6245. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 1 lb. Vitesse à vide : 20000 tr/min.",
+		"overview": "La 6245 est une meuleuse coudée composite à pince1/4,0,5 hp et20000 tr/min. Elle mesure 7 pouces et pèse 1 lb, avec levier de sécurité et échappement arrière. Les dimensions et le montage doivent être conservés par référence, plutôt que transférés des6200/6201.",
 		"verifiedFacts": [
 			"Masse publiée : 1 lb.",
 			"Vitesse à vide : 20000 tr/min.",
 			"Puissance publiée : 0.5 HP.",
-			"Échappement : Rear."
+			"Échappement : Rear.",
+			"Pince : 1/4 pouce ; pince de précision trois pièces.",
+			"Transmission : Engrenage conique hélicoïdal.",
+			"Commande : Levier avec verrouillage de sécurité.",
+			"Longueur : 7 pouces."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -98,6 +102,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-ctg-pdp-118-p1"
 			]
+		},
+		{
+			"label": "Pince",
+			"value": "1/4 pouce ; pince de précision trois pièces",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-aircat-6245:0"
+			]
+		},
+		{
+			"label": "Transmission",
+			"value": "Engrenage conique hélicoïdal",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-aircat-6245:0"
+			]
+		},
+		{
+			"label": "Commande",
+			"value": "Levier avec verrouillage de sécurité",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-aircat-6245:0"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "7 pouces",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-aircat-6245:0"
+			]
 		}
 	],
 	"evidence": [
@@ -110,6 +142,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 0bfbd1b6aef58173f55d6af6386a170073c2f6e582a3b824e3d7b1b606d90d9b. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-aircat-6245:0",
+			"sourceUrl": "https://continentaltoolgroup.com/product/aircat-5-hp-angle-die-grinder/",
+			"sourceLabel": "Aircat, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 6245 est une meuleuse coudée composite à pince1/4,0,5 hp et20000 tr/min. Elle mesure 7 pouces et pèse 1 lb, avec levier de sécurité et échappement arrière. Les dimensions et le montage doivent être conservés par référence, plutôt que transférés des6200/6201. GET complet SHA-256 9537fbdc30e8b09634ca0f7eff4406873f8557083673f2b32f9b80f5c0308aed. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
@@ -120,7 +162,7 @@ const product: ToolProfileInput = {
 			"october2-tools-ctg-pdp-118-p1"
 		],
 		"workingPressureBar": [
-			"october2-tools-ctg-pdp-118-p1"
+			"review:2026-11-16-reviews:meuleuse-aircat-6245:0"
 		],
 		"demandExplanation": [
 			"october2-tools-ctg-pdp-118-p1"

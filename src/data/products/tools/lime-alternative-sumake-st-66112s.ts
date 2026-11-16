@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/lime-alternative-sumake-st-66112s.webp",
+		"src": "/images/products/lime-alternative-sumake-st-66112s-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Sumake ST-66112S",
 		"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "sumake-st-66112s",
@@ -39,7 +39,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-66112S. Consommation publiée, régime non précisé : 170 L/min à 6,2 bar. Consommation dans les unités du tableau : 170 L/min ; 6 cfm. Configuration complète publiée : ST-66112S.",
+		"overview": "Le ST-66112S est le Turbolap à mouvement oscillant de 1,2 mm, annoncé à 10 000 cycles/min. Le ST-66112 sans S utilise le mouvement linéaire à 15 000 ; le ST-66107S réduit la course à 0,7 mm. Ces différences concernent le mouvement de finition, pas seulement la vitesse. Le corps commun mesure 185 mm pour 0,2 kg ; les 170 L/min restent sans régime de consommation établi.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 36.",
 			"Consommation dans les unités du tableau : 170 L/min ; 6 cfm.",
@@ -99,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "review:2026-11-16-reviews:lime-alternative-sumake-st-66112s:0",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
+			"sourceLabel": "Sumake, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le ST-66112S est le Turbolap à mouvement oscillant de 1,2 mm, annoncé à 10 000 cycles/min. Le ST-66112 sans S utilise le mouvement linéaire à 15 000 ; le ST-66107S réduit la course à 0,7 mm. Ces différences concernent le mouvement de finition, pas seulement la vitesse. Le corps commun mesure 185 mm pour 0,2 kg ; les 170 L/min restent sans régime de consommation établi. GET complet SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Pages PDF lues : 36."
 		}
 	],
 	"fieldSources": {

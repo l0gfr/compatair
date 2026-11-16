@@ -9,75 +9,71 @@ const product: ToolProfileInput = {
 	"categoryId": "riveteuse",
 	"category": "riveteuse",
 	"label": "Rodcraft RC6758",
-	"demandModel": "fixed-flow",
-	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
-		"max": 6.3
-	},
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/rodcraft-rc6758.webp",
+		"src": "/images/products/rodcraft-rc6758-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Rodcraft RC6758, référence 8951000410",
 		"sourceUrl": "https://www.rodcraft.com/en/products/8951000410",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Rodcraft RC6758, référence 8951000410. Le dimensionnement utilise 168 L/min à 6,3 bar, selon les régimes publiés par le fabricant. Masse : 2.2 kg. Longueur : 280 mm. Diamètre intérieur du tuyau (longueur 5 m) : 10 mm.",
+		"overview": "Rodcraft RC6758 : sertisseuse pour écrous à riveter M3–M12, course maximale 7 mm et sept embouts livrés. Elle se distingue des RC6738 et RC6748 pour rivets aveugles. Les 2,8 L/s en charge restent documentaires ; le plafond dynamique de service de 6,3 bar n’est pas une pression de mesure démontrée.",
 		"verifiedFacts": [
-			"Pression dynamique de travail maximale publiée : 6.3 bar, retenue comme point de fonctionnement. Respecter cette limite à l’entrée de l’outil.",
-			"Consommation en charge publiée : 2.8 L/s. Valeur retenue : 168 L/min (maximum des régimes documentés, L/s × 60).",
-			"Référence fabricant : 8951000410.",
-			"Masse : 2.2 kg.",
-			"Longueur : 280 mm.",
-			"Diamètre intérieur du tuyau (longueur 5 m) : 10 mm."
+			"Usage / capacités : Écrous à riveter M3–M12.",
+			"Course maximale / embouts : 7 mm / 7.",
+			"Masse / longueur : 2,2 kg / 280 mm.",
+			"Consommation en charge : 2,8 L/s.",
+			"Pression dynamique maximale : 6,3 bar.",
+			"Raccord / flexible minimal sur 5 m : 1/4 BSP / 10 mm."
 		],
 		"limitations": [
-			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
-			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes."
+			"La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression dynamique de travail maximale publiée : 6.3 bar, retenue comme point de fonctionnement. Respecter cette limite à l’entrée de l’outil.",
+			"label": "Usage / capacités",
+			"value": "Écrous à riveter M3–M12",
 			"evidenceIds": [
-				"rodcraft-8951000410-20260927"
+				"review:2026-11-16-reviews:rodcraft-rc6758:0"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation en charge publiée : 2.8 L/s. Valeur retenue : 168 L/min (maximum des régimes documentés, L/s × 60).",
+			"label": "Course maximale / embouts",
+			"value": "7 mm / 7",
 			"evidenceIds": [
-				"rodcraft-8951000410-20260927"
+				"review:2026-11-16-reviews:rodcraft-rc6758:0"
 			]
 		},
 		{
-			"label": "Masse",
-			"value": "2.2 kg",
+			"label": "Masse / longueur",
+			"value": "2,2 kg / 280 mm",
 			"evidenceIds": [
-				"rodcraft-8951000410-20260927"
+				"review:2026-11-16-reviews:rodcraft-rc6758:0"
 			]
 		},
 		{
-			"label": "Longueur",
-			"value": "280 mm",
+			"label": "Consommation en charge",
+			"value": "2,8 L/s",
 			"evidenceIds": [
-				"rodcraft-8951000410-20260927"
+				"review:2026-11-16-reviews:rodcraft-rc6758:0"
 			]
 		},
 		{
-			"label": "Diamètre intérieur du tuyau (longueur 5 m)",
-			"value": "10 mm",
+			"label": "Pression dynamique maximale",
+			"value": "6,3 bar",
 			"evidenceIds": [
-				"rodcraft-8951000410-20260927"
+				"review:2026-11-16-reviews:rodcraft-rc6758:0"
 			]
 		},
 		{
-			"label": "Filetage d’entrée d’air",
-			"value": "1/4",
+			"label": "Raccord / flexible minimal sur 5 m",
+			"value": "1/4 BSP / 10 mm",
 			"evidenceIds": [
-				"rodcraft-8951000410-20260927"
+				"review:2026-11-16-reviews:rodcraft-rc6758:0"
 			]
 		}
 	],
@@ -90,27 +86,33 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation en charge publiée : 2.8 L/s. Valeur retenue : 168 L/min (maximum des régimes documentés, L/s × 60)."
+		},
+		{
+			"id": "review:2026-11-16-reviews:rodcraft-rc6758:0",
+			"sourceUrl": "https://www.rodcraft.com/en/products/8951000410",
+			"sourceLabel": "Rodcraft, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Rodcraft RC6758 : sertisseuse pour écrous à riveter M3–M12, course maximale 7 mm et sept embouts livrés. Elle se distingue des RC6738 et RC6748 pour rivets aveugles. Les 2,8 L/s en charge restent documentaires ; le plafond dynamique de service de 6,3 bar n’est pas une pression de mesure démontrée. GET complet SHA-256 8a91123ef44be558fe10791253159ae02e9cfb3f8e9a25984d1b4fdc6becf532. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"rodcraft-8951000410-20260927"
+			"review:2026-11-16-reviews:rodcraft-rc6758:0"
+		],
+		"demandExplanation": [
+			"review:2026-11-16-reviews:rodcraft-rc6758:0"
 		],
 		"workingPressureBar": [
-			"rodcraft-8951000410-20260927"
-		],
-		"airflowLpm": [
-			"rodcraft-8951000410-20260927"
+			"review:2026-11-16-reviews:rodcraft-rc6758:0"
 		]
 	},
 	"notes": [
-		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+		"La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne."
 	],
-	"airflowLpm": {
-		"min": 168,
-		"typical": 168,
-		"max": 168
-	}
+	"demandExplanation": "La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne."
 };
 
 export default product;

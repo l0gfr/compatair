@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/burineur-sumake-st-ah605r-q.webp",
+		"src": "/images/products/burineur-sumake-st-ah605r-q-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Sumake ST-AH605R-Q",
 		"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "sumake-st-ah605r-q",
@@ -39,7 +39,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-AH605R-Q. Consommation publiée, régime non précisé : 480 L/min à 6,2 bar. Consommation dans les unités du tableau : 480 L/min ; 17 cfm. Configuration complète publiée : ST-AH605R-Q.",
+		"overview": "Le ST-AH605R-Q est le burineur à emmanchement rond 0,41 pouce et course 89 mm, à 2 500 coups/min. Le 603R-Q utilise 58 mm de course et 3 500 coups/min ; les 605H-Q et 606H-Q changent l’emmanchement en hexagone 10 ou 11 mm. La bonne interface et la course précèdent le choix de burin. Les 480 L/min sont sans régime défini et restent hors calcul.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 53.",
 			"Consommation dans les unités du tableau : 480 L/min ; 17 cfm.",
@@ -99,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "review:2026-11-16-reviews:burineur-sumake-st-ah605r-q:0",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
+			"sourceLabel": "Sumake, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le ST-AH605R-Q est le burineur à emmanchement rond 0,41 pouce et course 89 mm, à 2 500 coups/min. Le 603R-Q utilise 58 mm de course et 3 500 coups/min ; les 605H-Q et 606H-Q changent l’emmanchement en hexagone 10 ou 11 mm. La bonne interface et la course précèdent le choix de burin. Les 480 L/min sont sans régime défini et restent hors calcul. GET complet SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Pages PDF lues : 53."
 		}
 	],
 	"fieldSources": {

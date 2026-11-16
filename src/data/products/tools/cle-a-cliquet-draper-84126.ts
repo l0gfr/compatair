@@ -16,10 +16,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-cliquet-draper-84126.webp",
+		"src": "/images/products/cle-a-cliquet-draper-84126-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Draper 84126",
 		"sourceUrl": "https://www.drapertools.com/product/84126/air-ratchet-3-8-sq-dr/",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "draper-84126",
@@ -31,7 +31,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Draper 84126. La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué. Champ fabricant : Weight : 1.22kg. Champ fabricant : Air inlet : 1/4\" BSP.",
+		"overview": "Le cliquet Draper 84126 utilise un carré 3/8 pouce, tourne à 160 tr/min et publie 85 Nm ultimes. Le 84122 emploie le carré 1/2 pouce ; la référence 47568 tourne à 200 tr/min. Le carré et l’accès à l’écrou déterminent donc le choix avant la vitesse. Les 113 L/min sont une consommation moyenne à côté d’une pression de service de 6,2 bar, sans conversion en débit continu.",
 		"verifiedFacts": [
 			"Champ fabricant : Weight : 1.22kg.",
 			"Champ fabricant : Air inlet : 1/4\" BSP.",
@@ -148,6 +148,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 290dc03b758ced4e7358491f5a9252cf345e747e2b795eba237bdc78324ce38f. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-cliquet-draper-84126:0",
+			"sourceUrl": "https://www.drapertools.com/product/84126/air-ratchet-3-8-sq-dr/",
+			"sourceLabel": "Draper, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le cliquet Draper 84126 utilise un carré 3/8 pouce, tourne à 160 tr/min et publie 85 Nm ultimes. Le 84122 emploie le carré 1/2 pouce ; la référence 47568 tourne à 200 tr/min. Le carré et l’accès à l’écrou déterminent donc le choix avant la vitesse. Les 113 L/min sont une consommation moyenne à côté d’une pression de service de 6,2 bar, sans conversion en débit continu. GET complet SHA-256 56e876634f90d4cad4b854201e66aa08a1c2675f1b63b2cddef8c2982e18a003. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

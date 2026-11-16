@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/sioux-sco10s184f.webp",
+		"src": "/images/products/sioux-sco10s184f-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Sioux SCO10S184F, référence SCO10S184F",
-		"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=58",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Sioux SCO10S184F, référence SCO10S184F. Le dimensionnement utilise 840 L/min à 6,2 bar, selon les régimes publiés par le fabricant. Vitesse à vide : 18000 tr/min. Diamètre du disque : 100 mm. Masse : 0.9 kg.",
+		"overview": "La Sioux SCO10S184F est la tronçonneuse droite à échappement avant, disque 100 mm et 18 000 tr/min. La 184R évacue l’air vers l’arrière ; la A184 possède une géométrie d’angle et une masse différente. Ces différences guident le choix de forme et de projection de l’air, sans modifier par analogie les conditions de consommation de la ligne 184F.",
 		"verifiedFacts": [
 			"Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur.",
 			"Consommation publiée : 14.0 L/s (30.0 scfm). Le guide du catalogue (page PDF 10) définit ces débits comme de l’air détendu à pression atmosphérique et des consommations maximales, sauf indication contraire. La plus grande valeur publiée est retenue : 840 L/min (L/s × 60).",
@@ -79,6 +79,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"sioux-sco10s184f-20260927"
 			]
+		},
+		{
+			"label": "Échappement",
+			"value": "Avant, Front",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:sioux-sco10s184f:0"
+			]
 		}
 	],
 	"evidence": [
@@ -99,6 +106,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur."
+		},
+		{
+			"id": "review:2026-11-16-reviews:sioux-sco10s184f:0",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx",
+			"sourceLabel": "Sioux, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La Sioux SCO10S184F est la tronçonneuse droite à échappement avant, disque 100 mm et 18 000 tr/min. La 184R évacue l’air vers l’arrière ; la A184 possède une géométrie d’angle et une masse différente. Ces différences guident le choix de forme et de projection de l’air, sans modifier par analogie les conditions de consommation de la ligne 184F. GET complet SHA-256 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8. Pages PDF lues : 58."
 		}
 	],
 	"fieldSources": {

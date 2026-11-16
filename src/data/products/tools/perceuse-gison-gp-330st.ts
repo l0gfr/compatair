@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/perceuse-gison-gp-330st.webp",
+		"src": "/images/products/perceuse-gison-gp-330st-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : GISON GP-330ST",
 		"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "gison-gp-330st",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-330ST. Consommation de régime non précisé : 610 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 1.08 kg. Longueur : 218 mm.",
+		"overview": "La GP-330ST est une perceuse droite à mandrin 3/8 pouce, 2 600 tr/min et 218 mm. La STN garde ce format avec 3 600 tr/min et 0,64 m³/min publiés, contre 0,61 pour la ST. La GP-330 standard est plus longue à 225 mm et tourne à 2 500 tr/min. Les consommations ne précisent pas leur régime ; elles restent hors calcul de capacité continue.",
 		"verifiedFacts": [
 			"Masse : 1.08 kg.",
 			"Longueur : 218 mm.",
@@ -112,6 +112,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:perceuse-gison-gp-330st:0",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
+			"sourceLabel": "GISON, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La GP-330ST est une perceuse droite à mandrin 3/8 pouce, 2 600 tr/min et 218 mm. La STN garde ce format avec 3 600 tr/min et 0,64 m³/min publiés, contre 0,61 pour la ST. La GP-330 standard est plus longue à 225 mm et tourne à 2 500 tr/min. Les consommations ne précisent pas leur régime ; elles restent hors calcul de capacité continue. GET complet SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Pages PDF lues : 59."
 		}
 	],
 	"fieldSources": {

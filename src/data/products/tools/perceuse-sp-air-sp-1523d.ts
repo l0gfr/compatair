@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/perceuse-sp-air-sp-1523d.webp",
+		"src": "/images/products/perceuse-sp-air-sp-1523d-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : SP AIR SP-1523D",
 		"sourceUrl": "https://spair.vessel.co.jp/download/SP_catalog_all_E.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "sp-air-sp-1523d",
@@ -39,7 +39,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SP AIR SP-1523D. Consommation publiée, régime non précisé : 400 L/min à 6,2 bar. Raccord publié : 1/4\"NPT. Masse publiée : 1 kg.",
+		"overview": "La SP-1523D est une perceuse droite, rotation à droite uniquement, mandrin 1–10 mm et commande par levier, à 3 800 tr/min. La SP-1522 conserve le même diamètre avec une poignée pistolet, un silencieux et 2 500 tr/min. Les 0,4 m³/min à la pression indiquée de 0,62 MPa n’ont pas de régime de consommation explicite ; aucune capacité continue de compresseur n’en est déduite.",
 		"verifiedFacts": [
 			"Raccord publié : 1/4\"NPT.",
 			"Masse publiée : 1 kg.",
@@ -105,6 +105,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:perceuse-sp-air-sp-1523d:0",
+			"sourceUrl": "https://spair.vessel.co.jp/download/SP_catalog_all_E.pdf",
+			"sourceLabel": "SP AIR, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La SP-1523D est une perceuse droite, rotation à droite uniquement, mandrin 1–10 mm et commande par levier, à 3 800 tr/min. La SP-1522 conserve le même diamètre avec une poignée pistolet, un silencieux et 2 500 tr/min. Les 0,4 m³/min à la pression indiquée de 0,62 MPa n’ont pas de régime de consommation explicite ; aucune capacité continue de compresseur n’en est déduite. GET complet SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. Pages PDF lues : 13."
 		}
 	],
 	"fieldSources": {

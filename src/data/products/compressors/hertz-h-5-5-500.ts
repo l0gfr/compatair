@@ -24,10 +24,10 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/hertz-h-5-5-500.svg",
+		"src": "/images/products/hertz-h-5-5-500-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Hertz H 5.5-500",
 		"sourceUrl": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -74,7 +74,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Hertz H 5.5-500. Le débit restitué sous pression reste non qualifié. Groupe sur cuve 500 L.",
+		"overview": "Le H5.5-500 associe le groupe 4 kW à un réservoir de 500 L pour une configuration 7 bar. Le H5.5-500T est une version deux étages à 12,5 bar, avec un déplacement aspiré différent. Les 649 L/min publiés ici ne sont pas un débit restitué sous pression. La cuve permet du stockage, sans établir le FAD ou le taux de marche du groupe.",
 		"verifiedFacts": [
 			"Configuration de pression documentée : 7 bar.",
 			"Cuve de stockage documentée : 500 L."
@@ -97,6 +97,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-04",
 			"confidence": "B",
 			"notes": "SHA-256 e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339 de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:hertz-h-5-5-500:0",
+			"sourceUrl": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf",
+			"sourceLabel": "Hertz, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le H5.5-500 associe le groupe 4 kW à un réservoir de 500 L pour une configuration 7 bar. Le H5.5-500T est une version deux étages à 12,5 bar, avec un déplacement aspiré différent. Les 649 L/min publiés ici ne sont pas un débit restitué sous pression. La cuve permet du stockage, sans établir le FAD ou le taux de marche du groupe. GET complet SHA-256 e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339. Pages PDF lues : 52."
 		}
 	],
 	"fieldSources": {

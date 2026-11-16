@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-cliquet-tranmax-tpt-221f-3.webp",
+		"src": "/images/products/cle-a-cliquet-tranmax-tpt-221f-3-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Tranmax TPT-221F-3",
 		"sourceUrl": "https://ss-client-website.s3-ap-northeast-1.amazonaws.com/tranmax/2023_01_09_113224_2212-Professional-Power-Tools-TP.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "tranmax-tpt-221f-3",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Tranmax TPT-221F-3. Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse. Masse publiée : 0.6 kg (1.3 lb). Longueur hors tout publiée : 194 mm (7.6 inch).",
+		"overview": "Le TPT-221F-3 est le cliquet composite à carré 3/8 pouce de 194 mm et 0,6 kg, avec 230 tr/min et 35 Nm maximum. Le TPT-221F ne change que le carré en 1/4 pouce ; le TPT-217F passe à 270 mm, 0,9 kg et 81 Nm. Le tableau distingue 55 L/min moyens en charge, mais n’établit pas leur pression de mesure : cette valeur reste documentaire.",
 		"verifiedFacts": [
 			"Masse publiée : 0.6 kg (1.3 lb).",
 			"Longueur hors tout publiée : 194 mm (7.6 inch)."
@@ -74,6 +74,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : c2e29dbb1f9d433e1d65568bc327d3ea21eadd7d39f8edbb0d98145850f7c7d2. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-cliquet-tranmax-tpt-221f-3:0",
+			"sourceUrl": "https://ss-client-website.s3-ap-northeast-1.amazonaws.com/tranmax/2023_01_09_113224_2212-Professional-Power-Tools-TP.pdf",
+			"sourceLabel": "Tranmax, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le TPT-221F-3 est le cliquet composite à carré 3/8 pouce de 194 mm et 0,6 kg, avec 230 tr/min et 35 Nm maximum. Le TPT-221F ne change que le carré en 1/4 pouce ; le TPT-217F passe à 270 mm, 0,9 kg et 81 Nm. Le tableau distingue 55 L/min moyens en charge, mais n’établit pas leur pression de mesure : cette valeur reste documentaire. GET complet SHA-256 c2e29dbb1f9d433e1d65568bc327d3ea21eadd7d39f8edbb0d98145850f7c7d2. Pages PDF lues : 16."
 		}
 	],
 	"fieldSources": {

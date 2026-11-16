@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/perceuse-astro-pneumatic-510aht.svg",
+		"src": "/images/products/perceuse-astro-pneumatic-510aht-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Astro Pneumatic 510AHT",
 		"sourceUrl": "https://www.astrotools.com/product/3-8-reversible-angle-head-air-drill-1-800rpm/",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "astro-pneumatic-510aht",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Astro Pneumatic 510AHT. Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "La 510AHT est la perceuse de 210 mm dont le fabricant distingue 1 600 tr/min à 90 psi et 1 800 à 120 psi. La 525C publie 1 800 tr/min, la 527C 500 : ces vitesses ne doivent pas être comparées sans les conditions. La pression admissible des accessoires et du réseau doit être respectée. Les 6 cfm sont moyens et ne qualifient pas le besoin en charge.",
 		"verifiedFacts": [
 			"Vitesse à vide : 1,800rpm at 120psi / 1,600rpm at 90psi.",
 			"Longueur hors tout : 8-1/4\" (210mm).",
@@ -121,6 +121,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 dbc5e53065019e8948626343d80b0bf4399606eac6a7e9369941b399aa51dc13. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:perceuse-astro-pneumatic-510aht:0",
+			"sourceUrl": "https://www.astrotools.com/product/3-8-reversible-angle-head-air-drill-1-800rpm/",
+			"sourceLabel": "Astro Pneumatic, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 510AHT est la perceuse de 210 mm dont le fabricant distingue 1 600 tr/min à 90 psi et 1 800 à 120 psi. La 525C publie 1 800 tr/min, la 527C 500 : ces vitesses ne doivent pas être comparées sans les conditions. La pression admissible des accessoires et du réseau doit être respectée. Les 6 cfm sont moyens et ne qualifient pas le besoin en charge. GET complet SHA-256 42519cb7e21fad297111072bd5c9155f0ed8be2979ac563225412de3c24e0868. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

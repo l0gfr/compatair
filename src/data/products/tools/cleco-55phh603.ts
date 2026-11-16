@@ -17,16 +17,15 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cleco-55phh603.webp",
+		"src": "/images/products/cleco-55phh603-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Cleco 55PHH603, référence 55PHH603",
-		"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=86",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Cleco 55PHH603, référence 55PHH603. Le tableau fabricant publie 750 L/min et une plage d’utilisation de 6 à 6 bar. Plage de couple publiée : 30 à 55 Nm. Vitesse à vide publiée : 6000 tr/min.",
+		"overview": "La 55PHH603 est l’outil à impulsions sans arrêt automatique, carré 3/8 pouce, de 30 à 55 Nm et 6 000 tr/min à vide. La 55PTHH403 ajoute l’arrêt automatique et tourne à 4 000 tr/min. À 6 bar, le tableau sépare 750 L/min à vide et 600 L/min en charge pour la PHH : seul le second régime est retenu dans le calcul en charge.",
 		"verifiedFacts": [
 			"Performances publiées à 6 bar à l’entrée de l’outil, note de la page 86.",
-			"Le tableau distingue 750 L/min à vide et 600 L/min en charge à 6 bar. Le calcul conserve la plus élevée des deux valeurs publiées (750 L/min), sans cycle de travail supposé.",
 			"Référence fabricant : 55PHH603.",
 			"Plage de couple publiée : 30 à 55 Nm.",
 			"Vitesse à vide publiée : 6000 tr/min.",
@@ -34,7 +33,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Données de catalogue industriel, sans essai physique CompatAir. Disponibilité et révision livrée à confirmer avec le fournisseur.",
-			"Source : catalogue GI-1250-EU, édition archivée du fabricant. Vérifier la référence et la notice de la révision effectivement livrée."
+			"Source : catalogue GI-1250-EU, édition archivée du fabricant. Vérifier la référence et la notice de la révision effectivement livrée.",
+			"Le tableau distingue 750 L/min à vide et 600 L/min en charge, à 6 bar. Le champ de dimensionnement utilise exclusivement les 600 L/min en charge."
 		]
 	},
 	"specifications": [
@@ -47,7 +47,7 @@ const product: ToolProfileInput = {
 		},
 		{
 			"label": "Condition de consommation",
-			"value": "Le tableau distingue 750 L/min à vide et 600 L/min en charge à 6 bar. Le calcul conserve la plus élevée des deux valeurs publiées (750 L/min), sans cycle de travail supposé.",
+			"value": "Le tableau distingue 750 L/min à vide et 600 L/min en charge, à 6 bar. Le champ de dimensionnement utilise exclusivement les 600 L/min en charge.",
 			"evidenceIds": [
 				"cleco-55phh603-20260926"
 			]
@@ -111,6 +111,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Le tableau distingue 750 L/min à vide et 600 L/min en charge à 6 bar. Le calcul conserve la plus élevée des deux valeurs publiées (750 L/min), sans cycle de travail supposé."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cleco-55phh603:0",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf",
+			"sourceLabel": "Cleco, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 55PHH603 est l’outil à impulsions sans arrêt automatique, carré 3/8 pouce, de 30 à 55 Nm et 6 000 tr/min à vide. La 55PTHH403 ajoute l’arrêt automatique et tourne à 4 000 tr/min. À 6 bar, le tableau sépare 750 L/min à vide et 600 L/min en charge pour la PHH : seul le second régime est retenu dans le calcul en charge. GET complet SHA-256 8668d5e77a6b2469dc9b9012841e65bbfb947234a8087faa6fdd90384b3babac. Pages PDF lues : 86."
 		}
 	],
 	"fieldSources": {
@@ -121,16 +131,16 @@ const product: ToolProfileInput = {
 			"cleco-55phh603-20260926"
 		],
 		"airflowLpm": [
-			"cleco-55phh603-20260926"
+			"review:2026-11-16-reviews:cleco-55phh603:0"
 		]
 	},
 	"notes": [
 		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
 	],
 	"airflowLpm": {
-		"min": 750,
-		"typical": 750,
-		"max": 750
+		"min": 600,
+		"typical": 600,
+		"max": 600
 	}
 };
 

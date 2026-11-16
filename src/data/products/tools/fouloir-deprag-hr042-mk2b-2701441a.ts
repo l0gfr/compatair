@@ -17,10 +17,10 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/fouloir-deprag-hr042-mk2b-2701441a.svg",
+		"src": "/images/products/fouloir-deprag-hr042-mk2b-2701441a-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : DEPRAG HR042-MK2B (réf. 2701441A)",
 		"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "deprag-hr042-mk2b",
@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "DEPRAG HR042-MK2B (réf. 2701441A). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "Le HR042-MK2B est un fouloir à cône Morse 2, course 120 mm et 850 coups/min. Le HR025-R40B utilise une course 80 mm et 1 200 coups/min ; le HR069-MK2B partage des valeurs de course mais relève d’une autre configuration. L’interface de l’outil et la cadence doivent correspondre au travail. Sans point consommation–pression dans cette table, le moteur reste non conclusif.",
 		"verifiedFacts": [
 			"Fréquence des impacts, impacts/min : 850.",
 			"Course du piston, mm (in) : 120 (4.72).",
@@ -102,6 +102,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:fouloir-deprag-hr042-mk2b-2701441a:0",
+			"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
+			"sourceLabel": "DEPRAG, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le HR042-MK2B est un fouloir à cône Morse 2, course 120 mm et 850 coups/min. Le HR025-R40B utilise une course 80 mm et 1 200 coups/min ; le HR069-MK2B partage des valeurs de course mais relève d’une autre configuration. L’interface de l’outil et la cadence doivent correspondre au travail. Sans point consommation–pression dans cette table, le moteur reste non conclusif. GET complet SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Pages PDF lues : 24."
 		}
 	],
 	"fieldSources": {

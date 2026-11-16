@@ -16,10 +16,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/visseuse-du-pas-tdcs-d08-1500.webp",
+		"src": "/images/products/visseuse-du-pas-tdcs-d08-1500-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Du-Pas TDCS-D08-1500",
 		"sourceUrl": "https://ss-client-website.s3-ap-northeast-1.amazonaws.com/tranmax/2023_01_09_113341_220907-Industrial-Assembly-Tools-Du-Pas.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "du-pas-tdcs-d08-1500",
@@ -31,18 +31,24 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Du-Pas TDCS-D08-1500. Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse. Masse publiée : 0.7 kg. Vitesse libre publiée : 1500 rpm.",
+		"overview": "Du-Pas TDCS-D08-1500 : visseuse pistolet à coupure automatique pour vis M2, 0,4–0,7 Nm et 1 500 tr/min. Le D08S est une autre forme plus légère ; le D10-1600 couvre M2–M3 et 0,7–1,3 Nm. Les valeurs 3,5 L/s et 7 CFM du tableau sont conservées séparément car elles ne concordent pas.",
 		"verifiedFacts": [
 			"Masse publiée : 0.7 kg.",
 			"Vitesse libre publiée : 1500 rpm.",
 			"Plage de couple publiée : 0.4–0.7 N·m.",
-			"Entrée d’air publiée : 1/4 inch."
+			"Entrée d’air publiée : 1/4 inch.",
+			"Commande / entraînement : Pistolet à coupure automatique / hexagonal 1/4 pouce.",
+			"Capacité / couple : M2 / 0,4–0,7 Nm.",
+			"Vitesse / masse : 1 500 tr/min / 0,70 kg.",
+			"Consommation, unités originales divergentes : 3,5 L/s et 7 CFM.",
+			"Pression recommandée distincte : 0,5 MPa."
 		],
 		"limitations": [
 			"Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse.",
 			"Référence physique explicitement imprimée dans un tableau constructeur ; aucune référence n’est créée à partir d’une nomenclature de suffixes.",
 			"Les conversions de contrôle de masse et longueur servent à relire le tableau ; elles ne reconstituent aucune consommation d’air.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée.",
+			"La table imprime 3,5 L/s et 7 CFM pour cette référence : valeurs non concordantes, sans arbitrage."
 		]
 	},
 	"specifications": [
@@ -80,6 +86,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-tranmax-dupas-pdf-p12"
 			]
+		},
+		{
+			"label": "Commande / entraînement",
+			"value": "Pistolet à coupure automatique / hexagonal 1/4 pouce",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:visseuse-du-pas-tdcs-d08-1500:0"
+			]
+		},
+		{
+			"label": "Capacité / couple",
+			"value": "M2 / 0,4–0,7 Nm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:visseuse-du-pas-tdcs-d08-1500:0"
+			]
+		},
+		{
+			"label": "Vitesse / masse",
+			"value": "1 500 tr/min / 0,70 kg",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:visseuse-du-pas-tdcs-d08-1500:0"
+			]
+		},
+		{
+			"label": "Consommation, unités originales divergentes",
+			"value": "3,5 L/s et 7 CFM",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:visseuse-du-pas-tdcs-d08-1500:0"
+			]
+		},
+		{
+			"label": "Pression recommandée distincte",
+			"value": "0,5 MPa",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:visseuse-du-pas-tdcs-d08-1500:0"
+			]
 		}
 	],
 	"evidence": [
@@ -92,6 +133,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 3e3749757c14c7ee18541f6ebe65c09228de1c585b55366dc23a97860a65a840. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:visseuse-du-pas-tdcs-d08-1500:0",
+			"sourceUrl": "https://ss-client-website.s3-ap-northeast-1.amazonaws.com/tranmax/2023_01_09_113341_220907-Industrial-Assembly-Tools-Du-Pas.pdf",
+			"sourceLabel": "Du-Pas, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Du-Pas TDCS-D08-1500 : visseuse pistolet à coupure automatique pour vis M2, 0,4–0,7 Nm et 1 500 tr/min. Le D08S est une autre forme plus légère ; le D10-1600 couvre M2–M3 et 0,7–1,3 Nm. Les valeurs 3,5 L/s et 7 CFM du tableau sont conservées séparément car elles ne concordent pas. GET complet SHA-256 3e3749757c14c7ee18541f6ebe65c09228de1c585b55366dc23a97860a65a840. Pages PDF lues : 12."
 		}
 	],
 	"fieldSources": {

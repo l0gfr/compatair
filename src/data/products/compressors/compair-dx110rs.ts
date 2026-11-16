@@ -26,10 +26,10 @@ const product: CompressorInput = {
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/compair-dx110rs.svg",
+    "src": "/images/products/compair-dx110rs-technical-20261116-reviews.svg",
     "alt": "Repères techniques : CompAir DX110RS",
     "sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/blta76611689adb5848/blt1a5f7f6e226706dc/67ef95d1e79e24eb628a8f5b/61728_6_11_24_24161_D_SERIES_DX_12PP_EN_WORK.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "specifications": [
     {
@@ -83,7 +83,7 @@ const product: CompressorInput = {
     }
   ],
   "editorial": {
-    "overview": "CompAir DX110RS. 19 700 L/min déclarés à 7 bar, maximum de la plage FAD publiée, sans qualification du régime moteur. Configuration constructeur : DX110RS.",
+    "overview": "Le DX110RS est le groupe à vitesse variable de 110 kW, avec une plage de FAD 7,0–19,7 m³/min à 7 bar. Le minimum est une limite de régulation, pas un débit moyen. Le DX110 fixe ne se sélectionne pas de la même façon, et le DX132 change la puissance et les points de pression. La pression maximale 10,7 bar ne fournit pas un FAD à cette limite.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 10,7 bar.",
       "FAD sous pression identifié séparément des valeurs d’aspiration : 19 700 L/min déclarés à 7 bar, maximum de la plage FAD publiée, sans qualification du régime moteur."
@@ -116,6 +116,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 9aefc2ec8892e1e96271ae206c2566ed5bc02fc655f2164d62823dca6c664b56 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-reviews:compair-dx110rs:0",
+      "sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/blta76611689adb5848/blt1a5f7f6e226706dc/67ef95d1e79e24eb628a8f5b/61728_6_11_24_24161_D_SERIES_DX_12PP_EN_WORK.pdf",
+      "sourceLabel": "CompAir, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "Le DX110RS est le groupe à vitesse variable de 110 kW, avec une plage de FAD 7,0–19,7 m³/min à 7 bar. Le minimum est une limite de régulation, pas un débit moyen. Le DX110 fixe ne se sélectionne pas de la même façon, et le DX132 change la puissance et les points de pression. La pression maximale 10,7 bar ne fournit pas un FAD à cette limite. GET complet SHA-256 9aefc2ec8892e1e96271ae206c2566ed5bc02fc655f2164d62823dca6c664b56. Pages PDF lues : 11, 1."
     }
   ],
   "fieldSources": {

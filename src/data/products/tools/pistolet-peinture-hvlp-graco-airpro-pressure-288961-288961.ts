@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/pistolet-peinture-hvlp-graco-airpro-pressure-288961-288961.svg",
+		"src": "/images/products/pistolet-peinture-hvlp-graco-airpro-pressure-288961-288961-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Graco AirPro pressure 288961 (réf. 288961)",
 		"sourceUrl": "https://www.graco.com/content/dam/graco/tech_documents/manuals/312/312414/312414EN-U.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "graco-airpro-pressure-288961",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Graco AirPro pressure 288961 (réf. 288961). Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "L’AirPro 288961 est la version HVLP à alimentation sous pression, buse 0,8 mm, pour produits de type Stain. Le modèle 288960 garde le chapeau Stain avec une buse 0,5 mm ; le 288967 de 0,8 mm utilise la configuration Waterborne. La limite HVLP est 1,5 bar pour le Stain, distincte de la pression de sécurité maximale d’entrée. Les consommations en SCFM restent documentaires, faute de convention volumique suffisamment établie pour le calcul.",
 		"verifiedFacts": [
 			"Orifice Size in. (mm) : 0.030 (0.8).",
 			"Spray technology : HVLP.",
@@ -117,6 +117,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-05",
 			"confidence": "B",
 			"notes": "Déclaration fabricant, capture SHA-256 db686f2919e70169aab5175ac84b40c5d306d31bd483f4d3723f6b971a0086cb. Aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:pistolet-peinture-hvlp-graco-airpro-pressure-288961-288961:0",
+			"sourceUrl": "https://www.graco.com/content/dam/graco/tech_documents/manuals/312/312414/312414EN-U.pdf",
+			"sourceLabel": "Graco, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’AirPro 288961 est la version HVLP à alimentation sous pression, buse 0,8 mm, pour produits de type Stain. Le modèle 288960 garde le chapeau Stain avec une buse 0,5 mm ; le 288967 de 0,8 mm utilise la configuration Waterborne. La limite HVLP est 1,5 bar pour le Stain, distincte de la pression de sécurité maximale d’entrée. Les consommations en SCFM restent documentaires, faute de convention volumique suffisamment établie pour le calcul. GET complet SHA-256 db686f2919e70169aab5175ac84b40c5d306d31bd483f4d3723f6b971a0086cb. Pages PDF lues : 4, 23."
 		}
 	],
 	"fieldSources": {

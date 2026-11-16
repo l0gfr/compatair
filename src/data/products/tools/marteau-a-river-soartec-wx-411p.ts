@@ -17,10 +17,10 @@ const product: ToolProfileInput = {
 	"connectorSize": "1/4\" (Air Inlet)",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/marteau-a-river-soartec-wx-411p.webp",
+		"src": "/images/products/marteau-a-river-soartec-wx-411p-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Soartec WX-411P",
 		"sourceUrl": "https://www.soartectools.com/products/air-riveting-hammer-pistol-type-wx-411p",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "soartec-wx-411p",
@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Soartec WX-411P. La fiche publie une consommation et une pression d’alimentation, sans préciser le régime de consommation ni affirmer que cette valeur est mesurée à cette pression. Ces champs restent séparés et hors du calcul de compatibilité. Fonction déclarée : Air Riveting Hammer - Pistol Type. Champ fabricant : Chisel Shank (in) : 0.4\".",
+		"overview": "Le WX-411P est le marteau à river pistolet à emmanchement 0,4 pouce et course 35 mm. Le WX-411S est droit, alors que le 412S augmente la course à 57,2 mm. La fiche sépare les capacités acier et aluminium, 1/8 et 5/32 pouce pour le 411P : elles ne sont pas interchangeables. Les 4 cfm publiés restent sans régime et pression de mesure appariés.",
 		"verifiedFacts": [
 			"Fonction déclarée : Air Riveting Hammer - Pistol Type.",
 			"Champ fabricant : Chisel Shank (in) : 0.4\".",
@@ -176,6 +176,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 8eafbc68e98327e9caa6ff298abcf0e575192716dd42ea647a5c4f283d1aa976. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:marteau-a-river-soartec-wx-411p:0",
+			"sourceUrl": "https://www.soartectools.com/products/air-riveting-hammer-pistol-type-wx-411p",
+			"sourceLabel": "Soartec, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le WX-411P est le marteau à river pistolet à emmanchement 0,4 pouce et course 35 mm. Le WX-411S est droit, alors que le 412S augmente la course à 57,2 mm. La fiche sépare les capacités acier et aluminium, 1/8 et 5/32 pouce pour le 411P : elles ne sont pas interchangeables. Les 4 cfm publiés restent sans régime et pression de mesure appariés. GET complet SHA-256 48d77452c9a4153687c472f6086b9abed4a4a0b2d988a51b2cf7c53869496c2b. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

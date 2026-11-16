@@ -18,10 +18,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-jonnesway-jai-0926.webp",
+		"src": "/images/products/cle-a-chocs-jonnesway-jai-0926-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Jonnesway JAI-0926",
 		"sourceUrl": "https://www.jonnesway.com/pImages/JAI-0926_666.jpg",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "jonnesway-jai-0926",
@@ -33,7 +33,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Jonnesway JAI-0926. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Square Drive : 3/4\". Working Torque : 1,350NM (1,000FT-LBS).",
+		"overview": "La JAI-0926 est la clé à chocs composite à carré3/4, double marteau et échappement arrière. Ses couples publiés sont1350 Nm au travail et1626 Nm maximum. Les JAI-0923 et0924 utilisent des carrés3/8 et1/2 avec d’autres plages ; ces montages ne sont pas fusionnés.",
 		"verifiedFacts": [
 			"Square Drive : 3/4\".",
 			"Working Torque : 1,350NM (1,000FT-LBS).",
@@ -43,7 +43,10 @@ const product: ToolProfileInput = {
 			"Overall Length : 219MM (8.62\").",
 			"Weight : 3.15KGS (6.89LBS).",
 			"Air Inlet Size : 3/8\".",
-			"Air Hose (I.D.) : 1/2\"."
+			"Air Hose (I.D.) : 1/2\".",
+			"Mécanisme et échappement : Twin Hammer ; arrière.",
+			"Carré : 3/4 pouce.",
+			"Raccord et flexible : Entrée3/8 pouce ; flexible intérieur1/2 pouce."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -127,6 +130,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-jonnes-cat-29-pdp-55-spec63-p1"
 			]
+		},
+		{
+			"label": "Mécanisme et échappement",
+			"value": "Twin Hammer ; arrière",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-jonnesway-jai-0926:0"
+			]
+		},
+		{
+			"label": "Carré",
+			"value": "3/4 pouce",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-jonnesway-jai-0926:0"
+			]
+		},
+		{
+			"label": "Raccord et flexible",
+			"value": "Entrée3/8 pouce ; flexible intérieur1/2 pouce",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-jonnesway-jai-0926:0"
+			]
 		}
 	],
 	"evidence": [
@@ -139,6 +163,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 18a9bd5ec4b1b9d16ed73df81bc61e33a1d7dd7702cd69f1c8ab5e4a999819fe. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-chocs-jonnesway-jai-0926:0",
+			"sourceUrl": "https://www.jonnesway.com/pImages/JAI-0926_666.jpg",
+			"sourceLabel": "Jonnesway, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La JAI-0926 est la clé à chocs composite à carré3/4, double marteau et échappement arrière. Ses couples publiés sont1350 Nm au travail et1626 Nm maximum. Les JAI-0923 et0924 utilisent des carrés3/8 et1/2 avec d’autres plages ; ces montages ne sont pas fusionnés. GET complet SHA-256 18a9bd5ec4b1b9d16ed73df81bc61e33a1d7dd7702cd69f1c8ab5e4a999819fe. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

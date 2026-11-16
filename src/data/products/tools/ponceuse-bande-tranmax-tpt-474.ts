@@ -11,13 +11,13 @@ const product: ToolProfileInput = {
 	"mpn": "TPT-474",
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
-	"demandExplanation": "Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse.",
+	"demandExplanation": "La consommation publiée est une moyenne en charge, sans pression de mesure associée dans le tableau. Elle reste documentaire et ne donne pas un maximum de dimensionnement.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-bande-tranmax-tpt-474.webp",
+		"src": "/images/products/ponceuse-bande-tranmax-tpt-474-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Tranmax TPT-474",
 		"sourceUrl": "https://ss-client-website.s3-ap-northeast-1.amazonaws.com/tranmax/2023_01_09_113224_2212-Professional-Power-Tools-TP.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "tranmax-tpt-474",
@@ -29,38 +29,53 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Tranmax TPT-474. Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse. Masse publiée : 2.1 kg (4.6 lb). Longueur hors tout publiée : 390 mm (15.4 inch).",
+		"overview": "La TPT-474 utilise une bande large de 30 × 540 mm à 13 000 tr/min pour 2,1 kg. La TPT-476 passe à 20 × 520 mm et la TPT-469 à 60 × 260 mm ; le format de bande et la portée diffèrent avant toute considération de consommation.",
 		"verifiedFacts": [
-			"Masse publiée : 2.1 kg (4.6 lb).",
-			"Longueur hors tout publiée : 390 mm (15.4 inch)."
+			"Bande : 30 × 540 mm.",
+			"Vitesse à vide : 13 000 tr/min.",
+			"Longueur et masse : 390 mm ; 2,1 kg.",
+			"Consommation moyenne en charge : 85 L/min (3 cfm) ; pression de mesure non indiquée.",
+			"Arrivée d’air et flexible : 1/4 NPTF ; flexible 3/8 pouce (10 mm)."
 		],
 		"limitations": [
-			"Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse.",
-			"Référence physique explicitement imprimée dans un tableau constructeur ; aucune référence n’est créée à partir d’une nomenclature de suffixes.",
-			"Les conversions de contrôle de masse et longueur servent à relire le tableau ; elles ne reconstituent aucune consommation d’air.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"La consommation publiée est une moyenne en charge, sans pression de mesure associée dans le tableau. Elle reste documentaire et ne donne pas un maximum de dimensionnement.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "2.1 kg (4.6 lb)",
+			"label": "Bande",
+			"value": "30 × 540 mm",
 			"evidenceIds": [
-				"october2b-tools-oct2b-tranmax-tp-pdf-p27"
+				"review:2026-11-16-reviews:ponceuse-bande-tranmax-tpt-474:0"
 			]
 		},
 		{
-			"label": "Longueur hors tout publiée",
-			"value": "390 mm (15.4 inch)",
+			"label": "Vitesse à vide",
+			"value": "13 000 tr/min",
 			"evidenceIds": [
-				"october2b-tools-oct2b-tranmax-tp-pdf-p27"
+				"review:2026-11-16-reviews:ponceuse-bande-tranmax-tpt-474:0"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "Aucun point de pression de consommation n’est établi pour cette ligne.",
+			"label": "Longueur et masse",
+			"value": "390 mm ; 2,1 kg",
 			"evidenceIds": [
-				"october2b-tools-oct2b-tranmax-tp-pdf-p27"
+				"review:2026-11-16-reviews:ponceuse-bande-tranmax-tpt-474:0"
+			]
+		},
+		{
+			"label": "Consommation moyenne en charge",
+			"value": "85 L/min (3 cfm) ; pression de mesure non indiquée",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-bande-tranmax-tpt-474:0"
+			]
+		},
+		{
+			"label": "Arrivée d’air et flexible",
+			"value": "1/4 NPTF ; flexible 3/8 pouce (10 mm)",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-bande-tranmax-tpt-474:0"
 			]
 		}
 	],
@@ -74,21 +89,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : c2e29dbb1f9d433e1d65568bc327d3ea21eadd7d39f8edbb0d98145850f7c7d2. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-bande-tranmax-tpt-474:0",
+			"sourceUrl": "https://ss-client-website.s3-ap-northeast-1.amazonaws.com/tranmax/2023_01_09_113224_2212-Professional-Power-Tools-TP.pdf",
+			"sourceLabel": "Tranmax, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La TPT-474 utilise une bande large de 30 × 540 mm à 13 000 tr/min pour 2,1 kg. La TPT-476 passe à 20 × 520 mm et la TPT-469 à 60 × 260 mm ; le format de bande et la portée diffèrent avant toute considération de consommation. GET complet SHA-256 c2e29dbb1f9d433e1d65568bc327d3ea21eadd7d39f8edbb0d98145850f7c7d2. Pages PDF lues : 27."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october2b-tools-oct2b-tranmax-tp-pdf-p27"
-		],
-		"workingPressureBar": [
-			"october2b-tools-oct2b-tranmax-tp-pdf-p27"
+			"review:2026-11-16-reviews:ponceuse-bande-tranmax-tpt-474:0"
 		],
 		"demandExplanation": [
-			"october2b-tools-oct2b-tranmax-tp-pdf-p27"
+			"review:2026-11-16-reviews:ponceuse-bande-tranmax-tpt-474:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-reviews:ponceuse-bande-tranmax-tpt-474:0"
 		]
 	},
 	"notes": [
-		"Les caractéristiques mécaniques sont déclarées dans le tableau constructeur ; aucun débit de compatibilité n’est déduit du couple, de la vitesse ou de la masse."
+		"La consommation publiée est une moyenne en charge, sans pression de mesure associée dans le tableau. Elle reste documentaire et ne donne pas un maximum de dimensionnement."
 	]
 };
 

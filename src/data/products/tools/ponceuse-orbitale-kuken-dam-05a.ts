@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Le tableau établit les caractéristiques individuelles. La consommation normale n’est pas explicitement rattachée à un régime en charge et à une pression de mesure.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-orbitale-kuken-dam-05a.webp",
+		"src": "/images/products/ponceuse-orbitale-kuken-dam-05a-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : KUKEN DAM-05A",
 		"sourceUrl": "https://www.kuken.co.jp/en/catalogue/pdf/best_selection.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "kuken-dam-05a",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "KUKEN DAM-05A. Le tableau établit les caractéristiques individuelles. La consommation normale n’est pas explicitement rattachée à un régime en charge et à une pression de mesure. Masse publiée : 1.1 kg (2.4 lb). Longueur publiée : 183.0 mm.",
+		"overview": "La DAM-05A est la ponceuse 125 mm sans aspiration à orbite de 10 mm. La DAM-05AS ajoute l’aspiration et mesure 180 mm au lieu de 183 mm ; la DAM-055 réduit l’orbite à 5 mm. Les trois annoncent 9 500 tr/min et 1,1 kg. L’orbite et l’extraction de poussière différencient le travail ; les 0,38 m³/min restent hors dimensionnement faute de régime explicite.",
 		"verifiedFacts": [
 			"Masse publiée : 1.1 kg (2.4 lb).",
 			"Longueur publiée : 183.0 mm."
@@ -74,6 +74,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 0da76488e568242877887f713ecd81203eaa9f2322c20eb65648d25bb7e71cc7. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-orbitale-kuken-dam-05a:0",
+			"sourceUrl": "https://www.kuken.co.jp/en/catalogue/pdf/best_selection.pdf",
+			"sourceLabel": "KUKEN, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La DAM-05A est la ponceuse 125 mm sans aspiration à orbite de 10 mm. La DAM-05AS ajoute l’aspiration et mesure 180 mm au lieu de 183 mm ; la DAM-055 réduit l’orbite à 5 mm. Les trois annoncent 9 500 tr/min et 1,1 kg. L’orbite et l’extraction de poussière différencient le travail ; les 0,38 m³/min restent hors dimensionnement faute de régime explicite. GET complet SHA-256 0da76488e568242877887f713ecd81203eaa9f2322c20eb65648d25bb7e71cc7. Pages PDF lues : 20."
 		}
 	],
 	"fieldSources": {

@@ -22,13 +22,13 @@ const product: CompressorInput = {
 	"confidence": "A",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/gentilin-esk480-10.webp",
+		"src": "/images/products/gentilin-esk480-10-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Gentilin ESK480/10, référence 811604007",
-		"sourceUrl": "https://www.gentilinair.com/en/products/esk480-100-mono",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://www.gentilinair.com/docs/esk480-660-10-en_1711031505.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Gentilin ESK480/10, référence 811604007 : cuve de 10 L, pression maximale publiée de 10 bar. Le point documenté le plus élevé en pression fournit 210 L/min à 8 bar.",
+		"overview": "L’ESK480/10 associe une cuve de 10 L à un groupe quatre cylindres de 2,8 kW sous 230 V/50 Hz. La fiche donne 255 L/min à 5 bar et 210 à 8 bar, distincts des 430 L/min aspirés. L’ESK480/100 conserve ces points avec une cuve réelle de 90 L ; le nombre du nom ne remplace pas sa capacité publiée. Le libellé Duty cycle S1 100% est conservé avec sa portée constructeur.",
 		"verifiedFacts": [
 			"Débit restitué publié : 255 L/min à 5 bar ; 210 L/min à 8 bar.",
 			"Compresseur à pistons sans huile. Puissance moteur publiée : 2,8 kW.",
@@ -104,6 +104,26 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "La notice liée à cette fiche déclare la compression sans huile : Compressing air (no oil) to be used with suitable pneumatic utensils according to current"
+		},
+		{
+			"id": "review:2026-11-16-reviews:gentilin-esk480-10:0",
+			"sourceUrl": "https://www.gentilinair.com/docs/esk480-660-10-en_1711031505.pdf",
+			"sourceLabel": "Gentilin, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’ESK480/10 associe une cuve de 10 L à un groupe quatre cylindres de 2,8 kW sous 230 V/50 Hz. La fiche donne 255 L/min à 5 bar et 210 à 8 bar, distincts des 430 L/min aspirés. L’ESK480/100 conserve ces points avec une cuve réelle de 90 L ; le nombre du nom ne remplace pas sa capacité publiée. Le libellé Duty cycle S1 100% est conservé avec sa portée constructeur. GET complet SHA-256 7aa4be2a0bcd740f8a75785d75adac3b2062688b0b69c8810b6251e1dc8c39c0. Pages PDF lues : 13."
+		},
+		{
+			"id": "review:2026-11-16-reviews:gentilin-esk480-10:1",
+			"sourceUrl": "https://www.gentilinair.com/en/products/esk480-100-mono",
+			"sourceLabel": "Gentilin, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’ESK480/10 associe une cuve de 10 L à un groupe quatre cylindres de 2,8 kW sous 230 V/50 Hz. La fiche donne 255 L/min à 5 bar et 210 à 8 bar, distincts des 430 L/min aspirés. L’ESK480/100 conserve ces points avec une cuve réelle de 90 L ; le nombre du nom ne remplace pas sa capacité publiée. Le libellé Duty cycle S1 100% est conservé avec sa portée constructeur. GET complet SHA-256 eae97573058ec54eac2e971c3ca34c893e3d1801d1193b811149dd1fa15a6164. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

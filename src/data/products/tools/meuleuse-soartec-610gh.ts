@@ -16,10 +16,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La fiche publie une consommation et une pression d’alimentation, sans préciser le régime de consommation ni affirmer que cette valeur est mesurée à cette pression. Ces champs restent séparés et hors du calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-soartec-610gh.webp",
+		"src": "/images/products/meuleuse-soartec-610gh-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Soartec 610GH",
 		"sourceUrl": "https://www.soartectools.com/products/9-vertical-air-grinder-610gh",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "soartec-610gh",
@@ -31,7 +31,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Soartec 610GH. La fiche publie une consommation et une pression d’alimentation, sans préciser le régime de consommation ni affirmer que cette valeur est mesurée à cette pression. Ces champs restent séparés et hors du calcul de compatibilité. Fonction déclarée : 9\" Vertical Air Grinder 6000 rpm. Champ fabricant : Wheel Size (in/mm) : 230 x 10 x 22.2.",
+		"overview": "La 610GH est la meuleuse verticale 230 mm à 6 000 tr/min. La fiche de la 610G juxtapose 4 500 tr/min dans le titre et 6 000 dans la table, écart qui reste visible ; la WS-662 est une meuleuse d’angle pour disques de 100 mm. La vitesse et le montage du disque doivent convenir au travail et au carter. Les 2 800 L/min publiés à côté d’une consigne 90 psi restent hors calcul faute de régime de mesure explicite.",
 		"verifiedFacts": [
 			"Fonction déclarée : 9\" Vertical Air Grinder 6000 rpm.",
 			"Champ fabricant : Wheel Size (in/mm) : 230 x 10 x 22.2.",
@@ -160,6 +160,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 80e8fb677f5b217f020e928ea8afd08bc61d4a26eda058d6998b3f019acab981. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-soartec-610gh:0",
+			"sourceUrl": "https://www.soartectools.com/products/9-vertical-air-grinder-610gh",
+			"sourceLabel": "Soartec, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 610GH est la meuleuse verticale 230 mm à 6 000 tr/min. La fiche de la 610G juxtapose 4 500 tr/min dans le titre et 6 000 dans la table, écart qui reste visible ; la WS-662 est une meuleuse d’angle pour disques de 100 mm. La vitesse et le montage du disque doivent convenir au travail et au carter. Les 2 800 L/min publiés à côté d’une consigne 90 psi restent hors calcul faute de régime de mesure explicite. GET complet SHA-256 e1a12a012a67887b0b67d860980b9a302a41dc446b8321d0a75e286cd3a180d7. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

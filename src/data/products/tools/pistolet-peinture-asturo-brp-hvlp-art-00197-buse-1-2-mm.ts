@@ -26,13 +26,13 @@ const product: ToolProfileInput = {
     }
   },
   "image": {
-    "src": "/images/products/pistolet-peinture-asturo-brp-hvlp-art-00197-buse-1-2-mm.svg",
+    "src": "/images/products/pistolet-peinture-asturo-brp-hvlp-art-00197-buse-1-2-mm-technical-20261116-reviews.svg",
     "alt": "Repères techniques : Asturo BRP HVLP art. 00197 buse 1,2 mm",
     "sourceUrl": "https://www.ltf.it/wp-content/uploads/2023/10/Asturo.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "editorial": {
-    "overview": "Asturo BRP HVLP art. 00197 buse 1,2 mm. Le régime de consommation et/ou la pression de travail appariée ne sont pas définis. Le débit publié reste hors du calcul FAD. Le tableau du pistolet BRP HVLP (article de base 00197) publie le diamètre de buse 1,2 mm sous le code de buse 12. Ce calibre est une configuration de pulvérisation réelle du catalogue ; la consommation commune de la famille n’est pas différenciée par buse.",
+    "overview": "Le BRP HVLP 00197 en code buse 12 utilise une buse de 1,2 mm et une alimentation produit externe, par pompe ou réservoir. Les codes 10 et 14 changent la buse en 1,0 et 1,4 mm ; le tableau conserve 180 L/min. La pression de service de 3,5 bar et le maximum de 5 bar ne documentent pas le point de mesure de cette consommation. La masse publiée est 375 g.",
     "verifiedFacts": [
       "Article de base imprimé : 00197.",
       "Code de buse imprimé : 12.",
@@ -144,6 +144,16 @@ const product: ToolProfileInput = {
       "retrievedAt": "2026-10-08",
       "confidence": "B",
       "notes": "Réponse primaire SHA-256 1649c2153ad235d9c7303af0aeac4de327f2558f30db378397af3b25af7e9794. Déclaration fabricant, sans essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-reviews:pistolet-peinture-asturo-brp-hvlp-art-00197-buse-1-2-mm:0",
+      "sourceUrl": "https://www.ltf.it/wp-content/uploads/2023/10/Asturo.pdf",
+      "sourceLabel": "Asturo, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "Le BRP HVLP 00197 en code buse 12 utilise une buse de 1,2 mm et une alimentation produit externe, par pompe ou réservoir. Les codes 10 et 14 changent la buse en 1,0 et 1,4 mm ; le tableau conserve 180 L/min. La pression de service de 3,5 bar et le maximum de 5 bar ne documentent pas le point de mesure de cette consommation. La masse publiée est 375 g. GET complet SHA-256 1649c2153ad235d9c7303af0aeac4de327f2558f30db378397af3b25af7e9794. Pages PDF lues : 8."
     }
   ],
   "fieldSources": {

@@ -13,13 +13,13 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/stanley-fatmax-dv2-400-10-24p.webp",
+		"src": "/images/products/stanley-fatmax-dv2-400-10-24p-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Stanley Fatmax DV2 400/10/24P, référence 8119550STF521",
-		"sourceUrl": "https://www.nuair.pl/images/katalogi/Catalogo_STANLEY_FATMAX_2020_EN_9990222_LR.pdf#page=17",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://www.nuair.pl/images/katalogi/Catalogo_STANLEY_FATMAX_2020_EN_9990222_LR.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Stanley Fatmax DV2 400/10/24P, référence 8119550STF521 : cuve de 24 L, pression maximale publiée de 10 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Groupe de compression publié : VDC. Groupe de compression : VDC. Nombre de cylindres : 2.",
+		"overview": "Le DV2 400/10/24P 8119550STF521 est le modèle à cuve de 24 L du groupe VDC bicylindre en V. Les versions 50 et 100 L conservent 2,2 kW sous 230 V/50 Hz et 356 L/min aspirés à 2 850 tr/min. Le 24P privilégie le stockage réduit et la poignée extensible. Ses 44,4 kg et 605 × 440 × 745 mm sont des données brutes d’expédition ; aucun débit restitué sous pression n’est déduit du déplacement d’air.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons. Puissance moteur publiée : 2,2 kW.",
@@ -103,6 +103,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Le tableau Stanley Fatmax, catalogue compresseurs 2020 indique « Air displacement » : 356 L/min aspirés. Aucun débit restitué à une pression de mesure n’est fourni dans cette ligne."
+		},
+		{
+			"id": "review:2026-11-16-reviews:stanley-fatmax-dv2-400-10-24p:0",
+			"sourceUrl": "https://www.nuair.pl/images/katalogi/Catalogo_STANLEY_FATMAX_2020_EN_9990222_LR.pdf",
+			"sourceLabel": "Stanley, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le DV2 400/10/24P 8119550STF521 est le modèle à cuve de 24 L du groupe VDC bicylindre en V. Les versions 50 et 100 L conservent 2,2 kW sous 230 V/50 Hz et 356 L/min aspirés à 2 850 tr/min. Le 24P privilégie le stockage réduit et la poignée extensible. Ses 44,4 kg et 605 × 440 × 745 mm sont des données brutes d’expédition ; aucun débit restitué sous pression n’est déduit du déplacement d’air. GET complet SHA-256 b2015c46cd22990d7024097652b91193a116a7959be0886b3265d976fd49e1ad. Pages PDF lues : 17."
 		}
 	],
 	"fieldSources": {

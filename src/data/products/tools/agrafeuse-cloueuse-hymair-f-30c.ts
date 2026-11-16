@@ -9,24 +9,14 @@ const product: ToolProfileInput = {
 	"brand": "Hymair",
 	"model": "F-30C",
 	"mpn": "F-30C",
-	"demandModel": "fixed-flow",
-	"workingPressureBar": {
-		"min": 6.205,
-		"typical": 6.205,
-		"max": 6.205
-	},
-	"airflowLpm": {
-		"min": 25.485,
-		"typical": 25.485,
-		"max": 25.485
-	},
-	"airflowBasis": "unqualified",
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/agrafeuse-cloueuse-hymair-f-30c.webp",
+		"src": "/images/products/agrafeuse-cloueuse-hymair-f-30c-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Hymair F-30C",
 		"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=PWKUAfLuMrCV&dp=GvUApKfKKUAU",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "hymair-f-30c",
@@ -38,59 +28,77 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Hymair F-30C. Consommation de régime non précisé : 25,485 L/min à 6,205 bar. Masse publiée : 1.10 kg. Longueur publiée : 240 mm.",
+		"overview": "Hymair F-30C, catalogue Steed : cloueur de pointes 18 gauge de 10 à 30 mm, magasin 100 pointes et masse 1,10 kg. Le NS-5040B du même document accepte aussi les agrafes, tandis que le F-30C est décrit comme cloueur. La sécurité de contact et le format de pointe 1,05 × 1,25 mm guident son équipement.",
 		"verifiedFacts": [
-			"Masse publiée : 1.10 kg.",
-			"Longueur publiée : 240 mm.",
-			"Hauteur publiée : 185 mm.",
-			"Capacité du magasin : 100 nails."
+			"Fixations : Pointes 18 gauge, section 1,05 × 1,25 mm.",
+			"Longueur des pointes : 10–30 mm.",
+			"Magasin : 100 pointes.",
+			"Dimensions longueur × hauteur × largeur : 240 × 185 × 55 mm.",
+			"Masse : 1,10 kg.",
+			"Sécurité : Par contact.",
+			"Consommation documentaire : 0,9 SCFM à 90 psi, régime et cadence de mesure non précisés.",
+			"Plage de service : 4–7,5 bar, maximum 8,3 bar."
 		],
 		"limitations": [
-			"Une consommation moyenne, à vide ou de régime non précisé ne confirme pas le débit maximal en charge ; le verdict reste insufficient_data.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"La valeur 0,9 SCFM à 90 psi n’est associée ni à une cadence de tir ni à un état volumique de référence détaillé. Aucun volume par tir ni débit en charge n’en est déduit ; la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "1.10 kg",
+			"label": "Fixations",
+			"value": "Pointes 18 gauge, section 1,05 × 1,25 mm",
 			"evidenceIds": [
-				"october2-tools-steed-6-p4"
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-hymair-f-30c:0"
 			]
 		},
 		{
-			"label": "Longueur publiée",
-			"value": "240 mm",
+			"label": "Longueur des pointes",
+			"value": "10–30 mm",
 			"evidenceIds": [
-				"october2-tools-steed-6-p4"
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-hymair-f-30c:0"
 			]
 		},
 		{
-			"label": "Hauteur publiée",
-			"value": "185 mm",
+			"label": "Magasin",
+			"value": "100 pointes",
 			"evidenceIds": [
-				"october2-tools-steed-6-p4"
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-hymair-f-30c:0"
 			]
 		},
 		{
-			"label": "Capacité du magasin",
-			"value": "100 nails",
+			"label": "Dimensions longueur × hauteur × largeur",
+			"value": "240 × 185 × 55 mm",
 			"evidenceIds": [
-				"october2-tools-steed-6-p4"
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-hymair-f-30c:0"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "Air consumption .................................... 0.9 SCFM @ 90 PSI",
+			"label": "Masse",
+			"value": "1,10 kg",
 			"evidenceIds": [
-				"october2-tools-steed-6-p4"
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-hymair-f-30c:0"
 			]
 		},
 		{
-			"label": "Consommation dans son unité originale",
-			"value": "0.9 cfm",
+			"label": "Sécurité",
+			"value": "Par contact",
 			"evidenceIds": [
-				"october2-tools-steed-6-p4"
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-hymair-f-30c:0"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "0,9 SCFM à 90 psi, régime et cadence de mesure non précisés",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-hymair-f-30c:0"
+			]
+		},
+		{
+			"label": "Plage de service",
+			"value": "4–7,5 bar, maximum 8,3 bar",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-hymair-f-30c:0"
 			]
 		}
 	],
@@ -104,25 +112,33 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 2ba54ea32cf0ef4aa86123d86f6ea822cce25a4e72cea15b8bda4c0c6cccb524. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:agrafeuse-cloueuse-hymair-f-30c:0",
+			"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=PWKUAfLuMrCV&dp=GvUApKfKKUAU",
+			"sourceLabel": "Hymair, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Hymair F-30C, catalogue Steed : cloueur de pointes 18 gauge de 10 à 30 mm, magasin 100 pointes et masse 1,10 kg. Le NS-5040B du même document accepte aussi les agrafes, tandis que le F-30C est décrit comme cloueur. La sécurité de contact et le format de pointe 1,05 × 1,25 mm guident son équipement. GET complet SHA-256 2ba54ea32cf0ef4aa86123d86f6ea822cce25a4e72cea15b8bda4c0c6cccb524. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october2-tools-steed-6-p4"
+			"review:2026-11-16-reviews:agrafeuse-cloueuse-hymair-f-30c:0"
+		],
+		"demandExplanation": [
+			"review:2026-11-16-reviews:agrafeuse-cloueuse-hymair-f-30c:0"
 		],
 		"workingPressureBar": [
-			"october2-tools-steed-6-p4"
-		],
-		"airflowLpm": [
-			"october2-tools-steed-6-p4"
-		],
-		"airflowBasis": [
-			"october2-tools-steed-6-p4"
+			"review:2026-11-16-reviews:agrafeuse-cloueuse-hymair-f-30c:0"
 		]
 	},
 	"notes": [
-		"Consommation de régime non précisé : 25,485 L/min à 6,205 bar."
-	]
+		"La valeur 0,9 SCFM à 90 psi n’est associée ni à une cadence de tir ni à un état volumique de référence détaillé. Aucun volume par tir ni débit en charge n’en est déduit ; la compatibilité demeure indéterminée."
+	],
+	"demandExplanation": "La valeur 0,9 SCFM à 90 psi n’est associée ni à une cadence de tir ni à un état volumique de référence détaillé. Aucun volume par tir ni débit en charge n’en est déduit ; la compatibilité demeure indéterminée."
 };
 
 export default product;

@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/scie-sumake-st-bw300.webp",
+		"src": "/images/products/scie-sumake-st-bw300-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Sumake ST-BW300",
 		"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "sumake-st-bw300",
@@ -39,7 +39,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-BW300. Consommation publiée, régime non précisé : 240 L/min à 6,2 bar. Consommation dans les unités du tableau : 240 L/min ; 8.5 cfm. Configuration complète publiée : ST-BW300.",
+		"overview": "La ST-BW300 est une scie alternative à transmission par engrenages, course 10 mm et 7 000 coups/min. Sa table donne une capacité acier 5,3 mm et aluminium 5,8 mm ; la ST-SR101 est une cisaille, et la ST-CT100 une tronçonneuse à disque de 76,2 mm. La méthode de coupe et la lame priment donc sur le seul gabarit. Les 240 L/min restent de régime indéterminé.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 23.",
 			"Consommation dans les unités du tableau : 240 L/min ; 8.5 cfm.",
@@ -99,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "review:2026-11-16-reviews:scie-sumake-st-bw300:0",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
+			"sourceLabel": "Sumake, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La ST-BW300 est une scie alternative à transmission par engrenages, course 10 mm et 7 000 coups/min. Sa table donne une capacité acier 5,3 mm et aluminium 5,8 mm ; la ST-SR101 est une cisaille, et la ST-CT100 une tronçonneuse à disque de 76,2 mm. La méthode de coupe et la lame priment donc sur le seul gabarit. Les 240 L/min restent de régime indéterminé. GET complet SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Pages PDF lues : 23."
 		}
 	],
 	"fieldSources": {

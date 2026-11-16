@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-bande-astro-pneumatic-3035.svg",
+		"src": "/images/products/ponceuse-bande-astro-pneumatic-3035-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Astro Pneumatic 3035",
 		"sourceUrl": "https://www.astrotools.com/product/air-belt-sander-3-4-x-20-5-with-2-belts-80-100/",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "astro-pneumatic-3035",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Astro Pneumatic 3035. Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "La 3035 est la ponceuse à bande 0,5 hp à 16 000 tr/min, de 430 mm et 1,4 kg. La 3039 garde la vitesse publiée dans un corps de 370 mm. L’accès au travail et la géométrie de bande doivent être contrôlés avant les accessoires. Les 4 cfm sont une consommation moyenne ; la consigne 90 psi ne les transforme pas en consommation en charge.",
 		"verifiedFacts": [
 			"Puissance : 0.5HP.",
 			"Vitesse à vide : 16,000rpm.",
@@ -121,6 +121,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 e54fb4448a250b66f5f4b512fe4c34b8b8a8db187c12c764684fdecaac293122. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-bande-astro-pneumatic-3035:0",
+			"sourceUrl": "https://www.astrotools.com/product/air-belt-sander-3-4-x-20-5-with-2-belts-80-100/",
+			"sourceLabel": "Astro Pneumatic, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 3035 est la ponceuse à bande 0,5 hp à 16 000 tr/min, de 430 mm et 1,4 kg. La 3039 garde la vitesse publiée dans un corps de 370 mm. L’accès au travail et la géométrie de bande doivent être contrôlés avant les accessoires. Les 4 cfm sont une consommation moyenne ; la consigne 90 psi ne les transforme pas en consommation en charge. GET complet SHA-256 51558e65e5b659f360a49da09b5297180b970516a1944585579f91bc7df84357. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

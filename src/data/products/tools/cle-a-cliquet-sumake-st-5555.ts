@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-cliquet-sumake-st-5555.webp",
+		"src": "/images/products/cle-a-cliquet-sumake-st-5555-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Sumake ST-5555",
 		"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "sumake-st-5555",
@@ -39,7 +39,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-5555. Consommation publiée, régime non précisé : 283 L/min à 6,2 bar. Consommation dans les unités du tableau : 283 L/min ; 10 cfm. Configuration complète publiée : ST-5555.",
+		"overview": "Le ST-5555 est le cliquet à carré 1/4 pouce de 165 mm et 0,5 kg, à 230 tr/min et 34 Nm maximum. Le 5555A change le carré en 3/8 pouce ; le 5557 passe à 267 mm et 68 Nm. Le petit format sert les accès restreints, avec le carré adapté aux douilles. Les 283 L/min et les 6,2 bar recommandés ne qualifient pas une consommation en charge.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 11.",
 			"Consommation dans les unités du tableau : 283 L/min ; 10 cfm.",
@@ -99,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-cliquet-sumake-st-5555:0",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
+			"sourceLabel": "Sumake, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le ST-5555 est le cliquet à carré 1/4 pouce de 165 mm et 0,5 kg, à 230 tr/min et 34 Nm maximum. Le 5555A change le carré en 3/8 pouce ; le 5557 passe à 267 mm et 68 Nm. Le petit format sert les accès restreints, avec le carré adapté aux douilles. Les 283 L/min et les 6,2 bar recommandés ne qualifient pas une consommation en charge. GET complet SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Pages PDF lues : 11."
 		}
 	],
 	"fieldSources": {

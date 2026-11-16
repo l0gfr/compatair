@@ -9,91 +9,64 @@ const product: ToolProfileInput = {
 	"categoryId": "soufflette",
 	"category": "soufflette",
 	"label": "Aircraft BP PRO L",
-	"demandModel": "fixed-flow",
-	"workingPressureBar": {
-		"min": 6,
-		"typical": 6,
-		"max": 6
-	},
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/aircraft-bp-pro-l.webp",
+		"src": "/images/products/aircraft-bp-pro-l-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Aircraft BP PRO L, référence 2112123",
-		"sourceUrl": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-tools-2026-09-27.json",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
+		"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=231",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Aircraft BP PRO L, référence 2112123. Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Longueur du tube de soufflage : 250 mm. Diamètre extérieur du tube : 6 mm.",
+		"overview": "Aircraft BP PRO L : tube de soufflage de 250 mm, contre 500 mm pour la XL et 1 000 mm pour la EXL à buse Venturi/latérale. Le catalogue 2026/27 indique 150 L/min approximatifs sans régime de mesure. La masse de 0,2 kg diffère du relevé historique à 0,16 kg ; ces deux relevés restent identifiés.",
 		"verifiedFacts": [
-			"Pression de travail publiée : 6 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
-			"Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
-			"Référence fabricant : 2112123.",
-			"Longueur du tube de soufflage : 250 mm.",
-			"Diamètre extérieur du tube : 6 mm.",
-			"Diamètre de sortie de buse : 3 mm."
+			"Tube : 250 mm.",
+			"Diamètres extérieur du tube / sortie : 6 / 3 mm.",
+			"Pression de service / entrée maximale : 6 / 11 bar.",
+			"Masse approximative, catalogue 2026/27 : 0,2 kg.",
+			"Consommation approximative, régime non précisé : 150 L/min."
 		],
 		"limitations": [
-			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
-			"Une consommation moyenne ne constitue pas un débit maximal en usage continu. Vérifier le régime réel auprès du fabricant avant dimensionnement.",
-			"Écarts entre documents fabricant : Masse approximative : relevé de fiche du 27/09/2026 = 0.16 kg ; AIRCRAFT Hauptkatalog 2026/27 = 0.2kg."
+			"La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer.",
+			"Le relevé historique et le catalogue donnent des masses différentes ; vérifier la version livrée."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression de travail publiée : 6 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
-			"evidenceIds": [
-				"aircraft-2112123-20260927"
-			]
-		},
-		{
-			"label": "Condition de consommation",
-			"value": "Consommation moyenne publiée : 150 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
-			"evidenceIds": [
-				"aircraft-2112123-20260927"
-			]
-		},
-		{
-			"label": "Longueur du tube de soufflage",
+			"label": "Tube",
 			"value": "250 mm",
 			"evidenceIds": [
-				"aircraft-2112123-20260927"
+				"review:2026-11-16-reviews:aircraft-bp-pro-l:0"
 			]
 		},
 		{
-			"label": "Diamètre extérieur du tube",
-			"value": "6 mm",
+			"label": "Diamètres extérieur du tube / sortie",
+			"value": "6 / 3 mm",
 			"evidenceIds": [
-				"aircraft-2112123-20260927"
+				"review:2026-11-16-reviews:aircraft-bp-pro-l:0"
 			]
 		},
 		{
-			"label": "Diamètre de sortie de buse",
-			"value": "3 mm",
+			"label": "Pression de service / entrée maximale",
+			"value": "6 / 11 bar",
 			"evidenceIds": [
-				"aircraft-2112123-20260927"
+				"review:2026-11-16-reviews:aircraft-bp-pro-l:0"
 			]
 		},
 		{
-			"label": "Masse approximative",
-			"value": "0.16 kg",
+			"label": "Masse approximative, catalogue 2026/27",
+			"value": "0,2 kg",
 			"evidenceIds": [
-				"aircraft-2112123-20260927"
+				"review:2026-11-16-reviews:aircraft-bp-pro-l:0"
 			]
 		},
 		{
-			"label": "Type indiqué par le fabricant",
-			"value": "Professional blow gun with 250 mm blowpipe",
+			"label": "Consommation approximative, régime non précisé",
+			"value": "150 L/min",
 			"evidenceIds": [
-				"aircraft-2112123-20260927"
-			]
-		},
-		{
-			"label": "Écart documentaire fabricant",
-			"value": "Masse approximative : relevé de fiche du 27/09/2026 = 0.16 kg ; AIRCRAFT Hauptkatalog 2026/27 = 0.2kg.",
-			"evidenceIds": [
-				"aircraft-2112123-20260927",
-				"aircraft-2112123-documentation-20261023"
+				"review:2026-11-16-reviews:aircraft-bp-pro-l:0"
 			]
 		}
 	],
@@ -117,31 +90,33 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer 702076. Empreinte PDF SHA-256 : bc60546f310ec633fe500c22a71abb07b8a23499e7359d7ef6a8a505c786fa2f. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
+		},
+		{
+			"id": "review:2026-11-16-reviews:aircraft-bp-pro-l:0",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=231",
+			"sourceLabel": "Aircraft, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Aircraft BP PRO L : tube de soufflage de 250 mm, contre 500 mm pour la XL et 1 000 mm pour la EXL à buse Venturi/latérale. Le catalogue 2026/27 indique 150 L/min approximatifs sans régime de mesure. La masse de 0,2 kg diffère du relevé historique à 0,16 kg ; ces deux relevés restent identifiés. GET complet SHA-256 bc60546f310ec633fe500c22a71abb07b8a23499e7359d7ef6a8a505c786fa2f. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"aircraft-2112123-20260927"
+			"review:2026-11-16-reviews:aircraft-bp-pro-l:0"
+		],
+		"demandExplanation": [
+			"review:2026-11-16-reviews:aircraft-bp-pro-l:0"
 		],
 		"workingPressureBar": [
-			"aircraft-2112123-20260927"
-		],
-		"airflowLpm": [
-			"aircraft-2112123-20260927"
-		],
-		"airflowBasis": [
-			"aircraft-2112123-20260927"
+			"review:2026-11-16-reviews:aircraft-bp-pro-l:0"
 		]
 	},
 	"notes": [
-		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+		"La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne."
 	],
-	"airflowLpm": {
-		"min": 150,
-		"typical": 150,
-		"max": 150
-	},
-	"airflowBasis": "average"
+	"demandExplanation": "La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne."
 };
 
 export default product;

@@ -11,13 +11,13 @@ const product: ToolProfileInput = {
 	"mpn": "MP-351C-218",
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
-	"demandExplanation": "Volume par course publié, sans pression ni base volumique établies ; valeur conservée dans la ligne technique, hors calcul.",
+	"demandExplanation": "Le tableau indique un volume par course sans pression ni état de référence volumique établis. La valeur reste documentaire, hors calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/riveteuse-michigan-pneumatic-mp-351c-218.webp",
+		"src": "/images/products/riveteuse-michigan-pneumatic-mp-351c-218-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Michigan Pneumatic MP-351C-218",
 		"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/13-Riveters_v2.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "michigan-pneumatic-mp-351c-218",
@@ -29,37 +29,77 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Michigan Pneumatic MP-351C-218. Volume par course publié, sans pression ni base volumique établies ; valeur conservée dans la ligne technique, hors calcul. Masse publiée : 6000 lbs. Ligne technique constructeur : MP-351C-218 3/16\" 5/32\" 2-1/8\" 1-3/16\" 25/32\" 0.187\" 6000 lbs 9/16\" 17-1/2\" 12.50 lbs 1/4\" 3/8\" 2.75 cfper stroke.",
+		"overview": "Michigan Pneumatic MP-351C-218 : riveteuse à compression et étrier en C, portée 2⅛ pouces, capacité aluminium 3/16 et acier 5/32 pouce. La force maximale publiée est 6 000 lb ; la masse avec étrier est 12,50 lb. La version tandem MP-351CT-218 passe à 12 000 lb de force et 15,25 lb de masse.",
 		"verifiedFacts": [
-			"Masse publiée : 6000 lbs.",
-			"Ligne technique constructeur : MP-351C-218 3/16\" 5/32\" 2-1/8\" 1-3/16\" 25/32\" 0.187\" 6000 lbs 9/16\" 17-1/2\" 12.50 lbs 1/4\" 3/8\" 2.75 cfper stroke."
+			"Fonction : Rivetage par compression, étrier en C.",
+			"Capacités aluminium / acier : 3/16 pouce / 5/32 pouce.",
+			"Portée d’étrier : 2⅛ pouces.",
+			"Force maximale, unité fabricant : 6 000 lb.",
+			"Course maximale : 9/16 pouce.",
+			"Longueur : 17½ pouces.",
+			"Masse avec étrier : 12,50 lb.",
+			"Volume documentaire par course : 2,75 cf par course, pression et état de référence non établis."
 		],
 		"limitations": [
-			"Volume par course publié, sans pression ni base volumique établies ; valeur conservée dans la ligne technique, hors calcul.",
-			"Données du catalogue constructeur archivé ; consommation moyenne ou de régime non précisé, sans certification du besoin maximal en charge.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Le tableau indique un volume par course sans pression ni état de référence volumique établis. La valeur reste documentaire, hors calcul de compatibilité.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "6000 lbs",
+			"label": "Fonction",
+			"value": "Rivetage par compression, étrier en C",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-13-pdf-p6"
+				"review:2026-11-16-reviews:riveteuse-michigan-pneumatic-mp-351c-218:0"
 			]
 		},
 		{
-			"label": "Ligne technique constructeur",
-			"value": "MP-351C-218 3/16\" 5/32\" 2-1/8\" 1-3/16\" 25/32\" 0.187\" 6000 lbs 9/16\" 17-1/2\" 12.50 lbs 1/4\" 3/8\" 2.75 cfper stroke",
+			"label": "Capacités aluminium / acier",
+			"value": "3/16 pouce / 5/32 pouce",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-13-pdf-p6"
+				"review:2026-11-16-reviews:riveteuse-michigan-pneumatic-mp-351c-218:0"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "Aucune pression de mesure de cette ligne de consommation n’est établie dans le tableau.",
+			"label": "Portée d’étrier",
+			"value": "2⅛ pouces",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-13-pdf-p6"
+				"review:2026-11-16-reviews:riveteuse-michigan-pneumatic-mp-351c-218:0"
+			]
+		},
+		{
+			"label": "Force maximale, unité fabricant",
+			"value": "6 000 lb",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:riveteuse-michigan-pneumatic-mp-351c-218:0"
+			]
+		},
+		{
+			"label": "Course maximale",
+			"value": "9/16 pouce",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:riveteuse-michigan-pneumatic-mp-351c-218:0"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "17½ pouces",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:riveteuse-michigan-pneumatic-mp-351c-218:0"
+			]
+		},
+		{
+			"label": "Masse avec étrier",
+			"value": "12,50 lb",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:riveteuse-michigan-pneumatic-mp-351c-218:0"
+			]
+		},
+		{
+			"label": "Volume documentaire par course",
+			"value": "2,75 cf par course, pression et état de référence non établis",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:riveteuse-michigan-pneumatic-mp-351c-218:0"
 			]
 		}
 	],
@@ -73,21 +113,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 10b8be5bab69a1115007085fbd0305b474d3b8349820d435bc73d3d3869389c6. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:riveteuse-michigan-pneumatic-mp-351c-218:0",
+			"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/13-Riveters_v2.pdf",
+			"sourceLabel": "Michigan Pneumatic, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Michigan Pneumatic MP-351C-218 : riveteuse à compression et étrier en C, portée 2⅛ pouces, capacité aluminium 3/16 et acier 5/32 pouce. La force maximale publiée est 6 000 lb ; la masse avec étrier est 12,50 lb. La version tandem MP-351CT-218 passe à 12 000 lb de force et 15,25 lb de masse. GET complet SHA-256 10b8be5bab69a1115007085fbd0305b474d3b8349820d435bc73d3d3869389c6. Pages PDF lues : 6."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october2b-tools-oct2b-michigan-13-pdf-p6"
-		],
-		"workingPressureBar": [
-			"october2b-tools-oct2b-michigan-13-pdf-p6"
+			"review:2026-11-16-reviews:riveteuse-michigan-pneumatic-mp-351c-218:0"
 		],
 		"demandExplanation": [
-			"october2b-tools-oct2b-michigan-13-pdf-p6"
+			"review:2026-11-16-reviews:riveteuse-michigan-pneumatic-mp-351c-218:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-reviews:riveteuse-michigan-pneumatic-mp-351c-218:0"
 		]
 	},
 	"notes": [
-		"Volume par course publié, sans pression ni base volumique établies ; valeur conservée dans la ligne technique, hors calcul."
+		"Le tableau indique un volume par course sans pression ni état de référence volumique établis. La valeur reste documentaire, hors calcul de compatibilité."
 	]
 };
 

@@ -17,10 +17,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La consommation publiée est « 2,30 liter », sans dénominateur et sans point de mesure. La plage d’alimentation de 5 à 7 bar reste distincte ; aucun débit de compatibilité n’est calculé.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/riveteuse-gesipa-taurus-2-1457771.webp",
+		"src": "/images/products/riveteuse-gesipa-taurus-2-1457771-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : GESIPA TAURUS 2 (réf. 1457771)",
 		"sourceUrl": "https://www.gesipa.com/products/pneumatic-riveting-tools/1457771-taurus-2/",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "gesipa-taurus-2",
@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GESIPA TAURUS 2 (réf. 1457771). La consommation publiée est « 2,30 liter », sans dénominateur et sans point de mesure. La plage d’alimentation de 5 à 7 bar reste distincte ; aucun débit de compatibilité n’est calculé. Masse de l’outil seul : 1,60 kg. Course de l’outil : 18 mm.",
+		"overview": "GESIPA TAURUS 2 1457771 : riveteuse pour rivets jusqu’à 5 mm tous matériaux et 6 mm aluminium ou acier, mandrin maximal 3,2 mm. L’aspiration des mandrins est commutable ; sa consommation ne doit pas être supposée constante avec tous les réglages. Le fabricant donne 2,30 litres sans dénominateur de cycle.",
 		"verifiedFacts": [
 			"Masse de l’outil seul : 1,60 kg.",
 			"Course de l’outil : 18 mm.",
@@ -40,7 +40,13 @@ const product: ToolProfileInput = {
 			"Diamètre maximal de mandrin : 3,20 mm.",
 			"Plage de rivets déclarée : Jusqu’à 5 mm, tous matériaux ; jusqu’à 6 mm en aluminium ou acier.",
 			"Consommation, libellé original sans dénominateur : 2,30 liter.",
-			"Masse avec emballage et accessoires : 2,70 kg."
+			"Masse avec emballage et accessoires : 2,70 kg.",
+			"Capacité : 5 mm tous matériaux ; 6 mm aluminium ou acier.",
+			"Course / force : 18 mm / 11 000 N.",
+			"Mandrin maximal : 3,2 mm.",
+			"Masse outil / colis avec accessoires : 1,60 / 2,70 kg.",
+			"Aspiration : Commutable par curseur verrouillable.",
+			"Consommation, libellé incomplet : 2,30 litres."
 		],
 		"limitations": [
 			"La consommation publiée est « 2,30 liter », sans dénominateur et sans point de mesure. La plage d’alimentation de 5 à 7 bar reste distincte ; aucun débit de compatibilité n’est calculé.",
@@ -113,6 +119,48 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october3c-tools-gesipa-taurus2-page-p1"
 			]
+		},
+		{
+			"label": "Capacité",
+			"value": "5 mm tous matériaux ; 6 mm aluminium ou acier",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:riveteuse-gesipa-taurus-2-1457771:0"
+			]
+		},
+		{
+			"label": "Course / force",
+			"value": "18 mm / 11 000 N",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:riveteuse-gesipa-taurus-2-1457771:0"
+			]
+		},
+		{
+			"label": "Mandrin maximal",
+			"value": "3,2 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:riveteuse-gesipa-taurus-2-1457771:0"
+			]
+		},
+		{
+			"label": "Masse outil / colis avec accessoires",
+			"value": "1,60 / 2,70 kg",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:riveteuse-gesipa-taurus-2-1457771:0"
+			]
+		},
+		{
+			"label": "Aspiration",
+			"value": "Commutable par curseur verrouillable",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:riveteuse-gesipa-taurus-2-1457771:0"
+			]
+		},
+		{
+			"label": "Consommation, libellé incomplet",
+			"value": "2,30 litres",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:riveteuse-gesipa-taurus-2-1457771:0"
+			]
 		}
 	],
 	"evidence": [
@@ -125,6 +173,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 36edb468a2f925a8c4411f602ede7417d3da49c2dc0b593e40a886d586220a97. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:riveteuse-gesipa-taurus-2-1457771:0",
+			"sourceUrl": "https://www.gesipa.com/products/pneumatic-riveting-tools/1457771-taurus-2/",
+			"sourceLabel": "GESIPA, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "GESIPA TAURUS 2 1457771 : riveteuse pour rivets jusqu’à 5 mm tous matériaux et 6 mm aluminium ou acier, mandrin maximal 3,2 mm. L’aspiration des mandrins est commutable ; sa consommation ne doit pas être supposée constante avec tous les réglages. Le fabricant donne 2,30 litres sans dénominateur de cycle. GET complet SHA-256 9f8955c47ca2c0bf6aa9c2402d7dece7ce71621e950ba681ae424ca16a66097b. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

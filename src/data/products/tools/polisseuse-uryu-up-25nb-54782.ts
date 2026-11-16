@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "average",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/polisseuse-uryu-up-25nb-54782.webp",
+		"src": "/images/products/polisseuse-uryu-up-25nb-54782-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : URYU UP-25NB (réf. 54782)",
 		"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P62.pdf",
-		"sourceLabel": "Carte technique CompatAir, établie à partir du document constructeur"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "uryu-up-25nb",
@@ -37,11 +37,17 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU UP-25NB, code 54782. Le tableau publie une consommation moyenne de 0,6 m³/min, soit 600 L/min. Pression de référence retenue : 6 bar.",
+		"overview": "UP-25NB, code 54782 : polisseuse pour plateau 125 mm, 9 000 tr/min et puissance publiée 300 W, longueur 250 mm et masse 1,77 kg hors accessoire. La UP-26NB utilise 150 mm pour 263 mm et 1,95 kg ; la UP-15N est en 125 mm mais 225 W et 175 mm. Les débits moyens restent non dimensionnants.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 54782, page PDF 1.",
 			"Consommation moyenne publiée : 600 L/min après conversion de l’unité originale.",
-			"SPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85psi)"
+			"SPECIFICATIONS                                       Recommended Air Pressure : 0.6MPa (85psi)",
+			"Plateau ou papier : 125 mm.",
+			"Vitesse à vide maximale : 9 000 tr/min.",
+			"Puissance publiée : 300 W.",
+			"Longueur : 250 mm.",
+			"Hauteur : 119 mm.",
+			"Masse hors accessoire : 1,77 kg."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
@@ -76,6 +82,48 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-uryu-p62"
 			]
+		},
+		{
+			"label": "Plateau ou papier",
+			"value": "125 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:polisseuse-uryu-up-25nb-54782:0"
+			]
+		},
+		{
+			"label": "Vitesse à vide maximale",
+			"value": "9 000 tr/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:polisseuse-uryu-up-25nb-54782:0"
+			]
+		},
+		{
+			"label": "Puissance publiée",
+			"value": "300 W",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:polisseuse-uryu-up-25nb-54782:0"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "250 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:polisseuse-uryu-up-25nb-54782:0"
+			]
+		},
+		{
+			"label": "Hauteur",
+			"value": "119 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:polisseuse-uryu-up-25nb-54782:0"
+			]
+		},
+		{
+			"label": "Masse hors accessoire",
+			"value": "1,77 kg",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:polisseuse-uryu-up-25nb-54782:0"
+			]
 		}
 	],
 	"evidence": [
@@ -88,6 +136,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 daaddcba105d4bd9dc97a38929d5b89c6543ad8e8d447e6b9c00c1bb64865b3b. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		},
+		{
+			"id": "review:2026-11-16-reviews:polisseuse-uryu-up-25nb-54782:0",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P62.pdf",
+			"sourceLabel": "URYU, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "UP-25NB, code 54782 : polisseuse pour plateau 125 mm, 9 000 tr/min et puissance publiée 300 W, longueur 250 mm et masse 1,77 kg hors accessoire. La UP-26NB utilise 150 mm pour 263 mm et 1,95 kg ; la UP-15N est en 125 mm mais 225 W et 175 mm. Les débits moyens restent non dimensionnants. GET complet SHA-256 daaddcba105d4bd9dc97a38929d5b89c6543ad8e8d447e6b9c00c1bb64865b3b. Pages PDF lues : 1."
 		}
 	],
 	"fieldSources": {

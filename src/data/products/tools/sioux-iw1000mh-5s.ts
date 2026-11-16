@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/sioux-iw1000mh-5s.webp",
+		"src": "/images/products/sioux-iw1000mh-5s-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Sioux IW1000MH-5S, référence IW1000MH-5S",
-		"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=42",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Sioux IW1000MH-5S, référence IW1000MH-5S. Le dimensionnement utilise 1 740 L/min à 6,2 bar, selon les régimes publiés par le fabricant. Vitesse à vide : 4000 tr/min. Couple maximal publié : 3380 Nm. Masse : 15.3 kg.",
+		"overview": "La Sioux IW1000MH-5S possède une sortie #5 Spline. Les versions 8H et 12H ont d’autres entraînements ; une capacité de couple commune ne rend pas leurs accessoires interchangeables. La ligne 5S publie 4 000 tr/min, 3 380 Nm et 15,3 kg. Le débit doit conserver le régime défini par son tableau propre, sans transposer celui d’une autre version.",
 		"verifiedFacts": [
 			"Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur.",
 			"Consommation publiée : 29.0 L/s (62.0 scfm). Le guide du catalogue (page PDF 10) définit ces débits comme de l’air détendu à pression atmosphérique et des consommations maximales, sauf indication contraire. La plus grande valeur publiée est retenue : 1740 L/min (L/s × 60).",
@@ -79,6 +79,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"sioux-iw1000mh-5s-20260927"
 			]
+		},
+		{
+			"label": "Sortie documentée",
+			"value": "#5 Spline",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:sioux-iw1000mh-5s:0"
+			]
 		}
 	],
 	"evidence": [
@@ -99,6 +106,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur."
+		},
+		{
+			"id": "review:2026-11-16-reviews:sioux-iw1000mh-5s:0",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx",
+			"sourceLabel": "Sioux, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La Sioux IW1000MH-5S possède une sortie #5 Spline. Les versions 8H et 12H ont d’autres entraînements ; une capacité de couple commune ne rend pas leurs accessoires interchangeables. La ligne 5S publie 4 000 tr/min, 3 380 Nm et 15,3 kg. Le débit doit conserver le régime défini par son tableau propre, sans transposer celui d’une autre version. GET complet SHA-256 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8. Pages PDF lues : 42."
 		}
 	],
 	"fieldSources": {

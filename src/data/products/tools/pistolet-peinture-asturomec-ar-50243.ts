@@ -17,10 +17,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/pistolet-peinture-asturomec-ar-50243.svg",
+		"src": "/images/products/pistolet-peinture-asturomec-ar-50243-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Asturomec AR (réf. 50243)",
 		"sourceUrl": "https://walmec.com/it/cataloghi/catalogo-asturomec/AD_13_24_IT.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "asturomec-ar",
@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Asturomec AR (réf. 50243). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "L’AR 50243 applique des protections insonorisantes, y compris les produits bicomposants prémélangés indiqués par le fabricant, avec un godet à baïonnette de 1 000 cm³. L’IM BODY 50242 utilise un réservoir de 1 litre avec un autre porte-cartouche et une pression de service 5–8 bar. L’AR fonctionne à 2–5 bar et pèse 865 g. Aucun débit d’air non publié n’est ajouté.",
 		"verifiedFacts": [
 			"Réservoir : aluminium 1000 cc, baïonnette.",
 			"Corps : métal poli nickelé avec soft-touch.",
@@ -85,6 +85,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 28bc606b4d5bdb9fb84c9288e42573241454b8347b9623c38854744b09fab5e3. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:pistolet-peinture-asturomec-ar-50243:0",
+			"sourceUrl": "https://walmec.com/it/cataloghi/catalogo-asturomec/AD_13_24_IT.pdf",
+			"sourceLabel": "Asturomec, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’AR 50243 applique des protections insonorisantes, y compris les produits bicomposants prémélangés indiqués par le fabricant, avec un godet à baïonnette de 1 000 cm³. L’IM BODY 50242 utilise un réservoir de 1 litre avec un autre porte-cartouche et une pression de service 5–8 bar. L’AR fonctionne à 2–5 bar et pèse 865 g. Aucun débit d’air non publié n’est ajouté. GET complet SHA-256 28bc606b4d5bdb9fb84c9288e42573241454b8347b9623c38854744b09fab5e3. Pages PDF lues : 59."
 		}
 	],
 	"fieldSources": {

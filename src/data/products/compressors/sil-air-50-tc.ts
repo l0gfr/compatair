@@ -28,10 +28,10 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/sil-air-50-tc.svg",
+		"src": "/images/products/sil-air-50-tc-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : SIL-AIR 50 TC",
 		"sourceUrl": "https://cdn.prod.website-files.com/5ef4a20d28c31157474872b0/6a4fceb90145c46f2acc6262_SILAIR%202025.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -79,7 +79,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "SIL-AIR 50 TC. 37 L/min déclarés à 5 bar. Compresseur sur cuve 3.5 L.",
+		"overview": "Le Sil-Air 50TC 230 V/50 Hz publie 37 L/min FAD à 5 bar, pour 340 W et une cuve 3,5 L. Le 50D augmente la cuve à 6 L ; les versions 115 V/60 Hz ont d’autres débits. Les 50 L/min aspirés restent distincts des 37 restitués. La pression maximale 8 bar ne devient pas un second point de courbe et le cycle du groupe n’est pas supposé.",
 		"verifiedFacts": [
 			"Configuration de pression documentée : 8 bar.",
 			"Cuve de stockage documentée : 3,5 L.",
@@ -112,6 +112,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-04",
 			"confidence": "B",
 			"notes": "SHA-256 d93f1024b6fa89f01eaacc77c199f3d2f5deb296b92dedf6081ab8568854468a de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:sil-air-50-tc:0",
+			"sourceUrl": "https://cdn.prod.website-files.com/5ef4a20d28c31157474872b0/6a4fceb90145c46f2acc6262_SILAIR%202025.pdf",
+			"sourceLabel": "SIL-AIR, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le Sil-Air 50TC 230 V/50 Hz publie 37 L/min FAD à 5 bar, pour 340 W et une cuve 3,5 L. Le 50D augmente la cuve à 6 L ; les versions 115 V/60 Hz ont d’autres débits. Les 50 L/min aspirés restent distincts des 37 restitués. La pression maximale 8 bar ne devient pas un second point de courbe et le cycle du groupe n’est pas supposé. GET complet SHA-256 d93f1024b6fa89f01eaacc77c199f3d2f5deb296b92dedf6081ab8568854468a. Pages PDF lues : 13, 5."
 		}
 	],
 	"fieldSources": {

@@ -17,10 +17,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/agrafeuse-cloueuse-pneutools-cf16.svg",
+		"src": "/images/products/agrafeuse-cloueuse-pneutools-cf16-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : PneuTools CF16",
 		"sourceUrl": "https://www.pneutools.net/product/cf16",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "pneutools-cf16",
@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "PneuTools CF16. Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "PneuTools CF16 : outil pour fixations ondulées Honeycomb de 3/8, 1/2 ou 5/8 pouce, chargeur de 46 et choix tir au contact ou séquentiel. Les CN100 et CN130 sont des cloueurs à rouleaux et n’utilisent pas ces fixations. Les cellules de masse et dimensions du CF16 ne portent pas d’unité explicite dans la page.",
 		"verifiedFacts": [
 			"Longueur de fixation : 3/8″, 1/2″, 5/8″.",
 			"Shank Diameter : Honeycomb Style.",
@@ -47,7 +47,12 @@ const product: ToolProfileInput = {
 			"Masse, unité originale : 5.1.",
 			"Longueur, unité originale : 11.8.",
 			"Largeur, unité originale : 3.2.",
-			"Hauteur, unité originale : 11.10."
+			"Hauteur, unité originale : 11.10.",
+			"Fixations : Honeycomb, 3/8, 1/2 ou 5/8 pouce.",
+			"Chargeur / commande : 46 / contact ou séquentielle.",
+			"Profondeur : Réglage absent.",
+			"Pression de service : 80–120 PSI.",
+			"Masse et dimensions : Unités absentes dans les cellules web ; pas de conversion déduite."
 		],
 		"limitations": [
 			"Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
@@ -163,6 +168,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october3d-tools-pneutools-product-extra-03-p1"
 			]
+		},
+		{
+			"label": "Fixations",
+			"value": "Honeycomb, 3/8, 1/2 ou 5/8 pouce",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-pneutools-cf16:0"
+			]
+		},
+		{
+			"label": "Chargeur / commande",
+			"value": "46 / contact ou séquentielle",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-pneutools-cf16:0"
+			]
+		},
+		{
+			"label": "Profondeur",
+			"value": "Réglage absent",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-pneutools-cf16:0"
+			]
+		},
+		{
+			"label": "Pression de service",
+			"value": "80–120 PSI",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-pneutools-cf16:0"
+			]
+		},
+		{
+			"label": "Masse et dimensions",
+			"value": "Unités absentes dans les cellules web ; pas de conversion déduite",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-pneutools-cf16:0"
+			]
 		}
 	],
 	"evidence": [
@@ -175,6 +215,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 e027e219e9bf5a885d594167f41e9977f82ddde1aebc524e7c8de490ff6d26c6. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:agrafeuse-cloueuse-pneutools-cf16:0",
+			"sourceUrl": "https://www.pneutools.net/product/cf16",
+			"sourceLabel": "PneuTools, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "PneuTools CF16 : outil pour fixations ondulées Honeycomb de 3/8, 1/2 ou 5/8 pouce, chargeur de 46 et choix tir au contact ou séquentiel. Les CN100 et CN130 sont des cloueurs à rouleaux et n’utilisent pas ces fixations. Les cellules de masse et dimensions du CF16 ne portent pas d’unité explicite dans la page. GET complet SHA-256 cb7ff522dac45ef475d26b2ff829788e05d50513cf8fe61b7ea8763e64985032. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

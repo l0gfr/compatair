@@ -22,7 +22,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 1983.333
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "unknown",
 	"powerKw": 15,
 	"weightKg": 505,
@@ -30,10 +29,10 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/ceccato-csa-20-ff-sur-cuve-500-l-10-bar.webp",
+		"src": "/images/products/ceccato-csa-20-ff-sur-cuve-500-l-10-bar-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Ceccato CSA 20, FF sur cuve 500 L ; 10 bar",
 		"sourceUrl": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csa-7-5-20-hp/leaflets/Ceccato_CSA_7.5-20_Leaflet_EN.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -66,17 +65,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Ceccato CSA 20, FF sur cuve 500 L ; 10 bar. FF sur cuve 500 L. Débit restitué déclaré : 1 983,333 L/min à 9,5 bar.",
+		"overview": "Le CSA20 FF sur cuve 500 L, version maximale 10 bar, publie 119 m³/h FAD à la référence 9,5 bar, moteur 15 kW. La version 8 bar est mesurée à 7,5 bar pour 131 m³/h ; le CSA15 utilise 11 kW. La masse FF500 est 505 kg et le sécheur fait partie de cette configuration. La page HTML reste inaccessible ; le PDF ne chiffre pas de taux de marche, et l’ancien 100 % est retiré.",
 		"verifiedFacts": [
 			"Dimensions publiées : 1940 × 665 × 1665 mm.",
-			"Masse de cette configuration : 505 kg ; puissance moteur : 15 kW.",
-			"La page constructeur de cette série prévoit le fonctionnement continu, sous ses conditions d’installation et d’entretien."
+			"Masse de cette configuration : 505 kg ; puissance moteur : 15 kW."
 		],
 		"limitations": [
 			"Le point FAD appartient à cette configuration et à sa pression de référence ; aucune courbe de fonctionnement supplémentaire n’est inventée.",
 			"Mode de lubrification non établi dans cette fiche ; aucune qualité d’air déduite.",
 			"Configuration et pression explicites du catalogue, sans numéro d’article attribué artificiellement ; faire confirmer la version commandée.",
-			"Disponibilité locale, alimentation électrique, dégagements d’entretien et qualité d’air au point d’usage à vérifier avant installation."
+			"Disponibilité locale, alimentation électrique, dégagements d’entretien et qualité d’air au point d’usage à vérifier avant installation.",
+			"Le taux de marche du groupe complet n’est pas chiffré par les passages retenus ; aucune valeur numérique n’est déduite du service du moteur ou d’une promesse générale."
 		]
 	},
 	"evidence": [
@@ -99,6 +98,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 a396f7642312e7bc1e0f7624ec55b4836b176f0deb7ba6e0ae70e4ce9cbe4df6. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ceccato-csa-20-ff-sur-cuve-500-l-10-bar:0",
+			"sourceUrl": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csa-7-5-20-hp/leaflets/Ceccato_CSA_7.5-20_Leaflet_EN.pdf",
+			"sourceLabel": "Ceccato, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le CSA20 FF sur cuve 500 L, version maximale 10 bar, publie 119 m³/h FAD à la référence 9,5 bar, moteur 15 kW. La version 8 bar est mesurée à 7,5 bar pour 131 m³/h ; le CSA15 utilise 11 kW. La masse FF500 est 505 kg et le sécheur fait partie de cette configuration. La page HTML reste inaccessible ; le PDF ne chiffre pas de taux de marche, et l’ancien 100 % est retiré. GET complet SHA-256 b36c0fbb8a63a69867b66a6e663923588ccfd8e2def16303b3be948aa706c23c. Pages PDF lues : 6."
 		}
 	],
 	"fieldSources": {
@@ -116,9 +125,6 @@ const product: CompressorInput = {
 		],
 		"weightKg": [
 			"october-ceccato-csa-7-5-20-hp-pdf-p6"
-		],
-		"dutyCycle": [
-			"october-ceccato-csa-7-5-20-hp"
 		]
 	},
 	"notes": [

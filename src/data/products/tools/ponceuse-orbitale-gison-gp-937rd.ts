@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-orbitale-gison-gp-937rd.webp",
+		"src": "/images/products/ponceuse-orbitale-gison-gp-937rd-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : GISON GP-937RD",
 		"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "gison-gp-937rd",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-937RD. Consommation de régime non précisé : 420 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 1.10 kg. Longueur : 122 mm.",
+		"overview": "La GP-937RD est une ponceuse à aspiration autonome, plateaux 5 ou 6 pouces et orbite 2,5 mm. La GP-937R n’intègre pas l’aspiration ; la GP-934RD passe à une orbite de 10 mm et un corps de 240 mm. La RD mesure 122 mm pour 1,10 kg à 9 000 tr/min. Les 0,42 m³/min publiés restent hors calcul de compatibilité faute de régime établi.",
 		"verifiedFacts": [
 			"Masse : 1.10 kg.",
 			"Longueur : 122 mm.",
@@ -112,6 +112,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-orbitale-gison-gp-937rd:0",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
+			"sourceLabel": "GISON, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La GP-937RD est une ponceuse à aspiration autonome, plateaux 5 ou 6 pouces et orbite 2,5 mm. La GP-937R n’intègre pas l’aspiration ; la GP-934RD passe à une orbite de 10 mm et un corps de 240 mm. La RD mesure 122 mm pour 1,10 kg à 9 000 tr/min. Les 0,42 m³/min publiés restent hors calcul de compatibilité faute de régime établi. GET complet SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Pages PDF lues : 37."
 		}
 	],
 	"fieldSources": {

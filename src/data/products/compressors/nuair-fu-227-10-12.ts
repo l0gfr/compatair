@@ -13,13 +13,13 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/nuair-fu-227-10-12.webp",
+		"src": "/images/products/nuair-fu-227-10-12-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Nuair FU-227/10/12, référence HYBD404NUA",
-		"sourceUrl": "https://www.nuair.pl/images/katalogi/Catalogo_Nuair_Professional_2022_9990284_PL.pdf#page=28",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://www.nuair.pl/images/katalogi/Catalogo_Nuair_Professional_2022_9990284_PL.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Nuair FU-227/10/12, référence HYBD404NUA : cuve de 12 L, pression maximale publiée de 10 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Groupe de compression publié : HY227. Groupe de compression : HY227. Nombre de cylindres : 1.",
+		"overview": "Le FU-227/10/12 HYBD404NUA est la version FUTURA à cuve de 12 L, contre 24 L pour le FU-227/10/24V. Les deux publient 1,5 kW, 10 bar maximum et 222 L/min de déplacement d’air à 3 400 tr/min. Le choix change surtout le stockage et la forme : l’emballage du 12 L mesure 520 × 255 × 470 mm, celui du 24V 315 × 315 × 700 mm. Aucun de ces débits aspirés n’est un FAD.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons. Puissance moteur publiée : 1,5 kW.",
@@ -96,6 +96,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Le tableau Nuair Professional, catalogue 2022 indique « Air displacement » : 222 L/min aspirés. Aucun débit restitué à une pression de mesure n’est fourni dans cette ligne."
+		},
+		{
+			"id": "review:2026-11-16-reviews:nuair-fu-227-10-12:0",
+			"sourceUrl": "https://www.nuair.pl/images/katalogi/Catalogo_Nuair_Professional_2022_9990284_PL.pdf",
+			"sourceLabel": "Nuair, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le FU-227/10/12 HYBD404NUA est la version FUTURA à cuve de 12 L, contre 24 L pour le FU-227/10/24V. Les deux publient 1,5 kW, 10 bar maximum et 222 L/min de déplacement d’air à 3 400 tr/min. Le choix change surtout le stockage et la forme : l’emballage du 12 L mesure 520 × 255 × 470 mm, celui du 24V 315 × 315 × 700 mm. Aucun de ces débits aspirés n’est un FAD. GET complet SHA-256 ff66120118923fba45228dbfc35eca66f045a3ad4c98e751bec6dfd582ecb1a9. Pages PDF lues : 28."
 		}
 	],
 	"fieldSources": {

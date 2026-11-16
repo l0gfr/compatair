@@ -18,10 +18,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/lime-bande-puma-at-7125.webp",
+		"src": "/images/products/lime-bande-puma-at-7125-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : PUMA AT-7125",
 		"sourceUrl": "https://www.pumaair.com/product-Air-Belt-Sander-AirBeltSander.html",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "puma-at-7125",
@@ -33,7 +33,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "PUMA AT-7125. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Sanding Belt Size / inch : 25/64×13. Sanding Belt Size / mm : 10×330.",
+		"overview": "L’AT-7125 est la lime à bande 10 × 330 mm à 16 000 tr/min, longue de 320 mm. L’AT-7124 conserve la longueur avec une bande 6 × 330 mm ; l’AT-7122 utilise 50 × 235 mm et 8 500 tr/min. La largeur de bande et l’accès à la zone changent le choix. Les 226 L/min sont moyens, sans facteur permettant d’en déduire une consommation en charge.",
 		"verifiedFacts": [
 			"Sanding Belt Size / inch : 25/64×13.",
 			"Sanding Belt Size / mm : 10×330.",
@@ -139,6 +139,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 7d4a583bc6e978ed46f634796f2d5adc5dfad734de318eaf9c230fb12b7a6c98. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:lime-bande-puma-at-7125:0",
+			"sourceUrl": "https://www.pumaair.com/product-Air-Belt-Sander-AirBeltSander.html",
+			"sourceLabel": "PUMA, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’AT-7125 est la lime à bande 10 × 330 mm à 16 000 tr/min, longue de 320 mm. L’AT-7124 conserve la longueur avec une bande 6 × 330 mm ; l’AT-7122 utilise 50 × 235 mm et 8 500 tr/min. La largeur de bande et l’accès à la zone changent le choix. Les 226 L/min sont moyens, sans facteur permettant d’en déduire une consommation en charge. GET complet SHA-256 7d4a583bc6e978ed46f634796f2d5adc5dfad734de318eaf9c230fb12b7a6c98. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

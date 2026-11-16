@@ -17,20 +17,25 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/aircraft-srs-1-2-ht-pro.webp",
+		"src": "/images/products/aircraft-srs-1-2-ht-pro-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Aircraft SRS 1/2\" HT PRO, référence 2401570",
-		"sourceUrl": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-tools-2026-09-27.json",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
+		"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=255",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Aircraft SRS 1/2\" HT PRO, référence 2401570. Consommation moyenne publiée : 90 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Diamètre intérieur du flexible : 13 mm. Vitesse de rotation : 600 min¯¹.",
+		"overview": "Aircraft SRS 1/2 HT PRO : cliquet à chocs carré 1/2 pouce, réglage progressif au manche, 600 tr/min et 106 Nm en serrage comme en desserrage. Le RS 1/2 VT PRO atteint 150 tr/min et 68 Nm. Les 90 L/min explicitement moyens restent hors dimensionnement continu.",
 		"verifiedFacts": [
 			"Pression de travail publiée : 6,2 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
 			"Consommation moyenne publiée : 90 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
 			"Référence fabricant : 2401570.",
 			"Diamètre intérieur du flexible : 13 mm.",
 			"Vitesse de rotation : 600 min¯¹.",
-			"Mandrin ou entraînement publié : ½ \"."
+			"Mandrin ou entraînement publié : ½ \".",
+			"Carré : 1/2 pouce.",
+			"Vitesse : 600 tr/min.",
+			"Couples maximaux serrage / desserrage : 106 / 106 Nm.",
+			"Dimensions / masse approximatives : 280 × 45,5 × 56,3 mm / 1,3 kg.",
+			"Consommation moyenne explicite : 90 L/min."
 		],
 		"limitations": [
 			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
@@ -114,6 +119,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"aircraft-2401570-20260927"
 			]
+		},
+		{
+			"label": "Carré",
+			"value": "1/2 pouce",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:aircraft-srs-1-2-ht-pro:0"
+			]
+		},
+		{
+			"label": "Vitesse",
+			"value": "600 tr/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:aircraft-srs-1-2-ht-pro:0"
+			]
+		},
+		{
+			"label": "Couples maximaux serrage / desserrage",
+			"value": "106 / 106 Nm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:aircraft-srs-1-2-ht-pro:0"
+			]
+		},
+		{
+			"label": "Dimensions / masse approximatives",
+			"value": "280 × 45,5 × 56,3 mm / 1,3 kg",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:aircraft-srs-1-2-ht-pro:0"
+			]
+		},
+		{
+			"label": "Consommation moyenne explicite",
+			"value": "90 L/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:aircraft-srs-1-2-ht-pro:0"
+			]
 		}
 	],
 	"evidence": [
@@ -136,6 +176,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer 702076. Empreinte PDF SHA-256 : ac23fe023c6135a0a0d0cd0e0a47b3310f846a7a6c6e3f370ed32d1d7327f99d. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
+		},
+		{
+			"id": "review:2026-11-16-reviews:aircraft-srs-1-2-ht-pro:0",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=255",
+			"sourceLabel": "Aircraft, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Aircraft SRS 1/2 HT PRO : cliquet à chocs carré 1/2 pouce, réglage progressif au manche, 600 tr/min et 106 Nm en serrage comme en desserrage. Le RS 1/2 VT PRO atteint 150 tr/min et 68 Nm. Les 90 L/min explicitement moyens restent hors dimensionnement continu. GET complet SHA-256 ac23fe023c6135a0a0d0cd0e0a47b3310f846a7a6c6e3f370ed32d1d7327f99d. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

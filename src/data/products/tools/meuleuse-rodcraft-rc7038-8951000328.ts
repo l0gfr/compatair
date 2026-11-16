@@ -16,10 +16,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-rodcraft-rc7038-8951000328.webp",
+		"src": "/images/products/meuleuse-rodcraft-rc7038-8951000328-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Rodcraft RC7038 (réf. 8951000328)",
 		"sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "rodcraft-rc7038",
@@ -31,11 +31,16 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Rodcraft RC7038 (réf. 8951000328). La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 0.92 kg. Dimensions publiées : 210x72x43 mm.",
+		"overview": "Rodcraft RC7038 : outil d’effacement d’adhésifs et vinyles à roue mince, réducteur planétaire et 2 800 tr/min. La RC7068 est une meuleuse à pince 6 mm ; la RC7684 est une meuleuse pistolet à 20 000 tr/min. Les filetages 3/8-24 mâle et 5/16 femelle du RC7038 ne sont pas une pince.",
 		"verifiedFacts": [
 			"Masse publiée : 0.92 kg.",
 			"Dimensions publiées : 210x72x43 mm.",
-			"Diamètre de tuyau : 8 mm."
+			"Diamètre de tuyau : 8 mm.",
+			"Usage : Effacement d’adhésifs et vinyles ; suivre la notice et travailler sans pression sur surface propre.",
+			"Broche : 3/8-24 mâle et 5/16 femelle.",
+			"Puissance / vitesse : 400 W / 2 800 tr/min.",
+			"Masse / longueur : 0,92 kg / 210 mm.",
+			"Consommation moyenne / à vide : 500 / 918 L/min."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -79,6 +84,41 @@ const product: ToolProfileInput = {
 				"october2-tools-rodcraft-catalog-p62",
 				"october2-tools-rodcraft-catalog-p4"
 			]
+		},
+		{
+			"label": "Usage",
+			"value": "Effacement d’adhésifs et vinyles ; suivre la notice et travailler sans pression sur surface propre",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-rodcraft-rc7038-8951000328:0"
+			]
+		},
+		{
+			"label": "Broche",
+			"value": "3/8-24 mâle et 5/16 femelle",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-rodcraft-rc7038-8951000328:0"
+			]
+		},
+		{
+			"label": "Puissance / vitesse",
+			"value": "400 W / 2 800 tr/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-rodcraft-rc7038-8951000328:0"
+			]
+		},
+		{
+			"label": "Masse / longueur",
+			"value": "0,92 kg / 210 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-rodcraft-rc7038-8951000328:0"
+			]
+		},
+		{
+			"label": "Consommation moyenne / à vide",
+			"value": "500 / 918 L/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-rodcraft-rc7038-8951000328:0"
+			]
 		}
 	],
 	"evidence": [
@@ -101,6 +141,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Document complémentaire de la référence exacte, sans essai CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-rodcraft-rc7038-8951000328:0",
+			"sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf",
+			"sourceLabel": "Rodcraft, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Rodcraft RC7038 : outil d’effacement d’adhésifs et vinyles à roue mince, réducteur planétaire et 2 800 tr/min. La RC7068 est une meuleuse à pince 6 mm ; la RC7684 est une meuleuse pistolet à 20 000 tr/min. Les filetages 3/8-24 mâle et 5/16 femelle du RC7038 ne sont pas une pince. GET complet SHA-256 c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Pages PDF lues : 4, 62."
 		}
 	],
 	"fieldSources": {

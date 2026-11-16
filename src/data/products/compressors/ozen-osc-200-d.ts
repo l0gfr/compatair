@@ -27,10 +27,10 @@ const product: CompressorInput = {
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/ozen-osc-200-d.svg",
+    "src": "/images/products/ozen-osc-200-d-technical-20261116-reviews.svg",
     "alt": "Repères techniques : Ozen OSC 200 D",
     "sourceUrl": "https://ozenkompresor.com.tr/wp-content/uploads/2026/01/katalog-2025.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "specifications": [
     {
@@ -77,7 +77,7 @@ const product: CompressorInput = {
     }
   ],
   "editorial": {
-    "overview": "Ozen OSC 200 D. 28 370 L/min déclarés à 12,5 bar. Configuration constructeur : OSC 200 D.",
+    "overview": "L’OSC200D de 200 kW est déclaré à 28,37 m³/min à la référence 12,5 bar pour la version maximale 13 bar. L’OSC200S publie 30,2 m³/min au même point dans une autre série ; les suffixes D, S et DS ne doivent pas être confondus. La note de mesure permet de conserver le point FAD, sans transformer 13 bar en pression de mesure ni inventer une cuve ou un cycle.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 13 bar.",
       "FAD sous pression identifié séparément des valeurs d’aspiration : 28 370 L/min déclarés à 12,5 bar."
@@ -100,6 +100,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 cfcfbd23c05cfe5db69ec1bb59c552a6543cf1597869b67811a985d1b7458b60 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-reviews:ozen-osc-200-d:0",
+      "sourceUrl": "https://ozenkompresor.com.tr/wp-content/uploads/2026/01/katalog-2025.pdf",
+      "sourceLabel": "Ozen, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "L’OSC200D de 200 kW est déclaré à 28,37 m³/min à la référence 12,5 bar pour la version maximale 13 bar. L’OSC200S publie 30,2 m³/min au même point dans une autre série ; les suffixes D, S et DS ne doivent pas être confondus. La note de mesure permet de conserver le point FAD, sans transformer 13 bar en pression de mesure ni inventer une cuve ou un cycle. GET complet SHA-256 cfcfbd23c05cfe5db69ec1bb59c552a6543cf1597869b67811a985d1b7458b60. Pages PDF lues : 19."
     }
   ],
   "fieldSources": {

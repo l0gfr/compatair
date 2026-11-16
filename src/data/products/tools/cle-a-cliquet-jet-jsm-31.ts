@@ -11,13 +11,13 @@ const product: ToolProfileInput = {
 	"mpn": "JSM-31",
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
-	"demandExplanation": "Les caractéristiques mécaniques sont documentées ; aucune consommation n’est associée à une pression de mesure et à un régime suffisant pour le calcul.",
+	"demandExplanation": "Le catalogue publie une consommation en CFM sans régime ni pression de mesure associés. Cette valeur reste documentaire et la compatibilité demeure indéterminée.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-cliquet-jet-jsm-31.webp",
+		"src": "/images/products/cle-a-cliquet-jet-jsm-31-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : JET JSM-31",
 		"sourceUrl": "https://d29c95q8mcesvj.cloudfront.net/wysiwyg/pdf/414700_Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "jet-jsm-31",
@@ -29,37 +29,69 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "JET JSM-31. Les caractéristiques mécaniques sont documentées ; aucune consommation n’est associée à une pression de mesure et à un régime suffisant pour le calcul. Masse publiée : 2-1/2 lbs. Ligne technique constructeur : JSm-31 1/2 1/2 ball 50 150 4 1/4 3/8 4.5 108 10 2-1/2.",
+		"overview": "JET JSM-31 : cliquet à carré 1/2 pouce, retenue à bille et maximum publié 50 ft-lb. La JSM-30 conserve 150 tr/min, 10 pouces et 2½ lb avec un carré 3/8 pouce. La JSG-0735 garde le carré 1/2 avec un corps de 14⅜ pouces et un maximum 90 ft-lb.",
 		"verifiedFacts": [
-			"Masse publiée : 2-1/2 lbs.",
-			"Ligne technique constructeur : JSm-31 1/2 1/2 ball 50 150 4 1/4 3/8 4.5 108 10 2-1/2."
+			"Carré : 1/2 pouce.",
+			"Retenue : Bille.",
+			"Couple maximum publié : 50 ft-lb.",
+			"Vitesse à vide : 150 tr/min.",
+			"Longueur : 10 pouces.",
+			"Masse : 2½ lb.",
+			"Consommation documentaire : 4 CFM, régime non précisé."
 		],
 		"limitations": [
-			"Les caractéristiques mécaniques sont documentées ; aucune consommation n’est associée à une pression de mesure et à un régime suffisant pour le calcul.",
-			"Catalogue industriel JET archivé. Référence physique explicitement listée dans une ligne technique ; aucun kit, jeu de burins, adaptateur ou accessoire n’est ajouté.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Le catalogue publie une consommation en CFM sans régime ni pression de mesure associés. Cette valeur reste documentaire et la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "2-1/2 lbs",
+			"label": "Carré",
+			"value": "1/2 pouce",
 			"evidenceIds": [
-				"october2b-tools-oct2b-jet-catalog-pdf-p61"
+				"review:2026-11-16-reviews:cle-a-cliquet-jet-jsm-31:0"
 			]
 		},
 		{
-			"label": "Ligne technique constructeur",
-			"value": "JSm-31 1/2 1/2 ball 50 150 4 1/4 3/8 4.5 108 10 2-1/2",
+			"label": "Retenue",
+			"value": "Bille",
 			"evidenceIds": [
-				"october2b-tools-oct2b-jet-catalog-pdf-p61"
+				"review:2026-11-16-reviews:cle-a-cliquet-jet-jsm-31:0"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "La pression de mesure de la consommation de la ligne n’est pas établie.",
+			"label": "Couple maximum publié",
+			"value": "50 ft-lb",
 			"evidenceIds": [
-				"october2b-tools-oct2b-jet-catalog-pdf-p61"
+				"review:2026-11-16-reviews:cle-a-cliquet-jet-jsm-31:0"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "150 tr/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-cliquet-jet-jsm-31:0"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "10 pouces",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-cliquet-jet-jsm-31:0"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "2½ lb",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-cliquet-jet-jsm-31:0"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "4 CFM, régime non précisé",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-cliquet-jet-jsm-31:0"
 			]
 		}
 	],
@@ -73,21 +105,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 9381736270fc03a7d3233abbb4c97f401cc4f8f453822e2b9eabc85c4e4f6ec6. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-cliquet-jet-jsm-31:0",
+			"sourceUrl": "https://d29c95q8mcesvj.cloudfront.net/wysiwyg/pdf/414700_Catalog.pdf",
+			"sourceLabel": "JET, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "JET JSM-31 : cliquet à carré 1/2 pouce, retenue à bille et maximum publié 50 ft-lb. La JSM-30 conserve 150 tr/min, 10 pouces et 2½ lb avec un carré 3/8 pouce. La JSG-0735 garde le carré 1/2 avec un corps de 14⅜ pouces et un maximum 90 ft-lb. GET complet SHA-256 9381736270fc03a7d3233abbb4c97f401cc4f8f453822e2b9eabc85c4e4f6ec6. Pages PDF lues : 61."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october2b-tools-oct2b-jet-catalog-pdf-p61"
-		],
-		"workingPressureBar": [
-			"october2b-tools-oct2b-jet-catalog-pdf-p61"
+			"review:2026-11-16-reviews:cle-a-cliquet-jet-jsm-31:0"
 		],
 		"demandExplanation": [
-			"october2b-tools-oct2b-jet-catalog-pdf-p61"
+			"review:2026-11-16-reviews:cle-a-cliquet-jet-jsm-31:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-reviews:cle-a-cliquet-jet-jsm-31:0"
 		]
 	},
 	"notes": [
-		"Les caractéristiques mécaniques sont documentées ; aucune consommation n’est associée à une pression de mesure et à un régime suffisant pour le calcul."
+		"Le catalogue publie une consommation en CFM sans régime ni pression de mesure associés. Cette valeur reste documentaire et la compatibilité demeure indéterminée."
 	]
 };
 

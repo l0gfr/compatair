@@ -22,16 +22,15 @@ const product: CompressorInput = {
       "litersPerMinute": 450
     }
   ],
-  "dutyCycle": 1,
   "powerKw": 4,
   "oilType": "unknown",
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/gardner-denver-esm04fs-500.svg",
+    "src": "/images/products/gardner-denver-esm04fs-500-technical-20261116-reviews.svg",
     "alt": "Repères techniques : Gardner Denver ESM04FS-500",
     "sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/blt87a221679f131e8d/blt14083a1eebc91a7c/67f910c40a3bd686326692f5/21874_New_Frame_0_6pp_Brochure_work.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "specifications": [
     {
@@ -85,7 +84,7 @@ const product: CompressorInput = {
     }
   ],
   "editorial": {
-    "overview": "Gardner Denver ESM04FS-500. 450 L/min déclarés à 10 bar. Configuration constructeur : Station avec sécheur intégré et cuve.",
+    "overview": "L’ESM04FS-500 est la station 4 kW avec sécheur et réservoir 500 L, à 450 L/min FAD à 10 bar. L’ESM04FS-270 réduit le stockage ; l’ESM04-270 n’intègre pas le même traitement. Le stockage n’augmente pas le débit du groupe. La brochure décrit le fonctionnement continu mais ne chiffre pas un taux de marche : l’ancien 100 % est retiré du calcul.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 10 bar.",
       "Cuve de stockage documentée : 500 L.",
@@ -93,7 +92,8 @@ const product: CompressorInput = {
     ],
     "limitations": [
       "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-      "La fréquence électrique de cette configuration n’est pas documentée."
+      "La fréquence électrique de cette configuration n’est pas documentée.",
+      "Le taux de marche du groupe complet n’est pas chiffré par les passages retenus ; aucune valeur numérique n’est déduite du service du moteur ou d’une promesse générale."
     ]
   },
   "evidence": [
@@ -116,6 +116,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 5a6d2333e7f9f5e04cdc65936f40212a31b7c5fb6d428edfeb9a9896073a85f1 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-reviews:gardner-denver-esm04fs-500:0",
+      "sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/blt87a221679f131e8d/blt14083a1eebc91a7c/67f910c40a3bd686326692f5/21874_New_Frame_0_6pp_Brochure_work.pdf",
+      "sourceLabel": "Gardner Denver, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "L’ESM04FS-500 est la station 4 kW avec sécheur et réservoir 500 L, à 450 L/min FAD à 10 bar. L’ESM04FS-270 réduit le stockage ; l’ESM04-270 n’intègre pas le même traitement. Le stockage n’augmente pas le débit du groupe. La brochure décrit le fonctionnement continu mais ne chiffre pas un taux de marche : l’ancien 100 % est retiré du calcul. GET complet SHA-256 5a6d2333e7f9f5e04cdc65936f40212a31b7c5fb6d428edfeb9a9896073a85f1. Pages PDF lues : 5, 2."
     }
   ],
   "fieldSources": {
@@ -133,9 +143,6 @@ const product: CompressorInput = {
     ],
     "powerKw": [
       "october4c-gd-esm2-6-p5"
-    ],
-    "dutyCycle": [
-      "october4c-gd-esm2-6-p2"
     ]
   },
   "notes": [

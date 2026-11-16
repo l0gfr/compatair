@@ -11,13 +11,13 @@ const product: ToolProfileInput = {
 	"mpn": "YNR-8FN",
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
-	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+	"demandExplanation": "La consommation en charge est documentée, mais son appariement à une pression de mesure n’est pas établi. Les consignes de service restent séparées ; la compatibilité demeure indéterminée.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-cliquet-yokota-ynr-8fn.webp",
+		"src": "/images/products/cle-a-cliquet-yokota-ynr-8fn-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Yokota YNR-8FN",
 		"sourceUrl": "https://www.yokota-kogyo.co.jp/link/generalcatalog-j.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "yokota-ynr-8fn",
@@ -29,43 +29,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Yokota YNR-8FN. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Capacité de vissage publiée : M8. Vitesse à vide : 1400 tr/min.",
+		"overview": "Yokota YNR-8FN : nutrunner pour M8, 1 400 tr/min, tête haute de 19,5 mm et masse 1,2 kg. Le RW-120 du même catalogue est un cliquet M10 à 150 tr/min et 1,1 kg. La YRW-8NS utilise une tête de 13 mm et une douille de 12 mm ; leurs architectures et vitesses diffèrent.",
 		"verifiedFacts": [
-			"Capacité de vissage publiée : M8.",
-			"Vitesse à vide : 1400 tr/min."
+			"Capacité publiée : M8.",
+			"Vitesse à vide : 1 400 tr/min.",
+			"Longueur : 257 mm.",
+			"Hauteur de tête : 19,5 mm.",
+			"Masse : 1,2 kg.",
+			"Consommation en charge, hors calcul : 400 L/min."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"La consommation en charge est documentée, mais son appariement à une pression de mesure n’est pas établi. Les consignes de service restent séparées ; la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Capacité de vissage publiée",
+			"label": "Capacité publiée",
 			"value": "M8",
 			"evidenceIds": [
-				"october2-tools-yokota-jp-p42"
+				"review:2026-11-16-reviews:cle-a-cliquet-yokota-ynr-8fn:0"
 			]
 		},
 		{
 			"label": "Vitesse à vide",
-			"value": "1400 tr/min",
+			"value": "1 400 tr/min",
 			"evidenceIds": [
-				"october2-tools-yokota-jp-p42"
+				"review:2026-11-16-reviews:cle-a-cliquet-yokota-ynr-8fn:0"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "La pression précisée pour le couple ou le fonctionnement ne constitue pas un point de mesure de consommation documenté.",
+			"label": "Longueur",
+			"value": "257 mm",
 			"evidenceIds": [
-				"october2-tools-yokota-jp-p42"
+				"review:2026-11-16-reviews:cle-a-cliquet-yokota-ynr-8fn:0"
+			]
+		},
+		{
+			"label": "Hauteur de tête",
+			"value": "19,5 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-cliquet-yokota-ynr-8fn:0"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "1,2 kg",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-cliquet-yokota-ynr-8fn:0"
 			]
 		},
 		{
 			"label": "Consommation en charge, hors calcul",
 			"value": "400 L/min",
 			"evidenceIds": [
-				"october2-tools-yokota-jp-p42"
+				"review:2026-11-16-reviews:cle-a-cliquet-yokota-ynr-8fn:0"
 			]
 		}
 	],
@@ -79,21 +97,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : b60e8188ea17df768d52a2b1381382bc9b0e158a03fcd4416d4c4e3ebd0a866c. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-cliquet-yokota-ynr-8fn:0",
+			"sourceUrl": "https://www.yokota-kogyo.co.jp/link/generalcatalog-j.pdf",
+			"sourceLabel": "Yokota, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Yokota YNR-8FN : nutrunner pour M8, 1 400 tr/min, tête haute de 19,5 mm et masse 1,2 kg. Le RW-120 du même catalogue est un cliquet M10 à 150 tr/min et 1,1 kg. La YRW-8NS utilise une tête de 13 mm et une douille de 12 mm ; leurs architectures et vitesses diffèrent. GET complet SHA-256 b60e8188ea17df768d52a2b1381382bc9b0e158a03fcd4416d4c4e3ebd0a866c. Pages PDF lues : 42."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october2-tools-yokota-jp-p42"
-		],
-		"workingPressureBar": [
-			"october2-tools-yokota-jp-p42"
+			"review:2026-11-16-reviews:cle-a-cliquet-yokota-ynr-8fn:0"
 		],
 		"demandExplanation": [
-			"october2-tools-yokota-jp-p42"
+			"review:2026-11-16-reviews:cle-a-cliquet-yokota-ynr-8fn:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-reviews:cle-a-cliquet-yokota-ynr-8fn:0"
 		]
 	},
 	"notes": [
-		"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité."
+		"La consommation en charge est documentée, mais son appariement à une pression de mesure n’est pas établi. Les consignes de service restent séparées ; la compatibilité demeure indéterminée."
 	]
 };
 

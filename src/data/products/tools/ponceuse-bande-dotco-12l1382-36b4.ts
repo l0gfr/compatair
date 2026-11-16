@@ -10,18 +10,14 @@ const product: ToolProfileInput = {
 	"model": "12L1382-36B4",
 	"mpn": "12L1382-36B4",
 	"demandModel": "variable-volume",
-	"workingPressureBar": {
-		"min": 6.2,
-		"typical": 6.2,
-		"max": 6.2
-	},
-	"demandExplanation": "La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner.",
+	"workingPressureBar": {},
+	"demandExplanation": "La consommation d’air manque dans le tableau de la référence. Les performances mécaniques à 90 psi / 620 kPa ne permettent pas de calculer son besoin en air.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-bande-dotco-12l1382-36b4.webp",
+		"src": "/images/products/ponceuse-bande-dotco-12l1382-36b4-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Dotco 12L1382-36B4",
 		"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/DOTCO%20Material%20Removal_SP-102EN_en.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "dotco-12l1382-36b4",
@@ -34,51 +30,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Dotco 12L1382-36B4. La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner. Vitesse à vide : 20,000 tr/min. Masse publiée : 0.77 kg.",
+		"overview": "La 12L1382-36B4 travaille avec une bande de 1 × 12 pouces à 20 000 tr/min. La B2 se limite à 1/2 × 12 pouces et pèse 0,64 kg au lieu de 0,77 kg ; la 12L1280-36B2 tourne à 12 000 tr/min.",
 		"verifiedFacts": [
-			"Vitesse à vide : 20,000 tr/min.",
-			"Masse publiée : 0.77 kg.",
-			"Dimension publiée : 287 mm."
+			"Bande : 1 × 12 pouces.",
+			"Vitesse à vide : 20 000 tr/min.",
+			"Puissance de famille : 0,3 hp ; 0,22 kW.",
+			"Corps : Composite.",
+			"Longueur et masse : 287 mm ; 0,77 kg.",
+			"Consommation : Absente du tableau ; demande indéterminée."
 		],
 		"limitations": [
-			"La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"La consommation d’air manque dans le tableau de la référence. Les performances mécaniques à 90 psi / 620 kPa ne permettent pas de calculer son besoin en air.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
+			"label": "Bande",
+			"value": "1 × 12 pouces",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-bande-dotco-12l1382-36b4:0"
+			]
+		},
+		{
 			"label": "Vitesse à vide",
-			"value": "20,000 tr/min",
+			"value": "20 000 tr/min",
 			"evidenceIds": [
-				"october-dotco-p53"
+				"review:2026-11-16-reviews:ponceuse-bande-dotco-12l1382-36b4:0"
 			]
 		},
 		{
-			"label": "Masse publiée",
-			"value": "0.77 kg",
+			"label": "Puissance de famille",
+			"value": "0,3 hp ; 0,22 kW",
 			"evidenceIds": [
-				"october-dotco-p53"
+				"review:2026-11-16-reviews:ponceuse-bande-dotco-12l1382-36b4:0"
 			]
 		},
 		{
-			"label": "Dimension publiée",
-			"value": "287 mm",
+			"label": "Corps",
+			"value": "Composite",
 			"evidenceIds": [
-				"october-dotco-p53"
+				"review:2026-11-16-reviews:ponceuse-bande-dotco-12l1382-36b4:0"
 			]
 		},
 		{
-			"label": "Localisation documentaire",
-			"value": "Cleco/Dotco, Material Removal SP-102EN, page 53",
+			"label": "Longueur et masse",
+			"value": "287 mm ; 0,77 kg",
 			"evidenceIds": [
-				"october-dotco-p53"
+				"review:2026-11-16-reviews:ponceuse-bande-dotco-12l1382-36b4:0"
 			]
 		},
 		{
-			"label": "Condition de pression originale",
-			"value": "All tools performance rated @ 90 psi / 620 kPa air pressure.",
+			"label": "Consommation",
+			"value": "Absente du tableau ; demande indéterminée",
 			"evidenceIds": [
-				"october-dotco-p53"
+				"review:2026-11-16-reviews:ponceuse-bande-dotco-12l1382-36b4:0"
 			]
 		}
 	],
@@ -92,21 +98,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 93b7d3cdb96a91eecf95baaf172ed0953f2021cb336460e5f9a202ce7e687c10. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-bande-dotco-12l1382-36b4:0",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/DOTCO%20Material%20Removal_SP-102EN_en.pdf",
+			"sourceLabel": "Dotco, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 12L1382-36B4 travaille avec une bande de 1 × 12 pouces à 20 000 tr/min. La B2 se limite à 1/2 × 12 pouces et pèse 0,64 kg au lieu de 0,77 kg ; la 12L1280-36B2 tourne à 12 000 tr/min. GET complet SHA-256 93b7d3cdb96a91eecf95baaf172ed0953f2021cb336460e5f9a202ce7e687c10. Pages PDF lues : 53."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october-dotco-p53"
-		],
-		"workingPressureBar": [
-			"october-dotco-p53"
+			"review:2026-11-16-reviews:ponceuse-bande-dotco-12l1382-36b4:0"
 		],
 		"demandExplanation": [
-			"october-dotco-p53"
+			"review:2026-11-16-reviews:ponceuse-bande-dotco-12l1382-36b4:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-reviews:ponceuse-bande-dotco-12l1382-36b4:0"
 		]
 	},
 	"notes": [
-		"La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner."
+		"La consommation d’air manque dans le tableau de la référence. Les performances mécaniques à 90 psi / 620 kPa ne permettent pas de calculer son besoin en air."
 	]
 };
 

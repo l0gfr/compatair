@@ -27,10 +27,10 @@ const product: CompressorInput = {
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/compair-dx132.svg",
+    "src": "/images/products/compair-dx132-technical-20261116-reviews.svg",
     "alt": "Repères techniques : CompAir DX132",
     "sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/blta76611689adb5848/blt1a5f7f6e226706dc/67ef95d1e79e24eb628a8f5b/61728_6_11_24_24161_D_SERIES_DX_12PP_EN_WORK.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "specifications": [
     {
@@ -77,7 +77,7 @@ const product: CompressorInput = {
     }
   ],
   "editorial": {
-    "overview": "CompAir DX132. 21 800 L/min déclarés à 10 bar. Configuration constructeur : DX132.",
+    "overview": "Le DX132 fixe de 132 kW est déclaré à 21,8 m³/min FAD à 10 bar en refroidissement par air ; le tableau de refroidissement par eau donne 22,0. Le DX132RS est la variante à vitesse variable. La limite de fonctionnement 10,5 bar reste distincte du point de mesure 10 bar. Le type de refroidissement doit donc être confirmé, sans mélanger les deux colonnes.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 10,5 bar.",
       "FAD sous pression identifié séparément des valeurs d’aspiration : 21 800 L/min déclarés à 10 bar."
@@ -111,6 +111,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 9aefc2ec8892e1e96271ae206c2566ed5bc02fc655f2164d62823dca6c664b56 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-reviews:compair-dx132:0",
+      "sourceUrl": "https://azure-na-assets.contentstack.com/v3/assets/blta76611689adb5848/blt1a5f7f6e226706dc/67ef95d1e79e24eb628a8f5b/61728_6_11_24_24161_D_SERIES_DX_12PP_EN_WORK.pdf",
+      "sourceLabel": "CompAir, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "Le DX132 fixe de 132 kW est déclaré à 21,8 m³/min FAD à 10 bar en refroidissement par air ; le tableau de refroidissement par eau donne 22,0. Le DX132RS est la variante à vitesse variable. La limite de fonctionnement 10,5 bar reste distincte du point de mesure 10 bar. Le type de refroidissement doit donc être confirmé, sans mélanger les deux colonnes. GET complet SHA-256 9aefc2ec8892e1e96271ae206c2566ed5bc02fc655f2164d62823dca6c664b56. Pages PDF lues : 11, 1."
     }
   ],
   "fieldSources": {

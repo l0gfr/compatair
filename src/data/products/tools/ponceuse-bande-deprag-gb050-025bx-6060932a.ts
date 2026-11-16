@@ -17,10 +17,10 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-bande-deprag-gb050-025bx-6060932a.svg",
+		"src": "/images/products/ponceuse-bande-deprag-gb050-025bx-6060932a-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : DEPRAG GB050-025BX (réf. 6060932A)",
 		"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "deprag-gb050-025bx",
@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "DEPRAG GB050-025BX (réf. 6060932A). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "La GB050-025BX est une ponceuse à bande de 0,5 kW, vitesse de bande 23 m/s et masse 1,4 kg sans raccord. Les GBA030-013BX/CX-200 sont d’autres bras et motorisations de 0,3 kW, à 20 000 tr/min. La forme du bras et la bande prescrite déterminent l’accès. Le tableau ne donne pas de consommation à pression connue ; le moteur reste non conclusif.",
 		"verifiedFacts": [
 			"Puissance déclarée, kW (hp) : 0,5 (.67).",
 			"Vitesse à vide, tr/min : 16 000.",
@@ -102,6 +102,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-bande-deprag-gb050-025bx-6060932a:0",
+			"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
+			"sourceLabel": "DEPRAG, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La GB050-025BX est une ponceuse à bande de 0,5 kW, vitesse de bande 23 m/s et masse 1,4 kg sans raccord. Les GBA030-013BX/CX-200 sont d’autres bras et motorisations de 0,3 kW, à 20 000 tr/min. La forme du bras et la bande prescrite déterminent l’accès. Le tableau ne donne pas de consommation à pression connue ; le moteur reste non conclusif. GET complet SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Pages PDF lues : 14."
 		}
 	],
 	"fieldSources": {

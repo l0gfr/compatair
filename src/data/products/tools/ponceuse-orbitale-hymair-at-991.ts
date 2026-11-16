@@ -10,18 +10,14 @@ const product: ToolProfileInput = {
 	"model": "AT-991",
 	"mpn": "AT-991",
 	"demandModel": "variable-volume",
-	"workingPressureBar": {
-		"min": 6.2,
-		"typical": 6.2,
-		"max": 6.2
-	},
-	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+	"workingPressureBar": {},
+	"demandExplanation": "La consommation publiée est une moyenne. La consigne de pression de service ne définit pas une mesure maximale en charge ; la compatibilité demeure indéterminée.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-orbitale-hymair-at-991.webp",
+		"src": "/images/products/ponceuse-orbitale-hymair-at-991-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Hymair AT-991",
 		"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SAUfKpBkCgyL&dp=GvUApKfKKUAU",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "hymair-at-991",
@@ -33,51 +29,85 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Hymair AT-991. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Vitesse à vide : 10,000 rpm. Masse publiée (kg/lb) : 0.91/2.00.",
+		"overview": "Hymair AT-991 : ponceuse de paume pour abrasif autoagrippant 6 pouces, six trous, mouvement orbital 3/16 pouce et raccordement à aspiration centrale. La AT-991LA est livrée avec flexible et sac selon le descriptif ; la AT-991N est présentée comme centrale/sans aspiration. La AT-991 mesure 195 × 143 mm pour 0,91 kg.",
 		"verifiedFacts": [
-			"Vitesse à vide : 10,000 rpm.",
-			"Masse publiée (kg/lb) : 0.91/2.00.",
-			"Longueur × hauteur : 195x143 mm."
+			"Plateau : 6 pouces (152 mm), face autoagrippante six trous.",
+			"Orbite : 3/16 pouce.",
+			"Aspiration : Prête pour aspiration centrale.",
+			"Échappement : Arrière.",
+			"Vitesse à vide : 10 000 tr/min.",
+			"Dimensions longueur × hauteur : 195 × 143 mm.",
+			"Masse : 0,91 kg.",
+			"Consommation moyenne : 4 CFM.",
+			"Pression de service : 6,2 bar."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"La consommation publiée est une moyenne. La consigne de pression de service ne définit pas une mesure maximale en charge ; la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
+			"label": "Plateau",
+			"value": "6 pouces (152 mm), face autoagrippante six trous",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-orbitale-hymair-at-991:0"
+			]
+		},
+		{
+			"label": "Orbite",
+			"value": "3/16 pouce",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-orbitale-hymair-at-991:0"
+			]
+		},
+		{
+			"label": "Aspiration",
+			"value": "Prête pour aspiration centrale",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-orbitale-hymair-at-991:0"
+			]
+		},
+		{
+			"label": "Échappement",
+			"value": "Arrière",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-orbitale-hymair-at-991:0"
+			]
+		},
+		{
 			"label": "Vitesse à vide",
-			"value": "10,000 rpm",
+			"value": "10 000 tr/min",
 			"evidenceIds": [
-				"october2-tools-steed-2-p31"
+				"review:2026-11-16-reviews:ponceuse-orbitale-hymair-at-991:0"
 			]
 		},
 		{
-			"label": "Masse publiée (kg/lb)",
-			"value": "0.91/2.00",
+			"label": "Dimensions longueur × hauteur",
+			"value": "195 × 143 mm",
 			"evidenceIds": [
-				"october2-tools-steed-2-p31"
+				"review:2026-11-16-reviews:ponceuse-orbitale-hymair-at-991:0"
 			]
 		},
 		{
-			"label": "Longueur × hauteur",
-			"value": "195x143 mm",
+			"label": "Masse",
+			"value": "0,91 kg",
 			"evidenceIds": [
-				"october2-tools-steed-2-p31"
+				"review:2026-11-16-reviews:ponceuse-orbitale-hymair-at-991:0"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "WORKING PRESSURE : 6.2 Bar",
+			"label": "Consommation moyenne",
+			"value": "4 CFM",
 			"evidenceIds": [
-				"october2-tools-steed-2-p31"
+				"review:2026-11-16-reviews:ponceuse-orbitale-hymair-at-991:0"
 			]
 		},
 		{
-			"label": "Consommation moyenne, hors calcul",
-			"value": "4 cfm",
+			"label": "Pression de service",
+			"value": "6,2 bar",
 			"evidenceIds": [
-				"october2-tools-steed-2-p31"
+				"review:2026-11-16-reviews:ponceuse-orbitale-hymair-at-991:0"
 			]
 		}
 	],
@@ -91,21 +121,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : b9c6143d5502d453b5b2e0846bcfec263fb763d42a478fbc52089a41725e7d8d. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-orbitale-hymair-at-991:0",
+			"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SAUfKpBkCgyL&dp=GvUApKfKKUAU",
+			"sourceLabel": "Hymair, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Hymair AT-991 : ponceuse de paume pour abrasif autoagrippant 6 pouces, six trous, mouvement orbital 3/16 pouce et raccordement à aspiration centrale. La AT-991LA est livrée avec flexible et sac selon le descriptif ; la AT-991N est présentée comme centrale/sans aspiration. La AT-991 mesure 195 × 143 mm pour 0,91 kg. GET complet SHA-256 b9c6143d5502d453b5b2e0846bcfec263fb763d42a478fbc52089a41725e7d8d. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october2-tools-steed-2-p31"
-		],
-		"workingPressureBar": [
-			"october2-tools-steed-2-p31"
+			"review:2026-11-16-reviews:ponceuse-orbitale-hymair-at-991:0"
 		],
 		"demandExplanation": [
-			"october2-tools-steed-2-p31"
+			"review:2026-11-16-reviews:ponceuse-orbitale-hymair-at-991:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-reviews:ponceuse-orbitale-hymair-at-991:0"
 		]
 	},
 	"notes": [
-		"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité."
+		"La consommation publiée est une moyenne. La consigne de pression de service ne définit pas une mesure maximale en charge ; la compatibilité demeure indéterminée."
 	]
 };
 

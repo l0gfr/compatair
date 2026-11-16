@@ -1,3 +1,4 @@
+import { beforeReservedNovember16ReviewsFollowup } from './reviewed-catalog-amendments-2026-11-16-reviews.mjs';
 import { parseCatalogProductSource } from './catalog-tooling.mjs';
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
@@ -7,7 +8,7 @@ import { evaluateCompatibility } from '../../server/air-compatibility.mjs';
 import { calculateSizing } from '../../server/air-sizing.mjs';
 
 const snapshot = JSON.parse(readFileSync(new URL('../../src/data/imports/documented-tools-2026-10-02-b.json', import.meta.url)));
-const batch = buildDocumentedToolsOctober2B(snapshot);
+const batch = buildDocumentedToolsOctober2B(snapshot).map(beforeReservedNovember16ReviewsFollowup);
 const byMpn = (brand, mpn) => batch.find(product => product.brand === brand && product.mpn === mpn);
 const ample = { id: 'fixture-compressor', tankLiters: 500, maxPressureBar: 20, fadCurve: [{ pressureBar: 6, litersPerMinute: 50000 }, { pressureBar: 20, litersPerMinute: 40000 }], dutyCycle: 1, oilType: 'oil', confidence: 'B' };
 const changeBoth = (copy, brand, mpn, change) => {
@@ -25,7 +26,7 @@ describe('documented tools, October 2, second batch', () => {
   expect(new Set(batch.map(product => `${normalize(product.brand)}:${normalize(product.mpn)}`)).size).toBe(2000);
   for (const product of batch) {
    const text = readFileSync(new URL(`../../src/data/products/tools/${product.slug}.ts`, import.meta.url), 'utf8');
-   expect(toolProfileSchema.parse(parseCatalogProductSource('tools', text))).toEqual(toolProfileSchema.parse(product));
+   expect(toolProfileSchema.parse(beforeReservedNovember16ReviewsFollowup(parseCatalogProductSource('tools', text)))).toEqual(toolProfileSchema.parse(product));
   }
  });
  it('attaches a dated, hashed primary source to every technical field', () => {

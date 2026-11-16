@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/sioux-srs10p21-9.webp",
+		"src": "/images/products/sioux-srs10p21-9-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Sioux SRS10P21-9, référence SRS10P21-9",
-		"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=85",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Sioux SRS10P21-9, référence SRS10P21-9. Le dimensionnement utilise 720 L/min à 6,2 bar, selon les régimes publiés par le fabricant. Vitesse à vide : 21000 tr/min. Diamètre de fraise : 14 mm. Masse : 1.2 kg.",
+		"overview": "La SRS10P21-9 arase des rivets avec une fraise de 9/16 pouce, soit le diamètre nominal de 14 mm donné au tableau. La terminaison -10 reçoit une fraise 5/8 pouce et la -5 une 5/16 ; toutes gardent 21 000 tr/min dans cette famille. Le réglage de profondeur se fait par incréments de 0,0005 pouce. Les 12 L/s publiés ne sont pas assimilés à une consommation de coupe en charge sans régime propre établi.",
 		"verifiedFacts": [
 			"Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur.",
 			"Consommation publiée : 12.0 L/s (25.0 scfm). Le guide du catalogue (page PDF 10) définit ces débits comme de l’air détendu à pression atmosphérique et des consommations maximales, sauf indication contraire. La plus grande valeur publiée est retenue : 720 L/min (L/s × 60).",
@@ -35,7 +35,8 @@ const product: ToolProfileInput = {
 		"limitations": [
 			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
 			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
-			"Le diamètre publié concerne la capacité de fraise ; le catalogue précise que les fraises ne sont pas fournies."
+			"Le diamètre publié concerne la capacité de fraise ; le catalogue précise que les fraises ne sont pas fournies.",
+			"La pression de service n’atteste pas la pression de mesure de consommation. Le régime ou l’appariement documentaire reste non qualifié ; aucune consommation dimensionnante n’est conservée."
 		]
 	},
 	"specifications": [
@@ -100,6 +101,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur."
+		},
+		{
+			"id": "review:2026-11-16-reviews:sioux-srs10p21-9:0",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx",
+			"sourceLabel": "Sioux, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La SRS10P21-9 arase des rivets avec une fraise de 9/16 pouce, soit le diamètre nominal de 14 mm donné au tableau. La terminaison -10 reçoit une fraise 5/8 pouce et la -5 une 5/16 ; toutes gardent 21 000 tr/min dans cette famille. Le réglage de profondeur se fait par incréments de 0,0005 pouce. Les 12 L/s publiés ne sont pas assimilés à une consommation de coupe en charge sans régime propre établi. GET complet SHA-256 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8. Pages PDF lues : 85."
 		}
 	],
 	"fieldSources": {
@@ -111,6 +122,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"sioux-srs10p21-9-20260927"
+		],
+		"airflowBasis": [
+			"review:2026-11-16-reviews:sioux-srs10p21-9:0"
 		]
 	},
 	"notes": [
@@ -120,7 +134,8 @@ const product: ToolProfileInput = {
 		"min": 720,
 		"typical": 720,
 		"max": 720
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-rotative-puma-at-7112.webp",
+		"src": "/images/products/ponceuse-rotative-puma-at-7112-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : PUMA AT-7112",
 		"sourceUrl": "https://www.pumaair.com/product-High-Speed-Sander---Polisher-HighSpeedSander-Polisher.html",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "puma-at-7112",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "PUMA AT-7112. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Sanding PadSize / inch : 5. Sanding PadSize / mm : 125.",
+		"overview": "L’AT-7112 est une ponceuse rotative de 125 mm à 16 000 tr/min, broche 7/16-20NF. La 7113 conserve le diamètre avec 18 000 tr/min ; la 7171 réduit le plateau à 75 mm et utilise une autre broche. Le choix d’accessoire dépend donc de la vitesse admissible et du filetage. Les 226 L/min sont moyens et restent hors calcul du besoin continu.",
 		"verifiedFacts": [
 			"Sanding PadSize / inch : 5.",
 			"Sanding PadSize / mm : 125.",
@@ -127,6 +127,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : fb6ca211d716a55c760b83a9526c2cedb696445b3b91bfaeeebed13c71d568ba. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-rotative-puma-at-7112:0",
+			"sourceUrl": "https://www.pumaair.com/product-High-Speed-Sander---Polisher-HighSpeedSander-Polisher.html",
+			"sourceLabel": "PUMA, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’AT-7112 est une ponceuse rotative de 125 mm à 16 000 tr/min, broche 7/16-20NF. La 7113 conserve le diamètre avec 18 000 tr/min ; la 7171 réduit le plateau à 75 mm et utilise une autre broche. Le choix d’accessoire dépend donc de la vitesse admissible et du filetage. Les 226 L/min sont moyens et restent hors calcul du besoin continu. GET complet SHA-256 c937d348fa1a3e97aaa1381f3e7c3c4a96d33f415d6fb6ff503c0506f7ff67d0. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

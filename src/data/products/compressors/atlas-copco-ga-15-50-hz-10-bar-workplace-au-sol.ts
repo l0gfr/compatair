@@ -24,17 +24,16 @@ const product: CompressorInput = {
 			"litersPerMinute": 2358
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "oil",
 	"powerKw": 15,
 	"mobility": "fixed",
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/atlas-copco-ga-15-50-hz-10-bar-workplace-au-sol.webp",
+		"src": "/images/products/atlas-copco-ga-15-50-hz-10-bar-workplace-au-sol-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Atlas Copco GA 15, WorkPlace au sol, 10 bar",
 		"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/compressor-technique/industrial-air/documents/leaflets/compressors/ga11-30/ga-15-30-%282023%29/GA15-30-Brendola-datasheet-EN-2935081941.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -81,7 +80,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Atlas Copco GA 15, WorkPlace au sol, 10 bar. 2 358 L/min à 9,5 bar.",
+		"overview": "Le GA15 WorkPlace au sol 50 Hz 10 bar fournit 39,3 L/s à la référence 9,5 bar. La version sur réservoir 500 L reprend le groupe, tandis que la variante 13 bar publie 33,3 L/s à 12,5 bar. Le stockage et la pression utile sont donc deux choix distincts. La fiche technique ne chiffre pas le taux de marche du groupe complet ; l’ancien 100 % est retiré du calcul.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Configuration de stockage documentée : groupe au sol sans réservoir de stockage intégré.",
@@ -91,7 +90,8 @@ const product: CompressorInput = {
 			"Service continu déclaré pour cette famille ; installation, refroidissement et entretien conformes au constructeur restent nécessaires.",
 			"Seules les pressions documentées sont utilisées. Aucun débit aspiré, prolongement de courbe ou essai physique CompatAir.",
 			"Configuration publiée dans la documentation citée ; disponibilité commerciale actuelle à confirmer.",
-			"Le point de la configuration GA 18 à 10 bar est exclu de ce lot : 49,5 L/s et 178,5 m³/h ne concordent pas aux arrondis imprimés."
+			"Le point de la configuration GA 18 à 10 bar est exclu de ce lot : 49,5 L/s et 178,5 m³/h ne concordent pas aux arrondis imprimés.",
+			"Le taux de marche du groupe complet n’est pas chiffré par les passages retenus ; aucune valeur numérique n’est déduite du service du moteur ou d’une promesse générale."
 		]
 	},
 	"evidence": [
@@ -114,6 +114,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 7bda6b5672104176d447cd4a203b2b7258ca06ee4f4bcc6588bdcd646faf82c0 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:atlas-copco-ga-15-50-hz-10-bar-workplace-au-sol:0",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/compressor-technique/industrial-air/documents/leaflets/compressors/ga11-30/ga-15-30-%282023%29/GA15-30-Brendola-datasheet-EN-2935081941.pdf",
+			"sourceLabel": "Atlas Copco, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le GA15 WorkPlace au sol 50 Hz 10 bar fournit 39,3 L/s à la référence 9,5 bar. La version sur réservoir 500 L reprend le groupe, tandis que la variante 13 bar publie 33,3 L/s à 12,5 bar. Le stockage et la pression utile sont donc deux choix distincts. La fiche technique ne chiffre pas le taux de marche du groupe complet ; l’ancien 100 % est retiré du calcul. GET complet SHA-256 7bda6b5672104176d447cd4a203b2b7258ca06ee4f4bcc6588bdcd646faf82c0. Pages PDF lues : 2, 1."
 		}
 	],
 	"fieldSources": {
@@ -130,9 +140,6 @@ const product: CompressorInput = {
 			"october3c-atlas-ga15-30-2023-p2"
 		],
 		"oilType": [
-			"october3c-atlas-ga15-30-2023-p1"
-		],
-		"dutyCycle": [
 			"october3c-atlas-ga15-30-2023-p1"
 		]
 	},

@@ -13,31 +13,31 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/airpress-aps-20-basic-364810-13.webp",
+		"src": "/images/products/airpress-aps-20-basic-364810-13-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Airpress APS 20 Basic, référence 364810-13",
 		"sourceUrl": "https://airpress.fr/compresseur-a-vis-aps-20-basic-13-bar-20-ch-15-kw-1332-l-min-364810-13",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Airpress APS 20 Basic, référence 364810-13 : configuration sans cuve intégrée, pression maximale publiée de 13 bar. Aucun débit restitué relié à une pression de mesure n’est documenté ; la compatibilité pneumatique reste indéterminée.",
+		"overview": "L’APS 20 Basic 364810-13 est le groupe de 15 kW sans cuve ni sécheur. La fiche 13 bar publie 1 332 L/min ; les variantes 10 et 8 bar indiquent 1 680 et 1 860 L/min. Le cycle 100/0 est explicite, mais le débit de sortie est qualifié d’estimation par le constructeur. Il n’est donc pas utilisé comme un FAD mesuré dans le moteur.",
 		"verifiedFacts": [
-			"Débit restitué à une pression de mesure précise : non documenté.",
-			"Compresseur à vis. Puissance moteur publiée : 15 kW.",
-			"Alimentation publiée : 400 V / 50 Hz / 3 Ph, triphasée."
+			"L’APS 20 Basic 364810-13 est le groupe de 15 kW sans cuve ni sécheur.",
+			"La fiche 13 bar publie 1 332 L/min ; les variantes 10 et 8 bar indiquent 1 680 et 1 860 L/min."
 		],
 		"limitations": [
 			"Une valeur de débit sans pression de mesure associée ne permet pas de construire une courbe FAD. Aucun point n’est estimé.",
 			"Le taux de marche est celui déclaré par le fabricant ; les conditions de cycle et de température restent à respecter. La disponibilité commerciale reste à confirmer.",
 			"La pression maximale du compresseur n’est pas utilisée comme pression de mesure implicite du débit.",
-			"La compatibilité nécessite un débit restitué documenté à la pression de l’outil."
+			"La compatibilité nécessite un débit restitué documenté à la pression de l’outil.",
+			"La courbe dimensionnante a été retirée après revue : la mesure FAD et son appariement à une pression ne sont pas suffisamment établis. Les valeurs documentaires restent conservées."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Conditions du débit",
-			"value": "Le débit restitué indiqué sur la fiche n’est pas accompagné d’une pression de mesure explicite. Il est conservé comme valeur publiée, sans l’assimiler à un point de FAD utilisable pour la compatibilité.",
+			"label": "Débit documentaire, hors calcul",
+			"value": "Le débit restitué indiqué sur la fiche n’est pas accompagné d’une pression de mesure explicite. Il est conservé comme valeur publiée, sans l’assimiler à un point de FAD utilisable pour la compatibilité. ; pression de mesure non qualifiée. Les anciens points sont conservés dans l’historique.",
 			"evidenceIds": [
-				"airpress-364810-13-20260926"
+				"review:2026-11-16-reviews:airpress-aps-20-basic-364810-13:0"
 			]
 		},
 		{
@@ -99,6 +99,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Le débit restitué indiqué sur la fiche n’est pas accompagné d’une pression de mesure explicite. Il est conservé comme valeur publiée, sans l’assimiler à un point de FAD utilisable pour la compatibilité."
+		},
+		{
+			"id": "review:2026-11-16-reviews:airpress-aps-20-basic-364810-13:0",
+			"sourceUrl": "https://airpress.fr/compresseur-a-vis-aps-20-basic-13-bar-20-ch-15-kw-1332-l-min-364810-13",
+			"sourceLabel": "Airpress, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’APS 20 Basic 364810-13 est le groupe de 15 kW sans cuve ni sécheur. La fiche 13 bar publie 1 332 L/min ; les variantes 10 et 8 bar indiquent 1 680 et 1 860 L/min. Le cycle 100/0 est explicite, mais le débit de sortie est qualifié d’estimation par le constructeur. Il n’est donc pas utilisé comme un FAD mesuré dans le moteur. GET complet SHA-256 ae133cf19704a58073cc163ec22c68030bed76f2d1246c53e3df41aa5b78b95b. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
@@ -112,7 +122,7 @@ const product: CompressorInput = {
 			"airpress-364810-13-20260926"
 		],
 		"fadCurve": [
-			"airpress-364810-13-20260926"
+			"review:2026-11-16-reviews:airpress-aps-20-basic-364810-13:0"
 		],
 		"oilType": [
 			"airpress-364810-13-20260926"

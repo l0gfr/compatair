@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "average",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/marteau-a-river-zipp-zrh-195p.webp",
+		"src": "/images/products/marteau-a-river-zipp-zrh-195p-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : ZIPP ZRH-195P",
 		"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "zipp-zrh-195p",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZRH-195P. Consommation moyenne : 220 L/min ; pression publiée : 6,2 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Cadence : 1560 coups/min. Masse : 2.1 kg.",
+		"overview": "Le ZRH195P est le marteau à river pistolet à emmanchement 0,498 pouce, course 68,3 mm et 1 560 coups/min. Il admet des rivets acier 4,8 mm et aluminium 6,4 mm ; le ZRH197P augmente la course à 147,6 mm avec une autre capacité. Le 195P pèse 2,1 kg et mesure 230 mm. Les 220 L/min sont moyens ; la consigne 6,2 bar ne les qualifie pas pour un besoin continu.",
 		"verifiedFacts": [
 			"Cadence : 1560 coups/min.",
 			"Masse : 2.1 kg.",
@@ -96,6 +96,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:marteau-a-river-zipp-zrh-195p:0",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+			"sourceLabel": "ZIPP, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le ZRH195P est le marteau à river pistolet à emmanchement 0,498 pouce, course 68,3 mm et 1 560 coups/min. Il admet des rivets acier 4,8 mm et aluminium 6,4 mm ; le ZRH197P augmente la course à 147,6 mm avec une autre capacité. Le 195P pèse 2,1 kg et mesure 230 mm. Les 220 L/min sont moyens ; la consigne 6,2 bar ne les qualifie pas pour un besoin continu. GET complet SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. Pages PDF lues : 90."
 		}
 	],
 	"fieldSources": {

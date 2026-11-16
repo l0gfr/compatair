@@ -26,10 +26,10 @@ const product: CompressorInput = {
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/sullivan-palatek-sp11-40vfd.svg",
+    "src": "/images/products/sullivan-palatek-sp11-40vfd-technical-20261116-reviews.svg",
     "alt": "Repères techniques : Sullivan-Palatek SP11-40VFD",
-    "sourceUrl": "https://www.sullivan-palatek.com/product-detail/vfd-variable-frequency-compressor-series/",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceUrl": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "specifications": [
     {
@@ -71,7 +71,7 @@ const product: CompressorInput = {
     }
   ],
   "editorial": {
-    "overview": "Sullivan-Palatek SP11-40VFD. 4 607,151 L/min déclarés à 8,618 bar. Configuration publiée : Compresseur à vis électrique à variateur VFD, SP11-40VFD.",
+    "overview": "Le SP11-40VFD est la version à variateur du groupe 40 hp, déclarée à 162,7 cfm à 125 psig, environ 4 607,151 L/min à 8,618 bar. Le SP11-40 fixe annonce 158,1 cfm au même point. Le maximum de capacité n’est pas un débit moyen de modulation ; les autres pressions proposées relèvent de configurations distinctes. La puissance reste en hp et le stockage demeure à définir.",
     "verifiedFacts": [
       "Débit réellement livré identifié séparément du déplacement : 4 607,151 L/min déclarés à 8,618 bar.",
       "Plafond documentaire du point retenu : 8,618 bar."
@@ -106,6 +106,26 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-08",
       "confidence": "B",
       "notes": "SHA-256 d27889a3ac6ba50e0bfacaf4e011378054cfc515d050082f4c8d0760f2c75e59 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-reviews:sullivan-palatek-sp11-40vfd:0",
+      "sourceUrl": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+      "sourceLabel": "Sullivan-Palatek, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "Le SP11-40VFD est la version à variateur du groupe 40 hp, déclarée à 162,7 cfm à 125 psig, environ 4 607,151 L/min à 8,618 bar. Le SP11-40 fixe annonce 158,1 cfm au même point. Le maximum de capacité n’est pas un débit moyen de modulation ; les autres pressions proposées relèvent de configurations distinctes. La puissance reste en hp et le stockage demeure à définir. GET complet SHA-256 751228aea7ee7b2d83bb7af67071a1647374ae710e5d02c44f45cee1e59c4546. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
+    },
+    {
+      "id": "review:2026-11-16-reviews:sullivan-palatek-sp11-40vfd:1",
+      "sourceUrl": "https://www.sullivan-palatek.com/product-detail/vfd-variable-frequency-compressor-series/",
+      "sourceLabel": "Sullivan-Palatek, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "Le SP11-40VFD est la version à variateur du groupe 40 hp, déclarée à 162,7 cfm à 125 psig, environ 4 607,151 L/min à 8,618 bar. Le SP11-40 fixe annonce 158,1 cfm au même point. Le maximum de capacité n’est pas un débit moyen de modulation ; les autres pressions proposées relèvent de configurations distinctes. La puissance reste en hp et le stockage demeure à définir. GET complet SHA-256 0442dc0d2e3d6e5e67cc9b1875be71ad5dad1512b10da798dd3c05b6c424f450. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
     }
   ],
   "fieldSources": {

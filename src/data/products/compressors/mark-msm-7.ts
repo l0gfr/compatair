@@ -19,7 +19,7 @@ const product: CompressorInput = {
 	"fadCurve": [
 		{
 			"pressureBar": 9.5,
-			"litersPerMinute": 961.667
+			"litersPerMinute": 961
 		}
 	],
 	"dutyCycle": 1,
@@ -28,10 +28,10 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/mark-msm-7.svg",
+		"src": "/images/products/mark-msm-7-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : MARK MSM 7",
-		"sourceUrl": "https://www.mark-compressors.com/en-int/products/screw-compressors/fixed-speed/belt-driven-msm",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+		"sourceUrl": "https://www.mark-compressors.com/content/dam/brands/Mark/products-bp-structure/oil-injected-screw-compressor/fixed-speed/msm-2-2-7/leaflets/Mark_MSM_2.2-7_MSM%202.2-7%20IVR_Sales_Leaflet_EN_Brendola_6999200582.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -82,14 +82,38 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october3d-mark-family-03"
 			]
+		},
+		{
+			"label": "FAD à9,5 bar, unités publiées",
+			"value": "57,7 m³/h ; 961 L/min dans la colonne alternative",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:mark-msm-7:0"
+			]
+		},
+		{
+			"label": "Mesure",
+			"value": "Fixe : ISO1217 annexe C ; IVR : annexe E",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:mark-msm-7:0"
+			]
+		},
+		{
+			"label": "Encombrement sur socle",
+			"value": "620 × 695 × 950 mm ; largeur630 mm + supplément65 mm pour10 hp",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:mark-msm-7:0"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "MARK MSM 7. 961,667 L/min à 9,5 bar. Groupe sur socle sans réservoir de stockage intégré.",
+		"overview": "La MSM 7 fixe sur socle publie 961 L/min à 9,5 bar pour 7,5 kW ; la colonne en m³/h arrondit ce point à 57,7. La MSM 4 atteint 502 L/min au même point avec 4 kW. La brochure distingue les montages sur socle et sur réservoir et annonce explicitement un cycle de 100 % pour les groupes MSM fixes et IVR. Le bruit de l’IVR est mesuré à 70 % de charge, avec une condition différente de la version fixe.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 0 L.",
-			"Pression maximale de fonctionnement publiée : 10 bar."
+			"Pression maximale de fonctionnement publiée : 10 bar.",
+			"FAD à9,5 bar, unités publiées : 57,7 m³/h ; 961 L/min dans la colonne alternative.",
+			"Mesure : Fixe : ISO1217 annexe C ; IVR : annexe E.",
+			"Encombrement sur socle : 620 × 695 × 950 mm ; largeur630 mm + supplément65 mm pour10 hp."
 		],
 		"limitations": [
 			"La pression FAD et le maximum de la version sont conservés séparément.",
@@ -139,6 +163,26 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 28c022685dd878e93695b877a9a23fda56d17a95ae53e8a61903355e2e4d03cf de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:mark-msm-7:0",
+			"sourceUrl": "https://www.mark-compressors.com/content/dam/brands/Mark/products-bp-structure/oil-injected-screw-compressor/fixed-speed/msm-2-2-7/leaflets/Mark_MSM_2.2-7_MSM%202.2-7%20IVR_Sales_Leaflet_EN_Brendola_6999200582.pdf",
+			"sourceLabel": "MARK, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La MSM 7 fixe sur socle publie 961 L/min à 9,5 bar pour 7,5 kW ; la colonne en m³/h arrondit ce point à 57,7. La MSM 4 atteint 502 L/min au même point avec 4 kW. La brochure distingue les montages sur socle et sur réservoir et annonce explicitement un cycle de 100 % pour les groupes MSM fixes et IVR. Le bruit de l’IVR est mesuré à 70 % de charge, avec une condition différente de la version fixe. GET complet SHA-256 64d6ab7907e7a65c5c76e427626d86890e4361dbe459f470c317a15b25e3b530. Pages PDF lues : 2, 6, 7."
+		},
+		{
+			"id": "review:2026-11-16-reviews:mark-msm-7:1",
+			"sourceUrl": "https://www.mark-compressors.com/en-int/products/screw-compressors/fixed-speed/belt-driven-msm",
+			"sourceLabel": "MARK, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La MSM 7 fixe sur socle publie 961 L/min à 9,5 bar pour 7,5 kW ; la colonne en m³/h arrondit ce point à 57,7. La MSM 4 atteint 502 L/min au même point avec 4 kW. La brochure distingue les montages sur socle et sur réservoir et annonce explicitement un cycle de 100 % pour les groupes MSM fixes et IVR. Le bruit de l’IVR est mesuré à 70 % de charge, avec une condition différente de la version fixe. GET complet SHA-256 357cf7f61cda71b4577f3f6674b7239760636d955bce3cd2e1fad21517034ec2. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
@@ -155,7 +199,7 @@ const product: CompressorInput = {
 			"october3d-mark-family-03"
 		],
 		"fadCurve": [
-			"october3d-mark-family-03"
+			"review:2026-11-16-reviews:mark-msm-7:0"
 		],
 		"powerKw": [
 			"october3d-mark-family-03"

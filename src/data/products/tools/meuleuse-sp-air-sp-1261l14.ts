@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-sp-air-sp-1261l14.webp",
+		"src": "/images/products/meuleuse-sp-air-sp-1261l14-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : SP AIR SP-1261L14",
 		"sourceUrl": "https://spair.vessel.co.jp/download/SP_catalog_all_E.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "sp-air-sp-1261l14",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SP AIR SP-1261L14. Consommation publiée, régime non précisé : 800 L/min à 6,2 bar. Raccord publié : 3/8\"NPT. Masse publiée : 3.8 kg.",
+		"overview": "La SP-1261L14 est une meuleuse de 180 mm à broche M14 × 2, levier de sécurité et régulateur intégré, à 7 500 tr/min. La SP-1261G utilise M16 × 2 et une commande rotative ; sa longueur est 270 mm contre 320 mm. Les 0,8 m³/min du tableau n’ont pas de régime explicite et restent hors dimensionnement, avec la pression de service conservée séparément.",
 		"verifiedFacts": [
 			"Raccord publié : 3/8\"NPT.",
 			"Masse publiée : 3.8 kg."
@@ -88,6 +88,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-sp-air-sp-1261l14:0",
+			"sourceUrl": "https://spair.vessel.co.jp/download/SP_catalog_all_E.pdf",
+			"sourceLabel": "SP AIR, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La SP-1261L14 est une meuleuse de 180 mm à broche M14 × 2, levier de sécurité et régulateur intégré, à 7 500 tr/min. La SP-1261G utilise M16 × 2 et une commande rotative ; sa longueur est 270 mm contre 320 mm. Les 0,8 m³/min du tableau n’ont pas de régime explicite et restent hors dimensionnement, avec la pression de service conservée séparément. GET complet SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. Pages PDF lues : 18."
 		}
 	],
 	"fieldSources": {

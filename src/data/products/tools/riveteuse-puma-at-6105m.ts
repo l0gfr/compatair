@@ -11,133 +11,91 @@ const product: ToolProfileInput = {
 	"mpn": "AT-6105M",
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
-	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+	"demandExplanation": "Le tableau associe le libellé par cycle aux unités scfm/l/min. Le volume par pose et le débit en charge restent indéterminés.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/riveteuse-puma-at-6105m.webp",
+		"src": "/images/products/riveteuse-puma-at-6105m-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : PUMA AT-6105M",
-		"sourceUrl": "https://www.pumaair.com/product-Air-Spin-Pull-Tool-AirSpinPullTool.html",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceUrl": "https://www.pumaair.com/views/proimages/pd-en/PDF/PIC-2680/P067-AIR_HYDRAULIC_RIVETER-SPIN_PULL_TOOL-2680.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "puma-at-6105m",
 		"label": "Référence AT-6105M",
 		"distinguishingAttributes": {
-			"reference": "AT-6105M",
-			"Riveting Nut Capacity": "M4~M12",
-			"Traction Power / lbs": "6000"
+			"Capacité d’écrous de la version M": "M4–M12",
+			"Course": "7 mm",
+			"Longueur": "278 mm",
+			"Masse": "2,30 kg",
+			"Traction Power, unités imprimées": "6 000 lb ; 2 722 kg"
 		}
 	},
 	"editorial": {
-		"overview": "PUMA AT-6105M. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Riveting Nut Capacity : M4~M12. Traction Power / lbs : 6000.",
+		"overview": "PUMA AT-6105M : outil hydropneumatique de pose d’écrous M4–M12, course de 7 mm, longueur 278 mm et masse 2,30 kg. La version 6105 couvre les tailles impériales #6–1/2 pouce ; la 6306M couvre M3–M8. Le tableau mêle le libellé par cycle aux unités de débit minute : la valeur 2,1 reste dans son unité imprimée, sans calcul d’air par pose.",
 		"verifiedFacts": [
-			"Riveting Nut Capacity : M4~M12.",
-			"Traction Power / lbs : 6000.",
-			"Traction Power / kgs : 2722.",
-			"Stroke Length / inch : 0.276.",
-			"Stroke Length / mm : 7.",
-			"OverallLength / inch : 10.94.",
-			"OverallLength / mm : 278.",
-			"Air Inlet (PT) : 1/4”.",
-			"Air Hose (ID) : 3/8”.",
-			"Net Weight / lb : 5.07.",
-			"Net Weight / kg : 2.3."
+			"Capacité d’écrous de la version M : M4–M12.",
+			"Course : 7 mm.",
+			"Longueur : 278 mm.",
+			"Masse : 2,30 kg.",
+			"Traction Power, unités imprimées : 6 000 lb ; 2 722 kg.",
+			"Pression de service, unités imprimées : 85–95 psi ; 6–6,7 kg/cm².",
+			"Consommation, libellé et unités imprimés : Avg. Air Consumption Per Rivet Cycle : 0,074 scfm ; 2,1 l/min."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Le libellé Per Rivet Cycle et les unités scfm/l/min sont incompatibles pour définir un volume par pose. Aucun 2,1 L/action ni régime en charge n’est déduit.",
+			"La plage de service reste distincte d’une pression de mesure de consommation.",
+			"La fiche imprimée compare la 6306M, tandis que le HTML courant présente aussi la 6206M ; leurs caractéristiques ne sont pas fusionnées.",
+			"Édition de la fiche PDF non précisée ; vérifier la référence et la configuration effectivement livrées."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Riveting Nut Capacity",
-			"value": "M4~M12",
+			"label": "Capacité d’écrous de la version M",
+			"value": "M4–M12",
 			"evidenceIds": [
-				"october2-tools-puma-cat-48-pdp-267-p1"
+				"review:2026-11-16-reviews:riveteuse-puma-at-6105m:0"
 			]
 		},
 		{
-			"label": "Traction Power / lbs",
-			"value": "6000",
+			"label": "Course",
+			"value": "7 mm",
 			"evidenceIds": [
-				"october2-tools-puma-cat-48-pdp-267-p1"
+				"review:2026-11-16-reviews:riveteuse-puma-at-6105m:0"
 			]
 		},
 		{
-			"label": "Traction Power / kgs",
-			"value": "2722",
+			"label": "Longueur",
+			"value": "278 mm",
 			"evidenceIds": [
-				"october2-tools-puma-cat-48-pdp-267-p1"
+				"review:2026-11-16-reviews:riveteuse-puma-at-6105m:0"
 			]
 		},
 		{
-			"label": "Stroke Length / inch",
-			"value": "0.276",
+			"label": "Masse",
+			"value": "2,30 kg",
 			"evidenceIds": [
-				"october2-tools-puma-cat-48-pdp-267-p1"
+				"review:2026-11-16-reviews:riveteuse-puma-at-6105m:0"
 			]
 		},
 		{
-			"label": "Stroke Length / mm",
-			"value": "7",
+			"label": "Traction Power, unités imprimées",
+			"value": "6 000 lb ; 2 722 kg",
 			"evidenceIds": [
-				"october2-tools-puma-cat-48-pdp-267-p1"
+				"review:2026-11-16-reviews:riveteuse-puma-at-6105m:0"
 			]
 		},
 		{
-			"label": "OverallLength / inch",
-			"value": "10.94",
+			"label": "Pression de service, unités imprimées",
+			"value": "85–95 psi ; 6–6,7 kg/cm²",
 			"evidenceIds": [
-				"october2-tools-puma-cat-48-pdp-267-p1"
+				"review:2026-11-16-reviews:riveteuse-puma-at-6105m:0"
 			]
 		},
 		{
-			"label": "OverallLength / mm",
-			"value": "278",
+			"label": "Consommation, libellé et unités imprimés",
+			"value": "Avg. Air Consumption Per Rivet Cycle : 0,074 scfm ; 2,1 l/min",
 			"evidenceIds": [
-				"october2-tools-puma-cat-48-pdp-267-p1"
-			]
-		},
-		{
-			"label": "Air Inlet (PT)",
-			"value": "1/4”",
-			"evidenceIds": [
-				"october2-tools-puma-cat-48-pdp-267-p1"
-			]
-		},
-		{
-			"label": "Air Hose (ID)",
-			"value": "3/8”",
-			"evidenceIds": [
-				"october2-tools-puma-cat-48-pdp-267-p1"
-			]
-		},
-		{
-			"label": "Net Weight / lb",
-			"value": "5.07",
-			"evidenceIds": [
-				"october2-tools-puma-cat-48-pdp-267-p1"
-			]
-		},
-		{
-			"label": "Net Weight / kg",
-			"value": "2.3",
-			"evidenceIds": [
-				"october2-tools-puma-cat-48-pdp-267-p1"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "Working Air Pressure ; psi : 85~95 ; plage de fonctionnement, point de mesure non établi.",
-			"evidenceIds": [
-				"october2-tools-puma-cat-48-pdp-267-p1"
-			]
-		},
-		{
-			"label": "Consommation moyenne, hors calcul",
-			"value": "2.1 L/min",
-			"evidenceIds": [
-				"october2-tools-puma-cat-48-pdp-267-p1"
+				"review:2026-11-16-reviews:riveteuse-puma-at-6105m:0"
 			]
 		}
 	],
@@ -151,21 +109,43 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 6dc6efda72ed3ec8481a9fa4b1247316f568d94ce93e229b6c5a9735f5022bf2. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:riveteuse-puma-at-6105m:0",
+			"sourceUrl": "https://www.pumaair.com/views/proimages/pd-en/PDF/PIC-2680/P067-AIR_HYDRAULIC_RIVETER-SPIN_PULL_TOOL-2680.pdf",
+			"sourceLabel": "PUMA, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "PUMA AT-6105M : outil hydropneumatique de pose d’écrous M4–M12, course de 7 mm, longueur 278 mm et masse 2,30 kg. La version 6105 couvre les tailles impériales #6–1/2 pouce ; la 6306M couvre M3–M8. Le tableau mêle le libellé par cycle aux unités de débit minute : la valeur 2,1 reste dans son unité imprimée, sans calcul d’air par pose. GET complet SHA-256 4c1fb182e7fe8cb7c4aff9284f8d71288f5cbdc341648f7748aa66c23d4aead6. Pages PDF lues : 3."
+		},
+		{
+			"id": "review:2026-11-16-reviews:riveteuse-puma-at-6105m:1",
+			"sourceUrl": "https://www.pumaair.com/product-Air-Spin-Pull-Tool-AirSpinPullTool.html",
+			"sourceLabel": "PUMA, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "PUMA AT-6105M : outil hydropneumatique de pose d’écrous M4–M12, course de 7 mm, longueur 278 mm et masse 2,30 kg. La version 6105 couvre les tailles impériales #6–1/2 pouce ; la 6306M couvre M3–M8. Le tableau mêle le libellé par cycle aux unités de débit minute : la valeur 2,1 reste dans son unité imprimée, sans calcul d’air par pose. GET complet SHA-256 6dc6efda72ed3ec8481a9fa4b1247316f568d94ce93e229b6c5a9735f5022bf2. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october2-tools-puma-cat-48-pdp-267-p1"
-		],
-		"workingPressureBar": [
-			"october2-tools-puma-cat-48-pdp-267-p1"
+			"review:2026-11-16-reviews:riveteuse-puma-at-6105m:0"
 		],
 		"demandExplanation": [
-			"october2-tools-puma-cat-48-pdp-267-p1"
+			"review:2026-11-16-reviews:riveteuse-puma-at-6105m:0",
+			"review:2026-11-16-reviews:riveteuse-puma-at-6105m:1"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-reviews:riveteuse-puma-at-6105m:0",
+			"review:2026-11-16-reviews:riveteuse-puma-at-6105m:1"
 		]
 	},
 	"notes": [
-		"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité."
+		"Le tableau associe le libellé par cycle aux unités scfm/l/min. Le volume par pose et le débit en charge restent indéterminés."
 	]
 };
 

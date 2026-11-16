@@ -16,10 +16,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La fiche publie une consommation et une pression d’alimentation, sans préciser le régime de consommation ni affirmer que cette valeur est mesurée à cette pression. Ces champs restent séparés et hors du calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/visseuse-soartec-ws-2057.webp",
+		"src": "/images/products/visseuse-soartec-ws-2057-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Soartec WS-2057",
 		"sourceUrl": "https://www.soartectools.com/products/1-4-heavy-duty-air-screwdriver-pistol-type-ws-2057",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "soartec-ws-2057",
@@ -31,7 +31,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Soartec WS-2057. La fiche publie une consommation et une pression d’alimentation, sans préciser le régime de consommation ni affirmer que cette valeur est mesurée à cette pression. Ces champs restent séparés et hors du calcul de compatibilité. Fonction déclarée : 1/4\" Heavy Duty Air Screwdriver Pistol Type. Champ fabricant : Hex Size : 1/4\".",
+		"overview": "La WS-2057 est la visseuse pistolet à hexagone 1/4 pouce et mécanisme Twin Hammer, 12 000 tr/min, 145 mm et 1,6 kg. Le couple 110 Nm est annoncé à deux secondes, contre 200 Nm pour la WS-2052 ; la WS-301 est droite et annonce 60 Nm à deux secondes. Ces valeurs ne garantissent pas un serrage précis. Les 425 L/min restent de régime non précisé.",
 		"verifiedFacts": [
 			"Fonction déclarée : 1/4\" Heavy Duty Air Screwdriver Pistol Type.",
 			"Champ fabricant : Hex Size : 1/4\".",
@@ -139,6 +139,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 11004e6010d2fcaa8e3bf8ebbb8d65bb5b674e42455dfa3d68dcdf2d04dd37b4. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:visseuse-soartec-ws-2057:0",
+			"sourceUrl": "https://www.soartectools.com/products/1-4-heavy-duty-air-screwdriver-pistol-type-ws-2057",
+			"sourceLabel": "Soartec, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La WS-2057 est la visseuse pistolet à hexagone 1/4 pouce et mécanisme Twin Hammer, 12 000 tr/min, 145 mm et 1,6 kg. Le couple 110 Nm est annoncé à deux secondes, contre 200 Nm pour la WS-2052 ; la WS-301 est droite et annonce 60 Nm à deux secondes. Ces valeurs ne garantissent pas un serrage précis. Les 425 L/min restent de régime non précisé. GET complet SHA-256 0245433e1a3964eb411ecb73e029adda8ae7ef0c2624f46b9bed43e48555dcec. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Le volume par coup publié n’est pas rattaché à un point de pression de mesure. La plage de fonctionnement ne permet pas de reconstituer ce point.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/agrafeuse-cloueuse-omer-12-40-g.webp",
+		"src": "/images/products/agrafeuse-cloueuse-omer-12-40-g-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Omer 12.40 G",
 		"sourceUrl": "https://www.omertools.com/wp-content/uploads/2024/03/CATALOGO_2017.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "omer-12-40-g",
@@ -29,14 +29,17 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Omer 12.40 G. Le volume par coup publié n’est pas rattaché à un point de pression de mesure. La plage de fonctionnement ne permet pas de reconstituer ce point. Longueur des fixations utilisables : 25 ÷ 40 mm. Capacité du magasin : 100 fixations.",
+		"overview": "Omer 12.40 G : cloueur de pointes Brads 12 de 25–40 mm pour moulures et assemblages de finition, magasin de 100 et corps 252 × 52 × 228 mm. Le 12.40 standard accepte 12–40 mm et pèse 1,15 kg contre 1,25 kg ici. La pression de fonctionnement 5–7 kg/cm² ne renseigne pas la pression de mesure des 0,34 L par coup.",
 		"verifiedFacts": [
 			"Longueur des fixations utilisables : 25 ÷ 40 mm.",
 			"Capacité du magasin : 100 fixations.",
 			"Masse publiée : 1,25 kg.",
 			"Dimensions (L × W × H) : 252 x 52 x 228 mm.",
 			"Pression de fonctionnement originale : 5 ÷ 7 kg/cm².",
-			"Volume par cycle original : 0,34 litri/colpo."
+			"Volume par cycle original : 0,34 litri/colpo.",
+			"Fixations / magasin : Brads 12 de 25–40 mm / 100.",
+			"Dimensions / masse : 252 × 52 × 228 mm / 1,25 kg.",
+			"Volume par coup, pression non précisée : 0,34 L."
 		],
 		"limitations": [
 			"Le volume par coup publié n’est pas rattaché à un point de pression de mesure. La plage de fonctionnement ne permet pas de reconstituer ce point.",
@@ -94,6 +97,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-omer-2017-pdf-p46"
 			]
+		},
+		{
+			"label": "Fixations / magasin",
+			"value": "Brads 12 de 25–40 mm / 100",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-omer-12-40-g:0"
+			]
+		},
+		{
+			"label": "Dimensions / masse",
+			"value": "252 × 52 × 228 mm / 1,25 kg",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-omer-12-40-g:0"
+			]
+		},
+		{
+			"label": "Volume par coup, pression non précisée",
+			"value": "0,34 L",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-omer-12-40-g:0"
+			]
 		}
 	],
 	"evidence": [
@@ -106,6 +130,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : fd0c4d3cc4edfbb1e60aefe73acde4739f3e3919f580d97e4c3b26bca75fca44. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:agrafeuse-cloueuse-omer-12-40-g:0",
+			"sourceUrl": "https://www.omertools.com/wp-content/uploads/2024/03/CATALOGO_2017.pdf",
+			"sourceLabel": "Omer, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Omer 12.40 G : cloueur de pointes Brads 12 de 25–40 mm pour moulures et assemblages de finition, magasin de 100 et corps 252 × 52 × 228 mm. Le 12.40 standard accepte 12–40 mm et pèse 1,15 kg contre 1,25 kg ici. La pression de fonctionnement 5–7 kg/cm² ne renseigne pas la pression de mesure des 0,34 L par coup. GET complet SHA-256 fd0c4d3cc4edfbb1e60aefe73acde4739f3e3919f580d97e4c3b26bca75fca44. Pages PDF lues : 46."
 		}
 	],
 	"fieldSources": {
@@ -113,7 +147,7 @@ const product: ToolProfileInput = {
 			"october2b-tools-oct2b-omer-2017-pdf-p46"
 		],
 		"workingPressureBar": [
-			"october2b-tools-oct2b-omer-2017-pdf-p46"
+			"review:2026-11-16-reviews:agrafeuse-cloueuse-omer-12-40-g:0"
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-omer-2017-pdf-p46"

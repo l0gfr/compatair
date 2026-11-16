@@ -40,6 +40,11 @@ describe('public agent fidelity benchmark', () => {
 
  it('preserves98 pairs and both prior panel digests when replacing the two newly non-fixed demands', () => {
   const panel = JSON.parse(readFileSync(new URL('../../config/agent-benchmark-panel.json', import.meta.url), 'utf8'));
+  for (const later of panel.reviewedCorrections.slice(3).reverse()) {
+   expect(panel.pairs[later.pairIndex]).toEqual(later.after);
+   panel.pairs[later.pairIndex] = later.before; panel.reviewedCorrections.pop();
+   expect(createHash('sha256').update(JSON.stringify(panel,null,2)+'\n').digest('hex')).toBe(later.previousPanelSha256);
+  }
   const original = structuredClone(panel), changes = panel.reviewedCorrections.slice(1);
   expect(changes.map((entry: any) => entry.pairIndex)).toEqual([76,87]);
   expect(changes.map((entry: any) => entry.before.tool_id)).toEqual(['shinano-si-2012ex-6','rupes-ra150a']);
@@ -53,6 +58,22 @@ describe('public agent fidelity benchmark', () => {
   }
   expect(panel.pairs).toHaveLength(100);
   expect(original.pairs.filter((_: any,index: number)=>![76,87].includes(index))).toEqual(panel.pairs.filter((_: any,index: number)=>![76,87].includes(index)));
+ });
+
+ it('preserves98 pairs and all earlier digests when replacing the November16 non-fixed demands', () => {
+  const panel = JSON.parse(readFileSync(new URL('../../config/agent-benchmark-panel.json', import.meta.url), 'utf8'));
+  const original = structuredClone(panel), changes = panel.reviewedCorrections.slice(3);
+  expect(changes.map((entry: any) => entry.pairIndex)).toEqual([1,79]);
+  expect(changes.map((entry: any) => entry.before.tool_id)).toEqual(['biax-gaf-505','biax-srd-3-45-3']);
+  expect(changes.map((entry: any) => entry.after.tool_id)).toEqual(['yokota-yd-5phca','red-rooster-rrg-260re']);
+  for(const entry of [...changes].reverse()) {
+   expect(panel.pairs[entry.pairIndex]).toEqual(entry.after);
+   expect(agentFidelityBenchmark.scenarios[entry.pairIndex].expected.air_supply_verdict.engine_verdict).toBe('insufficient_data');
+   panel.pairs[entry.pairIndex] = entry.before; panel.reviewedCorrections.pop();
+   expect(createHash('sha256').update(JSON.stringify(panel,null,2)+'\n').digest('hex')).toBe(entry.previousPanelSha256);
+  }
+  expect(panel.pairs).toHaveLength(100);
+  expect(original.pairs.filter((_: any,index: number)=>![1,79].includes(index))).toEqual(panel.pairs.filter((_: any,index: number)=>![1,79].includes(index)));
  });
 
 	it('publishes exactly 100 deterministic, scoped and attributable scenarios', () => {

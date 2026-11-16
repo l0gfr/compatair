@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/perceuse-apach-adr001t.svg",
+		"src": "/images/products/perceuse-apach-adr001t-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : APACH ADR001T",
 		"sourceUrl": "https://www.apach.com.tw/en-US/dl6",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "apach-adr001t",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "APACH ADR001T. Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "L’ADR001T est une perceuse pour points de soudure à foret 8 mm, avec trois étages et deux modes donnant 450/1 200, 700/1 800 et 900/2 400 tr/min, tolérance annoncée ±5 %. Une perceuse conventionnelle à vitesse unique ne fournit pas le même réglage. Le corps mesure 200 mm pour 1,8 kg. La consigne 90 psi n’établit pas de consommation mesurée ; le moteur reste non conclusif.",
 		"verifiedFacts": [
 			"Diamètre de foret déclaré : 8 mm (O.D.).",
 			"Puissance publiée : 0,6 hp.",
@@ -106,6 +106,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 4d0dbade211705fbfdf82795be42bf8faa2bbe12ea036c6ba7ac3eb52aef2d59. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:perceuse-apach-adr001t:0",
+			"sourceUrl": "https://www.apach.com.tw/en-US/dl6",
+			"sourceLabel": "APACH, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’ADR001T est une perceuse pour points de soudure à foret 8 mm, avec trois étages et deux modes donnant 450/1 200, 700/1 800 et 900/2 400 tr/min, tolérance annoncée ±5 %. Une perceuse conventionnelle à vitesse unique ne fournit pas le même réglage. Le corps mesure 200 mm pour 1,8 kg. La consigne 90 psi n’établit pas de consommation mesurée ; le moteur reste non conclusif. GET complet SHA-256 4d0dbade211705fbfdf82795be42bf8faa2bbe12ea036c6ba7ac3eb52aef2d59. Pages PDF lues : 5."
 		}
 	],
 	"fieldSources": {

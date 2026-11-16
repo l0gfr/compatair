@@ -17,10 +17,10 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-deprag-psr24-826320a.svg",
+		"src": "/images/products/cle-a-chocs-deprag-psr24-826320a-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : DEPRAG PSR24 (réf. 826320A)",
 		"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "deprag-psr24",
@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "DEPRAG PSR24 (réf. 826320A). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "La PSR24 vise les assemblages M14–M24 et publie 680 Nm maximum, contre 260 Nm et M10–M16 pour la PSR16. Le catalogue porte 16 500 tr/min sur la ligne PSR24 ; cette transcription est conservée sans la convertir en cadence d’impact, donnée séparément en hertz. Le couple maximum ne garantit pas le serrage final. La consommation reste inconnue, donc le calcul d’air non conclusif.",
 		"verifiedFacts": [
 			"Dimensions de vis visées : M14 - M24.",
 			"Couple maximal déclaré, Nm (ft.lbs) : 680 (502).",
@@ -102,6 +102,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-chocs-deprag-psr24-826320a:0",
+			"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
+			"sourceLabel": "DEPRAG, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La PSR24 vise les assemblages M14–M24 et publie 680 Nm maximum, contre 260 Nm et M10–M16 pour la PSR16. Le catalogue porte 16 500 tr/min sur la ligne PSR24 ; cette transcription est conservée sans la convertir en cadence d’impact, donnée séparément en hertz. Le couple maximum ne garantit pas le serrage final. La consommation reste inconnue, donc le calcul d’air non conclusif. GET complet SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Pages PDF lues : 22."
 		}
 	],
 	"fieldSources": {

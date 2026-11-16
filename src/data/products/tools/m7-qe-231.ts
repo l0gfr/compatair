@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/m7-qe-231.webp",
+		"src": "/images/products/m7-qe-231-technical-20261116-reviews.svg",
 		"alt": "Repères techniques M7 QE-231, référence QE-231",
 		"sourceUrl": "https://www.mighty-seven.com/product/303",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "M7 QE-231, référence QE-231. Consommation moyenne publiée : 170 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Capacité de mandrin : 5/16\" / 8 (mm). Vitesse à vide : 1600 (R.P.M).",
+		"overview": "La QE-231 est une perceuse de dépointer avec crochet amovible et réglage de profondeur, plutôt qu’une perceuse généraliste à mandrin 13 mm. Elle reçoit un foret de 8 mm et fonctionne à 1 600 tr/min ; le constructeur donne une profondeur maximale de 4,5 mm, limitée à 3,8 mm dans l’inox. La consommation de 170 L/min est moyenne, sans régime dimensionnant établi.",
 		"verifiedFacts": [
 			"Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
 			"Consommation moyenne publiée : 170 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
@@ -119,6 +119,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation moyenne publiée : 170 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+		},
+		{
+			"id": "review:2026-11-16-reviews:m7-qe-231:0",
+			"sourceUrl": "https://www.mighty-seven.com/product/303",
+			"sourceLabel": "M7, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La QE-231 est une perceuse de dépointer avec crochet amovible et réglage de profondeur, plutôt qu’une perceuse généraliste à mandrin 13 mm. Elle reçoit un foret de 8 mm et fonctionne à 1 600 tr/min ; le constructeur donne une profondeur maximale de 4,5 mm, limitée à 3,8 mm dans l’inox. La consommation de 170 L/min est moyenne, sans régime dimensionnant établi. GET complet SHA-256 a9162012cfba2f1a41fa82ec0b64867e52cde10ffde426f5b790c17ca582ffc2. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

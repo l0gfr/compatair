@@ -13,13 +13,13 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/nuair-fc2-6.webp",
+		"src": "/images/products/nuair-fc2-6-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Nuair FC2/6, référence FCBB404NUB002",
-		"sourceUrl": "https://www.nuair.pl/images/katalogi/Catalogo_Nuair_Professional_2022_9990284_PL.pdf#page=8",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://www.nuair.pl/images/katalogi/Catalogo_Nuair_Professional_2022_9990284_PL.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Nuair FC2/6, référence FCBB404NUB002 : cuve de 6 L, pression maximale publiée de 8 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Groupe de compression publié : FC2. Groupe de compression : FC2. Nombre de cylindres : 1.",
+		"overview": "Le FC2/6 FCBB404NUB002 stocke 6 L et utilise un groupe lubrifié de 1,5 kW à 2 850 tr/min, sous 230 V/50 Hz. Le NEW VENTO de la même page est sans huile, avec 1,1 kW et 180 L/min aspirés, contre 222 pour le FC2/6. Le catalogue donne une masse brute de 17 kg et des dimensions d’emballage ; ces données ne sont pas présentées comme une masse nette ou un encombrement installé. Le FAD reste inconnu.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons. Puissance moteur publiée : 1,5 kW.",
@@ -96,6 +96,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Le tableau Nuair Professional, catalogue 2022 indique « Air displacement » : 222 L/min aspirés. Aucun débit restitué à une pression de mesure n’est fourni dans cette ligne."
+		},
+		{
+			"id": "review:2026-11-16-reviews:nuair-fc2-6:0",
+			"sourceUrl": "https://www.nuair.pl/images/katalogi/Catalogo_Nuair_Professional_2022_9990284_PL.pdf",
+			"sourceLabel": "Nuair, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le FC2/6 FCBB404NUB002 stocke 6 L et utilise un groupe lubrifié de 1,5 kW à 2 850 tr/min, sous 230 V/50 Hz. Le NEW VENTO de la même page est sans huile, avec 1,1 kW et 180 L/min aspirés, contre 222 pour le FC2/6. Le catalogue donne une masse brute de 17 kg et des dimensions d’emballage ; ces données ne sont pas présentées comme une masse nette ou un encombrement installé. Le FAD reste inconnu. GET complet SHA-256 ff66120118923fba45228dbfc35eca66f045a3ad4c98e751bec6dfd582ecb1a9. Pages PDF lues : 8."
 		}
 	],
 	"fieldSources": {

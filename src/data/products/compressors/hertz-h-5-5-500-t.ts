@@ -24,10 +24,10 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/hertz-h-5-5-500-t.svg",
+		"src": "/images/products/hertz-h-5-5-500-t-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Hertz H 5.5-500 T",
 		"sourceUrl": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -74,7 +74,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Hertz H 5.5-500 T. Le débit restitué sous pression reste non qualifié. Groupe sur cuve 500 L.",
+		"overview": "Le H5.5-500T est le compresseur à pistons deux étages, moteur 4 kW, sur réservoir 500 L pour 12,5 bar. Les 324 L/min sont du déplacement aspiré, pas un FAD. Le H5.5-500 sans T utilise un autre groupe à 7 bar et annonce 649 L/min aspirés ; le 300T change le stockage. Sans débit restitué et cycle du groupe, le calcul reste non conclusif.",
 		"verifiedFacts": [
 			"Configuration de pression documentée : 12,5 bar.",
 			"Cuve de stockage documentée : 500 L."
@@ -97,6 +97,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-04",
 			"confidence": "B",
 			"notes": "SHA-256 e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339 de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:hertz-h-5-5-500-t:0",
+			"sourceUrl": "https://www.hertz-kompressoren.com/Files/compressor-catalog.pdf",
+			"sourceLabel": "Hertz, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le H5.5-500T est le compresseur à pistons deux étages, moteur 4 kW, sur réservoir 500 L pour 12,5 bar. Les 324 L/min sont du déplacement aspiré, pas un FAD. Le H5.5-500 sans T utilise un autre groupe à 7 bar et annonce 649 L/min aspirés ; le 300T change le stockage. Sans débit restitué et cycle du groupe, le calcul reste non conclusif. GET complet SHA-256 e35f62157b67dcb57d28a0a30b4a0984c996af066a85d60939c70ad4529b6339. Pages PDF lues : 52."
 		}
 	],
 	"fieldSources": {

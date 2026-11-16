@@ -22,10 +22,10 @@ const product: ToolProfileInput = {
   },
   "confidence": "B",
   "image": {
-    "src": "/images/products/pistolet-peinture-hvlp-sagola-4600-hex-hvlp-buse-1-20-xl-hex-10142481.svg",
+    "src": "/images/products/pistolet-peinture-hvlp-sagola-4600-hex-hvlp-buse-1-20-xl-hex-10142481-technical-20261116-reviews.svg",
     "alt": "Repères techniques : Sagola 4600 HEX HVLP buse 1.20 XL HEX (réf. 10142481)",
     "sourceUrl": "https://sagola.com/uploads/documentos/bodyshop-catalogue.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "variant": {
     "familyId": "sagola-4600-hex-hvlp-buse-1-20-xl-hex",
@@ -37,7 +37,7 @@ const product: ToolProfileInput = {
     }
   },
   "editorial": {
-    "overview": "Sagola 4600 HEX HVLP buse 1.20 XL HEX (réf. 10142481). Demande au point documenté : 425 L/min à 1,8 bar.",
+    "overview": "La 4600 HEX 10142481 combine une buse 1,20 XL HEX et le chapeau HVLP. Elle se distingue de la 10142473 par la version XL du kit, et de la 10142477 par le diamètre 1,30. La notice associe le chapeau HVLP à 425 L/min sous 1,8 bar ; les chapeaux DVR CLEAR PRO, CLEAR et BASE ont leurs propres points. Le réglage initial ouvre complètement les régulateurs de largeur de jet et de produit.",
     "verifiedFacts": [
       "Buse : 1.20 XL mm (HEX).",
       "Chapeau d’air : HVLP."
@@ -119,6 +119,26 @@ const product: ToolProfileInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "Déclaration fabricant, réponse primaire SHA-256 58029e52391ec5f2c82be4fa99ead52f275e62a0cac611ab0c4ecf207b5dd8bb. Aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-reviews:pistolet-peinture-hvlp-sagola-4600-hex-hvlp-buse-1-20-xl-hex-10142481:0",
+      "sourceUrl": "https://sagola.com/uploads/documentos/bodyshop-catalogue.pdf",
+      "sourceLabel": "Sagola, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "La 4600 HEX 10142481 combine une buse 1,20 XL HEX et le chapeau HVLP. Elle se distingue de la 10142473 par la version XL du kit, et de la 10142477 par le diamètre 1,30. La notice associe le chapeau HVLP à 425 L/min sous 1,8 bar ; les chapeaux DVR CLEAR PRO, CLEAR et BASE ont leurs propres points. Le réglage initial ouvre complètement les régulateurs de largeur de jet et de produit. GET complet SHA-256 d2fa5b5045b7def1a1134e7083ebf60bc40a3df70ac77aa478358186cc144056. Pages PDF lues : 15."
+    },
+    {
+      "id": "review:2026-11-16-reviews:pistolet-peinture-hvlp-sagola-4600-hex-hvlp-buse-1-20-xl-hex-10142481:1",
+      "sourceUrl": "https://sagola.com/uploads/manuales/pistola-sagola-4600-hex-manual.pdf",
+      "sourceLabel": "Sagola, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "La 4600 HEX 10142481 combine une buse 1,20 XL HEX et le chapeau HVLP. Elle se distingue de la 10142473 par la version XL du kit, et de la 10142477 par le diamètre 1,30. La notice associe le chapeau HVLP à 425 L/min sous 1,8 bar ; les chapeaux DVR CLEAR PRO, CLEAR et BASE ont leurs propres points. Le réglage initial ouvre complètement les régulateurs de largeur de jet et de produit. GET complet SHA-256 58029e52391ec5f2c82be4fa99ead52f275e62a0cac611ab0c4ecf207b5dd8bb. Pages PDF lues : 33, 32, 35."
     }
   ],
   "fieldSources": {

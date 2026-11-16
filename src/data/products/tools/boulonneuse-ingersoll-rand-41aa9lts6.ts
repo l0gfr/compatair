@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Le tableau individuel établit les caractéristiques mécaniques, sans consommation associée à un point de pression de mesure ; aucun débit de la ligne de série n’est transféré.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/boulonneuse-ingersoll-rand-41aa9lts6.webp",
+		"src": "/images/products/boulonneuse-ingersoll-rand-41aa9lts6-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Ingersoll Rand 41AA9LTS6",
 		"sourceUrl": "https://irtoolhelp.ingersollrand.com/hc/en-us/article_attachments/4410723358739",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "ingersoll-rand-41aa9lts6",
@@ -29,10 +29,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Ingersoll Rand 41AA9LTS6. Le tableau individuel établit les caractéristiques mécaniques, sans consommation associée à un point de pression de mesure ; aucun débit de la ligne de série n’est transféré. Masse publiée : 1.8 kg. Caractéristiques du tableau constructeur : 41AA9LTS6 25 – 58 (2.8 – 6.5) 25 – 90 (2.8 – 10.2) – 950 3.9 (1.8) 14.2” (360) 0.6” (15) 1.5” (38.1) 3/8”.",
+		"overview": "Ingersoll Rand 41AA9LTS6 : boulonneuse d’angle à coupure automatique et démarrage au levier, carré 3/8 pouce, 950 tr/min et longueur 360 mm. La 41AA9LTH4 utilise 1/4 pouce ; la 41AA6LTS6 tourne à 600 tr/min. Les trois colonnes de couple dépendent de l’assemblage et ne forment pas un seul maximum interchangeable.",
 		"verifiedFacts": [
 			"Masse publiée : 1.8 kg.",
-			"Caractéristiques du tableau constructeur : 41AA9LTS6 25 – 58 (2.8 – 6.5) 25 – 90 (2.8 – 10.2) – 950 3.9 (1.8) 14.2” (360) 0.6” (15) 1.5” (38.1) 3/8”."
+			"Caractéristiques du tableau constructeur : 41AA9LTS6 25 – 58 (2.8 – 6.5) 25 – 90 (2.8 – 10.2) – 950 3.9 (1.8) 14.2” (360) 0.6” (15) 1.5” (38.1) 3/8”.",
+			"Commande : Levier et coupure automatique.",
+			"Carré / vitesse : 3/8 pouce / 950 tr/min.",
+			"Longueur / masse : 360 mm / 1,8 kg.",
+			"Colonnes de couple publiées : 2,8–6,5 Nm ; 2,8–10,2 Nm ; troisième colonne absente.",
+			"Consommation de série, régime non précisé : 31 CFM / 878 L/min."
 		],
 		"limitations": [
 			"Le tableau individuel établit les caractéristiques mécaniques, sans consommation associée à un point de pression de mesure ; aucun débit de la ligne de série n’est transféré.",
@@ -61,6 +66,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-ir-production-fastening-pdf-p49"
 			]
+		},
+		{
+			"label": "Commande",
+			"value": "Levier et coupure automatique",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:boulonneuse-ingersoll-rand-41aa9lts6:0"
+			]
+		},
+		{
+			"label": "Carré / vitesse",
+			"value": "3/8 pouce / 950 tr/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:boulonneuse-ingersoll-rand-41aa9lts6:0"
+			]
+		},
+		{
+			"label": "Longueur / masse",
+			"value": "360 mm / 1,8 kg",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:boulonneuse-ingersoll-rand-41aa9lts6:0"
+			]
+		},
+		{
+			"label": "Colonnes de couple publiées",
+			"value": "2,8–6,5 Nm ; 2,8–10,2 Nm ; troisième colonne absente",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:boulonneuse-ingersoll-rand-41aa9lts6:0"
+			]
+		},
+		{
+			"label": "Consommation de série, régime non précisé",
+			"value": "31 CFM / 878 L/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:boulonneuse-ingersoll-rand-41aa9lts6:0"
+			]
 		}
 	],
 	"evidence": [
@@ -73,6 +113,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 58f6dd413f360beb3c24048bfe40e3e325ba005dc2b3b1d3e02a21110a0be9c1. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:boulonneuse-ingersoll-rand-41aa9lts6:0",
+			"sourceUrl": "https://irtoolhelp.ingersollrand.com/hc/en-us/article_attachments/4410723358739",
+			"sourceLabel": "Ingersoll Rand, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Ingersoll Rand 41AA9LTS6 : boulonneuse d’angle à coupure automatique et démarrage au levier, carré 3/8 pouce, 950 tr/min et longueur 360 mm. La 41AA9LTH4 utilise 1/4 pouce ; la 41AA6LTS6 tourne à 600 tr/min. Les trois colonnes de couple dépendent de l’assemblage et ne forment pas un seul maximum interchangeable. GET complet SHA-256 58f6dd413f360beb3c24048bfe40e3e325ba005dc2b3b1d3e02a21110a0be9c1. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
@@ -80,7 +130,7 @@ const product: ToolProfileInput = {
 			"october2b-tools-oct2b-ir-production-fastening-pdf-p49"
 		],
 		"workingPressureBar": [
-			"october2b-tools-oct2b-ir-production-fastening-pdf-p49"
+			"review:2026-11-16-reviews:boulonneuse-ingersoll-rand-41aa9lts6:0"
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-ir-production-fastening-pdf-p49"

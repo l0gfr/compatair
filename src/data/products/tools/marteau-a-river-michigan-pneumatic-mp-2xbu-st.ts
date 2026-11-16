@@ -11,13 +11,13 @@ const product: ToolProfileInput = {
 	"mpn": "MP-2XBU-ST",
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
-	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+	"demandExplanation": "Le tableau publie une consommation moyenne, sans pression de mesure associée. La valeur reste documentaire et la compatibilité demeure indéterminée.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/marteau-a-river-michigan-pneumatic-mp-2xbu-st.webp",
+		"src": "/images/products/marteau-a-river-michigan-pneumatic-mp-2xbu-st-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Michigan Pneumatic MP-2XBU-ST",
 		"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/6-Aircraft%20Riveters_v2.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "michigan-pneumatic-mp-2xbu-st",
@@ -29,44 +29,77 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Michigan Pneumatic MP-2XBU-ST. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 2.0 lbs. Ligne technique constructeur : MP-2XBU-ST Button 0.401 1/8\" 3/32\" 1/2\" x 2-1/4\" 2580 6\"8\"2.0 lbs 1/4\" 3/8\" 4 cfm.",
+		"overview": "Michigan Pneumatic MP-2XBU-ST : marteau à river à poignée bouton, queue 0,401 pouce et longueur 8 pouces. La version MP-2X-ST déportée mesure 6 pouces ; la MP-4XBU-ST passe à 9⅝ pouces et à une capacité duralumin 1/4 pouce, contre 1/8 pour la 2XBU. Les 4 cfm sont une moyenne documentaire.",
 		"verifiedFacts": [
-			"Masse publiée : 2.0 lbs.",
-			"Ligne technique constructeur : MP-2XBU-ST Button 0.401 1/8\" 3/32\" 1/2\" x 2-1/4\" 2580 6\"8\"2.0 lbs 1/4\" 3/8\" 4 cfm."
+			"Poignée : Bouton, version BU.",
+			"Queue : 0,401 pouce.",
+			"Capacités duralumin / acier : 1/8 pouce / 3/32 pouce.",
+			"Course : 2¼ pouces.",
+			"Cadence : 2 580 coups/min.",
+			"Longueur, version BU : 8 pouces.",
+			"Masse, version BU : 2 lb.",
+			"Consommation moyenne, hors calcul : 4 cfm."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Données du catalogue constructeur archivé ; consommation moyenne ou de régime non précisé, sans certification du besoin maximal en charge.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Le tableau publie une consommation moyenne, sans pression de mesure associée. La valeur reste documentaire et la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "2.0 lbs",
+			"label": "Poignée",
+			"value": "Bouton, version BU",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-6-pdf-p2"
+				"review:2026-11-16-reviews:marteau-a-river-michigan-pneumatic-mp-2xbu-st:0"
 			]
 		},
 		{
-			"label": "Ligne technique constructeur",
-			"value": "MP-2XBU-ST Button 0.401 1/8\" 3/32\" 1/2\" x 2-1/4\" 2580 6\"8\"2.0 lbs 1/4\" 3/8\" 4 cfm",
+			"label": "Queue",
+			"value": "0,401 pouce",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-6-pdf-p2"
+				"review:2026-11-16-reviews:marteau-a-river-michigan-pneumatic-mp-2xbu-st:0"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "Aucune pression de mesure de cette ligne de consommation n’est établie dans le tableau.",
+			"label": "Capacités duralumin / acier",
+			"value": "1/8 pouce / 3/32 pouce",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-6-pdf-p2"
+				"review:2026-11-16-reviews:marteau-a-river-michigan-pneumatic-mp-2xbu-st:0"
+			]
+		},
+		{
+			"label": "Course",
+			"value": "2¼ pouces",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:marteau-a-river-michigan-pneumatic-mp-2xbu-st:0"
+			]
+		},
+		{
+			"label": "Cadence",
+			"value": "2 580 coups/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:marteau-a-river-michigan-pneumatic-mp-2xbu-st:0"
+			]
+		},
+		{
+			"label": "Longueur, version BU",
+			"value": "8 pouces",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:marteau-a-river-michigan-pneumatic-mp-2xbu-st:0"
+			]
+		},
+		{
+			"label": "Masse, version BU",
+			"value": "2 lb",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:marteau-a-river-michigan-pneumatic-mp-2xbu-st:0"
 			]
 		},
 		{
 			"label": "Consommation moyenne, hors calcul",
 			"value": "4 cfm",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-6-pdf-p2"
+				"review:2026-11-16-reviews:marteau-a-river-michigan-pneumatic-mp-2xbu-st:0"
 			]
 		}
 	],
@@ -80,21 +113,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : db4ad3c3e258481ba1d19f3b9c6afbd624eea583ec1d6652b495921b7a8dbe80. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:marteau-a-river-michigan-pneumatic-mp-2xbu-st:0",
+			"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/6-Aircraft%20Riveters_v2.pdf",
+			"sourceLabel": "Michigan Pneumatic, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Michigan Pneumatic MP-2XBU-ST : marteau à river à poignée bouton, queue 0,401 pouce et longueur 8 pouces. La version MP-2X-ST déportée mesure 6 pouces ; la MP-4XBU-ST passe à 9⅝ pouces et à une capacité duralumin 1/4 pouce, contre 1/8 pour la 2XBU. Les 4 cfm sont une moyenne documentaire. GET complet SHA-256 db4ad3c3e258481ba1d19f3b9c6afbd624eea583ec1d6652b495921b7a8dbe80. Pages PDF lues : 2."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october2b-tools-oct2b-michigan-6-pdf-p2"
-		],
-		"workingPressureBar": [
-			"october2b-tools-oct2b-michigan-6-pdf-p2"
+			"review:2026-11-16-reviews:marteau-a-river-michigan-pneumatic-mp-2xbu-st:0"
 		],
 		"demandExplanation": [
-			"october2b-tools-oct2b-michigan-6-pdf-p2"
+			"review:2026-11-16-reviews:marteau-a-river-michigan-pneumatic-mp-2xbu-st:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-reviews:marteau-a-river-michigan-pneumatic-mp-2xbu-st:0"
 		]
 	},
 	"notes": [
-		"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité."
+		"Le tableau publie une consommation moyenne, sans pression de mesure associée. La valeur reste documentaire et la compatibilité demeure indéterminée."
 	]
 };
 

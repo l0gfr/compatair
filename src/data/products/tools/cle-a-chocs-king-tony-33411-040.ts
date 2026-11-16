@@ -16,10 +16,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La notice donne une consommation moyenne. Elle ne publie pas le débit maximal ou en charge de la référence ; la pression du tableau reste séparée du point de mesure de consommation.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-king-tony-33411-040.webp",
+		"src": "/images/products/cle-a-chocs-king-tony-33411-040-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : King Tony 33411-040",
 		"sourceUrl": "https://www.kingtony.com/upload/file/member/User-guide/Pneumatic/33411-040&33411-041.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "king-tony-33411-040",
@@ -31,7 +31,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "King Tony 33411-040. La notice donne une consommation moyenne. Elle ne publie pas le débit maximal ou en charge de la référence ; la pression du tableau reste séparée du point de mesure de consommation. Fonction déclarée : Clé à chocs pneumatique. Carré d’entraînement (pouces) : 1/2\".",
+		"overview": "King Tony 33411-040 : clé à chocs carré 1/2 pouce, enclume standard et entrée d’air 1/4 BSPT. La 33411-041 utilise une entrée NPT ; la notice distingue aussi une enclume prolongée pour 33412-040. Le filetage doit être choisi avec le raccord du réseau, même lorsque couple et consommation moyenne sont communs.",
 		"verifiedFacts": [
 			"Fonction déclarée : Clé à chocs pneumatique.",
 			"Carré d’entraînement (pouces) : 1/2\".",
@@ -43,7 +43,12 @@ const product: ToolProfileInput = {
 			"Diamètre intérieur du tuyau (pouces) : 3/8\".",
 			"Consommation moyenne, colonne originale CFM : 4.0.",
 			"Consommation moyenne, colonne originale L/min : 113.",
-			"Capacité de boulon, champ fabricant (mm) : M16."
+			"Capacité de boulon, champ fabricant (mm) : M16.",
+			"Entrée d’air : 1/4 BSPT, distinct du NPT de la 33411-041.",
+			"Enclume : Standard, distincte de la 33412-040 prolongée.",
+			"Couple / vitesse : 678 Nm maximaux / 8 000 tr/min.",
+			"Longueur / masse : 187 mm / 2,60 kg.",
+			"Consommation moyenne : 4 CFM / 113 L/min."
 		],
 		"limitations": [
 			"La notice donne une consommation moyenne. Elle ne publie pas le débit maximal ou en charge de la référence ; la pression du tableau reste séparée du point de mesure de consommation.",
@@ -143,6 +148,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october3c-tools-kingtony-manual-009-p1"
 			]
+		},
+		{
+			"label": "Entrée d’air",
+			"value": "1/4 BSPT, distinct du NPT de la 33411-041",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-king-tony-33411-040:0"
+			]
+		},
+		{
+			"label": "Enclume",
+			"value": "Standard, distincte de la 33412-040 prolongée",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-king-tony-33411-040:0"
+			]
+		},
+		{
+			"label": "Couple / vitesse",
+			"value": "678 Nm maximaux / 8 000 tr/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-king-tony-33411-040:0"
+			]
+		},
+		{
+			"label": "Longueur / masse",
+			"value": "187 mm / 2,60 kg",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-king-tony-33411-040:0"
+			]
+		},
+		{
+			"label": "Consommation moyenne",
+			"value": "4 CFM / 113 L/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-king-tony-33411-040:0"
+			]
 		}
 	],
 	"evidence": [
@@ -155,6 +195,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 7b3b4af989861e47110a9f1b50f9baaf1d8f62f961dacc7d0842cc42b73842d2. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-chocs-king-tony-33411-040:0",
+			"sourceUrl": "https://www.kingtony.com/upload/file/member/User-guide/Pneumatic/33411-040&33411-041.pdf",
+			"sourceLabel": "King Tony, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "King Tony 33411-040 : clé à chocs carré 1/2 pouce, enclume standard et entrée d’air 1/4 BSPT. La 33411-041 utilise une entrée NPT ; la notice distingue aussi une enclume prolongée pour 33412-040. Le filetage doit être choisi avec le raccord du réseau, même lorsque couple et consommation moyenne sont communs. GET complet SHA-256 7b3b4af989861e47110a9f1b50f9baaf1d8f62f961dacc7d0842cc42b73842d2. Pages PDF lues : 1."
 		}
 	],
 	"fieldSources": {

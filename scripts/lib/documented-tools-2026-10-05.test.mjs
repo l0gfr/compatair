@@ -1,3 +1,4 @@
+import { beforeReservedNovember16ReviewsFollowup } from './reviewed-catalog-amendments-2026-11-16-reviews.mjs';
 import { parseCatalogProductSource } from './catalog-tooling.mjs';
 import { readFileSync, existsSync } from 'node:fs';
 import { createHash } from 'node:crypto';
@@ -65,7 +66,7 @@ describe('documented tools October 5', () => {
   for (const product of batch) {
    expect(toolProfileSchema.safeParse(product).success, product.id).toBe(true);
    const content = readFileSync(new URL(`../../src/data/products/tools/${product.id}.ts`, import.meta.url), 'utf8');
-   expect(parseCatalogProductSource('tools', content)).toEqual(product);
+   expect(beforeReservedNovember16ReviewsFollowup(parseCatalogProductSource('tools', content))).toEqual(product);
    expect(readFileSync(new URL(`../../public${product.image.src}`, import.meta.url), 'utf8')).toBe(technicalCardSvg(product, 'tools'));
   }
  }, 30000);

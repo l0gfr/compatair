@@ -16,10 +16,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-hazet-9012tt.webp",
+		"src": "/images/products/cle-a-chocs-hazet-9012tt-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : HAZET 9012TT",
 		"sourceUrl": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/impact-driver/product/ean-4000896226924",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "hazet-9012tt",
@@ -31,7 +31,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "HAZET 9012TT. La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi. Champ fabricant : Loosening torque maximum : 2200 Nm. Champ fabricant : Output : 1/2 inch (12.5 mm) square, solid.",
+		"overview": "La 9012TT concentre un carré 1/2 et un mécanisme à double marteau dans 128 mm pour 1,6 kg. Les 2 200 Nm concernent le desserrage, les 1 356 Nm le serrage maximal et les 948 Nm le couple recommandé. La 9012ECO est plus lourde à 2,15 kg ; ses valeurs de couple restent distinctes.",
 		"verifiedFacts": [
 			"Champ fabricant : Loosening torque maximum : 2200 Nm.",
 			"Champ fabricant : Output : 1/2 inch (12.5 mm) square, solid.",
@@ -53,7 +53,10 @@ const product: ToolProfileInput = {
 			"Champ fabricant : Coupler plug : Nominal size 7.2 (included).",
 			"Champ fabricant : Sound power level : 110.7 db(A) Lp W.",
 			"Champ fabricant : Air requirement [l/sec] : 2.5 l/sec.",
-			"Champ fabricant : Working pressure ( bar ) : 6.3 bar."
+			"Champ fabricant : Working pressure ( bar ) : 6.3 bar.",
+			"Longueur du corps : 128 mm.",
+			"Réglages : Deux niveaux au vissage ; un au dévissage.",
+			"Couples distincts : Recommandé 948 Nm ; serrage maximal 1 356 Nm ; desserrage maximal 2 200 Nm."
 		],
 		"limitations": [
 			"La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi.",
@@ -224,6 +227,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-hazet-4000896226924-html-p1"
 			]
+		},
+		{
+			"label": "Longueur du corps",
+			"value": "128 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-hazet-9012tt:0"
+			]
+		},
+		{
+			"label": "Réglages",
+			"value": "Deux niveaux au vissage ; un au dévissage",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-hazet-9012tt:0"
+			]
+		},
+		{
+			"label": "Couples distincts",
+			"value": "Recommandé 948 Nm ; serrage maximal 1 356 Nm ; desserrage maximal 2 200 Nm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-hazet-9012tt:0"
+			]
 		}
 	],
 	"evidence": [
@@ -236,6 +260,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 34eeef04c81d7dc55f8e57c9238ce49294b342de4b3991b386fb223a0f8ce685. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-chocs-hazet-9012tt:0",
+			"sourceUrl": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/impact-driver/product/ean-4000896226924",
+			"sourceLabel": "HAZET, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 9012TT concentre un carré 1/2 et un mécanisme à double marteau dans 128 mm pour 1,6 kg. Les 2 200 Nm concernent le desserrage, les 1 356 Nm le serrage maximal et les 948 Nm le couple recommandé. La 9012ECO est plus lourde à 2,15 kg ; ses valeurs de couple restent distinctes. GET complet SHA-256 f820648d2e067494546ffc278c0ce7bf3462e7a98089ab4c9c97868a30a18440. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

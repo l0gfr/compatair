@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cleco-24raa06al3.webp",
+		"src": "/images/products/cleco-24raa06al3-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Cleco 24RAA06AL3, référence 24RAA06AL3",
-		"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=75",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Cleco 24RAA06AL3, référence 24RAA06AL3. Le tableau fabricant publie 680 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Plage de couple publiée : 4 à 5.5 Nm. Vitesse à vide publiée : 2200 tr/min.",
+		"overview": "La 24RAA06AL3 couvre 4 à 5,5 Nm à 2 200 tr/min avec une sortie carrée 3/8 pouce. Les 07AL3 et 11AL3 conservent les 358 mm et 1,2 kg mais déplacent la plage de couple à 5–7 et 7–11 Nm. Le débit de catalogue de 0,68 m³/min reste non qualifié en charge.",
 		"verifiedFacts": [
 			"Performances publiées à 6,2 bar à l’entrée de l’outil, note de la page 75.",
 			"Consommation publiée dans la colonne Air Cons. m³/min, multipliée par 1 000. Le régime de mesure n’est pas précisé dans ce tableau.",
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Données de catalogue industriel, sans essai physique CompatAir. Disponibilité et révision livrée à confirmer avec le fournisseur.",
-			"Source : catalogue GI-1250-EU, édition archivée du fabricant. Vérifier la référence et la notice de la révision effectivement livrée."
+			"Source : catalogue GI-1250-EU, édition archivée du fabricant. Vérifier la référence et la notice de la révision effectivement livrée.",
+			"Le régime de mesure de la consommation publiée reste non précisé. Cette valeur documentaire ne permet pas de conclure au débit requis en charge."
 		]
 	},
 	"specifications": [
@@ -104,6 +105,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation publiée dans la colonne Air Cons. m³/min, multipliée par 1 000. Le régime de mesure n’est pas précisé dans ce tableau."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cleco-24raa06al3:0",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf",
+			"sourceLabel": "Cleco, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 24RAA06AL3 couvre 4 à 5,5 Nm à 2 200 tr/min avec une sortie carrée 3/8 pouce. Les 07AL3 et 11AL3 conservent les 358 mm et 1,2 kg mais déplacent la plage de couple à 5–7 et 7–11 Nm. Le débit de catalogue de 0,68 m³/min reste non qualifié en charge. GET complet SHA-256 8668d5e77a6b2469dc9b9012841e65bbfb947234a8087faa6fdd90384b3babac. Pages PDF lues : 75."
 		}
 	],
 	"fieldSources": {
@@ -115,6 +126,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"cleco-24raa06al3-20260926"
+		],
+		"airflowBasis": [
+			"review:2026-11-16-reviews:cleco-24raa06al3:0"
 		]
 	},
 	"notes": [
@@ -124,7 +138,8 @@ const product: ToolProfileInput = {
 		"min": 680,
 		"typical": 680,
 		"max": 680
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

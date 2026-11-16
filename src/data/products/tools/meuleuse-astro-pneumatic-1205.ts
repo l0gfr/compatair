@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-astro-pneumatic-1205.svg",
+		"src": "/images/products/meuleuse-astro-pneumatic-1205-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Astro Pneumatic 1205",
 		"sourceUrl": "https://www.astrotools.com/product/composite-body-1-4-mini-die-grinder-with-safety-lever-25-000rpm/",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "astro-pneumatic-1205",
@@ -29,15 +29,18 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Astro Pneumatic 1205. Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "La meuleuse droite 1205 associe une pince de 1/4 pouce, un levier de sécurité et un échappement avant dans 120 mm. La 1240 mesure 146 mm et tourne à 20 000 tr/min ; la 201 est plus longue et évacue à l’arrière.",
 		"verifiedFacts": [
 			"Pince : 1/4\".",
 			"Vitesse à vide : 25,000rpm.",
-			"Longueur hors tout : 4-3/4\" (120mm).",
-			"Masse nette : 13/16lbs. (.37kg).",
+			"Longueur hors tout : 4-3/4\" (120 mm).",
+			"Masse nette : 13/16lbs. (.37 kg).",
 			"Filetage d’arrivée d’air : 1/4\".",
-			"Diamètre intérieur du flexible : 3/8\" (10mm).",
-			"Pression d’air publiée : 90-120psi."
+			"Diamètre intérieur du flexible : 3/8\" (10 mm).",
+			"Pression d’air publiée : 90-120psi.",
+			"Commande : Levier de sécurité ; régulation intégrée.",
+			"Échappement : Avant.",
+			"Puissance publiée : 1/3 hp."
 		],
 		"limitations": [
 			"Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
@@ -102,6 +105,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october3d-tools-astro-product-1205-p1"
 			]
+		},
+		{
+			"label": "Commande",
+			"value": "Levier de sécurité ; régulation intégrée",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-astro-pneumatic-1205:0"
+			]
+		},
+		{
+			"label": "Échappement",
+			"value": "Avant",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-astro-pneumatic-1205:0"
+			]
+		},
+		{
+			"label": "Puissance publiée",
+			"value": "1/3 hp",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-astro-pneumatic-1205:0"
+			]
 		}
 	],
 	"evidence": [
@@ -114,6 +138,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 26074eadbf64b0287069968941aa4ba26519b68707057dee48535aac639932a0. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-astro-pneumatic-1205:0",
+			"sourceUrl": "https://www.astrotools.com/product/composite-body-1-4-mini-die-grinder-with-safety-lever-25-000rpm/",
+			"sourceLabel": "Astro Pneumatic, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La meuleuse droite 1205 associe une pince de 1/4 pouce, un levier de sécurité et un échappement avant dans 120 mm. La 1240 mesure 146 mm et tourne à 20 000 tr/min ; la 201 est plus longue et évacue à l’arrière. GET complet SHA-256 7a59274ee60f8d2adb9f3d21565bc5bbd39e762652e9ff4867f28df93aa9f8ce. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
@@ -121,7 +155,7 @@ const product: ToolProfileInput = {
 			"october3d-tools-astro-product-1205-p1"
 		],
 		"workingPressureBar": [
-			"october3d-tools-astro-product-1205-p1"
+			"review:2026-11-16-reviews:meuleuse-astro-pneumatic-1205:0"
 		],
 		"demandExplanation": [
 			"october3d-tools-astro-product-1205-p1"

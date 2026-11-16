@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/visseuse-sumake-st-4469.webp",
+		"src": "/images/products/visseuse-sumake-st-4469-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Sumake ST-4469",
 		"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "sumake-st-4469",
@@ -39,7 +39,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-4469. Consommation publiée, régime non précisé : 270 L/min à 6,2 bar. Consommation dans les unités du tableau : 270 L/min ; 9.5 cfm. Configuration complète publiée : ST-4469.",
+		"overview": "La ST-4469 est la visseuse à impacts Double Hammer à hexagone 1/4 pouce, 7 500 tr/min et 200 Nm maximum. La ST-4470A annonce le même maximum à 8 000 tr/min ; la ST-4468 est plus courte et limitée à 35 Nm. Le maximum n’est pas une consigne de serrage contrôlée. Les 270 L/min du tableau restent sans régime explicite et hors dimensionnement.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 12.",
 			"Consommation dans les unités du tableau : 270 L/min ; 9.5 cfm.",
@@ -99,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "review:2026-11-16-reviews:visseuse-sumake-st-4469:0",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
+			"sourceLabel": "Sumake, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La ST-4469 est la visseuse à impacts Double Hammer à hexagone 1/4 pouce, 7 500 tr/min et 200 Nm maximum. La ST-4470A annonce le même maximum à 8 000 tr/min ; la ST-4468 est plus courte et limitée à 35 Nm. Le maximum n’est pas une consigne de serrage contrôlée. Les 270 L/min du tableau restent sans régime explicite et hors dimensionnement. GET complet SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Pages PDF lues : 12."
 		}
 	],
 	"fieldSources": {

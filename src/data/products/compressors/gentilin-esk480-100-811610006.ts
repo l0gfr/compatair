@@ -22,13 +22,13 @@ const product: CompressorInput = {
 	"confidence": "A",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/gentilin-esk480-100-811610006.webp",
+		"src": "/images/products/gentilin-esk480-100-811610006-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Gentilin ESK480/100, référence 811610006",
-		"sourceUrl": "https://www.gentilinair.com/en/products/esk480-100-230-50",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://www.gentilinair.com/docs/esk660100en_1711032524.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Gentilin ESK480/100, référence 811610006 : cuve de 90 L, pression maximale publiée de 10 bar. Le point documenté le plus élevé en pression fournit 210 L/min à 8 bar.",
+		"overview": "L’ESK480/100 811610006 possède une cuve publiée de 90 L et mesure 103,5 × 54 × 75 cm. Le modèle ESK480/10 est plus court et ne stocke que 10 L ; tous deux publient 255 L/min à 5 bar et 210 à 8 bar. La fiche exacte indique 2,8 kW et Duty cycle S1 100%. La notice commune inclut bien les ESK480/100 et ESK660/100 : son nom de fichier ne suffit pas à exclure le premier.",
 		"verifiedFacts": [
 			"Débit restitué publié : 255 L/min à 5 bar ; 210 L/min à 8 bar.",
 			"Compresseur à pistons sans huile. Puissance moteur publiée : 2,8 kW.",
@@ -104,6 +104,26 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "La notice liée à cette fiche déclare la compression sans huile : Compressing air (no oil) to be used with suitable pneumatic utensils according to current legislation in force (E.g. blowing,"
+		},
+		{
+			"id": "review:2026-11-16-reviews:gentilin-esk480-100-811610006:0",
+			"sourceUrl": "https://www.gentilinair.com/docs/esk660100en_1711032524.pdf",
+			"sourceLabel": "Gentilin, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’ESK480/100 811610006 possède une cuve publiée de 90 L et mesure 103,5 × 54 × 75 cm. Le modèle ESK480/10 est plus court et ne stocke que 10 L ; tous deux publient 255 L/min à 5 bar et 210 à 8 bar. La fiche exacte indique 2,8 kW et Duty cycle S1 100%. La notice commune inclut bien les ESK480/100 et ESK660/100 : son nom de fichier ne suffit pas à exclure le premier. GET complet SHA-256 0fbfccc3fd9ef013a94acc6c500a67f29213bfba0ace1eebac1065f2ede995b3. Pages PDF lues : 12."
+		},
+		{
+			"id": "review:2026-11-16-reviews:gentilin-esk480-100-811610006:1",
+			"sourceUrl": "https://www.gentilinair.com/en/products/esk480-100-230-50",
+			"sourceLabel": "Gentilin, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’ESK480/100 811610006 possède une cuve publiée de 90 L et mesure 103,5 × 54 × 75 cm. Le modèle ESK480/10 est plus court et ne stocke que 10 L ; tous deux publient 255 L/min à 5 bar et 210 à 8 bar. La fiche exacte indique 2,8 kW et Duty cycle S1 100%. La notice commune inclut bien les ESK480/100 et ESK660/100 : son nom de fichier ne suffit pas à exclure le premier. GET complet SHA-256 9b6c98dda68986f4120ad6a2893583090b3a41ce8b83182b3aafe4c6e9c7e756. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

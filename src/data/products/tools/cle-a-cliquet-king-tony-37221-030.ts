@@ -16,10 +16,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La notice donne une consommation moyenne. Elle ne publie pas le débit maximal ou en charge de la référence ; la pression du tableau reste séparée du point de mesure de consommation.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-cliquet-king-tony-37221-030.webp",
+		"src": "/images/products/cle-a-cliquet-king-tony-37221-030-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : King Tony 37221-030",
 		"sourceUrl": "https://www.kingtony.com/upload/file/member/User-guide/Pneumatic/37221-030.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "king-tony-37221-030",
@@ -31,7 +31,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "King Tony 37221-030. La notice donne une consommation moyenne. Elle ne publie pas le débit maximal ou en charge de la référence ; la pression du tableau reste séparée du point de mesure de consommation. Fonction déclarée : Clé à cliquet pneumatique. Carré d’entraînement (pouces) : 1/4.",
+		"overview": "King Tony 37221-030 : cliquet carré 1/4 pouce à entrée BSPT, 250 tr/min et 41 Nm maximaux. La 37221-031 utilise NPT ; le modèle 37235 est plus court. La notice décrit les pièces du cliquet malgré un titre générique impact wrench ; aucun mécanisme à chocs n’est déduit de ce titre.",
 		"verifiedFacts": [
 			"Fonction déclarée : Clé à cliquet pneumatique.",
 			"Carré d’entraînement (pouces) : 1/4.",
@@ -43,7 +43,11 @@ const product: ToolProfileInput = {
 			"Diamètre intérieur du tuyau (pouces) : 3/8.",
 			"Consommation moyenne, colonne originale CFM : 2.8.",
 			"Consommation moyenne, colonne originale L/min : 79.",
-			"Capacité de boulon, champ fabricant (mm) : M6."
+			"Capacité de boulon, champ fabricant (mm) : M6.",
+			"Carré / entrée : 1/4 pouce / 1/4 BSPT.",
+			"Couple / vitesse : 41 Nm / 250 tr/min.",
+			"Longueur / masse : 205 mm / 0,67 kg.",
+			"Consommation moyenne : 2,8 CFM / 79 L/min."
 		],
 		"limitations": [
 			"La notice donne une consommation moyenne. Elle ne publie pas le débit maximal ou en charge de la référence ; la pression du tableau reste séparée du point de mesure de consommation.",
@@ -143,6 +147,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october3c-tools-kingtony-manual-000-p1"
 			]
+		},
+		{
+			"label": "Carré / entrée",
+			"value": "1/4 pouce / 1/4 BSPT",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-cliquet-king-tony-37221-030:0"
+			]
+		},
+		{
+			"label": "Couple / vitesse",
+			"value": "41 Nm / 250 tr/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-cliquet-king-tony-37221-030:0"
+			]
+		},
+		{
+			"label": "Longueur / masse",
+			"value": "205 mm / 0,67 kg",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-cliquet-king-tony-37221-030:0"
+			]
+		},
+		{
+			"label": "Consommation moyenne",
+			"value": "2,8 CFM / 79 L/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-cliquet-king-tony-37221-030:0"
+			]
 		}
 	],
 	"evidence": [
@@ -155,6 +187,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 4603b3265aebf3f3f1a6366c7bb8ad2219978a09291b5fbfbfdb773c8bd72a4f. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-cliquet-king-tony-37221-030:0",
+			"sourceUrl": "https://www.kingtony.com/upload/file/member/User-guide/Pneumatic/37221-030.pdf",
+			"sourceLabel": "King Tony, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "King Tony 37221-030 : cliquet carré 1/4 pouce à entrée BSPT, 250 tr/min et 41 Nm maximaux. La 37221-031 utilise NPT ; le modèle 37235 est plus court. La notice décrit les pièces du cliquet malgré un titre générique impact wrench ; aucun mécanisme à chocs n’est déduit de ce titre. GET complet SHA-256 4603b3265aebf3f3f1a6366c7bb8ad2219978a09291b5fbfbfdb773c8bd72a4f. Pages PDF lues : 1."
 		}
 	],
 	"fieldSources": {

@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/marteau-a-river-sumake-st-2401sl.webp",
+		"src": "/images/products/marteau-a-river-sumake-st-2401sl-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Sumake ST-2401SL",
 		"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "sumake-st-2401sl",
@@ -39,7 +39,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-2401SL. Consommation publiée, régime non précisé : 400 L/min à 6,2 bar. Consommation dans les unités du tableau : 400 L/min ; 14 cfm. Configuration complète publiée : ST-2401SL.",
+		"overview": "Le ST-2401SL est le marteau à river droit à emmanchement 0,401 pouce, course 35 mm et 2 850 coups/min. Le 2401 pistolet mesure 115 mm, contre 160 mm pour les versions droites S/SL ; le 2402SL augmente la course à 57,2 mm. La table ne chiffre pas de capacité de rivet pour la ligne 2401SL : aucune n’est déduite d’une autre ligne. Les 400 L/min restent documentaires.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 57.",
 			"Consommation dans les unités du tableau : 400 L/min ; 14 cfm.",
@@ -99,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "review:2026-11-16-reviews:marteau-a-river-sumake-st-2401sl:0",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
+			"sourceLabel": "Sumake, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le ST-2401SL est le marteau à river droit à emmanchement 0,401 pouce, course 35 mm et 2 850 coups/min. Le 2401 pistolet mesure 115 mm, contre 160 mm pour les versions droites S/SL ; le 2402SL augmente la course à 57,2 mm. La table ne chiffre pas de capacité de rivet pour la ligne 2401SL : aucune n’est déduite d’une autre ligne. Les 400 L/min restent documentaires. GET complet SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Pages PDF lues : 57."
 		}
 	],
 	"fieldSources": {

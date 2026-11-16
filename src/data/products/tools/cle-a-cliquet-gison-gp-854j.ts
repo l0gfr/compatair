@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-cliquet-gison-gp-854j.webp",
+		"src": "/images/products/cle-a-cliquet-gison-gp-854j-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : GISON GP-854J",
 		"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "gison-gp-854j",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-854J. Consommation de régime non précisé : 540 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 0.60 kg. Longueur : 210 mm.",
+		"overview": "Le GP-854J est un cliquet traversant de 210 mm et 0,60 kg ; le GP-854J2 raccourcit le corps à 167 mm et 0,50 kg. Leur couple maximal est 41 Nm, contre 40 Nm pour le GP-854 standard à carré 1/4 pouce. Le choix dépend du passage de tige et des embouts fournis. Les 0,54 m³/min restent documentaires, sans régime de consommation explicite.",
 		"verifiedFacts": [
 			"Masse : 0.60 kg.",
 			"Longueur : 210 mm.",
@@ -104,6 +104,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-cliquet-gison-gp-854j:0",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
+			"sourceLabel": "GISON, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le GP-854J est un cliquet traversant de 210 mm et 0,60 kg ; le GP-854J2 raccourcit le corps à 167 mm et 0,50 kg. Leur couple maximal est 41 Nm, contre 40 Nm pour le GP-854 standard à carré 1/4 pouce. Le choix dépend du passage de tige et des embouts fournis. Les 0,54 m³/min restent documentaires, sans régime de consommation explicite. GET complet SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Pages PDF lues : 22."
 		}
 	],
 	"fieldSources": {

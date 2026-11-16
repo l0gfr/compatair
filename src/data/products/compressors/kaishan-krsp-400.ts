@@ -29,13 +29,13 @@ const product: CompressorInput = {
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/kaishan-krsp-400.svg",
+    "src": "/images/products/kaishan-krsp-400-technical-20261116-reviews.svg",
     "alt": "Repères techniques : Kaishan KRSP-400",
     "sourceUrl": "https://www.kaishan.com.au/wp-content/uploads/2024/07/KRSP-2023-Digital.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "editorial": {
-    "overview": "Kaishan KRSP-400. 74 300 L/min déclarés à 8 bar. Configuration constructeur : KRSP-400-8.",
+    "overview": "Le KRSP400-8 50 Hz est déclaré à 74,3 m³/min sous 8 bar à pleine charge ; 8,5 bar est sa pression maximale. Le KRSP45-8 fournit 8,5 m³/min au même point pour 45 kW, contre 400 kW ici. Les deux colonnes de pression sont donc conservées séparément. Aucun débit à 8,5 bar, volume de cuve ou taux de marche n’est inventé.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 8,5 bar.",
       "FAD sous pression identifié séparément des valeurs d’aspiration : 74 300 L/min déclarés à 8 bar."
@@ -101,6 +101,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-05",
       "confidence": "B",
       "notes": "SHA-256 e6c541d4660dda7212e2455f09b4368e93fedc81fa6b701264b32db0f86dac60 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-reviews:kaishan-krsp-400:0",
+      "sourceUrl": "https://www.kaishan.com.au/wp-content/uploads/2024/07/KRSP-2023-Digital.pdf",
+      "sourceLabel": "Kaishan, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "Le KRSP400-8 50 Hz est déclaré à 74,3 m³/min sous 8 bar à pleine charge ; 8,5 bar est sa pression maximale. Le KRSP45-8 fournit 8,5 m³/min au même point pour 45 kW, contre 400 kW ici. Les deux colonnes de pression sont donc conservées séparément. Aucun débit à 8,5 bar, volume de cuve ou taux de marche n’est inventé. GET complet SHA-256 e6c541d4660dda7212e2455f09b4368e93fedc81fa6b701264b32db0f86dac60. Pages PDF lues : 5."
     }
   ],
   "fieldSources": {

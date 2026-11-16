@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "free-speed",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-bosch-0-607-450-618-0607450618.webp",
+		"src": "/images/products/cle-a-chocs-bosch-0-607-450-618-0607450618-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Bosch 0 607 450 618 (réf. 0607450618)",
 		"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "bosch-0-607-450-618",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Bosch 0 607 450 618 (réf. 0607450618). Consommation à vide : 900 L/min à 6,3 bar. Vitesse à vide : 7000 tr/min. Masse : 2.6 kg.",
+		"overview": "La 0 607 450 618 est la clé à chocs 1/2 pouce à broche prolongée : 2,6 kg et 7 000 tr/min. La 615 utilise une broche standard, 2,4 kg et 550 Nm maximum, contre 500 Nm pour la 618 ; la plage recommandée de la 618 reste 150–300 Nm. Les 15 L/s sont relevés à vide à 6,3 bar avec quatre mètres de tuyau. Les 900 L/min restent hors calcul du besoin en serrage.",
 		"verifiedFacts": [
 			"Vitesse à vide : 7000 tr/min.",
 			"Masse : 2.6 kg."
@@ -99,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-chocs-bosch-0-607-450-618-0607450618:0",
+			"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf",
+			"sourceLabel": "Bosch, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 0 607 450 618 est la clé à chocs 1/2 pouce à broche prolongée : 2,6 kg et 7 000 tr/min. La 615 utilise une broche standard, 2,4 kg et 550 Nm maximum, contre 500 Nm pour la 618 ; la plage recommandée de la 618 reste 150–300 Nm. Les 15 L/s sont relevés à vide à 6,3 bar avec quatre mètres de tuyau. Les 900 L/min restent hors calcul du besoin en serrage. GET complet SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. Pages PDF lues : 68, 4."
 		}
 	],
 	"fieldSources": {

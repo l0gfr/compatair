@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Le tableau établit les caractéristiques individuelles. La consommation normale n’est pas explicitement rattachée à un régime en charge et à une pression de mesure.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-bande-kuken-kbs-20t.webp",
+		"src": "/images/products/ponceuse-bande-kuken-kbs-20t-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : KUKEN KBS-20T",
 		"sourceUrl": "https://www.kuken.co.jp/en/catalogue/pdf/best_selection.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "kuken-kbs-20t",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "KUKEN KBS-20T. Le tableau établit les caractéristiques individuelles. La consommation normale n’est pas explicitement rattachée à un régime en charge et à une pression de mesure. Masse publiée : 1.6 kg (3.5 lb). Longueur publiée : 427.0 mm.",
+		"overview": "La KBS-20T reçoit une bande de 20 × 520 mm, contre 10 ou 12 × 330 mm pour les KBS-10A et KBS-12. Elle annonce 14 000 tr/min, 427 mm et 1,6 kg : le bras et la largeur de bande changent l’accès à la pièce. Les 0,62 m³/min figurent dans un tableau à 0,62 MPa, sans régime de consommation. Le conflit de vitesse de la KBS-12 reste propre à cette voisine et n’est pas transposé ici.",
 		"verifiedFacts": [
 			"Masse publiée : 1.6 kg (3.5 lb).",
 			"Longueur publiée : 427.0 mm."
@@ -74,6 +74,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 0da76488e568242877887f713ecd81203eaa9f2322c20eb65648d25bb7e71cc7. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-bande-kuken-kbs-20t:0",
+			"sourceUrl": "https://www.kuken.co.jp/en/catalogue/pdf/best_selection.pdf",
+			"sourceLabel": "KUKEN, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La KBS-20T reçoit une bande de 20 × 520 mm, contre 10 ou 12 × 330 mm pour les KBS-10A et KBS-12. Elle annonce 14 000 tr/min, 427 mm et 1,6 kg : le bras et la largeur de bande changent l’accès à la pièce. Les 0,62 m³/min figurent dans un tableau à 0,62 MPa, sans régime de consommation. Le conflit de vitesse de la KBS-12 reste propre à cette voisine et n’est pas transposé ici. GET complet SHA-256 0da76488e568242877887f713ecd81203eaa9f2322c20eb65648d25bb7e71cc7. Pages PDF lues : 25."
 		}
 	],
 	"fieldSources": {

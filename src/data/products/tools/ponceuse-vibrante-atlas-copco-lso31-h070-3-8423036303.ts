@@ -22,10 +22,10 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-vibrante-atlas-copco-lso31-h070-3-8423036303.webp",
+		"src": "/images/products/ponceuse-vibrante-atlas-copco-lso31-h070-3-8423036303-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Atlas Copco LSO31 H070-3 (réf. 8423036303)",
 		"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/itba/catalogs/Atlas%20Copco%20Industrial%20Tools%20and%20Solutions.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "atlas-copco-lso31-h070-3",
@@ -37,61 +37,71 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Atlas Copco LSO31 H070-3 (réf. 8423036303). Consommation maximale : 453,07 L/min à 6,3 bar. Vitesse à vide : 7000 tr/min. Plateau : 93x170 mm.",
+		"overview": "Atlas Copco LSO31 H070-3, code 8423 0363 03 : ponceuse orbitale à plateau 93 × 170 mm, orbite 5 mm et aspiration autonome avec sac. La LSO30 H070-3 est sans aspiration ; la LSO32 H070-3 se raccorde à une aspiration centrale. Les 16 cfm sont explicitement mesurés à vide et restent hors du dimensionnement en charge.",
 		"verifiedFacts": [
 			"Vitesse à vide : 7000 tr/min.",
 			"Plateau : 93x170 mm.",
 			"Orbite : 5 mm.",
-			"Longueur : 310 mm."
+			"Longueur : 310 mm.",
+			"Plateau : 93 × 170 mm.",
+			"Aspiration : Autonome, sac inclus.",
+			"Vitesse à vide : 7 000 tr/min.",
+			"Consommation à vide, hors calcul : 16 cfm à 6,3 bar ; conversion documentaire 453,07 L/min."
 		],
 		"limitations": [
-			"La consommation maximale est déclarée dans les conventions du fabricant ; les exceptions explicites du modèle restent prioritaires.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée.",
+			"Consommation à vide explicitement publiée, hors dimensionnement en charge."
 		]
 	},
 	"specifications": [
-		{
-			"label": "Vitesse à vide",
-			"value": "7000 tr/min",
-			"evidenceIds": [
-				"october2-tools-atlas-industrial-p220"
-			]
-		},
-		{
-			"label": "Plateau",
-			"value": "93x170 mm",
-			"evidenceIds": [
-				"october2-tools-atlas-industrial-p220"
-			]
-		},
-		{
-			"label": "Orbite",
-			"value": "5 mm",
-			"evidenceIds": [
-				"october2-tools-atlas-industrial-p220"
-			]
-		},
-		{
-			"label": "Longueur",
-			"value": "310 mm",
-			"evidenceIds": [
-				"october2-tools-atlas-industrial-p220"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "6.3 bar : point de consommation maximale déclaré dans les conventions fabricant, page PDF 4, sauf exception explicite.",
-			"evidenceIds": [
-				"october2-tools-atlas-industrial-p220",
-				"october2-tools-atlas-industrial-p4"
-			]
-		},
 		{
 			"label": "Consommation dans son unité originale",
 			"value": "16 cfm",
 			"evidenceIds": [
 				"october2-tools-atlas-industrial-p220",
 				"october2-tools-atlas-industrial-p4"
+			]
+		},
+		{
+			"label": "Plateau",
+			"value": "93 × 170 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-vibrante-atlas-copco-lso31-h070-3-8423036303:0"
+			]
+		},
+		{
+			"label": "Orbite",
+			"value": "5 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-vibrante-atlas-copco-lso31-h070-3-8423036303:0"
+			]
+		},
+		{
+			"label": "Aspiration",
+			"value": "Autonome, sac inclus",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-vibrante-atlas-copco-lso31-h070-3-8423036303:0"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "7 000 tr/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-vibrante-atlas-copco-lso31-h070-3-8423036303:0"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "310 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-vibrante-atlas-copco-lso31-h070-3-8423036303:0"
+			]
+		},
+		{
+			"label": "Consommation à vide, hors calcul",
+			"value": "16 cfm à 6,3 bar ; conversion documentaire 453,07 L/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-vibrante-atlas-copco-lso31-h070-3-8423036303:0"
 			]
 		}
 	],
@@ -115,6 +125,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 03eb69cef54f9a52be2a2bd73342620448907b5706ed365db2b3c8a4ca9d3617. Document complémentaire de la référence exacte, sans essai CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-vibrante-atlas-copco-lso31-h070-3-8423036303:0",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/local-countries/united-states/documents/itba/catalogs/Atlas%20Copco%20Industrial%20Tools%20and%20Solutions.pdf",
+			"sourceLabel": "Atlas Copco, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Atlas Copco LSO31 H070-3, code 8423 0363 03 : ponceuse orbitale à plateau 93 × 170 mm, orbite 5 mm et aspiration autonome avec sac. La LSO30 H070-3 est sans aspiration ; la LSO32 H070-3 se raccorde à une aspiration centrale. Les 16 cfm sont explicitement mesurés à vide et restent hors du dimensionnement en charge. GET complet SHA-256 03eb69cef54f9a52be2a2bd73342620448907b5706ed365db2b3c8a4ca9d3617. Pages PDF lues : 220, 4."
 		}
 	],
 	"fieldSources": {
@@ -128,11 +148,15 @@ const product: ToolProfileInput = {
 		"airflowLpm": [
 			"october2-tools-atlas-industrial-p220",
 			"october2-tools-atlas-industrial-p4"
+		],
+		"airflowBasis": [
+			"review:2026-11-16-reviews:ponceuse-vibrante-atlas-copco-lso31-h070-3-8423036303:0"
 		]
 	},
 	"notes": [
-		"Consommation maximale : 453,07 L/min à 6,3 bar."
-	]
+		"Consommation à vide explicitement publiée, hors dimensionnement en charge."
+	],
+	"airflowBasis": "free-speed"
 };
 
 export default product;

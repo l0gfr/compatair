@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-beta-tools-1933-019330001.svg",
+		"src": "/images/products/meuleuse-beta-tools-1933-019330001-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Beta Tools 1933 (réf. 019330001)",
 		"sourceUrl": "https://www.beta-tools.com/files/2026/Action_EXPORT_2026.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "beta-tools-1933",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Beta Tools 1933 (réf. 019330001). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "La Beta 1933 est une meuleuse droite à pinces 3–6 mm, 25 000 tr/min et 0,20 kW. La 1933L allonge l’accès ; la 1936/4A est une meuleuse d’angle pour disque 115 mm, à 11 000 tr/min. L’accessoire et sa vitesse admissible déterminent le choix. Les 230 L/min sont une consommation moyenne, distincte de la consigne de service 6,2 bar, et restent hors dimensionnement continu.",
 		"verifiedFacts": [
 			"Vitesse à vide : 25.000 rpm.",
 			"Capacité de pince : 3-6 mm.",
@@ -120,6 +120,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 db4a2bce6f421e1aa42ea2eeb8274541ffcd4965b052e6328696a9d61735e85b. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-beta-tools-1933-019330001:0",
+			"sourceUrl": "https://www.beta-tools.com/files/2026/Action_EXPORT_2026.pdf",
+			"sourceLabel": "Beta Tools, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La Beta 1933 est une meuleuse droite à pinces 3–6 mm, 25 000 tr/min et 0,20 kW. La 1933L allonge l’accès ; la 1936/4A est une meuleuse d’angle pour disque 115 mm, à 11 000 tr/min. L’accessoire et sa vitesse admissible déterminent le choix. Les 230 L/min sont une consommation moyenne, distincte de la consigne de service 6,2 bar, et restent hors dimensionnement continu. GET complet SHA-256 db4a2bce6f421e1aa42ea2eeb8274541ffcd4965b052e6328696a9d61735e85b. Pages PDF lues : 94."
 		}
 	],
 	"fieldSources": {

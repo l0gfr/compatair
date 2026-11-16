@@ -30,10 +30,10 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/ktc-kme-c-4-270.svg",
+		"src": "/images/products/ktc-kme-c-4-270-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : KTC KME C 4 270",
 		"sourceUrl": "https://www.ktc-air.com/uploaded_files/attachments/202511171763376673/ktc_kme_c_plus_4_55_en.pdf?track_download=true",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -80,7 +80,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "KTC KME C 4 270. 490 L/min déclarés à 10 bar. on tank ; cuve 270 L.",
+		"overview": "Le KME C4 270 est le groupe à vis 4 kW sur réservoir 270 L sans le sécheur de la variante E. Le tableau 50 Hz donne 490 L/min à 10 bar, 550 à 8 bar et 381 à 13 bar pour cette puissance. Le KME C4 E est un montage au sol avec sécheur ; le 270E ajoute traitement et cuve. La pression et l’équipement doivent être sélectionnés ensemble, sans ajouter un taux de marche absent.",
 		"verifiedFacts": [
 			"Configuration de pression documentée : 10 bar.",
 			"Cuve de stockage documentée : 270 L.",
@@ -113,6 +113,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-04",
 			"confidence": "B",
 			"notes": "SHA-256 90262fa5be288a704088e70f800049ab76cec4331e237b1b7d65d338ea95d4ac de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ktc-kme-c-4-270:0",
+			"sourceUrl": "https://www.ktc-air.com/uploaded_files/attachments/202511171763376673/ktc_kme_c_plus_4_55_en.pdf?track_download=true",
+			"sourceLabel": "KTC, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le KME C4 270 est le groupe à vis 4 kW sur réservoir 270 L sans le sécheur de la variante E. Le tableau 50 Hz donne 490 L/min à 10 bar, 550 à 8 bar et 381 à 13 bar pour cette puissance. Le KME C4 E est un montage au sol avec sécheur ; le 270E ajoute traitement et cuve. La pression et l’équipement doivent être sélectionnés ensemble, sans ajouter un taux de marche absent. GET complet SHA-256 90262fa5be288a704088e70f800049ab76cec4331e237b1b7d65d338ea95d4ac. Pages PDF lues : 4, 2."
 		}
 	],
 	"fieldSources": {

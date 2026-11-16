@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-orbitale-astro-pneumatic-314.svg",
+		"src": "/images/products/ponceuse-orbitale-astro-pneumatic-314-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Astro Pneumatic 314",
 		"sourceUrl": "https://www.astrotools.com/product/onyx-jitterbug-random-orbit-air-palm-sander/",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "astro-pneumatic-314",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Astro Pneumatic 314. Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "La 314 est une ponceuse à semelle 75 × 100 mm et 12 000 tr/min. La fiche annonce une orbite de 3 mm mais décrit aussi une course de 3/32 pouce, environ 2,38 mm : cette divergence reste à confirmer. La 321 est un format plus petit à 16 000 tr/min. La fiche sépare 4,7 cfm moyens et 19 cfm dits « actual », sans régime de mesure défini ; aucun des deux n’est utilisé comme débit en charge.",
 		"verifiedFacts": [
 			"Dimension du plateau : 3\" x 4\" (75 x 100 mm).",
 			"Orbite : 3.0 mm.",
@@ -41,7 +41,8 @@ const product: ToolProfileInput = {
 			"Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 			"La consommation moyenne ou sans régime publié reste hors calcul ; aucun débit en charge à pression de mesure connue n’est extrapolé.",
 			"Une pression recommandée ou de service n’est pas un point de mesure de la consommation.",
-			"Données déclarées dans les documents identifiés ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"Données déclarées dans les documents identifiés ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué.",
+			"La 314 est une ponceuse à semelle 75 × 100 mm et 12 000 tr/min. La fiche annonce une orbite de 3 mm mais décrit aussi une course de 3/32 pouce, environ 2,38 mm : cette divergence reste à confirmer. La 321 est un format plus petit à 16 000 tr/min. La fiche sépare 4,7 cfm moyens et 19 cfm dits « actual », sans régime de mesure défini ; aucun des deux n’est utilisé comme débit en charge."
 		]
 	},
 	"specifications": [
@@ -105,6 +106,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 0df2f89d0496b1b121f8be0c259003da3796202fb6e558b17da7927b642fe969. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-orbitale-astro-pneumatic-314:0",
+			"sourceUrl": "https://www.astrotools.com/product/onyx-jitterbug-random-orbit-air-palm-sander/",
+			"sourceLabel": "Astro Pneumatic, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 314 est une ponceuse à semelle 75 × 100 mm et 12 000 tr/min. La fiche annonce une orbite de 3 mm mais décrit aussi une course de 3/32 pouce, environ 2,38 mm : cette divergence reste à confirmer. La 321 est un format plus petit à 16 000 tr/min. La fiche sépare 4,7 cfm moyens et 19 cfm dits « actual », sans régime de mesure défini ; aucun des deux n’est utilisé comme débit en charge. GET complet SHA-256 fe698dcda7f69f883e6fb3c71707a19b832697ed848fa913eff5c1955d998338. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

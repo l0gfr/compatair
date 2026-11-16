@@ -10,18 +10,14 @@ const product: ToolProfileInput = {
 	"model": "10L1001-3608",
 	"mpn": "10L1001-3608",
 	"demandModel": "variable-volume",
-	"workingPressureBar": {
-		"min": 6.2,
-		"typical": 6.2,
-		"max": 6.2
-	},
-	"demandExplanation": "La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner.",
+	"workingPressureBar": {},
+	"demandExplanation": "La consommation d’air manque dans le tableau de la référence. Les performances mécaniques à 90 psi / 620 kPa ne permettent pas de calculer son besoin en air.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-dotco-10l1001-3608.webp",
+		"src": "/images/products/meuleuse-dotco-10l1001-3608-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Dotco 10L1001-3608",
 		"sourceUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=216",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "dotco-10l1001-3608",
@@ -33,59 +29,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Dotco 10L1001-3608. La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner. Terminaison publiée : 1/8 in. Échappement : Avant.",
+		"overview": "La 10L1001-3608 reçoit une pince de 1/8 pouce et un échappement avant à 34 000 tr/min. La 10L1001-36 accepte 1/4 pouce ; la 10L1000-3608 garde 1/8 pouce à 30 000 tr/min. Le suffixe 08 ne désigne pas 8 mm.",
 		"verifiedFacts": [
-			"Terminaison publiée : 1/8 in.",
+			"Pince standard : 1/8 pouce.",
+			"Vitesse à vide : 34 000 tr/min.",
 			"Échappement : Avant.",
-			"Terminaison publiée : 1/4 in.",
-			"Vitesse à vide : 34000 tr/min."
+			"Puissance de famille : 0,3 hp ; 0,22 kW.",
+			"Longueur et masse de cette édition : 4,6 pouces ; 0,66 lb.",
+			"Consommation : Absente du tableau ; demande indéterminée."
 		],
 		"limitations": [
-			"La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"La consommation d’air manque dans le tableau de la référence. Les performances mécaniques à 90 psi / 620 kPa ne permettent pas de calculer son besoin en air.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Terminaison publiée",
-			"value": "1/8 in",
+			"label": "Pince standard",
+			"value": "1/8 pouce",
 			"evidenceIds": [
-				"october-cleco-p216-p216"
+				"review:2026-11-16-reviews:meuleuse-dotco-10l1001-3608:0"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "34 000 tr/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-dotco-10l1001-3608:0"
 			]
 		},
 		{
 			"label": "Échappement",
 			"value": "Avant",
 			"evidenceIds": [
-				"october-cleco-p216-p216"
+				"review:2026-11-16-reviews:meuleuse-dotco-10l1001-3608:0"
 			]
 		},
 		{
-			"label": "Terminaison publiée",
-			"value": "1/4 in",
+			"label": "Puissance de famille",
+			"value": "0,3 hp ; 0,22 kW",
 			"evidenceIds": [
-				"october-cleco-p216-p216"
+				"review:2026-11-16-reviews:meuleuse-dotco-10l1001-3608:0"
 			]
 		},
 		{
-			"label": "Vitesse à vide",
-			"value": "34000 tr/min",
+			"label": "Longueur et masse de cette édition",
+			"value": "4,6 pouces ; 0,66 lb",
 			"evidenceIds": [
-				"october-cleco-p216-p216"
+				"review:2026-11-16-reviews:meuleuse-dotco-10l1001-3608:0"
 			]
 		},
 		{
-			"label": "Localisation documentaire",
-			"value": "Cleco, catalogue SP-1081, page 216",
+			"label": "Consommation",
+			"value": "Absente du tableau ; demande indéterminée",
 			"evidenceIds": [
-				"october-cleco-p216-p216"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "All tools performance rated @ 90 psi / 620 kPa air pressure.",
-			"evidenceIds": [
-				"october-cleco-p216-p216"
+				"review:2026-11-16-reviews:meuleuse-dotco-10l1001-3608:0"
 			]
 		}
 	],
@@ -99,21 +97,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 dd695b3d5449614c24c96b193e71d25636915f9979aee32ab89dfb843f20f5d6. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-dotco-10l1001-3608:0",
+			"sourceUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=216",
+			"sourceLabel": "Dotco, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 10L1001-3608 reçoit une pince de 1/8 pouce et un échappement avant à 34 000 tr/min. La 10L1001-36 accepte 1/4 pouce ; la 10L1000-3608 garde 1/8 pouce à 30 000 tr/min. Le suffixe 08 ne désigne pas 8 mm. GET complet SHA-256 8d7e4ee130bef4bd13331d6393e04f3928bb26d43548fdd53fdb52d771f32a78. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october-cleco-p216-p216"
-		],
-		"workingPressureBar": [
-			"october-cleco-p216-p216"
+			"review:2026-11-16-reviews:meuleuse-dotco-10l1001-3608:0"
 		],
 		"demandExplanation": [
-			"october-cleco-p216-p216"
+			"review:2026-11-16-reviews:meuleuse-dotco-10l1001-3608:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-reviews:meuleuse-dotco-10l1001-3608:0"
 		]
 	},
 	"notes": [
-		"La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner."
+		"La consommation d’air manque dans le tableau de la référence. Les performances mécaniques à 90 psi / 620 kPa ne permettent pas de calculer son besoin en air."
 	]
 };
 

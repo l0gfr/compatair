@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/sioux-ag22d847.webp",
+		"src": "/images/products/sioux-ag22d847-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Sioux AG22D847, référence AG22D847",
-		"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=54",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Sioux AG22D847, référence AG22D847. Le dimensionnement utilise 1 680 L/min à 6,2 bar, selon les régimes publiés par le fabricant. Vitesse à vide : 8400 tr/min. Diamètre de meule : 175 mm. Masse : 3.2 kg.",
+		"overview": "L’AG22D847 reçoit une meule type 27 de 175 mm à 8 400 tr/min, avec un régulateur de vitesse et 1,6 kW. L’AG16D106 utilise 150 mm à 10 000 tr/min et 1,2 kW. Le tableau distingue 28 L/s en charge et 21 L/s à vide, performances données à 6,2 bar : le moteur retient les 1 680 L/min en charge. Le diamètre, la vitesse admissible et le filetage 5/8-11 restent à vérifier ensemble pour l’accessoire.",
 		"verifiedFacts": [
 			"Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur.",
 			"Consommation publiée : 28.0 L/s (60.0 scfm) ; 21.0 L/s (45.0 scfm). Le guide du catalogue (page PDF 10) définit ces débits comme de l’air détendu à pression atmosphérique et des consommations maximales, sauf indication contraire. La plus grande valeur publiée est retenue : 1680 L/min (L/s × 60).",
@@ -106,6 +106,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur."
+		},
+		{
+			"id": "review:2026-11-16-reviews:sioux-ag22d847:0",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx",
+			"sourceLabel": "Sioux, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’AG22D847 reçoit une meule type 27 de 175 mm à 8 400 tr/min, avec un régulateur de vitesse et 1,6 kW. L’AG16D106 utilise 150 mm à 10 000 tr/min et 1,2 kW. Le tableau distingue 28 L/s en charge et 21 L/s à vide, performances données à 6,2 bar : le moteur retient les 1 680 L/min en charge. Le diamètre, la vitesse admissible et le filetage 5/8-11 restent à vérifier ensemble pour l’accessoire. GET complet SHA-256 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8. Pages PDF lues : 54."
 		}
 	],
 	"fieldSources": {

@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "average",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-rotative-uryu-usg-5vla-55922.webp",
+		"src": "/images/products/ponceuse-rotative-uryu-usg-5vla-55922-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : URYU USG-5VLA (réf. 55922)",
 		"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P57_61.pdf",
-		"sourceLabel": "Carte technique CompatAir, établie à partir du document constructeur"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "uryu-usg-5vla",
@@ -37,11 +37,18 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU USG-5VLA, code 55922. Le tableau publie une consommation moyenne de 0,85 m³/min, soit 850 L/min. Pression de référence retenue : 6 bar.",
+		"overview": "USG-5VLA, code 55922 : meuleuse verticale à montage IN, capacité de meule 125 mm, 10 500 tr/min et 375 W. La USG-4VL reçoit 100 mm à 12 000 tr/min pour 435 W ; la USG-45P est une autre configuration de 125 mm, 225 W et 0,87 kg. La moyenne de 850 L/min n’établit pas un maximum en charge.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 55922, page PDF 3.",
 			"Consommation moyenne publiée : 850 L/min après conversion de l’unité originale.",
-			"SPECIFICATIONS                                        Recommended Air Pressure : 0.6MPa (85psi)"
+			"SPECIFICATIONS                                        Recommended Air Pressure : 0.6MPa (85psi)",
+			"Capacité de meule : 125 mm.",
+			"Vitesse à vide maximale : 10 500 tr/min.",
+			"Puissance publiée : 375 W.",
+			"Longueur : 220 mm.",
+			"Hauteur : 97 mm.",
+			"Masse hors meule : 1,48 kg.",
+			"Montage : IN, broche spéciale URYU avec petite bride."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
@@ -76,6 +83,55 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-uryu-p57-61"
 			]
+		},
+		{
+			"label": "Capacité de meule",
+			"value": "125 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-rotative-uryu-usg-5vla-55922:0"
+			]
+		},
+		{
+			"label": "Vitesse à vide maximale",
+			"value": "10 500 tr/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-rotative-uryu-usg-5vla-55922:0"
+			]
+		},
+		{
+			"label": "Puissance publiée",
+			"value": "375 W",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-rotative-uryu-usg-5vla-55922:0"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "220 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-rotative-uryu-usg-5vla-55922:0"
+			]
+		},
+		{
+			"label": "Hauteur",
+			"value": "97 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-rotative-uryu-usg-5vla-55922:0"
+			]
+		},
+		{
+			"label": "Masse hors meule",
+			"value": "1,48 kg",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-rotative-uryu-usg-5vla-55922:0"
+			]
+		},
+		{
+			"label": "Montage",
+			"value": "IN, broche spéciale URYU avec petite bride",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-rotative-uryu-usg-5vla-55922:0"
+			]
 		}
 	],
 	"evidence": [
@@ -88,6 +144,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 f00ce52018de3cd2c8f093e9762bb4f6c63230f68c6a1b04217089408fe89245. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-rotative-uryu-usg-5vla-55922:0",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P57_61.pdf",
+			"sourceLabel": "URYU, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "USG-5VLA, code 55922 : meuleuse verticale à montage IN, capacité de meule 125 mm, 10 500 tr/min et 375 W. La USG-4VL reçoit 100 mm à 12 000 tr/min pour 435 W ; la USG-45P est une autre configuration de 125 mm, 225 W et 0,87 kg. La moyenne de 850 L/min n’établit pas un maximum en charge. GET complet SHA-256 f00ce52018de3cd2c8f093e9762bb4f6c63230f68c6a1b04217089408fe89245. Pages PDF lues : 3."
 		}
 	],
 	"fieldSources": {

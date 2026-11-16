@@ -28,13 +28,13 @@ const product: CompressorInput = {
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/mauguiere-mavd-521.svg",
+    "src": "/images/products/mauguiere-mavd-521-technical-20261116-reviews.svg",
     "alt": "Repères techniques : Mauguière MAVD 521",
     "sourceUrl": "https://www.compresseurs-mauguiere.com/content/dam/brands/ceccatocluster/maugui%C3%A8re/screw-compressors/variable-speed/mavd-v-421---621/mavd-v-421---621---leaflet/MAUGUIERE_MAVD_MAVDV_421-621_6999460550_FR_LR.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "editorial": {
-    "overview": "Mauguière MAVD 521. 6 600 L/min déclarés à 7 bar. Configuration constructeur : MAVD 521.",
+    "overview": "Le MAVD521 fixe 37 kW publie 396 m³/h FAD à 7 bar, pour une pression maximale 7,5 bar. Les variantes maximales 8,5 et 10 bar sont mesurées à 8 et 9,5 bar ; le MAVD421 utilise 30 kW. Le PDF actuel a déplacé la table à la page 10 : l’ancienne page 5 ne contient plus cette ligne. Le point 6 600 L/min à 7 bar est conservé avec la nouvelle preuve exacte.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 7,5 bar.",
       "FAD sous pression identifié séparément des valeurs d’aspiration : 6 600 L/min déclarés à 7 bar."
@@ -102,6 +102,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-05",
       "confidence": "B",
       "notes": "SHA-256 29520acfdec144eec75a1acd2f89dc9caa7f24ed966a1943ef01f54e70e27721 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-reviews:mauguiere-mavd-521:0",
+      "sourceUrl": "https://www.compresseurs-mauguiere.com/content/dam/brands/ceccatocluster/maugui%C3%A8re/screw-compressors/variable-speed/mavd-v-421---621/mavd-v-421---621---leaflet/MAUGUIERE_MAVD_MAVDV_421-621_6999460550_FR_LR.pdf",
+      "sourceLabel": "Mauguière, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "Le MAVD521 fixe 37 kW publie 396 m³/h FAD à 7 bar, pour une pression maximale 7,5 bar. Les variantes maximales 8,5 et 10 bar sont mesurées à 8 et 9,5 bar ; le MAVD421 utilise 30 kW. Le PDF actuel a déplacé la table à la page 10 : l’ancienne page 5 ne contient plus cette ligne. Le point 6 600 L/min à 7 bar est conservé avec la nouvelle preuve exacte. GET complet SHA-256 5c2071da9498142c2603e21dc95945f5b176d60b784ef4d7a965150a79224f5d. Pages PDF lues : 10."
     }
   ],
   "fieldSources": {

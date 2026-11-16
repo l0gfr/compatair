@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/marteau-a-river-puma-at-2210.webp",
+		"src": "/images/products/marteau-a-river-puma-at-2210-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : PUMA AT-2210",
 		"sourceUrl": "https://www.pumaair.com/product-Riveting-Hammer-straight-RivetingHammer-straight.html",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "puma-at-2210",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "PUMA AT-2210. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Chisel shank / inch : 0.315. Chisel shank / mm : 8.0.",
+		"overview": "L’AT-2210 est un marteau à river droit de 0,4 kg, course de 31 mm et 5 400 coups/min. Les AT-2214 et 2215 changent l’emmanchement et la course pour d’autres capacités. Le tableau juxtapose 5,9 pouces et 165 mm de longueur : ces valeurs divergent et restent à confirmer. Les 85 L/min moyens restent documentaires, avec un calcul non conclusif.",
 		"verifiedFacts": [
 			"Chisel shank / inch : 0.315.",
 			"Chisel shank / mm : 8.0.",
@@ -191,6 +191,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : e5c24ff3a90f246f1b512b7e2255ad973b1a3a03a5d2d545c2b7c1ac7fdba4d6. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:marteau-a-river-puma-at-2210:0",
+			"sourceUrl": "https://www.pumaair.com/product-Riveting-Hammer-straight-RivetingHammer-straight.html",
+			"sourceLabel": "PUMA, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’AT-2210 est un marteau à river droit de 0,4 kg, course de 31 mm et 5 400 coups/min. Les AT-2214 et 2215 changent l’emmanchement et la course pour d’autres capacités. Le tableau juxtapose 5,9 pouces et 165 mm de longueur : ces valeurs divergent et restent à confirmer. Les 85 L/min moyens restent documentaires, avec un calcul non conclusif. GET complet SHA-256 a352c4fa7391ce66ec0cb8a2af672675a8f2f22e4ec73064ab2237889018e31e. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

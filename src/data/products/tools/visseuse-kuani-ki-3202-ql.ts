@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Consommation moyenne publiée sans facteur de marche ni point de pression de mesure : aucun débit en charge déterministe ne peut être retenu.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/visseuse-kuani-ki-3202-ql.webp",
+		"src": "/images/products/visseuse-kuani-ki-3202-ql-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : KUANI KI-3202-QL",
 		"sourceUrl": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "kuani-ki-3202-ql",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "KUANI KI-3202-QL. Consommation moyenne publiée sans facteur de marche ni point de pression de mesure : aucun débit en charge déterministe ne peut être retenu. Vitesse à vide (tr/min) : 8,500. Longueur totale (mm) : 202.",
+		"overview": "La KI-3202-QL est la visseuse droite à hexagone 1/4 pouce et mécanisme Twin Dog, à 8 500 tr/min, 202 mm et 0,9 kg. La 3202-P-QL est la version pistolet, 192 mm et 1,3 kg ; la 3266-P-QL raccourcit encore le corps. Le format et l’accès au vissage distinguent les références. Les 71 L/min sont une moyenne et aucun couple absent de la table n’est inventé.",
 		"verifiedFacts": [
 			"Vitesse à vide (tr/min) : 8,500.",
 			"Longueur totale (mm) : 202.",
@@ -113,6 +113,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:visseuse-kuani-ki-3202-ql:0",
+			"sourceUrl": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf",
+			"sourceLabel": "KUANI, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La KI-3202-QL est la visseuse droite à hexagone 1/4 pouce et mécanisme Twin Dog, à 8 500 tr/min, 202 mm et 0,9 kg. La 3202-P-QL est la version pistolet, 192 mm et 1,3 kg ; la 3266-P-QL raccourcit encore le corps. Le format et l’accès au vissage distinguent les références. Les 71 L/min sont une moyenne et aucun couple absent de la table n’est inventé. GET complet SHA-256 569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba. Pages PDF lues : 43."
 		}
 	],
 	"fieldSources": {

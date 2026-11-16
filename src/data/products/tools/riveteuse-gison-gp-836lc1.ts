@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/riveteuse-gison-gp-836lc1.webp",
+		"src": "/images/products/riveteuse-gison-gp-836lc1-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : GISON GP-836LC1",
 		"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "gison-gp-836lc1",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-836LC1. Consommation de régime non précisé : 350 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 1.20 kg. Longueur : 200 mm.",
+		"overview": "La GP-836LC1 pose des écrous à sertir par entraînement rotatif, avec une sortie pour tailles 3, 4 et 5 mm ainsi que 3/16 et 1/4 pouce listées par le fabricant. Elle tourne à 700 tr/min et pèse 1,20 kg ; la GP-836LC atteint 2 500 tr/min, la LC2 descend à 450 tr/min avec d’autres capacités. Les 0,35 m³/min ne sont pas un volume par pose qualifié.",
 		"verifiedFacts": [
 			"Masse : 1.20 kg.",
 			"Longueur : 200 mm.",
@@ -104,6 +104,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:riveteuse-gison-gp-836lc1:0",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
+			"sourceLabel": "GISON, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La GP-836LC1 pose des écrous à sertir par entraînement rotatif, avec une sortie pour tailles 3, 4 et 5 mm ainsi que 3/16 et 1/4 pouce listées par le fabricant. Elle tourne à 700 tr/min et pèse 1,20 kg ; la GP-836LC atteint 2 500 tr/min, la LC2 descend à 450 tr/min avec d’autres capacités. Les 0,35 m³/min ne sont pas un volume par pose qualifié. GET complet SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Pages PDF lues : 70."
 		}
 	],
 	"fieldSources": {

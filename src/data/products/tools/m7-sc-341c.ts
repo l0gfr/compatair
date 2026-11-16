@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/m7-sc-341c.webp",
+		"src": "/images/products/m7-sc-341c-technical-20261116-reviews.svg",
 		"alt": "Repères techniques M7 SC-341C, référence SC-341C",
 		"sourceUrl": "https://www.mighty-seven.com/product/399",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "M7 SC-341C, référence SC-341C. Consommation moyenne publiée : 220 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Emmanchement : ⬣. Longueur publiée : 7-31/64\" / 190 (mm).",
+		"overview": "Le SC-341C utilise un emmanchement hexagonal de 10 mm, une course de 71 mm et une poignée à réduction de vibrations. La version ronde SC-331C demande un autre burin : la terminaison de référence ne doit pas être ignorée. La cadence publiée est 3 000 coups/min et la longueur 190 mm. La consommation moyenne de 220 L/min ne qualifie pas un besoin continu.",
 		"verifiedFacts": [
 			"Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
 			"Consommation moyenne publiée : 220 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
@@ -133,6 +133,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation moyenne publiée : 220 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+		},
+		{
+			"id": "review:2026-11-16-reviews:m7-sc-341c:0",
+			"sourceUrl": "https://www.mighty-seven.com/product/399",
+			"sourceLabel": "M7, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le SC-341C utilise un emmanchement hexagonal de 10 mm, une course de 71 mm et une poignée à réduction de vibrations. La version ronde SC-331C demande un autre burin : la terminaison de référence ne doit pas être ignorée. La cadence publiée est 3 000 coups/min et la longueur 190 mm. La consommation moyenne de 220 L/min ne qualifie pas un besoin continu. GET complet SHA-256 f882cab52d3482967ca62701e10564665fec93547b32c22bbc9ad297aece711e. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

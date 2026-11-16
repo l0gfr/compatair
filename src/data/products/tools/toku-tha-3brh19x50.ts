@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/toku-tha-3brh19x50.webp",
+		"src": "/images/products/toku-tha-3brh19x50-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Toku THA-3BRH19x50, référence THA-3BRH19x50",
-		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=50",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Toku THA-3BRH19x50, référence THA-3BRH19x50. Le tableau fabricant publie 900 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Masse publiée : 7,2 kg. Diamètre intérieur de flexible conseillé : 13 mm.",
+		"overview": "Le THA-3BRH19x50 combine un emmanchement 19 × 50 mm, une course de 64 mm et 2 200 coups/min. Le THA-2BRH raccourcit la course à 51 mm ; le THA-4BRH l’allonge à 102 mm et descend à 1 800 coups/min. Ces variantes changent l’énergie par coup et la masse. Les 15 L/s du tableau ne sont pas qualifiés comme consommation dimensionnante.",
 		"verifiedFacts": [
 			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
 			"Consommation publiée : 15 L/s, convertis en 900 L/min par multiplication par 60.",
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas.",
+			"La pression de service n’atteste pas la pression de mesure de consommation. Le régime ou l’appariement documentaire reste non qualifié ; aucune consommation dimensionnante n’est conservée."
 		]
 	},
 	"specifications": [
@@ -92,6 +93,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "review:2026-11-16-reviews:toku-tha-3brh19x50:0",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf",
+			"sourceLabel": "Toku, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le THA-3BRH19x50 combine un emmanchement 19 × 50 mm, une course de 64 mm et 2 200 coups/min. Le THA-2BRH raccourcit la course à 51 mm ; le THA-4BRH l’allonge à 102 mm et descend à 1 800 coups/min. Ces variantes changent l’énergie par coup et la masse. Les 15 L/s du tableau ne sont pas qualifiés comme consommation dimensionnante. GET complet SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. Pages PDF lues : 50, 106."
 		}
 	],
 	"fieldSources": {
@@ -109,6 +120,9 @@ const product: ToolProfileInput = {
 		],
 		"connectorSize": [
 			"toku-tha-3brh19x50-20260926"
+		],
+		"airflowBasis": [
+			"review:2026-11-16-reviews:toku-tha-3brh19x50:0"
 		]
 	},
 	"notes": [
@@ -122,7 +136,8 @@ const product: ToolProfileInput = {
 	"recommendedHose": {
 		"innerDiameterMm": 13
 	},
-	"connectorSize": "PT 3/8\""
+	"connectorSize": "PT 3/8\"",
+	"airflowBasis": "unqualified"
 };
 
 export default product;

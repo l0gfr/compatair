@@ -28,10 +28,10 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/mattei-erc-7.svg",
+		"src": "/images/products/mattei-erc-7-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Mattei ERC 7",
 		"sourceUrl": "https://4609801.fs1.hubspotusercontent-na1.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20CLASSIC/Classic_Range_EN.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -80,7 +80,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Mattei ERC 7. 960 L/min à 12,5 bar. Groupe Classic sur socle sans réservoir.",
+		"overview": "L’ERC7 fixe 50 Hz publie 0,96 m³/min FAD à la référence 12,5 bar pour la variante maximale 13 bar. L’ERC11 fournit 1,35 m³/min au même point ; l’ERCS7 reprend le groupe avec réservoir. Le tableau 60 Hz est séparé. La régulation proportionnelle permet le fonctionnement sans réservoir selon le fabricant, mais ne chiffre pas un taux de marche du groupe : aucun 100 % n’est ajouté.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 0 L.",
@@ -135,6 +135,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:mattei-erc-7:0",
+			"sourceUrl": "https://4609801.fs1.hubspotusercontent-na1.net/hubfs/4609801/MATTEI%20CORPORATE%20NEW%20WEBSITE/CATALOGHI/INGLESE/EN_COMPRESSORI%20LUBRIFICATI/EN_SERIE%20CLASSIC/Classic_Range_EN.pdf",
+			"sourceLabel": "Mattei, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’ERC7 fixe 50 Hz publie 0,96 m³/min FAD à la référence 12,5 bar pour la variante maximale 13 bar. L’ERC11 fournit 1,35 m³/min au même point ; l’ERCS7 reprend le groupe avec réservoir. Le tableau 60 Hz est séparé. La régulation proportionnelle permet le fonctionnement sans réservoir selon le fabricant, mais ne chiffre pas un taux de marche du groupe : aucun 100 % n’est ajouté. GET complet SHA-256 db466718453e214d4ec391d1efb9788f63bc90284ff8146cedb3d41cc46274c2. Pages PDF lues : 6, 14, 4, 3."
 		}
 	],
 	"fieldSources": {

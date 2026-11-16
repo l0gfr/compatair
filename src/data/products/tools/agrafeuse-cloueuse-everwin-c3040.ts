@@ -17,10 +17,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/agrafeuse-cloueuse-everwin-c3040.svg",
+		"src": "/images/products/agrafeuse-cloueuse-everwin-c3040-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : EVERWIN C3040",
 		"sourceUrl": "https://www.everwinpneumatic.com/files/catalog/EVERWIN_catalog-20250822.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "everwin-c3040",
@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "EVERWIN C3040. Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "EVERWIN C3040 : cloueur pour pointes trempées 0° de 12–40 mm, destiné notamment aux rails métalliques sur béton ou acier. Il reçoit 32 pointes, avec porte de déblocage sans outil et blocage à vide. Les FCN90B et FCN90LB sont des cloueurs à rouleaux ; leurs consommations ne sont pas reprises.",
 		"verifiedFacts": [
 			"Masse, cellule constructeur : Weight 2.68 kg (5.9 lbs).",
 			"Hauteur, cellule constructeur : Height 330 mm (13\").",
@@ -41,7 +41,11 @@ const product: ToolProfileInput = {
 			"Plage ou pression de service publiée : Operating Pressure 5~8 bar (70~120 psi).",
 			"Type de fixation : 0° Hardened Pins.",
 			"Capacité du chargeur publiée : 32.",
-			"Longueur de fixation, cellule A : 12~40 mm (1/2\"~1-5/8\")."
+			"Longueur de fixation, cellule A : 12~40 mm (1/2\"~1-5/8\").",
+			"Fixations : Pointes trempées 0°, longueur 12–40 mm.",
+			"Capacité : 32 pointes.",
+			"Dimensions / masse : 336 × 100 × 330 mm / 2,68 kg.",
+			"Équipement : Déclenchement séquentiel, porte de déblocage, blocage à vide."
 		],
 		"limitations": [
 			"Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
@@ -114,6 +118,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october3d-tools-everwin-extra-0-p64"
 			]
+		},
+		{
+			"label": "Fixations",
+			"value": "Pointes trempées 0°, longueur 12–40 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-everwin-c3040:0"
+			]
+		},
+		{
+			"label": "Capacité",
+			"value": "32 pointes",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-everwin-c3040:0"
+			]
+		},
+		{
+			"label": "Dimensions / masse",
+			"value": "336 × 100 × 330 mm / 2,68 kg",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-everwin-c3040:0"
+			]
+		},
+		{
+			"label": "Équipement",
+			"value": "Déclenchement séquentiel, porte de déblocage, blocage à vide",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-everwin-c3040:0"
+			]
 		}
 	],
 	"evidence": [
@@ -126,6 +158,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 9c3ec0a7d7edcf8d78cfebc98e6838e694b1cbbec531d4140ad0dea7d2b9cb5c. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:agrafeuse-cloueuse-everwin-c3040:0",
+			"sourceUrl": "https://www.everwinpneumatic.com/files/catalog/EVERWIN_catalog-20250822.pdf",
+			"sourceLabel": "EVERWIN, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "EVERWIN C3040 : cloueur pour pointes trempées 0° de 12–40 mm, destiné notamment aux rails métalliques sur béton ou acier. Il reçoit 32 pointes, avec porte de déblocage sans outil et blocage à vide. Les FCN90B et FCN90LB sont des cloueurs à rouleaux ; leurs consommations ne sont pas reprises. GET complet SHA-256 9c3ec0a7d7edcf8d78cfebc98e6838e694b1cbbec531d4140ad0dea7d2b9cb5c. Pages PDF lues : 64."
 		}
 	],
 	"fieldSources": {

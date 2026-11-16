@@ -17,10 +17,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/pistolet-cartouche-asturomec-pb-50253.svg",
+		"src": "/images/products/pistolet-cartouche-asturomec-pb-50253-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Asturomec PB (réf. 50253)",
 		"sourceUrl": "https://walmec.com/it/cataloghi/catalogo-asturomec/AD_13_24_IT.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "asturomec-pb",
@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Asturomec PB (réf. 50253). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "Le PB 50253 est un pistolet pour cartouches de mastics, avec trois buses en laiton et pression de service 2–5 bar. Le PB/S 50254 reçoit des poches de 34 cm, tandis que le PB reçoit des cartouches de 22,5 cm et diamètre coté 40–50, sans unité explicite dans la table. Le contenant détermine le choix. Le PB pèse 1,02 kg ; la page ne chiffre pas de consommation d’air utilisable.",
 		"verifiedFacts": [
 			"Conditionnement compatible : cartouche.",
 			"Longueur et diamètre du conditionnement : 22,5 cm ; Ø40 à Ø50, unité non explicitée pour ces diamètres.",
@@ -93,6 +93,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 28bc606b4d5bdb9fb84c9288e42573241454b8347b9623c38854744b09fab5e3. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:pistolet-cartouche-asturomec-pb-50253:0",
+			"sourceUrl": "https://walmec.com/it/cataloghi/catalogo-asturomec/AD_13_24_IT.pdf",
+			"sourceLabel": "Asturomec, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le PB 50253 est un pistolet pour cartouches de mastics, avec trois buses en laiton et pression de service 2–5 bar. Le PB/S 50254 reçoit des poches de 34 cm, tandis que le PB reçoit des cartouches de 22,5 cm et diamètre coté 40–50, sans unité explicite dans la table. Le contenant détermine le choix. Le PB pèse 1,02 kg ; la page ne chiffre pas de consommation d’air utilisable. GET complet SHA-256 28bc606b4d5bdb9fb84c9288e42573241454b8347b9623c38854744b09fab5e3. Pages PDF lues : 59."
 		}
 	],
 	"fieldSources": {

@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/m7-qp-113.webp",
+		"src": "/images/products/m7-qp-113-technical-20261116-reviews.svg",
 		"alt": "Repères techniques M7 QP-113, référence QP-113",
 		"sourceUrl": "https://www.mighty-seven.com/product/264",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "M7 QP-113, référence QP-113. Consommation moyenne publiée : 99 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Diamètre de plateau : 3\" / 76 (mm). Filetage de broche : 5/16\"-24.",
+		"overview": "La QP-113 est une ponceuse pistolet à plateau de 76 mm, orbite de 2,5 mm et vitesse à vide de 15 000 tr/min. Son filetage 5/16-24 et sa longueur de 127 mm guident le choix des accessoires et l’accès aux petites zones. Elle ne remplace pas la QP-327X, polisseuse de 178 mm à 2 500 tr/min. Les 99 L/min sont une moyenne documentaire, hors calcul du besoin continu.",
 		"verifiedFacts": [
 			"Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
 			"Consommation moyenne publiée : 99 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
@@ -133,6 +133,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation moyenne publiée : 99 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+		},
+		{
+			"id": "review:2026-11-16-reviews:m7-qp-113:0",
+			"sourceUrl": "https://www.mighty-seven.com/product/264",
+			"sourceLabel": "M7, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La QP-113 est une ponceuse pistolet à plateau de 76 mm, orbite de 2,5 mm et vitesse à vide de 15 000 tr/min. Son filetage 5/16-24 et sa longueur de 127 mm guident le choix des accessoires et l’accès aux petites zones. Elle ne remplace pas la QP-327X, polisseuse de 178 mm à 2 500 tr/min. Les 99 L/min sont une moyenne documentaire, hors calcul du besoin continu. GET complet SHA-256 80dbf57c354a8f35af5f73a35a80ddfe0d827dcb1cc5c3a9d7ada3a653be2ddb. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-astro-pneumatic-135bt.svg",
+		"src": "/images/products/cle-a-chocs-astro-pneumatic-135bt-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Astro Pneumatic 135BT",
 		"sourceUrl": "https://www.astrotools.com/product/3-8-snub-nose-impact-wrench-75ft-lb-torque/",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "astro-pneumatic-135bt",
@@ -29,18 +29,20 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Astro Pneumatic 135BT. Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "La 135BT est une clé à chocs courte à carré 3/8, avec protection de nez en caoutchouc et régulateur. Elle mesure 171 mm contre 177 mm pour la 136E. La fiche fabricant la signale « NO LONGER AVAILABLE » : c’est une fiche technique d’un modèle ancien, pas une offre courante.",
 		"verifiedFacts": [
 			"Carré d’entraînement : 3/8\".",
 			"Vitesse à vide : 10,000rpm.",
-			"Longueur hors tout : 6-3/4\" (171mm).",
-			"Masse nette : 2-3/8lbs. (1.1kg).",
+			"Longueur hors tout : 6-3/4\" (171 mm).",
+			"Masse nette : 2-3/8lbs. (1.1 kg).",
 			"Couple maximal : 75ft./lbs..",
-			"Capacité boulon : 3/8\" (10mm).",
+			"Capacité boulon : 3/8\" (10 mm).",
 			"Filetage d’arrivée d’air : 1/4\".",
-			"Diamètre intérieur du flexible : 3/8\" (10mm).",
+			"Diamètre intérieur du flexible : 3/8\" (10 mm).",
 			"Consommation moyenne, hors calcul : 4cfm.",
-			"Pression d’air publiée : 90-120psi."
+			"Pression d’air publiée : 90-120psi.",
+			"Statut fabricant au 12 novembre 2026 : NO LONGER AVAILABLE.",
+			"Conception : Nez court protégé ; régulateur de puissance intégré."
 		],
 		"limitations": [
 			"Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
@@ -133,6 +135,20 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october3d-tools-astro-product-135bt-p1"
 			]
+		},
+		{
+			"label": "Statut fabricant au 12 novembre 2026",
+			"value": "NO LONGER AVAILABLE",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-astro-pneumatic-135bt:0"
+			]
+		},
+		{
+			"label": "Conception",
+			"value": "Nez court protégé ; régulateur de puissance intégré",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-astro-pneumatic-135bt:0"
+			]
 		}
 	],
 	"evidence": [
@@ -145,6 +161,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 92463f45b85a666810672af5a85f232151e98878f57c1a28a9c326e35d05b473. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-chocs-astro-pneumatic-135bt:0",
+			"sourceUrl": "https://www.astrotools.com/product/3-8-snub-nose-impact-wrench-75ft-lb-torque/",
+			"sourceLabel": "Astro Pneumatic, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 135BT est une clé à chocs courte à carré 3/8, avec protection de nez en caoutchouc et régulateur. Elle mesure 171 mm contre 177 mm pour la 136E. La fiche fabricant la signale « NO LONGER AVAILABLE » : c’est une fiche technique d’un modèle ancien, pas une offre courante. GET complet SHA-256 75cbdbe2dae636021c334eb7dd3eb8d6398bd2289a347b189c28f6ea261934ce. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
@@ -152,7 +178,7 @@ const product: ToolProfileInput = {
 			"october3d-tools-astro-product-135bt-p1"
 		],
 		"workingPressureBar": [
-			"october3d-tools-astro-product-135bt-p1"
+			"review:2026-11-16-reviews:cle-a-chocs-astro-pneumatic-135bt:0"
 		],
 		"demandExplanation": [
 			"october3d-tools-astro-product-135bt-p1"

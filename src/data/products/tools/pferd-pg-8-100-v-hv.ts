@@ -9,97 +9,79 @@ const product: ToolProfileInput = {
 	"categoryId": "meuleuse",
 	"category": "meuleuse",
 	"label": "PFERD PG 8/100 V-HV",
-	"demandModel": "fixed-flow",
-	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
-		"max": 6.3
-	},
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/pferd-pg-8-100-v-hv.webp",
+		"src": "/images/products/pferd-pg-8-100-v-hv-technical-20261116-reviews.svg",
 		"alt": "Repères techniques PFERD PG 8/100 V-HV, référence 80107003",
 		"sourceUrl": "https://fr.pferd.com/fr/meuleuse-droite-pneumatique-pg-8100?a%5Btype-tds%5D=avec+prolongateur&a%5Bthrottle-type-tds%5D=Levier&a%5Bpferd-type-tds%5D=PG+8%2F100+V-HV",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "PFERD PG 8/100 V-HV, référence 80107003. Le dimensionnement utilise 850 L/min à 6,3 bar, selon les régimes publiés par le fabricant. Longueur : 310 mm. Pince de serrage Ø comprise [mm] : 6 mm. Poids net de la machine : 1.4 kg.",
+		"overview": "PFERD PG 8/100 V-HV : meuleuse droite longue de 310 mm, pince 6 mm et échappement avant. La PG 8/100 HV courte mesure 184 mm ; la PGAS 8/100 V-HV dirige l’air vers l’arrière. Le régulateur centrifuge et la gâchette de sécurité sont documentés, sans qualifier la pression de mesure des débits en charge et à vide.",
 		"verifiedFacts": [
-			"Pression de service publiée sur cette fiche : 6.3 bar. Aucune autre pression de fonctionnement n’est déduite.",
-			"Consommation sous charge : 0.85 m³/min ; à vide : 0.17 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 850 L/min (m³/min × 1 000).",
-			"Référence fabricant : 80107003.",
-			"Longueur : 310 mm.",
-			"Pince de serrage Ø comprise [mm] : 6 mm.",
-			"Poids net de la machine : 1.4 kg."
+			"Pince / vitesse : 6 mm / 10 000 tr/min.",
+			"Puissance / masse : 600 W / 1,4 kg.",
+			"Dimensions : 310 × 46 × 46 mm.",
+			"Échappement / commande : Avant / levier de sécurité.",
+			"Consommation en charge / à vide : 0,85 / 0,17 m³/min.",
+			"Pression de service : 6,3 bar.",
+			"Lubrification : 5 gouttes/min dans la fiche."
 		],
 		"limitations": [
-			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
-			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
-			"La valeur la plus élevée à vide ou en charge couvre les deux régimes documentés ; aucune moyenne de cycle n’est substituée à ces valeurs."
+			"La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression de service publiée sur cette fiche : 6.3 bar. Aucune autre pression de fonctionnement n’est déduite.",
+			"label": "Pince / vitesse",
+			"value": "6 mm / 10 000 tr/min",
 			"evidenceIds": [
-				"pferd-80107003-20260927"
+				"review:2026-11-16-reviews:pferd-pg-8-100-v-hv:0"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation sous charge : 0.85 m³/min ; à vide : 0.17 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 850 L/min (m³/min × 1 000).",
+			"label": "Puissance / masse",
+			"value": "600 W / 1,4 kg",
 			"evidenceIds": [
-				"pferd-80107003-20260927"
+				"review:2026-11-16-reviews:pferd-pg-8-100-v-hv:0"
 			]
 		},
 		{
-			"label": "Longueur",
-			"value": "310 mm",
+			"label": "Dimensions",
+			"value": "310 × 46 × 46 mm",
 			"evidenceIds": [
-				"pferd-80107003-20260927"
+				"review:2026-11-16-reviews:pferd-pg-8-100-v-hv:0"
 			]
 		},
 		{
-			"label": "Pince de serrage Ø comprise [mm]",
-			"value": "6 mm",
+			"label": "Échappement / commande",
+			"value": "Avant / levier de sécurité",
 			"evidenceIds": [
-				"pferd-80107003-20260927"
+				"review:2026-11-16-reviews:pferd-pg-8-100-v-hv:0"
 			]
 		},
 		{
-			"label": "Poids net de la machine",
-			"value": "1.4 kg",
+			"label": "Consommation en charge / à vide",
+			"value": "0,85 / 0,17 m³/min",
 			"evidenceIds": [
-				"pferd-80107003-20260927"
+				"review:2026-11-16-reviews:pferd-pg-8-100-v-hv:0"
 			]
 		},
 		{
-			"label": "Puissance",
-			"value": "600 Watt",
+			"label": "Pression de service",
+			"value": "6,3 bar",
 			"evidenceIds": [
-				"pferd-80107003-20260927"
+				"review:2026-11-16-reviews:pferd-pg-8-100-v-hv:0"
 			]
 		},
 		{
-			"label": "Vitesse de rotation",
-			"value": "10000 t/min",
+			"label": "Lubrification",
+			"value": "5 gouttes/min dans la fiche",
 			"evidenceIds": [
-				"pferd-80107003-20260927"
-			]
-		},
-		{
-			"label": "Échappement d'air",
-			"value": "Avant",
-			"evidenceIds": [
-				"pferd-80107003-20260927"
-			]
-		},
-		{
-			"label": "ø intérieur flexible d'alimentation",
-			"value": "8.5 mm",
-			"evidenceIds": [
-				"pferd-80107003-20260927"
+				"review:2026-11-16-reviews:pferd-pg-8-100-v-hv:0"
 			]
 		}
 	],
@@ -112,27 +94,33 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation sous charge : 0.85 m³/min ; à vide : 0.17 m³/min. La valeur la plus élevée est retenue pour le dimensionnement : 850 L/min (m³/min × 1 000)."
+		},
+		{
+			"id": "review:2026-11-16-reviews:pferd-pg-8-100-v-hv:0",
+			"sourceUrl": "https://fr.pferd.com/fr/meuleuse-droite-pneumatique-pg-8100?a%5Btype-tds%5D=avec+prolongateur&a%5Bthrottle-type-tds%5D=Levier&a%5Bpferd-type-tds%5D=PG+8%2F100+V-HV",
+			"sourceLabel": "PFERD, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "PFERD PG 8/100 V-HV : meuleuse droite longue de 310 mm, pince 6 mm et échappement avant. La PG 8/100 HV courte mesure 184 mm ; la PGAS 8/100 V-HV dirige l’air vers l’arrière. Le régulateur centrifuge et la gâchette de sécurité sont documentés, sans qualifier la pression de mesure des débits en charge et à vide. GET complet SHA-256 177efbc390db95687a23b6aabfd318539f8654db4137e4361b17b766bfe967f0. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"pferd-80107003-20260927"
+			"review:2026-11-16-reviews:pferd-pg-8-100-v-hv:0"
+		],
+		"demandExplanation": [
+			"review:2026-11-16-reviews:pferd-pg-8-100-v-hv:0"
 		],
 		"workingPressureBar": [
-			"pferd-80107003-20260927"
-		],
-		"airflowLpm": [
-			"pferd-80107003-20260927"
+			"review:2026-11-16-reviews:pferd-pg-8-100-v-hv:0"
 		]
 	},
 	"notes": [
-		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+		"La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne."
 	],
-	"airflowLpm": {
-		"min": 850,
-		"typical": 850,
-		"max": 850
-	}
+	"demandExplanation": "La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne."
 };
 
 export default product;

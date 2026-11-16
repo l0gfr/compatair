@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/deprag-344-440-31.webp",
+		"src": "/images/products/deprag-344-440-31-technical-20261116-reviews.svg",
 		"alt": "Repères techniques DEPRAG 344-440-31, référence 389730B",
-		"sourceUrl": "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3130/D3130en.pdf#page=12",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3130/D3130en.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "DEPRAG 344-440-31, référence 389730B. Le tableau fabricant publie 1 100 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple minimal : 4 Nm. Couple maximal : 10 Nm.",
+		"overview": "La 344-440-31, référence 389730B, est une broche à démarrage distant, rotation et coupure à droite, pour 4–10 Nm à 2 100 tr/min. La 344-340-31 passe à 2 800 tr/min pour 4–8 Nm ; la version 31U est réversible et possède une autre plage. Le tableau relie les performances à 6,3 bar, mais ne précise pas le régime des 1,1 m³/min de consommation. Cette valeur reste hors dimensionnement.",
 		"verifiedFacts": [
 			"La note du tableau indique une pression de fonctionnement de 6,3 bar.",
 			"Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine.",
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Le couple et la vitesse correspondent à la colonne de cette référence commande, pas à l’ensemble de la famille.",
-			"Les broches intégrées nécessitent aussi le dimensionnement des auxiliaires de l’installation, qui ne sont pas inclus dans la consommation du moteur de vissage."
+			"Les broches intégrées nécessitent aussi le dimensionnement des auxiliaires de l’installation, qui ne sont pas inclus dans la consommation du moteur de vissage.",
+			"La pression de service n’atteste pas la pression de mesure de consommation. Le régime ou l’appariement documentaire reste non qualifié ; aucune consommation dimensionnante n’est conservée."
 		]
 	},
 	"specifications": [
@@ -97,6 +98,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation publiée en m³/min dans le tableau de la référence ; conversion × 1 000 en L/min, contrôlée avec la valeur CFM voisine."
+		},
+		{
+			"id": "review:2026-11-16-reviews:deprag-344-440-31:0",
+			"sourceUrl": "https://www.deprag.com/fileadmin/bilder_content/emedia/broschueren_pics/emedia_schraubtechnik/D3130/D3130en.pdf",
+			"sourceLabel": "DEPRAG, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 344-440-31, référence 389730B, est une broche à démarrage distant, rotation et coupure à droite, pour 4–10 Nm à 2 100 tr/min. La 344-340-31 passe à 2 800 tr/min pour 4–8 Nm ; la version 31U est réversible et possède une autre plage. Le tableau relie les performances à 6,3 bar, mais ne précise pas le régime des 1,1 m³/min de consommation. Cette valeur reste hors dimensionnement. GET complet SHA-256 9d445214624acd388e222274452a61e9bc2026c82f3d78fae74d146516a75dbd. Pages PDF lues : 12."
 		}
 	],
 	"fieldSources": {
@@ -108,6 +119,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"deprag-389730b-20260926"
+		],
+		"airflowBasis": [
+			"review:2026-11-16-reviews:deprag-344-440-31:0"
 		]
 	},
 	"notes": [
@@ -117,7 +131,8 @@ const product: ToolProfileInput = {
 		"min": 1100,
 		"typical": 1100,
 		"max": 1100
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La notice établit les caractéristiques du modèle ou de sa famille. La consommation reste documentaire tant que son point de pression et son régime ne sont pas précisés.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-henrytools-400ghsd.webp",
+		"src": "/images/products/meuleuse-henrytools-400ghsd-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Henrytools 400GHSD",
 		"sourceUrl": "https://henrytools.com/assets/images/parts_manuals_PDF/03-31-2024_400GHSD_Horizontal_Grinder_Side_Exhaust.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "henrytools-400ghsd",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Henrytools 400GHSD. La notice établit les caractéristiques du modèle ou de sa famille. La consommation reste documentaire tant que son point de pression et son régime ne sont pas précisés. Puissance du tableau modèle/famille : 1.2 H.P.. Consommation du tableau modèle/famille, hors calcul : 25 cfm.",
+		"overview": "La 400GHSD est la meuleuse horizontale à échappement latéral et commande par levier de la famille 400GH. La 400GHSK2 ajoute une autre commande ; les références et vitesses doivent être confirmées avant de choisir la meule. Le tableau de famille annonce 1,2 hp et 25 cfm en travail, sans pression de mesure associée. Ces 25 cfm ne deviennent pas un point de dimensionnement.",
 		"verifiedFacts": [
 			"Puissance du tableau modèle/famille : 1.2 H.P..",
 			"Consommation du tableau modèle/famille, hors calcul : 25 cfm."
@@ -74,6 +74,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 26bfce40b3915d4db4edb3ebdd7218477cf2da92a4b9939a9e8a3a32c371779b. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-henrytools-400ghsd:0",
+			"sourceUrl": "https://henrytools.com/assets/images/parts_manuals_PDF/03-31-2024_400GHSD_Horizontal_Grinder_Side_Exhaust.pdf",
+			"sourceLabel": "Henrytools, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 400GHSD est la meuleuse horizontale à échappement latéral et commande par levier de la famille 400GH. La 400GHSK2 ajoute une autre commande ; les références et vitesses doivent être confirmées avant de choisir la meule. Le tableau de famille annonce 1,2 hp et 25 cfm en travail, sans pression de mesure associée. Ces 25 cfm ne deviennent pas un point de dimensionnement. GET complet SHA-256 26bfce40b3915d4db4edb3ebdd7218477cf2da92a4b9939a9e8a3a32c371779b. Pages PDF lues : 1."
 		}
 	],
 	"fieldSources": {

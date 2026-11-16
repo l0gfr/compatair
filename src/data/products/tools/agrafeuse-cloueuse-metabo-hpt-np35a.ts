@@ -19,10 +19,10 @@ const product: ToolProfileInput = {
 	"actionLabel": "cycle de pose",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/agrafeuse-cloueuse-metabo-hpt-np35a.webp",
+		"src": "/images/products/agrafeuse-cloueuse-metabo-hpt-np35a-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Metabo HPT NP35A",
 		"sourceUrl": "https://www.metabo-hpt.com/docs/default-source/product-owners-manuals/np35a_e2_om.pdf?sfvrsn=4718c147_2",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "metabo-hpt-np35a",
@@ -34,15 +34,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Metabo HPT NP35A. Volume déclaré : 0,5 L par cycle à 6,9 bar ; la cadence doit être renseignée. Masse déclarée : 0.9 kg. Dimensions L × H × l déclarées : 238 × 162 × 47 mm.",
+		"overview": "Le NP35A reçoit des pointes sans tête calibre23 de 15–35 mm ; le NP50A étend la longueur à 13–50 mm, tandis que le N3804A5 est une agrafeuse calibre18. Le NP35A publie 0,5 L par tir à 6,9 bar, 0,4 à 6,2 et 0,3 à 5,5. Le calcul doit utiliser la cadence réelle et la pression du point, sans reprendre l’exemple erroné de conversion en litres/minute de la notice.",
 		"verifiedFacts": [
-			"Masse déclarée : 0.9 kg.",
-			"Dimensions L × H × l déclarées : 238 × 162 × 47 mm.",
-			"Capacité du chargeur déclarée : 100 clous."
+			"Pointes calibre23, 15–35 mm ; magasin100 ; masse0,9 kg.",
+			"Table de consommation : 0,3 L/tir à5,5 bar,0,4 à6,2 et0,5 à6,9."
 		],
 		"limitations": [
 			"Une cadence déclarée permet le calcul moyen ; la pointe instantanée de déclenchement reste distincte.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée.",
+			"L’exemple3 outils ×30 tirs/min ×0,5 L/tir ×1,2 donne54 L/min ; le94 L/min imprimé dans la notice est incohérent. Les volumes par tir de la table restent distincts de cet exemple."
 		]
 	},
 	"specifications": [
@@ -104,6 +104,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 557d54400b71178005124aada964911c5308cbae18ea599533b5a9ea70ee67bb. Document complémentaire de la référence exacte, sans essai CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:agrafeuse-cloueuse-metabo-hpt-np35a:0",
+			"sourceUrl": "https://www.metabo-hpt.com/docs/default-source/product-owners-manuals/np35a_e2_om.pdf?sfvrsn=4718c147_2",
+			"sourceLabel": "Metabo HPT, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le NP35A reçoit des pointes sans tête calibre23 de 15–35 mm ; le NP50A étend la longueur à 13–50 mm, tandis que le N3804A5 est une agrafeuse calibre18. Le NP35A publie 0,5 L par tir à 6,9 bar, 0,4 à 6,2 et 0,3 à 5,5. Le calcul doit utiliser la cadence réelle et la pression du point, sans reprendre l’exemple erroné de conversion en litres/minute de la notice. GET complet SHA-256 557d54400b71178005124aada964911c5308cbae18ea599533b5a9ea70ee67bb. Pages PDF lues : 9, 10, 11."
 		}
 	],
 	"fieldSources": {

@@ -16,10 +16,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La source donne une quantité approximative par fixation, sans indiquer sa pression de mesure. Le calcul par cadence attend cette condition.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/agrafeuse-cloueuse-prebena-1gp-a16ln50.webp",
+		"src": "/images/products/agrafeuse-cloueuse-prebena-1gp-a16ln50-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : PREBENA 1GP-A16LN50",
 		"sourceUrl": "https://prebena.de/fileadmin/user_upload/Downloads/Prospekte/PREBENA-Hauptkatalog_2024_Seitenverlinkung_DE.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "prebena-1gp-a16ln50",
@@ -31,12 +31,17 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "PREBENA 1GP-A16LN50. La source donne une quantité approximative par fixation, sans indiquer sa pression de mesure. Le calcul par cadence attend cette condition. Consommation approximative par fixation : 0,5 litre ; pression de mesure non précisée. Masse : 0,94 kg.",
+		"overview": "PREBENA 1GP-A16LN50 : agrafeuse Type A de 4 à 16 mm à nez long de 50 mm pour rainures et angles. La 1GP-A16 standard mesure 155 mm de haut, contre 215 mm ici ; l’A16NH est une autre configuration à matrice mobile. Les 0,5 L par fixation sont approximatifs sans pression de mesure indiquée.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 36.",
 			"Consommation approximative par fixation : 0,5 litre ; pression de mesure non précisée.",
 			"Masse : 0,94 kg.",
-			"Dimensions (L × l × h) : 220 x 50 x 215 mm."
+			"Dimensions (L × l × h) : 220 x 50 x 215 mm.",
+			"Nez : Longueur 50 mm.",
+			"Fixations : Agrafes Type A, 4–16 mm.",
+			"Déclenchement / échappement : Coup par coup / arrière.",
+			"Dimensions / masse : 220 × 50 × 215 mm / 0,94 kg.",
+			"Consommation par fixation : Environ 0,5 L ; pression de mesure absente."
 		],
 		"limitations": [
 			"La source donne une quantité approximative par fixation, sans indiquer sa pression de mesure. Le calcul par cadence attend cette condition.",
@@ -80,6 +85,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-d-prebena-2024-p36"
 			]
+		},
+		{
+			"label": "Nez",
+			"value": "Longueur 50 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-prebena-1gp-a16ln50:0"
+			]
+		},
+		{
+			"label": "Fixations",
+			"value": "Agrafes Type A, 4–16 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-prebena-1gp-a16ln50:0"
+			]
+		},
+		{
+			"label": "Déclenchement / échappement",
+			"value": "Coup par coup / arrière",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-prebena-1gp-a16ln50:0"
+			]
+		},
+		{
+			"label": "Dimensions / masse",
+			"value": "220 × 50 × 215 mm / 0,94 kg",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-prebena-1gp-a16ln50:0"
+			]
+		},
+		{
+			"label": "Consommation par fixation",
+			"value": "Environ 0,5 L ; pression de mesure absente",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-prebena-1gp-a16ln50:0"
+			]
 		}
 	],
 	"evidence": [
@@ -92,6 +132,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 80e839ee7c69b786c470baff4ff85214f2776c400ebd64dda03145a061a88028. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "review:2026-11-16-reviews:agrafeuse-cloueuse-prebena-1gp-a16ln50:0",
+			"sourceUrl": "https://prebena.de/fileadmin/user_upload/Downloads/Prospekte/PREBENA-Hauptkatalog_2024_Seitenverlinkung_DE.pdf",
+			"sourceLabel": "PREBENA, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "PREBENA 1GP-A16LN50 : agrafeuse Type A de 4 à 16 mm à nez long de 50 mm pour rainures et angles. La 1GP-A16 standard mesure 155 mm de haut, contre 215 mm ici ; l’A16NH est une autre configuration à matrice mobile. Les 0,5 L par fixation sont approximatifs sans pression de mesure indiquée. GET complet SHA-256 80e839ee7c69b786c470baff4ff85214f2776c400ebd64dda03145a061a88028. Pages PDF lues : 36."
 		}
 	],
 	"fieldSources": {

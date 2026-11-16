@@ -58,10 +58,10 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/bambi-vts250.svg",
+		"src": "/images/products/bambi-vts250-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Bambi VTS250",
 		"sourceUrl": "https://bambi-air.co.uk/product/vts250/",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -164,7 +164,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Bambi VTS250. 280 L/min à 1 bar ; 265 L/min à 2 bar ; 248 L/min à 3 bar ; 222 L/min à 4 bar ; 210 L/min à 5 bar ; 188 L/min à 6 bar ; 179 L/min à 7 bar ; 160 L/min à 8 bar. Groupe avec cuve 59 L.",
+		"overview": "Le VTS250 utilise une cuve de 59 L et annonce 210 L/min FAD à 5 bar, 160 à 8 bar. Le VTS200D est plus petit avec sécheur ; le VTS250D est une variante avec traitement, dont la table diffère. Le cycle maximal reste 50 %, et le débit doit être choisi à la pression utile de l’outil. La masse 122 kg et l’alimentation 240 V/50 Hz doivent être prises en compte pour l’installation.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 59 L.",
@@ -187,6 +187,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 7d283273349a77cb05dbb3207ea4598b7c67a4b46b848cedc282aad857618cf1 de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:bambi-vts250:0",
+			"sourceUrl": "https://bambi-air.co.uk/product/vts250/",
+			"sourceLabel": "Bambi, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le VTS250 utilise une cuve de 59 L et annonce 210 L/min FAD à 5 bar, 160 à 8 bar. Le VTS200D est plus petit avec sécheur ; le VTS250D est une variante avec traitement, dont la table diffère. Le cycle maximal reste 50 %, et le débit doit être choisi à la pression utile de l’outil. La masse 122 kg et l’alimentation 240 V/50 Hz doivent être prises en compte pour l’installation. GET complet SHA-256 b896680671b723f5fa48f39b8d427e528337a16891de7d6403f0eca544fd80e2. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

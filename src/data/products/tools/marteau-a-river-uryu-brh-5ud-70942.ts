@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "average",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/marteau-a-river-uryu-brh-5ud-70942.webp",
+		"src": "/images/products/marteau-a-river-uryu-brh-5ud-70942-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : URYU BRH-5UD (réf. 70942)",
 		"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P70_71.pdf",
-		"sourceLabel": "Carte technique CompatAir, établie à partir du document constructeur"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "uryu-brh-5ud",
@@ -37,7 +37,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU BRH-5UD, code 70942. Le tableau publie une consommation moyenne de 0,37 m³/min, soit 370 L/min. Pression de référence retenue : 6 bar.",
+		"overview": "Le BRH-5UD de code 70942 correspond à la version R à emmanchement rond ; la colonne H du catalogue porte un autre code et un autre équipement de rivetage. Le 5UD annonce 1 800 coups/min et une course de 100 mm, contre 2 800 coups/min et 38 mm pour le 1UD. Les 0,37 m³/min sont une moyenne. La pression de 0,6 MPa est une recommandation de service, pas un point de consommation en charge établi.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 70942, page PDF 1.",
 			"Consommation moyenne publiée : 370 L/min après conversion de l’unité originale.",
@@ -88,6 +88,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 51a1fe7622e1fe09d10ce44fc0fdbe4bc87c11f14d72836a26e18c2a733d7884. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		},
+		{
+			"id": "review:2026-11-16-reviews:marteau-a-river-uryu-brh-5ud-70942:0",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P70_71.pdf",
+			"sourceLabel": "URYU, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le BRH-5UD de code 70942 correspond à la version R à emmanchement rond ; la colonne H du catalogue porte un autre code et un autre équipement de rivetage. Le 5UD annonce 1 800 coups/min et une course de 100 mm, contre 2 800 coups/min et 38 mm pour le 1UD. Les 0,37 m³/min sont une moyenne. La pression de 0,6 MPa est une recommandation de service, pas un point de consommation en charge établi. GET complet SHA-256 51a1fe7622e1fe09d10ce44fc0fdbe4bc87c11f14d72836a26e18c2a733d7884. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

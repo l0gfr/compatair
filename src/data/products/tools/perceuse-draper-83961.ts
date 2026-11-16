@@ -16,10 +16,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/perceuse-draper-83961.webp",
+		"src": "/images/products/perceuse-draper-83961-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Draper 83961",
 		"sourceUrl": "https://www.drapertools.com/product/83961/reversible-air-drill-10mm/",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "draper-83961",
@@ -31,7 +31,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Draper 83961. La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué. Champ fabricant : Air Inlet : 1/4\" BSP. Champ fabricant : Average Air Consumption : 5.5cfm (155L/min).",
+		"overview": "La Draper 83961 est une perceuse réversible à mandrin 10 mm et 2 200 tr/min. La 83811 conserve le diamètre et la vitesse publiés ; la 84121 passe à 13 mm et 700 tr/min. La capacité de perçage et le régime orientent le choix de foret. Les 155 L/min moyens et les 6,2 bar de service ne constituent pas une mesure de consommation en charge.",
 		"verifiedFacts": [
 			"Champ fabricant : Air Inlet : 1/4\" BSP.",
 			"Champ fabricant : Average Air Consumption : 5.5cfm (155L/min).",
@@ -139,6 +139,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 13e08113452f33d006b21a8bbe9c01a396257899ea0254690141f89f6c47cac0. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:perceuse-draper-83961:0",
+			"sourceUrl": "https://www.drapertools.com/product/83961/reversible-air-drill-10mm/",
+			"sourceLabel": "Draper, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La Draper 83961 est une perceuse réversible à mandrin 10 mm et 2 200 tr/min. La 83811 conserve le diamètre et la vitesse publiés ; la 84121 passe à 13 mm et 700 tr/min. La capacité de perçage et le régime orientent le choix de foret. Les 155 L/min moyens et les 6,2 bar de service ne constituent pas une mesure de consommation en charge. GET complet SHA-256 379076522fdbe12d57370e4cf05dc064c5ced54b19dc6a5d5d89cd07ef828640. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

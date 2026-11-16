@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/fiam-smz15d.webp",
+		"src": "/images/products/fiam-smz15d-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Fiam SMZ15D, référence 142313001",
 		"sourceUrl": "https://www.fiamgroup.com/en/products/grinders-and-sanders/smz15d/",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Fiam SMZ15D, référence 142313001. Le tableau fabricant publie 360 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide : 22000 tr/min. Masse publiée : 0.37 kg.",
+		"overview": "La SMZ15D 142313001 est une meuleuse droite de 130 W à 22 000 tr/min, avec échappement arrière et levier de sécurité. Son corps de 155 mm et sa masse de 0,37 kg diffèrent des SMLES135 et SMS100A, plus lourdes et limitées à 13 500 tr/min. Les 6 L/s documentaires ne sont pas une consommation en charge qualifiée.",
 		"verifiedFacts": [
 			"La brochure associée à cette fiche indique une pression de mesure et d’utilisation recommandée de 6,3 bar (ISO 2787).",
 			"La fiche fabricant publie 6 L/s, soit 360 L/min après conversion × 60. Le régime de charge n’est pas précisé sur la fiche HTML.",
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Le couple éventuel est indicatif : l’assemblage, l’accessoire et la pression dynamique influencent le résultat.",
-			"Consommation déclarée par le fabricant, sans essai indépendant ni garantie d’un maximum à tous les régimes."
+			"Consommation déclarée par le fabricant, sans essai indépendant ni garantie d’un maximum à tous les régimes.",
+			"Le régime de mesure de la consommation publiée reste non précisé. Cette valeur documentaire ne permet pas de conclure au débit requis en charge."
 		]
 	},
 	"specifications": [
@@ -106,6 +107,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de mesure et pression recommandée de la brochure directement liée à cette fiche produit."
+		},
+		{
+			"id": "review:2026-11-16-reviews:fiam-smz15d:0",
+			"sourceUrl": "https://www.fiamgroup.com/en/products/grinders-and-sanders/smz15d/",
+			"sourceLabel": "Fiam, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La SMZ15D 142313001 est une meuleuse droite de 130 W à 22 000 tr/min, avec échappement arrière et levier de sécurité. Son corps de 155 mm et sa masse de 0,37 kg diffèrent des SMLES135 et SMS100A, plus lourdes et limitées à 13 500 tr/min. Les 6 L/s documentaires ne sont pas une consommation en charge qualifiée. GET complet SHA-256 b0284a6b209695d237c9c3ea97196ee29f6475591ddc11afbf817b4ffc5dcb92. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
+		},
+		{
+			"id": "review:2026-11-16-reviews:fiam-smz15d:1",
+			"sourceUrl": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-44.pdf",
+			"sourceLabel": "Fiam, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La SMZ15D 142313001 est une meuleuse droite de 130 W à 22 000 tr/min, avec échappement arrière et levier de sécurité. Son corps de 155 mm et sa masse de 0,37 kg diffèrent des SMLES135 et SMS100A, plus lourdes et limitées à 13 500 tr/min. Les 6 L/s documentaires ne sont pas une consommation en charge qualifiée. GET complet SHA-256 01b152f269aeae367daa8a9524f083a1679707b0a3eff4daa59bcec83635f6de. Pages PDF lues : 7."
 		}
 	],
 	"fieldSources": {
@@ -117,6 +138,10 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"fiam-142313001-20260926"
+		],
+		"airflowBasis": [
+			"review:2026-11-16-reviews:fiam-smz15d:0",
+			"review:2026-11-16-reviews:fiam-smz15d:1"
 		]
 	},
 	"notes": [
@@ -126,7 +151,8 @@ const product: ToolProfileInput = {
 		"min": 360,
 		"typical": 360,
 		"max": 360
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

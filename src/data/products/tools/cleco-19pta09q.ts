@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cleco-19pta09q.webp",
+		"src": "/images/products/cleco-19pta09q-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Cleco 19PTA09Q, référence 19PTA09Q",
-		"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf#page=69",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Cleco 19PTA09Q, référence 19PTA09Q. Le tableau fabricant publie 310 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Plage de couple publiée : 1.7 à 8.9 Nm. Vitesse à vide publiée : 470 tr/min.",
+		"overview": "La 19PTA09Q est la version pistolet à gâchette de 1,7 à 8,9 Nm et 470 tr/min. Les 19PTA02Q et 03Q atteignent 2 800 et 1 900 tr/min avec des plages de couple plus basses. Les 310 L/min communs à la série ne décrivent pas le régime de mesure ; le calcul de débit reste non conclusif.",
 		"verifiedFacts": [
 			"Performances publiées à 6,2 bar à l’entrée de l’outil, note de la page 69.",
 			"Consommation générale publiée de 310 L/min pour la série 19 ; le catalogue ne la qualifie pas de maximum ou de moyenne.",
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Données de catalogue industriel, sans essai physique CompatAir. Disponibilité et révision livrée à confirmer avec le fournisseur.",
-			"Source : catalogue GI-1250-EU, édition archivée du fabricant. Vérifier la référence et la notice de la révision effectivement livrée."
+			"Source : catalogue GI-1250-EU, édition archivée du fabricant. Vérifier la référence et la notice de la révision effectivement livrée.",
+			"Le régime de mesure de la consommation publiée reste non précisé. Cette valeur documentaire ne permet pas de conclure au débit requis en charge."
 		]
 	},
 	"specifications": [
@@ -104,6 +105,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation générale publiée de 310 L/min pour la série 19 ; le catalogue ne la qualifie pas de maximum ou de moyenne."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cleco-19pta09q:0",
+			"sourceUrl": "https://www.clecotools.com/sites/clecotools/files/pim_pdfs/ATG_GI-1250-EU_en.pdf",
+			"sourceLabel": "Cleco, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 19PTA09Q est la version pistolet à gâchette de 1,7 à 8,9 Nm et 470 tr/min. Les 19PTA02Q et 03Q atteignent 2 800 et 1 900 tr/min avec des plages de couple plus basses. Les 310 L/min communs à la série ne décrivent pas le régime de mesure ; le calcul de débit reste non conclusif. GET complet SHA-256 8668d5e77a6b2469dc9b9012841e65bbfb947234a8087faa6fdd90384b3babac. Pages PDF lues : 69."
 		}
 	],
 	"fieldSources": {
@@ -115,6 +126,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"cleco-19pta09q-20260926"
+		],
+		"airflowBasis": [
+			"review:2026-11-16-reviews:cleco-19pta09q:0"
 		]
 	},
 	"notes": [
@@ -124,7 +138,8 @@ const product: ToolProfileInput = {
 		"min": 310,
 		"typical": 310,
 		"max": 310
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

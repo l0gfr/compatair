@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-rotative-gison-gp-823sa2.webp",
+		"src": "/images/products/ponceuse-rotative-gison-gp-823sa2-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : GISON GP-823SA2",
 		"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "gison-gp-823sa2",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-823SA2. Consommation de régime non précisé : 490 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 0.37 kg. Longueur : 115 mm.",
+		"overview": "La GP-823SA2 est une mini-ponceuse rotative sans engrenage, plateau 2 pouces et vitesse de 24 000 tr/min. La SA3 passe à 3 pouces et 18 000 tr/min ; la GP-823SB reste à 2 pouces mais tourne à 15 000 tr/min. Le corps de la SA2 mesure 115 mm pour 0,37 kg. Les 0,49 m³/min du tableau n’ont pas de régime établi et restent hors dimensionnement.",
 		"verifiedFacts": [
 			"Masse : 0.37 kg.",
 			"Longueur : 115 mm.",
@@ -104,6 +104,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-rotative-gison-gp-823sa2:0",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
+			"sourceLabel": "GISON, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La GP-823SA2 est une mini-ponceuse rotative sans engrenage, plateau 2 pouces et vitesse de 24 000 tr/min. La SA3 passe à 3 pouces et 18 000 tr/min ; la GP-823SB reste à 2 pouces mais tourne à 15 000 tr/min. Le corps de la SA2 mesure 115 mm pour 0,37 kg. Les 0,49 m³/min du tableau n’ont pas de régime établi et restent hors dimensionnement. GET complet SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Pages PDF lues : 44."
 		}
 	],
 	"fieldSources": {

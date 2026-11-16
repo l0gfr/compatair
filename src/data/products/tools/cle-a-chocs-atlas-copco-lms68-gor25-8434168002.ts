@@ -22,10 +22,10 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-atlas-copco-lms68-gor25-8434168002.webp",
+		"src": "/images/products/cle-a-chocs-atlas-copco-lms68-gor25-8434168002-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Atlas Copco LMS68 GOR25 (réf. 8434168002)",
 		"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "atlas-copco-lms68-gor25",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Atlas Copco LMS68 GOR25 (réf. 8434168002). Consommation maximale : 1 680 L/min à 6,3 bar. Consommations originales : 28 L/s ; 58.9 cfm. Vitesse à vide : 5000 tr/min.",
+		"overview": "La LMS68 GOR25 8434168002 place la gâchette à l’extérieur, à la différence de la GIR25. Les deux versions publient 600–1 800 Nm, un carré 1 pouce et 28 L/s en charge à 6,3 bar. La LMS88 passe au carré 1½ pouce et à 1 000–5 500 Nm avec 33 L/s. La durée de serrage recommandée ne dépasse pas cinq secondes ; le couple final dépend de l’assemblage.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 21.",
 			"Consommations originales : 28 L/s ; 58.9 cfm.",
@@ -101,6 +101,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-chocs-atlas-copco-lms68-gor25-8434168002:0",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf",
+			"sourceLabel": "Atlas Copco, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La LMS68 GOR25 8434168002 place la gâchette à l’extérieur, à la différence de la GIR25. Les deux versions publient 600–1 800 Nm, un carré 1 pouce et 28 L/s en charge à 6,3 bar. La LMS88 passe au carré 1½ pouce et à 1 000–5 500 Nm avec 33 L/s. La durée de serrage recommandée ne dépasse pas cinq secondes ; le couple final dépend de l’assemblage. GET complet SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Pages PDF lues : 3, 21."
 		}
 	],
 	"fieldSources": {

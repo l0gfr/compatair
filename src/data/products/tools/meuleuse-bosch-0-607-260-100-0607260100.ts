@@ -22,10 +22,10 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-bosch-0-607-260-100-0607260100.webp",
+		"src": "/images/products/meuleuse-bosch-0-607-260-100-0607260100-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Bosch 0 607 260 100 (réf. 0607260100)",
 		"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "bosch-0-607-260-100",
@@ -37,7 +37,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Bosch 0 607 260 100 (réf. 0607260100). Consommation en charge : 510 L/min à 6,3 bar. Vitesse à vide : 21000 tr/min. Masse : 0.5 kg.",
+		"overview": "La 0 607 260 100 est une meuleuse droite de 320 W avec pince 6 mm, à 21 000 tr/min. La 101 change la pince en 1/4 pouce ; le coffret 110 fournit notamment les pinces 3 et 6 mm. Les performances sont données à 6,3 bar avec quatre mètres de tuyau. Les 8,5 L/s de la colonne en charge correspondent aux 510 L/min utilisés par le moteur.",
 		"verifiedFacts": [
 			"Vitesse à vide : 21000 tr/min.",
 			"Masse : 0.5 kg."
@@ -98,6 +98,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-bosch-0-607-260-100-0607260100:0",
+			"sourceUrl": "https://www.bosch-professional.com/fr/media/service_relaunch/downloads/kataloge/francais/industriewerkzeuge/catalogue_complet_des_outils_industriels_pneumatiques.pdf",
+			"sourceLabel": "Bosch, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 0 607 260 100 est une meuleuse droite de 320 W avec pince 6 mm, à 21 000 tr/min. La 101 change la pince en 1/4 pouce ; le coffret 110 fournit notamment les pinces 3 et 6 mm. Les performances sont données à 6,3 bar avec quatre mètres de tuyau. Les 8,5 L/s de la colonne en charge correspondent aux 510 L/min utilisés par le moteur. GET complet SHA-256 54586613160c46c045dd75ba02ebb5b2962a5dbb09c773f0902d4d8b10d41eab. Pages PDF lues : 30, 4."
 		}
 	],
 	"fieldSources": {

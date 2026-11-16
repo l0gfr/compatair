@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/red-rooster-rr-24n-1.webp",
+		"src": "/images/products/red-rooster-rr-24n-1-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Red Rooster RR-24N 1, référence RR-24N 1",
-		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf#page=38",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Red Rooster RR-24N 1, référence RR-24N 1. Le tableau fabricant publie 960 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Vitesse à vide publiée : 5500 tr/min. Masse publiée : 3,7 kg.",
+		"overview": "La RR-24N 1 utilise un carré 1 pouce, contre 3/4 pouce pour la RR-24N. Le tableau publie 1 900 Nm et 5 500 tr/min, avec trois positions de serrage documentées par la notice du catalogue. Les 16 L/s sont explicitement relevés en charge. La consigne dynamique générale de 6,3 bar reste distinguée d’une attestation du point de mesure de consommation.",
 		"verifiedFacts": [
 			"La notice générale du catalogue prescrit 0,63 MPa, soit 6,3 bar mesurés au moteur en fonctionnement.",
 			"Consommation en charge publiée : 16 L/s, convertis en 960 L/min par multiplication par 60.",
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas.",
+			"La pression de service n’atteste pas la pression de mesure de consommation. Le régime ou l’appariement documentaire reste non qualifié ; aucune consommation dimensionnante n’est conservée."
 		]
 	},
 	"specifications": [
@@ -99,6 +100,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression de service dynamique, explicitement mesurée au moteur en fonctionnement dans les consignes du catalogue."
+		},
+		{
+			"id": "review:2026-11-16-reviews:red-rooster-rr-24n-1:0",
+			"sourceUrl": "https://www.rami-yokota.com/media/mpnb45zf/powertools_spread_fr.pdf",
+			"sourceLabel": "Red Rooster, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La RR-24N 1 utilise un carré 1 pouce, contre 3/4 pouce pour la RR-24N. Le tableau publie 1 900 Nm et 5 500 tr/min, avec trois positions de serrage documentées par la notice du catalogue. Les 16 L/s sont explicitement relevés en charge. La consigne dynamique générale de 6,3 bar reste distinguée d’une attestation du point de mesure de consommation. GET complet SHA-256 f22d1a57dc63da65a76cb6ba58b2c7f43dba3dbb28ee9032eca6ab1e1fa99c0e. Pages PDF lues : 38, 106."
 		}
 	],
 	"fieldSources": {
@@ -116,6 +127,9 @@ const product: ToolProfileInput = {
 		],
 		"connectorSize": [
 			"red-rooster-rr-24n-1-20260926"
+		],
+		"airflowBasis": [
+			"review:2026-11-16-reviews:red-rooster-rr-24n-1:0"
 		]
 	},
 	"notes": [
@@ -129,7 +143,8 @@ const product: ToolProfileInput = {
 	"recommendedHose": {
 		"innerDiameterMm": 10
 	},
-	"connectorSize": "PT 3/8\""
+	"connectorSize": "PT 3/8\"",
+	"airflowBasis": "unqualified"
 };
 
 export default product;

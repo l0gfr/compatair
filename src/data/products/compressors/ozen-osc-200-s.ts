@@ -27,10 +27,10 @@ const product: CompressorInput = {
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/ozen-osc-200-s.svg",
+    "src": "/images/products/ozen-osc-200-s-technical-20261116-reviews.svg",
     "alt": "Repères techniques : Ozen OSC 200 S",
     "sourceUrl": "https://ozenkompresor.com.tr/wp-content/uploads/2026/01/katalog-2025.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "specifications": [
     {
@@ -77,7 +77,7 @@ const product: CompressorInput = {
     }
   ],
   "editorial": {
-    "overview": "Ozen OSC 200 S. 30 200 L/min déclarés à 12,5 bar. Configuration constructeur : OSC 200 S.",
+    "overview": "L’OSC200S de 200 kW publie 30,2 m³/min à 12,5 bar, pression de référence de la version 13 bar. L’OSC200D donne 28,37 au même point ; la référence SD relève encore d’une autre configuration. La comparaison porte sur la même pression mesurée et le bon suffixe, pas sur la seule puissance. Le volume de stockage et le taux de marche restent indéterminés.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 13 bar.",
       "FAD sous pression identifié séparément des valeurs d’aspiration : 30 200 L/min déclarés à 12,5 bar."
@@ -100,6 +100,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 cfcfbd23c05cfe5db69ec1bb59c552a6543cf1597869b67811a985d1b7458b60 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-reviews:ozen-osc-200-s:0",
+      "sourceUrl": "https://ozenkompresor.com.tr/wp-content/uploads/2026/01/katalog-2025.pdf",
+      "sourceLabel": "Ozen, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "L’OSC200S de 200 kW publie 30,2 m³/min à 12,5 bar, pression de référence de la version 13 bar. L’OSC200D donne 28,37 au même point ; la référence SD relève encore d’une autre configuration. La comparaison porte sur la même pression mesurée et le bon suffixe, pas sur la seule puissance. Le volume de stockage et le taux de marche restent indéterminés. GET complet SHA-256 cfcfbd23c05cfe5db69ec1bb59c552a6543cf1597869b67811a985d1b7458b60. Pages PDF lues : 38."
     }
   ],
   "fieldSources": {

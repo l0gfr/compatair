@@ -11,117 +11,91 @@ const product: ToolProfileInput = {
 	"mpn": "AT-7438M",
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
-	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+	"demandExplanation": "La consommation moyenne publiée reste documentaire. Aucun débit en charge ni maximum de demande continue n’est déduit de cette moyenne.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-puma-at-7438m.webp",
+		"src": "/images/products/meuleuse-puma-at-7438m-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : PUMA AT-7438M",
-		"sourceUrl": "https://www.pumaair.com/product-Air-Die-Grinder-AirDieGrinder-.html",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceUrl": "https://www.pumaair.com/views/proimages/pd-en/PDF/PIC-2680/P044-AIR_DIE_GRINDER-2680.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "puma-at-7438m",
 		"label": "Référence AT-7438M",
 		"distinguishingAttributes": {
-			"reference": "AT-7438M",
-			"Free SpeedRPM": "6",
-			"Collet Size / inch": "24000"
+			"Pince de la version M": "6 mm, version métrique selon la légende",
+			"Échappement": "Latéral",
+			"Longueur du PDF": "205 mm",
+			"Masse du PDF": "0,76 kg",
+			"Puissance du PDF": "0,40 kW ; 0,54 hp"
 		}
 	},
 	"editorial": {
-		"overview": "PUMA AT-7438M. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Free SpeedRPM : 6. Collet Size / inch : 24000.",
+		"overview": "PUMA AT-7438M : meuleuse droite à pince métrique de 6 mm et échappement latéral, longueur 205 mm et masse 0,76 kg. La fiche PDF annonce 22 000 tr/min ; le tableau HTML présente des en-têtes incohérents et une cellule 24 000. La vitesse de la version livrée reste à confirmer. La 7438 utilise la pince impériale ; la 7437M est plus courte, 160 mm et 0,40 kg. Les 340 L/min moyens restent non dimensionnants.",
 		"verifiedFacts": [
-			"Free SpeedRPM : 6.",
-			"Collet Size / inch : 24000.",
-			"Collet Size / mm : 0.54.",
-			"Overall Length / inch : 400.",
-			"Overall Length / mm : 8.1.",
-			"AirInlet (PT) : 205.",
-			"Air Hose (ID) : 1/4”.",
-			"Net Weight / lb : 340.",
-			"Net Weight / kg : 1.7."
+			"Pince de la version M : 6 mm, version métrique selon la légende.",
+			"Échappement : Latéral.",
+			"Longueur du PDF : 205 mm.",
+			"Masse du PDF : 0,76 kg.",
+			"Puissance du PDF : 0,40 kW ; 0,54 hp.",
+			"Vitesse à vide, PDF : 22 000 tr/min ; cellule HTML discordante 24 000.",
+			"Consommation moyenne documentaire : 340 L/min ; 12 scfm, unités imprimées."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"La table HTML possède 14 colonnes d’en-têtes pour 16 cellules par référence. Ses valeurs ne sont pas réordonnées par supposition ; la fiche PDF est citée séparément.",
+			"La différence 22 000/24 000 tr/min reste à confirmer avec le fabricant avant de choisir un abrasif.",
+			"La consommation moyenne ne qualifie pas la demande continue en charge. L’état de référence du volume n’est pas défini ici.",
+			"Édition de la fiche PDF non précisée ; vérifier la référence et la configuration effectivement livrées."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Free SpeedRPM",
-			"value": "6",
+			"label": "Pince de la version M",
+			"value": "6 mm, version métrique selon la légende",
 			"evidenceIds": [
-				"october2-tools-puma-cat-41-pdp-263-p1"
+				"review:2026-11-16-reviews:meuleuse-puma-at-7438m:0"
 			]
 		},
 		{
-			"label": "Collet Size / inch",
-			"value": "24000",
+			"label": "Échappement",
+			"value": "Latéral",
 			"evidenceIds": [
-				"october2-tools-puma-cat-41-pdp-263-p1"
+				"review:2026-11-16-reviews:meuleuse-puma-at-7438m:0"
 			]
 		},
 		{
-			"label": "Collet Size / mm",
-			"value": "0.54",
+			"label": "Longueur du PDF",
+			"value": "205 mm",
 			"evidenceIds": [
-				"october2-tools-puma-cat-41-pdp-263-p1"
+				"review:2026-11-16-reviews:meuleuse-puma-at-7438m:0"
 			]
 		},
 		{
-			"label": "Overall Length / inch",
-			"value": "400",
+			"label": "Masse du PDF",
+			"value": "0,76 kg",
 			"evidenceIds": [
-				"october2-tools-puma-cat-41-pdp-263-p1"
+				"review:2026-11-16-reviews:meuleuse-puma-at-7438m:0"
 			]
 		},
 		{
-			"label": "Overall Length / mm",
-			"value": "8.1",
+			"label": "Puissance du PDF",
+			"value": "0,40 kW ; 0,54 hp",
 			"evidenceIds": [
-				"october2-tools-puma-cat-41-pdp-263-p1"
+				"review:2026-11-16-reviews:meuleuse-puma-at-7438m:0"
 			]
 		},
 		{
-			"label": "AirInlet (PT)",
-			"value": "205",
+			"label": "Vitesse à vide, PDF",
+			"value": "22 000 tr/min ; cellule HTML discordante 24 000",
 			"evidenceIds": [
-				"october2-tools-puma-cat-41-pdp-263-p1"
+				"review:2026-11-16-reviews:meuleuse-puma-at-7438m:0"
 			]
 		},
 		{
-			"label": "Air Hose (ID)",
-			"value": "1/4”",
+			"label": "Consommation moyenne documentaire",
+			"value": "340 L/min ; 12 scfm, unités imprimées",
 			"evidenceIds": [
-				"october2-tools-puma-cat-41-pdp-263-p1"
-			]
-		},
-		{
-			"label": "Net Weight / lb",
-			"value": "340",
-			"evidenceIds": [
-				"october2-tools-puma-cat-41-pdp-263-p1"
-			]
-		},
-		{
-			"label": "Net Weight / kg",
-			"value": "1.7",
-			"evidenceIds": [
-				"october2-tools-puma-cat-41-pdp-263-p1"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "La pression de mesure du débit n’est pas explicitée dans cette fiche.",
-			"evidenceIds": [
-				"october2-tools-puma-cat-41-pdp-263-p1"
-			]
-		},
-		{
-			"label": "Consommation moyenne, hors calcul",
-			"value": "12 L/min",
-			"evidenceIds": [
-				"october2-tools-puma-cat-41-pdp-263-p1"
+				"review:2026-11-16-reviews:meuleuse-puma-at-7438m:0"
 			]
 		}
 	],
@@ -135,21 +109,43 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 08b9f9c7d1898261da064b9521bc097278817d20a1ebb50c4f75c23188e0a7c7. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-puma-at-7438m:0",
+			"sourceUrl": "https://www.pumaair.com/views/proimages/pd-en/PDF/PIC-2680/P044-AIR_DIE_GRINDER-2680.pdf",
+			"sourceLabel": "PUMA, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "PUMA AT-7438M : meuleuse droite à pince métrique de 6 mm et échappement latéral, longueur 205 mm et masse 0,76 kg. La fiche PDF annonce 22 000 tr/min ; le tableau HTML présente des en-têtes incohérents et une cellule 24 000. La vitesse de la version livrée reste à confirmer. La 7438 utilise la pince impériale ; la 7437M est plus courte, 160 mm et 0,40 kg. Les 340 L/min moyens restent non dimensionnants. GET complet SHA-256 997bff19440269b150fc8e7f9654a25c740959b69be2fc32aab920b6d90c98c4. Pages PDF lues : 1."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-puma-at-7438m:1",
+			"sourceUrl": "https://www.pumaair.com/product-Air-Die-Grinder-AirDieGrinder-.html",
+			"sourceLabel": "PUMA, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "PUMA AT-7438M : meuleuse droite à pince métrique de 6 mm et échappement latéral, longueur 205 mm et masse 0,76 kg. La fiche PDF annonce 22 000 tr/min ; le tableau HTML présente des en-têtes incohérents et une cellule 24 000. La vitesse de la version livrée reste à confirmer. La 7438 utilise la pince impériale ; la 7437M est plus courte, 160 mm et 0,40 kg. Les 340 L/min moyens restent non dimensionnants. GET complet SHA-256 08b9f9c7d1898261da064b9521bc097278817d20a1ebb50c4f75c23188e0a7c7. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october2-tools-puma-cat-41-pdp-263-p1"
-		],
-		"workingPressureBar": [
-			"october2-tools-puma-cat-41-pdp-263-p1"
+			"review:2026-11-16-reviews:meuleuse-puma-at-7438m:0"
 		],
 		"demandExplanation": [
-			"october2-tools-puma-cat-41-pdp-263-p1"
+			"review:2026-11-16-reviews:meuleuse-puma-at-7438m:0",
+			"review:2026-11-16-reviews:meuleuse-puma-at-7438m:1"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-reviews:meuleuse-puma-at-7438m:0",
+			"review:2026-11-16-reviews:meuleuse-puma-at-7438m:1"
 		]
 	},
 	"notes": [
-		"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité."
+		"La consommation moyenne publiée reste documentaire. Aucun débit en charge ni maximum de demande continue n’est déduit de cette moyenne."
 	]
 };
 

@@ -16,22 +16,17 @@ const product: CompressorInput = {
 	},
 	"tankLiters": 387,
 	"maxPressureBar": 14,
-	"fadCurve": [
-		{
-			"pressureBar": 14,
-			"litersPerMinute": 1050
-		}
-	],
+	"fadCurve": [],
 	"intakeFlowLpm": 1545,
 	"powerKw": 11,
 	"oilType": "oil-free",
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/lupamat-lpyi-110-14-d.svg",
+		"src": "/images/products/lupamat-lpyi-110-14-d-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Lupamat LPYI 110/14 D",
 		"sourceUrl": "https://lupamat.com/pdf/Lupamat-EN-Katalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -56,10 +51,10 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Air livré à 14 bar",
-			"value": "1 050 L/min",
+			"label": "Débit documentaire, hors calcul",
+			"value": "1 050 L/min ; pression de mesure non qualifiée. Les anciens points sont conservés dans l’historique.",
 			"evidenceIds": [
-				"october4-lupamat-current-catalog-p22"
+				"review:2026-11-16-reviews:lupamat-lpyi-110-14-d:0"
 			]
 		},
 		{
@@ -78,17 +73,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Lupamat LPYI 110/14 D. 1 050 L/min déclarés à 14 bar. Receiver Mounted Type.",
+		"overview": "Le LPYI110/14D est le groupe sur réservoir 387 L, moteur 11 kW, pour un maximum de 14 bar. Les versions K et KD changent le caisson et le montage. La table distingue 1 545 L/min aspirés et 1 050 L/min FAD ; la pression maximale ne suffit pas à établir la pression de mesure du FAD. Les deux valeurs restent documentaires et le calcul demeure non conclusif.",
 		"verifiedFacts": [
-			"Configuration de pression documentée : 14 bar.",
-			"Cuve de stockage documentée : 387 L.",
-			"FAD sous pression identifié séparément des valeurs d’aspiration : 1 050 L/min déclarés à 14 bar."
+			"Le LPYI110/14D est le groupe sur réservoir 387 L, moteur 11 kW, pour un maximum de 14 bar.",
+			"Les versions K et KD changent le caisson et le montage."
 		],
 		"limitations": [
 			"Le FAD est déclaré dans le tableau à côté de la pression de fonctionnement. Aucune norme ISO ni méthode d’essai supplémentaire n’est ajoutée.",
 			"Une seule version de pression par puissance et montage est retenue.",
 			"Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil."
+			"Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
+			"La courbe dimensionnante a été retirée après revue : la mesure FAD et son appariement à une pression ne sont pas suffisamment établis. Les valeurs documentaires restent conservées."
 		]
 	},
 	"evidence": [
@@ -101,6 +96,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-04",
 			"confidence": "B",
 			"notes": "SHA-256 3330cc258da3e7cf4f293c5af0da2ae3ced11d881237b550687f50e1f01fd978 de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:lupamat-lpyi-110-14-d:0",
+			"sourceUrl": "https://lupamat.com/pdf/Lupamat-EN-Katalog.pdf",
+			"sourceLabel": "Lupamat, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le LPYI110/14D est le groupe sur réservoir 387 L, moteur 11 kW, pour un maximum de 14 bar. Les versions K et KD changent le caisson et le montage. La table distingue 1 545 L/min aspirés et 1 050 L/min FAD ; la pression maximale ne suffit pas à établir la pression de mesure du FAD. Les deux valeurs restent documentaires et le calcul demeure non conclusif. GET complet SHA-256 3330cc258da3e7cf4f293c5af0da2ae3ced11d881237b550687f50e1f01fd978. Pages PDF lues : 22."
 		}
 	],
 	"fieldSources": {
@@ -114,7 +119,7 @@ const product: CompressorInput = {
 			"october4-lupamat-current-catalog-p22"
 		],
 		"fadCurve": [
-			"october4-lupamat-current-catalog-p22"
+			"review:2026-11-16-reviews:lupamat-lpyi-110-14-d:0"
 		],
 		"intakeFlowLpm": [
 			"october4-lupamat-current-catalog-p22"

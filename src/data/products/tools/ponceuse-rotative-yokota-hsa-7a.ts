@@ -11,13 +11,13 @@ const product: ToolProfileInput = {
 	"mpn": "HSA-7A",
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
-	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+	"demandExplanation": "La consommation en charge est documentée, mais son appariement à une pression de mesure n’est pas établi. Les consignes de service restent séparées ; la compatibilité demeure indéterminée.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-rotative-yokota-hsa-7a.webp",
+		"src": "/images/products/ponceuse-rotative-yokota-hsa-7a-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Yokota HSA-7A",
 		"sourceUrl": "https://www.yokota-kogyo.co.jp/link/generalcatalog-j.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "yokota-hsa-7a",
@@ -29,51 +29,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Yokota HSA-7A. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Vitesse à vide : 7500 tr/min. Longueur : 222 mm.",
+		"overview": "Yokota HSA-7A : ponceuse pour papier 180 × 22 mm à 7 500 tr/min, longueur 222 mm et masse 1,8 kg. La HSA-6A conserve 1,8 kg avec un papier 150 × 22 mm, 8 400 tr/min et 204 mm. La HSA-4A passe au papier 100 × 16 mm et à 1 kg ; les trois montages ne sont pas interchangeables.",
 		"verifiedFacts": [
-			"Vitesse à vide : 7500 tr/min.",
+			"Papier, diamètre × alésage : 180 × 22 mm.",
+			"Vitesse à vide : 7 500 tr/min.",
 			"Longueur : 222 mm.",
-			"Masse : 1.8 kg."
+			"Masse : 1,8 kg.",
+			"Consommation en charge, hors calcul : 1 100 L/min.",
+			"Pression de service : 0,6 MPa ; appariement de mesure de consommation non établi."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"La consommation en charge est documentée, mais son appariement à une pression de mesure n’est pas établi. Les consignes de service restent séparées ; la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Vitesse à vide",
-			"value": "7500 tr/min",
+			"label": "Papier, diamètre × alésage",
+			"value": "180 × 22 mm",
 			"evidenceIds": [
-				"october2-tools-yokota-jp-p57"
+				"review:2026-11-16-reviews:ponceuse-rotative-yokota-hsa-7a:0"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "7 500 tr/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-rotative-yokota-hsa-7a:0"
 			]
 		},
 		{
 			"label": "Longueur",
 			"value": "222 mm",
 			"evidenceIds": [
-				"october2-tools-yokota-jp-p57"
+				"review:2026-11-16-reviews:ponceuse-rotative-yokota-hsa-7a:0"
 			]
 		},
 		{
 			"label": "Masse",
-			"value": "1.8 kg",
+			"value": "1,8 kg",
 			"evidenceIds": [
-				"october2-tools-yokota-jp-p57"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "La pression précisée pour le couple ou le fonctionnement ne constitue pas un point de mesure de consommation documenté.",
-			"evidenceIds": [
-				"october2-tools-yokota-jp-p57"
+				"review:2026-11-16-reviews:ponceuse-rotative-yokota-hsa-7a:0"
 			]
 		},
 		{
 			"label": "Consommation en charge, hors calcul",
-			"value": "1100 L/min",
+			"value": "1 100 L/min",
 			"evidenceIds": [
-				"october2-tools-yokota-jp-p57"
+				"review:2026-11-16-reviews:ponceuse-rotative-yokota-hsa-7a:0"
+			]
+		},
+		{
+			"label": "Pression de service",
+			"value": "0,6 MPa ; appariement de mesure de consommation non établi",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-rotative-yokota-hsa-7a:0"
 			]
 		}
 	],
@@ -87,21 +97,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : b60e8188ea17df768d52a2b1381382bc9b0e158a03fcd4416d4c4e3ebd0a866c. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-rotative-yokota-hsa-7a:0",
+			"sourceUrl": "https://www.yokota-kogyo.co.jp/link/generalcatalog-j.pdf",
+			"sourceLabel": "Yokota, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Yokota HSA-7A : ponceuse pour papier 180 × 22 mm à 7 500 tr/min, longueur 222 mm et masse 1,8 kg. La HSA-6A conserve 1,8 kg avec un papier 150 × 22 mm, 8 400 tr/min et 204 mm. La HSA-4A passe au papier 100 × 16 mm et à 1 kg ; les trois montages ne sont pas interchangeables. GET complet SHA-256 b60e8188ea17df768d52a2b1381382bc9b0e158a03fcd4416d4c4e3ebd0a866c. Pages PDF lues : 57."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october2-tools-yokota-jp-p57"
-		],
-		"workingPressureBar": [
-			"october2-tools-yokota-jp-p57"
+			"review:2026-11-16-reviews:ponceuse-rotative-yokota-hsa-7a:0"
 		],
 		"demandExplanation": [
-			"october2-tools-yokota-jp-p57"
+			"review:2026-11-16-reviews:ponceuse-rotative-yokota-hsa-7a:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-reviews:ponceuse-rotative-yokota-hsa-7a:0"
 		]
 	},
 	"notes": [
-		"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité."
+		"La consommation en charge est documentée, mais son appariement à une pression de mesure n’est pas établi. Les consignes de service restent séparées ; la compatibilité demeure indéterminée."
 	]
 };
 

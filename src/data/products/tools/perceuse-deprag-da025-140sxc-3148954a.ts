@@ -17,10 +17,10 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/perceuse-deprag-da025-140sxc-3148954a.svg",
+		"src": "/images/products/perceuse-deprag-da025-140sxc-3148954a-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : DEPRAG DA025-140SXC (réf. 3148954A)",
 		"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "deprag-da025-140sxc",
@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "DEPRAG DA025-140SXC (réf. 3148954A). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "La DA025-140SXC est une perceuse de 0,25 kW à 14 000 tr/min, capacité aluminium 6 mm et masse 0,9 kg sans raccord. La DA035-140SXC augmente la puissance à 0,35 kW ; la DA035-036SXC descend à 3 600 tr/min. Le matériau et la vitesse du foret distinguent les références. La page ne publie pas de consommation utilisable à pression connue.",
 		"verifiedFacts": [
 			"Puissance déclarée, kW (hp) : 0,25 (.34).",
 			"Vitesse à vide, tr/min : 14 000.",
@@ -102,6 +102,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:perceuse-deprag-da025-140sxc-3148954a:0",
+			"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
+			"sourceLabel": "DEPRAG, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La DA025-140SXC est une perceuse de 0,25 kW à 14 000 tr/min, capacité aluminium 6 mm et masse 0,9 kg sans raccord. La DA035-140SXC augmente la puissance à 0,35 kW ; la DA035-036SXC descend à 3 600 tr/min. Le matériau et la vitesse du foret distinguent les références. La page ne publie pas de consommation utilisable à pression connue. GET complet SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Pages PDF lues : 19."
 		}
 	],
 	"fieldSources": {

@@ -28,13 +28,13 @@ const product: CompressorInput = {
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/swan-sdu-310c-1.svg",
+    "src": "/images/products/swan-sdu-310c-1-technical-20261116-reviews.svg",
     "alt": "Repères techniques : SWAN SDU-310C-1",
-    "sourceUrl": "https://www.swan-aircompressor.com/en/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZzBQIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f21f3a426d479c9a27849c7f499ea9b940b557b7/Oil-less%20Compressor%20Series.pdf?disposition=preview",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceUrl": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "editorial": {
-    "overview": "SWAN SDU-310C-1. 885 L/min déclarés à 7,845 bar. Configuration constructeur : Groupe complet SDU-310C-1 ; configuration de la table constructeur.",
+    "overview": "Le SDU310C-1 est le groupe en caisson 7,5 kW, déclaré à 885 L/min FAD sous 8 kgf/cm², environ 7,845 bar. Le SDU310CD avec séchage et filtration publie 793 L/min ; le SDU307C-1 de 5,5 kW publie 730. Le traitement d’air ne permet pas de reprendre automatiquement le débit de la version C-1. Le stockage et le cycle du groupe restent non renseignés.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 7,845 bar.",
       "FAD sous pression identifié séparément des valeurs d’aspiration : 885 L/min déclarés à 7,845 bar."
@@ -114,6 +114,26 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-07",
       "confidence": "B",
       "notes": "SHA-256 99092c3ae6a5030fdb6901f601cb87d99c07d62f31a164a4a0b6786847c5cc6c de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-reviews:swan-sdu-310c-1:0",
+      "sourceUrl": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+      "sourceLabel": "SWAN, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "Le SDU310C-1 est le groupe en caisson 7,5 kW, déclaré à 885 L/min FAD sous 8 kgf/cm², environ 7,845 bar. Le SDU310CD avec séchage et filtration publie 793 L/min ; le SDU307C-1 de 5,5 kW publie 730. Le traitement d’air ne permet pas de reprendre automatiquement le débit de la version C-1. Le stockage et le cycle du groupe restent non renseignés. GET complet SHA-256 751228aea7ee7b2d83bb7af67071a1647374ae710e5d02c44f45cee1e59c4546. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
+    },
+    {
+      "id": "review:2026-11-16-reviews:swan-sdu-310c-1:1",
+      "sourceUrl": "https://www.swan-aircompressor.com/en/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZzBQIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f21f3a426d479c9a27849c7f499ea9b940b557b7/Oil-less%20Compressor%20Series.pdf?disposition=preview",
+      "sourceLabel": "SWAN, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "Le SDU310C-1 est le groupe en caisson 7,5 kW, déclaré à 885 L/min FAD sous 8 kgf/cm², environ 7,845 bar. Le SDU310CD avec séchage et filtration publie 793 L/min ; le SDU307C-1 de 5,5 kW publie 730. Le traitement d’air ne permet pas de reprendre automatiquement le débit de la version C-1. Le stockage et le cycle du groupe restent non renseignés. GET complet SHA-256 ba27dceb7bc711898ad3b2f485fdb7734a1487fb2494d253ac319020abe9821b. Pages PDF lues : 6."
     }
   ],
   "fieldSources": {

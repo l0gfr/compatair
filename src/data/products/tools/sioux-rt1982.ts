@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/sioux-rt1982.webp",
+		"src": "/images/products/sioux-rt1982-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Sioux RT1982, référence RT1982",
-		"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=81",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Sioux RT1982, référence RT1982. Le dimensionnement utilise 1 080 L/min à 6,2 bar, selon les régimes publiés par le fabricant. Vitesse à vide : 20000 tr/min. Pince : 3/8\". Masse : 3.4 kg.",
+		"overview": "La RT1982 est une défonceuse à pince 3/8 pouce, base de 152 mm et hauteur de 211 mm, à 20 000 tr/min. La RT1983 utilise une pince 1/2 pouce dans cette géométrie ; la RT1981 est plus basse et plus légère. Le diamètre de queue de fraise et le gabarit guident le choix. Les 18 L/s du catalogue restent documentaires avec leur convention générale, sans les présenter comme un point en charge propre au modèle.",
 		"verifiedFacts": [
 			"Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur.",
 			"Consommation publiée : 18.0 L/s (38.0 scfm). Le guide du catalogue (page PDF 10) définit ces débits comme de l’air détendu à pression atmosphérique et des consommations maximales, sauf indication contraire. La plus grande valeur publiée est retenue : 1080 L/min (L/s × 60).",
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Caractéristiques déclarées par le constructeur ; aucune mesure physique réalisée par CompatAir.",
-			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes."
+			"La présence au catalogue fabricant ne prouve ni le stock d’un distributeur, ni un volume de ventes.",
+			"La pression de service n’atteste pas la pression de mesure de consommation. Le régime ou l’appariement documentaire reste non qualifié ; aucune consommation dimensionnante n’est conservée."
 		]
 	},
 	"specifications": [
@@ -99,6 +100,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur."
+		},
+		{
+			"id": "review:2026-11-16-reviews:sioux-rt1982:0",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx",
+			"sourceLabel": "Sioux, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La RT1982 est une défonceuse à pince 3/8 pouce, base de 152 mm et hauteur de 211 mm, à 20 000 tr/min. La RT1983 utilise une pince 1/2 pouce dans cette géométrie ; la RT1981 est plus basse et plus légère. Le diamètre de queue de fraise et le gabarit guident le choix. Les 18 L/s du catalogue restent documentaires avec leur convention générale, sans les présenter comme un point en charge propre au modèle. GET complet SHA-256 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8. Pages PDF lues : 81."
 		}
 	],
 	"fieldSources": {
@@ -110,6 +121,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"sioux-rt1982-20260927"
+		],
+		"airflowBasis": [
+			"review:2026-11-16-reviews:sioux-rt1982:0"
 		]
 	},
 	"notes": [
@@ -119,7 +133,8 @@ const product: ToolProfileInput = {
 		"min": 1080,
 		"typical": 1080,
 		"max": 1080
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

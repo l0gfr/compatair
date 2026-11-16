@@ -17,10 +17,10 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/derouilleur-a-aiguilles-deprag-sn23-831125a.svg",
+		"src": "/images/products/derouilleur-a-aiguilles-deprag-sn23-831125a-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : DEPRAG SN23 (réf. 831125A)",
 		"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "deprag-sn23",
@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "DEPRAG SN23 (réf. 831125A). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "La SN23 reçoit 12 aiguilles de 3 × 180 mm et annonce 4 000 coups/min. La SN25 porte 23 aiguilles de même taille ; la SN10 utilise 29 aiguilles de 2 × 150 mm. Le faisceau et l’accès à la surface changent le choix, malgré une cadence commune. Le diamètre de flexible recommandé ne fournit pas un débit d’air mesuré et aucun point n’est ajouté au calcul.",
 		"verifiedFacts": [
 			"Nombre d’aiguilles : 12.",
 			"Dimensions des aiguilles, mm (in) : Ø 3x180 (Ø.12x7.09).",
@@ -94,6 +94,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:derouilleur-a-aiguilles-deprag-sn23-831125a:0",
+			"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
+			"sourceLabel": "DEPRAG, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La SN23 reçoit 12 aiguilles de 3 × 180 mm et annonce 4 000 coups/min. La SN25 porte 23 aiguilles de même taille ; la SN10 utilise 29 aiguilles de 2 × 150 mm. Le faisceau et l’accès à la surface changent le choix, malgré une cadence commune. Le diamètre de flexible recommandé ne fournit pas un débit d’air mesuré et aucun point n’est ajouté au calcul. GET complet SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Pages PDF lues : 25."
 		}
 	],
 	"fieldSources": {

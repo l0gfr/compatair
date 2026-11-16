@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/sioux-as22s847.webp",
+		"src": "/images/products/sioux-as22s847-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Sioux AS22S847, référence AS22S847",
-		"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx#page=67",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Sioux AS22S847, référence AS22S847. Le dimensionnement utilise 1 680 L/min à 6,2 bar, selon les régimes publiés par le fabricant. Vitesse à vide : 8400 tr/min. Diamètre du plateau : 175 mm. Masse : 2.8 kg.",
+		"overview": "L’AS22S847 est une ponceuse d’angle à plateau de 175 mm et 8 400 tr/min, avec régulation de vitesse. L’AS16S847 garde ce diamètre et cette vitesse avec une puissance et une masse inférieures ; l’AS16S125 passe au plateau 125 mm. Pour l’AS22, les 28 L/s en charge à 6,2 bar sont distincts des 21 L/s à vide. Le moteur conserve le point en charge, soit 1 680 L/min.",
 		"verifiedFacts": [
 			"Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur.",
 			"Consommation publiée : 28.0 L/s (60.0 scfm) ; 21.0 L/s (45.0 scfm). Le guide du catalogue (page PDF 10) définit ces débits comme de l’air détendu à pression atmosphérique et des consommations maximales, sauf indication contraire. La plus grande valeur publiée est retenue : 1680 L/min (L/s × 60).",
@@ -106,6 +106,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Performances déclarées à 90 psig (6,2 bar), pression de référence indiquée sous le tableau constructeur."
+		},
+		{
+			"id": "review:2026-11-16-reviews:sioux-as22s847:0",
+			"sourceUrl": "https://viewer.ipaper.io/sna-europe/sioux/sioux-product-catalog/GetPDF.ashx",
+			"sourceLabel": "Sioux, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’AS22S847 est une ponceuse d’angle à plateau de 175 mm et 8 400 tr/min, avec régulation de vitesse. L’AS16S847 garde ce diamètre et cette vitesse avec une puissance et une masse inférieures ; l’AS16S125 passe au plateau 125 mm. Pour l’AS22, les 28 L/s en charge à 6,2 bar sont distincts des 21 L/s à vide. Le moteur conserve le point en charge, soit 1 680 L/min. GET complet SHA-256 2a5030b584ce6f8bd5613ebbee0b33b66a620e82e26c83d2524cbbf055dd8bf8. Pages PDF lues : 67."
 		}
 	],
 	"fieldSources": {

@@ -16,10 +16,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-rodcraft-rc2444-8951077210.webp",
+		"src": "/images/products/cle-a-chocs-rodcraft-rc2444-8951077210-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Rodcraft RC2444 (réf. 8951077210)",
 		"sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "rodcraft-rc2444",
@@ -31,13 +31,17 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Rodcraft RC2444 (réf. 8951077210). La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Vitesse publiée : 2700 min-1. Masse publiée : 14.6 kg.",
+		"overview": "Rodcraft RC2444 : clé à chocs carré 1 pouce, mécanisme CLOSED HAMMER et régulateur 4+4 positions. Les 2 450 Nm de travail et 3 500 Nm maximaux sont distincts. Le catalogue donne 400 L/min moyens et 1 120 L/min à vide, selon son glossaire ; les RC2466 et RC2457Xi ont d’autres mécanismes et masses.",
 		"verifiedFacts": [
 			"Vitesse publiée : 2700 min-1.",
 			"Masse publiée : 14.6 kg.",
 			"Dimensions publiées : 325x300x121 mm.",
 			"Diamètre de tuyau : 13 mm.",
-			"Carré de sortie : 1\"."
+			"Carré de sortie : 1\".",
+			"Couple de travail / maximal : 2 450 / 3 500 Nm.",
+			"Mécanisme / réglages : CLOSED HAMMER / 4+4 positions.",
+			"Vitesse / masse : 2 700 tr/min / 14,6 kg.",
+			"Consommation moyenne / à vide : 400 / 1 120 L/min."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -95,6 +99,34 @@ const product: ToolProfileInput = {
 				"october2-tools-rodcraft-catalog-p16",
 				"october2-tools-rodcraft-catalog-p4"
 			]
+		},
+		{
+			"label": "Couple de travail / maximal",
+			"value": "2 450 / 3 500 Nm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-rodcraft-rc2444-8951077210:0"
+			]
+		},
+		{
+			"label": "Mécanisme / réglages",
+			"value": "CLOSED HAMMER / 4+4 positions",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-rodcraft-rc2444-8951077210:0"
+			]
+		},
+		{
+			"label": "Vitesse / masse",
+			"value": "2 700 tr/min / 14,6 kg",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-rodcraft-rc2444-8951077210:0"
+			]
+		},
+		{
+			"label": "Consommation moyenne / à vide",
+			"value": "400 / 1 120 L/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-rodcraft-rc2444-8951077210:0"
+			]
 		}
 	],
 	"evidence": [
@@ -117,6 +149,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Document complémentaire de la référence exacte, sans essai CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-chocs-rodcraft-rc2444-8951077210:0",
+			"sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf",
+			"sourceLabel": "Rodcraft, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Rodcraft RC2444 : clé à chocs carré 1 pouce, mécanisme CLOSED HAMMER et régulateur 4+4 positions. Les 2 450 Nm de travail et 3 500 Nm maximaux sont distincts. Le catalogue donne 400 L/min moyens et 1 120 L/min à vide, selon son glossaire ; les RC2466 et RC2457Xi ont d’autres mécanismes et masses. GET complet SHA-256 c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Pages PDF lues : 4, 16."
 		}
 	],
 	"fieldSources": {

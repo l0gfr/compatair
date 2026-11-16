@@ -17,10 +17,10 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/burineur-deprag-hc007-r10p-2104091a.svg",
+		"src": "/images/products/burineur-deprag-hc007-r10p-2104091a-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : DEPRAG HC007-R10P (réf. 2104091A)",
 		"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "deprag-hc007-r10p",
@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "DEPRAG HC007-R10P (réf. 2104091A). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "Le HC007-R10P est le burineur à emmanchement rond 10,3 × 36 mm, à 4 000 coups/min. Le HC007-HR12P change l’interface en hexagone, alors que le HC010-H10B porte une autre course et une cadence de 9 000. L’emmanchement prescrit doit correspondre au burin. La page technique ne fournit aucun point consommation–pression utilisable ; aucun débit n’est transféré depuis une autre famille.",
 		"verifiedFacts": [
 			"Emmanchement du burin, mm : Ø 10,3x36.",
 			"Fréquence des impacts, impacts/min : 4 000.",
@@ -86,6 +86,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:burineur-deprag-hc007-r10p-2104091a:0",
+			"sourceUrl": "https://www.depragindustrial.cz/files/eshop/products-dokumenty/deprag_complete_product_line_24__en.pdf",
+			"sourceLabel": "DEPRAG, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le HC007-R10P est le burineur à emmanchement rond 10,3 × 36 mm, à 4 000 coups/min. Le HC007-HR12P change l’interface en hexagone, alors que le HC010-H10B porte une autre course et une cadence de 9 000. L’emmanchement prescrit doit correspondre au burin. La page technique ne fournit aucun point consommation–pression utilisable ; aucun débit n’est transféré depuis une autre famille. GET complet SHA-256 7de335b0a26e42cbb8bdc58dd6786731f8acb69bc92a8435a472f9e3e2ac3621. Pages PDF lues : 23."
 		}
 	],
 	"fieldSources": {

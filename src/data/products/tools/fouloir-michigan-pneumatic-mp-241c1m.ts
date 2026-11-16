@@ -11,13 +11,13 @@ const product: ToolProfileInput = {
 	"mpn": "MP-241C1M",
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
-	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+	"demandExplanation": "Le tableau publie une consommation moyenne, sans pression de mesure associée. La valeur reste documentaire et la compatibilité demeure indéterminée.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/fouloir-michigan-pneumatic-mp-241c1m.webp",
+		"src": "/images/products/fouloir-michigan-pneumatic-mp-241c1m-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Michigan Pneumatic MP-241C1M",
 		"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/5-Rammers_V3.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "michigan-pneumatic-mp-241c1m",
@@ -29,44 +29,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Michigan Pneumatic MP-241C1M. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 16.0 lbs. Ligne technique constructeur : MP-241C1M 3-1/4\" Rubber 803 1-5/16\" 4\" 1590 24\" 16.0 lbs 3/8\" 3/8\" 29 cfm TX-00203.",
+		"overview": "Michigan Pneumatic MP-241C1M : fouloir à semelle caoutchouc 3¼ pouces, course 4 pouces et cadence 1 590 coups/min. Son corps de 24 pouces pèse 16 lb. La MP-241A1M conserve la course et la semelle avec un corps de 52½ pouces et 26 lb ; le choix dépend de la portée nécessaire.",
 		"verifiedFacts": [
-			"Masse publiée : 16.0 lbs.",
-			"Ligne technique constructeur : MP-241C1M 3-1/4\" Rubber 803 1-5/16\" 4\" 1590 24\" 16.0 lbs 3/8\" 3/8\" 29 cfm TX-00203."
+			"Semelle : Caoutchouc 3¼ pouces, cône 803.",
+			"Course : 4 pouces.",
+			"Cadence : 1 590 coups/min.",
+			"Longueur : 24 pouces.",
+			"Masse : 16 lb.",
+			"Consommation moyenne, hors calcul : 29 cfm."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Données du catalogue constructeur archivé ; consommation moyenne ou de régime non précisé, sans certification du besoin maximal en charge.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Le tableau publie une consommation moyenne, sans pression de mesure associée. La valeur reste documentaire et la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "16.0 lbs",
+			"label": "Semelle",
+			"value": "Caoutchouc 3¼ pouces, cône 803",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-5-pdf-p3"
+				"review:2026-11-16-reviews:fouloir-michigan-pneumatic-mp-241c1m:0"
 			]
 		},
 		{
-			"label": "Ligne technique constructeur",
-			"value": "MP-241C1M 3-1/4\" Rubber 803 1-5/16\" 4\" 1590 24\" 16.0 lbs 3/8\" 3/8\" 29 cfm TX-00203",
+			"label": "Course",
+			"value": "4 pouces",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-5-pdf-p3"
+				"review:2026-11-16-reviews:fouloir-michigan-pneumatic-mp-241c1m:0"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "Aucune pression de mesure de cette ligne de consommation n’est établie dans le tableau.",
+			"label": "Cadence",
+			"value": "1 590 coups/min",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-5-pdf-p3"
+				"review:2026-11-16-reviews:fouloir-michigan-pneumatic-mp-241c1m:0"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "24 pouces",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:fouloir-michigan-pneumatic-mp-241c1m:0"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "16 lb",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:fouloir-michigan-pneumatic-mp-241c1m:0"
 			]
 		},
 		{
 			"label": "Consommation moyenne, hors calcul",
 			"value": "29 cfm",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-5-pdf-p3"
+				"review:2026-11-16-reviews:fouloir-michigan-pneumatic-mp-241c1m:0"
 			]
 		}
 	],
@@ -80,21 +97,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : daa0a640fccce93e6ce22aa4d173f30872ad77ea4f3d710917b36dcf6b85bab5. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:fouloir-michigan-pneumatic-mp-241c1m:0",
+			"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/5-Rammers_V3.pdf",
+			"sourceLabel": "Michigan Pneumatic, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Michigan Pneumatic MP-241C1M : fouloir à semelle caoutchouc 3¼ pouces, course 4 pouces et cadence 1 590 coups/min. Son corps de 24 pouces pèse 16 lb. La MP-241A1M conserve la course et la semelle avec un corps de 52½ pouces et 26 lb ; le choix dépend de la portée nécessaire. GET complet SHA-256 daa0a640fccce93e6ce22aa4d173f30872ad77ea4f3d710917b36dcf6b85bab5. Pages PDF lues : 3."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october2b-tools-oct2b-michigan-5-pdf-p3"
-		],
-		"workingPressureBar": [
-			"october2b-tools-oct2b-michigan-5-pdf-p3"
+			"review:2026-11-16-reviews:fouloir-michigan-pneumatic-mp-241c1m:0"
 		],
 		"demandExplanation": [
-			"october2b-tools-oct2b-michigan-5-pdf-p3"
+			"review:2026-11-16-reviews:fouloir-michigan-pneumatic-mp-241c1m:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-reviews:fouloir-michigan-pneumatic-mp-241c1m:0"
 		]
 	},
 	"notes": [
-		"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité."
+		"Le tableau publie une consommation moyenne, sans pression de mesure associée. La valeur reste documentaire et la compatibilité demeure indéterminée."
 	]
 };
 

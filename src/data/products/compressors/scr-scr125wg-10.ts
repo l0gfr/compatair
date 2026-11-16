@@ -28,10 +28,10 @@ const product: CompressorInput = {
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/scr-scr125wg-10.svg",
+    "src": "/images/products/scr-scr125wg-10-technical-20261116-reviews.svg",
     "alt": "Repères techniques : SCR SCR125WG-10",
     "sourceUrl": "https://www.scrcompressor.com/en/products/oil_free_compressor/57.html",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "specifications": [
     {
@@ -78,7 +78,7 @@ const product: CompressorInput = {
     }
   ],
   "editorial": {
-    "overview": "SCR SCR125WG-10. 13 000 L/min déclarés à 10 bar. Configuration constructeur : SCR125WG-10.",
+    "overview": "Le SCR125WG-10 est le groupe 90 kW déclaré à 13 m³/min à 10 bar, contre 16 à 7 bar dans la même série. La note technique relie les capacités à GB3853, équivalent ISO1217 annexe C, sous 380 V/50 Hz triphasé. La GPM2 est une autre série. La plage recommandée de capacité 60–100 % n’est pas un taux de marche et aucun volume de cuve n’est déduit.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 10 bar.",
       "FAD sous pression identifié séparément des valeurs d’aspiration : 13 000 L/min déclarés à 10 bar."
@@ -101,6 +101,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 48777369a52d7eb304d60ba9a0e3791f78ea65a94c53d23a110659f6ab4d1e46 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-reviews:scr-scr125wg-10:0",
+      "sourceUrl": "https://www.scrcompressor.com/en/products/oil_free_compressor/57.html",
+      "sourceLabel": "SCR, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "Le SCR125WG-10 est le groupe 90 kW déclaré à 13 m³/min à 10 bar, contre 16 à 7 bar dans la même série. La note technique relie les capacités à GB3853, équivalent ISO1217 annexe C, sous 380 V/50 Hz triphasé. La GPM2 est une autre série. La plage recommandée de capacité 60–100 % n’est pas un taux de marche et aucun volume de cuve n’est déduit. GET complet SHA-256 48777369a52d7eb304d60ba9a0e3791f78ea65a94c53d23a110659f6ab4d1e46. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
     }
   ],
   "fieldSources": {

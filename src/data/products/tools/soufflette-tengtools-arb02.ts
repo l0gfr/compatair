@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Cette fiche précise la buse, la longueur et le raccord d’entrée, mais ne publie pas la consommation de la soufflette ni son point de pression. Aucun débit n’est déduit de la seule géométrie.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/soufflette-tengtools-arb02.webp",
+		"src": "/images/products/soufflette-tengtools-arb02-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : TengTools ARB02",
 		"sourceUrl": "https://www.tengtools.com/en-gb/collections/air-tools/products/air-blow-gun-300mm",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "tengtools-arb02",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "TengTools ARB02. Cette fiche précise la buse, la longueur et le raccord d’entrée, mais ne publie pas la consommation de la soufflette ni son point de pression. Aucun débit n’est déduit de la seule géométrie. Product Type : Air Blow Guns. Nozzle length (mm) : 270.",
+		"overview": "L’ARB02 est la soufflette à buse longue, annoncée « 300 mm » dans le titre. La table donne une buse de 270 mm et une longueur totale de 360 mm : ces cotes sont distinguées. Les ARB01 et ARB03 ont une buse de 100 mm. La portée et le dégagement changent l’usage ; la fiche ne publie aucun point débit–pression permettant de dimensionner le compresseur.",
 		"verifiedFacts": [
 			"Product Type : Air Blow Guns.",
 			"Nozzle length (mm) : 270.",
@@ -96,6 +96,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 389ad586028dd0b6da67e07d8e3cef327f8bbf31f2eb866853bf138a44c86cdc. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:soufflette-tengtools-arb02:0",
+			"sourceUrl": "https://www.tengtools.com/en-gb/collections/air-tools/products/air-blow-gun-300mm",
+			"sourceLabel": "TengTools, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’ARB02 est la soufflette à buse longue, annoncée « 300 mm » dans le titre. La table donne une buse de 270 mm et une longueur totale de 360 mm : ces cotes sont distinguées. Les ARB01 et ARB03 ont une buse de 100 mm. La portée et le dégagement changent l’usage ; la fiche ne publie aucun point débit–pression permettant de dimensionner le compresseur. GET complet SHA-256 528461b7a67b3a324f58a120a449d866ca6bfa4984ff75f3329262fe1fbc74ba. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

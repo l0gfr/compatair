@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-sp-air-sp-1145a.webp",
+		"src": "/images/products/cle-a-chocs-sp-air-sp-1145a-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : SP AIR SP-1145A",
 		"sourceUrl": "https://spair.vessel.co.jp/download/SP_catalog_all_E.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "sp-air-sp-1145a",
@@ -39,7 +39,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SP AIR SP-1145A. Consommation publiée, régime non précisé : 600 L/min à 6,2 bar. Raccord publié : 1/4\"NPT. Masse publiée : 2.5 kg.",
+		"overview": "La SP-1145A utilise un mécanisme Pin clutch, un carré 1/2 pouce et une plage publiée de 55–420 Nm à 6 000 tr/min. La SP-1148F passe à 55–475 Nm avec un mécanisme Twin Dog et 197 mm de long, contre 190 mm. Les 0,6 m³/min n’ont pas de régime explicite dans le tableau, même si sa pression de 0,62 MPa est indiquée : le moteur garde un résultat non conclusif.",
 		"verifiedFacts": [
 			"Raccord publié : 1/4\"NPT.",
 			"Masse publiée : 2.5 kg.",
@@ -105,6 +105,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-chocs-sp-air-sp-1145a:0",
+			"sourceUrl": "https://spair.vessel.co.jp/download/SP_catalog_all_E.pdf",
+			"sourceLabel": "SP AIR, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La SP-1145A utilise un mécanisme Pin clutch, un carré 1/2 pouce et une plage publiée de 55–420 Nm à 6 000 tr/min. La SP-1148F passe à 55–475 Nm avec un mécanisme Twin Dog et 197 mm de long, contre 190 mm. Les 0,6 m³/min n’ont pas de régime explicite dans le tableau, même si sa pression de 0,62 MPa est indiquée : le moteur garde un résultat non conclusif. GET complet SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. Pages PDF lues : 10."
 		}
 	],
 	"fieldSources": {

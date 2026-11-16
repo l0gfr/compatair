@@ -28,10 +28,10 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/ekom-dk50-6x4vrt-m.svg",
+		"src": "/images/products/ekom-dk50-6x4vrt-m-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : EKOM DK50 6x4VRT/M",
 		"sourceUrl": "https://www.ekom.sk/fileadmin/Ekom/navody/2021/industry_lab/NP-DK50-Nx4VRTM-AD-A-EN-12_11-2025.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -86,7 +86,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "EKOM DK50 6x4VRT/M. 1 370 L/min à 6 bar. Groupe avec cuve et sécheur.",
+		"overview": "Le DK50 6x4VRT/M 50 Hz fournit 1 370 L/min FAD à 6 bar avec séchage PDP −20 °C, contre 1 300 au réglage −40 °C. La version 4x4 fournit 910/870 L/min ; la 6x4VRTS/M ajoute l’insonorisation. Le tableau du groupe complet indique S1-100 et une cuve 500 L. Le FAD suppose les conditions de référence de la notice, avec correction d’altitude au-delà de 1 500 m.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Cuve de stockage documentée : 500 L.",
@@ -120,6 +120,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 a81ad585b5680e0fffee03a56db7457bc0debba5b80d5f9b560083720e8761cf de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ekom-dk50-6x4vrt-m:0",
+			"sourceUrl": "https://www.ekom.sk/fileadmin/Ekom/navody/2021/industry_lab/NP-DK50-Nx4VRTM-AD-A-EN-12_11-2025.pdf",
+			"sourceLabel": "EKOM, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le DK50 6x4VRT/M 50 Hz fournit 1 370 L/min FAD à 6 bar avec séchage PDP −20 °C, contre 1 300 au réglage −40 °C. La version 4x4 fournit 910/870 L/min ; la 6x4VRTS/M ajoute l’insonorisation. Le tableau du groupe complet indique S1-100 et une cuve 500 L. Le FAD suppose les conditions de référence de la notice, avec correction d’altitude au-delà de 1 500 m. GET complet SHA-256 a81ad585b5680e0fffee03a56db7457bc0debba5b80d5f9b560083720e8761cf. Pages PDF lues : 16, 19."
 		}
 	],
 	"fieldSources": {

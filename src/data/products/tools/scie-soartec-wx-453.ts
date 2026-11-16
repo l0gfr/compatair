@@ -16,10 +16,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La fiche publie une consommation et une pression d’alimentation, sans préciser le régime de consommation ni affirmer que cette valeur est mesurée à cette pression. Ces champs restent séparés et hors du calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/scie-soartec-wx-453.webp",
+		"src": "/images/products/scie-soartec-wx-453-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Soartec WX-453",
 		"sourceUrl": "https://www.soartectools.com/products/air-reciprocating-saw-10mm-wx-453",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "soartec-wx-453",
@@ -31,7 +31,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Soartec WX-453. La fiche publie une consommation et une pression d’alimentation, sans préciser le régime de consommation ni affirmer que cette valeur est mesurée à cette pression. Ces champs restent séparés et hors du calcul de compatibilité. Fonction déclarée : Air Reciprocating Saw 10mm. Champ fabricant : Stroke Length (mm) : 10.",
+		"overview": "La WX-453 est une scie alternative, course 10 mm, 10 000 courses/min, 180 mm et 0,45 kg. La WX-452 mesure 200 mm ; la WX-455 ajoute l’usage scie/lime avec mandrin double. Le montage de lame et le kit doivent correspondre au travail. Les 215 L/min publiés ne portent pas de régime de mesure explicite. Le moteur conserve une réponse non conclusive, sans inventer de capacité de coupe.",
 		"verifiedFacts": [
 			"Fonction déclarée : Air Reciprocating Saw 10mm.",
 			"Champ fabricant : Stroke Length (mm) : 10.",
@@ -115,6 +115,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : a40a9331a24f99b423a8c1bf582e9ad39fbb097ba1ecb783ba22ab6f0566aef2. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:scie-soartec-wx-453:0",
+			"sourceUrl": "https://www.soartectools.com/products/air-reciprocating-saw-10mm-wx-453",
+			"sourceLabel": "Soartec, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La WX-453 est une scie alternative, course 10 mm, 10 000 courses/min, 180 mm et 0,45 kg. La WX-452 mesure 200 mm ; la WX-455 ajoute l’usage scie/lime avec mandrin double. Le montage de lame et le kit doivent correspondre au travail. Les 215 L/min publiés ne portent pas de régime de mesure explicite. Le moteur conserve une réponse non conclusive, sans inventer de capacité de coupe. GET complet SHA-256 f9a9ae18ccd0112c822b9d506a6a37a012f4e022dcebfe3f992927c0b275fcd9. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

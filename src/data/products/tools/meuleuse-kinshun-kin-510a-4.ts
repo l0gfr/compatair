@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-kinshun-kin-510a-4.webp",
+		"src": "/images/products/meuleuse-kinshun-kin-510a-4-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Kinshun KIN-510A-4",
 		"sourceUrl": "https://shenghuiairtools.com/cdn/shop/files/Product_Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "kinshun-kin-510a-4",
@@ -29,12 +29,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Kinshun KIN-510A-4. Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse. Masse publiée : 500g. Dimensions publiées : 265mm+Ø35mm(19Ø+100mm).",
+		"overview": "La KIN-510A-4 est la version allongée à commande par palette, avec échappement arrière. La KIN-520A-4 utilise une commande rotative ; la KIN-510A-6 porte une extension plus longue. La consommation absente du tableau ne se déduit pas de leurs22000 tr/min communs.",
 		"verifiedFacts": [
 			"Masse publiée : 500g.",
-			"Dimensions publiées : 265mm+Ø35mm(19Ø+100mm).",
+			"Dimensions publiées : 265 mm+Ø35 mm(19Ø+100 mm).",
 			"Vitesse publiée dans son unité originale : 22000 rpm .",
-			"Pince publiée : 6mm+3mm(3.175-6.35)."
+			"Pince publiée : 6 mm+3 mm(3.175-6.35).",
+			"Commande : Palette ; contrairement à la commande rotative de la KIN-520A-4.",
+			"Échappement : Arrière.",
+			"Pince : libellé original : 6 mm+3 mm(3.175-6.35) ; version métrique ou impériale à confirmer."
 		],
 		"limitations": [
 			"Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse.",
@@ -76,6 +79,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-shenghui-catalog-p10"
 			]
+		},
+		{
+			"label": "Commande",
+			"value": "Palette ; contrairement à la commande rotative de la KIN-520A-4",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-kinshun-kin-510a-4:0"
+			]
+		},
+		{
+			"label": "Échappement",
+			"value": "Arrière",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-kinshun-kin-510a-4:0"
+			]
+		},
+		{
+			"label": "Pince : libellé original",
+			"value": "6mm+3mm(3.175-6.35) ; version métrique ou impériale à confirmer",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-kinshun-kin-510a-4:0"
+			]
 		}
 	],
 	"evidence": [
@@ -88,6 +112,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : a5e9965c317f752d6cfc55359849a9129715ca0da347b990149ccaee82467510. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-kinshun-kin-510a-4:0",
+			"sourceUrl": "https://shenghuiairtools.com/cdn/shop/files/Product_Catalog.pdf",
+			"sourceLabel": "Kinshun, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La KIN-510A-4 est la version allongée à commande par palette, avec échappement arrière. La KIN-520A-4 utilise une commande rotative ; la KIN-510A-6 porte une extension plus longue. La consommation absente du tableau ne se déduit pas de leurs22000 tr/min communs. GET complet SHA-256 a5e9965c317f752d6cfc55359849a9129715ca0da347b990149ccaee82467510. Pages PDF lues : 10."
 		}
 	],
 	"fieldSources": {
@@ -95,7 +129,7 @@ const product: ToolProfileInput = {
 			"october2-tools-shenghui-catalog-p10"
 		],
 		"workingPressureBar": [
-			"october2-tools-shenghui-catalog-p10"
+			"review:2026-11-16-reviews:meuleuse-kinshun-kin-510a-4:0"
 		],
 		"demandExplanation": [
 			"october2-tools-shenghui-catalog-p10"

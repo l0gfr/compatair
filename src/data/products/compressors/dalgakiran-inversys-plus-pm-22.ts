@@ -20,7 +20,7 @@ const product: CompressorInput = {
 	"fadCurve": [
 		{
 			"pressureBar": 13,
-			"litersPerMinute": 920
+			"litersPerMinute": 2650
 		}
 	],
 	"powerKw": 22,
@@ -28,10 +28,10 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/dalgakiran-inversys-plus-pm-22.svg",
+		"src": "/images/products/dalgakiran-inversys-plus-pm-22-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Dalgakiran INVERSYS PLUS PM 22",
 		"sourceUrl": "https://www.dalgakiran.com/Files/compressor-catalogue.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -56,8 +56,8 @@ const product: CompressorInput = {
 			]
 		},
 		{
-			"label": "Air livré à 13 bar",
-			"value": "920 L/min",
+			"label": "Débit minimum de modulation, hors capacité maximale",
+			"value": "920 L/min ; valeur minimale, pas la capacité du groupe.",
 			"evidenceIds": [
 				"october4-dalgakiran-catalog-p20"
 			]
@@ -68,14 +68,20 @@ const product: CompressorInput = {
 			"evidenceIds": [
 				"october4-dalgakiran-catalog-p20"
 			]
+		},
+		{
+			"label": "FAD maximal à 13 bar",
+			"value": "2650 L/min ; minimum et maximum distingués dans le tableau constructeur",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:dalgakiran-inversys-plus-pm-22:0"
+			]
 		}
 	],
 	"editorial": {
-		"overview": "Dalgakiran INVERSYS PLUS PM 22. 920 L/min déclarés à 13 bar. Base Mounted, stockage d’air externe.",
+		"overview": "L’INVERSYS PLUS PM22 au sol publie à 13 bar une modulation de 0,92 à 2,65 m³/min. L’ancien point 920 L/min reprenait le minimum de régulation ; la capacité maximale est corrigée à 2 650 L/min. Le PM30 atteint 3,87 m³/min au même point, le PM15 1,36. Le minimum n’est pas une moyenne d’utilisation. Le réservoir proposé en option ne fait pas partie du montage au sol retenu.",
 		"verifiedFacts": [
-			"Configuration de pression documentée : 13 bar.",
-			"Montage sans réservoir de stockage intégré explicitement documenté.",
-			"FAD sous pression identifié séparément des valeurs d’aspiration : 920 L/min déclarés à 13 bar."
+			"L’INVERSYS PLUS PM22 au sol publie à 13 bar une modulation de 0,92 à 2,65 m³/min.",
+			"L’ancien point 920 L/min reprenait le minimum de régulation ; la capacité maximale est corrigée à 2 650 L/min."
 		],
 		"limitations": [
 			"Une seule configuration de pression est retenue par modèle. Les autres lignes de pression ne sont pas assemblées en une courbe mesurée.",
@@ -106,6 +112,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-04",
 			"confidence": "B",
 			"notes": "SHA-256 aabb3138e3f934f46cf268df131ac7aa179a19ac716715bf2661475fef36438b de la réponse HTTP originale. Données constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:dalgakiran-inversys-plus-pm-22:0",
+			"sourceUrl": "https://www.dalgakiran.com/Files/compressor-catalogue.pdf",
+			"sourceLabel": "Dalgakiran, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’INVERSYS PLUS PM22 au sol publie à 13 bar une modulation de 0,92 à 2,65 m³/min. L’ancien point 920 L/min reprenait le minimum de régulation ; la capacité maximale est corrigée à 2 650 L/min. Le PM30 atteint 3,87 m³/min au même point, le PM15 1,36. Le minimum n’est pas une moyenne d’utilisation. Le réservoir proposé en option ne fait pas partie du montage au sol retenu. GET complet SHA-256 aabb3138e3f934f46cf268df131ac7aa179a19ac716715bf2661475fef36438b. Pages PDF lues : 20, 17."
 		}
 	],
 	"fieldSources": {
@@ -122,7 +138,7 @@ const product: CompressorInput = {
 			"october4-dalgakiran-catalog-p20"
 		],
 		"fadCurve": [
-			"october4-dalgakiran-catalog-p20"
+			"review:2026-11-16-reviews:dalgakiran-inversys-plus-pm-22:0"
 		],
 		"powerKw": [
 			"october4-dalgakiran-catalog-p20"

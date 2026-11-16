@@ -13,13 +13,13 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/aircraft-airprofi-401-90-v.webp",
+		"src": "/images/products/aircraft-airprofi-401-90-v-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Aircraft AIRPROFI 401/90 V, référence 2018414",
-		"sourceUrl": "https://raw.githubusercontent.com/l0gfr/compatair/6205a81599051d10cd378ed8e73f66a0e5f47e86/src/data/imports/catalog-compressors-2026-09-27.json",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit ; fondée sur le relevé fabricant historique conservé par CompatAir"
+		"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=48",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Aircraft AIRPROFI 401/90 V, référence 2018414 : cuve de 90 L, pression maximale publiée de 10 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Capacité de remplissage approximative : 266 l/min. Condition de remplissage publiée : à 6 bar de pression de travail.",
+		"overview": "L’AIRPROFI 401/90 V 2018414 associe une cuve verticale de 90 L à une alimentation 230 V. Le catalogue 2026/27 publie 600 × 600 × 1 070 mm et 66 kg ; le relevé historique indiquait 1 030 mm et 77 kg, à vérifier sur la révision livrée. Face au 401/50 P horizontal de 50 L, le stockage et l’encombrement changent, avec les mêmes 365 L/min aspirés et 266 L/min de remplissage approximatif à 6 bar. Ce dernier chiffre reste distinct d’un FAD qualifié.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons. Puissance moteur publiée : 2,2 kW.",
@@ -46,9 +46,9 @@ const product: CompressorInput = {
 		},
 		{
 			"label": "Dimensions publiées",
-			"value": "600 mm × 600 mm × 1030 mm (L × l × H, approximatives)",
+			"value": "Catalogue 2026/27 : 600 × 600 × 1 070 mm ; relevé historique : 600 × 600 × 1 030 mm, révision livrée à confirmer",
 			"evidenceIds": [
-				"aircraft-2018414-20260927"
+				"review:2026-11-16-reviews:aircraft-airprofi-401-90-v:0"
 			]
 		},
 		{
@@ -88,9 +88,9 @@ const product: CompressorInput = {
 		},
 		{
 			"label": "Masse approximative publiée",
-			"value": "77 kg",
+			"value": "Catalogue 2026/27 : 66 kg ; relevé historique : 77 kg, révision livrée à confirmer",
 			"evidenceIds": [
-				"aircraft-2018414-20260927"
+				"review:2026-11-16-reviews:aircraft-airprofi-401-90-v:0"
 			]
 		},
 		{
@@ -130,32 +130,52 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-23",
 			"confidence": "A",
 			"notes": "Document fabricant consulté le 23/10/2026. Diffusion : OXOMI, portail public MROSE, fournisseur Stürmer 702076. Empreinte PDF SHA-256 : 3917824170e53035dbe1f3eb1fbfd745f22d0ddb7009209b82efabe2ca9b1e7c. Identité exacte vérifiée. Périmètre et écarts consignés dans le registre de revue du 23/10/2026 ; les caractéristiques de la fiche web de septembre gardent leur preuve historique distincte."
+		},
+		{
+			"id": "review:2026-11-16-reviews:aircraft-airprofi-401-90-v:0",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=48",
+			"sourceLabel": "Aircraft, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’AIRPROFI 401/90 V 2018414 associe une cuve verticale de 90 L à une alimentation 230 V. Le catalogue 2026/27 publie 600 × 600 × 1 070 mm et 66 kg ; le relevé historique indiquait 1 030 mm et 77 kg, à vérifier sur la révision livrée. Face au 401/50 P horizontal de 50 L, le stockage et l’encombrement changent, avec les mêmes 365 L/min aspirés et 266 L/min de remplissage approximatif à 6 bar. Ce dernier chiffre reste distinct d’un FAD qualifié. GET complet SHA-256 3917824170e53035dbe1f3eb1fbfd745f22d0ddb7009209b82efabe2ca9b1e7c. Pages PDF lues : 1."
+		},
+		{
+			"id": "review:2026-11-16-reviews:aircraft-airprofi-401-90-v:1",
+			"sourceUrl": "https://oxomi.com/portals/api/v1/documents/download?document=10714317&portal=3001205&pageNumber=46",
+			"sourceLabel": "Aircraft, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’AIRPROFI 401/90 V 2018414 associe une cuve verticale de 90 L à une alimentation 230 V. Le catalogue 2026/27 publie 600 × 600 × 1 070 mm et 66 kg ; le relevé historique indiquait 1 030 mm et 77 kg, à vérifier sur la révision livrée. Face au 401/50 P horizontal de 50 L, le stockage et l’encombrement changent, avec les mêmes 365 L/min aspirés et 266 L/min de remplissage approximatif à 6 bar. Ce dernier chiffre reste distinct d’un FAD qualifié. GET complet SHA-256 0162403973d0a2407492d73ff211eb8812261b8146dd32cb139c2342ab932ff9. Pages PDF lues : 1."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"aircraft-2018414-20260927"
+			"review:2026-11-16-reviews:aircraft-airprofi-401-90-v:0"
 		],
 		"tankLiters": [
-			"aircraft-2018414-20260927"
+			"review:2026-11-16-reviews:aircraft-airprofi-401-90-v:0"
 		],
 		"maxPressureBar": [
-			"aircraft-2018414-20260927"
+			"review:2026-11-16-reviews:aircraft-airprofi-401-90-v:0"
 		],
 		"fadCurve": [
-			"aircraft-2018414-20260927"
+			"review:2026-11-16-reviews:aircraft-airprofi-401-90-v:0"
 		],
 		"oilType": [
 			"aircraft-2018414-20260927"
 		],
 		"intakeFlowLpm": [
-			"aircraft-2018414-20260927"
+			"review:2026-11-16-reviews:aircraft-airprofi-401-90-v:0"
 		],
 		"powerKw": [
-			"aircraft-2018414-20260927"
+			"review:2026-11-16-reviews:aircraft-airprofi-401-90-v:0"
 		],
 		"voltage": [
-			"aircraft-2018414-20260927"
+			"review:2026-11-16-reviews:aircraft-airprofi-401-90-v:0"
 		]
 	},
 	"notes": [

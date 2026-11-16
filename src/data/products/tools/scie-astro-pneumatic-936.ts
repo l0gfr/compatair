@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/scie-astro-pneumatic-936.svg",
+		"src": "/images/products/scie-astro-pneumatic-936-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Astro Pneumatic 936",
 		"sourceUrl": "https://www.astrotools.com/product/onyx-gear-driven-heavy-duty-air-saw/",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "astro-pneumatic-936",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Astro Pneumatic 936. Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "La 936 est une scie alternative de 310 mm et 3 lb, à course 10 mm et cadence 7 000/min. La capacité publiée de 1/4 pouce ne doit pas être étendue à tout matériau sans prescription de lame. L’AF7 et la SA347 ont d’autres gabarits et cadences. La fiche ne fournit pas de point consommation–pression utilisable ; le moteur reste non conclusif.",
 		"verifiedFacts": [
 			"Cadence mécanique : 7,000.",
 			"Arrivée d’air : 1/4\".",
@@ -106,6 +106,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 4b1dda85f66db0d963b75f1d8e5bb60449afe665b1b527d7a1320f2ae19efeef. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:scie-astro-pneumatic-936:0",
+			"sourceUrl": "https://www.astrotools.com/product/onyx-gear-driven-heavy-duty-air-saw/",
+			"sourceLabel": "Astro Pneumatic, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 936 est une scie alternative de 310 mm et 3 lb, à course 10 mm et cadence 7 000/min. La capacité publiée de 1/4 pouce ne doit pas être étendue à tout matériau sans prescription de lame. L’AF7 et la SA347 ont d’autres gabarits et cadences. La fiche ne fournit pas de point consommation–pression utilisable ; le moteur reste non conclusif. GET complet SHA-256 ed0b363e6bae2945c915930c69b711e9439ad99b7fa3e6dac1e609fdb76dbf66. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

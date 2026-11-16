@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/taraudeuse-sumake-st-tt130.webp",
+		"src": "/images/products/taraudeuse-sumake-st-tt130-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Sumake ST-TT130",
 		"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "sumake-st-tt130",
@@ -39,7 +39,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-TT130. Consommation publiée, régime non précisé : 396 L/min à 6,2 bar. Consommation dans les unités du tableau : 396 L/min ; 14 cfm. Configuration complète publiée : ST-TT130.",
+		"overview": "La ST-TT130 est la taraudeuse M3–M8 à cône B12 et échappement arrière, 350 tr/min et 370 mm. La ST-TT120 conserve la capacité et la vitesse mais évacue l’air par la poignée et mesure 267 mm ; la ST-TT140 passe au cône B16 pour M3–M12. L’interface et l’espace disponible guident le choix. Les 396 L/min n’ont pas de régime de consommation établi.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 27.",
 			"Consommation dans les unités du tableau : 396 L/min ; 14 cfm.",
@@ -99,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "review:2026-11-16-reviews:taraudeuse-sumake-st-tt130:0",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
+			"sourceLabel": "Sumake, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La ST-TT130 est la taraudeuse M3–M8 à cône B12 et échappement arrière, 350 tr/min et 370 mm. La ST-TT120 conserve la capacité et la vitesse mais évacue l’air par la poignée et mesure 267 mm ; la ST-TT140 passe au cône B16 pour M3–M12. L’interface et l’espace disponible guident le choix. Les 396 L/min n’ont pas de régime de consommation établi. GET complet SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Pages PDF lues : 27."
 		}
 	],
 	"fieldSources": {

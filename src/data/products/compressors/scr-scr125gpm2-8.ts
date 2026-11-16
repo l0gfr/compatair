@@ -16,21 +16,16 @@ const product: CompressorInput = {
   },
   "maxPressureBar": 8,
   "maxPressureBasis": "selected-working-pressure-ceiling",
-  "fadCurve": [
-    {
-      "pressureBar": 8,
-      "litersPerMinute": 13600
-    }
-  ],
+  "fadCurve": [],
   "powerKw": 90,
   "oilType": "oil-free",
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/scr-scr125gpm2-8.svg",
+    "src": "/images/products/scr-scr125gpm2-8-technical-20261116-reviews.svg",
     "alt": "Repères techniques : SCR SCR125GPM2-8",
     "sourceUrl": "https://www.scrcompressor.com/en/products/oil_free_compressor/173.html",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "specifications": [
     {
@@ -55,10 +50,10 @@ const product: CompressorInput = {
       ]
     },
     {
-      "label": "Air livré à 8 bar",
-      "value": "13 600 L/min",
+      "label": "Débit documentaire, hors calcul",
+      "value": "13 600 L/min ; pression de mesure non qualifiée. Les anciens points sont conservés dans l’historique.",
       "evidenceIds": [
-        "october4c-scr-173-p1"
+        "review:2026-11-16-reviews:scr-scr125gpm2-8:0"
       ]
     },
     {
@@ -77,10 +72,10 @@ const product: CompressorInput = {
     }
   ],
   "editorial": {
-    "overview": "SCR SCR125GPM2-8. 13 600 L/min déclarés à 8 bar. Configuration constructeur : SCR125GPM2-8.",
+    "overview": "Le SCR125GPM2-8 est le groupe sans huile 90 kW dont la table associe 13,6 m³/min à 8 bar. La version -7 annonce 14,5 m³/min ; la SCR125WG-10 relève d’une autre série et d’une autre pression. La page GPM2 ne précise pas la convention FAD de cette capacité, et la cote de hauteur de la ligne est tronquée. Le débit reste documentaire plutôt qu’un point de calcul présenté comme mesuré.",
     "verifiedFacts": [
-      "Pression de la configuration documentée : 8 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 13 600 L/min déclarés à 8 bar."
+      "Le SCR125GPM2-8 est le groupe sans huile 90 kW dont la table associe 13,6 m³/min à 8 bar.",
+      "La version -7 annonce 14,5 m³/min ; la SCR125WG-10 relève d’une autre série et d’une autre pression."
     ],
     "limitations": [
       "Cuve et cycle de service non documentés. Pressions et tensions variantes regroupées avant décompte.",
@@ -89,7 +84,8 @@ const product: CompressorInput = {
       "Cycle de service non documenté : une compatibilité continue ne peut pas être conclue à partir de ce seul profil.",
       "La fréquence électrique de cette configuration n’est pas documentée.",
       "Cuve non documentée : l’autonomie et le volume de stockage ne peuvent pas être conclus à partir de ce profil.",
-      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions."
+      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions.",
+      "La courbe dimensionnante a été retirée après revue : la mesure FAD et son appariement à une pression ne sont pas suffisamment établis. Les valeurs documentaires restent conservées."
     ]
   },
   "evidence": [
@@ -102,6 +98,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 c8f881898562b28a7db336b4dee5580a73bb2af7a803aff0162aa3a6d7cb7fef de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-reviews:scr-scr125gpm2-8:0",
+      "sourceUrl": "https://www.scrcompressor.com/en/products/oil_free_compressor/173.html",
+      "sourceLabel": "SCR, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "Le SCR125GPM2-8 est le groupe sans huile 90 kW dont la table associe 13,6 m³/min à 8 bar. La version -7 annonce 14,5 m³/min ; la SCR125WG-10 relève d’une autre série et d’une autre pression. La page GPM2 ne précise pas la convention FAD de cette capacité, et la cote de hauteur de la ligne est tronquée. Le débit reste documentaire plutôt qu’un point de calcul présenté comme mesuré. GET complet SHA-256 c8f881898562b28a7db336b4dee5580a73bb2af7a803aff0162aa3a6d7cb7fef. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
     }
   ],
   "fieldSources": {
@@ -115,7 +121,7 @@ const product: CompressorInput = {
       "october4c-scr-173-p1"
     ],
     "fadCurve": [
-      "october4c-scr-173-p1"
+      "review:2026-11-16-reviews:scr-scr125gpm2-8:0"
     ],
     "powerKw": [
       "october4c-scr-173-p1"

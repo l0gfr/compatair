@@ -11,13 +11,13 @@ const product: ToolProfileInput = {
 	"mpn": "MP-20M-401L-3MT",
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
-	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+	"demandExplanation": "Le tableau publie une consommation moyenne, sans pression de mesure associée. La valeur reste documentaire et la compatibilité demeure indéterminée.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/perceuse-michigan-pneumatic-mp-20m-401l-3mt.webp",
+		"src": "/images/products/perceuse-michigan-pneumatic-mp-20m-401l-3mt-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Michigan Pneumatic MP-20M-401L-3MT",
 		"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/9-Drills_V2.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "michigan-pneumatic-mp-20m-401l-3mt",
@@ -29,44 +29,85 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Michigan Pneumatic MP-20M-401L-3MT. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 21.5 lbs. Ligne technique constructeur : MP-20M-401L-3MT 1\" 240 rpm #3 2 5-1/4\" 24-3/4\" 21.5 lbs 1-7/16\" 26 cfm.",
+		"overview": "Michigan Pneumatic MP-20M-401L-3MT : perceuse d’angle non réversible, cône Morse n°3, capacité de perçage 1 pouce et vitesse 240 tr/min. La MP-20M-401L utilise un cône n°2 avec les mêmes dimensions et puissance 2 hp. Les rallonges et dispositifs d’avance illustrés sont des options.",
 		"verifiedFacts": [
-			"Masse publiée : 21.5 lbs.",
-			"Ligne technique constructeur : MP-20M-401L-3MT 1\" 240 rpm #3 2 5-1/4\" 24-3/4\" 21.5 lbs 1-7/16\" 26 cfm."
+			"Architecture : Angle, non réversible.",
+			"Cône Morse : N°3.",
+			"Capacité de perçage : 1 pouce.",
+			"Vitesse à vide : 240 tr/min.",
+			"Puissance publiée : 2 hp.",
+			"Hauteur de broche maximale : 5¼ pouces.",
+			"Longueur : 24¾ pouces.",
+			"Masse : 21,5 lb.",
+			"Consommation moyenne, hors calcul : 26 cfm."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Données du catalogue constructeur archivé ; consommation moyenne ou de régime non précisé, sans certification du besoin maximal en charge.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Le tableau publie une consommation moyenne, sans pression de mesure associée. La valeur reste documentaire et la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "21.5 lbs",
+			"label": "Architecture",
+			"value": "Angle, non réversible",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-9-pdf-p8"
+				"review:2026-11-16-reviews:perceuse-michigan-pneumatic-mp-20m-401l-3mt:0"
 			]
 		},
 		{
-			"label": "Ligne technique constructeur",
-			"value": "MP-20M-401L-3MT 1\" 240 rpm #3 2 5-1/4\" 24-3/4\" 21.5 lbs 1-7/16\" 26 cfm",
+			"label": "Cône Morse",
+			"value": "N°3",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-9-pdf-p8"
+				"review:2026-11-16-reviews:perceuse-michigan-pneumatic-mp-20m-401l-3mt:0"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "Aucune pression de mesure de cette ligne de consommation n’est établie dans le tableau.",
+			"label": "Capacité de perçage",
+			"value": "1 pouce",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-9-pdf-p8"
+				"review:2026-11-16-reviews:perceuse-michigan-pneumatic-mp-20m-401l-3mt:0"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "240 tr/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-michigan-pneumatic-mp-20m-401l-3mt:0"
+			]
+		},
+		{
+			"label": "Puissance publiée",
+			"value": "2 hp",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-michigan-pneumatic-mp-20m-401l-3mt:0"
+			]
+		},
+		{
+			"label": "Hauteur de broche maximale",
+			"value": "5¼ pouces",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-michigan-pneumatic-mp-20m-401l-3mt:0"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "24¾ pouces",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-michigan-pneumatic-mp-20m-401l-3mt:0"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "21,5 lb",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-michigan-pneumatic-mp-20m-401l-3mt:0"
 			]
 		},
 		{
 			"label": "Consommation moyenne, hors calcul",
 			"value": "26 cfm",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-9-pdf-p8"
+				"review:2026-11-16-reviews:perceuse-michigan-pneumatic-mp-20m-401l-3mt:0"
 			]
 		}
 	],
@@ -80,21 +121,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 551c618f343aa18c70a0d669a0bd9c70065142f614e83cf879859d6835562ad2. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:perceuse-michigan-pneumatic-mp-20m-401l-3mt:0",
+			"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/9-Drills_V2.pdf",
+			"sourceLabel": "Michigan Pneumatic, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Michigan Pneumatic MP-20M-401L-3MT : perceuse d’angle non réversible, cône Morse n°3, capacité de perçage 1 pouce et vitesse 240 tr/min. La MP-20M-401L utilise un cône n°2 avec les mêmes dimensions et puissance 2 hp. Les rallonges et dispositifs d’avance illustrés sont des options. GET complet SHA-256 551c618f343aa18c70a0d669a0bd9c70065142f614e83cf879859d6835562ad2. Pages PDF lues : 8."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october2b-tools-oct2b-michigan-9-pdf-p8"
-		],
-		"workingPressureBar": [
-			"october2b-tools-oct2b-michigan-9-pdf-p8"
+			"review:2026-11-16-reviews:perceuse-michigan-pneumatic-mp-20m-401l-3mt:0"
 		],
 		"demandExplanation": [
-			"october2b-tools-oct2b-michigan-9-pdf-p8"
+			"review:2026-11-16-reviews:perceuse-michigan-pneumatic-mp-20m-401l-3mt:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-reviews:perceuse-michigan-pneumatic-mp-20m-401l-3mt:0"
 		]
 	},
 	"notes": [
-		"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité."
+		"Le tableau publie une consommation moyenne, sans pression de mesure associée. La valeur reste documentaire et la compatibilité demeure indéterminée."
 	]
 };
 

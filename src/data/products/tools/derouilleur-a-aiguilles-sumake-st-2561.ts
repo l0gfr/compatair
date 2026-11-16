@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/derouilleur-a-aiguilles-sumake-st-2561.webp",
+		"src": "/images/products/derouilleur-a-aiguilles-sumake-st-2561-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Sumake ST-2561",
 		"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "sumake-st-2561",
@@ -39,7 +39,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-2561. Consommation publiée, régime non précisé : 283 L/min à 6,2 bar. Consommation dans les unités du tableau : 283 L/min ; 10 cfm. Configuration complète publiée : ST-2561.",
+		"overview": "Le ST-2561 utilise 23 aiguilles de 3 × 180 mm, avec une option 53 aiguilles de 2 mm, et une course de 27 mm à 4 000 coups/min. Le ST-2550 utilise 19 aiguilles de 3 mm et 33 mm de course ; le 2553A ajoute une configuration d’aspiration. Le faisceau et la collecte de poussière changent le choix. Les 283 L/min de régime non précisé restent documentaires.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 55.",
 			"Consommation dans les unités du tableau : 283 L/min ; 10 cfm.",
@@ -99,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "review:2026-11-16-reviews:derouilleur-a-aiguilles-sumake-st-2561:0",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
+			"sourceLabel": "Sumake, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le ST-2561 utilise 23 aiguilles de 3 × 180 mm, avec une option 53 aiguilles de 2 mm, et une course de 27 mm à 4 000 coups/min. Le ST-2550 utilise 19 aiguilles de 3 mm et 33 mm de course ; le 2553A ajoute une configuration d’aspiration. Le faisceau et la collecte de poussière changent le choix. Les 283 L/min de régime non précisé restent documentaires. GET complet SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Pages PDF lues : 55."
 		}
 	],
 	"fieldSources": {

@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/pistolet-peinture-hvlp-sames-kremlin-fstart-g-hvlp-13-mva-135-756-113.svg",
+		"src": "/images/products/pistolet-peinture-hvlp-sames-kremlin-fstart-g-hvlp-13-mva-135-756-113-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Sames Kremlin FStart G HVLP-13-Mva (réf. 135.756.113)",
 		"sourceUrl": "https://cdn.quable.com/sames/94e0c606-6b89-4092-a995-front/original/Catalogue_Sames-Kremlin-Airspray_FR_V5-3SA_2021.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "sames-kremlin-fstart-g-hvlp-13-mva",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sames Kremlin FStart G HVLP-13-Mva (réf. 135.756.113). Les caractéristiques propres à cette référence sont documentées. Le régime et le point de pression associés à une consommation utilisable restent insuffisants pour dimensionner le compresseur.",
+		"overview": "Le FStart G 135.756.113 associe gravité, godet de 0,6 L et buse HVLP de 1,3 mm, avec un jet M de 20–30 cm. Le tableau laisse sa consommation individuelle vide, alors qu’il donne 18,8 m³/h au 1,5 mm et 18,9 au 1,8 mm. Les 20,4 m³/h à 2,2 bar de l’en-tête de gamme ne sont pas attribués automatiquement à cette buse. Le moteur garde un résultat non conclusif.",
 		"verifiedFacts": [
 			"Taille buse (mm) : 1.3.",
 			"Technologie de pulvérisation : HVLP.",
@@ -76,6 +76,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-05",
 			"confidence": "B",
 			"notes": "Déclaration fabricant, capture SHA-256 6b03f3e209e5ba2f66d1af3125fce83e0bc66316d718c30dbe6e397141a2b715. Aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:pistolet-peinture-hvlp-sames-kremlin-fstart-g-hvlp-13-mva-135-756-113:0",
+			"sourceUrl": "https://cdn.quable.com/sames/94e0c606-6b89-4092-a995-front/original/Catalogue_Sames-Kremlin-Airspray_FR_V5-3SA_2021.pdf",
+			"sourceLabel": "Sames Kremlin, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le FStart G 135.756.113 associe gravité, godet de 0,6 L et buse HVLP de 1,3 mm, avec un jet M de 20–30 cm. Le tableau laisse sa consommation individuelle vide, alors qu’il donne 18,8 m³/h au 1,5 mm et 18,9 au 1,8 mm. Les 20,4 m³/h à 2,2 bar de l’en-tête de gamme ne sont pas attribués automatiquement à cette buse. Le moteur garde un résultat non conclusif. GET complet SHA-256 6b03f3e209e5ba2f66d1af3125fce83e0bc66316d718c30dbe6e397141a2b715. Pages PDF lues : 36."
 		}
 	],
 	"fieldSources": {

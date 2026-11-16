@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "average",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/boulonneuse-uryu-uan-611r-60c-26892.webp",
+		"src": "/images/products/boulonneuse-uryu-uan-611r-60c-26892-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : URYU UAN-611R-60C (réf. 26892)",
 		"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P37.pdf",
-		"sourceLabel": "Carte technique CompatAir, établie à partir du document constructeur"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "uryu-uan-611r-60c",
@@ -37,11 +37,16 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "URYU UAN-611R-60C, code 26892. Le tableau publie une consommation moyenne de 0,6 m³/min, soit 600 L/min. Pression de référence retenue : 6 bar.",
+		"overview": "UAN-611R-60C, code 26892 : visseuse d’angle de plage indicative 6,5–12 Nm, environ 620 tr/min, 383 mm et 1,6 kg sans douille. La 611RM-60C ajoute le suivi de couple et mesure 419 mm pour 2 kg ; la 611R-30C couvre 13–25 Nm à 270 tr/min. La moyenne commune de 600 L/min ne décrit pas ces différences.",
 		"verifiedFacts": [
 			"Référence complète imprimée : 26892, page PDF 1.",
 			"Consommation moyenne publiée : 600 L/min après conversion de l’unité originale.",
-			"SPECIFICATIONS                                        Recommended Air Pressure : 0.6MPa (85psi)\nSPECIFICATIONS                                        Recommended Air Pressure : 0.6MPa (85psi)"
+			"SPECIFICATIONS                                        Recommended Air Pressure : 0.6MPa (85psi)\nSPECIFICATIONS                                        Recommended Air Pressure : 0.6MPa (85psi)",
+			"Couple indicatif : 6,5–12 Nm.",
+			"Vitesse à vide approximative : 620 tr/min.",
+			"Longueur sans douille : 383 mm.",
+			"Masse sans douille : 1,6 kg.",
+			"Carré de sortie : 9,5 mm (3/8 pouce)."
 		],
 		"limitations": [
 			"Une moyenne ne permet pas de conclure sur le débit continu ou la pointe : le moteur conserve insufficient_data tant que le régime de consommation n’est pas documenté.",
@@ -76,6 +81,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"documented-20260930-uryu-p37"
 			]
+		},
+		{
+			"label": "Couple indicatif",
+			"value": "6,5–12 Nm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:boulonneuse-uryu-uan-611r-60c-26892:0"
+			]
+		},
+		{
+			"label": "Vitesse à vide approximative",
+			"value": "620 tr/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:boulonneuse-uryu-uan-611r-60c-26892:0"
+			]
+		},
+		{
+			"label": "Longueur sans douille",
+			"value": "383 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:boulonneuse-uryu-uan-611r-60c-26892:0"
+			]
+		},
+		{
+			"label": "Masse sans douille",
+			"value": "1,6 kg",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:boulonneuse-uryu-uan-611r-60c-26892:0"
+			]
+		},
+		{
+			"label": "Carré de sortie",
+			"value": "9,5 mm (3/8 pouce)",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:boulonneuse-uryu-uan-611r-60c-26892:0"
+			]
 		}
 	],
 	"evidence": [
@@ -88,6 +128,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "Document constructeur consulté le 2026-09-30. SHA-256 89b37c84865085c98aa0bfaa6639cfbe9e7634d09c3657d12e05e9a8cef17a7b. La transcription et les pages PDF sont versionnées dans le lot documentaire. Le lieu d’hébergement ne constitue pas une validation indépendante."
+		},
+		{
+			"id": "review:2026-11-16-reviews:boulonneuse-uryu-uan-611r-60c-26892:0",
+			"sourceUrl": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P37.pdf",
+			"sourceLabel": "URYU, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "UAN-611R-60C, code 26892 : visseuse d’angle de plage indicative 6,5–12 Nm, environ 620 tr/min, 383 mm et 1,6 kg sans douille. La 611RM-60C ajoute le suivi de couple et mesure 419 mm pour 2 kg ; la 611R-30C couvre 13–25 Nm à 270 tr/min. La moyenne commune de 600 L/min ne décrit pas ces différences. GET complet SHA-256 89b37c84865085c98aa0bfaa6639cfbe9e7634d09c3657d12e05e9a8cef17a7b. Pages PDF lues : 1."
 		}
 	],
 	"fieldSources": {

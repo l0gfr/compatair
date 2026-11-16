@@ -16,10 +16,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La fiche fournit les caractéristiques propres de cette référence, mais ne documente pas ensemble une consommation en charge, sa pression de mesure et sa convention volumique. Aucun besoin d’air n’est déduit de la masse, de la vitesse ou de la capacité.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/boulonneuse-soartec-wx-3t7150ab.webp",
+		"src": "/images/products/boulonneuse-soartec-wx-3t7150ab-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Soartec WX-3T7150AB",
 		"sourceUrl": "https://www.soartectools.com/products/industrial-auto-shut-off-air-nutrunner-wx-3t7150ab",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "soartec-wx-3t7150ab",
@@ -31,7 +31,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Soartec WX-3T7150AB. La fiche fournit les caractéristiques propres de cette référence, mais ne documente pas ensemble une consommation en charge, sa pression de mesure et sa convention volumique. Aucun besoin d’air n’est déduit de la masse, de la vitesse ou de la capacité. Fonction déclarée : Industrial Auto Shut Off Air Nutrunner. Masse : 1.6 kg.",
+		"overview": "La WX-3T7150AB est la boulonneuse à coupure automatique, 700 tr/min, 350 mm et 1,6 kg. Sa page juxtapose une plage de couple 6–18 Nm dans le tableau et 10–70 Nm dans la présentation. Cette contradiction touche le choix du serrage ; aucune plage n’est retenue par préférence. La consigne 90 psi et l’absence de consommation qualifiée maintiennent aussi le calcul d’air non conclusif.",
 		"verifiedFacts": [
 			"Fonction déclarée : Industrial Auto Shut Off Air Nutrunner.",
 			"Masse : 1.6 kg.",
@@ -42,7 +42,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"La fiche fournit les caractéristiques propres de cette référence, mais ne documente pas ensemble une consommation en charge, sa pression de mesure et sa convention volumique. Aucun besoin d’air n’est déduit de la masse, de la vitesse ou de la capacité.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée.",
+			"La WX-3T7150AB est la boulonneuse à coupure automatique, 700 tr/min, 350 mm et 1,6 kg. Sa page juxtapose une plage de couple 6–18 Nm dans le tableau et 10–70 Nm dans la présentation. Cette contradiction touche le choix du serrage ; aucune plage n’est retenue par préférence. La consigne 90 psi et l’absence de consommation qualifiée maintiennent aussi le calcul d’air non conclusif."
 		]
 	},
 	"specifications": [
@@ -113,6 +114,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 79fa0055fadd8fecd2a86cae8af89ec06fc2b40e2c09dbcd6ee0691c58e19724. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:boulonneuse-soartec-wx-3t7150ab:0",
+			"sourceUrl": "https://www.soartectools.com/products/industrial-auto-shut-off-air-nutrunner-wx-3t7150ab",
+			"sourceLabel": "Soartec, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La WX-3T7150AB est la boulonneuse à coupure automatique, 700 tr/min, 350 mm et 1,6 kg. Sa page juxtapose une plage de couple 6–18 Nm dans le tableau et 10–70 Nm dans la présentation. Cette contradiction touche le choix du serrage ; aucune plage n’est retenue par préférence. La consigne 90 psi et l’absence de consommation qualifiée maintiennent aussi le calcul d’air non conclusif. GET complet SHA-256 457d306f6efd2e63563473d3a24e589e0706dd3222ef14b9b828d757814442c3. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

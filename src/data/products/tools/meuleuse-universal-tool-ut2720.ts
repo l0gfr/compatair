@@ -19,10 +19,10 @@ const product: ToolProfileInput = {
 	"connectorSize": "1/4-in. (Air Inlet (NPT / BSP))",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-universal-tool-ut2720.webp",
+		"src": "/images/products/meuleuse-universal-tool-ut2720-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Universal Tool UT2720",
 		"sourceUrl": "https://continentaltoolgroup.com/product/die-grinder-4/",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "universal-tool-ut2720",
@@ -34,13 +34,17 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Universal Tool UT2720. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 0.6 kg. Longueur publiée : 171 mm.",
+		"overview": "La UT2720 est une meuleuse droite à pince1/4,0,4 hp et25000 tr/min, avec levier de sécurité et échappement arrière. L’UT2710 est plus courte et moins puissante ; l’UT2715 est plus longue. Le fabricant limite la disponibilité de cette fiche au marché américain.",
 		"verifiedFacts": [
 			"Masse publiée : 0.6 kg.",
 			"Longueur publiée : 171 mm.",
 			"Vitesse publiée : 25000 tr/min.",
 			"Puissance publiée : 0.4 HP.",
-			"Échappement : Rear."
+			"Échappement : Rear.",
+			"Pince et disque maximal déclaré : 1/4 pouce ; Max.Wheel Size2 pouces, accessoire exact à confirmer.",
+			"Commande : Levier avec verrouillage de sécurité.",
+			"Consommations distinctes : 18 CFM, régime non précisé ; moyenne4,5 CFM.",
+			"Marché déclaré : Produit disponible uniquement aux USA dans cette fiche."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -110,6 +114,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-ctg-pdp-284-p1"
 			]
+		},
+		{
+			"label": "Pince et disque maximal déclaré",
+			"value": "1/4 pouce ; Max.Wheel Size2 pouces, accessoire exact à confirmer",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-universal-tool-ut2720:0"
+			]
+		},
+		{
+			"label": "Commande",
+			"value": "Levier avec verrouillage de sécurité",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-universal-tool-ut2720:0"
+			]
+		},
+		{
+			"label": "Consommations distinctes",
+			"value": "18 CFM, régime non précisé ; moyenne4,5 CFM",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-universal-tool-ut2720:0"
+			]
+		},
+		{
+			"label": "Marché déclaré",
+			"value": "Produit disponible uniquement aux USA dans cette fiche",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-universal-tool-ut2720:0"
+			]
 		}
 	],
 	"evidence": [
@@ -122,6 +154,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 70843b9b0d63eae46edadfc2018034f97eeebe6ad2e5b6577990dc0502514766. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-universal-tool-ut2720:0",
+			"sourceUrl": "https://continentaltoolgroup.com/product/die-grinder-4/",
+			"sourceLabel": "Universal Tool, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La UT2720 est une meuleuse droite à pince1/4,0,4 hp et25000 tr/min, avec levier de sécurité et échappement arrière. L’UT2710 est plus courte et moins puissante ; l’UT2715 est plus longue. Le fabricant limite la disponibilité de cette fiche au marché américain. GET complet SHA-256 0c0cc20eef955477757c17534538ca7f815c5501fd8e4865d4a2d691e04d7a9e. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

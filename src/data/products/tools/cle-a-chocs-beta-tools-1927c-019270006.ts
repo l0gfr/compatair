@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-beta-tools-1927c-019270006.svg",
+		"src": "/images/products/cle-a-chocs-beta-tools-1927c-019270006-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Beta Tools 1927C (réf. 019270006)",
 		"sourceUrl": "https://www.beta-tools.com/files/2026/Action_EXPORT_2026.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "beta-tools-1927c",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Beta Tools 1927C (réf. 019270006). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "La 1927C est une clé à chocs composite à double marteau, inversion par levier et trois niveaux de vissage. Elle publie 950 Nm à 9 000 tr/min ; la 1927E est à 750 Nm et 7 000 tr/min pour la même masse de 2,4 kg. Les consommations restent des moyennes, sans dimensionnement déduit.",
 		"verifiedFacts": [
 			"Vitesse à vide : 9.000 rpm.",
 			"Couple maximal : 950 Nm.",
@@ -37,7 +37,10 @@ const product: ToolProfileInput = {
 			"Filetage d’arrivée d’air : 1/4” GAS.",
 			"Pression de service : 6,2 bar.",
 			"Diamètre intérieur du flexible : 10 mm.",
-			"Consommation moyenne, hors calcul : 125 l/min."
+			"Consommation moyenne, hors calcul : 125 l/min.",
+			"Masse : 2,4 kg.",
+			"Commande : Levier d’inversion ; trois positions de puissance au vissage.",
+			"Échappement : Dans la poignée antivibratile."
 		],
 		"limitations": [
 			"Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
@@ -108,6 +111,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october3d-tools-beta-action-export-2026-p91"
 			]
+		},
+		{
+			"label": "Masse",
+			"value": "2,4 kg",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-beta-tools-1927c-019270006:0"
+			]
+		},
+		{
+			"label": "Commande",
+			"value": "Levier d’inversion ; trois positions de puissance au vissage",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-beta-tools-1927c-019270006:0"
+			]
+		},
+		{
+			"label": "Échappement",
+			"value": "Dans la poignée antivibratile",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-beta-tools-1927c-019270006:0"
+			]
 		}
 	],
 	"evidence": [
@@ -120,6 +144,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 db4a2bce6f421e1aa42ea2eeb8274541ffcd4965b052e6328696a9d61735e85b. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-chocs-beta-tools-1927c-019270006:0",
+			"sourceUrl": "https://www.beta-tools.com/files/2026/Action_EXPORT_2026.pdf",
+			"sourceLabel": "Beta Tools, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 1927C est une clé à chocs composite à double marteau, inversion par levier et trois niveaux de vissage. Elle publie 950 Nm à 9 000 tr/min ; la 1927E est à 750 Nm et 7 000 tr/min pour la même masse de 2,4 kg. Les consommations restent des moyennes, sans dimensionnement déduit. GET complet SHA-256 db4a2bce6f421e1aa42ea2eeb8274541ffcd4965b052e6328696a9d61735e85b. Pages PDF lues : 91."
 		}
 	],
 	"fieldSources": {
@@ -127,7 +161,7 @@ const product: ToolProfileInput = {
 			"october3d-tools-beta-action-export-2026-p91"
 		],
 		"workingPressureBar": [
-			"october3d-tools-beta-action-export-2026-p91"
+			"review:2026-11-16-reviews:cle-a-chocs-beta-tools-1927c-019270006:0"
 		],
 		"demandExplanation": [
 			"october3d-tools-beta-action-export-2026-p91"

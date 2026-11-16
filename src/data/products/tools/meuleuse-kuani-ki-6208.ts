@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Consommation moyenne publiée sans facteur de marche ni point de pression de mesure : aucun débit en charge déterministe ne peut être retenu.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-kuani-ki-6208.webp",
+		"src": "/images/products/meuleuse-kuani-ki-6208-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : KUANI KI-6208",
 		"sourceUrl": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "kuani-ki-6208",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "KUANI KI-6208. Consommation moyenne publiée sans facteur de marche ni point de pression de mesure : aucun débit en charge déterministe ne peut être retenu. Taille de pince (mm) : 6. Vitesse à vide (tr/min) : 25,000.",
+		"overview": "Le KI-6208 est la meuleuse droite à pince 6 mm, 25 000 tr/min, 180 mm et 0,56 kg. Le KI-6202 est plus court, 155 mm, à même vitesse ; le KD-6204 allonge le nez à 313 mm et descend à 22 000 tr/min. Le porte-à-faux et la vitesse admissible de l’accessoire déterminent le choix. Les 108 L/min publiés sont moyens.",
 		"verifiedFacts": [
 			"Taille de pince (mm) : 6.",
 			"Vitesse à vide (tr/min) : 25,000.",
@@ -121,6 +121,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-kuani-ki-6208:0",
+			"sourceUrl": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf",
+			"sourceLabel": "KUANI, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le KI-6208 est la meuleuse droite à pince 6 mm, 25 000 tr/min, 180 mm et 0,56 kg. Le KI-6202 est plus court, 155 mm, à même vitesse ; le KD-6204 allonge le nez à 313 mm et descend à 22 000 tr/min. Le porte-à-faux et la vitesse admissible de l’accessoire déterminent le choix. Les 108 L/min publiés sont moyens. GET complet SHA-256 569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba. Pages PDF lues : 84."
 		}
 	],
 	"fieldSources": {

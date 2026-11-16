@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La consommation du modèle est publiée sans régime et sans pression de mesure. Aucun débit en charge n’est établi à partir de ces seules caractéristiques.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-rotative-ata-ra12m-sm14.webp",
+		"src": "/images/products/ponceuse-rotative-ata-ra12m-sm14-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : ATA RA12M-SM14",
 		"sourceUrl": "https://catalogue.atagroup.com/international/2022/1338/",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "ata-ra12m-sm14",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ATA RA12M-SM14. La consommation du modèle est publiée sans régime et sans pression de mesure. Aucun débit en charge n’est établi à partir de ces seules caractéristiques. Vitesse déclarée (tr/min) : 12,000. Puissance déclarée (W) : 675.",
+		"overview": "ATA RA12M-SM14 : ponceuse d’angle à broche M14 pour disques fibre 115 ou 125 mm, plateau support non fourni. La RA1650-SM14A est une construction plus puissante ; la RAM16L est une autre géométrie. La fiche publie 0,71 m³/min et 21,90 CFM, valeurs qui ne concordent pas ; aucune conversion commune n’est choisie.",
 		"verifiedFacts": [
 			"Vitesse déclarée (tr/min) : 12,000.",
 			"Puissance déclarée (W) : 675.",
@@ -37,13 +37,19 @@ const product: ToolProfileInput = {
 			"Longueur (mm) : 206.",
 			"Hauteur (mm) : 71.",
 			"Consommation publiée (m³/min), régime non précisé : 0.71.",
-			"Niveau sonore déclaré, champ fabricant (dB(A)) : 77."
+			"Niveau sonore déclaré, champ fabricant (dB(A)) : 77.",
+			"Broche / consommables : M14 / disques fibre 115 ou 125 mm.",
+			"Plateau support : Non fourni.",
+			"Puissance / vitesse : 675 W / 12 000 tr/min.",
+			"Échappement / commande : Arrière / levier.",
+			"Consommations originales divergentes : 0,71 m³/min / 21,90 CFM."
 		],
 		"limitations": [
 			"La consommation du modèle est publiée sans régime et sans pression de mesure. Aucun débit en charge n’est établi à partir de ces seules caractéristiques.",
 			"Édition 2022/23 publiée par ATA ; la disponibilité actuelle reste à confirmer.",
 			"La consommation ne précise pas de régime en charge et la page ne fixe pas sa pression de mesure. Les conversions d’unité restent documentaires, sans débit de compatibilité confirmé.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée.",
+			"Le tableau imprime 0,71 m³/min et 21,90 CFM : cette divergence interdit une conversion commune."
 		]
 	},
 	"specifications": [
@@ -109,6 +115,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october3c-tools-ata-page-1338-p1338"
 			]
+		},
+		{
+			"label": "Broche / consommables",
+			"value": "M14 / disques fibre 115 ou 125 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-rotative-ata-ra12m-sm14:0"
+			]
+		},
+		{
+			"label": "Plateau support",
+			"value": "Non fourni",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-rotative-ata-ra12m-sm14:0"
+			]
+		},
+		{
+			"label": "Puissance / vitesse",
+			"value": "675 W / 12 000 tr/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-rotative-ata-ra12m-sm14:0"
+			]
+		},
+		{
+			"label": "Échappement / commande",
+			"value": "Arrière / levier",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-rotative-ata-ra12m-sm14:0"
+			]
+		},
+		{
+			"label": "Consommations originales divergentes",
+			"value": "0,71 m³/min / 21,90 CFM",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:ponceuse-rotative-ata-ra12m-sm14:0"
+			]
 		}
 	],
 	"evidence": [
@@ -121,6 +162,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : bc719937beb9addb14de0a1f476f6d84490eeb510543c2cb7fa57f2eb141a694. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-rotative-ata-ra12m-sm14:0",
+			"sourceUrl": "https://catalogue.atagroup.com/international/2022/1338/",
+			"sourceLabel": "ATA, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "ATA RA12M-SM14 : ponceuse d’angle à broche M14 pour disques fibre 115 ou 125 mm, plateau support non fourni. La RA1650-SM14A est une construction plus puissante ; la RAM16L est une autre géométrie. La fiche publie 0,71 m³/min et 21,90 CFM, valeurs qui ne concordent pas ; aucune conversion commune n’est choisie. GET complet SHA-256 bc719937beb9addb14de0a1f476f6d84490eeb510543c2cb7fa57f2eb141a694. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
@@ -128,7 +179,7 @@ const product: ToolProfileInput = {
 			"october3c-tools-ata-page-1338-p1338"
 		],
 		"workingPressureBar": [
-			"october3c-tools-ata-page-1338-p1338"
+			"review:2026-11-16-reviews:ponceuse-rotative-ata-ra12m-sm14:0"
 		],
 		"demandExplanation": [
 			"october3c-tools-ata-page-1338-p1338"

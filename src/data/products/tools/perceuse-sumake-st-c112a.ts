@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/perceuse-sumake-st-c112a.webp",
+		"src": "/images/products/perceuse-sumake-st-c112a-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Sumake ST-C112A",
 		"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "sumake-st-c112a",
@@ -39,7 +39,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-C112A. Consommation publiée, régime non précisé : 340 L/min à 6,2 bar. Consommation dans les unités du tableau : 340 L/min ; 12 cfm. Configuration complète publiée : ST-C112A.",
+		"overview": "La ST-C112A est la perceuse à mandrin 13 mm et 450 tr/min, de 245 mm et 1,4 kg. La ST-C112 conserve le gabarit avec 800 tr/min ; la ST-C110 utilise 10 mm et 2 000 tr/min. Le diamètre et la vitesse demandés par le foret différencient ces références. Les 340 L/min restent sans régime de mesure établi, malgré la recommandation de service 6,2 bar.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 20.",
 			"Consommation dans les unités du tableau : 340 L/min ; 12 cfm.",
@@ -99,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "review:2026-11-16-reviews:perceuse-sumake-st-c112a:0",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
+			"sourceLabel": "Sumake, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La ST-C112A est la perceuse à mandrin 13 mm et 450 tr/min, de 245 mm et 1,4 kg. La ST-C112 conserve le gabarit avec 800 tr/min ; la ST-C110 utilise 10 mm et 2 000 tr/min. Le diamètre et la vitesse demandés par le foret différencient ces références. Les 340 L/min restent sans régime de mesure établi, malgré la recommandation de service 6,2 bar. GET complet SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Pages PDF lues : 20."
 		}
 	],
 	"fieldSources": {

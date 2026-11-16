@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "average",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/taraudeuse-zipp-zat712aki.webp",
+		"src": "/images/products/taraudeuse-zipp-zat712aki-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : ZIPP ZAT712AKI",
 		"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "zipp-zat712aki",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZAT712AKI. Consommation moyenne : 198 L/min ; pression publiée : 6,2 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Vitesse à vide : 150 tr/min. Masse : 1.77 kg.",
+		"overview": "La ZAT712AKI est une taraudeuse à échappement dans la poignée, pour M6–M12 dans l’aluminium et M6–M8 dans le fer. Elle publie 150 tr/min et 245 mm, contre 1 000 tr/min pour la ZAT415B2 et une autre capacité. Les 198 L/min sont moyens, à distinguer d’une consommation en charge. L’en-tête de pression de 90 psi ne suffit pas à transformer cette moyenne en demande continue.",
 		"verifiedFacts": [
 			"Vitesse à vide : 150 tr/min.",
 			"Masse : 1.77 kg.",
@@ -96,6 +96,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:taraudeuse-zipp-zat712aki:0",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+			"sourceLabel": "ZIPP, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La ZAT712AKI est une taraudeuse à échappement dans la poignée, pour M6–M12 dans l’aluminium et M6–M8 dans le fer. Elle publie 150 tr/min et 245 mm, contre 1 000 tr/min pour la ZAT415B2 et une autre capacité. Les 198 L/min sont moyens, à distinguer d’une consommation en charge. L’en-tête de pression de 90 psi ne suffit pas à transformer cette moyenne en demande continue. GET complet SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. Pages PDF lues : 157."
 		}
 	],
 	"fieldSources": {

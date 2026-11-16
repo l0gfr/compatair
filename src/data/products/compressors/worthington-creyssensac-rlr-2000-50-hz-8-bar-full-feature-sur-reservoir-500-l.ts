@@ -30,10 +30,10 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/worthington-creyssensac-rlr-2000-50-hz-8-bar-full-feature-sur-reservoir-500-l.webp",
+		"src": "/images/products/worthington-creyssensac-rlr-2000-50-hz-8-bar-full-feature-sur-reservoir-500-l-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Worthington Creyssensac RLR 2000, Full Feature sur réservoir 500 L, 8 bar",
 		"sourceUrl": "https://www.worthington-creyssensac.com/content/dam/brands/Worthington%20Creyssensac/products-bp-structure/oil-injected-screw-compressor/fixed-speed/rlr-750-2000-%282022%29/leaflets/wco-rollair-750-2000-leaflet-en.pdf.coredownload.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -73,7 +73,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "Worthington Creyssensac RLR 2000, Full Feature sur réservoir 500 L, 8 bar. 2 200 L/min à 7,5 bar.",
+		"overview": "Le RLR2000 Full Feature 50 Hz 8 bar associe le groupe 15 kW, le sécheur intégré et un réservoir 500 L. Le tableau donne 132 m³/h à 7,5 bar, contre 120 m³/h à 9,5 bar pour la configuration 10 bar. La variante Pack au sol n’intègre pas le même stockage. Le volume de cuve n’augmente pas le débit continu et aucun taux de marche numérique n’est ajouté.",
 		"verifiedFacts": [
 			"Air livré rattaché à une pression et aux unités originales du constructeur.",
 			"Configuration de stockage documentée : 500 L.",
@@ -105,6 +105,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 453e287507815373993e3d0c796c82836a43fbc822fe0f2117a56f7b9635ba9d de la réponse originale. Documentation constructeur ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:worthington-creyssensac-rlr-2000-50-hz-8-bar-full-feature-sur-reservoir-500-l:0",
+			"sourceUrl": "https://www.worthington-creyssensac.com/content/dam/brands/Worthington%20Creyssensac/products-bp-structure/oil-injected-screw-compressor/fixed-speed/rlr-750-2000-%282022%29/leaflets/wco-rollair-750-2000-leaflet-en.pdf.coredownload.pdf",
+			"sourceLabel": "Worthington Creyssensac, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le RLR2000 Full Feature 50 Hz 8 bar associe le groupe 15 kW, le sécheur intégré et un réservoir 500 L. Le tableau donne 132 m³/h à 7,5 bar, contre 120 m³/h à 9,5 bar pour la configuration 10 bar. La variante Pack au sol n’intègre pas le même stockage. Le volume de cuve n’augmente pas le débit continu et aucun taux de marche numérique n’est ajouté. GET complet SHA-256 453e287507815373993e3d0c796c82836a43fbc822fe0f2117a56f7b9635ba9d. Pages PDF lues : 6, 1."
 		}
 	],
 	"fieldSources": {

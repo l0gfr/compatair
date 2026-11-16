@@ -16,10 +16,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La notice publie 9 Nl par cycle et une pression de service de 6 bar séparément. Elle ne fixe pas explicitement le point de mesure du volume ni ses conditions de normalisation ; aucun besoin en L/min n’est déduit sans clarification et sans cadence.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/riveteuse-far-kj60.webp",
+		"src": "/images/products/riveteuse-far-kj60-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : FAR KJ60",
 		"sourceUrl": "https://www.far.bo.it/en/download/use-and-maintenance-manual/category/3-riveting-tools-for-blind-rivet-nuts.html?download=35%3Akj60",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "far-kj60",
@@ -31,7 +31,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "FAR KJ60. La notice publie 9 Nl par cycle et une pression de service de 6 bar séparément. Elle ne fixe pas explicitement le point de mesure du volume ni ses conditions de normalisation ; aucun besoin en L/min n’est déduit sans clarification et sans cadence. Fonction déclarée : Pose d’écrous à sertir aveugles, système oléopneumatique. Capacité filetée : M3 à M8 ; M8 inox exclu.",
+		"overview": "FAR KJ60 : sertisseuse oléopneumatique d’écrous M3–M8, avec exclusion explicite du M8 inox. Le réglage de course doit suivre l’épaisseur de la pièce ; la RAC2200 est un outil pour rivets, pas un substitut d’écrous. Les 9 Nl/cycle sont documentés sans conditions normalisées complètes.",
 		"verifiedFacts": [
 			"Fonction déclarée : Pose d’écrous à sertir aveugles, système oléopneumatique.",
 			"Capacité filetée : M3 à M8 ; M8 inox exclu.",
@@ -39,7 +39,12 @@ const product: ToolProfileInput = {
 			"Consommation publiée par cycle, unité originale : 9 Nl.",
 			"Effort maximal déclaré : 13 656 N à 6 bar.",
 			"Diamètre intérieur minimal du tuyau : 8 mm.",
-			"Température de travail : −5 à +50 °C."
+			"Température de travail : −5 à +50 °C.",
+			"Capacité : M3–M8 ; M8 inox exclu.",
+			"Force maximale : 13 656 N à 6 bar.",
+			"Masse : 2,2 kg.",
+			"Consommation par cycle : 9 Nl ; conditions normalisées non précisées.",
+			"Flexible intérieur minimal : 8 mm."
 		],
 		"limitations": [
 			"La notice publie 9 Nl par cycle et une pression de service de 6 bar séparément. Elle ne fixe pas explicitement le point de mesure du volume ni ses conditions de normalisation ; aucun besoin en L/min n’est déduit sans clarification et sans cadence.",
@@ -106,6 +111,41 @@ const product: ToolProfileInput = {
 				"october3c-tools-far-kj60-manual-p12",
 				"october3c-tools-far-kj60-manual-p13"
 			]
+		},
+		{
+			"label": "Capacité",
+			"value": "M3–M8 ; M8 inox exclu",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:riveteuse-far-kj60:0"
+			]
+		},
+		{
+			"label": "Force maximale",
+			"value": "13 656 N à 6 bar",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:riveteuse-far-kj60:0"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "2,2 kg",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:riveteuse-far-kj60:0"
+			]
+		},
+		{
+			"label": "Consommation par cycle",
+			"value": "9 Nl ; conditions normalisées non précisées",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:riveteuse-far-kj60:0"
+			]
+		},
+		{
+			"label": "Flexible intérieur minimal",
+			"value": "8 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:riveteuse-far-kj60:0"
+			]
 		}
 	],
 	"evidence": [
@@ -128,6 +168,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 27472efae97e555344f5f025c6dfe2364b82074dd983b89296c2f49ea9d01ea5. Document complémentaire de la référence exacte, sans essai CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:riveteuse-far-kj60:0",
+			"sourceUrl": "https://www.far.bo.it/en/download/use-and-maintenance-manual/category/3-riveting-tools-for-blind-rivet-nuts.html?download=35%3Akj60",
+			"sourceLabel": "FAR, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "FAR KJ60 : sertisseuse oléopneumatique d’écrous M3–M8, avec exclusion explicite du M8 inox. Le réglage de course doit suivre l’épaisseur de la pièce ; la RAC2200 est un outil pour rivets, pas un substitut d’écrous. Les 9 Nl/cycle sont documentés sans conditions normalisées complètes. GET complet SHA-256 abf22c42aa33ede0691ca4a2d0fb4a2f88d31ff9425a7b81a640a3a2a827693e. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

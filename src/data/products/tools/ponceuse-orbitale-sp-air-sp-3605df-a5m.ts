@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-orbitale-sp-air-sp-3605df-a5m.webp",
+		"src": "/images/products/ponceuse-orbitale-sp-air-sp-3605df-a5m-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : SP AIR SP-3605DF-A5M",
 		"sourceUrl": "https://spair.vessel.co.jp/download/SP_catalog_all_E.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "sp-air-sp-3605df-a5m",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SP AIR SP-3605DF-A5M. Consommation publiée, régime non précisé : 300 L/min à 6,2 bar. Raccord publié : 1/4\"NPT. Masse publiée : 1.23 kg.",
+		"overview": "La SP-3605DF-A5M est la ponceuse à plateau autoagrippant 125 mm, orbite 5 mm et aspiration avec tuyau et sac fournis, à 10 000 tr/min. La SP-3605-A5M conserve le mécanisme sans ce système de collecte ; la SP-3606DF-A5M passe à 150 mm. Les 0,3 m³/min du tableau restent documentaires, le régime de consommation n’étant pas précisé.",
 		"verifiedFacts": [
 			"Raccord publié : 1/4\"NPT.",
 			"Masse publiée : 1.23 kg."
@@ -88,6 +88,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-orbitale-sp-air-sp-3605df-a5m:0",
+			"sourceUrl": "https://spair.vessel.co.jp/download/SP_catalog_all_E.pdf",
+			"sourceLabel": "SP AIR, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La SP-3605DF-A5M est la ponceuse à plateau autoagrippant 125 mm, orbite 5 mm et aspiration avec tuyau et sac fournis, à 10 000 tr/min. La SP-3605-A5M conserve le mécanisme sans ce système de collecte ; la SP-3606DF-A5M passe à 150 mm. Les 0,3 m³/min du tableau restent documentaires, le régime de consommation n’étant pas précisé. GET complet SHA-256 85aa3c367832416b252ecf5c0bc354487a760e41de3e8a2e9cf0090670d16ba5. Pages PDF lues : 14."
 		}
 	],
 	"fieldSources": {

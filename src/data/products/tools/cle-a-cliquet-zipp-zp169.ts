@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "average",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-cliquet-zipp-zp169.webp",
+		"src": "/images/products/cle-a-cliquet-zipp-zp169-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : ZIPP ZP169",
 		"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "zipp-zp169",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ZIPP ZP169. Consommation moyenne : 70 L/min ; pression publiée : 6,2 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Vitesse à vide : 260 tr/min. Masse : 0.45 kg.",
+		"overview": "Le ZP169 est le cliquet court à carré 3/8 pouce, 133 mm et 0,45 kg. Le ZP168 remplace le carré par du 1/4 pouce avec les mêmes 260 tr/min et 27 Nm ; le ZP163 à moteur 0,5 hp est une autre configuration. Les 70 L/min sont une moyenne publiée à côté de la pression de service. Le moteur ne les utilise pas comme consommation en charge.",
 		"verifiedFacts": [
 			"Vitesse à vide : 260 tr/min.",
 			"Masse : 0.45 kg.",
@@ -96,6 +96,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 5904c6537cbcbd47da75d3a30cd5a1966cfc5b51c4db0b0d4ed65da32c8434b6. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-cliquet-zipp-zp169:0",
+			"sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+			"sourceLabel": "ZIPP, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le ZP169 est le cliquet court à carré 3/8 pouce, 133 mm et 0,45 kg. Le ZP168 remplace le carré par du 1/4 pouce avec les mêmes 260 tr/min et 27 Nm ; le ZP163 à moteur 0,5 hp est une autre configuration. Les 70 L/min sont une moyenne publiée à côté de la pression de service. Le moteur ne les utilise pas comme consommation en charge. GET complet SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3. Pages PDF lues : 19."
 		}
 	],
 	"fieldSources": {

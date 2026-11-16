@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/shinano-si-1345ex.webp",
+		"src": "/images/products/shinano-si-1345ex-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Shinano SI-1345EX, référence SI-1345EX",
-		"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf#page=9",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Shinano SI-1345EX, référence SI-1345EX. Le tableau fabricant publie 426 L/min et une plage d’utilisation de 6,3 à 6,3 bar. Couple maximal publié : 115 Nm. Vitesse à vide publiée : 160 tr/min.",
+		"overview": "La SI-1345EX est un cliquet 1/2 pouce de 265 mm à échappement arrière, avec raccord d’air pivotant à 360°. Elle annonce 115 Nm maximum et 160 tr/min, contre 90 Nm pour la SI-1325A à échappement avant. Le catalogue sépare 7,1 L/s maximum et 1,2 L/s en moyenne. Sa consigne d’alimentation à 90 psi, outil en marche, ne constitue pas une attestation de la pression de mesure de ces deux consommations.",
 		"verifiedFacts": [
 			"Le catalogue général 2025, page PDF 43 (page imprimée 83), indique 0,63 MPa, soit 6,3 bar, outil en fonctionnement et commande entièrement actionnée.",
 			"Colonne Max Air Consumption : 15 CFM / 7.1 L/s. Conversion du maximum publié : 7.1 × 60 = 426 L/min.",
@@ -35,7 +35,8 @@ const product: ToolProfileInput = {
 		"limitations": [
 			"Caractéristiques déclarées par Shinano, sans essai physique CompatAir.",
 			"La consommation moyenne, lorsqu’elle est également publiée, n’est pas utilisée à la place de la consommation de référence.",
-			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée."
+			"La taille de raccord ne suffit pas à établir son profil de filetage ; vérifier la version livrée.",
+			"La pression de service n’atteste pas la pression de mesure de consommation. Le régime ou l’appariement documentaire reste non qualifié ; aucune consommation dimensionnante n’est conservée."
 		]
 	},
 	"specifications": [
@@ -93,6 +94,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Pression publiée outil en fonctionnement, tableau Air Supply System. Ce modèle figure dans le même catalogue."
+		},
+		{
+			"id": "review:2026-11-16-reviews:shinano-si-1345ex:0",
+			"sourceUrl": "https://shinanoinc.com/wp-content/uploads/SHINANO_General-Catalog_2025.pdf",
+			"sourceLabel": "Shinano, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La SI-1345EX est un cliquet 1/2 pouce de 265 mm à échappement arrière, avec raccord d’air pivotant à 360°. Elle annonce 115 Nm maximum et 160 tr/min, contre 90 Nm pour la SI-1325A à échappement avant. Le catalogue sépare 7,1 L/s maximum et 1,2 L/s en moyenne. Sa consigne d’alimentation à 90 psi, outil en marche, ne constitue pas une attestation de la pression de mesure de ces deux consommations. GET complet SHA-256 03b3841b7d1e4a2df2330b806ac10d0e67067766a4b3daaca3f7da7e4ebc0e6b. Pages PDF lues : 9, 43."
 		}
 	],
 	"fieldSources": {
@@ -104,6 +115,9 @@ const product: ToolProfileInput = {
 		],
 		"airflowLpm": [
 			"shinano-si-1345ex-20260926"
+		],
+		"airflowBasis": [
+			"review:2026-11-16-reviews:shinano-si-1345ex:0"
 		]
 	},
 	"notes": [
@@ -113,7 +127,8 @@ const product: ToolProfileInput = {
 		"min": 426,
 		"typical": 426,
 		"max": 426
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

@@ -22,10 +22,10 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-impulsions-atlas-copco-ep12pts150-hr13-re-8431037490.webp",
+		"src": "/images/products/cle-a-impulsions-atlas-copco-ep12pts150-hr13-re-8431037490-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Atlas Copco EP12PTS150 HR13-RE (réf. 8431037490)",
 		"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "atlas-copco-ep12pts150-hr13-re",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Atlas Copco EP12PTS150 HR13-RE (réf. 8431037490). Consommation maximale : 780 L/min à 6,3 bar. Consommations originales : 13 L/s ; 27 cfm. Vitesse à vide : 4200 tr/min.",
+		"overview": "L’EP12PTS150 HR13-RE 8431037490 combine un carré 1/2 pouce et la plage indicative 85–150 Nm. Le tableau TRIM-RE donne 4 200 tr/min, vanne TRIM entièrement ouverte, contre 4 100 tr/min en mode pleine vitesse pour l’AutoTrim HR13-AT. La consommation en charge de 13 L/s à 6,3 bar est commune aux deux ; le couple réel reste lié à l’assemblage et aux accessoires.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 26.",
 			"Consommations originales : 13 L/s ; 27 cfm.",
@@ -101,6 +101,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-impulsions-atlas-copco-ep12pts150-hr13-re-8431037490:0",
+			"sourceUrl": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf",
+			"sourceLabel": "Atlas Copco, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’EP12PTS150 HR13-RE 8431037490 combine un carré 1/2 pouce et la plage indicative 85–150 Nm. Le tableau TRIM-RE donne 4 200 tr/min, vanne TRIM entièrement ouverte, contre 4 100 tr/min en mode pleine vitesse pour l’AutoTrim HR13-AT. La consommation en charge de 13 L/s à 6,3 bar est commune aux deux ; le couple réel reste lié à l’assemblage et aux accessoires. GET complet SHA-256 1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21. Pages PDF lues : 3, 26."
 		}
 	],
 	"fieldSources": {

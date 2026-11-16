@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/polisseuse-gison-gp-823st5.webp",
+		"src": "/images/products/polisseuse-gison-gp-823st5-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : GISON GP-823ST5",
 		"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "gison-gp-823st5",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-823ST5. Consommation de régime non précisé : 650 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 1.00 kg. Longueur : 203 mm.",
+		"overview": "La GP-823ST5 est une polisseuse d’angle pour plateau 5 pouces, avec broche 5/16-24 et 4 000 tr/min. La GP-823ST3 conserve le corps de 203 mm et le même débit documentaire avec un plateau de 3 pouces ; les GP-822AR2 et AR3 sont des modèles sans engrenage à 3 500 tr/min. Le régime des 0,65 m³/min n’étant pas précisé, le moteur reste non conclusif.",
 		"verifiedFacts": [
 			"Masse : 1.00 kg.",
 			"Longueur : 203 mm.",
@@ -112,6 +112,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:polisseuse-gison-gp-823st5:0",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
+			"sourceLabel": "GISON, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La GP-823ST5 est une polisseuse d’angle pour plateau 5 pouces, avec broche 5/16-24 et 4 000 tr/min. La GP-823ST3 conserve le corps de 203 mm et le même débit documentaire avec un plateau de 3 pouces ; les GP-822AR2 et AR3 sont des modèles sans engrenage à 3 500 tr/min. Le régime des 0,65 m³/min n’étant pas précisé, le moteur reste non conclusif. GET complet SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Pages PDF lues : 46."
 		}
 	],
 	"fieldSources": {

@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La consommation du modèle est publiée sans régime et sans pression de mesure. Aucun débit en charge n’est établi à partir de ces seules caractéristiques.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-ata-ra12m-100.webp",
+		"src": "/images/products/meuleuse-ata-ra12m-100-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : ATA RA12M-100",
 		"sourceUrl": "https://catalogue.atagroup.com/international/2022/1326/",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "ata-ra12m-100",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "ATA RA12M-100. La consommation du modèle est publiée sans régime et sans pression de mesure. Aucun débit en charge n’est établi à partir de ces seules caractéristiques. Vitesse déclarée (tr/min) : 12,000. Puissance déclarée (W) : 675.",
+		"overview": "ATA RA12M-100 : meuleuse d’angle pour disque 100 mm, 12 000 tr/min et broche 5/8-11 UNC. La 100A ajoute l’équilibrage automatique ; les 115/115A reçoivent 115 mm et ont une autre hauteur. La poignée latérale est interchangeable et le carter réglable ; ces versions partagent la consommation documentaire de 0,71 m³/min.",
 		"verifiedFacts": [
 			"Vitesse déclarée (tr/min) : 12,000.",
 			"Puissance déclarée (W) : 675.",
@@ -37,7 +37,11 @@ const product: ToolProfileInput = {
 			"Longueur (mm) : 215.00.",
 			"Hauteur (mm) : 95.00.",
 			"Consommation publiée (m³/min), régime non précisé : 0.71.",
-			"Niveau sonore déclaré, champ fabricant (dB(A)) : 77."
+			"Niveau sonore déclaré, champ fabricant (dB(A)) : 77.",
+			"Disque / broche : 100 mm / 5/8-11 UNC.",
+			"Équilibrage automatique : Absent ; présent sur RA12M-100A.",
+			"Commande / échappement : Levier de sécurité / arrière.",
+			"Puissance / vitesse : 675 W / 12 000 tr/min."
 		],
 		"limitations": [
 			"La consommation du modèle est publiée sans régime et sans pression de mesure. Aucun débit en charge n’est établi à partir de ces seules caractéristiques.",
@@ -110,6 +114,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october3c-tools-ata-page-1326-p1326"
 			]
+		},
+		{
+			"label": "Disque / broche",
+			"value": "100 mm / 5/8-11 UNC",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-ata-ra12m-100:0"
+			]
+		},
+		{
+			"label": "Équilibrage automatique",
+			"value": "Absent ; présent sur RA12M-100A",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-ata-ra12m-100:0"
+			]
+		},
+		{
+			"label": "Commande / échappement",
+			"value": "Levier de sécurité / arrière",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-ata-ra12m-100:0"
+			]
+		},
+		{
+			"label": "Puissance / vitesse",
+			"value": "675 W / 12 000 tr/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-ata-ra12m-100:0"
+			]
 		}
 	],
 	"evidence": [
@@ -122,6 +154,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : cde8839211f9e90af00e786b5b68bd3f540b221dcadb3f8c958d6bbe28afb734. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-ata-ra12m-100:0",
+			"sourceUrl": "https://catalogue.atagroup.com/international/2022/1326/",
+			"sourceLabel": "ATA, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "ATA RA12M-100 : meuleuse d’angle pour disque 100 mm, 12 000 tr/min et broche 5/8-11 UNC. La 100A ajoute l’équilibrage automatique ; les 115/115A reçoivent 115 mm et ont une autre hauteur. La poignée latérale est interchangeable et le carter réglable ; ces versions partagent la consommation documentaire de 0,71 m³/min. GET complet SHA-256 cde8839211f9e90af00e786b5b68bd3f540b221dcadb3f8c958d6bbe28afb734. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
@@ -129,7 +171,7 @@ const product: ToolProfileInput = {
 			"october3c-tools-ata-page-1326-p1326"
 		],
 		"workingPressureBar": [
-			"october3c-tools-ata-page-1326-p1326"
+			"review:2026-11-16-reviews:meuleuse-ata-ra12m-100:0"
 		],
 		"demandExplanation": [
 			"october3c-tools-ata-page-1326-p1326"

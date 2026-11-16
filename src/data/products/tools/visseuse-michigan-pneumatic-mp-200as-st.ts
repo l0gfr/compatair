@@ -11,13 +11,13 @@ const product: ToolProfileInput = {
 	"mpn": "MP-200AS-ST",
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
-	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+	"demandExplanation": "Le tableau publie une consommation moyenne, sans pression de mesure associée. La valeur reste documentaire et la compatibilité demeure indéterminée.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/visseuse-michigan-pneumatic-mp-200as-st.webp",
+		"src": "/images/products/visseuse-michigan-pneumatic-mp-200as-st-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Michigan Pneumatic MP-200AS-ST",
 		"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/8-Screwdrivers_V2.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "michigan-pneumatic-mp-200as-st",
@@ -29,44 +29,69 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Michigan Pneumatic MP-200AS-ST. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 1.98 lbs. Ligne technique constructeur : MP-200AS-ST 1/4\" Hex 4-45 in-lbs 600 rpm 8-3/4\" 1.98 lbs 1/4\" 3/8\" 4 cfm.",
+		"overview": "Michigan Pneumatic MP-200AS-ST : visseuse pistolet à arrêt automatique, hexagonal 1/4 pouce, plage 4–45 in-lb et 600 tr/min. La MP-201AS-ST garde la fonction avec 3–40 in-lb et 1 000 tr/min, pour une longueur 8 5/16 pouces contre 8¾. Trois ressorts de réglage de couple sont annoncés.",
 		"verifiedFacts": [
-			"Masse publiée : 1.98 lbs.",
-			"Ligne technique constructeur : MP-200AS-ST 1/4\" Hex 4-45 in-lbs 600 rpm 8-3/4\" 1.98 lbs 1/4\" 3/8\" 4 cfm."
+			"Commande : Pistolet réversible à arrêt automatique.",
+			"Porte-outil : Hexagonal 1/4 pouce.",
+			"Couple publié : 4–45 in-lb.",
+			"Vitesse à vide : 600 tr/min.",
+			"Longueur : 8¾ pouces.",
+			"Masse : 1,98 lb.",
+			"Consommation moyenne, hors calcul : 4 cfm."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Données du catalogue constructeur archivé ; consommation moyenne ou de régime non précisé, sans certification du besoin maximal en charge.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Le tableau publie une consommation moyenne, sans pression de mesure associée. La valeur reste documentaire et la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "1.98 lbs",
+			"label": "Commande",
+			"value": "Pistolet réversible à arrêt automatique",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-8-pdf-p2"
+				"review:2026-11-16-reviews:visseuse-michigan-pneumatic-mp-200as-st:0"
 			]
 		},
 		{
-			"label": "Ligne technique constructeur",
-			"value": "MP-200AS-ST 1/4\" Hex 4-45 in-lbs 600 rpm 8-3/4\" 1.98 lbs 1/4\" 3/8\" 4 cfm",
+			"label": "Porte-outil",
+			"value": "Hexagonal 1/4 pouce",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-8-pdf-p2"
+				"review:2026-11-16-reviews:visseuse-michigan-pneumatic-mp-200as-st:0"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "Aucune pression de mesure de cette ligne de consommation n’est établie dans le tableau.",
+			"label": "Couple publié",
+			"value": "4–45 in-lb",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-8-pdf-p2"
+				"review:2026-11-16-reviews:visseuse-michigan-pneumatic-mp-200as-st:0"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "600 tr/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:visseuse-michigan-pneumatic-mp-200as-st:0"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "8¾ pouces",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:visseuse-michigan-pneumatic-mp-200as-st:0"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "1,98 lb",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:visseuse-michigan-pneumatic-mp-200as-st:0"
 			]
 		},
 		{
 			"label": "Consommation moyenne, hors calcul",
 			"value": "4 cfm",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-8-pdf-p2"
+				"review:2026-11-16-reviews:visseuse-michigan-pneumatic-mp-200as-st:0"
 			]
 		}
 	],
@@ -80,21 +105,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 9cc8530f87647f13613f641dbd90c846c9145250b38af0c20f47944847b674e1. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:visseuse-michigan-pneumatic-mp-200as-st:0",
+			"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/8-Screwdrivers_V2.pdf",
+			"sourceLabel": "Michigan Pneumatic, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Michigan Pneumatic MP-200AS-ST : visseuse pistolet à arrêt automatique, hexagonal 1/4 pouce, plage 4–45 in-lb et 600 tr/min. La MP-201AS-ST garde la fonction avec 3–40 in-lb et 1 000 tr/min, pour une longueur 8 5/16 pouces contre 8¾. Trois ressorts de réglage de couple sont annoncés. GET complet SHA-256 9cc8530f87647f13613f641dbd90c846c9145250b38af0c20f47944847b674e1. Pages PDF lues : 2."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october2b-tools-oct2b-michigan-8-pdf-p2"
-		],
-		"workingPressureBar": [
-			"october2b-tools-oct2b-michigan-8-pdf-p2"
+			"review:2026-11-16-reviews:visseuse-michigan-pneumatic-mp-200as-st:0"
 		],
 		"demandExplanation": [
-			"october2b-tools-oct2b-michigan-8-pdf-p2"
+			"review:2026-11-16-reviews:visseuse-michigan-pneumatic-mp-200as-st:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-reviews:visseuse-michigan-pneumatic-mp-200as-st:0"
 		]
 	},
 	"notes": [
-		"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité."
+		"Le tableau publie une consommation moyenne, sans pression de mesure associée. La valeur reste documentaire et la compatibilité demeure indéterminée."
 	]
 };
 

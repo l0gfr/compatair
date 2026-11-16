@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-gison-gp-8240d.webp",
+		"src": "/images/products/meuleuse-gison-gp-8240d-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : GISON GP-8240D",
 		"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "gison-gp-8240d",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-8240D. Consommation de régime non précisé : 340 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 0.50 kg. Longueur : 175 mm.",
+		"overview": "La GP-8240D est une micro-meuleuse à pinces 3 et 6 mm, à 35 000 tr/min, longue de 175 mm pour 0,50 kg. Les GP-8240B et 8240C utilisent une pince 3 mm à 54 000 tr/min et un corps de 132 mm. La vitesse admissible de l’outil monté et le diamètre de queue se contrôlent ensemble. Les 0,34 m³/min restent hors dimensionnement faute de régime explicite.",
 		"verifiedFacts": [
 			"Masse : 0.50 kg.",
 			"Longueur : 175 mm.",
@@ -104,6 +104,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-gison-gp-8240d:0",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
+			"sourceLabel": "GISON, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La GP-8240D est une micro-meuleuse à pinces 3 et 6 mm, à 35 000 tr/min, longue de 175 mm pour 0,50 kg. Les GP-8240B et 8240C utilisent une pince 3 mm à 54 000 tr/min et un corps de 132 mm. La vitesse admissible de l’outil monté et le diamètre de queue se contrôlent ensemble. Les 0,34 m³/min restent hors dimensionnement faute de régime explicite. GET complet SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Pages PDF lues : 33."
 		}
 	],
 	"fieldSources": {

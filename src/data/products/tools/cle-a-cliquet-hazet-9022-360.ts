@@ -16,10 +16,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-cliquet-hazet-9022-360.webp",
+		"src": "/images/products/cle-a-cliquet-hazet-9022-360-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : HAZET 9022-360",
 		"sourceUrl": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/air-ratchet/product/ean-4000896209781",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "hazet-9022-360",
@@ -31,7 +31,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "HAZET 9022-360. La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi. Champ fabricant : Manual/impact operation : For impact operation. Champ fabricant : Tightening torque maximum : 120 Nm.",
+		"overview": "Le 9022-360 permet de faire pivoter le levier de commande à 360° et d’inverser le sens par une bague sur la poignée. Il publie 120 Nm pneumatiques à 200 tr/min pour 285 mm. Les 500 Nm annoncés pour le resserrage manuel ne sont pas un couple moteur.",
 		"verifiedFacts": [
 			"Champ fabricant : Manual/impact operation : For impact operation.",
 			"Champ fabricant : Tightening torque maximum : 120 Nm.",
@@ -50,7 +50,11 @@ const product: ToolProfileInput = {
 			"Champ fabricant : Coupler plug : Nominal size 7.2 (included).",
 			"Champ fabricant : Sound power level : 102.2 db(A) Lp W.",
 			"Champ fabricant : Air requirement [l/sec] : 1.8 l/sec.",
-			"Champ fabricant : Working pressure ( bar ) : 6.3 bar."
+			"Champ fabricant : Working pressure ( bar ) : 6.3 bar.",
+			"Levier : Orientable à 360°.",
+			"Couple pneumatique maximal : 120 Nm.",
+			"Resserrage manuel annoncé : 500 Nm ; distinct de la puissance pneumatique.",
+			"Mode silencieux : bruit déclaré : Pression 81,5 dB(A) ; puissance 92,5 dB(A)."
 		],
 		"limitations": [
 			"La fiche constructeur établit les caractéristiques individuelles. Le besoin maximal en charge à une pression de mesure donnée n’est pas établi.",
@@ -200,6 +204,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-hazet-4000896209781-html-p1"
 			]
+		},
+		{
+			"label": "Levier",
+			"value": "Orientable à 360°",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-cliquet-hazet-9022-360:0"
+			]
+		},
+		{
+			"label": "Couple pneumatique maximal",
+			"value": "120 Nm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-cliquet-hazet-9022-360:0"
+			]
+		},
+		{
+			"label": "Resserrage manuel annoncé",
+			"value": "500 Nm ; distinct de la puissance pneumatique",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-cliquet-hazet-9022-360:0"
+			]
+		},
+		{
+			"label": "Mode silencieux : bruit déclaré",
+			"value": "Pression 81,5 dB(A) ; puissance 92,5 dB(A)",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-cliquet-hazet-9022-360:0"
+			]
 		}
 	],
 	"evidence": [
@@ -212,6 +244,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 13983dcd77d6ba625cae641c2dbe5d185e50efffce9915bf1b1d4a9c4030f0d7. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-cliquet-hazet-9022-360:0",
+			"sourceUrl": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/air-ratchet/product/ean-4000896209781",
+			"sourceLabel": "HAZET, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le 9022-360 permet de faire pivoter le levier de commande à 360° et d’inverser le sens par une bague sur la poignée. Il publie 120 Nm pneumatiques à 200 tr/min pour 285 mm. Les 500 Nm annoncés pour le resserrage manuel ne sont pas un couple moteur. GET complet SHA-256 30e2da241d096aace5a421b7bd8304e2434b861fa9e6d24b840b3689e9cbf347. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

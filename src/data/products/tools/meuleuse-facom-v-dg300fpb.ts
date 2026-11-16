@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La fiche établit les dimensions ou caractéristiques mécaniques du modèle. Aucun débit d’air n’est déduit du couple, de la vitesse ni de la puissance.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-facom-v-dg300fpb.webp",
+		"src": "/images/products/meuleuse-facom-v-dg300fpb-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : FACOM V.DG300FPB",
 		"sourceUrl": "https://www.facom.com/product/vdg300fpb/pneumatic-straight-die-grinder-6mm-collet?tid=610786",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "facom-v-dg300fpb",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "FACOM V.DG300FPB. La fiche établit les dimensions ou caractéristiques mécaniques du modèle. Aucun débit d’air n’est déduit du couple, de la vitesse ni de la puissance. Champ fabricant : Power Source : Pneumatic. Champ fabricant : Product Height [mm] : 70.",
+		"overview": "La V.DG300FPB est une meuleuse droite à pince 6 mm, dans un corps de 160 × 39 × 70 mm et 0,44 kg. Les V.347F et V.445F relèvent d’autres formats ; la pince et le dégagement disponible doivent être vérifiés avec l’accessoire. La page constructeur consultée fournit les dimensions et l’alimentation pneumatique, sans point consommation–pression utilisable. Le moteur conserve une réponse non conclusive.",
 		"verifiedFacts": [
 			"Champ fabricant : Power Source : Pneumatic.",
 			"Champ fabricant : Product Height [mm] : 70.",
@@ -98,6 +98,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 4d496e1788daf3e9bd7be0c5e8bd972809691bf63730e25580f24f208ca29bfb. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-facom-v-dg300fpb:0",
+			"sourceUrl": "https://www.facom.com/product/vdg300fpb/pneumatic-straight-die-grinder-6mm-collet?tid=610786",
+			"sourceLabel": "FACOM, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La V.DG300FPB est une meuleuse droite à pince 6 mm, dans un corps de 160 × 39 × 70 mm et 0,44 kg. Les V.347F et V.445F relèvent d’autres formats ; la pince et le dégagement disponible doivent être vérifiés avec l’accessoire. La page constructeur consultée fournit les dimensions et l’alimentation pneumatique, sans point consommation–pression utilisable. Le moteur conserve une réponse non conclusive. GET complet SHA-256 493d0a0522320f37741305aa63f64ab440a5596912834634aebafc37dc16c753. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

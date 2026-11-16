@@ -11,13 +11,13 @@ const product: ToolProfileInput = {
 	"mpn": "JSM-704",
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
-	"demandExplanation": "Les caractéristiques mécaniques sont documentées ; aucune consommation n’est associée à une pression de mesure et à un régime suffisant pour le calcul.",
+	"demandExplanation": "Le catalogue publie une consommation en CFM sans régime ni pression de mesure associés. Cette valeur reste documentaire et la compatibilité demeure indéterminée.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/perceuse-jet-jsm-704.webp",
+		"src": "/images/products/perceuse-jet-jsm-704-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : JET JSM-704",
 		"sourceUrl": "https://d29c95q8mcesvj.cloudfront.net/wysiwyg/pdf/414700_Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "jet-jsm-704",
@@ -29,37 +29,77 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "JET JSM-704. Les caractéristiques mécaniques sont documentées ; aucune consommation n’est associée à une pression de mesure et à un régime suffisant pour le calcul. Masse publiée : 3-1/8 lbs. Ligne technique constructeur : JSm-704 yeS 1/2 3/8-24 1/2 800 4 1/4 3/8 2.2 95 7 3-1/8.",
+		"overview": "JET JSM-704 : perceuse réversible à mandrin 1/2 pouce, 800 tr/min et puissance publiée 1/2 hp. La JSM-705 passe au mandrin 3/8 pouce et à 1 800 tr/min ; la JSM-724 conserve le mandrin et la vitesse de la 704 avec un corps de 7½ pouces, contre 7 pouces pour la 704.",
 		"verifiedFacts": [
-			"Masse publiée : 3-1/8 lbs.",
-			"Ligne technique constructeur : JSm-704 yeS 1/2 3/8-24 1/2 800 4 1/4 3/8 2.2 95 7 3-1/8."
+			"Mandrin : 1/2 pouce.",
+			"Sens : Réversible.",
+			"Broche : 3/8 pouce-24.",
+			"Puissance publiée : 1/2 hp.",
+			"Vitesse à vide : 800 tr/min.",
+			"Longueur : 7 pouces.",
+			"Masse : 3⅛ lb.",
+			"Consommation documentaire : 4 CFM, régime non précisé."
 		],
 		"limitations": [
-			"Les caractéristiques mécaniques sont documentées ; aucune consommation n’est associée à une pression de mesure et à un régime suffisant pour le calcul.",
-			"Catalogue industriel JET archivé. Référence physique explicitement listée dans une ligne technique ; aucun kit, jeu de burins, adaptateur ou accessoire n’est ajouté.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Le catalogue publie une consommation en CFM sans régime ni pression de mesure associés. Cette valeur reste documentaire et la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "3-1/8 lbs",
+			"label": "Mandrin",
+			"value": "1/2 pouce",
 			"evidenceIds": [
-				"october2b-tools-oct2b-jet-catalog-pdf-p67"
+				"review:2026-11-16-reviews:perceuse-jet-jsm-704:0"
 			]
 		},
 		{
-			"label": "Ligne technique constructeur",
-			"value": "JSm-704 yeS 1/2 3/8-24 1/2 800 4 1/4 3/8 2.2 95 7 3-1/8",
+			"label": "Sens",
+			"value": "Réversible",
 			"evidenceIds": [
-				"october2b-tools-oct2b-jet-catalog-pdf-p67"
+				"review:2026-11-16-reviews:perceuse-jet-jsm-704:0"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "La pression de mesure de la consommation de la ligne n’est pas établie.",
+			"label": "Broche",
+			"value": "3/8 pouce-24",
 			"evidenceIds": [
-				"october2b-tools-oct2b-jet-catalog-pdf-p67"
+				"review:2026-11-16-reviews:perceuse-jet-jsm-704:0"
+			]
+		},
+		{
+			"label": "Puissance publiée",
+			"value": "1/2 hp",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-jet-jsm-704:0"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "800 tr/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-jet-jsm-704:0"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "7 pouces",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-jet-jsm-704:0"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "3⅛ lb",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-jet-jsm-704:0"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "4 CFM, régime non précisé",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-jet-jsm-704:0"
 			]
 		}
 	],
@@ -73,21 +113,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 9381736270fc03a7d3233abbb4c97f401cc4f8f453822e2b9eabc85c4e4f6ec6. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:perceuse-jet-jsm-704:0",
+			"sourceUrl": "https://d29c95q8mcesvj.cloudfront.net/wysiwyg/pdf/414700_Catalog.pdf",
+			"sourceLabel": "JET, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "JET JSM-704 : perceuse réversible à mandrin 1/2 pouce, 800 tr/min et puissance publiée 1/2 hp. La JSM-705 passe au mandrin 3/8 pouce et à 1 800 tr/min ; la JSM-724 conserve le mandrin et la vitesse de la 704 avec un corps de 7½ pouces, contre 7 pouces pour la 704. GET complet SHA-256 9381736270fc03a7d3233abbb4c97f401cc4f8f453822e2b9eabc85c4e4f6ec6. Pages PDF lues : 67."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october2b-tools-oct2b-jet-catalog-pdf-p67"
-		],
-		"workingPressureBar": [
-			"october2b-tools-oct2b-jet-catalog-pdf-p67"
+			"review:2026-11-16-reviews:perceuse-jet-jsm-704:0"
 		],
 		"demandExplanation": [
-			"october2b-tools-oct2b-jet-catalog-pdf-p67"
+			"review:2026-11-16-reviews:perceuse-jet-jsm-704:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-reviews:perceuse-jet-jsm-704:0"
 		]
 	},
 	"notes": [
-		"Les caractéristiques mécaniques sont documentées ; aucune consommation n’est associée à une pression de mesure et à un régime suffisant pour le calcul."
+		"Le catalogue publie une consommation en CFM sans régime ni pression de mesure associés. Cette valeur reste documentaire et la compatibilité demeure indéterminée."
 	]
 };
 

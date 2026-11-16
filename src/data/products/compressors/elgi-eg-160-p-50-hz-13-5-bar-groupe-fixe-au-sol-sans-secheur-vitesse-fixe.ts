@@ -31,10 +31,10 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/elgi-eg-160-p-50-hz-13-5-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe.webp",
+		"src": "/images/products/elgi-eg-160-p-50-hz-13-5-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : ELGi EG 160-P, 50 Hz, 13,5 bar",
 		"sourceUrl": "https://www.elgi.com/in/wp-content/uploads/2019/06/EG-Premium-90-160-catalogue_India.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -81,7 +81,7 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "ELGi EG 160-P, 50 Hz, 13,5 bar. 21 400 L/min à 12,5 bar. Moteur 160 kW ; groupe fixe au sol, sans sécheur ; vitesse fixe.",
+		"overview": "L’EG160-P fixe 50 Hz est déclaré à 21,4 m³/min à 12,5 bar ; les 13,5 bar désignent la pression maximale de décharge. À 10 bar de travail, le même modèle fournit 25,7 m³/min. Le tableau VFD distingue une plage de modulation et une masse de 3 550 kg, contre 3 430 kg pour cette version fixe. Le FAD ISO 1217 est mesuré en sortie du groupe, après séparateur d’humidité, dans le périmètre Inde de cette brochure.",
 		"verifiedFacts": [
 			"Débit restitué relié à une pression et aux unités originales de la fiche fabricant.",
 			"Périmètre retenu : groupe seul ; réservoir de stockage externe exclu.",
@@ -115,6 +115,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 2b9f43ec8dff222a8f93b9217c688172836c6c783a2c5af2c5e44ebf448f8b9d de la réponse originale. Données fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:elgi-eg-160-p-50-hz-13-5-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe:0",
+			"sourceUrl": "https://www.elgi.com/in/wp-content/uploads/2019/06/EG-Premium-90-160-catalogue_India.pdf",
+			"sourceLabel": "ELGi, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’EG160-P fixe 50 Hz est déclaré à 21,4 m³/min à 12,5 bar ; les 13,5 bar désignent la pression maximale de décharge. À 10 bar de travail, le même modèle fournit 25,7 m³/min. Le tableau VFD distingue une plage de modulation et une masse de 3 550 kg, contre 3 430 kg pour cette version fixe. Le FAD ISO 1217 est mesuré en sortie du groupe, après séparateur d’humidité, dans le périmètre Inde de cette brochure. GET complet SHA-256 2b9f43ec8dff222a8f93b9217c688172836c6c783a2c5af2c5e44ebf448f8b9d. Pages PDF lues : 8, 3."
 		}
 	],
 	"fieldSources": {

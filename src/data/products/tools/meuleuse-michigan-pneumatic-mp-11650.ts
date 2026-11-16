@@ -11,13 +11,13 @@ const product: ToolProfileInput = {
 	"mpn": "MP-11650",
 	"demandModel": "variable-volume",
 	"workingPressureBar": {},
-	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
+	"demandExplanation": "Le tableau publie une consommation moyenne, sans pression de mesure associée. La valeur reste documentaire et la compatibilité demeure indéterminée.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-michigan-pneumatic-mp-11650.webp",
+		"src": "/images/products/meuleuse-michigan-pneumatic-mp-11650-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Michigan Pneumatic MP-11650",
 		"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/10-Grinders_V3.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "michigan-pneumatic-mp-11650",
@@ -29,44 +29,77 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Michigan Pneumatic MP-11650. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 5.0 lbs. Ligne technique constructeur : MP-11650 Angle Side – 5/8\"-11 5\" Type 27 11,000 rpm 0.9 3-1/4\" 7-3/4\" 5.0 lbs 1/4\" 3/8\" 21.5 cfm.",
+		"overview": "Michigan Pneumatic MP-11650 : meuleuse d’angle à corps acier, broche 5/8 pouce-11 et disque type 27 de 5 pouces à 11 000 tr/min. La MP-11650A à corps aluminium conserve le montage et la vitesse, avec 4,25 lb contre 5 lb. Les deux corps mesurent 7¾ pouces et publient 0,9 hp.",
 		"verifiedFacts": [
-			"Masse publiée : 5.0 lbs.",
-			"Ligne technique constructeur : MP-11650 Angle Side – 5/8\"-11 5\" Type 27 11,000 rpm 0.9 3-1/4\" 7-3/4\" 5.0 lbs 1/4\" 3/8\" 21.5 cfm."
+			"Architecture : Angle, corps acier, échappement latéral.",
+			"Disque : 5 pouces, type 27.",
+			"Broche : 5/8 pouce-11.",
+			"Vitesse à vide : 11 000 tr/min.",
+			"Puissance publiée : 0,9 hp.",
+			"Longueur : 7¾ pouces.",
+			"Masse : 5 lb.",
+			"Consommation moyenne, hors calcul : 21,5 cfm."
 		],
 		"limitations": [
-			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
-			"Données du catalogue constructeur archivé ; consommation moyenne ou de régime non précisé, sans certification du besoin maximal en charge.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"Le tableau publie une consommation moyenne, sans pression de mesure associée. La valeur reste documentaire et la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Masse publiée",
-			"value": "5.0 lbs",
+			"label": "Architecture",
+			"value": "Angle, corps acier, échappement latéral",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-10-pdf-p24"
+				"review:2026-11-16-reviews:meuleuse-michigan-pneumatic-mp-11650:0"
 			]
 		},
 		{
-			"label": "Ligne technique constructeur",
-			"value": "MP-11650 Angle Side – 5/8\"-11 5\" Type 27 11,000 rpm 0.9 3-1/4\" 7-3/4\" 5.0 lbs 1/4\" 3/8\" 21.5 cfm",
+			"label": "Disque",
+			"value": "5 pouces, type 27",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-10-pdf-p24"
+				"review:2026-11-16-reviews:meuleuse-michigan-pneumatic-mp-11650:0"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "Aucune pression de mesure de cette ligne de consommation n’est établie dans le tableau.",
+			"label": "Broche",
+			"value": "5/8 pouce-11",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-10-pdf-p24"
+				"review:2026-11-16-reviews:meuleuse-michigan-pneumatic-mp-11650:0"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "11 000 tr/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-michigan-pneumatic-mp-11650:0"
+			]
+		},
+		{
+			"label": "Puissance publiée",
+			"value": "0,9 hp",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-michigan-pneumatic-mp-11650:0"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "7¾ pouces",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-michigan-pneumatic-mp-11650:0"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "5 lb",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:meuleuse-michigan-pneumatic-mp-11650:0"
 			]
 		},
 		{
 			"label": "Consommation moyenne, hors calcul",
-			"value": "21.5 cfm",
+			"value": "21,5 cfm",
 			"evidenceIds": [
-				"october2b-tools-oct2b-michigan-10-pdf-p24"
+				"review:2026-11-16-reviews:meuleuse-michigan-pneumatic-mp-11650:0"
 			]
 		}
 	],
@@ -80,21 +113,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 68a07091e12cedba8fd2c428b652540aa3e7b34b0fa2da703b0f9115ca7e8705. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-michigan-pneumatic-mp-11650:0",
+			"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/10-Grinders_V3.pdf",
+			"sourceLabel": "Michigan Pneumatic, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Michigan Pneumatic MP-11650 : meuleuse d’angle à corps acier, broche 5/8 pouce-11 et disque type 27 de 5 pouces à 11 000 tr/min. La MP-11650A à corps aluminium conserve le montage et la vitesse, avec 4,25 lb contre 5 lb. Les deux corps mesurent 7¾ pouces et publient 0,9 hp. GET complet SHA-256 68a07091e12cedba8fd2c428b652540aa3e7b34b0fa2da703b0f9115ca7e8705. Pages PDF lues : 24, 25."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october2b-tools-oct2b-michigan-10-pdf-p24"
-		],
-		"workingPressureBar": [
-			"october2b-tools-oct2b-michigan-10-pdf-p24"
+			"review:2026-11-16-reviews:meuleuse-michigan-pneumatic-mp-11650:0"
 		],
 		"demandExplanation": [
-			"october2b-tools-oct2b-michigan-10-pdf-p24"
+			"review:2026-11-16-reviews:meuleuse-michigan-pneumatic-mp-11650:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-reviews:meuleuse-michigan-pneumatic-mp-11650:0"
 		]
 	},
 	"notes": [
-		"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité."
+		"Le tableau publie une consommation moyenne, sans pression de mesure associée. La valeur reste documentaire et la compatibilité demeure indéterminée."
 	]
 };
 

@@ -15,10 +15,10 @@ const product: ToolProfileInput = {
 	"connectorSize": "1-in. (Air Inlet NPT/BSP)",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-universal-tool-ut2588lt-th.webp",
+		"src": "/images/products/cle-a-chocs-universal-tool-ut2588lt-th-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Universal Tool UT2588LT-TH",
 		"sourceUrl": "https://continentaltoolgroup.com/product/2-1-2-drive-lever-throttle-impact-wrench/",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "universal-tool-ut2588lt-th",
@@ -30,16 +30,19 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Universal Tool UT2588LT-TH. Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse. Masse publiée : 97.5 kg. Longueur publiée : 675.6 mm.",
+		"overview": "La UT2588LT-TH est la clé industrielle à carré2-1/2, poignée en T et retenue de douille traversante. Ses97,5 kg et son mécanisme bille/came la distinguent des petites UT2025R/2110R. Le couple de travail25000 ft-lb reste distinct du maximum 50000 ft-lb ; aucune consommation n’est publiée.",
 		"verifiedFacts": [
 			"Masse publiée : 97.5 kg.",
 			"Longueur publiée : 675.6 mm.",
 			"Couple de travail déclaré : 33892 Nm.",
-			"Retenue de douille : Through Hole."
+			"Retenue de douille : Through Hole.",
+			"Carré et poignée : 2-1/2 pouces ; poignée en T.",
+			"Couples originaux distincts : Travail25000 ft-lb /33892 Nm ; maximum 50000 ft-lb /67784 Nm, valeurs imprimées non recalculées.",
+			"Équipement déclaré : Lubrificateur intégré ; poignée auxiliaire ; suspensions horizontale et verticale.",
+			"Raccord et flexible, valeurs originales : Entrée1 pouce ; flexible1 pouce /25 mm (arrondi)."
 		],
 		"limitations": [
 			"Consommation de cette référence non établie dans la source ; aucun débit déduit de la puissance ou de la vitesse.",
-			"Les diamètres intérieurs publiés diffèrent après conversion ; aucune valeur unique n’est retenue sans clarification.",
 			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
 		]
 	},
@@ -99,6 +102,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-ctg-pdp-62-p1"
 			]
+		},
+		{
+			"label": "Carré et poignée",
+			"value": "2-1/2 pouces ; poignée en T",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-universal-tool-ut2588lt-th:0"
+			]
+		},
+		{
+			"label": "Couples originaux distincts",
+			"value": "Travail25000 ft-lb /33892 Nm ; maximum50000 ft-lb /67784 Nm, valeurs imprimées non recalculées",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-universal-tool-ut2588lt-th:0"
+			]
+		},
+		{
+			"label": "Équipement déclaré",
+			"value": "Lubrificateur intégré ; poignée auxiliaire ; suspensions horizontale et verticale",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-universal-tool-ut2588lt-th:0"
+			]
+		},
+		{
+			"label": "Raccord et flexible, valeurs originales",
+			"value": "Entrée1 pouce ; flexible1 pouce /25 mm (arrondi)",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-universal-tool-ut2588lt-th:0"
+			]
 		}
 	],
 	"evidence": [
@@ -111,6 +142,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 160492f608390f5178bc8df5b7d6f257e3a6d5c50bffe8f09766716be854113f. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-chocs-universal-tool-ut2588lt-th:0",
+			"sourceUrl": "https://continentaltoolgroup.com/product/2-1-2-drive-lever-throttle-impact-wrench/",
+			"sourceLabel": "Universal Tool, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La UT2588LT-TH est la clé industrielle à carré2-1/2, poignée en T et retenue de douille traversante. Ses97,5 kg et son mécanisme bille/came la distinguent des petites UT2025R/2110R. Le couple de travail25000 ft-lb reste distinct du maximum 50000 ft-lb ; aucune consommation n’est publiée. GET complet SHA-256 1f172637840e53ed18435c09385908f8f178a7151909055b32399bc65a12d03a. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
@@ -121,7 +162,7 @@ const product: ToolProfileInput = {
 			"october2-tools-ctg-pdp-62-p1"
 		],
 		"workingPressureBar": [
-			"october2-tools-ctg-pdp-62-p1"
+			"review:2026-11-16-reviews:cle-a-chocs-universal-tool-ut2588lt-th:0"
 		],
 		"demandExplanation": [
 			"october2-tools-ctg-pdp-62-p1"

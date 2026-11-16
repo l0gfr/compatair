@@ -18,10 +18,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-mannesmann-demag-e-18-p3-29915-32-5.webp",
+		"src": "/images/products/cle-a-chocs-mannesmann-demag-e-18-p3-29915-32-5-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Mannesmann DEMAG E 18 P3 (réf. 29915-32-5)",
 		"sourceUrl": "https://www.mannesmann-demag.com/bilder-und-dateien/downloads/kataloge/md_airtools_05_2017_e.pdf?type=download",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "mannesmann-demag-e-18-p3",
@@ -33,12 +33,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Mannesmann DEMAG E 18 P3 (réf. 29915-32-5). La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 2.4 kg. Référence fabricant : 29915-32-5.",
+		"overview": "La E18 P3 utilise un carré1/2 et un mécanisme Twin Hammer, avec plage de travail80–240 Nm et maximum 400 Nm. Les E10 P3 et PS3 changent de montage et de plage de couple. Les680 L/min documentaires ne constituent pas une mesure appariée de consommation à6 bar.",
 		"verifiedFacts": [
 			"Masse publiée : 2.4 kg.",
 			"Référence fabricant : 29915-32-5.",
 			"Vitesse à vide : 6 800 tr/min.",
-			"Longueur publiée : 185 mm."
+			"Longueur publiée : 185 mm.",
+			"Carré : 1/2 pouce.",
+			"Plage de travail et maximum distinct : 80–240 Nm ; maximum 400 Nm.",
+			"Mécanisme et réglages : Twin Hammer ; quatre niveaux de commande."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -88,6 +91,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-mannesmann-0-p71"
 			]
+		},
+		{
+			"label": "Carré",
+			"value": "1/2 pouce",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-mannesmann-demag-e-18-p3-29915-32-5:0"
+			]
+		},
+		{
+			"label": "Plage de travail et maximum distinct",
+			"value": "80–240 Nm ; maximum400 Nm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-mannesmann-demag-e-18-p3-29915-32-5:0"
+			]
+		},
+		{
+			"label": "Mécanisme et réglages",
+			"value": "Twin Hammer ; quatre niveaux de commande",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-mannesmann-demag-e-18-p3-29915-32-5:0"
+			]
 		}
 	],
 	"evidence": [
@@ -100,6 +124,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 9de8eb77aad6c7412b390db54a16646c71c0a4f9925ddf3ddfba1048b1779f3b. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-chocs-mannesmann-demag-e-18-p3-29915-32-5:0",
+			"sourceUrl": "https://www.mannesmann-demag.com/bilder-und-dateien/downloads/kataloge/md_airtools_05_2017_e.pdf?type=download",
+			"sourceLabel": "Mannesmann DEMAG, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La E18 P3 utilise un carré1/2 et un mécanisme Twin Hammer, avec plage de travail80–240 Nm et maximum 400 Nm. Les E10 P3 et PS3 changent de montage et de plage de couple. Les680 L/min documentaires ne constituent pas une mesure appariée de consommation à6 bar. GET complet SHA-256 9de8eb77aad6c7412b390db54a16646c71c0a4f9925ddf3ddfba1048b1779f3b. Pages PDF lues : 71."
 		}
 	],
 	"fieldSources": {

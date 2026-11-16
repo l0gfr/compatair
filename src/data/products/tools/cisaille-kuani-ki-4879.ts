@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Consommation moyenne publiée sans facteur de marche ni point de pression de mesure : aucun débit en charge déterministe ne peut être retenu.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cisaille-kuani-ki-4879.webp",
+		"src": "/images/products/cisaille-kuani-ki-4879-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : KUANI KI-4879",
 		"sourceUrl": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "kuani-ki-4879",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "KUANI KI-4879. Consommation moyenne publiée sans facteur de marche ni point de pression de mesure : aucun débit en charge déterministe ne peut être retenu. Capacité en acier, champ fabricant (mm) : 1.6. Cadence publiée (coups/min) : 2,200.",
+		"overview": "La cisaille KI-4879 coupe l’acier 1,6 mm à 2 200 courses/min et évacue l’air par la poignée. La KI-4842A conserve 1,6 mm avec 2 500 courses/min et un échappement arrière ; la KI-4872 est limitée à 1,2 mm. Le 4879 mesure 200 mm et pèse 1,22 kg. Ses 111 L/min moyens ne dimensionnent pas une utilisation continue.",
 		"verifiedFacts": [
 			"Capacité en acier, champ fabricant (mm) : 1.6.",
 			"Cadence publiée (coups/min) : 2,200.",
@@ -121,6 +121,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cisaille-kuani-ki-4879:0",
+			"sourceUrl": "https://www.kuani.com/TW/ImgKuani/%E7%B6%9C%E5%90%88%E5%9E%8B%E9%8C%84%20202310-001-R2-2503%20%E5%A3%93%E7%B8%AE.pdf",
+			"sourceLabel": "KUANI, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La cisaille KI-4879 coupe l’acier 1,6 mm à 2 200 courses/min et évacue l’air par la poignée. La KI-4842A conserve 1,6 mm avec 2 500 courses/min et un échappement arrière ; la KI-4872 est limitée à 1,2 mm. Le 4879 mesure 200 mm et pèse 1,22 kg. Ses 111 L/min moyens ne dimensionnent pas une utilisation continue. GET complet SHA-256 569aacfbb59d7f84482da0eff26f47c6a89293c02b85c46fc33d30338b0a6bba. Pages PDF lues : 54."
 		}
 	],
 	"fieldSources": {

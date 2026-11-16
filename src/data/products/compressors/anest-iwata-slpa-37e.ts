@@ -33,10 +33,10 @@ const product: CompressorInput = {
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/anest-iwata-slpa-37e.svg",
+    "src": "/images/products/anest-iwata-slpa-37e-technical-20261116-reviews.svg",
     "alt": "Repères techniques : Anest Iwata SLPA-37E",
     "sourceUrl": "https://anest-iwata.com.au/product-guides/100-oil-free-scroll/air-energy-catalogue.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "specifications": [
     {
@@ -125,7 +125,7 @@ const product: CompressorInput = {
     }
   ],
   "editorial": {
-    "overview": "Anest Iwata SLPA-37E. 404 L/min déclarés à 8 bar. Configuration publiée : Scroll oil-free ; Standard.",
+    "overview": "Le SLPA37E est le scroll standard sans huile de 3,7 kW, déclaré à 404 L/min FAD mesurés à 8 bar. Le SLPA37E-90 ajoute un réservoir 90 L, et le SLPA37ED-90 ajoute le sécheur. La table distingue les masses et les équipements ; aucun volume de cuve n’est attribué au groupe standard par défaut. Le cycle du groupe n’est pas déduit du moteur.",
     "verifiedFacts": [
       "Débit réellement livré identifié séparément du déplacement : 404 L/min déclarés à 8 bar.",
       "Maximum de travail publié : 8 bar.",
@@ -150,6 +150,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-08",
       "confidence": "B",
       "notes": "SHA-256 aff4c508ab6c389b0b3a5d370302d098cab772d9a532b44ba767031ae36371b8 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-reviews:anest-iwata-slpa-37e:0",
+      "sourceUrl": "https://anest-iwata.com.au/product-guides/100-oil-free-scroll/air-energy-catalogue.pdf",
+      "sourceLabel": "Anest Iwata, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "Le SLPA37E est le scroll standard sans huile de 3,7 kW, déclaré à 404 L/min FAD mesurés à 8 bar. Le SLPA37E-90 ajoute un réservoir 90 L, et le SLPA37ED-90 ajoute le sécheur. La table distingue les masses et les équipements ; aucun volume de cuve n’est attribué au groupe standard par défaut. Le cycle du groupe n’est pas déduit du moteur. GET complet SHA-256 aff4c508ab6c389b0b3a5d370302d098cab772d9a532b44ba767031ae36371b8. Pages PDF lues : 5."
     }
   ],
   "fieldSources": {

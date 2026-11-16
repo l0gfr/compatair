@@ -18,10 +18,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-puma-at-5042.webp",
+		"src": "/images/products/cle-a-chocs-puma-at-5042-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : PUMA AT-5042",
 		"sourceUrl": "https://www.pumaair.com/product-1-2--Mini-Impact-Wrench-1-2MiniImpactWrench.html",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "puma-at-5042",
@@ -33,7 +33,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "PUMA AT-5042. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Square Drive : 1/2”. Capacity Bolt Size / inch : 1/2.",
+		"overview": "L’AT-5042 est une clé à chocs mini à carré 1/2 pouce, longue de 149 mm pour 1,38 kg. Elle publie 9 000 tr/min et 258 Nm maximum ; les AT-5244 et 5344 emploient un corps et des performances différents. Les 283 L/min sont moyens. Le couple maximal ne constitue pas une consigne de serrage, et la moyenne d’air ne qualifie pas le besoin en charge.",
 		"verifiedFacts": [
 			"Square Drive : 1/2”.",
 			"Capacity Bolt Size / inch : 1/2.",
@@ -163,6 +163,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 11d18cc179f7b83ec754774c0990c3e4b6eae4e9d687b974733730c6ffa5642a. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-chocs-puma-at-5042:0",
+			"sourceUrl": "https://www.pumaair.com/product-1-2--Mini-Impact-Wrench-1-2MiniImpactWrench.html",
+			"sourceLabel": "PUMA, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’AT-5042 est une clé à chocs mini à carré 1/2 pouce, longue de 149 mm pour 1,38 kg. Elle publie 9 000 tr/min et 258 Nm maximum ; les AT-5244 et 5344 emploient un corps et des performances différents. Les 283 L/min sont moyens. Le couple maximal ne constitue pas une consigne de serrage, et la moyenne d’air ne qualifie pas le besoin en charge. GET complet SHA-256 11d18cc179f7b83ec754774c0990c3e4b6eae4e9d687b974733730c6ffa5642a. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

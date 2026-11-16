@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La consommation est publiée sous le libellé « 100% int. ». Ce facteur de marche ne démontre pas le régime en charge ni sa pression de mesure ; aucun débit continu calculable n’en est déduit.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-tengtools-arwc12.webp",
+		"src": "/images/products/cle-a-chocs-tengtools-arwc12-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : TengTools ARWC12",
 		"sourceUrl": "https://www.tengtools.com/en-gb/collections/air-tools/products/1-2-composite-air-impact-wrench",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "tengtools-arwc12",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "TengTools ARWC12. La consommation est publiée sous le libellé « 100% int. ». Ce facteur de marche ne démontre pas le régime en charge ni sa pression de mesure ; aucun débit continu calculable n’en est déduit. Product Type : Air Impact Wrenches. Drive : 1/2\".",
+		"overview": "L’ARWC12 est la clé à chocs composite à carré 1/2 pouce, pour boulons M16. Le tableau distingue trois niveaux avant 258/461/930 Nm et un maximum arrière de 960 Nm ; ces valeurs ne sont pas des consignes de serrage. L’ARWC38 utilise un carré 3/8 pouce, l’ARWM11S un carré 1 pouce. Les 144 L/min à « 100% int. » restent sans pression de mesure documentée.",
 		"verifiedFacts": [
 			"Product Type : Air Impact Wrenches.",
 			"Drive : 1/2\".",
@@ -206,6 +206,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 86286d89d9c4fafc34674e1280a833683a99f76d8bcd6408669765c262b5b150. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-chocs-tengtools-arwc12:0",
+			"sourceUrl": "https://www.tengtools.com/en-gb/collections/air-tools/products/1-2-composite-air-impact-wrench",
+			"sourceLabel": "TengTools, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’ARWC12 est la clé à chocs composite à carré 1/2 pouce, pour boulons M16. Le tableau distingue trois niveaux avant 258/461/930 Nm et un maximum arrière de 960 Nm ; ces valeurs ne sont pas des consignes de serrage. L’ARWC38 utilise un carré 3/8 pouce, l’ARWM11S un carré 1 pouce. Les 144 L/min à « 100% int. » restent sans pression de mesure documentée. GET complet SHA-256 744f6d309bf862ae88269e4602a810877a028b691475d13c96c1fa55a9880996. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

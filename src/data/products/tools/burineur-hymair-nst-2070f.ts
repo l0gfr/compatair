@@ -18,10 +18,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/burineur-hymair-nst-2070f.webp",
+		"src": "/images/products/burineur-hymair-nst-2070f-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Hymair NST-2070F",
 		"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SAUfKpBkCgyL&dp=GvUApKfKKUAU",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "hymair-nst-2070f",
@@ -33,7 +33,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Hymair NST-2070F. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée (kg/lb) : 1.63/3.61. Longueur × hauteur : 205x170 mm.",
+		"overview": "Le NST-2070F est le burineur de la série à corps de 205 × 170 mm, plus long que le NST-2070C de 165 × 165 mm et plus court que le NST-2080F de 260 × 170 mm. Les 5 cfm moyens publiés restent séparés d’un débit en charge. Le format et l’emmanchement se contrôlent pour l’intervention ; aucun besoin continu n’est reconstruit depuis la moyenne.",
 		"verifiedFacts": [
 			"Masse publiée (kg/lb) : 1.63/3.61.",
 			"Longueur × hauteur : 205x170 mm."
@@ -83,6 +83,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : b9c6143d5502d453b5b2e0846bcfec263fb763d42a478fbc52089a41725e7d8d. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:burineur-hymair-nst-2070f:0",
+			"sourceUrl": "https://www.steedtools.com/phoenix/admin/download?fileId=SAUfKpBkCgyL&dp=GvUApKfKKUAU",
+			"sourceLabel": "Hymair, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le NST-2070F est le burineur de la série à corps de 205 × 170 mm, plus long que le NST-2070C de 165 × 165 mm et plus court que le NST-2080F de 260 × 170 mm. Les 5 cfm moyens publiés restent séparés d’un débit en charge. Le format et l’emmanchement se contrôlent pour l’intervention ; aucun besoin continu n’est reconstruit depuis la moyenne. GET complet SHA-256 b9c6143d5502d453b5b2e0846bcfec263fb763d42a478fbc52089a41725e7d8d. Pages PDF lues : 8."
 		}
 	],
 	"fieldSources": {

@@ -16,10 +16,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/perceuse-rodcraft-rc4607-8951073090.webp",
+		"src": "/images/products/perceuse-rodcraft-rc4607-8951073090-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Rodcraft RC4607 (réf. 8951073090)",
 		"sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "rodcraft-rc4607",
@@ -31,11 +31,15 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Rodcraft RC4607 (réf. 8951073090). La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 1.00 kg. Dimensions publiées : 225x40x42 mm.",
+		"overview": "Rodcraft RC4607 : perceuse droite 500 W à mandrin RÖHM sans clé 10 mm, double roulement avant et échappement silencieux sous la poignée. La RC4500 est de forme pistolet avec inversion. Les 380 L/min moyens en charge et 510 L/min à vide restent séparés, faute de pression de mesure établie.",
 		"verifiedFacts": [
 			"Masse publiée : 1.00 kg.",
 			"Dimensions publiées : 225x40x42 mm.",
-			"Diamètre de tuyau : 8 mm."
+			"Diamètre de tuyau : 8 mm.",
+			"Mandrin : RÖHM sans clé, 10 mm.",
+			"Puissance / vitesse : 500 W / 2 000 tr/min.",
+			"Masse / dimensions : 1 kg / 225 × 40 × 42 mm.",
+			"Consommation moyenne en charge / à vide : 380 / 510 L/min."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -79,6 +83,34 @@ const product: ToolProfileInput = {
 				"october2-tools-rodcraft-catalog-p31",
 				"october2-tools-rodcraft-catalog-p4"
 			]
+		},
+		{
+			"label": "Mandrin",
+			"value": "RÖHM sans clé, 10 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-rodcraft-rc4607-8951073090:0"
+			]
+		},
+		{
+			"label": "Puissance / vitesse",
+			"value": "500 W / 2 000 tr/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-rodcraft-rc4607-8951073090:0"
+			]
+		},
+		{
+			"label": "Masse / dimensions",
+			"value": "1 kg / 225 × 40 × 42 mm",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-rodcraft-rc4607-8951073090:0"
+			]
+		},
+		{
+			"label": "Consommation moyenne en charge / à vide",
+			"value": "380 / 510 L/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-rodcraft-rc4607-8951073090:0"
+			]
 		}
 	],
 	"evidence": [
@@ -101,6 +133,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Document complémentaire de la référence exacte, sans essai CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:perceuse-rodcraft-rc4607-8951073090:0",
+			"sourceUrl": "https://www.photos.rodcraft.com/content/dam/brands/Rodcraft/literature/catalogs/RC_EN.pdf",
+			"sourceLabel": "Rodcraft, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Rodcraft RC4607 : perceuse droite 500 W à mandrin RÖHM sans clé 10 mm, double roulement avant et échappement silencieux sous la poignée. La RC4500 est de forme pistolet avec inversion. Les 380 L/min moyens en charge et 510 L/min à vide restent séparés, faute de pression de mesure établie. GET complet SHA-256 c10fd37c2e1adf9ac34431eb523b1933644b83f1cec85b376d30cd77aab01ef3. Pages PDF lues : 4, 31."
 		}
 	],
 	"fieldSources": {

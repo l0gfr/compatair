@@ -13,13 +13,13 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/stanley-fatmax-dv2-400-10-50.webp",
+		"src": "/images/products/stanley-fatmax-dv2-400-10-50-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Stanley Fatmax DV2 400/10/50, référence 8119500STF522",
-		"sourceUrl": "https://www.nuair.pl/images/katalogi/Catalogo_STANLEY_FATMAX_2020_EN_9990222_LR.pdf#page=17",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://www.nuair.pl/images/katalogi/Catalogo_STANLEY_FATMAX_2020_EN_9990222_LR.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Stanley Fatmax DV2 400/10/50, référence 8119500STF522 : cuve de 50 L, pression maximale publiée de 10 bar. Aucun débit FAD avec conditions de mesure complètes n’est établi dans les sources retenues ; la compatibilité pneumatique reste indéterminée. Groupe de compression publié : VDC. Groupe de compression : VDC. Nombre de cylindres : 2.",
+		"overview": "Le DV2 400/10/50 8119500STF522 porte une cuve de 50 L, entre les versions 24P et 100 L de la même famille. Le groupe VDC reste un bicylindre lubrifié de 2,2 kW, avec 10 bar maximum et 356 L/min aspirés. La version 100 L ajoute du stockage sans augmenter ce débit déclaré. Le catalogue distingue la masse brute de 51 kg et l’emballage 800 × 350 × 670 mm ; le calcul reste non conclusif faute de FAD qualifié.",
 		"verifiedFacts": [
 			"Débit FAD exploitable pour un verdict : non établi dans les sources retenues.",
 			"Compresseur à pistons. Puissance moteur publiée : 2,2 kW.",
@@ -103,6 +103,16 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Le tableau Stanley Fatmax, catalogue compresseurs 2020 indique « Air displacement » : 356 L/min aspirés. Aucun débit restitué à une pression de mesure n’est fourni dans cette ligne."
+		},
+		{
+			"id": "review:2026-11-16-reviews:stanley-fatmax-dv2-400-10-50:0",
+			"sourceUrl": "https://www.nuair.pl/images/katalogi/Catalogo_STANLEY_FATMAX_2020_EN_9990222_LR.pdf",
+			"sourceLabel": "Stanley, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le DV2 400/10/50 8119500STF522 porte une cuve de 50 L, entre les versions 24P et 100 L de la même famille. Le groupe VDC reste un bicylindre lubrifié de 2,2 kW, avec 10 bar maximum et 356 L/min aspirés. La version 100 L ajoute du stockage sans augmenter ce débit déclaré. Le catalogue distingue la masse brute de 51 kg et l’emballage 800 × 350 × 670 mm ; le calcul reste non conclusif faute de FAD qualifié. GET complet SHA-256 b2015c46cd22990d7024097652b91193a116a7959be0886b3265d976fd49e1ad. Pages PDF lues : 17."
 		}
 	],
 	"fieldSources": {

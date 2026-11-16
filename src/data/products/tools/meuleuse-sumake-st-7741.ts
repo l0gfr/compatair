@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-sumake-st-7741.webp",
+		"src": "/images/products/meuleuse-sumake-st-7741-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Sumake ST-7741",
 		"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "sumake-st-7741",
@@ -39,7 +39,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sumake ST-7741. Consommation publiée, régime non précisé : 820 L/min à 6,2 bar. Consommation dans les unités du tableau : 820 L/min ; 29 cfm. Configuration complète publiée : ST-7741.",
+		"overview": "La ST-7741 est la meuleuse 7 pouces à commande par levier, 7 000 tr/min, 343 mm et 3,2 kg. La ST-7842 reçoit un disque 5 pouces à 11 000 tr/min ; les ST-77365 existent aussi avec commande tournante. Le diamètre, la commande et la vitesse admissible du disque sont déterminants. Les 820 L/min de la ST-7741 n’ont pas de régime de mesure explicite.",
 		"verifiedFacts": [
 			"Désignation et configuration documentées à la page PDF 42.",
 			"Consommation dans les unités du tableau : 820 L/min ; 29 cfm.",
@@ -99,6 +99,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-sumake-st-7741:0",
+			"sourceUrl": "https://sumakenorthamerica.com/wp-content/uploads/2024/06/2024-Pneumatic-Tools-Catalog.pdf",
+			"sourceLabel": "Sumake, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La ST-7741 est la meuleuse 7 pouces à commande par levier, 7 000 tr/min, 343 mm et 3,2 kg. La ST-7842 reçoit un disque 5 pouces à 11 000 tr/min ; les ST-77365 existent aussi avec commande tournante. Le diamètre, la commande et la vitesse admissible du disque sont déterminants. Les 820 L/min de la ST-7741 n’ont pas de régime de mesure explicite. GET complet SHA-256 9ad8de928d1401a57c1094677b32441ea89915e2248ef4e7950148ac1d955299. Pages PDF lues : 42."
 		}
 	],
 	"fieldSources": {

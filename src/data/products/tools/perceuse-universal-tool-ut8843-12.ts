@@ -19,10 +19,10 @@ const product: ToolProfileInput = {
 	"connectorSize": "1/2-in. (Air Inlet (NPT / BSP))",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/perceuse-universal-tool-ut8843-12.webp",
+		"src": "/images/products/perceuse-universal-tool-ut8843-12-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Universal Tool UT8843-12",
 		"sourceUrl": "https://continentaltoolgroup.com/product/1-2-d-handle-drill-2/",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "universal-tool-ut8843-12",
@@ -34,13 +34,18 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Universal Tool UT8843-12. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 3.3 kg. Longueur publiée : 197 mm.",
+		"overview": "La UT8843-12 est une perceuse à poignée D, gâchette intérieure et mandrin1/2. Elle tourne à1200 tr/min contre 800 pour l’UT8843-8. La poignée auxiliaire se monte de chaque côté ; les puissances1,1 hp et0,75 kW sont des valeurs originales à faire confirmer, sans conversion silencieuse.",
 		"verifiedFacts": [
 			"Masse publiée : 3.3 kg.",
 			"Longueur publiée : 197 mm.",
 			"Vitesse publiée : 1200 tr/min.",
 			"Puissance publiée : 1.1 HP.",
-			"Échappement : Bottom."
+			"Échappement : Bottom.",
+			"Mandrin et forme : 1/2 pouce ; poignée D à gâchette intérieure.",
+			"Poignée auxiliaire : Montable de chaque côté.",
+			"Puissance : valeurs originales : 1,1 HP ;0,75 kW dans la même table, non concordantes.",
+			"Consommations distinctes : 30 CFM, régime non précisé ; moyenne7,5 CFM.",
+			"Marché déclaré : Produit disponible uniquement aux USA dans cette fiche."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -110,6 +115,41 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-ctg-pdp-15-p1"
 			]
+		},
+		{
+			"label": "Mandrin et forme",
+			"value": "1/2 pouce ; poignée D à gâchette intérieure",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-universal-tool-ut8843-12:0"
+			]
+		},
+		{
+			"label": "Poignée auxiliaire",
+			"value": "Montable de chaque côté",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-universal-tool-ut8843-12:0"
+			]
+		},
+		{
+			"label": "Puissance : valeurs originales",
+			"value": "1,1 HP ;0,75 kW dans la même table, non concordantes",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-universal-tool-ut8843-12:0"
+			]
+		},
+		{
+			"label": "Consommations distinctes",
+			"value": "30 CFM, régime non précisé ; moyenne7,5 CFM",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-universal-tool-ut8843-12:0"
+			]
+		},
+		{
+			"label": "Marché déclaré",
+			"value": "Produit disponible uniquement aux USA dans cette fiche",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-universal-tool-ut8843-12:0"
+			]
 		}
 	],
 	"evidence": [
@@ -122,6 +162,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : a65c6fac4d7ab636076e7fe2a2a9e49b13482ea74a80323fbe28821a5371e359. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:perceuse-universal-tool-ut8843-12:0",
+			"sourceUrl": "https://continentaltoolgroup.com/product/1-2-d-handle-drill-2/",
+			"sourceLabel": "Universal Tool, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La UT8843-12 est une perceuse à poignée D, gâchette intérieure et mandrin1/2. Elle tourne à1200 tr/min contre 800 pour l’UT8843-8. La poignée auxiliaire se monte de chaque côté ; les puissances1,1 hp et0,75 kW sont des valeurs originales à faire confirmer, sans conversion silencieuse. GET complet SHA-256 78dfdae5cdc24902bb52bb5049806aa9f55af7b2c152dcf0aabddcd5da6290d1. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

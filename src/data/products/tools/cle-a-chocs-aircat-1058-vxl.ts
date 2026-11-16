@@ -15,10 +15,10 @@ const product: ToolProfileInput = {
 	"connectorSize": "1/4-in. (Air Inlet (NPT/BSP))",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-aircat-1058-vxl.webp",
+		"src": "/images/products/cle-a-chocs-aircat-1058-vxl-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Aircat 1058-VXL",
 		"sourceUrl": "https://continentaltoolgroup.com/product/1-2-vibrotherm-drive-composite-compact-impact-wrench/",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "aircat-1058-vxl",
@@ -30,10 +30,13 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Aircat 1058-VXL. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Masse publiée : 2.8 lb. Vitesse à vide : 9000 tr/min.",
+		"overview": "La 1058-VXL utilise un carré1/2 et le mécanisme Vibrotherm dans un corps compact de4,4 pouces. Les550 ft-lb maximum et750 ft-lb au desserrage restent deux valeurs distinctes. La 1056-XL et la 1059-VXL sont des configurations voisines, sans débit maximal déduit des8 CFM documentaires.",
 		"verifiedFacts": [
 			"Masse publiée : 2.8 lb.",
-			"Vitesse à vide : 9000 tr/min."
+			"Vitesse à vide : 9000 tr/min.",
+			"Carré et longueur : 1/2 pouce ;4,4 pouces.",
+			"Couples originaux : Maximum550 ft-lb ; desserrage750 ft-lb.",
+			"Mécanisme : Vibrotherm Drive ;1700 impacts/min."
 		],
 		"limitations": [
 			"La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
@@ -82,6 +85,27 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2-tools-ctg-pdp-306-p1"
 			]
+		},
+		{
+			"label": "Carré et longueur",
+			"value": "1/2 pouce ;4,4 pouces",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-aircat-1058-vxl:0"
+			]
+		},
+		{
+			"label": "Couples originaux",
+			"value": "Maximum550 ft-lb ; desserrage750 ft-lb",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-aircat-1058-vxl:0"
+			]
+		},
+		{
+			"label": "Mécanisme",
+			"value": "Vibrotherm Drive ;1700 impacts/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:cle-a-chocs-aircat-1058-vxl:0"
+			]
 		}
 	],
 	"evidence": [
@@ -94,6 +118,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 1ff77929b6bf24e400c896f1cb3abb39c27b2fcbc691b00b0507a8c6673d4a30. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:cle-a-chocs-aircat-1058-vxl:0",
+			"sourceUrl": "https://continentaltoolgroup.com/product/1-2-vibrotherm-drive-composite-compact-impact-wrench/",
+			"sourceLabel": "Aircat, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 1058-VXL utilise un carré1/2 et le mécanisme Vibrotherm dans un corps compact de4,4 pouces. Les550 ft-lb maximum et750 ft-lb au desserrage restent deux valeurs distinctes. La 1056-XL et la 1059-VXL sont des configurations voisines, sans débit maximal déduit des8 CFM documentaires. GET complet SHA-256 db779759a5a037cea04d2a5e7aee8f7c25021964ee7389b8d821f4cf1dac55af. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
@@ -104,7 +138,7 @@ const product: ToolProfileInput = {
 			"october2-tools-ctg-pdp-306-p1"
 		],
 		"workingPressureBar": [
-			"october2-tools-ctg-pdp-306-p1"
+			"review:2026-11-16-reviews:cle-a-chocs-aircat-1058-vxl:0"
 		],
 		"demandExplanation": [
 			"october2-tools-ctg-pdp-306-p1"

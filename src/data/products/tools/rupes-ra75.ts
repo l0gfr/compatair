@@ -9,75 +9,71 @@ const product: ToolProfileInput = {
 	"categoryId": "ponceuse-orbitale",
 	"category": "ponceuse-orbitale",
 	"label": "RUPES RA75",
-	"demandModel": "fixed-flow",
-	"workingPressureBar": {
-		"min": 6.2,
-		"typical": 6.2,
-		"max": 6.2
-	},
+	"demandModel": "variable-volume",
+	"workingPressureBar": {},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/rupes-ra75.webp",
+		"src": "/images/products/rupes-ra75-technical-20261116-reviews.svg",
 		"alt": "Repères techniques RUPES RA75, référence RA75",
-		"sourceUrl": "https://www.rupes.com/catalogue/2026/RUPES_Catalogue-2026_EN.pdf#page=62",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://www.rupes.com/catalogue/2026/RUPES_Catalogue-2026_EN.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "RUPES RA75, référence RA75. Le tableau fabricant publie 380 L/min et une plage d’utilisation de 6,2 à 6,2 bar. Diamètre d’orbite : 3 mm. Diamètre de plateau : 75 mm.",
+		"overview": "RUPES RA75 : mini-ponceuse à plateau 75 mm sans aspiration, orbite 3 mm et vitesse réglable jusqu’à 11 000 tr/min. La RA75A possède trois trous et l’aspiration centrale ; la RA150A utilise un plateau 150 mm et une orbite 5 mm. Le maximum de consommation est documenté, sa pression de mesure reste à établir.",
 		"verifiedFacts": [
-			"Pression de service de 6,2 bar / 90 PSIG indiquée dans le même tableau.",
-			"Consommation maximale explicitement publiée dans le tableau « Air consumption max », en L/min.",
-			"Référence fabricant : RA75.",
-			"Diamètre d’orbite : 3 mm.",
-			"Diamètre de plateau : 75 mm.",
-			"Masse publiée : 0,68 kg."
+			"Plateau / orbite : 75 / 3 mm.",
+			"Aspiration / trous : Sans aspiration / aucun trou.",
+			"Vitesse / masse : 0–11 000 tr/min / 0,68 kg.",
+			"Filetages plateau / air : 5/16 pouce femelle / 1/4 GAS.",
+			"Consommation maximale documentaire : 380 L/min.",
+			"Pression de service : 6,2 bar."
 		],
 		"limitations": [
-			"Le débit concerne l’outil. L’aspiration externe et les autres consommateurs de l’atelier doivent être examinés séparément.",
-			"Les variantes d’orbite et de plateau ne sont pas interchangeables pour un même objectif de finition."
+			"La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Condition de pression",
-			"value": "Pression de service de 6,2 bar / 90 PSIG indiquée dans le même tableau.",
+			"label": "Plateau / orbite",
+			"value": "75 / 3 mm",
 			"evidenceIds": [
-				"rupes-ra75-20260926"
+				"review:2026-11-16-reviews:rupes-ra75:0"
 			]
 		},
 		{
-			"label": "Condition de consommation",
-			"value": "Consommation maximale explicitement publiée dans le tableau « Air consumption max », en L/min.",
+			"label": "Aspiration / trous",
+			"value": "Sans aspiration / aucun trou",
 			"evidenceIds": [
-				"rupes-ra75-20260926"
+				"review:2026-11-16-reviews:rupes-ra75:0"
 			]
 		},
 		{
-			"label": "Diamètre d’orbite",
-			"value": "3 mm",
+			"label": "Vitesse / masse",
+			"value": "0–11 000 tr/min / 0,68 kg",
 			"evidenceIds": [
-				"rupes-ra75-20260926"
+				"review:2026-11-16-reviews:rupes-ra75:0"
 			]
 		},
 		{
-			"label": "Diamètre de plateau",
-			"value": "75 mm",
+			"label": "Filetages plateau / air",
+			"value": "5/16 pouce femelle / 1/4 GAS",
 			"evidenceIds": [
-				"rupes-ra75-20260926"
+				"review:2026-11-16-reviews:rupes-ra75:0"
 			]
 		},
 		{
-			"label": "Masse publiée",
-			"value": "0,68 kg",
+			"label": "Consommation maximale documentaire",
+			"value": "380 L/min",
 			"evidenceIds": [
-				"rupes-ra75-20260926"
+				"review:2026-11-16-reviews:rupes-ra75:0"
 			]
 		},
 		{
-			"label": "Vitesse publiée",
-			"value": "0 - 11000 tr/min",
+			"label": "Pression de service",
+			"value": "6,2 bar",
 			"evidenceIds": [
-				"rupes-ra75-20260926"
+				"review:2026-11-16-reviews:rupes-ra75:0"
 			]
 		}
 	],
@@ -90,27 +86,33 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Consommation maximale explicitement publiée dans le tableau « Air consumption max », en L/min."
+		},
+		{
+			"id": "review:2026-11-16-reviews:rupes-ra75:0",
+			"sourceUrl": "https://www.rupes.com/catalogue/2026/RUPES_Catalogue-2026_EN.pdf",
+			"sourceLabel": "RUPES, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "RUPES RA75 : mini-ponceuse à plateau 75 mm sans aspiration, orbite 3 mm et vitesse réglable jusqu’à 11 000 tr/min. La RA75A possède trois trous et l’aspiration centrale ; la RA150A utilise un plateau 150 mm et une orbite 5 mm. Le maximum de consommation est documenté, sa pression de mesure reste à établir. GET complet SHA-256 018272fb053802b4e419d3f70bb75a46a02a62aec2a0404862ded7c21b443a63. Pages PDF lues : 62."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"rupes-ra75-20260926"
+			"review:2026-11-16-reviews:rupes-ra75:0"
+		],
+		"demandExplanation": [
+			"review:2026-11-16-reviews:rupes-ra75:0"
 		],
 		"workingPressureBar": [
-			"rupes-ra75-20260926"
-		],
-		"airflowLpm": [
-			"rupes-ra75-20260926"
+			"review:2026-11-16-reviews:rupes-ra75:0"
 		]
 	},
 	"notes": [
-		"Données déclarées par le fabricant ; aucune mesure physique CompatAir."
+		"La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne."
 	],
-	"airflowLpm": {
-		"min": 380,
-		"typical": 380,
-		"max": 380
-	}
+	"demandExplanation": "La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne."
 };
 
 export default product;

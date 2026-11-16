@@ -23,10 +23,10 @@ const product: ToolProfileInput = {
 	"airflowBasis": "unqualified",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-bande-gison-gp-902d.webp",
+		"src": "/images/products/ponceuse-bande-gison-gp-902d-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : GISON GP-902D",
 		"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "gison-gp-902d",
@@ -38,7 +38,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "GISON GP-902D. Consommation de régime non précisé : 560 L/min ; pression publiée : 6,205 bar. Cette valeur n’établit pas un besoin maximal ou en charge. Masse : 0.80 kg. Longueur : 285 mm.",
+		"overview": "La GP-902D reçoit une bande 13 × 305 mm, sans bande fournie selon la légende du catalogue. La GP-902 utilise 10 × 330 mm ; la GP-902A passe à 20 × 520 mm. Les trois tournent à 18 000 tr/min, mais leurs bras et masses diffèrent : 285 mm et 0,80 kg pour la D. La consommation de 0,56 m³/min reste documentaire, sans régime explicite.",
 		"verifiedFacts": [
 			"Masse : 0.80 kg.",
 			"Longueur : 285 mm.",
@@ -112,6 +112,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-bande-gison-gp-902d:0",
+			"sourceUrl": "https://www.gison.com.tw/Templates/att/GISON-Air-Tools-Pneumatic-Tools-Catalogs-2018-2019-en-A4.pdf?lng=en",
+			"sourceLabel": "GISON, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La GP-902D reçoit une bande 13 × 305 mm, sans bande fournie selon la légende du catalogue. La GP-902 utilise 10 × 330 mm ; la GP-902A passe à 20 × 520 mm. Les trois tournent à 18 000 tr/min, mais leurs bras et masses diffèrent : 285 mm et 0,80 kg pour la D. La consommation de 0,56 m³/min reste documentaire, sans régime explicite. GET complet SHA-256 a2a15bbc194483ea2ed75229c0aea942929e93844a169903e6690ba1a2cb6077. Pages PDF lues : 45."
 		}
 	],
 	"fieldSources": {

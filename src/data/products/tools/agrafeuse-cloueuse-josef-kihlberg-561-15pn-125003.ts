@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/agrafeuse-cloueuse-josef-kihlberg-561-15pn-125003.svg",
+		"src": "/images/products/agrafeuse-cloueuse-josef-kihlberg-561-15pn-125003-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Josef Kihlberg 561-15PN (réf. 125003)",
 		"sourceUrl": "https://kihlberg.com/tools/application/top-stapling/125003",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "josef-kihlberg-561-15pn",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Josef Kihlberg 561-15PN (réf. 125003). Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "Josef Kihlberg 561-15PN 125003 : agrafeuse de fermeture de cartons à agrafes JK561 de 15 mm, magasin de 150 et lubrification requise. La 561-18PN utilise 18 mm ; l’A560PN est une autre construction. La notice distingue 4–5 bar recommandés, 7 bar maximaux et 1 L par pose mesuré à 6 bar.",
 		"verifiedFacts": [
 			"Masse publiée, unités originales : 2.5  kg 5.5  lbs.",
 			"Dimensions publiées, unités originales : 470 × 100 × 305 mm 18.5 x 3.9 x 12.0  in.",
@@ -37,7 +37,11 @@ const product: ToolProfileInput = {
 			"Capacité du chargeur, valeur publiée : 150.",
 			"Pression maximale, valeur web sans unité explicite : 7.",
 			"Longueur des agrafes : 15 mm ( 5/8 in ).",
-			"Consommation par pose publiée dans la notice : 1,0 litres par opération à 6 bar ; base air libre ou normalisée non précisée."
+			"Consommation par pose publiée dans la notice : 1,0 litres par opération à 6 bar ; base air libre ou normalisée non précisée.",
+			"Agrafes / magasin : JK561-15K ou 15G, 15 mm / 150.",
+			"Pression recommandée / maximale : 4–5 / 7 bar.",
+			"Volume par pose : 1 L à 6 bar ; base volumique non précisée.",
+			"Dimensions / masse : 470 × 100 × 305 mm / 2,5 kg."
 		],
 		"limitations": [
 			"Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
@@ -111,6 +115,38 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october3d-tools-kihlberg-operating-1-p2"
 			]
+		},
+		{
+			"label": "Agrafes / magasin",
+			"value": "JK561-15K ou 15G, 15 mm / 150",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-josef-kihlberg-561-15pn-125003:0",
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-josef-kihlberg-561-15pn-125003:1"
+			]
+		},
+		{
+			"label": "Pression recommandée / maximale",
+			"value": "4–5 / 7 bar",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-josef-kihlberg-561-15pn-125003:0",
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-josef-kihlberg-561-15pn-125003:1"
+			]
+		},
+		{
+			"label": "Volume par pose",
+			"value": "1 L à 6 bar ; base volumique non précisée",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-josef-kihlberg-561-15pn-125003:0",
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-josef-kihlberg-561-15pn-125003:1"
+			]
+		},
+		{
+			"label": "Dimensions / masse",
+			"value": "470 × 100 × 305 mm / 2,5 kg",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-josef-kihlberg-561-15pn-125003:0",
+				"review:2026-11-16-reviews:agrafeuse-cloueuse-josef-kihlberg-561-15pn-125003:1"
+			]
 		}
 	],
 	"evidence": [
@@ -133,6 +169,26 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 3e1216376cd0891ce43358bc51d06283edf7cfc8d4416d242e15b7a42df585c4. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:agrafeuse-cloueuse-josef-kihlberg-561-15pn-125003:0",
+			"sourceUrl": "https://kihlberg.com/tools/application/top-stapling/125003",
+			"sourceLabel": "Josef Kihlberg, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Josef Kihlberg 561-15PN 125003 : agrafeuse de fermeture de cartons à agrafes JK561 de 15 mm, magasin de 150 et lubrification requise. La 561-18PN utilise 18 mm ; l’A560PN est une autre construction. La notice distingue 4–5 bar recommandés, 7 bar maximaux et 1 L par pose mesuré à 6 bar. GET complet SHA-256 a15ba69de84c557744281e7bbe0705ca40e0f292ba8d3e21e2809dca5f0d7d4e. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
+		},
+		{
+			"id": "review:2026-11-16-reviews:agrafeuse-cloueuse-josef-kihlberg-561-15pn-125003:1",
+			"sourceUrl": "https://wp.kihlberg.com/wp-content/uploads/2018/09/561-15PN_04.20.pdf",
+			"sourceLabel": "Josef Kihlberg, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Josef Kihlberg 561-15PN 125003 : agrafeuse de fermeture de cartons à agrafes JK561 de 15 mm, magasin de 150 et lubrification requise. La 561-18PN utilise 18 mm ; l’A560PN est une autre construction. La notice distingue 4–5 bar recommandés, 7 bar maximaux et 1 L par pose mesuré à 6 bar. GET complet SHA-256 3e1216376cd0891ce43358bc51d06283edf7cfc8d4416d242e15b7a42df585c4. Pages PDF lues : 2."
 		}
 	],
 	"fieldSources": {
@@ -140,7 +196,8 @@ const product: ToolProfileInput = {
 			"october3d-tools-kihlberg-tool-11-p1"
 		],
 		"workingPressureBar": [
-			"october3d-tools-kihlberg-tool-11-p1"
+			"review:2026-11-16-reviews:agrafeuse-cloueuse-josef-kihlberg-561-15pn-125003:0",
+			"review:2026-11-16-reviews:agrafeuse-cloueuse-josef-kihlberg-561-15pn-125003:1"
 		],
 		"demandExplanation": [
 			"october3d-tools-kihlberg-tool-11-p1",

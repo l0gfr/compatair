@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La consommation moyenne déclarée ne fournit pas la demande maximale à un point de pression de mesure identifié. Aucun débit en charge n’est reconstitué.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/fouloir-npk-b-1a.webp",
+		"src": "/images/products/fouloir-npk-b-1a-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : NPK B-1A",
 		"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/15-NPK.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "npk-b-1a",
@@ -29,10 +29,14 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "NPK B-1A. La consommation moyenne déclarée ne fournit pas la demande maximale à un point de pression de mesure identifié. Aucun débit en charge n’est reconstitué. Masse publiée : 12.5 lbs. Consommation documentaire, hors calcul : 14.1 cfm.",
+		"overview": "NPK B-1A : fouloir de sable pour compactage lourd et travaux de four, semelle caoutchouc de 2 1/2 pouces sur cône ML. Sa course de 4 1/2 pouces et ses 850 coups/min diffèrent du B-0A, plus court, et du F-2 à longue portée. Les semelles optionnelles ne remplacent pas la semelle standard dans la fiche.",
 		"verifiedFacts": [
 			"Masse publiée : 12.5 lbs.",
-			"Consommation documentaire, hors calcul : 14.1 cfm."
+			"Consommation documentaire, hors calcul : 14.1 cfm.",
+			"Semelle / cône : Caoutchouc 2 1/2 pouces / ML.",
+			"Course / cadence : 4 1/2 pouces / 850 coups/min.",
+			"Longueur / masse : 19 1/8 pouces / 12,5 lb.",
+			"Consommation moyenne explicite : 14,1 CFM."
 		],
 		"limitations": [
 			"La consommation moyenne déclarée ne fournit pas la demande maximale à un point de pression de mesure identifié. Aucun débit en charge n’est reconstitué.",
@@ -62,6 +66,34 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"october2b-tools-oct2b-michigan-15-npk-pdf-p5"
 			]
+		},
+		{
+			"label": "Semelle / cône",
+			"value": "Caoutchouc 2 1/2 pouces / ML",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:fouloir-npk-b-1a:0"
+			]
+		},
+		{
+			"label": "Course / cadence",
+			"value": "4 1/2 pouces / 850 coups/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:fouloir-npk-b-1a:0"
+			]
+		},
+		{
+			"label": "Longueur / masse",
+			"value": "19 1/8 pouces / 12,5 lb",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:fouloir-npk-b-1a:0"
+			]
+		},
+		{
+			"label": "Consommation moyenne explicite",
+			"value": "14,1 CFM",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:fouloir-npk-b-1a:0"
+			]
 		}
 	],
 	"evidence": [
@@ -74,6 +106,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 8991587b6147dedde29a8ca888682d24a45127a873a1fb3a753e048fd2696462. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:fouloir-npk-b-1a:0",
+			"sourceUrl": "https://www.michiganpneumatic.com/pdf/catalog-files/15-NPK.pdf",
+			"sourceLabel": "NPK, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "NPK B-1A : fouloir de sable pour compactage lourd et travaux de four, semelle caoutchouc de 2 1/2 pouces sur cône ML. Sa course de 4 1/2 pouces et ses 850 coups/min diffèrent du B-0A, plus court, et du F-2 à longue portée. Les semelles optionnelles ne remplacent pas la semelle standard dans la fiche. GET complet SHA-256 8991587b6147dedde29a8ca888682d24a45127a873a1fb3a753e048fd2696462. Pages PDF lues : 5."
 		}
 	],
 	"fieldSources": {
@@ -81,7 +123,7 @@ const product: ToolProfileInput = {
 			"october2b-tools-oct2b-michigan-15-npk-pdf-p5"
 		],
 		"workingPressureBar": [
-			"october2b-tools-oct2b-michigan-15-npk-pdf-p5"
+			"review:2026-11-16-reviews:fouloir-npk-b-1a:0"
 		],
 		"demandExplanation": [
 			"october2b-tools-oct2b-michigan-15-npk-pdf-p5"

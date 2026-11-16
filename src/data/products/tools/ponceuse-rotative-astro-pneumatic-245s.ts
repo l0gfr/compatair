@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/ponceuse-rotative-astro-pneumatic-245s.svg",
+		"src": "/images/products/ponceuse-rotative-astro-pneumatic-245s-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Astro Pneumatic 245S",
 		"sourceUrl": "https://www.astrotools.com/product/7-angle-head-sander-4-500rpm/",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "astro-pneumatic-245s",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Astro Pneumatic 245S. Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "La 245S est la ponceuse rotative 7 pouces à 4 500 tr/min et broche 5/8-11, longue de 375 mm. La 249 tourne à 4 000 tr/min dans un corps de 345 mm ; la 320 est un petit format à autre vitesse. L’accessoire doit convenir au diamètre et à la vitesse admissible. Les 11 cfm sont moyens, sans pression de mesure unique reliée à la plage de service 90–120 psi.",
 		"verifiedFacts": [
 			"Dimension du plateau : 7\".",
 			"Vitesse à vide : 4,500rpm.",
@@ -137,6 +137,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 6ff1fa56f26ae1e40190a216a093a194a36dc95980041ba275a72cc966693b9b. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:ponceuse-rotative-astro-pneumatic-245s:0",
+			"sourceUrl": "https://www.astrotools.com/product/7-angle-head-sander-4-500rpm/",
+			"sourceLabel": "Astro Pneumatic, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 245S est la ponceuse rotative 7 pouces à 4 500 tr/min et broche 5/8-11, longue de 375 mm. La 249 tourne à 4 000 tr/min dans un corps de 345 mm ; la 320 est un petit format à autre vitesse. L’accessoire doit convenir au diamètre et à la vitesse admissible. Les 11 cfm sont moyens, sans pression de mesure unique reliée à la plage de service 90–120 psi. GET complet SHA-256 43568761014fbabf0d59b9733188fc2964f1486e0b682812fad44ee376773ba6. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

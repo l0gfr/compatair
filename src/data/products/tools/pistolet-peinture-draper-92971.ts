@@ -17,10 +17,10 @@ const product: ToolProfileInput = {
 	"connectorSize": "1/4\" (Air inlet)",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/pistolet-peinture-draper-92971.webp",
+		"src": "/images/products/pistolet-peinture-draper-92971-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Draper 92971",
 		"sourceUrl": "https://www.drapertools.com/product/92971/gravity-feed-air-spray-gun-500ml/",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "draper-92971",
@@ -32,7 +32,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Draper 92971. La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué. Champ fabricant : Air consumption : 175L/min(6 CFM). Champ fabricant : Nozzle size : 1.5mm.",
+		"overview": "La Draper 92971 est un pistolet à gravité, godet de 500 ml et buse 1,5 mm, annoncé à 0,33 kg. La 28354 emploie un godet de 1 litre et une buse 1,8 mm ; la 21526 publie une autre consommation. La pression de service 45–50 psi reste distincte du maximum 60 psi. Les 175 L/min ne sont pas associés à un régime de mesure suffisamment défini pour calculer un besoin continu.",
 		"verifiedFacts": [
 			"Champ fabricant : Air consumption : 175L/min(6 CFM).",
 			"Champ fabricant : Nozzle size : 1.5mm.",
@@ -148,6 +148,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 3cdaddd91beab423506353cfe70c96b43948d5955aec768d7214dbbbbb52fbd0. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:pistolet-peinture-draper-92971:0",
+			"sourceUrl": "https://www.drapertools.com/product/92971/gravity-feed-air-spray-gun-500ml/",
+			"sourceLabel": "Draper, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La Draper 92971 est un pistolet à gravité, godet de 500 ml et buse 1,5 mm, annoncé à 0,33 kg. La 28354 emploie un godet de 1 litre et une buse 1,8 mm ; la 21526 publie une autre consommation. La pression de service 45–50 psi reste distincte du maximum 60 psi. Les 175 L/min ne sont pas associés à un régime de mesure suffisamment défini pour calculer un besoin continu. GET complet SHA-256 25aa724640f9b4ccd88028b1ef6f555749d4a9ed300ed88229bf785b45925344. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

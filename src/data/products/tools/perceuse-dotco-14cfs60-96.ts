@@ -10,18 +10,14 @@ const product: ToolProfileInput = {
 	"model": "14CFS60-96",
 	"mpn": "14CFS60-96",
 	"demandModel": "variable-volume",
-	"workingPressureBar": {
-		"min": 6.2,
-		"typical": 6.2,
-		"max": 6.2
-	},
-	"demandExplanation": "La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner.",
+	"workingPressureBar": {},
+	"demandExplanation": "La consommation d’air manque dans le tableau de la référence. Les performances mécaniques à 90 psi / 620 kPa ne permettent pas de calculer son besoin en air.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/perceuse-dotco-14cfs60-96.webp",
+		"src": "/images/products/perceuse-dotco-14cfs60-96-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Dotco 14CFS60-96",
 		"sourceUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=176",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "dotco-14cfs60-96",
@@ -34,73 +30,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Dotco 14CFS60-96. La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner. Vitesse à vide : 29000 r/min. Échappement : Arrière.",
+		"overview": "La 14CFS60-96 est une fraise à araser les rivets, avec réglage de profondeur et échappement arrière. La -97 ajoute le stabilisateur 02-8120 ; la série 14CN réduit la vitesse à 20 000 tr/min. Le choix porte sur l’arasage, pas sur une capacité de perçage générique.",
 		"verifiedFacts": [
-			"Vitesse à vide : 29000 r/min.",
+			"Usage documenté : Arasage de rivets ; jupe de guidage vendue séparément.",
+			"Vitesse à vide : 29 000 tr/min.",
+			"Puissance de famille : 0,4 hp ; 0,3 kW.",
+			"Longueur et masse : 208,3 mm ; 1 kg.",
 			"Échappement : Arrière.",
-			"Masse publiée : 1 kg.",
-			"Longueur publiée : 208.3 mm."
+			"Consommation : Absente du tableau ; demande indéterminée."
 		],
 		"limitations": [
-			"La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner.",
-			"Données déclarées, sans essai physique CompatAir. La disponibilité actuelle, la notice de sécurité et la configuration livrée restent à confirmer."
+			"La consommation d’air manque dans le tableau de la référence. Les performances mécaniques à 90 psi / 620 kPa ne permettent pas de calculer son besoin en air.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Vitesse à vide",
-			"value": "29000 r/min",
+			"label": "Usage documenté",
+			"value": "Arasage de rivets ; jupe de guidage vendue séparément",
 			"evidenceIds": [
-				"october-cleco-p176-p176"
+				"review:2026-11-16-reviews:perceuse-dotco-14cfs60-96:0"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "29 000 tr/min",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-dotco-14cfs60-96:0"
+			]
+		},
+		{
+			"label": "Puissance de famille",
+			"value": "0,4 hp ; 0,3 kW",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-dotco-14cfs60-96:0"
+			]
+		},
+		{
+			"label": "Longueur et masse",
+			"value": "208,3 mm ; 1 kg",
+			"evidenceIds": [
+				"review:2026-11-16-reviews:perceuse-dotco-14cfs60-96:0"
 			]
 		},
 		{
 			"label": "Échappement",
 			"value": "Arrière",
 			"evidenceIds": [
-				"october-cleco-p176-p176"
+				"review:2026-11-16-reviews:perceuse-dotco-14cfs60-96:0"
 			]
 		},
 		{
-			"label": "Masse publiée",
-			"value": "1 kg",
+			"label": "Consommation",
+			"value": "Absente du tableau ; demande indéterminée",
 			"evidenceIds": [
-				"october-cleco-p176-p176"
-			]
-		},
-		{
-			"label": "Longueur publiée",
-			"value": "208.3 mm",
-			"evidenceIds": [
-				"october-cleco-p176-p176"
-			]
-		},
-		{
-			"label": "Masse publiée",
-			"value": "1 kg",
-			"evidenceIds": [
-				"october-cleco-p176-p176"
-			]
-		},
-		{
-			"label": "Longueur publiée",
-			"value": "208.3 mm",
-			"evidenceIds": [
-				"october-cleco-p176-p176"
-			]
-		},
-		{
-			"label": "Localisation documentaire",
-			"value": "Cleco, catalogue SP-1081, page 176",
-			"evidenceIds": [
-				"october-cleco-p176-p176"
-			]
-		},
-		{
-			"label": "Condition de pression originale",
-			"value": "All tools performance rated @ 90psi / 620 kPa air pressure.",
-			"evidenceIds": [
-				"october-cleco-p176-p176"
+				"review:2026-11-16-reviews:perceuse-dotco-14cfs60-96:0"
 			]
 		}
 	],
@@ -114,21 +98,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 fbb461b26f5fb74c6a3b1266ea4c9e57d6f1966d1458afe7f4e683c4efdd37dd. Caractéristiques déclarées, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:perceuse-dotco-14cfs60-96:0",
+			"sourceUrl": "https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=176",
+			"sourceLabel": "Dotco, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 14CFS60-96 est une fraise à araser les rivets, avec réglage de profondeur et échappement arrière. La -97 ajoute le stabilisateur 02-8120 ; la série 14CN réduit la vitesse à 20 000 tr/min. Le choix porte sur l’arasage, pas sur une capacité de perçage générique. GET complet SHA-256 e814d81aab3990c091aa95dad66c8ab7dd50c75e731c7b386dcfa7ce1777b8c4. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october-cleco-p176-p176"
-		],
-		"workingPressureBar": [
-			"october-cleco-p176-p176"
+			"review:2026-11-16-reviews:perceuse-dotco-14cfs60-96:0"
 		],
 		"demandExplanation": [
-			"october-cleco-p176-p176"
+			"review:2026-11-16-reviews:perceuse-dotco-14cfs60-96:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-reviews:perceuse-dotco-14cfs60-96:0"
 		]
 	},
 	"notes": [
-		"La consommation d’air en charge ou maximale n’est pas donnée dans le tableau de cette référence. La vitesse et la puissance du moteur ne permettent pas de la déduire. Une valeur constructeur à pression et régime explicites est nécessaire pour dimensionner."
+		"La consommation d’air manque dans le tableau de la référence. Les performances mécaniques à 90 psi / 620 kPa ne permettent pas de calculer son besoin en air."
 	]
 };
 

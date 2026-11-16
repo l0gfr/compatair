@@ -18,10 +18,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/burineur-puma-at-2023q.webp",
+		"src": "/images/products/burineur-puma-at-2023q-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : PUMA AT-2023Q",
 		"sourceUrl": "https://www.pumaair.com/product-Air-Hammer-AirHammer-.html",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "puma-at-2023q",
@@ -33,7 +33,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "PUMA AT-2023Q. La pression de mesure de la consommation n’est pas établie. Les valeurs documentaires restent hors du calcul de compatibilité. Chisel Shank (inch) / Round : 0.401. Chisel Shank (inch) / Hex. : 0.410.",
+		"overview": "L’AT-2023Q est le burineur à changement rapide de burin, course de 71 mm et cadence de 3 000 coups/min. Le tableau distingue les emmanchements rond 0,401 pouce et hexagonal 0,410 pouce. La version AT-2024Q allonge la course, tandis que l’AT-2020 est une autre configuration de retenue. Les 241 L/min sont moyens et ne servent pas au dimensionnement.",
 		"verifiedFacts": [
 			"Chisel Shank (inch) / Round : 0.401.",
 			"Chisel Shank (inch) / Hex. : 0.410.",
@@ -171,6 +171,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 8946dc887b4fb021b0861d4917646ac9c6a69e90ffe61142c011e0d3b9517939. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:burineur-puma-at-2023q:0",
+			"sourceUrl": "https://www.pumaair.com/product-Air-Hammer-AirHammer-.html",
+			"sourceLabel": "PUMA, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "L’AT-2023Q est le burineur à changement rapide de burin, course de 71 mm et cadence de 3 000 coups/min. Le tableau distingue les emmanchements rond 0,401 pouce et hexagonal 0,410 pouce. La version AT-2024Q allonge la course, tandis que l’AT-2020 est une autre configuration de retenue. Les 241 L/min sont moyens et ne servent pas au dimensionnement. GET complet SHA-256 8946dc887b4fb021b0861d4917646ac9c6a69e90ffe61142c011e0d3b9517939. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

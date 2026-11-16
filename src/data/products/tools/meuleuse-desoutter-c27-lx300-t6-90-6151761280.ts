@@ -10,18 +10,14 @@ const product: ToolProfileInput = {
 	"model": "C27-LX300-T6-90",
 	"mpn": "6151761280",
 	"demandModel": "variable-volume",
-	"workingPressureBar": {
-		"min": 6.3,
-		"typical": 6.3,
-		"max": 6.3
-	},
-	"demandExplanation": "Le débit de la fiche individuelle contredit la ligne du catalogue constructeur. Une confirmation fabricant est requise avant de dimensionner.",
+	"workingPressureBar": {},
+	"demandExplanation": "La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/meuleuse-desoutter-c27-lx300-t6-90-6151761280.webp",
+		"src": "/images/products/meuleuse-desoutter-c27-lx300-t6-90-6151761280-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Desoutter C27-LX300-T6-90 (réf. 6151761280)",
 		"sourceUrl": "https://www.datocms-assets.com/104564/1789974097-desoutter_general_catalog_fr_2026-09.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "desoutter-c27-lx300-t6-90",
@@ -34,108 +30,61 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Desoutter C27-LX300-T6-90 (réf. 6151761280). Le débit de la fiche individuelle contredit la ligne du catalogue constructeur. Une confirmation fabricant est requise avant de dimensionner. Entrée d’air (pouces) : 1/4. Pince : 1/4 (6.35mm).",
+		"overview": "La C27-LX300-T6-90-BRB est une ébavureuse coudée à 90°, démarrage par bouton et silencieux court. Elle tourne à 300 tr/min, contre 400 pour la LX400 ; la version QR est plus courte. Les anciens relevés de fiche individuelle restent séparés du catalogue 09/2026.",
 		"verifiedFacts": [
-			"Désignation et configuration documentées à la page PDF 307.",
-			"Entrée d’air (pouces) : 1/4.",
-			"Pince : 1/4 (6.35mm).",
-			"Longueur : 290.2 mm."
+			"Référence : 6151761280.",
+			"Pince : 6,4 mm (1/4 pouce nominal).",
+			"Vitesse à vide : 300 tr/min.",
+			"Longueur et masse du catalogue 09/2026 : 291,5 mm ; 0,82 kg.",
+			"Consommation documentaire du catalogue : 8 L/s ; 17 cfm ; régime non précisé.",
+			"Écart historique conservé : Fiche individuelle relevée : 372 L/min ; 290,2 mm ; 0,84 kg. Aucun appariement silencieux de versions.."
 		],
 		"limitations": [
-			"Le débit de la fiche individuelle contredit la ligne du catalogue constructeur. Une confirmation fabricant est requise avant de dimensionner.",
-			"Caractéristiques déclarées par le fabricant. Aucun essai physique réalisé par CompatAir.",
-			"La disponibilité locale, les raccords, les accessoires et la notice de sécurité de la référence livrée restent à vérifier.",
-			"La page actuelle porte désormais la désignation LX ; les écarts dimensionnels et de consommation restent visibles, sans choix arbitraire de version."
+			"La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Localisation du tableau",
-			"value": "Page PDF 307",
+			"label": "Référence",
+			"value": "6151761280",
 			"evidenceIds": [
-				"documented-d-desoutter-2026-p307",
-				"documented-d-desoutter-6151761280"
-			]
-		},
-		{
-			"label": "Entrée d’air (pouces)",
-			"value": "1/4",
-			"evidenceIds": [
-				"documented-d-desoutter-2026-p307",
-				"documented-d-desoutter-6151761280"
+				"review:2026-11-16-reviews:meuleuse-desoutter-c27-lx300-t6-90-6151761280:0"
 			]
 		},
 		{
 			"label": "Pince",
-			"value": "1/4 (6.35mm)",
+			"value": "6,4 mm (1/4 pouce nominal)",
 			"evidenceIds": [
-				"documented-d-desoutter-2026-p307",
-				"documented-d-desoutter-6151761280"
+				"review:2026-11-16-reviews:meuleuse-desoutter-c27-lx300-t6-90-6151761280:0"
 			]
 		},
 		{
-			"label": "Longueur",
-			"value": "290.2 mm",
+			"label": "Vitesse à vide",
+			"value": "300 tr/min",
 			"evidenceIds": [
-				"documented-d-desoutter-2026-p307",
-				"documented-d-desoutter-6151761280"
+				"review:2026-11-16-reviews:meuleuse-desoutter-c27-lx300-t6-90-6151761280:0"
 			]
 		},
 		{
-			"label": "Flexible intérieur minimal pour 5 m",
-			"value": "6 mm",
+			"label": "Longueur et masse du catalogue 09/2026",
+			"value": "291,5 mm ; 0,82 kg",
 			"evidenceIds": [
-				"documented-d-desoutter-2026-p307",
-				"documented-d-desoutter-6151761280"
+				"review:2026-11-16-reviews:meuleuse-desoutter-c27-lx300-t6-90-6151761280:0"
 			]
 		},
 		{
-			"label": "Déclenchement",
-			"value": "Button",
+			"label": "Consommation documentaire du catalogue",
+			"value": "8 L/s ; 17 cfm ; régime non précisé",
 			"evidenceIds": [
-				"documented-d-desoutter-2026-p307",
-				"documented-d-desoutter-6151761280"
+				"review:2026-11-16-reviews:meuleuse-desoutter-c27-lx300-t6-90-6151761280:0"
 			]
 		},
 		{
-			"label": "Masse",
-			"value": "0.84 kg",
+			"label": "Écart historique conservé",
+			"value": "Fiche individuelle relevée : 372 L/min ; 290,2 mm ; 0,84 kg. Aucun appariement silencieux de versions.",
 			"evidenceIds": [
-				"documented-d-desoutter-2026-p307",
-				"documented-d-desoutter-6151761280"
-			]
-		},
-		{
-			"label": "Consommation déclarée, exclue du calcul",
-			"value": "372 L/min",
-			"evidenceIds": [
-				"documented-d-desoutter-2026-p307",
-				"documented-d-desoutter-6151761280"
-			]
-		},
-		{
-			"label": "Consommation à vide du catalogue, conservée séparément",
-			"value": "8 l/s ; 17 cfm ; différente de la fiche individuelle",
-			"evidenceIds": [
-				"documented-d-desoutter-2026-p307",
-				"documented-d-desoutter-6151761280"
-			]
-		},
-		{
-			"label": "Ancienne désignation relevée sur fiche individuelle",
-			"value": "C27-BX300-T6-90- RB ; observation historique, page actuelle C27-LX300-T6-90BRB",
-			"evidenceIds": [
-				"documented-d-desoutter-2026-p307",
-				"documented-d-desoutter-6151761280"
-			]
-		},
-		{
-			"label": "Désignation actuelle et dimensions du catalogue",
-			"value": "C27-LX300-T6-90BRB ; 291,5 mm ; 0,82 kg. Relevé historique 290,2 mm / 0,84 kg conservé séparément.",
-			"evidenceIds": [
-				"review:2026-11-06-followup:meuleuse-desoutter-c27-lx300-t6-90-6151761280:1",
-				"review:2026-11-06-followup:meuleuse-desoutter-c27-lx300-t6-90-6151761280:2",
-				"review:2026-11-06-followup:meuleuse-desoutter-c27-lx300-t6-90-6151761280:3"
+				"review:2026-11-16-reviews:meuleuse-desoutter-c27-lx300-t6-90-6151761280:0"
 			]
 		}
 	],
@@ -199,23 +148,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-11-06",
 			"confidence": "B",
 			"notes": "Catalogue complet p307 : code6151761280,C27-LX300-T6-90BRB,300 tr/min,291,5 mm et0,82 kg,8 L/s à vide. La page actuelle porte désormais la même désignation LX ; la mention BX de fiche individuelle doit être datée comme ancienne observation. Débit variable conservé. SHA-256 du document complet : 7d2121c4aeb36c31bde784ba6ddcebee83686fb4883c6b63005d0e569613304c."
+		},
+		{
+			"id": "review:2026-11-16-reviews:meuleuse-desoutter-c27-lx300-t6-90-6151761280:0",
+			"sourceUrl": "https://www.datocms-assets.com/104564/1789974097-desoutter_general_catalog_fr_2026-09.pdf",
+			"sourceLabel": "Desoutter, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La C27-LX300-T6-90-BRB est une ébavureuse coudée à 90°, démarrage par bouton et silencieux court. Elle tourne à 300 tr/min, contre 400 pour la LX400 ; la version QR est plus courte. Les anciens relevés de fiche individuelle restent séparés du catalogue 09/2026. GET complet SHA-256 7d2121c4aeb36c31bde784ba6ddcebee83686fb4883c6b63005d0e569613304c. Pages PDF lues : 307, 345."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"documented-d-desoutter-2026-p307"
-		],
-		"workingPressureBar": [
-			"documented-d-desoutter-2026-p307",
-			"documented-d-desoutter-2026-p345"
+			"review:2026-11-16-reviews:meuleuse-desoutter-c27-lx300-t6-90-6151761280:0"
 		],
 		"demandExplanation": [
-			"documented-d-desoutter-2026-p307",
-			"documented-d-desoutter-6151761280"
+			"review:2026-11-16-reviews:meuleuse-desoutter-c27-lx300-t6-90-6151761280:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-reviews:meuleuse-desoutter-c27-lx300-t6-90-6151761280:0"
 		]
 	},
 	"notes": [
-		"Le débit de la fiche individuelle contredit la ligne du catalogue constructeur. Une confirmation fabricant est requise avant de dimensionner."
+		"La demande continue en charge n’est pas entièrement qualifiée par les données publiées. Les consommations et leurs régimes documentés restent dans les spécifications ; aucun maximum continu n’est déduit d’une moyenne."
 	]
 };
 

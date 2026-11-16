@@ -33,13 +33,13 @@ const product: ToolProfileInput = {
     }
   },
   "image": {
-    "src": "/images/products/pistolet-peinture-hvlp-walcom-genesi-carbonio-360-evo-geo-gravite-buse-1-3-mm.svg",
+    "src": "/images/products/pistolet-peinture-hvlp-walcom-genesi-carbonio-360-evo-geo-gravite-buse-1-3-mm-technical-20261116-reviews.svg",
     "alt": "Repères techniques : Walcom Genesi Carbonio 360 EVO GEO, gravité, buse 1.3 mm",
     "sourceUrl": "https://walmec.com/en/catalogues/catalogue_walcom/WD16_26EN.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "editorial": {
-    "overview": "Walcom Genesi Carbonio 360 EVO GEO, gravité, buse 1.3 mm. Le catalogue publie un débit sans protocole de mesure identifié pour cette version exacte. Buse 1.3 mm et alimentation gravité, explicitement proposées dans la matrice fabricant ; une configuration par diamètre et circuit de produit, sans variante de godet ou de manomètre.",
+    "overview": "Le Genesi Carbonio 360 Evo GEO de 1,3 mm appartient à la famille à double atomisation pour bases à l’eau et vernis solvantés. La brochure donne 425 L/min à 2 bar et 340 g. Les codes W0430, W0435 et W0420 distinguent notamment le godet et l’équipement de régulation, plutôt qu’un nouveau débit lié à la buse. Le régime de consommation restant indéterminé, le moteur ne transforme pas cette valeur en besoin continu.",
     "verifiedFacts": [
       "Buse déclarée : 1.3 mm.",
       "Alimentation : gravité.",
@@ -119,6 +119,16 @@ const product: ToolProfileInput = {
       "retrievedAt": "2026-10-07",
       "confidence": "B",
       "notes": "Réponse primaire SHA-256 82e98909d06567bec6e49964a7a75545cdc5802f4366bd5607a89f8cc01f8376. Déclaration fabricant, sans essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-reviews:pistolet-peinture-hvlp-walcom-genesi-carbonio-360-evo-geo-gravite-buse-1-3-mm:0",
+      "sourceUrl": "https://walmec.com/en/catalogues/catalogue_walcom/WD16_26EN.pdf",
+      "sourceLabel": "Walcom, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "Le Genesi Carbonio 360 Evo GEO de 1,3 mm appartient à la famille à double atomisation pour bases à l’eau et vernis solvantés. La brochure donne 425 L/min à 2 bar et 340 g. Les codes W0430, W0435 et W0420 distinguent notamment le godet et l’équipement de régulation, plutôt qu’un nouveau débit lié à la buse. Le régime de consommation restant indéterminé, le moteur ne transforme pas cette valeur en besoin continu. GET complet SHA-256 82e98909d06567bec6e49964a7a75545cdc5802f4366bd5607a89f8cc01f8376. Pages PDF lues : 8."
     }
   ],
   "fieldSources": {

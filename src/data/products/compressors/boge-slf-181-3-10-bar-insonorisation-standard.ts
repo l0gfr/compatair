@@ -14,20 +14,18 @@ const product: CompressorInput = {
 			"cuve": "0 L"
 		}
 	},
-	"tankLiters": 0,
 	"maxPressureBar": 10,
 	"fadCurve": [],
-	"dutyCycle": 1,
 	"oilType": "oil",
 	"powerKw": 132,
 	"mobility": "fixed",
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/boge-slf-181-3-10-bar-insonorisation-standard.webp",
+		"src": "/images/products/boge-slf-181-3-10-bar-insonorisation-standard-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : BOGE SLF 181-3, 10 bar, insonorisation standard",
 		"sourceUrl": "https://www.boge.com/f/287325279136465/x/55679246a0/boge-datenblatt-schraubenkompressor-s-3.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -74,11 +72,10 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "BOGE SLF 181-3, 10 bar, insonorisation standard. S-3, insonorisation standard. La livraison effective est publiée, mais sa pression de mesure n’est pas séparément établie : aucun FAD calculable n’est ajouté.",
+		"overview": "Le SLF 181-3 en version 10 bar publie une plage de livraison effective de 7,97 à 19,65 m³/min. Les versions 7,5 et 13 bar du même groupe annoncent respectivement 8,12–22,77 et 7,68–16,08 m³/min. La puissance principale reste 132 kW, avec un ventilateur de 4 kW séparé. La pression de mesure du débit et le taux de marche du groupe ne sont pas établis ; le calcul reste non conclusif.",
 		"verifiedFacts": [
-			"Dimensions publiées : 3150 × 1910 × 2140 mm.",
-			"Puissance moteur publiée : 132 kW.",
-			"La documentation constructeur de cette série prévoit le service continu, sous ses conditions d’installation et d’entretien."
+			"Le SLF 181-3 en version 10 bar publie une plage de livraison effective de 7,97 à 19,65 m³/min.",
+			"Les versions 7,5 et 13 bar du même groupe annoncent respectivement 8,12–22,77 et 7,68–16,08 m³/min."
 		],
 		"limitations": [
 			"La disponibilité actuelle et le contenu de la configuration livrée restent à confirmer.",
@@ -106,12 +103,19 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 721b071d19957929d82543cb2851fa494476c228f6440fe41e5ee21bcc5e038c. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "review:2026-11-16-reviews:boge-slf-181-3-10-bar-insonorisation-standard:0",
+			"sourceUrl": "https://www.boge.com/f/287325279136465/x/55679246a0/boge-datenblatt-schraubenkompressor-s-3.pdf",
+			"sourceLabel": "BOGE, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le SLF 181-3 en version 10 bar publie une plage de livraison effective de 7,97 à 19,65 m³/min. Les versions 7,5 et 13 bar du même groupe annoncent respectivement 8,12–22,77 et 7,68–16,08 m³/min. La puissance principale reste 132 kW, avec un ventilateur de 4 kW séparé. La pression de mesure du débit et le taux de marche du groupe ne sont pas établis ; le calcul reste non conclusif. GET complet SHA-256 516b7e8e9ad6af00cbdea1444d9394ba099b039f5d01c72db9c295211d69ef27. Pages PDF lues : 1."
 		}
 	],
 	"fieldSources": {
-		"tankLiters": [
-			"documented-d-boge-s3-current-p1"
-		],
 		"maxPressureBar": [
 			"documented-d-boge-s3-current-p1"
 		],
@@ -123,9 +127,6 @@ const product: CompressorInput = {
 		],
 		"oilType": [
 			"documented-d-boge-s3-current-p1"
-		],
-		"dutyCycle": [
-			"documented-d-boge-s3-duty"
 		]
 	},
 	"notes": [

@@ -25,16 +25,15 @@ const product: CompressorInput = {
       "litersPerMinute": 1050
     }
   ],
-  "dutyCycle": 1,
   "powerKw": 7.5,
   "oilType": "oil",
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/fini-cube-7-5-10-270-z.svg",
+    "src": "/images/products/fini-cube-7-5-10-270-z-technical-20261116-reviews.svg",
     "alt": "Repères techniques : Fini CUBE 7.5-10-270 Z",
     "sourceUrl": "https://finicompressors.com/wp-content/uploads/Catalogo-Cube-Fini_EN_04-2024_9990397.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "specifications": [
     {
@@ -88,7 +87,7 @@ const product: CompressorInput = {
     }
   ],
   "editorial": {
-    "overview": "Fini CUBE 7.5-10-270 Z. 1 050 L/min déclarés à 9,5 bar. Configuration constructeur : Cuve 270 L galvanisée.",
+    "overview": "Le CUBE7.5-10-270Z associe le groupe 7,5 kW et la cuve galvanisée 270 L, sans le sécheur de la variante ES Z. Il publie 1 050 L/min à la référence 9,5 bar pour un maximum de 10 bar. L’ES sans Z reste distinct de l’ES Z par la configuration de cuve documentée. La promesse de fonctionnement continu ne chiffre pas un taux du groupe : l’ancien 100 % est retiré du calcul.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 10 bar.",
       "Cuve de stockage documentée : 270 L.",
@@ -98,7 +97,8 @@ const product: CompressorInput = {
       "FAD déclaré par le constructeur à la pression de mesure indiquée, distincte du plafond de fonctionnement.",
       "La normalisation exclut les seules variantes de pression et de tension. Modèle et code fabricant retenus exacts.",
       "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
-      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions."
+      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions.",
+      "Le taux de marche du groupe complet n’est pas chiffré par les passages retenus ; aucune valeur numérique n’est déduite du service du moteur ou d’une promesse générale."
     ]
   },
   "evidence": [
@@ -121,6 +121,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 270d2f554801e15883dd85b3f3b6089c641adf51dd59c15f31e0fd06c7b88e1a de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-reviews:fini-cube-7-5-10-270-z:0",
+      "sourceUrl": "https://finicompressors.com/wp-content/uploads/Catalogo-Cube-Fini_EN_04-2024_9990397.pdf",
+      "sourceLabel": "Fini, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "Le CUBE7.5-10-270Z associe le groupe 7,5 kW et la cuve galvanisée 270 L, sans le sécheur de la variante ES Z. Il publie 1 050 L/min à la référence 9,5 bar pour un maximum de 10 bar. L’ES sans Z reste distinct de l’ES Z par la configuration de cuve documentée. La promesse de fonctionnement continu ne chiffre pas un taux du groupe : l’ancien 100 % est retiré du calcul. GET complet SHA-256 270d2f554801e15883dd85b3f3b6089c641adf51dd59c15f31e0fd06c7b88e1a. Pages PDF lues : 3, 1."
     }
   ],
   "fieldSources": {
@@ -144,9 +154,6 @@ const product: CompressorInput = {
     ],
     "oilType": [
       "october4b-fini-cube-p1"
-    ],
-    "dutyCycle": [
-      "october4b-fini-cube-p3"
     ],
     "mpn": [
       "october4b-fini-cube-p3"

@@ -16,10 +16,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "La consommation et son point de pression ne sont pas établis de façon exploitable dans la fiche fabricant. Les caractéristiques publiées restent consultables, sans débit de calcul supposé.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/soufflette-ks-tools-515-1901.webp",
+		"src": "/images/products/soufflette-ks-tools-515-1901-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : KS Tools 515.1901",
 		"sourceUrl": "https://www.kstools.com/en/products/special-tools-for-commercial-vehicle/general-workshop-requirements/air-blow-out-tools/5962/pneumatic-blow-out-pistol-with-flow-regulation?c=1011737446",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "ks-tools-515-1901",
@@ -31,7 +31,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "KS Tools 515.1901. La consommation et son point de pression ne sont pas établis de façon exploitable dans la fiche fabricant. Les caractéristiques publiées restent consultables, sans débit de calcul supposé. Intitulé fabricant : Pneumatic blow out pistol with flow regulation. Champ fabricant : Accessories : with hose adapter.",
+		"overview": "La 515.1901 est une soufflette à débit réglable, avec adaptateur de flexible, longue de 235 mm pour 150 g. Elle se distingue du stylo 515.1908 de 110 mm et du tube télescopique 515.1907 de 90–190 mm. La fiche sépare une entrée maximale de 15 bar et une pression de service maximale de 6,3 bar. Les 300 L/min du champ « max. Flow rate » restent documentaires : leur nature et leur point de mesure ne suffisent pas à dimensionner le compresseur.",
 		"verifiedFacts": [
 			"Intitulé fabricant : Pneumatic blow out pistol with flow regulation.",
 			"Champ fabricant : Accessories : with hose adapter.",
@@ -157,6 +157,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : cfab5ab9789b9efebe33546145837b880d9fa8266fa9cafd1708ff3a08b59c6f. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:soufflette-ks-tools-515-1901:0",
+			"sourceUrl": "https://www.kstools.com/en/products/special-tools-for-commercial-vehicle/general-workshop-requirements/air-blow-out-tools/5962/pneumatic-blow-out-pistol-with-flow-regulation?c=1011737446",
+			"sourceLabel": "KS Tools, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 515.1901 est une soufflette à débit réglable, avec adaptateur de flexible, longue de 235 mm pour 150 g. Elle se distingue du stylo 515.1908 de 110 mm et du tube télescopique 515.1907 de 90–190 mm. La fiche sépare une entrée maximale de 15 bar et une pression de service maximale de 6,3 bar. Les 300 L/min du champ « max. Flow rate » restent documentaires : leur nature et leur point de mesure ne suffisent pas à dimensionner le compresseur. GET complet SHA-256 39aaf937bbc2b45cb70aacc2bb6d758b88d7d24f2e4278f603fd93bbc927a5e1. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

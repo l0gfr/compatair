@@ -17,13 +17,13 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/yokota-yla70a.webp",
+		"src": "/images/products/yokota-yla70a-technical-20261116-reviews.svg",
 		"alt": "Repères techniques Yokota YLA70A, référence YLA70A",
-		"sourceUrl": "https://www.rami-yokota.com/media/godd0tdm/2026_fr_outils_d-assemblage_spreads.pdf#page=17",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceUrl": "https://www.rami-yokota.com/media/godd0tdm/2026_fr_outils_d-assemblage_spreads.pdf",
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "Yokota YLA70A, référence YLA70A. Le tableau fabricant publie 366 L/min et une plage d’utilisation de 5 à 6 bar. Couple indicatif publié : 20 à 28 Nm. Vitesse à vide : 7000 tr/min.",
+		"overview": "La YLA70A possède un hexagone femelle 1/4 pouce, pour une plage indicative de 20–28 Nm à 7 000 tr/min. La YLA70E utilise un carré 3/8 pouce. Le tableau distingue 5,5 L/s à plein et 6,1 L/s à vide : retenir le plus grand chiffre effacerait le régime. La plage 0,5–0,6 MPa porte sur le couple ; le besoin d’air reste non conclusif sans point de mesure de consommation établi.",
 		"verifiedFacts": [
 			"La plage du tableau Yokota va de 0,5 à 0,6 MPa, soit 5 à 6 bar ; le point de comparaison retenu est 6 bar.",
 			"Le maximum entre la consommation en charge et à vide est retenu : 6.1 L/s, convertis en 366 L/min par multiplication par 60.",
@@ -34,7 +34,8 @@ const product: ToolProfileInput = {
 		],
 		"limitations": [
 			"Les couples indiqués sont des valeurs indicatives, sensibles à l’assemblage et à l’accessoire.",
-			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas."
+			"La pression doit être vérifiée pendant le fonctionnement ; la pression statique du réservoir ne suffit pas.",
+			"La pression de service n’atteste pas la pression de mesure de consommation. Le régime ou l’appariement documentaire reste non qualifié ; aucune consommation dimensionnante n’est conservée."
 		]
 	},
 	"specifications": [
@@ -113,6 +114,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-26",
 			"confidence": "A",
 			"notes": "Condition de pression spécifique du tableau Yokota à impulsions."
+		},
+		{
+			"id": "review:2026-11-16-reviews:yokota-yla70a:0",
+			"sourceUrl": "https://www.rami-yokota.com/media/godd0tdm/2026_fr_outils_d-assemblage_spreads.pdf",
+			"sourceLabel": "Yokota, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La YLA70A possède un hexagone femelle 1/4 pouce, pour une plage indicative de 20–28 Nm à 7 000 tr/min. La YLA70E utilise un carré 3/8 pouce. Le tableau distingue 5,5 L/s à plein et 6,1 L/s à vide : retenir le plus grand chiffre effacerait le régime. La plage 0,5–0,6 MPa porte sur le couple ; le besoin d’air reste non conclusif sans point de mesure de consommation établi. GET complet SHA-256 6b7dca4923bfef1dbe2c7f6691e91e07f92fec5c1fa3b8d56f211ecbdb5e4845. Pages PDF lues : 17."
 		}
 	],
 	"fieldSources": {
@@ -127,6 +138,9 @@ const product: ToolProfileInput = {
 		],
 		"recommendedHose": [
 			"yokota-yla70a-20260926"
+		],
+		"airflowBasis": [
+			"review:2026-11-16-reviews:yokota-yla70a:0"
 		]
 	},
 	"notes": [
@@ -139,7 +153,8 @@ const product: ToolProfileInput = {
 	},
 	"recommendedHose": {
 		"innerDiameterMm": 6.5
-	}
+	},
+	"airflowBasis": "unqualified"
 };
 
 export default product;

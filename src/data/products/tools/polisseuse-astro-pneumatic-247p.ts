@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
 	"demandExplanation": "Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/polisseuse-astro-pneumatic-247p.svg",
+		"src": "/images/products/polisseuse-astro-pneumatic-247p-technical-20261116-reviews.svg",
 		"alt": "Repères techniques : Astro Pneumatic 247P",
 		"sourceUrl": "https://www.astrotools.com/product/7-angle-head-polisher-2-500rpm/",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "astro-pneumatic-247p",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Astro Pneumatic 247P. Les caractéristiques propres à cette référence sont documentées ; la demande d’air avec régime, unité et pression utilisables reste insuffisante pour un verdict.",
+		"overview": "La 247P est la polisseuse 7 pouces à 2 500 tr/min, broche 5/8-11 et longueur 375 mm. La référence 250 garde la vitesse et le diamètre avec un corps plus court de 345 mm. Le plateau doit être conçu pour la vitesse et le filetage choisis. Les 11 cfm sont moyens, avec une plage de service 90–120 psi qui ne précise pas leur pression de mesure.",
 		"verifiedFacts": [
 			"Dimension du plateau : 7\".",
 			"Vitesse à vide : 2,500rpm.",
@@ -137,6 +137,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 89e3b163109b90a7533c540320458024a9bc82168b9d363a93e00e64c006816f. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reviews:polisseuse-astro-pneumatic-247p:0",
+			"sourceUrl": "https://www.astrotools.com/product/7-angle-head-polisher-2-500rpm/",
+			"sourceLabel": "Astro Pneumatic, document constructeur relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La 247P est la polisseuse 7 pouces à 2 500 tr/min, broche 5/8-11 et longueur 375 mm. La référence 250 garde la vitesse et le diamètre avec un corps plus court de 345 mm. Le plateau doit être conçu pour la vitesse et le filetage choisis. Les 11 cfm sont moyens, avec une plage de service 90–120 psi qui ne précise pas leur pression de mesure. GET complet SHA-256 4f2033f0102a77412e16af082d2cb272009b5745df5dcc333c4cf87df16fd1a0. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

@@ -14,10 +14,10 @@ const product: ToolProfileInput = {
   "demandExplanation": "Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
   "confidence": "B",
   "image": {
-    "src": "/images/products/pistolet-peinture-hvlp-prowin-k-528s-14.svg",
+    "src": "/images/products/pistolet-peinture-hvlp-prowin-k-528s-14-technical-20261116-reviews.svg",
     "alt": "Repères techniques : ProWin K-528S-14",
     "sourceUrl": "https://www.prowin-tools.com/wp-content/uploads/2023/05/Air-Painting-ToolsNew.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "variant": {
     "familyId": "prowin-k-528s-14",
@@ -29,7 +29,7 @@ const product: ToolProfileInput = {
     }
   },
   "editorial": {
-    "overview": "ProWin K-528S-14. Les caractéristiques de cette référence sont documentées ; la consommation avec régime, unité et pression utilisables reste insuffisante pour conclure.",
+    "overview": "Le K-528S-14 est un pistolet HVLP à aspiration avec godet de 1 000 cm³ et buse de 1,4 mm. Il garde les 250 L/min publiés du K-528S-12, avec une largeur de jet de 300 mm contre 290 mm. La version 1,7 mm monte à 260 L/min. Ces consommations n’ont pas de régime ni de pression de mesure explicites ; la plage de service 20–28 psi reste séparée. La colonne Fluid Output est en ml, sans durée permettant d’en faire un débit.",
     "verifiedFacts": [
       "Buse : 1.4 mm.",
       "Largeur de jet : 300 mm."
@@ -82,6 +82,16 @@ const product: ToolProfileInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "Déclaration fabricant, réponse primaire SHA-256 2cd45573cff8decba50b2fbbfe2127d8e4bc1c3f1fdb6550e2f2467703941213. Aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-reviews:pistolet-peinture-hvlp-prowin-k-528s-14:0",
+      "sourceUrl": "https://www.prowin-tools.com/wp-content/uploads/2023/05/Air-Painting-ToolsNew.pdf",
+      "sourceLabel": "ProWin, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "Le K-528S-14 est un pistolet HVLP à aspiration avec godet de 1 000 cm³ et buse de 1,4 mm. Il garde les 250 L/min publiés du K-528S-12, avec une largeur de jet de 300 mm contre 290 mm. La version 1,7 mm monte à 260 L/min. Ces consommations n’ont pas de régime ni de pression de mesure explicites ; la plage de service 20–28 psi reste séparée. La colonne Fluid Output est en ml, sans durée permettant d’en faire un débit. GET complet SHA-256 2cd45573cff8decba50b2fbbfe2127d8e4bc1c3f1fdb6550e2f2467703941213. Pages PDF lues : 17."
     }
   ],
   "fieldSources": {

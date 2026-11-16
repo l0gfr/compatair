@@ -26,13 +26,13 @@ const product: ToolProfileInput = {
     }
   },
   "image": {
-    "src": "/images/products/pistolet-peinture-hvlp-ani-f1-n-super-s-hvlp-buse-2-5.svg",
+    "src": "/images/products/pistolet-peinture-hvlp-ani-f1-n-super-s-hvlp-buse-2-5-technical-20261116-reviews.svg",
     "alt": "Repères techniques : ANI F1/N-SUPER/S HVLP buse 2.5",
     "sourceUrl": "https://www.ani.it/pdf/ani-officine-meccaniche-catalogo-prodotti-2020.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "editorial": {
-    "overview": "ANI F1/N-SUPER/S HVLP buse 2.5. Le régime de consommation et/ou la pression de travail appariée ne sont pas définis. Le débit publié reste hors du calcul FAD. Le code AH1507010A désigne la buse de 2.5 mm de F1/N-SUPER/S, en technologie HVLP avec alimentation gravité.",
+    "overview": "Le F1/N-SUPER/S HVLP AH1507010A correspond à la buse 2,5 mm et au godet gravité de 500 cm³ en nylon. Les références AH1507009A et AH1507006A changent la buse en 2,0 et 1,2 mm. La plage 2–6 bar n’est pas un point de consommation mesuré. Les versions linguistiques de la fiche divergent sur la masse et le diamètre d’aiguille ; ces chiffres restent à confirmer, sans retenir silencieusement une traduction.",
     "verifiedFacts": [
       "Buse : 2.5 mm.",
       "Technologie : HVLP.",
@@ -94,6 +94,16 @@ const product: ToolProfileInput = {
       "retrievedAt": "2026-10-08",
       "confidence": "B",
       "notes": "Réponse primaire SHA-256 12a27d19855f4601a5be44802f83642c43f4fe1828907915ff1589c1a197e9e9. Déclaration fabricant, sans essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-reviews:pistolet-peinture-hvlp-ani-f1-n-super-s-hvlp-buse-2-5:0",
+      "sourceUrl": "https://www.ani.it/pdf/ani-officine-meccaniche-catalogo-prodotti-2020.pdf",
+      "sourceLabel": "ANI, document constructeur relu le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "Le F1/N-SUPER/S HVLP AH1507010A correspond à la buse 2,5 mm et au godet gravité de 500 cm³ en nylon. Les références AH1507009A et AH1507006A changent la buse en 2,0 et 1,2 mm. La plage 2–6 bar n’est pas un point de consommation mesuré. Les versions linguistiques de la fiche divergent sur la masse et le diamètre d’aiguille ; ces chiffres restent à confirmer, sans retenir silencieusement une traduction. GET complet SHA-256 12a27d19855f4601a5be44802f83642c43f4fe1828907915ff1589c1a197e9e9. Pages PDF lues : 86."
     }
   ],
   "fieldSources": {
