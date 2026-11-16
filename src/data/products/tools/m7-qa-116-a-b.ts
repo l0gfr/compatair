@@ -17,20 +17,21 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/m7-qa-116-a-b.webp",
+		"src": "/images/products/m7-qa-116-a-b-technical-20261116-followup.svg",
 		"alt": "Repères techniques M7 QA-116 A/B, référence QA-116 A/B",
 		"sourceUrl": "https://www.mighty-seven.com/product/150",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "M7 QA-116 A/B, référence QA-116 A/B. Consommation moyenne publiée : 141 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Diamètre de pince : 1/4\" & 1/8\" / 6 (mm) & 3 (mm). Puissance moteur publiée : 0.5.",
+		"overview": "La QA-116 A/B est une meuleuse droite de 345 mm à 22 000 tr/min. La QA-110 A/B conserve cette vitesse dans 186 mm ; la QA-101 A/B est plus courte à 119 mm et tourne à 25 000 tr/min. Les pinces métriques et impériales correspondent aux configurations à confirmer, pas à des diamètres exactement équivalents.",
 		"verifiedFacts": [
 			"Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
 			"Consommation moyenne publiée : 141 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
 			"Référence fabricant : QA-116 A/B.",
 			"Diamètre de pince : 1/4\" & 1/8\" / 6 (mm) & 3 (mm).",
 			"Puissance moteur publiée : 0.5.",
-			"Vitesse à vide : 22000 (R.P.M)."
+			"Vitesse à vide : 22000 (R.P.M).",
+			"Configuration des pinces : Tailles publiées : 1/4 et 1/8 pouce, ou 6 et 3 mm ; vérifier la version livrée."
 		],
 		"limitations": [
 			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
@@ -115,6 +116,13 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"m7-qa-116-a-b-20260927"
 			]
+		},
+		{
+			"label": "Configuration des pinces",
+			"value": "Tailles publiées : 1/4 et 1/8 pouce, ou 6 et 3 mm ; vérifier la version livrée",
+			"evidenceIds": [
+				"review:2026-11-16-technical:m7-qa-116-a-b:0"
+			]
 		}
 	],
 	"evidence": [
@@ -126,6 +134,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation moyenne publiée : 141 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+		},
+		{
+			"id": "review:2026-11-16-technical:m7-qa-116-a-b:0",
+			"sourceUrl": "https://www.mighty-seven.com/product/150",
+			"sourceLabel": "M7, document constructeur vérifié le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La QA-116 A/B est une meuleuse droite de 345 mm à 22 000 tr/min. La QA-110 A/B conserve cette vitesse dans 186 mm ; la QA-101 A/B est plus courte à 119 mm et tourne à 25 000 tr/min. Les pinces métriques et impériales correspondent aux configurations à confirmer, pas à des diamètres exactement équivalents. GET complet SHA-256 d3ef479407f1c31a1e084860bc1eab31ee47288747e164cad5b2dbf461a82bb9. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

@@ -29,10 +29,10 @@ const product: CompressorInput = {
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/sullair-ls-25s-350.svg",
+    "src": "/images/products/sullair-ls-25s-350-technical-20261116-followup.svg",
     "alt": "Repères techniques : Sullair LS-25S-350",
     "sourceUrl": "https://europe.sullair.com/sites/default/files/2018-06/LIT%20Sullair%20Single-Stage%20Brochure_SAPSS200350201803-3_EN.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "specifications": [
     {
@@ -85,13 +85,37 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4c-sullair-single-stage-p8"
       ]
+    },
+    {
+      "label": "Point original",
+      "value": "1438 acfm à125 psig ; colonne50 Hz fixe",
+      "evidenceIds": [
+        "review:2026-11-16-technical:sullair-ls-25s-350:0"
+      ]
+    },
+    {
+      "label": "Dimensions et masse",
+      "value": "3911 × 1981 × 2184 mm ;5039 kg",
+      "evidenceIds": [
+        "review:2026-11-16-technical:sullair-ls-25s-350:0"
+      ]
+    },
+    {
+      "label": "Référence de mesure",
+      "value": "CAGI/PNEUROP PN2CPTC2 ; ISO1217 annexe C",
+      "evidenceIds": [
+        "review:2026-11-16-technical:sullair-ls-25s-350:0"
+      ]
     }
   ],
   "editorial": {
-    "overview": "Sullair LS-25S-350. 40 719,622 L/min déclarés à 8,618 bar. Configuration constructeur : Compresseur single-stage à vis à vitesse fixe, configuration 50 Hz.",
+    "overview": "La LS-25S-350 fixe50 Hz publie1438 acfm à125 psig avec261 kW ; la LS-25S-300 à50 Hz publie1305 acfm à150 psig pour224 kW. Le choix doit conserver fréquence et pression propres à chaque ligne. La documentation du groupe prévoit un service continu.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 8,618 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 40 719,622 L/min déclarés à 8,618 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 40 719,622 L/min déclarés à 8,618 bar.",
+      "Point original : 1438 acfm à125 psig ; colonne50 Hz fixe.",
+      "Dimensions et masse : 3911 × 1981 × 2184 mm ;5039 kg.",
+      "Référence de mesure : CAGI/PNEUROP PN2CPTC2 ; ISO1217 annexe C."
     ],
     "limitations": [
       "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
@@ -129,6 +153,26 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 8320fc427e9a475c0df0a55f3c7acfc927b00528f7da4464c2fb512220387f14 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-technical:sullair-ls-25s-350:0",
+      "sourceUrl": "https://europe.sullair.com/sites/default/files/2018-06/LIT%20Sullair%20Single-Stage%20Brochure_SAPSS200350201803-3_EN.pdf",
+      "sourceLabel": "Sullair, document constructeur vérifié le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "La LS-25S-350 fixe50 Hz publie1438 acfm à125 psig avec261 kW ; la LS-25S-300 à50 Hz publie1305 acfm à150 psig pour224 kW. Le choix doit conserver fréquence et pression propres à chaque ligne. La documentation du groupe prévoit un service continu. GET complet SHA-256 8320fc427e9a475c0df0a55f3c7acfc927b00528f7da4464c2fb512220387f14. Pages PDF lues : 3, 8."
+    },
+    {
+      "id": "review:2026-11-16-technical:sullair-ls-25s-350:1",
+      "sourceUrl": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+      "sourceLabel": "Sullair, document constructeur vérifié le 16 novembre 2026",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "La LS-25S-350 fixe50 Hz publie1438 acfm à125 psig avec261 kW ; la LS-25S-300 à50 Hz publie1305 acfm à150 psig pour224 kW. Le choix doit conserver fréquence et pression propres à chaque ligne. La documentation du groupe prévoit un service continu. GET complet SHA-256 751228aea7ee7b2d83bb7af67071a1647374ae710e5d02c44f45cee1e59c4546. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
     }
   ],
   "fieldSources": {

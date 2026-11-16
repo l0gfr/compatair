@@ -27,16 +27,20 @@ const product: CompressorInput = {
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/rotair-mdvn-37-k.svg",
+    "src": "/images/products/rotair-mdvn-37-k-technical-20261116-followup.svg",
     "alt": "Repères techniques : Rotair MDVN 37 K",
     "sourceUrl": "https://www.rotairspa.com/portable-compressors-diesel/mdvn-range/",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "editorial": {
-    "overview": "Rotair MDVN 37 K. 3 600 L/min déclarés à 7 bar. Configuration constructeur : Configuration constructeur MDVN 37 K à 7,0 bar.",
+    "overview": "Rotair MDVN 37 K : compresseur diesel à moteur Kubota Stage IIIa, distinct du moteur Perkins de la version voisine. La configuration 7 bar fournit 3 600 L/min ; la version 10 bar donne 3 000 L/min. Le fabricant réserve cette famille aux pays où les normes d’émissions concernées ne s’appliquent pas. La MDVN 30 Rehlko Stage V répond à une autre destination.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 7 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 3 600 L/min déclarés à 7 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 3 600 L/min déclarés à 7 bar.",
+      "Motorisation : Kubota Stage IIIa.",
+      "Destination annoncée : Pays sans application des normes et réglementations d’émissions concernées ; vérifier admissibilité locale.",
+      "Versions de pression distinctes : 7 bar : 3 600 L/min ; 10 bar : 3000 L/min ; 12 bar : 2 250 L/min.",
+      "Option sablage : Refroidissement et séchage, non attribués au groupe générique."
     ],
     "limitations": [
       "Les autres colonnes de pression décrivent les versions proposées ; aucun débit intermédiaire ni pression de sécurité de cette configuration ne sont déduits.",
@@ -97,6 +101,34 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october7-rotair-mdvn-p1"
       ]
+    },
+    {
+      "label": "Motorisation",
+      "value": "Kubota Stage IIIa",
+      "evidenceIds": [
+        "review:2026-11-16-technical:rotair-mdvn-37-k:0"
+      ]
+    },
+    {
+      "label": "Destination annoncée",
+      "value": "Pays sans application des normes et réglementations d’émissions concernées ; vérifier admissibilité locale",
+      "evidenceIds": [
+        "review:2026-11-16-technical:rotair-mdvn-37-k:0"
+      ]
+    },
+    {
+      "label": "Versions de pression distinctes",
+      "value": "7 bar : 3 600 L/min ; 10 bar : 3000 L/min ; 12 bar : 2 250 L/min",
+      "evidenceIds": [
+        "review:2026-11-16-technical:rotair-mdvn-37-k:0"
+      ]
+    },
+    {
+      "label": "Option sablage",
+      "value": "Refroidissement et séchage, non attribués au groupe générique",
+      "evidenceIds": [
+        "review:2026-11-16-technical:rotair-mdvn-37-k:0"
+      ]
     }
   ],
   "evidence": [
@@ -109,6 +141,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-07",
       "confidence": "B",
       "notes": "SHA-256 c46081e4b4e881c8aa68ca24a3f3a545a35014031c6793bb91f8a4809e9050a2 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-technical:rotair-mdvn-37-k:0",
+      "sourceUrl": "https://www.rotairspa.com/portable-compressors-diesel/mdvn-range/",
+      "sourceLabel": "Rotair, document constructeur vérifié le 16 novembre 2026",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "Rotair MDVN 37 K : compresseur diesel à moteur Kubota Stage IIIa, distinct du moteur Perkins de la version voisine. La configuration 7 bar fournit 3 600 L/min ; la version 10 bar donne 3 000 L/min. Le fabricant réserve cette famille aux pays où les normes d’émissions concernées ne s’appliquent pas. La MDVN 30 Rehlko Stage V répond à une autre destination. GET complet SHA-256 a9da2bb39af41c45f89cf10960a9928ab6c21a32459e5599d3421ec58c7f897a. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
     }
   ],
   "fieldSources": {

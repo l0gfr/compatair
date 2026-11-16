@@ -13,6 +13,7 @@ import { technicalCardSvg } from './technical-card.mjs';
 import { evaluateCompatibility } from '../../server/air-compatibility.mjs';
 const read = path => readFileSync(new URL('../../' + path, import.meta.url));
 const hash = value => createHash('sha256').update(value).digest('hex');
+const datedHistory = evidenceHistory.events.slice(0, 38660);
 const s = JSON.parse(read('src/data/imports/catalog-amendments-reviewed-2026-11-15-technical.json'));
 const ample = compressorSchema.parse({ ...compressors[0], maxPressureBar: 50, dutyCycle: 1, fadCurve: [{ pressureBar: 1, litersPerMinute: 100000 }, { pressureBar: 50, litersPerMinute: 100000 }] });
 describe('November 15 scoped technical and editorial followup', () => {
@@ -40,11 +41,11 @@ describe('November 15 scoped technical and editorial followup', () => {
  });
  it('preserves the complete 38592-event prefix and appends exactly 68 proofs', () => {
   const prefix = s.evidenceHistoryAppend.previousEventCount;
-  expect(prefix).toBe(38592); expect(hash(JSON.stringify(evidenceHistory.events.slice(0, prefix)))).toBe(s.evidenceHistoryAppend.previousEventsSha256);
-  expect(s.evidenceHistoryAppend.addedEvents).toBe(68); expect(evidenceHistory.events).toHaveLength(prefix + 68);
-  for (const event of evidenceHistory.events.slice(prefix)) expect(hash(JSON.stringify({ productId: event.productId, evidence: event.snapshot })), event.id).toBe(event.fingerprint);
+  expect(prefix).toBe(38592); expect(hash(JSON.stringify(datedHistory.slice(0, prefix)))).toBe(s.evidenceHistoryAppend.previousEventsSha256);
+  expect(s.evidenceHistoryAppend.addedEvents).toBe(68); expect(datedHistory).toHaveLength(prefix + 68);
+  for (const event of datedHistory.slice(prefix)) expect(hash(JSON.stringify({ productId: event.productId, evidence: event.snapshot })), event.id).toBe(event.fingerprint);
   const expected = s.rows.flatMap(row => row.after.evidence.slice(row.before.evidence.length).map(e => e.id)).sort();
-  expect(evidenceHistory.events.slice(prefix).map(e => e.evidenceId).sort()).toEqual(expected);
+  expect(datedHistory.slice(prefix).map(e => e.evidenceId).sort()).toEqual(expected);
  });
  it('retains insufficient states and makes native/runtime decisions identical for every changed reference', () => {
   for (const row of s.rows) {

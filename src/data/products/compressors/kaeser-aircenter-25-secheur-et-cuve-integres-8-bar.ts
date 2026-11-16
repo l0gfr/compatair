@@ -22,7 +22,6 @@ const product: CompressorInput = {
 			"litersPerMinute": 2520
 		}
 	],
-	"dutyCycle": 1,
 	"oilType": "unknown",
 	"powerKw": 15,
 	"weightKg": 587,
@@ -30,10 +29,10 @@ const product: CompressorInput = {
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/kaeser-aircenter-25-secheur-et-cuve-integres-8-bar.webp",
+		"src": "/images/products/kaeser-aircenter-25-secheur-et-cuve-integres-8-bar-technical-20261116-followup.svg",
 		"alt": "Repères techniques : KAESER AIRCENTER 25, sécheur et cuve intégrés, 8 bar",
 		"sourceUrl": "https://nl.kaeser.com/download.ashx?id=tcm:32-5921",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -66,16 +65,16 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "KAESER AIRCENTER 25, sécheur et cuve intégrés, 8 bar. Débit restitué déclaré : 2 520 L/min à 7,5 bar. Puissance moteur : 15 kW ; masse : 587 kg.",
+		"overview": "Cette version AIRCENTER 25 fixe publie 2,52 m³/min à 7,5 bar pour un maximum de 8 bar. Moteur 15 kW, sécheur ABT 25 et cuve 350 L la distinguent des groupes seuls ; le bloc SFC du catalogue décrit une autre régulation. Les variantes 11 et 15 bar partagent l’encombrement, avec des capacités différentes. Aucun service permanent n’est déduit du seul type de compresseur.",
 		"verifiedFacts": [
 			"FAD et pression de référence associés à la configuration exacte du tableau fabricant.",
-			"Cuve intégrée : 350 L ; le volume d’un réservoir externe n’est pas supposé.",
-			"Fonctionnement continu prévu dans la documentation de la série, sous les conditions d’installation et d’entretien du fabricant."
+			"Cuve intégrée : 350 L ; le volume d’un réservoir externe n’est pas supposé."
 		],
 		"limitations": [
 			"Un seul point FAD publié pour cette configuration de pression ; aucune extrapolation vers une pression supérieure.",
 			"Version du catalogue identifiée, sans numéro d’article artificiel. La disponibilité, la tension électrique et les options livrées doivent être confirmées sur le devis.",
-			"Le fluide de refroidissement ne suffit pas à établir le type de lubrification ; aucune qualité d’air garantie."
+			"Le fluide de refroidissement ne suffit pas à établir le type de lubrification ; aucune qualité d’air garantie.",
+			"Le débit publié est conservé. La déclaration générale de service de la série ne fournit pas le taux de marche du groupe complet exact ; ce taux reste indéterminé."
 		]
 	},
 	"evidence": [
@@ -98,6 +97,26 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-10-01",
 			"confidence": "B",
 			"notes": "SHA-256 3f5687777a06c60ed4f3918036cfb4edab945e750016d89b42305f3a2bc6b9fe. Données déclarées par le fabricant ; aucun essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-technical:kaeser-aircenter-25-secheur-et-cuve-integres-8-bar:0",
+			"sourceUrl": "https://nl.kaeser.com/download.ashx?id=tcm:32-5921",
+			"sourceLabel": "KAESER, document constructeur vérifié le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Cette version AIRCENTER 25 fixe publie 2,52 m³/min à 7,5 bar pour un maximum de 8 bar. Moteur 15 kW, sécheur ABT 25 et cuve 350 L la distinguent des groupes seuls ; le bloc SFC du catalogue décrit une autre régulation. Les variantes 11 et 15 bar partagent l’encombrement, avec des capacités différentes. Aucun service permanent n’est déduit du seul type de compresseur. GET complet SHA-256 e7f1e0bfdf990a0abe341a0750f48a851c4245bca66e72802e90d35c3fe4b75e. Pages PDF lues : 8."
+		},
+		{
+			"id": "review:2026-11-16-technical:kaeser-aircenter-25-secheur-et-cuve-integres-8-bar:1",
+			"sourceUrl": "https://us.kaeser.com/compressed-air-resources/applications/automotive-services/",
+			"sourceLabel": "KAESER, document constructeur vérifié le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Cette version AIRCENTER 25 fixe publie 2,52 m³/min à 7,5 bar pour un maximum de 8 bar. Moteur 15 kW, sécheur ABT 25 et cuve 350 L la distinguent des groupes seuls ; le bloc SFC du catalogue décrit une autre régulation. Les variantes 11 et 15 bar partagent l’encombrement, avec des capacités différentes. Aucun service permanent n’est déduit du seul type de compresseur. GET complet SHA-256 bbefa209a94f83d07dbada3e3c5b6109f3df85b40db53dca306a0a43e58e5797. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
@@ -115,9 +134,6 @@ const product: CompressorInput = {
 		],
 		"weightKg": [
 			"october-b-kaeser-sk-p8"
-		],
-		"dutyCycle": [
-			"october-b-kaeser-duty"
 		]
 	},
 	"notes": [

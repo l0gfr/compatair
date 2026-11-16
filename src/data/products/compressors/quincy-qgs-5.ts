@@ -26,10 +26,10 @@ const product: CompressorInput = {
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/quincy-qgs-5.svg",
+    "src": "/images/products/quincy-qgs-5-technical-20261116-followup.svg",
     "alt": "Repères techniques : Quincy QGS-5",
     "sourceUrl": "https://www.quincycompressor.com/wp-content/uploads/2023/12/QC-QGS-QGSV-4p-AP-1-min.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "specifications": [
     {
@@ -75,13 +75,45 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4b-quincy-qgs-qgsv-p2"
       ]
+    },
+    {
+      "label": "Point original",
+      "value": "16,8 cfm à145 psig ;5 hp",
+      "evidenceIds": [
+        "review:2026-11-16-technical:quincy-qgs-5:0"
+      ]
+    },
+    {
+      "label": "Dimensions publiées",
+      "value": "56 × 23 × 51 pouces",
+      "evidenceIds": [
+        "review:2026-11-16-technical:quincy-qgs-5:0"
+      ]
+    },
+    {
+      "label": "Réservoir",
+      "value": "60 gallon ; définition US ou impériale non précisée",
+      "evidenceIds": [
+        "review:2026-11-16-technical:quincy-qgs-5:0"
+      ]
+    },
+    {
+      "label": "Masses TM/TMD",
+      "value": "419/474 lb ; configurations distinctes",
+      "evidenceIds": [
+        "review:2026-11-16-technical:quincy-qgs-5:0"
+      ]
     }
   ],
   "editorial": {
-    "overview": "Quincy QGS-5. 475,723 L/min déclarés à 9,997 bar. Configuration constructeur : QGS-5.",
+    "overview": "La QGS-5 associe5 hp,16,8 cfm à145 psig et un réservoir publié de60 gallon. La QGS-15 monte à54,9 cfm à125 psig avec120 gallon. La définition du gallon et le taux de service restent à établir avant de calculer stockage ou marche continue.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 9,997 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 475,723 L/min déclarés à 9,997 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 475,723 L/min déclarés à 9,997 bar.",
+      "Point original : 16,8 cfm à145 psig ;5 hp.",
+      "Dimensions publiées : 56 × 23 × 51 pouces.",
+      "Réservoir : 60 gallon ; définition US ou impériale non précisée.",
+      "Masses TM/TMD : 419/474 lb ; configurations distinctes."
     ],
     "limitations": [
       "Les valeurs originales sont exprimées en psig et cfm ; conversion SI selon NIST, sans interpolation de FAD.",
@@ -113,6 +145,26 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 d3ba38edef97bc380f20879b3c5b16067cc25bf230584cc7af67638b500c8c30 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-technical:quincy-qgs-5:0",
+      "sourceUrl": "https://www.quincycompressor.com/wp-content/uploads/2023/12/QC-QGS-QGSV-4p-AP-1-min.pdf",
+      "sourceLabel": "Quincy, document constructeur vérifié le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "La QGS-5 associe5 hp,16,8 cfm à145 psig et un réservoir publié de60 gallon. La QGS-15 monte à54,9 cfm à125 psig avec120 gallon. La définition du gallon et le taux de service restent à établir avant de calculer stockage ou marche continue. GET complet SHA-256 3846893a6d89c68cf8053db3ba68ff0fdc4a1b20e9f71940c73a2813bb8245f8. Pages PDF lues : 2."
+    },
+    {
+      "id": "review:2026-11-16-technical:quincy-qgs-5:1",
+      "sourceUrl": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+      "sourceLabel": "Quincy, document constructeur vérifié le 16 novembre 2026",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "La QGS-5 associe5 hp,16,8 cfm à145 psig et un réservoir publié de60 gallon. La QGS-15 monte à54,9 cfm à125 psig avec120 gallon. La définition du gallon et le taux de service restent à établir avant de calculer stockage ou marche continue. GET complet SHA-256 751228aea7ee7b2d83bb7af67071a1647374ae710e5d02c44f45cee1e59c4546. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
     }
   ],
   "fieldSources": {

@@ -14,20 +14,18 @@ const product: CompressorInput = {
 			"cuve": "0 L"
 		}
 	},
-	"tankLiters": 0,
 	"maxPressureBar": 10,
 	"fadCurve": [],
-	"dutyCycle": 1,
 	"oilType": "oil",
 	"powerKw": 160,
 	"mobility": "fixed",
 	"confidence": "B",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/boge-sl-221-3-10-bar-insonorisation-standard.webp",
+		"src": "/images/products/boge-sl-221-3-10-bar-insonorisation-standard-technical-20261116-followup.svg",
 		"alt": "Repères techniques : BOGE SL 221-3, 10 bar, insonorisation standard",
 		"sourceUrl": "https://www.boge.com/f/287325279136465/x/55679246a0/boge-datenblatt-schraubenkompressor-s-3.pdf",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"specifications": [
 		{
@@ -67,16 +65,17 @@ const product: CompressorInput = {
 		}
 	],
 	"editorial": {
-		"overview": "BOGE SL 221-3, 10 bar, insonorisation standard. S-3, insonorisation standard. La livraison effective est publiée, mais sa pression de mesure n’est pas séparément établie : aucun FAD calculable n’est ajouté.",
+		"overview": "Le SL 221-3 standard associe 160 kW et une pression maximale de 10 bar dans un châssis 3 100 × 1 910 × 2 140 mm. Le SL 181-3 annonce aussi 22,70 m³/min, avec 132 kW et un maximum de 7,5 bar. Ces débits effectifs restent documentaires : leur pression de mesure n’est pas établie séparément, donc le calcul reste non conclusif.",
 		"verifiedFacts": [
 			"Dimensions publiées : 3100 × 1910 × 2140 mm.",
-			"Puissance moteur publiée : 160 kW.",
-			"La documentation constructeur de cette série prévoit le service continu, sous ses conditions d’installation et d’entretien."
+			"Puissance moteur publiée : 160 kW."
 		],
 		"limitations": [
 			"La disponibilité actuelle et le contenu de la configuration livrée restent à confirmer.",
 			"Le maximum de pression n’est pas assimilé à une pression de mesure du FAD. Le verdict reste insufficient_data.",
-			"La classe de qualité d’air du réseau, les pertes de pression et le refroidissement nécessitent une vérification sur l’installation."
+			"La classe de qualité d’air du réseau, les pertes de pression et le refroidissement nécessitent une vérification sur l’installation.",
+			"Le service continu de gamme ne quantifie pas le taux de marche du groupe complet. Conserver les données de débit et leurs limites de pression ; aucun service moteur ne remplace ce taux.",
+			"Le volume de stockage de cette configuration n’est pas qualifié dans le tableau."
 		]
 	},
 	"evidence": [
@@ -99,12 +98,29 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-09-30",
 			"confidence": "B",
 			"notes": "SHA-256 721b071d19957929d82543cb2851fa494476c228f6440fe41e5ee21bcc5e038c. Transcription, unités originales et périmètre conservés dans le lot documentaire. Aucun essai physique réalisé."
+		},
+		{
+			"id": "review:2026-11-16-technical:boge-sl-221-3-10-bar-insonorisation-standard:0",
+			"sourceUrl": "https://www.boge.com/f/287325279136465/x/55679246a0/boge-datenblatt-schraubenkompressor-s-3.pdf",
+			"sourceLabel": "BOGE, document constructeur vérifié le 16 novembre 2026",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le SL 221-3 standard associe 160 kW et une pression maximale de 10 bar dans un châssis 3 100 × 1 910 × 2 140 mm. Le SL 181-3 annonce aussi 22,70 m³/min, avec 132 kW et un maximum de 7,5 bar. Ces débits effectifs restent documentaires : leur pression de mesure n’est pas établie séparément, donc le calcul reste non conclusif. GET complet SHA-256 516b7e8e9ad6af00cbdea1444d9394ba099b039f5d01c72db9c295211d69ef27. Pages PDF lues : 1."
+		},
+		{
+			"id": "review:2026-11-16-technical:boge-sl-221-3-10-bar-insonorisation-standard:1",
+			"sourceUrl": "https://www.boge.com/en-us/products/compressors/screw-compressors/",
+			"sourceLabel": "BOGE, document constructeur vérifié le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Le SL 221-3 standard associe 160 kW et une pression maximale de 10 bar dans un châssis 3 100 × 1 910 × 2 140 mm. Le SL 181-3 annonce aussi 22,70 m³/min, avec 132 kW et un maximum de 7,5 bar. Ces débits effectifs restent documentaires : leur pression de mesure n’est pas établie séparément, donc le calcul reste non conclusif. GET complet SHA-256 ec9cf5cbd51a323d685ada3cf8cd61a2c5d7f363e08c25d99f6de223fdd804bf. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
-		"tankLiters": [
-			"documented-d-boge-s3-current-p1"
-		],
 		"maxPressureBar": [
 			"documented-d-boge-s3-current-p1"
 		],
@@ -116,9 +132,6 @@ const product: CompressorInput = {
 		],
 		"oilType": [
 			"documented-d-boge-s3-current-p1"
-		],
-		"dutyCycle": [
-			"documented-d-boge-s3-duty"
 		]
 	},
 	"notes": [

@@ -10,16 +10,14 @@ const product: ToolProfileInput = {
 	"model": "515.5065",
 	"mpn": "515.5065",
 	"demandModel": "variable-volume",
-	"workingPressureBar": {
-		"max": 6.3
-	},
-	"demandExplanation": "La consommation et son point de pression ne sont pas établis de façon exploitable dans la fiche fabricant. Les caractéristiques publiées restent consultables, sans débit de calcul supposé.",
+	"workingPressureBar": {},
+	"demandExplanation": "La fiche ne qualifie ni le régime de consommation ni son appariement à une pression de mesure. Les valeurs publiées restent documentaires ; la compatibilité demeure indéterminée.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/pistolet-peinture-ks-tools-515-5065.webp",
+		"src": "/images/products/pistolet-peinture-ks-tools-515-5065-technical-20261116-followup.svg",
 		"alt": "Repères techniques : KS Tools 515.5065",
 		"sourceUrl": "https://www.kstools.com/en/products/hand-tools-catalogue/pneumatic-tools/spray-guns/6150/1/4-pneumatic-combination-spray-gun?c=1011737469",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "ks-tools-515-5065",
@@ -31,85 +29,131 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "KS Tools 515.5065. La consommation et son point de pression ne sont pas établis de façon exploitable dans la fiche fabricant. Les caractéristiques publiées restent consultables, sans débit de calcul supposé. Intitulé fabricant : 1/4\" Pneumatic combination spray gun. Consommation publiée (L/min) : 225.",
+		"overview": "KS Tools 515.5065 : pistolet combiné pour revêtement de soubassement ou cire de corps creux, avec cartouche standard 1 000 ml. Le flexible de 500 mm porte une buse de diffusion pour les cavités. Le corps mesure 220 mm et pèse 400 g ; l’usage documenté précise le produit à pulvériser.",
 		"verifiedFacts": [
-			"Intitulé fabricant : 1/4\" Pneumatic combination spray gun.",
-			"Consommation publiée (L/min) : 225.",
-			"Filetage de raccordement publié : 1/4\"PT.",
-			"Pression de service, libellé original : max. 6,3 bar (90 psi).",
-			"Longueur totale publiée (mm) : 220.",
-			"Masse publiée (g) : 400.",
-			"Dimension minimale de tuyau, libellé original : 1/4\" - 6,35 mm."
+			"Applications : Revêtement de soubassement, protection acoustique et cire de corps creux.",
+			"Cartouche : Standard 1 000 ml.",
+			"Flexible de diffusion : 500 mm.",
+			"Longueur : 220 mm.",
+			"Masse : 400 g.",
+			"Consommation documentaire : 225 L/min, régime non précisé."
 		],
 		"limitations": [
-			"La consommation et son point de pression ne sont pas établis de façon exploitable dans la fiche fabricant. Les caractéristiques publiées restent consultables, sans débit de calcul supposé.",
-			"La fiche ne relie pas explicitement la consommation à un point de pression mesuré ni à un régime en charge. La pression de service et le débit publié restent deux informations distinctes.",
-			"Le champ « min. Tube diameter » ne précise pas littéralement un diamètre intérieur ; aucune section hydraulique n’est déduite de ce libellé.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"La fiche ne qualifie ni le régime de consommation ni son appariement à une pression de mesure. Les valeurs publiées restent documentaires ; la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Intitulé fabricant",
-			"value": "1/4\" Pneumatic combination spray gun",
+			"label": "Applications",
+			"value": "Revêtement de soubassement, protection acoustique et cire de corps creux",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5065-p1"
+				"review:2026-11-16-technical:pistolet-peinture-ks-tools-515-5065:0"
 			]
 		},
 		{
-			"label": "Consommation publiée (L/min)",
+			"label": "Cartouche",
+			"value": "Standard 1 000 ml",
+			"evidenceIds": [
+				"review:2026-11-16-technical:pistolet-peinture-ks-tools-515-5065:0"
+			]
+		},
+		{
+			"label": "Flexible de diffusion",
+			"value": "500 mm",
+			"evidenceIds": [
+				"review:2026-11-16-technical:pistolet-peinture-ks-tools-515-5065:0"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "220 mm",
+			"evidenceIds": [
+				"review:2026-11-16-technical:pistolet-peinture-ks-tools-515-5065:0"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "400 g",
+			"evidenceIds": [
+				"review:2026-11-16-technical:pistolet-peinture-ks-tools-515-5065:0"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "225 L/min, régime non précisé",
+			"evidenceIds": [
+				"review:2026-11-16-technical:pistolet-peinture-ks-tools-515-5065:0"
+			]
+		},
+		{
+			"label": "Champ fabricant : Air consumption in l/min",
 			"value": "225",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5065-p1"
+				"review:2026-11-16-technical:pistolet-peinture-ks-tools-515-5065:0"
 			]
 		},
 		{
-			"label": "Filetage de raccordement publié",
+			"label": "Champ fabricant : Connection thread",
 			"value": "1/4\"PT",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5065-p1"
+				"review:2026-11-16-technical:pistolet-peinture-ks-tools-515-5065:0"
 			]
 		},
 		{
-			"label": "Pression de service, libellé original",
+			"label": "Champ fabricant : Operating pressure in bar",
 			"value": "max. 6,3 bar (90 psi)",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5065-p1"
+				"review:2026-11-16-technical:pistolet-peinture-ks-tools-515-5065:0"
 			]
 		},
 		{
-			"label": "Longueur totale publiée (mm)",
+			"label": "Champ fabricant : Packaging contents",
+			"value": "1",
+			"evidenceIds": [
+				"review:2026-11-16-technical:pistolet-peinture-ks-tools-515-5065:0"
+			]
+		},
+		{
+			"label": "Champ fabricant : Packaging height, mm",
+			"value": "60",
+			"evidenceIds": [
+				"review:2026-11-16-technical:pistolet-peinture-ks-tools-515-5065:0"
+			]
+		},
+		{
+			"label": "Champ fabricant : Packaging length, mm",
+			"value": "202",
+			"evidenceIds": [
+				"review:2026-11-16-technical:pistolet-peinture-ks-tools-515-5065:0"
+			]
+		},
+		{
+			"label": "Champ fabricant : Packaging width, mm",
+			"value": "181",
+			"evidenceIds": [
+				"review:2026-11-16-technical:pistolet-peinture-ks-tools-515-5065:0"
+			]
+		},
+		{
+			"label": "Champ fabricant : Total length L in mm",
 			"value": "220",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5065-p1"
+				"review:2026-11-16-technical:pistolet-peinture-ks-tools-515-5065:0"
 			]
 		},
 		{
-			"label": "Masse publiée (g)",
+			"label": "Champ fabricant : Weight [g]",
 			"value": "400",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5065-p1"
+				"review:2026-11-16-technical:pistolet-peinture-ks-tools-515-5065:0"
 			]
 		},
 		{
-			"label": "Dimension minimale de tuyau, libellé original",
+			"label": "Champ fabricant : min. Tube diameter",
 			"value": "1/4\" - 6,35 mm",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5065-p1"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "Operating pressure in bar: max. 6,3 bar (90 psi)",
-			"evidenceIds": [
-				"october3c-tools-ks-product-515-5065-p1"
-			]
-		},
-		{
-			"label": "Consommation de régime non précisé, hors calcul",
-			"value": "225 L/min",
-			"evidenceIds": [
-				"october3c-tools-ks-product-515-5065-p1"
+				"review:2026-11-16-technical:pistolet-peinture-ks-tools-515-5065:0"
 			]
 		}
 	],
@@ -123,21 +167,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 1d804621eaf26714c61ebb540a041a5187870c56da7cefc948fd529badc23665. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-technical:pistolet-peinture-ks-tools-515-5065:0",
+			"sourceUrl": "https://www.kstools.com/en/products/hand-tools-catalogue/pneumatic-tools/spray-guns/6150/1/4-pneumatic-combination-spray-gun?c=1011737469",
+			"sourceLabel": "KS Tools, document constructeur vérifié le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "KS Tools 515.5065 : pistolet combiné pour revêtement de soubassement ou cire de corps creux, avec cartouche standard 1 000 ml. Le flexible de 500 mm porte une buse de diffusion pour les cavités. Le corps mesure 220 mm et pèse 400 g ; l’usage documenté précise le produit à pulvériser. GET complet SHA-256 779c90966350bd71b58244b220fd51bbc1b483e869bf9cb3bf617edf61729f43. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october3c-tools-ks-product-515-5065-p1"
-		],
-		"workingPressureBar": [
-			"october3c-tools-ks-product-515-5065-p1"
+			"review:2026-11-16-technical:pistolet-peinture-ks-tools-515-5065:0"
 		],
 		"demandExplanation": [
-			"october3c-tools-ks-product-515-5065-p1"
+			"review:2026-11-16-technical:pistolet-peinture-ks-tools-515-5065:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-technical:pistolet-peinture-ks-tools-515-5065:0"
 		]
 	},
 	"notes": [
-		"La consommation et son point de pression ne sont pas établis de façon exploitable dans la fiche fabricant. Les caractéristiques publiées restent consultables, sans débit de calcul supposé."
+		"La fiche ne qualifie ni le régime de consommation ni son appariement à une pression de mesure. Les valeurs publiées restent documentaires ; la compatibilité demeure indéterminée."
 	]
 };
 

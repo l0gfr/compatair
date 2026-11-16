@@ -31,10 +31,10 @@ const product: CompressorInput = {
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/fini-cube-7-5-10-270-es-z.svg",
+    "src": "/images/products/fini-cube-7-5-10-270-es-z-technical-20261116-followup.svg",
     "alt": "Repères techniques : Fini CUBE 7.5-10-270 ES Z",
     "sourceUrl": "https://finicompressors.com/wp-content/uploads/Catalogo-Cube-Fini_EN_04-2024_9990397.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "specifications": [
     {
@@ -85,14 +85,38 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4b-fini-cube-p3"
       ]
+    },
+    {
+      "label": "Référence et équipement",
+      "value": "V91PO92FNM501 ; sécheur frigorifique et cuve galvanisée270 L",
+      "evidenceIds": [
+        "review:2026-11-16-technical:fini-cube-7-5-10-270-es-z:0"
+      ]
+    },
+    {
+      "label": "Dimensions et masse nettes",
+      "value": "1200 × 600 × 1450 mm ; 215 kg",
+      "evidenceIds": [
+        "review:2026-11-16-technical:fini-cube-7-5-10-270-es-z:0"
+      ]
+    },
+    {
+      "label": "Conditions de mesure",
+      "value": "ISO1217 ; air aspiré20°C, pression atmosphérique1 bar ; débit mesuré9,5 bar pour version10 bar",
+      "evidenceIds": [
+        "review:2026-11-16-technical:fini-cube-7-5-10-270-es-z:0"
+      ]
     }
   ],
   "editorial": {
-    "overview": "Fini CUBE 7.5-10-270 ES Z. 1 050 L/min déclarés à 9,5 bar. Configuration constructeur : Cuve 270 L galvanisée avec sécheur frigorifique intégré.",
+    "overview": "La CUBE7.5-10-270 ES Z combine cuve galvanisée270 L et sécheur frigorifique intégré, codeV91PO92FNM501. ES ajoute le sécheur ; Z indique la galvanisation. Son FAD reste1050 L/min à9,5 bar, comme la version à cuve peinte.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 10 bar.",
       "Cuve de stockage documentée : 270 L.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 1 050 L/min déclarés à 9,5 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 1 050 L/min déclarés à 9,5 bar.",
+      "Référence et équipement : V91PO92FNM501 ; sécheur frigorifique et cuve galvanisée270 L.",
+      "Dimensions et masse nettes : 1200 × 600 × 1450 mm ; 215 kg.",
+      "Conditions de mesure : ISO1217 ; air aspiré20°C, pression atmosphérique1 bar ; débit mesuré9,5 bar pour version10 bar."
     ],
     "limitations": [
       "FAD déclaré par le constructeur à la pression de mesure indiquée, distincte du plafond de fonctionnement.",
@@ -121,6 +145,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 270d2f554801e15883dd85b3f3b6089c641adf51dd59c15f31e0fd06c7b88e1a de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-technical:fini-cube-7-5-10-270-es-z:0",
+      "sourceUrl": "https://finicompressors.com/wp-content/uploads/Catalogo-Cube-Fini_EN_04-2024_9990397.pdf",
+      "sourceLabel": "Fini, document constructeur vérifié le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "La CUBE7.5-10-270 ES Z combine cuve galvanisée270 L et sécheur frigorifique intégré, codeV91PO92FNM501. ES ajoute le sécheur ; Z indique la galvanisation. Son FAD reste1050 L/min à9,5 bar, comme la version à cuve peinte. GET complet SHA-256 270d2f554801e15883dd85b3f3b6089c641adf51dd59c15f31e0fd06c7b88e1a. Pages PDF lues : 1, 3."
     }
   ],
   "fieldSources": {

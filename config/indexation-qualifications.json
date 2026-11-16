@@ -87276,6 +87276,1210 @@
           "sha256": "4482a7221b44be52f910b29f0e968da8e91012da4cf2e95476d10523d91aede9"
         }
       ]
+    },
+    {
+      "path": "/outils-pneumatiques/m7-qa-116-a-b/",
+      "contentHash": "8ec8d39438c155841522641d01781bc7040f9d4959563e0e7ba85e6a18f9781f",
+      "neighbors": [
+        "/outils-pneumatiques/m7-qa-101-a-b/",
+        "/outils-pneumatiques/m7-qa-110-a-b/"
+      ],
+      "contextHash": "a43780c986b04a142a0a594c6ae8bb54499a8262a88ec7afe721f904ce49e734",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Portée 345 mm à 22 000 tr/min, comparée aux QA-110 et QA-101 ; pinces métriques et impériales distinctes. La source indique Avg. Air Consumption 141 L/min à côté de la pression de service 6,3 bar : la moyenne reste non dimensionnante. Les pictogrammes kg/lb ont été lus, pas déduits des valeurs.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.mighty-seven.com/product/150",
+          "sha256": "d3ef479407f1c31a1e084860bc1eab31ee47288747e164cad5b2dbf461a82bb9"
+        },
+        {
+          "url": "https://www.mighty-seven.com/upload/product/spe%20icons-54.png",
+          "sha256": "e5ccd8e8f4d16bc189e85e50f084eeda54844411b4291ec202bc35d515220fc6"
+        },
+        {
+          "url": "https://www.mighty-seven.com/upload/product/spe%20icons-55.png",
+          "sha256": "1d657b05007e015cffcd22ed99e333b17a740d2121980da7d681d361575f6708"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/m7-qb-42602/",
+      "contentHash": "a80e39b13a894867246cea3be8e9a0ad9bb4a77f53be59201913134b453e025b",
+      "neighbors": [
+        "/outils-pneumatiques/m7-qb-42502/",
+        "/outils-pneumatiques/m7-qb-45602/"
+      ],
+      "contextHash": "217ecbe23a6accd4480b5feb0be97a4e45b7a702e55a40adaf1181a889cdf255",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Plateau 152 mm et orbite 5 mm ; la désignation Non-Vacuum prime sur le descriptif générique de jupe. Comparaison QB-42502 plus petite et QB-45602 avec aspiration centrale. Consommation moyenne 109 L/min, hors calcul.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.mighty-seven.com/product/3520",
+          "sha256": "d51f854cdeafefd70dfbb60e01e6e0291ec5148e794df36d4b07f09487a82987"
+        },
+        {
+          "url": "https://www.mighty-seven.com/upload/product/spe%20icons-54.png",
+          "sha256": "e5ccd8e8f4d16bc189e85e50f084eeda54844411b4291ec202bc35d515220fc6"
+        },
+        {
+          "url": "https://www.mighty-seven.com/upload/product/spe%20icons-55.png",
+          "sha256": "1d657b05007e015cffcd22ed99e333b17a740d2121980da7d681d361575f6708"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/m7-qc-254/",
+      "contentHash": "8aa3f7cbbe25f688d8cacb18f15c94c7731e75e1012291e2ff060ce8b26e03e7",
+      "neighbors": [
+        "/outils-pneumatiques/m7-qc-234/",
+        "/outils-pneumatiques/m7-qc-253/"
+      ],
+      "contextHash": "f1c46ac39620053d1a9a4313e81b15a45930bda41f04f131d4a5378e1a80509e",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Tronçonnage coudé 100 mm à 20 000 tr/min et corps 206 mm ; le diamètre et la vitesse distinguent QC-253/QC-234. Moyenne 141 L/min, pas un besoin continu validé.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.mighty-seven.com/product/277",
+          "sha256": "89482ef5a176aaaa4eb92bf09f0f77cb5f30b8272c68c5870800447f59353579"
+        },
+        {
+          "url": "https://www.mighty-seven.com/upload/product/spe%20icons-54.png",
+          "sha256": "e5ccd8e8f4d16bc189e85e50f084eeda54844411b4291ec202bc35d515220fc6"
+        },
+        {
+          "url": "https://www.mighty-seven.com/upload/product/spe%20icons-55.png",
+          "sha256": "1d657b05007e015cffcd22ed99e333b17a740d2121980da7d681d361575f6708"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-chocs-ks-tools-512-1015/",
+      "contentHash": "d8c1000b811feb847bbc2cbd8db4641c380e4967616b25dd982333ce9349ecba",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-chocs-ks-tools-512-0002/",
+        "/outils-pneumatiques/cle-a-chocs-ks-tools-512-1020/"
+      ],
+      "contextHash": "1939cb38b9d9b3dbe2052a65ed325ce63bfbfb785dae4243501a771a8a9c4f6e",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Carré 1 pouce, corps court 246 mm et double marteau. Desserrage 4 250 Nm distinct des trois réglages de serrage 1 600/2 730/3 110 ; comparaison avec 512.1020 et 512.0002. Les 170 L/min ne sont pas appariés à une mesure documentée ; état moteur non conclusif.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kstools.com/en/products/hand-tools-catalogue/pneumatic-tools/impact-wrenches/24412/1-the-devil-high-performance-impact-wrench-4250nm?c=1011737465",
+          "sha256": "f80e1645deea13c5516b7f7db923713fb23724560a88caf755accadb1e3e6cf8"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-cliquet-ks-tools-515-3825/",
+      "contentHash": "aa373e64525d5b927648a88ac747eb92289ebc76f26f22e5208a8d54c1c8ece8",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-cliquet-ks-tools-515-1185/",
+        "/outils-pneumatiques/cle-a-cliquet-ks-tools-515-5505/"
+      ],
+      "contextHash": "0ca66b3f1b808d18fdaf8e2ff9d347c961ae7d0e019685e696ac06305d42550a",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Carré 3/8, 340 mm et 300 tr/min ; couple conseillé 60 Nm, pneumatique maximal 81 Nm, capacité manuelle 271 Nm distincte. Comparée aux carrés 1/2 et mini 1/4 des voisines. Les 60,3 L/min et max.6,3 bar restent documentaires.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kstools.com/en/products/hand-tools-catalogue/pneumatic-tools/reversible-ratchet/12926/3/8-monster-high-performance-pneumatic-reversing-ratchet?c=1011737473",
+          "sha256": "5dd04be2ce22eb37c09019b851d791fb0a605a5bab079747c5a1e3de97c4db6c"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/derouilleur-a-aiguilles-ks-tools-515-3980/",
+      "contentHash": "ccec6443017f2efbbfca3af73a2afadb16c01923b57d3e03d2a76219b29579e7",
+      "neighbors": [
+        "/outils-pneumatiques/derouilleur-a-aiguilles-ks-tools-515-3070/"
+      ],
+      "contextHash": "e42658fc79351945f47c1092409ed43b5f62c8bcfc3a2b894c5b3ec274e27b96",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Treize aiguilles de 1,4 mm et jeu 515.3981, 3 000 coups/min et corps 235 mm ; différent du gros 515.3070. Les 48,1 L/min sans régime documenté ne dimensionnent pas le compresseur.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kstools.com/en/products/hand-tools-catalogue/pneumatic-tools/needle-scaler/24420/mini-compressed-air-needle-scaler?c=1011737455",
+          "sha256": "83cd8bb8bfd6c6423b8141e58c25c31061dc236e4db9bcf1781ad1e9c3761bae"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/gonflage-ks-tools-515-1950/",
+      "contentHash": "e5eda1f133b9921b8e5ee3a6c3c656f3f0bb1d401afe9fb42cbf7036b1d1166c",
+      "neighbors": [
+        "/outils-pneumatiques/gonflage-ks-tools-515-1920/",
+        "/outils-pneumatiques/gonflage-ks-tools-515-1960/"
+      ],
+      "contextHash": "a9b4b950b19a25c63601d06ac848f43dde36d792f0299457edc5e616e51ace0d",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Manomètre analogique 0–12 bar avec flexible 600 mm et levier/décharge ; 515.1920 et 515.1960 ont d’autres flexibles ou plages. La plage de lecture ne remplace ni débit de gonflage ni limite de service 6,3 bar.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kstools.com/en/products/special-tools-for-commercial-vehicle/engine-turbocharger/pressure-testing-tools/18790/tyre-filling-gauge-0-12bar?c=1011737461",
+          "sha256": "075d4965f9c1362a7691bf758775bfc393e4e8b25f8881cf319635b288132598"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/meuleuse-ks-tools-515-3198/",
+      "contentHash": "47ce85403bd3d04120ae5d08fd4f04b017cd862cb48df549b0039cacc523a211",
+      "neighbors": [
+        "/outils-pneumatiques/meuleuse-ks-tools-515-3179/",
+        "/outils-pneumatiques/meuleuse-ks-tools-515-5410/"
+      ],
+      "contextHash": "368b5d385b39434d668a5256c7f7e62b6299b1d5860a54d17d28f9131db003e0",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Meuleuse stylo droite 70 000 tr/min, 150 W, 132 mm. Le champ pince «3» ne reçoit pas une unité inventée ; comparaison au modèle coudé 515.3179 et 515.5410. Consommation 140 L/min non qualifiée pour le moteur.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kstools.com/en/products/special-tools-for-passenger-cars-and-light-commercial-vans/bodywork-and-interior/surface-treatment/6034/pneumatic-pencil-grinder-70.000-rpm?c=1011737471",
+          "sha256": "109438dcf5da6e48ff4e7a238a15e07150eb736f8e8629fbc9c439c4cf08fd4d"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/perceuse-ks-tools-515-5435/",
+      "contentHash": "b9fbd972a08f1780b13747ee18c9d08b0ad9f2ad3f6e2ee8338d1316db1b3c1b",
+      "neighbors": [
+        "/outils-pneumatiques/perceuse-ks-tools-515-5465/",
+        "/outils-pneumatiques/perceuse-ks-tools-515-5520/"
+      ],
+      "contextHash": "a8592bb62a8dc02c628160a4f92fc81fda1c26ca59732a9edf0a695632409ea3",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Perceuse droite non réversible, mandrin jusqu’à 10 mm, 4 000 tr/min et 370 W ; distincte de la coudée et de la mini 7 000 tr/min. Les valeurs 350 L/min et pression maximale 6,3 bar ne forment pas un point de mesure de consommation.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kstools.com/en/products/special-tools-for-passenger-cars-and-light-commercial-vans/bodywork-and-interior/body-boring-tools/14692/pneumatic-drill-straight-4.000-rpm?c=1011737470",
+          "sha256": "ae780119e576dc2bd22acc1d7e7d9fb5dc2d9b8b5bd4d7527978fec099bb54c1"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-cartouche-ks-tools-515-1985/",
+      "contentHash": "170b4e0f80101582346e72d2aeb328956a8e4ecc38fc07b20987773e5a281e2a",
+      "neighbors": [
+        "/outils-pneumatiques/pistolet-cartouche-ks-tools-515-1975/"
+      ],
+      "contextHash": "bcf60b5ac78f35ec849d5aa052804fa6ba28b9d4a874d4c44c103c0b7db7e0b3",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Cartouches et poches 600 ml, antigoutte et deux adaptateurs, corps 620 mm ; différent du 310 ml 515.1975. Libellé kg/cm³ incohérent et nature du débit 40 l/min non définie sont conservés comme réserves documentaires, sans calcul.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kstools.com/en/products/special-tools-for-commercial-vehicle/auto-glass/pressurised-air-pistol-cartridges/5979/pneumatic-cartridge-pistols-600-ml?c=1011740895",
+          "sha256": "c511237f8514fcc0431a4d41ffdc087677ee2a4ac766e9e7051d68e92d0f94d5"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-ks-tools-515-5065/",
+      "contentHash": "1eb4af6fcb797fb7bb34d56f385d9facd121914bdce9b061401f5b007375203c",
+      "neighbors": [
+        "/outils-pneumatiques/pistolet-peinture-prowin-k-515m-10/",
+        "/outils-pneumatiques/pistolet-peinture-prowin-k-515m-15/"
+      ],
+      "contextHash": "687b683af695e8e847a197a51003484ac1503e85e4042e580752f6fef18626db",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Pistolet de revêtement de soubassement/cire, cartouche 1 000 ml et flexible diffuseur 500 mm ; il ne remplace pas les pistolets de peinture de finition voisins. Les 225 L/min restent non dimensionnants.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kstools.com/en/products/hand-tools-catalogue/pneumatic-tools/spray-guns/6150/1/4-pneumatic-combination-spray-gun?c=1011737469",
+          "sha256": "779c90966350bd71b58244b220fd51bbc1b483e869bf9cb3bf617edf61729f43"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/polisseuse-ks-tools-515-5121/",
+      "contentHash": "dd610865c4414026428e54f750ae00e89b4996ca076bfc254f7f5190d6382481",
+      "neighbors": [
+        "/outils-pneumatiques/polisseuse-ks-tools-515-5455/",
+        "/outils-pneumatiques/polisseuse-ks-tools-515-5590/"
+      ],
+      "contextHash": "fcf2364833d0111abe4c2f24e49b01c0d95882759df71c010f59f8af6c8c5b80",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Mini finition coudée à disque autoagrippant 75 mm, 2 500 tr/min, 150 W et trois entretoises. Récepteur à filetage intérieur et max.5,2 bar conservés ; comparaison aux 515.5455/515.5590. Les 113 L/min ne sont pas qualifiés en charge.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kstools.com/en/products/hand-tools-catalogue/pneumatic-tools/burnisher/6163/1/4-mini-burnishing-machine?c=1011737459",
+          "sha256": "3aafb33580c3373b876e038dac83855f66089ed858af70c8d488fb16692d8489"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-bande-ks-tools-515-3549/",
+      "contentHash": "fa01396ec2e8ee2a70ad59fee730f9a3622292942c7b8eba3e329c231e67cf41",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-bande-dotco-36b4/",
+        "/outils-pneumatiques/ponceuse-bande-sealey-sa354/"
+      ],
+      "contextHash": "cae3fc7fed08c4c207716b1353a9a15aa95f67fd84fa88acd514ec7fbd859913",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Bande 10 × 330 mm, tête 360°, 18 000 tr/min et vitesse de bande 1 188 m/min ; cotes L1/L2 non additionnées. Comparée au Sealey 20 × 520 et Top Cat 36B4. Les 142 L/min restent documentaires.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kstools.com/en/products/special-tools-for-passenger-cars-and-light-commercial-vans/bodywork-and-interior/surface-treatment/6086/pneumatic-belt-grinder-150mm?c=1011737447",
+          "sha256": "74cf9cdd8d1126afaeda1cb913497bc95899866ad2560c41136eb47f4517dabc"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-orbitale-ks-tools-515-3066/",
+      "contentHash": "f1415bbd3b710152e9a0384ff954a00ee09277dc62dec58a42acf0aef15342e9",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-orbitale-ks-tools-515-3061/",
+        "/outils-pneumatiques/ponceuse-orbitale-ks-tools-515-5111/"
+      ],
+      "contextHash": "e0df97b79e9151e625c5f58001e8367ec204127b85e788fd5838e5a4d8550d12",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Orbite 5 mm, six trous et choix sac textile/aspiration industrielle ; D150 et récepteur152,4 mm restent deux libellés distincts. Comparée au modèle finition et à la mini. Les 225 L/min ne fournissent pas un régime en charge documenté.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kstools.com/en/products/special-tools-for-passenger-cars-and-light-commercial-vans/bodywork-and-interior/surface-treatment/6020/rapid-removal-finish-pneumatic-eccentric-sander-with-dust-extraction?c=1011737451",
+          "sha256": "36e098bc210b8e85b954afb4c00548fd042cf0cc2203d52d0800eb0f99517eec"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/riveteuse-ks-tools-515-3102/",
+      "contentHash": "104d0b512055c9ba6f1b1feac601f19121f6b89c0166fa057433e3ea6c34ed11",
+      "neighbors": [
+        "/outils-pneumatiques/riveteuse-ks-tools-515-3101/"
+      ],
+      "contextHash": "b47a11b7c49256d88f1b33c6d1b5c6ee576a410aba4251dbba8cb46fe0d32d0c",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Rivets pop jusqu’à4,8 mm et course14 mm, face au 515.3101 plus capacitaire. Le litre/course n’est pas converti en débit minute sans état de référence, pression de mesure et cadence ; moteur non conclusif.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kstools.com/en/products/special-tools-for-passenger-cars-and-light-commercial-vans/bodywork-and-interior/blind-rivet-tools/6029/pneumatic-riveting-tool-pistol-2-4-3-2-4-4-8mm?c=1011737449",
+          "sha256": "0d3c06354e9a2cdac6f7aa35dc9c1f6153907857e43333d96b79ab62b8dfbdcb"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/soufflette-ks-tools-515-1216/",
+      "contentHash": "17ba93edfbf42fd0e59e27d888484b1cc9c0eca3618fde2b550ac9f4da4b70c5",
+      "neighbors": [
+        "/outils-pneumatiques/soufflette-ks-tools-515-1901/",
+        "/outils-pneumatiques/soufflette-ks-tools-515-1915/"
+      ],
+      "contextHash": "eb1df1dd2c1784bca94f13ebbd94f61303eef9cb980e5f221765cd8b2fee628f",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "La source décrit le rinçage d’un circuit de refroidissement combinant eau et air, raccord eau1/2 et buse19/29/32/36,5/40 mm. La catégorie soufflette doit devenir pistolet-nettoyage avant admission. Entrée max8,5 bar distincte du service max6,3 ; aucun débit inventé.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kstools.com/en/products/special-tools-for-passenger-cars-and-light-commercial-vans/general-workshop-requirements/individual-parts/11399/cooling-system-pneumatic-flush-gun?c=1011737446",
+          "sha256": "f7940665f73206d411207b9f63f210e714e3ff037110abf750e2ed8c64e2cb44"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/tronconneuse-ks-tools-515-5475/",
+      "contentHash": "001c2686e1160edd9df7fe40d7bfd295d3f297ee2e6b2df079215e5d97f01fc7",
+      "neighbors": [
+        "/outils-pneumatiques/tronconneuse-ks-tools-515-5440/",
+        "/outils-pneumatiques/tronconneuse-ks-tools-515-5555/"
+      ],
+      "contextHash": "49757221de56c3d79d4e7f16bcfa7ab34fa195c107bf8c7aab2e062ea3e09a7a",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Disque déclaré100×1,6×16 mm, 15 000 tr/min et protection réglable. L’autre champ Tool holder6,3 mm et le titre3/8 restent explicitement à confirmer ; aucune interchangeabilité d’accessoire n’est affirmée. Consommation350 L/min non dimensionnante.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kstools.com/en/products/special-tools-for-passenger-cars-and-light-commercial-vans/exhaust-system-catalysers/exhaust-pipe-separating-and-cutting-tools/12682/3/8-pneumatic-short-disc-cutter-15.000-rpm?c=1011737472",
+          "sha256": "5bc8ab653c42bd5bbbbee6656d438d0ac007edc256e283ef36c9c4481f54c539"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-chocs-sealey-gsa6005/",
+      "contentHash": "7c2fa37062ab0b178f8675622957b9f0c65145dc331c3cb3e2c6f38d7c6f364a",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-chocs-sealey-gsa6000/",
+        "/outils-pneumatiques/cle-a-chocs-sealey-gsa6002/"
+      ],
+      "contextHash": "9df42d86b22f22784c8609cbc8da1448bacee520d512694bf63ab2754e8b18f4",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Carré1 pouce, double marteau, poignée latérale ; serrage2 000 Nm distinct du desserrage2 250 Nm et masse5,87 kg. Les38 cfm et114 psi sont des valeurs de fiche sans régime de consommation qualifié.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.sealey.co.uk/generation-composite-twin-hammer-air-impact-wrench-1-sq-drive-gsa6005/",
+          "sha256": "d75e584b230a7927d9ec54d681aa9368883ec7f4f5d48743b5fae91bcab3abfc"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-cliquet-sealey-gsa635/",
+      "contentHash": "723623ecddb96536977088cc5fba71e1880cbec7f4a7cf0ac0c5647f85b36fe2",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-cliquet-sealey-gsa20/",
+        "/outils-pneumatiques/cle-a-cliquet-sealey-gsa634/"
+      ],
+      "contextHash": "e672bef8166a8541f9c5690b68ad92c8cf3739021bf0d3333678993a79af60ed",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Cliquet3/8 compact185 mm, 180 tr/min et27 Nm, masse0,56 kg ; l’accès dans un compartiment moteur est distinct des modèles voisins plus longs. Les4 cfm à côté de90 psi ne qualifient pas un débit en charge.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.sealey.co.uk/generation-compact-air-ratchet-wrench-3-8-sq-drive-gsa635/",
+          "sha256": "7cc3c3faff8a535696bc72c03acb380f642d447c7054d69bbc7ac56de9a102a2"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/derouilleur-a-aiguilles-sealey-sa52/",
+      "contentHash": "ec3980b9d46c53755638a94d536ff241d712aab28b61623d519105a4cd4ecff6",
+      "neighbors": [
+        "/outils-pneumatiques/derouilleur-a-aiguilles-sealey-sa50/",
+        "/outils-pneumatiques/derouilleur-a-aiguilles-sealey-sa501/"
+      ],
+      "contextHash": "a4e4c4e3a9a83c39ed034f68898476d16e4cba2db762157bc4a60e036af090b8",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Marteau droit avec têtes aiguilles/burin interchangeables, 4 800 coups/min et course32 mm ; jeu de12 aiguillesSA51/16 identifié. Les3 cfm restent documentaires, sans cadence moyenne de dimensionnement déduite.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.sealey.co.uk/air-needle-scaler-air-hammer-sa52/",
+          "sha256": "d95019b18fd3d9fb41d54c174e93a98ee41e96243b5cdd58e0a77a82ce26b0d6"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/meuleuse-sealey-sa1004/",
+      "contentHash": "d6e49b2fbf99253462774023a7c7b46ee3ee337d0067293267ad4db174e1c96c",
+      "neighbors": [
+        "/outils-pneumatiques/meuleuse-sealey-sa152/",
+        "/outils-pneumatiques/meuleuse-sealey-sa153/"
+      ],
+      "contextHash": "62e14284f28881e69390be2221841f2b933cfc2cea9a37d2fdc2f56159397630",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Meuleuse mini droite à pince6 mm, 25 000 tr/min et longueur123 mm, face aux meuleuses/disques voisins. Source actuelle11,3 cfm et80 psi ; régime de consommation non précisé, moteur non conclusif.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.sealey.co.uk/premier-mini-air-die-grinder-6mm-sa1004/",
+          "sha256": "8dbb78362138192c607679215c29ab6a67703e2a7e924edac65bc5f134a5f580"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/perceuse-sealey-sa24/",
+      "contentHash": "e3bb1565e5ad6331fbb53111843b52a7cd74a7aa9c3a77390cef916144f10c8d",
+      "neighbors": [
+        "/outils-pneumatiques/perceuse-sealey-sa241/",
+        "/outils-pneumatiques/perceuse-sealey-sa26/"
+      ],
+      "contextHash": "d82d4f0d1fa22a67d9f7d73fdcbce27e64332e816172eaaa6dc7ca29481f0100",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Perceuse réversible à mandrin10 mm avec clé et engrenages planétaires, 1 800 tr/min ; distincte du mandrin rapideSA241 et de la coudéeSA26. Les4 cfm et90 psi restent hors calcul.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.sealey.co.uk/reversible-air-drill-10mm-sa24/",
+          "sha256": "ab24f896bbe3388ffbf476bb3a1f19900c928ff6bab8e2c621875b11fbabdbb7"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-bande-sealey-sa354/",
+      "contentHash": "3a17ec3d0b8dc733becbd8c860b4a12df399054d2855c58d165dae03d8ca68e2",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-bande-sealey-sa35/",
+        "/outils-pneumatiques/ponceuse-bande-sealey-sa355/"
+      ],
+      "contextHash": "25fc28d1c1813db6a7bb985c6959eeccfad0fa71a2673fdc041f53fa37efec24",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Bande20×520 mm et bras articulé à tension par ressort, 16 000 tr/min ; différente de la10×330 mmSA35. Les15 cfm n’établissent pas un besoin maximal à une pression de mesure.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.sealey.co.uk/air-belt-sander-20-x-520mm-sa354/",
+          "sha256": "7c760f3ba9cd7942802b6cf438928990e38d7187d3a9a43b215e91c23f4e0260"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-orbitale-sealey-gsa04/",
+      "contentHash": "8a4c41857b43c9206e8133d750c4d0beb93cacefd690d043cc15e1c7c6b21bba",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-orbitale-sealey-gsa05/",
+        "/outils-pneumatiques/ponceuse-orbitale-sealey-gsa06/"
+      ],
+      "contextHash": "5984a1687f909b00b010601d9fa9adb8d71ed418dc206cf5a71501d8165af403",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Orbite2,5 mm et plateau150 mm sans sortie d’aspiration ; le silencieux360° n’est pas un raccord de poussières. ComparaisonGSA05/GSA06, 3 cfm et90 psi non dimensionnants.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.sealey.co.uk/generation-air-palm-random-orbital-sander-150mm-gsa04/",
+          "sha256": "16c69b21ae447bd142492957215af823937d42e884015c0917be974d90da99c5"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-pneumatique-sealey-sa32/",
+      "contentHash": "3654838ba2698126071e072f1f8a7907a35533581938aed988d710e5496f1c79",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-pneumatique-sealey-sa1003/",
+        "/outils-pneumatiques/ponceuse-pneumatique-sealey-sa22/"
+      ],
+      "contextHash": "a88a09575aebae1d151b106efe19ef0f52bcb02ec950edce60f0d18cd6f4ea6f",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Mouvement rectiligne à deux pistons, plateau400×70 mm et course25 mm à2 400 mouvements/min ; n’est pas une orbitale. Les8 cfm restent hors moteur faute de régime et conditions de mesure.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.sealey.co.uk/twin-piston-in-line-air-sander-400-x-70mm-sa32/",
+          "sha256": "31a8077bc7220b0b5d47953270f9687cb6b7fff1a8ec70dd78e968961b6377c1"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/scie-sealey-sa342/",
+      "contentHash": "fafa9a8a1688b3e57371b31f03fc0f7186446f5cd9ffb4b52b7f3ba34a8498c0",
+      "neighbors": [
+        "/outils-pneumatiques/scie-sealey-sa34/",
+        "/outils-pneumatiques/scie-sealey-sa347/"
+      ],
+      "contextHash": "e55baab48abef97721f4c5fdbfb0aa71ca9549ed99cf3132db4d033d70289efa",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Scie alternative à guide réglable et gâchette de sécurité, course10 mm et9 000 mouvements/min. Capacité acier/aluminium1,5 mm conservée, 4 cfm non dimensionnants ; comparaisonSA34/SA347.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.sealey.co.uk/reciprocating-air-saw-sa342/",
+          "sha256": "4bdb65e9beef53ebe23630652a923402b6040c7a72b3f8ade2cf305d1439a0b2"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/soufflette-sealey-sa904/",
+      "contentHash": "bfc810ae2232cf7f91b6d64b2e747bde1e64f8e2423e39a488f1d96574f8ff7a",
+      "neighbors": [
+        "/outils-pneumatiques/soufflette-sealey-sa913l/",
+        "/outils-pneumatiques/soufflette-sealey-sa913m/"
+      ],
+      "contextHash": "fc59a955d8f9de9667f430f45d044badc08b417e95775b3ee3970059c52b7269",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Mini soufflette à embout Venturi et crochet détachable, masse0,07 kg et maximum90 psi. Aucune consommation n’est publiée ; aucun débit d’air amplifié ou de réseau n’est inventé. Comparée aux souffletttes à lance180/290 mm.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.sealey.co.uk/mini-air-blow-gun-with-venturi-tip-sa904/",
+          "sha256": "2ca3b69648d7b50846cf7befc14f79fc470f8945f3a0b87ef952be449c20a0d1"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/tronconneuse-sealey-s01005/",
+      "contentHash": "f91db72c01230b3dc592b8095ea4fab27d9d7e564d10072c3d7afb03966549fa",
+      "neighbors": [
+        "/outils-pneumatiques/tronconneuse-sealey-sa25/",
+        "/outils-pneumatiques/tronconneuse-sealey-sa2501/"
+      ],
+      "contextHash": "73df7c3440d17d786baf2624e7161db17656cb0b5bd34c0b7f65b36484253e2a",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Tronçonnage à disque75×2×10 mm, 20 000 tr/min, carter et sécurité, disque non fourni. Les4 cfm–90 psi sans régime précisé ne sont pas un point moteur ; comparaisonSA25/SA2501.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.sealey.co.uk/siegen-air-rotary-cut-off-tool-75mm-s01005/",
+          "sha256": "0ca9c3c5c0ed80e8a93e36978d08d65e77bfbcc66db1227e3c58e5cfdf8df1b1"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/visseuse-sealey-sa623/",
+      "contentHash": "8096a91d4dfc9d71b8052b681d5f2593ae3dfe98863018618cfc0e589bf6f704",
+      "neighbors": [
+        "/outils-pneumatiques/visseuse-sealey-sa58/"
+      ],
+      "contextHash": "d22b783813fd778b2f32b76a5e066b97476e9ec59ad8155157922c7c398241ab",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Mini visseuse réversible à hexagone1/4 rapide, 11 000 tr/min et couplemax67 Nm ; pas de coupure au couple documentée. La consommation3 cfm ne remplace pas un débit en charge ; comparaisonSA58.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.sealey.co.uk/premier-composite-mini-air-screwdriver-sa623/",
+          "sha256": "708faa8f18fa58926d55b8a8011be8d609bfb3ce69bcb35ae9bb4f2e89496b6e"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/almig-f-drive-22/",
+      "contentHash": "6b6be71f16f0a2ad23f85334b5fdbfa250454814dd4d52bf7fccae5269b74798",
+      "neighbors": [
+        "/compresseurs/almig-f-drive-11/",
+        "/compresseurs/almig-f-drive-15/"
+      ],
+      "contextHash": "312cea68e6e0ed31ef65b9b95875d377fd2187d7e4db88937343b7a82ffbfc28",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Le F-DRIVE 22 module de 420 à 4 110 L/min à 7 bar, sous 50 Hz. Son châssis de 790 × 800 × 1 757 mm diffère de celui des F-DRIVE 11 et 15. Le minimum de modulation décrit une limite de régulation, pas la consommation moyenne d’un atelier. Le taux de marche du groupe et le stockage restent à documenter.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf#page=16",
+          "sha256": "f5ca167dedaab25352808dc5001ba9badc7acffb2c37168c6d9f89182b752a0e"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/almig-f-drive-30/",
+      "contentHash": "863741bf74c1b06b72b19b81f97ef9d9aaff9d4e5890a7a71aabc65c6d794cf0",
+      "neighbors": [
+        "/compresseurs/almig-f-drive-11/",
+        "/compresseurs/almig-f-drive-37/"
+      ],
+      "contextHash": "5dbb4cdbd16af374ece5eb4c3d0fa567f12c8ac3cc3b131fb43060d1e27f532f",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Le F-DRIVE 30 module de 620 à 6 150 L/min à 7 bar, sous 50 Hz. Il partage les dimensions 940 × 850 × 1 805 mm du F-DRIVE 37, dont le débit maximal est de 7 470 L/min. Cet encombrement identique ne rend pas leurs capacités interchangeables ; le taux de marche du groupe reste indéterminé.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.almig.de/fileadmin/user_upload/Prospekte/Schraubenbroschuere/ALMiG_Screwcpressor_catalog_20260706_en.pdf#page=16",
+          "sha256": "f5ca167dedaab25352808dc5001ba9badc7acffb2c37168c6d9f89182b752a0e"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/boge-sl-221-3-10-bar-insonorisation-standard/",
+      "contentHash": "9b5d8166331e6850ac74c2bb27714aa001495535ba7642389943d466b6d4e28c",
+      "neighbors": [
+        "/compresseurs/boge-sl-181-3-7-5-bar-insonorisation-standard/"
+      ],
+      "contextHash": "95389a1ece8cc7f757b0dbb313ec7db6e89504a953f5546765f10469cd021754",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Le SL 221-3 standard associe 160 kW et une pression maximale de 10 bar dans un châssis 3 100 × 1 910 × 2 140 mm. Le SL 181-3 annonce aussi 22,70 m³/min, avec 132 kW et un maximum de 7,5 bar. Ces débits effectifs restent documentaires : leur pression de mesure n’est pas établie séparément, donc le calcul reste non conclusif.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.boge.com/f/287325279136465/x/55679246a0/boge-datenblatt-schraubenkompressor-s-3.pdf#page=1",
+          "sha256": "516b7e8e9ad6af00cbdea1444d9394ba099b039f5d01c72db9c295211d69ef27"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/boge-sl-31-3-7-5-bar-insonorisation-standard/",
+      "contentHash": "acbaf38eeee131186e825b66fe9aa9f3377da6310b78918fa649dbc4a66e2554",
+      "neighbors": [
+        "/compresseurs/boge-sl-181-3-7-5-bar-insonorisation-standard/",
+        "/compresseurs/boge-sl-221-3-10-bar-insonorisation-standard/"
+      ],
+      "contextHash": "d30d23e2e835414322fa1c6e282d3d7264c9f12b254de0f28e7bb214f371be3d",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Le SL 31-3 standard est le groupe de 22 kW, 780 kg et 1 620 × 990 × 1 450 mm du tableau S-3. Son débit effectif de 3,96 m³/min et son maximum de 7,5 bar le distinguent du SL 181-3, beaucoup plus volumineux. Le tableau ne sépare pas la pression de mesure du débit ; aucun point FAD calculable n’est ajouté.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.boge.com/f/287325279136465/x/55679246a0/boge-datenblatt-schraubenkompressor-s-3.pdf#page=1",
+          "sha256": "516b7e8e9ad6af00cbdea1444d9394ba099b039f5d01c72db9c295211d69ef27"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/kaeser-aircenter-25-secheur-et-cuve-integres-6-bar/",
+      "contentHash": "1f2ef5c9d1c8381481b6e564483c5b94d088a2a785d0d46e3f934634baa4905b",
+      "neighbors": [
+        "/compresseurs/kaeser-aircenter-25-secheur-et-cuve-integres-11-bar/",
+        "/compresseurs/kaeser-aircenter-25-secheur-et-cuve-integres-15-bar/"
+      ],
+      "contextHash": "c1af9f48c495d8868fa0a7ee36673bc3bb72d9c90ed40c0e17e44805ccf62a5e",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "L’AIRCENTER 25 fixe de cette configuration s’arrête à 6 bar et publie 2,69 m³/min à cette même pression. Il réunit moteur 15 kW, sécheur ABT 25 et cuve 350 L dans 750 × 1 335 × 1 880 mm. Les versions voisines autorisent 11 ou 15 bar, avec des points de débit à 10 ou 13 bar : leur pression ne doit pas être attribuée à cette version 6 bar. Le taux de marche du groupe reste inconnu.",
+      "sourceDocuments": [
+        {
+          "url": "https://nl.kaeser.com/download.ashx?id=tcm:32-5921#page=8",
+          "sha256": "e7f1e0bfdf990a0abe341a0750f48a851c4245bca66e72802e90d35c3fe4b75e"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/kaeser-aircenter-25-secheur-et-cuve-integres-8-bar/",
+      "contentHash": "79b8a75877564e6b6b615c36e26084bc3dce92dc1c62547d10f00f91da2a8df7",
+      "neighbors": [
+        "/compresseurs/kaeser-aircenter-25-secheur-et-cuve-integres-11-bar/",
+        "/compresseurs/kaeser-aircenter-25-secheur-et-cuve-integres-15-bar/"
+      ],
+      "contextHash": "c1af9f48c495d8868fa0a7ee36673bc3bb72d9c90ed40c0e17e44805ccf62a5e",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Cette version AIRCENTER 25 fixe publie 2,52 m³/min à 7,5 bar pour un maximum de 8 bar. Moteur 15 kW, sécheur ABT 25 et cuve 350 L la distinguent des groupes seuls ; le bloc SFC du catalogue décrit une autre régulation. Les variantes 11 et 15 bar partagent l’encombrement, avec des capacités différentes. Aucun service permanent n’est déduit du seul type de compresseur.",
+      "sourceDocuments": [
+        {
+          "url": "https://nl.kaeser.com/download.ashx?id=tcm:32-5921#page=8",
+          "sha256": "e7f1e0bfdf990a0abe341a0750f48a851c4245bca66e72802e90d35c3fe4b75e"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/elgi-eg-15-60-hz-vitesse-variable-groupe-fixe-au-sol-sans-secheur-vitesse-variable/",
+      "contentHash": "214d450daa1916c6dc0e849e041a48ecf4cb63c82cedcff0b0c02234b4b3ef6d",
+      "neighbors": [
+        "/compresseurs/elgi-eg-15-60-hz-10-8-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/",
+        "/compresseurs/elgi-eg-15-60-hz-12-6-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/"
+      ],
+      "contextHash": "a0f54114425de7e9cdbc3abfb1554cefbaed1562233ad15ae328ce985a251fdf",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "L’EG 15 variable du catalogue 60 Hz module de 1,05 à 2,61 m³/min à 6,9 bar et de 0,91 à 1,95 m³/min à 12,1 bar. Ses maxima rejoignent certains points de l’EG 15 fixe, mais ses minima de modulation et sa masse de 690 kg décrivent une autre configuration. Le profil conserve les maxima publiés, sans simuler la stabilité à faible charge ni transposer les valeurs à 50 Hz.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.elgi.com/eu/wp-content/uploads/2019/10/eg-series-11-75-60hz.pdf#page=11",
+          "sha256": "8bc82033cb7674d7a38e6b598e3a87555db6aab7601604f39a955080e166aa66"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/alup-evoluto-22/",
+      "contentHash": "a11530e05500057f083d0d82bf8fcac5541892815907cc8d231cad3ecdb89871",
+      "neighbors": [
+        "/compresseurs/alup-evoluto-11/"
+      ],
+      "contextHash": "f0a10bd82034584652735f4d15209335e243d90037bd1220b629caab75aed2b0",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "L’EVOLUTO 22 sur socle est le groupe 22 kW de 1 395 × 835 × 1 220 mm ; l’EVOLUTO 11 utilise le châssis 1 165 × 655 × 1 045 mm. À 9,5 bar, leurs maxima publiés sont respectivement 208,8 et 95,8 m³/h. La colonne 12,5 bar du catalogue dépasse le plafond de 10 bar retenu et reste exclue du moteur. Le débit minimal de modulation ne représente pas une moyenne d’atelier.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.alup.com/content/dam/brands/Alup/products-bp-structure/oil-injected-screw-compressor/fixed-speed/largo-15-25/leaflets/Alup_Largo_15-25_Evoluto_8-22_EN.pdf",
+          "sha256": "88850343508a5a38e98557b7e0229f393825f76cfdf4daa350b9ef9f9f6359a3"
+        },
+        {
+          "url": "https://www.alup.com/en-international/products/screw-compressors/variable-speed/evoluto-8-22",
+          "sha256": "b74b6285383007c4526967500fa4532ae5300e8ec6015e8ded96cf358fefa5e6"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/alup-evoluto-8/",
+      "contentHash": "fe32ea1c9e257c5126f8773e4af90561257f4e67bab90832dc2b994134414fa0",
+      "neighbors": [
+        "/compresseurs/alup-evoluto-11/"
+      ],
+      "contextHash": "f0a10bd82034584652735f4d15209335e243d90037bd1220b629caab75aed2b0",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "L’EVOLUTO 8 sur socle développe 7,5 kW dans 1 165 × 655 × 1 045 mm, comme l’enveloppe de l’EVOLUTO 11. Le maximum à 9,5 bar est de 67,7 m³/h contre 95,8 pour le 11. La variante sur cuve avec sécheur occupe un autre volume et n’est pas attribuée à ce groupe seul. Le taux de marche reste indéterminé.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.alup.com/content/dam/brands/Alup/products-bp-structure/oil-injected-screw-compressor/fixed-speed/largo-15-25/leaflets/Alup_Largo_15-25_Evoluto_8-22_EN.pdf",
+          "sha256": "88850343508a5a38e98557b7e0229f393825f76cfdf4daa350b9ef9f9f6359a3"
+        },
+        {
+          "url": "https://www.alup.com/en-international/products/screw-compressors/variable-speed/evoluto-8-22",
+          "sha256": "b74b6285383007c4526967500fa4532ae5300e8ec6015e8ded96cf358fefa5e6"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/fini-cube-7-5-10-270-es-z/",
+      "contentHash": "4296392a6d5c41665d620e2a84163c91e04253bd91b7f3c038d7c58a053aa6ec",
+      "neighbors": [
+        "/compresseurs/fini-cube-7-5-10-270-es/",
+        "/compresseurs/fini-cube-7-5-10-270-z/"
+      ],
+      "contextHash": "f40b9ed14fee55b84f6344f15711b182bf33326d602146af93ad69bacccc3d70",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "La CUBE7.5-10-270 ES Z combine cuve galvanisée270 L et sécheur frigorifique intégré, codeV91PO92FNM501. ES ajoute le sécheur ; Z indique la galvanisation. Son FAD reste1050 L/min à9,5 bar, comme la version à cuve peinte.",
+      "sourceDocuments": [
+        {
+          "url": "https://finicompressors.com/wp-content/uploads/Catalogo-Cube-Fini_EN_04-2024_9990397.pdf#page=3",
+          "sha256": "270d2f554801e15883dd85b3f3b6089c641adf51dd59c15f31e0fd06c7b88e1a"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/puska-ixo-5-5s-10-400-50-200-ce/",
+      "contentHash": "865fe029dd561463a440ebd714eb0c8dd578897777ec99919ee747dcc384c5de",
+      "neighbors": [
+        "/compresseurs/puska-ixo-5-5-10-400-50-200-ce/",
+        "/compresseurs/puska-ixo-5-5-10-400-50-ce/"
+      ],
+      "contextHash": "e35c4e6c1ad419c94d118c837511c48f8702381ba04fcc65871a5cd270cdf5e5",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Puska IXO 5,5S 10 400/50 200 CE 1839032446 : groupe sur cuve de 200 L avec sécheur, 4 kW et 180 kg. La version sans S conserve le débit de 498 L/min dans la ligne 10 bar mais pèse 153 kg ; la base seule mesure 615 × 780 × 946 mm. Le sécheur et l’encombrement distinguent les configurations.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.puska.com/content/dam/brands/Puska/catalogos/Cat%C3%A1logo%20Puska%202025.pdf#page=26",
+          "sha256": "62ce74f8e02f84d3c021f7162c9e8fd8cd9fc17fa41131797a1d7b3465e92454"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/puska-pke-3-10-k-200-c/",
+      "contentHash": "d1ec75813a636f94dd1ba6718193e4bf29ee4188480f2f0f18fdd64800ec227a",
+      "neighbors": [
+        "/compresseurs/puska-pke-3-10-k-c/"
+      ],
+      "contextHash": "fa183fc3aece381dcaa48bda15028640d9c57a89c6a65bf8ed036cd742f2c1bc",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Puska PKE 3 10 K 200 C 4152050529 : vis 2,2 kW sur cuve 200 L, contrôleur ES4000 Connect, 165 kg. La base sans cuve pèse 110 kg. Le suffixe K signale l’absence du démarreur étoile-triangle.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.puska.com/content/dam/brands/Puska/catalogos/Cat%C3%A1logo%20Puska%202025.pdf#page=29",
+          "sha256": "62ce74f8e02f84d3c021f7162c9e8fd8cd9fc17fa41131797a1d7b3465e92454"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/quincy-qgs-40c/",
+      "contentHash": "92d1b5753eec1347c6b90ccfddd3287698ff34e0709f89ef7af30d0555f20f9f",
+      "neighbors": [
+        "/compresseurs/quincy-qgs-40/",
+        "/compresseurs/quincy-qgs-50c/"
+      ],
+      "contextHash": "2322b8dc91a3187f6630669e9a182064ab90020f4ce46df6d9cc66b60eb91055",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "La QGS-40C publie176,1 cfm à125 psig pour40 hp, contre 154,9 cfm pour la QGS-40. Le catalogue distingue les versions au sol avec ou sans sécheur dans les dimensions et masses. La colonne réservoir NA ne devient pas un volume nul.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+          "sha256": "751228aea7ee7b2d83bb7af67071a1647374ae710e5d02c44f45cee1e59c4546"
+        },
+        {
+          "url": "https://www.quincycompressor.com/wp-content/uploads/2023/12/QC-QGS-QGSV-4p-AP-1-min.pdf#page=2",
+          "sha256": "3846893a6d89c68cf8053db3ba68ff0fdc4a1b20e9f71940c73a2813bb8245f8"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/quincy-qgs-5/",
+      "contentHash": "801f410b621d3e583feab98aafc421aa64710eecf4c1728f54994253246d50fa",
+      "neighbors": [
+        "/compresseurs/quincy-qgs-15/",
+        "/compresseurs/quincy-qgs-25/"
+      ],
+      "contextHash": "2bb24bafb406eab98ca1f50bf2525b21bd488a8005b837a1417d08b218252b4b",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "La QGS-5 associe5 hp,16,8 cfm à145 psig et un réservoir publié de60 gallon. La QGS-15 monte à54,9 cfm à125 psig avec120 gallon. La définition du gallon et le taux de service restent à établir avant de calculer stockage ou marche continue.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+          "sha256": "751228aea7ee7b2d83bb7af67071a1647374ae710e5d02c44f45cee1e59c4546"
+        },
+        {
+          "url": "https://www.quincycompressor.com/wp-content/uploads/2023/12/QC-QGS-QGSV-4p-AP-1-min.pdf#page=2",
+          "sha256": "3846893a6d89c68cf8053db3ba68ff0fdc4a1b20e9f71940c73a2813bb8245f8"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/ekomak-dmd-250/",
+      "contentHash": "a41a38c0844c71a2b2b4f3cb6ff420c449cc2731fc65db3faf278613094d1810",
+      "neighbors": [
+        "/compresseurs/ekomak-dmd-200/"
+      ],
+      "contextHash": "09de35ba18d12300910dca333c57a4c9d843f406779b08e77579b860348dafba",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Le DMD 250 est le groupe à courroie de 18,5 kW du tableau DMD 200–400. À la ligne de pression maximale 13 bar, le constructeur publie 139 m³/h, contre 112 pour le DMD 200 de 15 kW. La pression de mesure n’est pas identifiée séparément : ces valeurs restent documentaires. Les 100 % annoncés concernent l’élément de compression, pas un taux quantifié du groupe complet.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.ekomak.com/content/dam/brands/ekomak/products-bp-structure/oil-injected-screw-compressor/ivr/eko-8-22-x-vst/eko-16-22-x-vst/leaflet/Ekomak%20DMD%20200-400%20EKO%2016-22X%20VST%20Sales%20Leaflet%20EN%206999970200.pdf",
+          "sha256": "609ea406512a3dadefd878925a1b50486dc5b4dbe0f307b41f2a45cd726584b8"
+        },
+        {
+          "url": "https://www.ekomak.com/content/dam/brands/ekomak/products-bp-structure/oil-injected-screw-compressor/ivr/eko-8-22-x-vst/eko-16-22-x-vst/leaflet/Ekomak%20DMD%20200-400%20EKO%2016-22X%20VST%20Sales%20Leaflet%20EN%206999970200.pdf#page=5",
+          "sha256": "609ea406512a3dadefd878925a1b50486dc5b4dbe0f307b41f2a45cd726584b8"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/ekomak-dmd-30-crd/",
+      "contentHash": "03c42fc743dae3d5d8e61e5282261978db1ac3428cc0e8ad87f2ff503f3a90b7",
+      "neighbors": [
+        "/compresseurs/ekomak-dmd-250/"
+      ],
+      "contextHash": "96a28398308eaea1a31adb7ac95f7464e567b78429e6295aa2f005832e623882",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Le DMD 30 CRD associe le groupe 2,2 kW, la cuve 270 L et le sécheur : 190 kg pour 600 × 1 430 × 1 260 mm. Le DMD 30 CR sans sécheur pèse 165 kg ; le C seul, 110 kg. Les 0,32 m³/min du tableau à 10 bar sont conservés. La déclaration de cycle de l’élément de compression ne qualifie pas le taux de marche du groupe complet.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.ekomak.com/content/dam/brands/ekomak/products-bp-structure/oil-injected-screw-compressor/fixed-speed/dmd-30-400/Ekomak%20DMD%2030-75%20Sales%20Leaflet%206999970220%20EN%20LR.pdf#page=3",
+          "sha256": "fd54c02e168a7e0a604263b5b075e20280c649b5647ec0210fed527225764387"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/sullair-ls-25s-350/",
+      "contentHash": "b029e0c9523bf6a92025efea391f4a72e9ee399d83dc5b1ea16974486ad6194d",
+      "neighbors": [
+        "/compresseurs/sullair-ls-25s-200/",
+        "/compresseurs/sullair-ls-25s-300/"
+      ],
+      "contextHash": "1f6226117076d26c8a8a81c5be9ddc7c184d5f003717d5cb00f93761b3bfc44c",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "La LS-25S-350 fixe50 Hz publie1438 acfm à125 psig avec261 kW ; la LS-25S-300 à50 Hz publie1305 acfm à150 psig pour224 kW. Le choix doit conserver fréquence et pression propres à chaque ligne. La documentation du groupe prévoit un service continu.",
+      "sourceDocuments": [
+        {
+          "url": "https://europe.sullair.com/sites/default/files/2018-06/LIT%20Sullair%20Single-Stage%20Brochure_SAPSS200350201803-3_EN.pdf#page=8",
+          "sha256": "8320fc427e9a475c0df0a55f3c7acfc927b00528f7da4464c2fb512220387f14"
+        },
+        {
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+          "sha256": "751228aea7ee7b2d83bb7af67071a1647374ae710e5d02c44f45cee1e59c4546"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/sullair-ls110/",
+      "contentHash": "792a7cd6d9ad4ec3559493eae9eb23ef799be1b0ae2bda006f86c4f36a156281",
+      "neighbors": [
+        "/compresseurs/sullair-ls110v/"
+      ],
+      "contextHash": "80128103a3e2da85beecf1c76b9e290c84a08a1b95e65180299d057524d73aa0",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "La LS110 fixe publie568 cfm à175 psig pour110 kW ; la LS110V variable donne 559 cfm à ce même point. Leurs valeurs de pleine charge ne décrivent pas l’efficacité à faible charge. Le taux de service et la fréquence restent non qualifiés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+          "sha256": "751228aea7ee7b2d83bb7af67071a1647374ae710e5d02c44f45cee1e59c4546"
+        },
+        {
+          "url": "https://www.sullair.com/sites/default/files/2025-06/LIT_LS%20Brochure_en.pdf#page=20",
+          "sha256": "b5334d2e14ba868abae9d11191aa45a30e2ea9755e0ccbf4f32c4c8e16b7edc8"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/rotair-mdvn-37-k/",
+      "contentHash": "c1e473b6646620009f52b992c4cc1270a7484059eb69d9cdd36f7a28048b5f07",
+      "neighbors": [
+        "/compresseurs/rotair-mdvn-30/",
+        "/compresseurs/rotair-mdvn-37-p/"
+      ],
+      "contextHash": "0d8d54402716cdb60ca7130f2c9837ab701a1d4dff14cca2bd761523184e745e",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Rotair MDVN 37 K : compresseur diesel à moteur Kubota Stage IIIa, distinct du moteur Perkins de la version voisine. La configuration 7 bar fournit 3 600 L/min ; la version 10 bar donne 3 000 L/min. Le fabricant réserve cette famille aux pays où les normes d’émissions concernées ne s’appliquent pas. La MDVN 30 Rehlko Stage V répond à une autre destination.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.rotairspa.com/portable-compressors-diesel/mdvn-range/",
+          "sha256": "a9da2bb39af41c45f89cf10960a9928ab6c21a32459e5599d3421ec58c7f897a"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/rotair-mdvn-37-p/",
+      "contentHash": "3dce2a6564f91de7a4a1c11c4eaae8fb728580f6d3e4cdf064c9b4b82b1906b9",
+      "neighbors": [
+        "/compresseurs/rotair-mdvn-30/",
+        "/compresseurs/rotair-mdvn-37-k/"
+      ],
+      "contextHash": "8cc1fbaab4fe29e8520eff804ba24659ebd1c27af9601ed7efbb597be519c25f",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Rotair MDVN 37 P : compresseur diesel à moteur Perkins Stage IIIa, distinct du moteur Kubota de la version voisine. La configuration 7 bar fournit 3 600 L/min ; la version 10 bar donne 2 900 L/min. Le fabricant réserve cette famille aux pays où les normes d’émissions concernées ne s’appliquent pas. La MDVN 30 Rehlko Stage V répond à une autre destination.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.rotairspa.com/portable-compressors-diesel/mdvn-range/",
+          "sha256": "a9da2bb39af41c45f89cf10960a9928ab6c21a32459e5599d3421ec58c7f897a"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/rolair-5715mk103/",
+      "contentHash": "3260cb99a3cc39b9582b247be7f7000d870a7f14d0b72979ff34a99d45219c29",
+      "neighbors": [
+        "/compresseurs/rolair-6820mk103d/"
+      ],
+      "contextHash": "7bbcb972a3fb79260917002c026cca240fccfad4ae8fc0d6b76df398bea79813",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Le 5715MK103 de 1,5 HP livre 7,3 CFM à 90 PSI, distincts de ses 10,1 CFM déplacés ; le 6820MK103D de 2 HP livre 8,2 CFM. La fiche 2015 indique 110 V, 170 lb et un cycle de 100 %, alors que la page actuelle affiche 115/230 V et 175 lb. Ces révisions restent séparées : le cycle de l’ancienne fiche ne qualifie pas automatiquement le groupe actuellement livré.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+          "sha256": "751228aea7ee7b2d83bb7af67071a1647374ae710e5d02c44f45cee1e59c4546"
+        },
+        {
+          "url": "https://www.rolair.com/air-compressors/wheeled-electric-air-compressors/5715mk103",
+          "sha256": "9093717b37f24a35587924ebdcb6b4b5c8963fcaa0cfac38da3f150ecb09638b"
+        },
+        {
+          "url": "https://www.rolair.com/service-support/frequently-asked-questions",
+          "sha256": "3521638b3d4381bce2a642005d4c41949ff6eade5ad52ad726bb939a7f7b1192"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/rolair-6820mk103d/",
+      "contentHash": "257a8956c780751db81d1c02e9dd51ce242cdf6aaac6da32a7e68e0addc03d85",
+      "neighbors": [
+        "/compresseurs/rolair-5715mk103/"
+      ],
+      "contextHash": "bf061eb8469ef899aef48d05dcbb8e4d65dbb2e3c214953ff4c2864553da0236",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Le 6820MK103D de 2 HP et 1 740 tr/min fournit 8,2 CFM à 90 PSI, contre 7,3 pour le 5715MK103 de 1,5 HP. La double commande et le commutateur de tension sont de série. Les 11 CFM déplacés sont une autre grandeur ; les 20 gallons ASME sont une option distincte des 9 gallons publiés. Aucun cycle de service du groupe n’est déduit du service moteur mentionné dans la FAQ.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+          "sha256": "751228aea7ee7b2d83bb7af67071a1647374ae710e5d02c44f45cee1e59c4546"
+        },
+        {
+          "url": "https://www.rolair.com/air-compressors/wheeled-electric-air-compressors/6820mk103d",
+          "sha256": "f706cbda7af9c81169c09b5b3eced54bf5739e6fbfd0bd535543c27bddfee652"
+        },
+        {
+          "url": "https://www.rolair.com/service-support/frequently-asked-questions",
+          "sha256": "3521638b3d4381bce2a642005d4c41949ff6eade5ad52ad726bb939a7f7b1192"
+        }
+      ]
+    },
+    {
+      "path": "/guides/biax-gaf209-gaf513-microvissage/",
+      "contentHash": "1d349ebe7f34d24d234881b337062180b53fa2f4decb0eb166c4d814ea85b50b",
+      "neighbors": [
+        "/guides/compresseur-pour-visseuse-pneumatique/",
+        "/guides/utiliser-plusieurs-outils-pneumatiques/"
+      ],
+      "contextHash": "ff92c6f609ef41d18a9aa8cfaf05f6947e63f4f394891aed7a25a9f153db2092",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Deux interfaces et formats de microvissage : GAF209 150 g, hexagone 3 mm, 900 tr/min, face au GAF513 630 g, 1/4 pouce, 1 300 tr/min. Tableaux PDF 6 et 8 relus. La consigne de fonctionnement 6 bar est séparée de la mesure de consommation ; la somme 450 L/min reste documentaire. Progression choix de montage, interface et alimentation, distincte du simple dimensionnement simultané.",
+      "sourceDocuments": [
+        {
+          "url": "https://biax.de/wp-content/uploads/2025/02/BIAX_Schrauber_DE.pdf",
+          "sha256": "234541dfd789768204963f04e6df723f00c634bb38ced6d544e88ac762382718"
+        }
+      ]
+    },
+    {
+      "path": "/guides/biax-gmd3-graveur-cadence-air/",
+      "contentHash": "9e4aef608375fcddadeb4835c204e4f00b9d7b9c06d6476df4d59c33ee0c442c",
+      "neighbors": [
+        "/guides/compresseur-pour-graveur-pneumatique-cp9361/",
+        "/guides/micro-meuleuse-50000-60000-tr-min/"
+      ],
+      "contextHash": "fc61cc5cdaed8e377cb2dcce2cf0b26d65fd92c19bf60f5750513410e21a1a87",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Mécanisme alternatif 3 000 coups/min, porte-pointe hexagonal 3 mm et 100 g : le guide distingue cadence, vitesse de rotation et interface. PDF page 58 et tableau GMD3 HTML lus. Les 80 L/min restent documentaires, la consigne 6 bar ne prouve pas leur mesure. Apport distinct du CP9361 et de la micro-meuleuse rotative.",
+      "sourceDocuments": [
+        {
+          "url": "https://biax.de/en/product/gmd-3/",
+          "sha256": "8a84f3e62a5e5b959c21cd1423bcfbdf4c572ee2f2f6e7532cbc3345652a57e4"
+        },
+        {
+          "url": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf",
+          "sha256": "318971fb9ba951f395b81cbca3d1e57938ce23b74db3aef25ff98bb8f0edc6c8"
+        }
+      ]
+    },
+    {
+      "path": "/guides/uryu-us-lt10b-visseuse-faible-couple-air/",
+      "contentHash": "0bc9eb2067b662b4030f2e7f19f32c3a911cf436b8edbf243f57335cf52388c1",
+      "neighbors": [
+        "/guides/uryu-cle-chocs-temps-serrage-cinq-secondes/",
+        "/guides/uryu-urw6-pression-recommandee-couple-6-bar/"
+      ],
+      "contextHash": "b75c51ff57072cb2e07e2d7b59b3fe2a5efe4ab0acc832a90c7633992f49fa43",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "US-LT10B, code 47362, plage 0,20–0,60 Nm à pression recommandée 0,5 MPa, 1 000 tr/min, 191 mm et 0,29 kg : ligne exacte page PDF 1 lue. La moyenne 0,15 m³/min ne devient pas un maximum de serrage. Le profil calculateur est déjà average et non conclusif. Le guide traite la validation de l’assemblage faible couple ; il se distingue de l’URW6 et des limites de temps d’une clé à chocs.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.uryu.co.jp/wordpress/wp-content/themes/uryu-new/assets/pdf/product/en/2020/P50_51.pdf",
+          "sha256": "6cd4a6cabf99f71e218a0882b40a4f02651ca2ed0bb8bdfc8fd22eb8314cc941"
+        }
+      ]
+    },
+    {
+      "path": "/guides/atlas-ltv28-r07-6-couple-debit-compresseur/",
+      "contentHash": "5e546155e76aa2c5c223aaf69ca9a5a28a56d2161709cb00b41a0bd171691b78",
+      "neighbors": [
+        "/guides/compresseur-pour-visseuse-pneumatique/",
+        "/guides/renner-rs-b-3-0-atlas-lum22-450-l-min/"
+      ],
+      "contextHash": "5a383a24412ef435afe61da1ec2f87b3660a7e9b637c5baacaa591c228bf0a2b",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "La ligne LTV28 R07-6 8431060165 page PDF 35 publie 8 L/s dans la colonne Air consumption at free speed ; page 3 lue pour la pression générale 6,3 bar. Correction du guide et de sa dépendance calculateur : 480 L/min à vide, hors dimensionnement. Le RS-B 3.0, catalogue Renner page 8, livre 0,46 m³/min à 7,5 bar ; cet exemple ne conclut plus sur le besoin en serrage. Question distincte du cas LUM22 et du choix générique de visseuse.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.atlascopco.com/content/dam/atlas-copco/industrial-technique/general/documents/catalogs/Industrial%20Tools%20and%20Solutions_uk.pdf",
+          "sha256": "1e22ac35e18dfbe166f86a825fb5f9b33d152e6eddd3601c658fd39f20195e21"
+        },
+        {
+          "url": "https://www.renner-kompressoren.de/fileadmin/DATA/Medien/Newsletter/Deutsch/03_2026/RENNER_-_Produktkatalog_-_2026_-_DE_3.pdf",
+          "sha256": "35bd2421c2cc333bc6a0d6cd20c09bbf6b3c2af621021cb6cd2a254d23e74f8a"
+        }
+      ]
+    },
+    {
+      "path": "/guides/ceccato-csa-15-270-500-litres-manutention/",
+      "contentHash": "1f52977d0daa06fe70a37fc0186d6eabf0f8d52f66116638683c6eaf2d9f6d87",
+      "neighbors": [
+        "/guides/ceccato-csa-15-deux-perceuses-bosch/",
+        "/guides/ceccato-drb-20-7-bar-pression-reference/"
+      ],
+      "contextHash": "dd7bc0d1d50644305d4403a500acf3a3bdd0197756f7752939fd95d5dfdde3a0",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Comparaison des CSA15 FF TM270 et TM500 : +400 mm de longueur, +130 mm de hauteur et +65 kg, tableau PDF 6 lu avec pressions max 8/10/13 séparées des références 7,5/9,5/12,5. Le guide organise devis, passage et manutention ; la cuve ne reçoit aucun gain de FAD. Intention distincte du cas deux perceuses et de l’implantation DRB.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/csa-7-5-20-hp/leaflets/Ceccato_CSA_7.5-20_Leaflet_EN.pdf",
+          "sha256": "b36c0fbb8a63a69867b66a6e663923588ccfd8e2def16303b3be948aa706c23c"
+        }
+      ]
+    },
+    {
+      "path": "/guides/ceccato-drb-20-cuve-500-secheur-local/",
+      "contentHash": "c36474996e0f0a7096cb7ff1910be2dd6d2d62aecaf1f1cd7e0e5ae5affe87e6",
+      "neighbors": [
+        "/guides/ceccato-csa-15-deux-perceuses-bosch/",
+        "/guides/ceccato-drb-20-7-bar-pression-reference/"
+      ],
+      "contextHash": "dd7bc0d1d50644305d4403a500acf3a3bdd0197756f7752939fd95d5dfdde3a0",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "PDF 7 lu : trois montages DRB20, groupe seul 330 kg, groupe avec sécheur 375 kg, cuve500 avec sécheur 550 kg, enveloppes différentes. La progression porte sur la configuration livrée et l’espace du local, distincte du guide pression de référence DRB20 et de la manutention CSA15. FAD 162 m³/h à 7 bar séparé du maximum7,5 ; le stockage ne crée pas de capacité permanente.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.ceccato.com/content/dam/brands/Ceccato/restyling-website-ceccato/products/screw-compressors/fixed-speed/drb/drb-20-35-hp/Ceccato_DRB20-34_EN_LR.pdf",
+          "sha256": "36de017fd6f8e157e7827b0032fd27f34e40c340a8421cb4b889853235022c40"
+        }
+      ]
+    },
+    {
+      "path": "/guides/iwata-lw1-rallonge-angle-cavite/",
+      "contentHash": "822831f0c0781fd79aeeaa87cbf92012baf27bfc2da1abac36e49649f2537fd9",
+      "neighbors": [
+        "/guides/acheter-outil-industriel-reference-documentation/",
+        "/guides/mesurer-pression-dynamique-pistolet-peinture/"
+      ],
+      "contextHash": "5ee713e35d85a7d54bd035468d2ed9fcbd074612aafaa308c5f0b5b641ffa2fb",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Catalogue industrie Iwata PDF20 : cannes150/300/500 mm et angles0/45/90, configurations10E1 1mm à3bar 90Nl/min et18N1 1,8mm à3,5bar 210Nl/min. Les codes4515/4550 restent des combinaisons documentées ; longueur nominale et angle ne garantissent pas l’accès. Guide sur la géométrie de la cavité, distinct du réglage de pression et de la traçabilité à l’achat ; aucun régime de consommation en charge inventé.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.anest-iwata-coating.com/wp-content/uploads/2023/01/catalogue_2023__INDUSTRY_ENGaipl-1-compressed.pdf",
+          "sha256": "302977aaa53c6499ba928666a051209796dd51917555d3072a140af327ff01f1"
+        }
+      ]
+    },
+    {
+      "path": "/guides/hutchins-eliminator-2001-4921-rotative-couple/",
+      "contentHash": "9c230d51ba9c17b9d38a56dc2724aa1c65a53f52cf42fe9ef6dff03697c3aec5",
+      "neighbors": [
+        "/guides/diagnostiquer-chute-pression-air-comprime/",
+        "/guides/ponceuse-rotation-forcee-double-action/"
+      ],
+      "contextHash": "5416cac65fe28c7bb714a8c032662e7794435bed97a65cf20ed712957b96fcf4",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:17:09.787Z",
+      "note": "Section effective INSTRUCTIONS FOR HUTCHINS ELIMINATOR lue : vraie rotative à fort couple/faible vitesse, poignée en T pour guider, maintien arrière, alimentation à droite et pigtail d’échappement à gauche, contrôle du régulateur. Le guide sépare mouvement, prise en main et installation de l’aspiration sans inventer de débit ni de dépannage invasif. Intention distincte d’une orbitale et du diagnostic général des pertes de pression.",
+      "sourceDocuments": [
+        {
+          "url": "https://hutchinsmfg.com/troubleshoot/",
+          "sha256": "1f31e62893439936a5b6c6dedce02ddf779a215e63f262672b970e408b120736"
+        }
+      ]
+    },
+    {
+      "path": "/guides/iwata-tof50-tof50r-jet-plat-rond/",
+      "contentHash": "de4c695efb57b0e155147a7b1a8d1560358cfebcc5af0fa2d31cb3ca11145606",
+      "neighbors": [
+        "/guides/acheter-outil-industriel-reference-documentation/",
+        "/guides/iwata-lw1-rallonge-angle-cavite/",
+        "/guides/mesurer-pression-dynamique-pistolet-peinture/"
+      ],
+      "contextHash": "1ee3f0883afc31ec596794d798f51913244acd443d4185799485122968c86eb1",
+      "rulesHash": "294e31d62453ab70455d2c0abe9d795018d765a3f67be6becaf719ce8e10d91c",
+      "sourceReleaseSha": "a3b33ea1bbdc9d892fbb5154736c499b1ffb5706",
+      "reviewedAt": "2026-11-16T08:19:43.411Z",
+      "note": "Nouvelle entrée mécanique après priorisation des qualifications, relue intégralement. Tableau et codes page PDF35 vérifiés visuellement : TOF-50-102P 13608980, chapeau E2, 1bar, 50Nl/min, 280mL/min, jet180mm ; TOF-50R-102P 13609090, chapeau1, 2,5bar, 70Nl/min, 280mL/min, jet55mm. Les pressions différentes empêchent un classement de rendement. Guide sur le choix de forme et le protocole d’essai de démoulant, distinct de la géométrie LW1 et du réglage dynamique. Les deux profils moteur conservent airflowBasis unqualified.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.anest-iwata-coating.com/wp-content/uploads/2023/01/catalogue_2023__INDUSTRY_ENGaipl-1-compressed.pdf",
+          "sha256": "302977aaa53c6499ba928666a051209796dd51917555d3072a140af327ff01f1"
+        }
+      ]
     }
   ]
 }

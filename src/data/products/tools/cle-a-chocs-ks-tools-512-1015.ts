@@ -10,16 +10,14 @@ const product: ToolProfileInput = {
 	"model": "512.1015",
 	"mpn": "512.1015",
 	"demandModel": "variable-volume",
-	"workingPressureBar": {
-		"max": 8
-	},
-	"demandExplanation": "La consommation et son point de pression ne sont pas établis de façon exploitable dans la fiche fabricant. Les caractéristiques publiées restent consultables, sans débit de calcul supposé.",
+	"workingPressureBar": {},
+	"demandExplanation": "La fiche ne qualifie ni le régime de consommation ni son appariement à une pression de mesure. Les valeurs publiées restent documentaires ; la compatibilité demeure indéterminée.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-chocs-ks-tools-512-1015.webp",
+		"src": "/images/products/cle-a-chocs-ks-tools-512-1015-technical-20261116-followup.svg",
 		"alt": "Repères techniques : KS Tools 512.1015",
 		"sourceUrl": "https://www.kstools.com/en/products/hand-tools-catalogue/pneumatic-tools/impact-wrenches/24412/1-the-devil-high-performance-impact-wrench-4250nm?c=1011737465",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "ks-tools-512-1015",
@@ -31,181 +29,210 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "KS Tools 512.1015. La consommation et son point de pression ne sont pas établis de façon exploitable dans la fiche fabricant. Les caractéristiques publiées restent consultables, sans débit de calcul supposé. Intitulé fabricant : 1\" THE DEVIL high performance impact wrench, 4250Nm. Consommation publiée (L/min) : 170.",
+		"overview": "KS Tools 512.1015 : clé à chocs à carré 1 pouce et double marteau, corps court 246 mm et masse 7 300 g. Le fabricant distingue le desserrage maximum 4 250 Nm des trois réglages de serrage 1 600 / 2 730 / 3 110 Nm. Le raccord 1/2 PT et la limite de service 8 bar restent des caractéristiques d’alimentation.",
 		"verifiedFacts": [
-			"Intitulé fabricant : 1\" THE DEVIL high performance impact wrench, 4250Nm.",
-			"Consommation publiée (L/min) : 170.",
-			"Filetage de raccordement publié : 1/2\"PT.",
-			"Champ fabricant : Drive in imperial : 1.",
-			"Champ fabricant : Handle : cold isolated handle.",
-			"Vitesse à vide publiée (tr/min) : 5500.",
-			"Champ fabricant : Noise performance level (dbA) : 108.8.",
-			"Champ fabricant : Noise pressure level (dbA) : 96.09.",
-			"Pression de service, libellé original : max. 8,0 bar.",
-			"Carré d’entraînement publié : 1.",
-			"Longueur totale publiée (mm) : 246.",
-			"Champ fabricant : Vibration acceleration : 12,96.",
-			"Masse publiée (g) : 7300.",
-			"Largeur B publiée : 240.",
-			"Champ fabricant : max. Clockwise torque2 : 2 = 2730 Nm.",
-			"Champ fabricant : max. Clockwise-torque3 : 3 = 3110 Nm.",
-			"Couple maximal de desserrage publié : 4250.",
-			"Couple maximal de serrage publié : 1 = 1600 Nm.",
-			"Dimension minimale de tuyau, libellé original : 3/8\" - 10 mm."
+			"Carré : 1 pouce.",
+			"Mécanisme : Double marteau.",
+			"Serrage, trois réglages publiés : 1 600 / 2 730 / 3 110 Nm.",
+			"Desserrage maximum publié : 4 250 Nm.",
+			"Longueur : 246 mm.",
+			"Masse : 7 300 g.",
+			"Consommation documentaire : 170 L/min, régime non précisé.",
+			"Limite de service : 8 bar."
 		],
 		"limitations": [
-			"La consommation et son point de pression ne sont pas établis de façon exploitable dans la fiche fabricant. Les caractéristiques publiées restent consultables, sans débit de calcul supposé.",
-			"La fiche ne relie pas explicitement la consommation à un point de pression mesuré ni à un régime en charge. La pression de service et le débit publié restent deux informations distinctes.",
-			"Le champ « min. Tube diameter » ne précise pas littéralement un diamètre intérieur ; aucune section hydraulique n’est déduite de ce libellé.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"La fiche ne qualifie ni le régime de consommation ni son appariement à une pression de mesure. Les valeurs publiées restent documentaires ; la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Intitulé fabricant",
-			"value": "1\" THE DEVIL high performance impact wrench, 4250Nm",
+			"label": "Carré",
+			"value": "1 pouce",
 			"evidenceIds": [
-				"october3c-tools-ks-product-512-1015-p1"
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
 			]
 		},
 		{
-			"label": "Consommation publiée (L/min)",
+			"label": "Mécanisme",
+			"value": "Double marteau",
+			"evidenceIds": [
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
+			]
+		},
+		{
+			"label": "Serrage, trois réglages publiés",
+			"value": "1 600 / 2 730 / 3 110 Nm",
+			"evidenceIds": [
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
+			]
+		},
+		{
+			"label": "Desserrage maximum publié",
+			"value": "4 250 Nm",
+			"evidenceIds": [
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "246 mm",
+			"evidenceIds": [
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "7 300 g",
+			"evidenceIds": [
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "170 L/min, régime non précisé",
+			"evidenceIds": [
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
+			]
+		},
+		{
+			"label": "Limite de service",
+			"value": "8 bar",
+			"evidenceIds": [
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
+			]
+		},
+		{
+			"label": "Champ fabricant : Air consumption in l/min",
 			"value": "170",
 			"evidenceIds": [
-				"october3c-tools-ks-product-512-1015-p1"
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
 			]
 		},
 		{
-			"label": "Filetage de raccordement publié",
+			"label": "Champ fabricant : Connection thread",
 			"value": "1/2\"PT",
 			"evidenceIds": [
-				"october3c-tools-ks-product-512-1015-p1"
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Drive in imperial",
 			"value": "1",
 			"evidenceIds": [
-				"october3c-tools-ks-product-512-1015-p1"
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Handle",
 			"value": "cold isolated handle",
 			"evidenceIds": [
-				"october3c-tools-ks-product-512-1015-p1"
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
 			]
 		},
 		{
-			"label": "Vitesse à vide publiée (tr/min)",
+			"label": "Champ fabricant : No Load current rpm",
 			"value": "5500",
 			"evidenceIds": [
-				"october3c-tools-ks-product-512-1015-p1"
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Noise performance level (dbA)",
 			"value": "108.8",
 			"evidenceIds": [
-				"october3c-tools-ks-product-512-1015-p1"
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Noise pressure level (dbA)",
 			"value": "96.09",
 			"evidenceIds": [
-				"october3c-tools-ks-product-512-1015-p1"
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
 			]
 		},
 		{
-			"label": "Pression de service, libellé original",
+			"label": "Champ fabricant : Operating pressure in bar",
 			"value": "max. 8,0 bar",
 			"evidenceIds": [
-				"october3c-tools-ks-product-512-1015-p1"
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
 			]
 		},
 		{
-			"label": "Carré d’entraînement publié",
+			"label": "Champ fabricant : Packaging contents",
 			"value": "1",
 			"evidenceIds": [
-				"october3c-tools-ks-product-512-1015-p1"
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
 			]
 		},
 		{
-			"label": "Longueur totale publiée (mm)",
+			"label": "Champ fabricant : Square drive",
+			"value": "1",
+			"evidenceIds": [
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
+			]
+		},
+		{
+			"label": "Champ fabricant : Total length L in mm",
 			"value": "246",
 			"evidenceIds": [
-				"october3c-tools-ks-product-512-1015-p1"
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Vibration acceleration",
 			"value": "12,96",
 			"evidenceIds": [
-				"october3c-tools-ks-product-512-1015-p1"
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
 			]
 		},
 		{
-			"label": "Masse publiée (g)",
+			"label": "Champ fabricant : Weight [g]",
 			"value": "7300",
 			"evidenceIds": [
-				"october3c-tools-ks-product-512-1015-p1"
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
 			]
 		},
 		{
-			"label": "Largeur B publiée",
+			"label": "Champ fabricant : Width B",
 			"value": "240",
 			"evidenceIds": [
-				"october3c-tools-ks-product-512-1015-p1"
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : max. Clockwise torque2",
 			"value": "2 = 2730 Nm",
 			"evidenceIds": [
-				"october3c-tools-ks-product-512-1015-p1"
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : max. Clockwise-torque3",
 			"value": "3 = 3110 Nm",
 			"evidenceIds": [
-				"october3c-tools-ks-product-512-1015-p1"
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
 			]
 		},
 		{
-			"label": "Couple maximal de desserrage publié",
+			"label": "Champ fabricant : max. Loosening torque",
 			"value": "4250",
 			"evidenceIds": [
-				"october3c-tools-ks-product-512-1015-p1"
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
 			]
 		},
 		{
-			"label": "Couple maximal de serrage publié",
+			"label": "Champ fabricant : max. Tightening torque",
 			"value": "1 = 1600 Nm",
 			"evidenceIds": [
-				"october3c-tools-ks-product-512-1015-p1"
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
 			]
 		},
 		{
-			"label": "Dimension minimale de tuyau, libellé original",
+			"label": "Champ fabricant : min. Tube diameter",
 			"value": "3/8\" - 10 mm",
 			"evidenceIds": [
-				"october3c-tools-ks-product-512-1015-p1"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "Operating pressure in bar: max. 8,0 bar",
-			"evidenceIds": [
-				"october3c-tools-ks-product-512-1015-p1"
-			]
-		},
-		{
-			"label": "Consommation de régime non précisé, hors calcul",
-			"value": "170 L/min",
-			"evidenceIds": [
-				"october3c-tools-ks-product-512-1015-p1"
+				"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
 			]
 		}
 	],
@@ -219,21 +246,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 74572f096885950eea40cb77e39396d4e2b6c5b119b2098f6d14dd502d2d8484. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0",
+			"sourceUrl": "https://www.kstools.com/en/products/hand-tools-catalogue/pneumatic-tools/impact-wrenches/24412/1-the-devil-high-performance-impact-wrench-4250nm?c=1011737465",
+			"sourceLabel": "KS Tools, document constructeur vérifié le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "KS Tools 512.1015 : clé à chocs à carré 1 pouce et double marteau, corps court 246 mm et masse 7 300 g. Le fabricant distingue le desserrage maximum 4 250 Nm des trois réglages de serrage 1 600 / 2 730 / 3 110 Nm. Le raccord 1/2 PT et la limite de service 8 bar restent des caractéristiques d’alimentation. GET complet SHA-256 f80e1645deea13c5516b7f7db923713fb23724560a88caf755accadb1e3e6cf8. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october3c-tools-ks-product-512-1015-p1"
-		],
-		"workingPressureBar": [
-			"october3c-tools-ks-product-512-1015-p1"
+			"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
 		],
 		"demandExplanation": [
-			"october3c-tools-ks-product-512-1015-p1"
+			"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-technical:cle-a-chocs-ks-tools-512-1015:0"
 		]
 	},
 	"notes": [
-		"La consommation et son point de pression ne sont pas établis de façon exploitable dans la fiche fabricant. Les caractéristiques publiées restent consultables, sans débit de calcul supposé."
+		"La fiche ne qualifie ni le régime de consommation ni son appariement à une pression de mesure. Les valeurs publiées restent documentaires ; la compatibilité demeure indéterminée."
 	]
 };
 

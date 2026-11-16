@@ -10,16 +10,14 @@ const product: ToolProfileInput = {
 	"model": "515.5475",
 	"mpn": "515.5475",
 	"demandModel": "variable-volume",
-	"workingPressureBar": {
-		"max": 6.3
-	},
-	"demandExplanation": "La consommation et son point de pression ne sont pas établis de façon exploitable dans la fiche fabricant. Les caractéristiques publiées restent consultables, sans débit de calcul supposé.",
+	"workingPressureBar": {},
+	"demandExplanation": "La fiche ne qualifie ni le régime de consommation ni son appariement à une pression de mesure. Les valeurs publiées restent documentaires ; la compatibilité demeure indéterminée.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/tronconneuse-ks-tools-515-5475.webp",
+		"src": "/images/products/tronconneuse-ks-tools-515-5475-technical-20261116-followup.svg",
 		"alt": "Repères techniques : KS Tools 515.5475",
 		"sourceUrl": "https://www.kstools.com/en/products/special-tools-for-passenger-cars-and-light-commercial-vans/exhaust-system-catalysers/exhaust-pipe-separating-and-cutting-tools/12682/3/8-pneumatic-short-disc-cutter-15.000-rpm?c=1011737472",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "ks-tools-515-5475",
@@ -31,181 +29,246 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "KS Tools 515.5475. La consommation et son point de pression ne sont pas établis de façon exploitable dans la fiche fabricant. Les caractéristiques publiées restent consultables, sans débit de calcul supposé. Intitulé fabricant : 3/8\" Pneumatic short disc cutter, 15.000 rpm. Consommation publiée (L/min) : 350.",
+		"overview": "KS Tools 515.5475 : tronçonneuse à carter pare-étincelles réglable, disque déclaré jusqu’à 100 × 1,6 × 16 mm et vitesse à vide 15 000 tr/min. La longueur publiée est 345 mm et la masse 1 410 g. La fiche indique aussi Tool holder 6,3 mm et un titre 3/8 pouce : la fixation exacte du disque reste à confirmer.",
 		"verifiedFacts": [
-			"Intitulé fabricant : 3/8\" Pneumatic short disc cutter, 15.000 rpm.",
-			"Consommation publiée (L/min) : 350.",
-			"Puissance publiée : 370 Watt.",
-			"Filetage de raccordement publié : 1/4\"NPT.",
-			"Champ fabricant : Disc diameter [mm] : 100.",
-			"Champ fabricant : Function attribute 1 : safety locking device.",
-			"Champ fabricant : Handle : cold isolated handle.",
-			"Vitesse à vide publiée (tr/min) : 15000.",
-			"Champ fabricant : Noise performance level (dbA) : 104.8.",
-			"Champ fabricant : Noise pressure level (dbA) : 93.8.",
-			"Champ fabricant : Norm : DIN EN ISO 28927-3.",
-			"Pression de service, libellé original : max. 6,3 bar (90 psi).",
-			"Champ fabricant : Replacement-cutting wheel : 337.2010.",
-			"Champ fabricant : Tool holder : 6,3 mm.",
-			"Longueur totale publiée (mm) : 345.",
-			"Champ fabricant : Vibration acceleration : < 5,8.",
-			"Masse publiée (g) : 1410.",
-			"Largeur B publiée : 60.0.",
-			"Dimension minimale de tuyau, libellé original : 3/8\" - 10 mm."
+			"Disque, capacité déclarée : Jusqu’à 100 × 1,6 × 16 mm.",
+			"Protection : Pare-étincelles réglable.",
+			"Vitesse à vide : 15 000 tr/min.",
+			"Puissance : 370 W.",
+			"Longueur : 345 mm.",
+			"Masse : 1 410 g.",
+			"Tool holder, libellé fabricant : 6,3 mm.",
+			"Consommation documentaire : 350 L/min, régime non précisé."
 		],
 		"limitations": [
-			"La consommation et son point de pression ne sont pas établis de façon exploitable dans la fiche fabricant. Les caractéristiques publiées restent consultables, sans débit de calcul supposé.",
-			"La fiche ne relie pas explicitement la consommation à un point de pression mesuré ni à un régime en charge. La pression de service et le débit publié restent deux informations distinctes.",
-			"Le champ « min. Tube diameter » ne précise pas littéralement un diamètre intérieur ; aucune section hydraulique n’est déduite de ce libellé.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"La fiche ne qualifie ni le régime de consommation ni son appariement à une pression de mesure. Les valeurs publiées restent documentaires ; la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer.",
+			"Le titre 3/8 pouce, le champ Tool holder 6,3 mm et l’alésage déclaré 16 mm ne sont pas fusionnés en une même dimension de montage."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Intitulé fabricant",
-			"value": "3/8\" Pneumatic short disc cutter, 15.000 rpm",
+			"label": "Disque, capacité déclarée",
+			"value": "Jusqu’à 100 × 1,6 × 16 mm",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5475-p1"
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
 			]
 		},
 		{
-			"label": "Consommation publiée (L/min)",
+			"label": "Protection",
+			"value": "Pare-étincelles réglable",
+			"evidenceIds": [
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "15 000 tr/min",
+			"evidenceIds": [
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
+			]
+		},
+		{
+			"label": "Puissance",
+			"value": "370 W",
+			"evidenceIds": [
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
+			]
+		},
+		{
+			"label": "Longueur",
+			"value": "345 mm",
+			"evidenceIds": [
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "1 410 g",
+			"evidenceIds": [
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
+			]
+		},
+		{
+			"label": "Tool holder, libellé fabricant",
+			"value": "6,3 mm",
+			"evidenceIds": [
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "350 L/min, régime non précisé",
+			"evidenceIds": [
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
+			]
+		},
+		{
+			"label": "Champ fabricant : Air consumption in l/min",
 			"value": "350",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5475-p1"
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
 			]
 		},
 		{
-			"label": "Puissance publiée",
+			"label": "Champ fabricant : Capacity Watt",
 			"value": "370 Watt",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5475-p1"
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
 			]
 		},
 		{
-			"label": "Filetage de raccordement publié",
+			"label": "Champ fabricant : Connection thread",
 			"value": "1/4\"NPT",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5475-p1"
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Disc diameter [mm]",
 			"value": "100",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5475-p1"
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Function attribute 1",
 			"value": "safety locking device",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5475-p1"
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Handle",
 			"value": "cold isolated handle",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5475-p1"
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
 			]
 		},
 		{
-			"label": "Vitesse à vide publiée (tr/min)",
+			"label": "Champ fabricant : Measuring uncertainty vibration acceleration",
+			"value": "1.9",
+			"evidenceIds": [
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
+			]
+		},
+		{
+			"label": "Champ fabricant : No Load current rpm",
 			"value": "15000",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5475-p1"
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Noise performance level (dbA)",
 			"value": "104.8",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5475-p1"
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Noise pressure level (dbA)",
 			"value": "93.8",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5475-p1"
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Norm",
 			"value": "DIN EN ISO 28927-3",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5475-p1"
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
 			]
 		},
 		{
-			"label": "Pression de service, libellé original",
+			"label": "Champ fabricant : Operating Mode",
+			"value": "pneumatic",
+			"evidenceIds": [
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
+			]
+		},
+		{
+			"label": "Champ fabricant : Operating pressure in bar",
 			"value": "max. 6,3 bar (90 psi)",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5475-p1"
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
+			]
+		},
+		{
+			"label": "Champ fabricant : Packaging contents",
+			"value": "1",
+			"evidenceIds": [
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
+			]
+		},
+		{
+			"label": "Champ fabricant : Packaging height, mm",
+			"value": "85",
+			"evidenceIds": [
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
+			]
+		},
+		{
+			"label": "Champ fabricant : Packaging length, mm",
+			"value": "371",
+			"evidenceIds": [
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
+			]
+		},
+		{
+			"label": "Champ fabricant : Packaging width, mm",
+			"value": "131",
+			"evidenceIds": [
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Replacement-cutting wheel",
 			"value": "337.2010",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5475-p1"
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Tool holder",
 			"value": "6,3 mm",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5475-p1"
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
 			]
 		},
 		{
-			"label": "Longueur totale publiée (mm)",
+			"label": "Champ fabricant : Total length L in mm",
 			"value": "345",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5475-p1"
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Vibration acceleration",
 			"value": "< 5,8",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5475-p1"
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
 			]
 		},
 		{
-			"label": "Masse publiée (g)",
+			"label": "Champ fabricant : Weight [g]",
 			"value": "1410",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5475-p1"
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
 			]
 		},
 		{
-			"label": "Largeur B publiée",
+			"label": "Champ fabricant : Width B",
 			"value": "60.0",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5475-p1"
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
 			]
 		},
 		{
-			"label": "Dimension minimale de tuyau, libellé original",
+			"label": "Champ fabricant : min. Tube diameter",
 			"value": "3/8\" - 10 mm",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-5475-p1"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "Operating pressure in bar: max. 6,3 bar (90 psi)",
-			"evidenceIds": [
-				"october3c-tools-ks-product-515-5475-p1"
-			]
-		},
-		{
-			"label": "Consommation de régime non précisé, hors calcul",
-			"value": "350 L/min",
-			"evidenceIds": [
-				"october3c-tools-ks-product-515-5475-p1"
+				"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
 			]
 		}
 	],
@@ -219,21 +282,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 5008f309afc9e9697d01eb5043aab844900ea520cf0c1753e0f91752118c95b4. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0",
+			"sourceUrl": "https://www.kstools.com/en/products/special-tools-for-passenger-cars-and-light-commercial-vans/exhaust-system-catalysers/exhaust-pipe-separating-and-cutting-tools/12682/3/8-pneumatic-short-disc-cutter-15.000-rpm?c=1011737472",
+			"sourceLabel": "KS Tools, document constructeur vérifié le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "KS Tools 515.5475 : tronçonneuse à carter pare-étincelles réglable, disque déclaré jusqu’à 100 × 1,6 × 16 mm et vitesse à vide 15 000 tr/min. La longueur publiée est 345 mm et la masse 1 410 g. La fiche indique aussi Tool holder 6,3 mm et un titre 3/8 pouce : la fixation exacte du disque reste à confirmer. GET complet SHA-256 5bc8ab653c42bd5bbbbee6656d438d0ac007edc256e283ef36c9c4481f54c539. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october3c-tools-ks-product-515-5475-p1"
-		],
-		"workingPressureBar": [
-			"october3c-tools-ks-product-515-5475-p1"
+			"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
 		],
 		"demandExplanation": [
-			"october3c-tools-ks-product-515-5475-p1"
+			"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-technical:tronconneuse-ks-tools-515-5475:0"
 		]
 	},
 	"notes": [
-		"La consommation et son point de pression ne sont pas établis de façon exploitable dans la fiche fabricant. Les caractéristiques publiées restent consultables, sans débit de calcul supposé."
+		"La fiche ne qualifie ni le régime de consommation ni son appariement à une pression de mesure. Les valeurs publiées restent documentaires ; la compatibilité demeure indéterminée."
 	]
 };
 

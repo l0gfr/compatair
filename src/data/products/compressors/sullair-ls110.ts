@@ -27,10 +27,10 @@ const product: CompressorInput = {
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/sullair-ls110.svg",
+    "src": "/images/products/sullair-ls110-technical-20261116-followup.svg",
     "alt": "Repères techniques : Sullair LS110",
     "sourceUrl": "https://www.sullair.com/sites/default/files/2025-06/LIT_LS%20Brochure_en.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "specifications": [
     {
@@ -76,13 +76,37 @@ const product: CompressorInput = {
       "evidenceIds": [
         "october4c-sullair-ls-catalog-p20"
       ]
+    },
+    {
+      "label": "Point original",
+      "value": "568 cfm à175 psig ; ISO1217 annexe C",
+      "evidenceIds": [
+        "review:2026-11-16-technical:sullair-ls110:0"
+      ]
+    },
+    {
+      "label": "Dimensions publiées",
+      "value": "2509 × 1760 × 1773 mm",
+      "evidenceIds": [
+        "review:2026-11-16-technical:sullair-ls110:0"
+      ]
+    },
+    {
+      "label": "Masse publiée",
+      "value": "2730 kg ;6007 lb, valeurs originales conservées",
+      "evidenceIds": [
+        "review:2026-11-16-technical:sullair-ls110:0"
+      ]
     }
   ],
   "editorial": {
-    "overview": "Sullair LS110. 16 083,967 L/min déclarés à 12,066 bar. Configuration constructeur : Compresseur à vis à vitesse fixe, point de pleine charge du catalogue LS 2025.",
+    "overview": "La LS110 fixe publie568 cfm à175 psig pour110 kW ; la LS110V variable donne 559 cfm à ce même point. Leurs valeurs de pleine charge ne décrivent pas l’efficacité à faible charge. Le taux de service et la fréquence restent non qualifiés.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 12,066 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 16 083,967 L/min déclarés à 12,066 bar."
+      "FAD sous pression identifié séparément des valeurs d’aspiration : 16 083,967 L/min déclarés à 12,066 bar.",
+      "Point original : 568 cfm à175 psig ; ISO1217 annexe C.",
+      "Dimensions publiées : 2509 × 1760 × 1773 mm.",
+      "Masse publiée : 2730 kg ;6007 lb, valeurs originales conservées."
     ],
     "limitations": [
       "Les cfm sont explicitement rattachés à ISO 1217 annexe C ; ils sont utilisés pour la conversion, sans reprendre les colonnes métriques présentant des écarts.",
@@ -113,6 +137,26 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 057d9641caab13e6632aa7f70eeb1b76d676ae3e131b3e6ed73b8bf6ca0c28c3 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-technical:sullair-ls110:0",
+      "sourceUrl": "https://www.sullair.com/sites/default/files/2025-06/LIT_LS%20Brochure_en.pdf",
+      "sourceLabel": "Sullair, document constructeur vérifié le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "La LS110 fixe publie568 cfm à175 psig pour110 kW ; la LS110V variable donne 559 cfm à ce même point. Leurs valeurs de pleine charge ne décrivent pas l’efficacité à faible charge. Le taux de service et la fréquence restent non qualifiés. GET complet SHA-256 b5334d2e14ba868abae9d11191aa45a30e2ea9755e0ccbf4f32c4c8e16b7edc8. Pages PDF lues : 20."
+    },
+    {
+      "id": "review:2026-11-16-technical:sullair-ls110:1",
+      "sourceUrl": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+      "sourceLabel": "Sullair, document constructeur vérifié le 16 novembre 2026",
+      "sourceType": "manufacturer",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "La LS110 fixe publie568 cfm à175 psig pour110 kW ; la LS110V variable donne 559 cfm à ce même point. Leurs valeurs de pleine charge ne décrivent pas l’efficacité à faible charge. Le taux de service et la fréquence restent non qualifiés. GET complet SHA-256 751228aea7ee7b2d83bb7af67071a1647374ae710e5d02c44f45cee1e59c4546. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
     }
   ],
   "fieldSources": {

@@ -10,16 +10,14 @@ const product: ToolProfileInput = {
 	"model": "SA52",
 	"mpn": "SA52",
 	"demandModel": "variable-volume",
-	"workingPressureBar": {
-		"typical": 6.205
-	},
-	"demandExplanation": "La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué.",
+	"workingPressureBar": {},
+	"demandExplanation": "La fiche décrit la consommation sans qualifier son régime de mesure. La pression de service reste séparée ; la compatibilité demeure indéterminée.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/derouilleur-a-aiguilles-sealey-sa52.webp",
+		"src": "/images/products/derouilleur-a-aiguilles-sealey-sa52-technical-20261116-followup.svg",
 		"alt": "Repères techniques : Sealey SA52",
 		"sourceUrl": "https://www.sealey.co.uk/air-needle-scaler-air-hammer-sa52/",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "sealey-sa52",
@@ -31,86 +29,154 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "Sealey SA52. La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué. Champ fabricant : Air Consumption : 3cfm. Champ fabricant : Free Speed : 4800bpm.",
+		"overview": "Sealey SA52 : marteau droit à têtes interchangeables pour aiguilles ou burin, commandé dans la paume. La course est 32 mm, la cadence à vide 4 800 coups/min et la masse 1,2 kg. La fiche indique un jeu de remplacement de 12 aiguilles et le burin SA52/15.",
 		"verifiedFacts": [
-			"Champ fabricant : Air Consumption : 3cfm.",
-			"Champ fabricant : Free Speed : 4800bpm.",
-			"Champ fabricant : Inlet Size : 1/4\"BSP.",
-			"Champ fabricant : Noise Power/Pressure : 105/94dB(A).",
-			"Champ fabricant : Operating Pressure : 90psi.",
-			"Champ fabricant : Stroke : 32mm.",
-			"Champ fabricant : Vibration/Uncertainty : 8.56/1.34m/s².",
-			"Champ fabricant : Nett Weight : 1.2kg."
+			"Têtes : Interchangeables, aiguilles et burin.",
+			"Commande : Dans la paume.",
+			"Course : 32 mm.",
+			"Cadence à vide : 4 800 coups/min.",
+			"Masse : 1,2 kg.",
+			"Jeu d’aiguilles de remplacement : SA51/16, 12 pièces.",
+			"Consommation documentaire : 3 cfm, régime non précisé.",
+			"Pression de service : 90 psi."
 		],
 		"limitations": [
-			"La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué.",
-			"Fiche produit constructeur, caractéristiques déclaratives ; aucun essai physique CompatAir.",
-			"Les pressions recommandées ou limites d’alimentation restent distinctes des points de mesure de consommation.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"La fiche décrit la consommation sans qualifier son régime de mesure. La pression de service reste séparée ; la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
+			"label": "Têtes",
+			"value": "Interchangeables, aiguilles et burin",
+			"evidenceIds": [
+				"review:2026-11-16-technical:derouilleur-a-aiguilles-sealey-sa52:0"
+			]
+		},
+		{
+			"label": "Commande",
+			"value": "Dans la paume",
+			"evidenceIds": [
+				"review:2026-11-16-technical:derouilleur-a-aiguilles-sealey-sa52:0"
+			]
+		},
+		{
+			"label": "Course",
+			"value": "32 mm",
+			"evidenceIds": [
+				"review:2026-11-16-technical:derouilleur-a-aiguilles-sealey-sa52:0"
+			]
+		},
+		{
+			"label": "Cadence à vide",
+			"value": "4 800 coups/min",
+			"evidenceIds": [
+				"review:2026-11-16-technical:derouilleur-a-aiguilles-sealey-sa52:0"
+			]
+		},
+		{
+			"label": "Masse",
+			"value": "1,2 kg",
+			"evidenceIds": [
+				"review:2026-11-16-technical:derouilleur-a-aiguilles-sealey-sa52:0"
+			]
+		},
+		{
+			"label": "Jeu d’aiguilles de remplacement",
+			"value": "SA51/16, 12 pièces",
+			"evidenceIds": [
+				"review:2026-11-16-technical:derouilleur-a-aiguilles-sealey-sa52:0"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "3 cfm, régime non précisé",
+			"evidenceIds": [
+				"review:2026-11-16-technical:derouilleur-a-aiguilles-sealey-sa52:0"
+			]
+		},
+		{
+			"label": "Pression de service",
+			"value": "90 psi",
+			"evidenceIds": [
+				"review:2026-11-16-technical:derouilleur-a-aiguilles-sealey-sa52:0"
+			]
+		},
+		{
 			"label": "Champ fabricant : Air Consumption",
 			"value": "3cfm",
 			"evidenceIds": [
-				"october2b-tools-oct2b-sealey-sa52-html-p1"
+				"review:2026-11-16-technical:derouilleur-a-aiguilles-sealey-sa52:0"
+			]
+		},
+		{
+			"label": "Champ fabricant : Consumable Parts",
+			"value": "SA51/16 - Replacement Needle Set (12pc), SA52/15 - Replacement Chisel",
+			"evidenceIds": [
+				"review:2026-11-16-technical:derouilleur-a-aiguilles-sealey-sa52:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Free Speed",
 			"value": "4800bpm",
 			"evidenceIds": [
-				"october2b-tools-oct2b-sealey-sa52-html-p1"
+				"review:2026-11-16-technical:derouilleur-a-aiguilles-sealey-sa52:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Inlet Size",
 			"value": "1/4\"BSP",
 			"evidenceIds": [
-				"october2b-tools-oct2b-sealey-sa52-html-p1"
+				"review:2026-11-16-technical:derouilleur-a-aiguilles-sealey-sa52:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Noise Power/Pressure",
 			"value": "105/94dB(A)",
 			"evidenceIds": [
-				"october2b-tools-oct2b-sealey-sa52-html-p1"
+				"review:2026-11-16-technical:derouilleur-a-aiguilles-sealey-sa52:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Operating Pressure",
 			"value": "90psi",
 			"evidenceIds": [
-				"october2b-tools-oct2b-sealey-sa52-html-p1"
+				"review:2026-11-16-technical:derouilleur-a-aiguilles-sealey-sa52:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Stroke",
 			"value": "32mm",
 			"evidenceIds": [
-				"october2b-tools-oct2b-sealey-sa52-html-p1"
+				"review:2026-11-16-technical:derouilleur-a-aiguilles-sealey-sa52:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Vibration/Uncertainty",
 			"value": "8.56/1.34m/s²",
 			"evidenceIds": [
-				"october2b-tools-oct2b-sealey-sa52-html-p1"
+				"review:2026-11-16-technical:derouilleur-a-aiguilles-sealey-sa52:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Nett Weight",
 			"value": "1.2kg",
 			"evidenceIds": [
-				"october2b-tools-oct2b-sealey-sa52-html-p1"
+				"review:2026-11-16-technical:derouilleur-a-aiguilles-sealey-sa52:0"
 			]
 		},
 		{
-			"label": "Portée de la pression dans la source",
-			"value": "Operating Pressure: 90psi",
+			"label": "Champ fabricant : Barcode",
+			"value": "5024209161749",
 			"evidenceIds": [
-				"october2b-tools-oct2b-sealey-sa52-html-p1"
+				"review:2026-11-16-technical:derouilleur-a-aiguilles-sealey-sa52:0"
+			]
+		},
+		{
+			"label": "Champ fabricant : Plug Type",
+			"value": "N/A",
+			"evidenceIds": [
+				"review:2026-11-16-technical:derouilleur-a-aiguilles-sealey-sa52:0"
 			]
 		}
 	],
@@ -124,21 +190,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-02",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 1cf8d5202932cfc20e7f17bc732a071c894e9e91b37c8025a53df02e8cd70d70. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-technical:derouilleur-a-aiguilles-sealey-sa52:0",
+			"sourceUrl": "https://www.sealey.co.uk/air-needle-scaler-air-hammer-sa52/",
+			"sourceLabel": "Sealey, document constructeur vérifié le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Sealey SA52 : marteau droit à têtes interchangeables pour aiguilles ou burin, commandé dans la paume. La course est 32 mm, la cadence à vide 4 800 coups/min et la masse 1,2 kg. La fiche indique un jeu de remplacement de 12 aiguilles et le burin SA52/15. GET complet SHA-256 d95019b18fd3d9fb41d54c174e93a98ee41e96243b5cdd58e0a77a82ce26b0d6. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october2b-tools-oct2b-sealey-sa52-html-p1"
-		],
-		"workingPressureBar": [
-			"october2b-tools-oct2b-sealey-sa52-html-p1"
+			"review:2026-11-16-technical:derouilleur-a-aiguilles-sealey-sa52:0"
 		],
 		"demandExplanation": [
-			"october2b-tools-oct2b-sealey-sa52-html-p1"
+			"review:2026-11-16-technical:derouilleur-a-aiguilles-sealey-sa52:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-technical:derouilleur-a-aiguilles-sealey-sa52:0"
 		]
 	},
 	"notes": [
-		"La fiche décrit cette référence et ses dimensions ou caractéristiques mécaniques. Aucun besoin d’air maximal à une pression donnée n’est reconstitué."
+		"La fiche décrit la consommation sans qualifier son régime de mesure. La pression de service reste séparée ; la compatibilité demeure indéterminée."
 	]
 };
 

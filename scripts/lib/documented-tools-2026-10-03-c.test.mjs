@@ -1,3 +1,4 @@
+import { beforeReservedNovember16TechnicalFollowup } from './reviewed-catalog-amendments-2026-11-16-technical.mjs';
 import { parseCatalogProductSource } from './catalog-tooling.mjs';
 import {readFileSync} from 'node:fs';
 import {describe,it,expect} from 'vitest';
@@ -20,7 +21,7 @@ describe('documented tools, October 3, third batch',()=>{
   for (const x of batch) {
    expect(toolProfileSchema.safeParse(x).success, x.id).toBe(true);
    const text = readFileSync(new URL(`../../src/data/products/tools/${x.slug}.ts`, import.meta.url), 'utf8');
-   expect(toolProfileSchema.parse(parseCatalogProductSource('tools', text))).toEqual(toolProfileSchema.parse(x));
+   expect(toolProfileSchema.parse(beforeReservedNovember16TechnicalFollowup(parseCatalogProductSource('tools', text)))).toEqual(toolProfileSchema.parse(x));
   }
  });
  it('preserves dated hashed primary source records',()=>{for(const source of snapshot.sources){expect(new URL(source.url).protocol).toBe('https:');expect(source.sha256).toMatch(/^[a-f0-9]{64}$/);expect(source.bytes).toBeGreaterThan(0);expect(Number.isFinite(Date.parse(source.observedAt))).toBe(true);}});

@@ -17,25 +17,28 @@ const product: ToolProfileInput = {
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/m7-qb-42602.webp",
+		"src": "/images/products/m7-qb-42602-technical-20261116-followup.svg",
 		"alt": "Repères techniques M7 QB-42602, référence QB-42602",
 		"sourceUrl": "https://www.mighty-seven.com/product/3520",
-		"sourceLabel": "Carte technique CompatAir, valeurs déclarées par le fabricant ; pas une photographie du produit"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "M7 QB-42602, référence QB-42602. Consommation moyenne publiée : 109 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie. Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé. Diamètre de plateau : 6\" / 152 (mm). Puissance moteur publiée : 0.24.",
+		"overview": "La QB-42602 est annoncée sans aspiration, avec plateau de 152 mm et orbite de 5 mm. La QB-42502 passe à 127 mm ; la QB-45602 est prévue pour une aspiration centrale. La mention générique de jupe d’aspiration dans le descriptif ne transforme pas la 42602 en version aspirante.",
 		"verifiedFacts": [
 			"Pression de travail publiée : 6,3 bar. Aucun intervalle de fonctionnement supplémentaire n’est extrapolé.",
 			"Consommation moyenne publiée : 109 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie.",
 			"Référence fabricant : QB-42602.",
 			"Diamètre de plateau : 6\" / 152 (mm).",
 			"Puissance moteur publiée : 0.24.",
-			"Vitesse à vide : 10000 (R.P.M)."
+			"Vitesse à vide : 10000 (R.P.M).",
+			"Aspiration de cette référence : Non-Vacuum dans la désignation fabricant.",
+			"Orbite et plateau : 5 mm ; 152 mm."
 		],
 		"limitations": [
 			"Le besoin réel dépend de la charge, du cycle et des pertes de pression dans le flexible. Aucune mesure physique CompatAir.",
 			"Une consommation moyenne ne constitue pas un débit maximal en usage continu. Vérifier le régime réel auprès du fabricant avant dimensionnement.",
-			"Les valeurs acoustiques et vibratoires sont celles de cette fiche ; leurs protocoles et incertitudes ne sont pas détaillés ici."
+			"Les valeurs acoustiques et vibratoires sont celles de cette fiche ; leurs protocoles et incertitudes ne sont pas détaillés ici.",
+			"Le descriptif commun évoque une jupe d’aspiration mais la référence est désignée Non-Vacuum ; équipement exact à confirmer."
 		]
 	},
 	"specifications": [
@@ -122,6 +125,20 @@ const product: ToolProfileInput = {
 			"evidenceIds": [
 				"m7-qb-42602-20260927"
 			]
+		},
+		{
+			"label": "Aspiration de cette référence",
+			"value": "Non-Vacuum dans la désignation fabricant",
+			"evidenceIds": [
+				"review:2026-11-16-technical:m7-qb-42602:0"
+			]
+		},
+		{
+			"label": "Orbite et plateau",
+			"value": "5 mm ; 152 mm",
+			"evidenceIds": [
+				"review:2026-11-16-technical:m7-qb-42602:0"
+			]
 		}
 	],
 	"evidence": [
@@ -133,6 +150,16 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-09-27",
 			"confidence": "A",
 			"notes": "Consommation moyenne publiée : 109 L/min. Valeur SI du fabricant, sans conversion depuis une unité arrondie."
+		},
+		{
+			"id": "review:2026-11-16-technical:m7-qb-42602:0",
+			"sourceUrl": "https://www.mighty-seven.com/product/3520",
+			"sourceLabel": "M7, document constructeur vérifié le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "La QB-42602 est annoncée sans aspiration, avec plateau de 152 mm et orbite de 5 mm. La QB-42502 passe à 127 mm ; la QB-45602 est prévue pour une aspiration centrale. La mention générique de jupe d’aspiration dans le descriptif ne transforme pas la 42602 en version aspirante. GET complet SHA-256 d51f854cdeafefd70dfbb60e01e6e0291ec5148e794df36d4b07f09487a82987. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {

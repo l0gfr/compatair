@@ -10,16 +10,14 @@ const product: ToolProfileInput = {
 	"model": "515.3825",
 	"mpn": "515.3825",
 	"demandModel": "variable-volume",
-	"workingPressureBar": {
-		"max": 6.3
-	},
-	"demandExplanation": "La consommation et son point de pression ne sont pas établis de façon exploitable dans la fiche fabricant. Les caractéristiques publiées restent consultables, sans débit de calcul supposé.",
+	"workingPressureBar": {},
+	"demandExplanation": "La fiche ne qualifie ni le régime de consommation ni son appariement à une pression de mesure. Les valeurs publiées restent documentaires ; la compatibilité demeure indéterminée.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/cle-a-cliquet-ks-tools-515-3825.webp",
+		"src": "/images/products/cle-a-cliquet-ks-tools-515-3825-technical-20261116-followup.svg",
 		"alt": "Repères techniques : KS Tools 515.3825",
 		"sourceUrl": "https://www.kstools.com/en/products/hand-tools-catalogue/pneumatic-tools/reversible-ratchet/12926/3/8-monster-high-performance-pneumatic-reversing-ratchet?c=1011737473",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "ks-tools-515-3825",
@@ -31,173 +29,216 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "KS Tools 515.3825. La consommation et son point de pression ne sont pas établis de façon exploitable dans la fiche fabricant. Les caractéristiques publiées restent consultables, sans débit de calcul supposé. Intitulé fabricant : 3/8\" MONSTER high-performance pneumatic reversing ratchet. Consommation publiée (L/min) : 60.3.",
+		"overview": "KS Tools 515.3825 : cliquet réversible à carré 3/8 pouce, longueur 340 mm et vitesse à vide 300 tr/min. Le fabricant recommande 60 Nm et publie 81 Nm maximum en serrage comme en desserrage. La capacité manuelle annoncée jusqu’à 271 Nm est une indication distincte du couple pneumatique.",
 		"verifiedFacts": [
-			"Intitulé fabricant : 3/8\" MONSTER high-performance pneumatic reversing ratchet.",
-			"Consommation publiée (L/min) : 60.3.",
-			"Filetage de raccordement publié : 1/4\"PT.",
-			"Champ fabricant : Drive in imperial : 3/8.",
-			"Vitesse à vide publiée (tr/min) : 300.",
-			"Champ fabricant : Noise performance level (dbA) : 103.6.",
-			"Champ fabricant : Noise pressure level (dbA) : 92.6.",
-			"Champ fabricant : Norm : DIN 3120, ISO 1174.",
-			"Pression de service, libellé original : max. 6,3 bar (90 psi).",
-			"Champ fabricant : Reccomended torque : 60 Nm.",
-			"Carré d’entraînement publié : 3/8.",
-			"Longueur totale publiée (mm) : 340.0.",
-			"Champ fabricant : Vibration acceleration : < 4,51.",
-			"Masse publiée (g) : 1420.",
-			"Largeur B publiée : 50.0.",
-			"Couple maximal de desserrage publié : 81 Nm.",
-			"Couple maximal de serrage publié : 81 Nm.",
-			"Dimension minimale de tuyau, libellé original : 3/8\" - 10 mm."
+			"Carré : 3/8 pouce.",
+			"Longueur : 340 mm.",
+			"Vitesse à vide : 300 tr/min.",
+			"Couple recommandé : 60 Nm.",
+			"Maximum pneumatique publié : 81 Nm, serrage et desserrage.",
+			"Capacité manuelle annoncée : Jusqu’à 271 Nm, indication distincte.",
+			"Consommation documentaire : 60,3 L/min, régime non précisé."
 		],
 		"limitations": [
-			"La consommation et son point de pression ne sont pas établis de façon exploitable dans la fiche fabricant. Les caractéristiques publiées restent consultables, sans débit de calcul supposé.",
-			"La fiche ne relie pas explicitement la consommation à un point de pression mesuré ni à un régime en charge. La pression de service et le débit publié restent deux informations distinctes.",
-			"Le champ « min. Tube diameter » ne précise pas littéralement un diamètre intérieur ; aucune section hydraulique n’est déduite de ce libellé.",
-			"Édition et source identifiées, disponibilité actuelle à confirmer. Vérifier la notice et la configuration exacte livrée."
+			"La fiche ne qualifie ni le régime de consommation ni son appariement à une pression de mesure. Les valeurs publiées restent documentaires ; la compatibilité demeure indéterminée.",
+			"Documents fabricant de versions identifiées ; disponibilité et configuration livrée à confirmer."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Intitulé fabricant",
-			"value": "3/8\" MONSTER high-performance pneumatic reversing ratchet",
+			"label": "Carré",
+			"value": "3/8 pouce",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-3825-p1"
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
 			]
 		},
 		{
-			"label": "Consommation publiée (L/min)",
+			"label": "Longueur",
+			"value": "340 mm",
+			"evidenceIds": [
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
+			]
+		},
+		{
+			"label": "Vitesse à vide",
+			"value": "300 tr/min",
+			"evidenceIds": [
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
+			]
+		},
+		{
+			"label": "Couple recommandé",
+			"value": "60 Nm",
+			"evidenceIds": [
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
+			]
+		},
+		{
+			"label": "Maximum pneumatique publié",
+			"value": "81 Nm, serrage et desserrage",
+			"evidenceIds": [
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
+			]
+		},
+		{
+			"label": "Capacité manuelle annoncée",
+			"value": "Jusqu’à 271 Nm, indication distincte",
+			"evidenceIds": [
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
+			]
+		},
+		{
+			"label": "Consommation documentaire",
+			"value": "60,3 L/min, régime non précisé",
+			"evidenceIds": [
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
+			]
+		},
+		{
+			"label": "Champ fabricant : Air consumption in l/min",
 			"value": "60.3",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-3825-p1"
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
 			]
 		},
 		{
-			"label": "Filetage de raccordement publié",
+			"label": "Champ fabricant : Connection thread",
 			"value": "1/4\"PT",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-3825-p1"
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Drive in imperial",
 			"value": "3/8",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-3825-p1"
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
 			]
 		},
 		{
-			"label": "Vitesse à vide publiée (tr/min)",
+			"label": "Champ fabricant : No Load current rpm",
 			"value": "300",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-3825-p1"
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Noise performance level (dbA)",
 			"value": "103.6",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-3825-p1"
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Noise pressure level (dbA)",
 			"value": "92.6",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-3825-p1"
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Norm",
 			"value": "DIN 3120, ISO 1174",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-3825-p1"
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
 			]
 		},
 		{
-			"label": "Pression de service, libellé original",
+			"label": "Champ fabricant : Operating pressure in bar",
 			"value": "max. 6,3 bar (90 psi)",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-3825-p1"
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
+			]
+		},
+		{
+			"label": "Champ fabricant : Packaging contents",
+			"value": "1",
+			"evidenceIds": [
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
+			]
+		},
+		{
+			"label": "Champ fabricant : Packaging height, mm",
+			"value": "64",
+			"evidenceIds": [
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
+			]
+		},
+		{
+			"label": "Champ fabricant : Packaging length, mm",
+			"value": "368",
+			"evidenceIds": [
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
+			]
+		},
+		{
+			"label": "Champ fabricant : Packaging width, mm",
+			"value": "61",
+			"evidenceIds": [
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Reccomended torque",
 			"value": "60 Nm",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-3825-p1"
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
 			]
 		},
 		{
-			"label": "Carré d’entraînement publié",
+			"label": "Champ fabricant : Square drive",
 			"value": "3/8",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-3825-p1"
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
 			]
 		},
 		{
-			"label": "Longueur totale publiée (mm)",
+			"label": "Champ fabricant : Total length L in mm",
 			"value": "340.0",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-3825-p1"
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
 			]
 		},
 		{
 			"label": "Champ fabricant : Vibration acceleration",
 			"value": "< 4,51",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-3825-p1"
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
 			]
 		},
 		{
-			"label": "Masse publiée (g)",
+			"label": "Champ fabricant : Weight [g]",
 			"value": "1420",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-3825-p1"
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
 			]
 		},
 		{
-			"label": "Largeur B publiée",
+			"label": "Champ fabricant : Width B",
 			"value": "50.0",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-3825-p1"
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
 			]
 		},
 		{
-			"label": "Couple maximal de desserrage publié",
+			"label": "Champ fabricant : max. Loosening torque",
 			"value": "81 Nm",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-3825-p1"
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
 			]
 		},
 		{
-			"label": "Couple maximal de serrage publié",
+			"label": "Champ fabricant : max. Tightening torque",
 			"value": "81 Nm",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-3825-p1"
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
 			]
 		},
 		{
-			"label": "Dimension minimale de tuyau, libellé original",
+			"label": "Champ fabricant : min. Tube diameter",
 			"value": "3/8\" - 10 mm",
 			"evidenceIds": [
-				"october3c-tools-ks-product-515-3825-p1"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "Operating pressure in bar: max. 6,3 bar (90 psi)",
-			"evidenceIds": [
-				"october3c-tools-ks-product-515-3825-p1"
-			]
-		},
-		{
-			"label": "Consommation de régime non précisé, hors calcul",
-			"value": "60.3 L/min",
-			"evidenceIds": [
-				"october3c-tools-ks-product-515-3825-p1"
+				"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
 			]
 		}
 	],
@@ -211,21 +252,31 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "SHA-256 de la réponse source : 0f8147320298bdd465b66931b32dfe1ca0eea3fd87e4b0b5896840ebc28b45f7. Caractéristiques déclarées par le fabricant, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0",
+			"sourceUrl": "https://www.kstools.com/en/products/hand-tools-catalogue/pneumatic-tools/reversible-ratchet/12926/3/8-monster-high-performance-pneumatic-reversing-ratchet?c=1011737473",
+			"sourceLabel": "KS Tools, document constructeur vérifié le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "KS Tools 515.3825 : cliquet réversible à carré 3/8 pouce, longueur 340 mm et vitesse à vide 300 tr/min. Le fabricant recommande 60 Nm et publie 81 Nm maximum en serrage comme en desserrage. La capacité manuelle annoncée jusqu’à 271 Nm est une indication distincte du couple pneumatique. GET complet SHA-256 5dd04be2ce22eb37c09019b851d791fb0a605a5bab079747c5a1e3de97c4db6c. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october3c-tools-ks-product-515-3825-p1"
-		],
-		"workingPressureBar": [
-			"october3c-tools-ks-product-515-3825-p1"
+			"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
 		],
 		"demandExplanation": [
-			"october3c-tools-ks-product-515-3825-p1"
+			"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
+		],
+		"workingPressureBar": [
+			"review:2026-11-16-technical:cle-a-cliquet-ks-tools-515-3825:0"
 		]
 	},
 	"notes": [
-		"La consommation et son point de pression ne sont pas établis de façon exploitable dans la fiche fabricant. Les caractéristiques publiées restent consultables, sans débit de calcul supposé."
+		"La fiche ne qualifie ni le régime de consommation ni son appariement à une pression de mesure. Les valeurs publiées restent documentaires ; la compatibilité demeure indéterminée."
 	]
 };
 

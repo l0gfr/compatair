@@ -16,22 +16,16 @@ const product: CompressorInput = {
   },
   "maxPressureBar": 13,
   "maxPressureBasis": "selected-working-pressure-ceiling",
-  "fadCurve": [
-    {
-      "pressureBar": 13,
-      "litersPerMinute": 2316.667
-    }
-  ],
-  "dutyCycle": 1,
+  "fadCurve": [],
   "powerKw": 18.5,
   "oilType": "oil",
   "confidence": "B",
   "status": "unknown",
   "image": {
-    "src": "/images/products/ekomak-dmd-250.svg",
+    "src": "/images/products/ekomak-dmd-250-technical-20261116-followup.svg",
     "alt": "Repères techniques : Ekomak DMD 250",
     "sourceUrl": "https://www.ekomak.com/content/dam/brands/ekomak/products-bp-structure/oil-injected-screw-compressor/ivr/eko-8-22-x-vst/eko-16-22-x-vst/leaflet/Ekomak%20DMD%20200-400%20EKO%2016-22X%20VST%20Sales%20Leaflet%20EN%206999970200.pdf",
-    "sourceLabel": "Carte technique CompatAir, données déclarées par le constructeur"
+    "sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
   },
   "specifications": [
     {
@@ -56,7 +50,7 @@ const product: CompressorInput = {
       ]
     },
     {
-      "label": "Air livré à 13 bar",
+      "label": "Débit documentaire, pression de mesure non qualifiée",
       "value": "2 316,667 L/min",
       "evidenceIds": [
         "october4c-ekomak-dmd-leaflet-2-p5"
@@ -70,13 +64,6 @@ const product: CompressorInput = {
       ]
     },
     {
-      "label": "Cycle de service déclaré",
-      "value": "100 %",
-      "evidenceIds": [
-        "october4c-ekomak-dmd-leaflet-2-p2"
-      ]
-    },
-    {
       "label": "Fréquence de la configuration retenue",
       "value": "Non documentée",
       "evidenceIds": [
@@ -85,16 +72,17 @@ const product: CompressorInput = {
     }
   ],
   "editorial": {
-    "overview": "Ekomak DMD 250. 2 316,667 L/min déclarés à 13 bar. Configuration constructeur : DMD 250.",
+    "overview": "Le DMD 250 est le groupe à courroie de 18,5 kW du tableau DMD 200–400. À la ligne de pression maximale 13 bar, le constructeur publie 139 m³/h, contre 112 pour le DMD 200 de 15 kW. La pression de mesure n’est pas identifiée séparément : ces valeurs restent documentaires. Les 100 % annoncés concernent l’élément de compression, pas un taux quantifié du groupe complet.",
     "verifiedFacts": [
       "Pression de la configuration documentée : 13 bar.",
-      "FAD sous pression identifié séparément des valeurs d’aspiration : 2 316,667 L/min déclarés à 13 bar."
+      "Puissance moteur publiée dans la ligne DMD 250 : 18,5 kW."
     ],
     "limitations": [
       "Modèle de base sélectionné ; options de cuve et de séchage non transformées en nouvelles références. Cuve et fréquence électrique non qualifiées.",
       "Aucune interpolation de FAD, aucun essai physique CompatAir ; disponibilité et raccordement local à confirmer.",
       "Cuve non documentée : l’autonomie et le volume de stockage ne peuvent pas être conclus à partir de ce profil.",
-      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions."
+      "Le plafond CompatAir correspond à la pression de la configuration retenue, sans qualification de la soupape ni des autres versions.",
+      "Le tableau donne un débit ISO 1217 et une colonne de pression de configuration, sans identifier explicitement la pression de mesure du débit. Aucun point FAD apparié n’est retenu."
     ]
   },
   "evidence": [
@@ -117,6 +105,16 @@ const product: CompressorInput = {
       "retrievedAt": "2026-10-04",
       "confidence": "B",
       "notes": "SHA-256 609ea406512a3dadefd878925a1b50486dc5b4dbe0f307b41f2a45cd726584b8 de la réponse HTTP originale. Données déclarées ; aucun essai physique CompatAir."
+    },
+    {
+      "id": "review:2026-11-16-technical:ekomak-dmd-250:0",
+      "sourceUrl": "https://www.ekomak.com/content/dam/brands/ekomak/products-bp-structure/oil-injected-screw-compressor/ivr/eko-8-22-x-vst/eko-16-22-x-vst/leaflet/Ekomak%20DMD%20200-400%20EKO%2016-22X%20VST%20Sales%20Leaflet%20EN%206999970200.pdf",
+      "sourceLabel": "Ekomak, document constructeur vérifié le 16 novembre 2026",
+      "sourceType": "manual",
+      "sourceRole": "primary",
+      "retrievedAt": "2026-11-16",
+      "confidence": "B",
+      "notes": "Le DMD 250 est le groupe à courroie de 18,5 kW du tableau DMD 200–400. À la ligne de pression maximale 13 bar, le constructeur publie 139 m³/h, contre 112 pour le DMD 200 de 15 kW. La pression de mesure n’est pas identifiée séparément : ces valeurs restent documentaires. Les 100 % annoncés concernent l’élément de compression, pas un taux quantifié du groupe complet. GET complet SHA-256 609ea406512a3dadefd878925a1b50486dc5b4dbe0f307b41f2a45cd726584b8. Pages PDF lues : 2, 5."
     }
   ],
   "fieldSources": {
@@ -129,17 +127,14 @@ const product: CompressorInput = {
     "maxPressureBar": [
       "october4c-ekomak-dmd-leaflet-2-p5"
     ],
-    "fadCurve": [
-      "october4c-ekomak-dmd-leaflet-2-p5"
-    ],
     "powerKw": [
       "october4c-ekomak-dmd-leaflet-2-p5"
     ],
     "oilType": [
       "october4c-ekomak-dmd-leaflet-2-p2"
     ],
-    "dutyCycle": [
-      "october4c-ekomak-dmd-leaflet-2-p2"
+    "fadCurve": [
+      "review:2026-11-16-technical:ekomak-dmd-250:0"
     ]
   },
   "notes": [
