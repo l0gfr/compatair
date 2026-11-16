@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-11-16T21:26:59.636904+00:00",
+  "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+  "scope": "Continuation des12réserves après intégration autorisée de Parker aux436, sans modifier les produits ou retarder la préparation commune.",
+  "priorityPreparation": {
+    "commit": "03b7f03bf0597b2617847e92f4c01f00a976c5a3",
+    "qualifiedTotal": 437,
+    "counts": {
+      "guides": 1,
+      "compressors": 76,
+      "tools": 360
+    },
+    "targetContentChanged": false,
+    "currentReceipts": 437,
+    "documentUrlsVerified": 479,
+    "admissions": 0,
+    "siteBuilds": 0
+  },
+  "pages": [
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-prona-r-4300-hvlp-g13-buse-1-3-hvlp-gravity/",
+      "contentHash": "a4d3c09825e545ca26ad8d3959e06e0723e5f9050b4a3120e08a607851c6ae4a",
+      "decision": "needs-correction",
+      "qualificationRecorded": false,
+      "admission": false,
+      "recordedAt": "2026-11-16T21:26:59.636904+00:00",
+      "finding": "Aucun tableau technique primaire supplémentaire exact obtenu. Le HTML constructeur et la liste régionale déjà lus ne rétablissent pas le tableau image en échec.",
+      "nextRequiredEvidence": "Obtenir le tableau technique portant exactement R4300 HVLP G13 et ses conditions ; conserver les valeurs historiques comme non revérifiées.",
+      "newSourceChecks": [],
+      "previousEvidenceReport": "docs/editorial/indexation-reserves-followup-2026-11-16-d.json",
+      "previousSourceChecksRemainDated": true
+    },
+    {
+      "path": "/outils-pneumatiques/ingersoll-rand-182lna1/",
+      "contentHash": "d224e4cd1f626aa94a8719a0b4b0a37d4172b906135f9f9556411bcfb60d9ab2",
+      "decision": "needs-correction",
+      "qualificationRecorded": false,
+      "admission": false,
+      "recordedAt": "2026-11-16T21:26:59.636904+00:00",
+      "finding": "La réserve d’accès constructeur reste celle des GET429 datés dans le rapport précédent. Aucun document primaire complet nouveau obtenu.",
+      "nextRequiredEvidence": "Retrouver une notice ou fiche complète pour182LNA1, puis contrôler son identité, sa consommation et les conditions appariées.",
+      "newSourceChecks": [],
+      "previousEvidenceReport": "docs/editorial/indexation-reserves-followup-2026-11-16-d.json",
+      "previousSourceChecksRemainDated": true
+    },
+    {
+      "path": "/outils-pneumatiques/ingersoll-rand-61h120g4/",
+      "contentHash": "bf921299a25a21d152b88b7670454d483ffc7ea60e270accb80ccb73779705b2",
+      "decision": "needs-correction",
+      "qualificationRecorded": false,
+      "admission": false,
+      "recordedAt": "2026-11-16T21:26:59.636904+00:00",
+      "finding": "Nouvelle fiche officielle française du groupe61 lue par GET : HTTP429. L’extrait indexé et la notice16576126 du moteur de recherche ne sont pas importés.",
+      "nextRequiredEvidence": "Lire la fiche complète de la référence exacte en distinguant la version EU et vérifier les conditions de consommation.",
+      "newSourceChecks": [
+        {
+          "url": "https://powertools.ingersollrand.com/fr-fr/surface-preparation-finishing-tools/grinders/61-die/",
+          "checkedAt": "2026-11-16T21:23:12.681Z",
+          "httpStatus": 429,
+          "complete": false,
+          "finalUrl": "https://powertools.ingersollrand.com/fr-fr/surface-preparation-finishing-tools/grinders/61-die/"
+        }
+      ],
+      "previousEvidenceReport": "docs/editorial/indexation-reserves-followup-2026-11-16-d.json",
+      "previousSourceChecksRemainDated": true
+    },
+    {
+      "path": "/outils-pneumatiques/ingersoll-rand-7s60l/",
+      "contentHash": "9a6adc15ac6c9259bea70ae5290a3a3107636f6882d5952501b4ca0935324301",
+      "decision": "needs-correction",
+      "qualificationRecorded": false,
+      "admission": false,
+      "recordedAt": "2026-11-16T21:26:59.636904+00:00",
+      "finding": "Pas de preuve primaire nouvelle levant le429 et la divergence de consommation. Les observations précédentes restent datées et conservées.",
+      "nextRequiredEvidence": "Obtenir la table du7S60L et le régime de consommation à sa pression documentée.",
+      "newSourceChecks": [],
+      "previousEvidenceReport": "docs/editorial/indexation-reserves-followup-2026-11-16-d.json",
+      "previousSourceChecksRemainDated": true
+    },
+    {
+      "path": "/outils-pneumatiques/fouloir-zipp-zsr-304l/",
+      "contentHash": "997df8a4779bfb4aabbbcb7860b96b7189c6fd9b1325eba836c4143bfd536b36",
+      "decision": "needs-correction",
+      "qualificationRecorded": false,
+      "admission": false,
+      "recordedAt": "2026-11-16T21:26:59.636904+00:00",
+      "finding": "Le catalogue officiel complet a été téléchargé à nouveau :16 229 866octets, hash a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3, identique au corps déjà inspecté. La table du résultat de recherche imprimée172 reste absente des pages courantes précédemment lues.",
+      "nextRequiredEvidence": "Obtenir un tableau lisible de la référence dans un document actuel complet ; ne pas valider700coups/min,9,79kg ou850L/min depuis le seul extrait indexé.",
+      "newSourceChecks": [
+        {
+          "url": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+          "checkedAt": "2026-11-16T21:21:19.168Z",
+          "httpStatus": 200,
+          "sha256": "a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3",
+          "bytes": 16229866,
+          "complete": true,
+          "finalUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf"
+        }
+      ],
+      "previousEvidenceReport": "docs/editorial/indexation-reserves-followup-2026-11-16-d.json",
+      "previousSourceChecksRemainDated": true
+    },
+    {
+      "path": "/outils-pneumatiques/burineur-universal-tool-ut8652h/",
+      "contentHash": "e99e12c42fc8cbb88e0d6f70ec95b28f971c630dedec8fc8e5588f2d5f294ca4",
+      "decision": "needs-correction",
+      "qualificationRecorded": false,
+      "admission": false,
+      "recordedAt": "2026-11-16T21:26:59.636904+00:00",
+      "finding": "Deux notices alternatives officielles découvertes, ut8653h.pdf et ut8653r.pdf, répondent toutes deuxHTTP404 en GET. Le titre2pouces et la course3pouces de la table restent contradictoires.",
+      "nextRequiredEvidence": "Obtenir une révision applicable ou une correction explicite du constructeur sur la course ; conserver le régime et la pression de mesure distincts.",
+      "newSourceChecks": [
+        {
+          "url": "https://universaltoolusa.com/media/attachment/file/u/t/ut8653h.pdf",
+          "checkedAt": "2026-11-16T21:21:18.978Z",
+          "httpStatus": 404,
+          "complete": false,
+          "finalUrl": "https://universaltoolusa.com/media/attachment/file/u/t/ut8653h.pdf"
+        },
+        {
+          "url": "https://universaltoolusa.com/media/attachment/file/u/t/ut8653r.pdf",
+          "checkedAt": "2026-11-16T21:21:19.100Z",
+          "httpStatus": 404,
+          "complete": false,
+          "finalUrl": "https://universaltoolusa.com/media/attachment/file/u/t/ut8653r.pdf"
+        }
+      ],
+      "previousEvidenceReport": "docs/editorial/indexation-reserves-followup-2026-11-16-d.json",
+      "previousSourceChecksRemainDated": true
+    },
+    {
+      "path": "/outils-pneumatiques/meuleuse-puma-at-7438m/",
+      "contentHash": "9109bdfae5fb05db16be07b2cec3279f5f22d503e1a37867c5a195906433f679",
+      "decision": "needs-correction",
+      "qualificationRecorded": false,
+      "admission": false,
+      "recordedAt": "2026-11-16T21:26:59.636904+00:00",
+      "finding": "La recherche de la fiche officielle renvoie encore24 000tr/min ; le PDF primaire déjà lu indique22 000tr/min. Aucune indication de révision obtenue ne tranche leur applicabilité.",
+      "nextRequiredEvidence": "Obtenir une spécification applicable àAT7438M levant le conflit de vitesse ; ne pas choisir la valeur la plus favorable.",
+      "newSourceChecks": [],
+      "previousEvidenceReport": "docs/editorial/indexation-reserves-followup-2026-11-16-d.json",
+      "previousSourceChecksRemainDated": true
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hymair-as2003g/",
+      "contentHash": "f55e0e24d7a30264f591a8f81ea22ae26d78515c05b022bd850097eb2b60f708",
+      "decision": "needs-correction",
+      "qualificationRecorded": false,
+      "admission": false,
+      "recordedAt": "2026-11-16T21:26:59.636904+00:00",
+      "finding": "PDF complet déjà téléchargé le16novembre relu, pagePDF7 imprimée113, avec contrôle visuel : G et GA ont tous deux buse standard1,6mm, options1,6–1,8mm, service4,5–6bar, jet150–260mm, consommation7,2cfm et godet600ml. Les photos diffèrent par l’aspect du godet ; aucune matière ou différence de performance n’est explicitée.",
+      "nextRequiredEvidence": "Obtenir la différence technique G/GA et justifier une réponse distincte ; ne pas inférer une matière depuis la photo.",
+      "newSourceChecks": [],
+      "previousEvidenceReport": "docs/editorial/indexation-reserves-followup-2026-11-16-d.json",
+      "previousSourceChecksRemainDated": true
+    },
+    {
+      "path": "/outils-pneumatiques/boulonneuse-soartec-wx-3t7150ab/",
+      "contentHash": "9ea2a4ffc13f38e99b88145a802e96e4bbdca13ec031a3ed2c7266ca884bbec5",
+      "decision": "needs-correction",
+      "qualificationRecorded": false,
+      "admission": false,
+      "recordedAt": "2026-11-16T21:26:59.636904+00:00",
+      "finding": "Collection et fiche constructeur lues : la fiche conserve6–18Nm dans la table et10–70Nm dans le texte. Le lien officiel conduit au catalogueSoartec Product Catalog_2025 ; la page et son fichier de configuration public sont complets, mais aucun tableau technique exact exploitable n’a été obtenu. Aucun contenu de page de catalogue n’est prétendu lu depuis cette seule enveloppe.",
+      "nextRequiredEvidence": "Lire un tableau exact et applicable ou une correction constructeur ; conserver l’unitécfm/Lmin ambiguë et l’absence de consommation qualifiée.",
+      "newSourceChecks": [
+        {
+          "url": "https://online.fliphtml5.com/irxvj/mqyk/",
+          "checkedAt": "2026-11-16T21:23:12.343Z",
+          "httpStatus": 200,
+          "sha256": "047b42a3fcefeebf46f3c1f3b2f7b4c9de7435cb2622ff4e671a0a38134e4c1e",
+          "bytes": 4835,
+          "complete": true,
+          "finalUrl": "https://online.fliphtml5.com/irxvj/mqyk/"
+        },
+        {
+          "url": "https://online.fliphtml5.com/irxvj/mqyk/javascript/config.js?1787885916",
+          "checkedAt": "2026-11-16T21:24:02.134Z",
+          "httpStatus": 200,
+          "sha256": "8e9a0baefef426454bc17a4fd8cf0b4fe82192fda4fd0445788be035753d687e",
+          "bytes": 61971,
+          "complete": true,
+          "finalUrl": "https://online.fliphtml5.com/irxvj/mqyk/javascript/config.js?1787885916"
+        }
+      ],
+      "previousEvidenceReport": "docs/editorial/indexation-reserves-followup-2026-11-16-d.json",
+      "previousSourceChecksRemainDated": true
+    },
+    {
+      "path": "/outils-pneumatiques/riveteuse-astro-pneumatic-pr36/",
+      "contentHash": "47cf88ca6924fc37a8f53a799cf35f0ea314d31c3392ed935857bc8ca73f1311",
+      "decision": "needs-correction",
+      "qualificationRecorded": false,
+      "admission": false,
+      "recordedAt": "2026-11-16T21:26:59.636904+00:00",
+      "finding": "Les recherches primaires retrouvent la noticePR36 déjà lue et un catalogue ne donnant qu’une capacité de rivets. Aucun nouveau passage ne résout la traction1938/380lb, les dimensions280/270mm ni les conditions du volume par course.",
+      "nextRequiredEvidence": "Obtenir une correction constructeur applicable ; préserver le volume documentaire2.320Liter/Stroke hors calcul et les contradictions existantes.",
+      "newSourceChecks": [],
+      "previousEvidenceReport": "docs/editorial/indexation-reserves-followup-2026-11-16-d.json",
+      "previousSourceChecksRemainDated": true
+    },
+    {
+      "path": "/compresseurs/fs-curtis-eco-pure-vsd-110w/",
+      "contentHash": "6f9b1102be1912c12ff1b05c7093f6a26709a7ffded30575abc292ca2a6e3d9c",
+      "decision": "needs-correction",
+      "qualificationRecorded": false,
+      "admission": false,
+      "recordedAt": "2026-11-16T21:26:59.636904+00:00",
+      "finding": "Les résultats de recherche conservent l’ancienne URL exacte100psi déjà404 ; aucun document complet nouveau ne rétablit le point du110W. Les fiches160W/250W retournées concernent d’autres références.",
+      "nextRequiredEvidence": "Obtenir la ficheCAGI complète ECO-Pure VSD110W100psi ; aucune donnée d’un autre modèle ou d’une autre pression.",
+      "newSourceChecks": [],
+      "previousEvidenceReport": "docs/editorial/indexation-reserves-followup-2026-11-16-d.json",
+      "previousSourceChecksRemainDated": true
+    },
+    {
+      "path": "/compresseurs/fs-curtis-eco-pure-vsd-132a/",
+      "contentHash": "10847f99326288a265a32cd1a674d90a33aa9dd6a625f1ea7dcb01e71595228a",
+      "decision": "needs-correction",
+      "qualificationRecorded": false,
+      "admission": false,
+      "recordedAt": "2026-11-16T21:26:59.636904+00:00",
+      "finding": "Aucune fiche primaire complète exacte nouvelle obtenue. Les autres référencesFS-Curtis et le modèle132Aà vitesse fixe restent inapplicables à cette réserveVSD.",
+      "nextRequiredEvidence": "Obtenir la ficheCAGI complète ECO-Pure VSD132A100psi ; conserver les données historiques avec leur provenance réservée.",
+      "newSourceChecks": [],
+      "previousEvidenceReport": "docs/editorial/indexation-reserves-followup-2026-11-16-d.json",
+      "previousSourceChecksRemainDated": true
+    }
+  ],
+  "counts": {
+    "reviewedRecords": 12,
+    "newQualifications": 0,
+    "remainingReserves": 12,
+    "newProductCorrections": 0,
+    "admissions": 0,
+    "siteBuilds": 0
+  },
+  "visualReRead": {
+    "url": "https://www.steedtools.com/phoenix/admin/download?fileId=SZUfKpLkrMNq&dp=GvUApKfKKUAU",
+    "sourceSha256": "971e9f3f662af10d3c638d5e9c29c8847ee04672c40e29957ad4ca4eb13d61c1",
+    "pdfPage": 7,
+    "printedPage": 113,
+    "readAt": "2026-11-16T21:26:59.636904+00:00",
+    "sourceDownloadedAt": "2026-11-16T07:38:05.658Z",
+    "freshDownloadDuringContinuation": false,
+    "imageSha256": "3e1cf1d54d4453cbbd516ffbfe6e2ad208d8b67f9eeb1bf33e24d8d1a7beb671"
+  },
+  "researchLimit": "Firecrawl a refusé la recherche faute de crédits ; aucun résultat de cet appel. Recherche web et GET primaires bornés utilisés ensuite. Les extraits indexés sont des pistes, jamais des reçus.",
+  "fullSourceAudit": {
+    "runId": 43901927469,
+    "urlInventory": 7550,
+    "http404": 109,
+    "unverified": 790,
+    "retained": true,
+    "targetedChecksDoNotReplaceInventory": true
+  },
+  "nextLot": "Les12réserves restent exclues des admissions. Reprendre les437au prochain jour réellement éligible, dans la proposition exacte, après sourceChecks du jour, empreintes, revue, préparation, hook normal et unique buildCI. Une réserve individuelle reporte seulement sa page."
+}
