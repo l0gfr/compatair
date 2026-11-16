@@ -116582,6 +116582,25 @@
           "sha256": "9a8741f11a2c31dffc6095547c2d75c08b527337ebd2a3d0582437608e719ed5"
         }
       ]
+    },
+    {
+      "path": "/guides/generateur-azote-purete-oxygene-argon-ppm/",
+      "contentHash": "44a5b103c5e66a882a65a346c8c193dbfeff6bc98c4585e8692838203038bb97",
+      "neighbors": [
+        "/guides/generateur-azote-compresseur-debit-purete/",
+        "/guides/qualite-air-comprime-iso-8573-1/"
+      ],
+      "contextHash": "1ae4f8989ec46c1271a104f1184a15eee6858c8e91711b49e3b274b2e1640052",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-16T20:21:10.422Z",
+      "note": "Notice primaire DB5–20 PKR_IOM_DB5-20_082022, ©2022, pages6/7 relues visuellement et sections pertinentes lues. Exemple corrigé à cette seule gamme :1%O2 résiduel pour99%N2+argon, base de fraction conservée pour les conversions. Différence relue avec NGP/dimensionnement amont et ISO/particules-eau-huile : le guide précise ce que la mesure O2 couvre et la demande de contrôle des autres constituants. Aucun débit ou analyseur DB5 n’est transféré àDB1200 ; source2019 HTTP403 conservée dans le rapport, jamais dite rétablie. Aucun essai de terrain ni admission.",
+      "sourceDocuments": [
+        {
+          "url": "https://test.parker.com/content/dam/Parker-com/Literature/IGFG/PDF-Files/PKR_IOM_DB5-20_082022.pdf",
+          "sha256": "8ddda841eb67c24296c0393072c6b70eb864bcab6da56865e16c42adcf1c5ed8"
+        }
+      ]
     }
   ]
 }

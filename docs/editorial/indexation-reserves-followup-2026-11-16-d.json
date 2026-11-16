@@ -1,0 +1,821 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-11-16T20:23:23.503246+00:00",
+  "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+  "scope": "Suivi des 13 réserves après les deux AIRMAN, sans modifier ni retarder la préparation prioritaire de 436 pages. Les constats antérieurs sont conservés avec leurs dates ; les seuls nouveaux GET sont explicitement listés.",
+  "priorityLot": {
+    "commit": "9cecb50c4c9099accf6d5dc7f9cad9d9de21f926",
+    "qualifiedPages": 436,
+    "compressors": 76,
+    "tools": 360,
+    "guides": 0,
+    "modified": false
+  },
+  "pages": [
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-prona-r-4300-hvlp-g13-buse-1-3-hvlp-gravity/",
+      "previousContentHash": "a4d3c09825e545ca26ad8d3959e06e0723e5f9050b4a3120e08a607851c6ae4a",
+      "contentHash": "a4d3c09825e545ca26ad8d3959e06e0723e5f9050b4a3120e08a607851c6ae4a",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "Prona R4300 HVLP G13 : la fiche HTML est accessible mais le tableau technique est une image externe ; le GET de cette image échoue ENOTFOUND. Les valeurs historiques ne sont pas déclarées revérifiées depuis le seul HTML200.",
+      "neighbors": [
+        "/outils-pneumatiques/pistolet-peinture-prona-r-4300-hvlp-g11-buse-1-1-hvlp-gravity/",
+        "/outils-pneumatiques/pistolet-peinture-prona-r-4300-hvlp-g12-buse-1-2-hvlp-gravity/"
+      ],
+      "sourceReadings": [],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://www.prona.com.cn/Product_dt/1179777387076407296.html",
+          "checkedAt": "2026-11-16T10:45:10.734Z",
+          "httpStatus": 200,
+          "complete": true,
+          "sha256": "4fceebd9d906d50f5d4cca1be9c973372f644aba281630d4b618e4a2ff9fc2c1",
+          "bytes": 114046,
+          "finalUrl": "https://www.prona.com.cn/Product_dt/1179777387076407296.html"
+        }
+      ],
+      "priorFollowup": {
+        "status": "prior-reserve-maintained",
+        "finding": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027069+00:00",
+      "continuationNote": "La liste officielle Prona Taiwan est accessible mais distingue R4300G/R4300NG sans établir la combinaison HVLP-G13 de ce candidat. Le tableau image de la fiche Chine reste non vérifié : aucun débit ni buse transférés.",
+      "newQualificationId": null,
+      "priorReport": "docs/editorial/indexation-reserves-followup-2026-11-16-c.json",
+      "currentDecision": "needs-correction",
+      "currentQualificationId": null,
+      "newAdmission": false,
+      "currentContinuation": "Le corps HTML constructeur est identique au précédent ; le tableau image exact répond maintenant HTTP 567, après l’échec DNS conservé dans le rapport précédent. Les pages du distributeur vietnamien sont complètes et portent la référence G13, mais aucun document primaire technique accessible n’y a été retrouvé. Leurs chiffres ne sont pas importés ni assimilés à une qualification constructeur.",
+      "currentSourceChecks": [
+        {
+          "url": "https://www.prona.com.cn/Product_dt/1179777387076407296.html",
+          "checkedAt": "2026-11-16T20:10:00.837Z",
+          "httpStatus": 200,
+          "sha256": "4fceebd9d906d50f5d4cca1be9c973372f644aba281630d4b618e4a2ff9fc2c1",
+          "bytes": 114046,
+          "complete": true,
+          "finalUrl": "https://www.prona.com.cn/Product_dt/1179777387076407296.html"
+        },
+        {
+          "url": "https://omo-oss-image.thefastimg.com/portal-saas/new2023102717520985071/cms/image/fee93c5d-a40e-474c-be14-30690aa61493.jpg",
+          "checkedAt": "2026-11-16T20:10:02.829Z",
+          "httpStatus": 567,
+          "complete": false,
+          "finalUrl": "https://omo-oss-image.thefastimg.com/portal-saas/new2023102717520985071/cms/image/fee93c5d-a40e-474c-be14-30690aa61493.jpg"
+        }
+      ],
+      "secondarySourceChecks": [
+        {
+          "url": "https://www.prona.com.vn/sung-phun-son-r4300-hvlp-g13",
+          "checkedAt": "2026-11-16T20:18:17.068Z",
+          "httpStatus": 200,
+          "sha256": "bb17fa8232cd9ef830bc1016648d8cde7b79290f92c18f40f2aa06abfa084f69",
+          "bytes": 106472,
+          "complete": true,
+          "finalUrl": "https://www.prona.com.vn/sung-phun-son-r4300-hvlp-g13"
+        },
+        {
+          "url": "https://www.prona.com.vn/download-catalogues",
+          "checkedAt": "2026-11-16T20:18:20.595Z",
+          "httpStatus": 200,
+          "sha256": "229a6844f268d5ef8f9c4201372c4cd4ccd2f05e2a4deaf8abc699ed2acd6aa1",
+          "bytes": 56962,
+          "complete": true,
+          "finalUrl": "https://www.prona.com.vn/download-catalogues"
+        }
+      ],
+      "continuationRecordedAt": "2026-11-16T20:23:23.503246+00:00"
+    },
+    {
+      "path": "/outils-pneumatiques/ingersoll-rand-182lna1/",
+      "previousContentHash": "d224e4cd1f626aa94a8719a0b4b0a37d4172b906135f9f9556411bcfb60d9ab2",
+      "contentHash": "d224e4cd1f626aa94a8719a0b4b0a37d4172b906135f9f9556411bcfb60d9ab2",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "IR182LNA1 : la source documentaire et la fiche exacte de remplacement restent HTTP429. Aucun accès complet ni empreinte de document actuel ne permet une qualification.",
+      "neighbors": [
+        "/outils-pneumatiques/ingersoll-rand-182l/",
+        "/outils-pneumatiques/ingersoll-rand-182g/"
+      ],
+      "sourceReadings": [],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://powertools.ingersollrand.com/en-gb/asset-library/",
+          "checkedAt": "2026-11-16T10:40:46.980Z",
+          "httpStatus": 429,
+          "complete": false,
+          "finalUrl": "https://powertools.ingersollrand.com/en-gb/asset-library/"
+        },
+        {
+          "url": "https://powertools.ingersollrand.com/en/surface-preparation-finishing-tools/needle-and-chisel-scalers/182-needle/",
+          "checkedAt": "2026-11-16T13:51:16.721Z",
+          "httpStatus": 429,
+          "complete": false,
+          "finalUrl": "https://powertools.ingersollrand.com/en/surface-preparation-finishing-tools/needle-and-chisel-scalers/182-needle/"
+        }
+      ],
+      "priorFollowup": {
+        "documents": [
+          "https://powertools.ingersollrand.com/en/surface-preparation-finishing-tools/needle-and-chisel-scalers/182-needle/"
+        ],
+        "finding": "La nouvelle fiche officielle exacte répond429 auGET. Le tableau visible dans le moteur de recherche n’est pas importé comme preuve actuelle.",
+        "nextCorrection": "Attendre un accès constructeur complet et vérifier la pression de mesure appariée ; conserver la réserve.",
+        "status": "exact-alternative-source-429",
+        "sourceChecks": [
+          {
+            "url": "https://powertools.ingersollrand.com/en/surface-preparation-finishing-tools/needle-and-chisel-scalers/182-needle/",
+            "checkedAt": "2026-11-16T13:51:16.721Z",
+            "httpStatus": 429,
+            "complete": false,
+            "finalUrl": "https://powertools.ingersollrand.com/en/surface-preparation-finishing-tools/needle-and-chisel-scalers/182-needle/"
+          }
+        ],
+        "checkedAt": "2026-11-16T14:00:56.344371Z",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "La nouvelle fiche officielle exacte répond429 auGET. Le tableau visible dans le moteur de recherche n’est pas importé comme preuve actuelle.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027189+00:00",
+      "continuationNote": "Nouvelle fiche officielle en-us : GET429, en dépit de son contenu indexé par le moteur de recherche. Les valeurs de ce cache ne sont pas importées.",
+      "newQualificationId": null,
+      "priorReport": "docs/editorial/indexation-reserves-followup-2026-11-16-c.json",
+      "currentDecision": "needs-correction",
+      "currentQualificationId": null,
+      "newAdmission": false,
+      "currentContinuation": "Preuves et limites documentées précédemment conservées ; aucune nouvelle preuve exacte complète obtenue dans cette continuation. Les documents ne sont pas déclarés relus ou téléchargés à nouveau.",
+      "continuationRecordedAt": "2026-11-16T20:23:23.503246+00:00"
+    },
+    {
+      "path": "/outils-pneumatiques/ingersoll-rand-61h120g4/",
+      "previousContentHash": "bf921299a25a21d152b88b7670454d483ffc7ea60e270accb80ccb73779705b2",
+      "contentHash": "bf921299a25a21d152b88b7670454d483ffc7ea60e270accb80ccb73779705b2",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "IR61H120G4 : source et fiche produit exacte restent HTTP429. Pas de transposition depuis un autre modèle ou une copie de moteur de recherche.",
+      "neighbors": [
+        "/outils-pneumatiques/ingersoll-rand-61h120h63/",
+        "/outils-pneumatiques/ingersoll-rand-61h120l6/"
+      ],
+      "sourceReadings": [],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://powertools.ingersollrand.com/en-gb/asset-library/",
+          "checkedAt": "2026-11-16T10:40:46.980Z",
+          "httpStatus": 429,
+          "complete": false,
+          "finalUrl": "https://powertools.ingersollrand.com/en-gb/asset-library/"
+        }
+      ],
+      "priorFollowup": {
+        "status": "prior-reserve-maintained",
+        "finding": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027193+00:00",
+      "continuationNote": "La notice officielle 16576126_ed2_B découverte dans la recherche répond429 au GET complet. La version EU/US et les données de consommation ne sont pas transposées.",
+      "newQualificationId": null,
+      "priorReport": "docs/editorial/indexation-reserves-followup-2026-11-16-c.json",
+      "currentDecision": "needs-correction",
+      "currentQualificationId": null,
+      "newAdmission": false,
+      "currentContinuation": "Preuves et limites documentées précédemment conservées ; aucune nouvelle preuve exacte complète obtenue dans cette continuation. Les documents ne sont pas déclarés relus ou téléchargés à nouveau.",
+      "continuationRecordedAt": "2026-11-16T20:23:23.503246+00:00"
+    },
+    {
+      "path": "/outils-pneumatiques/ingersoll-rand-7s60l/",
+      "previousContentHash": "9a6adc15ac6c9259bea70ae5290a3a3107636f6882d5952501b4ca0935324301",
+      "contentHash": "9a6adc15ac6c9259bea70ae5290a3a3107636f6882d5952501b4ca0935324301",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "IR7S60L : source et fiche produit exacte restent HTTP429. Une divergence antérieure de consommation reste non résolue ; une extraction non accessible par GET complet ne la lève pas.",
+      "neighbors": [
+        "/outils-pneumatiques/ingersoll-rand-7s30l/",
+        "/outils-pneumatiques/ingersoll-rand-7s48l/"
+      ],
+      "sourceReadings": [],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://powertools.ingersollrand.com/en-gb/asset-library/",
+          "checkedAt": "2026-11-16T10:40:46.980Z",
+          "httpStatus": 429,
+          "complete": false,
+          "finalUrl": "https://powertools.ingersollrand.com/en-gb/asset-library/"
+        }
+      ],
+      "priorFollowup": {
+        "status": "prior-reserve-maintained",
+        "finding": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027195+00:00",
+      "continuationNote": "Réserve d’accès et de consommation conservée. Les distributeurs consultables et un extrait de moteur de recherche ne remplacent pas une source primaire complète et applicable.",
+      "newQualificationId": null,
+      "priorReport": "docs/editorial/indexation-reserves-followup-2026-11-16-c.json",
+      "currentDecision": "needs-correction",
+      "currentQualificationId": null,
+      "newAdmission": false,
+      "currentContinuation": "La nouvelle page officielle française de la famille 7P répond HTTP 429. La réserve d’accès et la divergence de consommation restent ouvertes.",
+      "currentSourceChecks": [
+        {
+          "url": "https://powertools.ingersollrand.com/fr-fr/surface-preparation-finishing-tools/sanders-polishers-buffers/pro-7p/",
+          "checkedAt": "2026-11-16T20:10:03.157Z",
+          "httpStatus": 429,
+          "complete": false,
+          "finalUrl": "https://powertools.ingersollrand.com/fr-fr/surface-preparation-finishing-tools/sanders-polishers-buffers/pro-7p/"
+        }
+      ],
+      "continuationRecordedAt": "2026-11-16T20:23:23.503246+00:00"
+    },
+    {
+      "path": "/guides/generateur-azote-purete-oxygene-argon-ppm/",
+      "previousContentHash": "bfef43ec462598d93069c4920fa811f2bf9f43c479fbe7c40ace2a550c319666",
+      "contentHash": "bfef43ec462598d93069c4920fa811f2bf9f43c479fbe7c40ace2a550c319666",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "Guide oxygène/argon Parker : guide relu, source primaire IOM403 et alternative officielle403. L’unité ppm et les conditions propres à l’argon ne sont pas validées par une source effectivement accessible aujourd’hui. Réserve conservée.",
+      "neighbors": [
+        "/guides/generateur-azote-compresseur-debit-purete/",
+        "/guides/compresseur-decoupe-laser-air-azote/"
+      ],
+      "sourceReadings": [],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://www.parker.com/content/dam/Parker-com/Literature/IGFG/PDF-Files/IOM_PKR_DB1200_9000_062019.pdf",
+          "checkedAt": "2026-11-16T10:45:10.597Z",
+          "httpStatus": 403,
+          "complete": false,
+          "finalUrl": "https://www.parker.com/content/dam/Parker-com/Literature/IGFG/PDF-Files/IOM_PKR_DB1200_9000_062019.pdf"
+        }
+      ],
+      "priorFollowup": {
+        "status": "prior-reserve-maintained",
+        "finding": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027197+00:00",
+      "continuationNote": "Le guide de modules à membrane Parker découvert répond403 au GET ; il ne serait de toute façon pas une preuve de la série PSA DB. Les assertions sur argon/O2/ppm restent réservées.",
+      "newQualificationId": null,
+      "priorReport": "docs/editorial/indexation-reserves-followup-2026-11-16-c.json",
+      "currentDecision": "qualified",
+      "currentQualificationId": "502477d37f116d101b7424a5a4d6aef780e6da61b70359232edee516820b0225",
+      "newAdmission": false,
+      "currentContinuation": "Exemple documentaire corrigé à la gamme DB5–20 réellement lue, source primaire complète, pages 6 et 7 inspectées visuellement, voisins relus et contrôles ciblés réussis. Reçu enregistré sans admission ; correction conservée dans une branche distincte du lot de 436.",
+      "currentContentHash": "44a5b103c5e66a882a65a346c8c193dbfeff6bc98c4585e8692838203038bb97",
+      "currentSourceChecks": [
+        {
+          "url": "https://test.parker.com/content/dam/Parker-com/Literature/IGFG/PDF-Files/PKR_IOM_DB5-20_082022.pdf",
+          "checkedAt": "2026-11-16T20:10:03.327Z",
+          "httpStatus": 200,
+          "sha256": "8ddda841eb67c24296c0393072c6b70eb864bcab6da56865e16c42adcf1c5ed8",
+          "bytes": 9137671,
+          "complete": true,
+          "finalUrl": "https://test.parker.com/content/dam/Parker-com/Literature/IGFG/PDF-Files/PKR_IOM_DB5-20_082022.pdf"
+        }
+      ],
+      "correctionReport": "docs/editorial/indexation-parker-followup-2026-11-16.json",
+      "continuationRecordedAt": "2026-11-16T20:23:23.503246+00:00"
+    },
+    {
+      "path": "/outils-pneumatiques/fouloir-zipp-zsr-304l/",
+      "previousContentHash": "997df8a4779bfb4aabbbcb7860b96b7189c6fd9b1325eba836c4143bfd536b36",
+      "contentHash": "997df8a4779bfb4aabbbcb7860b96b7189c6fd9b1325eba836c4143bfd536b36",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "ZIPP ZSR304L : la page PDF176 actuelle ne contient plus la table attribuée au modèle ; la recherche dans le texte complet ne localise pas sa ligne. Cadence700, masse9,79 et consommation850 historiques non confirmées sur un passage exact. Réserve de provenance maintenue.",
+      "neighbors": [
+        "/outils-pneumatiques/fouloir-zipp-zsr-302/",
+        "/outils-pneumatiques/fouloir-zipp-zsr-302l/"
+      ],
+      "sourceReadings": [],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+          "checkedAt": "2026-11-16T10:41:31.981Z",
+          "httpStatus": 200,
+          "complete": true,
+          "sha256": "a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3",
+          "bytes": 16229866,
+          "finalUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf"
+        },
+        {
+          "url": "https://www.airtools.com.tw/zsr-304l-air-rammer/",
+          "checkedAt": "2026-11-16T13:52:36.601Z",
+          "httpStatus": 200,
+          "complete": true,
+          "sha256": "9022df4013a4b9fa7e871d403c753df33fb0ef4ff5fa0d90e5e95f9aea6bfd91",
+          "bytes": 201970,
+          "finalUrl": "https://www.airtools.com.tw/zsr-304l-air-rammer/"
+        }
+      ],
+      "priorFollowup": {
+        "documents": [
+          "https://www.airtools.com.tw/zsr-304l-air-rammer/"
+        ],
+        "finding": "La page officielle confirme la référenceZSR304L et son usage de compactage mais ne contient pas le tableau quantitatif attendu. La pagePDF176 ne correspond pas au tableau recherché ; certaines fontes du document se rendent sous forme de points. Aucun700 coups/min,9,79 kg ou850 L/min historique n’est revalidé par ces lectures.",
+        "nextCorrection": "Retrouver un tableau quantitatif complet et lisible portant cette référence ; une page marketing ou le sommaire ne suffisent pas.",
+        "status": "identity-recovered-quantities-unverified",
+        "sourceChecks": [
+          {
+            "url": "https://www.airtools.com.tw/zsr-304l-air-rammer/",
+            "checkedAt": "2026-11-16T13:52:36.601Z",
+            "httpStatus": 200,
+            "complete": true,
+            "sha256": "9022df4013a4b9fa7e871d403c753df33fb0ef4ff5fa0d90e5e95f9aea6bfd91",
+            "bytes": 201970,
+            "finalUrl": "https://www.airtools.com.tw/zsr-304l-air-rammer/"
+          }
+        ],
+        "checkedAt": "2026-11-16T14:00:56.344371Z",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "La page officielle confirme la référenceZSR304L et son usage de compactage mais ne contient pas le tableau quantitatif attendu. La pagePDF176 ne correspond pas au tableau recherché ; certaines fontes du document se rendent sous forme de points. Aucun700 coups/min,9,79 kg ou850 L/min historique n’est revalidé par ces lectures.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027202+00:00",
+      "continuationNote": "Le PDF complet actuel a été rendu avec Poppler. La pagePDF175 porte le numéro imprimé171 ; la suivante porte183 et concerne une riveteuse sans fil. Les pages150à199 ont été inspectées visuellement pour localiser le tableau attendu. L’extrait de recherche donnant une table Air Rammer172 n’est pas une preuve du corps courant : aucune valeur700/9,79/850 n’est revalidée.",
+      "newQualificationId": null,
+      "priorReport": "docs/editorial/indexation-reserves-followup-2026-11-16-c.json",
+      "currentDecision": "needs-correction",
+      "currentQualificationId": null,
+      "newAdmission": false,
+      "currentContinuation": "Preuves et limites documentées précédemment conservées ; aucune nouvelle preuve exacte complète obtenue dans cette continuation. Les documents ne sont pas déclarés relus ou téléchargés à nouveau.",
+      "continuationRecordedAt": "2026-11-16T20:23:23.503246+00:00"
+    },
+    {
+      "path": "/outils-pneumatiques/burineur-universal-tool-ut8652h/",
+      "previousContentHash": "e99e12c42fc8cbb88e0d6f70ec95b28f971c630dedec8fc8e5588f2d5f294ca4",
+      "contentHash": "e99e12c42fc8cbb88e0d6f70ec95b28f971c630dedec8fc8e5588f2d5f294ca4",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "Course contradictoire2/3pouces dans la page constructeur, sans arbitrage exact.",
+      "neighbors": [
+        "/outils-pneumatiques/burineur-universal-tool-ut8652r/",
+        "/outils-pneumatiques/burineur-universal-tool-ut8651h/"
+      ],
+      "sourceReadings": [
+        {
+          "url": "https://continentaltoolgroup.com/product/2-stroke-chipping-hammer/",
+          "hash": "f9d3b0d9aa1416ba47ee674be8d013f3edc08787e98c6843167e67df8935adf3",
+          "checkedAt": "2026-11-16T07:35:22.899Z",
+          "httpStatus": 200,
+          "complete": true,
+          "readPages": []
+        }
+      ],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://continentaltoolgroup.com/product/2-stroke-chipping-hammer/",
+          "checkedAt": "2026-11-16T07:35:22.899Z",
+          "httpStatus": 200,
+          "sha256": "f9d3b0d9aa1416ba47ee674be8d013f3edc08787e98c6843167e67df8935adf3",
+          "bytes": 181921,
+          "complete": true,
+          "finalUrl": "https://continentaltoolgroup.com/product/universal-tool-2-stroke-chipping-hammer/"
+        },
+        {
+          "url": "https://continentaltoolgroup.com/wp-content/uploads/2024/06/ut_catalog.pdf",
+          "checkedAt": "2026-11-16T13:54:16.741Z",
+          "httpStatus": 404,
+          "complete": false,
+          "finalUrl": "https://continentaltoolgroup.com/wp-content/uploads/2024/06/ut_catalog.pdf"
+        }
+      ],
+      "priorFollowup": {
+        "documents": [
+          "https://continentaltoolgroup.com/wp-content/uploads/2024/06/ut_catalog.pdf"
+        ],
+        "finding": "Le catalogue officiel alternatif est404. La recherche expose encore le conflit titre2pouces/table3pouces, sans corps complet utilisable pour l’arbitrer.",
+        "nextCorrection": "Conserver les deux valeurs historiques, obtenir une clarification exacte constructeur.",
+        "status": "alternative-catalog-404",
+        "sourceChecks": [
+          {
+            "url": "https://continentaltoolgroup.com/wp-content/uploads/2024/06/ut_catalog.pdf",
+            "checkedAt": "2026-11-16T13:54:16.741Z",
+            "httpStatus": 404,
+            "complete": false,
+            "finalUrl": "https://continentaltoolgroup.com/wp-content/uploads/2024/06/ut_catalog.pdf"
+          }
+        ],
+        "checkedAt": "2026-11-16T14:00:56.344371Z",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "Le catalogue officiel alternatif est404. La recherche expose encore le conflit titre2pouces/table3pouces, sans corps complet utilisable pour l’arbitrer.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027204+00:00",
+      "continuationNote": "La notice officielle alternative ut8652r.pdf répond404 au GET. Les extraits indexés conservent eux-mêmes le titre2pouces et la table3pouces : aucun arbitrage inventé.",
+      "newQualificationId": null,
+      "priorReport": "docs/editorial/indexation-reserves-followup-2026-11-16-c.json",
+      "currentDecision": "needs-correction",
+      "currentQualificationId": null,
+      "newAdmission": false,
+      "currentContinuation": "Preuves et limites documentées précédemment conservées ; aucune nouvelle preuve exacte complète obtenue dans cette continuation. Les documents ne sont pas déclarés relus ou téléchargés à nouveau.",
+      "continuationRecordedAt": "2026-11-16T20:23:23.503246+00:00"
+    },
+    {
+      "path": "/outils-pneumatiques/meuleuse-puma-at-7438m/",
+      "previousContentHash": "9109bdfae5fb05db16be07b2cec3279f5f22d503e1a37867c5a195906433f679",
+      "contentHash": "9109bdfae5fb05db16be07b2cec3279f5f22d503e1a37867c5a195906433f679",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "Vitesse PDF22000 contreHTML24000 : sécurité de l’accessoire à confirmer.",
+      "neighbors": [
+        "/outils-pneumatiques/meuleuse-puma-at-7438/",
+        "/outils-pneumatiques/meuleuse-puma-at-7437/"
+      ],
+      "sourceReadings": [
+        {
+          "url": "https://www.pumaair.com/views/proimages/pd-en/PDF/PIC-2680/P044-AIR_DIE_GRINDER-2680.pdf",
+          "hash": "997bff19440269b150fc8e7f9654a25c740959b69be2fc32aab920b6d90c98c4",
+          "checkedAt": "2026-11-16T10:55:37.230Z",
+          "httpStatus": 200,
+          "complete": true,
+          "readPages": [
+            1
+          ]
+        },
+        {
+          "url": "https://www.pumaair.com/product-Air-Die-Grinder-AirDieGrinder-.html",
+          "hash": "08b9f9c7d1898261da064b9521bc097278817d20a1ebb50c4f75c23188e0a7c7",
+          "checkedAt": "2026-11-16T07:37:49.202Z",
+          "httpStatus": 200,
+          "complete": true,
+          "readPages": []
+        }
+      ],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://www.pumaair.com/product-Air-Die-Grinder-AirDieGrinder-.html",
+          "checkedAt": "2026-11-16T07:37:49.202Z",
+          "httpStatus": 200,
+          "sha256": "08b9f9c7d1898261da064b9521bc097278817d20a1ebb50c4f75c23188e0a7c7",
+          "bytes": 83533,
+          "complete": true,
+          "finalUrl": "https://www.pumaair.com/product-Air-Die-Grinder-AirDieGrinder-.html"
+        },
+        {
+          "url": "https://www.pumaair.com/views/proimages/pd-en/PDF/PIC-2680/P044-AIR_DIE_GRINDER-2680.pdf",
+          "checkedAt": "2026-11-16T10:55:37.230Z",
+          "httpStatus": 200,
+          "sha256": "997bff19440269b150fc8e7f9654a25c740959b69be2fc32aab920b6d90c98c4",
+          "bytes": 675399,
+          "complete": true,
+          "finalUrl": "https://www.pumaair.com/views/proimages/pd-en/PDF/PIC-2680/P044-AIR_DIE_GRINDER-2680.pdf"
+        }
+      ],
+      "priorFollowup": {
+        "status": "prior-reserve-maintained",
+        "finding": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027206+00:00",
+      "continuationNote": "La recherche primaire confirme encore24 000tr/min dans le HTML face aux22 000 du PDF déjà lu ; aucune preuve d’applicabilité par révision ne lève ce conflit de vitesse.",
+      "newQualificationId": null,
+      "priorReport": "docs/editorial/indexation-reserves-followup-2026-11-16-c.json",
+      "currentDecision": "needs-correction",
+      "currentQualificationId": null,
+      "newAdmission": false,
+      "currentContinuation": "Preuves et limites documentées précédemment conservées ; aucune nouvelle preuve exacte complète obtenue dans cette continuation. Les documents ne sont pas déclarés relus ou téléchargés à nouveau.",
+      "continuationRecordedAt": "2026-11-16T20:23:23.503246+00:00"
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hymair-as2003g/",
+      "previousContentHash": "f55e0e24d7a30264f591a8f81ea22ae26d78515c05b022bd850097eb2b60f708",
+      "contentHash": "f55e0e24d7a30264f591a8f81ea22ae26d78515c05b022bd850097eb2b60f708",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "Différence G/GA non démontrée par les chiffres et le document actuel ; ne pas créer une deuxième réponse équivalente.",
+      "neighbors": [
+        "/outils-pneumatiques/pistolet-peinture-hymair-as2003ga/",
+        "/outils-pneumatiques/pistolet-peinture-hymair-as2003s/"
+      ],
+      "sourceReadings": [
+        {
+          "url": "https://www.steedtools.com/phoenix/admin/download?fileId=SZUfKpLkrMNq&dp=GvUApKfKKUAU",
+          "hash": "971e9f3f662af10d3c638d5e9c29c8847ee04672c40e29957ad4ca4eb13d61c1",
+          "checkedAt": "2026-11-16T07:38:05.658Z",
+          "httpStatus": 200,
+          "complete": true,
+          "readPages": []
+        }
+      ],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://www.steedtools.com/phoenix/admin/download?fileId=SZUfKpLkrMNq&dp=GvUApKfKKUAU",
+          "checkedAt": "2026-11-16T07:38:05.658Z",
+          "httpStatus": 200,
+          "sha256": "971e9f3f662af10d3c638d5e9c29c8847ee04672c40e29957ad4ca4eb13d61c1",
+          "bytes": 73317529,
+          "complete": true,
+          "finalUrl": "https://rqrnrwxhlkmi5q.ldycdn.com/Air+Spary+Guns+%26+Brushes%EF%BC%88Ningbo+Steed+Tools%EF%BC%89-aidpiBqkKiiSRmlririqoio.pdf?dp=GvUApKfKKUAU"
+        }
+      ],
+      "priorFollowup": {
+        "status": "prior-reserve-maintained",
+        "finding": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027209+00:00",
+      "continuationNote": "Aucune preuve primaire nouvelle n’établit une différence utile G/GA. La réserve de variante reste maintenue, sans nouvelle page par reformulation.",
+      "newQualificationId": null,
+      "priorReport": "docs/editorial/indexation-reserves-followup-2026-11-16-c.json",
+      "currentDecision": "needs-correction",
+      "currentQualificationId": null,
+      "newAdmission": false,
+      "currentContinuation": "Preuves et limites documentées précédemment conservées ; aucune nouvelle preuve exacte complète obtenue dans cette continuation. Les documents ne sont pas déclarés relus ou téléchargés à nouveau.",
+      "continuationRecordedAt": "2026-11-16T20:23:23.503246+00:00"
+    },
+    {
+      "path": "/outils-pneumatiques/boulonneuse-soartec-wx-3t7150ab/",
+      "previousContentHash": "9ea2a4ffc13f38e99b88145a802e96e4bbdca13ec031a3ed2c7266ca884bbec5",
+      "contentHash": "9ea2a4ffc13f38e99b88145a802e96e4bbdca13ec031a3ed2c7266ca884bbec5",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "La WX-3T7150AB est la boulonneuse à coupure automatique, 700 tr/min, 350 mm et 1,6 kg. Sa page juxtapose une plage de couple 6–18 Nm dans le tableau et 10–70 Nm dans la présentation. Cette contradiction touche le choix du serrage ; aucune plage n’est retenue par préférence. La consigne 90 psi et l’absence de consommation qualifiée maintiennent aussi le calcul d’air non conclusif.",
+      "neighbors": [
+        "/outils-pneumatiques/boulonneuse-soartec-wx-3953/"
+      ],
+      "sourceReadings": [
+        {
+          "url": "https://www.soartectools.com/products/industrial-auto-shut-off-air-nutrunner-wx-3t7150ab",
+          "hash": "457d306f6efd2e63563473d3a24e589e0706dd3222ef14b9b828d757814442c3",
+          "checkedAt": "2026-11-16T10:45:43.008Z",
+          "httpStatus": 200,
+          "complete": true,
+          "readPages": []
+        }
+      ],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://www.soartectools.com/products/industrial-auto-shut-off-air-nutrunner-wx-3t7150ab",
+          "checkedAt": "2026-11-16T10:45:43.008Z",
+          "httpStatus": 200,
+          "sha256": "457d306f6efd2e63563473d3a24e589e0706dd3222ef14b9b828d757814442c3",
+          "bytes": 323392,
+          "complete": true,
+          "finalUrl": "https://www.soartectools.com/products/1-2-air-shut-off-nutrunner-angle-head-wx-3t7150ab"
+        }
+      ],
+      "priorFollowup": {
+        "status": "prior-reserve-maintained",
+        "finding": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027211+00:00",
+      "continuationNote": "La source officielle reste contradictoire sur la plage de couple déterminante ; aucune table exacte supplémentaire obtenue ne tranche6–18contre10–70Nm.",
+      "newQualificationId": null,
+      "priorReport": "docs/editorial/indexation-reserves-followup-2026-11-16-c.json",
+      "currentDecision": "needs-correction",
+      "currentQualificationId": null,
+      "newAdmission": false,
+      "currentContinuation": "Preuves et limites documentées précédemment conservées ; aucune nouvelle preuve exacte complète obtenue dans cette continuation. Les documents ne sont pas déclarés relus ou téléchargés à nouveau.",
+      "continuationRecordedAt": "2026-11-16T20:23:23.503246+00:00"
+    },
+    {
+      "path": "/outils-pneumatiques/riveteuse-astro-pneumatic-pr36/",
+      "previousContentHash": "5e4338ab130cb1e74511bc4cd87737526b5083855a2bdb2828304865913c3cd8",
+      "contentHash": "47cf88ca6924fc37a8f53a799cf35f0ea314d31c3392ed935857bc8ca73f1311",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": true,
+      "admission": false,
+      "note": "Fiche PR36 et notice complète relues, avec contrôle visuel de la page1. La notice donne 2.320 Liter/Stroke, sans pression de mesure appariée : valeur documentaire, pas nouveau paramètre per-action. La traction1938/380lb reste contradictoire et les dimensions270/280mm divergent ; aucune qualification ni admission pour cette page.",
+      "neighbors": [
+        "/outils-pneumatiques/riveteuse-genius-tools-501300/",
+        "/outils-pneumatiques/riveteuse-toptul-kara0205b/"
+      ],
+      "sourceReadings": [
+        {
+          "url": "https://www.astrotools.com/product/air-riveter-3-32-1-8-5-32-3-16-capacity/",
+          "hash": "eb4ee09633e9454415ce0dc4af84574ee2f60dcd9a73a198a22a18c4c29b203d",
+          "checkedAt": "2026-11-16T10:41:44.854Z",
+          "httpStatus": 200,
+          "complete": true,
+          "readPages": []
+        },
+        {
+          "url": "https://www.astrotools.com/product/air-riveter-3-32-1-8-5-32-3-16-capacity/?attachment_id=6156&download_file=efv4nxoancz5g",
+          "hash": "69d806829bbc60a6476dd991fa86281120de73b305e521febcab30ee5d5bdf3b",
+          "checkedAt": "2026-11-16T17:06:03.134Z",
+          "httpStatus": 200,
+          "complete": true,
+          "readPages": [
+            1,
+            2,
+            5
+          ]
+        }
+      ],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://www.astrotools.com/product/air-riveter-3-32-1-8-5-32-3-16-capacity/",
+          "checkedAt": "2026-11-16T10:41:44.854Z",
+          "httpStatus": 200,
+          "sha256": "eb4ee09633e9454415ce0dc4af84574ee2f60dcd9a73a198a22a18c4c29b203d",
+          "bytes": 309073,
+          "complete": true,
+          "finalUrl": "https://www.astrotools.com/product/air-riveter-3-32-1-8-5-32-3-16-capacity/"
+        },
+        {
+          "url": "https://www.astrotools.com/product/air-riveter-3-32-1-8-5-32-3-16-capacity/?attachment_id=6156&download_file=efv4nxoancz5g",
+          "checkedAt": "2026-11-16T17:06:03.134Z",
+          "httpStatus": 200,
+          "sha256": "69d806829bbc60a6476dd991fa86281120de73b305e521febcab30ee5d5bdf3b",
+          "bytes": 654409,
+          "complete": true,
+          "finalUrl": "https://www.astrotools.com/product/air-riveter-3-32-1-8-5-32-3-16-capacity/?attachment_id=6156&download_file=efv4nxoancz5g"
+        }
+      ],
+      "priorFollowup": {
+        "status": "prior-reserve-maintained",
+        "finding": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": {
+        "demandModel": "variable-volume",
+        "nonConclusive": true,
+        "qualificationEligible": false
+      },
+      "preservedReserve": "Fiche PR36 et notice complète relues, avec contrôle visuel de la page1. La notice donne 2.320 Liter/Stroke, sans pression de mesure appariée : valeur documentaire, pas nouveau paramètre per-action. La traction1938/380lb reste contradictoire et les dimensions270/280mm divergent ; aucune qualification ni admission pour cette page.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027213+00:00",
+      "continuationNote": "La notice et le volume documentaire déjà intégrés restent conservés. Aucune preuve nouvelle ne tranche la traction1938/380lb ni les conditions de mesure du volume ; page non qualifiée.",
+      "newQualificationId": null,
+      "priorReport": "docs/editorial/indexation-reserves-followup-2026-11-16-c.json",
+      "currentDecision": "needs-correction",
+      "currentQualificationId": null,
+      "newAdmission": false,
+      "currentContinuation": "Preuves et limites documentées précédemment conservées ; aucune nouvelle preuve exacte complète obtenue dans cette continuation. Les documents ne sont pas déclarés relus ou téléchargés à nouveau.",
+      "continuationRecordedAt": "2026-11-16T20:23:23.503246+00:00"
+    },
+    {
+      "path": "/compresseurs/fs-curtis-eco-pure-vsd-110w/",
+      "previousContentHash": "6f9b1102be1912c12ff1b05c7093f6a26709a7ffded30575abc292ca2a6e3d9c",
+      "contentHash": "6f9b1102be1912c12ff1b05c7093f6a26709a7ffded30575abc292ca2a6e3d9c",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "FSCurtisECO-PureVSD110W : fiche exacte CAGI primaire404. Le document de conversion NIST accessible ne rétablit pas les performances constructeur. Réserve propre à la page.",
+      "neighbors": [
+        "/compresseurs/fs-curtis-eco-pure-vsd-110a/",
+        "/compresseurs/fs-curtis-eco-pure-vsd-132a/"
+      ],
+      "sourceReadings": [],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://us.fscurtis.com/wp-content/uploads/2026/01/ep-vsd-110w-100psi-cagi-data-sheet.pdf",
+          "checkedAt": "2026-11-16T10:41:14.048Z",
+          "httpStatus": 404,
+          "complete": false,
+          "finalUrl": "https://us.fscurtis.com/wp-content/uploads/2026/01/ep-vsd-110w-100psi-cagi-data-sheet.pdf"
+        },
+        {
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+          "checkedAt": "2026-11-16T07:41:47.560Z",
+          "httpStatus": 200,
+          "complete": true,
+          "sha256": "751228aea7ee7b2d83bb7af67071a1647374ae710e5d02c44f45cee1e59c4546",
+          "bytes": 169506,
+          "finalUrl": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8"
+        }
+      ],
+      "priorFollowup": {
+        "status": "prior-reserve-maintained",
+        "finding": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027215+00:00",
+      "continuationNote": "La fiche ep132a100psi découverte porte un modèle à vitesse fixe, pas la référence VSD exacte, et son GET répond404. Aucun851,1acfm du modèle fixe n’est transféré aux VSD110W/132A.",
+      "newQualificationId": null,
+      "priorReport": "docs/editorial/indexation-reserves-followup-2026-11-16-c.json",
+      "currentDecision": "needs-correction",
+      "currentQualificationId": null,
+      "newAdmission": false,
+      "currentContinuation": "La piste d’une fiche 150 psi répond HTTP 404 ; elle aurait de toute façon une pression différente du candidat 100 psi. Aucun point de fonctionnement transposé.",
+      "currentSourceChecks": [
+        {
+          "url": "https://us.fscurtis.com/wp-content/uploads/2026/01/ep-vsd-110w-150psi-cagi-data-sheet.pdf",
+          "checkedAt": "2026-11-16T20:10:10.514Z",
+          "httpStatus": 404,
+          "complete": false,
+          "finalUrl": "https://us.fscurtis.com/wp-content/uploads/2026/01/ep-vsd-110w-150psi-cagi-data-sheet.pdf"
+        }
+      ],
+      "continuationRecordedAt": "2026-11-16T20:23:23.503246+00:00"
+    },
+    {
+      "path": "/compresseurs/fs-curtis-eco-pure-vsd-132a/",
+      "previousContentHash": "10847f99326288a265a32cd1a674d90a33aa9dd6a625f1ea7dcb01e71595228a",
+      "contentHash": "10847f99326288a265a32cd1a674d90a33aa9dd6a625f1ea7dcb01e71595228a",
+      "decision": "needs-correction",
+      "qualificationId": null,
+      "corrected": false,
+      "admission": false,
+      "note": "FSCurtisECO-PureVSD132A : fiche exacte CAGI primaire404. NIST confirme seulement les conversions, pas les points du modèle. Réserve conservée.",
+      "neighbors": [
+        "/compresseurs/fs-curtis-eco-pure-vsd-132w/",
+        "/compresseurs/fs-curtis-eco-pure-vsd-110a/"
+      ],
+      "sourceReadings": [],
+      "currentPrimaryChecks": [
+        {
+          "url": "https://us.fscurtis.com/wp-content/uploads/2026/01/ep-vsd-132a-100psi-cagi-data-sheet.pdf",
+          "checkedAt": "2026-11-16T10:41:15.874Z",
+          "httpStatus": 404,
+          "complete": false,
+          "finalUrl": "https://us.fscurtis.com/wp-content/uploads/2026/01/ep-vsd-132a-100psi-cagi-data-sheet.pdf"
+        },
+        {
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+          "checkedAt": "2026-11-16T07:41:47.560Z",
+          "httpStatus": 200,
+          "complete": true,
+          "sha256": "751228aea7ee7b2d83bb7af67071a1647374ae710e5d02c44f45cee1e59c4546",
+          "bytes": 169506,
+          "finalUrl": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8"
+        }
+      ],
+      "priorFollowup": {
+        "status": "prior-reserve-maintained",
+        "finding": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+        "admission": false,
+        "qualificationRecorded": false
+      },
+      "engineLimits": null,
+      "preservedReserve": "Réserve déjà lue conservée. Aucune preuve supplémentaire exacte et complète ne lève la contradiction ou l’indisponibilité dans cette continuation.",
+      "followupReviewedAt": "2026-11-16T18:39:15.027218+00:00",
+      "continuationNote": "La fiche ep132a100psi découverte porte un modèle à vitesse fixe, pas la référence VSD exacte, et son GET répond404. Aucun851,1acfm du modèle fixe n’est transféré aux VSD110W/132A.",
+      "newQualificationId": null,
+      "priorReport": "docs/editorial/indexation-reserves-followup-2026-11-16-c.json",
+      "currentDecision": "needs-correction",
+      "currentQualificationId": null,
+      "newAdmission": false,
+      "currentContinuation": "Preuves et limites documentées précédemment conservées ; aucune nouvelle preuve exacte complète obtenue dans cette continuation. Les documents ne sont pas déclarés relus ou téléchargés à nouveau.",
+      "continuationRecordedAt": "2026-11-16T20:23:23.503246+00:00"
+    }
+  ],
+  "counts": {
+    "records": 13,
+    "newCorrections": 1,
+    "newQualifications": 1,
+    "remainingReserves": 12,
+    "admissions": 0,
+    "siteBuilds": 0
+  },
+  "nextSteps": "Intégrer la préparation prioritaire au prochain lot réellement éligible après contrôle du main et de la production, proposition exacte, fraîcheur des sources, revue du jour et hook normal. La qualification Parker supplémentaire reste séparée : ne pas retarder les 436 pour les réserves. Une réserve individuelle n’empêche aucune admission indépendante validée.",
+  "historicalFullSourceAudit": {
+    "runId": 43901927469,
+    "urlInventory": 7550,
+    "http404": 109,
+    "unverified": 790,
+    "note": "Inventaire complet et anomalies conservés ; les nouveaux GET ciblés ne le remplacent pas."
+  }
+}
