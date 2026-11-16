@@ -1,3 +1,4 @@
+import { beforeReservedNovember16ReservesFollowup } from './reviewed-catalog-amendments-2026-11-16-reserves.mjs';
 import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import { describe, it, expect } from 'vitest';
@@ -12,27 +13,29 @@ import { technicalCardSvg } from './technical-card.mjs';
 import { evaluateCompatibility } from '../../server/air-compatibility.mjs';
 const read = path => readFileSync(new URL('../../' + path, import.meta.url));
 const hash = value => createHash('sha256').update(value).digest('hex');
-const datedHistory = evidenceHistory.events;
+const datedHistory = evidenceHistory.events.slice(0,39188);
 const s = JSON.parse(read('src/data/imports/catalog-amendments-reviewed-2026-11-16-reviews.json'));
+const later = JSON.parse(read('src/data/imports/catalog-amendments-reviewed-2026-11-16-reserves.json'));
+const datedFileBytes = row => { const metadata=later.rows.find(r=>r.id===row.id); if(!metadata)return read(row.file); const p=beforeReservedNovember16ReservesFollowup(parseCatalogProductSource(row.kind,read(row.file).toString())); let bytes=buildCatalogProductSource(row.kind,Object.fromEntries(metadata.sourcePropertyOrder.map(k=>[k,p[k]])),metadata.sourceIndentation); if(metadata.sourceCompactExport)bytes=bytes.replace(';\n\nexport',';\nexport'); return bytes; };
 const ample = compressorSchema.parse({ ...compressors[0], maxPressureBar: 50, dutyCycle: 1, fadCurve: [{ pressureBar: 1, litersPerMinute: 100000 }, { pressureBar: 50, litersPerMinute: 100000 }] });
 describe('November 16 449-dossier review preparation', () => {
  it('reconstructs all 432 exact records and rejects unknown identity or source drift', () => {
   expect(s.rows).toHaveLength(432);
   for (const row of s.rows) {
-   const after = parseCatalogProductSource(row.kind, read(row.file).toString()), before = beforeReservedNovember16ReviewsFollowup(after);
+   const after = beforeReservedNovember16ReservesFollowup(parseCatalogProductSource(row.kind, read(row.file).toString())), before = beforeReservedNovember16ReviewsFollowup(after);
    expect(after, row.id).toEqual(row.after); expect(before, row.id).toEqual(row.before);
-   expect(applyReservedNovember16ReviewsFollowup(structuredClone(before)), row.id).toEqual(after);
-   expect(applyReservedNovember16ReviewsFollowup(structuredClone(after)), row.id).toEqual(after);
+   expect(beforeReservedNovember16ReservesFollowup(applyReservedNovember16ReviewsFollowup(structuredClone(before))), row.id).toEqual(after);
+   expect(beforeReservedNovember16ReservesFollowup(applyReservedNovember16ReviewsFollowup(structuredClone(after))), row.id).toEqual(after);
    let bytes = buildCatalogProductSource(row.kind, Object.fromEntries(row.sourcePropertyOrder.map(k => [k, before[k]])), row.sourceIndentation);
    if (row.sourceCompactExport) bytes = bytes.replace(';\n\nexport', ';\nexport');
-   expect(hash(bytes), row.id).toBe(row.beforeFileSha256); expect(hash(read(row.file)), row.id).toBe(row.afterFileSha256);
+   expect(hash(bytes), row.id).toBe(row.beforeFileSha256); expect(hash(datedFileBytes(row)), row.id).toBe(row.afterFileSha256);
    expect(after.evidence.slice(0, before.evidence.length), row.id).toEqual(before.evidence);
    for (const key of ['brand', 'model', 'mpn']) expect(() => applyReservedNovember16ReviewsFollowup({ ...before, [key]: 'unknown' }), row.id).toThrow('identity');
    const drift = structuredClone(before); drift[row.fields[0]] = 'unknown'; expect(() => applyReservedNovember16ReviewsFollowup(drift), row.id).toThrow('base');
    expect(() => beforeReservedNovember16ReviewsFollowup(drift), row.id).toThrow('historical');
    const parsed = (row.kind === 'tools' ? toolProfileSchema : compressorSchema).parse(after);
    const live = (row.kind === 'tools' ? tools : compressors).find(p => p.id === row.id);
-   expect(live, row.id).toEqual(row.kind === 'tools' ? { ...parsed, category: toolCategoryLabel(parsed.categoryId) } : parsed);
+   expect(beforeReservedNovember16ReservesFollowup(live), row.id).toEqual(row.kind === 'tools' ? { ...parsed, category: toolCategoryLabel(parsed.categoryId) } : parsed);
    const ids = new Set(after.evidence.map(e => e.id)); for (const refs of Object.values(after.fieldSources)) for (const id of refs) expect(ids.has(id), row.id).toBe(true);
    for (const spec of after.specifications) for (const id of spec.evidenceIds) expect(ids.has(id), row.id).toBe(true);
    for (const source of row.sourceReadings) { expect(source.complete).toBe(true); expect(source.httpStatus).toBe(200); expect(source.hash).toMatch(/^[a-f0-9]{64}$/); }

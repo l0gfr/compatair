@@ -13,45 +13,67 @@ const product: CompressorInput = {
 	"confidence": "A",
 	"status": "unknown",
 	"image": {
-		"src": "/images/products/fiac-ax-303bd-dry-8-400-50-ce-technical-20261116-reviews.svg",
+		"src": "/images/products/fiac-ax-303bd-dry-8-400-50-ce-technical-20261116-reserves.svg",
 		"alt": "Repères techniques FIAC AX 303BD DRY 8 400/50 CE, référence 4152026247",
 		"sourceUrl": "https://shop.fiac.it/en-IT/products/4152026247/ax-303bd-dry-8-40050-ce",
-		"sourceLabel": "Carte technique CompatAir, données fabricant relues le 16 novembre 2026"
+		"sourceLabel": "Carte technique CompatAir, documents constructeur relus le 16 novembre 2026"
 	},
 	"editorial": {
-		"overview": "L’AX303BD DRY 8 400/50 CE 4152026247 est la version avec sécheur à 8 bar maximum, capacité FAD déclarée 3 650 L/min. La version 13 bar 4152026249 annonce 2 770. Le catalogue AIRBLOK et la fiche AX sont rapprochés par le numéro d’article, sans effacer leurs puissances 22 et 22,4 kW. La pression de mesure du FAD reste à confirmer ; aucun point à 8 bar n’est supposé dans le moteur.",
+		"overview": "Le FIAC AX 303BD DRY 8 400/50 CE (4152026247) est la configuration à sécheur intégré et pression maximale de 8 bar, sans cuve intégrée. La fiche publie un FAD de 3650 L/min. Les versions 8 et 13 bar ne délivrent pas la même capacité déclarée : 3 650 contre 2 770 L/min. Le catalogue et la fiche diffèrent sur la puissance, 22 et 22,4 kW ; la puissance normalisée et la courbe FAD restent absentes en attendant leurs conditions applicables.",
 		"verifiedFacts": [
-			"L’AX303BD DRY 8 400/50 CE 4152026247 est la version avec sécheur à 8 bar maximum, capacité FAD déclarée 3 650 L/min.",
-			"La version 13 bar 4152026249 annonce 2 770."
+			"Référence 4152026247 : 8 bar maximum et sécheur DRY.",
+			"Ligne AIRBLOK 303 BD DRY du catalogue p35 appariée par le code article.",
+			"Dimensions 1585 × 780 × 1220 mm et masse 464 kg déclarées dans cette table."
 		],
 		"limitations": [
-			"Un seul point de débit restitué est documenté. Aucune mesure aux autres pressions n’est inventée.",
-			"Le taux de marche continu n’est pas établi dans cette fiche. La disponibilité commerciale reste à confirmer.",
-			"La référence commande prime sur le nom commercial : le catalogue utilise AIRBLOK et la fiche en ligne le code AX.",
-			"Les puissances arrondies peuvent différer entre le catalogue PDF et la fiche actuelle. Les valeurs de cette fiche proviennent exclusivement de la fiche individuelle consultée.",
-			"La courbe dimensionnante a été retirée après revue : la mesure FAD et son appariement à une pression ne sont pas suffisamment établis. Les valeurs documentaires restent conservées."
+			"La pression maximale de service ne devient pas une pression de mesure du FAD par hypothèse.",
+			"La divergence de puissance 22/22,4 kW reste visible ; aucune des deux valeurs n’est choisie comme donnée moteur.",
+			"Un taux de marche du groupe complet n’est pas déduit de la désignation industrielle.",
+			"Données des documents identifiés, sans essai physique CompatAir ni garantie de disponibilité de la configuration livrée."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Débit documentaire, hors calcul",
-			"value": "La fiche individuelle 4152026247 publie un FAD de 3650 L/min pour cette version de 8 bar. Débit restitué fabricant, pas débit aspiré. ; pression de mesure non qualifiée. Les anciens points sont conservés dans l’historique.",
+			"label": "Capacité FAD déclarée, hors calcul",
+			"value": "3650 L/min ; pression de mesure non qualifiée dans les documents relus",
 			"evidenceIds": [
-				"review:2026-11-16-reviews:fiac-ax-303bd-dry-8-400-50-ce:0"
+				"review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:0"
+			]
+		},
+		{
+			"label": "Pression de service maximale",
+			"value": "8 bar",
+			"evidenceIds": [
+				"review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:0"
 			]
 		},
 		{
 			"label": "Équipement",
-			"value": "Sans cuve intégrée. Version DRY avec sécheur intégré.",
+			"value": "Sans cuve intégrée, sécheur DRY intégré",
 			"evidenceIds": [
-				"fiac-4152026247-20260926"
+				"review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:0"
 			]
 		},
 		{
-			"label": "Dimensions publiées",
-			"value": "1585 × 780 × 1220 mm (L × l × H)",
+			"label": "Puissances documentaires divergentes",
+			"value": "22,4 kW dans la fiche individuelle ; 22 kW dans le catalogue p35. Aucune valeur normalisée retenue.",
 			"evidenceIds": [
-				"fiac-4152026247-20260926"
+				"review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:0",
+				"review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:1"
+			]
+		},
+		{
+			"label": "Dimensions et masse du tableau de gamme",
+			"value": "1585 × 780 × 1220 mm ; 464 kg",
+			"evidenceIds": [
+				"review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:1"
+			]
+		},
+		{
+			"label": "Alimentation du tableau de gamme",
+			"value": "400/50/3 ; configurations alternatives listées séparément",
+			"evidenceIds": [
+				"review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:1"
 			]
 		}
 	],
@@ -93,41 +115,58 @@ const product: CompressorInput = {
 			"retrievedAt": "2026-11-16",
 			"confidence": "B",
 			"notes": "L’AX303BD DRY 8 400/50 CE 4152026247 est la version avec sécheur à 8 bar maximum, capacité FAD déclarée 3 650 L/min. La version 13 bar 4152026249 annonce 2 770. Le catalogue AIRBLOK et la fiche AX sont rapprochés par le numéro d’article, sans effacer leurs puissances 22 et 22,4 kW. La pression de mesure du FAD reste à confirmer ; aucun point à 8 bar n’est supposé dans le moteur. GET complet SHA-256 55421a11ceb9c201bd873f1d0e4596ea6682b7fd68fc5e03e0c380ddf879ac85. Pages PDF lues : 35."
+		},
+		{
+			"id": "review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:0",
+			"sourceUrl": "https://shop.fiac.it/en-IT/products/4152026247/ax-303bd-dry-8-40050-ce",
+			"sourceLabel": "FIAC, document relu le 16 novembre 2026",
+			"sourceType": "manufacturer",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Fiche exacte 4152026247 et tableau p35 relus, avec la version voisine 8/13 bar. Retrait de powerKw ambigu, conservation des deux puissances et des FAD déclarés dans les spécifications ; fadCurve vide et dutyCycle absent. Apport : distinguer les deux variantes DRY sans proposer de verdict sur un point FAD non qualifié. GET complet SHA-256 6ea6e4f9fd3dbbe5480a094d2ee4ee4f5134365a75417935d2cae766034c4756."
+		},
+		{
+			"id": "review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:1",
+			"sourceUrl": "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf#page=35",
+			"sourceLabel": "FIAC, document relu le 16 novembre 2026 (pages PDF 35)",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Fiche exacte 4152026247 et tableau p35 relus, avec la version voisine 8/13 bar. Retrait de powerKw ambigu, conservation des deux puissances et des FAD déclarés dans les spécifications ; fadCurve vide et dutyCycle absent. Apport : distinguer les deux variantes DRY sans proposer de verdict sur un point FAD non qualifié. GET complet SHA-256 55421a11ceb9c201bd873f1d0e4596ea6682b7fd68fc5e03e0c380ddf879ac85."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"fiac-4152026247-20260926"
+			"review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:0"
 		],
 		"tankLiters": [
-			"fiac-4152026247-20260926"
+			"review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:0"
 		],
 		"maxPressureBar": [
-			"fiac-4152026247-20260926"
+			"review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:0"
 		],
 		"fadCurve": [
-			"review:2026-11-16-reviews:fiac-ax-303bd-dry-8-400-50-ce:0"
+			"review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:0"
 		],
 		"oilType": [
 			"fiac-4152026247-20260926-oiltype-1"
 		],
-		"powerKw": [
-			"fiac-4152026247-20260926"
-		],
 		"weightKg": [
-			"fiac-4152026247-20260926"
+			"review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:1"
 		],
 		"voltage": [
-			"fiac-4152026247-20260926"
+			"review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:1"
 		],
 		"phase": [
-			"fiac-4152026247-20260926"
+			"review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:1"
 		]
 	},
 	"notes": [
-		"Caractéristiques déclarées par le fabricant. Les comparaisons dépendent des conditions de débit et de pression documentées."
+		"Caractéristiques déclarées par le fabricant. Les comparaisons dépendent des conditions de débit et de pression documentées.",
+		"Fiche exacte 4152026247 et tableau p35 relus, avec la version voisine 8/13 bar. Retrait de powerKw ambigu, conservation des deux puissances et des FAD déclarés dans les spécifications ; fadCurve vide et dutyCycle absent. Apport : distinguer les deux variantes DRY sans proposer de verdict sur un point FAD non qualifié."
 	],
-	"powerKw": 22.4,
 	"weightKg": 464,
 	"voltage": "400 V, 50 Hz",
 	"phase": "three-phase"

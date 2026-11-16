@@ -12,15 +12,16 @@ const product: ToolProfileInput = {
 	"demandModel": "variable-volume",
 	"workingPressureBar": {
 		"min": 0.5,
+		"typical": 2,
 		"max": 2.4
 	},
-	"demandExplanation": "Les sources constructeur publient des consommations divergentes pour cette famille ; aucune valeur n’est arbitrée pour calculer un débit.",
+	"demandExplanation": "335 Nl/min dans le catalogue 2025, contre 325 Nl/min dans une notice historique désormais inaccessible. La convention et les conditions applicables ne sont pas arbitrées ; aucun débit moteur n’est ajouté.",
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/pistolet-peinture-sata-jet-x-rp-1-1-i-basic-1200295.svg",
+		"src": "/images/products/pistolet-peinture-sata-jet-x-rp-1-1-i-basic-1200295-technical-20261116-reserves.svg",
 		"alt": "Repères techniques : SATA jet X RP 1.1 I BASIC (réf. 1200295)",
 		"sourceUrl": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, documents constructeur relus le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "sata-jet-x-rp-1-1-i-basic",
@@ -32,102 +33,60 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SATA jet X RP 1.1 I BASIC (réf. 1200295). Les sources constructeur publient des consommations divergentes pour cette famille ; aucune valeur n’est arbitrée pour calculer un débit.",
+		"overview": "Le jet X 1200295 est le RP à profil de buse I de 1,1, dans la configuration BASIC. Le 1200378 passe à 1,2 ; les configurations DIGITAL de la même table ne sont pas cette version BASIC. Le catalogue annonce 335 Nl/min pour RP et 445 pour HVLP, avec une distance de pulvérisation RP de 17–21 cm. Les 325 Nl/min de la notice historique restent une divergence de version, sans point de débit retenu par le moteur.",
 		"verifiedFacts": [
-			"Technologie de pulvérisation : RP.",
-			"Profil de buse : I.",
-			"Buse publiée : 1,1 ; unité non précisée dans ce tableau.",
-			"Configuration : BASIC, sans affichage DIGITAL.",
-			"Consommation publiée dans le catalogue 2025 : 335 Nl/min, sans point de mesure relié dans cette table.",
-			"Plage de pression à l’entrée : 0,5 à 2,4 bar.",
-			"Consommation différente dans la notice jet X : 325 Nl/min à 2,0 bar àl’entrée du pistolet.",
-			"Écart de la fiche exacte de la même famille : La fiche HVLP 1.3 I BASIC 1200170 affiche 420 l/min ; cette valeur n’est pas attribuée à cette référence.",
-			"Température maximale du produit pulvérisé : 50 °C."
+			"Tableau p14 : BASIC, RP, profil I 1,1, code 1200295.",
+			"Domaine d’entrée 0,5–2,4 bar ; consigne recommandée 2,0 bar.",
+			"1200378 : buse 1,2 dans la même ligne RP BASIC."
 		],
 		"limitations": [
-			"Les sources constructeur publient des consommations divergentes pour cette famille ; aucune valeur n’est arbitrée pour calculer un débit.",
-			"Le catalogue 2025 donne RP 335 / HVLP 445 Nl/min ; la notice officielle donne RP 325 / HVLP 430 Nl/min explicitement à 2 bar. Aucune valeur n’est arbitrée.",
-			"La fiche précise HVLP 1.3 I BASIC 1200170 affiche 420 l/min au 2026-10-03. L/min et Nl/min restent distincts ; aucune condition normale absente des citations n’est supposée.",
-			"Une seule configuration BASIC par buse et technologie est retenue. Les versions DIGITAL, godets, couleurs, accessoires et jeux de buses seuls ne créent aucune nouveauté dans ce lot.",
-			"Données déclarées dans les documents identifiés ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"La notice historique 325 Nl/min reste inaccessible ; sa réserve n’est pas effacée par le catalogue.",
+			"La plage d’application et la consigne d’air ne qualifient pas seules la pression de mesure du débit normal.",
+			"La fiche d’une autre référence HVLP n’est pas utilisée pour corriger le débit de cette RP.",
+			"Données des documents identifiés, sans essai physique CompatAir ni garantie de disponibilité de la configuration livrée."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Technologie de pulvérisation",
-			"value": "RP",
+			"label": "Technologie et configuration",
+			"value": "RP, profil I, buse 1,1, BASIC ; référence 1200295",
 			"evidenceIds": [
-				"october3d-tools-sata-current-catalog-2025-p14"
+				"review:2026-11-16-reserves:pistolet-peinture-sata-jet-x-rp-1-1-i-basic-1200295:0"
 			]
 		},
 		{
-			"label": "Profil de buse",
-			"value": "I",
+			"label": "Consommation catalogue 2025, hors calcul",
+			"value": "335 Nl/min pour RP ; la colonne HVLP donne 445 Nl/min",
 			"evidenceIds": [
-				"october3d-tools-sata-current-catalog-2025-p14"
+				"review:2026-11-16-reserves:pistolet-peinture-sata-jet-x-rp-1-1-i-basic-1200295:0"
 			]
 		},
 		{
-			"label": "Buse publiée",
-			"value": "1,1 ; unité non précisée dans ce tableau",
+			"label": "Pression recommandée et domaine d’application",
+			"value": "2,0 bar ; plage d’entrée 0,5–2,4 bar",
 			"evidenceIds": [
-				"october3d-tools-sata-current-catalog-2025-p14"
+				"review:2026-11-16-reserves:pistolet-peinture-sata-jet-x-rp-1-1-i-basic-1200295:0"
 			]
 		},
 		{
-			"label": "Configuration",
-			"value": "BASIC, sans affichage DIGITAL",
+			"label": "Distance de pulvérisation recommandée",
+			"value": "17–21 cm pour RP, contre 10–15 cm pour HVLP",
 			"evidenceIds": [
-				"october3d-tools-sata-current-catalog-2025-p14"
+				"review:2026-11-16-reserves:pistolet-peinture-sata-jet-x-rp-1-1-i-basic-1200295:0"
 			]
 		},
 		{
-			"label": "Consommation publiée dans le catalogue 2025",
-			"value": "335 Nl/min, sans point de mesure relié dans cette table",
+			"label": "Alternative de buse",
+			"value": "1200378 : RP 1,2 I BASIC, sans changement de consommation de famille démontré",
 			"evidenceIds": [
-				"october3d-tools-sata-current-catalog-2025-p14"
+				"review:2026-11-16-reserves:pistolet-peinture-sata-jet-x-rp-1-1-i-basic-1200295:0"
 			]
 		},
 		{
-			"label": "Plage de pression à l’entrée",
-			"value": "0,5 à 2,4 bar",
+			"label": "Réserve historique non levée",
+			"value": "Une notice capturée en octobre donnait 325 Nl/min à 2,0 bar. Elle est aujourd’hui HTTP 404 ; la différence de version reste à établir.",
 			"evidenceIds": [
 				"october3d-tools-sata-more-jet-x-manual-85-p102"
-			]
-		},
-		{
-			"label": "Consommation différente dans la notice jet X",
-			"value": "325 Nl/min à 2,0 bar àl’entrée du pistolet",
-			"evidenceIds": [
-				"october3d-tools-sata-more-jet-x-manual-85-p102"
-			]
-		},
-		{
-			"label": "Écart de la fiche exacte de la même famille",
-			"value": "La fiche HVLP 1.3 I BASIC 1200170 affiche 420 l/min ; cette valeur n’est pas attribuée à cette référence",
-			"evidenceIds": [
-				"october3d-tools-sata-baseline-1200170-recheck-p1"
-			]
-		},
-		{
-			"label": "Température maximale du produit pulvérisé",
-			"value": "50 °C",
-			"evidenceIds": [
-				"october3d-tools-sata-more-jet-x-manual-85-p102"
-			]
-		},
-		{
-			"label": "Consommation publiée, hors calcul",
-			"value": "335 Nl/min",
-			"evidenceIds": [
-				"october3d-tools-sata-current-catalog-2025-p14"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "Recommended air inlet pressure 2,0 bar; air inlet pressure field of application 0,5–2,4 bar. Valeurs séparées de la consommation dans le catalogue.",
-			"evidenceIds": [
-				"october3d-tools-sata-current-catalog-2025-p14"
 			]
 		}
 	],
@@ -161,23 +120,32 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-03",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 3fc1a486bdd5ee9f5b609cc09300c8f7a2dc94e8a1393d752726496ee84366b2. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reserves:pistolet-peinture-sata-jet-x-rp-1-1-i-basic-1200295:0",
+			"sourceUrl": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806#page=14",
+			"sourceLabel": "SATA, document relu le 16 novembre 2026 (pages PDF 14)",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Catalogue actuel complet relu p14 avec code et colonnes RP/HVLP/BASIC, ainsi que la voisine 1200378. Les affirmations actives reposent sur cette page ; l’ancienne notice 404 reste une transcription datée, sans arbitrage de consommation. L’intérêt distinct porte sur le choix RP/BASIC et la buse, avec calcul non conclusif. GET complet SHA-256 36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october3d-tools-sata-current-catalog-2025-p14"
+			"review:2026-11-16-reserves:pistolet-peinture-sata-jet-x-rp-1-1-i-basic-1200295:0"
 		],
 		"workingPressureBar": [
-			"october3d-tools-sata-current-catalog-2025-p14"
+			"review:2026-11-16-reserves:pistolet-peinture-sata-jet-x-rp-1-1-i-basic-1200295:0"
 		],
 		"demandExplanation": [
-			"october3d-tools-sata-current-catalog-2025-p14",
-			"october3d-tools-sata-more-jet-x-manual-85-p102",
-			"october3d-tools-sata-baseline-1200170-recheck-p1"
+			"review:2026-11-16-reserves:pistolet-peinture-sata-jet-x-rp-1-1-i-basic-1200295:0"
 		]
 	},
 	"notes": [
-		"Les sources constructeur publient des consommations divergentes pour cette famille ; aucune valeur n’est arbitrée pour calculer un débit."
+		"Les sources constructeur publient des consommations divergentes pour cette famille ; aucune valeur n’est arbitrée pour calculer un débit.",
+		"Catalogue actuel complet relu p14 avec code et colonnes RP/HVLP/BASIC, ainsi que la voisine 1200378. Les affirmations actives reposent sur cette page ; l’ancienne notice 404 reste une transcription datée, sans arbitrage de consommation. L’intérêt distinct porte sur le choix RP/BASIC et la buse, avec calcul non conclusif."
 	]
 };
 

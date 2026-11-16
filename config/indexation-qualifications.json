@@ -97668,6 +97668,253 @@
           "sha256": "0442dc0d2e3d6e5e67cc9b1875be71ad5dad1512b10da798dd3c05b6c424f450"
         }
       ]
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sata-satajet-1000-k-hvlp-0-8-139196/",
+      "contentHash": "2d9f676980a52652a989c5a65de3a7ca418e1b766c44218bb45a30f1a227ac45",
+      "neighbors": [
+        "/outils-pneumatiques/pistolet-peinture-hvlp-sata-satajet-1000-k-hvlp-1-0-139204/",
+        "/outils-pneumatiques/pistolet-peinture-hvlp-sata-satajet-1000-k-hvlp-1-2-139212/"
+      ],
+      "contextHash": "05a53b1bbafa39a3d7f63fb8bd67dc889787a1bfa42b99fd45e4d423481f689a",
+      "rulesHash": "8793acd74bb8b7f6704d68904abc307a8a80a7319df38300e2e5096ca3254677",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-16T17:20:58.844Z",
+      "note": "Tableau p49 lu visuellement : 139196/139204/139212 et variante de surface 141960 distingués, pression air/produit séparée. Retrait du débit dimensionnant et du flexible non revérifié ; transcriptions et preuves historiques conservées. Apport : choisir la configuration sous pression et identifier les données à demander avant dimensionnement.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806",
+          "sha256": "36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3"
+        },
+        {
+          "url": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806#page=49",
+          "sha256": "36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-sata-jet-x-rp-1-1-i-basic-1200295/",
+      "contentHash": "4302779f302ad339ad00cad453f878523091bf1ba6d5ca10ebf357df1fabb3a9",
+      "neighbors": [
+        "/outils-pneumatiques/pistolet-peinture-sata-jet-x-rp-1-2-i-basic-1200378/"
+      ],
+      "contextHash": "7d47cd5ac5228f5a1c6e12e86dce427c4e6208a5a6841d875ffed9ce02787cc8",
+      "rulesHash": "8793acd74bb8b7f6704d68904abc307a8a80a7319df38300e2e5096ca3254677",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-16T17:20:58.844Z",
+      "note": "Catalogue actuel complet relu p14 avec code et colonnes RP/HVLP/BASIC, ainsi que la voisine 1200378. Les affirmations actives reposent sur cette page ; l’ancienne notice 404 reste une transcription datée, sans arbitrage de consommation. L’intérêt distinct porte sur le choix RP/BASIC et la buse, avec calcul non conclusif.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806",
+          "sha256": "36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3"
+        },
+        {
+          "url": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806#page=14",
+          "sha256": "36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/fiac-ax-303bd-dry-8-400-50-ce/",
+      "contentHash": "03421268914183e04902ca50f0d4e746d5a25cc08b44d843bacb7a4ecbe9d1ff",
+      "neighbors": [
+        "/compresseurs/fiac-ax-303bd-dry-13-400-50-ce/"
+      ],
+      "contextHash": "76796569045af92093341693c1b00048bfd28c521f7bedcbbcbb17ba07f8eaf7",
+      "rulesHash": "8793acd74bb8b7f6704d68904abc307a8a80a7319df38300e2e5096ca3254677",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-16T17:20:58.844Z",
+      "note": "Fiche exacte 4152026247 et tableau p35 relus, avec la version voisine 8/13 bar. Retrait de powerKw ambigu, conservation des deux puissances et des FAD déclarés dans les spécifications ; fadCurve vide et dutyCycle absent. Apport : distinguer les deux variantes DRY sans proposer de verdict sur un point FAD non qualifié.",
+      "sourceDocuments": [
+        {
+          "url": "https://shop.fiac.it/en-IT/products/4152026247/ax-303bd-dry-8-40050-ce",
+          "sha256": "6ea6e4f9fd3dbbe5480a094d2ee4ee4f5134365a75417935d2cae766034c4756"
+        },
+        {
+          "url": "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf",
+          "sha256": "55421a11ceb9c201bd873f1d0e4596ea6682b7fd68fc5e03e0c380ddf879ac85"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/fiac-ax-303bd-dry-13-400-50-ce/",
+      "contentHash": "0d66ef79e1ee178b22c7e3507d37c0e33a53f235e5f3359d5aca37e15e2bb43d",
+      "neighbors": [
+        "/compresseurs/fiac-ax-303bd-dry-8-400-50-ce/"
+      ],
+      "contextHash": "1fbb6c5eab1d7bc73c7540d85e84527df636344771911b6c89cd3e218d8872b1",
+      "rulesHash": "8793acd74bb8b7f6704d68904abc307a8a80a7319df38300e2e5096ca3254677",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-16T17:20:58.844Z",
+      "note": "Fiche exacte 4152026249 et tableau p35 relus, avec la version voisine 8/13 bar. Retrait de powerKw ambigu, conservation des deux puissances et des FAD déclarés dans les spécifications ; fadCurve vide et dutyCycle absent. Apport : distinguer les deux variantes DRY sans proposer de verdict sur un point FAD non qualifié.",
+      "sourceDocuments": [
+        {
+          "url": "https://shop.fiac.it/en-IT/products/4152026249/ax-303bd-dry-13-40050-ce",
+          "sha256": "e6fc4050efb8e9bf52e7444de83c5dc7abf2f46662648140436cee104c5d16cf"
+        },
+        {
+          "url": "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf",
+          "sha256": "55421a11ceb9c201bd873f1d0e4596ea6682b7fd68fc5e03e0c380ddf879ac85"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-orbitale-dynabrade-59040/",
+      "contentHash": "b5ea74d5fae6f36081ca36b1ab17cabdb4a3254c1933d1cda037b1b89727e671",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-orbitale-dynabrade-59043/",
+        "/outils-pneumatiques/ponceuse-orbitale-dynabrade-59044/"
+      ],
+      "contextHash": "ff710ab6257b06812a05f2afa0410429191482b199f81ad95f199949a3abc2b4",
+      "rulesHash": "8793acd74bb8b7f6704d68904abc307a8a80a7319df38300e2e5096ca3254677",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-16T17:20:58.844Z",
+      "note": "Fiche exacte, PD11.25 et PD14.22R relus avec table p4 et lignes 59040/59043/59044. DemandModel devient variable-volume, maintenant insufficient_data ; les débits, masses et arrondis contradictoires restent visibles. Apport : choix du captage et du plateau, pas garantie de débit pour une révision non identifiée.",
+      "sourceDocuments": [
+        {
+          "url": "https://eu.dynabrade.com/assets/bcb9f265-171e-4e94-ac08-f1a200383886/4074401012-pd1422r.pdf",
+          "sha256": "7080e1d42b43a829d264a4d2698681647bc5a253f3d1ae83ef295585e3452c2e"
+        },
+        {
+          "url": "https://eu.dynabrade.com/assets/fa93602f-70b6-4dc8-993f-6a245e0d7286/4074397578-pd1125.pdf",
+          "sha256": "c74f95fdc9d682d43ab09fbbf8a3a47e31057d0d6008810c763ea6fbdedf9faa"
+        },
+        {
+          "url": "https://eu.dynabrade.com/en/catalog/6-152-mm-dia-non-vacuum-dynorbital-spirit-random-orbital-sander~e5a782f4-b186-433b-8780-0cf3e59163e9",
+          "sha256": "11dc3213a135cccd5cbd3a1ed63ee1bccec72c586fae96c5a40ab2a9a5839261"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/agrafeuse-cloueuse-senco-finishpro21lxp/",
+      "contentHash": "bfb71b12b22e142e93ecba57693d4c96ee2fcc11c49ab82b261580aed6126d7a",
+      "neighbors": [
+        "/outils-pneumatiques/agrafeuse-cloueuse-senco-finishpro23lxp/",
+        "/outils-pneumatiques/agrafeuse-cloueuse-senco-finishpro23sxp/"
+      ],
+      "contextHash": "cffd5537991611529e3751350b4f78f7914b63850f5f1f2a4997e332079600c4",
+      "rulesHash": "8793acd74bb8b7f6704d68904abc307a8a80a7319df38300e2e5096ca3254677",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-16T17:20:58.844Z",
+      "note": "Notice complète relue p1/2/10/11 et colonnes des deux voisines. Cadence désormais documentée, mais aucune pression de mesure ni volume par tir inventés. La version documentaire est explicite ; les différences de pointes et de magasin constituent l’apport propre. Source européenne 404 et dimensions historiques conservées.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.senco.com/wp-content/uploads/2021/05/finishpro23lxp_man.pdf",
+          "sha256": "da8e7b17dafcdb1b6cfc1e21d46e96bc9d0f9b78af54eb99cec83b04eaa0bf65"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/boulonneuse-zipp-zat400dr-cmplt/",
+      "contentHash": "b1d7a6122f90a88a101191442197279d963d1d694642cd013a60c1a6ed2a43a4",
+      "neighbors": [
+        "/outils-pneumatiques/boulonneuse-zipp-zat1800cmplt/",
+        "/outils-pneumatiques/boulonneuse-zipp-zat400cmplt/"
+      ],
+      "contextHash": "eb21eb9e4ff4c187537db60ec8e30e54bf9c4fefc70cbb0b13f291e0613d093b",
+      "rulesHash": "8793acd74bb8b7f6704d68904abc307a8a80a7319df38300e2e5096ca3254677",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-16T17:20:58.844Z",
+      "note": "Page fabricant et PDF39 relus, dont annotation explicite ZATXXXDR-CMPLT, cotes A1/A et lignes ZAT400/ZAT1800. Différence utile de lecture/réglage motivée sans prétendre à un couple supérieur à ZAT400CMPLT. Moteur variable-volume inchangé et non conclusif.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+          "sha256": "a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3"
+        },
+        {
+          "url": "https://www.airtools.com.tw/zat-pneumatic-torque-wrench/",
+          "sha256": "f70b2ba2213688a5cb7c81e81c163c4308b25338f01becbbfd84cb206d494b0c"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-cliquet-hymair-nst-5058c/",
+      "contentHash": "a0ed619c42b944f324c851d37a521b2c4fa251a46abbe15fe7b5eedc362a040a",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-cliquet-hymair-nst-5059ca/"
+      ],
+      "contextHash": "ad7c5725c891c865f1df0f8930b54fcb797120aead3ef85578f9444513df7548",
+      "rulesHash": "8793acd74bb8b7f6704d68904abc307a8a80a7319df38300e2e5096ca3254677",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-16T17:20:58.844Z",
+      "note": "Fiches exactes NST5058C et NST5059CA relues : taille, masse, régime à vide et consommation moyenne comparés. Rebinding de provenance vers le constructeur, sans transformer 90PSI de travail en pression de mesure. Apport : choix d’encombrement et de vitesse ; moteur variable-volume inchangé.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.steedtools.com/3-8-Composite-Body-Air-Ratchet-Wrench-NST-5059CA-pd199316238.html",
+          "sha256": "dad24ac0b8a864ec69d2535c813b831adadeb083508895786f2275740f3a2d58"
+        },
+        {
+          "url": "https://www.steedtools.com/3-8-Composite-Body-Air-Ratchet-Wrench-Twin-Ratchet-Pawl-NST-5058C-pd123046238.html",
+          "sha256": "2570f8f94c876942cdbada0995d5e90ae10f914615f882e7570048fe1f6476a7"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/marteau-a-river-puma-at-2210/",
+      "contentHash": "a897f169302a7360c3d5bd55d20ab546d0e6a67d63a71d545e86e212c30b293c",
+      "neighbors": [
+        "/outils-pneumatiques/marteau-a-river-puma-at-2214/",
+        "/outils-pneumatiques/marteau-a-river-puma-at-2215/"
+      ],
+      "contextHash": "663fa23d434516e12c5a2b13f2de8f42d4a26f5e6912237467168ef25bb25826",
+      "rulesHash": "8793acd74bb8b7f6704d68904abc307a8a80a7319df38300e2e5096ca3254677",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-16T17:20:58.844Z",
+      "note": "Table complète relue pour AT2210/2214/2215. Les données stables d’emmanchement, course, cadence et masse distinguent la référence ; la longueur divergente est regroupée dans un champ explicitement incertain, sans normalisation. Le moteur reste variable-volume et aucun volume par coup n’est dérivé.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.pumaair.com/product-Riveting-Hammer-straight-RivetingHammer-straight.html",
+          "sha256": "a352c4fa7391ce66ec0cb8a2af672675a8f2f22e4ec73064ab2237889018e31e"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-orbitale-astro-pneumatic-314/",
+      "contentHash": "568da1c687471b2de6254843acbfc33b563df47acf6a98e2df6a07802de929e0",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-orbitale-astro-pneumatic-321/"
+      ],
+      "contextHash": "1fa7b165c19ace4dfbffd61d29a13e67e59258ca4c2de5bcb76f2b2a86dc3bc1",
+      "rulesHash": "8793acd74bb8b7f6704d68904abc307a8a80a7319df38300e2e5096ca3254677",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-16T17:20:58.844Z",
+      "note": "Fiche 314, flyer officiel complet p1 et fiche voisine321 relus. Le défaut d’unité d’orbite reste visible dans la spécification active, et les régimes de consommation ne sont pas fusionnés. Valeur propre : semelle rectangulaire contre petits plateaux circulaires, avec moteur variable-volume non conclusif.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.astrotools.com/product/onyx-jitterbug-random-orbit-air-palm-sander/",
+          "sha256": "fe698dcda7f69f883e6fb3c71707a19b832697ed848fa913eff5c1955d998338"
+        },
+        {
+          "url": "https://www.astrotools.com/product/onyx-jitterbug-random-orbit-air-palm-sander/?attachment_id=2829&download_file=k554ozjbgpn80",
+          "sha256": "4ed5972a15c5fa56480ab4c402541c8244c322c641baa819ff2366bd06e94ea6"
+        },
+        {
+          "url": "https://www.astrotools.com/product/onyx-micro-2-random-orbit-sander-hook-loop-3mm-orbit/",
+          "sha256": "9a8741f11a2c31dffc6095547c2d75c08b527337ebd2a3d0582437608e719ed5"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/tronconneuse-zipp-zag-386/",
+      "contentHash": "77384cd27d4426a304f42af901d3d28a6f30b7b4b3b59600f1756a58dca956af",
+      "neighbors": [
+        "/outils-pneumatiques/tronconneuse-zipp-zag-387/"
+      ],
+      "contextHash": "57335af37024f707b820f0ada26dcafffdce0c425ef4468895d11aa5687960f2",
+      "rulesHash": "8793acd74bb8b7f6704d68904abc307a8a80a7319df38300e2e5096ca3254677",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-16T17:20:58.844Z",
+      "note": "Table p124 et titre relus avec ZAG387. Le couple diamètre/vitesse et la masse constituent la différence utile ; la puissance contradictoire reste une réserve visible non dimensionnante. L’ancienne conversion de 4 cfm en 113,267 L/min n’est pas réutilisée comme mesure ni revendiquée comme nouveau fait.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+          "sha256": "a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3"
+        },
+        {
+          "url": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=124",
+          "sha256": "a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3"
+        }
+      ]
     }
   ]
 }

@@ -9,26 +9,16 @@ const product: ToolProfileInput = {
 	"brand": "SATA",
 	"model": "SATAjet 1000 K HVLP 0.8",
 	"mpn": "139196",
-	"demandModel": "fixed-flow",
+	"demandModel": "variable-volume",
 	"workingPressureBar": {
-		"min": 2.5,
-		"typical": 2.5,
-		"max": 2.5
-	},
-	"airflowLpm": {
-		"min": 530,
-		"typical": 530,
-		"max": 530
-	},
-	"recommendedHose": {
-		"innerDiameterMm": 9
+		"typical": 2.5
 	},
 	"confidence": "B",
 	"image": {
-		"src": "/images/products/pistolet-peinture-hvlp-sata-satajet-1000-k-hvlp-0-8-139196.svg",
+		"src": "/images/products/pistolet-peinture-hvlp-sata-satajet-1000-k-hvlp-0-8-139196-technical-20261116-reserves.svg",
 		"alt": "Repères techniques : SATA SATAjet 1000 K HVLP 0.8 (réf. 139196)",
 		"sourceUrl": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806",
-		"sourceLabel": "Carte technique CompatAir, données déclarées par le fabricant"
+		"sourceLabel": "Carte technique CompatAir, documents constructeur relus le 16 novembre 2026"
 	},
 	"variant": {
 		"familyId": "sata-satajet-1000-k-hvlp-0-8",
@@ -40,103 +30,67 @@ const product: ToolProfileInput = {
 		}
 	},
 	"editorial": {
-		"overview": "SATA SATAjet 1000 K HVLP 0.8 (réf. 139196). Consommation de référence en fonctionnement : 530 L/min à 2,5 bar.",
+		"overview": "Le SATAjet 1000 K HVLP 139196 est la version à buse 0,8 alimentée en peinture sous pression. Les 139204 et 139212 passent à 1,0 et 1,2 tout en partageant les 530 Nl/min publiés pour la famille. La pression produit maximale de 10 bar ne doit pas être réglée comme pression d’air : le catalogue recommande 2,5 bar à l’entrée d’air. La convention du débit normal reste à documenter pour calculer l’alimentation.",
 		"verifiedFacts": [
-			"Technologie de pulvérisation : HVLP.",
-			"Buse : 0,8 mm.",
-			"Configuration de buse : Buse standard.",
-			"Livraison constructeur : Pistolet à alimentation de peinture sous pression.",
-			"Consommation au point de la notice : 530 Nl/min à 2,5 bar.",
-			"Distance de pulvérisation recommandée : 10–15 cm.",
-			"Température maximale du produit pulvérisé : 50 °C.",
-			"Masse déclarée : 465 g, SATAjet 1000 K.",
-			"Diamètre intérieur minimal du flexible : 9 mm."
+			"139196 : ligne HVLP, buse 0,8, catalogue 2025 page 49.",
+			"Alimentation en produit sous pression ; entrée produit maximale 10,0 bar.",
+			"Distance recommandée 10–15 cm ; consommation publiée 530 Nl/min."
 		],
 		"limitations": [
-			"La demande au point documenté n’est réduite par aucun facteur de marche implicite.",
-			"Le débit est une consommation de référence au point indiqué dans la notice ; aucun maximum à toutes les positions du jet et du micromètre n’est revendiqué.",
-			"Nl/min est conservé sans supposer une température ni une humidité de référence absente des passages cités.",
-			"Une version par buse et technologie est retenue ; godet seul, couleur, affichage DIGITAL et accessoires ne multiplient pas le compte.",
-			"Les réglages de pression sont établis en dynamique, gâchette tirée ; la pression maximale de sécurité 10 bar ne sert pas de point de consommation.",
-			"Données déclarées dans les documents identifiés ; aucun essai physique ni disponibilité commerciale actuelle n’est revendiqué."
+			"La notice historique reste inaccessible ; son ancien diamètre de flexible de 9 mm n’est pas revalidé dans le catalogue.",
+			"Une buse de diamètre différent ne démontre pas une baisse de consommation d’air dans ce tableau.",
+			"Les 530 Nl/min ne sont pas transposés en débit dimensionnant sans convention et conditions de mesure.",
+			"Données des documents identifiés, sans essai physique CompatAir ni garantie de disponibilité de la configuration livrée."
 		]
 	},
 	"specifications": [
 		{
-			"label": "Technologie de pulvérisation",
-			"value": "HVLP",
+			"label": "Technologie et buse",
+			"value": "HVLP, 0,8 ; référence 139196 du tableau de buses",
 			"evidenceIds": [
-				"october3d-tools-sata-current-catalog-2025-p49"
+				"review:2026-11-16-reserves:pistolet-peinture-hvlp-sata-satajet-1000-k-hvlp-0-8-139196:0"
 			]
 		},
 		{
-			"label": "Buse",
-			"value": "0,8 mm",
-			"evidenceIds": [
-				"october3d-tools-sata-current-catalog-2025-p49"
-			]
-		},
-		{
-			"label": "Configuration de buse",
-			"value": "Buse standard",
-			"evidenceIds": [
-				"october3d-tools-sata-current-catalog-2025-p49"
-			]
-		},
-		{
-			"label": "Livraison constructeur",
+			"label": "Alimentation du produit",
 			"value": "Pistolet à alimentation de peinture sous pression",
 			"evidenceIds": [
-				"october3d-tools-sata-current-catalog-2025-p49"
+				"review:2026-11-16-reserves:pistolet-peinture-hvlp-sata-satajet-1000-k-hvlp-0-8-139196:0"
 			]
 		},
 		{
-			"label": "Consommation au point de la notice",
-			"value": "530 Nl/min à 2,5 bar",
+			"label": "Pression d’entrée d’air recommandée",
+			"value": "2,5 bar",
 			"evidenceIds": [
-				"october3d-tools-sata-family-1000kh-manual-0-p128"
+				"review:2026-11-16-reserves:pistolet-peinture-hvlp-sata-satajet-1000-k-hvlp-0-8-139196:0"
+			]
+		},
+		{
+			"label": "Consommation publiée, hors calcul",
+			"value": "530 Nl/min ; convention du litre normal non détaillée sur cette page",
+			"evidenceIds": [
+				"review:2026-11-16-reserves:pistolet-peinture-hvlp-sata-satajet-1000-k-hvlp-0-8-139196:0"
+			]
+		},
+		{
+			"label": "Pression maximale d’entrée du produit",
+			"value": "10,0 bar, distincte de la pression d’air",
+			"evidenceIds": [
+				"review:2026-11-16-reserves:pistolet-peinture-hvlp-sata-satajet-1000-k-hvlp-0-8-139196:0"
 			]
 		},
 		{
 			"label": "Distance de pulvérisation recommandée",
 			"value": "10–15 cm",
 			"evidenceIds": [
-				"october3d-tools-sata-family-1000kh-manual-0-p128"
+				"review:2026-11-16-reserves:pistolet-peinture-hvlp-sata-satajet-1000-k-hvlp-0-8-139196:0"
 			]
 		},
 		{
-			"label": "Température maximale du produit pulvérisé",
-			"value": "50 °C",
+			"label": "Version de surface distincte",
+			"value": "141960 : surface prolongeant la durée de vie de la buse et de l’aiguille ; autre référence",
 			"evidenceIds": [
-				"october3d-tools-sata-family-1000kh-manual-0-p128"
-			]
-		},
-		{
-			"label": "Masse déclarée",
-			"value": "465 g, SATAjet 1000 K",
-			"evidenceIds": [
-				"october3d-tools-sata-family-1000kh-manual-0-p128"
-			]
-		},
-		{
-			"label": "Diamètre intérieur minimal du flexible",
-			"value": "9 mm",
-			"evidenceIds": [
-				"october3d-tools-sata-family-1000kh-manual-0-p132"
-			]
-		},
-		{
-			"label": "Consommation dans son unité originale",
-			"value": "530 Nl/min",
-			"evidenceIds": [
-				"october3d-tools-sata-family-1000kh-manual-0-p128"
-			]
-		},
-		{
-			"label": "Portée de la pression dans la source",
-			"value": "Air consumption SATAjet 1000 K at 2,5 bar spray gun inlet pressure",
-			"evidenceIds": [
-				"october3d-tools-sata-family-1000kh-manual-0-p128"
+				"review:2026-11-16-reserves:pistolet-peinture-hvlp-sata-satajet-1000-k-hvlp-0-8-139196:0"
 			]
 		}
 	],
@@ -180,25 +134,34 @@ const product: ToolProfileInput = {
 			"retrievedAt": "2026-10-13",
 			"confidence": "B",
 			"notes": "Réponse primaire SHA-256 54e3d62ff5e087bb24908e5ece4b7661f668d360dc198a160065906244caec18. Déclaration constructeur, sans essai physique CompatAir."
+		},
+		{
+			"id": "review:2026-11-16-reserves:pistolet-peinture-hvlp-sata-satajet-1000-k-hvlp-0-8-139196:0",
+			"sourceUrl": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806#page=49",
+			"sourceLabel": "SATA, document relu le 16 novembre 2026 (pages PDF 49)",
+			"sourceType": "manual",
+			"sourceRole": "primary",
+			"retrievedAt": "2026-11-16",
+			"confidence": "B",
+			"notes": "Tableau p49 lu visuellement : 139196/139204/139212 et variante de surface 141960 distingués, pression air/produit séparée. Retrait du débit dimensionnant et du flexible non revérifié ; transcriptions et preuves historiques conservées. Apport : choisir la configuration sous pression et identifier les données à demander avant dimensionnement. GET complet SHA-256 36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3."
 		}
 	],
 	"fieldSources": {
 		"mpn": [
-			"october3d-tools-sata-current-catalog-2025-p49"
+			"review:2026-11-16-reserves:pistolet-peinture-hvlp-sata-satajet-1000-k-hvlp-0-8-139196:0"
 		],
 		"workingPressureBar": [
-			"october3d-tools-sata-family-1000kh-manual-0-p128"
+			"review:2026-11-16-reserves:pistolet-peinture-hvlp-sata-satajet-1000-k-hvlp-0-8-139196:0"
 		],
-		"recommendedHose": [
-			"october3d-tools-sata-family-1000kh-manual-0-p132"
-		],
-		"airflowLpm": [
-			"october3d-tools-sata-family-1000kh-manual-0-p128"
+		"demandExplanation": [
+			"review:2026-11-16-reserves:pistolet-peinture-hvlp-sata-satajet-1000-k-hvlp-0-8-139196:0"
 		]
 	},
 	"notes": [
-		"Consommation de référence en fonctionnement : 530 L/min à 2,5 bar."
-	]
+		"Consommation de référence en fonctionnement : 530 L/min à 2,5 bar.",
+		"Tableau p49 lu visuellement : 139196/139204/139212 et variante de surface 141960 distingués, pression air/produit séparée. Retrait du débit dimensionnant et du flexible non revérifié ; transcriptions et preuves historiques conservées. Apport : choisir la configuration sous pression et identifier les données à demander avant dimensionnement."
+	],
+	"demandExplanation": "Le catalogue donne 530 Nl/min et une pression d’entrée recommandée de 2,5 bar, sans définir ici l’état de référence du litre normal et la mesure du débit. Ces valeurs restent documentaires."
 };
 
 export default product;

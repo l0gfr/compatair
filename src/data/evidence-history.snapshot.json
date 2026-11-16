@@ -773075,7 +773075,387 @@
         "confidence": "B",
         "notes": "Le SP11-40VFD est la version à variateur du groupe 40 hp, déclarée à 162,7 cfm à 125 psig, environ 4 607,151 L/min à 8,618 bar. Le SP11-40 fixe annonce 158,1 cfm au même point. Le maximum de capacité n’est pas un débit moyen de modulation ; les autres pressions proposées relèvent de configurations distinctes. La puissance reste en hp et le stockage demeure à définir. GET complet SHA-256 0442dc0d2e3d6e5e67cc9b1875be71ad5dad1512b10da798dd3c05b6c424f450. Pages PDF lues : fiche HTML ; portée détaillée dans le compte rendu."
       }
+    },
+    {
+      "id": "review:2026-11-16-reserves:pistolet-peinture-hvlp-sata-satajet-1000-k-hvlp-0-8-139196:review:2026-11-16-reserves:pistolet-peinture-hvlp-sata-satajet-1000-k-hvlp-0-8-139196:0",
+      "evidenceId": "review:2026-11-16-reserves:pistolet-peinture-hvlp-sata-satajet-1000-k-hvlp-0-8-139196:0",
+      "productId": "pistolet-peinture-hvlp-sata-satajet-1000-k-hvlp-0-8-139196",
+      "productType": "tool",
+      "occurredAt": "2026-11-16",
+      "kind": "added",
+      "summary": "Tableau p49 lu visuellement : 139196/139204/139212 et variante de surface 141960 distingués, pression air/produit séparée. Retrait du débit dimensionnant et du flexible non revérifié ; transcriptions et preuves historiques conservées. Apport : choisir la configuration sous pression et identifier les données à demander avant dimensionnement.",
+      "fingerprint": "a86888360d5aaca986ea3d45653b916559de3fc8ea4a6e2781a11829e98ce795",
+      "snapshot": {
+        "id": "review:2026-11-16-reserves:pistolet-peinture-hvlp-sata-satajet-1000-k-hvlp-0-8-139196:0",
+        "sourceUrl": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806#page=49",
+        "sourceLabel": "SATA, document relu le 16 novembre 2026 (pages PDF 49)",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-16",
+        "confidence": "B",
+        "notes": "Tableau p49 lu visuellement : 139196/139204/139212 et variante de surface 141960 distingués, pression air/produit séparée. Retrait du débit dimensionnant et du flexible non revérifié ; transcriptions et preuves historiques conservées. Apport : choisir la configuration sous pression et identifier les données à demander avant dimensionnement. GET complet SHA-256 36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3."
+      }
+    },
+    {
+      "id": "review:2026-11-16-reserves:pistolet-peinture-sata-jet-x-rp-1-1-i-basic-1200295:review:2026-11-16-reserves:pistolet-peinture-sata-jet-x-rp-1-1-i-basic-1200295:0",
+      "evidenceId": "review:2026-11-16-reserves:pistolet-peinture-sata-jet-x-rp-1-1-i-basic-1200295:0",
+      "productId": "pistolet-peinture-sata-jet-x-rp-1-1-i-basic-1200295",
+      "productType": "tool",
+      "occurredAt": "2026-11-16",
+      "kind": "added",
+      "summary": "Catalogue actuel complet relu p14 avec code et colonnes RP/HVLP/BASIC, ainsi que la voisine 1200378. Les affirmations actives reposent sur cette page ; l’ancienne notice 404 reste une transcription datée, sans arbitrage de consommation. L’intérêt distinct porte sur le choix RP/BASIC et la buse, avec calcul non conclusif.",
+      "fingerprint": "6172b03db47ae47246b5cfb2285e3ba2c2ec4d2ffc80d062879a0074960a450e",
+      "snapshot": {
+        "id": "review:2026-11-16-reserves:pistolet-peinture-sata-jet-x-rp-1-1-i-basic-1200295:0",
+        "sourceUrl": "https://www.sata.com/media/1d/fa/b1/1771494954/EN---SATA-Product-Catalogue-2025_uid_6788ce1e8b007.pdf?ts=1771937806#page=14",
+        "sourceLabel": "SATA, document relu le 16 novembre 2026 (pages PDF 14)",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-16",
+        "confidence": "B",
+        "notes": "Catalogue actuel complet relu p14 avec code et colonnes RP/HVLP/BASIC, ainsi que la voisine 1200378. Les affirmations actives reposent sur cette page ; l’ancienne notice 404 reste une transcription datée, sans arbitrage de consommation. L’intérêt distinct porte sur le choix RP/BASIC et la buse, avec calcul non conclusif. GET complet SHA-256 36dec44ae129bc0052bc9fa43c54c9be507c6a3683df465f0cb38d950d749fe3."
+      }
+    },
+    {
+      "id": "review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:0",
+      "evidenceId": "review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:0",
+      "productId": "fiac-ax-303bd-dry-8-400-50-ce",
+      "productType": "compressor",
+      "occurredAt": "2026-11-16",
+      "kind": "added",
+      "summary": "Fiche exacte 4152026247 et tableau p35 relus, avec la version voisine 8/13 bar. Retrait de powerKw ambigu, conservation des deux puissances et des FAD déclarés dans les spécifications ; fadCurve vide et dutyCycle absent. Apport : distinguer les deux variantes DRY sans proposer de verdict sur un point FAD non qualifié.",
+      "fingerprint": "221138cdc84f1b30ded70e3479c8c5b3d77a0adeee8e7856b9024a124a843345",
+      "snapshot": {
+        "id": "review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:0",
+        "sourceUrl": "https://shop.fiac.it/en-IT/products/4152026247/ax-303bd-dry-8-40050-ce",
+        "sourceLabel": "FIAC, document relu le 16 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-16",
+        "confidence": "B",
+        "notes": "Fiche exacte 4152026247 et tableau p35 relus, avec la version voisine 8/13 bar. Retrait de powerKw ambigu, conservation des deux puissances et des FAD déclarés dans les spécifications ; fadCurve vide et dutyCycle absent. Apport : distinguer les deux variantes DRY sans proposer de verdict sur un point FAD non qualifié. GET complet SHA-256 6ea6e4f9fd3dbbe5480a094d2ee4ee4f5134365a75417935d2cae766034c4756."
+      }
+    },
+    {
+      "id": "review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:1",
+      "evidenceId": "review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:1",
+      "productId": "fiac-ax-303bd-dry-8-400-50-ce",
+      "productType": "compressor",
+      "occurredAt": "2026-11-16",
+      "kind": "added",
+      "summary": "Fiche exacte 4152026247 et tableau p35 relus, avec la version voisine 8/13 bar. Retrait de powerKw ambigu, conservation des deux puissances et des FAD déclarés dans les spécifications ; fadCurve vide et dutyCycle absent. Apport : distinguer les deux variantes DRY sans proposer de verdict sur un point FAD non qualifié.",
+      "fingerprint": "9c5a4c480f24ecb3d0292f0e5b14cfd51ed49c39b62ff619d790627ac6577147",
+      "snapshot": {
+        "id": "review:2026-11-16-reserves:fiac-ax-303bd-dry-8-400-50-ce:1",
+        "sourceUrl": "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf#page=35",
+        "sourceLabel": "FIAC, document relu le 16 novembre 2026 (pages PDF 35)",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-16",
+        "confidence": "B",
+        "notes": "Fiche exacte 4152026247 et tableau p35 relus, avec la version voisine 8/13 bar. Retrait de powerKw ambigu, conservation des deux puissances et des FAD déclarés dans les spécifications ; fadCurve vide et dutyCycle absent. Apport : distinguer les deux variantes DRY sans proposer de verdict sur un point FAD non qualifié. GET complet SHA-256 55421a11ceb9c201bd873f1d0e4596ea6682b7fd68fc5e03e0c380ddf879ac85."
+      }
+    },
+    {
+      "id": "review:2026-11-16-reserves:fiac-ax-303bd-dry-13-400-50-ce:review:2026-11-16-reserves:fiac-ax-303bd-dry-13-400-50-ce:0",
+      "evidenceId": "review:2026-11-16-reserves:fiac-ax-303bd-dry-13-400-50-ce:0",
+      "productId": "fiac-ax-303bd-dry-13-400-50-ce",
+      "productType": "compressor",
+      "occurredAt": "2026-11-16",
+      "kind": "added",
+      "summary": "Fiche exacte 4152026249 et tableau p35 relus, avec la version voisine 8/13 bar. Retrait de powerKw ambigu, conservation des deux puissances et des FAD déclarés dans les spécifications ; fadCurve vide et dutyCycle absent. Apport : distinguer les deux variantes DRY sans proposer de verdict sur un point FAD non qualifié.",
+      "fingerprint": "b456b22d8c4a362e96519d608de6ff63f015736d0bc7febbda4a025ab5be9856",
+      "snapshot": {
+        "id": "review:2026-11-16-reserves:fiac-ax-303bd-dry-13-400-50-ce:0",
+        "sourceUrl": "https://shop.fiac.it/en-IT/products/4152026249/ax-303bd-dry-13-40050-ce",
+        "sourceLabel": "FIAC, document relu le 16 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-16",
+        "confidence": "B",
+        "notes": "Fiche exacte 4152026249 et tableau p35 relus, avec la version voisine 8/13 bar. Retrait de powerKw ambigu, conservation des deux puissances et des FAD déclarés dans les spécifications ; fadCurve vide et dutyCycle absent. Apport : distinguer les deux variantes DRY sans proposer de verdict sur un point FAD non qualifié. GET complet SHA-256 e6fc4050efb8e9bf52e7444de83c5dc7abf2f46662648140436cee104c5d16cf."
+      }
+    },
+    {
+      "id": "review:2026-11-16-reserves:fiac-ax-303bd-dry-13-400-50-ce:review:2026-11-16-reserves:fiac-ax-303bd-dry-13-400-50-ce:1",
+      "evidenceId": "review:2026-11-16-reserves:fiac-ax-303bd-dry-13-400-50-ce:1",
+      "productId": "fiac-ax-303bd-dry-13-400-50-ce",
+      "productType": "compressor",
+      "occurredAt": "2026-11-16",
+      "kind": "added",
+      "summary": "Fiche exacte 4152026249 et tableau p35 relus, avec la version voisine 8/13 bar. Retrait de powerKw ambigu, conservation des deux puissances et des FAD déclarés dans les spécifications ; fadCurve vide et dutyCycle absent. Apport : distinguer les deux variantes DRY sans proposer de verdict sur un point FAD non qualifié.",
+      "fingerprint": "581fd0fd652c4717faaa09f467cdc9b47c6f4bcd736e8fd720a3c98dd77eeaa8",
+      "snapshot": {
+        "id": "review:2026-11-16-reserves:fiac-ax-303bd-dry-13-400-50-ce:1",
+        "sourceUrl": "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf#page=35",
+        "sourceLabel": "FIAC, document relu le 16 novembre 2026 (pages PDF 35)",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-16",
+        "confidence": "B",
+        "notes": "Fiche exacte 4152026249 et tableau p35 relus, avec la version voisine 8/13 bar. Retrait de powerKw ambigu, conservation des deux puissances et des FAD déclarés dans les spécifications ; fadCurve vide et dutyCycle absent. Apport : distinguer les deux variantes DRY sans proposer de verdict sur un point FAD non qualifié. GET complet SHA-256 55421a11ceb9c201bd873f1d0e4596ea6682b7fd68fc5e03e0c380ddf879ac85."
+      }
+    },
+    {
+      "id": "review:2026-11-16-reserves:dynabrade-59040:review:2026-11-16-reserves:dynabrade-59040:0",
+      "evidenceId": "review:2026-11-16-reserves:dynabrade-59040:0",
+      "productId": "dynabrade-59040",
+      "productType": "tool",
+      "occurredAt": "2026-11-16",
+      "kind": "added",
+      "summary": "Fiche exacte, PD11.25 et PD14.22R relus avec table p4 et lignes 59040/59043/59044. DemandModel devient variable-volume, maintenant insufficient_data ; les débits, masses et arrondis contradictoires restent visibles. Apport : choix du captage et du plateau, pas garantie de débit pour une révision non identifiée.",
+      "fingerprint": "859675ceac85629ad03bdb5d75cd12964fdc26c16b1792fd52e8be453c0d7bf6",
+      "snapshot": {
+        "id": "review:2026-11-16-reserves:dynabrade-59040:0",
+        "sourceUrl": "https://eu.dynabrade.com/en/catalog/6-152-mm-dia-non-vacuum-dynorbital-spirit-random-orbital-sander~e5a782f4-b186-433b-8780-0cf3e59163e9",
+        "sourceLabel": "Dynabrade, document relu le 16 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-16",
+        "confidence": "B",
+        "notes": "Fiche exacte, PD11.25 et PD14.22R relus avec table p4 et lignes 59040/59043/59044. DemandModel devient variable-volume, maintenant insufficient_data ; les débits, masses et arrondis contradictoires restent visibles. Apport : choix du captage et du plateau, pas garantie de débit pour une révision non identifiée. GET complet SHA-256 11dc3213a135cccd5cbd3a1ed63ee1bccec72c586fae96c5a40ab2a9a5839261."
+      }
+    },
+    {
+      "id": "review:2026-11-16-reserves:dynabrade-59040:review:2026-11-16-reserves:dynabrade-59040:1",
+      "evidenceId": "review:2026-11-16-reserves:dynabrade-59040:1",
+      "productId": "dynabrade-59040",
+      "productType": "tool",
+      "occurredAt": "2026-11-16",
+      "kind": "added",
+      "summary": "Fiche exacte, PD11.25 et PD14.22R relus avec table p4 et lignes 59040/59043/59044. DemandModel devient variable-volume, maintenant insufficient_data ; les débits, masses et arrondis contradictoires restent visibles. Apport : choix du captage et du plateau, pas garantie de débit pour une révision non identifiée.",
+      "fingerprint": "da9825b0f21cb9a9e48cb6c92f32bd5f5bdb36694703cd58a4cbdbb22d736767",
+      "snapshot": {
+        "id": "review:2026-11-16-reserves:dynabrade-59040:1",
+        "sourceUrl": "https://eu.dynabrade.com/assets/fa93602f-70b6-4dc8-993f-6a245e0d7286/4074397578-pd1125.pdf",
+        "sourceLabel": "Dynabrade, document relu le 16 novembre 2026 (pages PDF 1, 3, 4)",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-16",
+        "confidence": "B",
+        "notes": "Fiche exacte, PD11.25 et PD14.22R relus avec table p4 et lignes 59040/59043/59044. DemandModel devient variable-volume, maintenant insufficient_data ; les débits, masses et arrondis contradictoires restent visibles. Apport : choix du captage et du plateau, pas garantie de débit pour une révision non identifiée. GET complet SHA-256 c74f95fdc9d682d43ab09fbbf8a3a47e31057d0d6008810c763ea6fbdedf9faa."
+      }
+    },
+    {
+      "id": "review:2026-11-16-reserves:dynabrade-59040:review:2026-11-16-reserves:dynabrade-59040:2",
+      "evidenceId": "review:2026-11-16-reserves:dynabrade-59040:2",
+      "productId": "dynabrade-59040",
+      "productType": "tool",
+      "occurredAt": "2026-11-16",
+      "kind": "added",
+      "summary": "Fiche exacte, PD11.25 et PD14.22R relus avec table p4 et lignes 59040/59043/59044. DemandModel devient variable-volume, maintenant insufficient_data ; les débits, masses et arrondis contradictoires restent visibles. Apport : choix du captage et du plateau, pas garantie de débit pour une révision non identifiée.",
+      "fingerprint": "99d91b4205aa5276f1f69180f951802df0d04384cf549cfe4c1047628c084141",
+      "snapshot": {
+        "id": "review:2026-11-16-reserves:dynabrade-59040:2",
+        "sourceUrl": "https://eu.dynabrade.com/assets/bcb9f265-171e-4e94-ac08-f1a200383886/4074401012-pd1422r.pdf",
+        "sourceLabel": "Dynabrade, document relu le 16 novembre 2026 (pages PDF 1, 3, 4)",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-16",
+        "confidence": "B",
+        "notes": "Fiche exacte, PD11.25 et PD14.22R relus avec table p4 et lignes 59040/59043/59044. DemandModel devient variable-volume, maintenant insufficient_data ; les débits, masses et arrondis contradictoires restent visibles. Apport : choix du captage et du plateau, pas garantie de débit pour une révision non identifiée. GET complet SHA-256 7080e1d42b43a829d264a4d2698681647bc5a253f3d1ae83ef295585e3452c2e."
+      }
+    },
+    {
+      "id": "review:2026-11-16-reserves:agrafeuse-cloueuse-senco-finishpro21lxp:review:2026-11-16-reserves:agrafeuse-cloueuse-senco-finishpro21lxp:0",
+      "evidenceId": "review:2026-11-16-reserves:agrafeuse-cloueuse-senco-finishpro21lxp:0",
+      "productId": "agrafeuse-cloueuse-senco-finishpro21lxp",
+      "productType": "tool",
+      "occurredAt": "2026-11-16",
+      "kind": "added",
+      "summary": "Notice complète relue p1/2/10/11 et colonnes des deux voisines. Cadence désormais documentée, mais aucune pression de mesure ni volume par tir inventés. La version documentaire est explicite ; les différences de pointes et de magasin constituent l’apport propre. Source européenne 404 et dimensions historiques conservées.",
+      "fingerprint": "8bc53b8e1ac4014de043dc42b319282f1be4732a8de9bca7d1d95464eb2a16c1",
+      "snapshot": {
+        "id": "review:2026-11-16-reserves:agrafeuse-cloueuse-senco-finishpro21lxp:0",
+        "sourceUrl": "https://www.senco.com/wp-content/uploads/2021/05/finishpro23lxp_man.pdf",
+        "sourceLabel": "Senco, document relu le 16 novembre 2026 (pages PDF 1, 2, 10, 11)",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-16",
+        "confidence": "B",
+        "notes": "Notice complète relue p1/2/10/11 et colonnes des deux voisines. Cadence désormais documentée, mais aucune pression de mesure ni volume par tir inventés. La version documentaire est explicite ; les différences de pointes et de magasin constituent l’apport propre. Source européenne 404 et dimensions historiques conservées. GET complet SHA-256 da8e7b17dafcdb1b6cfc1e21d46e96bc9d0f9b78af54eb99cec83b04eaa0bf65."
+      }
+    },
+    {
+      "id": "review:2026-11-16-reserves:boulonneuse-zipp-zat400dr-cmplt:review:2026-11-16-reserves:boulonneuse-zipp-zat400dr-cmplt:0",
+      "evidenceId": "review:2026-11-16-reserves:boulonneuse-zipp-zat400dr-cmplt:0",
+      "productId": "boulonneuse-zipp-zat400dr-cmplt",
+      "productType": "tool",
+      "occurredAt": "2026-11-16",
+      "kind": "added",
+      "summary": "Page fabricant et PDF39 relus, dont annotation explicite ZATXXXDR-CMPLT, cotes A1/A et lignes ZAT400/ZAT1800. Différence utile de lecture/réglage motivée sans prétendre à un couple supérieur à ZAT400CMPLT. Moteur variable-volume inchangé et non conclusif.",
+      "fingerprint": "aab4252b69017e9da39ef65445762f9cd70c7f8d2570c84a73446ee1016fa697",
+      "snapshot": {
+        "id": "review:2026-11-16-reserves:boulonneuse-zipp-zat400dr-cmplt:0",
+        "sourceUrl": "https://www.airtools.com.tw/zat-pneumatic-torque-wrench/",
+        "sourceLabel": "ZIPP, document relu le 16 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-16",
+        "confidence": "B",
+        "notes": "Page fabricant et PDF39 relus, dont annotation explicite ZATXXXDR-CMPLT, cotes A1/A et lignes ZAT400/ZAT1800. Différence utile de lecture/réglage motivée sans prétendre à un couple supérieur à ZAT400CMPLT. Moteur variable-volume inchangé et non conclusif. GET complet SHA-256 f70b2ba2213688a5cb7c81e81c163c4308b25338f01becbbfd84cb206d494b0c."
+      }
+    },
+    {
+      "id": "review:2026-11-16-reserves:boulonneuse-zipp-zat400dr-cmplt:review:2026-11-16-reserves:boulonneuse-zipp-zat400dr-cmplt:1",
+      "evidenceId": "review:2026-11-16-reserves:boulonneuse-zipp-zat400dr-cmplt:1",
+      "productId": "boulonneuse-zipp-zat400dr-cmplt",
+      "productType": "tool",
+      "occurredAt": "2026-11-16",
+      "kind": "added",
+      "summary": "Page fabricant et PDF39 relus, dont annotation explicite ZATXXXDR-CMPLT, cotes A1/A et lignes ZAT400/ZAT1800. Différence utile de lecture/réglage motivée sans prétendre à un couple supérieur à ZAT400CMPLT. Moteur variable-volume inchangé et non conclusif.",
+      "fingerprint": "8dfb13c6040bea6b5f4fc26991558f6f4133cebab33b62c366c3bd5073a9ce75",
+      "snapshot": {
+        "id": "review:2026-11-16-reserves:boulonneuse-zipp-zat400dr-cmplt:1",
+        "sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=39",
+        "sourceLabel": "ZIPP, document relu le 16 novembre 2026 (pages PDF 39)",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-16",
+        "confidence": "B",
+        "notes": "Page fabricant et PDF39 relus, dont annotation explicite ZATXXXDR-CMPLT, cotes A1/A et lignes ZAT400/ZAT1800. Différence utile de lecture/réglage motivée sans prétendre à un couple supérieur à ZAT400CMPLT. Moteur variable-volume inchangé et non conclusif. GET complet SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3."
+      }
+    },
+    {
+      "id": "review:2026-11-16-reserves:cle-a-cliquet-hymair-nst-5058c:review:2026-11-16-reserves:cle-a-cliquet-hymair-nst-5058c:0",
+      "evidenceId": "review:2026-11-16-reserves:cle-a-cliquet-hymair-nst-5058c:0",
+      "productId": "cle-a-cliquet-hymair-nst-5058c",
+      "productType": "tool",
+      "occurredAt": "2026-11-16",
+      "kind": "added",
+      "summary": "Fiches exactes NST5058C et NST5059CA relues : taille, masse, régime à vide et consommation moyenne comparés. Rebinding de provenance vers le constructeur, sans transformer 90PSI de travail en pression de mesure. Apport : choix d’encombrement et de vitesse ; moteur variable-volume inchangé.",
+      "fingerprint": "9414a24f985c72a74707484c8f790d25c86cdd0110bd4ebf61b2b2eedf7693cb",
+      "snapshot": {
+        "id": "review:2026-11-16-reserves:cle-a-cliquet-hymair-nst-5058c:0",
+        "sourceUrl": "https://www.steedtools.com/3-8-Composite-Body-Air-Ratchet-Wrench-Twin-Ratchet-Pawl-NST-5058C-pd123046238.html",
+        "sourceLabel": "Hymair, document relu le 16 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-16",
+        "confidence": "B",
+        "notes": "Fiches exactes NST5058C et NST5059CA relues : taille, masse, régime à vide et consommation moyenne comparés. Rebinding de provenance vers le constructeur, sans transformer 90PSI de travail en pression de mesure. Apport : choix d’encombrement et de vitesse ; moteur variable-volume inchangé. GET complet SHA-256 2570f8f94c876942cdbada0995d5e90ae10f914615f882e7570048fe1f6476a7."
+      }
+    },
+    {
+      "id": "review:2026-11-16-reserves:marteau-a-river-puma-at-2210:review:2026-11-16-reserves:marteau-a-river-puma-at-2210:0",
+      "evidenceId": "review:2026-11-16-reserves:marteau-a-river-puma-at-2210:0",
+      "productId": "marteau-a-river-puma-at-2210",
+      "productType": "tool",
+      "occurredAt": "2026-11-16",
+      "kind": "added",
+      "summary": "Table complète relue pour AT2210/2214/2215. Les données stables d’emmanchement, course, cadence et masse distinguent la référence ; la longueur divergente est regroupée dans un champ explicitement incertain, sans normalisation. Le moteur reste variable-volume et aucun volume par coup n’est dérivé.",
+      "fingerprint": "e5955dc58ec0e61e9ed9929d966f8499f756275c7899558966d4b355e1128094",
+      "snapshot": {
+        "id": "review:2026-11-16-reserves:marteau-a-river-puma-at-2210:0",
+        "sourceUrl": "https://www.pumaair.com/product-Riveting-Hammer-straight-RivetingHammer-straight.html",
+        "sourceLabel": "PUMA, document relu le 16 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-16",
+        "confidence": "B",
+        "notes": "Table complète relue pour AT2210/2214/2215. Les données stables d’emmanchement, course, cadence et masse distinguent la référence ; la longueur divergente est regroupée dans un champ explicitement incertain, sans normalisation. Le moteur reste variable-volume et aucun volume par coup n’est dérivé. GET complet SHA-256 a352c4fa7391ce66ec0cb8a2af672675a8f2f22e4ec73064ab2237889018e31e."
+      }
+    },
+    {
+      "id": "review:2026-11-16-reserves:ponceuse-orbitale-astro-pneumatic-314:review:2026-11-16-reserves:ponceuse-orbitale-astro-pneumatic-314:0",
+      "evidenceId": "review:2026-11-16-reserves:ponceuse-orbitale-astro-pneumatic-314:0",
+      "productId": "ponceuse-orbitale-astro-pneumatic-314",
+      "productType": "tool",
+      "occurredAt": "2026-11-16",
+      "kind": "added",
+      "summary": "Fiche 314, flyer officiel complet p1 et fiche voisine321 relus. Le défaut d’unité d’orbite reste visible dans la spécification active, et les régimes de consommation ne sont pas fusionnés. Valeur propre : semelle rectangulaire contre petits plateaux circulaires, avec moteur variable-volume non conclusif.",
+      "fingerprint": "a8556fc3954fe58e73a765a0393a40453a6338c31b702798fed7f8882a98f3e0",
+      "snapshot": {
+        "id": "review:2026-11-16-reserves:ponceuse-orbitale-astro-pneumatic-314:0",
+        "sourceUrl": "https://www.astrotools.com/product/onyx-jitterbug-random-orbit-air-palm-sander/",
+        "sourceLabel": "Astro Pneumatic, document relu le 16 novembre 2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-16",
+        "confidence": "B",
+        "notes": "Fiche 314, flyer officiel complet p1 et fiche voisine321 relus. Le défaut d’unité d’orbite reste visible dans la spécification active, et les régimes de consommation ne sont pas fusionnés. Valeur propre : semelle rectangulaire contre petits plateaux circulaires, avec moteur variable-volume non conclusif. GET complet SHA-256 fe698dcda7f69f883e6fb3c71707a19b832697ed848fa913eff5c1955d998338."
+      }
+    },
+    {
+      "id": "review:2026-11-16-reserves:ponceuse-orbitale-astro-pneumatic-314:review:2026-11-16-reserves:ponceuse-orbitale-astro-pneumatic-314:1",
+      "evidenceId": "review:2026-11-16-reserves:ponceuse-orbitale-astro-pneumatic-314:1",
+      "productId": "ponceuse-orbitale-astro-pneumatic-314",
+      "productType": "tool",
+      "occurredAt": "2026-11-16",
+      "kind": "added",
+      "summary": "Fiche 314, flyer officiel complet p1 et fiche voisine321 relus. Le défaut d’unité d’orbite reste visible dans la spécification active, et les régimes de consommation ne sont pas fusionnés. Valeur propre : semelle rectangulaire contre petits plateaux circulaires, avec moteur variable-volume non conclusif.",
+      "fingerprint": "e59bc5464ab0dc89bee96c122461002d2bb001c0d99da46c0816f85191c78aca",
+      "snapshot": {
+        "id": "review:2026-11-16-reserves:ponceuse-orbitale-astro-pneumatic-314:1",
+        "sourceUrl": "https://www.astrotools.com/product/onyx-jitterbug-random-orbit-air-palm-sander/?attachment_id=2829&download_file=k554ozjbgpn80#page=1",
+        "sourceLabel": "Astro Pneumatic, document relu le 16 novembre 2026 (pages PDF 1)",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-16",
+        "confidence": "B",
+        "notes": "Fiche 314, flyer officiel complet p1 et fiche voisine321 relus. Le défaut d’unité d’orbite reste visible dans la spécification active, et les régimes de consommation ne sont pas fusionnés. Valeur propre : semelle rectangulaire contre petits plateaux circulaires, avec moteur variable-volume non conclusif. GET complet SHA-256 4ed5972a15c5fa56480ab4c402541c8244c322c641baa819ff2366bd06e94ea6."
+      }
+    },
+    {
+      "id": "review:2026-11-16-reserves:tronconneuse-zipp-zag-386:review:2026-11-16-reserves:tronconneuse-zipp-zag-386:0",
+      "evidenceId": "review:2026-11-16-reserves:tronconneuse-zipp-zag-386:0",
+      "productId": "tronconneuse-zipp-zag-386",
+      "productType": "tool",
+      "occurredAt": "2026-11-16",
+      "kind": "added",
+      "summary": "Table p124 et titre relus avec ZAG387. Le couple diamètre/vitesse et la masse constituent la différence utile ; la puissance contradictoire reste une réserve visible non dimensionnante. L’ancienne conversion de 4 cfm en 113,267 L/min n’est pas réutilisée comme mesure ni revendiquée comme nouveau fait.",
+      "fingerprint": "14b568a1601b489845054182b5805d4ec1c8b96913933ceae3c838c00c53f0ec",
+      "snapshot": {
+        "id": "review:2026-11-16-reserves:tronconneuse-zipp-zag-386:0",
+        "sourceUrl": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf#page=124",
+        "sourceLabel": "ZIPP, document relu le 16 novembre 2026 (pages PDF 124)",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-16",
+        "confidence": "B",
+        "notes": "Table p124 et titre relus avec ZAG387. Le couple diamètre/vitesse et la masse constituent la différence utile ; la puissance contradictoire reste une réserve visible non dimensionnante. L’ancienne conversion de 4 cfm en 113,267 L/min n’est pas réutilisée comme mesure ni revendiquée comme nouveau fait. GET complet SHA-256 a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3."
+      }
+    },
+    {
+      "id": "review:2026-11-16-reserves:riveteuse-astro-pneumatic-pr36:review:2026-11-16-reserves:riveteuse-astro-pneumatic-pr36:0",
+      "evidenceId": "review:2026-11-16-reserves:riveteuse-astro-pneumatic-pr36:0",
+      "productId": "riveteuse-astro-pneumatic-pr36",
+      "productType": "tool",
+      "occurredAt": "2026-11-16",
+      "kind": "added",
+      "summary": "Fiche PR36 et notice complète relues, avec contrôle visuel de la page1. La notice donne 2.320 Liter/Stroke, sans pression de mesure appariée : valeur documentaire, pas nouveau paramètre per-action. La traction1938/380lb reste contradictoire et les dimensions270/280mm divergent ; aucune qualification ni admission pour cette page.",
+      "fingerprint": "57047304db474dc0ce874e8c2073b7c0f592e94f19b31412a1c4533a3e4f06a2",
+      "snapshot": {
+        "id": "review:2026-11-16-reserves:riveteuse-astro-pneumatic-pr36:0",
+        "sourceUrl": "https://www.astrotools.com/product/air-riveter-3-32-1-8-5-32-3-16-capacity/",
+        "sourceLabel": "Astro Pneumatic PR36, document relu le16novembre2026",
+        "sourceType": "manufacturer",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-16",
+        "confidence": "B",
+        "notes": "Fiche PR36 et notice complète relues, avec contrôle visuel de la page1. La notice donne 2.320 Liter/Stroke, sans pression de mesure appariée : valeur documentaire, pas nouveau paramètre per-action. La traction1938/380lb reste contradictoire et les dimensions270/280mm divergent ; aucune qualification ni admission pour cette page. GET complet SHA-256 eb4ee09633e9454415ce0dc4af84574ee2f60dcd9a73a198a22a18c4c29b203d."
+      }
+    },
+    {
+      "id": "review:2026-11-16-reserves:riveteuse-astro-pneumatic-pr36:review:2026-11-16-reserves:riveteuse-astro-pneumatic-pr36:1",
+      "evidenceId": "review:2026-11-16-reserves:riveteuse-astro-pneumatic-pr36:1",
+      "productId": "riveteuse-astro-pneumatic-pr36",
+      "productType": "tool",
+      "occurredAt": "2026-11-16",
+      "kind": "added",
+      "summary": "Fiche PR36 et notice complète relues, avec contrôle visuel de la page1. La notice donne 2.320 Liter/Stroke, sans pression de mesure appariée : valeur documentaire, pas nouveau paramètre per-action. La traction1938/380lb reste contradictoire et les dimensions270/280mm divergent ; aucune qualification ni admission pour cette page.",
+      "fingerprint": "c4d36869ef18c9c9d16805858d156b30686f201101cd3cc401bb68a538fde98f",
+      "snapshot": {
+        "id": "review:2026-11-16-reserves:riveteuse-astro-pneumatic-pr36:1",
+        "sourceUrl": "https://www.astrotools.com/product/air-riveter-3-32-1-8-5-32-3-16-capacity/?attachment_id=6156&download_file=efv4nxoancz5g",
+        "sourceLabel": "Astro Pneumatic PR36, document relu le16novembre2026 ; pagesPDF 1, 2, 5",
+        "sourceType": "manual",
+        "sourceRole": "primary",
+        "retrievedAt": "2026-11-16",
+        "confidence": "B",
+        "notes": "Fiche PR36 et notice complète relues, avec contrôle visuel de la page1. La notice donne 2.320 Liter/Stroke, sans pression de mesure appariée : valeur documentaire, pas nouveau paramètre per-action. La traction1938/380lb reste contradictoire et les dimensions270/280mm divergent ; aucune qualification ni admission pour cette page. GET complet SHA-256 69d806829bbc60a6476dd991fa86281120de73b305e521febcab30ee5d5bdf3b."
+      }
     }
   ],
-  "historyVersion": "b8ad95c32119cd0a8ebe789b4fa81647df71544236968b5119ff81fb24f7cafe"
+  "historyVersion": "068253c0589cd7235456e835d390b4d36cc461f3f99d8d947db576669c524380"
 }
