@@ -1,9 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import InstitutionalHero from '../components/InstitutionalHero.astro';
 ---
 <BaseLayout title="Cookies et stockage local | CompatAir" description="Absence de traceurs de navigation, nettoyage des anciens cookies Analytics et mémoires locales du service." breadcrumbs={[{ name: 'Cookies et stockage local', path: '/cookies/' }]}>
- <article class="container content legal-content" id="choix">
-  <h1>Cookies et stockage local</h1>
+ <InstitutionalHero eyebrow="Protection des données" title="Cookies et stockage local" lead="Retrait des traceurs, nettoyage des anciens cookies Analytics et mémoires locales du service." items={[{ label: 'Traceurs de navigation', detail: 'Retirés du site' }, { label: 'Mémoires locales', detail: 'Parcours et carnets techniques' }, { label: 'Journaux serveur', detail: 'Fonctionnement et sécurité' }]} />
+ <article class="container content institutional-content legal-content" id="choix">
   <p class="legal-update">Dernière mise à jour : 17 novembre 2026</p>
   <h2>Retrait des traceurs</h2>
   <p>CompatAir ne charge plus Google Analytics, ne transmet plus d’événements de navigation et ne crée plus d’identifiant de suivi. Le bandeau de consentement Analytics a été supprimé. Le calculateur fonctionne sans contribution statistique.</p>
