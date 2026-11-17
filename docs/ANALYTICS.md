@@ -1,3 +1,19 @@
+# Retrait des traceurs
+
+Préparation du 17 novembre 2026, sur instruction de l’éditeur : retrait de Google Analytics, du bandeau de consentement, des compteurs de navigation et de la contribution statistique du calculateur. Aucune nouvelle attribution MCP ni empreinte d’appelant n’est créée. `/events` retourne 410. Le serveur conserve les protections contre les abus et la lecture des agrégats historiques ; il ne crée pas de nouvelle clé de télémétrie dans ce mode. Les anciennes clés et fichiers privés ne sont ni supprimés ni réécrits par ce changement.
+
+`ClearAnalyticsStorage.astro` supprime uniquement les anciens cookies GA accessibles, le choix de consentement et la catégorie d’acquisition en session. Aucun appel réseau ni identifiant de remplacement. Les mémoires fonctionnelles et les données historiques restent préservées.
+
+La CSP versionnée redevient limitée à la même origine pour les scripts et les connexions. Son installation sur le serveur exige la préparation root habituelle. Les budgets JavaScript retrouvent leurs plafonds antérieurs à l’ajout du consentement. CGU, confidentialité, cookies et mentions légales sont synchronisés. Ces changements ne sont pas une preuve d’activation en production.
+
+Vérifications : nettoyage ciblé et stockage bloqué ; absence de collecte au niveau du serveur, y compris pour d’anciens clients ; absence de création de secret ou d’empreinte ; réponses techniques et protections HTTP conservées. Après publication, vérifier les en-têtes effectivement servis, les modules chargés, l’absence d’appels Google et `/events`, ainsi que les pages légales.
+
+Le rapprochement automatique avec GA4 doit cesser. Les rapports et observations antérieurs restent privés et datés. GoAccess et les agrégats des journaux serveur restent séparés, sans devenir des nombres de personnes.
+
+## Historique de l’intégration retirée
+
+Le texte ci-dessous documente la configuration et les contrôles antérieurs. Ses fichiers de collecte et réglages actifs ont été retirés ; il ne décrit plus le fonctionnement courant.
+
 # Mesure d’audience CompatAir
 
 Configuration du 11 novembre 2026. L’identifiant de mesure est public, sans secret de Measurement Protocol.

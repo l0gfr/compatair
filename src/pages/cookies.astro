@@ -1,28 +1,22 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import InstitutionalHero from '../components/InstitutionalHero.astro';
 ---
-<BaseLayout title="Cookies et réglages de confidentialité | CompatAir" description="Choisir, refuser ou retirer Google Analytics ; connaître les cookies et mémoires locales de CompatAir." breadcrumbs={[{ name: 'Cookies', path: '/cookies/' }]}>
- <InstitutionalHero eyebrow="Cookies et stockage local" title="Cookies et consentement" lead="La mesure Google Analytics est facultative. Vous pouvez accepter, refuser ou changer d’avis à tout moment." primaryHref="#choix" primaryLabel="Gérer mon choix" items={[{ label: 'Audience', detail: 'Avec votre accord' }, { label: 'Choix', detail: 'Conservé 180 jours' }, { label: 'Publicité ciblée', detail: 'Désactivée' }]} />
- <article class="container content institutional-content legal-content" id="choix">
-  <p class="legal-update">Dernière mise à jour : 11 novembre 2026</p>
-  <p><a class="button" href="#choix" data-analytics-settings>Modifier mon choix pour Google Analytics</a></p>
-  <noscript><p>JavaScript est désactivé : Google Analytics reste désactivé.</p></noscript>
-  <h2>Mesure d’audience facultative</h2>
-  <p>Avec votre accord, Google Analytics 4 mesure les visites, les pages consultées, les sessions, l’origine des visites et les clics vers le calculateur ou un marchand. Aucun appel Google Analytics ne part avant acceptation. Le refus conserve l’accès à toutes les fonctionnalités.</p>
-  <div class="table-scroll"><table><caption>Cookies et mémoires utilisés</caption><thead><tr><th>Nom</th><th>Finalité</th><th>Durée maximale</th><th>Accord préalable</th></tr></thead><tbody>
-   <tr><td><code>_ga</code>, <code>_ga_*</code></td><td>Identifiants pseudonymes Google Analytics, visites et sessions</td><td>180 jours, sans renouvellement à chaque visite</td><td>Oui</td></tr>
-   <tr><td><code>ca:analytics-consent:v1</code> (stockage local)</td><td>Mémoriser l’acceptation ou le refus</td><td>180 jours</td><td>Nécessaire pour respecter votre choix</td></tr>
-   <tr><td>Mémoire du parcours technique (stockage local)</td><td>Reprendre une identification, un calcul ou une comparaison</td><td>30 jours</td><td>Fonctionnement du parcours demandé</td></tr>
-   <tr><td><code>ca:acquisition</code> (mémoire de session)</td><td>Catégorie générale d’origine utilisée par les compteurs locaux agrégés</td><td>Durée de l’onglet</td><td>Mesure locale décrite dans la politique de confidentialité</td></tr>
+<BaseLayout title="Cookies et stockage local | CompatAir" description="Absence de traceurs de navigation, nettoyage des anciens cookies Analytics et mémoires locales du service." breadcrumbs={[{ name: 'Cookies et stockage local', path: '/cookies/' }]}>
+ <article class="container content legal-content" id="choix">
+  <h1>Cookies et stockage local</h1>
+  <p class="legal-update">Dernière mise à jour : 17 novembre 2026</p>
+  <h2>Retrait des traceurs</h2>
+  <p>CompatAir ne charge plus Google Analytics, ne transmet plus d’événements de navigation et ne crée plus d’identifiant de suivi. Le bandeau de consentement Analytics a été supprimé. Le calculateur fonctionne sans contribution statistique.</p>
+  <h2>Anciens cookies et choix Analytics</h2>
+  <p>Lorsqu’une page mise à jour est chargée, un nettoyage local tente de supprimer les cookies <code>_ga</code> et <code>_ga_*</code> accessibles sur CompatAir, l’ancien choix <code>ca:analytics-consent:v1</code> et la catégorie d’origine <code>ca:acquisition</code>. Il ne transmet aucune donnée et ne crée aucun nouvel identifiant. Rechargez les anciens onglets pour utiliser la version mise à jour.</p>
+  <p>Le navigateur peut bloquer ce nettoyage. Vous pouvez aussi supprimer les données du site dans ses réglages ; cette suppression efface alors également les mémoires utiles décrites ci-dessous. Le retrait des traceurs ne supprime pas automatiquement les données précédemment transmises à Google. Les informations et le contact figurent dans la <a href="/confidentialite/#google-analytics">politique de confidentialité</a>.</p>
+  <h2>Mémoires nécessaires aux fonctions utilisées</h2>
+  <div class="table-scroll"><table><caption>Données conservées localement dans le navigateur</caption><thead><tr><th>Mémoire</th><th>Usage</th><th>Conservation</th></tr></thead><tbody>
+   <tr><td>Parcours technique</td><td>Reprendre une identification, un calcul ou une comparaison</td><td>30 jours au maximum ; effaçable avec l’action « Effacer »</td></tr>
+   <tr><td>Carnets d’exploitation, d’intervention et de maintenance</td><td>Retrouver les éléments enregistrés avec les fonctions concernées</td><td>Jusqu’à leur suppression ou à l’effacement des données du site dans le navigateur</td></tr>
   </tbody></table></div>
-  <h2>Accepter, refuser, retirer</h2>
-  <p>Les boutons « Accepter » et « Refuser » sont proposés au même niveau. Votre choix vaut pour ce navigateur pendant 180 jours. Le lien « Réglages des cookies » du footer reste accessible sur chaque page.</p>
-  <p>Un retrait arrête la collecte future, supprime les cookies Analytics de CompatAir et recharge la page pour arrêter le script déjà chargé. Les données précédemment envoyées ne sont pas automatiquement effacées chez Google. Les droits et le contact sont détaillés dans la <a href="/confidentialite/#google-analytics">politique de confidentialité</a>.</p>
-  <p>Vous pouvez supprimer les données locales dans les réglages du navigateur. Le choix sera alors redemandé. Si ce stockage est bloqué, la mesure reste désactivée ; le site continue de fonctionner.</p>
-  <h2>Données exclues</h2>
-  <p>Les adresses mesurées sont dépourvues de paramètres et de fragments. Le contenu des recherches, formulaires, photos et simulations n’est pas envoyé à Google Analytics. Les fonctions publicitaires, signaux Google et mesures améliorées automatiques sont désactivés.</p>
-  <h2>Autres traitements</h2>
-  <p>Les journaux du serveur, le rapport GoAccess privé, les statistiques techniques et la contribution facultative du calculateur sont décrits séparément dans la <a href="/confidentialite/">politique de confidentialité</a>. Une configuration partageable reste après le caractère <code>#</code> du lien. La mémoire locale du parcours peut être supprimée avec son action « Effacer ».</p>
+  <p>Ces mémoires restent dans votre navigateur et ne servent pas à mesurer vos visites. Une simulation partageable reste dans la partie de l’adresse placée après <code>#</code>. Les requêtes nécessaires à la recherche de produits et aux résultats sont décrites dans la <a href="/confidentialite/#recherches">politique de confidentialité</a>.</p>
+  <h2>Journaux du serveur</h2>
+  <p>Le serveur conserve des journaux techniques pour le fonctionnement et la sécurité. GoAccess produit un rapport privé à partir de ces journaux, sans déposer de cookie ni charger de traceur dans le navigateur. Les informations traitées et leurs limites sont détaillées dans la <a href="/confidentialite/#navigation">politique de confidentialité</a>.</p>
  </article>
 </BaseLayout>

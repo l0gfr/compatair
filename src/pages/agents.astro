@@ -34,7 +34,7 @@ const contracts = [
 	<TechnicalSurfaceNav current="mcp" />
 
 	<section class="container agent-section" id="statistiques">
-		<header class="agent-section-head"><p class="eyebrow">Observabilité qualifiée</p><h2>Statistiques MCP anonymisées</h2><p>Fenêtre glissante de 91 jours. Le rapport sépare les appels bruts des sessions plausibles, smoke de déploiement, répétitions automatiques et probes. Ces classes sont des heuristiques d’exploitation, jamais la preuve qu’un appelant est humain.</p></header>
+		<header class="agent-section-head"><p class="eyebrow">Observabilité qualifiée</p><h2>Statistiques MCP anonymisées</h2><p>Collecte arrêtée dans cette version de CompatAir. Les chiffres ci-dessous proviennent des anciens agrégats, sans nouvelle mesure de visite ni création d’empreinte d’appelant. Les classes historiques restent des heuristiques d’exploitation.</p></header>
 		<div class="agent-stats" data-agent-stats aria-live="polite">
 			<article><span>Initialisations</span><strong data-stat="initializations">...</strong></article>
 			<article><span>Appels bruts</span><strong data-stat="tool_calls">...</strong></article>
@@ -55,7 +55,7 @@ const contracts = [
 			<section><h3>Produits les plus demandés</h3><div class="agent-table-wrap"><table><thead><tr><th>Produit</th><th>Demandes</th></tr></thead><tbody data-product-rows></tbody></table></div></section>
 			<section><h3>Compatibilités les plus demandées</h3><div class="agent-table-wrap"><table><thead><tr><th>Compresseur</th><th>Outil</th><th>Demandes</th></tr></thead><tbody data-compatibility-rows></tbody></table></div></section>
 		</div>
-		<p class="agent-method"><strong>Ce qui est mesuré.</strong> Un « appelant » est une estimation issue d’un préfixe réseau tronqué et d’une famille d’agent utilisateur, protégés par HMAC. Ce n’est ni une personne identifiée ni un compte. Les produits et couples ne sont publiés qu’à partir des sessions plausibles et au-dessus du seuil de cohorte. Le croisement classe × tool × résultat × erreur est exact pour les appels enregistrés depuis le schéma 2.1.0 ; l’historique antérieur reste explicitement non classé. Les verdicts <code>air_supply</code> et <code>complete_air_system</code> sont comptés séparément dans le JSON source. <a href="/confidentialite/">Lire le cadre de confidentialité</a>.</p>
+		<p class="agent-method"><strong>Lecture de l’historique.</strong> Les anciens « appelants » étaient des estimations issues d’un préfixe réseau tronqué et d’une famille d’agent utilisateur, protégés par HMAC. Ce n’est ni une personne identifiée ni un compte. Les produits et couples ne sont publiés qu’à partir des sessions plausibles et au-dessus du seuil de cohorte. Le croisement classe × tool × résultat × erreur est exact pour les appels enregistrés depuis le schéma 2.1.0 ; l’historique antérieur reste explicitement non classé. Les verdicts <code>air_supply</code> et <code>complete_air_system</code> sont comptés séparément dans le JSON source. <a href="/confidentialite/">Lire le cadre de confidentialité</a>.</p>
 	</section>
 
 	<section class="agent-dark" id="connexion">
@@ -70,7 +70,7 @@ const contracts = [
 	</section>
 
 	<section class="container agent-section">
-		<header class="agent-section-head"><p class="eyebrow">Contrats publics</p><h2>Une réponse que l’agent peut vérifier</h2><p>Chaque résultat conserve son verdict, sa portée, ses limitations, les versions de méthode et de catalogue, les sources et une page CompatAir de référence. <code>canonical_follow_url</code> permet de mesurer une consultation attribuée sans confondre émission et clic.</p></header>
+		<header class="agent-section-head"><p class="eyebrow">Contrats publics</p><h2>Une réponse que l’agent peut vérifier</h2><p>Chaque résultat conserve son verdict, sa portée, ses limitations, les versions de méthode et de catalogue, les sources et une page CompatAir de référence. <code>canonical_follow_url</code> fournit une adresse de consultation sans suivi.</p></header>
 		<div class="agent-contracts">{contracts.map((contract) => <a href={contract.href}><strong>{contract.label}</strong><span>{contract.detail}</span><b aria-hidden="true">→</b></a>)}</div>
 	</section>
 

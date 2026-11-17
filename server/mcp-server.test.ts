@@ -26,8 +26,8 @@ describe('MCP HTTP boundary helpers', () => {
 		expect(parseOfferId('/go/valid-offer-1')).toBe('valid-offer-1');
 	});
 
-	it('builds attributed follow URLs without changing the canonical contract', () => {
-		expect(canonicalFollowUrl('https://compatair.fr/calculateur/?outil=a', 'check_compatibility')).toBe('https://compatair.fr/calculateur/?outil=a&via=mcp&tool=check_compatibility');
+	it('returns untracked consultation URLs without changing the canonical contract', () => {
+		expect(canonicalFollowUrl('https://compatair.fr/calculateur/?outil=a', 'check_compatibility')).toBe('https://compatair.fr/calculateur/?outil=a');
 		expect(canonicalFollowUrl('https://example.test/private', 'check_compatibility')).toBeUndefined();
 	});
 
@@ -71,7 +71,7 @@ describe('MCP HTTP boundary helpers', () => {
 		expect(result.headers['X-Robots-Tag']).toBe('noindex, nofollow');
 	});
 
-	it('answers affiliate HEAD requests without recording a click', async () => {
+	it('redirects HEAD and GET requests without recording clicks', async () => {
 		const target = 'https://www.awin1.com/pclick.php?p=1&a=2&m=17547';
 		const offerSnapshot = { offers: [{ id: 'offer-1', merchantId: 'manomano-fr', url: target, collectedAt: '2026-07-15T19:00:00.000Z' }] } as any;
 		const recorded: string[] = [];
@@ -90,7 +90,7 @@ describe('MCP HTTP boundary helpers', () => {
 		expect(head).toMatchObject({ status: 302, headers: { Location: target } });
 		expect(recorded).toEqual([]);
 		expect((await request('GET')).status).toBe(302);
-		expect(recorded).toEqual(['offer-1']);
+		expect(recorded).toEqual([]);
 	});
 
 	it('fails closed when an affiliate offer has expired at runtime', async () => {
@@ -162,7 +162,7 @@ describe('MCP HTTP boundary helpers', () => {
 		expect(status).toBe(429);
 	});
 
-	it('persists only a validated aggregate calculator funnel event', async () => {
+	it('refuses retired only a validated aggregate calculator funnel event', async () => {
 		const directory = mkdtempSync(join(tmpdir(), 'compatair-funnel-http-'));
 		const productFunnelAggregatePath = join(directory, 'product-funnel.json');
 		try {
@@ -176,12 +176,12 @@ describe('MCP HTTP boundary helpers', () => {
 				const response = { setTimeout() {}, writeHead(value: number) { resolve(value); }, end() {}, destroy() {} };
 				server.emit('request', request, response);
 			});
-			expect(status).toBe(204);
-			expect(JSON.parse(readFileSync(productFunnelAggregatePath, 'utf8'))).toMatchObject({ schemaVersion: '2.0.0', totalEvents: 1, counterfactual: { displayed: 1, byFamily: { machine: { displayed: 1 } } } });
+			expect(status).toBe(410);
+			expect(() => readFileSync(productFunnelAggregatePath, 'utf8')).toThrow();
 		} finally { rmSync(directory, { recursive: true, force: true }); }
 	});
 
-	it('persists merchant interest without accepting a product reference', async () => {
+	it('refuses retired merchant-interest events without writing aggregates', async () => {
 		const directory = mkdtempSync(join(tmpdir(), 'compatair-acquisition-http-'));
 		const acquisitionAggregatePath = join(directory, 'acquisition.json');
 		try {
@@ -196,13 +196,13 @@ describe('MCP HTTP boundary helpers', () => {
 			});
 			const accepted = JSON.stringify({ event: 'acquisition_aggregate', schemaVersion: '1.0.0', channel: 'organic', template: 'compressor', action: 'merchant_interest', outcome: 'unknown' });
 			const rejected = JSON.stringify({ event: 'acquisition_aggregate', schemaVersion: '1.0.0', channel: 'organic', template: 'compressor', action: 'merchant_interest', outcome: 'unknown', productId: 'compressor-a' });
-			expect(await call(accepted)).toBe(204);
-			expect(await call(rejected)).toBe(400);
-			expect(JSON.parse(readFileSync(acquisitionAggregatePath, 'utf8'))).toMatchObject({ totalEvents: 1, buckets: [{ channel: 'organic', template: 'compressor', action: 'merchant_interest', outcome: 'unknown', count: 1 }] });
+			expect(await call(accepted)).toBe(410);
+			expect(await call(rejected)).toBe(410);
+			expect(() => readFileSync(acquisitionAggregatePath, 'utf8')).toThrow();
 		} finally { rmSync(directory, { recursive: true, force: true }); }
 	});
 
-	it('rejects a demand aggregate from a non-authoritative calculation version', async () => {
+	it('refuses retired demand collection without creating an aggregate', async () => {
 		const directory = mkdtempSync(join(tmpdir(), 'compatair-demand-http-'));
 		const demandAggregatePath = join(directory, 'demand.json');
 		try {
@@ -217,12 +217,12 @@ describe('MCP HTTP boundary helpers', () => {
 				const response = { setTimeout() {}, writeHead(value: number) { resolve(value); }, end() {}, destroy() {} };
 				server.emit('request', request, response);
 			});
-			expect(status).toBe(400);
+			expect(status).toBe(410);
 			expect(() => readFileSync(demandAggregatePath, 'utf8')).toThrow();
 		} finally { rmSync(directory, { recursive: true, force: true }); }
 	});
 
-	it('does not retain attacker-controlled MCP tool names in process memory', async () => {
+	it('does not record known or attacker-controlled MCP tool names', async () => {
 		const recorded: string[] = [];
 		const server = createCompatAirServer({ catalog: { catalogVersion: 'test', compressors: [], tools: [] }, allowedOrigins: new Set(['https://compatair.fr']), recordToolCall: (name) => recorded.push(name) });
 		const requestTool = (name: string) => new Promise<number>((resolve) => {
@@ -236,10 +236,10 @@ describe('MCP HTTP boundary helpers', () => {
 		});
 		expect(await requestTool('x'.repeat(1_000))).toBe(200);
 		expect(await requestTool('find_offers')).toBe(200);
-		expect(recorded).toEqual(['find_offers']);
+		expect(recorded).toEqual([]);
 	});
 
-	it('persists MCP initialization, tool outcome and an explicit canonical follow', async () => {
+	it('serves MCP without recording callers or explicit legacy follow events', async () => {
 		const directory = mkdtempSync(join(tmpdir(), 'compatair-mcp-telemetry-http-'));
 		const mcpTelemetryPath = join(directory, 'mcp-telemetry.json');
 		try {
@@ -257,15 +257,16 @@ describe('MCP HTTP boundary helpers', () => {
 			const toolCall = await mcp({ jsonrpc: '2.0', id: 2, method: 'tools/call', params: { name: 'identify_product', arguments: { query: 'absent' } } });
 			const result = JSON.parse(toolCall.body).result.structuredContent;
 			expect(result.verdict).toBe('insufficient_data');
-			expect(result.canonical_follow_url).toContain('via=mcp&tool=identify_product');
+			expect(result.canonical_follow_url).toBe(result.canonical_url);
+			expect(result.canonical_follow_url).not.toMatch(/via=mcp|tool=identify_product/);
 			const followPayload = JSON.stringify({ event: 'mcp_canonical_follow', schemaVersion: '2.0.0', tool: 'identify_product' });
-			expect((await call({ url: '/events', method: 'POST', headers: { origin: 'https://compatair.fr', 'content-type': 'application/json', 'user-agent': 'Claude Code/1.2.3' }, socket: { remoteAddress: '192.0.2.42' }, async *[Symbol.asyncIterator]() { yield Buffer.from(followPayload); } })).status).toBe(204);
+			expect((await call({ url: '/events', method: 'POST', headers: { origin: 'https://compatair.fr', 'content-type': 'application/json', 'user-agent': 'Claude Code/1.2.3' }, socket: { remoteAddress: '192.0.2.42' }, async *[Symbol.asyncIterator]() { yield Buffer.from(followPayload); } })).status).toBe(410);
 			const report = await call({ url: '/data/mcp-usage.json', method: 'GET', headers: {}, socket: { remoteAddress: '127.0.0.1' } });
 			expect(JSON.parse(report.body)).toMatchObject({
 				schema_version: '2.1.0',
-				totals: { initializations: 1, tool_calls: 1, insufficient_data: 1, canonical_follows: 1, estimated_callers: null },
-				tool_outcome_breakdown: [{ traffic_class: 'plausible_session', tool: 'identify_product', outcome: 'insufficient_data', error_code: null, calls: 1 }],
-				tools: [{ name: 'identify_product', calls: 1, insufficient_data: 1, canonical_issued: 1, canonical_follows: 1 }],
+				totals: { initializations: 0, tool_calls: 0, insufficient_data: 0, canonical_follows: 0, estimated_callers: null },
+				tool_outcome_breakdown: [],
+				tools: [],
 			});
 		} finally { rmSync(directory, { recursive: true, force: true }); }
 	});
@@ -290,7 +291,7 @@ describe('MCP HTTP boundary helpers', () => {
 		expect(JSON.parse(result.body).sources).toEqual(expect.arrayContaining([expect.objectContaining({ id: 'source-c', sourceRole: 'primary' }), expect.objectContaining({ id: 'source-t', sourceRole: 'independent_corroboration' })]));
 	});
 
-	it('attributes only the closed official widget hint to the widget channel', async () => {
+	it('keeps the official widget contract without collecting acquisition events', async () => {
 		const directory = mkdtempSync(join(tmpdir(), 'compatair-widget-acquisition-'));
 		const acquisitionAggregatePath = join(directory, 'acquisition.json');
 		try {
@@ -308,7 +309,7 @@ describe('MCP HTTP boundary helpers', () => {
 			});
 			expect(await request('attacker')).toBe(400);
 			expect(await request('widget')).toBe(200);
-			expect(JSON.parse(readFileSync(acquisitionAggregatePath, 'utf8')).buckets).toContainEqual(expect.objectContaining({ channel: 'widget', template: 'compatibility', action: 'decision_request', count: 1 }));
+			expect(() => readFileSync(acquisitionAggregatePath, 'utf8')).toThrow();
 		} finally { rmSync(directory, { recursive: true, force: true }); }
 	});
 
@@ -500,7 +501,7 @@ describe('MCP HTTP boundary helpers', () => {
 		expect(resolveKnowledgeSnapshotPath('/catalog.json', '/srv/search.json')).toBe('/srv/search.json');
 	});
 
-	it('keeps funnel aggregation enabled with an older production unit', () => {
+	it('retains legacy aggregate-path resolution for historical files', () => {
 		expect(resolveProductFunnelAggregatePath('/var/lib/compatair/demand-aggregates.json')).toBe('/var/lib/compatair/product-funnel-aggregates.json');
 		expect(resolveProductFunnelAggregatePath(undefined)).toBeUndefined();
 		expect(resolveProductFunnelAggregatePath('/var/lib/compatair/demand-aggregates.json', '/srv/custom-funnel.json')).toBe('/srv/custom-funnel.json');

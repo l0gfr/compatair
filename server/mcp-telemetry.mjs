@@ -481,11 +481,15 @@ async function writeAggregate(filePath, state) {
 	await rename(temporaryPath, filePath);
 }
 
-/** @param {{ filePath?: string, secretFilePath?: string, configuredSecret?: string, catalog?: any, clock?: () => Date }} options */
-export function createMcpTelemetryStore({ filePath = undefined, secretFilePath = undefined, configuredSecret = undefined, catalog = { compressors: [], tools: [] }, clock = () => new Date() } = {}) {
+/** @param {{ filePath?: string, secretFilePath?: string, configuredSecret?: string, catalog?: any, clock?: () => Date, readOnly?: boolean }} options */
+export function createMcpTelemetryStore({ filePath = undefined, secretFilePath = undefined, configuredSecret = undefined, catalog = { compressors: [], tools: [] }, clock = () => new Date(), readOnly = false } = {}) {
 	let queue = Promise.resolve();
 	let statePromise = readAggregate(filePath);
-	let secretPromise = readOrCreateSecret(secretFilePath, configuredSecret);
+	const secretPromise = readOnly ? undefined : readOrCreateSecret(secretFilePath, configuredSecret);
+	async function activeSecret() {
+		if (!secretPromise) throw new Error('collection_retired');
+		return await secretPromise;
+	}
 	let pendingEvents = [];
 	let scheduledFlush;
 	function scheduleFlush() {
@@ -512,10 +516,10 @@ export function createMcpTelemetryStore({ filePath = undefined, secretFilePath =
 		await queue;
 	}
 	return {
-		enabled: Boolean(filePath),
-		async actorId(address, userAgent) { return callerFingerprint(await secretPromise, address, userAgent); },
-		async requestHash(toolName, args) { return mcpRequestFingerprint(await secretPromise, toolName, args); },
-		async record(event) { pendingEvents.push(event); await scheduleFlush(); },
+		enabled: Boolean(filePath) && !readOnly,
+		async actorId(address, userAgent) { return callerFingerprint(await activeSecret(), address, userAgent); },
+		async requestHash(toolName, args) { return mcpRequestFingerprint(await activeSecret(), toolName, args); },
+		async record(event) { if (readOnly) throw new Error('collection_retired'); pendingEvents.push(event); await scheduleFlush(); },
 		async snapshot() { await waitForIdle(); return structuredClone(await statePromise); },
 		async publicReport() { await waitForIdle(); return buildPublicMcpUsageReport(await statePromise, catalog); },
 	};

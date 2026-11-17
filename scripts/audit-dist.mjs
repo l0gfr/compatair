@@ -1,3 +1,4 @@
+import { browserTrackingErrors } from './lib/browser-tracking-policy.mjs';
 import { verifyStaticSmokePages } from './lib/live-seo-verification.mjs';
 import { createHash } from 'node:crypto';
 import { lstat, readdir, readFile } from 'node:fs/promises';
@@ -42,18 +43,16 @@ for (const kind of ['compressors', 'tools']) for (const product of auditedCatalo
 	if (error) errors.push(error);
 }
 const maximumDocumentTitleLength = 60;
-// Explicitly approved on 2026-11-11: the consent manager adds 2 KiB to the
-// existing page budgets. All initial and complete graph checks remain blocking.
-const analyticsConsentOverheadBytesGzip = 2 * 1024;
-const maximumInitialPageScriptBytesGzip = 50 * 1024 + analyticsConsentOverheadBytesGzip;
-const maximumPassportInitialScriptBytesGzip = 45 * 1024 + analyticsConsentOverheadBytesGzip;
-const maximumOnDemandPageScriptBytesGzip = 57 * 1024 + analyticsConsentOverheadBytesGzip;
+// Google Analytics and its consent manager have been removed. Original budgets apply.
+const maximumInitialPageScriptBytesGzip = 50 * 1024;
+const maximumPassportInitialScriptBytesGzip = 45 * 1024;
+const maximumOnDemandPageScriptBytesGzip = 57 * 1024;
 // Moteur partagé, provenance et version épinglée : 60 KiB mesurés pour le
 // calculateur, 58-59 pour ces trois parcours. Les données sont désormais ciblées.
-const maximumCalculatorOnDemandScriptBytesGzip = 61 * 1024 + analyticsConsentOverheadBytesGzip;
+const maximumCalculatorOnDemandScriptBytesGzip = 61 * 1024;
 const versionedDecisionPages = new Set(['passeport/index.html', 'diagnostic-intervention/index.html', 'suivi-exploitation/index.html']);
-const maximumVersionedDecisionScriptBytesGzip = 59 * 1024 + analyticsConsentOverheadBytesGzip;
-const maximumMaintenanceInitialScriptBytesGzip = 51 * 1024 + analyticsConsentOverheadBytesGzip;
+const maximumVersionedDecisionScriptBytesGzip = 59 * 1024;
+const maximumMaintenanceInitialScriptBytesGzip = 51 * 1024;
 // 5 006 références : 253 Kio de données d’exécution et 129 Kio de recherche mesurés.
 // Ces plafonds concernent les données ; les budgets JavaScript restent distincts.
 // Export historique enrichi de la provenance par champ (253 KiB mesurés).
@@ -178,6 +177,7 @@ async function walk(directory) {
 		const file = join(directory, name);
 		const info = await lstat(file);
 		const label = relative(root, file);
+	errors.push(...browserTrackingErrors(html, 'html', label));
 		if (info.isSymbolicLink()) errors.push(`${label}: lien symbolique interdit dans l’artifact`);
 		else if (info.isDirectory()) await walk(file);
 		else if (!info.isFile()) errors.push(`${label}: type de fichier spécial interdit dans l’artifact`);
@@ -228,6 +228,7 @@ async function scriptClosure(entryPaths, includeDynamicImports) {
 		let cached = scriptModuleCache.get(scriptPath);
 		if (!cached) {
 			const source = await readFile(join(root, scriptPath));
+			errors.push(...browserTrackingErrors(source.toString('utf8'), 'javascript', scriptPath));
 			let imports, parseError;
 			try { imports = parseJavaScriptModuleSpecifiers(source.toString('utf8'), scriptPath); }
 			catch (error) { parseError = error instanceof Error ? error.message : `${scriptPath}: JavaScript impossible à analyser`; }
@@ -825,6 +826,7 @@ for (const { basePath, accepts } of guideLibraries) {
 for (const file of htmlFiles) {
 	const html = await readFile(file, 'utf8');
 	const label = relative(root, file);
+	errors.push(...browserTrackingErrors(html, 'html', label));
 	const title = html.match(/<title>([^<]+)<\/title>/)?.[1];
 	const description = html.match(/<meta name="description" content="([^"]+)"/)?.[1];
 	const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];

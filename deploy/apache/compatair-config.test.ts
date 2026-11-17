@@ -14,8 +14,9 @@ const assetsDirectory = astroConfig.match(/assets:\s*['"]([^'"]+)['"]/)?.[1];
 describe('CompatAir Apache CSP', () => {
 	it('permits only the GA4 script and collection endpoints without advertising or inline execution', () => {
 		const csp = config.split('\n').find((line) => line.includes('script-src-attr')) ?? '';
-		expect(csp).toContain("script-src 'self' https://www.googletagmanager.com/gtag/js;");
-		expect(csp).toContain("connect-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://region1.google-analytics.com https://analytics.google.com https://region1.analytics.google.com;");
+		expect(csp).toContain("script-src 'self';");
+		expect(csp).toContain("connect-src 'self';");
+		expect(csp).not.toMatch(/googletagmanager|google-analytics|analytics\.google/);
 		for (const forbidden of ["script-src 'self' 'unsafe-inline'", "'unsafe-eval'", 'doubleclick', 'googlesyndication', 'https://*.']) expect(csp).not.toContain(forbidden);
 		expect(csp).toContain("frame-src 'none'");
 		expect(csp).toContain("script-src-attr 'none'");

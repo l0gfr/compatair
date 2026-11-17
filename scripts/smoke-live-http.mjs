@@ -193,7 +193,8 @@ if (mcpEnabled) {
 		assert(typeof health.verdictVersion === 'string' && health.verdictVersion.length > 0, 'verdictVersion MCP absente');
 		assert(health.mcpProfiles?.core?.tools === 7 && health.mcpProfiles.core.manifestBytes < 50_000, 'profil decision-core hors budget');
 		assert(health.mcpProfiles?.extended?.tools === 4 && health.mcpProfiles?.legacy?.tools === 9, 'profils MCP incomplets');
-		assert(health.mcpTelemetry?.enabled === true && health.mcpTelemetry?.schemaVersion === '2.1.0', 'télémétrie MCP inactive');
+		assert(health.mcpTelemetry?.enabled === false && health.mcpTelemetry?.schemaVersion === '2.1.0', 'la collecte MCP doit rester désactivée');
+		assert(health.demandAggregation?.enabled === false && health.productFunnelAggregation?.enabled === false && health.acquisitionAggregation?.enabled === false, 'les collectes statistiques doivent rester désactivées');
 	});
 
 	await check('statistiques MCP publiques', '/data/mcp-usage.json', ({ body, response }) => {

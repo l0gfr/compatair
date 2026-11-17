@@ -139,11 +139,8 @@ const commercialOffers = activeOffers
 		</details>
 		<details class="result-section result-disclosure result-expert-only" id="calculator-limits"><summary>Hypothèses et avertissements</summary><ul data-assumptions></ul></details>
 		<details class="result-section result-disclosure result-source-guide result-expert-only" id="calculator-sources"><summary>Sources et qualité documentaire</summary><div><ContextHelp topic="sourceQuality" /><p>Chaque carte de résultat affiche un libellé humain. Le grade technique et la date de vérification restent accessibles dans le détail de la fiche.</p><a class="text-link" href="/sources-fiabilite/">Consulter les sources et leur fiabilité →</a></div></details>
-		<div class="merchant-interest-control calculator-merchant-interest"><button class="button" type="button" data-calculator-merchant-interest aria-pressed="false">Je veux des options d’achat vérifiées</button><small aria-live="polite">Signal anonyme, sans référence produit ni donnée du calcul.</small></div>
-		<label class="demand-contribution result-expert-only">
-			<input type="checkbox" data-demand-contribution />
-			<span><strong>Aider à choisir les prochaines références étudiées</strong><small>Après lecture du résultat, vous pouvez partager uniquement les outils choisis et des tranches larges de débit, pression et durée. Aucun texte libre, valeur personnalisée exacte, cookie, adresse IP ou configuration complète n’est conservé.</small></span>
-		</label>
+
+
 		<div class="passport-readiness-note"><strong>Avant la recette terrain</strong><span>Prévoyez un manomètre et un essai avec l’outil en charge ; la pression et les fuites devront être mesurées, pas estimées.</span></div>
 		<div class="share-row"><a class="button primary" href="/passeport/" data-create-passport>Préparer mon installation</a><button class="button result-expert-only" type="button" data-share>Copier le lien</button><button class="button result-expert-only" type="button" data-copy-summary>Copier la synthèse</button><button class="button result-expert-only" type="button" data-print>Imprimer le calcul</button><span role="status" data-share-status></span></div>
 		<p class="calculator-note result-expert-only">Le lien copié conserve votre configuration après le caractère #. La recherche de références et d’alternatives transmet au serveur les identifiants et critères techniques nécessaires. <a href="/confidentialite/#recherches">Données utilisées</a>.</p>
@@ -191,7 +188,6 @@ const commercialOffers = activeOffers
 	type SizingResult = import('../domain/sizing').SizingResult;
 	type CounterfactualReport = import('../domain/counterfactual').CounterfactualReport;
 	type CounterfactualCandidate = import('../domain/counterfactual').CounterfactualCandidate;
-	type CounterfactualKind = import('../domain/counterfactual').CounterfactualKind;
 	type CounterfactualMachine = import('../domain/counterfactual').CounterfactualMachine;
 	type DecisionResolutionStatus = import('../domain/decision-resolution').DecisionResolutionStatus;
 	type DecisionContext = import('../domain/decision-resolution').DecisionContext;
@@ -356,19 +352,6 @@ const commercialOffers = activeOffers
 	let currentFilter: keyof typeof labels | 'all' = 'all';
 	let lastSummary = '';
 	let lastPriorityIds: string[] = [];
-	const recordedFunnelSteps = new Set<'started' | 'completed'>();
-	const recordedCounterfactualSteps = new Set<string>();
-	let pendingCounterfactualFamily: CounterfactualKind | undefined;
-	let lastContribution: { config: NonNullable<ReturnType<typeof configFromForm>>; result: SizingResult } | undefined;
-	const merchantInterestButton = root?.querySelector<HTMLButtonElement>('[data-calculator-merchant-interest]');
-	merchantInterestButton?.addEventListener('click', () => {
-		if (!navigator.sendBeacon) return;
-		let channel = 'direct'; try { channel = sessionStorage.getItem('ca:acquisition') ?? channel; } catch {}
-		const payload = { event: 'acquisition_aggregate', schemaVersion: '1.0.0', channel, template: 'calculator', action: 'merchant_interest', outcome: 'unknown' };
-		if (!navigator.sendBeacon('/events', new Blob([JSON.stringify(payload)], { type: 'application/json' }))) return;
-		merchantInterestButton.disabled = true; merchantInterestButton.setAttribute('aria-pressed', 'true');
-		if (merchantInterestButton.nextElementSibling) merchantInterestButton.nextElementSibling.textContent = 'Merci. Signal anonyme envoyé.';
-	}, { once: true });
 
 	function optionById(list: HTMLDataListElement | null, id: string) { return [...(list?.options ?? [])].find((option) => option.dataset.id === id); }
 	function optionByInput(list: HTMLDataListElement | null, value: string, verifiedIdentifier = false) {
@@ -424,17 +407,6 @@ const commercialOffers = activeOffers
 		const custom = root?.querySelector<HTMLElement>('[data-custom-compressor]'); if (custom) custom.hidden = hidden.value !== 'custom';
 		const note = root?.querySelector<HTMLElement>('[data-compressor-selection-note]');
 		if (note) note.textContent = !search.value.trim() ? 'Une référence brute est acceptée. Laissez vide pour calculer seulement le besoin.' : option ? `Référence reconnue directement : ${option.textContent?.trim() || option.value}.` : 'Référence non reconnue : choisissez une suggestion ou vérifiez le numéro.';
-	}
-
-	function recordFunnelStep(step: 'started' | 'completed') {
-		if (recordedFunnelSteps.has(step) || !navigator.sendBeacon) return;
-		if (navigator.sendBeacon('/events', new Blob([JSON.stringify({ event: 'calculator_funnel_aggregate', schemaVersion: '2.0.0', step })], { type: 'application/json' }))) recordedFunnelSteps.add(step);
-	}
-
-	function recordCounterfactualStep(step: 'recommendation_displayed' | 'recommendation_selected' | 'recalculation_succeeded', family: CounterfactualKind) {
-		const key = `${step}:${family}`;
-		if (recordedCounterfactualSteps.has(key) || !navigator.sendBeacon) return;
-		if (navigator.sendBeacon('/events', new Blob([JSON.stringify({ event: 'calculator_funnel_aggregate', schemaVersion: '2.0.0', step, family })], { type: 'application/json' }))) recordedCounterfactualSteps.add(key);
 	}
 
 	function resultLabel(result: SizingResult) {
@@ -707,7 +679,6 @@ const commercialOffers = activeOffers
 			const message = document.createElement('p'); message.className = 'decision-empty'; message.textContent = 'Aucun changement unique n’est démontré suffisant avec les données disponibles. CompatAir ne combine pas plusieurs hypothèses et ne transforme pas une mesure absente en conseil.';
 			target.replaceChildren(message);
 		} else {
-			recordCounterfactualStep('recommendation_displayed', candidate.kind);
 			const title = document.createElement('strong'); title.className = 'counterfactual-action';
 			if (candidate.kind === 'pressure') title.textContent = `Porter la pression disponible de ${Number(candidate.beforeValue).toLocaleString('fr-FR')} à ${Number(candidate.afterValue).toLocaleString('fr-FR')} bar, sans dépasser la plaque machine.`;
 			else if (candidate.kind === 'flexible') title.textContent = `Ramener la chute mesurée du flexible et du réseau de ${Number(candidate.beforeValue).toLocaleString('fr-FR')} à ${Number(candidate.afterValue).toLocaleString('fr-FR')} bar ou moins.`;
@@ -724,8 +695,6 @@ const commercialOffers = activeOffers
 			const apply = document.createElement('button'); apply.type = 'button'; apply.className = 'button'; apply.textContent = 'Appliquer et recalculer';
 			apply.addEventListener('click', () => {
 				if (!applyCounterfactual(candidate)) return;
-				recordCounterfactualStep('recommendation_selected', candidate.kind);
-				pendingCounterfactualFamily = candidate.kind;
 				form?.requestSubmit();
 			});
 			target.replaceChildren(title, proof, alternatives, apply);
@@ -918,43 +887,7 @@ const commercialOffers = activeOffers
 		syncSingleToolUi();
 	}
 
-	function flowBucket(value: number) {
-		if (value < 100) return 'lt-100';
-		if (value < 200) return '100-199';
-		if (value < 400) return '200-399';
-		if (value < 700) return '400-699';
-		return '700-plus';
-	}
-	function pressureBucket(value: number) {
-		if (value < 4) return 'lt-4';
-		if (value < 6) return '4-5.9';
-		if (value < 8) return '6-7.9';
-		return '8-plus';
-	}
-	function sessionBucket(value: number) {
-		if (value < 15) return 'lt-15';
-		if (value < 60) return '15-59';
-		return '60-plus';
-	}
-	function contributeDemand(config: NonNullable<ReturnType<typeof configFromForm>>, result: SizingResult) {
-		if (!root?.querySelector<HTMLInputElement>('[data-demand-contribution]')?.checked || !navigator.sendBeacon) return;
-		const event = {
-			event: 'calculator_demand_aggregate',
-			schemaVersion: '1.0.0',
-			calculationVersion: CALCULATION_VERSION,
-			toolIds: [...new Set(config.demands.map((demand) => demand.id))],
-			mode: config.mode,
-			flowBucket: flowBucket(result.recommendedFadLpm),
-			pressureBucket: pressureBucket(result.requiredPressureBar),
-			sessionBucket: sessionBucket(config.sessionMinutes ?? 30),
-			compressorSelection: config.selectedCompressor === 'custom' ? 'custom' : config.selectedCompressor ? 'catalog' : 'none',
-		};
-		navigator.sendBeacon('/events', new Blob([JSON.stringify(event)], { type: 'application/json' }));
-	}
-
 	root?.querySelector('[data-add-tool]')?.addEventListener('click', () => addDemand());
-	form?.addEventListener('input', () => recordFunnelStep('started'), { once: true });
-	form?.addEventListener('change', () => recordFunnelStep('started'), { once: true });
 	form?.addEventListener('input', clearFormError);
 	form?.addEventListener('change', clearFormError);
 	form?.querySelector<HTMLInputElement>('[data-compressor-search]')?.addEventListener('input', (event) => { syncCompressorSearch(); refreshSuggestions(event.currentTarget as HTMLInputElement, 'compressor', syncCompressorSearch); });
@@ -1037,9 +970,6 @@ const commercialOffers = activeOffers
 		if (mobileSubmit) mobileSubmit.hidden = false;
 		clearFormError();
 		setCalculatorUiState('loading', 'Calcul du besoin et vérification des compresseurs documentés…');
-		const appliedCounterfactualFamily = pendingCounterfactualFamily;
-		pendingCounterfactualFamily = undefined;
-		recordFunnelStep('started');
 		const errorTarget = root?.querySelector<HTMLElement>('[data-form-error]');
 		try {
 			await loadCalculatorRuntime();
@@ -1111,9 +1041,6 @@ const commercialOffers = activeOffers
 			} }));
 			const envelope = await createPassportEnvelope(config, compressors, tools, CATALOG_VERIFIED_AT);
 			root?.querySelector<HTMLAnchorElement>('[data-create-passport]')?.setAttribute('href', `/passeport/#passport=${encodePassportEnvelope(envelope)}${scenarioPreset ? `&scenario=${encodeURIComponent(scenarioPreset.id)}` : ''}`);
-			lastContribution = { config, result: base }; contributeDemand(config, base);
-			recordFunnelStep('completed');
-			if (appliedCounterfactualFamily) recordCounterfactualStep('recalculation_succeeded', appliedCounterfactualFamily);
 			output.hidden = false;
 			if (mobileSubmit) mobileSubmit.hidden = true;
 			if (mobileResult) {
@@ -1122,7 +1049,6 @@ const commercialOffers = activeOffers
 				mobileResult.textContent = contextualCompareLink && !contextualCompareLink.hidden ? 'Comparer les solutions' : 'Voir les solutions';
 			}
 			setCalculatorUiState('success', `Réponse calculée. ${lastPriorityIds.length} solution${lastPriorityIds.length > 1 ? 's' : ''} prioritaire${lastPriorityIds.length > 1 ? 's' : ''} affichée${lastPriorityIds.length > 1 ? 's' : ''}.`);
-			window.dispatchEvent(new Event('compatair:calculator-result'));
 			output.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
 		} catch (error) {
 			if (!errorTarget) return;
@@ -1148,7 +1074,6 @@ const commercialOffers = activeOffers
 		event.preventDefault();
 		target.scrollIntoView({ behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start' });
 	});
-	root?.querySelector<HTMLInputElement>('[data-demand-contribution]')?.addEventListener('change', (event) => { if ((event.target as HTMLInputElement).checked && lastContribution) contributeDemand(lastContribution.config, lastContribution.result); });
 	root?.querySelector('[data-print]')?.addEventListener('click', () => window.print());
 	root?.querySelector('[data-copy-summary]')?.addEventListener('click', async () => { if (!lastSummary) return; await navigator.clipboard.writeText(lastSummary); root!.querySelector<HTMLElement>('[data-share-status]')!.textContent = 'Synthèse copiée'; });
 	root?.querySelector('[data-share]')?.addEventListener('click', async () => { await loadCalculatorRuntime(); const config = configFromForm(); if (!config) return; const scenarioSuffix = scenarioPreset ? `&scenario=${encodeURIComponent(scenarioPreset.id)}` : ''; const url = `${location.origin}${location.pathname}#config=${encodePassportConfiguration(config)}${scenarioSuffix}`; await navigator.clipboard.writeText(url); root!.querySelector<HTMLElement>('[data-share-status]')!.textContent = 'Lien copié'; });

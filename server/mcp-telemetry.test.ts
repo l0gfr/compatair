@@ -1,4 +1,7 @@
 import { describe, expect, it } from 'vitest';
+import { mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { join } from 'node:path';
 import { aggregateMcpTelemetry, buildPublicMcpUsageReport, callerFingerprint, classifyMcpClient, classifyMcpErrorCode, classifyMcpOutcome, classifyMcpOutcomes, classifyMcpTrafficHint, createMcpTelemetryStore, extractMcpDemand, mcpRequestFingerprint, truncateNetworkAddress } from './mcp-telemetry.mjs';
 
 const empty = { schemaVersion: '1.0.0', updatedAt: null, totalEvents: 0, weeks: [], actors: [] };
@@ -146,4 +149,24 @@ it('withholds rates when weekly recorded subtotals cannot be reconciled', () => 
  expect(report.totals.success_rate).toBeNull();
  expect(report.tools[0].success_rate).toBeNull();
  expect(report.totals.tool_calls).toBe(2);
+});
+
+it('keeps historical telemetry read-only without generating a secret or new fingerprints', async () => {
+ const directory = mkdtempSync(join(tmpdir(), 'compatair-retired-telemetry-'));
+ try {
+  const filePath = join(directory, 'history.json');
+  const secretFilePath = join(directory, 'must-not-be-created.key');
+  const historical = aggregateMcpTelemetry(empty, { type: 'tool_call', actorId: actor, toolName: 'check_compatibility', outcome: 'success', products: [], compatibilities: [] }, new Date('2026-07-15T12:00:00Z'));
+  const bytes = JSON.stringify(historical);
+  writeFileSync(filePath, bytes);
+  const store = createMcpTelemetryStore({ filePath, secretFilePath, configuredSecret: 'invalid', catalog, readOnly: true });
+  expect(store.enabled).toBe(false);
+  expect(await store.snapshot()).toEqual(historical);
+  expect((await store.publicReport()).totals.tool_calls).toBe(1);
+  await expect(store.actorId('192.0.2.1', 'Browser/1')).rejects.toThrow('collection_retired');
+  await expect(store.requestHash('check_compatibility', {})).rejects.toThrow('collection_retired');
+  await expect(store.record({ type: 'initialize', actorId: actor, clientFamily: 'other' })).rejects.toThrow('collection_retired');
+  expect(readFileSync(filePath, 'utf8')).toBe(bytes);
+  expect(readdirSync(directory)).toEqual(['history.json']);
+ } finally { rmSync(directory, { recursive: true, force: true }); }
 });

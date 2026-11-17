@@ -8,10 +8,10 @@ import { fileURLToPath } from 'node:url';
 import { readDecisionSnapshot } from './demand-verdicts.mjs';
 import { verdictIndex } from './verdict-snapshot.mjs';
 import { createMcpCore, ENGINE_VERSION, MCP_SERVER_VERSION, METHOD_VERSION, PROTOCOL_VERSION, verifyCompatibilityReceipt } from './mcp-core.mjs';
-import { createDemandAggregateStore, DEMAND_EVENT_SCHEMA_VERSION, isValidCalculationVersion, validateDemandEvent } from './demand-aggregates.mjs';
-import { createProductFunnelAggregateStore, PRODUCT_FUNNEL_SCHEMA_VERSION, validateProductFunnelEvent } from './product-funnel-aggregates.mjs';
-import { ACQUISITION_SCHEMA_VERSION, createAcquisitionAggregateStore, validateAcquisitionEvent } from './acquisition-aggregates.mjs';
-import { classifyMcpClient, classifyMcpErrorCode, classifyMcpOutcomes, classifyMcpTrafficHint, createMcpTelemetryStore, extractMcpDemand, MCP_TELEMETRY_EVENT_SCHEMA_VERSION, MCP_TELEMETRY_SCHEMA_VERSION } from './mcp-telemetry.mjs';
+import { DEMAND_EVENT_SCHEMA_VERSION, isValidCalculationVersion } from './demand-aggregates.mjs';
+import { PRODUCT_FUNNEL_SCHEMA_VERSION } from './product-funnel-aggregates.mjs';
+import { ACQUISITION_SCHEMA_VERSION } from './acquisition-aggregates.mjs';
+import { createMcpTelemetryStore, MCP_TELEMETRY_SCHEMA_VERSION } from './mcp-telemetry.mjs';
 import { authorizeUcpRequest, createUcpError, createUcpToolArguments, fetchPublicUcpProfile, ucpErrorStatus, validateUcpEvaluationRequest } from './ucp-core.mjs';
 
 const BODY_LIMIT = 65_536;
@@ -127,16 +127,9 @@ export function canonicalFollowUrl(canonicalUrl, toolName) {
 	let url;
 	try { url = new URL(canonicalUrl); } catch { return undefined; }
 	if (url.origin !== 'https://compatair.fr') return undefined;
-	url.searchParams.set('via', 'mcp');
-	url.searchParams.set('tool', toolName);
+	url.searchParams.delete('via');
+	url.searchParams.delete('tool');
 	return url.toString();
-}
-
-function acquisitionOutcome(structuredContent) {
-	if (!structuredContent || structuredContent.error) return 'error';
-	if (structuredContent.verdict === 'insufficient_data') return 'insufficient_data';
-	if (structuredContent.verdict === 'incompatible') return 'incompatible';
-	return structuredContent.verdict === 'compatible' || structuredContent.verdict === 'compatible_with_limits' ? 'success' : 'unknown';
 }
 
 function createRateLimiter() {
@@ -182,7 +175,7 @@ function isJsonContentType(request) {
 /**
  * @param {{ catalog: any, verdictSnapshot?: { pairs?: any[], verdictVersion?: string, calculationVersion?: string }, offerSnapshot?: any, knowledgeItems?: any[], changefeedEvents?: any[], allowedOrigins: Set<string>, demandAggregatePath?: string, productFunnelAggregatePath?: string, acquisitionAggregatePath?: string, mcpTelemetryPath?: string, mcpTelemetrySecretPath?: string, mcpTelemetrySecret?: string, proxyManagesApiHeaders?: boolean, now?: () => number, fetchUcpProfile?: (url: URL) => Promise<any>, recordAffiliateClick?: (offerId: string) => void, recordToolCall?: (toolName: string) => void }} options
  */
-export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], verdictVersion: 'unavailable', calculationVersion: ENGINE_VERSION }, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, knowledgeItems = [], changefeedEvents = [], allowedOrigins, demandAggregatePath = undefined, productFunnelAggregatePath = undefined, acquisitionAggregatePath = undefined, mcpTelemetryPath = undefined, mcpTelemetrySecretPath = undefined, mcpTelemetrySecret = undefined, proxyManagesApiHeaders = false, now = Date.now, fetchUcpProfile = fetchPublicUcpProfile, recordAffiliateClick = () => {}, recordToolCall = () => {} }) {
+export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], verdictVersion: 'unavailable', calculationVersion: ENGINE_VERSION }, offerSnapshot = { offers: [], snapshotVersion: 'empty' }, knowledgeItems = [], changefeedEvents = [], allowedOrigins, mcpTelemetryPath = undefined, proxyManagesApiHeaders = false, now = Date.now, fetchUcpProfile = fetchPublicUcpProfile }) {
 	const coreOptions = { isOfferActive: (offer) => isFreshOfferSnapshot(offer, now()) && allowedOfferRedirect(offer) !== undefined, verdictSnapshot, knowledgeItems, changefeedEvents, now };
 	const mcpProfiles = {
 		core: createMcpCore(catalog, offerSnapshot, { ...coreOptions, profile: 'core' }),
@@ -198,10 +191,8 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 	const verdictMap = verdictIndex(verdictSnapshot);
 	const allow = createRateLimiter();
 	const counters = { rpc: 0, errors: 0 };
-	const demandStore = createDemandAggregateStore({ filePath: demandAggregatePath, catalog });
-	const productFunnelStore = createProductFunnelAggregateStore({ filePath: productFunnelAggregatePath });
-	const acquisitionStore = createAcquisitionAggregateStore({ filePath: acquisitionAggregatePath });
-	const telemetryStore = createMcpTelemetryStore({ filePath: mcpTelemetryPath, secretFilePath: mcpTelemetrySecretPath, configuredSecret: mcpTelemetrySecret, catalog });
+	// Historical aggregates remain readable; this server creates no tracking events or caller identifiers.
+	const telemetryStore = createMcpTelemetryStore({ filePath: mcpTelemetryPath, catalog, readOnly: true });
 	const mcpProfileMetrics = Object.fromEntries(Object.entries(mcpProfiles).map(([profile, profileCore]) => {
 		const listed = profileCore.handle({ jsonrpc: '2.0', id: 'health-tools-list', method: 'tools/list', params: {} });
 		return [profile, { endpoint: `/mcp${profile === 'core' ? '' : `/${profile}`}`, tools: listed?.result?.tools?.length ?? 0, manifestBytes: Buffer.byteLength(JSON.stringify(listed)) }];
@@ -243,17 +234,6 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			'Access-Control-Allow-Methods': methods, 'Access-Control-Allow-Headers': 'Accept', Vary: 'Origin',
 		};
 	}
-	async function recordAcquisition(event) {
-		try { await acquisitionStore.record(event); }
-		catch { counters.errors++; }
-	}
-	async function telemetryActorId(request) {
-		return telemetryStore.actorId(clientAddress(request), request.headers['user-agent']);
-	}
-	async function recordTelemetry(event) {
-		try { await telemetryStore.record(event); }
-		catch { counters.errors++; }
-	}
 
 	async function handle(request, response) {
 		response.setTimeout(10_000);
@@ -261,7 +241,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 		let url;
 		try { url = new URL(request.url, 'http://localhost'); } catch { return json(response, 400, { error: 'invalid_request_target' }); }
 
-		if (url.pathname === '/health' && request.method === 'GET') return json(response, 200, { status: 'ok', mcpServerVersion: MCP_SERVER_VERSION, protocolVersion: PROTOCOL_VERSION, methodVersion: METHOD_VERSION, catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, verdictVersion: verdictSnapshot.verdictVersion, knowledgeItems: knowledgeItems.length, changefeedEvents: changefeedEvents.length, mcpProfiles: mcpProfileMetrics, ucp: { readOnlyCompatibility: true }, demandAggregation: { enabled: demandStore.enabled, schemaVersion: DEMAND_EVENT_SCHEMA_VERSION }, productFunnelAggregation: { enabled: productFunnelStore.enabled, schemaVersion: PRODUCT_FUNNEL_SCHEMA_VERSION }, acquisitionAggregation: { enabled: acquisitionStore.enabled, schemaVersion: ACQUISITION_SCHEMA_VERSION }, mcpTelemetry: { enabled: telemetryStore.enabled, schemaVersion: MCP_TELEMETRY_SCHEMA_VERSION } });
+		if (url.pathname === '/health' && request.method === 'GET') return json(response, 200, { status: 'ok', mcpServerVersion: MCP_SERVER_VERSION, protocolVersion: PROTOCOL_VERSION, methodVersion: METHOD_VERSION, catalogVersion: catalog.catalogVersion, engineVersion: ENGINE_VERSION, verdictVersion: verdictSnapshot.verdictVersion, knowledgeItems: knowledgeItems.length, changefeedEvents: changefeedEvents.length, mcpProfiles: mcpProfileMetrics, ucp: { readOnlyCompatibility: true }, demandAggregation: { enabled: false, schemaVersion: DEMAND_EVENT_SCHEMA_VERSION }, productFunnelAggregation: { enabled: false, schemaVersion: PRODUCT_FUNNEL_SCHEMA_VERSION }, acquisitionAggregation: { enabled: false, schemaVersion: ACQUISITION_SCHEMA_VERSION }, mcpTelemetry: { enabled: telemetryStore.enabled, schemaVersion: MCP_TELEMETRY_SCHEMA_VERSION } });
 
 		if (url.pathname === '/data/mcp-usage.json') {
 			if (!['GET', 'HEAD'].includes(request.method ?? '')) return json(response, 405, { error: 'method_not_allowed' }, { Allow: 'GET, HEAD' });
@@ -309,7 +289,6 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			const limitations = Array.isArray(evaluation.warnings) ? evaluation.warnings : [];
 			const decision = callPublicTool('check_compatibility', { compressorId, toolId })?.structuredContent;
 			if (!decision || decision.error) return apiJson(503, { error: 'compatibility_decision_unavailable' }, { ...corsHeaders, 'Retry-After': '60' });
-			await recordAcquisition({ channel: acquisitionChannel, template: 'compatibility', action: 'decision_request', outcome: acquisitionOutcome(decision) });
 			return apiJson(200, {
 				verdict: decision.verdict, verdict_scope: decision.verdict_scope, verdict_schema_version: decision.verdict_schema_version, canonical_url: detailsUrl,
 				product_urls: [`https://compatair.fr/compresseurs/${compressor.slug}/`, `https://compatair.fr/outils-pneumatiques/${tool.slug}/`],
@@ -419,7 +398,6 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 				const called = callPublicTool('evaluate_air_compatibility', createUcpToolArguments(validated, resolved, authorized.profileUrl));
 				if (!called) return json(response, 500, { error: 'internal_error' });
 				if (called.isError) return json(response, 404, called.structuredContent);
-				await recordAcquisition({ channel: 'ucp', template: 'compatibility', action: 'decision_request', outcome: acquisitionOutcome(called.structuredContent) });
 				const canonicalUrl = called.structuredContent?.canonical_url;
 				const link = typeof canonicalUrl === 'string' && canonicalUrl.startsWith('https://compatair.fr/')
 					? `<${canonicalUrl}>; rel="canonical", <https://compatair.fr/schemas/ucp-compatibility-2026-07-15.json>; rel="describedby"`
@@ -437,23 +415,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			if (!isAllowedOrigin(request, allowedOrigins, true)) return json(response, 403, { error: 'origin_forbidden' });
 			if (!isJsonContentType(request)) return json(response, 415, { error: 'content_type_must_be_json' });
 			if (!allow(`events:${clientAddress(request)}`)) return json(response, 429, { error: 'rate_limited' }, { 'Retry-After': '60' });
-			try {
-				const event = await readJsonBody(request);
-				if (event?.event === 'mcp_canonical_follow' && event.schemaVersion === MCP_TELEMETRY_EVENT_SCHEMA_VERSION && typeof event.tool === 'string' && knownToolNames.has(event.tool) && Object.keys(event).length === 3) {
-					await recordTelemetry({ type: 'canonical_follow', actorId: await telemetryActorId(request), toolName: event.tool });
-					response.writeHead(204, { 'Cache-Control': 'no-store' });
-					return response.end();
-				}
-				const demand = validateDemandEvent(event, catalog, authoritativeCalculationVersion);
-				const productFunnel = validateProductFunnelEvent(event);
-				const acquisition = validateAcquisitionEvent(event);
-				if (demand) await demandStore.record(demand);
-				else if (productFunnel) await productFunnelStore.record(productFunnel);
-				else if (acquisition) await acquisitionStore.record(acquisition);
-				else return json(response, 400, { error: 'invalid_event' });
-				response.writeHead(204, { 'Cache-Control': 'no-store' });
-				return response.end();
-			} catch (error) { return json(response, error instanceof Error && error.message === 'BODY_TOO_LARGE' ? 413 : 400, { error: 'invalid_event' }); }
+			return json(response, 410, { error: 'tracking_removed' });
 		}
 
 		if (url.pathname.startsWith('/go/')) {
@@ -464,9 +426,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			const offer = (offerSnapshot.offers ?? []).find((item) => item.id === offerId);
 			const redirect = isFreshOfferSnapshot(offer, now()) ? allowedOfferRedirect(offer) : undefined;
 			if (!redirect) return json(response, 404, { error: 'offer_not_found' });
-			if (request.method === 'GET') {
-				recordAffiliateClick(offerId);
-			}
+
 			response.writeHead(302, { Location: redirect, 'Cache-Control': 'no-store', 'Referrer-Policy': 'no-referrer', 'X-Robots-Tag': 'noindex, nofollow', 'X-Content-Type-Options': 'nosniff' });
 			return response.end();
 		}
@@ -496,9 +456,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 			}
 			counters.rpc++;
 			const result = mcpProfiles[mcpProfile].handle(message);
-			if (message.method === 'initialize' && result && !result.error) {
-				await recordTelemetry({ type: 'initialize', actorId: await telemetryActorId(request), clientFamily: classifyMcpClient(message.params?.clientInfo) });
-			}
+
 			if (message.method === 'tools/call' && typeof message.params?.name === 'string' && result) {
 				const toolName = knownToolNames.has(message.params.name) ? message.params.name : 'unknown';
 				const structuredContent = result.result?.structuredContent;
@@ -507,21 +465,7 @@ export function createCompatAirServer({ catalog, verdictSnapshot = { pairs: [], 
 					result.result.structuredContent = { ...structuredContent, canonical_follow_url: followUrl };
 					result.result.content = [{ type: 'text', text: JSON.stringify(result.result.structuredContent) }];
 				}
-				const demand = extractMcpDemand(toolName, message.params?.arguments, result.result?.structuredContent, catalog);
-				const outcomes = classifyMcpOutcomes(result);
-				await recordTelemetry({
-					type: 'tool_call', actorId: await telemetryActorId(request), toolName,
-					outcome: outcomes === 'error' ? 'error' : outcomes.primary,
-					errorCode: classifyMcpErrorCode(result),
-					scopedOutcomes: outcomes === 'error' ? {} : { air_supply: outcomes.air_supply, complete_air_system: outcomes.complete_air_system },
-					trafficHint: classifyMcpTrafficHint(request.headers['user-agent']),
-					requestHash: await telemetryStore.requestHash(toolName, message.params?.arguments), profile: mcpProfile,
-					canonicalIssued: Boolean(followUrl), ...demand,
-				});
-				if (!result.error) {
-					recordToolCall(message.params.name);
-					await recordAcquisition({ channel: 'mcp', template: message.params.name === 'evaluate_air_compatibility' ? 'compatibility' : 'other', action: 'decision_request', outcome: acquisitionOutcome(result.result?.structuredContent) });
-				}
+
 			}
 			if (result === null || message.id === undefined) { response.writeHead(202, { 'Cache-Control': 'no-store' }); return response.end(); }
 			if (result.error) counters.errors++;
@@ -558,10 +502,7 @@ async function start() {
 	const changefeedPath = resolveChangefeedSnapshotPath(catalogPath, process.env.COMPAT_AIR_CHANGEFEED);
 	const allowedOrigins = new Set((process.env.MCP_ALLOWED_ORIGINS ?? 'https://compatair.fr,https://www.compatair.fr').split(',').map((item) => item.trim()).filter(Boolean));
 	const demandAggregatePath = process.env.COMPAT_AIR_DEMAND_AGGREGATES || undefined;
-	const productFunnelAggregatePath = resolveProductFunnelAggregatePath(demandAggregatePath, process.env.COMPAT_AIR_PRODUCT_FUNNEL_AGGREGATES || undefined);
-	const acquisitionAggregatePath = resolveAcquisitionAggregatePath(demandAggregatePath, process.env.COMPAT_AIR_ACQUISITION_AGGREGATES || undefined);
 	const mcpTelemetryPath = resolveMcpTelemetryPath(demandAggregatePath, process.env.COMPAT_AIR_MCP_TELEMETRY || undefined);
-	const mcpTelemetrySecretPath = process.env.COMPAT_AIR_MCP_TELEMETRY_SECRET_FILE || (mcpTelemetryPath ? resolve(dirname(mcpTelemetryPath), '.mcp-telemetry-secret') : undefined);
 	const proxyManagesApiHeaders = process.env.COMPAT_AIR_PROXY_MANAGES_API_HEADERS === '1';
 	const repositoryPath = resolve(dirname(catalogPath), '../_server/catalog.sqlite');
 	const repository = existsSync(repositoryPath) ? openCatalogRepository(repositoryPath) : undefined;
@@ -574,7 +515,7 @@ async function start() {
 	try { const value = JSON.parse(await readFile(knowledgePath, 'utf8')); if (Array.isArray(value)) knowledgeItems = value.slice(0, 10_000); } catch {}
 	let changefeedEvents = [];
 	try { const value = JSON.parse(await readFile(changefeedPath, 'utf8')); if (Array.isArray(value?.events)) changefeedEvents = value.events.slice(0, 10_000); } catch {}
-	const server = createCompatAirServer({ catalog, verdictSnapshot, offerSnapshot, knowledgeItems, changefeedEvents, allowedOrigins, demandAggregatePath, productFunnelAggregatePath, acquisitionAggregatePath, mcpTelemetryPath, mcpTelemetrySecretPath, proxyManagesApiHeaders });
+	const server = createCompatAirServer({ catalog, verdictSnapshot, offerSnapshot, knowledgeItems, changefeedEvents, allowedOrigins, mcpTelemetryPath, proxyManagesApiHeaders });
 	server.once('close', () => repository?.close());
 	server.on('error', (error) => { console.error(error); process.exitCode = 1; });
 	server.listen(port, host, () => console.error(`CompatAir MCP listening on http://${host}:${port}`));
