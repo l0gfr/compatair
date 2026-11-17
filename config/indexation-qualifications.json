@@ -116601,6 +116601,1737 @@
           "sha256": "8ddda841eb67c24296c0393072c6b70eb864bcab6da56865e16c42adcf1c5ed8"
         }
       ]
+    },
+    {
+      "path": "/compresseurs/airpress-aps-15-basic-combi-dry-364959/",
+      "contentHash": "51495c0b6f91c05f65f9b5973c49bebd4d15d8671975924cdf1760a0b427a33f",
+      "neighbors": [
+        "/compresseurs/airpress-aps-15-basic-combi-dry-364959-13/",
+        "/compresseurs/airpress-aps-15-basic-combi-dry-364959-8/"
+      ],
+      "contextHash": "0ef2131ca0ce4ba8fb8467b518d647186d9d3f446e6d97c52382779b1aa9107a",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "L’APS 15 Basic Combi Dry 364959 réunit une cuve de 500 L, un sécheur et un moteur de 11 kW sous 400 V triphasé 50 Hz. Sa version 10 bar publie 1 416 L/min, contre 1 620 pour la version 8 bar et 1 152 pour la 13 bar. Le constructeur précise que le débit de sortie est une valeur estimée : il reste documentaire. Le cycle 100/0 est, lui, explicitement déclaré pour ce groupe. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://airpress.fr/compresseur-a-vis-aps-15-basic-combi-dry-10-bar-15-ch-11-kw-1416l-min-500-l-364959",
+          "sha256": "6f5101208adfaf294be98a281e0607c7da2e6c2f1f46c5d949e213c7e5b415ca"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/airpress-aps-20-basic-364810-13/",
+      "contentHash": "328af9ebaf8a04538c5431ac0c401e89a5d2769ad2eeee01938f91eda4547e8e",
+      "neighbors": [
+        "/compresseurs/airpress-aps-20-basic-364810-8/",
+        "/compresseurs/airpress-aps-20-basic-364810/"
+      ],
+      "contextHash": "13662f2fac91a1b622f1d5e3c4e2f895d2a3633c40d690dc51606d29fa93bd6e",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "L’APS 20 Basic 364810-13 est le groupe de 15 kW sans cuve ni sécheur. La fiche 13 bar publie 1 332 L/min ; les variantes 10 et 8 bar indiquent 1 680 et 1 860 L/min. Le cycle 100/0 est explicite, mais le débit de sortie est qualifié d’estimation par le constructeur. Il n’est donc pas utilisé comme un FAD mesuré dans le moteur. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://airpress.fr/compresseur-a-vis-aps-20-basic-13-bar-20-ch-15-kw-1332-l-min-364810-13",
+          "sha256": "3f4644857c6afca496d00c48d59a744069649c00481dd98118bde3b03e5b668f"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/gentilin-esk480-10/",
+      "contentHash": "4d2c2c8fee1e5f777982904fd8b41140417e1081847bda0372be05b4d0c4aa78",
+      "neighbors": [
+        "/compresseurs/gentilin-esk1320-500/",
+        "/compresseurs/gentilin-esk480-270/"
+      ],
+      "contextHash": "355af269bf552d84d65928f01e573c99206d4ee8937d964fe502cf841d60aaa3",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "L’ESK480/10 associe une cuve de 10 L à un groupe quatre cylindres de 2,8 kW sous 230 V/50 Hz. La fiche donne 255 L/min à 5 bar et 210 à 8 bar, distincts des 430 L/min aspirés. L’ESK480/100 conserve ces points avec une cuve réelle de 90 L ; le nombre du nom ne remplace pas sa capacité publiée. Le libellé Duty cycle S1 100% est conservé avec sa portée constructeur. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.gentilinair.com/docs/esk480-660-10-en_1711031505.pdf",
+          "sha256": "7aa4be2a0bcd740f8a75785d75adac3b2062688b0b69c8810b6251e1dc8c39c0"
+        },
+        {
+          "url": "https://www.gentilinair.com/en/products/esk480-100-mono",
+          "sha256": "93a6ea3eddf2b4eaf2f45c8386cd45ea0f736079c792407413e14c1061aa74e7"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/gentilin-esk480-100-811610006/",
+      "contentHash": "f6ad673e2fd49164fc37ca3083f662254dd204836bb9fae01ce528e574a66386",
+      "neighbors": [
+        "/compresseurs/gentilin-esk480-10/",
+        "/compresseurs/gentilin-esk480-100-811610007/"
+      ],
+      "contextHash": "e8efdd90a518917a3dc25cb17ae037a89cbee4732229c4de6349be08d3e49941",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "L’ESK480/100 811610006 possède une cuve publiée de 90 L et mesure 103,5 × 54 × 75 cm. Le modèle ESK480/10 est plus court et ne stocke que 10 L ; tous deux publient 255 L/min à 5 bar et 210 à 8 bar. La fiche exacte indique 2,8 kW et Duty cycle S1 100%. La notice commune inclut bien les ESK480/100 et ESK660/100 : son nom de fichier ne suffit pas à exclure le premier. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.gentilinair.com/docs/esk660100en_1711032524.pdf",
+          "sha256": "0fbfccc3fd9ef013a94acc6c500a67f29213bfba0ace1eebac1065f2ede995b3"
+        },
+        {
+          "url": "https://www.gentilinair.com/en/products/esk480-100-230-50",
+          "sha256": "9d161c3445de64f02cac53c013b8c5f7c2ef3ee195a82ac59f95edb0290892c1"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/biax-srd-3-45-3/",
+      "contentHash": "2ef4c1635b028162a90bfcebe8ebdb62929cf9211d0c2bcb07650cd2d0b82e04",
+      "neighbors": [
+        "/outils-pneumatiques/biax-srd-3-30-2/",
+        "/outils-pneumatiques/biax-srd-3-55-2-ke/"
+      ],
+      "contextHash": "738a10f6019bf5bef61fea37214368a69c4de677a5f818e20ac68067835e0a81",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La SRD 3-45/3 150010775 est une meuleuse droite à valve rotative et broche fine pour atteindre les zones difficiles d’accès. Elle publie 260 W, 45 000 tr/min et une pince de 3 mm. Les SRD 3-30/2 et 3-55/2 KE ont d’autres vitesses et puissances ; les 380 L/min de la fiche ne sont pas appariés à une pression de mesure explicite. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://biax.de/en/product/srd-3-45-3-45-000-1-min-rotary-valve/",
+          "sha256": "ab3694d545caa7ce01f16c475c77e7f151512f38af7ac18e1be1494d96452f7d"
+        },
+        {
+          "url": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf",
+          "sha256": "318971fb9ba951f395b81cbca3d1e57938ce23b74db3aef25ff98bb8f0edc6c8"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/fiam-15c2apa-2cs/",
+      "contentHash": "a2c492897354615125d9e0d04ddfc0fdf9794a67de7df4736b0567ff97bdc70a",
+      "neighbors": [
+        "/outils-pneumatiques/fiam-15c2apa-2200-r-2cs/",
+        "/outils-pneumatiques/fiam-15c2apa-2200-r/"
+      ],
+      "contextHash": "1533fb9535d558fcc983595358a636261cc754187666812f51ee22b79751c6ad",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La 15C2APA-2CS 112509899 est une visseuse pistolet réversible de 0,6 à 2,2 Nm, 2 200 tr/min, à commande par bouton. Les versions 2200-R et 2200-R-2CS partagent la plage de couple mais ont une autre configuration de commande et une masse de 0,75 kg contre 0,7 kg ici. Les 6 L/s publiés restent de régime non précisé. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.fiamgroup.com/en/products/handheld-air-screwdrivers/15c2apa-2cs/",
+          "sha256": "d7fd80d63193563f71cb70de2878e1bc6d228316e41155acd9009fb45d997151"
+        },
+        {
+          "url": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-85.pdf",
+          "sha256": "e1c8db38588668ff2347c0005a43ac3067609b0b280d80dc3548f0d8043dccce"
+        },
+        {
+          "url": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-85.pdf#page=15",
+          "sha256": "e1c8db38588668ff2347c0005a43ac3067609b0b280d80dc3548f0d8043dccce"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/fiam-fo12p/",
+      "contentHash": "cd646f319d0fe2b98c586a4417997a5288bc780f66eb78ab6bd137f50ca5ab71",
+      "neighbors": [
+        "/outils-pneumatiques/fiam-fo16p/",
+        "/outils-pneumatiques/fiam-fo20p/"
+      ],
+      "contextHash": "f6f6729393c4284b313fe93cdf0fbcf400e45e5683f5ab25ac6200a596045c89",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La FO12P 127011512 est une perceuse pistolet de 745 W à 2 000 tr/min et sortie conique n°2. Les FO16P et FO20P ralentissent à 950 et 600 tr/min tout en restant à 14 L/s dans le tableau. Le choix porte donc sur la vitesse, la sortie et l’encombrement ; ce débit sans régime de mesure ne dimensionne pas le besoin en charge. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.fiamgroup.com/en/products/air-drills/fo12p/",
+          "sha256": "ae6d95bb086a058b0ff9899af74d1653b540f72009987bc4e0505d528d9e8d03"
+        },
+        {
+          "url": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf",
+          "sha256": "4bc7b8a199880ed886511848f97c3d61ae9b8a50dbb5f0f0318dddc819dcbf62"
+        },
+        {
+          "url": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf#page=13",
+          "sha256": "4bc7b8a199880ed886511848f97c3d61ae9b8a50dbb5f0f0318dddc819dcbf62"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/fiam-smz15d/",
+      "contentHash": "7645e383a42a3185aa6015ef44d3dab65c0ed3f4e1950d89f3aa865ceadd8751",
+      "neighbors": [
+        "/outils-pneumatiques/fiam-smles135/",
+        "/outils-pneumatiques/fiam-sms100a/"
+      ],
+      "contextHash": "b332f36c8665948058b326bf640b3053e37b191eebfa3efa2cd1aa9690717de2",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La SMZ15D 142313001 est une meuleuse droite de 130 W à 22 000 tr/min, avec échappement arrière et levier de sécurité. Son corps de 155 mm et sa masse de 0,37 kg diffèrent des SMLES135 et SMS100A, plus lourdes et limitées à 13 500 tr/min. Les 6 L/s documentaires ne sont pas une consommation en charge qualifiée. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.fiamgroup.com/en/products/grinders-and-sanders/smz15d/",
+          "sha256": "cd6b9a510e2ed43d31dc2c275d6118e27a049d0379fac1a50923a5a8e1a31dd9"
+        },
+        {
+          "url": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-44.pdf",
+          "sha256": "01b152f269aeae367daa8a9524f083a1679707b0a3eff4daa59bcec83635f6de"
+        },
+        {
+          "url": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-44.pdf#page=7",
+          "sha256": "01b152f269aeae367daa8a9524f083a1679707b0a3eff4daa59bcec83635f6de"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/rodcraft-rc6758/",
+      "contentHash": "09a846a92030ecd76f7b906b08b79fb8c2fd81e86aa4a401e9ffd7d924ba5915",
+      "neighbors": [
+        "/outils-pneumatiques/rodcraft-rc6738/",
+        "/outils-pneumatiques/rodcraft-rc6748/"
+      ],
+      "contextHash": "74158ebe3d6842ac0e3b479f9df04824af832c6ee7c559d245a9d53e4e87be27",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Rodcraft RC6758 : sertisseuse pour écrous à riveter M3–M12, course maximale 7 mm et sept embouts livrés. Elle se distingue des RC6738 et RC6748 pour rivets aveugles. Les 2,8 L/s en charge restent documentaires ; le plafond dynamique de service de 6,3 bar n’est pas une pression de mesure démontrée. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.rodcraft.com/en/products/8951000410",
+          "sha256": "903adb650447a40bdad15d99fd42ec54f04ffd45fc8a74b76720790aee5caf59"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/agrafeuse-cloueuse-max-cn565s3/",
+      "contentHash": "ff819221b8fa4165ae07e8ba604cc45c1e4587b1f97d550302e5478758b4c901",
+      "neighbors": [
+        "/outils-pneumatiques/agrafeuse-cloueuse-max-cn55/",
+        "/outils-pneumatiques/agrafeuse-cloueuse-max-cn550s/"
+      ],
+      "contextHash": "39e3be2c019f2d610053cd3461964b2a38100690820d2a1467cb9834f69df13e",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "MAX CN565S3 : cloueur de bardage à rouleaux 15°, déclenchement anti-double tir, réglage de profondeur et déflecteur d’échappement orientable. La notice sépare clous assemblés par fil et par plastique. Elle imprime 0,05 ft³ par cycle à 100 PSI et 1,55 L à 7 bar : ces couples de valeurs divergent et ne donnent pas un volume unique qualifié. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.maxusacorp.com/nailers_compressors/products/siding-coil-nailer-cn565s3-supersider/",
+          "sha256": "65b921c86c3fa8c42b602fd2e90ae5e4ae94383e84d07a1ca518b3f0f9af8090"
+        },
+        {
+          "url": "https://www.maxusacorp.com/wp-content/uploads/%E3%80%90%E5%AE%8C%E6%88%90%E7%89%88%E3%80%91_CN890F_5L_c6_250822_MAX.pdf",
+          "sha256": "158f081891729d5e86313ad16b99ed0ab724afec6c05fc26ffa7c9dd84ad0fd8"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/burineur-puma-at-2023q/",
+      "contentHash": "b499bc53d8954311c467212b7c9116f1387cfdc4a856541ee4ac27628da2bbc2",
+      "neighbors": [
+        "/outils-pneumatiques/burineur-puma-at-2020/",
+        "/outils-pneumatiques/burineur-puma-at-2024q/"
+      ],
+      "contextHash": "43a9a5ff59f28fc8aed670a8e1ac263f23f6837c3fb40d57c15a86d7d300de59",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "L’AT-2023Q est le burineur à changement rapide de burin, course de 71 mm et cadence de 3 000 coups/min. Le tableau distingue les emmanchements rond 0,401 pouce et hexagonal 0,410 pouce. La version AT-2024Q allonge la course, tandis que l’AT-2020 est une autre configuration de retenue. Les 241 L/min sont moyens et ne servent pas au dimensionnement. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.pumaair.com/product-Air-Hammer-AirHammer-.html",
+          "sha256": "e23e09c5422e4393d0f2156c84314a3662f91ef28178e4817d02c09225a5ac8d"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-chocs-aircat-1058-vxl/",
+      "contentHash": "e03d8dff0f188e3b3f5a9239d99986f952435980bfeccea1d4b824c05ae9b799",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-chocs-aircat-1056-xl/",
+        "/outils-pneumatiques/cle-a-chocs-aircat-1059-vxl/"
+      ],
+      "contextHash": "cd0b913bdb948166371a20491b45f91da7cce7e5d93c081104bdbc99bd0d19b6",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La 1058-VXL utilise un carré1/2 et le mécanisme Vibrotherm dans un corps compact de4,4 pouces. Les550 ft-lb maximum et750 ft-lb au desserrage restent deux valeurs distinctes. La 1056-XL et la 1059-VXL sont des configurations voisines, sans débit maximal déduit des8 CFM documentaires. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://continentaltoolgroup.com/product/1-2-vibrotherm-drive-composite-compact-impact-wrench/",
+          "sha256": "de63b11051ec93d49c90c90e6aad2c0087aba46adc0da6bce8d7090718a0ca0c"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-chocs-atp-atp1011pt-th/",
+      "contentHash": "2c916c36edc2d0332cf9ba26202bbf0c13e684438587d636063d1ea4634fd2fa",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-chocs-atp-atp1011ei-5s/",
+        "/outils-pneumatiques/cle-a-chocs-atp-atp1011pt-5s/"
+      ],
+      "contextHash": "e862010f9703ca9ae4327dd5a1fba41764179170ae3fd853a2feb4cddda06d09",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "ATP ATP1011PT-TH : clé à chocs à poignée pistolet, carré 1 pouce et retenue par trou traversant. La PT-5S emploie une sortie cannelée ; la EI-5S possède une poignée arrière. Le mécanisme à deux mâchoires, le silencieux intégré et le carter en trois pièces sont documentés pour la série. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://continentaltoolgroup.com/product/super-duty-1-square-drive-pistol-grip-pneumatic-impact-wrench/",
+          "sha256": "215370e0b45fa6e4112f020cd7a8451f8bcf215369e2bcf99bf673ec8ab439e9"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-chocs-puma-at-5042/",
+      "contentHash": "502d708932e3312d9053a5c3687daec25610e415969fae6e1b56b5a879ddae27",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-chocs-puma-at-5040/",
+        "/outils-pneumatiques/cle-a-chocs-puma-at-5041/"
+      ],
+      "contextHash": "9ef106d2e23f4cd28419e910c4f929623beaad9da841c253f081c406977b6936",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "L’AT-5042 est une clé à chocs mini à carré 1/2 pouce, longue de 149 mm pour 1,38 kg. Elle publie 9 000 tr/min et 258 Nm maximum ; les AT-5244 et 5344 emploient un corps et des performances différents. Les 283 L/min sont moyens. Le couple maximal ne constitue pas une consigne de serrage, et la moyenne d’air ne qualifie pas le besoin en charge. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.pumaair.com/product-1-2--Mini-Impact-Wrench-1-2MiniImpactWrench.html",
+          "sha256": "9ad3f4ddf7cf8da9a974f36b201ece4610877ecc6baa7334ac22d987d70ccad3"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-chocs-universal-tool-ut2588lt-th/",
+      "contentHash": "bf319089d4da9ee9cc521104df61c2098e234dc881769c03b75ef5d8f6a77115",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-chocs-universal-tool-ut2025r/",
+        "/outils-pneumatiques/cle-a-chocs-universal-tool-ut2110r-1/"
+      ],
+      "contextHash": "e0c594dbd298e00aacd1ca2d869a3f93d5d4ec4d588c7d47da3d3cb288bda68c",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La UT2588LT-TH est la clé industrielle à carré2-1/2, poignée en T et retenue de douille traversante. Ses97,5 kg et son mécanisme bille/came la distinguent des petites UT2025R/2110R. Le couple de travail25000 ft-lb reste distinct du maximum 50000 ft-lb ; aucune consommation n’est publiée. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://continentaltoolgroup.com/product/2-1-2-drive-lever-throttle-impact-wrench/",
+          "sha256": "d013179f70b00d05780faa3dac073316d8123c4177fe1da8c235b3843fa8bdd0"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-cliquet-aircat-805-ht-5/",
+      "contentHash": "d6d628df99b862c5bd0d0f818feeb1d87d649c90e644d17b5e69028b441dd827",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-cliquet-aircat-805-ht-22-5/",
+        "/outils-pneumatiques/cle-a-cliquet-aircat-805-ht/"
+      ],
+      "contextHash": "7f27b581a7a872db0fe9e58571a00b60c193c3d719a716988e6a4bc7b1e731a1",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Le cliquet 805-HT-5 reçoit un carré1/2 avec une plage de travail20–90 ft-lb et un maximum 130 ft-lb. Il mesure 12,45 pouces ; la 805-HT-22-5 est la version longue portée de21,6 pouces. Le carré, la portée et la tête commandent le choix avant les6 CFM non qualifiés. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://continentaltoolgroup.com/product/1-2-high-torque-ratchet/",
+          "sha256": "26dde3c0a6f8e01b7393aea313a6d0c57911d4da93fbb906f646229d14618fa9"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/meuleuse-aircat-6245/",
+      "contentHash": "82dd85adb78b4b6fa27d85e76a8fcd14a30331fd574c20fb8a6bdea06ca0910b",
+      "neighbors": [
+        "/outils-pneumatiques/meuleuse-aircat-6200/",
+        "/outils-pneumatiques/meuleuse-aircat-6201/"
+      ],
+      "contextHash": "eade7fc3a08c4fcd1c65f9f9938388a869fc5832a6c72b8c7d8529cb28d63d4e",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La 6245 est une meuleuse coudée composite à pince1/4,0,5 hp et20000 tr/min. Elle mesure 7 pouces et pèse 1 lb, avec levier de sécurité et échappement arrière. Les dimensions et le montage doivent être conservés par référence, plutôt que transférés des6200/6201. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://continentaltoolgroup.com/product/aircat-5-hp-angle-die-grinder/",
+          "sha256": "f26ea2f4c533996b7e4380d2e6566e38f152fc16f1b2de3fb83313b6929eac22"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/meuleuse-universal-tool-ut2720/",
+      "contentHash": "8802fbfdb1ae023ca750d90e33aef5dee6babe8b5d69e9ae80adcf4711020de8",
+      "neighbors": [
+        "/outils-pneumatiques/meuleuse-universal-tool-ut2710/",
+        "/outils-pneumatiques/meuleuse-universal-tool-ut2715/"
+      ],
+      "contextHash": "9f1f3eb3c860b0c7cfd22f152e4bcd2a0e396779403b805f3d13174724c3d3cc",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La UT2720 est une meuleuse droite à pince1/4,0,4 hp et25000 tr/min, avec levier de sécurité et échappement arrière. L’UT2710 est plus courte et moins puissante ; l’UT2715 est plus longue. Le fabricant limite la disponibilité de cette fiche au marché américain. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://continentaltoolgroup.com/product/die-grinder-4/",
+          "sha256": "e6f6c19d08001b4b92bfb7144f84782056813a2c35c8f244733e0bb360e02c5e"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/perceuse-puma-at-4330/",
+      "contentHash": "5fc51d7a889a8db7a75b4bfe5bdf8fea1839d2b5e65a680e1e119ea71b76d2af",
+      "neighbors": [
+        "/outils-pneumatiques/perceuse-puma-at-4331r/",
+        "/outils-pneumatiques/perceuse-puma-at-4332/"
+      ],
+      "contextHash": "fef8d08b5405eb42237d2fe1a46e0de83b280fc3ee6c3254dfe0f8fc266b3b63",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "L’AT-4330 est la perceuse droite non réversible à mandrin 10 mm, à 2 800 tr/min et broche 3/8-24. La 4331R ajoute l’inversion et fonctionne à 2 000 tr/min ; la 4332 atteint 5 600 tr/min. Le diamètre de foret, le sens de rotation et la vitesse orientent le choix. La consommation moyenne de 340 L/min reste hors dimensionnement. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.pumaair.com/product-3-8----1-4--Air-Drill-3-8-1-4AirDrill.html",
+          "sha256": "f18611d39ca8af9b69253257eb4bfa9b009d4b0e50272f641edd5febdaa339b3"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/perceuse-universal-tool-ut8843-12/",
+      "contentHash": "b1ef62b1bc98a4541bf0a221d9798a5137b3a33991b704d3f4a44912166308fb",
+      "neighbors": [
+        "/outils-pneumatiques/perceuse-universal-tool-ut8840r-1/",
+        "/outils-pneumatiques/perceuse-universal-tool-ut8843-8/"
+      ],
+      "contextHash": "b55ae27a273151fd82f776c9850af3b80c1905ee1f8d92bf4d67936086add932",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La UT8843-12 est une perceuse à poignée D, gâchette intérieure et mandrin1/2. Elle tourne à1200 tr/min contre 800 pour l’UT8843-8. La poignée auxiliaire se monte de chaque côté ; les puissances1,1 hp et0,75 kW sont des valeurs originales à faire confirmer, sans conversion silencieuse. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://continentaltoolgroup.com/product/1-2-d-handle-drill-2/",
+          "sha256": "044ae9b9d452d6c6f51a951b8cc4a0bde574f98679a60f3acdeb6a7037010cc2"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-orbitale-aircat-6700-6-332/",
+      "contentHash": "7743fe3b2ebb40ae5f8f3837617582eb7b5ffb39e836e4851ef57c8282e7a1d1",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-orbitale-aircat-6700-6-332cv/",
+        "/outils-pneumatiques/ponceuse-orbitale-aircat-6700-6-332sv/"
+      ],
+      "contextHash": "d304836ce28c29258842f847b9a846ab22692409249c6ba7f31e776e062c644f",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La 6700-6-332 est la ponceuse sans aspiration, plateau autoagrippant6 pouces et orbite3/32. Les versions CV et SV répondent à des raccordements d’aspiration différents. Le moteur est annoncé sans huilage ; la consommation1,6 CFM est expressément décrite comme moyenne, sans dimensionnement continu déduit. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://continentaltoolgroup.com/product/non-vac-orbital-palm-sander-4/",
+          "sha256": "52b1ec519341facea0f5f0808228474b46eeca8fa476b72584f3377e76ab496d"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-orbitale-puma-at-7027/",
+      "contentHash": "9385766011163cc00299effa517b71b83b7595275da02c74c3fca6ff3da74f16",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-orbitale-puma-at-7025/",
+        "/outils-pneumatiques/ponceuse-orbitale-puma-at-7028/"
+      ],
+      "contextHash": "e70895a943a9b8ee29340bd466278fd9a4798739f092725eac1765f75652a911",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "PUMA AT-7027 : ponceuse orbitale sans aspiration intégrée, orbite 5 mm, 9 000 tr/min et plateaux 125 ou 150 mm selon configuration. La 7028 ajoute une aspiration autonome avec la même orbite et la même vitesse. La 7025 est une ponceuse à plateau rectangulaire. Le choix d’aspiration et de plateau les distingue ; la moyenne de 170 L/min reste non dimensionnante. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.pumaair.com/product-Air-Sander-AirSander-.html",
+          "sha256": "68d8c6708d38fecbd84476acee3dd3f3a34c1865f24db78edec8e3afcb87ec5a"
+        },
+        {
+          "url": "https://www.pumaair.com/views/proimages/pd-en/PDF/PIC-2680/P036-AIR_SANDER-2680.pdf",
+          "sha256": "9a4c87edf5d2b6cb307f880ddecc8400bbbae15766e08d9899d0063c6ca00c82"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-orbitale-universal-tool-ut8789-5-336/",
+      "contentHash": "0957c21a5a9aa164e53f7b7248cc5994aa0a5d42c162561cfd3ec686a2b14542",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-orbitale-universal-tool-ut8789-5-332/",
+        "/outils-pneumatiques/ponceuse-orbitale-universal-tool-ut8789-5-336cv/"
+      ],
+      "contextHash": "7035439988052212a12b7014d66b9e8cbd50a0561eec177e6e34fe2948915424",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La UT8789-5-336 reçoit un plateau5 pouces et une orbite3/16. Le fabricant distingue1,6 CFM moyens de6,2 CFM en fonctionnement continu en charge ; leur pression de mesure reste non établie. La CV est une autre configuration d’aspiration et le code332 ne suffit pas à déduire une orbite. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://continentaltoolgroup.com/product/5-orbital-palm-sander-3/",
+          "sha256": "edd04d40952913614538e0a945a69b09c3cb5e07c7178276d1b0794d889954d6"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-rotative-puma-at-7112/",
+      "contentHash": "1668f3866f0fbf345d52bff95ac6df0b369a493b243e8bd0cc9d4a6edffcb121",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-rotative-puma-at-7113/",
+        "/outils-pneumatiques/ponceuse-rotative-puma-at-7117/"
+      ],
+      "contextHash": "1ea3bda999fa1cf70d305f978f068e1198cca1be216685a2357e91e1f12b6852",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "L’AT-7112 est une ponceuse rotative de 125 mm à 16 000 tr/min, broche 7/16-20NF. La 7113 conserve le diamètre avec 18 000 tr/min ; la 7171 réduit le plateau à 75 mm et utilise une autre broche. Le choix d’accessoire dépend donc de la vitesse admissible et du filetage. Les 226 L/min sont moyens et restent hors calcul du besoin continu. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.pumaair.com/product-High-Speed-Sander---Polisher-HighSpeedSander-Polisher.html",
+          "sha256": "fb6ca211d716a55c760b83a9526c2cedb696445b3b91bfaeeebed13c71d568ba"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/riveteuse-puma-at-6105m/",
+      "contentHash": "ef599d675e368014349c642509a2b4b826cd63aca3da37d6e7e24bd65770af9e",
+      "neighbors": [
+        "/outils-pneumatiques/riveteuse-puma-at-6013/",
+        "/outils-pneumatiques/riveteuse-puma-at-6105/"
+      ],
+      "contextHash": "165ccee19a35bc442f8b1a5e5b83471fd30167cff3ce95f1e05d60e16d30ec68",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "PUMA AT-6105M : outil hydropneumatique de pose d’écrous M4–M12, course de 7 mm, longueur 278 mm et masse 2,30 kg. La version 6105 couvre les tailles impériales #6–1/2 pouce ; la 6306M couvre M3–M8. Le tableau mêle le libellé par cycle aux unités de débit minute : la valeur 2,1 reste dans son unité imprimée, sans calcul d’air par pose. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.pumaair.com/product-Air-Spin-Pull-Tool-AirSpinPullTool.html",
+          "sha256": "f6d68f2b34841e17fff0b99f69258e1266d6eed99abeff8957304e4a1c72f61b"
+        },
+        {
+          "url": "https://www.pumaair.com/views/proimages/pd-en/PDF/PIC-2680/P067-AIR_HYDRAULIC_RIVETER-SPIN_PULL_TOOL-2680.pdf",
+          "sha256": "4c1fb182e7fe8cb7c4aff9284f8d71288f5cbdc341648f7748aa66c23d4aead6"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/visseuse-universal-tool-ut8080q/",
+      "contentHash": "aa68744337a6668307cf2b831da743802c1565359f16265e261fde58e5c5a8b3",
+      "neighbors": [
+        "/outils-pneumatiques/visseuse-universal-tool-ut8080p/",
+        "/outils-pneumatiques/visseuse-universal-tool-ut8090q/"
+      ],
+      "contextHash": "041881354f694fcd5c2aa145460470a3b1f97eaa08100e25f63de8107ded6f8d",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La UT8080Q est la visseuse à chocs à double marteau et porte-embout hexagonal1/4 à changement rapide. Elle publie75 ft-lb et10000 tr/min, avec commande combinée sens/puissance. Les UT8080P/8090Q ont leurs montages et motorisations propres ; leurs consommations ne se transfèrent pas. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://continentaltoolgroup.com/product/impact-driver-5/",
+          "sha256": "ef697e5b74bcd0e2405016e0f8c41dc17668b5b6406f35737bba60c7c3d35914"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cisaille-vessel-gt-hwr1-360701/",
+      "contentHash": "2f42f5c26f8ded3b018d8fc190b363ea01bb0f2e01df6b7a567be77db89a7be0",
+      "neighbors": [
+        "/outils-pneumatiques/cisaille-vessel-gt-hwr10-360714/",
+        "/outils-pneumatiques/cisaille-vessel-gt-hws1-360700/"
+      ],
+      "contextHash": "b67f3226444ddda98d14bb1467ff9e4ff5fb22d1925e5b8cf082a1b7bdd63668",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "VESSEL GT-HWR1 360701 : cisaille pneumatique double effet à corps rond sans levier. L’ouverture comme la fermeture sont entraînées par piston ; les lames sont en option. La HWS1 a une autre forme de corps et la HWR10 une autre capacité ; les valeurs du corps ne désignent pas une lame fournie. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.vessel.co.jp/english/product/airnippers/360701",
+          "sha256": "a35ad56e2b10a8dd3da8aafdfb55da9abed386da9de41aff93d4a21e48953f0c"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-chocs-hazet-9012tt/",
+      "contentHash": "fbddec651a4933ac9cc88b1b20c6e78c07890ed3f5b41a6e214a9e68cc35b1fb",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-chocs-hazet-9012eco/",
+        "/outils-pneumatiques/cle-a-chocs-hazet-9012el-1/"
+      ],
+      "contextHash": "601f1314e7370a382d25fe83fdbcfe71b8d21bda06a3808182ba2a469163764e",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La 9012TT concentre un carré 1/2 et un mécanisme à double marteau dans 128 mm pour 1,6 kg. Les 2 200 Nm concernent le desserrage, les 1 356 Nm le serrage maximal et les 948 Nm le couple recommandé. La 9012ECO est plus lourde à 2,15 kg ; ses valeurs de couple restent distinctes. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/impact-driver/product/ean-4000896226924",
+          "sha256": "ba6d29dac9237596dadce7ff190387697ca36b0576150d1b61e7bcc66ef236b8"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-cliquet-draper-84126/",
+      "contentHash": "de883286c70036f06bf221d4b6017e870ece1a8dbab3a6e60f449a96bcf76eb7",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-cliquet-draper-47568/",
+        "/outils-pneumatiques/cle-a-cliquet-draper-84122/"
+      ],
+      "contextHash": "b4b45f32af811d96c950da166df005a0feb8bb503ea0316ab6d948e001c1e9f5",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Le cliquet Draper 84126 utilise un carré 3/8 pouce, tourne à 160 tr/min et publie 85 Nm ultimes. Le 84122 emploie le carré 1/2 pouce ; la référence 47568 tourne à 200 tr/min. Le carré et l’accès à l’écrou déterminent donc le choix avant la vitesse. Les 113 L/min sont une consommation moyenne à côté d’une pression de service de 6,2 bar, sans conversion en débit continu. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.drapertools.com/product/84126/air-ratchet-3-8-sq-dr/",
+          "sha256": "d0effcc84e4d25048d2647767cba54808ba381c8b43f3629b519579171e721c6"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-cliquet-facom-vr-sj3500pb/",
+      "contentHash": "b83e86c6e1ceb7cc2db8b6dcbf948f90980d4a80df18f63defcebdc07abe338e",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-cliquet-facom-vr-j154/",
+        "/outils-pneumatiques/cle-a-cliquet-facom-vr-s3136pb/"
+      ],
+      "contextHash": "4da163bb8c6cbc36658a433e6fe5957b93f717a18a75de13bcc2dcbdb757d770",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "FACOM VR.SJ3500PB : cliquet à enclumes interchangeables 3/8 et 1/2 pouce, embrayage de protection de la main et tête fermée. Le déclenchement variable et l’échappement vers l’avant sont documentés. Le VR.J154 est un mini-cliquet ; la longueur de 318 mm de cette référence répond à un autre accès. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.facom.com/product/vrsj3500pb/38-12-high-torque-air-ratchet?tid=610786",
+          "sha256": "41fdbf841ab58c67aadc42acdf74411effe386a336bbe03b538f3f10b2b32d04"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-cliquet-hazet-9022-360/",
+      "contentHash": "58f9b2adb2322fe072e59735009bf0d6f9939efa878f77768caf652317729ef9",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-cliquet-hazet-9022eco-1/",
+        "/outils-pneumatiques/cle-a-cliquet-hazet-9022p-1/"
+      ],
+      "contextHash": "cc8d19682c7ab4a481677415d05cb0f0a472c197b942baaae03e0c878758cb00",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Le 9022-360 permet de faire pivoter le levier de commande à 360° et d’inverser le sens par une bague sur la poignée. Il publie 120 Nm pneumatiques à 200 tr/min pour 285 mm. Les 500 Nm annoncés pour le resserrage manuel ne sont pas un couple moteur. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/air-ratchet/product/ean-4000896209781",
+          "sha256": "19ccd07f5aa1fd59047e15b0fa8bfff753ab4678b4864fb02e1fd11b3d0f5e06"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/gonflage-hazet-9041g-1/",
+      "contentHash": "0288805c3c7e54c496cf215953752da0504525d06ee8340a7496c47f42a6ad3f",
+      "neighbors": [
+        "/outils-pneumatiques/gonflage-hazet-9041-1/",
+        "/outils-pneumatiques/gonflage-hazet-9041d-1/"
+      ],
+      "contextHash": "351bcb29c4066a89188f4a3f2dcb7fc0979b9bbdce672a31e0d1c94c1599aa2c",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Le 9041G-1 possède un manomètre de 80 mm et un flexible de 1 m, avec tolérances déclarées de ±0,08 bar jusqu’à 4 bar puis ±0,16 bar jusqu’à 12 bar. Le 9041-1 standard a un manomètre de 63 mm et un flexible de 400 mm ; le 9041D-1 est numérique. L’année d’étalonnage doit être lue sur le scellé de l’exemplaire. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/air-inflator-air-measuring-device/product/ean-4000896212385",
+          "sha256": "484ec24f44aa0088c16d93f558b2ab3b3046d5b3408e9e5261c2591ba53ee834"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/meuleuse-facom-v-dg300fpb/",
+      "contentHash": "7f6ae9d9f83856f7da41403a0b8a3aadc8b7464eba4f6c63ae7ce7e3d05905bf",
+      "neighbors": [
+        "/outils-pneumatiques/meuleuse-facom-v-347f/",
+        "/outils-pneumatiques/meuleuse-facom-v-445f/"
+      ],
+      "contextHash": "9b4d6edebf8a3afd37a9004a7db24c8ec16d31754931367b76b1933ff64275a2",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La V.DG300FPB est une meuleuse droite à pince 6 mm, dans un corps de 160 × 39 × 70 mm et 0,44 kg. Les V.347F et V.445F relèvent d’autres formats ; la pince et le dégagement disponible doivent être vérifiés avec l’accessoire. La page constructeur consultée fournit les dimensions et l’alimentation pneumatique, sans point consommation–pression utilisable. Le moteur conserve une réponse non conclusive. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.facom.com/product/vdg300fpb/pneumatic-straight-die-grinder-6mm-collet?tid=610786",
+          "sha256": "ee42bd999c6ad49ddfe701810c40b50cb14e9c66f1888ce723b7e0732adc734e"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/meuleuse-hazet-9032m-5/",
+      "contentHash": "a172b43636ff019b0ac5a07b0c3defc96d165f29311b38ccdf2d808cfbb1f2c9",
+      "neighbors": [
+        "/outils-pneumatiques/meuleuse-hazet-9032m-1/",
+        "/outils-pneumatiques/meuleuse-hazet-9032m-36/"
+      ],
+      "contextHash": "2fcf55148a9d80ce6fa2dab7ba18389b142beabdeaad7c6f2ef57fbc45c95dea",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La 9032M-5 est une mini-meuleuse coudée de 126 mm, pince 6 mm, 224 W et 18 000 tr/min. La 9032M-1 tourne à 25 000 tr/min pour 115 mm ; la M-36 à 30 000 tr/min pour 150 mm. La forme coudée de la M-5 sert les accès contraints ; ses 84 L/min restent sans régime de mesure établi. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/drilling-machine-sander-chisel-sabre-saw-shears/product/ean-4000896227105",
+          "sha256": "e4ab99237ff89b00f981dc924044e6bc3a8b0edebad3114d507865e279ff48d3"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/perceuse-draper-83961/",
+      "contentHash": "774a737a2cb697d3044681c35bbaf8253570c68dd203a0b24ad920e4db00f212",
+      "neighbors": [
+        "/outils-pneumatiques/perceuse-draper-83811/",
+        "/outils-pneumatiques/perceuse-draper-84121/"
+      ],
+      "contextHash": "ee7fb5b1c6b0a43089b358ad04c9597f2a40a39077faae9223105ab344429dcb",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La Draper 83961 est une perceuse réversible à mandrin 10 mm et 2 200 tr/min. La 83811 conserve le diamètre et la vitesse publiés ; la 84121 passe à 13 mm et 700 tr/min. La capacité de perçage et le régime orientent le choix de foret. Les 155 L/min moyens et les 6,2 bar de service ne constituent pas une mesure de consommation en charge. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.drapertools.com/product/83961/reversible-air-drill-10mm/",
+          "sha256": "0a685336425c5c98b2e8d1484bc640c3f0549830e62f1fad4143f6d26ea80abd"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-draper-92971/",
+      "contentHash": "5c0ef0ac33709fd6d91041164347d4607df91da0a61b5260aad94d8d910c2e34",
+      "neighbors": [
+        "/outils-pneumatiques/pistolet-peinture-draper-21526/",
+        "/outils-pneumatiques/pistolet-peinture-draper-28354/"
+      ],
+      "contextHash": "7f87eaf76a598768f4b9ea3476a557b2a1b47941e19f71a0bc235a5109e876ce",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La Draper 92971 est un pistolet à gravité, godet de 500 ml et buse 1,5 mm, annoncé à 0,33 kg. La 28354 emploie un godet de 1 litre et une buse 1,8 mm ; la 21526 publie une autre consommation. La pression de service 45–50 psi reste distincte du maximum 60 psi. Les 175 L/min ne sont pas associés à un régime de mesure suffisamment défini pour calculer un besoin continu. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.drapertools.com/product/92971/gravity-feed-air-spray-gun-500ml/",
+          "sha256": "876dfde68f046fa3670a9c247c56faa1afa0b0727b945d4c6808c7ecab923839"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/soufflette-hazet-9040p-1/",
+      "contentHash": "b334d3fe5ec3fd8fe06e04f79167e34a8493a50b92a967f20ada5f15154bbbbf",
+      "neighbors": [
+        "/outils-pneumatiques/soufflette-hazet-9040p-2/",
+        "/outils-pneumatiques/soufflette-hazet-9040p-3/"
+      ],
+      "contextHash": "84775a2355995e4cebc507b216eedac89d26b53f7a05f067bc4d43bd4ce64907",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La soufflette 9040P-1 utilise une buse standard sur tube coudé de 100 mm, pour une longueur totale de 247 mm. La P-2 atteint 420 mm ; la P-3 publie 245 L/min contre 290 pour la P-1, sans pression ni régime de mesure permettant de comparer un maximum en charge. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/air-blow-gun/product/ean-4000896209545",
+          "sha256": "dce18974b1eea3d1b422f9aaeb9bac6d9ec3b054860a705db1e6977b194deaf0"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/burineur-soartec-wx-420c/",
+      "contentHash": "389b4cec273550295184aa2109a8f16ea0b81d80795eb3a3bbc65307584a3d15",
+      "neighbors": [
+        "/outils-pneumatiques/burineur-soartec-wx-421/",
+        "/outils-pneumatiques/burineur-soartec-wx-422/"
+      ],
+      "contextHash": "f9554d5c0f8d951844b3fa349c6d57bcf9fcc77041cf2dfdc80dd87a43c0bfd3",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Le WX-420C est un burineur à fût court, à distinguer des fûts longs de la gamme par leur course et leur emmanchement. La fiche constructeur décrit l’outil et ses accessoires ; sa consommation non appariée à un régime et une pression de mesure reste documentaire. La taille de burin et l’accès au travail sont contrôlés séparément de l’alimentation. Le moteur conserve une réponse non conclusive. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.soartectools.com/products/air-chipping-hammer",
+          "sha256": "8674de79b6711e4faa81fcc1d99bf0d0c2c66f9899d61d3992f025bb5a2f9be4"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-chocs-soartec-ws-202l/",
+      "contentHash": "142ea10ccfadf20bdd6dc1f0c0b21a74ee6a7d7699cc914d035ff779009d9602",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-chocs-soartec-ws-202/",
+        "/outils-pneumatiques/cle-a-chocs-soartec-ws-203/"
+      ],
+      "contextHash": "9da21169eeb44b6747a614db1cbd03dd18984a8a4f5dfaae698f8d4e23c7c8ad",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La WS-202L est la clé à chocs Twin Hammer à carré 1/2 pouce et enclume allongée, annoncée à 660 ft-lb. Les WS-202 et WS-203 appartiennent à la même famille de couple mais avec d’autres corps ou enclumes. L’allonge sert l’accès et ne garantit pas davantage de couple. Les 17 cfm et la consigne 90 psi ne qualifient pas une consommation en charge. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.soartectools.com/products/air-impact-wrench-1-2-twin-hammer-ws-202l",
+          "sha256": "bf84730b00800d2fb6319643114ff40709f5d94203f41744717b438b6b31ce54"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-chocs-tengtools-arwc12/",
+      "contentHash": "f0a2ed26ca2234c3bc7629c984e0e26c927ffb30f86e050af34be1e11b4706a7",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-chocs-tengtools-arwc38/",
+        "/outils-pneumatiques/cle-a-chocs-tengtools-arwm11s/"
+      ],
+      "contextHash": "2f0b90b3c69f5239191cbceda69b9c74748c3095ddffda80e9861d7649653ca6",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "L’ARWC12 est la clé à chocs composite à carré 1/2 pouce, pour boulons M16. Le tableau distingue trois niveaux avant 258/461/930 Nm et un maximum arrière de 960 Nm ; ces valeurs ne sont pas des consignes de serrage. L’ARWC38 utilise un carré 3/8 pouce, l’ARWM11S un carré 1 pouce. Les 144 L/min à « 100% int. » restent sans pression de mesure documentée. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.tengtools.com/en-gb/collections/air-tools/products/1-2-composite-air-impact-wrench",
+          "sha256": "72838c754b9f9925d2f3960b01cd4ca8b36e42488ba6b7c7f208becf2d94e44c"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-cliquet-soartec-wx-2701/",
+      "contentHash": "a4974a95b7c42dde5f15766bd8881e1d31c584e79a77f6bf7851424966703af1",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-cliquet-soartec-wx-2702/",
+        "/outils-pneumatiques/cle-a-cliquet-soartec-wx-2703/"
+      ],
+      "contextHash": "9d1da35d4a41d1f8af33ce7c69f4b146c132a6670fdf55e4e9e81910d64a2893",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Le WX-2701 est le cliquet traversant pour hexagones 6–12 mm, 180 tr/min et 10 Nm de travail. Le WX-2702 couvre 10–14 mm ; le WX-2703 étend la sélection jusqu’à 19 mm. L’écrou et le dégagement déterminent la référence, puis le serrage final doit respecter l’assemblage. Les 127 L/min ne sont pas appariés à un régime de mesure explicite, malgré la consigne 90 psi. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.soartectools.com/products/air-ratchet-wrench-hex-bit",
+          "sha256": "f032decc0661ab0f3bbf04701af549bef25c641f01f82d93c06550822daf6db6"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/marteau-a-river-soartec-wx-411p/",
+      "contentHash": "db5ca7a941e36ccbd52773550693f9715e4884f4b29a9c54a67d68f258b405c7",
+      "neighbors": [
+        "/outils-pneumatiques/marteau-a-river-soartec-wx-411s/",
+        "/outils-pneumatiques/marteau-a-river-soartec-wx-412s/"
+      ],
+      "contextHash": "cfcc92ac72d6ba78ea36d31cf213ff6974d4ec236ae1a05b24fa5fd31a29b794",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Le WX-411P est le marteau à river pistolet à emmanchement 0,4 pouce et course 35 mm. Le WX-411S est droit, alors que le 412S augmente la course à 57,2 mm. La fiche sépare les capacités acier et aluminium, 1/8 et 5/32 pouce pour le 411P : elles ne sont pas interchangeables. Les 4 cfm publiés restent sans régime et pression de mesure appariés. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.soartectools.com/products/air-riveting-hammer-pistol-type-wx-411p",
+          "sha256": "c214ee5d1a0d4250af335865ed4197638254b000c5643af895781c3dad9d361e"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/meuleuse-soartec-610gh/",
+      "contentHash": "7ce2eadf055e46100b40a3f207f2ab3984f75fde5e6e28ee5db4083ba6c3f00c",
+      "neighbors": [
+        "/outils-pneumatiques/meuleuse-soartec-610g/",
+        "/outils-pneumatiques/meuleuse-soartec-ws-662/"
+      ],
+      "contextHash": "63a74e1f1ea2e577d66eff36f267cb0aeac5de49c7adb06f06c578e63ff17bf6",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La 610GH est la meuleuse verticale 230 mm à 6 000 tr/min. La fiche de la 610G juxtapose 4 500 tr/min dans le titre et 6 000 dans la table, écart qui reste visible ; la WS-662 est une meuleuse d’angle pour disques de 100 mm. La vitesse et le montage du disque doivent convenir au travail et au carter. Les 2 800 L/min publiés à côté d’une consigne 90 psi restent hors calcul faute de régime de mesure explicite. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.soartectools.com/products/9-vertical-air-grinder-610gh",
+          "sha256": "6ef25e6ac4adda42886a06033ab71ed8844d4abc6abfad0bd0882a8cb0a061f4"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/perceuse-soartec-wx-507/",
+      "contentHash": "6cd08dbd888c4e25c9accdedb793bc9b70244ead86c1931b5be19212e9774d5c",
+      "neighbors": [
+        "/outils-pneumatiques/perceuse-soartec-wx-506/",
+        "/outils-pneumatiques/perceuse-soartec-wx-521/"
+      ],
+      "contextHash": "1c3599d05af32a9ca611fd8b21bb6fc62eea7435cfe15295c8a67e613c44c528",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La WX-507 est une perceuse droite à mandrin 3/8 pouce, 4 000 tr/min, 215 mm et 0,89 kg. La WX-506 utilise le même format dans une autre vitesse de la gamme ; la WX-521 est une perceuse d’angle. L’accès au perçage et la vitesse du foret distinguent le besoin. Les 298 L/min de régime non précisé ne sont pas transformés en consommation en charge. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.soartectools.com/products/3-8-air-drill-straight-type-wx-507",
+          "sha256": "6c23d6c563caad657459be4d334da41bf883dc8a4aa9b8cf60832bddc075a45b"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-orbitale-soartec-ws-1051c-5h/",
+      "contentHash": "ec7960373f59edd0d621b314d596aad8d8c2fd70e249a45bf7276bd11d14ca48",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-orbitale-soartec-ws-1051c-3h/",
+        "/outils-pneumatiques/ponceuse-orbitale-soartec-ws-1051c-6h/"
+      ],
+      "contextHash": "5ec9fd06614668c1f1463d853c93d2385a08e223482c98935b518e93cf7a5fe3",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La WS-1051C-5H est la ponceuse orbitale 5 pouces à orbite 5 mm et aspiration centrale, 12 000 tr/min et 0,8 kg. La 3H réduit le plateau à 3 pouces ; la 6H l’augmente à 6 pouces. Le diamètre et le raccordement à l’aspirateur doivent correspondre à l’installation. Les 425 L/min publiés restent sans régime de mesure établi, hors dimensionnement. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.soartectools.com/products/5-air-random-orbital-sander-5mm-orbit-central-vacuum-ws-1051c-5h",
+          "sha256": "922cfdf16c2a128751b3cb291efb9231afb861461d720829cbb601653e13695f"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-rotative-soartec-wx-7931/",
+      "contentHash": "fc4f06c14fa231db0a0637b3eeb5c0ad64b1acc0e0ed9e0720f146b64ea6e9b3",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-rotative-soartec-wx-7921/"
+      ],
+      "contextHash": "5a025b82a948db12e8d612f20aa8e98489c39d012ba30b81989933163facb8de",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La WX-7931 est une râpe pneumatique pour pneus, format 3,5 pouces, à 2 500 tr/min, 172 mm et 1,2 kg. La WX-7921 est un outil de retrait d’adhésif à 3 600 tr/min : l’usage et l’accessoire diffèrent. La seule consigne 90 psi ne donne aucune consommation exploitable. Le calcul reste non conclusif sans ajouter le débit d’un autre modèle. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.soartectools.com/products/air-tire-buffer-3-5-88mm-wx-7931",
+          "sha256": "9c76f4a4a32107c5e7ae37c1f29805b8545cec67ce229a415dc7ca47fa0569b4"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/riveteuse-gesipa-taurus-2-1457771/",
+      "contentHash": "f9d44c40df7cb9ea6a6f20d62824865d10363b4938c8c17ae3a45e9dab5dde4e",
+      "neighbors": [
+        "/outils-pneumatiques/riveteuse-puma-at-6017/",
+        "/outils-pneumatiques/riveteuse-puma-at-6217/"
+      ],
+      "contextHash": "151fe62133c920cabb7614e5e41a1b3d5f5c495ddc53a862f28aecd9241d96c0",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "GESIPA TAURUS 2 1457771 : riveteuse pour rivets jusqu’à 5 mm tous matériaux et 6 mm aluminium ou acier, mandrin maximal 3,2 mm. L’aspiration des mandrins est commutable ; sa consommation ne doit pas être supposée constante avec tous les réglages. Le fabricant donne 2,30 litres sans dénominateur de cycle. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.gesipa.com/products/pneumatic-riveting-tools/1457771-taurus-2/",
+          "sha256": "bafe90eb00d2a4b81b7d2c3325fb21121441badada492fef90c88cf31d5d31e7"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/riveteuse-soartec-wx-5563/",
+      "contentHash": "58d2e260d364799e9f66d1a3e4f7d43a60402364cec6837315be114f0bf1655f",
+      "neighbors": [
+        "/outils-pneumatiques/riveteuse-soartec-wx-5553/",
+        "/outils-pneumatiques/riveteuse-soartec-wx-5573/"
+      ],
+      "contextHash": "7ce2644f78c2202ee1d57a7570a71c84c344940dcfc479d7f5def2bddce88fee",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La WX-5563 est la riveteuse hydropneumatique à trois mors et course 17 mm. Sa capacité maximale est 4,8 mm en acier et aluminium, mais 4 mm en inox ; la WX-5553 réduit les capacités et la WX-5573 les augmente. Le matériau de fixation est donc déterminant. Les 2,1 cfm ne sont pas un volume par tir et restent hors calcul de cadence. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.soartectools.com/products/3-16-in-industrial-air-hydraulic-riveter-3-jaws-wx-5563",
+          "sha256": "d1908404f21e2a22f64ce882d4923d01fa5645074e3137374f72d3796a5a817e"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/scie-soartec-wx-453/",
+      "contentHash": "ec35fe4374d14c48795fc575d2c05a924074902efe30d313dc9685dc76788504",
+      "neighbors": [
+        "/outils-pneumatiques/scie-soartec-wx-452/",
+        "/outils-pneumatiques/scie-soartec-wx-455/"
+      ],
+      "contextHash": "e8afd62e7a74be1e4fb624da59a2e03aa56d67096221c6de2b4f4bb5f568a3bd",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La WX-453 est une scie alternative, course 10 mm, 10 000 courses/min, 180 mm et 0,45 kg. La WX-452 mesure 200 mm ; la WX-455 ajoute l’usage scie/lime avec mandrin double. Le montage de lame et le kit doivent correspondre au travail. Les 215 L/min publiés ne portent pas de régime de mesure explicite. Le moteur conserve une réponse non conclusive, sans inventer de capacité de coupe. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.soartectools.com/products/air-reciprocating-saw-10mm-wx-453",
+          "sha256": "b2d288bbdc5ac94f739c2d734dabcc62eea76186a71d8311c116126565c7ca9d"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/scie-tengtools-ars02/",
+      "contentHash": "e6b983b2dab420b10ee4c0bdaadc811b8dd7b5ac72fd315a96ed89fcf24d24c7",
+      "neighbors": [
+        "/outils-pneumatiques/scie-tengtools-ars01/"
+      ],
+      "contextHash": "7cd5a83465b195379f780e0f0de93fe64fad46188c58657639481f6f9d0729b0",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "L’ARS02 est la scie courte de 170 mm et 399 g, course 10 mm à 9 000 courses/min. La table distingue 3 mm en acier, 3,4 mm en aluminium et 4 mm dans le bois ; la lame doit être adaptée au matériau. L’ARS01 appartient à la même famille dans un autre corps. Les 22,94 L/min à « 100% int. » ne sont pas associés à une pression de mesure. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.tengtools.com/en-gb/collections/air-tools/products/air-saw-170mm",
+          "sha256": "ad04500161026e9862fb5d90fb4028aa76c9f54e1e3958e747ca22f40bf72f91"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/soufflette-ks-tools-515-1901/",
+      "contentHash": "e6da069ef508eea193e71a84fe0c8ebf4688d93c704c71699b7545e7d0fad692",
+      "neighbors": [
+        "/outils-pneumatiques/soufflette-ks-tools-515-1907/",
+        "/outils-pneumatiques/soufflette-ks-tools-515-1908/"
+      ],
+      "contextHash": "594b8cb36f8296b82d736a3bcf98a96b3fa5ab3e8c6d3834b6392e893a75efde",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La 515.1901 est une soufflette à débit réglable, avec adaptateur de flexible, longue de 235 mm pour 150 g. Elle se distingue du stylo 515.1908 de 110 mm et du tube télescopique 515.1907 de 90–190 mm. La fiche sépare une entrée maximale de 15 bar et une pression de service maximale de 6,3 bar. Les 300 L/min du champ « max. Flow rate » restent documentaires : leur nature et leur point de mesure ne suffisent pas à dimensionner le compresseur. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.kstools.com/en/products/special-tools-for-commercial-vehicle/general-workshop-requirements/air-blow-out-tools/5962/pneumatic-blow-out-pistol-with-flow-regulation?c=1011737446",
+          "sha256": "b2e714cb5ad0532364acbdf543153f35617202289156afb2d5f14f41276606ef"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/soufflette-tengtools-arb02/",
+      "contentHash": "6899a6177b4cad1e54f89359b1284bdcdc9ce83a17d4badd17e669b2b0bdb240",
+      "neighbors": [
+        "/outils-pneumatiques/soufflette-tengtools-arb01/",
+        "/outils-pneumatiques/soufflette-tengtools-arb03/"
+      ],
+      "contextHash": "91c336ed6454602c85364a9622136ba99f419f0c608d00c0dd17eaacaeacf996",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "L’ARB02 est la soufflette à buse longue, annoncée « 300 mm » dans le titre. La table donne une buse de 270 mm et une longueur totale de 360 mm : ces cotes sont distinguées. Les ARB01 et ARB03 ont une buse de 100 mm. La portée et le dégagement changent l’usage ; la fiche ne publie aucun point débit–pression permettant de dimensionner le compresseur. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.tengtools.com/en-gb/collections/air-tools/products/air-blow-gun-300mm",
+          "sha256": "f1cab2df4b00a4fc09a67fe3cb1021085af409f28ec7327f4c93c8084c1c228d"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/visseuse-soartec-ws-2057/",
+      "contentHash": "eae312f1b7efb95eb0b5b6bec489743f502afb78c86c55cdd7b1c583108d49c6",
+      "neighbors": [
+        "/outils-pneumatiques/visseuse-soartec-ws-2052/",
+        "/outils-pneumatiques/visseuse-soartec-ws-301/"
+      ],
+      "contextHash": "e89e2e33064bc6a6edd0bc839acc2005f789c88cbede528e2f4f0fa855e890d0",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La WS-2057 est la visseuse pistolet à hexagone 1/4 pouce et mécanisme Twin Hammer, 12 000 tr/min, 145 mm et 1,6 kg. Le couple 110 Nm est annoncé à deux secondes, contre 200 Nm pour la WS-2052 ; la WS-301 est droite et annonce 60 Nm à deux secondes. Ces valeurs ne garantissent pas un serrage précis. Les 425 L/min restent de régime non précisé. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.soartectools.com/products/1-4-heavy-duty-air-screwdriver-pistol-type-ws-2057",
+          "sha256": "0065d3d5ef93e764f779d15d11e5cb7e29f0aa39031cc614b5c0e90d3fc165eb"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/airpol-srk-7/",
+      "contentHash": "8e5ee854d92ff3010d681336478b24cd1cf32322c269a272e36eceb153b99dcf",
+      "neighbors": [
+        "/compresseurs/airpol-srk-2/",
+        "/compresseurs/airpol-srk-4/"
+      ],
+      "contextHash": "00abae6e60fd655281e24df0513e19a6520b4999798a364f6ed44144b197d187",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Le SRK7 est le scroll sur cuve de la gamme 7,5 kW. Le catalogue donne 51 m³/h à 8 bar et 41,2 m³/h à 10 bar, contre 36,8/27 pour le SRK5, mais sans qualification FAD explicite. Le catalogue 2022 montre 500 L pour le SRK7, tandis que la FAQ actuelle annonce 240 L standard avec 500 L en option pour la famille. Cette configuration doit être confirmée ; ni la cuve ni un taux de marche numérique ne sont imposés au calcul. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://airpol.com.pl/en/knowledge-base/qa-frequently-asked-questions-about-airpol-sr-scroll-compressors/",
+          "sha256": "fb5078b47095d314438f00f6aaa462671fbd2712d8653893e682f610c187915e"
+        },
+        {
+          "url": "https://airpol.com.pl/wp-content/uploads/2022/05/Catalogue_Scroll-compressors.pdf",
+          "sha256": "67a30acdba6ecb84d085b8a7e469c5c4803f40edb843a5045634e22fdb8ed494"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/airpol-srkt-2/",
+      "contentHash": "ce2e8804a47b87e02449ccde1d8231347b050737050a06ebd454bd9c583cefbe",
+      "neighbors": [
+        "/compresseurs/airpol-srkt-4/",
+        "/compresseurs/airpol-srkt-5/"
+      ],
+      "contextHash": "4341b93eefc4c6cc2df17d84fb8fe809893039a2f299eaa8b7f5fe7712726cf4",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Le SRKT2 ajoute traitement d’air et réservoir au scroll 2,2 kW. Le SRK2 n’intègre pas le même traitement ; le SRKT4 passe à 3,7 kW. Le catalogue donne 12,8 m³/h à 10 bar mais ne qualifie pas explicitement cette capacité comme FAD. Les réservoirs 240 et 500 L sont proposés : la référence non configurée ne justifie pas 500 L par défaut. Le calcul reste non conclusif. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://airpol.com.pl/en/knowledge-base/qa-frequently-asked-questions-about-airpol-sr-scroll-compressors/",
+          "sha256": "fb5078b47095d314438f00f6aaa462671fbd2712d8653893e682f610c187915e"
+        },
+        {
+          "url": "https://airpol.com.pl/wp-content/uploads/2022/05/Catalogue_Scroll-compressors.pdf",
+          "sha256": "67a30acdba6ecb84d085b8a7e469c5c4803f40edb843a5045634e22fdb8ed494"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/bambi-vts200d/",
+      "contentHash": "11b46c2b12df1718bfcb514ca7854f6552449d19cea04fac6989be23ad2c9f8d",
+      "neighbors": [
+        "/compresseurs/bambi-vts200/",
+        "/compresseurs/bambi-vts250/"
+      ],
+      "contextHash": "114e60bb625218ca628469bf1178c8c21b6a9c757b0dba269a389e0855aaef3b",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Le VTS200D intègre le sécheur et une cuve de 23 L. Sa table donne 158 L/min FAD à 5 bar et 126 à 8 bar ; le VTS200 est sans sécheur, tandis que le VTS250 utilise 59 L. Le fabricant limite explicitement le cycle à 50 % : la réserve de stockage ne transforme pas ce débit en service permanent. L’alimentation de référence est 240 V/50 Hz. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://bambi-air.co.uk/product/vts200d/",
+          "sha256": "0eaa19219e535f7ed8a3811129c29eff209861388505f8d4203022d9083e4f8b"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/bambi-vts250/",
+      "contentHash": "c368381f1d663d224730b238f185868510658406dd586a7332ac10bbe34c303e",
+      "neighbors": [
+        "/compresseurs/bambi-vts200/",
+        "/compresseurs/bambi-vts250d/"
+      ],
+      "contextHash": "8126af51498cb29c1f078d628bdffd6aef68ab66aa16faaa60e18dd4f79e29c2",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Le VTS250 utilise une cuve de 59 L et annonce 210 L/min FAD à 5 bar, 160 à 8 bar. Le VTS200D est plus petit avec sécheur ; le VTS250D est une variante avec traitement, dont la table diffère. Le cycle maximal reste 50 %, et le débit doit être choisi à la pression utile de l’outil. La masse 122 kg et l’alimentation 240 V/50 Hz doivent être prises en compte pour l’installation. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://bambi-air.co.uk/product/vts250/",
+          "sha256": "bf6efbcb928041c5d5db4a9406b274e605a952962ae17b201ea1bc09edce4955"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/mark-msm-7/",
+      "contentHash": "1efc66a16e6f77dc34b5a08c9265b5ce84607dff85d2750d8d12f9db0e7ea4b7",
+      "neighbors": [
+        "/compresseurs/mark-msm-3/",
+        "/compresseurs/mark-msm-4/"
+      ],
+      "contextHash": "8ce2297b83d8d9ecb76fcfd68099786210e31ada2c99e743d15996fba5a9bb20",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La MSM 7 fixe sur socle publie 961 L/min à 9,5 bar pour 7,5 kW ; la colonne en m³/h arrondit ce point à 57,7. La MSM 4 atteint 502 L/min au même point avec 4 kW. La brochure distingue les montages sur socle et sur réservoir et annonce explicitement un cycle de 100 % pour les groupes MSM fixes et IVR. Le bruit de l’IVR est mesuré à 70 % de charge, avec une condition différente de la version fixe. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.mark-compressors.com/content/dam/brands/Mark/products-bp-structure/oil-injected-screw-compressor/fixed-speed/msm-2-2-7/leaflets/Mark_MSM_2.2-7_MSM%202.2-7%20IVR_Sales_Leaflet_EN_Brendola_6999200582.pdf",
+          "sha256": "64d6ab7907e7a65c5c76e427626d86890e4361dbe459f470c317a15b25e3b530"
+        },
+        {
+          "url": "https://www.mark-compressors.com/en-int/products/screw-compressors/fixed-speed/belt-driven-msm",
+          "sha256": "fdf12574f70eef3241e56b9231067341246aaf757449b7492c7326dfc348f50e"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/mark-rmb-15/",
+      "contentHash": "fece4b6db2f20664a1971c6448ec1eaa420847b7b77d0ae0038afdb891e34f32",
+      "neighbors": [
+        "/compresseurs/mark-rmb-15-ivr/",
+        "/compresseurs/mark-rmb-18-ivr/"
+      ],
+      "contextHash": "71e850cc6bcb0c132b66619439cd6dcbf6c9aad20cc24c8a193e775da5c53bd7",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La RMB 15 fixe publie 1 946 L/min à la pression de référence de 12,5 bar pour 15 kW ; 13 bar est la pression maximale de la version. Le tableau arrondit séparément ce débit à 117 m³/h. La RMB 15 IVR annonce 2 138 L/min à ce point, et la RMB 18 IVR 2 435 L/min. Le montage sur socle mesure 1 200 × 835 × 1 220 mm ; le sécheur allonge cette configuration à 1 450 mm. Le taux de marche reste indéterminé. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.mark-compressors.com/content/dam/brands/Mark/products-bp-structure/oil-injected-screw-compressor/fixed-speed/rmb-15-25/leaflets/Mark_RMA-RMB%207.5-25%20FS-IVR_EN.pdf",
+          "sha256": "7939b1c035eed5ecdfbbded352a6de075e9eeadd429dd7f7fb59d6f66f4d5e83"
+        },
+        {
+          "url": "https://www.mark-compressors.com/en-int/products/screw-compressors/fixed-speed/gear-driven-rmb",
+          "sha256": "9eea9ed1f5b0bc1638743fc367f66a6169c94abfd46641942c1c38d71f28c6f4"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/agrafeuse-cloueuse-fasco-f1a-mb-25a-j010874-05/",
+      "contentHash": "5dc0b56c60400c1716fad2bffd594d0317a140bd77ec81340f64112f61ff6624",
+      "neighbors": [
+        "/outils-pneumatiques/agrafeuse-cloueuse-fasco-f1b-10f-16-11088/",
+        "/outils-pneumatiques/agrafeuse-cloueuse-fasco-f1b-10j-16-11126/"
+      ],
+      "contextHash": "dd1334ee855fd7e981c17488d17e26e7c9d2e6e9fc01a05eee5f183bc4a9ca3d",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "FASCO F1A MB-25A J010874.05 : cloueur de finition à pointes MB, magasin latéral de 130 et déclenchement simple. Les F1B 10F-16 et 10J-16 sont des agrafeuses utilisant d’autres fixations. Le nom 25A ne limite pas la longueur : le tableau exact publie 12–30 mm. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.beck-fastening.com/en/f1a-mb-25a~p426",
+          "sha256": "6bb97a7a826c9258e63edcfde80e33a109c0d70eb95ccaa9da0d6359a4706867"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/agrafeuse-cloueuse-josef-kihlberg-561-15pn-125003/",
+      "contentHash": "65ee1ac728833fd3bd77ab7aeb20fdca31fcc1823603989b8cd7073d1e01d0af",
+      "neighbors": [
+        "/outils-pneumatiques/agrafeuse-cloueuse-josef-kihlberg-561-18pn-125006/",
+        "/outils-pneumatiques/agrafeuse-cloueuse-josef-kihlberg-a-560pn-125101/"
+      ],
+      "contextHash": "fa57edd88b59ce9a97252352ac41157387260bdf145e48a5113d343b8d640a92",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Josef Kihlberg 561-15PN 125003 : agrafeuse de fermeture de cartons à agrafes JK561 de 15 mm, magasin de 150 et lubrification requise. La 561-18PN utilise 18 mm ; l’A560PN est une autre construction. La notice distingue 4–5 bar recommandés, 7 bar maximaux et 1 L par pose mesuré à 6 bar. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://kihlberg.com/tools/application/top-stapling/125003",
+          "sha256": "e957c0b42140ddeb4cbd01db4173be49b1c5f4057851c729442836c1408c6f88"
+        },
+        {
+          "url": "https://wp.kihlberg.com/wp-content/uploads/2018/09/561-15PN_04.20.pdf",
+          "sha256": "3e1216376cd0891ce43358bc51d06283edf7cfc8d4416d242e15b7a42df585c4"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-chocs-astro-pneumatic-135bt/",
+      "contentHash": "59867fe4672b5fd32ccc6e974cc8f5e7664310263ed45773533ef073da638042",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-chocs-astro-pneumatic-136e/",
+        "/outils-pneumatiques/cle-a-chocs-astro-pneumatic-157/"
+      ],
+      "contextHash": "8fa654624dc05067318fcc2aed01c025373a5b7bb5a1232533d9718186c9943c",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La 135BT est une clé à chocs courte à carré 3/8, avec protection de nez en caoutchouc et régulateur. Elle mesure 171 mm contre 177 mm pour la 136E. La fiche fabricant la signale « NO LONGER AVAILABLE » : c’est une fiche technique d’un modèle ancien, pas une offre courante. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.astrotools.com/product/3-8-snub-nose-impact-wrench-75ft-lb-torque/",
+          "sha256": "b9037f1f31fcc9d6076d8976bfddbc764ab195aac5ab54bced5bf81d846e56db"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-cliquet-astro-pneumatic-1111a/",
+      "contentHash": "cba4b2a7268449020144bb3389df1319dd8ee9028d72251e9fd83dc256fa67b2",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-cliquet-astro-pneumatic-1114a/",
+        "/outils-pneumatiques/cle-a-cliquet-astro-pneumatic-1115/"
+      ],
+      "contextHash": "3a2b511cc4d8d269b23d5a9f1e15366cfe93045eacd9479aa1b55512001a3539",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Le mini-cliquet ONYX 1111A reçoit un carré 1/4 et mesure 140 mm pour 0,45 kg. Son échappement arrière comprend un silencieux ; il vise notamment les accès sous tableau de bord. La 1114A tourne plus vite, à 270 contre 240 tr/min, pour 0,54 kg. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.astrotools.com/product/onyx-1-4-palm-ratchet-wrench/",
+          "sha256": "115d0f9748abaffb67465ce9f086a2d1d33c6e2b2f83eb766eb0cf4e4246766a"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/derouilleur-a-aiguilles-astro-pneumatic-4320/",
+      "contentHash": "e11a34b2fac8f18648dec6314f15607cd5326a87deb2c0658376ab8f0e35233a",
+      "neighbors": [
+        "/outils-pneumatiques/derouilleur-a-aiguilles-deprag-sn10-831124a/"
+      ],
+      "contextHash": "c9adc633c809e13823bcb04eb20db0a60a6aba91eff0ebfe3700a5b8df65d3cc",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Le 4320 enlève rouille et calamine avec douze aiguilles de 3 mm × 7 pouces à 4 200 coups/min. La masse imprimée 12-1/3 lb / 1,14 kg est incohérente et reste écartée. La consommation de 0,12 m³/min ne précise ni régime ni pression de mesure. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.astrotools.com/product/in-line-needle-scaler/",
+          "sha256": "07c22debcfa26c90364a75e4f12766a5422fc32a1dcacb80816c2a42000a902f"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/meuleuse-astro-pneumatic-1205/",
+      "contentHash": "326444ee1aff79788ec79c745d7d223f2d01c0f39dadd85d0f265b728822ceff",
+      "neighbors": [
+        "/outils-pneumatiques/meuleuse-astro-pneumatic-1240/",
+        "/outils-pneumatiques/meuleuse-astro-pneumatic-201/"
+      ],
+      "contextHash": "dfbcb8bd3cc5c63f228fa2dc30dc637535b1916085ae32618021faa2c2eb4a63",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La meuleuse droite 1205 associe une pince de 1/4 pouce, un levier de sécurité et un échappement avant dans 120 mm. La 1240 mesure 146 mm et tourne à 20 000 tr/min ; la 201 est plus longue et évacue à l’arrière. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.astrotools.com/product/composite-body-1-4-mini-die-grinder-with-safety-lever-25-000rpm/",
+          "sha256": "e7bf6b5c4964aaa44fb615860197e5018bb180b0e7649ff58b6a8dd1f9ec4575"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/perceuse-astro-pneumatic-510aht/",
+      "contentHash": "17bc296935dbbb19db2f1778e3ed89fc160cd856044ea566dccfa9e3e6b0901c",
+      "neighbors": [
+        "/outils-pneumatiques/perceuse-astro-pneumatic-525c/",
+        "/outils-pneumatiques/perceuse-astro-pneumatic-527c/"
+      ],
+      "contextHash": "1dacdcf7ba333d88000c8ddcaffc804bfcbc283f3d8042fa10b7225f04587aab",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La 510AHT est la perceuse de 210 mm dont le fabricant distingue 1 600 tr/min à 90 psi et 1 800 à 120 psi. La 525C publie 1 800 tr/min, la 527C 500 : ces vitesses ne doivent pas être comparées sans les conditions. La pression admissible des accessoires et du réseau doit être respectée. Les 6 cfm sont moyens et ne qualifient pas le besoin en charge. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.astrotools.com/product/3-8-reversible-angle-head-air-drill-1-800rpm/",
+          "sha256": "7582f82992fd46148b8770a4e23364ed55e92e4c12b7d07918f63ae4a36d7240"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-astro-pneumatic-4008/",
+      "contentHash": "2787aab9a139e9462dbc39f40c0266f8b7808e211bcbbe5896ff9f88066557e4",
+      "neighbors": [
+        "/outils-pneumatiques/pistolet-peinture-astro-pneumatic-as6s/",
+        "/outils-pneumatiques/pistolet-peinture-astro-pneumatic-as7sp/"
+      ],
+      "contextHash": "c5a5da1998dde4a0f926adf7eee673b221188f03901792ad0bd7ed47bf9f66d2",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Le 4008 est un pistolet à buse 1,8 mm, pression de fonctionnement 50–60 psi et masse 1,36 kg. L’AS6S utilise une buse 1,4 mm et une autre plage de pression ; l’AS7SP garde 1,8 mm dans un autre corps. La viscosité, la buse et le réglage doivent convenir au produit appliqué. Les 7–12 cfm sont une consommation moyenne, sans débit continu déduit de la recommandation de compresseur 3 hp. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.astrotools.com/product/spray-gun-with-cup-red-handle-1-8mm-nozzle/",
+          "sha256": "bf799b9f26c16a69fab1fb52ec2081f27276ea362a05aafd9005c11fac90a12a"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-lvlp-astro-pneumatic-evo4014/",
+      "contentHash": "5b4f59471e5198480a0f2732bae41d8a984fc58915ae4921b4bb404f1b62861e",
+      "neighbors": [
+        "/outils-pneumatiques/pistolet-peinture-lvlp-astro-pneumatic-evo4018/"
+      ],
+      "contextHash": "69df58533bc952465113b951b9d140347c9e6448f7dd06ea4eabafab381283a8",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "L’EVO4014 est le pistolet LVLP à buse 1,4 mm et godet 600 ml, pour une pression de fonctionnement publiée de 25 psi. L’EVO4018 remplace la buse par 1,8 mm ; la sélection doit suivre le produit et sa viscosité. Les autres buses proposées ne sont pas toutes montées simultanément. Les 9,6–9,8 cfm sont moyens ; aucun débit continu n’est tiré de la recommandation 3 hp. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.astrotools.com/product/lvlp-gravity-feed-spray-gun-with-1-4mm-nozzle-suitable-for-waterborne-materials/",
+          "sha256": "5279dc0587486e0aa5eca1794e351a5a2ef466c9e75f278abd75980ba54212a0"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/polisseuse-astro-pneumatic-247p/",
+      "contentHash": "671e1d26288f2e9fd16c2fbd42bb669c1079dbc8b7e2b4132e69014f3e46422f",
+      "neighbors": [
+        "/outils-pneumatiques/polisseuse-astro-pneumatic-250/"
+      ],
+      "contextHash": "de376124e73991f1e311fafe23686fdb92532434f67ff8a9dfb5f3bb734e6d51",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La 247P est la polisseuse 7 pouces à 2 500 tr/min, broche 5/8-11 et longueur 375 mm. La référence 250 garde la vitesse et le diamètre avec un corps plus court de 345 mm. Le plateau doit être conçu pour la vitesse et le filetage choisis. Les 11 cfm sont moyens, avec une plage de service 90–120 psi qui ne précise pas leur pression de mesure. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.astrotools.com/product/7-angle-head-polisher-2-500rpm/",
+          "sha256": "41d57a0cc0d03876424921dcf3f569cef8dc64fbd135bbe09efea95b2608c767"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-bande-astro-pneumatic-3035/",
+      "contentHash": "2a7085e8ef1c68786d01011060d6036032a79ee81e7f05505988d39ecb96429f",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-bande-astro-pneumatic-3039/"
+      ],
+      "contextHash": "222fea364fd8aa10482dd46de73791a9793afca37f685dea19ed57dbc9f9d6ca",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La 3035 est la ponceuse à bande 0,5 hp à 16 000 tr/min, de 430 mm et 1,4 kg. La 3039 garde la vitesse publiée dans un corps de 370 mm. L’accès au travail et la géométrie de bande doivent être contrôlés avant les accessoires. Les 4 cfm sont une consommation moyenne ; la consigne 90 psi ne les transforme pas en consommation en charge. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.astrotools.com/product/air-belt-sander-3-4-x-20-5-with-2-belts-80-100/",
+          "sha256": "7e8d9a42f2c89fdd1fb7fd41307756503854c70966208977f720ca25f7b89fe6"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-rotative-astro-pneumatic-245s/",
+      "contentHash": "140eae130e7c1bf5501d98a26ada0121d1c352393248ae41514e628e44497028",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-rotative-astro-pneumatic-249/",
+        "/outils-pneumatiques/ponceuse-rotative-astro-pneumatic-320/"
+      ],
+      "contextHash": "5e110708806525c858b0e5b555c24fb1ef712ab80b140675826b9cea1e45211c",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La 245S est la ponceuse rotative 7 pouces à 4 500 tr/min et broche 5/8-11, longue de 375 mm. La 249 tourne à 4 000 tr/min dans un corps de 345 mm ; la 320 est un petit format à autre vitesse. L’accessoire doit convenir au diamètre et à la vitesse admissible. Les 11 cfm sont moyens, sans pression de mesure unique reliée à la plage de service 90–120 psi. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.astrotools.com/product/7-angle-head-sander-4-500rpm/",
+          "sha256": "23e6e6b6fd569935c2c309effb8ce90378ad30162194638fa19266dac4bae853"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-vibrante-astro-pneumatic-888s/",
+      "contentHash": "b356c6592689b1f891ed7be6a4434fd44ffc5c3ac452cc616eaba56e8ed9884e",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-vibrante-kuani-ki-6671/"
+      ],
+      "contextHash": "35693aade150696433169a6b659250f865860d4eea6174c902c6801094db2e9a",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La 888S est la ponceuse rectiligne courte à semelle 2¾ × 11 pouces, 3 000 courses/min, longueur 12 pouces et masse 1,9 kg. La KUANI KI-6671 utilise une semelle 64 × 407 mm et 2 500 courses/min : la surface d’appui et la cadence diffèrent. Le mouvement rectiligne ne remplace pas une orbitale. Les 4 cfm ne sont pas reliés à une pression de mesure et restent hors dimensionnement. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.astrotools.com/product/short-straight-line-sander/",
+          "sha256": "e06f0b1d44c4e74b2619f82f717f6fff9e722bd57572111acc416a796984e869"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/scie-astro-pneumatic-936/",
+      "contentHash": "f05d5b470f11d68b2282de9e1e2803e1f0d3138e9de38a99fef4bd5958bb438b",
+      "neighbors": [
+        "/outils-pneumatiques/scie-nile-af7/",
+        "/outils-pneumatiques/scie-sealey-sa347/"
+      ],
+      "contextHash": "f73ba86b090d6688dd83f0055c0c1cc84989b976fa25e7a675aa98a181cf3dfc",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "La 936 est une scie alternative de 310 mm et 3 lb, à course 10 mm et cadence 7 000/min. La capacité publiée de 1/4 pouce ne doit pas être étendue à tout matériau sans prescription de lame. L’AF7 et la SA347 ont d’autres gabarits et cadences. La fiche ne fournit pas de point consommation–pression utilisable ; le moteur reste non conclusif. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.astrotools.com/product/onyx-gear-driven-heavy-duty-air-saw/",
+          "sha256": "0610a13ce769ac9be381122f4e4c13207c6394a45bb7d8a90765b5ce79b698b9"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/swan-sdu-307c-1/",
+      "contentHash": "6cb9a4b969972fe477e378d04008da5110f541dc4c391b9233e957dc4da4c488",
+      "neighbors": [
+        "/compresseurs/swan-sdu-310c-1/",
+        "/compresseurs/swan-sdu-310cd/"
+      ],
+      "contextHash": "9e51bab33588264183ceeffb6b98a63dcafd03ccad53fe13676614a43316b8d5",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Le SDU307C-1 est le groupe en caisson 5,5 kW dont le tableau donne 730 L/min FAD à 8 kgf/cm², soit environ 7,845 bar. Le SDU310C-1 fournit 885 L/min pour 7,5 kW ; le SDU310CD avec traitement annonce 793. L’équipement et la puissance sont donc distingués à la même pression de travail. Aucun réservoir ni taux de marche absent du tableau n’est ajouté. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+          "sha256": "396d600159a343c2ac62ecd25e6eca0a457628ac56c765234ee1d4d25b0d6e11"
+        },
+        {
+          "url": "https://www.swan-aircompressor.com/en/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZzBQIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f21f3a426d479c9a27849c7f499ea9b940b557b7/Oil-less%20Compressor%20Series.pdf?disposition=preview",
+          "sha256": "ba27dceb7bc711898ad3b2f485fdb7734a1487fb2494d253ac319020abe9821b"
+        },
+        {
+          "url": "https://www.swan-aircompressor.com/en/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZzBQIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f21f3a426d479c9a27849c7f499ea9b940b557b7/Oil-less%20Compressor%20Series.pdf?disposition=preview#page=6",
+          "sha256": "ba27dceb7bc711898ad3b2f485fdb7734a1487fb2494d253ac319020abe9821b"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/swan-sdu-310c-1/",
+      "contentHash": "df0f0a8678abe7542663df1b6f8ecbe1d9c575987f69eadaa43ae7bd19eb18ad",
+      "neighbors": [
+        "/compresseurs/swan-sdu-307c-1/",
+        "/compresseurs/swan-sdu-310cd/"
+      ],
+      "contextHash": "2162ffbfe7922d1598ce7b365220c9bf71545c9530d04caf161383d0ec479ed2",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Le SDU310C-1 est le groupe en caisson 7,5 kW, déclaré à 885 L/min FAD sous 8 kgf/cm², environ 7,845 bar. Le SDU310CD avec séchage et filtration publie 793 L/min ; le SDU307C-1 de 5,5 kW publie 730. Le traitement d’air ne permet pas de reprendre automatiquement le débit de la version C-1. Le stockage et le cycle du groupe restent non renseignés. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+          "sha256": "396d600159a343c2ac62ecd25e6eca0a457628ac56c765234ee1d4d25b0d6e11"
+        },
+        {
+          "url": "https://www.swan-aircompressor.com/en/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZzBQIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f21f3a426d479c9a27849c7f499ea9b940b557b7/Oil-less%20Compressor%20Series.pdf?disposition=preview",
+          "sha256": "ba27dceb7bc711898ad3b2f485fdb7734a1487fb2494d253ac319020abe9821b"
+        },
+        {
+          "url": "https://www.swan-aircompressor.com/en/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZzBQIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f21f3a426d479c9a27849c7f499ea9b940b557b7/Oil-less%20Compressor%20Series.pdf?disposition=preview#page=6",
+          "sha256": "ba27dceb7bc711898ad3b2f485fdb7734a1487fb2494d253ac319020abe9821b"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/sullivan-palatek-sp11-40/",
+      "contentHash": "6d20c1b3f28899b1be433e73c13c487f3559db47f411058145bd55673dd7c81e",
+      "neighbors": [
+        "/compresseurs/sullivan-palatek-sp11-25/",
+        "/compresseurs/sullivan-palatek-sp11-40vfd/"
+      ],
+      "contextHash": "ea7c080815f2ad19d8fc234d1fb36480c4e24ebd548f063e2ccbd0b9ab0f847e",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Le SP11-40 fixe est déclaré à 158,1 cfm à 125 psig, environ 4 476,893 L/min à 8,618 bar après conversion conservée. Le SP11-40VFD publie 162,7 cfm au même point et permet une autre régulation ; le SP11-25 utilise une autre puissance. Les autres configurations de pression ne sont pas des points automatiquement disponibles sur ce groupe. La puissance reste en hp natifs et aucun réservoir optionnel n’est imposé. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+          "sha256": "396d600159a343c2ac62ecd25e6eca0a457628ac56c765234ee1d4d25b0d6e11"
+        },
+        {
+          "url": "https://www.sullivan-palatek.com/product-detail/sp11-series-25-40hp/",
+          "sha256": "3ab47ea7b60413160bef0a8d6beb29439b47d6f56aadbb8850bf4710e3146bcc"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/sullivan-palatek-sp11-40vfd/",
+      "contentHash": "a6660a9ab6ee4e2f16744b7a7a0840c5d6cb411c6b9be9f7f21b4b80c743cf8e",
+      "neighbors": [
+        "/compresseurs/sullivan-palatek-sp11-25/",
+        "/compresseurs/sullivan-palatek-sp11-40/"
+      ],
+      "contextHash": "cb9eb53657689a50074081bd8c4ab33fdf3526220c0f6f759bca34a00730fb21",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Le SP11-40VFD est la version à variateur du groupe 40 hp, déclarée à 162,7 cfm à 125 psig, environ 4 607,151 L/min à 8,618 bar. Le SP11-40 fixe annonce 158,1 cfm au même point. Le maximum de capacité n’est pas un débit moyen de modulation ; les autres pressions proposées relèvent de configurations distinctes. La puissance reste en hp et le stockage demeure à définir. Requalification du16novembre après intégration du corpus commun : contenu complet et voisins explicites inchangés, documents primaires complets et empreintes du jour contrôlés ; les changements de constructeurs concernent les réserves et conservent les décisions non conclusives. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8",
+          "sha256": "396d600159a343c2ac62ecd25e6eca0a457628ac56c765234ee1d4d25b0d6e11"
+        },
+        {
+          "url": "https://www.sullivan-palatek.com/product-detail/vfd-variable-frequency-compressor-series/",
+          "sha256": "2e5be9601fc066bfe820aeaffe84281cb9a326a8475150ed1325e0ba7354a7f6"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/fiac-ax-303bd-dry-13-400-50-ce/",
+      "contentHash": "0d66ef79e1ee178b22c7e3507d37c0e33a53f235e5f3359d5aca37e15e2bb43d",
+      "neighbors": [
+        "/compresseurs/fiac-ax-303bd-dry-8-400-50-ce/"
+      ],
+      "contextHash": "718edfd64b61ace0fd83894ed21dfa9c39614d9c532c238cf335a59628e7b672",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Fiche exacte 4152026249 et tableau p35 relus, avec la version voisine 8/13 bar. Retrait de powerKw ambigu, conservation des deux puissances et des FAD déclarés dans les spécifications ; fadCurve vide et dutyCycle absent. Apport : distinguer les deux variantes DRY sans proposer de verdict sur un point FAD non qualifié. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://shop.fiac.it/en-IT/products/4152026249/ax-303bd-dry-13-40050-ce",
+          "sha256": "82944512027057b16136ed7ec9fc486a476f8771edb8de7bdc825360a6ca27f5"
+        },
+        {
+          "url": "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf",
+          "sha256": "55421a11ceb9c201bd873f1d0e4596ea6682b7fd68fc5e03e0c380ddf879ac85"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/fiac-ax-303bd-dry-8-400-50-ce/",
+      "contentHash": "03421268914183e04902ca50f0d4e746d5a25cc08b44d843bacb7a4ecbe9d1ff",
+      "neighbors": [
+        "/compresseurs/fiac-ax-303bd-dry-13-400-50-ce/"
+      ],
+      "contextHash": "b599346a789faf626a06bbe003a0fe3f6401c5a36548c64adf422ffece2f93b1",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Fiche exacte 4152026247 et tableau p35 relus, avec la version voisine 8/13 bar. Retrait de powerKw ambigu, conservation des deux puissances et des FAD déclarés dans les spécifications ; fadCurve vide et dutyCycle absent. Apport : distinguer les deux variantes DRY sans proposer de verdict sur un point FAD non qualifié. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://shop.fiac.it/en-IT/products/4152026247/ax-303bd-dry-8-40050-ce",
+          "sha256": "28300c3c7bde52ca01a130f0dcc288be08e81988cad133a6af5cd8339c8d7bfd"
+        },
+        {
+          "url": "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf",
+          "sha256": "55421a11ceb9c201bd873f1d0e4596ea6682b7fd68fc5e03e0c380ddf879ac85"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-orbitale-dynabrade-59040/",
+      "contentHash": "b5ea74d5fae6f36081ca36b1ab17cabdb4a3254c1933d1cda037b1b89727e671",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-orbitale-dynabrade-59043/",
+        "/outils-pneumatiques/ponceuse-orbitale-dynabrade-59044/"
+      ],
+      "contextHash": "5e86d8afa5689f02dda508b32d0b8a090e74ea4c284c2e472b3dd1d8b43a77f8",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Fiche exacte, PD11.25 et PD14.22R relus avec table p4 et lignes 59040/59043/59044. DemandModel devient variable-volume, maintenant insufficient_data ; les débits, masses et arrondis contradictoires restent visibles. Apport : choix du captage et du plateau, pas garantie de débit pour une révision non identifiée. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://eu.dynabrade.com/assets/bcb9f265-171e-4e94-ac08-f1a200383886/4074401012-pd1422r.pdf",
+          "sha256": "7080e1d42b43a829d264a4d2698681647bc5a253f3d1ae83ef295585e3452c2e"
+        },
+        {
+          "url": "https://eu.dynabrade.com/assets/fa93602f-70b6-4dc8-993f-6a245e0d7286/4074397578-pd1125.pdf",
+          "sha256": "c74f95fdc9d682d43ab09fbbf8a3a47e31057d0d6008810c763ea6fbdedf9faa"
+        },
+        {
+          "url": "https://eu.dynabrade.com/en/catalog/6-152-mm-dia-non-vacuum-dynorbital-spirit-random-orbital-sander~e5a782f4-b186-433b-8780-0cf3e59163e9",
+          "sha256": "193e90c4b55897056f9845ac27498c25c0771fd87bab22630a82fc7a92580307"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/boulonneuse-zipp-zat400dr-cmplt/",
+      "contentHash": "b1d7a6122f90a88a101191442197279d963d1d694642cd013a60c1a6ed2a43a4",
+      "neighbors": [
+        "/outils-pneumatiques/boulonneuse-zipp-zat1800cmplt/",
+        "/outils-pneumatiques/boulonneuse-zipp-zat400cmplt/"
+      ],
+      "contextHash": "55752d4a2b70e981175f16cf0ba3a97c5657b47836666e9e630afd507b0043cc",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Page fabricant et PDF39 relus, dont annotation explicite ZATXXXDR-CMPLT, cotes A1/A et lignes ZAT400/ZAT1800. Différence utile de lecture/réglage motivée sans prétendre à un couple supérieur à ZAT400CMPLT. Moteur variable-volume inchangé et non conclusif. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.airtools.com.tw/wp-content/uploads/ZIPP-TOOL-General-Catalog.pdf",
+          "sha256": "a775ada40d09420c6d5c77f5da66defb2adf2c36c5e32f2a047afa188fd38df3"
+        },
+        {
+          "url": "https://www.airtools.com.tw/zat-pneumatic-torque-wrench/",
+          "sha256": "ac3d08effa1ff74c4d9f60ef2748bfe288245fb803cdc2bc31fa0d6d39b20ad9"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/marteau-a-river-puma-at-2210/",
+      "contentHash": "a897f169302a7360c3d5bd55d20ab546d0e6a67d63a71d545e86e212c30b293c",
+      "neighbors": [
+        "/outils-pneumatiques/marteau-a-river-puma-at-2214/",
+        "/outils-pneumatiques/marteau-a-river-puma-at-2215/"
+      ],
+      "contextHash": "31f25323dfd0af806c7c5a25397f39313216d159d692c15b2b5ec9a1c03d2719",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Table complète relue pour AT2210/2214/2215. Les données stables d’emmanchement, course, cadence et masse distinguent la référence ; la longueur divergente est regroupée dans un champ explicitement incertain, sans normalisation. Le moteur reste variable-volume et aucun volume par coup n’est dérivé. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.pumaair.com/product-Riveting-Hammer-straight-RivetingHammer-straight.html",
+          "sha256": "6b0f26222bcb8ded9e4a8e7f643604c9b92f4e3d4fccbb146e9f35f178937b29"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-orbitale-astro-pneumatic-314/",
+      "contentHash": "568da1c687471b2de6254843acbfc33b563df47acf6a98e2df6a07802de929e0",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-orbitale-astro-pneumatic-321/"
+      ],
+      "contextHash": "3904484fc6c7b8f9673d40a2de4d7722c05ce92878755299c78f652fe2b05b77",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Fiche 314, flyer officiel complet p1 et fiche voisine321 relus. Le défaut d’unité d’orbite reste visible dans la spécification active, et les régimes de consommation ne sont pas fusionnés. Valeur propre : semelle rectangulaire contre petits plateaux circulaires, avec moteur variable-volume non conclusif. Requalification du 16 novembre après intégration des deux AIRMAN : contenu complet et voisins explicites inchangés, sources complètes et empreintes du jour contrôlées ; les champs moteur des AIRMAN restent identiques et leurs corrections documentaires sont attestées. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.astrotools.com/product/onyx-jitterbug-random-orbit-air-palm-sander/",
+          "sha256": "523f5f21fb6fb79b1dd773a45b39ed35d567aaacfdfd6e8b0da68fcb12d69504"
+        },
+        {
+          "url": "https://www.astrotools.com/product/onyx-jitterbug-random-orbit-air-palm-sander/?attachment_id=2829&download_file=k554ozjbgpn80",
+          "sha256": "4ed5972a15c5fa56480ab4c402541c8244c322c641baa819ff2366bd06e94ea6"
+        },
+        {
+          "url": "https://www.astrotools.com/product/onyx-micro-2-random-orbit-sander-hook-loop-3mm-orbit/",
+          "sha256": "27e3bea25e9e8490bb23431ec839cce06ed5c0ddf768582542e9e8dfb95e80d3"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/airman-pds185sc-5c5/",
+      "contentHash": "128b56ed9497e338da28065780884d915cccd972bfe72ed1001ed8d788f1d556",
+      "neighbors": [
+        "/compresseurs/airman-pds185sc-7c5/"
+      ],
+      "contextHash": "4482febea6873fbeb556f6324999cac74ae77f00ed84d882c8bb1dcd542bf71b",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Fiche exacte AIRMAN Asia 284, tableau complet et voisine airman-pds185sc-7c5 relus. FAD de 5,2 m³/min et pression de fonctionnement de 0,7 MPa sont appariés dans la même ligne, soit 5 200 L/min à 7 bar. Les masses à sec/en service restent séparées. La longueur1 970 mm de la fiche Asia diffère du1 850 mm historique japonais, conservé comme transcription datée ; aucun arbitrage silencieux entre marchés. Les5C5/7C5 diffèrent par hauteur 1 080/1 300 mm, masses 765 (860)/835 (935) kg et carburant 90/92 L, pas par le FAD. Le service continu, la cuve et le maximum mécanique restent non qualifiés. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://airman-asia.com/product.php?catid=1&id=284",
+          "sha256": "06ee444eae43df5b006b124538c918606f45fa27d99925649c52c1297eee8ede"
+        },
+        {
+          "url": "https://airman-asia.com/series.php?catid=1&sub_catid=263",
+          "sha256": "97c85876d11ea4e45e27ce6b9501164720be83067b6fbd126ce33ffddf6c8506"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/airman-pds185sc-7c5/",
+      "contentHash": "a8b4adef8bdc0f58dc157bd44bf7b64d0a32c06ac5d4a4dc5397cbe510fc285e",
+      "neighbors": [
+        "/compresseurs/airman-pds185sc-5c5/"
+      ],
+      "contextHash": "5168339763b960b907fa945e91b896d8d0facdfeb1b7802d71aecf8597610aa5",
+      "rulesHash": "415d5f512d71834227d0635fd1db85df25cacce6013efda631fd3ffc0a6bdf4c",
+      "sourceReleaseSha": "15a6804835b66d62165af7598496f44e1890f4eb",
+      "reviewedAt": "2026-11-17T07:34:43.124Z",
+      "note": "Fiche exacte AIRMAN Asia 285, tableau complet et voisine airman-pds185sc-5c5 relus. FAD de 5,2 m³/min et pression de fonctionnement de 0,7 MPa sont appariés dans la même ligne, soit 5 200 L/min à 7 bar. Les masses à sec/en service restent séparées. La longueur1 970 mm de la fiche Asia diffère du1 850 mm historique japonais, conservé comme transcription datée ; aucun arbitrage silencieux entre marchés. Les5C5/7C5 diffèrent par hauteur 1 080/1 300 mm, masses 765 (860)/835 (935) kg et carburant 90/92 L, pas par le FAD. Le service continu, la cuve et le maximum mécanique restent non qualifiés. Nouvelle revue documentaire du 17 novembre : corps GET et différences actuelles examinés ; les changements lus concernent navigation, suggestions de produits, formulaires, métadonnées commerciales ou encodage, sans changement des passages techniques applicables. Le candidat complet, ses champs moteur, limites et voisins explicites sont inchangés. La qualification est réenregistrée avec les empreintes des corps actuels ; les anciens reçus sont conservés.",
+      "sourceDocuments": [
+        {
+          "url": "https://airman-asia.com/product.php?catid=1&id=285",
+          "sha256": "e409b224b3ef6ea05eafa380436b4b531fe7b81a1b48fce7afdac694a07a5aef"
+        },
+        {
+          "url": "https://airman-asia.com/series.php?catid=1&sub_catid=263",
+          "sha256": "97c85876d11ea4e45e27ce6b9501164720be83067b6fbd126ce33ffddf6c8506"
+        }
+      ]
     }
   ]
 }
