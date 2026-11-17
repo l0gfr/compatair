@@ -177,7 +177,6 @@ async function walk(directory) {
 		const file = join(directory, name);
 		const info = await lstat(file);
 		const label = relative(root, file);
-	errors.push(...browserTrackingErrors(html, 'html', label));
 		if (info.isSymbolicLink()) errors.push(`${label}: lien symbolique interdit dans l’artifact`);
 		else if (info.isDirectory()) await walk(file);
 		else if (!info.isFile()) errors.push(`${label}: type de fichier spécial interdit dans l’artifact`);
