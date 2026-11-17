@@ -9,9 +9,11 @@ import { editorialPriority } from './editorial-priority.mjs';
 import { assessGuideValue, assessProductValue } from './page-value.mjs';
 import { applyEditorialHolds } from './indexation-editorial-holds.mjs';
 import { collectPcpEditorialCandidate } from './pcp-editorial.mjs';
+import { parseCatalogProductSource } from './catalog-tooling.mjs';
 
-// A worker exits after each batch, releasing Node's non-evictable module cache.
-// The source order and all candidate fields remain identical to the direct loader.
+// Keep each batch within the existing worker memory bound. Most product files use
+// versioned JSON envelopes: decoding them avoids compiling thousands of data-only
+// TypeScript modules and retaining their non-evictable Node/V8 module state.
 export const PRODUCT_BATCH_SIZE = 1024;
 const WORKER_HEAP_LIMIT_BYTES = 288 * 1024 * 1024;
 export function productCandidates(product, kind) {
@@ -51,7 +53,12 @@ if (!isMainThread && workerData?.task === 'indexation-product-batch') {
  if (getHeapStatistics().heap_size_limit > WORKER_HEAP_LIMIT_BYTES) throw new Error('SEO worker heap exceeds 288 MiB; inherited V8 memory flags override its resource limit.');
  const candidates = [];
  for (const file of workerData.files) {
-  const { default: product } = await import(pathToFileURL(join(workerData.root, 'src/data/products', workerData.kind, file)).href);
+  const source = await readFile(join(workerData.root, 'src/data/products', workerData.kind, file), 'utf8');
+  // Legacy factory modules retain their native semantics. A typed JSON envelope
+  // must parse strictly; malformed data never falls back to code evaluation.
+  const product = source.startsWith('import type {')
+   ? parseCatalogProductSource(workerData.kind, source)
+   : (await import(pathToFileURL(join(workerData.root, 'src/data/products', workerData.kind, file)).href)).default;
   candidates.push(...productCandidates(product, workerData.kind));
  }
  parentPort.postMessage(candidates);

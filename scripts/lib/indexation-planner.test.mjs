@@ -9,6 +9,7 @@ import { indexationBuildProjection, writeIndexationArtifact } from './indexation
 import { analyzeCandidates, editorialText, planIndexation, productCandidate } from './indexation-planner.mjs';
 import { createIndexationPolicy, validateManifest, validatePolicy } from './indexation-policy.mjs';
 import { readLiveIndexation } from './indexation-live.mjs';
+import { buildCatalogProductSource } from './catalog-tooling.mjs';
 import { pcpEditorialInputPaths } from './pcp-editorial.mjs';
 import { pcpEditorial } from '../../src/data/pcp-editorial.ts';
 import { pcpReferences, pcpGuides } from '../../src/data/pcp.ts';
@@ -97,7 +98,9 @@ describe('bounded planner preserves the pinned admission decisions', () => {
 						: await readFile(new URL(`../../${path}`, import.meta.url), 'utf8');
 				await writeFile(target, contents);
 			}
-			for (let i = 0; i < 1025; i++) await writeFile(join(directory, 'src/data/products/compressors', `${String(i).padStart(4, '0')}.ts`), `export default ${JSON.stringify({ id: String(i), slug: `ref-${i}`, brand: 'Fixture', model: String(i), evidence: [], fadCurve: [], cutInPressureBar: 4, cutOutPressureBar: 8 })};`);
+			for (let i = 0; i < 1025; i++) await writeFile(join(directory, 'src/data/products/compressors', `${String(i).padStart(4, '0')}.ts`), buildCatalogProductSource('compressors', { id: String(i), slug: `ref-${i}`, brand: 'Fixture', model: String(i), evidence: [], fadCurve: [], cutInPressureBar: 4, cutOutPressureBar: 8 }));
+			// Native imports remain available for the historical factory modules.
+			await writeFile(join(directory, 'src/data/products/compressors/0000.ts'), `export default ${JSON.stringify({id:'0',slug:'ref-0',brand:'Fixture',model:'0',evidence:[],fadCurve:[],cutInPressureBar:4,cutOutPressureBar:8})};`);
 			const moduleUrl = new URL('./indexation-candidates.mjs', import.meta.url).href;
 			const code = `import {collectIndexationCandidates} from ${JSON.stringify(moduleUrl)}; const samples=[];const rows=await collectIndexationCandidates(${JSON.stringify(directory)},{now:new Date(${JSON.stringify(now.toISOString())}),onProgress:x=>samples.push(x.products)});console.log(JSON.stringify({paths:rows.map(x=>x.path),samples}));`;
 			const { stdout } = await promisify(execFile)(process.execPath, ['--input-type=module', '-e', code], { timeout: 30000 });
@@ -105,6 +108,9 @@ describe('bounded planner preserves the pinned admission decisions', () => {
 			expect(result.paths).toEqual([...Array.from({ length: 1025 }, (_, i) => `/compresseurs/ref-${i}/`), '/pcp/']);
 			expect(result.samples).toEqual([1024, 1025]);
 			await expect(promisify(execFile)(process.execPath, ['--max-old-space-size=4096', '--input-type=module', '-e', code], { timeout: 30000 })).rejects.toThrow('SEO worker heap exceeds');
+			// A malformed typed envelope must fail instead of becoming executable code.
+			await writeFile(join(directory, 'src/data/products/compressors/0000.ts'), buildCatalogProductSource('compressors', {id:'0'}).replace('export default product;', 'throw new Error("must not execute"); export default product;'));
+			await expect(promisify(execFile)(process.execPath, ['--input-type=module', '-e', code], { timeout: 30000 })).rejects.toThrow('Format du produit typé altéré');
 		} finally { await rm(directory, { recursive: true, force: true }); }
 	}, 40000);
 });

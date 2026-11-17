@@ -1,3 +1,4 @@
+import { buildCatalogProductSource } from './catalog-tooling.mjs';
 import { describe, expect, it } from 'vitest';
 import { mkdtemp, mkdir, readFile, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
@@ -154,7 +155,7 @@ describe('candidate collection applies the mandatory registry', () => {
 		const root = await mkdtemp(join(tmpdir(), 'editorial-hold-'));
 		for (const directory of ['config', 'src/data/products/tools', 'src/data/products/compressors', 'src/content/guides']) await mkdir(join(root, directory), { recursive: true });
 		await writeFile(join(root, 'config/seo-query-panel.json'), JSON.stringify({ queries: [] }));
-		await writeFile(join(root, 'src/data/products/tools/target.ts'), `export default ${JSON.stringify(products[0])};`);
+		await writeFile(join(root, 'src/data/products/tools/target.ts'), buildCatalogProductSource('tools', products[0]));
 		// Synthetic historical snapshot for registry isolation. These dates do
 		// not claim that the current PCP sources were checked in October.
 		const sourceDate = '2026-10-04';
