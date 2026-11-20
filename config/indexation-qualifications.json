@@ -137048,6 +137048,50 @@
           "sha256": "2e5be9601fc066bfe820aeaffe84281cb9a326a8475150ed1325e0ba7354a7f6"
         }
       ]
+    },
+    {
+      "path": "/compresseurs/airman-pds185sc-5c5/",
+      "contentHash": "128b56ed9497e338da28065780884d915cccd972bfe72ed1001ed8d788f1d556",
+      "neighbors": [
+        "/compresseurs/airman-pds185sc-7c5/"
+      ],
+      "contextHash": "ee26f77ec1964e2d0b6755bc0422be4a7d7a936bd30607a9c05a52d5d79fea36",
+      "rulesHash": "c6420da5d37883301f7e5f4fc034d320b9400b11d6cfd8f270f7610bc47c63f2",
+      "sourceReleaseSha": "6e67e42167b69ead84312060c37e198f3f170027",
+      "reviewedAt": "2026-11-20T07:20:40.067Z",
+      "note": "PDS185SC-5C5, fiche AIRMAN Asia 284, et ligne du tableau After Cooler Type relues. Free Air Delivery 5,2 m³/min et Rated Operating Pressure 0,7 MPa, soit le seul point de 5 200 L/min à 7 bar du champ de calcul. La fiche Asia distingue caisse de 1 970 × 950 × 1 080 mm, 765 kg à sec et 860 kg en service, carburant 90 L. Le 7C5 a la même alimentation en air et diffère par hauteur, masse et carburant. Le relevé japonais de longueur 1 850 mm reste historique. Les 34,9 kW à 3 000 tr/min décrivent le diesel Yanmar ; pas de puissance du groupe, de maximum mécanique, de cuve ni de taux de marche ajouté. Choix utile : encombrement et manutention pour le même point de débit.",
+      "sourceDocuments": [
+        {
+          "url": "https://airman-asia.com/product.php?catid=1&id=284",
+          "sha256": "0aeee702e18324c7da783885d3c3327a014b5f780b313b5a91103cbd7980b2ae"
+        },
+        {
+          "url": "https://airman-asia.com/series.php?catid=1&sub_catid=263",
+          "sha256": "740ca28ccc444bb1c62c3cdb4103603829ced8723961cd4cc49eba1a5aad57cb"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/airman-pds185sc-7c5/",
+      "contentHash": "a8b4adef8bdc0f58dc157bd44bf7b64d0a32c06ac5d4a4dc5397cbe510fc285e",
+      "neighbors": [
+        "/compresseurs/airman-pds185sc-5c5/"
+      ],
+      "contextHash": "24314d86d769b68dd45d7c465633c4bc1f0ae525993acd1ee090c0078f161679",
+      "rulesHash": "c6420da5d37883301f7e5f4fc034d320b9400b11d6cfd8f270f7610bc47c63f2",
+      "sourceReleaseSha": "6e67e42167b69ead84312060c37e198f3f170027",
+      "reviewedAt": "2026-11-20T07:20:40.067Z",
+      "note": "PDS185SC-7C5, fiche AIRMAN Asia 285, et ligne du tableau After Cooler Type relues. Free Air Delivery 5,2 m³/min et Rated Operating Pressure 0,7 MPa, correspondant au point moteur de 5 200 L/min à 7 bar. Longueur Asia 1 970 mm et largeur 950 mm comme le 5C5, hauteur 1 300 mm contre 1 080 mm, masse 835 kg à sec et 935 kg en service, carburant 92 L contre 90 L. La transcription japonaise de 1 850 mm reste visible et distincte. La valeur 34,9 kW à 3 000 tr/min concerne le diesel, et la pression nominale ne documente pas un maximum mécanique. Les champs de cuve et de service ne sont pas renseignés. Choix utile : hauteur et masse en service malgré le débit identique.",
+      "sourceDocuments": [
+        {
+          "url": "https://airman-asia.com/product.php?catid=1&id=285",
+          "sha256": "b04d15f1e8be574b51f1de98d9c2a4fe84fb4c602b907c6fde6cd57a0caf1111"
+        },
+        {
+          "url": "https://airman-asia.com/series.php?catid=1&sub_catid=263",
+          "sha256": "740ca28ccc444bb1c62c3cdb4103603829ced8723961cd4cc49eba1a5aad57cb"
+        }
+      ]
     }
   ]
 }
