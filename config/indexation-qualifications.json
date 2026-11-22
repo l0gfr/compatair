@@ -137092,6 +137092,119 @@
           "sha256": "740ca28ccc444bb1c62c3cdb4103603829ced8723961cd4cc49eba1a5aad57cb"
         }
       ]
+    },
+    {
+      "path": "/compresseurs/fiac-ax-303bd-dry-13-400-50-ce/",
+      "contentHash": "0d66ef79e1ee178b22c7e3507d37c0e33a53f235e5f3359d5aca37e15e2bb43d",
+      "neighbors": [
+        "/compresseurs/fiac-ax-303bd-dry-8-400-50-ce/"
+      ],
+      "contextHash": "a567825e0b09206345648848cd275850e2dac688adfdd8f1d144d2c6f959c0b9",
+      "rulesHash": "c6420da5d37883301f7e5f4fc034d320b9400b11d6cfd8f270f7610bc47c63f2",
+      "sourceReleaseSha": "71909578a6b32b648b3dca9f0ca41ff2a9070ee8",
+      "reviewedAt": "2026-11-22T10:02:08.738Z",
+      "note": "Fiche constructeur 4152026249 relue face à 4152026247. Le tableau de la fiche indique 13 bar maximum de service, une capacité FAD annoncée de 2 770 L/min, un sécheur et aucune cuve intégrée. Le modèle 8 bar annonce 3 650 L/min. Les 22,4 kW de la fiche et les 22 kW du catalogue p35, dont le corps complet est identique à la lecture documentée, restent distincts. Pas de pression de mesure établie pour le FAD. Courbe vide, puissance normalisée et taux de marche absents. Apport : choisir la variante DRY à pression de service plus élevée sans utiliser son FAD annoncé comme point de calcul.",
+      "sourceDocuments": [
+        {
+          "url": "https://shop.fiac.it/en-IT/products/4152026249/ax-303bd-dry-13-40050-ce",
+          "sha256": "17a2cd37c36ef4214acba84c15212a76c3e188a8a52dfd79224d9febc9116720"
+        },
+        {
+          "url": "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf",
+          "sha256": "55421a11ceb9c201bd873f1d0e4596ea6682b7fd68fc5e03e0c380ddf879ac85"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/fiac-ax-303bd-dry-8-400-50-ce/",
+      "contentHash": "03421268914183e04902ca50f0d4e746d5a25cc08b44d843bacb7a4ecbe9d1ff",
+      "neighbors": [
+        "/compresseurs/fiac-ax-303bd-dry-13-400-50-ce/"
+      ],
+      "contextHash": "402485e1e213c252564d9bd71df221c168cc8e86f146c058ebea4ae6435bc935",
+      "rulesHash": "c6420da5d37883301f7e5f4fc034d320b9400b11d6cfd8f270f7610bc47c63f2",
+      "sourceReleaseSha": "71909578a6b32b648b3dca9f0ca41ff2a9070ee8",
+      "reviewedAt": "2026-11-22T10:02:08.738Z",
+      "note": "Fiche constructeur 4152026247 relue face à 4152026249. Le modèle annonce 8 bar maximum de service, 3 650 L/min de capacité FAD, un sécheur intégré et aucune cuve, contre 13 bar et 2 770 L/min pour sa voisine. Le PDF de gamme p35 correspond au corps intégral déjà lu. La fiche indique 22,4 kW alors que la gamme indique 22 kW. La puissance normalisée, le taux de marche et la courbe FAD restent absents sans conditions de mesure. Apport : distinguer la variante basse pression et demander son point FAD mesuré avant dimensionnement.",
+      "sourceDocuments": [
+        {
+          "url": "https://shop.fiac.it/en-IT/products/4152026247/ax-303bd-dry-8-40050-ce",
+          "sha256": "55840b27f039ca43a38407ac30ce23f233c0581e246cf1b877d51ffe8cc70884"
+        },
+        {
+          "url": "https://web.fiac.it/content/dam/brands/fiac/website/documents/Fiac_Cat%20S226-R1-062026%20-%20screen__compressed.pdf",
+          "sha256": "55421a11ceb9c201bd873f1d0e4596ea6682b7fd68fc5e03e0c380ddf879ac85"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/gentilin-esk480-10/",
+      "contentHash": "4d2c2c8fee1e5f777982904fd8b41140417e1081847bda0372be05b4d0c4aa78",
+      "neighbors": [
+        "/compresseurs/gentilin-esk1320-500/",
+        "/compresseurs/gentilin-esk480-270/"
+      ],
+      "contextHash": "0c173d507f90c53d030f2bd4982440380aca6404b276995442862a8ac19d8674",
+      "rulesHash": "c6420da5d37883301f7e5f4fc034d320b9400b11d6cfd8f270f7610bc47c63f2",
+      "sourceReleaseSha": "71909578a6b32b648b3dca9f0ca41ff2a9070ee8",
+      "reviewedAt": "2026-11-22T10:02:08.738Z",
+      "note": "Table Technical Data de la référence 811604007 relue. Débit restitué 255 L/min à 5 bar et 210 L/min à 8 bar, séparé des 430 L/min aspirés, maximum publié 10 bar, groupe donné pour 2,8 kW et service S1 100%. Cuve 10 L, 79 × 59,5 × 57 cm, masse 72 kg. La brochure exacte est identique à la lecture précédente. La relecture des deux voisines du catalogue confirme la cuve 270 L de l’ESK480/270 et le groupe huit cylindres de l’ESK1320/500. Apport : vérifier le faible stockage et le gabarit du modèle 10 L au lieu de déduire sa capacité du débit aspiré.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.gentilinair.com/docs/esk480-660-10-en_1711031505.pdf",
+          "sha256": "7aa4be2a0bcd740f8a75785d75adac3b2062688b0b69c8810b6251e1dc8c39c0"
+        },
+        {
+          "url": "https://www.gentilinair.com/en/products/esk480-100-mono",
+          "sha256": "386199becbea1bdea4cc905bdcf9d0c81ed696d96aea016c41bf6cb0650fa322"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/gentilin-esk480-100-811610006/",
+      "contentHash": "f6ad673e2fd49164fc37ca3083f662254dd204836bb9fae01ce528e574a66386",
+      "neighbors": [
+        "/compresseurs/gentilin-esk480-10/",
+        "/compresseurs/gentilin-esk480-100-811610007/"
+      ],
+      "contextHash": "12af6ba5753c1d71cc7a7aee72a77660e48bf4d683d2dd7edfb2ae20ba001615",
+      "rulesHash": "c6420da5d37883301f7e5f4fc034d320b9400b11d6cfd8f270f7610bc47c63f2",
+      "sourceReleaseSha": "71909578a6b32b648b3dca9f0ca41ff2a9070ee8",
+      "reviewedAt": "2026-11-22T10:02:08.738Z",
+      "note": "Table Technical Data exacte de 811610006, ESK480/100 sous 230 V/50 Hz. Cuve réellement documentée 90 L, gabarit 103,5 × 54 × 75 cm et 84 kg, contre 10 L et 72 kg pour l’ESK480/10. Valeurs de débit restitué 255 L/min à 5 bar et 210 à 8 bar, distinctes des 430 aspirés, service S1 100% et groupe 2,8 kW. Les champs du modèle 811610007 relu restent distincts avec 3 kW et 345/285 L/min aux mêmes pressions. La brochure commune est identique au corps relu et inclut cette référence. Apport : choisir la variante électrique et la réserve utile sans supposer 100 L.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.gentilinair.com/docs/esk660100en_1711032524.pdf",
+          "sha256": "0fbfccc3fd9ef013a94acc6c500a67f29213bfba0ace1eebac1065f2ede995b3"
+        },
+        {
+          "url": "https://www.gentilinair.com/en/products/esk480-100-230-50",
+          "sha256": "3adf081a6474c8790e15db2f2fb121dbd2148b74db6560821c79c69102b133bf"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/biax-srd-3-45-3/",
+      "contentHash": "2ef4c1635b028162a90bfcebe8ebdb62929cf9211d0c2bcb07650cd2d0b82e04",
+      "neighbors": [
+        "/outils-pneumatiques/biax-srd-3-30-2/",
+        "/outils-pneumatiques/biax-srd-3-55-2-ke/"
+      ],
+      "contextHash": "b892e28be048aed5f7acdf3bc551bd04359c813791fdfa93f9c035634eb2e0ba",
+      "rulesHash": "c6420da5d37883301f7e5f4fc034d320b9400b11d6cfd8f270f7610bc47c63f2",
+      "sourceReleaseSha": "71909578a6b32b648b3dca9f0ca41ff2a9070ee8",
+      "reviewedAt": "2026-11-22T10:02:08.738Z",
+      "note": "Table Technical Data de la SRD 3-45/3 150010775 relue : valve rotative, broche fine, 260 W, 45 000 tr/min, queue maximale 3 mm et 310 g. Le tableau donne 380 L/min sans pression de mesure ni régime associé, et le catalogue PDF reste identique à la lecture documentaire antérieure. Les dossiers voisins relus distinguent la 3-30/2 (30 000 tr/min, 150 W) et la 3-55/2 KE (55 000 tr/min, moins de 100 W). Le moteur garde variable-volume, sans débit dimensionnant, donc insufficient_data. Apport : arbitrer accès, vitesse et puissance sans en déduire une demande à 6 bar.",
+      "sourceDocuments": [
+        {
+          "url": "https://biax.de/en/product/srd-3-45-3-45-000-1-min-rotary-valve/",
+          "sha256": "59b7b3962460c3027d25c20de4189169d2e7b3ee3c7f170aeabb1bccc5d7ba10"
+        },
+        {
+          "url": "https://biax.de/wp-content/uploads/2025/08/BIAX_Grinders-Files-and-Deburring-tools_EN-2.pdf",
+          "sha256": "318971fb9ba951f395b81cbca3d1e57938ce23b74db3aef25ff98bb8f0edc6c8"
+        }
+      ]
     }
   ]
 }
