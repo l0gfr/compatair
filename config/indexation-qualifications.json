@@ -137205,6 +137205,52 @@
           "sha256": "318971fb9ba951f395b81cbca3d1e57938ce23b74db3aef25ff98bb8f0edc6c8"
         }
       ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-orbitale-dynabrade-59040/",
+      "contentHash": "b5ea74d5fae6f36081ca36b1ab17cabdb4a3254c1933d1cda037b1b89727e671",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-orbitale-dynabrade-59043/",
+        "/outils-pneumatiques/ponceuse-orbitale-dynabrade-59044/"
+      ],
+      "contextHash": "d41439a24264c1d989dd9c887da2399fb132bb139f23f27898a60f10914ede3c",
+      "rulesHash": "c6420da5d37883301f7e5f4fc034d320b9400b11d6cfd8f270f7610bc47c63f2",
+      "sourceReleaseSha": "57a75cd943623a91590e710cd4eb4c69e2b3de52",
+      "reviewedAt": "2026-11-23T07:18:05.036Z",
+      "note": "Fiche fabricant actuelle relue pour 59040 : Ø 152 mm, sans aspiration, orbite 2,5 mm, 12 000 tr/min, 186 W et 14 SCFM (396 L/min). Les notices PD11.25 et PD14.22R ont les empreintes des exemplaires lus (table p. 4, lignes 59040/59043/59044). La seconde indique 16 SCFM (450 L/min) et 1,5 lb, contre 396 L/min et 1 lb pour la fiche actuelle. Les variantes 59043 et 59044 relues se distinguent par leur aspiration autonome ou centralisée. Les 90 PSIG caractérisent le service. Le débit contradictoire reste documentaire, sans champ airflowLpm ; le modèle variable-volume demeure non conclusif.",
+      "sourceDocuments": [
+        {
+          "url": "https://eu.dynabrade.com/assets/bcb9f265-171e-4e94-ac08-f1a200383886/4074401012-pd1422r.pdf",
+          "sha256": "7080e1d42b43a829d264a4d2698681647bc5a253f3d1ae83ef295585e3452c2e"
+        },
+        {
+          "url": "https://eu.dynabrade.com/assets/fa93602f-70b6-4dc8-993f-6a245e0d7286/4074397578-pd1125.pdf",
+          "sha256": "c74f95fdc9d682d43ab09fbbf8a3a47e31057d0d6008810c763ea6fbdedf9faa"
+        },
+        {
+          "url": "https://eu.dynabrade.com/en/catalog/6-152-mm-dia-non-vacuum-dynorbital-spirit-random-orbital-sander~e5a782f4-b186-433b-8780-0cf3e59163e9",
+          "sha256": "5b780e588dc7c5738ae9f1f08c726675f6511da7cfdd433c95a4163979fb8796"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/soufflette-tengtools-arb02/",
+      "contentHash": "6899a6177b4cad1e54f89359b1284bdcdc9ce83a17d4badd17e669b2b0bdb240",
+      "neighbors": [
+        "/outils-pneumatiques/soufflette-tengtools-arb01/",
+        "/outils-pneumatiques/soufflette-tengtools-arb03/"
+      ],
+      "contextHash": "259965f1161e4669c39592204a073ea98156717168142902355844e4caa030a8",
+      "rulesHash": "c6420da5d37883301f7e5f4fc034d320b9400b11d6cfd8f270f7610bc47c63f2",
+      "sourceReleaseSha": "57a75cd943623a91590e710cd4eb4c69e2b3de52",
+      "reviewedAt": "2026-11-23T07:18:05.036Z",
+      "note": "Fiche fabricant actuelle ARB02 relue : désignation commerciale 300 mm, buse de 270 mm, longueur totale 360 mm, entrée 1/4 pouce et 128 g. Les ARB01 et ARB03 relues ont chacune une buse de 100 mm et une longueur de 212 mm, pour 101 g et 109 g. La portée utile distingue cette variante. Le fabricant ne fournit pas de couple débit et pression de mesure ; modèle variable-volume sans airflowLpm ni pression de service chiffrée, non conclusif pour le dimensionnement.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.tengtools.com/en-gb/collections/air-tools/products/air-blow-gun-300mm",
+          "sha256": "f90d13f1ce7b9104e4696288b32ba7b8d877c081f5b9e14027a6acfae88a2649"
+        }
+      ]
     }
   ]
 }
