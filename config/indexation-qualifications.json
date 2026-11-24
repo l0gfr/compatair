@@ -137251,6 +137251,177 @@
           "sha256": "f90d13f1ce7b9104e4696288b32ba7b8d877c081f5b9e14027a6acfae88a2649"
         }
       ]
+    },
+    {
+      "path": "/outils-pneumatiques/pferd-pba-4-160-hv/",
+      "contentHash": "6cc05c9850279e8574d60b5ff9eda246823e2dc05ef7c48ca51081ffe5c34488",
+      "neighbors": [
+        "/outils-pneumatiques/pferd-pba-2-200-hv/",
+        "/outils-pneumatiques/pferd-pba-4-160-hv-ova/"
+      ],
+      "contextHash": "dc7130f4bfbf5f49543364b0e017ce098d7154c68b73f06a28ca2de0f6442702",
+      "rulesHash": "c6420da5d37883301f7e5f4fc034d320b9400b11d6cfd8f270f7610bc47c63f2",
+      "sourceReleaseSha": "8c173a4373d2289495d525077132f37bbbd3c65d",
+      "reviewedAt": "2026-11-24T07:23:06.394Z",
+      "note": "Table PBA 4/160 HV relue. Bande de 520 mm et 3 à 20 mm selon bras, BSVA 9/25 × 520 fourni, 370 W, 19,3 m/s, échappement arrière. La oVA vient sans le bras ; la 2/200 HV utilise des bandes de 305 mm. Les 0,60 m³/min en charge et 0,55 à vide ne sont pas appariés à une pression de mesure ; 6,3 bar désigne le service. Les moteurs restent en données insuffisantes.",
+      "sourceDocuments": [
+        {
+          "url": "https://fr.pferd.com/fr/ponceuse-a-bande-pneumatique-pba-4160-hv",
+          "sha256": "93c49d2b9223a6a48df9cdaffadfd545aee625137cd5876f54b417b7ee370727"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/pferd-pg-8-100-v-hv/",
+      "contentHash": "7591707c6b9753ea1ab96ccaf721fcc60c987337798b1e957f1fbb77a3372bf1",
+      "neighbors": [
+        "/outils-pneumatiques/pferd-pg-8-100-hv/",
+        "/outils-pneumatiques/pferd-pgas-8-100-v-hv/"
+      ],
+      "contextHash": "5e081fb94c1cdadfe19f5f59abdede82df333e899686fea82ed479147ff4835b",
+      "rulesHash": "c6420da5d37883301f7e5f4fc034d320b9400b11d6cfd8f270f7610bc47c63f2",
+      "sourceReleaseSha": "8c173a4373d2289495d525077132f37bbbd3c65d",
+      "reviewedAt": "2026-11-24T07:23:06.394Z",
+      "note": "Table de la PG 8/100 V-HV relue. Longueur 310 mm avec prolongateur, pince 6 mm, 10 000 tr/min, 600 W et échappement avant. La PG 8/100 HV mesure 184 mm ; la PGAS 8/100 V-HV évacue vers l’arrière. Les 0,85 m³/min en charge et 0,17 à vide restent séparés et les 6,3 bar de service ne qualifient pas leur mesure. Les moteurs restent non conclusifs.",
+      "sourceDocuments": [
+        {
+          "url": "https://fr.pferd.com/fr/meuleuse-droite-pneumatique-pg-8100?a%5Btype-tds%5D=avec+prolongateur&a%5Bthrottle-type-tds%5D=Levier&a%5Bpferd-type-tds%5D=PG+8%2F100+V-HV",
+          "sha256": "ada4cfc7b60ab113676c43830f8897db89fe758ad3753d46e773582b8119ca95"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cisaille-vessel-gt-hwr1-360701/",
+      "contentHash": "2f42f5c26f8ded3b018d8fc190b363ea01bb0f2e01df6b7a567be77db89a7be0",
+      "neighbors": [
+        "/outils-pneumatiques/cisaille-vessel-gt-hwr10-360714/",
+        "/outils-pneumatiques/cisaille-vessel-gt-hws1-360700/"
+      ],
+      "contextHash": "af929794dc40dcce0111c0033dbbd48e85839a8c786bbaddbb99aa3e0891d44b",
+      "rulesHash": "c6420da5d37883301f7e5f4fc034d320b9400b11d6cfd8f270f7610bc47c63f2",
+      "sourceReleaseSha": "8c173a4373d2289495d525077132f37bbbd3c65d",
+      "reviewedAt": "2026-11-24T07:23:06.394Z",
+      "note": "Ligne GT-HWR1/360701 relue. Corps rond sans levier à double effet de 95 mm et 84 g, lames en option. Diamètres extérieurs publiés : cuivre 1 mm, acier 0,5 mm. La HWS1 de 116 g a une autre géométrie ; la HWR10 offre 1,8/1,2 mm. Les 45 cm³ par course et 0,4 à 0,5 MPa de service ne qualifient ni pression exacte de mesure ni débit continu. Les moteurs restent non conclusifs.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.vessel.co.jp/english/product/airnippers/360701",
+          "sha256": "5c648005f6ab6ec16af0778d4ac2d95924b4b984b9464cc51fb59682a1bff4ff"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-cliquet-facom-vr-sj3500pb/",
+      "contentHash": "b83e86c6e1ceb7cc2db8b6dcbf948f90980d4a80df18f63defcebdc07abe338e",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-cliquet-facom-vr-j154/",
+        "/outils-pneumatiques/cle-a-cliquet-facom-vr-s3136pb/"
+      ],
+      "contextHash": "20493c312f82e57d05ee31de92a2bcdada13bfafc9b1187386dc767880c0e4f4",
+      "rulesHash": "c6420da5d37883301f7e5f4fc034d320b9400b11d6cfd8f270f7610bc47c63f2",
+      "sourceReleaseSha": "8c173a4373d2289495d525077132f37bbbd3c65d",
+      "reviewedAt": "2026-11-24T07:23:06.394Z",
+      "note": "Fiche VR.SJ3500PB relue. Enclumes interchangeables 3/8 et 1/2 pouce, tête fermée, embrayage de protection, 108 Nm maximum, 300 tr/min à vide, 318 mm. Le VR.J154 est un mini-cliquet de 136 mm à carré 3/8 ; le VR.S3136PB mesure 261 mm. Accès et enclumes distinguent la fiche. Les 6,2 bar de service ne s’accompagnent pas d’un débit. Verdict non conclusif dans les deux moteurs.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.facom.com/product/vrsj3500pb/38-12-high-torque-air-ratchet?tid=610786",
+          "sha256": "e8a9c0d19b1475c5c36df0646ec06de8f2d3ac133bc96f1334491f047449b068"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/meuleuse-facom-v-dg300fpb/",
+      "contentHash": "7f6ae9d9f83856f7da41403a0b8a3aadc8b7464eba4f6c63ae7ce7e3d05905bf",
+      "neighbors": [
+        "/outils-pneumatiques/meuleuse-facom-v-347f/",
+        "/outils-pneumatiques/meuleuse-facom-v-445f/"
+      ],
+      "contextHash": "978afb95de64d202b7725650289d53f2071e46c231ed3b51e53ce1fe3ee822bc",
+      "rulesHash": "c6420da5d37883301f7e5f4fc034d320b9400b11d6cfd8f270f7610bc47c63f2",
+      "sourceReleaseSha": "8c173a4373d2289495d525077132f37bbbd3c65d",
+      "reviewedAt": "2026-11-24T07:23:06.394Z",
+      "note": "Fiche V.DG300FPB relue. Meuleuse droite à pince 6 mm, 160 × 39 × 70 mm, 0,44 kg, gâchette progressive et silencieux intégré. La V.347F est coudée ; la V.445F est plus longue, 207 mm, et plus lourde. Géométrie, dégagement et pince guident le choix. Aucun couple consommation–pression n’est publié ; moteurs non conclusifs.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.facom.com/product/vdg300fpb/pneumatic-straight-die-grinder-6mm-collet?tid=610786",
+          "sha256": "8b8a8ec40541ba2799bbfa521fe0c4b064bfef20e8c13b5c92d56cde1e8f1658"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/meuleuse-hazet-9032m-5/",
+      "contentHash": "a172b43636ff019b0ac5a07b0c3defc96d165f29311b38ccdf2d808cfbb1f2c9",
+      "neighbors": [
+        "/outils-pneumatiques/meuleuse-hazet-9032m-1/",
+        "/outils-pneumatiques/meuleuse-hazet-9032m-36/"
+      ],
+      "contextHash": "4b363e9a37cea016c1bf32f5d0e9f33b99dd5aa033f96c0903c78e10e2c62668",
+      "rulesHash": "c6420da5d37883301f7e5f4fc034d320b9400b11d6cfd8f270f7610bc47c63f2",
+      "sourceReleaseSha": "8c173a4373d2289495d525077132f37bbbd3c65d",
+      "reviewedAt": "2026-11-24T07:23:06.394Z",
+      "note": "Table 9032M-5 relue. Forme coudée, 126 mm, pince 6 mm, 224 W et 18 000 tr/min. Les voisines M-1 (115 mm, 25 000 tr/min) et M-36 (150 mm, 30 000 tr/min) répondent à d’autres contraintes de vitesse et d’accès. Les 84 L/min sont publiés sans régime ni pression de mesure. Les deux moteurs restent non conclusifs.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/drilling-machine-sander-chisel-sabre-saw-shears/product/ean-4000896227105",
+          "sha256": "815e2454eb928b24ff2067eec091e0ba0c3835fcf0b657413de4582ab3e1ecf8"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/soufflette-hazet-9040p-1/",
+      "contentHash": "b334d3fe5ec3fd8fe06e04f79167e34a8493a50b92a967f20ada5f15154bbbbf",
+      "neighbors": [
+        "/outils-pneumatiques/soufflette-hazet-9040p-2/",
+        "/outils-pneumatiques/soufflette-hazet-9040p-3/"
+      ],
+      "contextHash": "ed4c1807a8bd2d9d84579d3a245bfd36cf2e626aece891a7a34d8773f11613b0",
+      "rulesHash": "c6420da5d37883301f7e5f4fc034d320b9400b11d6cfd8f270f7610bc47c63f2",
+      "sourceReleaseSha": "8c173a4373d2289495d525077132f37bbbd3c65d",
+      "reviewedAt": "2026-11-24T07:23:06.394Z",
+      "note": "Fiche 9040P-1 relue. Tube coudé de 100 mm, longueur totale 247 mm, buse standard et raccord femelle 1/4 pouce. La P-2 atteint 420 mm ; la P-3 mesure 255 mm. La portée et l’accès distinguent la fiche. Les 290 L/min de la P-1 n’ont pas de conditions de mesure permettant une comparaison en charge. Demande non conclusive dans les deux moteurs.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/air-blow-gun/product/ean-4000896209545",
+          "sha256": "b52b2350b92408527f5970c4d1aab132fa53ba406ecb9be7abd49fd5e5b2a0c2"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/bambi-vts200d/",
+      "contentHash": "11b46c2b12df1718bfcb514ca7854f6552449d19cea04fac6989be23ad2c9f8d",
+      "neighbors": [
+        "/compresseurs/bambi-vts200/",
+        "/compresseurs/bambi-vts250/"
+      ],
+      "contextHash": "c0d41707e31769e9cba142f873183aa54067015546fe0b99887babb9516f26dd",
+      "rulesHash": "c6420da5d37883301f7e5f4fc034d320b9400b11d6cfd8f270f7610bc47c63f2",
+      "sourceReleaseSha": "8c173a4373d2289495d525077132f37bbbd3c65d",
+      "reviewedAt": "2026-11-24T07:23:06.394Z",
+      "note": "Table VTS200D relue de 1 à 8 bar. Cuve 23 L, sécheur et postrefroidisseur, moteur 1,5 kW, 240 V/50 Hz. FAD 158 L/min à 5 bar et 126 à 8 bar. Le VTS200 de même courbe est sans traitement ; le VTS250 fournit 210 L/min à 5 bar sur 59 L. Le taux de marche maximal de 50 % limite la capacité moyenne calculée ; les deux moteurs l’appliquent.",
+      "sourceDocuments": [
+        {
+          "url": "https://bambi-air.co.uk/product/vts200d/",
+          "sha256": "cced465d9bf2527fa31d3aff2419986a1d938b22e638f2e4e6432d7c786d08e3"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/bambi-vts250/",
+      "contentHash": "c368381f1d663d224730b238f185868510658406dd586a7332ac10bbe34c303e",
+      "neighbors": [
+        "/compresseurs/bambi-vts200/",
+        "/compresseurs/bambi-vts250d/"
+      ],
+      "contextHash": "dd00a330d775538e8d26b556ce91445dbdc77c4dc367b62b2dfe51f50ccb6eea",
+      "rulesHash": "c6420da5d37883301f7e5f4fc034d320b9400b11d6cfd8f270f7610bc47c63f2",
+      "sourceReleaseSha": "8c173a4373d2289495d525077132f37bbbd3c65d",
+      "reviewedAt": "2026-11-24T07:23:06.394Z",
+      "note": "Table VTS250 relue de 1 à 8 bar. Cuve 59 L, moteur 1,84 kW, 240 V/50 Hz. FAD 210 L/min à 5 bar et 160 à 8 bar. Le VTS200 offre 23 L et 158 L/min à 5 bar ; le VTS250D garde 59 L mais inclut un sécheur et donne 200 L/min à 5 bar. Cycle maximal déclaré 50 %, appliqué à la capacité moyenne dans les deux moteurs.",
+      "sourceDocuments": [
+        {
+          "url": "https://bambi-air.co.uk/product/vts250/",
+          "sha256": "4ca99f999785424266e8693d68bedcc1c9fa54880ae0ce063e7f93c63db93dc9"
+        }
+      ]
     }
   ]
 }

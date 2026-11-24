@@ -101299,6 +101299,3151 @@
           "httpStatus": 200
         }
       ]
+    },
+    {
+      "publicationDay": "2026-11-24",
+      "sourceReleaseSha": "8c173a4373d2289495d525077132f37bbbd3c65d",
+      "policyHash": "02c8c9eef805ca32c18797d46de58793812117a16109e6121fc08d0bdc653691",
+      "corpusHash": "42a3f0f22bebda56bfc4d0d268e93f7dcb479151c0ae0651b6fafcad202ece7d",
+      "reviewedAt": "2026-11-24T07:23:50.748438+00:00",
+      "status": "partial",
+      "note": "Proposition exacte du 24 novembre. Neuf fiches Bambi, Facom, Hazet, PFERD et Vessel relues après changement d’empreinte des sources constructeur. Les deux courbes FAD, les limites de débit et de cycle et les différences avec les voisines ont été vérifiées.",
+      "pages": [
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sata-satajet-1000-k-hvlp-1-0-139204/",
+          "contentHash": "07aa56202792ca36bb758f5a5dd1887bc45ea611d856ccd33543620a8884b303",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-prowin-k-528s-17/",
+          "contentHash": "c5c0f238e35cba43b1533becb9522bf01fb6f634e5fa369db7b75bcf0c06651a",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sagola-4600-hex-hvlp-buse-1-30-hex-10142477/",
+          "contentHash": "f374a4d76e853ed6942536e612edcb42ff44127dc221042868fb253ca05b4bc6",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-graco-airpro-pressure-288967-288967/",
+          "contentHash": "b8344dee53352e82c1616027c41e88984599b47aa1e268d15c5b22e2be937a10",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sames-kremlin-fstart-g-hvlp-15-mva-135-756-115/",
+          "contentHash": "0a65a915a357b9f5821e53d4a95d798fe0b8816ebcadab9246d8771c385b8120",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-binks-trophy-2465-14hv-32s0/",
+          "contentHash": "e97575c6ca4d68d6c8f58d93e2e1c8eaad692dcb90709f6e93706ee21fa46f34",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-walcom-genesi-carbonio-360-evo-geo-gravite-buse-1-4-mm/",
+          "contentHash": "af13e2018a672d356e10c94ceac8658d9da93a3d0b792c16d689d8f124ff8555",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-asturo-brp-hvlp-art-00197-buse-1-4-mm/",
+          "contentHash": "7314a7a763b78e613fb99e54ff6419774e1c6bb919d291fbdde85031dc3fdc6b",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hvlp-ani-f1-n-super-s-hvlp-buse-2/",
+          "contentHash": "1a47c5a46876801cd7194b641a7358f0ad0a0c214993e52335b15022ea6220c2",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-prona-r-4300-hvlp-g14-buse-1-4-hvlp-gravity/",
+          "contentHash": "8a06bc7971f0872d7d0ba40697d782486f7e53ce94b0a7d6c9525cdfceb944ff",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/abac-spinn-11-8-230-50-tm500/",
+          "contentHash": "54bd016c30bbceb01b052b826d0cee8319f2f9b78d406e41c72d0d108a0ff6bf",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/abac-spinn-11-8-400-50-fm/",
+          "contentHash": "f9033ce914fea7c01b82db9976c280df505629367e0c8f32a4c2139e7cc595bb",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/fiac-ax-403bd-10-400-50-ce/",
+          "contentHash": "5060ae3d530d57202ab1943a1b474081382a35c9120afc67dd27fc7364215dcb",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/fiac-ax-403bd-13-400-50-ce/",
+          "contentHash": "4ad0975158977027c8a568671becf55f1ff9a3ad13f91a7db4b7f36aecbe9eeb",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cleco-19pta15q/",
+          "contentHash": "3020288a138ae5847f098acd7af53bce29d63a614fbbb46890014fdaa2444382",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cleco-24raa07al3/",
+          "contentHash": "7914679067d1d8b2d2bbf3650ac9baf2009da335d457eaa1841f77ff70b5e8f3",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cleco-55pthh403/",
+          "contentHash": "b10e8e4db60d26c3cd33e06486211e2709cf6eae3fcb9e5593d058736d529ac2",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-dynabrade-59104/",
+          "contentHash": "697067b80f9640ebe1eccf46839f85492bb540ddeaac092aca82cc697cab2444",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-1435/",
+          "contentHash": "2d697dce37aa438d5500036880764d4cd7581950cd282fcca93f964638772d3f",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-1550/",
+          "contentHash": "42f9ce9bc69dba3dd8569f424a316f506ade15815392d1d6f6b79b8adc5d240c",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-2022s-6/",
+          "contentHash": "fa084363ae526587e50f591dcf2a84dabcf0ffc9fc714d88c2104a9d6e2c48cb",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/shinano-si-3103bm/",
+          "contentHash": "e8fb7cb21362958da7ff89ec955828a1b858f35eba9810ec0140d199c4d9153e",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/airpress-aps-15-basic-combi-dry-364959/",
+          "contentHash": "51495c0b6f91c05f65f9b5973c49bebd4d15d8671975924cdf1760a0b427a33f",
+          "decision": "needs-correction",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://airpress.fr/compresseur-a-vis-aps-15-basic-combi-dry-10-bar-15-ch-11-kw-1416l-min-500-l-364959 (Corps complet modifié, nouvelle lecture requise) ; https://airpress.fr/compresseur-a-vis-aps-15-basic-combi-dry-10-bar-15-ch-11-kw-1416l-min-500-l-364959 (La table technique actuelle indique une courroie trapézoïdale, alors que la spécification courante conserve une courroie crantée. Débit estimé non utilisé comme FAD et cycle 100/0 bien distinct.)"
+        },
+        {
+          "path": "/compresseurs/airpress-aps-20-basic-364810-13/",
+          "contentHash": "328af9ebaf8a04538c5431ac0c401e89a5d2769ad2eeee01938f91eda4547e8e",
+          "decision": "needs-correction",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://airpress.fr/compresseur-a-vis-aps-20-basic-13-bar-20-ch-15-kw-1332-l-min-364810-13 (Corps complet modifié, nouvelle lecture requise) ; https://airpress.fr/compresseur-a-vis-aps-20-basic-13-bar-20-ch-15-kw-1332-l-min-364810-13 (La fiche présente le groupe 13 bar avec 20 ch / 15 kW dans la table, contre 15 ch / 11 kW dans le titre du descriptif. Puissance à confirmer auprès du fabricant. Débit 1 332 L/min estimé et pression maximale de 13 bar distincts.)"
+        },
+        {
+          "path": "/compresseurs/airpress-aps-20-basic-364810-8/",
+          "contentHash": "7608129b9f41bf983863e317233106eda149407c94e8c0cb1a43d2f03806849d",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/gentilin-esk480-100-811610007/",
+          "contentHash": "52afe54ad1f581c594bef8a0006628cccdf85f6440f4ec0f1aa7b5337e84dbc4",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/gentilin-esk480-270/",
+          "contentHash": "2762db479b0b8bb36966e3f8f63517980c8048220b50c9d50060cafefc5728a7",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/guides/biax-srd355-t365-micro-meuleuse/",
+          "contentHash": "7654f9ae0fcb33c4e65ffde033cedd09ef0a6d881c7529ab8199a95577320a0b",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/guides/deprag-3457259u-air-inferieur/",
+          "contentHash": "ab11f8d0a057bc527b518cb9f06b19bee0cb0910bc61828a3c48b3850677bb56",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/biax-gaf-509/",
+          "contentHash": "736332f4635e777be164632fcd2c3669019bbbc2b16aaa1a9d0e2bb2dbf17578",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/biax-srd-3-55-2-ke/",
+          "contentHash": "9ef3e9a5e4e983c76bba698eeef6c24188508866087c7bc759d52c5e3075d2cf",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/deprag-344-440-31u/",
+          "contentHash": "9deeee4c298132cc9c6f52a9376b70deb7c324bc1f66a1d2e0260ecfc29cb2c8",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/fiam-15c2apa-2cs/",
+          "contentHash": "a2c492897354615125d9e0d04ddfc0fdf9794a67de7df4736b0567ff97bdc70a",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.fiamgroup.com/en/products/handheld-air-screwdrivers/15c2apa-2cs/ (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/fiam-fo12p/",
+          "contentHash": "cd646f319d0fe2b98c586a4417997a5288bc780f66eb78ab6bd137f50ca5ab71",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.fiamgroup.com/en/products/air-drills/fo12p/ (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/fiam-smz15d/",
+          "contentHash": "7645e383a42a3185aa6015ef44d3dab65c0ed3f4e1950d89f3aa865ceadd8751",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.fiamgroup.com/en/products/grinders-and-sanders/smz15d/ (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/ingersoll-rand-61h150g4/",
+          "contentHash": "60bb82e64980dcd3993e826b0e65db56a2a247bfe5cea5f6b2de98bb4a9a2b0a",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ingersoll-rand-88s45w109/",
+          "contentHash": "b43f1d5ca24895eb987c8fdbf7f1330ef40ae5bc5c7a287f60fae4a71ea588b9",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rr-24n/",
+          "contentHash": "4bbabfb591a3332ef37356c7a4d07beb6fdbf6dcb3a42c83528df809dc7eba8c",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rrg-260rel/",
+          "contentHash": "fd17dbd8dd8ce26068f3df5c5b012aceea1c85264ce2e851b76791093232f521",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rri-200/",
+          "contentHash": "70f0407e225d9e8f41537e5843e1ba7e95ab4e1af3d31d1ef9d6485906720fb4",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rri-4596r/",
+          "contentHash": "e338004d23a4a25599e150ddf78c3ed8a28987edb68ced635744b9d9c50fdaa9",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/red-rooster-rri-sa10704/",
+          "contentHash": "d53fb0a7725fe0b3e35021405cd0167e1407a0d8d6bf1a7d37fe6a4cfe01cd21",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/rupes-ra75a/",
+          "contentHash": "b2896798df798f8d7f6a763c273a9393518fbc19d80af0b5669726d69f7e9721",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/toku-mi-20pg/",
+          "contentHash": "849cae36a99e2ba6b2a246ace5fd1f4dcc0b2e6f50780e6212b1ba6d71ded284",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/toku-tag-900qjl/",
+          "contentHash": "19def8524dac2ccab0b56fc87f3ddbfac4ad2596f21fb3cb4994342f918ba05d",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/toku-tha-4brh19x50/",
+          "contentHash": "cf4a876eb1de4b3849674534efe1c64ad104aa935e0b858b30e1781135763814",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/yokota-mg-oa/",
+          "contentHash": "b2798bb9b40de07f2309c551446d91b31702ce1150d813915ed815b97f937169",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/yokota-yd-600sz/",
+          "contentHash": "adc5d68dcb1819a42eecb74582cabd3d965b12737ffd0bdbd590a5564ec45278",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/yokota-yla70e/",
+          "contentHash": "f733a5f2c6f3c41cc6cccd2bff91c4c4afa40527f6a1e427b4e18198a71ae38e",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/aircraft-airprofi-403-90-v/",
+          "contentHash": "eb8ba3f29a13b7cde269f583a587a33cecb7b2e2f64c6011103b13819ef2a78f",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/aircraft-airprofi-440-100-of-pro/",
+          "contentHash": "efca01674b4bbc0d405987742625887a40b3c14c7ef2dcc4d398f60f60f53e4e",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/nuair-fu-227-10-24v/",
+          "contentHash": "da9afd41066f29b32ef2601417df7dafe724b3d38e506fb4d0cf34e1488da314",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/nuair-fu-227-10-30v/",
+          "contentHash": "ac6a20f7004a143977f582fd6f48bae424e66a4b72070d9849a5e45f6331693b",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/stanley-fatmax-dv4-400-10-24p/",
+          "contentHash": "7e8e73062a5243517c2d7ab48cb5638324283a20b9209b9238e53297a7589d95",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/stanley-fatmax-hy-227-10-12/",
+          "contentHash": "8359b01a6dae7b25665c263a95d842ecc63d94c8cbd1cc5eb5dddd3503fe2900",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/aircraft-bp-pro-r/",
+          "contentHash": "f81aea5a402aeb490e23d8fe18d953d28b2bc809805d68139671f5e761269da5",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/aircraft-bs-c-20-pro-vs/",
+          "contentHash": "7c9145ab2a86e69232d910e814c2b313ee6d46a3de5f19e62c4b52630b2bae08",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/aircraft-iss-c-1-2-compact-pro/",
+          "contentHash": "5399c51cdb001ecbcc261e12bd1d307faf589018f91cc8cbbd680ca6f3f86acb",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/aircraft-wb-mini-pro/",
+          "contentHash": "226723da5d64bc5e152fa9363c5f884a371440f638059135bc40ae90d329e7c2",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/bostitch-brt130-e/",
+          "contentHash": "f064db434ff0fc46159ca456ca2927077008997b02dbf48c3479a1b0bb5e59cb",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/m7-nc-3911/",
+          "contentHash": "ec0a792533406fd1760746aa5f5ae965916bb60a40330d406bc17c905afe7986",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/m7-ne-3305/",
+          "contentHash": "c6b3a3db8368d0060bc9bf3ebe4ca2a73862f97a9cdd64896d13d2132673ca94",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/m7-qa-131-a-b/",
+          "contentHash": "66a4b46ab815262b061538b334c6d19f1d0d775a576890069ee01f43bcae1bfb",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/m7-qb-43/",
+          "contentHash": "e269716ecf451e5260fa03b66486679d2a373682cc275c7da2e27121a87eb05b",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/m7-qc-264/",
+          "contentHash": "64471a0b0a4b1127a7852e6796fd196b505a205b49a505096113974eb4828dac",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/m7-qe-3031/",
+          "contentHash": "dbd77f3034cd4c643bcd520fbb68edce05ba40aa110a1f407349278dff4ff004",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/m7-qp-215/",
+          "contentHash": "d86901d61c11c4b767049caf161066919c943c217f7a1bcf0ed205f3dbcbddb6",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/m7-qp-335/",
+          "contentHash": "b2c316d19a8230c40aef606877f3517c63b3e5637c6aeb9f9f9f5724c7224037",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/m7-ra-1162/",
+          "contentHash": "8cb3fd1d63e949fe4de7670c6f18e265a501c15cd9ad6aa26bfcc809db8bec4b",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/m7-sc-342c/",
+          "contentHash": "2e594639caee0c4487c694bc30f571f0aeff86e511c548c6dc06ad924660ffaa",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/m7-sn-2128/",
+          "contentHash": "9ea7838b159e76cddd278d96fe4bba5f9e32349976be8829bd2422d458d41e62",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/mirka-ros-525cv/",
+          "contentHash": "f14065083f372a1e0e69e5852b7db30eb4bb3b5227699ac06233b87a5c34a583",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/pferd-pba-4-160-hv/",
+          "contentHash": "6cc05c9850279e8574d60b5ff9eda246823e2dc05ef7c48ca51081ffe5c34488",
+          "decision": "approved",
+          "note": "Table PBA 4/160 HV relue. Bande de 520 mm et 3 à 20 mm selon bras, BSVA 9/25 × 520 fourni, 370 W, 19,3 m/s, échappement arrière. La oVA vient sans le bras ; la 2/200 HV utilise des bandes de 305 mm. Les 0,60 m³/min en charge et 0,55 à vide ne sont pas appariés à une pression de mesure ; 6,3 bar désigne le service. Les moteurs restent en données insuffisantes. Sources complètes et empreintes du jour vérifiées, règles, contenu, groupe et voisins concordants. Voisins : /outils-pneumatiques/pferd-pba-2-200-hv/, /outils-pneumatiques/pferd-pba-4-160-hv-ova/",
+          "qualificationId": "9812236056433e29e79750acdae79f85fb95fa5fff3293a67e9accbeb1072534"
+        },
+        {
+          "path": "/outils-pneumatiques/pferd-pg-8-100-v-hv/",
+          "contentHash": "7591707c6b9753ea1ab96ccaf721fcc60c987337798b1e957f1fbb77a3372bf1",
+          "decision": "approved",
+          "note": "Table de la PG 8/100 V-HV relue. Longueur 310 mm avec prolongateur, pince 6 mm, 10 000 tr/min, 600 W et échappement avant. La PG 8/100 HV mesure 184 mm ; la PGAS 8/100 V-HV évacue vers l’arrière. Les 0,85 m³/min en charge et 0,17 à vide restent séparés et les 6,3 bar de service ne qualifient pas leur mesure. Les moteurs restent non conclusifs. Sources complètes et empreintes du jour vérifiées, règles, contenu, groupe et voisins concordants. Voisins : /outils-pneumatiques/pferd-pg-8-100-hv/, /outils-pneumatiques/pferd-pgas-8-100-v-hv/",
+          "qualificationId": "ed97f001f821d81c8ed0668c79b3a9677a1564e0bd5a527e22e4eabfc6c8e541"
+        },
+        {
+          "path": "/outils-pneumatiques/rodcraft-rc5195/",
+          "contentHash": "9f9ee9fb9ffa759cb965df7ad67386625c9b39846aad20f35db87deae0e8a315",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.rodcraft.com/en/products/8951000154 (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/rodcraft-rc6758/",
+          "contentHash": "09a846a92030ecd76f7b906b08b79fb8c2fd81e86aa4a401e9ffd7d924ba5915",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.rodcraft.com/en/products/8951000410 (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/sioux-go459-80srh/",
+          "contentHash": "a966341182f2b8251fdcd1ebc4a1b25485dc24f01509c82707a2ded33dd4c951",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/sioux-iw1000mh-8h/",
+          "contentHash": "b81eeee2817a34e407694d1610553dee3d19ea0897f84d7daf8d9f0040f3ee88",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/sioux-rt1983/",
+          "contentHash": "f10e3cd6b1ec1f0b0516ae557b2fc08073bd785fef37e4fd228f0486efda178e",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/sioux-sag03s12/",
+          "contentHash": "7d1ab424c3663b1026c31ae724d3a90244402ac042d9624bb716f5c9c631c880",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/sioux-sap10s227/",
+          "contentHash": "740470162d1275b25647c7396ca29e65c0e4f491671aac237bfea8f47d6e6556",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/sioux-sas03s122-20/",
+          "contentHash": "49ad238f2484b479a849049d30766433d80f44a6b470014dd2500e07e9b7010b",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/sioux-sco10s184r/",
+          "contentHash": "ee50a904c1eefb82700008af2ce1ad6652a8dae36226f83582bd36651bc31eb9",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/sioux-sdr10a10n3/",
+          "contentHash": "f4c365d701dffdb30299d4f82b9c5dbd70e13965078563077647b3f7f692895c",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/sioux-srs10s21-8/",
+          "contentHash": "f7be7e72d17019c1fe9f150903ecb0a0c41d9bad318d4670c750ad0567215ad3",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/sioux-ssd10a10s/",
+          "contentHash": "3959c0e2d47c07f073682cc3bcccd98b28e7fc6280a669b9e578db895deb3fb4",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/guides/muscle-pneumatique-dmsp-force-contraction/",
+          "contentHash": "1080975c5de1fb67467ac8ea404ccbbd6c843c5e3ef923876443708fff5586da",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/guides/pompe-graco-t3-rapport-3-1-pression-debit/",
+          "contentHash": "106dbd596374ba716b6a8224a0a974fdd8fc58400509f49e815b7c2012495987",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/renner-rsd-pro-11-0-310507/",
+          "contentHash": "845d9eb5a847702b2f6e0397e541a424d7e1b4b33f5f6e3b05e09ffe89ddc388",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/renner-rsd-pro-11-0-310508/",
+          "contentHash": "d7fd231218c4ebd53ae18b6bea0e411ec0465a838e39b7e2add306a025db4d79",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/boulonneuse-uryu-uan-611rm-30c-26822/",
+          "contentHash": "24f821cc04977b37f7e4e67749b4edd821162ec191bf65d9608f6938c45cec4d",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-npk-nw-1600ha-2r-25370/",
+          "contentHash": "487cad04a8c2b2ea580dc222373a71257d2ad2611bc362bd2565c93b33d1311f",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-uryu-uw-13srk-06372/",
+          "contentHash": "4607a71ed9a3c0435d8b3c1bcce81fd4597f214e64c98fc4b665816ef050dfda",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-uryu-urw-6-20052/",
+          "contentHash": "8f6abc8f429e6cb51ddb1807fe0df45253aa808d0464fcac48419d8074019352",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-impulsions-uryu-uxr-2000s-17632/",
+          "contentHash": "294b913ae6e890368ea3ef0012594d811c22993ed60aa1782b6cb78471c85c24",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/marteau-a-river-uryu-brh-5ud-70952/",
+          "contentHash": "2ac9d2a66d767600a9176052c4f8f49d2ea4478dc7ae07e4c7bef03f152655aa",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-top-cat-300ge-30000-1-4/",
+          "contentHash": "e5199db8837ae5914d39e994a2fd97109cee1109581a321a1ca7147c8599de00",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-uryu-ag-100s-in-53902/",
+          "contentHash": "16a1fe0d4707da6fc82d3363fc7727acc69fc73ed5fb1bbcb2991de0c4f623ad",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-top-cat-300d3mk-8250-d3-8/",
+          "contentHash": "58d636360feb02cd68e791d33318740ca5be9325206b4fb91fe4f25cd05f0a0c",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-uryu-ud-50s-22-61902/",
+          "contentHash": "9b0861b38f2b3578f0d6cb6fe040f4a081e5a2cc3fc7ca7c969c39293185b1ce",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/polisseuse-uryu-up-26db-55182/",
+          "contentHash": "cf8a0bbb7baca8304a217073fed0cd05d55834a93fa648dc9e2afe58e6c5c57c",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-top-cat-300ra5m2k-3000-5sp/",
+          "contentHash": "3fe2f5ee42b618b31a48e29327d1bac2333d195540448fe1256b2a7bda3f85a2",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-uryu-usg-7s-57312/",
+          "contentHash": "26031fbddbdc85dc3f3e2076f5b869c4c6f12c2ef165c29fbc8dc83ffa92eaba",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/taraudeuse-uryu-ut-66b-07-68132/",
+          "contentHash": "039a07ac98eb1a96f99c46a6bf394668399d6b3ea5ea12950991ba99ce4c6dbc",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-uryu-us-4-41812/",
+          "contentHash": "2d14b5544f014dcf74fd97d1858c71200e063f85a55a2b83c32497a8a07d1501",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/almig-f-drive-45/",
+          "contentHash": "ab7e03f40a32158d8ade885d774099ab06d70ce8e801e1ef2a5f5706121dde31",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/almig-f-drive-55/",
+          "contentHash": "aa09034644270ed6e213ec27d889eead260317eb38802d5cb840a1f60629d12e",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/boge-slf-181-3-13-bar-insonorisation-standard/",
+          "contentHash": "7b35e2b121d03d6484da84ae99c0e10221b7cf3dc50ca482ffe80225a7703798",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/boge-slf-181-3-7-5-bar-insonorisation-standard/",
+          "contentHash": "3fd1c93cfc93675a99ff1800c0e4ddba2cdccf8b5cca0be6a3449d8327807a1b",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/guides/fuji-fbs-1-4-e-bande-20-460-compresseur/",
+          "contentHash": "0c37de8ed83b8bee3718ce0d3e614541069d0b0e7788f59c6225e4d0de520baa",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-prebena-1gp-a16nh/",
+          "contentHash": "c21666f8bc9bdaf4c9a894ca3350da528574aaf7a3fef3568afdd621c29c85c0",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-senco-finishpro23lxp/",
+          "contentHash": "1bd58100a08b01da3801fed4396b5dc922800eaa97da5b139077c93ed9c28553",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/boulonneuse-atlas-copco-ltd38-n55-re-8431053520/",
+          "contentHash": "f6fb44f0994ea1a05d9d3def27e9b73a760bbf643c1411f98142ddf2d60f0658",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-sumake-st-ah606h-q/",
+          "contentHash": "d5272e444826f7a62b17e654e60f5f82eb7bf7d9aebd5b25f18cb10a19ad1eac",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-atlas-copco-lms88-gor38-8434188001/",
+          "contentHash": "26be1c6e606518b73f39acd278bf426e1c85c36a2d760591212a04905719baf5",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-sumake-st-55883/",
+          "contentHash": "25c4851dd816bbff3e1c071464723351fa47fd4a8d9c94c0928b1791b7473420",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-sumake-st-5555a/",
+          "contentHash": "86232a083d17ec87b0d44c7489b367869322673819ef4df15a7a2be3649d5a17",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-impulsions-atlas-copco-ep13ptx150-hr13-at-8431037662/",
+          "contentHash": "df5bcd8372a20cf934fa521abd9d8aba71cd719b23f1cccc05677e746d0cc435",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/marteau-a-river-atlas-copco-rrh14p-ts-8426111082/",
+          "contentHash": "42d19e2c9bded04c70b0103acd422069ec5a74aa26f11282946390a1df6ed71c",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/marteau-a-river-sumake-st-2402/",
+          "contentHash": "d93637ecd63b895c1b5013d25cd1ebf80ddb9c46f68e258d1dd356d91fd5824d",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-atlas-copco-lsf19-s300e-1-r-8423122488/",
+          "contentHash": "6080553bc39dab625b06dd1506384aa211a0f9633f68f430ccc31e05d06a4242",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-desoutter-c27-lx300-t6-90-6151761280/",
+          "contentHash": "51a831b6e1e4cadf2005b372b519d899686c77f64da6135c152ba4396a1a596d",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.datocms-assets.com/104564/1789974097-desoutter_general_catalog_fr_2026-09.pdf (ValueError: corps incomplet ou hors limite)"
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-sumake-st-7784/",
+          "contentHash": "f94c1d1709c7c4a679d3177c556dd88443ad833501af04afc1aa145b999ca715",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-atlas-copco-lbb16-ep-024-8421010820/",
+          "contentHash": "231c881e713355b4ad2cfa392da129fbabfc76a6e3d243b3f2e968f1e8605c3c",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-desoutter-dr300-t2000-s6-90-6151761490/",
+          "contentHash": "a47217335f822beb86939ddc2a596df97c940e5ab57a38ad11f29622b3255c8b",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.datocms-assets.com/104564/1789974097-desoutter_general_catalog_fr_2026-09.pdf (ValueError: corps incomplet ou hors limite)"
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-sumake-st-c112ac/",
+          "contentHash": "fb606391c69a9069e6e56cf7d78422a535b7663191ef45717ba4695a51b0da53",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/polisseuse-sumake-st-c121/",
+          "contentHash": "f8144be41318a5980f5e3cd2402d7e730b1bbcc6371d200e1a47a01a49f2a6a5",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-sumake-st-bs111k/",
+          "contentHash": "6e4488b920629a31ecd1abd15bc76e139b5614a543c233ff2eb707ca2d6e0e3d",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-atlas-copco-lsv28-s021-m14-8423012572/",
+          "contentHash": "df2c1ca7ba7677a99f7b6f7181b0b5592f3a98d6539bbc8e55cb8f79900233de",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-sumake-st-c122-2/",
+          "contentHash": "eec813297221f2745d75ab17cd63764f513f91edc90a77e2972fae2a636685b5",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/riveteuse-sumake-st-6361s/",
+          "contentHash": "e8de720dd11605f5a33144b88acb41844ef59ca6fa7abb2f874f3f448ef599ee",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/taraudeuse-sumake-st-tt140/",
+          "contentHash": "1217f6e0feb29b5e9955315b73dd7a2d144d4a9dc47354aa3346878baa09dfbf",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-atlas-copco-ltv009-r09-42-8431027815/",
+          "contentHash": "0ee1dc1a6e477daa1030824454110f8e93cb84210b5ae2020d3c3fa54ae9e731",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-desoutter-h410-n-90-1302614/",
+          "contentHash": "7a863553ad741422525f90ca65515344abdff5109cb9ec2429a5cbf713544e9a",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.datocms-assets.com/104564/1789974097-desoutter_general_catalog_fr_2026-09.pdf (ValueError: corps incomplet ou hors limite)"
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-sumake-st-4470a/",
+          "contentHash": "b68b85c6824322c1eb952ae63309e86ba23ade7e2b82b15e249cb74c9704d3e1",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/ceccato-csa-20-pack-au-sol-10-bar/",
+          "contentHash": "adfd0de1ff887fdf071cfb61d44a2b04fc4ff2415fced5d1bf0ab9232bdaae7b",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/ceccato-csa-20-pack-au-sol-13-bar/",
+          "contentHash": "ccb270fc38cae922a38016d5ecc01b107f0ff153d8eff382893031b129c5e150",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/guides/atlas-lms08-hr10-air-temps-serrage/",
+          "contentHash": "663b0a096ce298ac83b17e25795623bb342711e520d3208af7620b5cff52d68e",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/guides/ceccato-drc-40-pack-ff-encombrement/",
+          "contentHash": "eeb23f493088f3b07c0998cac3459bd0f677d73da0024f917707d00252f1b6ce",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/guides/cleco-mp5187-diametre-flexible-unites/",
+          "contentHash": "1ece9ff9363650b8804ba500c654b6a25313f3ecc7e017756907e33e0162b0c7",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-bosch-0-607-450-619-0607450619/",
+          "contentHash": "95cb0a0ac99ae4e13dea73f0f5dcd0b9e8567cdcde9b1dbdd9ea7d5fd25dfeb8",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-sp-air-sp-1148f/",
+          "contentHash": "3953ef7a77ab8f3bc4e63191ee6bb90327f1c43c2b0c24abe7c331d9400bd8f2",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-vessel-gt-1600vph/",
+          "contentHash": "5bb9e44c16aa68dc00bce5f5e41772842b3ec173d3ac0a9685b6c6ba8b9d03f4",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-sp-air-sp-1765/",
+          "contentHash": "1460de55bb4a10335e82e3417329e899f2af1def6ed0f61eae0453e1111a8825",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/detoureuse-dotco-10t4318-62/",
+          "contentHash": "b763cceeaf8124bcac82a99a64ce1c1739b37ac410e921006bd4f1c891957508",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-bosch-0-607-260-101-0607260101/",
+          "contentHash": "6b288c4b581653a88cf1694d99b95adbfbc164509f17c38e86e7e1a912487139",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-cleco-216glfb-250-c4/",
+          "contentHash": "0fc547146ab86ac2e5fa2eb6db651574bf70bfaaad9dc12c941b7a3e1a50abd7",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-dotco-10l1001-3608/",
+          "contentHash": "53abd1348dba805b79949d6b3ec07c8d14ed387c7e5c219c67f5b434d187b18a",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=216 (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-sp-air-sp-1523/",
+          "contentHash": "6cd6967dd067e33cb08f42c29fef4e446a48f558e5450284a90a2f640fb90088",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-vessel-gt-mg35-12cr/",
+          "contentHash": "0d5ef7a65e07e41c6c23b81f34a23aba4d4b088db083da14275697d404c6ec8e",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-bosch-0-607-160-504-0607160504/",
+          "contentHash": "b71d4b5b1b93ce4f08d4268fa8f1ba6f54170f701ca2c6a7c8387e28d4b53745",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-dotco-14cfs60-96/",
+          "contentHash": "a3c9fcd96c4973ab5c7da12539b184893679a2686e4bb9e0cd19612c3a69a997",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://cptmarketing.paperturn-view.com/en-cleco-catalog-sp-1081-online?pid=ODg8808063&p=176 (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-sp-air-sp-1525/",
+          "contentHash": "acbd3419e06909d5a549453f87642340a4de8cd645a1e09bb402b34ab867ba7a",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-vessel-gt-d60-30/",
+          "contentHash": "ba9d2c65906f71d406df0c33bca9e6c83cd0e1711e1111116d37bef0dca880be",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-dotco-12l2384-b1/",
+          "contentHash": "d5e463b9e6bb05cf037869dfe37b503205f992a6c577a0eaf7d4040fce1d3cd4",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-sp-air-sp-3606-a5m/",
+          "contentHash": "83bb85f337f232558b1f64a72c79b723cc17ef9477e4aaa8efe2a9128361de32",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-dotco-10lf200-32/",
+          "contentHash": "f3d83f4163036b75bf44b64c20fdad487777522b650025d80bc5b206ae180b19",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/scie-dotco-12s1274-03/",
+          "contentHash": "739f444a35c06b8694a53976e21d515a4dd58bd7b91db9de3ed6e41bd5503f51",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-bosch-0-607-452-604-0607452604/",
+          "contentHash": "454fad124bf9106e3b250f4a80cf49d817726d498035c33e68f983b3b1c2178a",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-vessel-gt-h5r/",
+          "contentHash": "d5d9e3c1f280e434b3acfcf95bd616264eb9633cbe6138d217214fd4a9bd96fa",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/kaeser-aircenter-3-secheur-et-cuve-integres-11-bar/",
+          "contentHash": "23b02a1b1a59ef5a3f453edaf41bf64a83804e1e271f0ad4502292b4772a9590",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/kaeser-aircenter-3-secheur-et-cuve-integres-8-bar/",
+          "contentHash": "113e459d730dfcde806f4b146d2fefe30fddd1b44c5812183b23090b6ecf556d",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/boulonneuse-zipp-zat400dr-cmplt/",
+          "contentHash": "b1d7a6122f90a88a101191442197279d963d1d694642cd013a60c1a6ed2a43a4",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.airtools.com.tw/zat-pneumatic-torque-wrench/ (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-zipp-zas132/",
+          "contentHash": "ce1fd55cd7d93bd5ab98b25315c2f62f4026315b231f246abe11c215cb92b479",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-gison-gw-13t/",
+          "contentHash": "ec7f9dbfca6c5ea39e723e1f5613583422fbe02ed1b90da82cf64fb1fa57d7cc",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-zipp-zaw-412lb2/",
+          "contentHash": "c838aaeb4cad72931fd6f0fcba3a04a4d062d946b31cb09b64a65a8aefef8127",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-gison-gp-854j2/",
+          "contentHash": "9c8620437b8f1013f45d62e4a3e5d89564698d7d7886cb2564a86246305adcef",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-zipp-zrw-917ls/",
+          "contentHash": "dbee6ddafd5eb0b0d2b7d5caca47ff52ac3af320f39f322624f61c1f1d2377f1",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-impulsions-zipp-pn072/",
+          "contentHash": "a24129abea44dd31c0383ec7db1c48b48383677ebe1cc7d01492023d43f99ae5",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/derouilleur-a-aiguilles-gison-gp-851e/",
+          "contentHash": "45141b67d2cb5232f42634fd4a49af5bb401407e5dc1b5555c3316b399e360d3",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/derouilleur-a-aiguilles-zipp-zkj222/",
+          "contentHash": "7e1aedc6268d0bf89b6bab5a6578f633fa1091e21834f14d326b5c44d9da63d6",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/fouloir-zipp-zsr-412/",
+          "contentHash": "3d34d6d0e3c24202d483c9de01c91201b2a59dd6d7fdd175f0a1d30eed8632cf",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/marteau-a-river-zipp-zrh-197p/",
+          "contentHash": "eee45c36ce6ba92f03265df774feb9fd866f40be1fcab8a4dae7ec6d23ab344a",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-gison-gp-8241/",
+          "contentHash": "6c11ff8e58195b183360d4f871bd1661fd9d0cf5af514b9e08e85c9d70413d19",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-zipp-zag-965r/",
+          "contentHash": "c9bf95f560afaecc815316a0fa49835459c0a33c24a7dc3093be4e36f90ab6ea",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-gison-gp-330stn/",
+          "contentHash": "520442d7238d0192cfeebf94b32c5c756808a4b323f711565e9c7616ba4dbb47",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-zipp-zd2320l/",
+          "contentHash": "faef0d41691f3f8bfd0f324a367dfbf5140bfb31157c07a49b67117bcad09cbc",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/polisseuse-gison-gp-830/",
+          "contentHash": "8baa40bfbfe04fc69bed354a03261637d7644bd280194939a59c533e04b2ec56",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/polisseuse-zipp-zas-883/",
+          "contentHash": "70cd7d8f404df49fd55ca2a76f2c880e0cbab8e7bd6807b1db3665ae37094ce7",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-gison-gp-902e/",
+          "contentHash": "cd0e59b79d43f9c0c8959bbfec37ff96e4beb1ffee4bfc097d45bf0425a45693",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-zipp-zbs-382n5/",
+          "contentHash": "af95fb9e85ba4fa48555b2ae857f0dcdc7a81905cb604148360381608b7f5e36",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-gison-gp-os30/",
+          "contentHash": "1e86a76f63422ba6638e3cea7999f2e29a6a7034299d54a3def18ef4d0f078f7",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-zipp-zos-214-n6/",
+          "contentHash": "5950cceea1b1e0ebcc25688b3a6395a8570ac992c101b19d7803531cc75bb1ba",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-gison-gp-823sa3/",
+          "contentHash": "2adc7946c4015e4e66850aafd44ea9d46d78b5db5b618019e931129cd19c934f",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-zipp-ztu391s/",
+          "contentHash": "f4c895e9ef756db6b8329a7b90fbead53e75819a5078415a5ace4240b6437bfe",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-vibrante-gison-gp-937s/",
+          "contentHash": "8809f49fa2f264d4df21657ccbf6ce5c367859b0ada6fc9d8ad62ec06e20b1f7",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-vibrante-zipp-zjs-nl4ac/",
+          "contentHash": "aefe609eadc7704089141c1ff1c92e84739dbbef0c6089d2a54e32edfcd56df3",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/riveteuse-gison-gp-836lc2/",
+          "contentHash": "e425e145e048cb03ee437ed0df2735e26297dd81381821897bc8db22adfb93b1",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/riveteuse-zipp-zpr1116t-3j/",
+          "contentHash": "515a7bd59180038b4afc8cd0f9d27ac9ce7271fb3c1c586d2310d14172e0f708",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/scie-zipp-zs317m/",
+          "contentHash": "0b4d4f8d69ce4c1f2d1c5581b1e623378e918abca5f1b43bd28844f5a7e4c236",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/tronconneuse-zipp-zag-387/",
+          "contentHash": "2b3c5383abdb6cda20af267092bc4701c480a4dc566eed9908a8afa07535cc19",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-gison-gp-861c/",
+          "contentHash": "43dc6f20939b2f40aaa64390c7c850671a2979c32d9e00bcc5f6fcc06add9a56",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-ober-an15-300-8304026/",
+          "contentHash": "2beba19aa3774828f95d000abfd82465419b3cc8ec0507179278bd7611dc29dd",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-zipp-zb46ccq/",
+          "contentHash": "677d521b8f3080ccbdea4944b4ec6a2e980221b5aa263d8d88b64692200239a8",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/broomwade-fm11-rsccp1113-7-bar/",
+          "contentHash": "1f826bcc9c4948d1fcab7d79ef1f68b15ae05bf41ef1aa2b54fde166b19222d5",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/broomwade-fm11-rsccp1114-8-bar/",
+          "contentHash": "7882bb75b3c2ba7877971d47db4abcf2b9737b06a8746dc875c31040709d578b",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/guides/iwata-w200-wb1-wbs-plages-consommation/",
+          "contentHash": "403d5b3bc9aeca63c410dad1846475a726ae8cc3be7c80618f888f9da1bbf4dd",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-hymair-f-50c/",
+          "contentHash": "df55580942d2631b36c5b7e06bd4df8cc042147c2f2314577e02b92c44e3fcbc",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-max-cn565s3/",
+          "contentHash": "ff819221b8fa4165ae07e8ba604cc45c1e4587b1f97d550302e5478758b4c901",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.maxusacorp.com/nailers_compressors/products/siding-coil-nailer-cn565s3-supersider/ (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-meite-422j/",
+          "contentHash": "d796fa385a27ae2f3cb85b500c72d903b532e3541c1f1877e36d6966cfb36277",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/boulonneuse-sumake-hawf5600/",
+          "contentHash": "8827fbf2805ed27d6e3c65b204bf4ea645f3c7856942b0d8b56b0e0d80afc8f2",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-hymair-nst-2080f/",
+          "contentHash": "05bb4c677b2e7cbc557ae4e408ebf698a78c5ec703667d989a6a9cb79a4e57cf",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-jonnesway-jah-1004h/",
+          "contentHash": "01f5912da43d217bd471a77a2474c137adecc65c130cd82007d83d1609883d64",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-puma-at-2023q/",
+          "contentHash": "b499bc53d8954311c467212b7c9116f1387cfdc4a856541ee4ac27628da2bbc2",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.pumaair.com/product-Air-Hammer-AirHammer-.html (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-universal-tool-ut8652r/",
+          "contentHash": "baa05e6bc3e11a41c780054bb9a81b74afdd5e95ccf3a6e1a74b0e83bab61b5d",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-aircat-1058-vxl/",
+          "contentHash": "e03d8dff0f188e3b3f5a9239d99986f952435980bfeccea1d4b824c05ae9b799",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://continentaltoolgroup.com/product/1-2-vibrotherm-drive-composite-compact-impact-wrench/ (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-atp-atp1011pt-th/",
+          "contentHash": "2c916c36edc2d0332cf9ba26202bbf0c13e684438587d636063d1ea4634fd2fa",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://continentaltoolgroup.com/product/super-duty-1-square-drive-pistol-grip-pneumatic-impact-wrench/ (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-hymair-at-241/",
+          "contentHash": "56e142a992af05f634a4109461520ed15b21a7a55be7f2fdcdc00489c2a44476",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-jonnesway-jai-0936/",
+          "contentHash": "11a38ae9f5857a80dd0a4d8e9e676628e5207dd6a11fa7c9f59424138d20208b",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-mannesmann-demag-e-24-p3-29908-31-5/",
+          "contentHash": "6b503be9c11e17046b2d9659b0adfd198e2bd1cff49f9c9c9e1cac819c8de004",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-paoli-dp-1800-001800-00001/",
+          "contentHash": "4bb7da73c56ed19056a688322bcb4f5c398f72e5a75d9da9f14e275b1d8ef1f3",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-puma-at-5042/",
+          "contentHash": "502d708932e3312d9053a5c3687daec25610e415969fae6e1b56b5a879ddae27",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.pumaair.com/product-1-2--Mini-Impact-Wrench-1-2MiniImpactWrench.html (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-rodcraft-rc2530-8951077260/",
+          "contentHash": "fe6054c9b51ac3d59fa83c876e9b0667c692e7c95e72b1fac224ed771377390b",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-rongpeng-rp7430/",
+          "contentHash": "53bec2f5e5965a05a05bc5458a84179c34a232f562322042f6b7adabdc7c1b9a",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-universal-tool-ut2588lt-th/",
+          "contentHash": "bf319089d4da9ee9cc521104df61c2098e234dc881769c03b75ef5d8f6a77115",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://continentaltoolgroup.com/product/2-1-2-drive-lever-throttle-impact-wrench/ (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-yokota-v-330/",
+          "contentHash": "f9ea1f2dc7520d6d440f028d80fcded4a698fae7e0c6b1297476a6b74e892b70",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-aircat-805-ht-5/",
+          "contentHash": "d6d628df99b862c5bd0d0f818feeb1d87d649c90e644d17b5e69028b441dd827",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://continentaltoolgroup.com/product/1-2-high-torque-ratchet/ (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-hymair-nst-5058ca/",
+          "contentHash": "2dada23c1bad3354ebeaa19485a4ceabc1d73aff900b7102ab5a41d73e727d7e",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-jonnesway-jar-1082/",
+          "contentHash": "ee5f8b0342b989fa37476480f0504ee0d152f8fa8602f35e0dd3354c3495fd22",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-puma-at-5111/",
+          "contentHash": "fe1d10b2a6373bcfd4b7bd1e3fcce7c61928c4f7d1b2e61b70d04add414d84be",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.pumaair.com/product-Air-Ratchet-Box-Wrench-AirRatchetBoxWrench.html (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-rodcraft-rc3200-8951078023/",
+          "contentHash": "aa21a975268ab7b3ba29e53053492802f337234361c7987ee3da421874e18cca",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/lime-bande-puma-at-7126/",
+          "contentHash": "9c1f2b118b042ea2d09a67396de7fb1473b11220ffd8f740264b32236ba8c125",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/marteau-a-river-puma-at-2211/",
+          "contentHash": "1a45dd25327eff239efd45979f85e80733a0a8687f6dafb8eaafe0f9f38a6978",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-aircat-6245/",
+          "contentHash": "82dd85adb78b4b6fa27d85e76a8fcd14a30331fd574c20fb8a6bdea06ca0910b",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://continentaltoolgroup.com/product/aircat-5-hp-angle-die-grinder/ (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-hymair-at-7032lan/",
+          "contentHash": "7ff593b50a35eff3368bb87735931c64f636cb0a5fb453fa60be9729bef8e982",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-jonnesway-jag-0913fm/",
+          "contentHash": "e8fcad6172ed9b2d31968a034f98a5afc7d2741851daf056d547547a6714e1ec",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-kinshun-kin-510a-6/",
+          "contentHash": "1cf5ff13a415d956045185d6dc9414e214144cfd2b321e1d07294251ecf77c65",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-mannesmann-demag-g-101-h-200-60009-42-5/",
+          "contentHash": "0f227940dd3980ff5c953207cc2dda0c0bb8883e496a5f3e553972e03e6c564b",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-paoli-dp-2450-002450-00002/",
+          "contentHash": "934bc0b3696a7364f43e3dace94b847942dac88acd4a16c506f0094b7ad70dee",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-puma-at-7439/",
+          "contentHash": "52bdc1db9dd31713725cf1c3adee06448466e9738aa7b19578e1c975f3e45575",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-rodcraft-rc7051-8951000165/",
+          "contentHash": "0259cfbf6c49011dffc65d3852dbc995f89fa3b049fb12a46083d912d86bf7ca",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-suhner-llc-23-top-100046895/",
+          "contentHash": "02c4b305aa14a99884686efd039a28b40e07ba187a227500e9b8de7aa52ac0ca",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-universal-tool-ut2720/",
+          "contentHash": "8802fbfdb1ae023ca750d90e33aef5dee6babe8b5d69e9ae80adcf4711020de8",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://continentaltoolgroup.com/product/die-grinder-4/ (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-hymair-at-4039b/",
+          "contentHash": "5e8b7c6e3e3dfc076a9e8a48c3743a6d4d0933701d152675b332ba0f6585dc60",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-jonnesway-jad-0534/",
+          "contentHash": "857bc0a3c1a87671a24ea940568c5841fffc4fd8c4ad8553149b4b3d0d192cb6",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-mannesmann-demag-d-13-45-p-29900-01-6/",
+          "contentHash": "af14b4fa8d239254cf0e358d0655eb6d592601922f110924c2359d62e8abf3f5",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-puma-at-4330/",
+          "contentHash": "5fc51d7a889a8db7a75b4bfe5bdf8fea1839d2b5e65a680e1e119ea71b76d2af",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.pumaair.com/product-3-8----1-4--Air-Drill-3-8-1-4AirDrill.html (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-rodcraft-rc4650-8951073050/",
+          "contentHash": "841fa98df5a7833be2d9e4e296a60d1bcbd95eb39b99dc551fae68c3d3084171",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-universal-tool-ut8843-12/",
+          "contentHash": "b1ef62b1bc98a4541bf0a221d9798a5137b3a33991b704d3f4a44912166308fb",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://continentaltoolgroup.com/product/1-2-d-handle-drill-2/ (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-anest-iwata-lw1-10e1-0015/",
+          "contentHash": "7b7427d5c07f588955a37c41a0f4712e6864792a12701c112bd2e3615e37c6ea",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-hymair-as2003ga/",
+          "contentHash": "bf69ca8c85d644e3bc5a9b034f44e6c1259b897ecb597c9a12851b16273c7d68",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-aircat-6700-6-332/",
+          "contentHash": "7743fe3b2ebb40ae5f8f3837617582eb7b5ffb39e836e4851ef57c8282e7a1d1",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://continentaltoolgroup.com/product/non-vac-orbital-palm-sander-4/ (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-hymair-at-991la/",
+          "contentHash": "e8b26a18460d7f830a6cca55729c8ceea59ea64e85e351dabdbd9e1d0608a393",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-puma-at-7027/",
+          "contentHash": "9385766011163cc00299effa517b71b83b7595275da02c74c3fca6ff3da74f16",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.pumaair.com/product-Air-Sander-AirSander-.html (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-universal-tool-ut8789-5-336/",
+          "contentHash": "0957c21a5a9aa164e53f7b7248cc5994aa0a5d42c162561cfd3ec686a2b14542",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://continentaltoolgroup.com/product/5-orbital-palm-sander-3/ (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-puma-at-7113/",
+          "contentHash": "a282800539c12b8230dfbaf2c541b1a76e33e1dc70411d43b65f6f27253b0124",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-yokota-hsa-l/",
+          "contentHash": "748969c48060f38f5fc38ac77df49890f1ffe4cea28a703604d27cefb8cf76d1",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-vibrante-atlas-copco-lso31-s070-3-8423036279/",
+          "contentHash": "fb49497a42524e8241bcd8c1d3580b8a88ae8b015e2aee4daeacbdc45e7ae567",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/riveteuse-hymair-at-6048/",
+          "contentHash": "3fa40709e2325b76d4f2d6d722588e221168a2f0824904e898c84109140bf7b1",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/riveteuse-puma-at-6206/",
+          "contentHash": "bbc2168c624c317627a3c9408a7a0735351f67e637cbd24b20b0c5e60ce030b3",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/scie-sumake-st-ak100/",
+          "contentHash": "28080c6cd817c8746ab20bb3c07604ab9d550ce4b465ae0ef7f2ca2874e8cd33",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/tronconneuse-hymair-at-6028/",
+          "contentHash": "55d498c9a2a0813159d78980d17211ae82108f07a73fa32f8c67271dc9f9c82f",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-hymair-at-w5/",
+          "contentHash": "f311a898800a3fa044c10bcb7e2cf5ea2d743a39a576f9e606c1d39e3fa6ca86",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-jonnesway-jab-2041/",
+          "contentHash": "e5da5b62009cbfd8c0847e278af3cd13f5b51ccd43c9bd89f68dcecb550fd7b2",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-universal-tool-ut8080q/",
+          "contentHash": "aa68744337a6668307cf2b831da743802c1565359f16265e261fde58e5c5a8b3",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://continentaltoolgroup.com/product/impact-driver-5/ (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/compresseurs/chicago-pneumatic-cpm75-50-hz-10-bar-std-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/",
+          "contentHash": "2fc28d68d9080fc2d28d97ff70e0bb685bc17ba6316b7230b587721c0969322d",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/chicago-pneumatic-cpm75-50-hz-7-5-bar-std-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/",
+          "contentHash": "dab191795c960f0754e1aed77ffafd6b1e5a01e4bb8b90667914a389416f5ad2",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/elgi-eg-160-p-50-hz-5-5-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/",
+          "contentHash": "c3472fe59772977d7fe67f4fa1e479e3b845e3dfd2cc00d84c64d808778d6efb",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/elgi-eg-160-p-50-hz-8-bar-groupe-fixe-au-sol-sans-secheur-vitesse-fixe/",
+          "contentHash": "ed936368d88abd07e304955d9e56634920d2ab1c73a125d806efbe8c5bd5197f",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-omer-12-40/",
+          "contentHash": "192238b6395c06514993037eafa12b17308936660a0b4bd04d19c72a4687c26e",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/boulonneuse-ingersoll-rand-5rlk2c3/",
+          "contentHash": "0383ee93275bbf33fbe92d0eff28a49311d919285967f134de01b607de92c753",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/boulonneuse-kuken-pts-450ex-l/",
+          "contentHash": "94871475a15025e39c606d4caff7b2a0fe86a88fd8c56bb698f90508166f2f32",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-michigan-pneumatic-mp-133-orange-nep/",
+          "contentHash": "c372181aac7914d9b69bff26f291541a5035a2ff8c5ec952a65284ed959edc04",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-tranmax-tpt-932/",
+          "contentHash": "5a10a97ea19a669c0b52c50bc53f70101a34c0294ad22db9a72c3205014868a2",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cisaille-vessel-gt-hwr1-360701/",
+          "contentHash": "2f42f5c26f8ded3b018d8fc190b363ea01bb0f2e01df6b7a567be77db89a7be0",
+          "decision": "approved",
+          "note": "Ligne GT-HWR1/360701 relue. Corps rond sans levier à double effet de 95 mm et 84 g, lames en option. Diamètres extérieurs publiés : cuivre 1 mm, acier 0,5 mm. La HWS1 de 116 g a une autre géométrie ; la HWR10 offre 1,8/1,2 mm. Les 45 cm³ par course et 0,4 à 0,5 MPa de service ne qualifient ni pression exacte de mesure ni débit continu. Les moteurs restent non conclusifs. Sources complètes et empreintes du jour vérifiées, règles, contenu, groupe et voisins concordants. Voisins : /outils-pneumatiques/cisaille-vessel-gt-hwr10-360714/, /outils-pneumatiques/cisaille-vessel-gt-hws1-360700/",
+          "qualificationId": "3f6108bbc5ab05341cd208fe9304f9309d0f03369d0f572e89231390509fc0f5"
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-cleco-wp-2059-6/",
+          "contentHash": "eb3a28cd53d5d544c3c75fa067b5fceae0a9ca8a9e40da497baafc3efeab1167",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-hazet-9012tt/",
+          "contentHash": "fbddec651a4933ac9cc88b1b20c6e78c07890ed3f5b41a6e214a9e68cc35b1fb",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/impact-driver/product/ean-4000896226924 (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-jet-j-3800p-505976/",
+          "contentHash": "3a0d7ed42de8aa9f8255452b9f18dee371341dd1d8cddd128438557ac6156428",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-kuken-kw-385gl/",
+          "contentHash": "57045c49ee34424ee8f6e40ea0f6c1a999f009c9e73cc8920136e08f7435f003",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-michigan-pneumatic-mp-1437ra/",
+          "contentHash": "082c03a12a11692b45df474238e091a6910596c64ced5f32ea15281cf53ce9ee",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-sealey-gsa6006/",
+          "contentHash": "f719acd83034eaf65c40e6b322860c4899b147f3a0e2123dd93d00d8bd8c166e",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-tranmax-tpt-2824-l/",
+          "contentHash": "c4fec714dcf4bcc7718e715f49a7174d39b204b9c98f8bb71cc1c3a1ec722bec",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-draper-84126/",
+          "contentHash": "de883286c70036f06bf221d4b6017e870ece1a8dbab3a6e60f449a96bcf76eb7",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.drapertools.com/product/84126/air-ratchet-3-8-sq-dr/ (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-facom-vr-sj3500pb/",
+          "contentHash": "b83e86c6e1ceb7cc2db8b6dcbf948f90980d4a80df18f63defcebdc07abe338e",
+          "decision": "approved",
+          "note": "Fiche VR.SJ3500PB relue. Enclumes interchangeables 3/8 et 1/2 pouce, tête fermée, embrayage de protection, 108 Nm maximum, 300 tr/min à vide, 318 mm. Le VR.J154 est un mini-cliquet de 136 mm à carré 3/8 ; le VR.S3136PB mesure 261 mm. Accès et enclumes distinguent la fiche. Les 6,2 bar de service ne s’accompagnent pas d’un débit. Verdict non conclusif dans les deux moteurs. Sources complètes et empreintes du jour vérifiées, règles, contenu, groupe et voisins concordants. Voisins : /outils-pneumatiques/cle-a-cliquet-facom-vr-j154/, /outils-pneumatiques/cle-a-cliquet-facom-vr-s3136pb/",
+          "qualificationId": "04d88758381859f4f15e36718eea138fb2591e984b6437e535bd34bf81a190d1"
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-hazet-9022-360/",
+          "contentHash": "58f9b2adb2322fe072e59735009bf0d6f9939efa878f77768caf652317729ef9",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/air-ratchet/product/ean-4000896209781 (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-jet-jsm-3330/",
+          "contentHash": "029ca362b9d0f3ce31897c06a8f47bc433e3af9851d5d048f11fdbe4fe0fec2b",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-sealey-sa230/",
+          "contentHash": "3d9008f27d2321fe72025655dcf963bf0fed8d23485cef3c7bf2f5fadb8fe6c8",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-tranmax-tpt-221f/",
+          "contentHash": "7f1d2746807e9b3bd983a71b8aafaae16834d7955d4025fb58e451156c8c39b2",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-impulsions-du-pas-tdi-180/",
+          "contentHash": "954bc47eb3c7bbace0c755222453d8cd0ff76164af590b81a1220a8efc4ee6ab",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-impulsions-ingersoll-rand-500a/",
+          "contentHash": "5310ea917b936dc393826667d638b9f450ebdb79eb53eff450523c1c059b8e38",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-impulsions-npk-npw-1600apts-000/",
+          "contentHash": "9e865da518660f1b4d174e4a1d2c52d3c053968bd0bd8ff0b22569dc85119498",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/derouilleur-a-aiguilles-sealey-sa660/",
+          "contentHash": "8a215457f58d2874c62e815cff200fb4ab0314c9d3cb3897980da3ec3b0def17",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/fouloir-michigan-pneumatic-mp-241c1mfr/",
+          "contentHash": "f4361332cbf7065c6105f86ed8f61951379becde22f139711fb1ff254d4c2c39",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/gonflage-hazet-9041g-1/",
+          "contentHash": "0288805c3c7e54c496cf215953752da0504525d06ee8340a7496c47f42a6ad3f",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/air-inflator-air-measuring-device/product/ean-4000896212385 (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/marteau-a-river-ingersoll-rand-avc12a1/",
+          "contentHash": "ba06d4eeb442140242fa8248c43de24f03813192254beb5d3c6eb892a1a90f76",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/marteau-a-river-michigan-pneumatic-mp-30xg/",
+          "contentHash": "f1c2f8eb1da17944fbab5014022ebc5d88d42b7d58965d1addb22feb51bb5b46",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-facom-v-dg300fpb/",
+          "contentHash": "7f6ae9d9f83856f7da41403a0b8a3aadc8b7464eba4f6c63ae7ce7e3d05905bf",
+          "decision": "approved",
+          "note": "Fiche V.DG300FPB relue. Meuleuse droite à pince 6 mm, 160 × 39 × 70 mm, 0,44 kg, gâchette progressive et silencieux intégré. La V.347F est coudée ; la V.445F est plus longue, 207 mm, et plus lourde. Géométrie, dégagement et pince guident le choix. Aucun couple consommation–pression n’est publié ; moteurs non conclusifs. Sources complètes et empreintes du jour vérifiées, règles, contenu, groupe et voisins concordants. Voisins : /outils-pneumatiques/meuleuse-facom-v-347f/, /outils-pneumatiques/meuleuse-facom-v-445f/",
+          "qualificationId": "67af3a42481ff89e2ad7fcde45d94ef87df5008b3ae48d17ac151969972b1f24"
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-hazet-9032m-5/",
+          "contentHash": "a172b43636ff019b0ac5a07b0c3defc96d165f29311b38ccdf2d808cfbb1f2c9",
+          "decision": "approved",
+          "note": "Table 9032M-5 relue. Forme coudée, 126 mm, pince 6 mm, 224 W et 18 000 tr/min. Les voisines M-1 (115 mm, 25 000 tr/min) et M-36 (150 mm, 30 000 tr/min) répondent à d’autres contraintes de vitesse et d’accès. Les 84 L/min sont publiés sans régime ni pression de mesure. Les deux moteurs restent non conclusifs. Sources complètes et empreintes du jour vérifiées, règles, contenu, groupe et voisins concordants. Voisins : /outils-pneumatiques/meuleuse-hazet-9032m-1/, /outils-pneumatiques/meuleuse-hazet-9032m-36/",
+          "qualificationId": "6c43512df0c10938ce54ac45a4fa8e0201956085009d59bf9231db40cecded80"
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-henrytools-400ghsk2/",
+          "contentHash": "38c77f780a542c32f2fa487f3bde78b4d65b5a034408dd9b25d6099b4e2be951",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-jet-jns-7032/",
+          "contentHash": "42e39d44e6853837da3858c771052c703cb86cb152531b0e0a7ce0cced9c036e",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-kuken-kg-10/",
+          "contentHash": "38bdd41e86a77248dfbdcf0e583fcdb1dc7c6a11e7878c9141cf99d877766b05",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-michigan-pneumatic-mp-11650a/",
+          "contentHash": "938c2eecf68555e9934cf2df5b5bd6f375dd6dea762389daff0b2a4d88bea6b7",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-npk-nag-1flw/",
+          "contentHash": "7ae586477f1ab0f7e54abbc4fb03efceb6785be5d509855fe403a646f532832b",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-sealey-sa152/",
+          "contentHash": "88206ba7cf2804a535802f2ffc466ec7098d4c6f572bc23734d9924fb6f9809d",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-tranmax-tpt-502h/",
+          "contentHash": "7f038d6f0b32b8360f10b251259ad284e751e99491b9e1d9d3942c61ca73517c",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-draper-83961/",
+          "contentHash": "774a737a2cb697d3044681c35bbaf8253570c68dd203a0b24ad920e4db00f212",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.drapertools.com/product/83961/reversible-air-drill-10mm/ (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-jet-jsm-705/",
+          "contentHash": "1542d7898d04b97cfa42d3552561c01e9f544e499addb2d68b667d44376385c4",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-michigan-pneumatic-mp-20m-401l/",
+          "contentHash": "2e228768ca98f4bfba8d661b13cd9af76f7b02b8fc5f6d5f3d59b675ee5c2cb8",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-sealey-sa241/",
+          "contentHash": "bb50c200eed7f6367a4ea7a109f5026dc74ad0799f8f74fece40a55b6eb51825",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-tranmax-tpt-608/",
+          "contentHash": "c03632695bc099f39b9f145eb39b4d9c3325aab10e79a0a01682d904848eb17b",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-draper-92971/",
+          "contentHash": "5c0ef0ac33709fd6d91041164347d4607df91da0a61b5260aad94d8d910c2e34",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.drapertools.com/product/92971/gravity-feed-air-spray-gun-500ml/ (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-jet-jsm-612/",
+          "contentHash": "cb51a20d6e9df54ba7eac2b12c6f5fc15100de2ac8007331834f01cef33b48b2",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-michigan-pneumatic-mp-1512bgs-38121-12/",
+          "contentHash": "8bd27e1067bd2a11814d746bcd50db6329786d3ec06c4d2b8d0b843d5facbdd7",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-sealey-sa355/",
+          "contentHash": "6a3043a3bfe2688aa9ca5571526c54798193f0f7f3823f30b1c5c1836b39d37f",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-tranmax-tpt-476/",
+          "contentHash": "7b7aeb8bb51c144c94350a45309e1ccb4e37817db1bf830035a84988ee685872",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-kuken-dam-05as/",
+          "contentHash": "4cd412e2c599c2633ee97e14744fa577d024db5f187b91d8b7c1630e08a4150a",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-michigan-pneumatic-mp-6166-st/",
+          "contentHash": "5df6a9520d3bfef1f2e21897ec2bc48d69530e6f6c4f5902269e2a657d98549f",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-rodcraft-rc7705v6-2h-8951000081/",
+          "contentHash": "53ad8454bf4a8f59c8dfc57bc0b3f63b5fe27ced90646839cbdd6dfdfffa5aa8",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-sealey-gsa05/",
+          "contentHash": "cfa32d253f4e2db24a4c3fc3b8071a51cc239969c3dd7d782fa6971ded335e1b",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-vibrante-kuken-sam-41/",
+          "contentHash": "8a52f5e47c3d2078842d496d684e3251a0920b81a65809bde45cdd4a2a369ff9",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/riveteuse-michigan-pneumatic-mp-351c-pu/",
+          "contentHash": "ab26d92fff0591cd12839d91664d07d0302b19b03c210ba79a50eb0c92fed5fb",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/riveteuse-sealey-sa31/",
+          "contentHash": "ebd84cbf77639e09063bf5bfb7b06a94378139fa9917beb0456fda6d6d8572bd",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/scie-sealey-sa347/",
+          "contentHash": "8aed89464a4f3bda010bbc6d65ec9c8be441ee9c7ca42f8dcf09e02d943fb65c",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/soufflette-hazet-9040p-1/",
+          "contentHash": "b334d3fe5ec3fd8fe06e04f79167e34a8493a50b92a967f20ada5f15154bbbbf",
+          "decision": "approved",
+          "note": "Fiche 9040P-1 relue. Tube coudé de 100 mm, longueur totale 247 mm, buse standard et raccord femelle 1/4 pouce. La P-2 atteint 420 mm ; la P-3 mesure 255 mm. La portée et l’accès distinguent la fiche. Les 290 L/min de la P-1 n’ont pas de conditions de mesure permettant une comparaison en charge. Demande non conclusive dans les deux moteurs. Sources complètes et empreintes du jour vérifiées, règles, contenu, groupe et voisins concordants. Voisins : /outils-pneumatiques/soufflette-hazet-9040p-2/, /outils-pneumatiques/soufflette-hazet-9040p-3/",
+          "qualificationId": "bfae94c380c7a8b83f1679093539c9769bfdfa08c98f458762b1c6bafc6d7014"
+        },
+        {
+          "path": "/outils-pneumatiques/soufflette-sealey-sa913l/",
+          "contentHash": "365277e9928cf6e5a99ea04f78ae9dda159d1602d9ed74b3a5894af1ac2427d1",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/tronconneuse-sealey-sa25/",
+          "contentHash": "dd93aaacf29f69482c1432f3f2a4780001df03cf1168ed039d53c5159454e75b",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-du-pas-tdcs-d08rs-1100-c/",
+          "contentHash": "16aa9c87bea753233b77fe22103e170e591692e67be0c33cafb522b20a1663f0",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-ingersoll-rand-41pa10tsq4/",
+          "contentHash": "cc827802f81bb512228d905db27495a6bab35dadf496b776ee274af5c53cdc58",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-jet-jsm-8272/",
+          "contentHash": "0b06533de7ab176f1d76e653da58484375a3a017b6dca31f5081d0d7975b2e7d",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-michigan-pneumatic-mp-201as-st/",
+          "contentHash": "3165e2129237f47a30ad63a191a6fac09f99f62f0b493d0a1f0e67f525b779b4",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/atlas-copco-ga-15-50-hz-13-bar-workplace-au-sol/",
+          "contentHash": "7e1d2da57bdd2a34cefcda6d6fca1ff43ec995d6c1d6d2caf5302f2292931929",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/atlas-copco-ga-15-50-hz-13-bar-workplace-sur-reservoir-500-l/",
+          "contentHash": "d195a1bfe9aafd4df5658610e0af0e8bbe6cdb88618a93cdc2c262e9ff00c172",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/worthington-creyssensac-rlr-300-frequence-non-precisee-10-bar-groupe-sur-reservoir-200-l/",
+          "contentHash": "5c8b32bda2596014b2ee4ff56b80be38c34f7bc7bad309a29afaf7dc58f01d76",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/worthington-creyssensac-rlr-300-frequence-non-precisee-10-bar-groupe-sur-reservoir-270-l/",
+          "contentHash": "27786c39b5c5568c318b498b39ec3beca777d6b3c4f6a5f580e87c4e242b21bc",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-basso-18-32-2/",
+          "contentHash": "20986a424e885008ac6fc3034f2870bc792d26123b09c416dc380face75fd909",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-bea-14-50-780c-12000522/",
+          "contentHash": "db0877c9cab5489d664832f8291cb910baad3e7827fe60ba59b66d0d02e9f83c",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-metabo-hpt-np50a/",
+          "contentHash": "ba7a60194af4f012479e64a697ab1bd17f01ec3c75ee903bcd0b88b9273ae6b6",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-kuani-ki-4727-r/",
+          "contentHash": "7086207b63f056682bdb217041c5bde3b46b00a55691a39096e6e6987d718ed5",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-soartec-wx-420c/",
+          "contentHash": "389b4cec273550295184aa2109a8f16ea0b81d80795eb3a3bbc65307584a3d15",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.soartectools.com/products/air-chipping-hammer (GET indisponible, HTTP 429)"
+        },
+        {
+          "path": "/outils-pneumatiques/cisaille-kuani-km-871/",
+          "contentHash": "71ea37c8290b0335891356e40a7109d9f8cb205b20ffb29b1d613def2d817479",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-king-tony-33411-041/",
+          "contentHash": "8529d7e1bd9ee41cc542dabddd6cdca9d62f709c425b6278cf7369ea81d249c0",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-ks-tools-512-1020/",
+          "contentHash": "1c9a1153da485e5774391bd803a6fcf426ae7c56b6e33fe2a247a8db0d198391",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-kuani-ki-1221a/",
+          "contentHash": "8bd838e2d8c9b3aac2de489b512e33d8cdc555a5fed09b93c9856f8b13b2e062",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-soartec-ws-202l/",
+          "contentHash": "142ea10ccfadf20bdd6dc1f0c0b21a74ee6a7d7699cc914d035ff779009d9602",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.soartectools.com/products/air-impact-wrench-1-2-twin-hammer-ws-202l (GET indisponible, HTTP 429)"
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-tengtools-arwc12/",
+          "contentHash": "f0a2ed26ca2234c3bc7629c984e0e26c927ffb30f86e050af34be1e11b4706a7",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.tengtools.com/en-gb/collections/air-tools/products/1-2-composite-air-impact-wrench (GET indisponible, HTTP 429)"
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-king-tony-37221-031/",
+          "contentHash": "856393e3265f5b052b5e4311fb475f7988efab2372c8712cfd20856fe8af7649",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-ks-tools-515-5505/",
+          "contentHash": "27058d54bf230199326085e1866b6ba43966b0117004461676d3c93abda73004",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-kuani-ki-2223/",
+          "contentHash": "d0564c2e1c592b0b4eefc914b8f1cdbffb6f0eebdd4271077f2646396d5fb8cd",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-soartec-wx-2701/",
+          "contentHash": "a4974a95b7c42dde5f15766bd8881e1d31c584e79a77f6bf7851424966703af1",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.soartectools.com/products/air-ratchet-wrench-hex-bit (GET indisponible, HTTP 429)"
+        },
+        {
+          "path": "/outils-pneumatiques/derouilleur-a-aiguilles-kuani-ki-4722-p/",
+          "contentHash": "01448318cd80b0bd5779fd8f61de2539b114a8fc6f2bd222e3346a35a8f01e08",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/fouloir-kuani-ki-4795a/",
+          "contentHash": "17eeef19a2f1516e9d1a25bbd568617e8d445804adb3709a11c961b56a400814",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/gonflage-ks-tools-515-1960/",
+          "contentHash": "0f6e7b23dd6d8e76f54b23b937f4a3d93df8a0dadcb009799f9cd92f5572164d",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/marteau-a-river-kuani-ki-4791-xp4/",
+          "contentHash": "b11996454002eeb2cb41d9cc6367dc203a4e8847dcc5b54c1712ef3d7e2a7628",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/marteau-a-river-soartec-wx-411p/",
+          "contentHash": "db5ca7a941e36ccbd52773550693f9715e4884f4b29a9c54a67d68f258b405c7",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.soartectools.com/products/air-riveting-hammer-pistol-type-wx-411p (GET indisponible, HTTP 429)"
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-ata-ra12m-100a/",
+          "contentHash": "3e3e8e7524b0792429797f0660b492be84a3ca11b1f8bb5d138e74e2f8ffda34",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-ks-tools-515-5410/",
+          "contentHash": "cf81881c0616b26fdf7bce676ff420ea1dc0b3b76ef7fd90add0ac0146aab103",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-kuani-ki-6216-6l/",
+          "contentHash": "3f170900addcc03d4d27cfe2866839b08c20b107ba0f56a22501bdd685df080b",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-soartec-610gh/",
+          "contentHash": "7ce2eadf055e46100b40a3f207f2ab3984f75fde5e6e28ee5db4083ba6c3f00c",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.soartectools.com/products/9-vertical-air-grinder-610gh (GET indisponible, HTTP 429)"
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-ks-tools-515-5465/",
+          "contentHash": "ffe6c2c78bf27032f3a378de60f9b2566e333025b835437bde7fa1fb19048c89",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-kuani-ki-5007/",
+          "contentHash": "d509298e9b345cb0806db914dc928d0fe975be781ffdc55f1d3153f323082090",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-soartec-wx-507/",
+          "contentHash": "6cd08dbd888c4e25c9accdedb793bc9b70244ead86c1931b5be19212e9774d5c",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.soartectools.com/products/3-8-air-drill-straight-type-wx-507 (GET indisponible, HTTP 429)"
+        },
+        {
+          "path": "/outils-pneumatiques/polisseuse-ks-tools-515-5455/",
+          "contentHash": "2082510b11ba12a4a7b0c54cca0219b9b551d7cfa6097e93b0caa84035087337",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-ata-ralm10l/",
+          "contentHash": "e635110d7fb4deae6aecfac312c204822fde69565a3445392e30ac45f288bbd8",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-kuani-ki-6411-x1l/",
+          "contentHash": "410addba36f94b1fdb132415dcb78af102bf01554955acf251f86dbea1ec452c",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-ks-tools-515-5111/",
+          "contentHash": "0d2527dbdc00560ade49141cb75995e24f1860aa3049f81623e43224cd2b17a7",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-kuani-ki-6603/",
+          "contentHash": "a74eb4e612bc6d8fec9113fc02d07413bf7047fdf2ba2350ebf4f84b23297419",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-soartec-ws-1051c-5h/",
+          "contentHash": "ec7960373f59edd0d621b314d596aad8d8c2fd70e249a45bf7276bd11d14ca48",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.soartectools.com/products/5-air-random-orbital-sander-5mm-orbit-central-vacuum-ws-1051c-5h (GET indisponible, HTTP 429)"
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-ata-ra14s-125pa5/",
+          "contentHash": "5165fdb9e41f8ccc2a5f33432c7038839e7e1dd7cd25316b509152e9193eb583",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-soartec-wx-7931/",
+          "contentHash": "fc4f06c14fa231db0a0637b3eeb5c0ad64b1acc0e0ed9e0720f146b64ea6e9b3",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.soartectools.com/products/air-tire-buffer-3-5-88mm-wx-7931 (GET indisponible, HTTP 429)"
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-vibrante-kuani-ki-6675/",
+          "contentHash": "05966623d93b4ba30d2d2c805a214bfc7860a2f62c47b6b69a132d88c8764dd2",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/riveteuse-far-kj60/",
+          "contentHash": "5b20da9ac12acdab57217a7958c3f23e3c409d6713728069b9cd4ae3e74f95e5",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.far.bo.it/en/download/use-and-maintenance-manual/category/3-riveting-tools-for-blind-rivet-nuts.html?download=35%3Akj60 (ValueError: réponse partielle) ; https://www.far.bo.it/en/download/use-and-maintenance-manual/category/3-riveting-tools-for-blind-rivet-nuts.html?download=35%3Akj60#page=12 (ValueError: réponse partielle) ; https://www.far.bo.it/en/download/use-and-maintenance-manual/category/3-riveting-tools-for-blind-rivet-nuts.html?download=35%3Akj60#page=13 (ValueError: réponse partielle)"
+        },
+        {
+          "path": "/outils-pneumatiques/riveteuse-gesipa-taurus-2-1457771/",
+          "contentHash": "f9d44c40df7cb9ea6a6f20d62824865d10363b4938c8c17ae3a45e9dab5dde4e",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.gesipa.com/products/pneumatic-riveting-tools/1457771-taurus-2/ (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/riveteuse-soartec-wx-5563/",
+          "contentHash": "58d2e260d364799e9f66d1a3e4f7d43a60402364cec6837315be114f0bf1655f",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.soartectools.com/products/3-16-in-industrial-air-hydraulic-riveter-3-jaws-wx-5563 (GET indisponible, HTTP 429)"
+        },
+        {
+          "path": "/outils-pneumatiques/scie-kuani-ki-4835b/",
+          "contentHash": "d322d6d588366973506229b5b1ff616fc6a5953277bc9958274bdfd9c48b273a",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/scie-soartec-wx-453/",
+          "contentHash": "ec35fe4374d14c48795fc575d2c05a924074902efe30d313dc9685dc76788504",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.soartectools.com/products/air-reciprocating-saw-10mm-wx-453 (GET indisponible, HTTP 429)"
+        },
+        {
+          "path": "/outils-pneumatiques/scie-tengtools-ars02/",
+          "contentHash": "e6b983b2dab420b10ee4c0bdaadc811b8dd7b5ac72fd315a96ed89fcf24d24c7",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.tengtools.com/en-gb/collections/air-tools/products/air-saw-170mm (GET indisponible, HTTP 429)"
+        },
+        {
+          "path": "/outils-pneumatiques/soufflette-ks-tools-515-1901/",
+          "contentHash": "e6da069ef508eea193e71a84fe0c8ebf4688d93c704c71699b7545e7d0fad692",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.kstools.com/en/products/special-tools-for-commercial-vehicle/general-workshop-requirements/air-blow-out-tools/5962/pneumatic-blow-out-pistol-with-flow-regulation?c=1011737446 (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/soufflette-tengtools-arb03/",
+          "contentHash": "91e3055b0d28612bdf78a768e26a8e4712a965fbaa974777ba0d15905fb1409d",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/tronconneuse-ks-tools-515-5555/",
+          "contentHash": "b3a9607ffc34f1890817b903101a6fc790da54caa6263e369db32a0b69e1f4c4",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-basso-isd-009-a2/",
+          "contentHash": "790a43fb9a814da1a8f4a95b6c94100107eddea47e97214d967e0cb1fa24154e",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-kuani-ki-3206/",
+          "contentHash": "f6ff5507dfd330020b7f512f69fa67b1df33150e70267d2e294fb48e2a123b2e",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-soartec-ws-2057/",
+          "contentHash": "eae312f1b7efb95eb0b5b6bec489743f502afb78c86c55cdd7b1c583108d49c6",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.soartectools.com/products/1-4-heavy-duty-air-screwdriver-pistol-type-ws-2057 (GET indisponible, HTTP 429)"
+        },
+        {
+          "path": "/compresseurs/airpol-srk-7/",
+          "contentHash": "8e5ee854d92ff3010d681336478b24cd1cf32322c269a272e36eceb153b99dcf",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://airpol.com.pl/en/knowledge-base/qa-frequently-asked-questions-about-airpol-sr-scroll-compressors/ (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/compresseurs/airpol-srkt-2/",
+          "contentHash": "ce2e8804a47b87e02449ccde1d8231347b050737050a06ebd454bd9c583cefbe",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://airpol.com.pl/en/knowledge-base/qa-frequently-asked-questions-about-airpol-sr-scroll-compressors/ (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/compresseurs/airpol-srkt-4/",
+          "contentHash": "470ae027494640014dd2c95f7bb12de08b492af49033b76d01bbcd98263acc8e",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/alup-largo-15/",
+          "contentHash": "6753efce9fd035fc084c4d750d781f2fc205c5f6a3623a69dc5dc36b5f13b252",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/alup-largo-19/",
+          "contentHash": "f27c105f4f140108942d288c0d513aa873f9ffa8cdc79515295a08bad5310df9",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/bambi-vts200d/",
+          "contentHash": "11b46c2b12df1718bfcb514ca7854f6552449d19cea04fac6989be23ad2c9f8d",
+          "decision": "approved",
+          "note": "Table VTS200D relue de 1 à 8 bar. Cuve 23 L, sécheur et postrefroidisseur, moteur 1,5 kW, 240 V/50 Hz. FAD 158 L/min à 5 bar et 126 à 8 bar. Le VTS200 de même courbe est sans traitement ; le VTS250 fournit 210 L/min à 5 bar sur 59 L. Le taux de marche maximal de 50 % limite la capacité moyenne calculée ; les deux moteurs l’appliquent. Sources complètes et empreintes du jour vérifiées, règles, contenu, groupe et voisins concordants. Voisins : /compresseurs/bambi-vts200/, /compresseurs/bambi-vts250/",
+          "qualificationId": "388d5e736bd929c37b7cbb488be54a97db698f9c4ba254868b220cee2e6eb5f6"
+        },
+        {
+          "path": "/compresseurs/bambi-vts250/",
+          "contentHash": "c368381f1d663d224730b238f185868510658406dd586a7332ac10bbe34c303e",
+          "decision": "approved",
+          "note": "Table VTS250 relue de 1 à 8 bar. Cuve 59 L, moteur 1,84 kW, 240 V/50 Hz. FAD 210 L/min à 5 bar et 160 à 8 bar. Le VTS200 offre 23 L et 158 L/min à 5 bar ; le VTS250D garde 59 L mais inclut un sécheur et donne 200 L/min à 5 bar. Cycle maximal déclaré 50 %, appliqué à la capacité moyenne dans les deux moteurs. Sources complètes et empreintes du jour vérifiées, règles, contenu, groupe et voisins concordants. Voisins : /compresseurs/bambi-vts200/, /compresseurs/bambi-vts250d/",
+          "qualificationId": "076f511cbbb9feeb4729a58ce55be53aed526fa02aa7cb02a12dbea4afde3804"
+        },
+        {
+          "path": "/compresseurs/ekom-dk50-9x4vrt-m/",
+          "contentHash": "d81071aa0aa3ed402cb404e22fc17cac7ab9b82e1518c018056b9f1baee79dbe",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/ekom-dk50-9x4vrts-m/",
+          "contentHash": "03fd34b29ca6d3a2589bd17a051546cff9e8a7a43ec9bd56301542ad6a277471",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/mark-msm-7/",
+          "contentHash": "1efc66a16e6f77dc34b5a08c9265b5ce84607dff85d2750d8d12f9db0e7ea4b7",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.mark-compressors.com/en-int/products/screw-compressors/fixed-speed/belt-driven-msm (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/compresseurs/mark-rmb-15/",
+          "contentHash": "fece4b6db2f20664a1971c6448ec1eaa420847b7b77d0ae0038afdb891e34f32",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.mark-compressors.com/en-int/products/screw-compressors/fixed-speed/gear-driven-rmb (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/compresseurs/mattei-ercs-2/",
+          "contentHash": "313ab1ab7319f54d9eb8815722ed1ecb8a32d438586883cb8ccf727226e1c337",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/mattei-ercs-3/",
+          "contentHash": "a5d349060ca9c577110ed2525a6b2ab513e951def0400e749ef286a4352bafeb",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-apach-an-10034-1/",
+          "contentHash": "590a889a332ca901fe68b3c037d4c89ca836cdf5a351cf6e47c2710ab6728b65",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-everwin-fcn90b/",
+          "contentHash": "deed973c09c9a6f2e3b2bff838a8f5c31282fb8a1c45f36996e8a4e7c978c77a",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-fasco-f1a-mb-25a-j010874-05/",
+          "contentHash": "5dc0b56c60400c1716fad2bffd594d0317a140bd77ec81340f64112f61ff6624",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.beck-fastening.com/en/f1a-mb-25a~p426 (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-josef-kihlberg-561-15pn-125003/",
+          "contentHash": "65ee1ac728833fd3bd77ab7aeb20fdca31fcc1823603989b8cd7073d1e01d0af",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://kihlberg.com/tools/application/top-stapling/125003 (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-pneutools-cf16/",
+          "contentHash": "89d17ca42799625d17d92586aab8a3a381661b7a0ed6da5cacd3c58d88b4de87",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.pneutools.net/product/cf16 (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-deprag-hc010-h10b-6060006a/",
+          "contentHash": "5ba800f03a90e106d7dcf02c7c21bdbe0bbe2abdfbb9e7118196a5457acab0ed",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-apach-aw050g/",
+          "contentHash": "8e5f29d74ed7e3cde9189c69aff78cec3be1d9ca9cab9adff2142240d419e380",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-astro-pneumatic-135bt/",
+          "contentHash": "59867fe4672b5fd32ccc6e974cc8f5e7664310263ed45773533ef073da638042",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.astrotools.com/product/3-8-snub-nose-impact-wrench-75ft-lb-torque/ (GET indisponible, HTTP 520)"
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-beta-tools-1927e-019270005/",
+          "contentHash": "a186cbea4d17fcf33ea862f29d4cfb8ef9891a801e2b1517a48e43f0ccc97034",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-deprag-smp026-1-2-zex-6061104a/",
+          "contentHash": "03d82716ba67e3303a73ccd4555b76357775bb5bfa934ef5be3cbd44c1ad889e",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-cliquet-astro-pneumatic-1111a/",
+          "contentHash": "cba4b2a7268449020144bb3389df1319dd8ee9028d72251e9fd83dc256fa67b2",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.astrotools.com/product/onyx-1-4-palm-ratchet-wrench/ (GET indisponible, HTTP 520)"
+        },
+        {
+          "path": "/outils-pneumatiques/derouilleur-a-aiguilles-astro-pneumatic-4320/",
+          "contentHash": "e11a34b2fac8f18648dec6314f15607cd5326a87deb2c0658376ab8f0e35233a",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.astrotools.com/product/in-line-needle-scaler/ (GET indisponible, HTTP 520)"
+        },
+        {
+          "path": "/outils-pneumatiques/derouilleur-a-aiguilles-deprag-sn25-831126a/",
+          "contentHash": "a0a75fd8544773cafa565b66f280c4530e5dac5b74dc505029d126431f9dcbad",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/fouloir-deprag-hr069-mk2b-2701091a/",
+          "contentHash": "cb5f909aec88f7b15844ab78f9a70928a80cf6c75a4e6c8cbc4c4814d074d289",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/gonflage-asturomec-pg-g-pro-cee-om-50181-o/",
+          "contentHash": "d3da31521b2067ca607032101473b6890d721b94cd9d6e81bbf9e0f6060ef3f6",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/lime-alternative-deprag-fs911-370bu-6061407a/",
+          "contentHash": "02690eec0d3dc073e7a07946147ded593830537c848186ea99704853b8de4b94",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/marteau-a-river-deprag-hc010-hr14d-2103441b/",
+          "contentHash": "e9b51fd24b5755f40a47a606644b5671ab3a828ac219aa445168870bba71a732",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-astro-pneumatic-1205/",
+          "contentHash": "326444ee1aff79788ec79c745d7d223f2d01c0f39dadd85d0f265b728822ceff",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.astrotools.com/product/composite-body-1-4-mini-die-grinder-with-safety-lever-25-000rpm/ (GET indisponible, HTTP 520)"
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-beta-tools-1933l-019330015/",
+          "contentHash": "9269187e590c91455cf13bfdbf6adc213d86d5901862bf63ebf15334d7d395f6",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-deprag-ga-811-100bx-6060546a/",
+          "contentHash": "e3b830fa6bac779dcd10de3e679c37755021a64c6c981660c2636db6d13edbb1",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-astro-pneumatic-510aht/",
+          "contentHash": "17bc296935dbbb19db2f1778e3ed89fc160cd856044ea566dccfa9e3e6b0901c",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.astrotools.com/product/3-8-reversible-angle-head-air-drill-1-800rpm/ (GET indisponible, HTTP 520)"
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-deprag-da035-036sxc-3149191b/",
+          "contentHash": "0aa9310da0f8dc20d90d56c945473761bd4578a2e5dc6cd18c55e848655fd3d3",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-cartouche-asturomec-pb-s-50254/",
+          "contentHash": "c57b16b43fec4be8162b57c9e817c1f660072c757de36c4596e2fc9a500db8dc",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-astro-pneumatic-4008/",
+          "contentHash": "2787aab9a139e9462dbc39f40c0266f8b7808e211bcbbe5896ff9f88066557e4",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.astrotools.com/product/spray-gun-with-cup-red-handle-1-8mm-nozzle/ (GET indisponible, HTTP 520)"
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-asturomec-im-body-50242/",
+          "contentHash": "f7c1fe3ea322f6b3a092e214c15f6c66fd1d5fb8586092ccdb87408263d18cc0",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-lvlp-astro-pneumatic-evo4014/",
+          "contentHash": "5b4f59471e5198480a0f2732bae41d8a984fc58915ae4921b4bb404f1b62861e",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.astrotools.com/product/lvlp-gravity-feed-spray-gun-with-1-4mm-nozzle-suitable-for-waterborne-materials/ (GET indisponible, HTTP 520)"
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-sata-jet-x-rp-1-1-o-basic-1200336/",
+          "contentHash": "a896997f9ff282fa51efb43cab39a6dbb4259944efb3e9cb1d19568fb130e2eb",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/polisseuse-astro-pneumatic-247p/",
+          "contentHash": "671e1d26288f2e9fd16c2fbd42bb669c1079dbc8b7e2b4132e69014f3e46422f",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.astrotools.com/product/7-angle-head-polisher-2-500rpm/ (GET indisponible, HTTP 520)"
+        },
+        {
+          "path": "/outils-pneumatiques/polisseuse-deprag-pa025-021sx-3149172c/",
+          "contentHash": "fdbc38efb467cebbc0ab2ed558c538070959468c769d1439f2052a0b5a08a263",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-astro-pneumatic-3035/",
+          "contentHash": "2a7085e8ef1c68786d01011060d6036032a79ee81e7f05505988d39ecb96429f",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.astrotools.com/product/air-belt-sander-3-4-x-20-5-with-2-belts-80-100/ (GET indisponible, HTTP 520)"
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-bande-deprag-gba030-013bx-200-830498a/",
+          "contentHash": "c14a1d9993f8f6cd514f71b2c0172c4c4a75b474bffea4d019fcceb01cda312a",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-astro-pneumatic-314/",
+          "contentHash": "568da1c687471b2de6254843acbfc33b563df47acf6a98e2df6a07802de929e0",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.astrotools.com/product/onyx-jitterbug-random-orbit-air-palm-sander/ (GET indisponible, HTTP 520) ; https://www.astrotools.com/product/onyx-jitterbug-random-orbit-air-palm-sander/?attachment_id=2829&download_file=k554ozjbgpn80 (GET indisponible, HTTP 520) ; https://www.astrotools.com/product/onyx-micro-2-random-orbit-sander-hook-loop-3mm-orbit/ (GET indisponible, HTTP 520)"
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-astro-pneumatic-245s/",
+          "contentHash": "140eae130e7c1bf5501d98a26ada0121d1c352393248ae41514e628e44497028",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.astrotools.com/product/7-angle-head-sander-4-500rpm/ (GET indisponible, HTTP 520)"
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-vibrante-astro-pneumatic-888s/",
+          "contentHash": "b356c6592689b1f891ed7be6a4434fd44ffc5c3ac452cc616eaba56e8ed9884e",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.astrotools.com/product/short-straight-line-sander/ (GET indisponible, HTTP 520)"
+        },
+        {
+          "path": "/outils-pneumatiques/riveteuse-beta-tools-1946c-7-8-019460008/",
+          "contentHash": "aa400b504b481ed5d342e04f84a8ee9e9c56491c13056cf04df442f788f0403d",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/scie-astro-pneumatic-936/",
+          "contentHash": "f05d5b470f11d68b2282de9e1e2803e1f0d3138e9de38a99fef4bd5958bb438b",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.astrotools.com/product/onyx-gear-driven-heavy-duty-air-saw/ (GET indisponible, HTTP 520)"
+        },
+        {
+          "path": "/outils-pneumatiques/scie-deprag-ppp35ax-830503a/",
+          "contentHash": "8ce5a764d4de571517bb0a1c5fbc545e0fa93d681b4b23e4020abc59ac566726",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/soufflette-astro-pneumatic-1711/",
+          "contentHash": "1e075ada7b95efc4934ea1c6e869350b3e39ae23fd6c0dbc12dfbf405c350eb1",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/soufflette-asturomec-pa-4n-50047/",
+          "contentHash": "6a255721d9cf8207516c410a6648a015cd384954d1c003a0d0c94a5825402956",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/soufflette-beta-tools-1949f2-019490028/",
+          "contentHash": "7700981cf498da5871ac15e6aaa770613eca09070dc68059cb54bdf824ba5c0e",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/taraudeuse-deprag-dp015-006zrb10-3235131c/",
+          "contentHash": "c4cc931e6b531939051fe888f592daed7c75a7af27afaeb7e155d595c89d94db",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/tronconneuse-astro-pneumatic-208/",
+          "contentHash": "f71a2e889c5e2575266921a7e0e0aece629659eebb242fe9544e3bea98212c8d",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/tronconneuse-deprag-sh150-180bx-6061125a/",
+          "contentHash": "93acd96c455841f7cee68f07380bceefc38a02afb274052a373773a8d5f752a3",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-astro-pneumatic-810t/",
+          "contentHash": "3d2ec9537f2fef75a896561cb6a602afb43be8fad9735b9f9d967fe2aaf8aecf",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-everwin-ews-202/",
+          "contentHash": "7bd51fad2ce33fa7fa7e90feefc657cf50527dbf7fabf644fb1bcd05300d1fe9",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/dalgakiran-inversys-plus-pm-37/",
+          "contentHash": "a58f2e4d68cdfcdb2c7e5b6bc132d811e0fefdd26fa55f41ed008754005c4cd9",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/dalgakiran-inversys-plus-pm-45/",
+          "contentHash": "8f6e6836d11093e174bdf06a587259e705a9b26540e39626b30c7c32bce5bfd0",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/hertz-h-7-5-500-t/",
+          "contentHash": "a1bd2d87da7d5cc9577c5b0175f049d4a316608a52a2ba9d9fe223d5225d59be",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/hertz-h-7-5-500/",
+          "contentHash": "80ce3e019482c91ec86059f1df5e7b0adb86dea978dd5192475f2b7902f90ec9",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/ktc-kme-c-4/",
+          "contentHash": "e831ac837ba80c7490cc17a79ee03816453b0de0f21938307646e658ca5f79da",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/ktc-kme-c-5-270-e/",
+          "contentHash": "969af6a3384603a708f50458504563c90ff6691724c28efddc7cfc8917ce28cf",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/lupamat-lpyi-110-14-k/",
+          "contentHash": "ebe6573a42033d0f0f699d4684e6b1312dcadba04542e1f39ae98752c79c87b2",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/lupamat-lpyi-110-14-kd/",
+          "contentHash": "95693018d7ae7a87226492259ac9a16a33f0e5858046768345a688b6b44fec9f",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/sil-air-baby-s/",
+          "contentHash": "6c9905b3e66f0b5d77484c6e598806066550afa8226fc2f47a7d23d928bd99a1",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/sil-air-baby-widow/",
+          "contentHash": "8862d92b28c26d0a1b29b035423dbeb11c2fb60354d9599e4731573865c5ecb9",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/burineur-taylor-pneumatic-t-2-chipping-hammer-t-2/",
+          "contentHash": "166a84c9433b5edfb5253cbf7cf8f50d9f8c69dbeab6bd6364804aa407252b2e",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/cle-a-chocs-taylor-pneumatic-t-6739-3-8-impact-wrench-t-6739/",
+          "contentHash": "13b47342f4fb606e98cca3ea4b2b01b4de754dedf3a27ac4ea6799b048c0f9bc",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/derouilleur-a-aiguilles-taylor-pneumatic-t-6356-mini-needle-scaler-t-6356/",
+          "contentHash": "9d2bef2190506f2eff3b639470d2e335241c11889bf20c112bbc3a494fe888ba",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/detoureuse-taylor-pneumatic-t-8705r-5-hp-router-t-8705r/",
+          "contentHash": "7162fddd5ccc23800112afa3ea72faaf0ce2075eb0eb2c46c8ba6ff6f64997ce",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/lime-bande-prowin-as-802/",
+          "contentHash": "38b6e046ecd912b83ccb0f6eec345fa8ad4369597e2f367afb2e0ab428566cfa",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/marteau-a-river-taylor-pneumatic-t-1x-401-jiffy-style-shank-rivet-hammer-2850-bpm-t-1x/",
+          "contentHash": "7e7ab08b9b5dd4f095642834b0fc3375baf65186b7cbf8bd87db518de07250a7",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/meuleuse-taylor-pneumatic-t-6757r-1-4-economy-die-grinder-rear-exhaust-t-6757r/",
+          "contentHash": "fe0008b36fe331fd30f12a3d5c068a50610efaee1bae4dec8e4738785afc3387",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/perceuse-taylor-pneumatic-t-7454hpr-hd-3-8-reversible-drill-t-7454hpr/",
+          "contentHash": "204f02aec367a527e340f2645ecaa53544a830478e73475705bd307c095b9bf2",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-gav-record-2000-1-aps/",
+          "contentHash": "d11162ab34611dcddc4dc5dd6fbdeb4227b1dc9602e290282be45353a4161983",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-lvlp-prowin-kl-410m-10/",
+          "contentHash": "c858f3e222652bd04a63c8477cf964d7f4227a076667eafbfa8c02032f79e8c5",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-prowin-k-100g-08/",
+          "contentHash": "78be666de7caf8b6d54639c2aa12f3de7a38d74f6b678e7cfb409c8ddba346a0",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/pistolet-peinture-sagola-2100-xd-2100xd-buse-1-30-10141635/",
+          "contentHash": "a1245c27e85b1599a790114ca55a8265d75932511162f5528c0c07d0644f27e7",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/polisseuse-prowin-as-1062/",
+          "contentHash": "bf610ece1a7d53a8d39d23bd554cdc222d9c4f360ad86d4fa50e21f3becd851f",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-festool-lex-3-125-3/",
+          "contentHash": "a5eca6914a1e424c8c89d0973e8e15511828a0615811c1e6f1a27e3f18128fb7",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-hutchins-model-3800-3800/",
+          "contentHash": "6aa60d7044d4966d356f7c6863772ec3f9c61721840f7e837caa1459bd3be45d",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-prowin-as-1061/",
+          "contentHash": "f4bb453d4d03a18fadb80df6d8d86e76188a2efb243ac64585cebbd3ec3cfd6c",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-orbitale-taylor-pneumatic-t-6445-5-economy-da-sander-3-16-orbit-t-6445/",
+          "contentHash": "9e490711b33714b513a80e4675db74a9f5f732935c90fa40b8db342929410b68",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-pneumatique-prowin-as-1060/",
+          "contentHash": "869a608c17f268c6c849b16df7110615d731e1eb287032d2eab64fd17bec8bd8",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-pneumatique-taylor-pneumatic-t-6778-5-high-speed-sander-t-6778/",
+          "contentHash": "e8e19f79cf473fa5ba7e166b8eb0cfd413f16c532a3ad86f8d6fb415a1c5567d",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/ponceuse-rotative-3m-28825/",
+          "contentHash": "c24c983ea5d39284dbb34a5b34e4d97c8505e6ef3e2c6628eb89f6e9697b1c38",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/scie-taylor-pneumatic-t-7702-reciprocating-mini-saw-t-7702/",
+          "contentHash": "7307c21345df7b135f9250d74c8a68251d719f5610af34371beb0ffb36947d8c",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/soufflette-guardair-57s30xb/",
+          "contentHash": "f1d52f11d43eaa4404407ced500966e0ed5b7ca655b70e36d46baf42bd1bceee",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/soufflette-walcom-ecodry-60125/",
+          "contentHash": "6bfe731229fc705bcd570cbd8a8721c72f71e549c87bedd172103f2294dac380",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/visseuse-taylor-pneumatic-t-2420ex-push-to-start-auto-off-screwdriver-t-2420ex/",
+          "contentHash": "fa0226b6ab6514c051ed289dc712e1a99ee212df9fc0b8221cd952a4b8a90426",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/fini-cube-7-5-10-270/",
+          "contentHash": "74755d3fd34cbe46d6abee29540b0a6d222f6624170e649463addc286d89a98b",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/fini-cube-7-5-10-500-es/",
+          "contentHash": "a6a395fda3d16f9972d42e6933b07cfee27f78ec8bcba1856fd7ba92625be803",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/puska-pke-3-10-k-c/",
+          "contentHash": "edad98cb8f73dd59cb2c5ff250b591e9ec70ed96479bab5e09028ce276836a37",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/puska-pke-3-vf-10-200/",
+          "contentHash": "ebd550bc818ac15936a3759a711c894e230bd9d011e0c92ea02662b767a76f8b",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/quincy-qgs-50c/",
+          "contentHash": "64eccf59bc03f9cc479b4e2b66200ddcdee64f7ad2e8625c79b120d2ed109e11",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/quincy-qgs-60/",
+          "contentHash": "da0b18ff9ee0c249132447cde92be66f157e438e4fc588d93faae20d56765f56",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/shamal-bora-38-08/",
+          "contentHash": "ac8df4bc1a06fba91da22bb1356b8c3c0ed947ecd07de76986d05cb3ee6e88cf",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/shamal-bora-45-10/",
+          "contentHash": "bf60a56c94803b5a8d3b0bc18a96700c641f551510a2201c1e0dc381779cdb17",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/compair-dx132rs/",
+          "contentHash": "0fe767c2af5b99dff76755d6ff2b6d2ca081e75c24aee54bff6188f593ecadf7",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/compair-dx160/",
+          "contentHash": "83ac6e1acc4313778735aa1d701a8ff68c65819fd8c7d74eaa3139ff6b700aca",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/ekomak-dmd-300/",
+          "contentHash": "d0fccd8bd5d49bd3dec591d33c68315e32c708431be4fa007ec8bb6c223b1679",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/ekomak-dmd-40-cr/",
+          "contentHash": "2b1ecaea5cf9547c62d39b9a40ff99c65ed0edf64bd1b47eae0c76eaee0feb26",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/gardner-denver-esm05-500/",
+          "contentHash": "97a284815ed039b5bf6a853d0509be957cda1d8bdfbf719b5cee29a3905beae1",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/gardner-denver-esm05/",
+          "contentHash": "238f28952c5d41c6bf4cffd0c163f0b3fe17fc95404af75f77b1cc75168dbfe0",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/ozen-osc-200-u/",
+          "contentHash": "611c13d07185e26978c65ffeb8e9ff5e0d40193e8a71005202a6a0d94e08d97b",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/ozen-osc-22-d/",
+          "contentHash": "9e8d2b865c04b5432ffb542370c7307aa97d6c9a39408f35e3822f80d6d25369",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/scr-scr1300lhpm/",
+          "contentHash": "6725ce15862b8be48bd8b288a3142f590f0889e5324782de84f233b8e7b7deea",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/scr-scr1500lhpm/",
+          "contentHash": "99cf5c5a996bcc761d708004d2264a74bd0b6712ec674ba5f0f214ed0f37a42b",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/sullair-ls110v/",
+          "contentHash": "95dd537bb417dc17cd19bd8414adb6fdde2781a81db2c4600e92ae40ca906b15",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/sullair-ls90/",
+          "contentHash": "80517cde8bf5d520cd5406b2e678ab5f19ded016682793ec53692d772c55ec8e",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/denair-da-315-w/",
+          "contentHash": "0843c4c9c0cd51b85479614fbf9f3c50a9fad5dd38bf6cb189c1bb2bf74b03e0",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/denair-da-355w/",
+          "contentHash": "450c0eb062b920745950989a502be9feedda144e1627de98cbad336e6e229519",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/kaishan-krsp-55/",
+          "contentHash": "df1c1d435c5788b66dcfd17007873d36e2bbd2c5cc25e6947aef68328be657bc",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/kaishan-krsp-75/",
+          "contentHash": "01be831d3670eae5aa0f403157e1f71546c7a231abeeab9561d52403550094d9",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/mauguiere-mavd-621/",
+          "contentHash": "a54c135153c5eada896540cd96a9061a535d5d532e50507f9977e28473ff4698",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/mauguiere-mavd-v-402/",
+          "contentHash": "9cb57e2e936cf484fe012cbe145fc8e56b7325c8f53efe84060f393164499a72",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-aeropro-8016/",
+          "contentHash": "b05867f520f7c2410614ae58909320f3c3db51d11562deafdeb0297a69ffc015",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-paslode-f150s-pp-515850/",
+          "contentHash": "b43c3072a0b1b64b98c3cc1f0c26f7b357c3769eaf98cefe87063016763abd2e",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/outils-pneumatiques/agrafeuse-cloueuse-yato-yt-09204/",
+          "contentHash": "24283e46a466d226052845ebfb27929ae289890f12a6d86a7ee3cc39fd0bc238",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/comprag-ar1508-270/",
+          "contentHash": "034183692f33b4089bdc45ecbd6d0a35ea13b3713dc327ecdd7c551da3aa2d27",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/comprag-ar1808-500/",
+          "contentHash": "1ee6e11c98a6ea73335e46527886ded1e52236d2319ad04bcbf47e3edca1d47c",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/fs-curtis-eco-pure-vsd-132w/",
+          "contentHash": "268b7bc26b00ac3b1c9a21122f11db1c391c0ac4a3c960f9287a8ca82ce5d1b1",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/fs-curtis-eco-pure-vsd-160a/",
+          "contentHash": "bd54158015fda9aa6c363f44deb347dee9e31178574b0d46bc69880a3c269030",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/rotair-mdvn-400-j/",
+          "contentHash": "314d3d24c87c97a346858c4adf8c480258f136bff85e7d23384611f67d0e00dc",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/rotair-mdvn-400-p/",
+          "contentHash": "68252e4a5a9d70c322e0d3cf0b59b25bd7173baf9b5320c2e5b56d737ec58a72",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/swan-sdu-307c-1/",
+          "contentHash": "6cb9a4b969972fe477e378d04008da5110f541dc4c391b9233e957dc4da4c488",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8 (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/compresseurs/swan-sdu-310c-1/",
+          "contentHash": "df0f0a8678abe7542663df1b6f8ecbe1d9c575987f69eadaa43ae7bd19eb18ad",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8 (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/guides/metpoint-ocv-zero-demarrage-air-non-mesure/",
+          "contentHash": "aafdd5245a6db0b632b8828cffb5573d3baab5c9157c852a574064e52b4b4926",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/airman-pds265s-4b2/",
+          "contentHash": "4add2c2ac7a6b162b3b3fc1e7701e5c1e88d9acc51240e18ab7c19fb286a831e",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/airman-pds265s-5b2/",
+          "contentHash": "490dbceab8344d2ec0b4de1ebc65bb059a8b5a097aa65bf4742f5039b259c37b",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/anest-iwata-slpa-37ed-90/",
+          "contentHash": "2ff8ff259fdddb690081f99752960d7f84b7af8eff4772910a4dbbd18c38f1ee",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/anest-iwata-slpa-55f/",
+          "contentHash": "b307771dd4bd2cfb353e6fafe000a3f25b1496840ebe4da7f822471338fb5afe",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/rolair-ab5plus/",
+          "contentHash": "43ae0e6f778bbc11fed4b03922496afa612d1a8c4dbfd550f99d368d55e6b43d",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/rolair-d2002hpv5/",
+          "contentHash": "0f683a6390cd6ee43422d29c48d25ad6c149ea5675da3ecb875f7916f805530c",
+          "decision": "deferred",
+          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/sullivan-palatek-sp11-40/",
+          "contentHash": "6d20c1b3f28899b1be433e73c13c487f3559db47f411058145bd55673dd7c81e",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8 (Corps complet modifié, nouvelle lecture requise) ; https://www.sullivan-palatek.com/product-detail/sp11-series-25-40hp/ (Corps complet modifié, nouvelle lecture requise)"
+        },
+        {
+          "path": "/compresseurs/sullivan-palatek-sp11-40vfd/",
+          "contentHash": "a6660a9ab6ee4e2f16744b7a7a0840c5d6cb411c6b9be9f7f21b4b80c743cf8e",
+          "decision": "deferred",
+          "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8 (Corps complet modifié, nouvelle lecture requise) ; https://www.sullivan-palatek.com/product-detail/vfd-variable-frequency-compressor-series/ (Corps complet modifié, nouvelle lecture requise)"
+        }
+      ],
+      "sourceChecks": [
+        {
+          "url": "https://bambi-air.co.uk/product/vts200d/",
+          "sha256": "cced465d9bf2527fa31d3aff2419986a1d938b22e638f2e4e6432d7c786d08e3",
+          "checkedAt": "2026-11-24T07:19:28.561501+00:00",
+          "complete": true,
+          "httpStatus": 200
+        },
+        {
+          "url": "https://bambi-air.co.uk/product/vts250/",
+          "sha256": "4ca99f999785424266e8693d68bedcc1c9fa54880ae0ce063e7f93c63db93dc9",
+          "checkedAt": "2026-11-24T07:19:28.739268+00:00",
+          "complete": true,
+          "httpStatus": 200
+        },
+        {
+          "url": "https://fr.pferd.com/fr/meuleuse-droite-pneumatique-pg-8100?a%5Btype-tds%5D=avec+prolongateur&a%5Bthrottle-type-tds%5D=Levier&a%5Bpferd-type-tds%5D=PG+8%2F100+V-HV",
+          "sha256": "ada4cfc7b60ab113676c43830f8897db89fe758ad3753d46e773582b8119ca95",
+          "checkedAt": "2026-11-24T07:19:18.039019+00:00",
+          "complete": true,
+          "httpStatus": 200
+        },
+        {
+          "url": "https://fr.pferd.com/fr/ponceuse-a-bande-pneumatique-pba-4160-hv",
+          "sha256": "93c49d2b9223a6a48df9cdaffadfd545aee625137cd5876f54b417b7ee370727",
+          "checkedAt": "2026-11-24T07:19:17.264961+00:00",
+          "complete": true,
+          "httpStatus": 200
+        },
+        {
+          "url": "https://www.facom.com/product/vdg300fpb/pneumatic-straight-die-grinder-6mm-collet?tid=610786",
+          "sha256": "8b8a8ec40541ba2799bbfa521fe0c4b064bfef20e8c13b5c92d56cde1e8f1658",
+          "checkedAt": "2026-11-24T07:19:25.386369+00:00",
+          "complete": true,
+          "httpStatus": 200
+        },
+        {
+          "url": "https://www.facom.com/product/vrsj3500pb/38-12-high-torque-air-ratchet?tid=610786",
+          "sha256": "e8a9c0d19b1475c5c36df0646ec06de8f2d3ac133bc96f1334491f047449b068",
+          "checkedAt": "2026-11-24T07:19:26.865572+00:00",
+          "complete": true,
+          "httpStatus": 200
+        },
+        {
+          "url": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/air-blow-gun/product/ean-4000896209545",
+          "sha256": "b52b2350b92408527f5970c4d1aab132fa53ba406ecb9be7abd49fd5e5b2a0c2",
+          "checkedAt": "2026-11-24T07:19:32.497022+00:00",
+          "complete": true,
+          "httpStatus": 200
+        },
+        {
+          "url": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/drilling-machine-sander-chisel-sabre-saw-shears/product/ean-4000896227105",
+          "sha256": "815e2454eb928b24ff2067eec091e0ba0c3835fcf0b657413de4582ab3e1ecf8",
+          "checkedAt": "2026-11-24T07:19:32.057585+00:00",
+          "complete": true,
+          "httpStatus": 200
+        },
+        {
+          "url": "https://www.vessel.co.jp/english/product/airnippers/360701",
+          "sha256": "5c648005f6ab6ec16af0778d4ac2d95924b4b984b9464cc51fb59682a1bff4ff",
+          "checkedAt": "2026-11-24T07:19:23.935645+00:00",
+          "complete": true,
+          "httpStatus": 200
+        }
+      ]
     }
   ]
 }
