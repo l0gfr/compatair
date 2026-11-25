@@ -56,7 +56,7 @@ describe('production workflow blocking DAG', () => {
 		for (const value of [0, -1, 1.5, `${maximum}`, maximum + 1]) rejects(config => { step(config, job, name)['timeout-minutes'] = value; });
 	});
 	it('requires a round-trip artifact probe before starting the expensive jobs', () => {
-		for (const name of ['Prepare artifact service probe', 'Probe artifact upload', 'Verify artifact probe identity', 'Probe artifact download', 'Verify artifact service probe']) {
+		for (const name of ['Prepare artifact service probe', 'Probe artifact upload', 'Verify artifact probe identity', 'Wait for artifact service probe', 'Probe artifact download', 'Verify artifact service probe']) {
 			rejects(config => { config.jobs.preflight.steps = config.jobs.preflight.steps.filter(item => item.name !== name); });
 			rejects(config => { step(config, 'preflight', name).if = 'false'; });
 		}
@@ -64,6 +64,10 @@ describe('production workflow blocking DAG', () => {
 		rejects(config => { step(config, 'preflight', 'Probe artifact upload').with.path = '.'; });
 		rejects(config => { step(config, 'preflight', 'Probe artifact upload').with['retention-days'] = 90; });
 		for (const override of [{ name: 'another-run' }, { 'artifact-ids': '123' }, { 'digest-mismatch': 'warn' }]) rejects(config => Object.assign(step(config, 'preflight', 'Probe artifact download').with, override));
+		rejects(config => { delete step(config, 'preflight', 'Probe artifact download').with['github-token']; });
+		rejects(config => { delete step(config, 'preflight', 'Wait for artifact service probe').env.PROBE_ARTIFACT_DIGEST; });
+		rejects(config => { step(config, 'preflight', 'Wait for artifact service probe')['timeout-minutes'] = 3; });
+		rejects(config => { delete config.jobs.preflight.permissions.actions; });
 		rejects(config => { delete step(config, 'preflight', 'Verify artifact probe identity').env.PROBE_ARTIFACT_ID; });
 		rejects(config => { const index = config.jobs.preflight.steps.findIndex(item => item.name === 'Verify artifact service probe'); config.jobs.preflight.steps.unshift(config.jobs.preflight.steps.splice(index, 1)[0]); });
 	});

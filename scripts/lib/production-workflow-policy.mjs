@@ -94,17 +94,22 @@ export function productionWorkflowErrors(config) {
 	const probeSource = namedGate('preflight', 'Prepare artifact service probe');
 	const probeUpload = namedGate('preflight', 'Probe artifact upload');
 	const probeIdentity = namedGate('preflight', 'Verify artifact probe identity');
+	const probeWait = gate('preflight', 'node scripts/wait-for-artifact-probe.mjs');
 	const probeDownload = namedGate('preflight', 'Probe artifact download');
 	const probeVerify = gate('preflight', 'cmp .astro/artifact-probe/source-sha.txt .astro/artifact-probe/download/source-sha.txt');
-	ordered('preflight', [gate('preflight', 'pnpm lint:source'), probeSource, probeUpload, probeIdentity, probeDownload, probeVerify]);
+	ordered('preflight', [gate('preflight', 'pnpm lint:source'), probeSource, probeUpload, probeIdentity, probeWait, probeDownload, probeVerify]);
 	const probeSteps = steps('preflight');
 	if (probeVerify !== namedGate('preflight', 'Verify artifact service probe') || !probeSteps[probeSource]?.run?.includes('printf \'%s\\n\' "$GITHUB_SHA" > .astro/artifact-probe/source-sha.txt')) fail('le précontrôle d’artefacts doit comparer le SHA du checkout après le téléchargement');
 	const probeArtifact = probeSteps[probeUpload];
 	if (probeArtifact?.id !== 'artifact_probe' || !probeArtifact.uses?.startsWith('actions/upload-artifact@') || probeArtifact.with?.name !== 'compatair-artifact-probe-${{ github.run_id }}-${{ github.run_attempt }}' || probeArtifact.with?.path !== '.astro/artifact-probe/source-sha.txt' || probeArtifact.with?.['if-no-files-found'] !== 'error' || probeArtifact.with?.['retention-days'] !== 1 || probeArtifact.with?.['compression-level'] !== 9 || probeArtifact.with?.overwrite !== undefined) fail('le test d’envoi doit rester borné à un petit témoin immuable conservé un jour');
 	const probeId = '${{ steps.artifact_probe.outputs.artifact-id }}';
 	if (probeSteps[probeIdentity]?.env?.PROBE_ARTIFACT_ID !== probeId || probeSteps[probeIdentity]?.run !== '[[ "$PROBE_ARTIFACT_ID" =~ ^[1-9][0-9]*$ ]]') fail('le test de téléchargement doit recevoir un identifiant numérique exact');
+	const probeWaitStep = probeSteps[probeWait];
+	if (probeWait !== namedGate('preflight', 'Wait for artifact service probe') || probeWaitStep?.['timeout-minutes'] !== 2
+		|| jobs.preflight?.permissions?.actions !== 'read' || probeWaitStep?.env?.GITHUB_TOKEN !== '${{ github.token }}'
+		|| probeWaitStep?.env?.PROBE_ARTIFACT_ID !== probeId || probeWaitStep?.env?.PROBE_ARTIFACT_DIGEST !== '${{ steps.artifact_probe.outputs.artifact-digest }}') fail('le précontrôle doit attendre la disponibilité du témoin exact dans un délai borné');
 	const probeRead = probeSteps[probeDownload];
-	if (probeRead?.uses !== downloadAction || probeRead.with?.['artifact-ids'] !== probeId || probeRead.with?.path !== '.astro/artifact-probe/download' || probeRead.with?.['merge-multiple'] !== true || probeRead.with?.['digest-mismatch'] !== 'error' || Object.keys(probeRead.with ?? {}).some(key => !['artifact-ids', 'path', 'merge-multiple', 'digest-mismatch'].includes(key))) fail('le test de téléchargement doit vérifier le digest du témoin du même run');
+	if (probeRead?.uses !== downloadAction || probeRead.with?.['artifact-ids'] !== probeId || probeRead.with?.['github-token'] !== '${{ github.token }}' || probeRead.with?.path !== '.astro/artifact-probe/download' || probeRead.with?.['merge-multiple'] !== true || probeRead.with?.['digest-mismatch'] !== 'error' || Object.keys(probeRead.with ?? {}).some(key => !['artifact-ids', 'github-token', 'path', 'merge-multiple', 'digest-mismatch'].includes(key))) fail('le test de téléchargement doit vérifier le digest du témoin du même run via l’API GitHub authentifiée');
 	for (const job of ['validate', 'deploy']) if (environmentName(jobs[job]) !== 'production') fail(`environnement production requis (${job})`);
 	for (const job of ['preflight', 'source-tests', 'source-archive', 'validate', 'deploy']) {
 		const install = gate(job, 'pnpm install --frozen-lockfile');

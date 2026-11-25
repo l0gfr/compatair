@@ -104450,9 +104450,9 @@
       "sourceReleaseSha": "ccd67aa2633519927b9cc822e50db83ba83e04bd",
       "policyHash": "02c8c9eef805ca32c18797d46de58793812117a16109e6121fc08d0bdc653691",
       "corpusHash": "42a3f0f22bebda56bfc4d0d268e93f7dcb479151c0ae0651b6fafcad202ece7d",
-      "reviewedAt": "2026-11-25T07:19:23.292033+00:00",
+      "reviewedAt": "2026-11-25T09:15:15.401588+00:00",
       "status": "partial",
-      "note": "Proposition exacte du 25 novembre. Neuf fiches Draper, Hazet et PUMA relues sur les fiches et tables constructeur actuelles après changement d’empreinte. Champs moteur, régimes et limites de débit comparés ; les voisines relues n’ont pas été utilisées pour extrapoler une valeur.",
+      "note": "Proposition exacte du 25 novembre. Neuf fiches Draper, Hazet et PUMA relues sur les fiches et tables constructeur actuelles après changement d’empreinte. Champs moteur, régimes et limites de débit comparés ; les voisines relues n’ont pas été utilisées pour extrapoler une valeur. Le contrôle de disponibilité de l’artefact a changé l’empreinte des règles. Les neuf dossiers et preuves du jour ont été vérifiés de nouveau et leurs nouveaux reçus ont été rattachés à la proposition exacte.",
       "pages": [
         {
           "path": "/outils-pneumatiques/pistolet-peinture-hvlp-sata-satajet-1000-k-hvlp-1-0-139204/",
@@ -104527,6 +104527,12 @@
           "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
         },
         {
+          "path": "/compresseurs/abac-spinn-11-8-400-50-tm270-sa/",
+          "contentHash": "3df9ef5c87f812799e51e55c71c01eaad30e52721491d6132c661b31a54942ef",
+          "decision": "deferred",
+          "note": "Nouvelle URL de la proposition recalculée. Lecture documentaire et comparaison éditoriale non achevées."
+        },
+        {
           "path": "/compresseurs/fiac-ax-403bd-10-400-50-ce/",
           "contentHash": "5060ae3d530d57202ab1943a1b474081382a35c9120afc67dd27fc7364215dcb",
           "decision": "deferred",
@@ -104537,6 +104543,12 @@
           "contentHash": "4ad0975158977027c8a568671becf55f1ff9a3ad13f91a7db4b7f36aecbe9eeb",
           "decision": "deferred",
           "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
+        },
+        {
+          "path": "/compresseurs/fiac-ax-403bd-8-400-50-ce/",
+          "contentHash": "1b1a34784ddc3709c5b6c11f829f324b0174a4377f9dcdbe8c5dc02fe7bb5b43",
+          "decision": "deferred",
+          "note": "Nouvelle URL de la proposition recalculée. Lecture documentaire et comparaison éditoriale non achevées."
         },
         {
           "path": "/outils-pneumatiques/cleco-19pta15q/",
@@ -105671,7 +105683,7 @@
           "contentHash": "b499bc53d8954311c467212b7c9116f1387cfdc4a856541ee4ac27628da2bbc2",
           "decision": "approved",
           "note": "Ligne PUMA AT-2023Q dans la table Air Hammer, avec course 71 mm, 3 000 coups/min, queues ronde 0,401 pouce et hexagonale 0,410 pouce. La 2024Q donne 92 mm et 2 200 coups/min ; l’AT-2020 correspond à une autre retenue. Choix sur la course et la fixation du burin. Les 241 L/min sont indiqués en moyenne, la colonne 90 psi donne le service. Aucun débit en charge dérivé, moteurs non conclusifs. Sources complètes et empreintes du jour vérifiées, règles, contenu, groupe et voisins concordants. Voisins : /outils-pneumatiques/burineur-puma-at-2020/, /outils-pneumatiques/burineur-puma-at-2024q/",
-          "qualificationId": "2adae9f2fadfa6966a2190b84cbf75fb9ea8a646bc0fefe428032ba297402294"
+          "qualificationId": "aab6e4c75e3e069dc8261b1dec21aa0000afa7c9f007c48e68487cb5f7636bc3"
         },
         {
           "path": "/outils-pneumatiques/burineur-universal-tool-ut8652r/",
@@ -105720,7 +105732,7 @@
           "contentHash": "502d708932e3312d9053a5c3687daec25610e415969fae6e1b56b5a879ddae27",
           "decision": "approved",
           "note": "Ligne AT-5042 relue : mini-clé à chocs à carré 1/2 pouce, longueur 149 mm, 1,38 kg, 9 000 tr/min à vide et 258 Nm maximum. Les AT-5040 et AT-5041 de même carré publient 312 et 434 Nm. La forme courte et le couple disponible permettent la comparaison sans en faire une consigne de serrage. Les 283 L/min sont moyens ; 90 psi est recommandé par le constructeur. Les moteurs restent non conclusifs. Sources complètes et empreintes du jour vérifiées, règles, contenu, groupe et voisins concordants. Voisins : /outils-pneumatiques/cle-a-chocs-puma-at-5040/, /outils-pneumatiques/cle-a-chocs-puma-at-5041/",
-          "qualificationId": "f6d682247247c248256390ead1575fd78bf92062841a4c7cc2b4ee4b203c8308"
+          "qualificationId": "9b11549d8c39e969bbd312a366a21853439a68244b5baf07555f10d144276649"
         },
         {
           "path": "/outils-pneumatiques/cle-a-chocs-rodcraft-rc2530-8951077260/",
@@ -105769,7 +105781,7 @@
           "contentHash": "fe1d10b2a6373bcfd4b7bd1e3fcce7c61928c4f7d1b2e61b70d04add414d84be",
           "decision": "approved",
           "note": "Ligne AT-5111 relue : cliquet traversant pour hexagones de 10 à 14 mm, 200 tr/min, 25 Nm maximum, 340 mm. Le 5110 couvre 6 à 12 mm pour 13,6 Nm ; le 5112 couvre 15 à 19 mm pour 81 Nm. Taille de l’écrou et accès déterminent la variante. La table indique 226 L/min moyens et ne donne pas de point de débit continu. Les moteurs restent non conclusifs. Sources complètes et empreintes du jour vérifiées, règles, contenu, groupe et voisins concordants. Voisins : /outils-pneumatiques/cle-a-cliquet-puma-at-5110/, /outils-pneumatiques/cle-a-cliquet-puma-at-5112/",
-          "qualificationId": "b18dab569b6fd73ba89f19fe754798c104e878536233da40d98264b90c6da84f"
+          "qualificationId": "55009b9843f4ec1d42953c16edd77589fb856970c4ccd160365eb8c844821024"
         },
         {
           "path": "/outils-pneumatiques/cle-a-cliquet-rodcraft-rc3200-8951078023/",
@@ -105872,7 +105884,7 @@
           "contentHash": "5fc51d7a889a8db7a75b4bfe5bdf8fea1839d2b5e65a680e1e119ea71b76d2af",
           "decision": "approved",
           "note": "Dans le tableau de la gamme à 90 psi (6,2 bar), la ligne AT-4330 donne mandrin 10 mm, broche 3/8-24, 2 800 tr/min à vide et 200 mm. La 4331R ajoute l’inversion, tourne à 2 000 tr/min et mesure 215 mm ; la 4332 publie 5 600 tr/min. Les 340 L/min moyens de la 4330 restent documentaires même avec la condition générale du tableau. Aucun débit en charge utilisé, moteurs non conclusifs. Sources complètes et empreintes du jour vérifiées, règles, contenu, groupe et voisins concordants. Voisins : /outils-pneumatiques/perceuse-puma-at-4331r/, /outils-pneumatiques/perceuse-puma-at-4332/",
-          "qualificationId": "eb98f71ce4e94f948af112505d87fe556f034068a128ef8e21fd61f9aa6768bd"
+          "qualificationId": "f67b21f692614c083624d626c86c0d20c60db197d7ebbf08097d4e23e329f66c"
         },
         {
           "path": "/outils-pneumatiques/perceuse-rodcraft-rc4650-8951073050/",
@@ -106053,7 +106065,7 @@
           "contentHash": "fbddec651a4933ac9cc88b1b20c6e78c07890ed3f5b41a6e214a9e68cc35b1fb",
           "decision": "approved",
           "note": "Fiche HAZET 9012TT relue : carré 1/2 pouce, double marteau, corps de 128 mm, 1,6 kg. Desserrage maximal 2 200 Nm, serrage maximal 1 356 Nm et couple recommandé 948 Nm restent trois valeurs distinctes. La 9012ECO est plus lourde, pour 850 Nm recommandés ; la 9012EL-1 indique 700 Nm recommandés. Le besoin d’air publié de 147,2 L/min manque de régime et de pression de mesure ; 6,3 bar désigne le service. Les deux moteurs restent en données insuffisantes. Sources complètes et empreintes du jour vérifiées, règles, contenu, groupe et voisins concordants. Voisins : /outils-pneumatiques/cle-a-chocs-hazet-9012eco/, /outils-pneumatiques/cle-a-chocs-hazet-9012el-1/",
-          "qualificationId": "9081cde5d484e87d20da2f15858f0bdd1c09ce61255802a774051f0aeaee5af5"
+          "qualificationId": "ffaa5641ee4c36e5a4051c5f7369c008cce06b68fc5a245d091e191b5111643a"
         },
         {
           "path": "/outils-pneumatiques/cle-a-chocs-jet-j-3800p-505976/",
@@ -106090,14 +106102,14 @@
           "contentHash": "de883286c70036f06bf221d4b6017e870ece1a8dbab3a6e60f449a96bcf76eb7",
           "decision": "approved",
           "note": "Table du Draper 84126 relue : carré 3/8 pouce, 160 tr/min à vide, 85 Nm au couple ultime et 1,22 kg. La 84122 utilise un carré 1/2 pouce pour le même couple ultime publié ; la 47568 conserve le carré 3/8 et publie 68 Nm. Le carré et le dégagement autour de la tête courte guident le choix. Les 4 cfm (113 L/min) sont moyens et la pression de service de 6,2 bar ne les rend pas utilisables comme débit continu. Moteurs non conclusifs. Sources complètes et empreintes du jour vérifiées, règles, contenu, groupe et voisins concordants. Voisins : /outils-pneumatiques/cle-a-cliquet-draper-47568/, /outils-pneumatiques/cle-a-cliquet-draper-84122/",
-          "qualificationId": "132abda1bcfd2cb67c417b22b823019675afc6ebbda86046645e067ef61e5f82"
+          "qualificationId": "648fbde5a44dbc54cbd6b756342fe100d8aff09d8fb13371b9bac4f92dbc9b2d"
         },
         {
           "path": "/outils-pneumatiques/cle-a-cliquet-hazet-9022-360/",
           "contentHash": "58f9b2adb2322fe072e59735009bf0d6f9939efa878f77768caf652317729ef9",
           "decision": "approved",
           "note": "Fiche HAZET 9022-360 relue : levier orientable à 360°, inversion par bague, carré 1/2 pouce, longueur 285 mm, 200 tr/min et 120 Nm maximaux en pneumatique. Les 500 Nm de resserrage manuel appartiennent à un autre usage. Les 9022ECO-1 et 9022P-1 affichent respectivement 80 et 95 Nm pneumatiques. Le levier orientable répond au travail en espace contraint. Les 107,6 L/min ne sont pas appariés à un régime et 6,3 bar est la pression de service. Moteurs non conclusifs. Sources complètes et empreintes du jour vérifiées, règles, contenu, groupe et voisins concordants. Voisins : /outils-pneumatiques/cle-a-cliquet-hazet-9022eco-1/, /outils-pneumatiques/cle-a-cliquet-hazet-9022p-1/",
-          "qualificationId": "ab9ca226047adb4c6ac82a9bbdd10269037e550fec5b7b6730407d01c40307ad"
+          "qualificationId": "30bd7fa91fa580f2472ef1999326cc666a62944a39e57e5146d99a809a7f89e8"
         },
         {
           "path": "/outils-pneumatiques/cle-a-cliquet-jet-jsm-3330/",
@@ -106218,7 +106230,7 @@
           "contentHash": "774a737a2cb697d3044681c35bbaf8253570c68dd203a0b24ad920e4db00f212",
           "decision": "approved",
           "note": "Fiche Draper 83961 relue : mandrin 10 mm, inversion de sens, poignée auxiliaire, 2 200 tr/min à vide, 1,48 kg. La 83811 conserve le diamètre et le régime avec mandrin sans clé ; la 84121 monte à 13 mm et descend à 700 tr/min. Mandrin, maintien et vitesse guident le choix. Le tableau donne 5,5 cfm (155 L/min) moyens et 90 psi (6,2 bar) de service. Aucun débit en charge qualifié pour les moteurs. Sources complètes et empreintes du jour vérifiées, règles, contenu, groupe et voisins concordants. Voisins : /outils-pneumatiques/perceuse-draper-83811/, /outils-pneumatiques/perceuse-draper-84121/",
-          "qualificationId": "0d0ffdd17f2d08c27ddd2fd4e26c566aeec97c081f1039ae75594cfce529a73c"
+          "qualificationId": "9dc431ea10d25c84a91da0211694b3fe50835d63a43111499f413a5360f50991"
         },
         {
           "path": "/outils-pneumatiques/perceuse-jet-jsm-705/",
@@ -106249,7 +106261,7 @@
           "contentHash": "5c0ef0ac33709fd6d91041164347d4607df91da0a61b5260aad94d8d910c2e34",
           "decision": "approved",
           "note": "Table Draper 92971 relue : godet gravité 500 ml, buse 1,5 mm, masse 0,33 kg. Les 28354 et 21526 retiennent des buses de 1,8 mm et des godets de 1 L. La plage de service 45 à 50 psi se distingue du maximum admissible de 60 psi. Le débit d’eau de 160 à 270 ml/min décrit le liquide ; les 175 L/min d’air n’ont pas de régime apparié. La pression normalisée reste une pression de travail et les moteurs restent non conclusifs. Sources complètes et empreintes du jour vérifiées, règles, contenu, groupe et voisins concordants. Voisins : /outils-pneumatiques/pistolet-peinture-draper-21526/, /outils-pneumatiques/pistolet-peinture-draper-28354/",
-          "qualificationId": "063515f889dab21ab456276a7963d6df696dfaa2d4387e3c30daad72df853bbd"
+          "qualificationId": "4608a87a2513d5be0adefa8e0442853a9ddd50ba6e988ac256755155f94413fc"
         },
         {
           "path": "/outils-pneumatiques/ponceuse-bande-jet-jsm-612/",
@@ -106690,12 +106702,6 @@
           "note": "Reçu antérieur conservé. Sources du jour à revoir : https://airpol.com.pl/en/knowledge-base/qa-frequently-asked-questions-about-airpol-sr-scroll-compressors/ (Corps complet modifié, nouvelle lecture requise)"
         },
         {
-          "path": "/compresseurs/airpol-srkt-4/",
-          "contentHash": "470ae027494640014dd2c95f7bb12de08b492af49033b76d01bbcd98263acc8e",
-          "decision": "deferred",
-          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
-        },
-        {
           "path": "/compresseurs/alup-largo-15/",
           "contentHash": "6753efce9fd035fc084c4d750d781f2fc205c5f6a3623a69dc5dc36b5f13b252",
           "decision": "deferred",
@@ -106742,12 +106748,6 @@
           "contentHash": "fece4b6db2f20664a1971c6448ec1eaa420847b7b77d0ae0038afdb891e34f32",
           "decision": "deferred",
           "note": "Reçu antérieur conservé. Sources du jour à revoir : https://www.mark-compressors.com/en-int/products/screw-compressors/fixed-speed/gear-driven-rmb (TimeoutError: The read operation timed out)"
-        },
-        {
-          "path": "/compresseurs/mark-rmb-18-ivr/",
-          "contentHash": "f9c0bf368b34eecb2aeb359b6134b75323b60e32896e93cf8ea9e312bba52f37",
-          "decision": "deferred",
-          "note": "Lecture documentaire et comparaison éditoriale non achevées pour cette URL de la proposition courante."
         },
         {
           "path": "/compresseurs/mattei-ercs-2/",

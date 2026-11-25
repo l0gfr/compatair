@@ -137593,6 +137593,177 @@
           "sha256": "a49e52637c4731b713ec377d916dcba1dc2ae2f70fde9f39dc70505fb82e76cc"
         }
       ]
+    },
+    {
+      "path": "/outils-pneumatiques/burineur-puma-at-2023q/",
+      "contentHash": "b499bc53d8954311c467212b7c9116f1387cfdc4a856541ee4ac27628da2bbc2",
+      "neighbors": [
+        "/outils-pneumatiques/burineur-puma-at-2020/",
+        "/outils-pneumatiques/burineur-puma-at-2024q/"
+      ],
+      "contextHash": "7e3aff67482f4a0fe87faae4fb7de2dbf6f66203e272df49a6b1c8c891c2b37e",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "ccd67aa2633519927b9cc822e50db83ba83e04bd",
+      "reviewedAt": "2026-11-25T09:11:41.030Z",
+      "note": "Ligne PUMA AT-2023Q dans la table Air Hammer, avec course 71 mm, 3 000 coups/min, queues ronde 0,401 pouce et hexagonale 0,410 pouce. La 2024Q donne 92 mm et 2 200 coups/min ; l’AT-2020 correspond à une autre retenue. Choix sur la course et la fixation du burin. Les 241 L/min sont indiqués en moyenne, la colonne 90 psi donne le service. Aucun débit en charge dérivé, moteurs non conclusifs.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.pumaair.com/product-Air-Hammer-AirHammer-.html",
+          "sha256": "8946dc887b4fb021b0861d4917646ac9c6a69e90ffe61142c011e0d3b9517939"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-chocs-puma-at-5042/",
+      "contentHash": "502d708932e3312d9053a5c3687daec25610e415969fae6e1b56b5a879ddae27",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-chocs-puma-at-5040/",
+        "/outils-pneumatiques/cle-a-chocs-puma-at-5041/"
+      ],
+      "contextHash": "0c45461812bbcad84f4f38bc5a6c8736cb5753d185afb9c1f10c23af5f383c21",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "ccd67aa2633519927b9cc822e50db83ba83e04bd",
+      "reviewedAt": "2026-11-25T09:11:41.030Z",
+      "note": "Ligne AT-5042 relue : mini-clé à chocs à carré 1/2 pouce, longueur 149 mm, 1,38 kg, 9 000 tr/min à vide et 258 Nm maximum. Les AT-5040 et AT-5041 de même carré publient 312 et 434 Nm. La forme courte et le couple disponible permettent la comparaison sans en faire une consigne de serrage. Les 283 L/min sont moyens ; 90 psi est recommandé par le constructeur. Les moteurs restent non conclusifs.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.pumaair.com/product-1-2--Mini-Impact-Wrench-1-2MiniImpactWrench.html",
+          "sha256": "11d18cc179f7b83ec754774c0990c3e4b6eae4e9d687b974733730c6ffa5642a"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-cliquet-puma-at-5111/",
+      "contentHash": "fe1d10b2a6373bcfd4b7bd1e3fcce7c61928c4f7d1b2e61b70d04add414d84be",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-cliquet-puma-at-5110/",
+        "/outils-pneumatiques/cle-a-cliquet-puma-at-5112/"
+      ],
+      "contextHash": "030275fdca3c840d772f1eff7a5e85c317304d9106e3b94139812f0a072f30f1",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "ccd67aa2633519927b9cc822e50db83ba83e04bd",
+      "reviewedAt": "2026-11-25T09:11:41.030Z",
+      "note": "Ligne AT-5111 relue : cliquet traversant pour hexagones de 10 à 14 mm, 200 tr/min, 25 Nm maximum, 340 mm. Le 5110 couvre 6 à 12 mm pour 13,6 Nm ; le 5112 couvre 15 à 19 mm pour 81 Nm. Taille de l’écrou et accès déterminent la variante. La table indique 226 L/min moyens et ne donne pas de point de débit continu. Les moteurs restent non conclusifs.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.pumaair.com/product-Air-Ratchet-Box-Wrench-AirRatchetBoxWrench.html",
+          "sha256": "4db745b393cbfc4f0ad8ac61be9540febddcd777ef168641469055f24673eff0"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/perceuse-puma-at-4330/",
+      "contentHash": "5fc51d7a889a8db7a75b4bfe5bdf8fea1839d2b5e65a680e1e119ea71b76d2af",
+      "neighbors": [
+        "/outils-pneumatiques/perceuse-puma-at-4331r/",
+        "/outils-pneumatiques/perceuse-puma-at-4332/"
+      ],
+      "contextHash": "0cfa2486d4122888938c7ca354527b1b09148f891f3adc7705cb1c4dc7ccf6c3",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "ccd67aa2633519927b9cc822e50db83ba83e04bd",
+      "reviewedAt": "2026-11-25T09:11:41.030Z",
+      "note": "Dans le tableau de la gamme à 90 psi (6,2 bar), la ligne AT-4330 donne mandrin 10 mm, broche 3/8-24, 2 800 tr/min à vide et 200 mm. La 4331R ajoute l’inversion, tourne à 2 000 tr/min et mesure 215 mm ; la 4332 publie 5 600 tr/min. Les 340 L/min moyens de la 4330 restent documentaires même avec la condition générale du tableau. Aucun débit en charge utilisé, moteurs non conclusifs.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.pumaair.com/product-3-8----1-4--Air-Drill-3-8-1-4AirDrill.html",
+          "sha256": "78df930e44470c4e289afc479656b929991d1fda5d136820c59619bc173068bc"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-chocs-hazet-9012tt/",
+      "contentHash": "fbddec651a4933ac9cc88b1b20c6e78c07890ed3f5b41a6e214a9e68cc35b1fb",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-chocs-hazet-9012eco/",
+        "/outils-pneumatiques/cle-a-chocs-hazet-9012el-1/"
+      ],
+      "contextHash": "c9ddcd87a868dfc7017929555172d4efed0dbce483e8f591eda568ab01fe4a7a",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "ccd67aa2633519927b9cc822e50db83ba83e04bd",
+      "reviewedAt": "2026-11-25T09:11:41.030Z",
+      "note": "Fiche HAZET 9012TT relue : carré 1/2 pouce, double marteau, corps de 128 mm, 1,6 kg. Desserrage maximal 2 200 Nm, serrage maximal 1 356 Nm et couple recommandé 948 Nm restent trois valeurs distinctes. La 9012ECO est plus lourde, pour 850 Nm recommandés ; la 9012EL-1 indique 700 Nm recommandés. Le besoin d’air publié de 147,2 L/min manque de régime et de pression de mesure ; 6,3 bar désigne le service. Les deux moteurs restent en données insuffisantes.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/impact-driver/product/ean-4000896226924",
+          "sha256": "af81c81aa87630ca37b1c2d3a5ab403e8d198bf3cce28d10297784dbdd438b0a"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-cliquet-draper-84126/",
+      "contentHash": "de883286c70036f06bf221d4b6017e870ece1a8dbab3a6e60f449a96bcf76eb7",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-cliquet-draper-47568/",
+        "/outils-pneumatiques/cle-a-cliquet-draper-84122/"
+      ],
+      "contextHash": "9c4702f2247e0bf138df8da92fbbc2633bf57fcdf0ffabf98d87a4522fd840ab",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "ccd67aa2633519927b9cc822e50db83ba83e04bd",
+      "reviewedAt": "2026-11-25T09:11:41.030Z",
+      "note": "Table du Draper 84126 relue : carré 3/8 pouce, 160 tr/min à vide, 85 Nm au couple ultime et 1,22 kg. La 84122 utilise un carré 1/2 pouce pour le même couple ultime publié ; la 47568 conserve le carré 3/8 et publie 68 Nm. Le carré et le dégagement autour de la tête courte guident le choix. Les 4 cfm (113 L/min) sont moyens et la pression de service de 6,2 bar ne les rend pas utilisables comme débit continu. Moteurs non conclusifs.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.drapertools.com/product/84126/air-ratchet-3-8-sq-dr/",
+          "sha256": "912393832eaa0cabf14cf5fd1fe6466503d511da979bbb86c46049862b789ae7"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-cliquet-hazet-9022-360/",
+      "contentHash": "58f9b2adb2322fe072e59735009bf0d6f9939efa878f77768caf652317729ef9",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-cliquet-hazet-9022eco-1/",
+        "/outils-pneumatiques/cle-a-cliquet-hazet-9022p-1/"
+      ],
+      "contextHash": "96c863c977a90e5c767958772407d75236ff6fc688d16c2da96c64fb1553246b",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "ccd67aa2633519927b9cc822e50db83ba83e04bd",
+      "reviewedAt": "2026-11-25T09:11:41.030Z",
+      "note": "Fiche HAZET 9022-360 relue : levier orientable à 360°, inversion par bague, carré 1/2 pouce, longueur 285 mm, 200 tr/min et 120 Nm maximaux en pneumatique. Les 500 Nm de resserrage manuel appartiennent à un autre usage. Les 9022ECO-1 et 9022P-1 affichent respectivement 80 et 95 Nm pneumatiques. Le levier orientable répond au travail en espace contraint. Les 107,6 L/min ne sont pas appariés à un régime et 6,3 bar est la pression de service. Moteurs non conclusifs.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.hazet.de/en/products/pneumatic-tools-power-tools/pneumatic-tool/air-ratchet/product/ean-4000896209781",
+          "sha256": "a25dbf8a633680eb0b6a724288d22b4cc737eff5a4067aad98489609c386f3ef"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/perceuse-draper-83961/",
+      "contentHash": "774a737a2cb697d3044681c35bbaf8253570c68dd203a0b24ad920e4db00f212",
+      "neighbors": [
+        "/outils-pneumatiques/perceuse-draper-83811/",
+        "/outils-pneumatiques/perceuse-draper-84121/"
+      ],
+      "contextHash": "5f10a1aa0e6fc381622ed3a316bfa7ceb746fbb0355c8f0c5881038d217445c8",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "ccd67aa2633519927b9cc822e50db83ba83e04bd",
+      "reviewedAt": "2026-11-25T09:11:41.030Z",
+      "note": "Fiche Draper 83961 relue : mandrin 10 mm, inversion de sens, poignée auxiliaire, 2 200 tr/min à vide, 1,48 kg. La 83811 conserve le diamètre et le régime avec mandrin sans clé ; la 84121 monte à 13 mm et descend à 700 tr/min. Mandrin, maintien et vitesse guident le choix. Le tableau donne 5,5 cfm (155 L/min) moyens et 90 psi (6,2 bar) de service. Aucun débit en charge qualifié pour les moteurs.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.drapertools.com/product/83961/reversible-air-drill-10mm/",
+          "sha256": "9e6aeab2b779202d293d2ca64f2c3880a71db94f8a2e95c679fa75c59290ddf0"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/pistolet-peinture-draper-92971/",
+      "contentHash": "5c0ef0ac33709fd6d91041164347d4607df91da0a61b5260aad94d8d910c2e34",
+      "neighbors": [
+        "/outils-pneumatiques/pistolet-peinture-draper-21526/",
+        "/outils-pneumatiques/pistolet-peinture-draper-28354/"
+      ],
+      "contextHash": "8346d1befef0ab1ed2c00f4f377420770b5ee570dce794e99597ff512549c369",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "ccd67aa2633519927b9cc822e50db83ba83e04bd",
+      "reviewedAt": "2026-11-25T09:11:41.030Z",
+      "note": "Table Draper 92971 relue : godet gravité 500 ml, buse 1,5 mm, masse 0,33 kg. Les 28354 et 21526 retiennent des buses de 1,8 mm et des godets de 1 L. La plage de service 45 à 50 psi se distingue du maximum admissible de 60 psi. Le débit d’eau de 160 à 270 ml/min décrit le liquide ; les 175 L/min d’air n’ont pas de régime apparié. La pression normalisée reste une pression de travail et les moteurs restent non conclusifs.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.drapertools.com/product/92971/gravity-feed-air-spray-gun-500ml/",
+          "sha256": "a49e52637c4731b713ec377d916dcba1dc2ae2f70fde9f39dc70505fb82e76cc"
+        }
+      ]
     }
   ]
 }
