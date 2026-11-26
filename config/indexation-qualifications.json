@@ -137764,6 +137764,158 @@
           "sha256": "a49e52637c4731b713ec377d916dcba1dc2ae2f70fde9f39dc70505fb82e76cc"
         }
       ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-chocs-atp-atp1011pt-th/",
+      "contentHash": "2c916c36edc2d0332cf9ba26202bbf0c13e684438587d636063d1ea4634fd2fa",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-chocs-atp-atp1011ei-5s/",
+        "/outils-pneumatiques/cle-a-chocs-atp-atp1011pt-5s/"
+      ],
+      "contextHash": "7edd4162b65171a1ef2b15183dcc809c590db1ffdba8846b1eac2fa81bfeeb4b",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "c6382ea0f45c9b05ea3504fbd67381d7c05110ea",
+      "reviewedAt": "2026-11-26T07:24:13.680Z",
+      "note": "La ligne ATP1011PT-TH donne une poignée pistolet, un carré 1 pouce, retenue par trou traversant, 10,7 pouces (271,7 mm) et 23,1 lb (10,4 kg). Les PT-5S et EI-5S ont une sortie cannelée, l’EI-5S une poignée arrière. Couple de travail et maximum sont séparés : 1 800 et 2 800 ft-lb. L’entrée NPT imprimée en champ composite ne permet pas de déduire un besoin d’air. Aucun débit avec pression de mesure et moteurs non conclusifs.",
+      "sourceDocuments": [
+        {
+          "url": "https://continentaltoolgroup.com/product/super-duty-1-square-drive-pistol-grip-pneumatic-impact-wrench/",
+          "sha256": "00752d4a944ce4708403e07d2c000a7c0b50e58ccd5ff3ce609fbe29c1aadd66"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/cle-a-chocs-universal-tool-ut2588lt-th/",
+      "contentHash": "bf319089d4da9ee9cc521104df61c2098e234dc881769c03b75ef5d8f6a77115",
+      "neighbors": [
+        "/outils-pneumatiques/cle-a-chocs-universal-tool-ut2025r/",
+        "/outils-pneumatiques/cle-a-chocs-universal-tool-ut2110r-1/"
+      ],
+      "contextHash": "fb2e4bfb0f2160c09dc8d690361523f40d43854ac7e6821abd4eda990be6eb6e",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "c6382ea0f45c9b05ea3504fbd67381d7c05110ea",
+      "reviewedAt": "2026-11-26T07:24:13.680Z",
+      "note": "Ligne UT2588LT-TH relue : carré 2-1/2 pouces, poignée en T, douille à retenue traversante, 97,5 kg, entrée 1 pouce. Le catalogue américain distingue le couple de travail 25 000 ft-lb du maximum 50 000 ft-lb. Les UT2025R et UT2110R-1 de 3/8 et 1/2 pouce utilisent une bague et un format nettement plus petit. La distinction est celle du montage industriel, sans extrapolation de consommation : la table ne donne aucun débit ni pression de mesure.",
+      "sourceDocuments": [
+        {
+          "url": "https://continentaltoolgroup.com/product/2-1-2-drive-lever-throttle-impact-wrench/",
+          "sha256": "c95fb0a0dbe89eea709d20c36a4aabfeefb5d065ddbd2ea85ff158a95555b5a0"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/meuleuse-aircat-6245/",
+      "contentHash": "82dd85adb78b4b6fa27d85e76a8fcd14a30331fd574c20fb8a6bdea06ca0910b",
+      "neighbors": [
+        "/outils-pneumatiques/meuleuse-aircat-6200/",
+        "/outils-pneumatiques/meuleuse-aircat-6201/"
+      ],
+      "contextHash": "062be696e0b0a0ba3e3b4d01758c3eeb63af842325e0e9033497af6c328c4348",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "c6382ea0f45c9b05ea3504fbd67381d7c05110ea",
+      "reviewedAt": "2026-11-26T07:24:13.680Z",
+      "note": "Table constructeur 6245 relue. Meuleuse coudée à pince 1/4 pouce, 0,5 hp, 20 000 tr/min à vide, 7 pouces et 1 lb. Engrenage conique hélicoïdal, poignée composite et échappement arrière pour choisir le montage et l’accès. La 6200 publie 0,4 hp pour 0,9 lb et la 6201 0,5 hp pour 1,1 lb. Les 3,5 CFM de la 6245 sont sans régime ni pression de mesure établis et restent hors moteur.",
+      "sourceDocuments": [
+        {
+          "url": "https://continentaltoolgroup.com/product/aircat-5-hp-angle-die-grinder/",
+          "sha256": "f51e54dfdd0a9a50a7352720abbf93481e7658d7689eb35fab9158b0c829e61a"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/meuleuse-universal-tool-ut2720/",
+      "contentHash": "8802fbfdb1ae023ca750d90e33aef5dee6babe8b5d69e9ae80adcf4711020de8",
+      "neighbors": [
+        "/outils-pneumatiques/meuleuse-universal-tool-ut2710/",
+        "/outils-pneumatiques/meuleuse-universal-tool-ut2715/"
+      ],
+      "contextHash": "abac24e54892d42c9924917de15f6ef6efe21425a82a3cee0b691d16c3a01c28",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "c6382ea0f45c9b05ea3504fbd67381d7c05110ea",
+      "reviewedAt": "2026-11-26T07:24:13.680Z",
+      "note": "Table UT2720 relue : meuleuse droite de 171 mm, pince 1/4 pouce, 0,4 hp, 25 000 tr/min, verrouillage du levier et échappement arrière. La 2710 de 152 mm est à 0,3 hp ; la 2715 de 191 mm est à 0,4 hp. La portée et la pince guident le choix. La page américaine distingue 18 CFM sans régime précisé de 4,5 CFM moyens. Les 90 psi (6,2 bar publiés) sont recommandés pour le service. Les moteurs restent non conclusifs.",
+      "sourceDocuments": [
+        {
+          "url": "https://continentaltoolgroup.com/product/die-grinder-4/",
+          "sha256": "cd20b1e75ae8c57f28ca228d978aea7b04ad8ef8534d2f0783cd1f280e78e8f3"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-orbitale-aircat-6700-6-332/",
+      "contentHash": "7743fe3b2ebb40ae5f8f3837617582eb7b5ffb39e836e4851ef57c8282e7a1d1",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-orbitale-aircat-6700-6-332cv/",
+        "/outils-pneumatiques/ponceuse-orbitale-aircat-6700-6-332sv/"
+      ],
+      "contextHash": "e41bf8c05484c02e797262a9f211db669a68b73e41054506ed4ae9e1d77e9342",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "c6382ea0f45c9b05ea3504fbd67381d7c05110ea",
+      "reviewedAt": "2026-11-26T07:24:13.680Z",
+      "note": "Fiche 6700-6-332 Non-Vac relue : plateau autoagrippant de 6 pouces, filetage 5/16-24, orbite de 3/32 pouce, 11 000 tr/min à vide et 1,8 lb. Le moteur est décrit comme sans huilage. Les variantes CV à aspiration centrale et SV à aspiration intégrée répondent à des raccordements différents. Les 1,6 CFM sont une moyenne explicite sans pression de mesure exploitable. Les moteurs restent non conclusifs.",
+      "sourceDocuments": [
+        {
+          "url": "https://continentaltoolgroup.com/product/non-vac-orbital-palm-sander-4/",
+          "sha256": "705d46c88a886f9bc817cdb8ea39c32f550689519d2d344f74e61e44f75bc6f8"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/visseuse-universal-tool-ut8080q/",
+      "contentHash": "aa68744337a6668307cf2b831da743802c1565359f16265e261fde58e5c5a8b3",
+      "neighbors": [
+        "/outils-pneumatiques/visseuse-universal-tool-ut8080p/",
+        "/outils-pneumatiques/visseuse-universal-tool-ut8090q/"
+      ],
+      "contextHash": "4b716381099a9068a0d943237180666acc4803e6992354aae42a4205e36b3e88",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "c6382ea0f45c9b05ea3504fbd67381d7c05110ea",
+      "reviewedAt": "2026-11-26T07:24:13.680Z",
+      "note": "Fiche UT8080Q et table relues : porte-embout hexagonal 1/4 pouce à changement rapide, double marteau, 75 ft-lb maximum, 10 000 tr/min, moteur 0,4 hp. Les 8080P et 8090Q sont comparées sur le montage et le régime : 8090Q mesure 160 mm, à 8 500 tr/min, contre 152 mm ici. Les 20 CFM de régime non précisé et 5 CFM moyens restent distincts ; 90 psi (6,2 bar) est une pression recommandée. Les moteurs restent non conclusifs.",
+      "sourceDocuments": [
+        {
+          "url": "https://continentaltoolgroup.com/product/impact-driver-5/",
+          "sha256": "6f44dee07401fafd1d0a4d1ec94b8f420b1965366fca45ce56345839fc5a71d1"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/agrafeuse-cloueuse-fasco-f1a-mb-25a-j010874-05/",
+      "contentHash": "5dc0b56c60400c1716fad2bffd594d0317a140bd77ec81340f64112f61ff6624",
+      "neighbors": [
+        "/outils-pneumatiques/agrafeuse-cloueuse-fasco-f1b-10f-16-11088/",
+        "/outils-pneumatiques/agrafeuse-cloueuse-fasco-f1b-10j-16-11126/"
+      ],
+      "contextHash": "dbee91bfa6373d43db34cea5f97ad42d549eb731730654220f4d27bfa289e44b",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "c6382ea0f45c9b05ea3504fbd67381d7c05110ea",
+      "reviewedAt": "2026-11-26T07:24:13.680Z",
+      "note": "Table BECK du FASCO F1A MB-25A, article J010874.05, relue : pointes MB de 12 à 30 mm, magasin latéral de 130, déclenchement simple, longueur 247 mm et masse 0,87 kg. Les F1B 10F-16 et 10J-16 sont des agrafeuses à chargement inférieur pour d’autres fixations. La plage de service 4 à 7 bar ne documente aucun volume d’air par coup pour le F1A. Les valeurs d’autres références ne sont pas reprises et les moteurs restent non conclusifs.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.beck-fastening.com/en/f1a-mb-25a~p426",
+          "sha256": "f68fb73ef5d495cb8cb827b15b95dfc67eb3d528d711a3761dfc7d1480bd7f16"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/agrafeuse-cloueuse-pneutools-cf16/",
+      "contentHash": "89d17ca42799625d17d92586aab8a3a381661b7a0ed6da5cacd3c58d88b4de87",
+      "neighbors": [
+        "/outils-pneumatiques/agrafeuse-cloueuse-pneutools-cn100/",
+        "/outils-pneumatiques/agrafeuse-cloueuse-pneutools-cn130/"
+      ],
+      "contextHash": "6faf3dd8df751899ba04223e2be2e2c30021d49eec575d5eb01151bafb914767",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "c6382ea0f45c9b05ea3504fbd67381d7c05110ea",
+      "reviewedAt": "2026-11-26T07:24:13.680Z",
+      "note": "Fiche CF16 relue : fixations ondulées Honeycomb de 3/8, 1/2 et 5/8 pouce, chargeur de 46, commande sélectionnable et profondeur non réglable. Les CN100 et CN130 utilisent des clous à rouleaux d’autres longueurs. La table donne 80 à 120 PSI en service sans consommation par cycle ; elle ne précise pas les unités de masse et dimensions de ses cellules. Aucun débit ni conversion implicite, moteur non conclusif.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.pneutools.net/product/cf16",
+          "sha256": "1253e224c7156ded4006d3dce6a4adac24c5e7e767ea061dd0c25280d4c2fd74"
+        }
+      ]
     }
   ]
 }
