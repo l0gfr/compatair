@@ -137916,6 +137916,175 @@
           "sha256": "1253e224c7156ded4006d3dce6a4adac24c5e7e767ea061dd0c25280d4c2fd74"
         }
       ]
+    },
+    {
+      "path": "/outils-pneumatiques/fiam-15c2apa-2cs/",
+      "contentHash": "a2c492897354615125d9e0d04ddfc0fdf9794a67de7df4736b0567ff97bdc70a",
+      "neighbors": [
+        "/outils-pneumatiques/fiam-15c2apa-2200-r-2cs/",
+        "/outils-pneumatiques/fiam-15c2apa-2200-r/"
+      ],
+      "contextHash": "b0f3d7afd6f020017578074d4f4b58d250dffcb9faf9d18ea1a79b1c24aef56f",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "2169c1d879753b0b9360f40ad29d24578eddf796",
+      "reviewedAt": "2026-11-27T07:24:08.112Z",
+      "note": "Table fabricant, ligne 112509899 : visseuse pistolet réversible à bouton, double prise pneumatique pour TOM, embrayage avec arrêt automatique, sortie hexagonale 1/4 pouce, 0,6–2,2 Nm et 2 200 tr/min. Les deux 2200-R ont une autre commande et pèsent 0,75 kg contre 0,70 kg. Le PDF FIAM inchangé rapporte la condition de 6,3 bar. Les 6 L/s ne sont pas identifiés comme débit en charge ou maximal et le moteur conserve insufficient_data.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.fiamgroup.com/en/products/handheld-air-screwdrivers/15c2apa-2cs/",
+          "sha256": "68f63d4b5f83ca7c462d898598821ba53845e8754f97cf699705706a117840d9"
+        },
+        {
+          "url": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-85.pdf",
+          "sha256": "e1c8db38588668ff2347c0005a43ac3067609b0b280d80dc3548f0d8043dccce"
+        },
+        {
+          "url": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-85.pdf#page=15",
+          "sha256": "e1c8db38588668ff2347c0005a43ac3067609b0b280d80dc3548f0d8043dccce"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/fiam-fo12p/",
+      "contentHash": "cd646f319d0fe2b98c586a4417997a5288bc780f66eb78ab6bd137f50ca5ab71",
+      "neighbors": [
+        "/outils-pneumatiques/fiam-fo16p/",
+        "/outils-pneumatiques/fiam-fo20p/"
+      ],
+      "contextHash": "1c40df3f18174c4676bde600211aa8f7745bba27b5fab63509d8d7aed08fa124",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "2169c1d879753b0b9360f40ad29d24578eddf796",
+      "reviewedAt": "2026-11-27T07:24:08.112Z",
+      "note": "Table fabricant, ligne 127011512 : perceuse pistolet à bouton, 745 W, 2 000 tr/min, cône n° 2 sans mandrin, 3,05 kg. Les FO16P et FO20P, de 3,6 kg, sont données pour 950 et 600 tr/min avec les mêmes 14 L/s documentaires. La différence porte sur la vitesse, le montage et le poids. Le PDF FIAM inchangé rapporte la condition de 6,3 bar, mais le tableau ne qualifie pas le régime de débit en charge ou maximal. Le moteur conserve insufficient_data.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.fiamgroup.com/en/products/air-drills/fo12p/",
+          "sha256": "c5c170c8a7bdd3fc8f5a951b8a26e36f1eb07cc5699fed1a1dfade904c67e080"
+        },
+        {
+          "url": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf",
+          "sha256": "4bc7b8a199880ed886511848f97c3d61ae9b8a50dbb5f0f0318dddc819dcbf62"
+        },
+        {
+          "url": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-34.pdf#page=13",
+          "sha256": "4bc7b8a199880ed886511848f97c3d61ae9b8a50dbb5f0f0318dddc819dcbf62"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/fiam-smz15d/",
+      "contentHash": "7645e383a42a3185aa6015ef44d3dab65c0ed3f4e1950d89f3aa865ceadd8751",
+      "neighbors": [
+        "/outils-pneumatiques/fiam-smles135/",
+        "/outils-pneumatiques/fiam-sms100a/"
+      ],
+      "contextHash": "f4450aba241ebeab042500e6d275b7cde0c4003ba4440c906f1c266567935521",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "2169c1d879753b0b9360f40ad29d24578eddf796",
+      "reviewedAt": "2026-11-27T07:24:08.112Z",
+      "note": "Table fabricant, ligne 142313001 : meuleuse droite de 130 W à 22 000 tr/min, échappement arrière, levier de sécurité, corps de 155 mm, pince de 5 mm au maximum et masse de 0,37 kg. Les SMLES135 et SMS100A sont à 13 500 tr/min et pèsent respectivement 0,86 et 1 kg. Le PDF FIAM inchangé rapporte la condition de 6,3 bar, mais les 6 L/s ne donnent pas un débit en charge ou maximal qualifié. Le moteur conserve insufficient_data.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.fiamgroup.com/en/products/grinders-and-sanders/smz15d/",
+          "sha256": "bd52a6afd86ceca43f37b6112bed3f2fea26de143528572e3be43104b722476c"
+        },
+        {
+          "url": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-44.pdf",
+          "sha256": "01b152f269aeae367daa8a9524f083a1679707b0a3eff4daa59bcec83635f6de"
+        },
+        {
+          "url": "https://www.fiamgroup.com/wp-content/uploads/2019/11/en-44.pdf#page=7",
+          "sha256": "01b152f269aeae367daa8a9524f083a1679707b0a3eff4daa59bcec83635f6de"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/ponceuse-orbitale-puma-at-7027/",
+      "contentHash": "9385766011163cc00299effa517b71b83b7595275da02c74c3fca6ff3da74f16",
+      "neighbors": [
+        "/outils-pneumatiques/ponceuse-orbitale-puma-at-7025/",
+        "/outils-pneumatiques/ponceuse-orbitale-puma-at-7028/"
+      ],
+      "contextHash": "cbad2979b60faacf30b2e6851b74604db4ae3b9c9ca23068f5fbd353f59278fb",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "2169c1d879753b0b9360f40ad29d24578eddf796",
+      "reviewedAt": "2026-11-27T07:24:08.112Z",
+      "note": "Table fabricant, ligne AT-7027 et PDF inchangé : ponceuse orbitale sans aspiration intégrée, orbite de 5 mm, 9 000 tr/min, plateaux 125 ou 150 mm suivant configuration, masses de 1,08 ou 1,10 kg. La 7028 ajoute une aspiration autonome et la 7025 utilise un plateau rectangulaire. Les 170 L/min sont une moyenne sans pression de mesure appariée. Le choix de plateau et d’aspiration est documenté, le dimensionnement moteur reste insufficient_data.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.pumaair.com/product-Air-Sander-AirSander-.html",
+          "sha256": "3404b78be5ec415005e258ec675060b23ed971ed40805f48ce4871be4f8491d0"
+        },
+        {
+          "url": "https://www.pumaair.com/views/proimages/pd-en/PDF/PIC-2680/P036-AIR_SANDER-2680.pdf",
+          "sha256": "9a4c87edf5d2b6cb307f880ddecc8400bbbae15766e08d9899d0063c6ca00c82"
+        }
+      ]
+    },
+    {
+      "path": "/outils-pneumatiques/riveteuse-gesipa-taurus-2-1457771/",
+      "contentHash": "f9d44c40df7cb9ea6a6f20d62824865d10363b4938c8c17ae3a45e9dab5dde4e",
+      "neighbors": [
+        "/outils-pneumatiques/riveteuse-puma-at-6017/",
+        "/outils-pneumatiques/riveteuse-puma-at-6217/"
+      ],
+      "contextHash": "c180b2233a9836d2588a7c06f865fa78506e0304a7fb3c1b97512384bf432a9e",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "2169c1d879753b0b9360f40ad29d24578eddf796",
+      "reviewedAt": "2026-11-27T07:24:08.112Z",
+      "note": "Fiche fabricant, référence 1457771 : rivets jusqu’à 5 mm pour tous matériaux ou 6 mm en aluminium et en acier, 3,2 mm de diamètre de mandrin au maximum, course de 18 mm et traction de 11 000 N. Le corps pèse 1,60 kg et l’aspiration des mandrins est commutable. Les voisines PUMA AT-6017 et AT-6217 ont des capacités nominales différentes et pèsent 2,4 et 2,0 kg. La pression de service de 5 à 7 bar n’est pas une pression de mesure appariée aux 2,30 litres, dont le dénominateur manque. Le moteur conserve insufficient_data.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.gesipa.com/products/pneumatic-riveting-tools/1457771-taurus-2/",
+          "sha256": "5f77437bc8deacbdee9768cdb59dc21493db3cca9ebda3e6e25e82cfcf4afd8b"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/mark-msm-7/",
+      "contentHash": "1efc66a16e6f77dc34b5a08c9265b5ce84607dff85d2750d8d12f9db0e7ea4b7",
+      "neighbors": [
+        "/compresseurs/mark-msm-3/",
+        "/compresseurs/mark-msm-4/"
+      ],
+      "contextHash": "e0154a80208b797e0844795cac5237574256a06604cc4f51bf6a92ff80fd5104",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "2169c1d879753b0b9360f40ad29d24578eddf796",
+      "reviewedAt": "2026-11-27T07:24:08.112Z",
+      "note": "Ligne MSM 7 fixe sur socle : 7,5 kW et 961 L/min FAD à la pression de référence de 9,5 bar selon ISO 1217 annexe C, pour 10 bar maximum. La brochure inchangée distingue socle et réservoir et documente un taux de marche de 100 % pour cette gamme. Les MSM 3 et 4 à la même pression fournissent moins de débit. Le moteur retrouve exactement le point de 961 L/min et ne lui attribue aucun FAD à 10 bar. La ligne 8 bar du tableau relève d’une autre configuration.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.mark-compressors.com/content/dam/brands/Mark/products-bp-structure/oil-injected-screw-compressor/fixed-speed/msm-2-2-7/leaflets/Mark_MSM_2.2-7_MSM%202.2-7%20IVR_Sales_Leaflet_EN_Brendola_6999200582.pdf",
+          "sha256": "64d6ab7907e7a65c5c76e427626d86890e4361dbe459f470c317a15b25e3b530"
+        },
+        {
+          "url": "https://www.mark-compressors.com/en-int/products/screw-compressors/fixed-speed/belt-driven-msm",
+          "sha256": "1ac50f53562282193086a5e3af6fa66be023402c09ff890b219dc44a7bd7bbec"
+        }
+      ]
+    },
+    {
+      "path": "/compresseurs/mark-rmb-15/",
+      "contentHash": "fece4b6db2f20664a1971c6448ec1eaa420847b7b77d0ae0038afdb891e34f32",
+      "neighbors": [
+        "/compresseurs/mark-rmb-15-ivr/",
+        "/compresseurs/mark-rmb-18-ivr/"
+      ],
+      "contextHash": "15f41eff93ccb7719095a53eee72a53b21263a8118ae36e7c5ee5692674497a9",
+      "rulesHash": "2c64f9582e50e782703d2bc199d42335d02dce3e0136ebd5e7d01bcda92461de",
+      "sourceReleaseSha": "2169c1d879753b0b9360f40ad29d24578eddf796",
+      "reviewedAt": "2026-11-27T07:24:08.112Z",
+      "note": "Ligne RMB 15 fixe sur socle : 15 kW, 1 946 L/min FAD à 12,5 bar et 13 bar maximum. Le tableau sépare les pressions de référence et la brochure inchangée sépare le montage sur socle du montage avec sécheur. Les voisines 15 IVR et 18 IVR sont à vitesse variable et leurs chiffres ne sont pas repris. Le moteur retrouve le point à 12,5 bar sans extrapolation à 13 bar. Le taux de marche non documenté ne permet pas de conclure sur l’endurance.",
+      "sourceDocuments": [
+        {
+          "url": "https://www.mark-compressors.com/content/dam/brands/Mark/products-bp-structure/oil-injected-screw-compressor/fixed-speed/rmb-15-25/leaflets/Mark_RMA-RMB%207.5-25%20FS-IVR_EN.pdf",
+          "sha256": "7939b1c035eed5ecdfbbded352a6de075e9eeadd429dd7f7fb59d6f66f4d5e83"
+        },
+        {
+          "url": "https://www.mark-compressors.com/en-int/products/screw-compressors/fixed-speed/gear-driven-rmb",
+          "sha256": "5ad7f1dc08340bf3ada28c072025162dd09b8b9e23609bb5e01b0391c2dc30a5"
+        }
+      ]
     }
   ]
 }
